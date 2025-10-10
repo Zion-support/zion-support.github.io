@@ -68,8 +68,8 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     // Remove unused component imports;
     const componentImports = ['Navigation', 'Footer', 'SEOOptimizer'];
     componentImports.forEach(comp => {);
-const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');
-      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {
+const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
+      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {`
         content = content.replace(importRegex, '');
 
     // Remove unused variable declarations;
@@ -145,9 +145,9 @@ const newContent = newLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production
-componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`;
+componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`;"`
 const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
-      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}
+      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}`
       /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g;
     unusedVarPatterns.forEach(pattern => {/* TODO: Fix JSX expression */})`
   d: ${filePath}`)} catch (error) {/* TODO: Fix JSX expression */}`
@@ -160,7 +160,7 @@ import { execSync } from 'child_process';
 function removeUnusedImportsFromFile(filePath) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
       } else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from'))) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true;
     
   
@@ -177,19 +177,19 @@ const name = imp.split(' as ')[0].trim();
       // Check if the name is used in the content (excluding the import line itself);
 const contentWithoutImport = content.replace(importLine, '');
       return contentWithoutImport.includes(name) && 
-             !contentWithoutImport.includes(`import ${name}`) &&
-             !contentWithoutImport.includes(`{ ${name}`) &&;
+             !contentWithoutImport.includes(`import ${name}`) &&`
+             !contentWithoutImport.includes(`{ ${name}`) &&;`
 function isImportUsed(content, importLine) {/* TODO: Fix JSX expression */}
   const importMatch = importLine.match(/import\s*{([^}]+)}\s*from/);
   if (importMatch) {/* TODO: Fix JSX expression */}`
              !contentWithoutImport.includes(`import ${name}`) &&`
              !contentWithoutImport.includes(`{ ${name}`) &&`
-             !contentWithoutImport.includes(`{${name}`);
+             !contentWithoutImport.includes(`{${name}`);`
   
   // For default imports;
   const defaultImportMatch = importLine.match(/import\s+(\w+)\s+from/);
   if (defaultImportMatch) {/* TODO: Fix JSX expression */}`
-           !contentWithoutImport.includes(`import ${name}`);
+           !contentWithoutImport.includes(`import ${name}`);`
   
   return true; // If we can't determine, keep the import;
 // Get all TypeScript/JavaScript files;

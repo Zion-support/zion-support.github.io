@@ -42,8 +42,8 @@ const fixes = [
     replacement: '$1={ $2 } $3'},
   //Fix template literal syntax;
   {
-    pattern: /`([^`]+)\s*>\s*([^`]+)`/g;
-    replacement: '`$1 > $2`'},
+    pattern: /`([^`]+)\s*>\s*([^`]+)`/g;`
+    replacement: '`$1 > $2`'},`
   //Fix destructuring syntax;
   {
     pattern: /{\s*(\w+)\s*:\s*(\w+)\s*}\s*=\s*(\w+)/g,
@@ -95,7 +95,7 @@ const fixes = [
   {
     pattern: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'onClick={ $1 } $2'},
-  //Fix className attributes;
+  //Fix: className attributes;
   {
     pattern: /className\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'className={ $1 } $2'},
@@ -202,7 +202,7 @@ const fixes = [
   {/* TODO: Fix JSX expression */}
   },
   //Fix import statements;
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g},
   //Fix export statements;
   {/* TODO: Fix JSX expression */}
@@ -228,7 +228,7 @@ const fixes = [
   n: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'onClick={ $1 } $2'},
-  //Fix className attributes;
+  //Fix: className attributes;
   {/* TODO: Fix JSX expression */}
   n: /className\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
@@ -313,4 +313,3 @@ async function main() {/* TODO: Fix JSX expression */}
   //   }
 
 // main().catch(console.error);
-"

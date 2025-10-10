@@ -13,11 +13,11 @@ const fixes = [
   // Fix missing opening parentheses in map functions;
   { pattern: /\.map\([^)]*\)\s*=>\s*\(}/g, replacement: (match) => match.replace('(}', '(') },
   // Fix stray backticks;
-  { pattern: /`\s*$/gm, replacement: '' },
+  { pattern: /`\s*$/gm, replacement: '' },`
   // Fix missing closing parentheses;
   { pattern: /\)\s*;[\s]*$/gm, replacement: ');' },
   // Fix template literal issues;
-  { pattern: /className=\{`([^`]+)`\}/g, replacement: 'className={`$1`}' },
+  { pattern: /className=\{`([^`]+)`\}/g, replacement: 'className={`$1`}' },`
   // Fix missing semicolons;
   { pattern: /}\s*$/gm, replacement: '};' },
   // Fix console statements;

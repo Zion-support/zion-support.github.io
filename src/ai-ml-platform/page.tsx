@@ -8,19 +8,19 @@ import { Link } from 'react-router-dom';
 
 'use client';
 import React from 'react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIMLPlatformPage: React.FC = () => {;
 const features = [
-=======
+
 import Navigation from '../components
 import Footer from '../components
 
 const AIMLPlatformPage: React.FC = () => {
   const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       ico,
     n: Brain,
@@ -63,11 +63,10 @@ const pricingPlans = [
       description: 'Ideal for development teams',;
 const features = [];
   return (
-<<<<<<< HEAD
+
     {// TODO: Add content}
-=======
+
     {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 };
   ico,
@@ -130,18 +129,18 @@ const features = [];
         'Custom compute',
         'Custom analytics',
         'White-label options',
-<<<<<<< HEAD
+
         'API access';
 const stats = [;
 const stats = [
   // TOD,
-=======
+
         'API access'
 
   const stats = [
   const stats = [
   /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   O: Add items;
 ];;
 
@@ -153,7 +152,6 @@ const stats = [
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AI ML Platform | Zion Tech Group<
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." 
       <
@@ -173,19 +171,17 @@ const stats = [
 
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-
           <
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           <
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hove,
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hove,>"
     r:bg-cyan-600 transition-colors">
-
-/
+</button>/
           <
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),
-  hover:bg-cyan-400,"
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),"
+  hover:bg-cyan-400,
   hover:text-slate-900 transition-colors"><
 Learn More;
           <
@@ -195,6 +191,6 @@ Learn More;
 
   )};
 
-export default $1;
+export default $1;>
 export default AiMlPlatformPage;
-
+</Footer>

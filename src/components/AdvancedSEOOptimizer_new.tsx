@@ -119,7 +119,7 @@ const script = document.createElement('script');
       ))}
 
       {/* Canonical URL */}
-      {/* TODO: Fix JSX expression */}"
+      {/* TODO: Fix JSX expression */}
         <link rel="canonical" href={seoData.canonicalUrl} /></link>
       )}
 
@@ -133,33 +133,32 @@ const script = document.createElement('script');
         <meta key={name} name={name} content={content} /></meta>
       ))}
 
-      {/* Additional SEO Tags */}"
-      <meta name="format-detection" content="telephone=no" /></meta>"
-      <meta name="mobile-web-app-capable" content="yes" /></meta>"
-      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
-      {/* Favicon and Icons */}"
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
-      <link rel="manifest" href="/site.webmanifest" /></link>
-      {/* Preconnect to external domains */}"
+      {/* Additional SEO Tags */}
+      <meta name="format-detection" content="telephone=no /></meta>"
+      <meta name="mobile-web-app-capable" content="yes /></meta>"
+      <meta name="apple-mobile-web-app-capable" content="yes /></meta>"
+      <meta name="apple-mobile-web-app-status-bar-style" content="default /></meta>"
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group /></meta>"
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico /></link>"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png /></link>"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png /></link>"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png /></link>"
+      <link rel="manifest" href="/site.webmanifest /></link>"
+      {/* Preconnect to external domains */}
       <link rel="preconnect" href="http,"
-  s://fonts.googleapis.com" /></link>"
+  s://fonts.googleapis.com /></link>
       <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+  s://fonts.gstatic.com" crossOrigin="anonymous /></link>"
       <link rel="preconnect" href="http,"
-  s://www.google-analytics.com" /></link>"
+  s://www.google-analytics.com /></link>
       <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
-      {/* DNS Prefetch */}"
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
+  s://www.googletagmanager.com /></link>
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com /></link>"
+      <link rel="dns-prefetch" href="//www.google-analytics.com /></link>"
+      <link rel="dns-prefetch" href="//www.googletagmanager.com /></link>"
     </Helmet>
   )};
 
 export default AdvancedSEOOptimizer;
-"

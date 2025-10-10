@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
 ;
 const SocialMediaManagerPage: React.FC = () => {
-<<<<<<< HEAD
+
   return (<div>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation<
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." 
@@ -18,7 +18,7 @@ const SocialMediaManagerPage: React.FC = () => {
               <Share2 className="w-4 h-4" 
               <span>Social Media Manager<
             <
-            <h1 className="text-5xl m,
+            <h1 className="text-5xl m,"
     d:text-6xl font-bold text-white mb-6 cyber-text">
               AI Social Media <
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation<
@@ -28,7 +28,7 @@ const SocialMediaManagerPage: React.FC = () => {
               and grow your social presence with intelligent automation.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center"><
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,"
     r:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started<
                 
@@ -44,20 +44,19 @@ const SocialMediaManagerPage: React.FC = () => {
       <
     <)
   );
-=======
+
   return (
     <>
       <Helmet></Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
-        <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/social-manager" />
+        <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence. />"
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/social-manager />"
       </Helmet>
-
       <div>
         <section className="pt-24 pb-16 px-4"></section>
           <div>
             <div>
-              <Share2 className="w-4 h-4" />
+              <Share2 className="w-4 h-4 />"
               <span>Social Media Manager</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
@@ -71,7 +70,7 @@ const SocialMediaManagerPage: React.FC = () => {
             <div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 />"
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>
                 View Demo
@@ -79,7 +78,6 @@ const SocialMediaManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16 px-4"></section>
           <div>
             <div>
@@ -92,16 +90,14 @@ const SocialMediaManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
+
 )]
     };
-=======
+
   );)
->>>>>>> main
+
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default SocialMediaManagerPage;
-=======
+
   );)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

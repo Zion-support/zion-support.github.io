@@ -199,7 +199,7 @@ const _link = document.createElement('link');
 
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components;
-    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)
+    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)"`
     );
 
     if ('IntersectionObserver' in window) {;
@@ -209,7 +209,7 @@ const componentObserver = new IntersectionObserver(entries => {)
             this.loadComponent(componentName, entry.target);
             componentObserver.unobserve(entry.target);
   setupComponentLazyLoading(componentName) {/* TODO: Fix JSX expression */}
-      `[data-component="${componentName}"]`
+      `[data-component="${componentName}"]`"`
     );
 
     if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
@@ -235,8 +235,8 @@ const componentObserver = new IntersectionObserver(entries => {)
 //         return;
   async loadComponent(componentName, element) {/* TODO: Fix JSX expression */}
       }
-`;
-const _component = await import(`../components/${componentName}.tsx`);
+`;`
+const _component = await import(`../components/${componentName}.tsx`);`
       // Render component to element;
       if (component.default) {
         element.innerHTML = component.default();
@@ -315,7 +315,7 @@ const _scripts = document.querySelectorAll('script[src]');
   n: 0 auto}
       .header {/* TODO: Fix JSX expression */}
   w: 0 2px 4px rgba(0,0,0,0.1)}`
-    `;
+    `;`
 ;
 const _style = document.createElement('style');
     style.textContent = criticalCSS;

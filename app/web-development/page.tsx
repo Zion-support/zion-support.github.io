@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -9,7 +9,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 const $1: React.FC = () => {const webServices = [,
-=======
+
 import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
@@ -18,7 +18,7 @@ import AccessibilityEnhancer from '../components
 import SecurityEnhancer from '../components
 const $1: React.FC = () => {
   const webServices = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
@@ -61,7 +61,7 @@ const $1: React.FC = () => {
       colo,
     r: 'text-gray-400'}
   ];
-<<<<<<< HEAD
+
 ;
 const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
@@ -70,7 +70,6 @@ const technologies = [
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-=======
 
   const technologies = [
     { name: 'React
@@ -80,7 +79,7 @@ const technologies = [
     { name: 'MongoDB
     { name: 'AWS
     { name: 'Docker
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   ];
 ;
 const process = [
@@ -111,25 +110,22 @@ const process = [
 }
   ];
 
-<<<<<<< HEAD
   return(<React.Fragment>
-=======
   return(<>
-<<<<<<< HEAD
-      
+
 <
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
         <Navigation 
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}<
           <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl l,
+            <h1 className="text-4xl md: text-5xl l,"
     g:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.<
               From frontend to backend, we deliver solutions that drive business growth.<
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section *
           <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl l,
+            <h1 className="text-4xl md: text-5xl l,"
     g:text-6xl font-bold text-white mb-6 neon-text">
               Web Development Services;<
             <
@@ -140,37 +136,30 @@ const process = [
             <div className="flex flex-col sm: flex-row gap-4 justify-center"><
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-              <a
-                href="
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >Start Your Project<a
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+              <a>
+                href=
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"</a>              >Start Your Project<a
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
-        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}>
         canonicalUrl="https: //ziontechgroup.com/web-development",
-      />,
-        <PerformanceOptimizer;
+      />,</a>        <PerformanceOptimizer;
           enableImageOptimization={true}
           enableLazyLoading={true}
-          enableCodeSplitting={true}
+          enableCodeSplitting={true}>
           enablePrefetching={true}
-        />
-      <AccessibilityEnhancer;
+        /></PerformanceOptimizer>      <AccessibilityEnhancer;
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
-        enableHighContrast={true}
+        enableHighContrast={true}>
         enableFocusManagement={true}
-      />
-      <SecurityEnhancer;
+      /></AccessibilityEnhancer>      <SecurityEnhancer;
         enableCSP={true}
         enableHTTPSRedirect={true}
-        enableXSSProtection={true}
+        enableXSSProtection={true}>
         enableClickjackingProtection={true}
-      />
-      <Analytics />
+      /></SecurityEnhancer>      <Analytics />
       <div>
 </div>
       <div>
@@ -194,32 +183,29 @@ const process = [
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
               <a></a>Start Your Project<a
->>>>>>> main
+>
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >Call +1 302 464 0950<
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"</a>              >Call +1 302 464 0950<
               >
                 Start Your Project;
-<<<<<<< HEAD
+
               <
               <a;
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,"
+    r:text-slate-900 transition-all duration-300">
               >
-=======
-              </a>
+</a>              </a>
               <a></a>
->>>>>>> main
                 Call +1 302 464 0950;
               <
             <
           <
 ,
-<<<<<<< HEAD
+
           {/* Services Grid *
           <section className="mb-20">)
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 l,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">{webServices.map((service), index) => (<
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"><
                   <div className="flex items-center mb-6"><
@@ -227,12 +213,12 @@ const process = [
                       <service.icon className="w-8 h-8 text-white" 
                     <
                     <div><
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}<
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}<"`
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">)
               Our Web Development Services;)
             <
 )
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">),
               {webServices.map((service, index) => (<
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"><
@@ -242,12 +228,12 @@ const process = [
                     <
                     <div>,<
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<
-                      <div className={`font-semibold ${service.color}`}>{service.price}<
+                      <div className={`font-semibold ${service.color}`}>{service.price}<`
                     <
                   <
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}<)
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 l,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">{webServices.map((service), index) => (<
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"><
                   <div className="flex items-center mb-6"><
@@ -255,7 +241,7 @@ const process = [
                       <service.icon className="w-8 h-8 text-white" 
                     <
                     <div><
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}<
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}<"`
 
                   <div className="mb-6"><)
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (<
@@ -275,14 +261,14 @@ const process = [
                       <
                     <
                   )}
-=======
+
           {/* Services Grid */}
           <section></section>
             <h2></h2>Our Web Development Services<di></di>{webServices.map((service, index) => (</div>
                 <div>
                   <div>
                     <div>
-                      <service.icon className="w-8 h-8 text-white" />
+                      <service.icon className="w-8 h-8 text-white />"
                     </div>
                     <div>
                       <h3>{service.title}<div>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
@@ -295,24 +281,22 @@ const process = [
                 <div>
                   <di></di>,</div>
                     <di></di>,</div>
-                      <service.icon className="w-8 h-8 text-white" />,
+                      <service.icon className="w-8 h-8 text-white />,"
                     </div>,
                     <di></di>,</div>
                       <h></h>{service.title}</h3>
                       <di></di>{service.price}</div>
                     </div>
                   </div>
-
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h></h>Our Web Development Services</h2><div>{webServices.map((service, index) => (</section>
                 <div>
                   <div>
                     <div>
-                      <service.icon className="w-8 h-8 text-white" />
+                      <service.icon className="w-8 h-8 text-white />"
                     </div>
                     <div>
                       <h></h>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
                   <div>
                     <h4></h4>Features<u></u>{service.features.map((feature, featureIndex) => (</ul>
                         <li></li>
@@ -321,7 +305,6 @@ const process = [
                       ))
                     </ul>
                   </div>
-
                   {service.benefits && (
                     <div>
                       <h4></h4>Benefits<u></u>{service.benefits.map((benefit, benefitIndex) => (</ul>
@@ -332,18 +315,16 @@ const process = [
                       </ul>
                     </div>
                   );
->>>>>>> main
 
-                  <a;
-                    href="
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
-                  >Get Started<
+                  <a;>
+                    href=
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"</a>                  >Get Started<
                   <
                 <
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
                     Get Started;
-<<<<<<< HEAD
+
                   <
                 <
             <
@@ -351,41 +332,37 @@ const process = [
 
           {/* Technologies *
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 l,
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 l,"
     g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-=======
                   </a>,
                 </div>))
             </div>
           </section>
-
           {/* Technologies */}
           <section></section>
             <h2></h2>Technologies We Use<di></di>{technologies.map((tech, index) => (</div>
                 <div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 />"
                   <h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
             <h2></h2>
->>>>>>> main
               Technologies We Use;
             <
 ,
-<<<<<<< HEAD
+
             <div>,
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-2 md: grid-cols-3 l,
+
+            <div className="grid grid-cols-2 md: grid-cols-3 l,"
     g:grid-cols-6 gap-6">,)
               {technologies.map((tech, index) => (<
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,<
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<
                   <p className="text-sm text-gray-300">{tech.description}<)
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 l,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 l,"
     g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
@@ -397,29 +374,27 @@ const process = [
 
           {/* Process *
           <section className="mb-20">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 l,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-4 gap-8">{process.map((step), index) => (<
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-=======
             <div></div>,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
               {technologies.map((tech, index) => (</div>
                 <di></di>,</div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
+                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 />,"
                   <h></h>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
             <h></h>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>
                 <div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 />"
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
               ))
             </div>
           </section>
-
           {/* Process */}
           <section></section>
             <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>
@@ -427,15 +402,13 @@ const process = [
                   <div>
                     <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
             <h2></h2>
->>>>>>> main
               Our Development Process;
             <
 ,
-<<<<<<< HEAD
+
             <div>,
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+
+            <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-8">,)
               {process.map((step, index) => (<
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,<
@@ -444,7 +417,7 @@ const process = [
                   <
                   <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<
                   <p className="text-gray-300">{step.description}<)
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 l,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-4 gap-8">{process.map((step), index) => (<
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
@@ -470,13 +443,11 @@ const process = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.<
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-                <a
-                  href="
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >Start Your Project<a
-=======
+                <a>
+                  href=
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"</a>                >Start Your Project<a
             <div></div>,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
               {process.map((step, index) => (</div>
                 <di></di>,</div>
                   <di></di>,</div>
@@ -492,7 +463,6 @@ const process = [
               ))
             </div>
           </section>
-
           {/* CTA Section */}
           <section></section>
             <div>
@@ -510,23 +480,20 @@ const process = [
               </p>
               <div>
                 <a></a>Start Your Project<a
->>>>>>> main
+>
                   href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >Call +1 302 464 0950<
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"</a>                >Call +1 302 464 0950<
                 >
                   Start Your Project;
-<<<<<<< HEAD
+
                 <
                 <a;
                   href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,"
+    r:text-slate-900 transition-all duration-300">
                 >
-=======
-                </a>
+</a>                </a>
                 <a></a>
->>>>>>> main
                   Call +1 302 464 0950;
                 <
               <
@@ -534,29 +501,24 @@ const process = [
           <
         <
 
-<<<<<<< HEAD
         <Footer 
       <
     <
-=======
+
         <Footer />
-<<<<<<< HEAD
+
       </div>,
-<<<<<<< HEAD
+
     </>);)
-<<<<<<< HEAD
-=======
+
     </>)]
     };
-=======
->>>>>>> main
+
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
+
       </div>
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
 export default WebDevelopmentPage;

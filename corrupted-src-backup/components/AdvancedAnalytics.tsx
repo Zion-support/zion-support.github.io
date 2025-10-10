@@ -86,22 +86,22 @@ const,
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
   return (<div className="advanced-analytics"></div>
-      <h2>Advanced Analytics Dashboard</h2>"
-      <div className="metrics-grid"></div>"
+      <h2>Advanced Analytics Dashboard</h2>
+      <div className="metrics-grid"></div>
         <div className="metric-card"></div>
           <h3>Page Views</h3>")
           <p className="metric-value">{analytics.pageViews.toLocaleString()}</p>
-        </div>"
+        </div>
         <div className="metric-card"></div>
-          <h3>Unique Visitors</h3>"
+          <h3>Unique Visitors</h3>
           <p className="metric-value">{analytics.uniqueVisitors.toLocaleString()}</p>
-        </div>"
+        </div>
         <div className="metric-card"></div>
-          <h3>Bounce Rate</h3>"
+          <h3>Bounce Rate</h3>
           <p className="metric-value">{analytics.bounceRate.toFixed(1)}%</p>
-        </div>"
+        </div>
         <div className="metric-card"></div>
-          <h3>Conversion Rate</h3>"
+          <h3>Conversion Rate</h3>
           <p className="metric-value">{analytics.conversionRate.toFixed(1)}%</p>
         </div>
       </div>
@@ -109,4 +109,3 @@ const,
   )};
 
 export default AdvancedAnalytics;
-"

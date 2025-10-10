@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
@@ -75,10 +75,10 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
 const contact =
   mobil,
   e: "+1 302 464 0950",
-  emai,"
+  emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
 };
 export const,
   comprehensiveExpandedServices: ComprehensiveService[] = [,
@@ -2481,9 +2481,9 @@ export interface ComprehensiveService,
   e: string; customer,
   s: number; ratin,
   g: number, review,
-  s: number} const contact = mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
+  s: number} const contact = mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" }; export const,
   comprehensiveExpandedServices: ComprehensiveService[] = [ // AI & Machine Learning Services,
   id: 'ai-autonomous-customer-success',' nam,
@@ -3261,9 +3261,7 @@ export interface ComprehensiveService,
   n: 'Cutting-edge technology solutions and platforms',' service,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),' ico,
   n: '🚀',' colo,
-  r: 'from-violet-600 to-purple-700' } ];'"
-=======
+  r: 'from-violet-600 to-purple-700' } ];'
     reviews: 89},
     id: 'zero-trust-security-platform'
     name: 'Zero Trust Security Platform'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

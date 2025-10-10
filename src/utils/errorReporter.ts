@@ -185,7 +185,7 @@ const errorReport: ErrorReport = {
    */
   private logToConsole(report: ErrorReport): void {;
 const style = this.getConsoleStyle(report.severity);
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
+    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);`
     if (process.env['NODE_ENV'] === 'development') {}
     if (process.env['NODE_ENV'] === 'development') {}
     if (process.env['NODE_ENV'] === 'development') {}
@@ -230,7 +230,7 @@ $4};
 
 }
     const style = this.getConsoleStyle(report.severity);
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
+    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);`
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content}
 }

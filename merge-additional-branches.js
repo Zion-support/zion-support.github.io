@@ -50,36 +50,36 @@ const additionalBranches = [
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
     //Fetch the branch;
-    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
+    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });`
 
     //Check if branch exists and has commits;
     try {
-      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' })} catch (e) {
+      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' })} catch (e) {`
 //       return { success: false, method: 'not_found' }}
 
     //Check if branch is already merged;
     try {;
-const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {)
+const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {)`
         encoding: 'utf8')}).trim();
-      const branchCommit = execSync(`git rev-parse origin/${branchName}`, {)
+      const branchCommit = execSync(`git rev-parse origin/${branchName}`, {)`
         encoding: 'utf8'),
 // //Step,
   3: Enhanced conflict resolution function;
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})`
   o: 'inherit' });
 
     //Check if branch exists and has commits;
     try {/* TODO: Fix JSX expression */}`
-      execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
+      execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})`
   o: 'pipe' })} catch (e) {/* TODO: Fix JSX expression */}
   d: 'not_found' }}
 
     //Check if branch is already merged;
-    try {/* TODO: Fix JSX expression */}`;
-const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {/* TODO: Fix JSX expression */})
-      }).trim();`;
-const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
+    try {/* TODO: Fix JSX expression */}`;`
+const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {/* TODO: Fix JSX expression */})`
+      }).trim();`;`
+const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})`
       }).trim();
 
       if (mergeBase === branchCommit) {/* TODO: Fix JSX expression */}
@@ -88,7 +88,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       //Continue with merge attempt}
 
     //Try initial merge;
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)"`
       { stdio: 'inherit' }
     );
 
@@ -101,7 +101,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
     }
 
     //Try initial merge;`
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,"`
       {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     );
@@ -109,8 +109,8 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -124,8 +124,8 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       execSync(
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -154,13 +154,13 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
         if (file.trim()) {
           try {
             //Try to resolve by taking the incoming version;
-            execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit' });
-            execSync(`git add "${file}"`, { stdio: 'inherit' });
+            execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit' });`
+            execSync(`git add "${file}"`, { stdio: 'inherit' });`
 //             } catch (fileError) {
-      for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
-            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'inherit' });"`
-            execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
+      for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`"`
+            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})"`
+  o: 'inherit' });"`"`
+            execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})"`
   o: 'inherit' });
 //             } catch (fileError) {/* TODO: Fix JSX expression */}
 //             }
@@ -168,10 +168,10 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       }
 
       //Complete the merge;
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)"`
         stdio: 'inherit'),
-      //Complete the merge;"`
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
+      //Complete the merge;"`"`
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})"`
       });
 //       return {/* TODO: Fix JSX expression */}
   d: 'manual' }} catch (manualError) {/* TODO: Fix JSX expression */}

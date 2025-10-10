@@ -22,22 +22,22 @@ export const,
   y: [
   // TOD,
   O: Add items]
-//     "default-src 'self'","
+//     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s://www.googletagmanager.com,"
-  https://www.google-analytics.com","
-//     "style-src 'self' 'unsafe-inline'","
+  s://www.googletagmanager.com,
+  https://www.google-analytics.com",
+//     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' dat,
   a: http,
-  s: blo,"
-  b:","
-    "font-src 'self' dat,"
-  a:","
+  s: blo,
+  b:",
+    "font-src 'self' dat,
+  a:",
     "connect-src 'self' http,
-  s://www.google-analytics.com,"
-  https://analytics.google.com","
-//     "frame-ancestors 'none'","
-//     "base-uri 'self'","
+  s://www.google-analytics.com,
+  https://analytics.google.com",
+//     "frame-ancestors 'none'",
+//     "base-uri 'self'",
 //     "form-action 'self'",
 //     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
@@ -123,7 +123,4 @@ export function getNextSecurityHeaders()
 //     key,
 //     value;)
   }))}
-export default defaultSecurityHeaders;"
-
-
-
+export default defaultSecurityHeaders;

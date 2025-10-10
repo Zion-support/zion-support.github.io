@@ -18,7 +18,7 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
   //   for (const filePath of files) {/* TODO: Fix JSX expression */}
       });
 
-      //Remove <div className="...">IconName</div>"
+      //Remove <div className="...">IconName</div>
       //       const divRegex = /<div className="[^"]+">\w+<\/div>/g;
       content = content.replace(divRegex, match => {)
         modified = true;)
@@ -46,4 +46,3 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
   //   }
 
 // removeProblematicIcons().catch(console.error);
-"

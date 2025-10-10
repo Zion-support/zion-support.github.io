@@ -288,7 +288,7 @@ const appError: AppError = {
   id: this.generateErrorId(),
       type: ErrorType.VALIDATION,
       severity: ErrorSeverity.LOW,
-      message: `Validation error in ${field}: ${message}`,
+      message: `Validation error in ${field}: ${message}`,`
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       context: { field, value },
@@ -301,7 +301,7 @@ const appError: AppError = {
     return appError}
   // Generate unique error ID
   private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   // Determine error type
   private determineErrorType(error: Error): ErrorType {;
 const stack = error.stack?.toLowerCase() || '';
@@ -334,7 +334,7 @@ const stack = error.stack?.toLowerCase() || '';
   private generateErrorId(): string {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   // Determine error type;
   private determineErrorType(erro)
   r: Error): ErrorType {const stack = error.stack?.toLowerCase() || ''}
@@ -407,7 +407,7 @@ const message = error.message.toLowerCase();
   // Log error
   private logError(error: AppError) {
     if (this.config.enableConsoleLogging) {;
-const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;`
       switch (error.severity) {
         case ErrorSeverity.CRITICAL:
         case ErrorSeverity.HIGH:
@@ -427,8 +427,8 @@ break;
 }
     if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
   O: Add content}
-}`;
-const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
+}`;`
+const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;`
       switch (error.severity) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -502,9 +502,9 @@ break
       z-index: 10000;
       max-width: 400px;
       font-family: Arial, sans-serif;
-    `;
+    `;`
     notification.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
+      <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style=
           background: none;
           border: none;
           color: white;
@@ -512,7 +512,7 @@ break
           cursor: pointer;
           margin-left: 10px;
         ">×</button></div>
-    `;
+    `;`
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors
     if (error.severity !== ErrorSeverity.CRITICAL) {
@@ -557,7 +557,7 @@ const retryItem = { error, retryCount: error.retryCount! + 1 };
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
             // // // console.log removed for production
-`)}
+`)}`
         }
         // Add your retry logic here
       }
@@ -693,7 +693,7 @@ const error = this.errors.find(e => e.id === errorId);
           
           
 
-          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
+          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style=
           background: none;,
     border: none;,
     color: white
@@ -701,8 +701,7 @@ const error = this.errors.find(e => e.id === errorId);
     cursor: pointer
           margin-left: 10px
 ">×</button></div>
-
-    `;
+    `;`
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
     if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
@@ -757,7 +756,6 @@ const error = this.errors.find(e => e.id === errorId);
           
           
           <div>Coming Soon</div>
-
   )
       error.type === ErrorType.NETWORK &&
 // error.retryCount! 
@@ -802,7 +800,7 @@ private async retryError(retryIte,
           if (import.meta.env.DEV) {
 
 // // // console.log removed for production
-`)
+`)`
           }
         }
         // Add your retry logic here}
@@ -929,7 +927,6 @@ const bySeverity = this.errors.reduce()
       {} as Record;
 
           <ErrorSeverity, number>
-
     );
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
@@ -1151,7 +1148,7 @@ const handleValidationError = useCallback()
   s: () => errorHandler.clearResolvedErrors()
   }
 }
-export default ErrorHandler;"`
+export default ErrorHandler;"`"`
 
 
 

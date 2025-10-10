@@ -60,7 +60,7 @@ const handleReactError = (erro,
       const componentStack =
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(error, `react_error_boundar)`
-  y: ${componentStack}`)};
+  y: ${componentStack}`)};`
     // Add event listeners;
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);

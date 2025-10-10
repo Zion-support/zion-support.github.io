@@ -5,8 +5,7 @@
   k: true) top} tota,
   l: memoryStore.length }) } return res.status(405).end() } } catch (error) {/* TODO: Fix JSX expression */}
   r: ") error)} return res.status(500).json({/* TODO: Fix JSX expression */}")
-  r: "Internal server error" })} } return res.status(405).end()} catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} } } catch (error) {/* TODO: Fix JSX expression */}"
+  r: "Internal server error" })} } return res.status(405).end()} catch (error) {/* TODO: Fix JSX expression */}
+  r: "Internal server error" })} catch (error) {/* TODO: Fix JSX expression */}
+  r: "Internal server error" })} } } catch (error) {/* TODO: Fix JSX expression */}
   r: "Internal server error" })} '
-"

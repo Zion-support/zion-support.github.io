@@ -33,10 +33,10 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 //Function to check if branch exists;
 function branchExists(branchName) {
   try {
-    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)`
       { stdio: 'pipe' }
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
-      `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
+      `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,`
       {/* TODO: Fix JSX expression */}
   o: 'pipe' }
     );
@@ -63,7 +63,7 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
     continue}
 
 //   //Try to merge the branch;
-  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`)
+  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`)"`
     `Merge ${branch}`
   );
 
@@ -73,20 +73,20 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
       branch)
       status: 'merged')})} else {
 //     //Try to abort the merge if there was a conflict;
-    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);`
 
     results.push({)
       branch)
       status: 'conflict'),
       error: mergeResult.error),
-//   //Try to merge the branch;`;
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`
-    `Merge ${branch}`)
+//   //Try to merge the branch;`;`
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`"`
+    `Merge ${branch}`)`
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     })} else {/* TODO: Fix JSX expression */}`
-    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);`
 
     results.push({/* TODO: Fix JSX expression */})
     })}
@@ -127,7 +127,7 @@ const report = {
     totalBranches: newCursorBranches.length;
     merged: mergedCount;
     notFound: notFoundCount;
-    successRate: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`},
+    successRate: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`},`
   systemChecks: {
     typeCheck: typeCheck.success;
     lintCheck: lintCheck.success;
@@ -143,7 +143,7 @@ const report = {
 // Save detailed report;
 fs.writeFileSync('new-cursor-branches-merge-report.json');
 const report = {/* TODO: Fix JSX expression */}`
-  e: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`},
+  e: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%`},`
   systemCheck,
   s: {/* TODO: Fix JSX expression */}
   },

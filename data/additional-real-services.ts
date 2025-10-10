@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export interface AdditionalRealService {id: string;
   name: string;
@@ -239,8 +238,8 @@ export const,
   }
 ];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
+  emai,
+  l: "kleber@ziontechgroup.com
     i,
   d: 'data - warehouse - solution',
     nam,
@@ -276,7 +275,7 @@ export const,
       "AI decision making",
       "Integration APIs",
       "Custom workflows",
-      "Analytics dashboard"
+      "Analytics dashboard
     ],
     link: '/services/ai-automation-suite',
     category: 'AI & Automation',
@@ -296,7 +295,7 @@ export const,
       "Real-time processing",
       "Advanced analytics",
       "Scalable architecture",
-      "Security compliance"
+      "Security compliance
     ],
     link: '/services/data-warehouse-solution',
     category: 'Data & Analytics',
@@ -317,73 +316,73 @@ export const,
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,
   e: "+1 302 464 0950",
-  i,"
+  i,
   d: "ai-automation-suite",
-    nam,"
+    nam,
   e: "AI Automation Suite",
-    taglin,"
+    taglin,
   e: "Intelligent automation for modern businesses",
-    pric,"
+    pric,
   e: "$79/month",
-    descriptio,"
+    descriptio,
   n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",
     feature,
-  s: [,"
-      "Workflow automation","
-      "AI decision making","
-      "Integration APIs","
-      "Custom workflows","
-      "Analytics dashboard"
+  s: [,
+      "Workflow automation",
+      "AI decision making",
+      "Integration APIs",
+      "Custom workflows",
+      "Analytics dashboard
     ],
-    lin,"
+    lin,
   k: "/services/ai-automation-suite",
-    categor,"
+    categor,
   y: "AI & Automation",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   },
-    i,"
+    i,
   d: "data-warehouse-solution",
-    nam,"
+    nam,
   e: "Data Warehouse Solution",
-    taglin,"
+    taglin,
   e: "Enterprise-grade data management and analytics",
-    pric,"
+    pric,
   e: "$149/month",
-    descriptio,"
+    descriptio,
   n: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",
     feature,
-  s: [,"
-      "Data integration","
-      "Real-time processing","
-      "Advanced analytics","
-      "Scalable architecture","
-      "Security compliance"
+  s: [,
+      "Data integration",
+      "Real-time processing",
+      "Advanced analytics",
+      "Scalable architecture",
+      "Security compliance
     ],
-    lin,"
+    lin,
   k: "/services/data-warehouse-solution",
-    categor,"
+    categor,
   y: "Data & Analytics",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
+  o: addres,
   s: "364 E Main St STE 1008 Middletown DE 19709",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  emai,
+  l: "kleber@ziontechgroup.com
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -399,7 +398,7 @@ export const,
       "AI decision making",
       "Integration APIs",
       "Custom workflows",
-      "Analytics dashboard"
+      "Analytics dashboard
     ],
     link: '/services/ai-automation-suite',
     category: 'AI & Automation',
@@ -408,38 +407,38 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "ai-automation-suite",
-    nam,"
+    nam,
   e: "AI Automation Suite",
-    taglin,"
+    taglin,
   e: "Intelligent automation for modern businesses",
-    pric,"
+    pric,
   e: "$79/month",
-    descriptio,"
+    descriptio,
   n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",
     feature,
-  s: [,"
-      "Workflow automation","
-      "AI decision making","
-      "Integration APIs","
-      "Custom workflows","
-      "Analytics dashboard"
+  s: [,
+      "Workflow automation",
+      "AI decision making",
+      "Integration APIs",
+      "Custom workflows",
+      "Analytics dashboard
     ],
-    lin,"
+    lin,
   k: "/services/ai-automation-suite",
-    categor,"
+    categor,
   y: "AI & Automation",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   },
     i,
@@ -1354,12 +1353,12 @@ varian,
     descriptio,
   n: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',
     feature,
-  s: [,"
-      "Data integration","
-      "Real-time processing","
-      "Advanced analytics","
-      "Scalable architecture","
-      "Security compliance"
+  s: [,
+      "Data integration",
+      "Real-time processing",
+      "Advanced analytics",
+      "Scalable architecture",
+      "Security compliance
     ],
     link: '/services/data-warehouse-solution',
     category: 'Data & Analytics',
@@ -1369,9 +1368,9 @@ varian,
     customers: 90;
     rating: 4.6;
     reviews: 54;
-    lin,"
+    lin,
   k: "/services/data-warehouse-solution",
-    categor,"
+    categor,
   y: "Data & Analytics",
     realImplementatio,
   n: true,
@@ -7502,9 +7501,9 @@ varian,
   t: 'agentic-suite',
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -7512,16 +7511,16 @@ varian,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -7608,9 +7607,9 @@ export interface AdditionalRealService,
   contactInfo: ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
+  emai,
   l: "kleber@ziontechgroup.com"' i,
   d: 'data - warehouse - solution',' nam,
   e: 'Data Warehouse Solution',' taglin,
@@ -7624,48 +7623,48 @@ export interface AdditionalRealService,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,
   e: "+1 302 464 0950",
-  i,"
-  d: "ai-automation-suite", nam,"
-  e: "AI Automation Suite", taglin,"
-  e: "Intelligent automation for modern businesses", pric,"
-  e: "$79/month", descriptio,"
-  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,"
-  s: [ "Workflow automation", "AI decision making", "Integration APIs", "Custom workflows", "Analytics dashboard" ], lin,"
-  k: "/services/ai-automation-suite", categor,"
+  i,
+  d: "ai-automation-suite", nam,
+  e: "AI Automation Suite", taglin,
+  e: "Intelligent automation for modern businesses", pric,
+  e: "$79/month", descriptio,
+  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,
+  s: [ "Workflow automation", "AI decision making", "Integration APIs", "Custom workflows", "Analytics dashboard" ], lin,
+  k: "/services/ai-automation-suite", categor,
   y: "AI & Automation", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } }, i,"
-  d: "data-warehouse-solution", nam,"
-  e: "Data Warehouse Solution", taglin,"
-  e: "Enterprise-grade data management and analytics", pric,"
-  e: "$149/month", descriptio,"
-  n: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.", feature,"
-  s: [ "Data integration", "Real-time processing", "Advanced analytics", "Scalable architecture", "Security compliance" ], lin,"
-  k: "/services/data-warehouse-solution", categor,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } }, i,
+  d: "data-warehouse-solution", nam,
+  e: "Data Warehouse Solution", taglin,
+  e: "Enterprise-grade data management and analytics", pric,
+  e: "$149/month", descriptio,
+  n: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.", feature,
+  s: [ "Data integration", "Real-time processing", "Advanced analytics", "Scalable architecture", "Security compliance" ], lin,
+  k: "/services/data-warehouse-solution", categor,
   y: "Data & Analytics", realImplementatio,
   n: true, contactInf,
-  o: addres,"
+  o: addres,
   s: "364 E Main St STE 1008 Middletown DE 19709",
-  emai,"
-  l: "kleber@ziontechgroup.com" addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,"
-  d: "ai-automation-suite", nam,"
-  e: "AI Automation Suite", taglin,"
-  e: "Intelligent automation for modern businesses", pric,"
-  e: "$79/month", descriptio,"
-  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,"
-  s: [ "Workflow automation", "AI decision making", "Integration APIs", "Custom workflows", "Analytics dashboard" ], lin,"
-  k: "/services/ai-automation-suite", categor,"
+  emai,
+  l: "kleber@ziontechgroup.com" addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,
+  d: "ai-automation-suite", nam,
+  e: "AI Automation Suite", taglin,
+  e: "Intelligent automation for modern businesses", pric,
+  e: "$79/month", descriptio,
+  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,
+  s: [ "Workflow automation", "AI decision making", "Integration APIs", "Custom workflows", "Analytics dashboard" ], lin,
+  k: "/services/ai-automation-suite", categor,
   y: "AI & Automation", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } }, ' i,
   d: 'mobile-first-survey',' nam,
   e: 'Mobile-First Survey Tool',' taglin,
@@ -7978,9 +7977,9 @@ export interface AdditionalRealService,
   e: 'Automated rightsizing, lifecycle policies, and anomaly detection',' pric,
   e: '$99',' perio,
   d: '/month',' descriptio,
-  n: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.', feature,"
-  s: [ "Data integration", "Real-time processing", "Advanced analytics", "Scalable architecture", "Security compliance" ], lin,"
-  k: "/services/data-warehouse-solution", categor,"
+  n: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.', feature,
+  s: [ "Data integration", "Real-time processing", "Advanced analytics", "Scalable architecture", "Security compliance" ], lin,
+  k: "/services/data-warehouse-solution", categor,
   y: "Data & Analytics", realImplementatio,
   n: true,' implementationDetail,
   s: 'SaaS analyzer with exporters for Terraform/Helm and alerting.',' launchDat,
@@ -10055,20 +10054,18 @@ export interface AdditionalRealService,
   e: '$12B sales tech',' growthRat,
   e: '19% CAGR',' varian,
   t: 'agentic-suite', contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
-=======
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '
     reviews: 24},
     id: 'churn-risk-alerts'
     name: 'Churn Risk Alerts for Slack'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

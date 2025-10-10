@@ -102,18 +102,18 @@ function mergeBranch(branchName) {
   // console.log removed for production
 try {
     // Check if branch exists;
-    const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists`);
+    const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists`);`
     
     if (branchExists !== null) {;
-const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `Merging ${branchName}`);
+const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `Merging ${branchName}`);`
       
       if (mergeResult) {
         // console.log removed for production
 return true} else {
         // console.log removed for production
 if (resolveAllMergeConflicts()) {
-          execGitCommand('git add .', `Adding resolved files from ${branchName}`);
-          execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName}`);
+          execGitCommand('git add .', `Adding resolved files from ${branchName}`);`
+          execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName}`);"`
           // console.log removed for production
 return true} else {
           // console.log removed for production
@@ -199,7 +199,7 @@ for (const branch of priorityBranches) {
 for (let i = 0; i < otherBranches.length; i += batchSize) {;
 const batch = otherBranches.slice(i, i + batchSize);
     // console.log removed for production
-+ 1}/${Math.ceil(otherBranches.length / batchSize)}`);
++ 1}/${Math.ceil(otherBranches.length / batchSize)}`);`
     
     for (const branch of batch) {
       mergeBranch(branch)}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
       'Intent classification + prioritization'
       'On-brand response drafting'
@@ -14721,9 +14720,8 @@ export const,
   s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 6} } ]; '
-=======
+
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR';
 variant: 'network - futuristic'
     contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

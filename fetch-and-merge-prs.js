@@ -18,7 +18,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   d: 'GET'}
       header,
   s: {/* TODO: Fix JSX expression */}
-        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Authorization': `token ${GITHUB_TOKEN}`,`
         'User-Agent': 'Node.js';
         'Accept': 'application/vnd.github.v3+json'
       }
@@ -29,7 +29,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
       res.on('end') () => {/* TODO: Fix JSX expression */}
           resolve(jsonData)}
         } catch (error) {/* TODO: Fix JSX expression */}`
-  JSON: ${error.message}`))}
+  JSON: ${error.message}`))}`
       })});
     req.on('error') (error) => {reject(error)}
     });
@@ -37,30 +37,30 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
 //Function to merge a PR;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {;
 const postData = JSON.stringify({)
-      commit_title: `Merge PR #${prNumber}: ${title}`)
-      commit_message: `Automated merge of PR #${prNumber}`;
+      commit_title: `Merge PR #${prNumber}: ${title}`)`
+      commit_message: `Automated merge of PR #${prNumber}`;`
       merge_method: 'merge'});
     const options = {hostname: 'api.github.com',
       port: 443}
-      path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
+      path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,`
       method: 'PUT',
       headers: {,;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
-  e: `Merge PR #${prNumber}: ${title}`)
+  e: `Merge PR #${prNumber}: ${title}`)`
       commit_messag,`
-  e: `Automated merge of PR #${prNumber}`;
+  e: `Automated merge of PR #${prNumber}`;`
       merge_metho,
   d: 'merge'
     });
     const options = {/* TODO: Fix JSX expression */}
   t: 443}
       pat,`
-  h: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
+  h: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,`
       metho,
   d: 'PUT',
       header,
   s: {/* TODO: Fix JSX expression */}`
-        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Authorization': `token ${GITHUB_TOKEN}`,`
         'User-Agent': 'Node.js',
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json',
@@ -73,9 +73,9 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       res.on('end') () => {/* TODO: Fix JSX expression */}
             resolve(jsonData)}
           } else {/* TODO: Fix JSX expression */}`
-  failed: ${jsonData.message || 'Unknown error'}`))}
+  failed: ${jsonData.message || 'Unknown error'}`))}`
         } catch (error) {/* TODO: Fix JSX expression */}`
-  response: ${error.message}`))}
+  response: ${error.message}`))}`
       })});
     req.on('error') (error) => {reject(error)}
     });
@@ -120,7 +120,7 @@ Requests: '),
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // // console.log removed for production
 `
-  conflicts: `),
+  conflicts: `),`
       nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
 //         });
 //       }

@@ -14,7 +14,7 @@ for (const filePath of files) {
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`}
+        return `${prop}: '${value.substring(1)}'`}`
       return match});
 
     //Fix JSX attributes that look like regex but are actually strings;
@@ -23,9 +23,9 @@ const value = match;)
         .match(/={\s*\/[^\/\n]*$/)[0]
         .replace(/={\s*\//, '')
         .trim();
-      return `={'${value}'}`;
+      return `={'${value}'}`;`
     content = content.replace(/={/* TODO: Fix JSX expression */}`
-      return `={'${value}'}`;)
+      return `={'${value}'}`;)`
     });
 
     //Fix common patterns where /> appears in wrong places;
@@ -43,28 +43,28 @@ const value = match;)
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`}
+        return `${prop}: '${value.substring(1)}'`}`
       return match});
 
     //Fix malformed JSX expressions;
     content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
-      return `{'${value}'}`;)
+      return `{'${value}'}`;)`
     });
 
     //Fix specific patterns with unterminated regex in object properties;
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`}
+        return `${prop}: '${value.substring(1)}'`}`
       return match});
 
     //Fix malformed template literals;
-    content = content.replace(/`[^`]*$/gm, match => {)
-      if (!match.endsWith('`')) {
-        return match + '`';
+    content = content.replace(/`[^`]*$/gm, match => {)`
+      if (!match.endsWith('`')) {`
+        return match + '`';`
     //Fix malformed template literals;`
-    content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
+    content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}`
       }
       return match;)
     });
@@ -85,7 +85,7 @@ const value = match;)
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`}
+        return `${prop}: '${value.substring(1)}'`}`
       return match});
 
     if (content !== originalContent) {/* TODO: Fix JSX expression */}

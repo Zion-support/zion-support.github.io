@@ -36,7 +36,7 @@ const newBranches = [
 function mergeBranch(branchName) {
 //   try {
     //Try direct merge;
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)"`
       { stdio: 'inherit' }
     );
 //     return { success: true, method: 'direct' }} catch (error) {
@@ -45,15 +45,15 @@ function mergeBranch(branchName) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
       execSync(;
 function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
-      `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
+      `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,"`
       {/* TODO: Fix JSX expression */}
   o: 'inherit' }
     );
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -67,8 +67,8 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       execSync(
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -96,13 +96,13 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       for (const file of conflictedFiles) {
         if (file.trim()) {
           try {
-            execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit' });
-            execSync(`git add "${file}"`, { stdio: 'inherit' });
+            execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit' });`
+            execSync(`git add "${file}"`, { stdio: 'inherit' });`
 //             } catch (fileError) {
-      for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
-            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'inherit' });"`
-            execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
+      for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`"`
+            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})"`
+  o: 'inherit' });"`"`
+            execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})"`
   o: 'inherit' });
 //             } catch (fileError) {/* TODO: Fix JSX expression */}
 //             }
@@ -110,10 +110,10 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       }
 
       //Complete the merge;
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)"`
         stdio: 'inherit'),
-      //Complete the merge;"`
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
+      //Complete the merge;"`"`
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})"`
       });
 //       return {/* TODO: Fix JSX expression */}
   d: 'manual' }} catch (manualError) {/* TODO: Fix JSX expression */}

@@ -21,11 +21,11 @@ exports.config = {/* TODO: Fix JSX expression */}
 };
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
+    logs.push(`\n=== ${name} ===`);`
     const {status, stdout} stderr } = runNode(rel) args);
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
+    logs.push(`exit=${status}`);`
     return status}
   step('securit)
   y: audit') 'automation/security-audit.cjs');
@@ -48,7 +48,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
   r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/10 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' step('securit)
+  e: '*/10 * * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' step('securit)`
   y: audit') 'automation/security-audit.cjs');' step('dead-cod)
   e: scan') 'automation/dead-code-scanner.cjs');' step('link)
   s: external-check') 'automation/external-link-check.cjs');' step('image)

@@ -29,7 +29,7 @@ const structuredData = {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com
     },
     "address": {
       "@type": "PostalAddress",
@@ -37,7 +37,7 @@ const structuredData = {
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US
     },
     "sameAs": [
       "https: //www.linkedin.com/company/ziontechgroup",
@@ -47,23 +47,23 @@ const structuredData = {
       "offerCount": "50+",
       "lowPrice": "19",
       "highPrice": "5000",
-      "priceCurrency": "USD"
+      "priceCurrency": "USD
     },
     "services": [
       {
         "@type": "Service",
         "name": "AI Solutions",
-        "description": "Advanced artificial intelligence solutions for businesses"
+        "description": "Advanced artificial intelligence solutions for businesses
       },
       {
         "@type": "Service",
         "name": "Cloud Services",
-        "description": "Comprehensive cloud migration and management services"
+        "description": "Comprehensive cloud migration and management services
       },
       {
         "@type": "Service",
         "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
+        "description": "Advanced cybersecurity solutions and protection
       }
     ]
   };
@@ -100,7 +100,7 @@ const metaTags = {
       "IT consulting",
       "micro SAAS",
       "AI tools",
-      "business automation"
+      "business automation
     ],
     og: {,
       title: "Zion Tech Group - Advanced AI and IT Solutions",
@@ -142,7 +142,7 @@ const faqSchema = {
         "name": "What services does Zion Tech Group offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Zion Tech Group offers comprehensive AI solutions, IT services, cloud migration, cybersecurity, quantum computing, autonomous systems, and digital transformation services."
+          "text": "Zion Tech Group offers comprehensive AI solutions, IT services, cloud migration, cybersecurity, quantum computing, autonomous systems, and digital transformation services.
         }
       },
       {
@@ -150,7 +150,7 @@ const faqSchema = {
         "name": "How can AI solutions benefit my business?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI solutions can automate processes, improve decision-making, enhance customer experience, increase efficiency, and provide valuable insights from data analysis."
+          "text": "AI solutions can automate processes, improve decision-making, enhance customer experience, increase efficiency, and provide valuable insights from data analysis.
         }
       },
       {
@@ -158,7 +158,7 @@ const faqSchema = {
         "name": "What is the pricing for your services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our pricing varies based on the specific services and requirements. We offer flexible pricing models starting from $19/month for micro SAAS solutions to enterprise-level custom solutions."
+          "text": "Our pricing varies based on the specific services and requirements. We offer flexible pricing models starting from $19/month for micro SAAS solutions to enterprise-level custom solutions.
         }
       },
       {
@@ -166,7 +166,7 @@ const faqSchema = {
         "name": "Do you offer free consultations?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we offer free consultations to discuss your specific needs and provide recommendations for the best solutions for your business."
+          "text": "Yes, we offer free consultations to discuss your specific needs and provide recommendations for the best solutions for your business.
         }
       }
     ]
@@ -230,18 +230,18 @@ const localBusinessSchema = {
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US
     },
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "39.4496",
-      "longitude": "-75.7163"
+      "longitude": "-75.7163
     },
     "openingHours": "Mo-Fr 09: 00-17:00",
     "priceRange": "$$",
     "serviceArea": {
       "@type": "Country",
-      "name": "United States"
+      "name": "United States
     }
   };
 
@@ -273,10 +273,10 @@ runSEOEnhancements();
   by: * - Generating comprehensive sitemaps * - Optimizing meta tags * - Adding structured data * - Improving page performance metrics */ import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); // __dirname removed
 class SEOEnhancer {/* TODO: Fix JSX expression */}
   s: //ziontechgroup.com' this.pages = []; this.blogPosts = []; this.services = []} this.caseStudies = []} } async generateSitemap() {' // Read blog posts try {' const blogPostsPath = path.join(__dirname) '../src/content/blog-posts.ts');' const blogContent = fs.readFileSync(blogPostsPath) 'utf8')} // Extract blog post slugs (simplified extraction) const blogMatches = blogContent.match(/slu)
-  g: \\s*"([^"]+)"/g), if (blogMatches) {/* TODO: Fix JSX expression */}"
-  g:\s*"/) '').replace(/"/} '') )} } catch (error) {' } // Define static pages const staticPages = [' '',' '/about',' '/services',' '/blog',' '/case-studies',' '/contact',' '/tools' ]; // Define service pages const servicePages = [' '/services/ai-data-analytics',' '/services/ai-workflow-automation',' '/services/ai-virtual-assistant',' '/services/cloud-migration',' '/services/devops-automation',' '/services/cybersecurity-consulting' ]; // Generate XML sitemap const sitemapXml = this.generateXMLSitemap([ ...staticPages, ...servicePages) ...this.blogPosts.map(slug => `/blog/${slug}`) ]); // Save sitemap' const sitemapPath = path.join(__dirname) '../public/sitemap.xml'); fs.writeFileSync(sitemapPath) sitemapXml)} generateXMLSitemap(pages) {const now = new Date().toISOString()} ' let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'' xml += '<urlset xmlns="htt,"`
-  p://www.sitemaps.org/schemas/sitemap/0.9">\n' pages.forEach(page => {' const url = page === '' ? this.baseUrl : `${this.baseUrl}${page}`)' const priority = page === '' ? '1.0' : ' page.includes('/blog/') ? '0.8' : ' page.includes('/services/') ? '0.9' : '0.7' ' xml += ' <url>\n' xml += ` <loc>${url}</loc>\\n`; xml += ` <lastmod>${now}</lastmod>\\n`; xml += ` <changefreq>weekly</changefreq>\\n`; xml += ` <priority>${priority}</priority>\\n`;' xml += ' </url>\n' }); ' xml += '</urlset>' return xml} generateRobotsTxt() {' // // console.log removed for production
-} const robotsContent = `User-agen,
+  g: \\s*"([^"]+)"/g), if (blogMatches) {/* TODO: Fix JSX expression */}
+  g:\s*"/) '').replace(/"/} '') )} } catch (error) {' } // Define static pages const staticPages = [' '',' '/about',' '/services',' '/blog',' '/case-studies',' '/contact',' '/tools' ]; // Define service pages const servicePages = [' '/services/ai-data-analytics',' '/services/ai-workflow-automation',' '/services/ai-virtual-assistant',' '/services/cloud-migration',' '/services/devops-automation',' '/services/cybersecurity-consulting' ]; // Generate XML sitemap const sitemapXml = this.generateXMLSitemap([ ...staticPages, ...servicePages) ...this.blogPosts.map(slug => `/blog/${slug}`) ]); // Save sitemap' const sitemapPath = path.join(__dirname) '../public/sitemap.xml'); fs.writeFileSync(sitemapPath) sitemapXml)} generateXMLSitemap(pages) {const now = new Date().toISOString()} ' let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'' xml += '<urlset xmlns="htt,"`"`
+  p://www.sitemaps.org/schemas/sitemap/0.9">\n' pages.forEach(page => {' const url = page === '' ? this.baseUrl : `${this.baseUrl}${page}`)' const priority = page === '' ? '1.0' : ' page.includes('/blog/') ? '0.8' : ' page.includes('/services/') ? '0.9' : '0.7' ' xml += ' <url>\n' xml += ` <loc>${url}</loc>\\n`; xml += ` <lastmod>${now}</lastmod>\\n`; xml += ` <changefreq>weekly</changefreq>\\n`; xml += ` <priority>${priority}</priority>\\n`;' xml += ' </url>\n' }); ' xml += '</urlset>' return xml} generateRobotsTxt() {' // // console.log removed for production`
+} const robotsContent = `User-agen,`
   t: * Allo,
   w: / # Sitemap,
   Sitemap: ${this.baseUrl}/sitemap.xml # Disallow admin areas,
@@ -286,10 +286,10 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   w: /static/ # Allow important pages,
   Allow: /blog/ Allo,
   w: /services/ Allo,`
-  w: /case-studies/ `, ' const robotsPath = path.join(__dirname) '../public/robots.txt'); fs.writeFileSync(robotsPath) robotsContent); ' } generateStructuredData() {' // // console.log removed for production
-} const organizationSchema = {/* TODO: Fix JSX expression */}"`
-  s: //schema.org", "@type": "Organization", "name": "Zion Tech Group", "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.", "url": this.baseUrl} "logo": `${this.baseUrl}/logo.png`, "contactPoint": {"@type": "ContactPoint", "telephone": "+1-302-464-0950", "contactType": "customer service"} "availableLanguage": "English" }, "address": {"@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008", "addressLocality": "Middletown", "addressRegion": "DE", "postalCode": "19709"} "addressCountry": "US" }, "sameAs": [ "http,"
-  s: //linkedin.com/company/zion-tech-group", "http,"
+  w: /case-studies/ `, ' const robotsPath = path.join(__dirname) '../public/robots.txt'); fs.writeFileSync(robotsPath) robotsContent); ' } generateStructuredData() {' // // console.log removed for production`
+} const organizationSchema = {/* TODO: Fix JSX expression */}"`"`
+  s: //schema.org", "@type": "Organization", "name": "Zion Tech Group", "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.", "url": this.baseUrl} "logo": `${this.baseUrl}/logo.png`, "contactPoint": {"@type": "ContactPoint", "telephone": "+1-302-464-0950", "contactType": "customer service"} "availableLanguage": "English" }, "address": {"@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008", "addressLocality": "Middletown", "addressRegion": "DE", "postalCode": "19709"} "addressCountry": "US" }, "sameAs": [ "http,"`
+  s: //linkedin.com/company/zion-tech-group", "http,
   s: //twitter.com/ziontechgroup" ], "foundingDate": "2020", "numberOfEmployees": "50-100", "services": [ "AI Workflow Automation", "AI Virtual Assistant", "AI Data Analytics", "Quantum Computing Consulting", "Edge AI Solutions", "Zero Trust Security", "Cybersecurity", "Cloud Infrastructure" ] }; ' const structuredDataPath = path.join(__dirname) '../public/structured-data.json'); fs.writeFileSync(structuredDataPath, JSON.stringify(organizationSchema, null) 2)); ' } async run() {' await this.generateSitemap(); this.generateRobotsTxt(); this.generateStructuredData(); ' ' ' ' ' // // console.log removed for production
 }' // // console.log removed for production
-} } } // Run the SEO enhancer const seoEnhancer = new SEOEnhancer(); seoEnhancer.run().catch(console.error);'"`
+} } } // Run the SEO enhancer const seoEnhancer = new SEOEnhancer(); seoEnhancer.run().catch(console.error);'"`"`

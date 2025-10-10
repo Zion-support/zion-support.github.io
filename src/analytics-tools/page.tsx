@@ -65,11 +65,9 @@ icon$5: BarChart,
 icon$5: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-<<<<<<< HEAD
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
@@ -79,27 +77,20 @@ const PagePage: React.FC = () => {
 return (
 
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
+        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month. />"
+        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics />"
       </Helmet>
 );
 }
       {/* Hero Section */}
-=======
+
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
 import { Link )} from 'react-router-dom';
 
@@ -111,27 +102,24 @@ const PagePage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>Analytics Tools - Zion Tech Group<
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." 
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" 
-      <
+      <>
       {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      <section className="pt-24 pb-16 px-4">
+</meta>      <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm: text-5xl m,
+          <h1 className="text-4xl sm: text-5xl m,">
     d:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools
-          <
+            AI Analytics Tools</h1>          <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
 
       {/* Hero Section *
       <section className="pt-24 pb-16 px-4"><
         <div className="max-w-7xl mx-auto text-center"><
-          <h1 className="text-4xl,
-  sm:text-5xl,"
+          <h1 className="text-4xl,"
+  sm:text-5xl,
   md: text-6xl font-bold text-white mb-6"><
 /
 
@@ -141,7 +129,7 @@ const PagePage: React.FC = () => {
           <
           {/* Stats *
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white
+            <div className="bg-white"
               <div className="text-3xl font-bold text-cyan-400 mb-2">6<
               <div className="text-gray-300">Analytics Tools<
             <
@@ -153,7 +141,7 @@ const PagePage: React.FC = () => {
               <div className="text-gray-300">Monitoring<
           {/* Contact Info *
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 m,
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 m,"
     d:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" 
@@ -169,9 +157,9 @@ const PagePage: React.FC = () => {
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
             Our Analytics Tools
           <
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">
-            {analyticsTools.map((tool), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white
+            {analyticsTools.map((tool), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white"
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}<
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}<
@@ -182,23 +170,20 @@ const PagePage: React.FC = () => {
                   <h4 className="font-semibold text-white mb-3">Features: <
                   <ul className="space-y-2">)
                     {tool.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}<
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}`
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block">
                   >
-                    Get Started
-                  <
+                    Get Started</a>                  <
       {/* Benefits Section *
             Why Choose Our Analytics Tools?
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-4 gap-8">
-            {benefits.map((benefit), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white
+            {benefits.map((benefit), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white"
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<
                 <p className="text-gray-300 text-sm">{benefit.description}<
-
               <div className="text-gray-300">Analytics Tools<
             <
               <div className="text-3xl font-bold text-green-400 mb-2">$179<
@@ -209,16 +194,15 @@ const PagePage: React.FC = () => {
               <div className="text-gray-300">Monitoring<
           {/* Contact Info *
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"><
-            <div className="flex flex-col,
+            <div className="flex flex-col,>"
   md:flex-row items-center justify-center space-y-4,
-  md:space-y-0,"
-  md:space-x-8"><
+  md:space-y-0,"</div>  md:space-x-8"><
               <div className="flex items-center space-x-2"><
-                <Phone className="w-5 h-5" /><
+                <Phone className="w-5 h-5 /><"
                 <span className="text-white font-medium">+1 302 464 0950<
-                <Mail className="w-5 h-5" /><
+                <Mail className="w-5 h-5 /><"
                 <span className="text-white font-medium">kleber@ziontechgroup.com<
-                <MapPin className="w-5 h-5" /><
+                <MapPin className="w-5 h-5 /><"
                 <span className="text-white font-medium">Middletown, DE<
       <
       {/* Analytics Tools Grid *
@@ -228,25 +212,25 @@ const PagePage: React.FC = () => {
   md:text-4xl font-bold text-white text-center mb-12 neon-text"><
 /
           <
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+          <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg: grid-cols-3 gap-8"><)
-            {analyticsTools.map((tool), index) => ()}"
-          <div key={index} className="bg-white
+            {analyticsTools.map((tool), index) => ()}
+          <div key={index} className="bg-white"
   hover:bg-white/20 transition-all duration-300"><
                 <div className="text-center mb-6"><
                   <div className="text-5xl mb-4">{tool.icon}<
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}<
                   <p className="text-gray-300 text-sm mb-4">{tool.description}<
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"><
-                    {tool.category}"
+                    {tool.category}
                 <div className="mb-6"><
                   <h4 className="font-semibold text-white mb-3">Feature,
   s: <
                   <ul className="space-y-2"><
-                    {tool.features.map((feature), featureIndex) => ()}"
+                    {tool.features.map((feature), featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"><
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /><
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 /><"
                         {feature}
                       <
                     ))}
@@ -256,25 +240,24 @@ const PagePage: React.FC = () => {
                   <a><
                     href={/* TODO: Fix JSX expression *
   ,
-    o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
-  hover:from-cyan-600,"
-  hover:to-blue-700 transition-all inline-block"
+    o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"`
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,"
+  hover:from-cyan-600,
+  hover:to-blue-700 transition-all inline-block
 /
 /
           <
       {/* Benefits Section *
-Why Choose Our Analytics Tools?"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+Why Choose Our Analytics Tools?
+          <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg: grid-cols-4 gap-8"><
-            {benefits.map((benefit), index) => ()}"
-          <div key={index} className="bg-white
+            {benefits.map((benefit), index) => ()}
+          <div key={index} className="bg-white"
   hover:bg-white/20 transition-all duration-300"><
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /><
+                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 /><"
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<
                 <p className="text-gray-300 text-sm">{benefit.description}<
-
       {/* CTA Section *
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -287,8 +270,8 @@ Why Choose Our Analytics Tools?"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
               Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
-    r:text-purple-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,"
+    r:text-purple-600 transition-colors
               Email Us
   )};
 Ready to Unlock Your Data?
@@ -297,9 +280,8 @@ Ready to Unlock Your Data?
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950;
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
-    r:text-purple-600 transition-colors"
-
+              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,"
+    r:text-purple-600 transition-colors
               Email Us;
   )};
 

@@ -60,7 +60,7 @@ const stats = fs.statSync(file);
 largeFiles.forEach(file => {);
 const stats = fs.statSync(file);
         // console.log removed for production
-.toFixed(2)} KB`)})}
+.toFixed(2)} KB`)})}`
   }
 
   async optimizeImages() {
@@ -168,7 +168,7 @@ const securityHeaders = `
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-`;
+`;`
 
     htmlFiles.forEach(htmlFile => {
 return (
@@ -178,7 +178,7 @@ let content = fs.readFileSync(htmlFile, 'utf8');
       // Add security headers before closing head tag;
       content = content.replace('</head>
 );
-}', `${securityHeaders}</head>`);
+}', `${securityHeaders}</head>`);`
       
       fs.writeFileSync(htmlFile, content)});
 
@@ -191,7 +191,7 @@ let content = fs.readFileSync(htmlFile, 'utf8');
   async generateSitemap() {
     // console.log removed for production
 ;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   <url>,
     <loc>https://ziontechgroup.com/</loc>,
@@ -223,7 +223,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <changefreq>monthly</changefreq></changefreq>
     <priority></p>0.7</priority>
   </url>
-</urlset>`;
+</urlset>`;`
 
     fs.writeFileSync(path.join(this.distPath, 'sitemap.xml'), sitemap);
 
@@ -235,7 +235,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   async generateRobotsTxt() {
     // console.log removed for production
 ;
-const robotsTxt = `User-agent: *
+const robotsTxt = `User-agent: *`
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
@@ -245,7 +245,7 @@ Crawl-delay: 1;
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/,
-Disallow: /private/`;
+Disallow: /private/`;`
 ,
     fs.writeFileSync(path.join(this.distPath, 'robots.txt'), robotsTxt);
 
@@ -324,7 +324,7 @@ const status = opt.status === 'completed' ? '✅' : ),
 }
 
 // Run optimization if called directly;
-if (import.meta.url === `file://${process.argv[1]}`) {;
+if (import.meta.url === `file://${process.argv[1]}`) {;`
 const optimizer = new BuildOptimizer();
   optimizer.optimize().catch(console.error)}
 

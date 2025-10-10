@@ -7,20 +7,19 @@ const,
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', size = 'md' }) => {/* TODO: Fix JSX expression */}
   };
 
-  return(<div className={`flex items-center justify-center ${className}`}>)
+  return(<div className={`flex items-center justify-center ${className}`}>)`
       <div;)
-        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`})
+        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`})`
       ></div>)
     </div>)
   return (
-    <div className={`flex items-center justify-center ${className}`}></div>
-      <div
-        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
+    <div className={`flex items-center justify-center ${className}`}></div>`
+      <div className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}`
       ></div>
     </div>
-  return (<div className={`flex items-center justify-center ${className}`}></div>
+  return (<div className={`flex items-center justify-center ${className}`}></div>`
       <div></div>`
-        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
+        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}`
       ></div>
     </div>)
   )};

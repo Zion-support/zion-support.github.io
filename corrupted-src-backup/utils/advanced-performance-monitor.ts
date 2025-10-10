@@ -260,21 +260,21 @@ const _latestData = this.data[this.data.length - 1];
 const warnings: string[] = [];
 ,
     if (data.loadTime > this.thresholds.loadTime) {,
-      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
+      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}`
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
-      warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)
+      warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)`
       )}
     if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
-      warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)
+      warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)`
       )}
     if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
-      warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)
+      warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)`
       )}
     if (data.firstInputDelay > this.thresholds.firstInputDelay) {
-      warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
+      warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)`
   private checkThresholds(dat)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
-      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
+      warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}`
     if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {/* TODO: Fix JSX expression */}`
         `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
       )}

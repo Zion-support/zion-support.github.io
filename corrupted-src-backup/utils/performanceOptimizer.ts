@@ -73,11 +73,11 @@ const requestTick = () => {/* TODO: Fix JSX expression */}
 
     if (process.env['NODE_ENV'] === 'development') {
       //       // // console.log removed for production
-}ms`);
+}ms`);`
   measurePerformance(nam,
   e: string, f)
   n: () => void): void {/* TODO: Fix JSX expression */}
-  e: ${name} took ${duration.toFixed(2)}ms`)}
+  e: ${name} took ${duration.toFixed(2)}ms`)}`
   }
 
   // Get performance metrics;

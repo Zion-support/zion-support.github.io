@@ -56,7 +56,7 @@ function fixImportsInFile(filePath) {
       /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g;
     if (linkImportRegex.test(content)) {
       content = content.replace(linkImportRegex)
-        "import Link from 'next/link';"
+        "import Link from 'next/link';
       );
       modified = true}
 
@@ -140,4 +140,4 @@ directories.forEach(dir => {/* TODO: Fix JSX expression */})
 // Process each file;
 files.forEach(fixImportsInFile);
 
-// "
+// 

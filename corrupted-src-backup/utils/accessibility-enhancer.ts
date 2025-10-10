@@ -153,7 +153,7 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem"]'));
 
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {/* TODO: Fix JSX expression */}
-      this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`)}
+      this.announceToScreenReader(`Focused on ${this.getElementDescription(element)}`)}`
   }
 
   /**
@@ -231,11 +231,11 @@ const _contrast = this.calculateContrast(color, backgroundColor);
           this.addIssue({)
             type: 'warning'),
             element: element as HTMLElement),
-            message: `Low color contrast: ${contrast.toFixed(2)}:1`,
+            message: `Low color contrast: ${contrast.toFixed(2)}:1`,`
             fix: 'Increase color contrast to at least 4.5:1',
             severity: 'high',
   private checkColorContrast(): void {/* TODO: Fix JSX expression */}`
-  contrast: ${contrast.toFixed(2)}:1`,
+  contrast: ${contrast.toFixed(2)}:1`,`
             fi,
   x: 'Increase color contrast to at least 4.5:1',
             severit,
@@ -272,7 +272,7 @@ const _images = document.querySelectorAll('img');
         img.height = img.naturalHeight || 600;
   private optimizeImages(): void {/* TODO: Fix JSX expression */}
         })}
-"
+
       // Add loading="lazy" for non-critical images;
       if (!img.hasAttribute('loading')) {/* TODO: Fix JSX expression */}
       }
@@ -347,7 +347,7 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);
         border: 0}
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
       }`
-    `;
+    `;`
     document.head.appendChild(style)}
 
   /**
@@ -399,9 +399,9 @@ const recommendations: string[] = [];
 ,
     if (errorCount > 0) {,
   private generateRecommendations(): string[] {/* TODO: Fix JSX expression */}`
-      recommendations.push(`Fix ${errorCount} accessibility errors`)}
+      recommendations.push(`Fix ${errorCount} accessibility errors`)}`
     if (warningCount > 0) {/* TODO: Fix JSX expression */}`
-      recommendations.push(`Address ${warningCount} accessibility warnings`)}
+      recommendations.push(`Address ${warningCount} accessibility warnings`)}`
     if (this.issues.some(i => i.message.includes('alt text'))) {/* TODO: Fix JSX expression */}
     }
     if (this.issues.some(i => i.message.includes('contrast'))) {/* TODO: Fix JSX expression */}
@@ -424,12 +424,12 @@ const _iconClass = icon.className;
     //     const id = input.id;
     if (id) {,
   private findAssociatedLabel(inpu)
-  t: HTMLInputElement): HTMLLabelElement | null {/* TODO: Fix JSX expression */}"`
-      return document.querySelector(`label[for="${id}"]`)}
+  t: HTMLInputElement): HTMLLabelElement | null {/* TODO: Fix JSX expression */}"`"`
+      return document.querySelector(`label[for="${id}"]`)}"`
     return input.closest('label')}
 
   private generateId(element: HTMLElement): string {,
-    return `id-${Math.random().toString(36).substr(2, 9)}`}
+    return `id-${Math.random().toString(36).substr(2, 9)}`}`
 
   private generateAltText(img: HTMLImageElement): string {,;
 const _src = img['src'];,
@@ -471,7 +471,7 @@ const _src = img['src'];,
       if (description) {
   private generateId(elemen)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}`
-    return `id-${Math.random().toString(36).substr(2, 9)}`}
+    return `id-${Math.random().toString(36).substr(2, 9)}`}`
 
   private generateAltText(im)
   g: HTMLImageElement): string {/* TODO: Fix JSX expression */}
@@ -492,7 +492,7 @@ const _src = img['src'];,
   }
 
   private addARIADescriptions(): void {/* TODO: Fix JSX expression */}`
-        //         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;
+        //         const descId = `desc-${Math.random().toString(36).substr(2, 9)}`;`
         const _descElement = document.createElement('div');
         descElement.id = descId;
         descElement.textContent = description;

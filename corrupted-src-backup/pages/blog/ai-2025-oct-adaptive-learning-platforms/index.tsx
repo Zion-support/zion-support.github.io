@@ -1,18 +1,15 @@
 impo, r, t { ArrowLe, f, t, GraduationC, a, p, Targ, e, t, CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
+
 ;
 const AdaptiveLearningPlatform, s = () => {
 return (
  
   return(<React.Fragment>
       <Helm, e, t>
-=======
-
 const AdaptiveLearningPlatform, s = () => { 
   return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <title>
           AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group;
         <
@@ -24,23 +21,20 @@ const AdaptiveLearningPlatform, s = () => {
         /><
       <
 
-<<<<<<< HEAD
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r />
         <article, className='container, m, x-auto, p, x-6, p, y-20' >
 );
 } {/* Back, Lin, k */ }
-          <Link, t, o='/bl, o, g'
+          <Link, t, o='/bl, o, g'>
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
-          >
-            <ArrowLeft, className='w-4 h-4, m, r-2' />;
+          ></Link>            <ArrowLeft, className='w-4 h-4, m, r-2' />;
 const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/bl, o, g'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           ></Link>
             <ArrowLeft, className='w-4 h-4, m, r-2' /></ArrowLeft>
-=======
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'><
         <Head, e, r 
         <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k *
@@ -52,7 +46,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression *
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           ><
             <ArrowLeft, className='w-4 h-4, m, r-2' /><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
             Back, to, Blog;
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>12, min, read<
             <
@@ -146,10 +140,9 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression *
                     
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' 
                     3. AI-Powered, Content, Generation;
-                  <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0
+                  <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0>
                     3. AI-Powered, Content, Generation
-
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'><
+</CheckCircle>                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'><
                   <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'><
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' 
                     3. AI-Powered, Content, Generation
@@ -318,16 +311,14 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression *
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'><
                 
                   <Target, classNam, e='w-5 h-5' 
-                  Request, Dem, o;)
-<<<<<<< HEAD
-})
-                ></Link>
+                  Request, Dem, o;)>
+
+})</Target>                ></Link>
                   <Target, classNam, e='w-5 h-5' /></Target>
                   Request, Dem, o}
-=======
+
 });
                 ><
                   <Target, classNam, e='w-5 h-5' /><
                   Request, Dem, o;
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

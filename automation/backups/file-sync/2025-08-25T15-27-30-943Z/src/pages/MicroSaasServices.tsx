@@ -428,202 +428,202 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         website: "https://ziontechgroup.com",
     {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     },
-    {/* TODO: Fix JSX expression */}"
+    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
-        websit,"
+        websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
       }
     }
   ];
@@ -641,7 +641,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <Zap className="text-left" />
+              <Zap className="text-left />"
               Innovation at Scale;
             </div>
           </div>
@@ -667,56 +667,55 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         {/* Search and Filters */}
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <Search className="text-left" />
+            <Search className="text-left />"
             <input;
               type="text";
-const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
+const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
     <div className="text-left"></div>
-      {/* Animated Background */}"
-      <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>
-      </div>"
+      {/* Animated Background */}
       <div className="text-left"></div>
-        {/* Header */}"
-        <div className="text-left"></div>"
-          <div className="text-left"></div>"
-            <div className="text-left"></div>"
-              <Zap className="text-left" /></Zap>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+      </div>
+      <div className="text-left"></div>
+        {/* Header */}
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <Zap className="text-left /></Zap>"
               Innovation at Scale;
             </div>
-          </div>"
+          </div>
           <h1 className="text-left"></h1>
             Micro SAAS Services;
-          </h1>"
+          </h1>
           <p className="text-left"></p>
-            Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs."
+            Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.
             <span className="text-left"> Affordable, powerful, and future-ready.<
-          </p>"
-          <div className="text-left"></div>"
-            <div className="text-left"></div>"
+          </p>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left"></div>
               <span>25+ Services Available<
-            </div>"
-            <div className="text-left"></div>"
+            </div>
+            <div className="text-left"></div>
               <div className="text-left"></div>
               <span>Starting from $15/month<
-            </div>"
-            <div className="text-left"></div>"
+            </div>
+            <div className="text-left"></div>
               <div className="text-left"></div>
               <span>24/7 Support<
-        {/* Search and Filters */}"
-        <div className="text-left"></div>"
-          <div className="text-left"></div>"
-            <Search className="text-left" /></Search>
-            <input></input>"
-              type="text""
+        {/* Search and Filters */}
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <Search className="text-left /></Search>"
+            <input></input>
+              type="text"
               placeholder="Search for innovative micro SAAS solutions..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}"
-              className="text-left"
-            />
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="text-left />"
             <div className="text-left"></div>
               <div className="text-left">
                 {filteredServices.length} services found;
@@ -727,33 +726,33 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
             <select;
           <div className="text-left"></div>
             <select
-            />"
-            <div className="text-left"></div>"
+            />
+            <div className="text-left"></div>
               <div className="text-left"></div>
                 {filteredServices.length} services found;
               </div>
             </div>
-          </div>"
+          </div>
           <div className="text-left"></div>
             <select></select>
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}"
+              onChange={(e) => setSelectedCategory(e.target.value)}
               className="text-left"
             >
-              {/* TODO: Fix JSX expression */}"
+              {/* TODO: Fix JSX expression */}
                 <option key={category} value={category} className="text-left"></option>
-                  {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
+                  {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"`
               className="text-left"
             >
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="text-left">)
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})`
         {/* Services Grid */})
         <div className="text-left">)
           {filteredServices.map((service) => (
               {pricingModels.map(pricing => (
                 <option key={pricing} value={pricing} className="text-left"></option>
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}`
         {/* Services Grid */}
         <div className="text-left">
           {filteredServices.map((service) => (</div>
@@ -771,34 +770,34 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                       {service.name}
                     </h3>
                     <div className="text-left"></div>
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}>
+                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}>`
                         {service.pricing}</span>
                       <
                       <span className="text-left">
                         {service.category}</span>
-              {/* TODO: Fix JSX expression */}"
-                <option key={pricing} value={pricing} className="text-left"></option>`
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
-        {/* Services Grid */}"
+              {/* TODO: Fix JSX expression */}
+                <option key={pricing} value={pricing} className="text-left"></option>`"`
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}`
+        {/* Services Grid */}
         <div className="text-left"></div>
-          {/* TODO: Fix JSX expression */}"
+          {/* TODO: Fix JSX expression */}
             <div key={service.id} className="text-left"></div>
-              {/* Service Header */}"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
+              {/* Service Header */}
+              <div className="text-left"></div>
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
                     <div className="text-left"></div>
                       {getCategoryIcon(service.category)}
                     </div>
                   </div>
-                  <div></div>"
+                  <div></div>
                     <h3 className="text-left"></h3>
                       {service.name}
-                    </h3>"
-                    <div className="text-left"></div>`
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}></span>
+                    </h3>
+                    <div className="text-left"></div>`"`
+                      <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}></span>`
                         {service.pricing}
-                      <"
+                      <
                       <span className="text-left"></span>
                         {service.category}
                       <
@@ -806,24 +805,24 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                   </div>
                 </div>
               </div>
-              {/* Description */}"
+              {/* Description */}
               <p className="text-left"></p>
                 {service.description}
               </p>
               {/* Pricing */}
               <div className="text-left"></div>
                 <div className="text-left">
-              {/* Pricing */}"
-              <div className="text-left"></div>"
+              {/* Pricing */}
+              <div className="text-left"></div>
                 <div className="text-left"></div>
                   {formatPrice(service.price} service.pricingModel)}
-                </div>"
+                </div>
                 <div className="text-left">{service.userLimit}</div>
               </div>
               {/* Features */}
               <div className="text-left"></div>
                 <h4 className="text-left">
-                  <Zap className="text-left" />
+                  <Zap className="text-left />"
                   Key Features;
                 </h4>
                 <div className="text-left">
@@ -837,7 +836,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
               {/* Target Audience */}
               <div className="text-left"></div>
                 <h4 className="text-left">
-                  <Users className="text-left" />
+                  <Users className="text-left />"
                   Perfect For;
                 </h4>
                 <div className="text-left">
@@ -863,7 +862,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                     rel="noopener noreferrer"
                   >
                     Get Started;
-                    <Link className="text-left" />
+                    <Link className="text-left />"
                   </a>
         {/* Contact Information */}
         <div className="text-left"></div>
@@ -873,7 +872,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <Rocket className="text-left" />
+                  <Rocket className="text-left />"
                   Ready to Transform Your Business?
                 </div>
               </div>
@@ -887,21 +886,21 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <Phone className="text-left" />
+                    <Phone className="text-left />"
                   </div>
                   <p className="text-left">Phone</p>
                   <p className="text-left">{microSaasServices[0].contactInfo.phone}</p>
                 </div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <Mail className="text-left" />
+                    <Mail className="text-left />"
                   </div>
                   <p className="text-left">Email</p>
                   <p className="text-left">{microSaasServices[0].contactInfo.email}</p>
                 </div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <MapPin className="text-left" />
+                    <MapPin className="text-left />"
                   </div>
                   <p className="text-left">Address</p>
                   <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
@@ -913,108 +912,108 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                 <a
                   href="mailto: kleber@ziontechgroup.<com" className="text-left"
                 >
-                  <Mail className="text-left" />
+                  <Mail className="text-left />"
                   Get Started Today;
                 </a>
                 <a;
                   href="tel:+<13024640950" className="text-left"
                 >,
-                  <Phone className="text-left" />,
+                  <Phone className="text-left />,"
                   Call Now;
-              {/* Features */}"
-              <div className="text-left"></div>"
-                <h4 className="text-left"></h4>"
-                  <Zap className="text-left" /></Zap>
+              {/* Features */}
+              <div className="text-left"></div>
+                <h4 className="text-left"></h4>
+                  <Zap className="text-left /></Zap>"
                   Key Features;
-                </h4>"
+                </h4>
                 <div className="text-left"></div>
-                  {service.features.slice(0) 3).map((feature} index) => ("
+                  {service.features.slice(0) 3).map((feature} index) => (
                     <span key={index} className="text-left"></span>
                       {feature}
                     <)
                   ))}
                 </div>
               </div>
-              {/* Target Audience */}"
-              <div className="text-left"></div>"
-                <h4 className="text-left"></h4>"
-                  <Users className="text-left" /></Users>
+              {/* Target Audience */}
+              <div className="text-left"></div>
+                <h4 className="text-left"></h4>
+                  <Users className="text-left /></Users>"
                   Perfect For;
-                </h4>"
+                </h4>
                 <div className="text-left"></div>
-                  {service.targetAudience.slice(0) 2).map((audience} index) => ("
+                  {service.targetAudience.slice(0) 2).map((audience} index) => (
                     <span key={index} className="text-left"></span>
                       {audience}
                     <)
                   ))}
                 </div>
               </div>
-              {/* CTA */}"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
+              {/* CTA */}
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <span className="text-left">Ready to transform your business?<
                   <a></a>
-                    href={service.contactInfo.website}"
-                    className="text-left""
-                    target="_blank""
+                    href={service.contactInfo.website}
+                    className="text-left"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Get Started;"
-                    <Link className="text-left" /></Link>
+                    Get Started;
+                    <Link className="text-left /></Link>"
                   </a>
-        {/* Contact Information */}"
-        <div className="text-left"></div>"
+        {/* Contact Information */}
+        <div className="text-left"></div>
           <div className="text-left"></div>
-            {/* Background Elements */}"
-            <div className="text-left"></div>"
-            <div className="text-left"></div>"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
-                  <Rocket className="text-left" /></Rocket>
+            {/* Background Elements */}
+            <div className="text-left"></div>
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
+                  <Rocket className="text-left /></Rocket>"
                   Ready to Transform Your Business?
                 </div>
-              </div>"
+              </div>
               <h2 className="text-left"></h2>
                 Let's Build the Future Together;
-              </h2>"
+              </h2>
               <p className="text-left"></p>
-                Our cutting-edge micro SAAS solutions are designed to scale with your business needs."
+                Our cutting-edge micro SAAS solutions are designed to scale with your business needs.
                 <span className="text-left"> Start your digital transformation journey today.<
-              </p>"
-              <div className="text-left"></div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
-                    <Phone className="text-left" /></Phone>
-                  </div>"
-                  <p className="text-left">Phone</p>"
+              </p>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
+                    <Phone className="text-left /></Phone>"
+                  </div>
+                  <p className="text-left">Phone</p>
                   <p className="text-left">{microSaasServices[0].contactInfo.phone}</p>
-                </div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
-                    <Mail className="text-left" /></Mail>
-                  </div>"
-                  <p className="text-left">Email</p>"
+                </div>
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
+                    <Mail className="text-left /></Mail>"
+                  </div>
+                  <p className="text-left">Email</p>
                   <p className="text-left">{microSaasServices[0].contactInfo.email}</p>
-                </div>"
-                <div className="text-left"></div>"
-                  <div className="text-left"></div>"
-                    <MapPin className="text-left" /></MapPin>
-                  </div>"
-                  <p className="text-left">Address</p>"
+                </div>
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
+                    <MapPin className="text-left /></MapPin>"
+                  </div>
+                  <p className="text-left">Address</p>
                   <p className="text-left">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-              </div>"
+              </div>
               <div className="text-left"></div>
-                <a></a>"
+                <a></a>
                   href="mailt,"
   o: kleber@ziontechgroup.<com" className="text-left"
-                ></com>"
-                  <Mail className="text-left" /></Mail>
+                ></com>
+                  <Mail className="text-left /></Mail>"
                   Get Started Today;
                 </a>
-                <a></a>"
+                <a></a>
                   href="te,"
   l:+<13024640950" className="text-left"
-                ></13024640950>"
-                  <Phone className="text-left" /></Phone>
-                  Call Now;"`
+                ></13024640950>
+                  <Phone className="text-left /></Phone>"
+                  Call Now;"`"`

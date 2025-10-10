@@ -28,7 +28,7 @@ const arrayPattern = /\[\s*\{\}\s*(\w+):/g;
 const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',')) {
-      return `${key}: ${value},`}
+      return `${key}: ${value},`}`
     return match});
 
   // Fix missing commas in object properties;

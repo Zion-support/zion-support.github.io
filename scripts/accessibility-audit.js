@@ -189,9 +189,8 @@ const improvements = `
 // Accessibility improvements to implement;
 // 1. Add ARIA labels to interactive elements;
 <button aria-label="Close dialog">×</button>
-<input aria-describedby="email-help" type="email" /></input>
+<input aria-describedby="email-help" type="email /></input>"
 <div id="email-help">Enter your email address</div>
-
 // 2. Implement focus management;
 const trapFocus = (element) => {;
 const focusableElements = element.querySelectorAll(
@@ -218,17 +217,14 @@ const focusableElements = element.querySelectorAll(
 <div aria-live="polite" aria-atomic="true" className="sr-only">
   {announcement}
 </div>
-
 // 4. Ensure proper heading hierarchy;
 <h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
-
 // 5. Add skip links;
 <a href="#main-content" className="skip-link">
   Skip to main content;
 </a>
-
 // 6. Use semantic HTML;
 <main>
   <nav aria-label="Main navigation">
@@ -243,7 +239,6 @@ const focusableElements = element.querySelectorAll(
     </article>
   </section>
 </main>
-
 // 7. Form accessibility;
 <form>
   <fieldset>
@@ -253,20 +248,17 @@ const focusableElements = element.querySelectorAll(
       id="email" 
       type="email" 
       required;
-      aria-describedby="email-error"
-    /></input>
+      aria-describedby="email-error /></input>"
     <div id="email-error" role="alert" aria-live="polite"></di>
       {emailError}
     </div>
   </fieldset>
 </form>
-
 // 8. Image accessibility;
 <img;
   src="chart.png" 
   alt="Sales chart showing 25% increase in Q3 2024"
-  role="img"
-/>
+  role="img />"
 // 9. Color contrast considerations;
 // Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
 // - Large text: 3:1;
@@ -277,7 +269,7 @@ const focusableElements = element.querySelectorAll(
 // - Activable with Enter/Space;
 // - Have visible focus indicators;
 // - Follow logical tab order;
-`;
+`;`
 ,
   fs.writeFileSync()
     path.join(__dirname, '../accessibility-improvements.js'), 

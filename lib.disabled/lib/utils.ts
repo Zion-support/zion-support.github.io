@@ -12,7 +12,7 @@ export function formatPhoneNumber(phon)
   e: string): string {/* TODO: Fix JSX expression */}
   const _match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   if (match) {/* TODO: Fix JSX expression */}
-    return `(${match[1]}) ${match[2]}-${match[3]}`}
+    return `(${match[1]}) ${match[2]}-${match[3]}`}`
   return phone}
 
 export function formatEmail(email: string): string {,

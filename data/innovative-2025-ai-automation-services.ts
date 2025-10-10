@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
   id: string;
   name: string;
@@ -2233,8 +2233,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   s: 35,
   rating: 4.9,
   reviews: 28 }} ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
-=======
+
       marketSize: '$25 B business process automation market'
       growthRate: '300% annual growth';
 variant: 'ai-automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

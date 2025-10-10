@@ -56,7 +56,7 @@ missingPages.forEach(page => // console.log removed for production
 // Check for pages that exist but aren't linked;
 const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
 // console.log removed for production
-===`);
+===`);`
 if (unlinkedPages.length > 0) {
   unlinkedPages.slice(0, 20).forEach(page => // console.log removed for production
 );

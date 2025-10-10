@@ -1,6 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
+
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -14,7 +13,6 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
 import React, { useState, useEffect, Suspense, memo } from 'react';
 import { Navigation } from './components/Navigation';
@@ -46,13 +44,13 @@ const HomePage: React.FC = () => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'phone_click', {
         event_category: 'engagement',
-<<<<<<< HEAD
+
         event_label: 'header_phone'
       });
-=======
+
         event_label: 'main_phone_number'
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
     }
   };
 
@@ -65,33 +63,27 @@ const HomePage: React.FC = () => {
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
         >
-          Skip to main content
-        </a>
-        
+          Skip to main content</a>        </a>
         {/* Content Promotion Banner */}
         <Suspense fallback={<div>Loading...</div>}>
           <ContentPromotionBanner />
         </Suspense>
-        
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-          <section
-            className={`text-center mb-16 transition-all duration-1000 ${
+          <section className={`text-center mb-16 transition-all duration-1000 ${`
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
-            }`}
+            }`}>`
             aria-labelledby="hero-heading"
-          >
-            <div className="max-w-6xl mx-auto">
+          ></section>            <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               >
-                Zion Tech Group
-              </h1>
+                Zion Tech Group</h1>              </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
@@ -99,8 +91,6 @@ const HomePage: React.FC = () => {
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -642,7 +632,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
           {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -650,7 +639,7 @@ const HomePage: React.FC = () => {
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 100+ ready-to-use applications with real market value.
-=======
+
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading"></section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text"></h2>
@@ -658,7 +647,7 @@ const HomePage: React.FC = () => {
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4"></p>
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
->>>>>>> main
+
           </p>
           {/* Productivity Tools */}
           <div className="mb-12"></div>
@@ -1206,9 +1195,6 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div></Suspense>}>
           <ContentNewsletterSignup />
         </Suspense>
-<<<<<<< HEAD
-=======
-
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading"></section>
           <div className="max-w-6xl mx-auto"></div>
@@ -1218,7 +1204,6 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto"></p>
               Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
             </p>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {/* Contact Information */}
               <div className="cyber-card hologram-card p-8"></div>
@@ -1226,7 +1211,7 @@ const HomePage: React.FC = () => {
                 <div className="space-y-6"></div>
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
-                      <Phone className="w-6 h-6 text-white" />
+                      <Phone className="w-6 h-6 text-white />"
                     </div>
                     <div></div>
                       <p className="text-gray-300 text-sm">Phone</p>
@@ -1235,10 +1220,9 @@ const HomePage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
-                      <Mail className="w-6 h-6 text-white" />
+                      <Mail className="w-6 h-6 text-white />"
                     </div>
                     <div></div>
                       <p className="text-gray-300 text-sm">Email</p>
@@ -1247,10 +1231,9 @@ const HomePage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
-                      <MapPin className="w-6 h-6 text-white" />
+                      <MapPin className="w-6 h-6 text-white />"
                     </div>
                     <div></div>
                       <p className="text-gray-300 text-sm">Address</p>
@@ -1260,10 +1243,9 @@ const HomePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
-                      <Clock className="w-6 h-6 text-white" />
+                      <Clock className="w-6 h-6 text-white />"
                     </div>
                     <div></div>
                       <p className="text-gray-300 text-sm">Business Hours</p>
@@ -1275,29 +1257,23 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-              
               {/* CTA Buttons */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
                   className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  aria-label="Call us at (302) 464-0950"
+                  aria-label="Call us at (302) 464-0950">
                 >
-                  Call (302) 464-0950
-                </a>
+                  Call (302) 464-0950</a>                </a>
                 <a
                   href="#contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                 >
-                  Get Free Consultation
-                </a>
+                  Get Free Consultation</a>                </a>
               </div>
             </div>
-<<<<<<< HEAD
           </section>
-          
           {/* Services Section */}
           <section className="mb-16" aria-labelledby="services-heading">
             <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
@@ -1306,7 +1282,6 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive AI and IT solutions designed to transform your business operations
             </p>
-            
             {/* Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
@@ -1318,7 +1293,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>
@@ -1328,7 +1302,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
@@ -1338,7 +1311,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🌐</div>
@@ -1351,27 +1323,23 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </main>
-        
         {/* Footer */}
         <Footer />
       </div>
     </>
   );
-=======
+
           </div>
         </section>
->>>>>>> main
       </main>
       {/* Footer */}
       <Footer />
     </div>
-<<<<<<< HEAD
   );
-=======
+
     </>
   );)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
 
 export default HomePage;

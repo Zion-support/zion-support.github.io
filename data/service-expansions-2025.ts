@@ -82,9 +82,9 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [,
     tagline: "Intelligent process automation and optimization", price: '$89/month',
     description: 'Advanced AI-powered workflow automation platform that streamlines business processes.',
     features: [;
-      "Process automation"
-      "AI optimization"
-      "Workflow analytics"
+      "Process automation
+      "AI optimization
+      "Workflow analytics
       "Integration capabilities",
       "Custom workflows"],
     link: "/services/ai-workflow-automation", category: "Service Expansions 2025",
@@ -99,7 +99,7 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -127,45 +127,45 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [,
 }
 export const,
   serviceExpansions2025: ServiceExpansion2025[] = [,
-    i,"
-  d: "ai-workflow-automation", nam,"
+    i,
+  d: "ai-workflow-automation", nam,
   e: "AI Workflow Automation",
-    taglin,"
-  e: "Intelligent process automation and optimization", pric,"
+    taglin,
+  e: "Intelligent process automation and optimization", pric,
   e: "$89/month",
-    descriptio,"
+    descriptio,
   n: "Advanced AI-powered workflow automation platform that streamlines business processes.",
     feature,
-  s: [;"
-      "Process automation""
-      "AI optimization""
-      "Workflow analytics""
-      "Integration capabilities""
-      "Custom workflows"
+  s: [;
+      "Process automation"
+      "AI optimization"
+      "Workflow analytics"
+      "Integration capabilities"
+      "Custom workflows
     ],
-    lin,"
-  k: "/services/ai-workflow-automation", categor,"
+    lin,
+  k: "/services/ai-workflow-automation", categor,
   y: "Service Expansions 2025",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -180,7 +180,7 @@ export const,
       "AI optimization",
       "Workflow analytics",
       "Integration capabilities",
-      "Custom workflows"
+      "Custom workflows
     ],
     link: '/services/ai-workflow-automation',
     category: 'Service Expansions 2025',
@@ -196,35 +196,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "ai-workflow-automation",
-    nam,"
+    nam,
   e: "AI Workflow Automation",
-    taglin,"
+    taglin,
   e: "Intelligent process automation and optimization",
-    pric,"
+    pric,
   e: "$89/month",
-    descriptio,"
+    descriptio,
   n: "Advanced AI-powered workflow automation platform that streamlines business processes.",
     feature,
-  s: [,"
-      "Process automation","
-      "AI optimization","
-      "Workflow analytics","
-      "Integration capabilities","
-      "Custom workflows"
+  s: [,
+      "Process automation",
+      "AI optimization",
+      "Workflow analytics",
+      "Integration capabilities",
+      "Custom workflows
     ],
-    lin,"
+    lin,
   k: "/services/ai-workflow-automation",
-    categor,"
+    categor,
   y: "Service Expansions 2025",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -232,16 +232,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -270,7 +270,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} } } addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -285,42 +285,42 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  serviceExpansions2025: ServiceExpansion2025[] = [ i,"
-  d: "ai-workflow-automation", nam,"
-  e: "AI Workflow Automation", taglin,"
-  e: "Intelligent process automation and optimization", pric,"
-  e: "$89/month", descriptio,"
-  n: "Advanced AI-powered workflow automation platform that streamlines business processes.", feature,"
-  s: [ "Process automation" "AI optimization" "Workflow analytics" "Integration capabilities" "Custom workflows" ], lin,"
-  k: "/services/ai-workflow-automation", categor,"
+  serviceExpansions2025: ServiceExpansion2025[] = [ i,
+  d: "ai-workflow-automation", nam,
+  e: "AI Workflow Automation", taglin,
+  e: "Intelligent process automation and optimization", pric,
+  e: "$89/month", descriptio,
+  n: "Advanced AI-powered workflow automation platform that streamlines business processes.", feature,
+  s: [ "Process automation" "AI optimization" "Workflow analytics" "Integration capabilities" "Custom workflows" ], lin,
+  k: "/services/ai-workflow-automation", categor,
   y: "Service Expansions 2025", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "ai-workflow-automation", nam,"
-  e: "AI Workflow Automation", taglin,"
-  e: "Intelligent process automation and optimization", pric,"
-  e: "$89/month", descriptio,"
-  n: "Advanced AI-powered workflow automation platform that streamlines business processes.", feature,"
-  s: [ "Process automation", "AI optimization", "Workflow analytics", "Integration capabilities", "Custom workflows" ], lin,"
-  k: "/services/ai-workflow-automation", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "ai-workflow-automation", nam,
+  e: "AI Workflow Automation", taglin,
+  e: "Intelligent process automation and optimization", pric,
+  e: "$89/month", descriptio,
+  n: "Advanced AI-powered workflow automation platform that streamlines business processes.", feature,
+  s: [ "Process automation", "AI optimization", "Workflow analytics", "Integration capabilities", "Custom workflows" ], lin,
+  k: "/services/ai-workflow-automation", categor,
   y: "Service Expansions 2025", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

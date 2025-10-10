@@ -5,14 +5,14 @@ import { execSync } from 'child_process';
 // Function to merge a branch into main
 function mergeBranch(branchName) {
   try {
-    console.log(`Merging ${branchName} into main...`);
+    console.log(`Merging ${branchName} into main...`);`
     
     // Merge the branch
-    execSync(`git merge ${branchName} --no-edit`, { stdio: 'pipe' });
-    console.log(`✓ Successfully merged ${branchName}`);
+    execSync(`git merge ${branchName} --no-edit`, { stdio: 'pipe' });`
+    console.log(`✓ Successfully merged ${branchName}`);`
     return true;
   } catch (error) {
-    console.log(`✗ Failed to merge ${branchName}: ${error.message}`);
+    console.log(`✗ Failed to merge ${branchName}: ${error.message}`);`
     return false;
   }
 }
@@ -47,21 +47,21 @@ async function main() {
         failedCount++;
       }
     } catch (error) {
-      console.log(`✗ Error processing ${branch}: ${error.message}`);
+      console.log(`✗ Error processing ${branch}: ${error.message}`);`
       failedCount++;
     }
   }
   
-  console.log(`\nMerge Summary:`);
-  console.log(`Successfully merged: ${mergedCount} branches`);
-  console.log(`Failed to merge: ${failedCount} branches`);
+  console.log(`\nMerge Summary:`);`
+  console.log(`Successfully merged: ${mergedCount} branches`);`
+  console.log(`Failed to merge: ${failedCount} branches`);`
   
   // Push changes to main
   try {
-    execSync(`git push origin main`, { stdio: 'pipe' });
-    console.log(`✓ Pushed changes to main`);
+    execSync(`git push origin main`, { stdio: 'pipe' });`
+    console.log(`✓ Pushed changes to main`);`
   } catch (error) {
-    console.log(`✗ Failed to push to main: ${error.message}`);
+    console.log(`✗ Failed to push to main: ${error.message}`);`
   }
 }
 

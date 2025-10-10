@@ -122,4 +122,4 @@ const elements = document.querySelectorAll('.animate-on-scroll');
  return () => {
  // Cleanup if needed;
  return () => {/* TODO: Fix JSX expression */}
- }}, [])}}}"
+ }}, [])}}}

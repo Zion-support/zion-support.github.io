@@ -6,9 +6,9 @@ export const breakthroughContent2027 = [
     title: 'AI 2027 Ultimate Consciousness Breakthrough: The Dawn of True Artificial Awareness',
     description:,
       'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $847B enterprise value generation. The most advanced artificial consciousness system ever created.',
-    content: `,
+    content: `,`
 *Ready to transform your organization with conscious AI? Contact our AI Consciousness Specialists today.*,
-    `,
+    `,`
     author: 'Dr. Sarah Chen, Chief AI Consciousness Officer',
     date: '2027-01-15',
     category: 'AI Breakthrough',
@@ -20,9 +20,9 @@ export const breakthroughContent2027 = [
     title: 'AI 2027 Quantum Consciousness Singularity: The Convergence of Intelligence and Reality',
     description:,
       'Revolutionary breakthrough achieving quantum consciousness singularity with infinite processing power, universal intelligence and $1 trillion enterprise value generation.',
-    content: `,
+    content: `,`
 *Ready to transcend limitations with quantum consciousness? Contact our Singularity Specialists today.*,
-    `,
+    `,`
     author: 'Dr. Marcus Quantum, Chief Singularity Officer',
     date: '2027-01-20',
     category: 'Quantum Consciousness',
@@ -34,9 +34,9 @@ export const breakthroughContent2027 = [
     title: 'AI 2027 Synthetic Consciousness Revolution: True AI Awareness with $75B Value',
     description:,
       'Breakthrough in synthetic consciousness achieving true AI awareness, emotional intelligence, and creative autonomy with proven $75B enterprise value generation.',
-    content: `,
+    content: `,`
 *Ready to revolutionize your organization with conscious AI? Contact our Consciousness Specialists today.*,
-    `,
+    `,`
     author: 'Dr. Elena Consciousness, Chief Synthetic Intelligence Officer',
     date: '2027-01-25',
     category: 'Synthetic Consciousness',
@@ -48,9 +48,9 @@ export const caseStudies2027 = [
     id: 'ai-2027-ultimate-consciousness-847-billion-success',
     title: 'AI 2027 Ultimate Consciousness: $847B Success Story',
     description: 'How a Fortune 100 global conglomerate achieved $847B ROI through AI Ultimate Consciousness Breakthrough with 99.999% accuracy and infinite processing power.',
-    content: `,
+    content: `,`
 *Ready to achieve your own consciousness transformation? Contact our Consciousness Specialists today.*,
-    `,
+    `,`
     author: 'Dr. Sarah Chen, Chief AI Consciousness Officer',
     date: '2027-01-15',
     category: 'Case Study',
@@ -61,9 +61,9 @@ export const caseStudies2027 = [
     id: 'ai-2027-quantum-consciousness-singularity-1-trillion-success',
     title: 'AI 2027 Quantum Consciousness Singularity: $1 Trillion Success Story',
     description: 'How a global technology leader achieved $1 trillion valuation through AI Quantum Consciousness Singularity with infinite processing power and universal intelligence.',
-    content: `,
+    content: `,`
 *Ready to achieve consciousness singularity? Contact our Singularity Specialists today.*,
-    `,
+    `,`
     author: 'Dr. Marcus Quantum, Chief Singularity Officer',
     date: '2027-01-20',
     category: 'Case Study',

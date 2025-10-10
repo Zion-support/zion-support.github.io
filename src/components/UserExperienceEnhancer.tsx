@@ -67,7 +67,7 @@ const,
   n: reduce) {/* TODO: Fix JSX expression */}
           }
         }
-      `;
+      `;`
       document.head.appendChild(style)}
   }, [enableSmoothScrolling]);
 
@@ -92,7 +92,7 @@ const href = link.getAttribute('href');
 
   // Global loading state;
   useEffect(() => {/* TODO: Fix JSX expression */}`
-            setLoading(`link-${href}`, true)}
+            setLoading(`link-${href}`, true)}`
         })})}
   }, [enableLoadingStates, setLoading]);
 

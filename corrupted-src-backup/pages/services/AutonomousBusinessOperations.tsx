@@ -1,19 +1,16 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
+
 ;
 const AutonomousBusinessOperation, s = () => {
 return (
  
   return(<React.Fragment>
       <Helm, e, t>
-=======
-
 const AutonomousBusinessOperation, s = () => { 
   return(<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;
         <
@@ -22,29 +19,22 @@ const AutonomousBusinessOperation, s = () => {
         /><
         <meta, nam, e='keywor, d, s'
           conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e')
-        <link, re, l = 'canonic, a, l')
+        <link, re, l = 'canonic, a, l')>
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s
-        
-      <
+        </meta>      <
 
-<<<<<<< HEAD
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' >
 );
 } {/* Hero, Sect, i, o, n */ }</div>
-=======
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' 
             <div, classNam, e='flex, justif, y-center, m, b-8'>
-              <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0
-                
-                Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;
-            <div, className='flex, justif, y-center, m, b-8'>
-              <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0
-                
-                Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;
-              <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'>
+              <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0>
+                Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;</div>            <div, className='flex, justif, y-center, m, b-8'>
+              <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0>
+                Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;</div>              <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/30, t, o-emera, l, d-6, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-2, borde, r-gre, e, n-4, 0, 0
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' /><
 
@@ -75,7 +65,6 @@ const AutonomousBusinessOperation, s = () => {
         {/* Trust, Indicat, o, r, s *
               Wh, a, t's, Included, in Your, Platfor, m
 
-<<<<<<< HEAD
         {/* Trust, Indicat, o, r, s */}</h2>
         <section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           <div, className='container, m, x-auto, p, x-6'></section>
@@ -102,7 +91,6 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'></div>
                 <Rocket, classNam, e='w-5 h-5, m, r-2' /></Rocket>
               <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d'></p>
-=======
         {/* Trust, Indicat, o, r, s */}<
         <section, classNam, e = 'py-12, b, g-bla, c, k
           <div, className='container, m, x-auto, p, x-6'><
@@ -129,7 +117,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression *
               <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'><
                 <Rocket, classNam, e='w-5 h-5, m, r-2' /><
               <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d'><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
                 Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;
             <div, className='flex, justif, y-center, m, b-8'><
               <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'><

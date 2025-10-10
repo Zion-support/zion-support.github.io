@@ -79,7 +79,7 @@ const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g;
       if (value.includes('"') && value.includes("'")) {
         modified = true;
         const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-        return `${attr}="${fixedValue}"`}
+        return `${attr}="${fixedValue}"`}"`
       return match});
 
     // Fix 3: Fix missing closing tags in JSX;
@@ -99,38 +99,38 @@ const nextLine = lines[lineIndex + 1];
       }
       
       modified = true;
-      return `${match}</${tagName}>
+      return `${match}</${tagName}>`
 );
-}`});
+}`});`
 
     // Fix 4: Fix missing commas in object literals;
 const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
     content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
-        return `${key1}: ${value1.trim()},\n    ${key2}:`}
+        return `${key1}: ${value1.trim()},\n    ${key2}:`}`
       return match});
 
-    // Fix 5: Fix malformed SVG URLs in className;
+    // Fix 5: Fix malformed SVG URLs in: className;
 const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
 const encodedSvg = encodeURIComponent(svgContent);
       modified = true;
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});
+      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});`
 
     // Fix 6: Fix missing closing parentheses in function calls;
 const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
-        return `${funcCall})\n    ${nextToken}`}
+        return `${funcCall})\n    ${nextToken}`}`
       return match});
 
     // Fix 7: Fix reserved word usage (like 'false' as identifier);
 const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g;
     content = content.replace(reservedWordPattern, (match, reserved, separator) => {
       modified = true;
-      return `: ${reserved}${separator}`});
+      return `: ${reserved}${separator}`});`
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');

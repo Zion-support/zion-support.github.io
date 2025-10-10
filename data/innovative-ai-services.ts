@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 export interface InnovativeAIService {id: string;
   name: string;
   tagline: string;
@@ -2801,7 +2801,7 @@ export interface InnovativeAIService,
   e: 'Quantum AI Brain - Computer Interface',' taglin,
   e: 'Revolutionary quantum - enhanced AI with human - like reasoning',' pric,
   e: '$2, 999',' perio,
-  d: '/month', descriptio,"
+  d: '/month', descriptio,
   n:  ,' "World's first quantum - enhanced AI with human - like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.", feature,
   s: [,' 'Quantum neural signal processing',' 'Real - time brain activity monitoring',' 'AI - powered cognitive enhancement',' 'Neural pattern recognition',' 'Secure quantum encryption',' 'Multi - modal interface support',' 'Advanced analytics dashboard',' 'API for research integration',' 'Compliance with medical standards',' '24 / 7 quantum AI support'], popula,
   r: true,' ico,
@@ -3647,11 +3647,9 @@ export interface InnovativeAIService,
   e: '2024-08-01', customer,
   s: 67, ratin,
   g: 4.7, review,
-  s: 34 } ]; ]} ]; '"
-=======
+  s: 34 } ]; ]} ]; '
     marketSize: '$1 && 1.5B BCI market'
     growthRate: '300% annual growth';
 variant: 'quantum-neural-advanced'
     contactInfo: unknown;
     color: 'from - purple - 600 to - indigo - 700'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

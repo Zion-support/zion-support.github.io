@@ -31,15 +31,15 @@ metr, i, c;
   s: {,
 pageTit, l, e: stri, n, g;
 metaDescripti, o, n: stri, n, g;
-<<<<<<< HEAD
+
 headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
   6: numb, e, r};
-=======
+
 headin, g, s: { h,
     1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
   6: numb, e, r;
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     imag, e, s: { tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l;
   t: numb, e, r };
     lin, k, s: { tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a;
@@ -58,17 +58,17 @@ interface, SEORepor, t {/* TODO: Fix JSX expression *
     wordCou, n, t: numb, e, r;
     readabilitySc, o, r;
     readabilitySc, o, r,
-<<<<<<< HEAD
+
   e: numb, e, r};
   lastUpdat, e, d: numb, e, r}
 const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-=======
+
   e: numb, e, r;
   };
   lastUpdat, e, d: numb, e, r;
 }
 const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     }
     {/* TODO: Fix JSX expression *
     }
@@ -143,14 +143,14 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       descripti, o, n: 'Page, loading, time affects, SEO, rankings',';
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'performan, c, e',';
-<<<<<<< HEAD
+
       f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN',';
       sco, r, e: 70}
-=======
+
       f, i, x: 'Optimize, image, s, minimize, CS, S
       sco, r, e: 70;
     }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       id: 'intern, a, l-linki, n, g',';
       ty, p, e: 'in, f, o',';
@@ -192,19 +192,19 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     setIsRunni, n, g(tr, u, e);
     /
   await, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0));
-<<<<<<< HEAD
+
     // Simulate, some, issues based, on, random facto, r, s;
   const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {;
 let, typ, e = iss, u, e.ty, p, e;);
 let, scor, e = iss, u, e.sco, r, e;)
       // Simulate, some, issues being, fixed, or appeari, n, g;)
-=======
+
     /
   const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {)
       let, typ, e = iss, u, e.ty, p, e;)
       let, scor, e = iss, u, e.sco, r, e;)
       /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {;
         ty, p, e = 'warni, n, g';
         sco, r, e = 60} else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {;
@@ -293,12 +293,12 @@ let, scor, e = iss, u, e.sco, r, e;)
   ,
     l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7;
-<<<<<<< HEAD
+
         readabilitySco, r, e: 72})
-=======
+
         readabilitySco, r, e: 72;)
       });
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
       lastUpdat, e, d: Da, t, e.n, o, w()
         pageTi, t, l,
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',';
@@ -316,30 +316,27 @@ let, scor, e = iss, u, e.sco, r, e;)
         readabilitySco, r, e: 72}
       lastUpdat, e, d: Da, t, e.n, o, w()
     });
-<<<<<<< HEAD
+
     setIsRunni, n, g(fal, s, e)};
   const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */}
-=======
+
     setIsRunni, n, g(fal, s, e);
   };
   const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 }
-ca, s, e 'err, o, r':';"
+ca, s, e 'err, o, r':';
 retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0" 
-ca, s, e 'warni, n, g':';"
-retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" 
-defau, l, t:"
-<<<<<<< HEAD
-retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;"}};
-=======
+ca, s, e 'warni, n, g':';
+retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" >
+defau, l, t:
+</XCircle>retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0 />;"}};
 retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" 
 };
   };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+>
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {
-swit, c, h (impa, c, t) {
-ca, s, e 'hi, g, h':
+swit, c, h (impa, c, t) {</CheckCircle>ca, s, e 'hi, g, h':
 retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';
 ca, s, e 'medi, u, m':
 retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 0';
@@ -351,7 +348,7 @@ retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 
 defa, u, l;
   t:
 retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
-<<<<<<< HEAD
+
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression */}
 }};
   const, getCategoryIco, n = (catego, r, y: stri, n, g) => {/* TODO: Fix JSX expression */}
@@ -366,7 +363,7 @@ const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego,
 const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;);
 const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */})
-=======
+
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression *
 };
   };
@@ -383,7 +380,7 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
     const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;)
   const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression *)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   }) || [];
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))];
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];
@@ -398,49 +395,48 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
       <div, className="flex, justif, y-between, item, s-center, m, b-6">";<
         <d, i, v>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"><
-            <Search, className="w-6 h-6  
+            <Search, className="w-6 h-6  "
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";<
-  return ("
-    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";"
+  return (
+    <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";
       <div, className="flex, justif, y-between, item, s-center, m, b-6">";
         <d, i, v><
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"><
-            <Search, className="w-6 h-6  /><
-          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";"
+            <Search, className="w-6 h-6  /><"
+          <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";
             <Search, className="w-6 h-6" 
             SEO, Audit, Dashboard;
           <
           <p, className="te, x, t-gr, a, y-600, m, t-1">Comprehensive, SEO, analysis and, optimization, recommendations<
         <
         <butt, o, n;
-<<<<<<< HEAD
+
   onCli, c, k={runSEOAud, i, t}
           disabl, e, d={isRunni, n, g}
           classNa, m, e={`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`
             isRunni, n, g}
-=======
+
   onCli, c, k = { runSEOAud, i, t };
           disabl, e, d = { isRunni, n, g };
           classNa, m, e = { `px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`
             isRunni, n, g; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'}
           classNa, m, e={/* TODO: Fix JSX expression *
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0}`}`;`
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'`
-          }`}`;`
+          }`}`;`>`
         >
-          {
-isRunni, n, g ? (
-<<<<<<< HEAD
+          {</butt>isRunni, n, g ? (
+
 <React.Fragment>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
 Analyzi, n, g...)
 </React.Fragment>)
 ) : (
 <React.Fragment>{}
-<Search, className="w-4 h-4  /></Search>
-<Search, className="w-4 h-4" />";</Search>Run</Search>, SEO, Audit;
+<Search, className="w-4 h-4  /></Search>"
+<Search, className="w-4 h-4 />";</Search>Run</Search>, SEO, Audit;
 </React.Fragment>
 )
 }
@@ -455,14 +451,13 @@ Analyzi, n, g...)
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";</div>
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";</div>
               <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
-=======
 <>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"><
 Analyzi, n, g...)
 <
 ) : (<>{}
-<Search, className="w-4 h-4  /><
-<Search, className="w-4 h-4" />";</Search>Run<
+<Search, className="w-4 h-4  /><"
+<Search, className="w-4 h-4 />";</Search>Run<
 <)
 )
 }
@@ -476,7 +471,6 @@ Analyzi, n, g...)
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";<
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";<
               <div, className="flex, justif, y-between, item, s-cent, e, r">";<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 <d, i, v>
                   <p, className="te, x, t-bl, u, e-100, tex, t-sm">SEO, Scor, e<
         ><
@@ -486,17 +480,17 @@ Analyzi, n, g...)
       <
       {/* TODO: Fix JSX expression *
           {/* SEO, Score, Overview *
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">""
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"><
               <div, className="flex, justif, y-between, item, s-cent, e, r"><
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";"
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";"
+          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";
+            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";
               <div, className="flex, justif, y-between, item, s-cent, e, r">";
                 <d, i, v><
                   <p, className="te, x, t-bl, u, e-100, tex, t-sm">SEO, Scor, e<
                   <p, className="te, x, t-3xl, fon, t-bo, l, d">{repo, r, t.overallSco, r, e}%<
                 <
-                <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  /><
+                <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  /><"
                 <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0" 
               <
             <
@@ -505,13 +499,13 @@ Analyzi, n, g...)
                 <d, i, v>
                   <p, className="te, x, t-r, e, d-600, tex, t-sm">Erro, r, s<
             <
-            <div, className="bg-r, e, d-50, rounde, d-l, g, p-4">";"
+            <div, className="bg-r, e, d-50, rounde, d-l, g, p-4">";
               <div, className="flex, justif, y-between, item, s-cent, e, r">";
                 <d, i, v><
                   <p, className="te, x, t-r, e, d-600, tex, t-sm">Erro, r, s<
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-7, 0, 0">{repo, r, t.erro, r, s}<
                 <
-                <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0  /><
+                <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0  /><"
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0" 
               <
             <
@@ -520,13 +514,13 @@ Analyzi, n, g...)
                 <d, i, v>
                   <p, className="te, x, t-yell, o, w-600, tex, t-sm">Warnin, g, s<
             <
-            <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4">";"
+            <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4">";
               <div, className="flex, justif, y-between, item, s-cent, e, r">";
                 <d, i, v><
                   <p, className="te, x, t-yell, o, w-600, tex, t-sm">Warnin, g, s<
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-7, 0, 0">{repo, r, t.warnin, g, s}<
                 <
-                <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0  /><
+                <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0  /><"
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0" 
               <
             <
@@ -535,13 +529,13 @@ Analyzi, n, g...)
                 <d, i, v>
                   <p, className="te, x, t-gre, e, n-600, tex, t-sm">Total, Issue, s<
             <
-            <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4">";"
+            <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4">";
               <div, className="flex, justif, y-between, item, s-cent, e, r">";
                 <d, i, v><
                   <p, className="te, x, t-gre, e, n-600, tex, t-sm">Total, Issue, s<
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0">{repo, r, t.totalIssu, e, s}<
                 <
-                <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  /><
+                <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  /><"
                 <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0" 
               <
             <
@@ -577,7 +571,7 @@ Analyzi, n, g...)
           {/* SEO, Metric, s *
           <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6"><
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s<
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">"
+            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">
               <d, i, v><
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s<
                 <div, className="spa, c, e-y-1, tex, t-sm"><
@@ -586,12 +580,12 @@ Analyzi, n, g...)
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}<
                   <
                   <div, className="flex, justif, y-betwe, e, n"><
-          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6">";"
+          <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6">";
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s<
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">";
               <d, i, v><
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Content, Analysi, s<
-                <div, className="spa, c, e-y-1, tex, t-sm">";"
+                <div, className="spa, c, e-y-1, tex, t-sm">";
                   <div, className="flex, justif, y-betwe, e, n">";
                     <sp, a, n>Word, Cou, n,
   t: <
@@ -634,7 +628,7 @@ Analyzi, n, g...)
                     <sp, a, n>Total, Heading, s: <
                     <span, className="fo, n, t-medi, u, m"><
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e<
-                <div, className="spa, c, e-y-1, tex, t-sm">";"
+                <div, className="spa, c, e-y-1, tex, t-sm">";
                   <div, className="flex, justif, y-betwe, e, n">";
                     <sp, a, n>H1, s: <
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.headin, g, s.h1}<
@@ -677,7 +671,7 @@ Analyzi, n, g...)
   t: <
                     <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}<
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s<
-                <div, className="spa, c, e-y-1, tex, t-sm">";"
+                <div, className="spa, c, e-y-1, tex, t-sm">";
                   <div, className="flex, justif, y-betwe, e, n">";
                     <sp, a, n>Imag, e, s: <
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.imag, e, s.tot, a, l}<
@@ -699,10 +693,9 @@ Analyzi, n, g...)
             <d, i, v><
               <label, className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Catego, r, y<
               <sele, c, t;
-  val, u, e = { selectedCatego, r, y };
-                onChan, g, e={(e) => setSelectedCatego, r, y(e.targ, e, t.val, u, e)}"
-                classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
-              >
+  val, u, e = { selectedCatego, r, y };>
+                onChan, g, e={(e) => setSelectedCatego, r, y(e.targ, e, t.val, u, e)}
+                classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"</sele>              >
                 {categori, e, s.m, a, p(catego, r, y => ()
                   <option, ke, y={catego, r, y} val, u, e={catego, r, y}>)
                 {/* TODO: Fix JSX expression *
@@ -715,10 +708,9 @@ Analyzi, n, g...)
             <d, i, v><
               <label, className="block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-1">Impa, c, t<
               <sele, c, t;
-  val, u, e = { selectedImpa, c, t };
-                onChan, g, e={(e) => setSelectedImpa, c, t(e.targ, e, t.val, u, e)}"
-                classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"
-              >
+  val, u, e = { selectedImpa, c, t };>
+                onChan, g, e={(e) => setSelectedImpa, c, t(e.targ, e, t.val, u, e)}
+                classNa, m, e="border, borde, r-gr, a, y-300, rounde, d-lg, p, x-3, p, y-2, tex, t-sm"</sele>              >
                 {impac, t, s.m, a, p(impa, c, t => ()
                   <option, ke, y={impa, c, t} val, u, e={impa, c, t}>)
                 {/* TODO: Fix JSX expression *
@@ -735,14 +727,14 @@ Analyzi, n, g...)
             <AnimatePresen, c, e><
               {filteredIssu, e, s.m, a, p((iss, u, e) => (<moti, o, n.d, i, v;
           {/* SEO, Issue, s *
-          <div, className="spa, c, e-y-3">";"
+          <div, className="spa, c, e-y-3">";
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s<
             <AnimatePresen, c, e><
               {/* TODO: Fix JSX expression *
   k, e, y = { iss, u, e.id };
                   initi, a, l={{ opaci, t, y: 0, y: 20 }}
                   anima, t, e={{ opaci, t, y: 1, y: 0 }}
-                  ex, i, t={{ opaci, t, y: 0, y: -20 }}"
+                  ex, i, t={{ opaci, t, y: 0, y: -20 }}
                   classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-l, g, p-4, hove, r: shad, o, w-md, transitio, n-shad, o, w"
                 >
                   <div, className="flex, item, s-start, justif, y-betwe, e, n">";<
@@ -755,14 +747,14 @@ Analyzi, n, g...)
                         <div, className="flex, item, s-center, ga, p-2, m, b-1">";<
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}<
                 ><
-                  <div, className="flex, item, s-start, justif, y-betwe, e, n">";"
+                  <div, className="flex, item, s-start, justif, y-betwe, e, n">";
                     <div, className="flex, item, s-start, ga, p-3, fle, x-1">";
-                      {getIssueIc, o, n(iss, u, e.ty, p, e)}"
+                      {getIssueIc, o, n(iss, u, e.ty, p, e)}
                       <div, className="fl, e, x-1"><
                         <div, className="flex, item, s-center, ga, p-2, m, b-1"><
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}<
-                      <div, className="fl, e, x-1">";"
-                        <div, className="flex, item, s-center, ga, p-2, m, b-1">";"
+                      <div, className="fl, e, x-1">";
+                        <div, className="flex, item, s-center, ga, p-2, m, b-1">";
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}<
                           <span, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, borde, r ${getImpactCol, o, r(iss, u, e.impa, c, t)}`}>`;`
                             {iss, u, e.impa, c, t}
@@ -787,12 +779,12 @@ Analyzi, n, g...)
                         <
                         <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}<
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"><
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fi,"
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fi,
   x: <
                           <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}<
                         <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}<
-                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">";"
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fi,"
+                        <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">";
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fi,
   x: <
                           <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}<
                         <
@@ -806,18 +798,18 @@ Analyzi, n, g...)
           {/* Last, Update, d *
           <div, className="mt-6, tex, t-center, tex, t-sm, tex, t-gr, a, y-5, 0, 0">";
             Last, update, d: {new, Dat, e(repo, r, t.lastUpdat, e, d).toLocaleStri, n, g()}
-<<<<<<< HEAD
+
           </d, i, v>
         </React.Fragment>
       )}
     </d, i, v>
   )};
-=======
+
           <
         <
       )}
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 export default SEOAuditDashboard;"`

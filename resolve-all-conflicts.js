@@ -25,7 +25,7 @@ const conflictFiles = gitStatus;
 // console.log removed for production
 // Function to resolve conflicts in a file;
 function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
-  found: ${filePath}`);
+  found: ${filePath}`);`
       return false}
 
     // console.log removed for production

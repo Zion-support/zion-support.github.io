@@ -150,7 +150,7 @@ let _score = 0;)
         !element.getAttribute('aria-describedby') &&,
         element.getAttribute('aria-invalid') === 'true') {,
   private optimizeFocusManagement(): void {/* TODO: Fix JSX expression */}
-        //         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;
+        //         const errorId = `error-${Math.random().toString(36).substr(2, 9)}`;`
         element.setAttribute('aria-describedby', errorId);
         improvements.push('Added aria-describedby for error state');
         score += 15}

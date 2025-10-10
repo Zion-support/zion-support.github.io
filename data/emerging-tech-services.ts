@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 
       'Quantum-secured space communication',
@@ -1410,7 +1410,7 @@ varian,
     perio,
   d: '/month',
     descriptio,
-  n: unknown,"
+  n: unknown,
       "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.",
     feature,
   s: [,
@@ -3249,7 +3249,7 @@ marketSize: '$400B smart city market, 300% annual growth',
     price: '$75,999',
     period: '/month',
     description:,
-      "World's first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations."
+      "World's first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.
     features: [;
       'Waste management'
       'Public safety'
@@ -3304,7 +3304,7 @@ varian,
   e: '$75,999'
     perio,
   d: '/month'
-    descriptio,"
+    descriptio,
   n: "World's first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.",
   feature,
   s: [;
@@ -5050,7 +5050,7 @@ export const,
   e: 'Quantum Space Communications',' taglin,
   e: 'Revolutionary quantum - secured space communication network',' pric,
   e: '$75, 999',' perio,
-  d: '/month', descriptio,"
+  d: '/month', descriptio,
   n:  ,' "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.", feature,
   s: [,' 'Quantum - secured space communication', ' 'Satellite quantum key distribution',' 'Interplanetary communication protocols',' 'Quantum encryption for space data',' 'Real - time space communication monitoring',' 'Quantum - secured satellite networks',' 'Space debris tracking and avoidance',' 'Quantum communication ground stations',' 'Advanced space analytics dashboard',' '24 / 7 quantum space operations center'], popula,
   r: true,' 'Quantum communication',' 'Satellite technology',' 'React',' 'Node && Node.js',' 'PostgreSQL',' 'Redis',' 'AWS',' 'Custom quantum hardware'], integration,
@@ -5436,7 +5436,7 @@ export const,
   e: 'Quantum Space Communications',' taglin,
   e: 'Revolutionary quantum - secured space communication network',' pric,
   e: '$75, 999',' perio,
-  d: '/month', descriptio,"
+  d: '/month', descriptio,
   n:  ,' "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.", feature,
   s: [,' 'Quantum - secured space communication', ' 'Satellite quantum key distribution',' 'Interplanetary communication protocols',' 'Quantum encryption for space data',' 'Real - time space communication monitoring',' 'Quantum - secured satellite networks',' 'Space debris tracking and avoidance',' 'Quantum communication ground stations',' 'Advanced space analytics dashboard',' '24 / 7 quantum space operations center'], popula,
   r: true,' ico,
@@ -5940,7 +5940,7 @@ export const,
   e: 'Quantum Space Communications'' taglin,
   e: 'Revolutionary quantum-secured space communication network'' pric,
   e: '$75,999'' perio,
-  d: '/month' descriptio,"
+  d: '/month' descriptio,
   n:' "World's first quantum-secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations." feature,
   s: [' 'Quantum-secured space communication'' 'Satellite quantum key distribution'' 'Interplanetary communication protocols'' 'Quantum encryption for space data'' 'Real-time space communication monitoring'' 'Quantum-secured satellite networks'' 'Space debris tracking and avoidance'' 'Quantum communication ground stations'' 'Advanced space analytics dashboard'' '24/7 quantum space operations center' ] popula,
   r: true' ico,
@@ -6339,8 +6339,6 @@ export const,
   e: '2024 - 09 - 01' customer,
   s: 35, ratin,
   g: 4.8, review,
-  s: 28} ; '"
-=======
+  s: 28} ; '
     growth_rate: '500% annual growth';
 variant: 'quantum - space'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

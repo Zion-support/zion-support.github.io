@@ -114,7 +114,7 @@ const entries = list.getEntries();
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,
+        message: `Unhandled Promise Rejection: ${event.reason}`,`
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href

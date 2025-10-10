@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {

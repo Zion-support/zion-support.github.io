@@ -7,7 +7,7 @@ return (
 );
 } {' ' })
       {/* Animated, Backgroun, d */})
-      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" />
+      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e />
       <div, classNam, e = 'absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-r, fro, m-transparent, vi, a-whi, t, e/5, t, o-transparent, transfor, m -sk, e, w-y-1' />
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'>
         <div, className='te, x, t-center, m, b-16'>
@@ -23,7 +23,7 @@ return (
 const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
       {/* Animated, Backgroun, d */}
-      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" /></div>
+      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e /></div>
       <div, classNam, e = 'absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-r, fro, m-transparent, vi, a-whi, t, e/5, t, o-transparent, transfor, m -sk, e, w-y-1' /></div>
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'></div>
         <div, className='te, x, t-center, m, b-16'></div>
@@ -332,4 +332,3 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
     </div>
   )};
 export default January2025ContentShowcaseBanner;
-"

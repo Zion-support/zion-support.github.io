@@ -70,9 +70,9 @@ Home;
                 href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
 // >
 //                 Explore Our Services;
-          <Link className="w-5 h-5 ml-2" />
+          <Link className="w-5 h-5 ml-2 />"
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2 />"
 // Call +1 302 464 0950;
           </a>
         </section>
@@ -96,18 +96,18 @@ Home;
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <CheckCircle className="w-6 h-6 text-blue-600" />
+                  <CheckCircle className="w-6 h-6 text-blue-600 />"
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
 // Proven Results;
           </h3>
                 <p className="text-gray-600">
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Star className="w-6 h-6 text-green-600" />
+                  <Star className="w-6 h-6 text-green-600 />"
 Expert Team;
                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Link className="w-6 h-6 text-purple-600" />
+                  <Link className="w-6 h-6 text-purple-600 />"
                   Fast Implementation;
                   Get your AI solutions up and running quickly with our streamlined implementation process.
         {/* CTA Section */}
@@ -118,7 +118,7 @@ Ready to Transform Your Business?
               Let's discuss how our AI solutions can drive your success.
                 href="/contact" Get Started Today;
                 href="/blog" View Our Blog;
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2 />"
       </main>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">

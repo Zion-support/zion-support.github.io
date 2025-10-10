@@ -72,7 +72,7 @@ export const,
       "AI defect detection",
       "Performance monitoring",
       "Quality metrics",
-      "Continuous integration"
+      "Continuous integration
     ],
     link: '/services/ai-quality-assurance',
     category: 'Verified Services 2025',
@@ -99,9 +99,9 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
     tagline: "Automated testing and quality control", price: '$79/month',
     description: 'AI-powered quality assurance platform that automates testing and ensures software quality.',
     features: [;
-      "Automated testing"
-      "AI defect detection"
-      "Performance monitoring"
+      "Automated testing
+      "AI defect detection
+      "Performance monitoring
       "Quality metrics",
       "Continuous integration"],
     link: "/services/ai-quality-assurance", category: "Verified Services 2025",
@@ -128,41 +128,41 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,
   e: "+1 302 464 0950",
-  i,"
+  i,
   d: "ai-quality-assurance",
-    nam,"
+    nam,
   e: "AI Quality Assurance Platform",
-    taglin,"
+    taglin,
   e: "Automated testing and quality control",
-    pric,"
+    pric,
   e: "$79/month",
-    descriptio,"
+    descriptio,
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
     feature,
-  s: [,"
-      "Automated testing","
-      "AI defect detection","
-      "Performance monitoring","
-      "Quality metrics","
-      "Continuous integration"
+  s: [,
+      "Automated testing",
+      "AI defect detection",
+      "Performance monitoring",
+      "Quality metrics",
+      "Continuous integration
     ],
-    lin,"
+    lin,
   k: "/services/ai-quality-assurance",
-    categor,"
+    categor,
   y: "Verified Services 2025",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -190,41 +190,41 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
 }
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
-    i,"
-  d: "ai-quality-assurance", nam,"
+    i,
+  d: "ai-quality-assurance", nam,
   e: "AI Quality Assurance Platform",
-    taglin,"
-  e: "Automated testing and quality control", pric,"
+    taglin,
+  e: "Automated testing and quality control", pric,
   e: "$79/month",
-    descriptio,"
+    descriptio,
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
     feature,
-  s: [;"
-      "Automated testing""
-      "AI defect detection""
-      "Performance monitoring""
-      "Quality metrics""
-      "Continuous integration"
+  s: [;
+      "Automated testing"
+      "AI defect detection"
+      "Performance monitoring"
+      "Quality metrics"
+      "Continuous integration
     ],
-    lin,"
-  k: "/services/ai-quality-assurance", categor,"
+    lin,
+  k: "/services/ai-quality-assurance", categor,
   y: "Verified Services 2025",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -239,7 +239,7 @@ export const,
       "AI defect detection",
       "Performance monitoring",
       "Quality metrics",
-      "Continuous integration"
+      "Continuous integration
     ],
     link: '/services/ai-quality-assurance',
     category: 'Verified Services 2025',
@@ -255,35 +255,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "ai-quality-assurance",
-    nam,"
+    nam,
   e: "AI Quality Assurance Platform",
-    taglin,"
+    taglin,
   e: "Automated testing and quality control",
-    pric,"
+    pric,
   e: "$79/month",
-    descriptio,"
+    descriptio,
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
     feature,
-  s: [,"
-      "Automated testing","
-      "AI defect detection","
-      "Performance monitoring","
-      "Quality metrics","
-      "Continuous integration"
+  s: [,
+      "Automated testing",
+      "AI defect detection",
+      "Performance monitoring",
+      "Quality metrics",
+      "Continuous integration
     ],
-    lin,"
+    lin,
   k: "/services/ai-quality-assurance",
-    categor,"
+    categor,
   y: "Verified Services 2025",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -291,16 +291,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -334,22 +334,22 @@ export interface VerifiedRealService2025Batch2,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,
   e: "+1 302 464 0950",
-  i,"
-  d: "ai-quality-assurance", nam,"
-  e: "AI Quality Assurance Platform", taglin,"
-  e: "Automated testing and quality control", pric,"
-  e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
-  s: [ "Automated testing", "AI defect detection", "Performance monitoring", "Quality metrics", "Continuous integration" ], lin,"
-  k: "/services/ai-quality-assurance", categor,"
+  i,
+  d: "ai-quality-assurance", nam,
+  e: "AI Quality Assurance Platform", taglin,
+  e: "Automated testing and quality control", pric,
+  e: "$79/month", descriptio,
+  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,
+  s: [ "Automated testing", "AI defect detection", "Performance monitoring", "Quality metrics", "Continuous integration" ], lin,
+  k: "/services/ai-quality-assurance", categor,
   y: "Verified Services 2025", realImplementatio,
   n: true, contactInf,
-  o: emai,"
+  o: emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; addres,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -364,41 +364,41 @@ export interface VerifiedRealService2025Batch2,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [ i,"
-  d: "ai-quality-assurance", nam,"
-  e: "AI Quality Assurance Platform", taglin,"
-  e: "Automated testing and quality control", pric,"
-  e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
-  s: [ "Automated testing" "AI defect detection" "Performance monitoring" "Quality metrics" "Continuous integration" ], lin,"
-  k: "/services/ai-quality-assurance", categor,"
+  verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [ i,
+  d: "ai-quality-assurance", nam,
+  e: "AI Quality Assurance Platform", taglin,
+  e: "Automated testing and quality control", pric,
+  e: "$79/month", descriptio,
+  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,
+  s: [ "Automated testing" "AI defect detection" "Performance monitoring" "Quality metrics" "Continuous integration" ], lin,
+  k: "/services/ai-quality-assurance", categor,
   y: "Verified Services 2025", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "ai-quality-assurance", nam,"
-  e: "AI Quality Assurance Platform", taglin,"
-  e: "Automated testing and quality control", pric,"
-  e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
-  s: [ "Automated testing", "AI defect detection", "Performance monitoring", "Quality metrics", "Continuous integration" ], lin,"
-  k: "/services/ai-quality-assurance", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "ai-quality-assurance", nam,
+  e: "AI Quality Assurance Platform", taglin,
+  e: "Automated testing and quality control", pric,
+  e: "$79/month", descriptio,
+  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,
+  s: [ "Automated testing", "AI defect detection", "Performance monitoring", "Quality metrics", "Continuous integration" ], lin,
+  k: "/services/ai-quality-assurance", categor,
   y: "Verified Services 2025", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

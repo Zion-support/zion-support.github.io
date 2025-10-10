@@ -15,7 +15,7 @@ p: errorReport.timestamp }); // Send to external error monitoring services await
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToErrorMonitoringServices(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}
-  s: {' 'Content-Type': 'application/json',' 'X-Sentry-Auth': `Sentry sentry_version=7} sentry_key=${process.env.SENTRY_KEY}` }) bod,
+  s: {' 'Content-Type': 'application/json',' 'X-Sentry-Auth': `Sentry sentry_version=7} sentry_key=${process.env.SENTRY_KEY}` }) bod,`
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: errorReport.error.message} stacktrac,
   e: {/* TODO: Fix JSX expression */})
@@ -29,7 +29,7 @@ p: errorReport.timestamp }); // Send to external error monitoring services await
   d: errorReport.sessionId} componentStac,
   k: errorReport.errorInfo.componentStack } }) })} // LogRocket if (process.env.LOGROCKET_APP_ID) {/* TODO: Fix JSX expression */}`
   s://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors` {/* TODO: Fix JSX expression */}`
-  s: {' 'Content-Type': 'application/json'}' 'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}` }, bod,
+  s: {' 'Content-Type': 'application/json'}' 'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}` }, bod,`
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   t: errorReport.userAgent} timestam)
   p: errorReport.timestamp }) })} // Custom webhook if (process.env.ERROR_WEBHOOK_URL) {/* TODO: Fix JSX expression */}
@@ -54,7 +54,7 @@ p: errorReport.timestamp }); // Send to external error monitoring services await
   e: ${errorReport.timestamp} User,
   Agent: ${errorReport.userAgent} Stack)',
   Trace:
-        Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */}
+        Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */}`
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}

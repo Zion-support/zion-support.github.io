@@ -174,50 +174,50 @@ const interaction: UserInteraction = {,
     const { lcp, fid, cls, fcp } = this.metrics;
     let _score = 100;
 
-    // LCP scoring (Good: <2.5s, Needs Improvement: 2.5-4s, Poor: >4s),
+    // LCP scoring (Good: <2.5s, Needs Improvement: 2.5-4s, Poor>4s),
     if (lcp !== null) {,
       if (lcp > 4000) score -= 30;
       else if (lcp > 2500) score -= 15}
 
-    // FID scoring (Good: <100ms, Needs Improvement: 100-300ms, Poor: >300ms),
+    // FID scoring (Good: <100ms, Needs Improvement: 100-300ms, Poor>300ms),
     if (fid !== null) {,
       if (fid > 300) score -= 30;
       else if (fid > 100) score -= 15}
 
-    // CLS scoring (Good: <0.1, Needs Improvement: 0.1-0.25, Poor: >0.25),
+    // CLS scoring (Good: <0.1, Needs Improvement: 0.1-0.25, Poor>0.25),
     if (cls !== null) {,
       if (cls > 0.25) score -= 30;
       else if (cls > 0.1) score -= 15}
 
-    // FCP scoring (Good: <1.8s, Needs Improvement: 1.8-3s, Poor: >3s),
+    // FCP scoring (Good: <1.8s, Needs Improvement: 1.8-3s, Poor>3s),
     if (fcp !== null) {,
       if (fcp > 3000) score -= 10;
       else if (fcp > 1800) score -= 5;
     // LCP scoring (Goo,
   d: <2.5s, Needs,
   Improvement: 2.5-4s, Poo)
-  r: >4s)
+  r>4s)
     if (lcp !== null) {/* TODO: Fix JSX expression */}
     }
 
     // FID scoring (Goo,
   d: <100ms, Needs,
   Improvement: 100-300ms, Poo)
-  r: >300ms)
+  r>300ms)
     if (fid !== null) {/* TODO: Fix JSX expression */}
     }
 
     // CLS scoring (Goo,
   d: <0.1, Needs,
   Improvement: 0.1-0.25, Poo)
-  r: >0.25)
+  r>0.25)
     if (cls !== null) {/* TODO: Fix JSX expression */}
     }
 
     // FCP scoring (Goo,
   d: <1.8s, Needs,
   Improvement: 1.8-3s, Poo)
-  r: >3s)
+  r>3s)
     if (fcp !== null) {/* TODO: Fix JSX expression */}
     }
 
@@ -228,27 +228,27 @@ const interaction: UserInteraction = {,
 Core Web,
   Vitals:
 - LC,`
-  P: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
+  P: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}`
 - FI,`
-  D: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
+  D: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}`
 - CL,
   S: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
 - FC,`
-  P: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+  P: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}`
 
     return `
 Performance Report:
 Overall Score: ${score}/100;
 Core Web Vitals:
-- LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
-- FID: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
+- LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}`
+- FID: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}`
 - CLS: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
-- FCP: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
+- FCP: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}`
 
 Page Load Metrics:
-- TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
-- Load Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
-- DOM Content Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
+- TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}`
+- Load Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}`
+- DOM Content Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}`
 
 User Interactions: ${interactions.length}
 - Clicks: ${interactions.filter(i => i.type === 'click').length}
@@ -258,11 +258,11 @@ User Interactions: ${interactions.length}
 Page Load,
   Metrics:
 - TTF,`
-  B: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
+  B: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}`
 - Load,`
-  Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
+  Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}`
 - DOM Content,`
-  Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
+  Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}`
 
 User,
   Interactions: ${interactions.length}
@@ -274,7 +274,7 @@ User,
   s: ${interactions.filter(i => i.type === 'keydown').length}
 - Resize,
   s: ${interactions.filter(i => i.type === 'resize').length}`
-    `.trim()}
+    `.trim()}`
 
   cleanup(): void {/* TODO: Fix JSX expression */}
     }

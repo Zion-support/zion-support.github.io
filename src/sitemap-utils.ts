@@ -26,7 +26,7 @@ export const generateSitemap = (pages: Array;)
 ';
   pages.forEach(page => {// TODO: Add content}
 }
-    sitemap += `  
+    sitemap += `  `
           
           
           
@@ -36,12 +36,12 @@ export const generateSitemap = (pages: Array;)
           
           
           <url>
+`;`
+    sitemap += `    <loc>${baseUrl}${page.path}</loc>`
 `;
-    sitemap += `    <loc>${baseUrl}${page.path}</loc>
+    sitemap += `    <priority>${page.priority}</priority>`
 `;
-    sitemap += `    <priority>${page.priority}</priority>
-`;
-    sitemap += `  </url>
+    sitemap += `  </url>`
 `});
   sitemap += '</urlset>';
   return sitemap};

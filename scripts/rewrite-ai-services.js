@@ -3,24 +3,24 @@ import fs from 'fs';
 
 // console.log removed for production
 ;
-const content = `'use client';
+const content = `'use client';`
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIServicesPage: React.FC = () => {;
 const aiServices = [,
-=======
+
 import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {,
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -122,10 +122,9 @@ const AIServicesPage: React.FC = () => {
   return(<React.Fragment>
       <SEOOptimizer;
         title="AI Services - Zion Tech Group"
-        description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications."
+        description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications.">
         keywords = { ['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence'] };
-        canonicalUrl="https: //ziontechgroup.com)
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)
+        canonicalUrl="https: //ziontechgroup.com)"</SEOOptimizer>      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)
         <Navigation 
         <main className="container mx-auto px-4 py-16 pt-24">),
           {/* Hero Section *
@@ -136,16 +135,15 @@ const AIServicesPage: React.FC = () => {
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
               Advanced Artificial Intelligence Solutions;
             <
-            <p className="text-base sm:text-lg m,
+            <p className="text-base sm:text-lg m,">
     d:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your business with our cutting-edge AI services. From machine learning to computer vision)
-              we provide comprehensive artificial intelligence solutions that drive innovation and growth.
+              Transform your business with our cutting-edge AI services. From machine learning to computer vision)</p>              we provide comprehensive artificial intelligence solutions that drive innovation and growth.
             <
           <
 ,
           {/* Services Grid *
           <section className="mb-16">
-            <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 x,
+            <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 x,"
     l:grid-cols-4 gap-6">,
               {aiServices.map((service, index) => (<article key={index} className="quantum-card p-6 energy-pulse hover: scale-105 transition-all duration-300">,
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">,
@@ -170,13 +168,12 @@ const AIServicesPage: React.FC = () => {
                   <div className="text-center"><
                     <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}<
                     <a;
-                      href="
+                      href=
                       className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover: bg-current hove,
     r:text-slate-900\`}
-                      aria-label="Get Started"
+                      aria-label="Get Started">
                     >
-                      Get Started;
-                    <
+                      Get Started;</a>                    <
                   <
                 <
               ))}
@@ -194,18 +191,16 @@ const AIServicesPage: React.FC = () => {
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a;
-                  href="
+                  href=
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                  aria-label="Get Free Consultation"
+                  aria-label="Get Free Consultation">
                 >
-                  Get Free Consultation;
-                <
+                  Get Free Consultation;</a>                <
                 <a;
                   href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" 
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,>"
+    r:text-slate-900 transition-all duration-300
+                ></a>                  <Phone className="w-5 h-5" 
                   +1 302 464 0950;
                 <
               <
@@ -213,23 +208,21 @@ const AIServicesPage: React.FC = () => {
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>,
     </React.Fragment>)};
 
-export default AIServicesPage;`;
+export default AIServicesPage;`;`
 
 fs.writeFileSync('./app/ai-services/page.tsx', content);
 // console.log removed for production
-=======
+
         <Footer 
       <
     <
 };
 
-export default AIServicesPage;`;
-
+export default AIServicesPage;`;`
+>
 fs.writeFileSync('./app/ai-services)
-console.log('✅ Rewritten ai-services page successfully');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+console.log('✅ Rewritten ai-services page successfully');</Footer>

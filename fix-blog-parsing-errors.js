@@ -47,7 +47,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
       newLines.push(line)}
     
     if (modified) {/* TODO: Fix JSX expression */}
-  errors: ${path.relative(__dirname, filePath)}`)}
+  errors: ${path.relative(__dirname, filePath)}`)}`
   } catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 }

@@ -159,15 +159,14 @@ const quickLinks = [
 const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
-<<<<<<< HEAD
+
 ;
 const searchResults = searchQuery 
     ? documentation.filter(doc => 
-=======
 
   const searchResults = searchQuery 
     ? documentation.filter(doc =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
@@ -176,7 +175,7 @@ const searchResults = searchQuery
 ;
 const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-<<<<<<< HEAD
+
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
@@ -188,15 +187,13 @@ const getDifficultyColor = (difficulty: string) => {
       <SEOOptimizer
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
-        keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
-        canonicalUrl="https://ziontechgroup.com/docs"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}>
+        canonicalUrl="https://ziontechgroup.com/docs /></SEOOptimizer>      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
+
       case 'Beginner': return 'text-green-400 bg-green-500
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500
       case 'Advanced': return 'text-red-400 bg-red-500
@@ -208,10 +205,9 @@ const getDifficultyColor = (difficulty: string) => {
   return (<>
 
           {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-
             <
             <p className="text-xl text-cyan-400 mb-8">
               Everything you need to build with AI
@@ -230,10 +226,9 @@ const getDifficultyColor = (difficulty: string) => {
                 <input
                   type="text"
                   placeholder="Search documentation..."
-                  value = { searchQuery };)
+                  value = { searchQuery };)>
                   onChange = { (e) => setSearchQuery(e.target.value) };
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"
-                
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"</Search>
               <
             <
           <
@@ -243,10 +238,9 @@ const getDifficultyColor = (difficulty: string) => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Quick Links
             <
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l,">
     g:grid-cols-4 gap-6">
-              {quickLinks.map((link), index) => (
-                  <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} 
+              {quickLinks.map((link), index) => (</div>                  <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} `
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {link.title}
                   <
@@ -261,16 +255,15 @@ const getDifficultyColor = (difficulty: string) => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Browse by Category
             <
-            <div className="grid grid-cols-2 md: grid-cols-3 l,
+            <div className="grid grid-cols-2 md: grid-cols-3 l,"
     g:grid-cols-6 gap-4 mb-8">
               {docCategories.map((category) => (<button
-                  key = { category.id };)
+                  key = { category.id };)>
                   onClick = { () => setSelectedCategory(category.id) };
-                  className={`p-4 rounded-lg text-center transition-all duration-300 ${
-                    selectedCategory === category.id
+                  className={`p-4 rounded-lg text-center transition-all duration-300 ${</button>                    selectedCategory === category.id`
                       ? 'bg-cyan-500 text-slate-900'
                       : 'bg-slate-800 text-white hover:bg-slate-700'
-                  }`}
+                  }`}`
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" 
                   <div className="text-sm font-semibold">{category.name}<
@@ -283,16 +276,15 @@ const getDifficultyColor = (difficulty: string) => {
           {/* Documentation List *
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-3 gap-6">
               {searchResults.map((doc) => (<div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <doc.icon className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" 
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">)
-                        <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>
+                        <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>`
                           {doc.difficulty}
                         <
                         <span className="text-gray-400 text-xs">{doc.readTime}<
@@ -309,7 +301,6 @@ const getDifficultyColor = (difficulty: string) => {
                     {doc.content}
                   <
                   <div className="flex items-center justify-between">
-                    
                       Read More
                       
                       {doc.category };
@@ -330,13 +321,11 @@ const getDifficultyColor = (difficulty: string) => {
                 Start building with our AI services today
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
+
                   <Play className="w-5 h-5 mr-2" 
                   Request Demo
                 <
@@ -348,8 +337,6 @@ const getDifficultyColor = (difficulty: string) => {
         <Footer 
       <
     <
-  );
+  );>
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-export default DocsPage;
+</Play>export default DocsPage;

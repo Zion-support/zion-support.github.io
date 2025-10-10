@@ -40,9 +40,9 @@ const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JS
   o: 'inherit'} shel,
   l: true});' execSync('node automation/optimize-images.cjs || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): fix broken refs and optimize [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' return {/* TODO: Fix JSX expression */}
   k: 'broken-image-defender' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

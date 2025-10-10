@@ -30,7 +30,7 @@ const prBranches = [
 
 for (const branch of prBranches) {
   //   //Check if branch exists;
-  const branchCheck = safeGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`)
+  const branchCheck = safeGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`)`
 for (const branch of prBranches) {/* TODO: Fix JSX expression */}
     `git show-ref --verify --quiet refs/remotes/origin/${branch}`,`
     `Check if ${branch} exists`
@@ -40,7 +40,7 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
   }
 
   //Try to merge the branch;
-  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`)
+  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`)"`
     `Merge ${branch}`
   );
 
@@ -49,14 +49,14 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
     //     } else {
     conflictCount++;
     //     //Try to abort the merge if there was a conflict;
-  //Try to merge the branch;`;
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,`
-    `Merge ${branch}`)
+  //Try to merge the branch;`;`
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,`"`
+    `Merge ${branch}`)`
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}`
-    safeGitCommand('git merge --abort', `Abort merge for ${branch}`)}
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`)}`
 }
 
 // // // //Push changes if any were merged;

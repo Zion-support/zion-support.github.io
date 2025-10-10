@@ -62,7 +62,7 @@ export function getConfig<T = unknown>(keyPath: string): T {let value: unknown =
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key]} else {
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${keyPath}" not found`);"`
   }
 
   return value as T}

@@ -16,35 +16,34 @@ export const waitFor = async (
   condition: () => boolean,
   timeout = 5000,
   interval = 100
-<<<<<<< HEAD
+
 ): Promise<void></void> => {}
   const startTime = Date.now()
   while (!condition()) {}
     if (Date.now() - startTime > timeout) {}
-throw new Error(`Timeout waiting for condition after ${timeout}ms`)]
+throw new Error(`Timeout waiting for condition after ${timeout}ms`)]`
     }
     await wait(interval)]
     }
 }
-=======
+
 ): Promise<void> => {
   const startTime = Date.now();
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);`
     }
     await wait(interval);
   }
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 /**
  * Mock fetch for testing
  */
 export const mockFetch = (
   response: any,
   status = 200,
-<<<<<<< HEAD
+
   headers: Record<string, string></string> = {}
 ): void => {}
   if (typeof global !== 'undefined') {}
@@ -57,16 +56,16 @@ export const mockFetch = (
         status,
         headers: new Headers(headers),
         json: async () => response;
-<<<<<<< HEAD
+
         text: async () => JSON.stringify(response);)
 } as Response)
     ) as typeof fetch;);
-=======
+
         text: async () => JSON.stringify(response)]
     } as Response)
     ) as typeof fetch]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
 }
 /**
  * Mock local storage;
@@ -129,7 +128,7 @@ writable: true,]
     });
 export const wait = (m)
   s: number): Promise<void></void> => {/* TODO: Fix JSX expression */});
-=======
+
   headers: Record<string, string> = {}
 ) => {
   return jest.fn().mockResolvedValue({
@@ -139,19 +138,19 @@ export const wait = (m)
     json: async () => response,
     text: async () => JSON.stringify(response)
   } as Response);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
 };
 
 /**
  * Mock local storage
  */
-<<<<<<< HEAD
+
 export const waitFor = async (conditio)
   n: () => boolean,
   timeout = 5000,
   interval = 100;
 ): Promise<void></void> => {/* TODO: Fix JSX expression */}
-throw new Error(`Timeout waiting for condition after ${timeout}ms`)]
+throw new Error(`Timeout waiting for condition after ${timeout}ms`)]`
     }
     await wait(interval)]
     }
@@ -327,11 +326,11 @@ export const generateTestData = {}
   boolean: (): boolean => {}
     return Math.random() > 0.5;});
 },
-  email: (): string => {`}
-    return `test${generateTestData.string(5);@example.com`]
+  email: (): string => {`}`
+    return `test${generateTestData.string(5);@example.com`]`
     },
-  url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10);`]
+  url: (): string => {`}`
+    return `https://example.com/${generateTestData.string(10);`]`
     },
   date: (): Date => {,
   date: (): Date => {}
@@ -349,11 +348,11 @@ export const generateTestData = {/* TODO: Fix JSX expression */});
 },
   emai,
   l: (): string => {/* TODO: Fix JSX expression */}`
-    return `test${generateTestData.string(5);@example.com`]
+    return `test${generateTestData.string(5);@example.com`]`
     },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10);`]
+  s://example.com/${generateTestData.string(10);`]`
     },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */});
@@ -407,7 +406,7 @@ this.mock()]
 }
       this.warnings.push(args.map(String).join(' '));});
 }
-=======
+
 export class MockStorage implements Storage {
   private store: Map<string, string> = new Map();
 
@@ -434,7 +433,7 @@ export class MockStorage implements Storage {
 
   setItem(key: string, value: string): void {
     this.store.set(key, value);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
   }
 }
 
@@ -446,17 +445,17 @@ export const createMockStorage = (): MockStorage => new MockStorage();
 /**
  * Mock window.location
  */
-<<<<<<< HEAD
+
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
     this.originalConsole = { ...console };
 this.mock()]
     }
   private mock(): void {/* TODO: Fix JSX expression */});
-=======
+
 export const mockLocation = (url: string) => {
   delete (window as any).location;
   window.location = new URL(url) as any;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
 };
 
 /**
@@ -477,7 +476,7 @@ export const mockMatchMedia = (matches: boolean) => {
     })),
   });
 };
-<<<<<<< HEAD
+
   s: unknown[]) => {/* TODO: Fix JSX expression */});
 }]
     }
@@ -492,13 +491,11 @@ export const mockMatchMedia = (matches: boolean) => {
   clear(): void {/* TODO: Fix JSX expression */});
 }
 }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 /**
  * Mock IntersectionObserver
  */
-<<<<<<< HEAD
+
 export interface Deferred<T></T> {
   promise: Promise<T></T>,
   resolve: (value: T) => void;
@@ -596,7 +593,7 @@ export const measureExecutionTime = async <T></T>(f)
 return { result, duration }]
     };
 export default {/* TODO: Fix JSX expression */});
-=======
+
 export const mockIntersectionObserver = () => {
   const mockIntersectionObserver = jest.fn();
   mockIntersectionObserver.mockReturnValue({
@@ -605,7 +602,7 @@ export const mockIntersectionObserver = () => {
     disconnect: () => null
   });
   window.IntersectionObserver = mockIntersectionObserver;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
 };
 
 /**

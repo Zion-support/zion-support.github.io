@@ -45,8 +45,8 @@ const newName = oldName;
           .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
         
         if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
-          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
+          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);`
+          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);`
           modified = true}
       }
       
@@ -68,7 +68,7 @@ const newName = oldName;
       if (modified) {
         fs.writeFileSync(filePath, content);
         // console.log removed for production
-}`);
+}`);`
         fixedCount++}
     } catch (error) {
       // console.error removed for production

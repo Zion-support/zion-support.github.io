@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export interface Q4Service {id: string;
   name: string;
@@ -814,7 +813,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     icon: '',
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300'}
-    link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,`
     market_position: unknown;
       'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',
     target_audience: 'Platform, data, and compliance teams',
@@ -927,7 +926,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     lin,
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
+        s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,`
     market_positio,
   n: unknown;
       'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',
@@ -1349,7 +1348,7 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300'}
-    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,`
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14;
     setupTime: '12 days',
@@ -1378,7 +1377,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,`
     targetAudienc,
   e: 'Platform, data, and compliance teams',
     trialDay,
@@ -1441,7 +1440,7 @@ varian,
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,`
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudience: 'Growth and eCommerce teams',
     trialDays:
@@ -1451,7 +1450,7 @@ varian,
     realService: true;
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,`
     market_position: unknown;
       'Simpler alternative to enterprise CDPs for SMBs, edge - native.',
     target_audience: 'Growth and e_commerce teams',
@@ -1496,7 +1495,7 @@ market_size: '$5B experimentation',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,`
     marketPositio,
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudienc,
@@ -1516,7 +1515,7 @@ market_size: '$5B experimentation',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,
+        s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`,`
     market_positio,
   n: unknown;
       'Simpler alternative to enterprise CDPs for SMBs, edge - native.',
@@ -1591,7 +1590,7 @@ varian,
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`,
+        s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`,`
     market_positio,
   n: unknown;
       'Faster than DIY scripts, comparable to Uffizzi / Gitpod previews.',
@@ -1693,7 +1692,7 @@ varian,
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`,
+        s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`,`
     market_positio,
   n: unknown;
       'Adds AI summaries to classic log alerts, vendor - agnostic ingestion.',
@@ -1855,7 +1854,7 @@ varian,
     icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
-    link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,`
     marketPosition: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudience: 'Platform and app teams',
     trialDays:
@@ -1888,7 +1887,7 @@ variant: 'dev-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,`
     marketPositio,
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudienc,
@@ -1952,7 +1951,7 @@ varian,
     icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
-    link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,`
     marketPosition: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudience: 'SREs and platform teams',
     trialDays:
@@ -1985,7 +1984,7 @@ variant: 'monitoring-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,`
     marketPositio,
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudienc,
@@ -2049,14 +2048,14 @@ varian,
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
-    link: `https://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,`
     marketPosition: 'Policy-focused alternative to generic toggle tools.',
     targetAudience: 'Product and platform teams',
     trialDays: 14;
     setupTime: '1 day',
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,`
     market_position: 'Policy - focused alternative to generic toggle tools.',
     target_audience: 'Product and platform teams',
     trial_days: 14;
@@ -2094,7 +2093,7 @@ variant: 'dev - futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,`
     marketPositio,
   n: 'Policy-focused alternative to generic toggle tools.',
     targetAudienc,
@@ -2110,7 +2109,7 @@ variant: 'dev - futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,
+        s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,`
     market_positio,
   n: 'Policy - focused alternative to generic toggle tools.',
     target_audienc,
@@ -2176,7 +2175,7 @@ varian,
     icon: '',
     color: 'from - fuchsia - 600 to - pink - 700',
     text_color: 'text - fuchsia - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,`
     market_position: 'Safer than generic sequencers, deliverability - first.',
     target_audience: 'Sales and growth teams',
     trial_days:
@@ -2215,7 +2214,7 @@ variant: 'growth - futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,
+        s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,`
     market_positio,
   n: 'Safer than generic sequencers, deliverability - first.',
     target_audienc,
@@ -2354,7 +2353,7 @@ varian,
     icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
-    link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,`
     marketPosition: 'Safer than generic sequencers, deliverability-first.',
     targetAudience: 'Sales and growth teams',
     trialDays:
@@ -2387,7 +2386,7 @@ variant: 'growth-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,`
     marketPositio,
   n: 'Safer than generic sequencers, deliverability-first.',
     targetAudienc,
@@ -2451,14 +2450,14 @@ varian,
     icon: '',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
-    link: `https://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,`
     marketPosition: 'Practical contracts vs. building from scratch.',
     targetAudience: 'Data engineering teams',
     trialDays: 14;
     setupTime: '35 days',
     color: 'from - sky - 600 to - indigo - 700',
     text_color: 'text - sky - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,`
     market_position: 'Practical contracts vs. building from scratch.',
     target_audience: 'Data engineering teams',
     trial_days: 14;
@@ -2498,7 +2497,7 @@ variant: 'quantum - matrix',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,`
     marketPositio,
   n: 'Practical contracts vs. building from scratch.',
     targetAudienc,
@@ -2514,7 +2513,7 @@ variant: 'quantum - matrix',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,
+        s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,`
     market_positio,
   n: 'Practical contracts vs. building from scratch.',
     target_audienc,
@@ -2653,14 +2652,14 @@ varian,
     icon: '',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
-    link: `https://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,`
     marketPosition: 'Accelerates enterprise deals vs. open-ended projects.',
     targetAudience: 'B2B SaaS product teams',
     trialDays: 0;
     setupTime: '1 week',
     color: 'from - slate - 600 to - gray - 700',
     text_color: 'text - slate - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,`
     market_position: 'Accelerates enterprise deals vs. open - ended projects.',
     target_audience: 'B2B SaaS product teams',
     trial_days: 0;
@@ -2698,7 +2697,7 @@ variant: 'enterprise - futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,`
     marketPositio,
   n: 'Accelerates enterprise deals vs. open-ended projects.',
     targetAudienc,
@@ -2714,7 +2713,7 @@ variant: 'enterprise - futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,
+        s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,`
     market_positio,
   n: 'Accelerates enterprise deals vs. open - ended projects.',
     target_audienc,
@@ -2851,14 +2850,14 @@ varian,
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
-    link: `https://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,`
     marketPosition: 'Lightweight RevOps insights without heavy BI projects.',
     targetAudience: 'Sales and RevOps leaders',
     trialDays: 7;
     setupTime: '23 days',
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,`
     market_position: 'Lightweight RevOps insights without heavy BI projects.',
     target_audience: 'Sales and RevOps leaders',
     trial_days: 7;
@@ -2910,7 +2909,7 @@ reviews: 10;
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,`
     marketPositio,
   n: 'Lightweight RevOps insights without heavy BI projects.',
     targetAudienc,
@@ -2926,7 +2925,7 @@ reviews: 10;
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,
+        s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,`
     market_positio,
   n: 'Lightweight RevOps insights without heavy BI projects.',
     target_audienc,
@@ -3026,7 +3025,7 @@ varian,
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: `https://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,`
     marketPosition: 'Production-ready relay alternative to building in-house.',
     targetAudience: 'Developers and platform teams',
     trialDays: 14;
@@ -3040,7 +3039,7 @@ varian,
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,`
     marketPositio,
   n: 'Production-ready relay alternative to building in-house.',
     targetAudienc,
@@ -3057,7 +3056,7 @@ varian,
     icon: '',
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,`
     market_position: 'Production - ready relay alternative to building in - house.',
     target_audience: 'Developers and platform teams',
     trial_days: 14;
@@ -3108,7 +3107,7 @@ variant: 'dev-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,
+        s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,`
     market_positio,
   n: 'Production - ready relay alternative to building in - house.',
     target_audienc,
@@ -3208,7 +3207,7 @@ varian,
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,`
     marketPosition: 'Practical alternative to DBAs for small teams.',
     targetAudience: 'SMBs and startups',
     trialDays: 7;
@@ -3222,7 +3221,7 @@ varian,
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,`
     marketPositio,
   n: 'Practical alternative to DBAs for small teams.',
     targetAudienc,
@@ -3238,7 +3237,7 @@ varian,
     icon: '',
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
-    link: `https://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,
+    link: `https://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,`
     market_position: 'Practical alternative to DBAs for small teams.',
     target_audience: 'SMBs and startups',
     trial_days: 7;
@@ -3273,7 +3272,7 @@ variant: 'enterprise - futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,
+        s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,`
     market_positio,
   n: 'Practical alternative to DBAs for small teams.',
     target_audienc,
@@ -3687,12 +3686,12 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300'}
-    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;`
     ];
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;`
     color: 'from-emerald-600 to-teal-700',
     marketPosition: 'Practical alternative to DBAs for small teams.',
     targetAudience: 'SMBs and startups',
@@ -3792,7 +3791,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;`
     ];
     ico,
   n: '',
@@ -3803,7 +3802,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;`
     colo,
   r: 'from-emerald-600 to-teal-700'
     marketPositio,
@@ -4368,7 +4367,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300'}
-    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,`
     marketPosition: unknown;
       'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',    targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14;
@@ -4450,7 +4449,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,`
     marketPositio,
   n: unknown;
       'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',    targetAudienc,
@@ -4515,7 +4514,7 @@ varian,
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,`
     marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudience: 'Growth and eCommerce teams',
     trialDays:
@@ -4550,7 +4549,7 @@ variant: 'edge-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,`
     marketPositio,
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudienc,
@@ -4614,7 +4613,7 @@ varian,
     icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
-    link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,`
     marketPosition: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudience: 'Platform and app teams',
     trialDays:
@@ -4647,7 +4646,7 @@ variant: 'dev-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,`
     marketPositio,
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
     targetAudienc,
@@ -4711,7 +4710,7 @@ varian,
     icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
-    link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,`
     marketPosition: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudience: 'SREs and platform teams',
     trialDays:
@@ -4744,7 +4743,7 @@ variant: 'monitoring-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,`
     marketPositio,
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
     targetAudienc,
@@ -4808,7 +4807,7 @@ varian,
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
-    link: `https://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,`
     marketPosition: 'Policy-focused alternative to generic toggle tools.',
     targetAudience: 'Product and platform teams',
     trialDays: 14;
@@ -4840,7 +4839,7 @@ variant: 'dev-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,`
     marketPositio,
   n: 'Policy-focused alternative to generic toggle tools.',
     targetAudienc,
@@ -4904,7 +4903,7 @@ varian,
     icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
-    link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,`
     marketPosition: 'Safer than generic sequencers, deliverability-first.',
     targetAudience: 'Sales and growth teams',
     trialDays:
@@ -4937,7 +4936,7 @@ variant: 'growth-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,`
     marketPositio,
   n: 'Safer than generic sequencers, deliverability-first.',
     targetAudienc,
@@ -5001,7 +5000,7 @@ varian,
     icon: '',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
-    link: `https://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,`
     marketPosition: 'Practical contracts vs. building from scratch.',
     targetAudience: 'Data engineering teams',
     trialDays: 14;
@@ -5033,7 +5032,7 @@ variant: 'quantum-matrix',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,`
     marketPositio,
   n: 'Practical contracts vs. building from scratch.',
     targetAudienc,
@@ -5096,7 +5095,7 @@ varian,
     icon: '',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
-    link: `https://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,`
     marketPosition: 'Accelerates enterprise deals vs. open-ended projects.',
     targetAudience: 'B2B SaaS product teams',
     trialDays: 0;
@@ -5128,7 +5127,7 @@ variant: 'enterprise-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,`
     marketPositio,
   n: 'Accelerates enterprise deals vs. open-ended projects.',
     targetAudienc,
@@ -5191,7 +5190,7 @@ varian,
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
-    link: `https://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,`
     marketPosition: 'Lightweight RevOps insights without heavy BI projects.',
     targetAudience: 'Sales and RevOps leaders',
     trialDays: 7;
@@ -5223,7 +5222,7 @@ variant: 'holographic-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,`
     marketPositio,
   n: 'Lightweight RevOps insights without heavy BI projects.',
     targetAudienc,
@@ -5287,7 +5286,7 @@ varian,
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: `https://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,`
     marketPosition: 'Production-ready relay alternative to building in-house.',
     targetAudience: 'Developers and platform teams',
     trialDays: 14;
@@ -5319,7 +5318,7 @@ variant: 'dev-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,`
     marketPositio,
   n: 'Production-ready relay alternative to building in-house.',
     targetAudienc,
@@ -5383,7 +5382,7 @@ varian,
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+    link: `https://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,`
     marketPosition: 'Practical alternative to DBAs for small teams.',
     targetAudience: 'SMBs and startups',
     trialDays: 7;
@@ -5417,7 +5416,7 @@ variant: 'enterprise-futuristic',
     lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,`
     marketPositio,
   n: 'Practical alternative to DBAs for small teams.',
     targetAudienc,
@@ -5760,7 +5759,7 @@ export interface Q4Service,
   r: 'text - cyan - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`, market_positio,
+        s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`, market_positio,`
   n: ;' 'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',' target_audienc,
   e: 'Platform, data, and compliance teams', trial_day,
   s: 14,' setup_tim,
@@ -5900,7 +5899,7 @@ export interface Q4Service,
   r: 'text-cyan-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,' targetAudienc,
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,' targetAudienc,`
   e: 'Platform, data, and compliance teams', trialDay,
   s: 14,' setupTim,
   e: '1–2 days',' categor,
@@ -5934,7 +5933,7 @@ export interface Q4Service,
   r: 'text-emerald-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,`
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',' targetAudienc,
   e: 'Growth and eCommerce teams', trialDay,
   s: 7,' setupTim,
@@ -5945,7 +5944,7 @@ export interface Q4Service,
   r: 'text - emerald - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`, market_positio,
+        s://ziontechgroup.com / services/${to_slug ('edge - personalization - engine')}`, market_positio,`
   n: ;' 'Simpler alternative to enterprise CDPs for SMBs, edge - native.',' target_audienc,
   e: 'Growth and e_commerce teams', trial_day,
   s: 7,' setup_tim,
@@ -5979,7 +5978,7 @@ export interface Q4Service,
   r: 'text - blue - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`, market_positio,
+        s://ziontechgroup.com / services/${to_slug ('devx - preview - environments')}`, market_positio,`
   n: ;' 'Faster than DIY scripts, comparable to Uffizzi / Gitpod previews.',' target_audienc,
   e: 'Platform and app teams', trial_day,
   s: 14,' setup_tim,
@@ -6013,7 +6012,7 @@ export interface Q4Service,
   r: 'text - rose - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`, market_positio,
+        s://ziontechgroup.com / services/${to_slug ('real - time - log - anomaly - guard')}`, market_positio,`
   n: ;' 'Adds AI summaries to classic log alerts, vendor - agnostic ingestion.',' target_audienc,
   e: 'SREs and platform teams', trial_day,
   s: 7,' setup_tim,
@@ -6070,7 +6069,7 @@ export interface Q4Service,
   r: 'text-blue-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,`
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',' targetAudienc,
   e: 'Platform and app teams', trialDay,
   s: 14,' setupTim,
@@ -6104,7 +6103,7 @@ export interface Q4Service,
   r: 'text-rose-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,`
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',' targetAudienc,
   e: 'SREs and platform teams', trialDay,
   s: 7,' setupTim,
@@ -6138,7 +6137,7 @@ export interface Q4Service,
   r: 'text-amber-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`, ' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`, ' marketPositio,`
   n: 'Policy-focused alternative to generic toggle tools.',' targetAudienc,
   e: 'Product and platform teams', trialDay,
   s: 14,' setupTim,
@@ -6147,7 +6146,7 @@ export interface Q4Service,
   r: 'text - amber - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('governed - feature - flags')}`,' market_positio,`
   n: 'Policy - focused alternative to generic toggle tools.',' target_audienc,
   e: 'Product and platform teams', trial_day,
   s: 14,' setup_tim,
@@ -6181,7 +6180,7 @@ export interface Q4Service,
   r: 'text - fuchsia - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('email - sequence - copilot')}`,' market_positio,`
   n: 'Safer than generic sequencers, deliverability - first.',' target_audienc,
   e: 'Sales and growth teams', trial_day,
   s: 7,' setup_tim,
@@ -6240,7 +6239,7 @@ export interface Q4Service,
   r: 'text-fuchsia-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,`
   n: 'Safer than generic sequencers, deliverability-first.',' targetAudienc,
   e: 'Sales and growth teams', trialDay,
   s: 7,' setupTim,
@@ -6274,7 +6273,7 @@ export interface Q4Service,
   r: 'text-sky-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`, ' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`, ' marketPositio,`
   n: 'Practical contracts vs. building from scratch.',' targetAudienc,
   e: 'Data engineering teams', trialDay,
   s: 14,' setupTim,
@@ -6283,7 +6282,7 @@ export interface Q4Service,
   r: 'text - sky - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('data - contracts - guardrails')}`,' market_positio,`
   n: 'Practical contracts vs. building from scratch.',' target_audienc,
   e: 'Data engineering teams', trial_day,
   s: 14,' setup_tim,
@@ -6342,7 +6341,7 @@ export interface Q4Service,
   r: 'text-slate-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`, ' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`, ' marketPositio,`
   n: 'Accelerates enterprise deals vs. open-ended projects.',' targetAudienc,
   e: 'B2B SaaS product teams', trialDay,
   s: 0,' setupTim,
@@ -6351,7 +6350,7 @@ export interface Q4Service,
   r: 'text - slate - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('managed - sso - fast - track')}`,' market_positio,`
   n: 'Accelerates enterprise deals vs. open - ended projects.',' target_audienc,
   e: 'B2B SaaS product teams', trial_day,
   s: 0,' setup_tim,
@@ -6410,7 +6409,7 @@ export interface Q4Service,
   r: 'text-amber-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`, ' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`, ' marketPositio,`
   n: 'Lightweight RevOps insights without heavy BI projects.',' targetAudienc,
   e: 'Sales and RevOps leaders', trialDay,
   s: 7,' setupTim,
@@ -6419,7 +6418,7 @@ export interface Q4Service,
   r: 'text - amber - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('ai - sales - pipeline - insights')}`,' market_positio,`
   n: 'Lightweight RevOps insights without heavy BI projects.',' target_audienc,
   e: 'Sales and RevOps leaders', trial_day,
   s: 7,' setup_tim,
@@ -6471,7 +6470,7 @@ export interface Q4Service,
   r: 'text-cyan-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`, ' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`, ' marketPositio,`
   n: 'Production-ready relay alternative to building in-house.',' targetAudienc,
   e: 'Developers and platform teams', trialDay,
   s: 14,' setupTim,
@@ -6481,7 +6480,7 @@ export interface Q4Service,
   r: 'text - cyan - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('secure - webhook - relay')}`,' market_positio,`
   n: 'Production - ready relay alternative to building in - house.',' target_audienc,
   e: 'Developers and platform teams', trial_day,
   s: 14,' setup_tim,
@@ -6534,7 +6533,7 @@ export interface Q4Service,
   r: 'text-emerald-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`, ' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`, ' marketPositio,`
   n: 'Practical alternative to DBAs for small teams.',' targetAudienc,
   e: 'SMBs and startups', trialDay,
   s: 7,' setupTim,
@@ -6544,7 +6543,7 @@ export interface Q4Service,
   r: 'text - emerald - 300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,' market_positio,
+        s://ziontechgroup.com / services/${to_slug ('managed - postgres - ha - lite')}`,' market_positio,`
   n: 'Practical alternative to DBAs for small teams.',' target_audienc,
   e: 'SMBs and startups', trial_day,
   s: 7,' setup_tim,
@@ -6759,13 +6758,13 @@ export interface Q4Service,
   r: 'text-emerald-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,`
   n: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;' colo,
+        s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;' colo,`
   r: 'from-emerald-600 to-teal-700'' marketPositio,
   n: 'Practical alternative to DBAs for small teams.'' targetAudienc,
   e: 'SMBs and startups' trialDay,
@@ -6995,7 +6994,7 @@ export interface Q4Service,
   r: 'text-cyan-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`, marketPositio,
+        s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`, marketPositio,`
   n: ;' 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.', targetAudienc,
   e: 'Platform, data, and compliance teams', trialDay,
   s: 14,' setupTim,
@@ -7030,7 +7029,7 @@ export interface Q4Service,
   r: 'text-emerald-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,' marketPositio,`
   n: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',' targetAudienc,
   e: 'Growth and eCommerce teams', trialDay,
   s: 7,' setupTim,
@@ -7064,7 +7063,7 @@ export interface Q4Service,
   r: 'text-blue-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,' marketPositio,`
   n: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',' targetAudienc,
   e: 'Platform and app teams', trialDay,
   s: 14,' setupTim,
@@ -7098,7 +7097,7 @@ export interface Q4Service,
   r: 'text-rose-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,' marketPositio,`
   n: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',' targetAudienc,
   e: 'SREs and platform teams', trialDay,
   s: 7,' setupTim,
@@ -7132,7 +7131,7 @@ export interface Q4Service,
   r: 'text-amber-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('governed-feature-flags')}`,' marketPositio,`
   n: 'Policy-focused alternative to generic toggle tools.',' targetAudienc,
   e: 'Product and platform teams', trialDay,
   s: 14,' setupTim,
@@ -7166,7 +7165,7 @@ export interface Q4Service,
   r: 'text-fuchsia-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,' marketPositio,`
   n: 'Safer than generic sequencers, deliverability-first.',' targetAudienc,
   e: 'Sales and growth teams', trialDay,
   s: 7,' setupTim,
@@ -7200,7 +7199,7 @@ export interface Q4Service,
   r: 'text-sky-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('data-contracts-guardrails')}`,' marketPositio,`
   n: 'Practical contracts vs. building from scratch.',' targetAudienc,
   e: 'Data engineering teams', trialDay,
   s: 14,' setupTim,
@@ -7234,7 +7233,7 @@ export interface Q4Service,
   r: 'text-slate-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('managed-sso-fast-track')}`,' marketPositio,`
   n: 'Accelerates enterprise deals vs. open-ended projects.',' targetAudienc,
   e: 'B2B SaaS product teams', trialDay,
   s: 0,' setupTim,
@@ -7268,7 +7267,7 @@ export interface Q4Service,
   r: 'text-amber-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('ai-sales-pipeline-insights')}`,' marketPositio,`
   n: 'Lightweight RevOps insights without heavy BI projects.',' targetAudienc,
   e: 'Sales and RevOps leaders', trialDay,
   s: 7,' setupTim,
@@ -7302,7 +7301,7 @@ export interface Q4Service,
   r: 'text-cyan-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('secure-webhook-relay')}`,' marketPositio,`
   n: 'Production-ready relay alternative to building in-house.',' targetAudienc,
   e: 'Developers and platform teams', trialDay,
   s: 14,' setupTim,
@@ -7337,7 +7336,7 @@ export interface Q4Service,
   r: 'text-emerald-300',' lin,`
   k: 'http,',
   s:
-        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,' marketPositio,
+        s://ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`,' marketPositio,`
   n: 'Practical alternative to DBAs for small teams.',' targetAudienc,
   e: 'SMBs and startups', trialDay,
   s: 7,' setupTim,
@@ -7360,7 +7359,7 @@ export interface Q4Service,
   g: 4.6, review,
   s: 9 } ]; review,
   s: 9 } ]; '`
-=======
+
     marketSize: '$1.5B affiliate software'
     growthRate: '15% YoY';
 variant: 'ai-futuristic'
@@ -7372,4 +7371,3 @@ variant: 'ai-futuristic'
     growth_rate: '15% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

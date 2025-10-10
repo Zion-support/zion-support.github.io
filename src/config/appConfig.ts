@@ -89,7 +89,7 @@ export function getConfig;
           <string, unknown>)[key]} else {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${keyPath}" not found`);"`
   return value as T;
  * Check if a feature is enabled;
 export function isFeatureEnabled(featur)

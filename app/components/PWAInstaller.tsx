@@ -16,7 +16,6 @@ const benefits = [
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>PWAInstaller | Zion Tech Group<
         <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." 
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" 
@@ -25,11 +24,9 @@ const benefits = [
         <
       <
 
-<<<<<<< HEAD
 }
 export default PWAInstallerPage;
-=======
-};
 
-export default PWAInstallerPage;)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+};>
+
+export default PWAInstallerPage;)</meta>

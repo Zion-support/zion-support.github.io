@@ -110,7 +110,7 @@ const duration = Date.now() - startTime;
 export const authMiddleware: Middleware = async (context, next) => {;
 const token = getAuthToken();
   if (token) {
-    context.request.headers['Authorization'] = `Bearer ${token}`;
+    context.request.headers['Authorization'] = `Bearer ${token}`;`
  * Get authentication token from storage;
 function getAuthToken(): string | null {// TODO: Add content}
 }
@@ -204,7 +204,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
         if (attempt < maxRetries) {// TODO: Add content}
 }
 //           logger.warn()
-            `Request failed, retrying (${attempt + 1}/${maxRetries})`,
+            `Request failed, retrying (${attempt + 1}/${maxRetries})`,`
 //             'RetryMiddleware',
             {// TODO: Add content}
 };

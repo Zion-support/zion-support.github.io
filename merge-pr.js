@@ -19,7 +19,7 @@ execSync('git pull origin main', { stdio: 'inherit' });
   const branchName = 'cursor/enhance-app-with-new-services-and-futuristic-design-c013';
   // console.log removed for production
 try {
-    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' });
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' });`
     // console.log removed for production
 } catch (error) {
     // console.log removed for production
@@ -28,7 +28,7 @@ process.exit(1)}
   // Try to merge the branch;
   // console.log removed for production
 try {
-    execSync(`git merge origin/${branchName} --no-ff -m "feat: Merge enhanced app with 50+ micro SAAS services and futuristic design"`, { stdio: 'inherit' });
+    execSync(`git merge origin/${branchName} --no-ff -m "feat: Merge enhanced app with 50+ micro SAAS services and futuristic design"`, { stdio: 'inherit' });`
     // console.log removed for production
 } catch (error) {
     // console.log removed for production

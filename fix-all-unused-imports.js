@@ -30,7 +30,7 @@ const imports = lucideImportMatch[1].split(',').map(imp => imp.trim());
 return (
 );
 const cleanImp = imp.replace(/\s*as\s+\w+/, '').trim();
-        if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {
+        if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {`
           usedImports.push(imp)});
 
       if (usedImports.length !== imports.length) {;
@@ -40,7 +40,7 @@ const newImport = usedImports.length >
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
-        if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {/* TODO: Fix JSX expression */}
+        if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {/* TODO: Fix JSX expression */}`
       });
 
       if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}`
@@ -53,8 +53,8 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     // Remove unused component imports;
     const componentImports = ['Navigation', 'Footer', 'SEOOptimizer'];
     componentImports.forEach(comp => {);
-const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');
-      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {
+const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
+      if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {`
         content = content.replace(importRegex, '');
 
     // Remove unused variable declarations that are assigned but never used;
@@ -79,13 +79,13 @@ const varName = varMatch[1];
     if (modified) {
       fs.writeFileSync(filePath, content);
       // console.log removed for production
-}`)} catch (error) {
+}`)} catch (error) {`
     // console.error removed for production
 // Process all page files;
 pageFiles.forEach(file => {)
   cleanUnusedImports(file);
 
-    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`;
+    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`;"`
 const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}`
   d: ${path.relative(__dirname, filePath)}`)} catch (error) {/* TODO: Fix JSX expression */}`
@@ -106,9 +106,9 @@ const name = imp.split(' as ')[0].trim();
             // Check if the name is used in the content (excluding the import line itself);
 const contentWithoutImport = content.replace(line, '');
             return contentWithoutImport.includes(name) && 
-                   !contentWithoutImport.includes(`import ${name}`) &&
-                   !contentWithoutImport.includes(`{ ${name}`) &&
-                   !contentWithoutImport.includes(`{${name}`);
+                   !contentWithoutImport.includes(`import ${name}`) &&`
+                   !contentWithoutImport.includes(`{ ${name}`) &&`
+                   !contentWithoutImport.includes(`{${name}`);`
           
           if (usedImports.length === 0) {
             // No used imports, remove the entire line;
@@ -122,7 +122,7 @@ const contentWithoutImport = content.replace(line, '');
           if (defaultImportMatch) {;
 const name = defaultImportMatch[1];
             if (contentWithoutImport.includes(name) && 
-                !contentWithoutImport.includes(`import ${name}`)) {
+                !contentWithoutImport.includes(`import ${name}`)) {`
             // If not used, skip the line (don't add it)
             // Other import types, keep them;
     const newContent = newLines.join('\n');
@@ -134,13 +134,13 @@ if (trimmedLine.startsWith('import ')) {/* TODO: Fix JSX expression */}
         if (importMatch) {/* TODO: Fix JSX expression */}`
                    !contentWithoutImport.includes(`import ${name}`) &&`
                    !contentWithoutImport.includes(`{ ${name}`) &&`
-                   !contentWithoutImport.includes(`{${name}`);
+                   !contentWithoutImport.includes(`{${name}`);`
           
           if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
           } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}`
                 !contentWithoutImport.includes(`import ${name}`)) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true;
     
   

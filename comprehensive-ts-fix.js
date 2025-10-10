@@ -34,9 +34,9 @@ return (
 
       if (text.trim()) {
         modified = true;
-        return `<${tagName}${attributes}>
+        return `<${tagName}${attributes}>`
 );
-}${text}</${tagName}>`}
+}${text}</${tagName}>`}`
       return match});
 
     // Fix 2: Fix self-closing tags that should have content;
@@ -46,9 +46,9 @@ return (
 
       if (text.trim() && !text.includes('<')) {
         modified = true;
-        return `<${tagName}${attributes}>
+        return `<${tagName}${attributes}>`
 );
-}${text}</${tagName}>`}
+}${text}</${tagName}>`}`
       return match});
 
     // Fix 3: Fix missing closing braces in object literals;
@@ -56,7 +56,7 @@ const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
     content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
-        return `${key1}: ${value1.trim()},\n    ${key2}:`}
+        return `${key1}: ${value1.trim()},\n    ${key2}:`}`
       return match});
 
     // Fix 4: Fix malformed SVG URLs;
@@ -64,14 +64,14 @@ const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g;
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
 const encodedSvg = encodeURIComponent(svgContent);
       modified = true;
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});
+      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});`
 
     // Fix 5: Fix missing closing parentheses in function calls;
 const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
-        return `${funcCall})\n    ${nextToken}`}
+        return `${funcCall})\n    ${nextToken}`}`
       return match});
 
     // Fix 6: Fix JSX elements with missing content between tags;
@@ -81,17 +81,17 @@ return (
 
       if (content.trim()) {
         modified = true;
-        return `<${tagName}${attributes}>
+        return `<${tagName}${attributes}>`
 );
-}${content}</${tagName}>`}
+}${content}</${tagName}>`}`
       return match});
 
-    // Fix 7: Fix malformed className attributes with quotes;
+    // Fix 7: Fix malformed className: attributes with quotes;
 const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g;
     content = content.replace(malformedClassPattern, (match, className, rest) => {;
 const fixedClassName = className.replace(/"/g, '&quot;');
       modified = true;
-      return `className="${fixedClassName}"${rest}>`});
+      return `className="${fixedClassName}"${rest}>`});"`
 
     // Fix 8: Fix missing closing tags in JSX;
 const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;
@@ -109,7 +109,7 @@ const tagName = match[1];
 let foundClosing = false;
         for (let j = i + 1; j < lines.length; j++) {;
 const nextLine = lines[j].trim();
-          if (nextLine.startsWith(`</${tagName}>`)) {
+          if (nextLine.startsWith(`</${tagName}>`)) {`
             foundClosing = true;
             break}
           if (nextLine.startsWith('<') && !nextLine.startsWith('</')) {
@@ -118,7 +118,7 @@ const nextLine = lines[j].trim();
         
         if (!foundClosing) {
           // Add closing tag
-          newContent = newContent.replace(line, line + `</${tagName}>`);
+          newContent = newContent.replace(line, line + `</${tagName}>`);`
           modified = true}
       }
     }
@@ -126,7 +126,7 @@ const nextLine = lines[j].trim();
     if (modified) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production
-}`);
+}`);`
       return true}
     
     return false} catch (error) {

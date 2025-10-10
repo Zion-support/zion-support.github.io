@@ -4,7 +4,7 @@ import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} fr
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -12,7 +12,7 @@ const AIProjectManagerPage: React.FC = () => {;
 const _features = [;
 const AiProjectManagerPage: React.FC = () => {;
 const features = [
-=======
+
 import Navigation from '../components
 import Footer from '../components
 
@@ -21,7 +21,7 @@ const AIProjectManagerPage: React.FC = () => {
 
 const AiProjectManagerPage: React.FC = () => {
   const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       ico,
     n: BarChart,
@@ -87,7 +87,6 @@ const stats = [
     { icon: Star, value: '4.9
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AI Project Manager | Zion Tech Group<
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." 
       <
@@ -101,23 +100,20 @@ const stats = [
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             <
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,">
     r:text-slate-900 transition-colors">
-              Learn More
-          <
-      
-<<<<<<< HEAD
+              Learn More</button>          <
+
       <Footer />
   )};
-=======
+
       <Footer)
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';>
 
-export default AIProjectManagerPage;
+export default AIProjectManagerPage;</Footer>

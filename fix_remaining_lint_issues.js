@@ -76,7 +76,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   1: Add underscore prefix to unused parameters;
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
-        return match.replace(param1, `_${param1}`)}
+        return match.replace(param1, `_${param1}`)}`
       return match});
 
     // Fix 2: Comment out unused variable declarations;
@@ -327,7 +327,7 @@ const fixedParams = params.map(p => {)
       // Fix,
   3: Add underscore prefix to unused function parameters;
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
-              return `_${p}`}
+              return `_${p}`}`
             return p});
           if (fixedParams.join(', ') !== params.join(', ')) {
             fixedLines.push(line.replace()

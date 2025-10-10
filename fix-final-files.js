@@ -50,14 +50,14 @@ const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX exp
   )};
 export default ${componentName};`
 `} else if (isTs) {
-    return `//${componentName} - TypeScript definitions and utilities;
+    return `//${componentName} - TypeScript definitions and utilities;`
 export interface ${componentName}Config {
   //Configuration properties}
 export const default${componentName}Config: ${componentName}Config = {
   //Default configuration};
 export default {
   default${componentName}Config} else if (isTs) {/* TODO: Fix JSX expression */}`
-    return `//${componentName} - TypeScript definitions and utilities;
+    return `//${componentName} - TypeScript definitions and utilities;`
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
 }
 export const default${componentName}Confi,
@@ -66,10 +66,10 @@ export const default${componentName}Confi,
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config};`
 `} else {
-    return `//${componentName} - JavaScript module;
+    return `//${componentName} - JavaScript module;`
 export const ${componentName} = {
   //Module implementation} else {/* TODO: Fix JSX expression */}`
-    return `//${componentName} - JavaScript module;
+    return `//${componentName} - JavaScript module;`
 export const ${componentName} = {/* TODO: Fix JSX expression */}
 };
 export default ${componentName};`

@@ -35,14 +35,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix root-level files that still have wrong paths;
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacemen,"
+        replacemen,
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
       },
       // Fix sitemap import;
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
-        replacemen,"
+        replacemen,
   t: "import { MetadataRoute, MetadataRouteSitemap } from './types/next';"},
       // Fix keywords type issues - convert string to array;
       {/* TODO: Fix JSX expression */}
@@ -78,4 +78,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed}
 
 // Process the app directory;
-// Process the app directory;"
+// Process the app directory;

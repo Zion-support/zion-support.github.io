@@ -137,7 +137,7 @@ class ErrorTrackingService {// TODO: Add content}
   O: Add content}
 }
       this.trackError(new Error(`Unhandled Promise)`
-  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
+  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}`
   O: Add content}
 };
 
@@ -197,7 +197,7 @@ const,
         this.errors.delete(oldestKey)}
     }
     // Log the error;`
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
+    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}`
   O: Add content}
 };
   error_i,

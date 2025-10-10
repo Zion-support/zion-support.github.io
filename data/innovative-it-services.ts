@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 
 export interface InnovativeITService {id: string;
@@ -1951,10 +1951,9 @@ export interface InnovativeITService,
   s: 2500, ratin,
   g: 4.7, review,
   s: 1250} ]} ; '
-=======
+
     market_size: '$45B cybersecurity market'
     growth_rate: '110% annual growth';
 variant: 'cyberpunk'
     contact_info: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -41,7 +41,7 @@ function fixJSXSyntax(content) {
   
   // Add missing closing tags at the end
   for (let i = openTags.length - 1; i >= 0; i--) {
-    result.push(`</${openTags[i]}>`);
+    result.push(`</${openTags[i]}>`);`
   }
   
   return result.join('\n');
@@ -77,14 +77,14 @@ function fixParsingErrors(content) {
   // Fix missing closing tags for common elements
   const commonElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside'];
   for (const element of commonElements) {
-    const regex = new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g');
+    const regex = new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g');`
     fixed = fixed.replace(regex, (match, attrs) => {
       // Count opening and closing tags
-      const openMatches = (fixed.match(new RegExp(`<${element}`, 'g')) || []).length;
-      const closeMatches = (fixed.match(new RegExp(`</${element}>`, 'g')) || []).length;
+      const openMatches = (fixed.match(new RegExp(`<${element}`, 'g')) || []).length;`
+      const closeMatches = (fixed.match(new RegExp(`</${element}>`, 'g')) || []).length;`
       
       if (openMatches > closeMatches) {
-        return match + `</${element}>`;
+        return match + `</${element}>`;`
       }
       return match;
     });
@@ -134,7 +134,7 @@ async function processFiles() {
             content.includes('Expected corresponding JSX closing tag') ||
             content.includes('Declaration or statement expected')) {
           
-          console.log(`Processing syntax errors in: ${file}`);
+          console.log(`Processing syntax errors in: ${file}`);`
           
           let fixed = fixJSXSyntax(content);
           fixed = fixTypeScriptSyntax(fixed);
@@ -144,10 +144,9 @@ async function processFiles() {
           processedCount++;
         }
       } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+        console.error(`Error processing ${file}:`, error.message);`
         errorCount++;
-<<<<<<< HEAD
-=======
+
 import path from 'path';
 
 function fixSyntaxErrors(filePath) {
@@ -157,17 +156,17 @@ function fixSyntaxErrors(filePath) {
     
     // Fix missing commas before properties in object literals
     // Pattern: property: value\n        property: value (missing comma)
-    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $&\n        $2:');
+    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: $&\n        $2:');`
     
     // More specific pattern for missing commas
-    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {
+    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {"`
       const before = match.substring(0, match.lastIndexOf('\n'));
       const after = match.substring(match.lastIndexOf('\n'));
       return before + ',' + after;
     });
     
     // Fix specific patterns we know are problematic
-    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {
+    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {"`
       const lines = match.split('\n');
       if (lines.length >= 2) {
         const firstLine = lines[0];
@@ -181,12 +180,12 @@ function fixSyntaxErrors(filePath) {
     
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath}`);`
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
     return false;
   }
 }
@@ -205,7 +204,7 @@ function findFilesWithSyntaxErrors(dir) {
         traverse(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
+
       }
     }
   }
@@ -216,7 +215,7 @@ traverse(dir);
 
 // Main execution
 const files = findFilesWithSyntaxErrors('/workspace');
-console.log(`Checking ${files.length} files for syntax errors`);
+console.log(`Checking ${files.length} files for syntax errors`);`
 
 let fixedCount = 0;
 for (const file of files) {
@@ -225,6 +224,5 @@ for (const file of files) {
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+console.log(`Fixed ${fixedCount} files`);`
+

@@ -127,12 +127,11 @@ const HomePage: React.FC = () => {
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
-        <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+        <section className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${`
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
-          }`}
+          }`}`
           aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto">
@@ -151,7 +150,6 @@ const HomePage: React.FC = () => {
               Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
               startups, and enterprises worldwide with proven results and 24/7 expert support.
             </p>
-            
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -175,7 +173,6 @@ const HomePage: React.FC = () => {
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
               </div>
             </div>
-            
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -196,7 +193,6 @@ const HomePage: React.FC = () => {
               >Get Free Consultation
               </a>
             </div>
-            
             {/* Contact Info */}
             <div className="mt-8 text-center">
               <p className="text-gray-300 text-sm mb-2">📍 364 E Main St STE 1008, Middletown, DE 19709
@@ -408,7 +404,6 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </div>
-
           {/* Additional Micro SAAS Services */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -537,7 +532,6 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </div>
-
           {/* Professional Tools Micro SAAS */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -666,7 +660,6 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </div>
-
           {/* IT Services & Infrastructure */}
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">IT Services & Infrastructure
@@ -1148,7 +1141,6 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div></Suspense>}>
           <ContentNewsletterSignup />
         </Suspense>
-
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading"></section>
           <div className="max-w-6xl mx-auto"></div>
@@ -1157,7 +1149,6 @@ const HomePage: React.FC = () => {
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
             </p>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {/* Contact Information */}
               <div className="cyber-card hologram-card p-8"></div>
@@ -1165,7 +1156,7 @@ const HomePage: React.FC = () => {
                 <div className="space-y-6"></div>
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
-                      <Phone className="w-6 h-6 text-white" />
+                      <Phone className="w-6 h-6 text-white />"
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Phone</p>
@@ -1173,10 +1164,9 @@ const HomePage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
-                      <Mail className="w-6 h-6 text-white" />
+                      <Mail className="w-6 h-6 text-white />"
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Email</p>
@@ -1184,10 +1174,9 @@ const HomePage: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
-                      <MapPin className="w-6 h-6 text-white" />
+                      <MapPin className="w-6 h-6 text-white />"
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Address</p>
@@ -1197,10 +1186,9 @@ const HomePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
-                      <Clock className="w-6 h-6 text-white" />
+                      <Clock className="w-6 h-6 text-white />"
                     </div>
                     <div>
                       <p className="text-gray-300 text-sm">Business Hours</p>
@@ -1212,7 +1200,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
@@ -1229,7 +1216,6 @@ const HomePage: React.FC = () => {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address
                     </label>
@@ -1242,7 +1228,6 @@ const HomePage: React.FC = () => {
                       required
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">Phone Number
                     </label>
@@ -1251,10 +1236,8 @@ const HomePage: React.FC = () => {
                       id="phone"
                       name="phone"
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your phone number"
-                    />
+                      placeholder="Enter your phone number />"
                   </div>
-                  
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">Service Interest
                     </label>
@@ -1271,13 +1254,11 @@ const HomePage: React.FC = () => {
                       <option value="other"></optio>Other</option>
                     </select>
                   </div>
-                  
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message
                     </label>
                     <textarea></textarea>
                   </div>
-                  
                   <button
                     type="submit"
                     className="w-full cyber-button text-center py-4"

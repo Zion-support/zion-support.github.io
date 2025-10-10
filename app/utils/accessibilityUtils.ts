@@ -1,9 +1,9 @@
 // Accessibility utilities for improving user experience and compliance
 
 export const generateId = (prefix: string = 'id'): string => {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}`
 export const createAriaLabel = (text: string, context?: string): string => {
-  return context ? `${text}, ${context}` : text}
+  return context ? `${text}, ${context}` : text}`
 export const announceToScreenReader = (message: string): void => {;
 const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -67,7 +67,7 @@ export const enhanceKeyboardNavigation = (element: HTMLElement): void => {
   })
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
 const skipLink = document.createElement('a');
-  skipLink.href = `#${targetId}`;
+  skipLink.href = `#${targetId}`;`
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
   
@@ -122,7 +122,7 @@ const style = document.createElement('style');
       overflow: visible,
       clip: auto,
       white-space: normal}
-  `;
+  `;`
   
   document.head.appendChild(style)
 export const initializeAccessibility = (): void => {

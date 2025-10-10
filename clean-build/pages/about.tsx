@@ -1,20 +1,18 @@
 
 export default function About() {
-<<<<<<< HEAD
+
   return(<React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
-=======
   return(<>
       
         <title>About Us - Zion Tech Group<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <meta;
+
+        <meta;>
           name="description"
-          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
-        /><
-        <meta name="viewport" content="width=device-width, initial-scale=1" /><
-        <link rel="icon" href="/favicon.ico" /><
+          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."</meta>        /><
+        <meta name="viewport" content="width=device-width, initial-scale=1 /><"
+        <link rel="icon" href="/favicon.ico /><"
       <
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}<
@@ -25,7 +23,7 @@ export default function About() {
                 About <span className="text-yellow-300">Zion Tech Group<
           <div className="container mx-auto px-4"><
             <div className="max-w-4xl mx-auto text-center"><
-              <h1 className="text-4xl m,
+              <h1 className="text-4xl m,"
     d:text-5xl font-bold mb-6">
                 About</h1> <span className="text-yellow-300">Zion Tech Group<
               <
@@ -58,7 +56,7 @@ export default function About() {
               <
               <div className="grid md: grid-cols-4 gap-8">
                 <div className="text-center">
-              <div className="grid m,
+              <div className="grid m,"
     d:grid-cols-4 gap-8"><
                 <div className="text-center"><
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+<
@@ -97,7 +95,7 @@ export default function About() {
               <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <div className="text-4xl mb-4">
-              <div className="grid md:grid-cols-2 l,
+              <div className="grid md:grid-cols-2 l,"
     g:grid-cols-4 gap-8"><
                 <div className="text-center p-6 bg-gray-50 rounded-lg"><
                   <div className="text-4xl mb-4"><
@@ -145,22 +143,20 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
+
   return (<React.Fragment>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
-=======
   return (<>
       <Head><
         <title>About Us - Zion Tech Group<
         <meta><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          name="description""
+
+          name="description"
           content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1" /><
-        <link rel="icon" href="/favicon.ico" /><
+        <meta name="viewport" content="width=device-width, initial-scale=1 /><"
+        <link rel="icon" href="/favicon.ico /><"
       <
       <div className="min-h-screen bg-gray-50"><
         {/* Hero Section *
@@ -234,8 +230,8 @@ export default function About() {/* TODO: Fix JSX expression *
                   solutions.
                 <
               <
-              <div className="grid,
-  md:grid-cols-2,"
+              <div className="grid,"
+  md:grid-cols-2,
   lg:grid-cols-4 gap-8"><
                 <div className="text-center p-6 bg-gray-50 rounded-lg"><
                   <div className="text-4xl mb-4"><
@@ -306,7 +302,7 @@ export default function About() {/* TODO: Fix JSX expression *
               <div className="grid md: grid-cols-3 gap-8">
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg">
                   <div className="text-5xl mb-4">
-              <div className="grid m,
+              <div className="grid m,"
     d:grid-cols-3 gap-8"><
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg"><
                   <div className="text-5xl mb-4"><
@@ -414,17 +410,15 @@ export default function About() {/* TODO: Fix JSX expression *
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
               <a
-                href="
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href=
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               >
-                Get In Touch;
-              <
+                Get In Touch;</a>              <
               <a;
-                href="
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
-    r:text-blue-600 transition-colors"
-        {/* CTA Section *
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"><
+                href=
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,>"
+    r:text-blue-600 transition-colors
+        {/* CTA Section *</a>        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"><
           <div className="container mx-auto px-4 text-center"><
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?<
             <p className="text-xl mb-8"><
@@ -434,20 +428,20 @@ export default function About() {/* TODO: Fix JSX expression *
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"><
               <a><
-                href="
+                href=
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-100 transition-colors"
+  hover:bg-gray-100 transition-colors
               >
                 Get In Touch;
               <
               <a><
-                href="
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-blue-600 transition-colors"
+                href=
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,"
+  hover:bg-white,
+  hover:text-blue-600 transition-colors
               >
                 View Our Services;
-<<<<<<< HEAD
+
               </a>
             </div>
           </div>
@@ -457,7 +451,7 @@ export default function About() {/* TODO: Fix JSX expression *
       </div>
     </React.Fragment>)
   )}
-=======
+
               <
             <
           <
@@ -468,5 +462,4 @@ export default function About() {/* TODO: Fix JSX expression *
     <)
   );
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-"
+

@@ -4,7 +4,7 @@ import fs from 'fs';
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
+    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}`
   };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
@@ -29,7 +29,7 @@ if (fs.existsSync(appPath)) {/* TODO: Fix JSX expression */}
 // // Fix AppMinimal.test.tsx;
 // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
-    "import { describe, it, expect } from 'jest'"
+    "import { describe, it, expect } from 'jest'
   );
 
   fs.writeFileSync(appMinimalTestPath, content);
@@ -55,9 +55,9 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
 
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
-  e: ['"][^'"]*['"]\s*\}\s*\]/g,"
-      "author,"
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
+  e: ['"][^'"]*['"]\s*\}\s*\]/g,
+      "author,
   s: ['Zion Tech Group']")
     );
 

@@ -82,9 +82,9 @@ export const realOperationalServices: RealOperationalService[] = [,
     tagline: "Real-time operational insights and optimization", price: '$99/month',
     description: 'Comprehensive operational intelligence platform for monitoring and optimizing business operations.',
     features: [;
-      "Real-time monitoring"
-      "Performance analytics"
-      "Operational insights"
+      "Real-time monitoring
+      "Performance analytics
+      "Operational insights
       "Optimization recommendations",
       "Alert system"],
     link: "/services/operational-intelligence", category: "Operational Services",
@@ -99,7 +99,7 @@ export const realOperationalServices: RealOperationalService[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -127,45 +127,45 @@ export const realOperationalServices: RealOperationalService[] = [,
 }
 export const,
   realOperationalServices: RealOperationalService[] = [,
-    i,"
-  d: "operational-intelligence", nam,"
+    i,
+  d: "operational-intelligence", nam,
   e: "Operational Intelligence Platform",
-    taglin,"
-  e: "Real-time operational insights and optimization", pric,"
+    taglin,
+  e: "Real-time operational insights and optimization", pric,
   e: "$99/month",
-    descriptio,"
+    descriptio,
   n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
     feature,
-  s: [;"
-      "Real-time monitoring""
-      "Performance analytics""
-      "Operational insights""
-      "Optimization recommendations""
-      "Alert system"
+  s: [;
+      "Real-time monitoring"
+      "Performance analytics"
+      "Operational insights"
+      "Optimization recommendations"
+      "Alert system
     ],
-    lin,"
-  k: "/services/operational-intelligence", categor,"
+    lin,
+  k: "/services/operational-intelligence", categor,
   y: "Operational Services",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -180,7 +180,7 @@ export const,
       "Performance analytics",
       "Operational insights",
       "Optimization recommendations",
-      "Alert system"
+      "Alert system
     ],
     link: '/services/operational-intelligence',
     category: 'Operational Services',
@@ -196,35 +196,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "operational-intelligence",
-    nam,"
+    nam,
   e: "Operational Intelligence Platform",
-    taglin,"
+    taglin,
   e: "Real-time operational insights and optimization",
-    pric,"
+    pric,
   e: "$99/month",
-    descriptio,"
+    descriptio,
   n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
     feature,
-  s: [,"
-      "Real-time monitoring","
-      "Performance analytics","
-      "Operational insights","
-      "Optimization recommendations","
-      "Alert system"
+  s: [,
+      "Real-time monitoring",
+      "Performance analytics",
+      "Operational insights",
+      "Optimization recommendations",
+      "Alert system
     ],
-    lin,"
+    lin,
   k: "/services/operational-intelligence",
-    categor,"
+    categor,
   y: "Operational Services",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -232,16 +232,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -270,7 +270,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} } } addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -285,42 +285,42 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  realOperationalServices: RealOperationalService[] = [ i,"
-  d: "operational-intelligence", nam,"
-  e: "Operational Intelligence Platform", taglin,"
-  e: "Real-time operational insights and optimization", pric,"
-  e: "$99/month", descriptio,"
-  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature,"
-  s: [ "Real-time monitoring" "Performance analytics" "Operational insights" "Optimization recommendations" "Alert system" ], lin,"
-  k: "/services/operational-intelligence", categor,"
+  realOperationalServices: RealOperationalService[] = [ i,
+  d: "operational-intelligence", nam,
+  e: "Operational Intelligence Platform", taglin,
+  e: "Real-time operational insights and optimization", pric,
+  e: "$99/month", descriptio,
+  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature,
+  s: [ "Real-time monitoring" "Performance analytics" "Operational insights" "Optimization recommendations" "Alert system" ], lin,
+  k: "/services/operational-intelligence", categor,
   y: "Operational Services", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "operational-intelligence", nam,"
-  e: "Operational Intelligence Platform", taglin,"
-  e: "Real-time operational insights and optimization", pric,"
-  e: "$99/month", descriptio,"
-  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature,"
-  s: [ "Real-time monitoring", "Performance analytics", "Operational insights", "Optimization recommendations", "Alert system" ], lin,"
-  k: "/services/operational-intelligence", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "operational-intelligence", nam,
+  e: "Operational Intelligence Platform", taglin,
+  e: "Real-time operational insights and optimization", pric,
+  e: "$99/month", descriptio,
+  n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.", feature,
+  s: [ "Real-time monitoring", "Performance analytics", "Operational insights", "Optimization recommendations", "Alert system" ], lin,
+  k: "/services/operational-intelligence", categor,
   y: "Operational Services", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

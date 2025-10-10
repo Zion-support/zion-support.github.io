@@ -40,7 +40,7 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
 if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
-  d: ${filePath}`);
+  d: ${filePath}`);`
       return true}
     
     return false} catch (error) {/* TODO: Fix JSX expression */}`
@@ -98,7 +98,7 @@ errorCount++}
   fixed: ${fixedCount}`);`
 // console.log removed for production
 `
-  s: ${errorCount}`);
+  s: ${errorCount}`);`
 
 // console.log removed for production
 // console.log removed for production

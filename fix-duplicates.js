@@ -15,11 +15,11 @@ let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix duplicate function declarations;
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`});
+      return `const ${name}: React.FC = () => {`});`
     
     // Fix duplicate const declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name} = () => {`});
+      return `const ${name} = () => {`});`
     
     // Fix missing closing braces in simple cases;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {;
@@ -31,12 +31,12 @@ const lines = body.split('\n');
         openBraces += (line.match(/{/g) || []).length;
 function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
+      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}`
     });
     
     // Fix duplicate const declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
+      return `const ${name} = () => {/* TODO: Fix JSX expression */}`
     });
     
     // Fix missing closing braces in simple cases;
@@ -44,7 +44,7 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
         closeBraces += (line.match(/}/g) || []).length}
       
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}
+        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}`
       return match});
     
     // Fix missing semicolons;
@@ -60,7 +60,7 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
 if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true}
     
     return false} catch (error) {/* TODO: Fix JSX expression */}`

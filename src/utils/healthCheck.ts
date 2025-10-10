@@ -90,7 +90,7 @@ const duration = performance.now() - startTime
           duration
         })
       } catch (error) {
-        logger.error(`Health check "${name}" failed`, error as Error);
+        logger.error(`Health check "${name}" failed`, error as Error);"`
         checks.push({
           name,
           status: 'fail',
@@ -249,7 +249,7 @@ const duration = performance.now() - startTime;
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        logger.error(`Health check "${name}" failed`, error as Error);
+        logger.error(`Health check "${name}" failed`, error as Error);"`
         checks.push({/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -445,7 +445,7 @@ $4}
 }
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 let,
-  status: 'pass' | 'warn' | 'fail' = 'pass'`;
+  status: 'pass' | 'warn' | 'fail' = 'pass'`;`
 let message = `Memory,`
   usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {/* TODO: Fix JSX expression */}
@@ -589,7 +589,7 @@ const missingAPIs: string[] = []
 
   name: 'browser-apis',
         status: 'warn',
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
+        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,`
         details: { missingAPIs }
       }
     }

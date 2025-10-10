@@ -99,12 +99,12 @@ const _now = Date.now();
 
   persistToStorage(key, value, expiry) {/* TODO: Fix JSX expression */}
       };
-      localStorage.setItem(`cache_${key}`, JSON.stringify(item))} catch (error) {/* TODO: Fix JSX expression */}
+      localStorage.setItem(`cache_${key}`, JSON.stringify(item))} catch (error) {/* TODO: Fix JSX expression */}`
       //       }
   }
 
   removeFromStorage(key) {/* TODO: Fix JSX expression */}`
-      localStorage.removeItem(`cache_${key}`)} catch (error) {/* TODO: Fix JSX expression */}
+      localStorage.removeItem(`cache_${key}`)} catch (error) {/* TODO: Fix JSX expression */}`
       //       }
   }
 

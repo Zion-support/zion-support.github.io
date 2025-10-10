@@ -29,14 +29,14 @@ export const waitFor = async ()
     if (Date.now() - startTime > timeout) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)}
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`)}`
     await wait(interval)}
   const startTime = Date.now()
   while (!condition()) {/* TODO: Fix JSX expression */}
   }
     if (Date.now() - startTime > timeout) {/* TODO: Fix JSX expression */}
   }`
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`)`
     }
     await wait(interval)
   }
@@ -256,13 +256,13 @@ export const generateTestData = {// TODO: Add content}
   l: (): string => {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-    return `test${generateTestData.string(5)}@example.com`},
+    return `test${generateTestData.string(5)}@example.com`},`
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
     return `http,`
-  s://example.com/${generateTestData.string(10)}`},
+  s://example.com/${generateTestData.string(10)}`},`
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */}
   O: Add content}

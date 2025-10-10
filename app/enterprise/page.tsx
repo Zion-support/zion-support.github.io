@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -94,11 +94,8 @@ const stats = [
     <div>
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
-        description="Comprehensive enterprise-grade solutions for large-scale business operations."
-        keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-      />
-      <Navigation />
-      
+        description="Comprehensive enterprise-grade solutions for large-scale business operations.">
+        keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions /></SEOOptimizer>      <Navigation />"
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div>
@@ -117,7 +114,7 @@ const stats = [
           <div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button>
               Get Enterprise Consultation
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              <ArrowRight className="inline-block ml-2 w-5 h-5 />"
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               View Case Studies
@@ -125,7 +122,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -133,7 +129,7 @@ const stats = [
             {stats.map((stat, index) => (
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
-                  <stat.icon className="w-12 h-12 text-purple-400" />
+                  <stat.icon className="w-12 h-12 text-purple-400 />"
                 </div>
                 <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm"></di>{stat.label}</div>
@@ -142,7 +138,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4"></section>
         <div>
@@ -154,16 +149,15 @@ const stats = [
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+                  <feature.icon className="w-8 h-8 text-purple-400 mr-3 />"
                   <h3 className="text-xl font-semibold text-white"></h>{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2"></ul>
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                       {benefit}
                     </li>
                   ));
@@ -173,7 +167,6 @@ const stats = [
           </div>
         </div>
       </section>
-
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Comprehensive Solutions
             </h2>
@@ -181,7 +174,6 @@ const stats = [
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>
-          
                     </li>
                   ));
                 </ul>
@@ -190,7 +182,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4"></section>
                 </button>
@@ -199,7 +190,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
         <div>
@@ -212,7 +202,7 @@ const stats = [
           <div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
               Contact Enterprise Sales
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              <ArrowRight className="inline-block ml-2 w-5 h-5 />"
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               Learn More
@@ -220,12 +210,10 @@ const stats = [
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
 )]
     };
 export default EnterprisePage;
-=======
+
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

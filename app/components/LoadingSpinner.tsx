@@ -12,8 +12,7 @@ const colorClasses = {
     primary: 'text-indigo-600',
     secondary: 'text-gray-600',
     white: 'text-white';);
-<<<<<<< HEAD
-=======
+
   text?: string]
     }
 
@@ -34,12 +33,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps></LoadingSpinnerProps> = ({
     white: 'text-white']
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <div className="flex flex-col items-center justify-center space-y-2"></div>
       <div>
       {text && (
-        <p className={`text-sm ${colorClasses[color]} animate-pulse`}></p>
+        <p className={`text-sm ${colorClasses[color]} animate-pulse`}></p>`
           {text}
         </p>
       );
@@ -48,5 +46,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps></LoadingSpinnerProps> = ({
     };
 export default LoadingSpinner;
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

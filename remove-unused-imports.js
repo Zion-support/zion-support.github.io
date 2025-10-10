@@ -32,11 +32,11 @@ let content = fs.readFileSync(filePath, 'utf8');
     
     // Get unused imports using ESLint;
     try {;
-const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, { )
+const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, { )`
         encoding: 'utf8'),
         stdio: 'pipe',;
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})
+      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})`
       });
       ;
 const lintResults = JSON.parse(result);
@@ -56,15 +56,15 @@ const unusedVars = lintResults[0].messages;
         if (line.trim().startsWith('import ')) {
           // Check if any of the unused vars are in this import;
           const hasUnusedVar = unusedVars.some(varName => )
-            line.includes(`{ ${varName}`) || 
-            line.includes(`{${varName}`) ||
-            line.includes(` ${varName},`) ||
-            line.includes(` ${varName} `) ||
-            line.includes(`,${varName}`) ||
-            line.includes(`, ${varName}`) ||
-            line.includes(`${varName},`) ||
-            line.includes(`${varName} `) ||
-            line.includes(`${varName}`) && line.includes('from')
+            line.includes(`{ ${varName}`) || `
+            line.includes(`{${varName}`) ||`
+            line.includes(` ${varName},`) ||`
+            line.includes(` ${varName} `) ||`
+            line.includes(`,${varName}`) ||`
+            line.includes(`, ${varName}`) ||`
+            line.includes(`${varName},`) ||`
+            line.includes(`${varName} `) ||`
+            line.includes(`${varName}`) && line.includes('from')`
           );
           
           if (hasUnusedVar) {
@@ -86,14 +86,14 @@ const imports = importMatch[1].split(',').map(imp => imp.trim());
             line.includes(`, ${varName}`) ||`
             line.includes(`${varName},`) ||`
             line.includes(`${varName} `) ||`
-            line.includes(`${varName}`) && line.includes('from')
+            line.includes(`${varName}`) && line.includes('from')`
           );
           
           if (hasUnusedVar) {/* TODO: Fix JSX expression */}
             const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
             if (importMatch) {/* TODO: Fix JSX expression */}
               } else {/* TODO: Fix JSX expression */}`
-                return line.replace(importMatch[0], `import { ${newImportList} } from`)}
+                return line.replace(importMatch[0], `import { ${newImportList} } from`)}`
             }
             return false; // Remove line if it's a default import}
         }
@@ -101,7 +101,7 @@ const imports = importMatch[1].split(',').map(imp => imp.trim());
       ;
 const newContent = newLines.join('\n');
       if (newContent !== originalContent) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
         return true}
       
     } catch (error) {

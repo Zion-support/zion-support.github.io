@@ -16,7 +16,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-age n t-reliabili t y-runboo k s-v5')
         />),
       </Helm, e, t>
-
       <div, className='container, m, x-auto, p, x-6, p, y-12'></div>
         <div, className='m, a, x-w-3xl, m, x-au, t, o'></div>
           <div, className='mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
@@ -27,7 +26,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           </h1>
           <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
             Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.</p>
-
             <div, classNam, e = 'mt-8'></div>
               <a, hre, f='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
                 ← Back, to, Blog;

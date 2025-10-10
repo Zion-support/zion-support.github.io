@@ -67,7 +67,7 @@ function improveLogging(content, filePath) {
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
             `$1\nimport { logger } from '${loggerPath}';`
           )} else {/* TODO: Fix JSX expression */}`
-          newContent = `import { logger } from '${loggerPath}';\n\n${content}`}
+          newContent = `import { logger } from '${loggerPath}';\n\n${content}`}`
       }
 
       // Replace console statements;
@@ -119,7 +119,7 @@ function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
   // Check for eval;
   if (content.match(/\beval\s*\(/)) {
   if (content.match(/\beval\s*\(/)) {/* TODO: Fix JSX expression */}`
-    issues.push(`Security risk in ${path.relative(process.cwd(), filePath)}: eval() usage`)}
+    issues.push(`Security risk in ${path.relative(process.cwd(), filePath)}: eval() usage`)}`
 
   // Check for localStorage without encryption;
   if (content.includes('localStorage.setItem') && content.includes('password')) {
@@ -155,9 +155,9 @@ function processFile(filePath) {
     if (loggingResult.improved) {
       newContent = loggingResult.content;
       fileImproved = true;
-      config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
+      config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);`
 function processFile(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${path.relative(process.cwd(), filePath)}`)}
+  in: ${path.relative(process.cwd(), filePath)}`)}`
 
     if (errorHandlingResult.improved) {/* TODO: Fix JSX expression */}
     }
@@ -166,7 +166,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     }
 
     if (importsResult.improved) {/* TODO: Fix JSX expression */}`
-  in: ${path.relative(process.cwd(), filePath)}`)}
+  in: ${path.relative(process.cwd(), filePath)}`)}`
 
     // Write file if improved;
     if (fileImproved && newContent !== content) {
@@ -176,7 +176,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     }
 
     return false} catch (error) {/* TODO: Fix JSX expression */}`
-    config.errors.push(`Error processing ${filePath}: ${error.message}`);
+    config.errors.push(`Error processing ${filePath}: ${error.message}`);`
     return false}
 }
 

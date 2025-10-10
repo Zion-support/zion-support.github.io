@@ -68,7 +68,6 @@ export function deepMerge;
 // sourceValue as Record;
 
           <string, unknown>
-
         ) as T[Extract<keyof T, string>]} else {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -100,7 +99,7 @@ export function flattenObject()
   O: Add content}
 }
       const value = obj[key];
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
+      const newKey = prefix ? `${prefix}${separator}${key}` : key;`
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -341,7 +340,7 @@ export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add c
           < 0 ? 0 : decimals;
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));`
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`}
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`}`
 /**
  * Format number with separators;
  */
@@ -403,7 +402,7 @@ export function formatRelativeTime(date: Date | string | number): string {// TOD
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-  return `${years} year${years > 1 ? 's' : ''} ago`}
+  return `${years} year${years > 1 ? 's' : ''} ago`}`
 /**
  * Truncate string;
  */

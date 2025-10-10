@@ -51,7 +51,6 @@ constructor(props: Props) {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
                 <summary className="cursor-pointer text-cyan-400 font-medium mb-2">
@@ -71,14 +70,12 @@ constructor(props: Props) {
               >
                 Refresh Page
               </button>
-              
               <button
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 Try Again
               </button>
-              
               <a
                 href="/"
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"

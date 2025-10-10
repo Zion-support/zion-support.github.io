@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -2201,11 +2200,10 @@ i,
   contactInfo: contact}]; contactInf,
   o: contact,
   contactInfo: contact } ]} ]; '
-=======
+
     roi: '310% ARR lift from churn reduction and pricing wins.'
     competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
     market_size: '$30 B+ subscription economy tooling'
     growth_rate: '30% YoY';
 variant: 'ai - futuristic'
     customers: 24;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

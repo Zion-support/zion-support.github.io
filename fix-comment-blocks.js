@@ -19,7 +19,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     (match, method, body) => {/* TODO: Fix JSX expression */}
         }
         return line}).join('\n');
-      return `// console.${method}(...): {\n${fixedBody}\n// }`}
+      return `// console.${method}(...): {\n${fixedBody}\n// }`}`
   );
 
   // Fix malformed comment blocks that are missing proper commenting;
@@ -50,7 +50,7 @@ const lines = body.split('\n');
     (match, method, body) => {/* TODO: Fix JSX expression */}
         }
         return line});`
-      return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`}
+      return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`}`
   );
 
   return content}
@@ -118,7 +118,7 @@ const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 ;
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`)}
+  d: ${file}`)}`
 }
 `
 // console.log removed for production

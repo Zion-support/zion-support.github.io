@@ -21,14 +21,14 @@ const generateSitemap = (pages: Array<{ url: string; priority: number; changefre
           
           <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `}
+${pages.map(page => `}`
           <url>
     <loc>${baseUrl}${page.url}</loc>
     <priority>${page.priority}</priority>
     <changefreq>${page.changefreq}</changefreq>
-  </url>`).join('
+  </url>`).join('`
 ')}
-</urlset>`;
+</urlset>`;`
   return sitemap;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

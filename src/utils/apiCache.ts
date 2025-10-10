@@ -228,7 +228,7 @@ const response = await fetch(url, options);
             retryDelay,
             attempt + 1
           )}
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`)}
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)}`
       const data = await response.json();
       return data as T} catch (error) {
       // Retry on network errors
@@ -280,7 +280,7 @@ const response = await fetch(url, options);
 //             retryDelay,
 //             attempt + 1)
         }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)`
       }
       const data = await response.json();
       return data as T} catch (error) {/* TODO: Fix JSX expression */}
@@ -354,7 +354,7 @@ const response = await fetch(url, options);
   private getCacheKey(url: string, options: RequestInit): string {;
 const method = options.method || 'GET';
     const body = options.body ? JSON.stringify(options.body) : '';
-    return `${method}:${url}:${body}`}
+    return `${method}:${url}:${body}`}`
   /**
    * Delay helper
    */
@@ -413,7 +413,7 @@ const now = Date.now();
 }
     const method = options.method || 'GET';
     const body = options.body ? JSON.stringify(options.body) : '';`
-    return `${method}:${url}:${body}`}
+    return `${method}:${url}:${body}`}`
   /**
    * Delay helper;
    */
@@ -467,9 +467,9 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 const cache = new ApiCache();
   return {
     get: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
+      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),`
     post: <T>(path: string, body: unknown, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, {
+      cache.fetch<T>(`${baseUrl}${path}`, {`
         ...defaultOptions,
         ...options,
         method: 'POST',
@@ -481,7 +481,7 @@ const cache = new ApiCache();
         body: JSON.stringify(body)
       }),
     put: <T>(path: string, body: unknown, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, {
+      cache.fetch<T>(`${baseUrl}${path}`, {`
         ...defaultOptions,
         ...options,
         method: 'PUT',
@@ -493,12 +493,12 @@ const cache = new ApiCache();
         body: JSON.stringify(body)
       }),
     delete: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
+      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),`
     invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
     clear: () => cache.clear(),
     stats: () => cache.getStats(),
     prefetch: <T>(path: string, options?: RequestInit) =>
-      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
+      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })`
   }}
 export default ApiCache;
  * Default API cache instance;
@@ -556,9 +556,9 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           
 
           <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
+      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),`
     post: <T>(path: string, body: unknown, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, {// TODO: Add content}
+      cache.fetch<T>(`${baseUrl}${path}`, {// TODO: Add content}`
 
 }
 //         ...defaultOptions,
@@ -591,7 +591,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           
 
           <T>(path: string, body: unknown, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, {// TODO: Add content}
+      cache.fetch<T>(`${baseUrl}${path}`, {// TODO: Add content}`
 
 }
 //         ...defaultOptions,
@@ -624,7 +624,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
           
           <T>(pat)
   h: string, options?: RequestInit) =>`
-      cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
+      cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})`
   d: 'DELETE' }),
     invalidat,
   e: (patter)
@@ -636,7 +636,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
     prefetc,
   h: <T>(pat)
   h: string, options?: RequestInit) =>`
-      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
+      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })`
   )
   }
 }

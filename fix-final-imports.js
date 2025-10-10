@@ -27,7 +27,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix root-level files;
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacemen,"
+        replacemen,
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
       },
@@ -62,4 +62,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed}
 
 // Process the app directory;
-// Process the app directory;"
+// Process the app directory;

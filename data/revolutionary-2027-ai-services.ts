@@ -82,9 +82,9 @@ export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
     tagline: "Revolutionary AI for 2027", price: '$399/month',
     description: 'Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.',
     features: [;
-      "Revolutionary AI"
-      "Transformative capabilities"
-      "Advanced algorithms"
+      "Revolutionary AI
+      "Transformative capabilities
+      "Advanced algorithms
       "Innovation platform",
       "Future-ready AI"],
     link: "/services/2027-revolutionary-ai", category: "Revolutionary 2027 AI",
@@ -99,7 +99,7 @@ export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -127,45 +127,45 @@ export const revolutionary2027 AIServices: Revolutionary2027 AiService[] = [,
 }
 export const,
   revolutionary2027AIServices: Revolutionary2027AiService[] = [,
-    i,"
-  d: "2027-revolutionary-ai", nam,"
+    i,
+  d: "2027-revolutionary-ai", nam,
   e: "2027 Revolutionary AI Platform",
-    taglin,"
-  e: "Revolutionary AI for 2027", pric,"
+    taglin,
+  e: "Revolutionary AI for 2027", pric,
   e: "$399/month",
-    descriptio,"
+    descriptio,
   n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.",
     feature,
-  s: [;"
-      "Revolutionary AI""
-      "Transformative capabilities""
-      "Advanced algorithms""
-      "Innovation platform""
-      "Future-ready AI"
+  s: [;
+      "Revolutionary AI"
+      "Transformative capabilities"
+      "Advanced algorithms"
+      "Innovation platform"
+      "Future-ready AI
     ],
-    lin,"
-  k: "/services/2027-revolutionary-ai", categor,"
+    lin,
+  k: "/services/2027-revolutionary-ai", categor,
   y: "Revolutionary 2027 AI",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -180,7 +180,7 @@ export const,
       "Transformative capabilities",
       "Advanced algorithms",
       "Innovation platform",
-      "Future-ready AI"
+      "Future-ready AI
     ],
     link: '/services/2027-revolutionary-ai',
     category: 'Revolutionary 2027 AI',
@@ -196,35 +196,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "2027-revolutionary-ai",
-    nam,"
+    nam,
   e: "2027 Revolutionary AI Platform",
-    taglin,"
+    taglin,
   e: "Revolutionary AI for 2027",
-    pric,"
+    pric,
   e: "$399/month",
-    descriptio,"
+    descriptio,
   n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.",
     feature,
-  s: [,"
-      "Revolutionary AI","
-      "Transformative capabilities","
-      "Advanced algorithms","
-      "Innovation platform","
-      "Future-ready AI"
+  s: [,
+      "Revolutionary AI",
+      "Transformative capabilities",
+      "Advanced algorithms",
+      "Innovation platform",
+      "Future-ready AI
     ],
-    lin,"
+    lin,
   k: "/services/2027-revolutionary-ai",
-    categor,"
+    categor,
   y: "Revolutionary 2027 AI",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -232,16 +232,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -270,7 +270,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} } } addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -285,42 +285,42 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  revolutionary2027AIServices: Revolutionary2027AiService[] = [ i,"
-  d: "2027-revolutionary-ai", nam,"
-  e: "2027 Revolutionary AI Platform", taglin,"
-  e: "Revolutionary AI for 2027", pric,"
-  e: "$399/month", descriptio,"
-  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.", feature,"
-  s: [ "Revolutionary AI" "Transformative capabilities" "Advanced algorithms" "Innovation platform" "Future-ready AI" ], lin,"
-  k: "/services/2027-revolutionary-ai", categor,"
+  revolutionary2027AIServices: Revolutionary2027AiService[] = [ i,
+  d: "2027-revolutionary-ai", nam,
+  e: "2027 Revolutionary AI Platform", taglin,
+  e: "Revolutionary AI for 2027", pric,
+  e: "$399/month", descriptio,
+  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.", feature,
+  s: [ "Revolutionary AI" "Transformative capabilities" "Advanced algorithms" "Innovation platform" "Future-ready AI" ], lin,
+  k: "/services/2027-revolutionary-ai", categor,
   y: "Revolutionary 2027 AI", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2027-revolutionary-ai", nam,"
-  e: "2027 Revolutionary AI Platform", taglin,"
-  e: "Revolutionary AI for 2027", pric,"
-  e: "$399/month", descriptio,"
-  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.", feature,"
-  s: [ "Revolutionary AI", "Transformative capabilities", "Advanced algorithms", "Innovation platform", "Future-ready AI" ], lin,"
-  k: "/services/2027-revolutionary-ai", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "2027-revolutionary-ai", nam,
+  e: "2027 Revolutionary AI Platform", taglin,
+  e: "Revolutionary AI for 2027", pric,
+  e: "$399/month", descriptio,
+  n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.", feature,
+  s: [ "Revolutionary AI", "Transformative capabilities", "Advanced algorithms", "Innovation platform", "Future-ready AI" ], lin,
+  k: "/services/2027-revolutionary-ai", categor,
   y: "Revolutionary 2027 AI", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

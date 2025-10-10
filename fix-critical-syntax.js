@@ -60,7 +60,7 @@ function fixCriticalSyntax(filePath) {
     
     return modified;
   } catch (error) {
-    console.error(`Error fixing syntax in ${filePath}:`, error.message);
+    console.error(`Error fixing syntax in ${filePath}:`, error.message);`
     return false;
   }
 }
@@ -94,15 +94,15 @@ console.log('Starting critical syntax fixes...');
 const appDir = path.join(process.cwd(), 'app');
 const appFiles = findAppFiles(appDir);
 
-console.log(`Found ${appFiles.length} app files to check`);
+console.log(`Found ${appFiles.length} app files to check`);`
 
 let fixedCount = 0;
 for (const file of appFiles) {
   if (fixCriticalSyntax(file)) {
     fixedCount++;
-    console.log(`Fixed syntax in: ${file}`);
+    console.log(`Fixed syntax in: ${file}`);`
   }
 }
 
-console.log(`Fixed syntax in ${fixedCount} files`);
+console.log(`Fixed syntax in ${fixedCount} files`);`
 console.log('Critical syntax fixes complete!');

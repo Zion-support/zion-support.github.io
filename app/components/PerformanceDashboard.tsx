@@ -79,7 +79,6 @@ const measureFPS = (currentTime: number) => {
           ×
         </button>
       </div>
-
       <div className="space-y-3">
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Load Time:</span>
@@ -87,26 +86,22 @@ const measureFPS = (currentTime: number) => {
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>
-
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Render Time:</span>
           <span className="text-sm font-mono">
             {metrics.renderTime.toFixed(2)}ms
           </span>
         </div>
-
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Memory Usage:</span>
           <span className="text-sm font-mono">
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
           </span>
         </div>
-
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
         </div>
-
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
             Last updated: {new Date().toLocaleTimeString()}</div>

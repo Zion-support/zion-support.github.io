@@ -1,15 +1,15 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
+
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
+
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
+
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
+
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
+
 const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
 const [servicesOpen, setServicesOpen] = useState(false);
 const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -24,10 +24,7 @@ const handleResize = () => {
 const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
   };
-  
-=======
->>>>>>> main
->>>>>>> origin/main
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -35,7 +32,7 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
@@ -208,7 +205,7 @@ const emergingTech = [
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                      ))}
+                    ))}
                   </div>
                 </div>
               )}
@@ -363,9 +360,9 @@ const emergingTech = [
               {/* Mobile AI Services */}
               <div>
                 <button
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
+                onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
                     <span>AI Services</span>
@@ -379,7 +376,7 @@ const emergingTech = [
                         key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus}>
                       >
                         {service.name}
                       </Link>
@@ -387,21 +384,19 @@ const emergingTech = [
                     <Link
                       href="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
+                      onClick={closeAllMenus}>
                     >
-                      View All AI Services →
-                    </Link>
+                      View All AI Services →</Link>                    </Link>
                   </div>
                 )}
               </div>
               {/* Mobile IT Services */}
               <div>
                 <button
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Cloud className="w-4 h-4" />
+                onClick={() => setItServicesOpen(!itServicesOpen)}
+                className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium>"
+                  <span className="flex items-center space-x-2>"
+                    <Cloud className="w-4 h-4 />"
                     <span>IT Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
@@ -413,7 +408,7 @@ const emergingTech = [
                         key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus}>
                       >
                         {service.name}
                       </Link>
@@ -424,11 +419,10 @@ const emergingTech = [
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Cpu className="w-4 h-4" />
+                onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium>"
+                  <span className="flex items-center space-x-2>"
+                    <Cpu className="w-4 h-4 />"
                     <span>Micro SAAS</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
@@ -440,7 +434,7 @@ const emergingTech = [
                         key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus}>
                       >
                         {service.name}
                       </Link>
@@ -448,10 +442,9 @@ const emergingTech = [
                     <Link
                       href="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
+                      onClick={closeAllMenus}>
                     >
-                      View All Micro SAAS →
-                    </Link>
+                      View All Micro SAAS →</Link>                    </Link>
                   </div>
                 )}
               </div>
@@ -473,22 +466,18 @@ const emergingTech = [
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">
                 <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
-                  <Phone className="w-4 h-4" />
+                  href="tel:+13024640950>"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium></a>                  <Phone className="w-4 h-4 />"
                   <span>(302) 464-0950</span>
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
-                  <Mail className="w-4 h-4" />
+                  href="mailto:kleber@ziontechgroup.com>"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium></a>                  <Mail className="w-4 h-4 />"
                   <span>kleber@ziontechgroup.com</span>
                 </a>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+                <div className="flex items-center space-x-2 text-gray-400>"
+                  <MapPin className="w-4 h-4 />"
+                  <span className="text-sm>364 E Main St STE 1008, Middletown DE 19709</span>"
                 </div>
               </div>
             </div>

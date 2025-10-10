@@ -24,7 +24,7 @@ for (const pr of prs) {
 //   try {
     //Check if branch exists;
     try {
-      execSync(`git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`)
+      execSync(`git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`)`
         { stdio: 'pipe' }
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
@@ -55,7 +55,7 @@ try {/* TODO: Fix JSX expression */}
 
 //Process each PR;
 for (const pr of prs) {/* TODO: Fix JSX expression */}
-        `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
+        `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,`
         {/* TODO: Fix JSX expression */}
   o: 'pipe' }
       );
@@ -64,7 +64,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 
     //Try to merge the branch;
     try {
-      execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)
+      execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)"`
         { stdio: 'inherit' }
       );
 //       } catch (error) {
@@ -76,7 +76,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 //           //Reset the merge;
           execSync('git merge --abort', { stdio: 'inherit' });
     try {/* TODO: Fix JSX expression */}`
-        `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
+        `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -101,8 +101,8 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
         if (file.trim()) {
           // console.log removed for production
 try {
-            execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' });
-            execSync(`git add "${file}"`, { stdio: 'inherit' })} catch (e) {
+            execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' });`
+            execSync(`git add "${file}"`, { stdio: 'inherit' })} catch (e) {`
             // console.log removed for production
 }
         }
@@ -138,4 +138,4 @@ try {/* TODO: Fix JSX expression */}
 //   } catch (error) {/* TODO: Fix JSX expression */}
 //   }
 
-// "`
+// "`"`

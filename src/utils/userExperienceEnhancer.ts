@@ -532,7 +532,7 @@ ${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''}
 ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''}
 ${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''}
 ${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
-    `;
+    `;`
     
     return report.trim()}
 }

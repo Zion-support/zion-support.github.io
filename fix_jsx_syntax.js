@@ -32,9 +32,9 @@ async function main() {/* TODO: Fix JSX expression */}
       if (onClickFix !== content) {/* TODO: Fix JSX expression */}
       }
 
-      //3. Fix className prop,
+      //3. Fix: className prop,
   placement: <div>\nclassName={...} -> <div\nclassName={...}
-      const classNameFix = content.replace()
+      const: classNameFix = content.replace()
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
         '<$1\nclassName={$2}'
       );

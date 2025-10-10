@@ -48,7 +48,7 @@ function mergeBranch(branchName) {
   try {
     // console.log removed for production
 // Try to merge the branch;
-    execSync(`git merge ${branchName} --no-ff -m "feat: Merge enhancements from ${branchName}"`, { stdio: 'pipe' });
+    execSync(`git merge ${branchName} --no-ff -m "feat: Merge enhancements from ${branchName}"`, { stdio: 'pipe' });`
     
     // console.log removed for production
 return true} catch (error) {
@@ -58,7 +58,7 @@ return true} catch (error) {
     
     if (conflictFiles.trim()) {
       // console.log removed for production
-.length} files...`);
+.length} files...`);`
       ;
 const files = conflictFiles.trim().split('\n');
       let resolvedCount = 0;
@@ -75,7 +75,7 @@ const files = conflictFiles.trim().split('\n');
       execSync('git add .', { stdio: 'inherit' });
 
       // Commit the resolution;
-      execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: 'inherit' });
+      execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: 'inherit' });`
       
       // console.log removed for production
 return true} else {
@@ -100,7 +100,7 @@ let mergedCount = 0;
   for (const branch of branchesToMerge) {
     try {
       // Check if branch has unique commits;
-      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
+      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });`
       
       if (!uniqueCommits.trim()) {
         // console.log removed for production

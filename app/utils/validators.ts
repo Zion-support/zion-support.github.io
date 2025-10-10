@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client';
 
 /**
@@ -165,6 +165,5 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
     errors
   };
 }
-=======
+
   error?: string;);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

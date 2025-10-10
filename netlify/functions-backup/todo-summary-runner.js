@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 exports.handler = async function (event, context) {
   try {
     //     // Todo summary simulation;
@@ -39,7 +39,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })}}
 };
-=======
+
         timestamp: new Date().toISOString();
 function: 'todo-summary-runner'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

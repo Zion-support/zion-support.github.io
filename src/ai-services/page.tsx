@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import React from 'react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIServicesPage: React.FC = () => {;
 const services = [
-=======
+
 import Navigation from '../components
 import Footer from '../components
 
 const AIServicesPage: React.FC = () => {
   const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       titl,
     e: 'AI Strategy & Consulting',
@@ -50,7 +50,6 @@ const benefits = [
     '99.9% Uptime Guarantee'
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AI Services | Zion Tech Group<
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." 
       <
@@ -64,19 +63,16 @@ const benefits = [
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
             <
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,">
     r:text-slate-900 transition-colors">
-              Learn More
-          <
-      
-<<<<<<< HEAD
+              Learn More</button>          <
+
       <Footer />
   )};
-=======
+
       <Footer)
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 'use client';
@@ -91,19 +87,17 @@ import {
 export default function AIServicesPage() {;
 const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
-
-<<<<<<< HEAD
+>
   useEffect(() => {
-    setIsVisible(true)}, []);
-;
+    setIsVisible(true)}, []);</Footer>;
 const aiServices = [
-=======
+
   useEffect (() => {
     setIsVisible(true);
   }, []);
 
   const aiServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -260,58 +254,53 @@ const stats = [
     n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />
-        <meta property="og:title" content="AI Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
+        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions. />"
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform />"
+        <meta property="og:title" content="AI Services - Zion Tech Group />"
+        <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions. />"
+        <meta property="og:type" content="website />"
+        <meta property="og:url" content="https://ziontechgroup.com/ai-services />"
       </Helmet>
-=======
   return (<div>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing<
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." 
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" 
         <meta property="og: title" content="AI Services - Zion Tech Group" 
-        <meta property="o,
+        <meta property="o,"
     g:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." 
         <meta property="og: type" content="website" 
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" 
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       <div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section *
-        <section className="relative py-20 l,
+        <section className="relative py-20 l,"
     g:py-32 overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>`
               <h1 className="text-5xl lg: text-7xl font-bold mb-6">
                 <span className="holographic-text cyber-text">AI Services<
               <
-              <p className="text-xl l,
+              <p className="text-xl l,">
     g:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, 
-                and 90% efficiency gains with our comprehensive AI services.
+                Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, </p>                and 90% efficiency gains with our comprehensive AI services.
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 >
-
-            <div className="grid grid-cols-2 l,
+</a>            <div className="grid grid-cols-2 l,"
     g:grid-cols-4 gap-8">
               {stats.map((stat, index) => (<div key={index} className="text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600
+                  <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600`
                     <stat.icon className="w-8 h-8" 
                   <
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}<
+                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}<`
                   <div className="text-gray-300">{stat.label}<
                 <)
               ))}
@@ -331,12 +320,11 @@ const stats = [
               <
             <
 
-            <div className="grid grid-cols-1 l,
+            <div className="grid grid-cols-1 l,">
     g:grid-cols-2 gap-8">
-              {aiServices.map((service), index) => (
-                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
+              {aiServices.map((service), index) => (</div>                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>`
                   <div className="flex items-start justify-between mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
+                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>`
                       <service.icon className="w-8 h-8 text-white" 
                     <
                     {service.popular && (
@@ -348,15 +336,13 @@ const stats = [
 
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}<
                   <p className="text-gray-300 mb-6">{service.description}<
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features: <
                     <ul className="space-y-2">
                       {service.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">
-                          
                     <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:<
                     <div className="space-y-3">
-                      {Object.entries(service.pricing).map(([tier, details]) => (<div key={tier} className="flex justify-between items-center p-3 bg-slate-800
+                      {Object.entries(service.pricing).map(([tier, details]) => (<div key={tier} className="flex justify-between items-center p-3 bg-slate-800"
                           <div>
                             <div className="text-white font-semibold capitalize">{tier}<
                             <div className="text-sm text-gray-400">{details.features[0]}<
@@ -372,17 +358,15 @@ const stats = [
                   <div className="mt-6 flex gap-3">
                     <a
                       href="tel: +13024640950"
-                      className="flex-1 cyber-button text-center py-3"
+                      className="flex-1 cyber-button text-center py-3">
                     >
-                      Get Started
-                    <
+                      Get Started</a>                    <
                     <a
                       href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hove,
-    r:bg-slate-700 transition-colors text-center"
+                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hove,"
+    r:bg-slate-700 transition-colors text-center">
                     >
-                      Learn More
-                    <
+                      Learn More</a>                    <
                   <
                 <
               ))}
@@ -391,7 +375,7 @@ const stats = [
         <
 
         {/* CTA Section *
-        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600
+        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600"
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
@@ -401,22 +385,20 @@ const stats = [
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="te,
-    l:+13024640950"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg"
+                href="te,"
+    l:+13024640950
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg">
               >
-                
-                <Mail className="w-5 h-5 mr-2" 
+                </a>                <Mail className="w-5 h-5 mr-2" >
                 Email Us
-<<<<<<< HEAD
-              </a>
+</Mail>              </a>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
   )}
-=======
+
               <
             <
           <
@@ -425,4 +407,3 @@ const stats = [
     <
   );
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

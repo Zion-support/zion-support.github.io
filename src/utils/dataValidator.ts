@@ -371,7 +371,7 @@ const value = data[field];
       errors[field] = fieldErrors;
       // Track validation errors
       errorTracking.trackError(
-        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
+        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),`
         {
           category: ErrorCategory.Validation,
           severity: ErrorSeverity.Low,
@@ -428,7 +428,7 @@ export function validateForm<T extends Record<string, unknown>
       errors[field] = fieldErrors;
       // Track validation errors;
 //       errorTracking.trackError()
-        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
+        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),`
         {/* TODO: Fix JSX expression */}
   O: Add content}
 };
@@ -671,7 +671,7 @@ export const dataValidator = DataValidator.getInstance();
     return pattern.test(value)
   }
   rules = ValidationRulesBuilder}
-export const dataValidator = DataValidator.getInstance()"`
+export const dataValidator = DataValidator.getInstance()"`"`
 
 
 

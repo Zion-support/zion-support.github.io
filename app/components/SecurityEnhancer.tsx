@@ -37,7 +37,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         "form-action 'self'",
         "object-src 'none'",
         "media-src 'self'",
-        "worker-src 'self' blob:"
+        "worker-src 'self' blob:
       ].join('; ');
       document.head.appendChild(cspMeta);
     }

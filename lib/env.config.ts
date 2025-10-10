@@ -50,7 +50,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
   private getEnvVar(ke)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
-      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || ''}
+      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || ''}`
     return defaultValue || ''}
 
   private getBooleanEnvVar(ke,
@@ -93,11 +93,11 @@ const errors: string[] = [];
 ,
     // Validate NODE_ENV;
     if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
-      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)}
+      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)}`
 
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
-      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
+      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);`
   private getNumberEnvVar(ke,
   y: string, defaultValu)
   e: number): number {/* TODO: Fix JSX expression */}
@@ -107,28 +107,28 @@ const errors: string[] = [];
     }}
 
   private validate(): void {/* TODO: Fix JSX expression */}`
-  NODE_ENV: ${this.config.NODE_ENV}`)}
+  NODE_ENV: ${this.config.NODE_ENV}`)}`
 
     // Validate URLs;
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
-  APP_URL: ${this.config.APP_URL}`)}
+  APP_URL: ${this.config.APP_URL}`)}`
 
     if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
-  API_BASE_URL: ${this.config.API_BASE_URL}`)}
+  API_BASE_URL: ${this.config.API_BASE_URL}`)}`
 
     // Validate timeout;
     if (this.config.API_TIMEOUT < 0) {
-      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)}
+      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)}`
 
     if (errors.length > 0) {
       //       // In production, we might want to throw, but in development just warn;
       if (this.config.NODE_ENV === 'production') {
-        throw new Error(`Environment validation failed: ${errors.join(', ')}`);
+        throw new Error(`Environment validation failed: ${errors.join(', ')}`);`
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
-  positive: ${this.config.API_TIMEOUT}`)}
+  positive: ${this.config.API_TIMEOUT}`)}`
 
     if (errors.length > 0) {/* TODO: Fix JSX expression */}`
-  failed: ${errors.join(', ')}`)}
+  failed: ${errors.join(', ')}`)}`
     }
   }
 

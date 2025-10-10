@@ -58,7 +58,7 @@ const importedNames = importMatch[1]
         if (name === 'default' || name === '*' || name.includes(' ')) return true;
         
         // Create regex to find usage of this name;
-        const usageRegex = new RegExp(`\\b${name}\\b`, 'g');
+        const usageRegex = new RegExp(`\\b${name}\\b`, 'g');`
         const matches = newContent.match(usageRegex) || [];
         
         // Count occurrences, excluding the import statement itself;
@@ -83,7 +83,7 @@ const importedNames = importMatch[1]
       const defaultImportMatch = importStatement.match(/import\s+(\w+)/);
       if (defaultImportMatch) {;
 const importName = defaultImportMatch[1];
-        const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
+        const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');`
         const matches = newContent.match(usageRegex) || [];
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         
@@ -138,7 +138,7 @@ const files = await glob(pattern, {)
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {`
   main()}
 
 export { processFile, removeUnusedImports };

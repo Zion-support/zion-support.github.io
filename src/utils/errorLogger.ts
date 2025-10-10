@@ -101,7 +101,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'
 
     };
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
+    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);`
     if (entry.error) {/* TODO: Fix JSX expression */}
   r:', entry.error)}
     }

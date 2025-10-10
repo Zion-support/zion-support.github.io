@@ -265,7 +265,7 @@ const slowResources = resources;
     if (rating === 'poor') {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      logger.warn(`Poor ${name} performance`, { value, rating })
+      logger.warn(`Poor ${name} performance`, { value, rating })`
     }
     // Send to analytics;
 //     this.sendToAnalytics(metric)

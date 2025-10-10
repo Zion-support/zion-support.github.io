@@ -15,7 +15,7 @@ const fileName = path.basename(filePath, path.extname(filePath));
 let content = '';
   
   if (isPage) {
-    content = `import React from 'react';
+    content = `import React from 'react';`
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
   return(<div className="min-h-screen bg-gray-50">)
@@ -30,8 +30,8 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
         </div>
       </div>
     </div>
-  )}`} else if (isComponent) {
-    content = `import React from 'react';
+  )}`} else if (isComponent) {`
+    content = `import React from 'react';`
 
 interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {
   className?: string;
@@ -53,8 +53,8 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
         </div>
       )}
     </div>
-  )}`} else if (isUtil || isConfig) {
-    content = `// ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} utility;
+  )}`} else if (isUtil || isConfig) {`
+    content = `// ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} utility;`
 // This file contains utility functions and configurations;
 export const ${fileName} = {
   // Add utility functions here;
@@ -63,17 +63,17 @@ export const ${fileName} = {
 }
 };
 
-export default ${fileName};`} else if (isType) {
-    content = `// Type definitions for ${fileName}
+export default ${fileName};`} else if (isType) {`
+    content = `// Type definitions for ${fileName}`
 
 export interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} {
   // Add type definitions here}
 
-export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)};`} else {
-    content = `// ${fileName} file;
+export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1)};`} else {`
+    content = `// ${fileName} file;`
 // This file is under development;
 export default function ${fileName}() {
-  return null}`}
+  return null}`}`
   
   return content}
 

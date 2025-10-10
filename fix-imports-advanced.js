@@ -21,43 +21,43 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     const replacements = [
       {
         pattern: /import\s+Link\s+from\s+'next\/link';/g;
-        replacement: `import Link from '${utilsPath}link';`},
+        replacement: `import Link from '${utilsPath}link';`},`
       {
         pattern: /import\s+Image\s+from\s+'next\/image';/g;
-        replacement: `import Image from '${utilsPath}image';`},
+        replacement: `import Image from '${utilsPath}image';`},`
       {
         pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g;
-        replacement: `import dynamic from '${utilsPath}dynamic';`,
+        replacement: `import dynamic from '${utilsPath}dynamic';`,`
       {/* TODO: Fix JSX expression */}
-  t: `import Link from '${utilsPath}link';`},
+  t: `import Link from '${utilsPath}link';`},`
       {/* TODO: Fix JSX expression */}`
-  t: `import Image from '${utilsPath}image';`},
+  t: `import Image from '${utilsPath}image';`},`
       {/* TODO: Fix JSX expression */}`
-  t: `import dynamic from '${utilsPath}dynamic';`},
+  t: `import dynamic from '${utilsPath}dynamic';`},`
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'next\/navigation';/g,
         replacemen,`
-  t: `import { useRouter } from '${utilsPath}navigation';`},
+  t: `import { useRouter } from '${utilsPath}navigation';`},`
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*usePathname\s*}\s+from\s+'next\/navigation';/g,
         replacemen,`
-  t: `import { usePathname } from '${utilsPath}navigation';`},
+  t: `import { usePathname } from '${utilsPath}navigation';`},`
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useSearchParams\s*}\s+from\s+'next\/navigation';/g,
         replacemen,`
-  t: `import { useSearchParams } from '${utilsPath}navigation';`},
+  t: `import { useSearchParams } from '${utilsPath}navigation';`},`
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*Metadata\s*}\s+from\s+'next';/g,
         replacemen,`
-  t: `import { Metadata } from '${typesPath}next';`},
+  t: `import { Metadata } from '${typesPath}next';`},`
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*MetadataRoute\s*}\s+from\s+'next';/g,
         replacemen,`
-  t: `import { MetadataRoute } from '${typesPath}next';`},
+  t: `import { MetadataRoute } from '${typesPath}next';`},`
       {/* TODO: Fix JSX expression */}
   n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'next';/g,
         replacemen,`
-  t: `import type { Metadata } from '${typesPath}next';`},
+  t: `import type { Metadata } from '${typesPath}next';`},`
       {
         pattern: /'use client';/g;
         replacement: "// 'use client'; // Removed for Vite compatibility",

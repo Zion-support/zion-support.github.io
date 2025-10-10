@@ -29,4 +29,4 @@ exports.config = {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true}); try {' run('node automation/newsroom-generator.cjs || true'); ' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(newsroom): auto-refresh newsroom content [skip ci]" || true');' run('git push origin main || true')} ' return {/* TODO: Fix JSX expression */}
   l: 'newsroom-auto' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

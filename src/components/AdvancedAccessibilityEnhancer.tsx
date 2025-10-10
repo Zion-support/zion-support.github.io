@@ -100,14 +100,14 @@ const originalPushState = history.pushState;
   // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
-        button.setAttribute('aria-label', `Button ${index + 1}`)}
+        button.setAttribute('aria-label', `Button ${index + 1}`)}`
     });
 
     // Add ARIA labels to images;
     const images = document.querySelectorAll('im)
   g:not([alt])');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-      img.setAttribute('alt', `Image ${index + 1}`)});
+      img.setAttribute('alt', `Image ${index + 1}`)});`
 
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('inpu)
@@ -115,7 +115,7 @@ const originalPushState = history.pushState;
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
       } else if (label) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}`
-        input.setAttribute('aria-label', `Input ${index + 1}`)}
+        input.setAttribute('aria-label', `Input ${index + 1}`)}`
     })}, []);
 
   // Skip links;

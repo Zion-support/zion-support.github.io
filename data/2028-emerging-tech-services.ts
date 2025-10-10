@@ -80,7 +80,7 @@ export const,
       "Innovation platform",
       "Future capabilities",
       "Advanced features",
-      "Expert insights"
+      "Expert insights
     ],
     link: '/services/2028-emerging-tech-service',
     category: 'Emerging Tech Services 2028',
@@ -107,9 +107,9 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
     tagline: "Emerging tech services for 2028", price: '$299/month',
     description: 'Advanced platform showcasing emerging technology services and innovations for 2028.',
     features: [;
-      "Emerging tech services"
-      "Innovation platform"
-      "Future capabilities"
+      "Emerging tech services
+      "Innovation platform
+      "Future capabilities
       "Advanced features",
       "Expert insights"],
     link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028",
@@ -136,41 +136,41 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,
   e: "+1 302 464 0950",
-  i,"
+  i,
   d: "2028-emerging-tech-service",
-    nam,"
+    nam,
   e: "2028 Emerging Tech Service Platform",
-    taglin,"
+    taglin,
   e: "Emerging tech services for 2028",
-    pric,"
+    pric,
   e: "$299/month",
-    descriptio,"
+    descriptio,
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
     feature,
-  s: [,"
-      "Emerging tech services","
-      "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
+  s: [,
+      "Emerging tech services",
+      "Innovation platform",
+      "Future capabilities",
+      "Advanced features",
+      "Expert insights
     ],
-    lin,"
+    lin,
   k: "/services/2028-emerging-tech-service",
-    categor,"
+    categor,
   y: "Emerging Tech Services 2028",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -198,41 +198,41 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
 }
 export const,
   emergingTech2028Services: EmergingTechService2028[] = [,
-    i,"
-  d: "2028-emerging-tech-service", nam,"
+    i,
+  d: "2028-emerging-tech-service", nam,
   e: "2028 Emerging Tech Service Platform",
-    taglin,"
-  e: "Emerging tech services for 2028", pric,"
+    taglin,
+  e: "Emerging tech services for 2028", pric,
   e: "$299/month",
-    descriptio,"
+    descriptio,
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
     feature,
-  s: [;"
-      "Emerging tech services""
-      "Innovation platform""
-      "Future capabilities""
-      "Advanced features""
-      "Expert insights"
+  s: [;
+      "Emerging tech services"
+      "Innovation platform"
+      "Future capabilities"
+      "Advanced features"
+      "Expert insights
     ],
-    lin,"
-  k: "/services/2028-emerging-tech-service", categor,"
+    lin,
+  k: "/services/2028-emerging-tech-service", categor,
   y: "Emerging Tech Services 2028",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -247,7 +247,7 @@ export const,
       "Innovation platform",
       "Future capabilities",
       "Advanced features",
-      "Expert insights"
+      "Expert insights
     ],
     link: '/services/2028-emerging-tech-service',
     category: 'Emerging Tech Services 2028',
@@ -263,35 +263,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "2028-emerging-tech-service",
-    nam,"
+    nam,
   e: "2028 Emerging Tech Service Platform",
-    taglin,"
+    taglin,
   e: "Emerging tech services for 2028",
-    pric,"
+    pric,
   e: "$299/month",
-    descriptio,"
+    descriptio,
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
     feature,
-  s: [,"
-      "Emerging tech services","
-      "Innovation platform","
-      "Future capabilities","
-      "Advanced features","
-      "Expert insights"
+  s: [,
+      "Emerging tech services",
+      "Innovation platform",
+      "Future capabilities",
+      "Advanced features",
+      "Expert insights
     ],
-    lin,"
+    lin,
   k: "/services/2028-emerging-tech-service",
-    categor,"
+    categor,
   y: "Emerging Tech Services 2028",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -299,16 +299,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -334,22 +334,22 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,
   e: "+1 302 464 0950",
-  i,"
-  d: "2028-emerging-tech-service", nam,"
-  e: "2028 Emerging Tech Service Platform", taglin,"
-  e: "Emerging tech services for 2028", pric,"
-  e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
-  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
-  k: "/services/2028-emerging-tech-service", categor,"
+  i,
+  d: "2028-emerging-tech-service", nam,
+  e: "2028 Emerging Tech Service Platform", taglin,
+  e: "Emerging tech services for 2028", pric,
+  e: "$299/month", descriptio,
+  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,
+  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,
+  k: "/services/2028-emerging-tech-service", categor,
   y: "Emerging Tech Services 2028", realImplementatio,
   n: true, contactInf,
-  o: emai,"
+  o: emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; addres,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -364,41 +364,41 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTech2028Services: EmergingTechService2028[] = [ i,"
-  d: "2028-emerging-tech-service", nam,"
-  e: "2028 Emerging Tech Service Platform", taglin,"
-  e: "Emerging tech services for 2028", pric,"
-  e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
-  s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
-  k: "/services/2028-emerging-tech-service", categor,"
+  emergingTech2028Services: EmergingTechService2028[] = [ i,
+  d: "2028-emerging-tech-service", nam,
+  e: "2028 Emerging Tech Service Platform", taglin,
+  e: "Emerging tech services for 2028", pric,
+  e: "$299/month", descriptio,
+  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,
+  s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,
+  k: "/services/2028-emerging-tech-service", categor,
   y: "Emerging Tech Services 2028", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2028-emerging-tech-service", nam,"
-  e: "2028 Emerging Tech Service Platform", taglin,"
-  e: "Emerging tech services for 2028", pric,"
-  e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
-  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
-  k: "/services/2028-emerging-tech-service", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "2028-emerging-tech-service", nam,
+  e: "2028 Emerging Tech Service Platform", taglin,
+  e: "Emerging tech services for 2028", pric,
+  e: "$299/month", descriptio,
+  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,
+  s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,
+  k: "/services/2028-emerging-tech-service", categor,
   y: "Emerging Tech Services 2028", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

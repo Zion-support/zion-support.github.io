@@ -163,11 +163,11 @@ const timer = setTimeout(() => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
+              className={`px-6 py-2 rounded-full font-medium transition-colors ${`
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
                   : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
+              }`}`
             >
               {category === 'all' ? 'All Articles' : category}
             </button>
@@ -192,7 +192,7 @@ const timer = setTimeout(() => {
         {/* All Posts */}
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
+            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}`
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (

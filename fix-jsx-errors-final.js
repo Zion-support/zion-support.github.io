@@ -14,7 +14,7 @@ for (const filePath of files) {
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`}
+        return `${prop}: '${value.substring(1)}'`}`
       return match});
 
     //Fix malformed <br> tags;
@@ -23,7 +23,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
 
     //Fix backticks after JSX tags;
     //Fix backticks after JSX tags;`
-    content = content.replace(/<(\w+)`/g, '<$1');
+    content = content.replace(/<(\w+)`/g, '<$1');`
 
     //Fix specific patterns where /> appears in wrong places;
     content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');

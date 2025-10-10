@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
@@ -8,11 +8,10 @@ return (;
 const serviceName = 'appointment-scheduler';
 const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
-<<<<<<< HEAD
   return (<div>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions<)
-        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} 
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} 
+        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} "`
+        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} "`
       <
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
@@ -30,7 +29,7 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
               Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center"><
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,"
     r:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started<
                 
@@ -46,20 +45,19 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
       <
     <
   );
-=======
+
   return (
     <>
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta name="description" content={`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
+        <meta name="description" content={`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} />"`
+        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />"`
       </Helmet>
-
       <div>
         <section className="pt-24 pb-16 px-4"></section>
           <div>
             <div>
-              <Settings className="w-4 h-4" />
+              <Settings className="w-4 h-4 />"
               <span>{title}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
@@ -72,7 +70,7 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
             <div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
                 <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 />"
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>
                 View Demo
@@ -80,7 +78,6 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
             </div>
           </div>
         </section>
-
         <section className="py-16 px-4"></section>
           <div>
             <div>
@@ -93,17 +90,15 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
         </section>
       </div>
     </>
-<<<<<<< HEAD
+
 )]
     };
-=======
+
   );)
->>>>>>> main
+
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default MicroSaaSPage;
 }
-=======
+
   );)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

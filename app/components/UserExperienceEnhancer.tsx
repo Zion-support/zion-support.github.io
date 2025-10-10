@@ -32,7 +32,7 @@ const style = document.createElement('style');
         *:focus {
           outline: 2px solid #06b6d4;
           outline-offset: 2px}
-      `;
+      `;`
       document.head.appendChild(style);
     enhanceUX()}, []);
 

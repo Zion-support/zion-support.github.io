@@ -24,7 +24,7 @@ constructor(props: Props) {
     return {,
       hasError: true;
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}`
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error details;
@@ -40,7 +40,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
   static getDerivedStateFromError(erro)
   r: Error): Partial<State> {/* TODO: Fix JSX expression */}
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}
+  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}`
 
   override componentDidCatch(erro,
   r: Error, errorInf)
@@ -128,9 +128,9 @@ const errorDetails = {
       url: window.location.href};
 
     // Create a mailto link with error details;
-//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
-//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
-//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;`
+//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
+//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;`
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
     };
 
@@ -140,7 +140,7 @@ const errorDetails = {
 //     const body = `Error,`
   Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
 //     const mailtoLink = `mailt,`
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;`
 
     window.open(mailtoLink)};
 
@@ -202,7 +202,6 @@ const errorDetails = {
                 </p>)
               )}
             </div>
-
             <div className='space-y-4'></div>
               <div className='flex space-x-4'>
                 {this.retryCount < this.maxRetries && (
@@ -283,7 +282,6 @@ const errorDetails = {
                 </button>
               </div>
             </div>
-
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>

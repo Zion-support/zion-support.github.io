@@ -147,7 +147,7 @@ const duration = performance.now() - startTime;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
       // Handle non-2xx responses;
       if (!response.ok) {/* TODO: Fix JSX expression */}
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);`
       // Apply response interceptor;
       let finalResponse = response;
       if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
@@ -226,11 +226,11 @@ const data = await this.parseResponse<T>(finalResponse);
    * Build full URL with query parameters;
    */
   private buildURL(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`;
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
+  g: RequestConfig): string {/* TODO: Fix JSX expression */}`;`
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;`
     if (config.params) {/* TODO: Fix JSX expression */}
       });`
-      url += `?${params.toString()}`}
+      url += `?${params.toString()}`}`
     return url}
   /**
    * Build request headers;
@@ -260,7 +260,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
    */
   private getCacheKey(confi)
   g: RequestConfig): string {/* TODO: Fix JSX expression */}`
-    return `${config.method}:${url}`}
+    return `${config.method}:${url}`}`
   /**
    * Get response from cache;
    */

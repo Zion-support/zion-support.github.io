@@ -29,7 +29,7 @@ $4};
     border-current
     border-t-transparent
     rounded-full
-  `;
+  `;`
   const containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
@@ -44,8 +44,6 @@ $4};
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>
-
-
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -90,29 +88,29 @@ const,
 //     border-current;
 //     border-t-transparent;
 //     rounded-full;`
-  `;
+  `;`
   const containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (<div>Coming Soon</div>)
   )
     
-          <div className={containerClasses} role="status" aria-label="Loading"></div>"
-      <div className="flex flex-col items-center space-y-4"></div>"
+          <div className={containerClasses} role="status" aria-label="Loading"></div>
+      <div className="flex flex-col items-center space-y-4"></div>
         <div className="relative"></div>
-          <div className={spinnerClasses}></div>"
+          <div className={spinnerClasses}></div>
           <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
         </div>
-        {text && ()}"
+        {text && ()}
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
-      </div>"
+      </div>
       <span className="sr-only">Loading content, please wait...</span>
     </div>
   )};
 export default ModernLoadingSpinner;
 
-export default ModernLoadingSpinner;"`
+export default ModernLoadingSpinner;"`"`
 
 
 

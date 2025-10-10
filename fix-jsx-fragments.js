@@ -55,15 +55,15 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);`
         modified = true}
     }
 
     // Fix any remaining syntax issues;
-    content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)
+    content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)"`
       ''
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
-  l:\s*['"`][^'"`]*['"`]\s*\}/g,
+  l:\s*['"`][^'"`]*['"`]\s*\}/g,"`
       '')
     );
 

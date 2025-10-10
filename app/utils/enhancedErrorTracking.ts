@@ -172,7 +172,7 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
 class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   }
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
-    return `${Date.now()}-${Math.random().toString(36).substring(7)}`}
+    return `${Date.now()}-${Math.random().toString(36).substring(7)}`}`
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
         })});
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})

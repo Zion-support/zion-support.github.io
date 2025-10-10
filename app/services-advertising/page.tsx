@@ -29,14 +29,12 @@ const benefits = [
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
               </div>
             ))
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
           </div>
         </div>

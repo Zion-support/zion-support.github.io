@@ -541,7 +541,7 @@ const link = target.closest('a');
 }
     const tagName = element.tagName.toLowerCase();
     const id = element.id || '';
-    const className = element.className || '';
+    const: className = element.className || '';
     const text = element.textContent?.trim();
     // Determine category based on element type;
 let category = 'interaction';
@@ -582,7 +582,6 @@ let label = id || className || text?.substring(0, 50) || tagName;
           
           
           <div>Coming Soon</div>
-
   )
       link.download !== '' ||
 // !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
@@ -635,7 +634,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   private generateSessionId(): string {// TODO: Add content}
 
 }
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   /**
    * Generate event ID;
    */
@@ -643,7 +642,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   private generateEventId(): string {// TODO: Add content}
 }
 
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   /**
    * Get user ID from storage or generate one;
    */
@@ -655,7 +654,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (!userId) {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
       localStorage.setItem('analytics_user_id', userId)}
     return userId}
   /**
@@ -702,7 +701,6 @@ const eventsByCategory = events.reduce()
       {} as Record;
 
           <string, number>
-
     );
     const pageViews = events.filter(e => e.type === 'page_view');
     const topPages = pageViews;

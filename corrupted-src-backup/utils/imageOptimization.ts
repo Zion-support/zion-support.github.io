@@ -2,7 +2,7 @@
     tabl, e, t: '5, 0, v, w',
     deskt, o, p: '3, 3, v, w'}; const size, s = { ...defau, l, t, s, ...conf, i, g }; return [
     `(m, a, x-wid, t, h: 640, p, x) ${siz, e, s.mob, i, l, e}`,`
-    `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,
+    `(m, a, x-wid, t, h: 1024, p, x) ${siz, e, s.tab, l, e, t}`,`
     siz, e, s.deskt, o, p].jo, i, n(', ');
 export const getOptimizedUrl = (
   s, r, c: st, r, i, n, g,
@@ -15,7 +15,7 @@ export const getOptimizedUrl = (
   if (optio, n, s.quali, t, y) para, m, s.appe, n, d('q', optio, n, s.quali, t, y.toStri, n, g());
   if (optio, n, s.form, a, t) para, m, s.appe, n, d('fm', optio, n, s.form, a, t);
 ;
-const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
+const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;`
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > { 
   if ('IntersectionObserv, e, r' in, wind, o, w) {
         rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport},
@@ -29,8 +29,8 @@ const imag, e = ent, r, y.target, as, HTMLImageElement; if (image.datas, e, t.sr
 export const getOptimizedUrl = (s, r, c: st, r, i, n, g,
   optio, n, s: {/* TODO: Fix JSX expression */}
    } = {})
-): string = > {/* TODO: Fix JSX expression */}`;
-const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
+): string = > {/* TODO: Fix JSX expression */}`;`
+const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;`
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}
       },
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}
@@ -62,8 +62,8 @@ const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
 
   // Add source elements for different formats;
   const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {);
-const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(
-      conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
+const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(`
+      conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);`
     placehold, e, r: string; // L o w-res placeholde r (e. g. 20x 2 0),
     s, r, c: string; // Full resolution image;
     a, l, t: str, i, n, g}): vo, i, d = > { 
@@ -89,9 +89,9 @@ export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f')
 } => {/* TODO: Fix JSX expression */}
   }; return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})
    });
-export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {/* TODO: Fix JSX expression */}`;
+export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {/* TODO: Fix JSX expression */}`;`
 const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t()`
-      conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
+      conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);`
     placehold, e, r: string; // L o w-res placeholde r (e. g. 20x 2 0)
     s, r, c: string; // Full resolution image;
     a, l, t: str, i, n, g}): vo, i, d = > {/* TODO: Fix JSX expression */}

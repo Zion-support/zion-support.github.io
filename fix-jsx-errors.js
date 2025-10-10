@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #!/usr/bin
 
 import fs from 'fs';
@@ -14,16 +14,16 @@ function fixJSXErrors(filePath) {
     
     jsxElements.forEach(element => {
       /)
-      const openTags = (content.match(new RegExp(`<${element}[^>]*>`, 'g')) || []).length;
-      const closeTags = (content.match(new RegExp(`<
+      const openTags = (content.match(new RegExp(`<${element}[^>]*>`, 'g')) || []).length;`
+      const closeTags = (content.match(new RegExp(`<`
       
       if (openTags > closeTags) {
         const missing = openTags - closeTags;
         /
         if (element === 'Fragment') {
-          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<
+          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<`
         } else {
-          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<
+          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<`
         }
         modified = true;
       }
@@ -35,7 +35,7 @@ function fixJSXErrors(filePath) {
     /
     content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
       if (!content.includes('<') && !content.includes('return')) {
-        return `return (\n    <div>\n      ${content}\n    <
+        return `return (\n    <div>\n      ${content}\n    <`
       }
       return match;)
     });
@@ -65,19 +65,19 @@ function fixJSXErrors(filePath) {
     /)
     content = content.replace(/\(\s*([^)]*)\s*$
       if (inner && !inner.includes('(') && !inner.includes(')')) {
-        return `(${inner})`;
+        return `(${inner})`;`
       }
       return match;
     });
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed JSX errors in: ${filePath}`);
+      console.log(`Fixed JSX errors in: ${filePath}`);`
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
     return false;
   }
 }
@@ -107,7 +107,7 @@ function findFilesWithJSXErrors(dir) {
         } catch (error) {
           /
         }
-=======
+
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -147,12 +147,11 @@ function fixJSXParentElements(content) {
       
       if (braceCount === 0 && line.trim().endsWith(')')) {
         break;
->>>>>>> main
+
       }
     }
   }
-  
-<<<<<<< HEAD
+
   searchDir(dir);
   return files;
 }
@@ -180,7 +179,7 @@ const problematicFiles = [
   '/workspace/app/ai-crm-assistant
 ];
 
-console.log(`Processing ${problematicFiles.length} files with JSX errors`);
+console.log(`Processing ${problematicFiles.length} files with JSX errors`);`
 
 let fixedCount = 0;
 problematicFiles.forEach(file => {)
@@ -188,8 +187,8 @@ problematicFiles.forEach(file => {)
     fixedCount++;
   }
 });
-console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
-=======
+console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);`
+
   if (hasMultipleRoots) {
     // Wrap everything in a React Fragment
     fixed = fixed.replace(
@@ -198,10 +197,9 @@ console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
     );
     
     // Find the closing of the return statement and add closing fragment
-    const returnMatch = fixed.match(/return \([\s\S]*?\);/);
+    const returnMatch = fixed.match(/return \([\s\S]*?\);/);>
     if (returnMatch) {
-      const returnContent = returnMatch[0];
-      const lastDivClose = returnContent.lastIndexOf('</div>');
+      const returnContent = returnMatch[0];</div>      const lastDivClose = returnContent.lastIndexOf('</div>');
       if (lastDivClose !== -1) {
         const beforeClose = returnContent.substring(0, lastDivClose + 6);
         const afterClose = returnContent.substring(lastDivClose + 6);
@@ -225,8 +223,8 @@ function fixMissingClosingTags(content) {
   
   for (const element of elements) {
     // Count opening and closing tags
-    const openRegex = new RegExp(`<${element}(?:\\s[^>]*)?(?:>|$)`, 'g');
-    const closeRegex = new RegExp(`</${element}>`, 'g');
+    const openRegex = new RegExp(`<${element}(?:\\s[^>]*)?(?:>|$)`, 'g');`
+    const closeRegex = new RegExp(`</${element}>`, 'g');`
     
     const openMatches = (fixed.match(openRegex) || []).length;
     const closeMatches = (fixed.match(closeRegex) || []).length;
@@ -235,7 +233,7 @@ function fixMissingClosingTags(content) {
       // Add missing closing tags at the end
       const missing = openMatches - closeMatches;
       for (let i = 0; i < missing; i++) {
-        fixed += `</${element}>`;
+        fixed += `</${element}>`;`
       }
     }
   }
@@ -292,7 +290,7 @@ async function processFiles() {
             content.includes(',)') ||
             content.includes(',;')) {
           
-          console.log(`Processing JSX errors in: ${file}`);
+          console.log(`Processing JSX errors in: ${file}`);`
           
           let fixed = fixJSXParentElements(content);
           fixed = fixMissingClosingTags(fixed);
@@ -302,17 +300,16 @@ async function processFiles() {
           processedCount++;
         }
       } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+        console.error(`Error processing ${file}:`, error.message);`
         errorCount++;
       }
     }
   }
   
-  console.log(`\nJSX error fixes complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
+  console.log(`\nJSX error fixes complete!`);`
+  console.log(`Files processed: ${processedCount}`);`
+  console.log(`Errors encountered: ${errorCount}`);`
 }
 
 // Run the script
 processFiles().catch(console.error);
->>>>>>> main

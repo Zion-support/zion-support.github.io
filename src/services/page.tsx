@@ -216,8 +216,7 @@ const stats = [
       <SEOOptimizer 
         title="AI & IT Services - Zion Tech Group"
         description="Comprehensive AI and IT solutions including AI services, automation, cybersecurity, cloud services, and micro SAAS applications. Starting from $39/month."
-        keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence"
-      />
+        keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence />"
       <Navigation />
       
       {/* Hero Section */}
@@ -235,7 +234,7 @@ const stats = [
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-5 w-5 mr-2 />"
                 Call (302) 464-0950
               </a>
               <Link
@@ -248,7 +247,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,7 +264,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* AI Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,7 +277,7 @@ const stats = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>`
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -289,14 +286,14 @@ const stats = [
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <service.icon className="h-8 w-8 text-cyan-400 mr-3" />
+                  <service.icon className="h-8 w-8 text-cyan-400 mr-3 />"
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 />"
                       {feature}
                     </li>
                   ))}
@@ -315,7 +312,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* IT Services Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,7 +325,7 @@ const stats = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>`
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -338,14 +334,14 @@ const stats = [
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <service.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <service.icon className="h-8 w-8 text-blue-400 mr-3 />"
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 />"
                       {feature}
                     </li>
                   ))}
@@ -364,7 +360,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Micro SAAS Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -378,7 +373,7 @@ const stats = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>`
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -387,14 +382,14 @@ const stats = [
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <service.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <service.icon className="h-8 w-8 text-purple-400 mr-3 />"
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 />"
                       {feature}
                     </li>
                   ))}
@@ -413,7 +408,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -429,7 +423,7 @@ const stats = [
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="bg-cyan-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-cyan-400" />
+                  <benefit.icon className="h-8 w-8 text-cyan-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
@@ -438,7 +432,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -454,7 +447,7 @@ const stats = [
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-5 w-5 mr-2 />"
                 Call (302) 464-0950
               </a>
               <Link
@@ -467,7 +460,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )};

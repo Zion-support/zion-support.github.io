@@ -138,39 +138,35 @@ const resources = [
 const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
-<<<<<<< HEAD
+
 ;
 const searchResults = searchQuery 
     ? faqs.filter(faq => 
-=======
 
   const searchResults = searchQuery 
     ? faqs.filter(faq =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <SEOOptimizer
         title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
-        keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}
-        canonicalUrl="https://ziontechgroup.com/support"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}>
+        canonicalUrl="https://ziontechgroup.com/support /></SEOOptimizer>      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
+
   return (<>
 
           {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Support Center
@@ -192,10 +188,9 @@ const searchResults = searchQuery
                 <input
                   type="text"
                   placeholder="Search for help..."
-                  value = { searchQuery };)
+                  value = { searchQuery };)>
                   onChange = { (e) => setSearchQuery(e.target.value) };
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"
-                
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"</Search>
               <
             <
           <
@@ -205,10 +200,10 @@ const searchResults = searchQuery
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Get Support
             <
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-4 gap-6">
               {supportChannels.map((channel), index) => (<div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} 
+                  <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} `
                   <h3 className="text-xl font-bold text-white mb-2">{channel.title}<
                   <p className="text-gray-300 mb-4">{channel.description}<
                   <div className="text-cyan-400 font-semibold mb-2">{channel.contact}<
@@ -223,16 +218,15 @@ const searchResults = searchQuery
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Browse by Category
             <
-            <div className="grid grid-cols-2 md: grid-cols-4 l,
+            <div className="grid grid-cols-2 md: grid-cols-4 l,"
     g:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (<button
-                  key = { category.id };)
+                  key = { category.id };)>
                   onClick = { () => setSelectedCategory(category.id) };
-                  className={`p-4 rounded-lg text-center transition-all duration-300 ${
-                    selectedCategory === category.id
+                  className={`p-4 rounded-lg text-center transition-all duration-300 ${</button>                    selectedCategory === category.id`
                       ? 'bg-cyan-500 text-slate-900'
                       : 'bg-slate-800 text-white hover:bg-slate-700'
-                  }`}
+                  }`}`
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" 
                   <div className="text-sm font-semibold">{category.name}<
@@ -261,14 +255,11 @@ const searchResults = searchQuery
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Helpful Resources
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {resources.map((resource), index) => (
-                  <div className="flex items-center mb-4">
-                    <resource.icon className="w-8 h-8 text-cyan-400 mr-4" 
-                    
-                    {resource.title}
-                  <
+              {resources.map((resource), index) => (</div>                  <div className="flex items-center mb-4">
+                    <resource.icon className="w-8 h-8 text-cyan-400 mr-4" >
+                    {resource.title}</resource>                  <
                   <p className="text-gray-300">{resource.description}<
                 <)
               ))}
@@ -286,12 +277,11 @@ const searchResults = searchQuery
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
-                  href="te,
-    l:+13024640950"
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
+                  href="te,"
+    l:+13024640950
+                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                 >
-                  
-                  <Mail className="w-5 h-5 mr-2" 
+                  </a>                  <Mail className="w-5 h-5 mr-2" 
                   Send Email
                 <
               <
@@ -299,17 +289,14 @@ const searchResults = searchQuery
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
+
         <Footer 
       <
     <
-  );
+  );>
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-export default SupportPage;
+</Footer>export default SupportPage;

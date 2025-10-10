@@ -10,7 +10,7 @@ function fixJSXTags(content) {
   // Fix JSX opening tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {;
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
-    return `<${tagName.substring(1)}`; // Remove the underscore});
+    return `<${tagName.substring(1)}`; // Remove the underscore});`
   
   // Fix JSX closing tags;
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
@@ -19,7 +19,7 @@ return (
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>
 );
 }/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
-    return `</${tagName.substring(1)}>`; // Remove the underscore});
+    return `</${tagName.substring(1)}>`; // Remove the underscore});`
   
   // Fix self-closing JSX tags;
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
@@ -28,7 +28,7 @@ return (
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>
 );
 }/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
-    return `<${tagName.substring(1)} />`; // Remove the underscore});
+    return `<${tagName.substring(1)} />`; // Remove the underscore});`
   
   return content}
 
@@ -59,7 +59,7 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
       }
       return trimmed}).join(', ');`
-    return `const { ${fixedVars} } = ${assignment};`});
+    return `const { ${fixedVars} } = ${assignment};`});`
   
   return content}
 
@@ -127,14 +127,14 @@ const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 ;
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`)}
+  d: ${file}`)}`
 }
 `
 // console.log removed for production
 // Also process root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx'];
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
-  d: ${file}`)}
+  d: ${file}`)}`
   }
 }
 

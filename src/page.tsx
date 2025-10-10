@@ -675,18 +675,16 @@ const specializedServices = [
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         {/* Neon Grid Overlay */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-          `,
+          `,`
           backgroundSize: '50px 50px'
         }}></div>
-
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>`
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
               ZION TECH GROUP
             </h1>
@@ -695,19 +693,19 @@ const specializedServices = [
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
-                <Phone className="w-6 h-6 mr-2" />
+                <Phone className="w-6 h-6 mr-2 />"
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
-                <Mail className="w-6 h-6 mr-2" />
+                <Mail className="w-6 h-6 mr-2 />"
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center text-pink-400 text-lg">
-                <MapPin className="w-6 h-6 mr-2" />
+                <MapPin className="w-6 h-6 mr-2 />"
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -731,7 +729,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Micro SAAS Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -744,7 +741,6 @@ const specializedServices = [
               Start with our micro SAAS solutions and scale as you grow.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSAASServices.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
@@ -767,7 +763,6 @@ const specializedServices = [
                     {service.description}
                   </p>
                 </div>
-                
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
@@ -780,19 +775,17 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />"
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
@@ -803,14 +796,13 @@ const specializedServices = [
                     ))}
                   </ul>
                 </div>
-                
                 <div className="text-center">
                   <a 
                     href={service.link}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2 />"
                   </a>
                 </div>
               </div>
@@ -818,7 +810,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* AI Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
@@ -831,13 +822,12 @@ const specializedServices = [
               Transform your business with our advanced AI capabilities.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 <div className="text-center mb-6">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className={`w-8 h-8 ${service.color}`} />
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>`
+                    <service.icon className={`w-8 h-8 ${service.color}`} />`
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                     {service.title}
@@ -846,7 +836,6 @@ const specializedServices = [
                     {service.description}
                   </p>
                 </div>
-                
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-purple-400">{service.price}</span>
@@ -859,19 +848,17 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />"
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
@@ -882,14 +869,13 @@ const specializedServices = [
                     ))}
                   </ul>
                 </div>
-                
                 <div className="text-center">
                   <a 
-                    href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
+                    href={`mailto:${service.contact}?subject=Interest in ${service.title}`}`
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Contact Us
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2 />"
                   </a>
                 </div>
               </div>
@@ -897,7 +883,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* IT Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -910,13 +895,12 @@ const specializedServices = [
               From infrastructure to cybersecurity, we've got you covered.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                 <div className="text-center mb-6">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className={`w-8 h-8 ${service.color}`} />
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>`
+                    <service.icon className={`w-8 h-8 ${service.color}`} />`
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {service.title}
@@ -925,7 +909,6 @@ const specializedServices = [
                     {service.description}
                   </p>
                 </div>
-                
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-green-400">{service.price}</span>
@@ -938,19 +921,17 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />"
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
@@ -961,14 +942,13 @@ const specializedServices = [
                     ))}
                   </ul>
                 </div>
-                
                 <div className="text-center">
                   <a 
-                    href={`tel:${service.contact}`}
+                    href={`tel:${service.contact}`}`
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Call Now
-                    <Phone className="w-4 h-4 ml-2" />
+                    <Phone className="w-4 h-4 ml-2 />"
                   </a>
                 </div>
               </div>
@@ -976,7 +956,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Specialized Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
@@ -989,13 +968,12 @@ const specializedServices = [
               Cutting-edge technology meets practical business needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specializedServices.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20">
                 <div className="text-center mb-6">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className={`w-8 h-8 ${service.color}`} />
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>`
+                    <service.icon className={`w-8 h-8 ${service.color}`} />`
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
                     {service.title}
@@ -1004,7 +982,6 @@ const specializedServices = [
                     {service.description}
                   </p>
                 </div>
-                
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-3xl font-bold text-orange-400">{service.price}</span>
@@ -1017,19 +994,17 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />"
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-red-400 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
@@ -1040,14 +1015,13 @@ const specializedServices = [
                     ))}
                   </ul>
                 </div>
-                
                 <div className="text-center">
                   <a 
-                    href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}
+                    href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}`
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2 />"
                   </a>
                 </div>
               </div>
@@ -1055,7 +1029,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -1067,28 +1040,25 @@ const specializedServices = [
               Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your success.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4 />"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
                 +1 302 464 0950
               </a>
             </div>
-            
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4 />"
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4 />"
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
@@ -1099,7 +1069,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <Footer />
     </div>

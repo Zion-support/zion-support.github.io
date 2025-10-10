@@ -39,8 +39,8 @@ function listSourceFiles(root)
   return files}
 function parseImports(source) {const edges = [];
   const importRegex =
-    /import\s+[^'"`]*from\s+['"]([^'"`]+)['"];?|import\s+['"]([^'"`]+)['"];?/g;
-  const _requireRegex = /require\(\s*['"]([^'"`]+)['"]\s*\)/g;
+    /import\s+[^'"`]*from\s+['"]([^'"`]+)['"];?|import\s+['"]([^'"`]+)['"];?/g;"`
+  const _requireRegex = /require\(\s*['"]([^'"`]+)['"]\s*\)/g;"`
   let m;
   while ((m = importRegex.exec(source))) {;
 const _spec = (m[1] || m[2] || '').trim();
@@ -92,17 +92,17 @@ function buildGraph(root)
       // try to find a matching file among known files(with extensions,;
 const variants = [
         candidate})
-        `${candidate}.js`)
-        `${candidate}.ts`)
-        `${candidate}.tsx`)
-        `${candidate}.cjs`)
-        `${candidate}.mjs`)
+        `${candidate}.js`)`
+        `${candidate}.ts`)`
+        `${candidate}.tsx`)`
+        `${candidate}.cjs`)`
+        `${candidate}.mjs`)`
         candidate}
         `${candidate}.js`,`
         `${candidate}.ts`,`
         `${candidate}.tsx`,`
         `${candidate}.cjs`,`
-        `${candidate}.mjs`)
+        `${candidate}.mjs`)`
         path.join(candidate) 'index.js'),
         path.join(candidate) 'index.ts'),
         path.join(candidate) 'index.tsx')];
@@ -183,7 +183,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         relDirs) {' const exts = new Set(['.js', '.ts', '.tsx', '.cjs') '.mjs']);' const ignore = new Set(['.git', 'node_modules', '.next') 'out']); const files = []; for (const rel of relDirs) { const dir = path.join(root)
         rel); if (!fs.existsSync(dir)) continue; const stack = [dir]; while (stack.length) { const current = stack.pop()} const entries = fs.readdirSync(current} { withFileTypes: true;)}); for (const entry of entries) {if (ignore.has(entry.name)) continue,;
 const full = path.join(current)
-        entry.name); if (entry.isDirectory()) stack.push(full); else if (exts.has(path.extname(full))) files.push(full)} } } return files} function parseImports(source) {const edges = [];' const importRegex = /import\s+[^'"`]*from\s+['"]([^'"`]+)['"];?|import\s+['"]([^'"`]+)['"];?/g;' const requireRegex = /require\(\s*['"]([^'"`]+)['"]\\s*\\)/g; let m; while ((m = importRegex.exec(source))) {' const spec = (m[1] || m[2] || '').trim(); if(spec)
+        entry.name); if (entry.isDirectory()) stack.push(full); else if (exts.has(path.extname(full))) files.push(full)} } } return files} function parseImports(source) {const edges = [];' const importRegex = /import\s+[^'"`]*from\s+['"]([^'"`]+)['"];?|import\s+['"]([^'"`]+)['"];?/g;' const requireRegex = /require\(\s*['"]([^'"`]+)['"]\\s*\\)/g; let m; while ((m = importRegex.exec(source))) {' const spec = (m[1] || m[2] || '').trim(); if(spec)`
         edges.push(spec;)
       } } while ((m = requireRegex.exec(source))) {' const spec = (m[1] || '').trim(); if(spec)
         edges.push(spec;)
@@ -192,7 +192,7 @@ const full = path.join(current)
         f); idByPath.set(f)
         id} nodes.push({ id)
         path: id})} for (const f of files) {const fromId = path.relative(root)
-        f);' let source = ''}' try { source = fs.readFileSync(f} 'utf8')} catch {} const imports = parseImports(source); for (const spec of imports) {' if (!spec.startsWith('.') && !spec.startsWith('/')) continue; // only local const candidate = path.resolve(path.dirname(f), spec} // try to find a matching file among known files (with extensions)' const variants = [candidate} `${candidate}.js`, `${candidate}.ts`, `${candidate}.tsx`, `${candidate}.cjs`, `${candidate}.mjs`, path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]; const match = variants.find(v => idByPath.has(v)); if (match) {edges.push({ from: fromId),
+        f);' let source = ''}' try { source = fs.readFileSync(f} 'utf8')} catch {} const imports = parseImports(source); for (const spec of imports) {' if (!spec.startsWith('.') && !spec.startsWith('/')) continue; // only local const candidate = path.resolve(path.dirname(f), spec} // try to find a matching file among known files (with extensions)' const variants = [candidate} `${candidate}.js`, `${candidate}.ts`, `${candidate}.tsx`, `${candidate}.cjs`, `${candidate}.mjs`, path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]; const match = variants.find(v => idByPath.has(v)); if (match) {edges.push({ from: fromId),`
         to: path.relative(root),
         match})} } } return {nodes,
         edges }} ' exports.config = { schedule: '*/3 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..');' const files = listSourceFiles(root, ['pages', 'components', 'automation') 'netlify/functions']); const graph = buildGraph(root)
@@ -216,7 +216,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
       } nodes.push({/* TODO: Fix JSX expression */})
       })} for (const f of files) {/* TODO: Fix JSX expression */}
         f);' let source = ''}' try { source = fs.readFileSync(f} 'utf8')} catch {} const imports = parseImports(source); for (const spec of imports) {/* TODO: Fix JSX expression */}`
-      } // try to find a matching file among known files (with extensions)' const variants = [candidate} `${candidate}.js`, `${candidate}.ts`, `${candidate}.tsx`, `${candidate}.cjs`, `${candidate}.mjs`, path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]; const match = variants.find(v => idByPath.has(v)); if (match) {/* TODO: Fix JSX expression */}
+      } // try to find a matching file among known files (with extensions)' const variants = [candidate} `${candidate}.js`, `${candidate}.ts`, `${candidate}.tsx`, `${candidate}.cjs`, `${candidate}.mjs`, path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]; const match = variants.find(v => idByPath.has(v)); if (match) {/* TODO: Fix JSX expression */}`
       })} } } return {/* TODO: Fix JSX expression */}
         edges }} ' exports.config = {/* TODO: Fix JSX expression */}
   e: '*/3 * * * *' }; exports.handler = async function handler() {/* TODO: Fix JSX expression */}
@@ -226,11 +226,11 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   o: 'inherit'} shel,
   l: true});' execSync('git add public/reports/architecture-graph.json') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       });' execSync('git commit -m "chore(reports): update architecture graph [skip ci]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('git push origin main || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true})} catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/architecture-graph.json' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"`
+      }) }} };'"`"`

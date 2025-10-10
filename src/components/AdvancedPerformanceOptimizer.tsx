@@ -48,7 +48,7 @@ const,
     const cache = new Map();
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {/* TODO: Fix JSX expression */}
-      const cacheKey = `${url}_${JSON.stringify(init)}`;
+      const cacheKey = `${url}_${JSON.stringify(init)}`;`
       
       if (cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
       }
@@ -100,7 +100,7 @@ const response = await originalFetch(input, init);
       .cyber-butto,
   n:hover {/* TODO: Fix JSX expression */}
   w: 0 10px 20px rgba(0,0,0,0.2)}`
-    `;
+    `;`
 ;
 const style = document.createElement('style');
     style.textContent = criticalCSS;

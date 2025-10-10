@@ -66,7 +66,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract;
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500"
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.<
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12"><

@@ -31,7 +31,7 @@ res.statusCode = 200;
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
-      quoteId: `quote_${Date.now()}`,
+      quoteId: `quote_${Date.now()}`,`
       data: quoteData
     }))} catch (error) {
     // console.error removed for production

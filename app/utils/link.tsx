@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 
 interface LinkProps {
   href: string,
     children: React.ReactNode
 interface LinkProps {}
   href: string,
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode: className?: string
   target?: string
   rel?: string
   onClick?: () => void
@@ -49,10 +47,9 @@ return (<a]
     }
   return(<a;
 import React from 'react';
-interface LinkProps {/* TODO: Fix JSX expression */});
+interface LinkProps {/* TODO: Fix JSX expression */});>
 }
-export const,
-  Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */});]
+export const,</a>  Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */});]
     }); => {/* TODO: Fix JSX expression */});
 }
     // Handle internal navigation;
@@ -84,6 +81,5 @@ export default Link;
     };
 export default Link;
 }
-=======
+
   return (<a;);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

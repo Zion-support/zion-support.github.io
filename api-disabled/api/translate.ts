@@ -34,14 +34,14 @@ const completion = await openai.chat.completions.create({
           { role: 'system', content: system },
           {)
             role: 'user')
-            content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`)
+            content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`)`
           })
         ])
         temperature: 0.2),
     for (const lng of targets) {/* TODO: Fix JSX expression */}
   t: system },
           {/* TODO: Fix JSX expression */}
-  t: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`}],
+  t: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`}],`
         temperatur,
   e: 0.2});
 ;

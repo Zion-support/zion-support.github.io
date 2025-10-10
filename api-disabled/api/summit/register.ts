@@ -4,4 +4,4 @@
   e: source || 'zion-global-2025'} created_a,
   t: new Date().toISOString()}])' .select('*') .single(); if (error) {/* TODO: Fix JSX expression */}
   k: true} registratio,
-  n: data })} catch (e: unknown) {} } } } '"
+  n: data })} catch (e: unknown) {} } } } '

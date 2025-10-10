@@ -2,19 +2,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const ITConsultingPage: React.FC = () => {;
 const consultingServices = [
-=======
+
 import Navigation from '../components
 import Footer from '../components
 
 const ITConsultingPage: React.FC = () => {
   const consultingServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
 
       titl,
@@ -36,21 +36,19 @@ const ITConsultingPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
-        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
+        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions. /></meta>"
+        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy /></meta>"
       </Helmet>
-=======
   return (<div><Helmet><
         <title>IT Consulting Services - Zion Tech Group<
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /><
-        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /><
+        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions. /><"
+        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy /><"
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      "
+
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"><
         <Navigation /><
         <main className="pt-24 pb-16 px-4"><
@@ -66,7 +64,7 @@ const ITConsultingPage: React.FC = () => {
               <
             <
 
-            <div className="grid md: grid-cols-2 l,
+            <div className="grid md: grid-cols-2 l,"
     g:grid-cols-2 gap-8 mb-16">)
               {consultingServices.map((service), index) => (<div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-6">
@@ -83,10 +81,8 @@ const ITConsultingPage: React.FC = () => {
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: <
                     <ul className="space-y-2">)
                       {service.features.map((feature), idx) => (<li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" 
-
-                          {feature}
-                        <)
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" >
+                          {feature}</CheckCircle>                        <)
                       ))}
                     <
 
@@ -102,7 +98,6 @@ const ITConsultingPage: React.FC = () => {
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits: <
                     <ul className="space-y-2">
                       {service.benefits.map((benefit), idx) => (<li key={idx} className="flex items-center">
-
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}<
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
                         Get Started
@@ -119,16 +114,14 @@ const ITConsultingPage: React.FC = () => {
           {/* CTA Section *
           <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
             <div className="max-w-4xl mx-auto text-center">
-
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?<
               <p className="text-xl text-gray-600 mb-8">
                 Contact our experts for a free consultation and discover how we can help your business.
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hove,
+                <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hove,>"
     r:bg-blue-700 transition-colors">
-                  
-                  <Mail className="w-5 h-5 inline mr-2" 
+                  </button>                  <Mail className="w-5 h-5 inline mr-2" 
                   Email Us
                 <
               <
@@ -140,15 +133,12 @@ const ITConsultingPage: React.FC = () => {
         <Footer 
       <
 
-<<<<<<< HEAD
-
     </React.Fragment>
   )};
-=======
+
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default ITConsultingPage;
 

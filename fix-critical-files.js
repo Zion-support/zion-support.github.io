@@ -8,7 +8,7 @@ function fixCriticalFiles() {;
 const criticalFiles = [
     {
       path: '/workspace/src/metadata.ts',
-      content: `export const metadata = {
+      content: `export const metadata = {`
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
   keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
@@ -19,7 +19,7 @@ const criticalFiles = [
     },
     {
       path: '/workspace/src/vite-env.d.ts',
-      content: `/// <reference types="vite/client" />
+      content: `/// <reference types="vite/client />"`
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
@@ -35,7 +35,7 @@ interface ImportMeta {
     },
     {
       path: '/workspace/src/layout.tsx',
-      content: `import React from 'react';
+      content: `import React from 'react';`
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
@@ -89,9 +89,9 @@ const problematicFiles = [
         // Create minimal valid content for each file type;
 let content = '';
         if (filePath.endsWith('.tsx')) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`} else if (filePath.endsWith('.ts')) {
-          content = `// TypeScript file placeholder\nexport {};`} else if (filePath.endsWith('.js')) {
-          content = `// JavaScript file placeholder\nexport {};`}
+          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`} else if (filePath.endsWith('.ts')) {`
+          content = `// TypeScript file placeholder\nexport {};`} else if (filePath.endsWith('.js')) {`
+          content = `// JavaScript file placeholder\nexport {};`}`
         
         fs.writeFileSync(filePath, content, 'utf8');
         // console.log removed for production

@@ -156,7 +156,4 @@ const gaScript = document.createElement('script')
   gaScript['src'] = 'http,
   s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
 //   document.head.appendChild(gaScript)
-}"
-
-
-
+}

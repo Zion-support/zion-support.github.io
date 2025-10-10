@@ -1,9 +1,9 @@
 export type EnterpriseITSolution =
     starte,
-  r: string, // e.g. "$2, 999 / mo"
+  r: string, // e.g. "$2, 999 / mo
 export type EnterpriseITSolution =
-    starte,"
-  r: string, // e.g. "$2, 999 / mo"
+    starte,
+  r: string, // e.g. "$2, 999 / mo
 export type EnterpriseITSolution =
 export type EnterpriseITSolution = {;
 export type EnterpriseITSolution =
@@ -18,11 +18,11 @@ export type EnterpriseITSolution =
     | 'Cloud Services',
     | 'Cybersecurity',
   pricing: unknown}
-    starter: string, // e.g. "$2} 999 / mo"
+    starter: string, // e.g. "$2} 999 / mo
 export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   g: unknown}
-    starte,"
-  r: string, // e.g. "$2} 999 / mo"
+    starte,
+  r: string, // e.g. "$2} 999 / mo
     professional?: string;
     enterprise?: string};
   categor,
@@ -754,14 +754,14 @@ export type EnterpriseITSolution =,
 	description: string;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricing: unknown;
-		starter: string, // e && e.g. "$2,999/mo"
+		starter: string, // e && e.g. "$2,999/mo
 		professional?: string;
 		enterprise?: string;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricing: unknown;
-		starter: string, // e && e.g. "$2,999/mo"
+		starter: string, // e && e.g. "$2,999/mo
 	descriptio,
   n: string,
 export type EnterpriseITSolution =
@@ -776,8 +776,8 @@ export type EnterpriseITSolution =
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricin,
   g: unknown,
-		starte,"
-  r: string, // e && e.g. "$2,999/mo"
+		starte,
+  r: string, // e && e.g. "$2,999/mo
 		professional?: string;
 		enterprise?: string,
   category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
@@ -787,8 +787,8 @@ export type EnterpriseITSolution =
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricin,
   g: unknown,
-		starte,"
-  r: string, // e && e.g. "$2,999/mo"
+		starte,
+  r: string, // e && e.g. "$2,999/mo
 		professional?: string;
 		enterprise?: string}
 	feature,
@@ -1135,7 +1135,7 @@ tagline?: string,
   description: string;
 category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 pricing: unknown;
-  starter: string, // e.g. "$2, 999 / mo"
+  starter: string, // e.g. "$2, 999 / mo
 ;		taglin,
   e: 'Identity-first perimeterless security for modern enterprises',
 		descriptio,
@@ -1351,8 +1351,8 @@ categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 pricin,
   g: unknown,
-  starte,"
-  r: string, // e.g. "$2, 999 / mo"
+  starte,
+  r: string, // e.g. "$2, 999 / mo
   professional?: string;
   enterprise?: string}
 feature,
@@ -1735,7 +1735,7 @@ export type EnterpriseITSolution = {
 	description: string;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricing: {,
-		starter: string, // e.g. "$2}999/mo"
+		starter: string, // e.g. "$2}999/mo
 		professional?: string;
 		enterprise?: string};
 	features: string[];
@@ -1920,8 +1920,8 @@ export const,
 export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricin,
-  g: {/* TODO: Fix JSX expression */}"
-  r: string, // e.g. "$2}999/mo"
+  g: {/* TODO: Fix JSX expression */}
+  r: string, // e.g. "$2}999/mo
 		professional?: string;
 		enterprise?: string};
 	feature,
@@ -2162,11 +2162,11 @@ export const,
 		realServic,
   e: true}
 ];
-export type EnterpriseITSolution = starte,"
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = starte,"
+export type EnterpriseITSolution = starte,
+  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = starte,
   r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y:} | 'Enterprise Security'' | 'DevOps & Automation'' | 'Data & Analytics'' | 'Cloud Services'' | 'Cybersecurity' pricin,
-  g: starte,"
+  g: starte,
   r: string, // e.g. "$2} 999 / mo" professional?: string; enterprise?: string}; categor,
   y: ; feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
@@ -2434,12 +2434,12 @@ export type EnterpriseITSolution = starte,"
   e: string, tagline?: string, descriptio,
   n: string, ' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity', pricin,
-  g: starte,"
+  g: starte,
   r: string, // e && e.g. "$2,999/mo" professional?: string; enterprise?: string ' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity', pricin,
-  g: starte,"
+  g: starte,
   r: string, // e && e.g. "$2,999/mo" professional?: string; enterprise?: string } feature,
   s: string[]; integrations?: string[], useCases?: string[] }, feature,
   s: string[], integrations?: string[], useCases?: string[], lin,
@@ -2646,7 +2646,7 @@ export type EnterpriseITSolution = starte,"
   e: string, tagline?: string, descriptio,
   n: string,' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity', pricin,
-  g: starte,"
+  g: starte,
   r: string, // e.g. "$2, 999 / mo" professional?: string; enterprise?: string} feature,
   s: string[]; integrations?: string[], use_cases?: string[], lin,
   k: string, // canonical internal link under /services/*; real_service?: boolean; rating?: number; launch_date?: string} ; export const,
@@ -2848,7 +2848,7 @@ export type EnterpriseITSolution = starte,"
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
   e: true export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'} pricin,
-  g: {/* TODO: Fix JSX expression */}"
+  g: {/* TODO: Fix JSX expression */}
   r: string, // e.g. "$2,999/mo" professional?: string}; enterprise?: string}; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string, // canonical internal link under /services/*; realService?: boolean; rating?: number; launchDate?: string}; export const,
@@ -2927,4 +2927,4 @@ export type EnterpriseITSolution = starte,"
   s: ['Audit readinessInsider risk reduction'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub'; realServic,
-  e: true} ]; '"
+  e: true} ]; '

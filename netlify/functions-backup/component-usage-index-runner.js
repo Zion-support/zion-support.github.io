@@ -19,11 +19,11 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '29 */6 * * *' };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
+    logs.push(`\n=== ${name} ===`);`
     const {status, stdout} stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
+    logs.push(`exit=${status}`);`
     return status}
   logStep('components: usage-index') () =>,
   logStep('component)
@@ -40,7 +40,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
   r: res.stderr || '' }} ' exports.config = {/* TODO: Fix JSX expression */}`
-  e: '29 */6 * * *' }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' logStep('component)
+  e: '29 */6 * * *' }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' logStep('component)`
   s: usage-index') () => runNode('automation/component-usage-indexer.cjs'));' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,

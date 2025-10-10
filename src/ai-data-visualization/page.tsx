@@ -8,12 +8,12 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
 }
   return (<div><Helmet><
         <title>AI Data Visualization Solutions - Zion Tech Group<
-        <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /><
-        <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /><
+        <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month. /><"
+        <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights /><"
         <link rel="canonical" href="http,"
-  s://ziontechgroup.com/ai-data-visualization" /><
+  s://ziontechgroup.com/ai-data-visualization /><
       <
-      "
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"><
         <Navigation /><
         <main className="container mx-auto px-4 py-16 pt-24"><
@@ -34,8 +34,8 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Features Grid *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features<
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg:grid-cols-3 gap-8"><
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🎨<
@@ -44,7 +44,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   AI automatically selects the best chart types and creates stunning visualizations from your data.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🔍<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Insights<
@@ -52,7 +52,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   AI analyzes your data and provides intelligent insights, trends, and recommendations.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">📱<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Interactive Dashboards<
@@ -60,7 +60,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   Create responsive, interactive dashboards that work perfectly on all devices.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🤖<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Natural Language Queries<
@@ -68,7 +68,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   Ask questions in plain English and get instant visual answers from your data.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">⚡<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Updates<
@@ -76,7 +76,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   Visualizations update automatically as new data comes in, keeping insights current.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🔮<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics<
@@ -104,7 +104,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 <
                 <a href="/contact" className="cyber-button w-full">Get Started<
               <
-              "
+              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"><
                 <h3 className="text-2xl font-bold text-white mb-4">Professional<
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span><
@@ -118,7 +118,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 <
                 <a href="/contact" className="cyber-button w-full">Get Started<
               <
-              "
+              
               <div className="cyber-card p-8 text-center"><
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise<
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom<
@@ -138,27 +138,27 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Use Cases Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For<
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg:grid-cols-4 gap-8"><
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl mb-4">📊<
                 <h3 className="text-xl font-bold text-white mb-4">Business Intelligence<
                 <p className="text-gray-300">Transform business data into actionable insights and strategic decisions.<
               <
-              "
+              
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl mb-4">📈<
                 <h3 className="text-xl font-bold text-white mb-4">Sales Analytics<
                 <p className="text-gray-300">Track sales performance, identify trends, and optimize revenue strategies.<
               <
-              "
+              
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl mb-4">👥<
                 <h3 className="text-xl font-bold text-white mb-4">Customer Analytics<
                 <p className="text-gray-300">Understand customer behavior and preferences through visual data analysis.<
               <
-              "
+              
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl mb-4">⚙️<
                 <h3 className="text-xl font-bold text-white mb-4">Operations<
@@ -180,25 +180,21 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 📞 Cal)
   l: (302) 464-0950;
               <
-              <a href="
+              <a href=">"
   hove,
-    r:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"><
+    r:bg-white,"</a>  hover:text-indigo-600 transition-all duration-300"><
                 Get Free Demo;
               <
             <
           <
         <
-        
-<<<<<<< HEAD
+
         <Footer /></Footer>
       </div>
     </div>
-  )}"
-=======
+  )}
         <Footer /><
       <
     <
   );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+}

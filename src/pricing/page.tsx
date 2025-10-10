@@ -181,7 +181,6 @@ const getColorClasses = (color: string) => {
           </p>
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,22 +192,22 @@ const colors = getColorClasses(plan.color);
               return (
                 <div
                   key={index}
-                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${`
                     plan.popular ? colors.border : 'border-gray-200'
-                  } overflow-hidden`}
+                  } overflow-hidden`}`
                 >
 );
 }
                   {plan.popular && (
-                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
+                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>`
                       Most Popular
                     </div>
                   )}
                   
-                  <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
+                  <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>`
                     <div className="text-center mb-8">
-                      <div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                        <plan.icon className={`w-8 h-8 ${colors.textLight}`} />
+                      <div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}>`
+                        <plan.icon className={`w-8 h-8 ${colors.textLight}`} />`
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                       <p className="text-gray-600 mb-4">{plan.description}</p>
@@ -217,26 +216,24 @@ const colors = getColorClasses(plan.color);
                         <span className="text-gray-600 ml-1">{plan.period}</span>
                       </div>
                     </div>
-
                     <div className="mb-8">
                       <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
                       <ul className="space-y-3">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 />"
                             <span className="text-gray-600">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-
                     {plan.limitations.length > 0 && (
                       <div className="mb-8">
                         <h4 className="font-semibold text-gray-900 mb-4">Limitations:</h4>
                         <ul className="space-y-3">
                           {plan.limitations.map((limitation, limitationIndex) => (
                             <li key={limitationIndex} className="flex items-start">
-                              <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                              <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0 />"
                               <span className="text-gray-600">{limitation}</span>
                             </li>
                           ))}
@@ -246,11 +243,11 @@ const colors = getColorClasses(plan.color);
 
                     <Link
                       to="/contact"
-                      className={`w-full ${
+                      className={`w-full ${`
                         plan.popular
                           ? `${colors.bg} hover:opacity-90 text-white`
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
-                      } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
+                      } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}`
                     >
                       {plan.cta}
                     </Link>
@@ -260,7 +257,6 @@ const colors = getColorClasses(plan.color);
           </div>
         </div>
       </section>
-
       {/* Add-ons */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -286,7 +282,6 @@ const colors = getColorClasses(plan.color);
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -308,7 +303,6 @@ const colors = getColorClasses(plan.color);
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -334,7 +328,6 @@ const colors = getColorClasses(plan.color);
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )};

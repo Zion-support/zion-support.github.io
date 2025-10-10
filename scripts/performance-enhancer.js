@@ -25,7 +25,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
     }}
 
   async enhance() {/* TODO: Fix JSX expression */}
-  to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`)} catch (error) {/* TODO: Fix JSX expression */}
+  to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`)} catch (error) {/* TODO: Fix JSX expression */}`
     }
   }
 
@@ -66,7 +66,7 @@ let _totalSize = 0;
       `
 //       // // console.log removed for production
 `
-  size: ${(totalSize / 1024).toFixed(2)} KB`)} catch (error) {/* TODO: Fix JSX expression */}
+  size: ${(totalSize / 1024).toFixed(2)} KB`)} catch (error) {/* TODO: Fix JSX expression */}`
 //       }
   }
 
@@ -87,7 +87,7 @@ const _images = await fs.readdir(imagesPath);
       let _optimizedCount = 0;
       
       for (const image of images) {/* TODO: Fix JSX expression */}`
-  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`)}
+  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`)}`
           
           optimizedCount++}
       }
@@ -97,7 +97,7 @@ const _images = await fs.readdir(imagesPath);
         status: 'completed'),
         details: `Processed ${optimizedCount} images`
       this.report.optimizations.push({/* TODO: Fix JSX expression */}`
-  s: `Processed ${optimizedCount} images`)
+  s: `Processed ${optimizedCount} images`)`
       });
       
 //       } catch (error) {/* TODO: Fix JSX expression */}
@@ -318,7 +318,7 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 //     }
 
   generateMarkdownReport() {
-    return `# Performance Enhancement Report;
+    return `# Performance Enhancement Report;`
 Generated: ${this.report.timestamp}
   async generateReport() {/* TODO: Fix JSX expression */}
 //     }
@@ -331,11 +331,11 @@ This report contains the results of the performance enhancement process.
 
 ## Optimizations Applied;
 ${this.report.optimizations.map(opt => )
-  `- **${opt.type}**: ${opt.status} - ${opt.details}`)
+  `- **${opt.type}**: ${opt.status} - ${opt.details}`)`
 ).join('\n')}
 
 ## Metrics;
-- Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
+- Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}`
 
 ## Recommendations;
 ${/* TODO: Fix JSX expression */}`
@@ -344,10 +344,10 @@ ${/* TODO: Fix JSX expression */}`
 
 ## Metrics;
 - Bundle,`
-  Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
+  Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}`
 
 ## Recommendations;`
-${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
+${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}`
 
 ## Next Steps;
 1. Review the recommendations above;

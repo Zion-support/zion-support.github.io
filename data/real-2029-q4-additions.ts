@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 
       'Intent classification and priority scoring'
@@ -5286,9 +5286,8 @@ export const,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
   s: 16} } ]; '
-=======
+
     market_size: 'Helpdesk software $20B+'
     growth_rate: '25% YoY';
 variant: 'ai - futuristic'
     contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

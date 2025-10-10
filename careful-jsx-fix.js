@@ -33,9 +33,9 @@ return (
 
       // Extract the first closing tag;
 const firstTag = match.match(/<\/(\w+)>/)[1];
-      return `</${firstTag}>
+      return `</${firstTag}>`
 );
-}`}
+}`}`
   }
 ];
 ;

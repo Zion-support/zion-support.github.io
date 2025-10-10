@@ -23,7 +23,7 @@ const _files = fs.readdirSync(this.inputDir);
 //     }
 
   async optimizeImage(filename) {/* TODO: Fix JSX expression */}
-//       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp`);
+//       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp`);`
       
       try {/* TODO: Fix JSX expression */}
   t: true })

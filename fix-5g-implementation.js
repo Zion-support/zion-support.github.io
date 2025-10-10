@@ -25,8 +25,7 @@ content = content.replace(/<\/undefined><\/undefined><\/undefined>/g, '');
 // Fix malformed self-closing tags
 content = content.replace(/\/><\/undefined>/g, '/>');
 
-// Fix malformed quotes in className
-content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
+// Fix malformed quotes in className: content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>');
 
 fs.writeFileSync(filePath, content, 'utf8');
 // console.log removed for production

@@ -18,10 +18,10 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 //Function to check if branch exists;
 function branchExists(branchName) {
   try {
-    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`)`
       { stdio: 'pipe' }
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
-      `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
+      `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,`
       {/* TODO: Fix JSX expression */}
   o: 'pipe' }
     );
@@ -95,7 +95,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
     continue}
 
 //   //Try to merge the branch;
-  const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)
+  const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)"`
     `Merge ${pr.branch}`
   );
 
@@ -108,7 +108,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
       branch: pr.branch)})} else {
     conflictCount++;
 //     //Try to abort the merge if there was a conflict;
-    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
+    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);`
 
     results.push({)
       pr: pr.number;)
@@ -116,14 +116,14 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
       status: 'conflict'),
       branch: pr.branch),
       error: mergeResult.error),
-//   //Try to merge the branch;`;
-const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,`
-    `Merge ${pr.branch}`)
+//   //Try to merge the branch;`;`
+const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,`"`
+    `Merge ${pr.branch}`)`
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     })} else {/* TODO: Fix JSX expression */}`
-    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);
+    safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`);`
 
     results.push({/* TODO: Fix JSX expression */})
     })}
@@ -165,7 +165,7 @@ const report = {
     merged: mergedCount;
     conflicts: conflictCount;
     notFound: notFoundCount;
-    successRate: `${Math.round((mergedCount / prs.length) * 100)}%`},
+    successRate: `${Math.round((mergedCount / prs.length) * 100)}%`},`
   systemChecks: {
     typeCheck: typeCheck.success;
     lintCheck: lintCheck.success;
@@ -181,7 +181,7 @@ const report = {
 //Save detailed report;
 fs.writeFileSync('enhanced-pr-merge-report.json');
 const report = {/* TODO: Fix JSX expression */}`
-  e: `${Math.round((mergedCount / prs.length) * 100)}%`},
+  e: `${Math.round((mergedCount / prs.length) * 100)}%`},`
   systemCheck,
   s: {/* TODO: Fix JSX expression */}
   },

@@ -29,4 +29,4 @@ exports.config = {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true}); try {' run('node automation/automation-guardian-10min.cjs || true');' run('node automation/netlify-auto-healer.cjs || true');' run('node automation/image-optimizer.cjs || true');' run('node automation/broken-image-scanner.cjs || true'); ' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(heal): guardian-ultra auto-heal and optimize [skip ci]" || true');' run('git push origin main || true')} ' return {/* TODO: Fix JSX expression */}
   l: 'guardian-ultra' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

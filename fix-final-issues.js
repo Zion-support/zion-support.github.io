@@ -8,14 +8,14 @@ function processFile(filePath) {
     // Fix duplicate React imports;
     if (content.includes("import React from 'react';\nimport React from 'react';")) {
       content = content.replace(/import React from 'react';\nimport React from 'react';/g)
-        "import React from 'react';"
+        "import React from 'react';
       );
       modified = true}
 
     // Fix duplicate React imports with different spacing;
     if (content.includes("import React from 'react';\n\nimport React from 'react';")) {
       content = content.replace(/import React from 'react';\n\nimport React from 'react';/g)
-        "import React from 'react';"
+        "import React from 'react';
       );
       modified = true}
 
@@ -43,8 +43,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('<Link href=')) {/* TODO: Fix JSX expression */}
     }
 
-    // Fix Next.js imports in sitemap;"
-    if (content.includes("import { Metadata } from 'next';")) {/* TODO: Fix JSX expression */}"
+    // Fix Next.js imports in sitemap;
+    if (content.includes("import { Metadata } from 'next';")) {/* TODO: Fix JSX expression */}
       content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';");
       modified = true}
 
@@ -69,4 +69,3 @@ async function main() {/* TODO: Fix JSX expression */}
   })}
 
 main().catch(console.error);
-"

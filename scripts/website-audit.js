@@ -45,7 +45,7 @@ const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx')
 const footerContent = fs.readFileSync(footerFile, 'utf8');
 
 // Extract all href links from Footer;
-const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;
+const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;"`
 const footerLinks = [];
 let match;
 ,
@@ -67,7 +67,7 @@ footerLinks.forEach(link => {)
 });
 
 // console.log removed for production
-:`);
+:`);`
 missingPages.forEach(page => {)
   // console.log removed for production
 });
@@ -100,7 +100,7 @@ const additionalMissing = commonPages.filter(page => )
 
 if (additionalMissing.length > 0) {
   // console.log removed for production
-:`);
+:`);`
   additionalMissing.forEach(page => {)
     // console.log removed for production
 })}
@@ -115,7 +115,7 @@ allPages.forEach(page => {)
 const content = fs.readFileSync(page.file, 'utf8');
     
     // Find all internal links in the page;
-    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;
+    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;"`
     let linkMatch;
     
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {;
@@ -132,7 +132,7 @@ const link = linkMatch[1];
 
 if (brokenLinks.length > 0) {
   // console.log removed for production
-:`);
+:`);`
   brokenLinks.forEach(({ page, brokenLink }) => {
     // console.log removed for production
 })} else {

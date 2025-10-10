@@ -31,9 +31,9 @@ export const _generateSitemap = (url)
 ${urls}
   .map((url) => {// TODO: Add content}
 }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;`
 
-    return `  
+    return `  `
           
           
           
@@ -54,7 +54,7 @@ ${urls}
   .join('
 ')}
 
-</urlset>`;
+</urlset>`;`
   return sitemap};
 // Define all the pages for the sitemap;
 
@@ -190,7 +190,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'yearly' },
     {/* TODO: Fix JSX expression */}
   q: 'yearly' }]
-}"`
+}"`"`
 
 
 

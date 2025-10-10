@@ -32,8 +32,7 @@ let content = fs.readFileSync(filePath, 'utf8');
       content = content.replace(/<\/undefined>/g, '');
       modified = true}
 
-    // Fix 2: Fix malformed quotes in className
-    if (content.includes('&quot;')) {
+    // Fix 2: Fix malformed quotes in className: if (content.includes('&quot;')) {
       content = content.replace(/&quot;/g, '"');
       modified = true}
 
@@ -44,9 +43,9 @@ return (
 
       if (text.trim()) {
         modified = true;
-        return `<${tagName}${attributes}>
+        return `<${tagName}${attributes}>`
 );
-}${text}</${tagName}>`}
+}${text}</${tagName}>`}`
       return match});
 
     // Fix 4: Fix self-closing tags that should have content;
@@ -56,16 +55,16 @@ return (
 
       if (text.trim() && !text.includes('<')) {
         modified = true;
-        return `<${tagName}${attributes}>
+        return `<${tagName}${attributes}>`
 );
-}${text}</${tagName}>`}
+}${text}</${tagName}>`}`
       return match});
 
-    // Fix 5: Fix malformed className attributes;
+    // Fix 5: Fix malformed className: attributes;
 const malformedClassPattern = /className="([^"]*)"([^>]*)><\/undefined>/g;
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       modified = true;
-      return `className="${className}"${rest}>`});
+      return `className="${className}"${rest}>`});"`
 
     // Fix 6: Fix malformed closing tags;
 const malformedClosingPattern = /<\/undefined><\/undefined>/g;
@@ -86,9 +85,9 @@ return (
 
       if (content.trim()) {
         modified = true;
-        return `<${tagName}${attributes}>
+        return `<${tagName}${attributes}>`
 );
-}${content}</${tagName}>`}
+}${content}</${tagName}>`}`
       return match});
 
     // Fix 9: Fix malformed return statements;
@@ -104,7 +103,7 @@ const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
-}`);
+}`);`
       return true}
     
     return false} catch (error) {

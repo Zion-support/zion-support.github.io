@@ -190,7 +190,7 @@ const requestPromise = this.executeRequest;
       if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`)}
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)}`
       // Apply response interceptor;
 let finalResponse = response;
       if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
@@ -335,7 +335,7 @@ const data = await this.parseResponse;
   private buildURL(config: RequestConfig): string {// TODO: Add content}
 }
 ;
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;`
     if (config.params) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -344,7 +344,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   O: Add content}
 }
         params.append(key, String(value))});`
-      url += `?${params.toString()}`}
+      url += `?${params.toString()}`}`
     return url}
   /**
    * Build request headers;
@@ -398,7 +398,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
     const url = this.buildURL(config);`
-    return `${config.method}:${url}`}
+    return `${config.method}:${url}`}`
   /**
    * Get response from cache;
    */

@@ -79,7 +79,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);`
         modified = true}
     }
 
@@ -87,15 +87,15 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (metadata.title || metadata.description) {
       //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {;
-const newHelmet = `<Helmet>
+const newHelmet = `<Helmet>`
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
         <title>${metadata.title || 'Zion Tech Group'}</title>
-        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
-        ${/* TODO: Fix JSX expression */}"`
-  g:type" content="${metadata.type}" />` : ''}
-        ${/* TODO: Fix JSX expression */}"`
-  g:url" content="${metadata.url}" />` : ''}`
-      </Helmet>`;
+        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'} /></meta>"
+        ${/* TODO: Fix JSX expression */}"`"`
+  g:type" content="${metadata.type} />` : ''}`"
+        ${/* TODO: Fix JSX expression */}"`"`
+  g:url" content="${metadata.url} />` : ''}`"
+      </Helmet>`;`
 
         content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true}

@@ -3,8 +3,7 @@ import React from 'react';
 interface LinkProps {// TODO: Add content}
 };
   href: string;,
-    children: React.ReactNode
-  className?: string
+    children: React.ReactNode: className?: string
   target?: string
   rel?: string
   onClick?: () => void

@@ -80,9 +80,9 @@ exports.config = {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('node automation/image-optimizer.cjs || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       }); // Commit and push changes' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true}); ' return {/* TODO: Fix JSX expression */}
   k: 'auto-heal-and-optimize' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

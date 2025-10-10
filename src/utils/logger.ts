@@ -1,10 +1,10 @@
 export const logger = {
   debug: (message: string, ...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
-      console.debug(`[DEBUG] ${message}`, ...args)}
+      console.debug(`[DEBUG] ${message}`, ...args)}`
   },
   info: (message: string, ...args: any[]) => {
-    console.info(`[INFO] ${message}`, ...args)},
+    console.info(`[INFO] ${message}`, ...args)},`
   warn: (message: string, ...args: any[]) => {
     // console.warn removed for production
 },
@@ -199,9 +199,9 @@ class Logger {/* TODO: Fix JSX expression */}
 }
     const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
     const timestamp = entry.timestamp || new Date().toISOString();
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;
+    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;`
 const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`}
+    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`}`
   /**
    * Format context object for display;
    */
@@ -220,7 +220,7 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
     if (context.sessionId) parts.push(`sessio)`
   n:${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
-  t:${context.requestId}`);
+  t:${context.requestId}`);`
     return parts.join(', ')}
   /**
    * Output to console with appropriate styling;
@@ -237,11 +237,11 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
 
       case LogLevel.DEBUG:
 
-        console.debug(`%c${message}`, styles, entry)
+        console.debug(`%c${message}`, styles, entry)`
         break;
       case LogLevel.INF,
   O:`
-        // console.info(`%c${message}`, styles, entry)
+        // console.info(`%c${message}`, styles, entry)`
         break;
       case LogLevel.WAR,
   N:`

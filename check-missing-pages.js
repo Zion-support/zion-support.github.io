@@ -16,7 +16,6 @@ const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*
 const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8');
 const navMatches = navContent.match(/to="([^"]+)"/g);
 const navLinks = navMatches ? navMatches.map(match => match.match(/to="([^"]+)"/)[1]) : [];
-
 // Combine all links;
 const allLinks = [...new Set([...footerLinks, ...navLinks])];
 
@@ -101,4 +100,4 @@ missingPages.forEach(page => // console.log removed for production
   routes: ${routes.length}`);`
 // console.log removed for production
 `
-  pages: ${existingPages.length}`);"`
+  pages: ${existingPages.length}`);"`"`

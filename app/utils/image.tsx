@@ -9,8 +9,7 @@ interface ImageProps {}
   src: string
   alt: string
   width?: number
-  height?: number
-  className?: string
+  height?: number: className?: string
   priority?: boolean
   _quality?: number
   src: string,
@@ -98,7 +97,7 @@ export const,
     })
   };
   if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}`
         style={imageStyle}
         {...props})
       >)</div>
@@ -139,4 +138,4 @@ export default Image;
   );
 };
 export default Image;
-"`
+"`"`

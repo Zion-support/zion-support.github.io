@@ -45,7 +45,7 @@ openGraphPages.forEach(pagePath => {)
       "authors: ['Zion Tech Group']",
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' \}\]/g,
-      "author,"
+      "author,
   s: ['Zion Tech Group']")
     );
 ,

@@ -111,7 +111,7 @@ export interface LoggerConfig {// TODO: Add content}
  * remote logging support, and performance tracking.
  *
  * @example;
- * ```typescript;
+ * ```typescript;`
  * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */})
   d: '123' });
  * logger.error('API request failed', {/* TODO: Fix JSX expression */})
@@ -172,7 +172,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional data to include;
    * @param source - Optional source identifier;
    * @example;`
-   * ```typescript;
+   * ```typescript;`
    * logger.debug('Component rendered', {/* TODO: Fix JSX expression */})
   s: componentProps }, 'MyComponent');`
    * ```
@@ -190,7 +190,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional data to include;
    * @param source - Optional source identifier;
    * @example;`
-   * ```typescript;
+   * ```typescript;`
    * logger.info('User action completed', {/* TODO: Fix JSX expression */})
   n: 'submit_form' }, 'FormComponent');`
    * ```
@@ -208,7 +208,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional data to include;
    * @param source - Optional source identifier;
    * @example;`
-   * ```typescript;
+   * ```typescript;`
    * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */})
   i: 'oldFunction' }, 'LegacyModule');`
    * ```
@@ -227,7 +227,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param error - Optional Error object for stack trace;
    * @param source - Optional source identifier;
    * @example;`
-   * ```typescript;
+   * ```typescript;`
    * try {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -302,7 +302,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @param markName - Unique name for the performance mark;
    * @example;`
-   * ```typescript;
+   * ```typescript;`
    * logger.startPerformance('api_call');
    * // ... perform operation;
    * logger.endPerformance('api_call'); // Logs the duration;`
@@ -331,16 +331,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (!startTime) {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
+      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');`
       return undefined}
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName)
 
 //     this.info()
-      `Performance: ${markName}`,
+      `Performance: ${markName}`,`
       {// TODO: Add content}
 };
-  duration: `${duration.toFixed(2)}ms`,
+  duration: `${duration.toFixed(2)}ms`,`
 
 //         ...data},
 //       'PerformanceMonitor'
@@ -428,9 +428,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
 }
     const levelName = LogLevel[entry.level];
-    const timestamp = entry.timestamp.toISOString();`;
-const source = entry.source ? ` [${entry.source}]` : '';`;
-const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
+    const timestamp = entry.timestamp.toISOString();`;`
+const source = entry.source ? ` [${entry.source}]` : '';`;`
+const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;`
     if (this.config.enableStructured) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -568,7 +568,7 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
   private generateLogId(): string {// TODO: Add content}
 }
 
-    return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   /**
    * Get user ID from session/storage;
    *
@@ -602,7 +602,7 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     try {if (!sessionId) {}
   // TOD,
   O: Add content}`
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
         sessionStorage.setItem('sessionId', sessionId)}
       return sessionId} catch {/* TODO: Fix JSX expression */}
   O: Add content}

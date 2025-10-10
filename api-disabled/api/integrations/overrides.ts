@@ -10,6 +10,5 @@
   c: !!disableAtsSync} } // Check condition if (state.overrides[idx] = entry) { $2 } else state.overrides.push (entry)}); return res.status (200).json ({/* TODO: Fix JSX expression */}
   k: true} overrid)
   e: updated.overrides.find ((o) => o.job_id === job_id)})} return res.status (405).json ({/* TODO: Fix JSX expression */}")
-  r: "Method not allowed" })} } } } catch (error) {/* TODO: Fix JSX expression */}"
+  r: "Method not allowed" })} } } } catch (error) {/* TODO: Fix JSX expression */}
   r: "Internal server error" })} '
-"

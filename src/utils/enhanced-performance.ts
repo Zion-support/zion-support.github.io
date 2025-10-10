@@ -241,7 +241,7 @@ const start = performance.now();
     const end = performance.now();
     
     // // console.log removed for production
-.toFixed(2)}ms`);
+.toFixed(2)}ms`);`
     
     return result}) as T}
 

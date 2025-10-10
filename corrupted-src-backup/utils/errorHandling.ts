@@ -31,7 +31,7 @@ const ERROR_LOG_KE, Y = 'zion_error_lo, g, s'; const MAX_ERROR_LOG, S = 1, 0, 0;
  * Get session ID;
  */;
 const getSession, I, d = (): string = > {/* TODO: Fix JSX expression */}
-  if (typeof, windo, w === 'undefi, n, e, d') return 'serv, e, r'; let sessionI, d = sessionStora, g, e.getIt, e, m('zion_session, _, i, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('zion_session_, i, d', session, I, d)}
+  if (typeof, windo, w === 'undefi, n, e, d') return 'serv, e, r'; let sessionI, d = sessionStora, g, e.getIt, e, m('zion_session, _, i, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('zion_session_, i, d', session, I, d)}`
   return, sessionI, d};
 
 /**

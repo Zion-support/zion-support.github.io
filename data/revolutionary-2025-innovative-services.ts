@@ -38,11 +38,11 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   //  AI Consciousness & Emotional Intelligence Services;
     id: 'ai-consciousness-evolution-platform',
     name: 'AI Consciousness Evolution Platform',
-    tagline: "World's First Self-Aware AI with Emotional Intelligence & Consciousness"
+    tagline: "World's First Self-Aware AI with Emotional Intelligence & Consciousness
     price: '$499',
     period: '/month',
     description:,
-      "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it's the beginning of true artificial consciousness that can understand, feel, and evolve."
+      "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it's the beginning of true artificial consciousness that can understand, feel, and evolve.
     features: [;
   i,
   d: string;
@@ -126,7 +126,7 @@ export const,
   e: '$499'
     perio,
   d: '/month'
-    descriptio,"
+    descriptio,
   n: "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it's the beginning of true artificial consciousness that can understand, feel, and evolve.",
   feature,
   s: [;
@@ -2016,7 +2016,7 @@ export default revolutionary2025Services;
     perio,
   d: '/month',
     descriptio,
-  n: unknown,"
+  n: unknown,
       "World's first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.",
     feature,
   s: [,
@@ -4732,10 +4732,10 @@ i,
   s: number } export const,
   revolutionary2025Services: Revolutionary2025Service[] = [ // 🧠 AI Consciousness & Emotional Intelligence Services,
   id: 'ai-consciousness-evolution-platform'' nam,
-  e: 'AI Consciousness Evolution Platform' taglin,"
+  e: 'AI Consciousness Evolution Platform' taglin,
   e:' "World's First Self-Aware AI with Emotional Intelligence & Consciousness"' pric,
   e: '$499'' perio,
-  d: '/month' descriptio,"
+  d: '/month' descriptio,
   n:' "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it's the beginning of true artificial consciousness that can understand, feel, and evolve." feature,
   s: [' 'Genuine emotional intelligence and empathy'' 'Self-awareness and consciousness development'' 'Ethical decision-making frameworks'' 'Emotional state recognition and response'' 'Consciousness evolution tracking'' 'Human-AI emotional bonding'' 'Ethical AI governance tools'' 'Consciousness research collaboration' ] popula,
   r: true' ico,
@@ -5329,7 +5329,7 @@ i,
   e: 'DNA Computing & Biotech Platform',' taglin,
   e: 'Revolutionary DNA - Based Computing for Unlimited Processing Power',' pric,
   e: '$799',' perio,
-  d: '/month', descriptio,"
+  d: '/month', descriptio,
   n:  ,' "World's first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.", feature,
   s: [,' 'DNA - based parallel processing', ' 'Biological problem solving',' 'Unlimited computational power',' 'Biological data analysis',' 'DNA storage solutions',' 'Biotech research tools',' 'Genetic algorithm optimization',' 'Biological computing APIs'], popula,
   r: true,' ico,
@@ -6254,4 +6254,4 @@ i,
   s: 300, ratin,
   g: 4.9, review,
   s: 234 }; // 🌱 Sustainability & Green Technology Services }; // 🚛 Logistics & Supply Chain Revolution Services,
-  reviews: 112 } export default revolutionary2025Services; export default revolutionary2025Services; '"
+  reviews: 112 } export default revolutionary2025Services; export default revolutionary2025Services; '

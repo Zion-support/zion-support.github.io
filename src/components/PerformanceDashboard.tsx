@@ -29,11 +29,10 @@ const,
   PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
   });
 
-<<<<<<< HEAD
   useEffect(() => {/* TODO: Fix JSX expression */}
   p: entry.startTime }));
         }
-=======
+
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -75,7 +74,7 @@ const,
         renderTime,
         memoryUsage,
         fps
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
       });
     });
 
@@ -94,6 +93,4 @@ const,
 };
 
 export default PerformanceDashboard;
-
-
 

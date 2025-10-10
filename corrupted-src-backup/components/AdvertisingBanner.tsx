@@ -96,4 +96,3 @@ const,
   )};
 
 export default AdvertisingBanner;
-"

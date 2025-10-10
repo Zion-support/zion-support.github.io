@@ -55,8 +55,7 @@ $4})
   };
   if (hasError) {
     return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+      <div className={`bg-gray-200 flex items-center justify-center ${className}`}`
         style={imageStyle}
         {...props}
       >
@@ -91,8 +90,7 @@ const,
   src: string;,
     alt: string
   width?: number
-  height?: number
-  className?: string
+  height?: number: className?: string
   priority?: boolean
   _quality?: number
 
@@ -170,11 +168,10 @@ quality = 75,
           
           
           <div>Coming Soon</div>
-
   )
       
           <div></div>
-className={`bg-gray-200 flex items-center justify-center ${className}`}
+className={`bg-gray-200 flex items-center justify-center ${className}`}`
         style={imageStyle}
         {...props}
 // >
@@ -209,7 +206,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 //     />
   )
 }
-export default Image;"`
+export default Image;"`"`
 
 
 

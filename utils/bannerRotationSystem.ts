@@ -26,7 +26,7 @@ const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance;
  * Get or create session ID;
  */;
 const getSessionId = (): string => {/* TODO: Fix JSX expression */}
-    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
     sessionStorage.setItem(SESSION_KEY, sessionId)}
   return sessionId};
 

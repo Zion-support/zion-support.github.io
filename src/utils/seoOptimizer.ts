@@ -115,7 +115,7 @@ class SEOOptimizer {// TODO: Add content}
   generateTitle(pageTitle?: string): string {
     return title.includes(this.config.siteName) 
       ? title 
-      : `${title} | ${this.config.siteName}`}
+      : `${title} | ${this.config.siteName}`}`
   /**
    * Generate optimized description
    */
@@ -132,7 +132,7 @@ const description = pageDescription || this.currentPageData?.description || this
    */
   generateTitle(pageTitle?: string): string {return title.includes(this.config.siteName)}
       ? title;
-      : `${title} | ${this.config.siteName}`}
+      : `${title} | ${this.config.siteName}`}`
   /**
    * Generate optimized description;
    */
@@ -189,7 +189,7 @@ const description = pageDescription || this.currentPageData?.description || this
     // Twitter Card tags
     if (this.config.twitterHandle) {
       this.setMetaTag('twitter:card', 'summary_large_image');
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);
+      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);`
       this.setMetaTag('twitter:title', title);
       this.setMetaTag('twitter:description', description);
       this.setMetaTag('twitter:image', image)}
@@ -214,7 +214,7 @@ const description = pageDescription || this.currentPageData?.description || this
       this.setMetaTag('twitte)
   r:card', 'summary_large_image');
       this.setMetaTag('twitte)`
-  r:site', `@${this.config.twitterHandle}`);
+  r:site', `@${this.config.twitterHandle}`);`
       this.setMetaTag('twitte)
   r:title', title);
       this.setMetaTag('twitte)
@@ -294,7 +294,7 @@ const structuredData = {
       url: this.config.siteUrl,
       potentialAction: {
         '@type': 'SearchAction',
-        target: `${this.config.siteUrl}/search?q={search_term_string}`,
+        target: `${this.config.siteUrl}/search?q={search_term_string}`,`
         'query-input': 'required name=search_term_string'
       }
     };
@@ -310,7 +310,7 @@ const structuredData = {
 }
         '@type': 'SearchAction',
         targe,`
-  t: `${this.config.siteUrl}/search?q={search_term_string}`,
+  t: `${this.config.siteUrl}/search?q={search_term_string}`,`
         'query-input': 'required name=search_term_string'
       }
     }
@@ -421,7 +421,7 @@ $4}
    * Generate robots.txt content
    */
   generateRobotsTxt(): string {
-    return `User-agent: *
+    return `User-agent: *`
 Allow: /
 Sitemap: ${this.config.siteUrl}/sitemap.xml
 # Disallow admin and private areas
@@ -429,7 +429,7 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/`}
+Disallow: /static/`}`
   /**
    * Check for SEO issues
    */
@@ -450,7 +450,7 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
 const images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.alt) {
-        issues.push(`Image ${index + 1} is missing alt text`)}
+        issues.push(`Image ${index + 1} is missing alt text`)}`
     });
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1');
@@ -626,7 +626,7 @@ let clsValue = 0;
 
   generateRobotsTxt(): string {// TODO: Add content}
 }
-    return `User-agent: *,
+    return `User-agent: *,`
 Allow: /,
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
 
@@ -684,7 +684,7 @@ const images = document.querySelectorAll('img');
       if (!img.alt) {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-        issues.push(`Image ${index + 1} is missing alt text`)}
+        issues.push(`Image ${index + 1} is missing alt text`)}`
     });
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1');

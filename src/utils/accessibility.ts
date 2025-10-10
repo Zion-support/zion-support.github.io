@@ -79,7 +79,7 @@ $4})} else if (img.alt === '') {
 const hasLabel =
         input.hasAttribute('aria-label') ||
         input.hasAttribute('aria-labelledby') ||
-        document.querySelector(`label[for="${input.id}"]`);
+        document.querySelector(`label[for="${input.id}"]`);"`
       if (!hasLabel) {
         errors.push({
           type: 'missing-label',
@@ -96,7 +96,7 @@ const level = parseInt(heading.tagName[1]);
         warnings.push({
           type: 'heading-hierarchy',
           element: heading.tagName.toLowerCase(),
-          message: `Heading level skipped from h${prevLevel} to h${level}`,
+          message: `Heading level skipped from h${prevLevel} to h${level}`,`
           suggestion:         ,
 $4})}
       prevLevel = level});
@@ -145,7 +145,7 @@ const rect = element.getBoundingClientRect();
         warnings.push({
           type: 'small-touch-target',
           element: element.tagName.toLowerCase(),
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,`
           suggestion:         ,
 $4})}
     });
@@ -329,8 +329,8 @@ class AccessibilityService {// TODO: Add content}
 }
       const hasLabel =)
 //         input.hasAttribute('aria-label') ||
-//         input.hasAttribute('aria-labelledby') ||"
-        document.querySelector(`label[for="${input.id}"]`);
+//         input.hasAttribute('aria-labelledby') ||
+        document.querySelector(`label[for="${input.id}"]`);"`
       if (!hasLabel) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -362,7 +362,7 @@ const level = parseInt(heading.tagName[1]);
 
   type: 'heading-hierarchy',
           element: heading.tagName.toLowerCase(),
-          message: `Heading level skipped from h${prevLevel} to h${level}`,
+          message: `Heading level skipped from h${prevLevel} to h${level}`,`
           suggestion: 'Maintain proper heading hierarchy'
 
         }
@@ -452,7 +452,7 @@ const rect = element.getBoundingClientRect();
 
   type: 'small-touch-target',
           element: element.tagName.toLowerCase(),
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,`
           suggestion: 'Increase touch target size to at least 44x44px'
 
         }
@@ -568,7 +568,7 @@ const focusableElements = element.querySelectorAll(
       'a[href], butto,
   n:not([disabled]), textare,
   a:not([disabled]), inpu,
-  t:not([disabled]), selec,"
+  t:not([disabled]), selec,
   t:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -635,7 +635,7 @@ export default a11y;
 }
 // Singleton instance;
 const a11y = new AccessibilityService()
-export default a11y;"`
+export default a11y;"`"`
 
 
 

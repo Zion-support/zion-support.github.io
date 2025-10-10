@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [,
 - One-click rollback with blast-radius checks;
 ## Results;
 - Fewer regressions, faster iteration, clearer ownership;
-    `,
+    `,`
     author: 'Zion Tech Group Reliability Lab',
     date: '2025-10-04',
     category: 'AI Reliability',
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [,
     title: 'Enterprise Agents in Production: Budgets, Approvals, and Rollback',
     description:
       'Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.',
-    content: `,
+    content: `,`
 # Enterprise Agents in Production: Budgets, Approvals, and Rollback;
 This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
 
@@ -73,7 +73,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
 - Incident rate stable as automation expands;
 - Faster delivery without runaway spend;
 - Clear accountability via weekly scorecards;
-    `,
+    `,`
     author: 'Zion Tech Group AI Operations',
     date: '2025-10-04',
     category: 'AI Operations',
@@ -86,8 +86,8 @@ This guide shows how to ship agentic systems that operate within explicit budget
     title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
     description:
       'Cut inference spend 60–85% with tiered routing, request coalescing, and selective distillation.',
-    content: `# GenAI Cost Optimization v6;
-Control GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,
+    content: `# GenAI Cost Optimization v6;`
+Control GenAI costs without UX regressions: quality-tier routers, request coalescing, semantic caches, and selective distillation for hot paths. Includes rollout rituals, SLO templates, and dashboards used by platform teams.`,`
     author: 'Zion Tech Group Platform Team',
     date: '2025-10-03',
     category: 'GenAI Engineering',
@@ -100,7 +100,7 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     title: 'Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts',
     description:
       'Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.',
-    content: `,
+    content: `,`
 # Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts;
 Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
 
@@ -112,7 +112,7 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
 ## Outcomes;
 - 8–12x deployment velocity with lower change-failure rate;
 - 30–70% GenAI cost reduction via quality tiers and caches;
-    `,
+    `,`
     author: 'Zion Tech Group AI Governance',
     date: '2025-10-01',
     category: 'AI Governance',

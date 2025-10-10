@@ -50,7 +50,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             </h3>
             <nav, className='spa, c, e-y-1'></nav>
               { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (
-                <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
+                <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${`
                     isActi, v, e(li, n, k.p, a, t, h)
                        ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'}
                       : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'}
@@ -64,7 +64,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             <nav, className='spa, c, e-y-1'></nav>
               {/* TODO: Fix JSX expression */}
                 <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={/* TODO: Fix JSX expression */}
-                   }`}
+                   }`}`
                 ></Link>
                   {li, n, k.lab, e, l}
                 </Li, n, k>)

@@ -43,7 +43,7 @@ const staticPages = [
     '/marketing-tools',
     '/productivity'
   ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   ${staticPages.map(page =>),
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -53,11 +53,11 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join('');
+  </url>`).join('');`
 </urlset>`
   return sitemap}
 export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *
+  return `User-agent: *`
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
@@ -67,12 +67,12 @@ Crawl-delay: 1,
 Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
-Disallow: /private/`}
+Disallow: /private/`}`
 }
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
-  l: `${baseUrl}/`,
+  l: `${baseUrl}/`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -80,7 +80,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 1.0},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/about`,
+  l: `${baseUrl}/about`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -88,7 +88,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.8},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/services`,
+  l: `${baseUrl}/services`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -96,7 +96,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.9},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/ai-services`,
+  l: `${baseUrl}/ai-services`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -104,7 +104,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.9},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/it-services`,
+  l: `${baseUrl}/it-services`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -112,7 +112,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.9},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/quantum-computing`,
+  l: `${baseUrl}/quantum-computing`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -120,7 +120,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.9},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/autonomous-systems`,
+  l: `${baseUrl}/autonomous-systems`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -128,7 +128,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.9},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/micro-saas`,
+  l: `${baseUrl}/micro-saas`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -136,7 +136,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.8},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/enterprise`,
+  l: `${baseUrl}/enterprise`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -144,7 +144,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.9},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/contact`,
+  l: `${baseUrl}/contact`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -152,7 +152,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.8},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/team`,
+  l: `${baseUrl}/team`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -160,7 +160,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.7},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/case-studies`,
+  l: `${baseUrl}/case-studies`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -168,7 +168,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.8},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/blog`,
+  l: `${baseUrl}/blog`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -176,7 +176,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.8},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/privacy`,
+  l: `${baseUrl}/privacy`,`
       lastmo,
   d: currentDate,
       changefre,
@@ -184,7 +184,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.3},
     {/* TODO: Fix JSX expression */}`
-  l: `${baseUrl}/terms`,
+  l: `${baseUrl}/terms`,`
       lastmo,
   d: currentDate,
       changefre,

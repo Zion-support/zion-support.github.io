@@ -34,13 +34,13 @@ function App() {/* TODO: Fix JSX expression */}
         <Router></Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes></Routes>
-              <Route path="/" element={<Home />} />"
-              <Route path="/about" element={<About />} />"
-              <Route path="/services" element={<Services />} />"
-              <Route path="/blog" element={<Blog />} />"
-              <Route path="/contact" element={<Contact />} />"
-              <Route path="/team" element={<Team />} />"
-              <Route path="/privacy" element={<Privacy />} />"
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
             </Routes>)
           </Suspense>)
@@ -90,9 +90,9 @@ class ErrorBoundary extends React.Component<
     //     }
 
   render() {/* TODO: Fix JSX expression */}
-  r: false })}"
+  r: false })}
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
-  hover:bg-blue-700"
+  hover:bg-blue-700
               >
                 Try again;
               </button>
@@ -103,4 +103,3 @@ class ErrorBoundary extends React.Component<
 }
 
 export default App;
-"

@@ -12,7 +12,7 @@ function fixTypeAnnotations(content) {
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {/* TODO: Fix JSX expression */}
-      return `{ ${body.trim()} }`}
+      return `{ ${body.trim()} }`}`
   );
 
   // Fix specific patterns we've seen;
@@ -110,7 +110,7 @@ const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 ;
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`)}
+  d: ${file}`)}`
 }
 `
 // console.log removed for production

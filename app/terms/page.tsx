@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
@@ -59,12 +59,11 @@ content: 'These terms shall be governed by and construed in accordance with the 
             Please read these terms carefully before using our services
           </p>
           <div>
-            <Calendar className="h-4 w-4 mr-2" />
+            <Calendar className="h-4 w-4 mr-2 />"
             Last updated: {lastUpdated}
           </div>
         </div>
       </div>
-
       <div>
         <div>
           <div>
@@ -73,7 +72,7 @@ content: 'These terms shall be governed by and construed in accordance with the 
                 <div>
                   <div>
                     <div>
-                      <section.icon className="h-6 w-6 text-blue-600" />
+                      <section.icon className="h-6 w-6 text-blue-600 />"
                     </div>
                     <div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
@@ -87,7 +86,6 @@ content: 'These terms shall be governed by and construed in accordance with the 
                 </div>
               ));
             </div>
-
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
               <p className="text-gray-700 mb-6"></p>
@@ -95,24 +93,23 @@ content: 'These terms shall be governed by and construed in accordance with the 
               </p>
               <div>
                 <div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <Mail className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>legal@ziontechgroup.com</span>
                 </div>
                 <div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <Phone className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>(302) 464-0950</span>
                 </div>
                 <div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
+                  <Globe className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>ziontechgroup.com</span>
                 </div>
                 <div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
+                  <User className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>Zion Tech Group Legal Team</span>
                 </div>
               </div>
             </div>
-
             <div>
               <p className="text-sm text-gray-500"></p>
                 By using our services, you acknowledge that you have read and understood these terms.
@@ -124,6 +121,5 @@ content: 'These terms shall be governed by and construed in accordance with the 
     </div>
 )]
     }
-=======
+
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

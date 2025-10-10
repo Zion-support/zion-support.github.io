@@ -39,14 +39,12 @@ const benefits = [
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>Page Optimized | Zion Tech Group<
         <meta name="description" content="Professional Page Optimized services by Zion Tech Group. Advanced AI and IT solutions for your business." 
         <meta name="keywords" content="page-optimized, AI solutions, IT services, Zion Tech Group, page optimized" 
-      <
+      <>
 
-      {/* Hero Section *
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      {/* Hero Section *</meta>      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -75,21 +73,19 @@ const benefits = [
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl m,
+            <h2 className="text-3xl m,>"
     d:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page Optimized?
-            <
+              Why Choose Our Page Optimized?</h2>            <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page optimized solutions deliver unmatched performance, security, and scalability.
             <
           <
 
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-8">)
-            {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
+            {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white"
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-<<<<<<< HEAD
-                  <feature.icon className="h-6 w-6 text-white" />
+                  <feature.icon className="h-6 w-6 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -98,7 +94,6 @@ const benefits = [
           </div>
         </div>
       </section>
-=======
                   <feature.icon className="h-6 w-6 text-white" 
                 <
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
@@ -108,10 +103,9 @@ const benefits = [
           <
         <
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       {/* Benefits Section *
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white"
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -122,19 +116,17 @@ const benefits = [
             <
           <
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />"
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))
           </div>
         </div>
       </section>
-=======
-          <div className="grid grid-cols-1 m,
+          <div className="grid grid-cols-1 m,"
     d:grid-cols-2 gap-6">
             {benefits.map((benefit), index) => (<div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" 
@@ -144,7 +136,6 @@ const benefits = [
           <
         <
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8">
@@ -157,20 +148,17 @@ const benefits = [
               Contact our experts to discuss your page optimized needs and get a customized solution.
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,>"
     r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                
-                <Mail className="mr-2 h-5 w-5" 
+                </button>                <Mail className="mr-2 h-5 w-5" >
                 Email Us
-<<<<<<< HEAD
-              </button>
+</Mail>              </button>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>);
-=======
+
               <
             <
           <
@@ -180,7 +168,4 @@ const benefits = [
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

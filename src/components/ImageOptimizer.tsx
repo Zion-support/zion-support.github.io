@@ -64,22 +64,22 @@ const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
 );
 }
-        <rect width="100%" height="100%" fill="#1e293b"/>
-        <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
-        <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
-        <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
+        <rect width="100%" height="100%" fill="#1e293b />"
+        <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3 />"
+        <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3 />"
+        <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3 />"
+        <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3 />"
         <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
           Loading...,
         </text>,
       </svg>,
-    `;
+    `;`
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}`};
+    return `data:image/svg+xml;base64,${btoa(svg)}`};`
 
   if (hasError) {
     return(<div;
-        className={`bg-slate-800 flex items-center justify-center ${className}`}
+        className={`bg-slate-800 flex items-center justify-center ${className}`}`
         style={{ width, height }}
       ></div>
         <div className="text-gray-400 text-center"></div>
@@ -91,7 +91,7 @@ const svg = `
 
   return(<div;
       ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden ${className}`}`
       style={{ width, height }}
     >
       {/* Placeholder */})
@@ -112,9 +112,9 @@ const svg = `
         <img;
           src={src}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${}`
             isLoaded ? 'opacity-100' : 'opacity-0'}
-          }`}
+          }`}`
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
           onLoad={handleLoad}

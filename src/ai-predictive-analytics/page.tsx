@@ -49,7 +49,6 @@ const features = [
             Predict future outcomes with AI-powered analytics. 
             Make data-driven decisions and stay ahead of trends with intelligent forecasting.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -61,22 +60,20 @@ const features = [
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              <TrendingUp className="w-5 h-5" />
+              <TrendingUp className="w-5 h-5 />"
               +1 302 464 0950
             </a>
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Predictive Analytics Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
@@ -87,7 +84,7 @@ const features = [
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0 />"
                       {benefit}
                     </li>
                   ))}
@@ -97,7 +94,6 @@ const features = [
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   )};

@@ -20,11 +20,11 @@ exports.config = {/* TODO: Fix JSX expression */}
 };
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
+    logs.push(`\n=== ${name} ===`);`
     const {status, stdout} stderr } = runNode(rel) args);
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
+    logs.push(`exit=${status}`);`
     return status}
   step('rep)
   o: knowledge-graph') 'automation/repo-knowledge-graph.cjs');
@@ -49,7 +49,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
   r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}`
-  e: '0 */3 * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' step('rep)
+  e: '0 */3 * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' step('rep)`
   o: knowledge-graph') 'automation/repo-knowledge-graph.cjs');' step('rep)
   o: radar-metrics') 'automation/repo-radar-metrics.cjs');' step('doc)
   s: indexer') 'automation/docs-pages-indexer.cjs');' step('newsroo)

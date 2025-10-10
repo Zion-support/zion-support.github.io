@@ -378,7 +378,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const result = fn(),
     const endTime = performance.now(),
     this.recordMetric({})
-      name: `function:${name}`)
+      name: `function:${name}`)`
       value: endTime - startTime),
       unit: 'ms'),
   measureFunction<T>(name: string, fn: () => T): T {}
@@ -386,7 +386,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const result = fn()
     const endTime = performance.now()
     this.recordMetric({})
-      name: `function:${name}`,
+      name: `function:${name}`,`
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
@@ -394,7 +394,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   measureFunction<T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
-  n:${name}`,
+  n:${name}`,`
       valu,
   e: endTime - startTime,
       uni,
@@ -413,16 +413,16 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const startTime = performance.now(),
     const result = await fn(),
     const endTime = performance.now(),
-    this.recordMetric({`})
-      name: `async:${name}`)
+    this.recordMetric({`})`
+      name: `async:${name}`)`
       value: endTime - startTime),
       unit: 'ms'),
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
     const startTime = performance.now()
     const result = await fn()
     const endTime = performance.now()
-    this.recordMetric({`})
-      name: `async:${name}`,
+    this.recordMetric({`})`
+      name: `async:${name}`,`
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
@@ -430,7 +430,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   async measureAsyncFunction<T>(nam,
   e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`
-  c:${name}`,
+  c:${name}`,`
       valu,
   e: endTime - startTime,
       uni,

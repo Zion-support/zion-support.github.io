@@ -50,17 +50,17 @@ function getRepoStats(rootDir) {/* TODO: Fix JSX expression */}
         totalMb; byExt }}
 function toMarkdown(insights) {/* TODO: Fix JSX expression */}
   lines.push('')}
-  lines.push(`Generated at: ${new Date().toISOString()}`);
+  lines.push(`Generated at: ${new Date().toISOString()}`);`
   lines.push('');
-  lines.push(`- Branch: ${insights.git.branch}`);
-  lines.push(`- Last commit: ${insights.git.lastCommitHash}`);
-  lines.push(`- Author: ${insights.git.lastCommitAuthor}`);
-  lines.push(`- Date: ${insights.git.lastCommitDate}`);
+  lines.push(`- Branch: ${insights.git.branch}`);`
+  lines.push(`- Last commit: ${insights.git.lastCommitHash}`);`
+  lines.push(`- Author: ${insights.git.lastCommitAuthor}`);`
+  lines.push(`- Date: ${insights.git.lastCommitDate}`);`
   lines.push('');
-  lines.push(`## Stats`);
-  lines.push(`- Files: ${insights.stats.totalFiles}`);
-  lines.push(`- Size: ${insights.stats.totalMb)
-        MB`);
+  lines.push(`## Stats`);`
+  lines.push(`- Files: ${insights.stats.totalFiles}`);`
+  lines.push(`- Size: ${insights.stats.totalMb)`
+        MB`);`
   lines.push('');
   lines.push('## Files by extension');
   Object.entries(insights.stats.byExt)
@@ -71,7 +71,7 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
     .forEach(([ext),
         count]) => {,
   lines.push(`Generated)`
-  at: ${new Date().toISOString()}`);
+  at: ${new Date().toISOString()}`);`
   lines.push('');`
   lines.push(`- Branc)`
   h: ${insights.git.branch}`);`
@@ -80,14 +80,14 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
   lines.push(`- Autho)`
   r: ${insights.git.lastCommitAuthor}`);`
   lines.push(`- Dat)`
-  e: ${insights.git.lastCommitDate}`);
+  e: ${insights.git.lastCommitDate}`);`
   lines.push('');`
   lines.push(`## Stats`);`
   lines.push(`- File)`
   s: ${insights.stats.totalFiles}`);`
-  lines.push(`- Siz,
+  lines.push(`- Siz,`
   e: ${/* TODO: Fix JSX expression */})`
-      lines.push(`- ${ext}: ${count}`)});
+      lines.push(`- ${ext}: ${count}`)});`
   return lines.join('\n')}
 exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async function handler() {try {
@@ -152,11 +152,11 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         entry.name} if (entry.isDirectory()) files.push(...walkDir(full)
         ignoreDirs)); else files.push(full)} return files} function getRepoStats(rootDir) {const files = walkDir(rootDir); let totalBytes = 0,;
 const byExt = {}; for (const f of files) {try { const stat = fs.statSync(f); totalBytes += stat.size;' const ext = path.extname(f) || 'noext' byExt[ext] = (byExt[ext] || 0) + 1} } catch {} } const totalFiles = files.length; const totalMb = +(totalBytes / (1024 * 1024)).toFixed(2); return {totalFiles,
-        totalMb; byExt }} function toMarkdown(insights) {const lines = []; lines.push(`# Repository Insights`);' lines.push('')} lines.push(`Generated at: ${new Date().toISOString()}`);' lines.push(''); lines.push(`- Branch: ${insights.git.branch}`); lines.push(`- Last commit: ${insights.git.lastCommitHash}`); lines.push(`- Author: ${insights.git.lastCommitAuthor}`); lines.push(`- Date: ${insights.git.lastCommitDate}`);' lines.push(''); lines.push(`## Stats`); lines.push(`- Files: ${insights.stats.totalFiles}`); lines.push(`- Size: ${insights.stats.totalMb),
-        MB`);' lines.push('');' lines.push('## Files by extension'); Object.entries(insights.stats.byExt).sort((a),
+        totalMb; byExt }} function toMarkdown(insights) {const lines = []; lines.push(`# Repository Insights`);' lines.push('')} lines.push(`Generated at: ${new Date().toISOString()}`);' lines.push(''); lines.push(`- Branch: ${insights.git.branch}`); lines.push(`- Last commit: ${insights.git.lastCommitHash}`); lines.push(`- Author: ${insights.git.lastCommitAuthor}`); lines.push(`- Date: ${insights.git.lastCommitDate}`);' lines.push(''); lines.push(`## Stats`); lines.push(`- Files: ${insights.stats.totalFiles}`); lines.push(`- Size: ${insights.stats.totalMb),`
+        MB`);' lines.push('');' lines.push('## Files by extension'); Object.entries(insights.stats.byExt).sort((a),`
         b)=>b[1]-a[1]).slice(0),
         25).forEach(([ext),
-        count])=>{ lines.push(`- ${ext}: ${count}`)});' return lines.join('\n')} ' exports.config = { schedule: '*/2 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..'); const git = getGitInfo(); const stats = getRepoStats(root;)
+        count])=>{ lines.push(`- ${ext}: ${count}`)});' return lines.join('\n')} ' exports.config = { schedule: '*/2 * * * *' }; exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..'); const git = getGitInfo(); const stats = getRepoStats(root;)`
       } const insights = { generatedAt: new Date().toISOString(), git,
         stats }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'), JSON.stringify(insights, null)
         2));' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'), toMarkdown(insights)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true});' execSync('git add public/reports/repo-insights.*') {stdio: 'inherit'} shell: true});' execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', {stdio: 'inherit'} shell: true});' execSync('git push origin main || true') {stdio: 'inherit'} shell: true})} catch {} ' return {statusCode: 200;
@@ -180,9 +180,9 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   commit: ${insights.git.lastCommitHash}`); lines.push(`- Autho)`
   r: ${insights.git.lastCommitAuthor}`); lines.push(`- Dat)`
   e: ${insights.git.lastCommitDate}`);' lines.push(''); lines.push(`## Stats`); lines.push(`- File)`
-  s: ${insights.stats.totalFiles}`); lines.push(`- Siz,
+  s: ${insights.stats.totalFiles}`); lines.push(`- Siz,`
   e: ${/* TODO: Fix JSX expression */})`
-        count])=>{ lines.push(`- ${ext}: ${count}`)});' return lines.join('\n')} ' exports.config = {/* TODO: Fix JSX expression */}
+        count])=>{ lines.push(`- ${ext}: ${count}`)});' return lines.join('\n')} ' exports.config = {/* TODO: Fix JSX expression */}`
   e: '*/2 * * * *' }; exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       } const insights = {/* TODO: Fix JSX expression */}
         stats }; ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'), JSON.stringify(insights, null)
@@ -190,11 +190,11 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   o: 'inherit'} shel,
   l: true});' execSync('git add public/reports/repo-insights.*') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       });' execSync('git commit -m "chore(reports): update repo insights [skip ci]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('git push origin main || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true})} catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/repo-insights.json' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"`
+      }) }} };'"`"`

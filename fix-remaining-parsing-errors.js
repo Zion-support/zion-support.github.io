@@ -35,7 +35,7 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
       modified = true}
 
     if (modified) {/* TODO: Fix JSX expression */}
-  d: ${path.relative(__dirname, filePath)}`)}
+  d: ${path.relative(__dirname, filePath)}`)}`
   } catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 }

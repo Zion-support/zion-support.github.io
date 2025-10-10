@@ -9,14 +9,13 @@ const AdCampaignManagerPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Ad Campaign Manager - Zion Tech Group | Automated Ad Management</title>
-        <meta name="description" content="Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn. Maximize ROI with intelligent targeting and budget allocation." />
-        <meta name="keywords" content="ad campaign manager, AI advertising, automated ads, Google Ads, Facebook Ads, LinkedIn Ads, ad optimization" />
-        <meta property="og:title" content="AI Ad Campaign Manager - Zion Tech Group" />
-        <meta property="og:description" content="Automated ad campaign management with AI optimization" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ad-campaign-manager" />
+        <meta name="description" content="Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn. Maximize ROI with intelligent targeting and budget allocation. />"
+        <meta name="keywords" content="ad campaign manager, AI advertising, automated ads, Google Ads, Facebook Ads, LinkedIn Ads, ad optimization />"
+        <meta property="og:title" content="AI Ad Campaign Manager - Zion Tech Group />"
+        <meta property="og:description" content="Automated ad campaign management with AI optimization />"
+        <meta property="og:type" content="website />"
+        <meta property="og:url" content="https://ziontechgroup.com/ad-campaign-manager />"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
@@ -39,7 +38,6 @@ const AdCampaignManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -47,23 +45,21 @@ const AdCampaignManagerPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-cyan-400" />
+                  <Target className="w-8 h-8 text-cyan-400 />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">AI-Powered Targeting</h3>
                 <p className="text-gray-300">Intelligent audience targeting and optimization across all platforms</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <BarChart className="w-8 h-8 text-purple-400" />
+                  <BarChart className="w-8 h-8 text-purple-400 />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Real-time Analytics</h3>
                 <p className="text-gray-300">Comprehensive performance tracking and detailed reporting</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-green-400" />
+                  <Zap className="w-8 h-8 text-green-400 />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Automated Optimization</h3>
                 <p className="text-gray-300">AI continuously optimizes campaigns for maximum performance</p>
@@ -71,7 +67,6 @@ const AdCampaignManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -81,19 +76,19 @@ const AdCampaignManagerPage: React.FC = () => {
               <p className="text-gray-300 mb-8">Perfect for businesses of all sizes</p>
               <ul className="space-y-4 text-left max-w-md mx-auto">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 />"
                   <span>Unlimited campaigns</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 />"
                   <span>Multi-platform support</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 />"
                   <span>AI optimization</span>
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 />"
                   <span>24/7 support</span>
                 </li>
               </ul>

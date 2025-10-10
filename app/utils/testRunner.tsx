@@ -431,16 +431,16 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }
     const passed = renderTime < this.config.performanceThreshold
     this.testResults.push({})
-      name: `Performance: ${testName}`,
+      name: `Performance: ${testName}`,`
       status: passed ? 'passed' : 'failed',
       duration: renderTime)
-    error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms
+    error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`
     const passed = renderTime < this.config.performanceThreshold;
     this.testResults.push({})
-      name: `Performance: ${testName}`)
+      name: `Performance: ${testName}`)`
       status: passed ? 'passed' : 'failed'),
       duration: renderTime),
-      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms;
+      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms;`
     })
     return { passed, metrics }
   public it(nam,
@@ -477,13 +477,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     };
     const passed = renderTime < this.config.performanceThreshold;
     this.testResults.push({/* TODO: Fix JSX expression */}
-  e: ${testName}`,
+  e: ${testName}`,`
       statu,
   s: passed ? 'passed' : 'failed',
       duratio,
   n: renderTime,
       erro,`
-  r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`)
+  r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`)`
     })
     return { passed, metrics };
   }
@@ -687,7 +687,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // Run tests;
     for (const test of suite.tests) {
       if (test.skip) {
-        this.results.push({`}
+        this.results.push({`}`
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {}
       await this.runHook(hook, 'beforeAll');}
@@ -695,13 +695,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // Run tests
     for (const test of suite.tests) {}
       if (test.skip) {}
-        this.results.push({`})
-          name: `${suite.name} - ${test.name}`,
+        this.results.push({`})`
+          name: `${suite.name} - ${test.name}`,`
           status: 'skipped',
           duration: 0)
     assertions: []
-        this.results.push({`})
-          name: `${suite.name} - ${test.name}`)
+        this.results.push({`})`
+          name: `${suite.name} - ${test.name}`)`
           status: 'skipped'),
           duration: 0),
           assertions: []})
@@ -719,7 +719,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     }
     // Run tests;
     for (const test of suite.tests) {/* TODO: Fix JSX expression */}`
-  e: `${suite.name} - ${test.name}`,
+  e: `${suite.name} - ${test.name}`,`
           statu,
   s: 'skipped',
           duratio,
@@ -741,10 +741,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   /**
    * Run a single test</void>
    */</void>
-  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
+  private async runTest(suite: TestSuite, test: Test): Promise<void>{`}`
    * Run a single test;
    */
-  private async runTest(suite: TestSuite, test: Test): Promise<void> {`}
+  private async runTest(suite: TestSuite, test: Test): Promise<void> {`}`
     const testName = `${suite.name} - ${test.name}`
     const startTime = Date.now()
     const assertions: AssertionResult[] = [],
@@ -778,8 +778,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         duration: Date.now() - startTime;
         assertions}
       })
-      if (this.config.verbose) {`}
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
+      if (this.config.verbose) {`}`
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }`
       }
     } catch (error) {
       this.results.push({} catch (error) {}
@@ -795,7 +795,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         error: error as Error;
         assertions}
       })
-      - startTime}ms)`)
+      - startTime}ms)`)`
       if (this.config.bail) {}
         throw error;}
     // Run afterAll hooks;
@@ -808,7 +808,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private async runTest(suit,
   e: TestSuite, tes)
   t: Test): Promise<void> {/* TODO: Fix JSX expression */}`
-    const testName = `${suite.name} - ${test.name}`;
+    const testName = `${suite.name} - ${test.name}`;`
     const startTime = Date.now();
     const,
   assertions: AssertionResult[] = [];
@@ -822,11 +822,11 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       this.results.push({/* TODO: Fix JSX expression */})
       })
       if (this.config.verbose) {/* TODO: Fix JSX expression */}`
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }`
       }
     } catch (error) {/* TODO: Fix JSX expression */}
       })`
-      - startTime}ms)`);
+      - startTime}ms)`);`
       if (this.config.bail) {/* TODO: Fix JSX expression */}
       }
     }
@@ -873,8 +873,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     timeout: number
   ): Promise<void> {}
     return new Promise((resolve, reject) => {}
-      const timer = setTimeout(() => {`}
-        reject(new Error(`Test timed out after ${timeout}ms`))
+      const timer = setTimeout(() => {`}`
+        reject(new Error(`Test timed out after ${timeout}ms`))`
       }, timeout)
       Promise.resolve(fn())
         .then(() => {}
@@ -906,7 +906,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     timeou,
   t: number,
   ): Promise<void> {/* TODO: Fix JSX expression */}`
-        reject(new Error(`Test timed out after ${timeout}ms`))
+        reject(new Error(`Test timed out after ${timeout}ms`))`
       }, timeout);
       Promise.resolve(fn())
         .then(() => {/* TODO: Fix JSX expression */}
@@ -1008,12 +1008,11 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
           .map()</div>
-    result => `}</div>
+    result => `}</div>`
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
-                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
+                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}`
             </div>
-
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
@@ -1023,15 +1022,15 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>
     <div class="tests">
         ${this.results;
-          .map(result => `}
+          .map(result => `}`
         ${this.results}
           .map()
-            result => `}</div>
+            result => `}</div>`
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
-                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
+                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})`
             </div>)
 )
           )
@@ -1063,8 +1062,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // Check for missing alt text on images
     const images = container.querySelectorAll('img')
     images.forEach((img, index) => {}
-      if (!img.getAttribute('alt')) {`}
-        violations.push(`Image ${index} missing alt text`)
+      if (!img.getAttribute('alt')) {`}`
+        violations.push(`Image ${index} missing alt text`)`
       }
     })
     // Check for missing labels on form inputs;
@@ -1073,8 +1072,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const id = input.getAttribute('id')
       const ariaLabel = input.getAttribute('aria-label')
       const ariaLabelledBy = input.getAttribute('aria-labelledby')
-      if (!id && !ariaLabel && !ariaLabelledBy) {`}
-        violations.push(`Input ${index} missing label`)
+      if (!id && !ariaLabel && !ariaLabelledBy) {`}`
+        violations.push(`Input ${index} missing label`)`
       }
     })
     // Check for proper heading hierarchy;
@@ -1084,8 +1083,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     let previousLevel = 0
     headings.forEach((heading, index) => {}
       const level = parseInt(heading.tagName.charAt(1))
-      if (<<<level>previousLevel</level></level> + 1) {`}
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`)
+      if (<<<level>previousLevel</level></level> + 1) {`}`
+        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`)`
       }
       previousLevel = level;
     })
@@ -1094,16 +1093,16 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     buttons.forEach((button, index) => {}
       const text = button.textContent?.trim()
       const ariaLabel = button.getAttribute('aria-label')
-      if (!text && !ariaLabel) {`}
-        violations.push(`Button ${index} missing accessible text`)
+      if (!text && !ariaLabel) {`}`
+        violations.push(`Button ${index} missing accessible text`)`
       }
     })
     const passed = violations.length === 0
-    this.testResults.push({`})
-      name: `Accessibility: ${testName}`,
+    this.testResults.push({`})`
+      name: `Accessibility: ${testName}`,`
       status: passed ? 'passed' : 'failed',
       duration: 0)
-    error: passed ? undefined : `Found ${violations.length} accessibility violations
+    error: passed ? undefined : `Found ${violations.length} accessibility violations`
     })
     return { passed, violations }
   }
@@ -1113,11 +1112,11 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     testName: string)
     assertions: (result: RenderResult) => void
     const passed = violations.length === 0;
-    this.testResults.push({`})
-      name: `Accessibility: ${testName}`)
+    this.testResults.push({`})`
+      name: `Accessibility: ${testName}`)`
       status: passed ? 'passed' : 'failed'),
       duration: 0),
-      error: passed ? undefined : `Found ${violations.length} accessibility violations;
+      error: passed ? undefined : `Found ${violations.length} accessibility violations;`
     })
     return { passed, violations }
   }
@@ -1129,31 +1128,31 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     try {
       const result = this.customRender(component)
       assertions(result)
-      this.testResults.push({`}
+      this.testResults.push({`}`
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
       const result = this.customRender(component)
       assertions(result)
-      this.testResults.push({`})
-        name: `Component: ${testName}`,
+      this.testResults.push({`})`
+        name: `Component: ${testName}`,`
         status: 'passed')
     duration: 0
-      this.testResults.push({`})
-        name: `Component: ${testName}`)
+      this.testResults.push({`})`
+        name: `Component: ${testName}`)`
         status: 'passed'),
         duration: 0,
       })
       return { passed: true }
     } catch (error) {}
       const errorMessage = error instanceof Error ? error.message : String(error)
-      this.testResults.push({`}
-      this.testResults.push({`})
-        name: `Component: ${testName}`,
+      this.testResults.push({`}`
+      this.testResults.push({`})`
+        name: `Component: ${testName}`,`
         status: 'failed',
         duration: 0)
     error: errorMessage
-      this.testResults.push({`})
-        name: `Component: ${testName}`)
+      this.testResults.push({`})`
+        name: `Component: ${testName}`)`
         status: 'failed'),
         duration: 0),
         error: errorMessage,
@@ -1187,9 +1186,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   d: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duratio,
   n: ${Date.now() - this.startTime}ms</p>
-    </div>"
+    </div>
     <div class="tests"></div>
-        ${/* TODO: Fix JSX expression */}"
+        ${/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>
                 <h3>${result.name}</h3>
                 <p>Statu,
@@ -1197,14 +1196,14 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 <p>Duratio,
   n: ${result.duration}ms</p>
                 ${/* TODO: Fix JSX expression */}`
-  r: ${result.error.message}</p>` : ''}
+  r: ${result.error.message}</p>` : ''}`
             </div>`
         `
           )
           .join('')}
     </div>
 </body>`
-</html>`;
+</html>`;`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
@@ -1222,38 +1221,38 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // Check for missing alt text on images;
     const images = container.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-        violations.push(`Image ${index} missing alt text`);
+        violations.push(`Image ${index} missing alt text`);`
       }
     })
     // Check for missing labels on form inputs;
     const inputs = container.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}`
-        violations.push(`Input ${index} missing label`);
+        violations.push(`Input ${index} missing label`);`
       }
     })
     // Check for proper heading hierarchy;
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
     headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}`
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
+        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);`
       }
       previousLevel = level;
     })
     // Check for proper button text;
     const buttons = container.querySelectorAll('button');
     buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}`
-        violations.push(`Button ${index} missing accessible text`);
+        violations.push(`Button ${index} missing accessible text`);`
       }
     })
     const passed = violations.length === 0;
     this.testResults.push({/* TODO: Fix JSX expression */}`
-  y: ${testName}`,
+  y: ${testName}`,`
       statu,
   s: passed ? 'passed' : 'failed',
       duratio,
   n: 0,
       erro,`
-  r: passed ? undefined : `Found ${violations.length} accessibility violations`)
+  r: passed ? undefined : `Found ${violations.length} accessibility violations`)`
     })
     return { passed, violations };
   }
@@ -1267,7 +1266,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   t: RenderResult) => void;
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
-  t: ${testName}`,
+  t: ${testName}`,`
         statu,
   s: 'passed',
         duratio,
@@ -1276,7 +1275,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   d: true };
     } catch (error) {/* TODO: Fix JSX expression */}`
-  t: ${testName}`,
+  t: ${testName}`,`
         statu,
   s: 'failed',
         duratio,
@@ -1292,27 +1291,26 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JUnit report;
    */
   private generateJunitReport(): void {}
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>"`
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results
           .map()</testsuite>
-    result => `}</testsuite>
+    result => `}</testsuite>`
 <testsuites>}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results}
           .map()
-            result => `}
+            result => `}`
             <testcase name="${result.name}" time="${result.duration / 1000}">
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}`
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
             </skipped>
-
 <testsuites>}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results;
-          .map(result => `}
+          .map(result => `}`
             <testcase name="${result.name}" time="${result.duration / 1000}">)
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})`
                 ${result.status === 'skipped' ? '<skipped/>' : ''})
             </testcase>)
 )
@@ -1335,31 +1333,31 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     try {
       const result = this.customRender(component)
       await userInteractions(result)
-      this.testResults.push({`}
+      this.testResults.push({`}`
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
       const result = this.customRender(component)
       await userInteractions(result)
-      this.testResults.push({`})
-        name: `Integration: ${testName}`,
+      this.testResults.push({`})`
+        name: `Integration: ${testName}`,`
         status: 'passed')
     duration: 0
-      this.testResults.push({`})
-        name: `Integration: ${testName}`)
+      this.testResults.push({`})`
+        name: `Integration: ${testName}`)`
         status: 'passed'),
         duration: 0,
       })
       return { passed: true }
     } catch (error) {}
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.testResults.push({`}
-      this.testResults.push({`})
-        name: `Integration: ${testName}`,
+      this.testResults.push({`}`
+      this.testResults.push({`})`
+        name: `Integration: ${testName}`,`
         status: 'failed',
         duration: 0)
     error: errorMessage
-      this.testResults.push({`})
-        name: `Integration: ${testName}`)
+      this.testResults.push({`})`
+        name: `Integration: ${testName}`)`
         status: 'failed'),
         duration: 0),
         error: errorMessage,
@@ -1378,7 +1376,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // This would typically use a tool like Percy or Chromatic;
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`}
+    this.testResults.push({`}`
   async runVisualRegressionTest()
     component: ReactElement,
     testName: string
@@ -1386,12 +1384,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`})
-      name: `Visual: ${testName}`,
+    this.testResults.push({`})`
+      name: `Visual: ${testName}`,`
       status: 'passed')
     duration: 0
-    this.testResults.push({`})
-      name: `Visual: ${testName}`)
+    this.testResults.push({`})`
+      name: `Visual: ${testName}`)`
       status: 'passed'),
       duration: 0,
     })
@@ -1419,8 +1417,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     this.testResults.push({)}
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
-      duration: 0,`})
-    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+      duration: 0,`})`
+    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`
     })
     return { passed, coverage }
   }
@@ -1445,8 +1443,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     this.testResults.push({)
       name: 'Coverage'),
       status: passed ? 'passed' : 'failed'),
-      duration: 0,`}
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+      duration: 0,`}`
+      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`
     })
     return { passed, coverage }
   }
@@ -1512,18 +1510,18 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           break;
         default:}
           result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
+  private generateJunitReport(): void {/* TODO: Fix JSX expression */}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${/* TODO: Fix JSX expression */}"
-            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
+        ${/* TODO: Fix JSX expression */}
+            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`"`
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}`
                 ${result.status === 'skipped' ? '<skipped/>' : ''}
             </testcase>`
         `
           )
           .join('')}
     </testsuite>`
-</testsuites>`;
+</testsuites>`;`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
@@ -1537,7 +1535,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   t: RenderResult) => Promise<void></void>
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
-  n: ${testName}`,
+  n: ${testName}`,`
         statu,
   s: 'passed',
         duratio,
@@ -1546,7 +1544,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       return {/* TODO: Fix JSX expression */}
   d: true };
     } catch (error) {/* TODO: Fix JSX expression */}`
-  n: ${testName}`,
+  n: ${testName}`,`
         statu,
   s: 'failed',
         duratio,
@@ -1567,7 +1565,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   d: boolean; diff?: unknown }> {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     this.testResults.push({/* TODO: Fix JSX expression */}`
-  l: ${testName}`,
+  l: ${testName}`,`
       statu,
   s: 'passed',
       duratio,
@@ -1583,7 +1581,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     };
     const passed = coverage.statements >= this.config.coverageThreshold;
     this.testResults.push({/* TODO: Fix JSX expression */}`
-  r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)
+  r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)`
     })
     return { passed, coverage };
   }
@@ -1720,9 +1718,9 @@ export const testUtils = {}
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i < count; i++) {}
       mockData.push({)}
-        id: i + 1,`}
-        name: `Mock ${type} ${i + 1}`,
-        description: `This is a mock ${type} item`)
+        id: i + 1,`}`
+        name: `Mock ${type} ${i + 1}`,`
+        description: `This is a mock ${type} item`)`
     createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
   // Create mock data;
@@ -1730,9 +1728,9 @@ export const testUtils = {}
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i < count; i++) {
       mockData.push({)
-        id: i + 1,`})
-        name: `Mock ${type} ${i + 1}`)
-        description: `This is a mock ${type} item`)
+        id: i + 1,`})`
+        name: `Mock ${type} ${i + 1}`)`
+        description: `This is a mock ${type} item`)`
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()})
     }
@@ -1766,8 +1764,8 @@ export const testUtils = {}
         subtree: true}
       })
       setTimeout(() => {}
-        observer.disconnect();`}
-        reject(new Error(`Element ${selector} not found within ${timeout}ms`))
+        observer.disconnect();`}`
+        reject(new Error(`Element ${selector} not found within ${timeout}ms`))`
       }, timeout)
     })
   },
@@ -1796,7 +1794,7 @@ export const testUtils = {}
         }
         break;
       default:
-        throw new Error(`Unknown action: ${action}`)
+        throw new Error(`Unknown action: ${action}`)`
   // Get test results;
   getTestResults() {/* TODO: Fix JSX expression */}
   }
@@ -1824,9 +1822,9 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */}
 export const testUtils = {/* TODO: Fix JSX expression */}
   t: string }> = [];
     for (let i = 0; i < count; i++) {/* TODO: Fix JSX expression */}`
-  e: `Mock ${type} ${i + 1}`,
+  e: `Mock ${type} ${i + 1}`,`
         descriptio,`
-  n: `This is a mock ${type} item`,
+  n: `This is a mock ${type} item`,`
         createdA,
   t: new Date().toISOString(),
         updatedA,
@@ -1846,7 +1844,7 @@ export const testUtils = {/* TODO: Fix JSX expression */}
       observer.observe(document.body, {/* TODO: Fix JSX expression */})
       })
       setTimeout(() => {/* TODO: Fix JSX expression */}`
-        reject(new Error(`Element ${selector} not found within ${timeout}ms`))
+        reject(new Error(`Element ${selector} not found within ${timeout}ms`))`
       }, timeout);
     })
   },
@@ -1860,7 +1858,7 @@ export const testUtils = {/* TODO: Fix JSX expression */}
       defaul,
   t:`
         throw new Error(`Unknown)`
-  action: ${action}`);
+  action: ${action}`);`
     }
   }
 }
@@ -1873,21 +1871,21 @@ export class Assert {}
    * Assert that a value is truthy;
    */
   public static assertTrue(value: unknown, message?: string): void {}
-    if (!value) {`}
-      throw new Error(message || `Expected ${value} to be truthy`)
+    if (!value) {`}`
+      throw new Error(message || `Expected ${value} to be truthy`)`
 export class Assert {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be truthy`);
+      throw new Error(message || `Expected ${value} to be truthy`);`
     }
   }
   /**
    * Assert that a value is falsy;
    */
   public static assertFalse(value: unknown, message?: string): void {}
-    if (value) {`}
-      throw new Error(message || `Expected ${value} to be falsy`)
+    if (value) {`}`
+      throw new Error(message || `Expected ${value} to be falsy`)`
   public static assertFalse(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be falsy`);
+      throw new Error(message || `Expected ${value} to be falsy`);`
     }
   }
   /**
@@ -1903,15 +1901,15 @@ export class Assert {/* TODO: Fix JSX expression */}`
     expected: unknown),
     message?: string;
   ): void {): void {}
-    if (actual !== expected) {`}
-      throw new Error(message || `Expected ${actual} to equal ${expected}`)
+    if (actual !== expected) {`}`
+      throw new Error(message || `Expected ${actual} to equal ${expected}`)`
   public static assertEquals(actua,
   l: unknown,
     expecte,
   d: unknown,
     message?: string;)
   ): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${actual} to equal ${expected}`);
+      throw new Error(message || `Expected ${actual} to equal ${expected}`);`
     }
   }
   /**
@@ -1927,59 +1925,59 @@ export class Assert {/* TODO: Fix JSX expression */}`
     expected: unknown),
     message?: string;
   ): void {): void {}
-    if (actual === expected) {`}
-      throw new Error(message || `Expected ${actual} to not equal ${expected}`)
+    if (actual === expected) {`}`
+      throw new Error(message || `Expected ${actual} to not equal ${expected}`)`
   public static assertNotEquals(actua,
   l: unknown,
     expecte,
   d: unknown,
     message?: string;)
   ): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${actual} to not equal ${expected}`);
+      throw new Error(message || `Expected ${actual} to not equal ${expected}`);`
     }
   }
   /**
    * Assert that a value is null;
    */
   public static assertNull(value: unknown, message?: string): void {}
-    if (value !== null) {`}
-      throw new Error(message || `Expected ${value} to be null`)
+    if (value !== null) {`}`
+      throw new Error(message || `Expected ${value} to be null`)`
   public static assertNull(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be null`);
+      throw new Error(message || `Expected ${value} to be null`);`
     }
   }
   /**
    * Assert that a value is not null;
    */
   public static assertNotNull(value: unknown, message?: string): void {}
-    if (value === null) {`}
-      throw new Error(message || `Expected ${value} to not be null`)
+    if (value === null) {`}`
+      throw new Error(message || `Expected ${value} to not be null`)`
   public static assertNotNull(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to not be null`);
+      throw new Error(message || `Expected ${value} to not be null`);`
     }
   }
   /**
    * Assert that a value is undefined;
    */
   public static assertUndefined(value: unknown, message?: string): void {}
-    if (value !== undefined) {`}
-      throw new Error(message || `Expected ${value} to be undefined`)
+    if (value !== undefined) {`}`
+      throw new Error(message || `Expected ${value} to be undefined`)`
   public static assertUndefined(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be undefined`);
+      throw new Error(message || `Expected ${value} to be undefined`);`
     }
   }
   /**
    * Assert that a value is not undefined;
    */
   public static assertNotUndefined(value: unknown, message?: string): void {}
-    if (value === undefined) {`}
-      throw new Error(message || `Expected ${value} to not be undefined`)
+    if (value === undefined) {`}`
+      throw new Error(message || `Expected ${value} to not be undefined`)`
   public static assertNotUndefined(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to not be undefined`);
+      throw new Error(message || `Expected ${value} to not be undefined`);`
     }
   }
   /**
@@ -2003,38 +2001,38 @@ export class Assert {/* TODO: Fix JSX expression */}`
         const errorMessage = (error as Error).message;
         if (typeof expectedError === 'string') {
           if (!errorMessage.includes(expectedError)) {
-            throw new Error(`})
-              `Expected error message to contain "${expectedError}", but got "${errorMessage}")
+            throw new Error(`})`
+              `Expected error message to contain "${expectedError}", but got "${errorMessage}")"`
             )
           }
         } else {
           if (!expectedError.test(errorMessage)) {
-            throw new Error(`})
-              `Expected error message to match ${expectedError}, but got "${errorMessage}")
+            throw new Error(`})`
+              `Expected error message to match ${expectedError}, but got "${errorMessage}")"`
     } catch (error) {}
       if (expectedError) {}
         const errorMessage = (error as Error).message
         if (typeof expectedError === 'string') {}
           if (!errorMessage.includes(expectedError)) {}
-            throw new Error(`})
-              `Expected error message to contain "${expectedError}", but got "${errorMessage}"
+            throw new Error(`})`
+              `Expected error message to contain "${expectedError}", but got "${errorMessage}"`
             )
           }
         } else {}
           if (!expectedError.test(errorMessage)) {}
-            throw new Error(`})
-              `Expected error message to match ${expectedError}, but got "${errorMessage}"
+            throw new Error(`})`
+              `Expected error message to match ${expectedError}, but got "${errorMessage}"`
             )
   public static assertThrows(f)
   n: () => void,
     expectedError?: string | RegExp;
   ): void {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}"`
-              `Expected error message to contain "${expectedError}", but got "${errorMessage}"`
+    } catch (error) {/* TODO: Fix JSX expression */}"`"`
+              `Expected error message to contain "${expectedError}", but got "${errorMessage}"`"`
             );
           }
-        } else {/* TODO: Fix JSX expression */}"`
-              `Expected error message to match ${expectedError}, but got "${errorMessage}"`
+        } else {/* TODO: Fix JSX expression */}"`"`
+              `Expected error message to match ${expectedError}, but got "${errorMessage}"`"`
             );
           }
         }
@@ -2052,8 +2050,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
     try {}
       fn();}
     } catch (error) {}
-      throw new Error(`})
-        `Expected function not to throw, but it threw: ${(error as Error).message}
+      throw new Error(`})`
+        `Expected function not to throw, but it threw: ${(error as Error).message}`
       )
   public static assertDoesNotThrow(f)
   n: () => void): void {/* TODO: Fix JSX expression */}
@@ -2071,23 +2069,23 @@ export class Assert {/* TODO: Fix JSX expression */}`
     message?: string
   ): void {
     if (!(value instanceof constructor)) {
-      throw new Error(`})
-    message || `Expected ${value} to be an instance of ${constructor.name}
+      throw new Error(`})`
+    message || `Expected ${value} to be an instance of ${constructor.name}`
   public static assertInstanceOf(value: unknown)
     constructor: new (...args: unknown[]) => unknown;
     message?: string;
   ): void {,
     if (!(value instanceof constructor)) {,
-      throw new Error(`})
-        message || `Expected ${value} to be an instance of ${constructor.name})
+      throw new Error(`})`
+        message || `Expected ${value} to be an instance of ${constructor.name})`
   public static assertInstanceOf()
     value: unknown,
     constructor: new (...args: unknown[]) => unknown,
     message?: string
   ): void {}
     if (!(value instanceof constructor)) {}
-      throw new Error(`})
-        message || `Expected ${value} to be an instance of ${constructor.name}
+      throw new Error(`})`
+        message || `Expected ${value} to be an instance of ${constructor.name}`
       )
   public static assertInstanceOf(valu,
   e: unknown,
@@ -2104,66 +2102,66 @@ export class Assert {/* TODO: Fix JSX expression */}`
    * Assert that a value is an array;
    */
   public static assertArray(value: unknown, message?: string): void {}
-    if (!Array.isArray(value)) {`}
-      throw new Error(message || `Expected ${value} to be an array`)
+    if (!Array.isArray(value)) {`}`
+      throw new Error(message || `Expected ${value} to be an array`)`
   public static assertArray(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be an array`);
+      throw new Error(message || `Expected ${value} to be an array`);`
     }
   }
   /**
    * Assert that a value is a string;
    */
   public static assertString(value: unknown, message?: string): void {}
-    if (typeof value !== 'string') {`}
-      throw new Error(message || `Expected ${value} to be a string`)
+    if (typeof value !== 'string') {`}`
+      throw new Error(message || `Expected ${value} to be a string`)`
   public static assertString(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be a string`);
+      throw new Error(message || `Expected ${value} to be a string`);`
     }
   }
   /**
    * Assert that a value is a number;
    */
   public static assertNumber(value: unknown, message?: string): void {}
-    if (typeof value !== 'number') {`}
-      throw new Error(message || `Expected ${value} to be a number`)
+    if (typeof value !== 'number') {`}`
+      throw new Error(message || `Expected ${value} to be a number`)`
   public static assertNumber(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be a number`);
+      throw new Error(message || `Expected ${value} to be a number`);`
     }
   }
   /**
    * Assert that a value is a boolean;
    */
   public static assertBoolean(value: unknown, message?: string): void {}
-    if (typeof value !== 'boolean') {`}
-      throw new Error(message || `Expected ${value} to be a boolean`)
+    if (typeof value !== 'boolean') {`}`
+      throw new Error(message || `Expected ${value} to be a boolean`)`
   public static assertBoolean(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be a boolean`);
+      throw new Error(message || `Expected ${value} to be a boolean`);`
     }
   }
   /**
    * Assert that a value is an object;
    */
   public static assertObject(value: unknown, message?: string): void {}
-    if (typeof value !== 'object' || value === null || Array.isArray(value)) {`}
-      throw new Error(message || `Expected ${value} to be an object`)
+    if (typeof value !== 'object' || value === null || Array.isArray(value)) {`}`
+      throw new Error(message || `Expected ${value} to be an object`)`
   public static assertObject(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be an object`);
+      throw new Error(message || `Expected ${value} to be an object`);`
     }
   }
   /**
    * Assert that a value is a function;
    */
   public static assertFunction(value: unknown, message?: string): void {}
-    if (typeof value !== 'function') {`}
-      throw new Error(message || `Expected ${value} to be a function`)
+    if (typeof value !== 'function') {`}`
+      throw new Error(message || `Expected ${value} to be a function`)`
   public static assertFunction(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-      throw new Error(message || `Expected ${value} to be a function`);
+      throw new Error(message || `Expected ${value} to be a function`);`
     }
   }
 }
@@ -2370,4 +2368,4 @@ export const testRunner = new TestRunner();
 export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
-"`
+"`"`

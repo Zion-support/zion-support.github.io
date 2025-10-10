@@ -1,19 +1,16 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
+
 ;
 const AutonomousDevOpsServic, e = () => {
 return (
  
   return(<React.Fragment>
       <Helm, e, t>
-=======
-
 const AutonomousDevOpsServic, e = () => { 
   return(<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <title>
           Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group;
         <
@@ -23,21 +20,20 @@ const AutonomousDevOpsServic, e = () => {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i)
         <link, re, l = 'canonic, a, l')
-<<<<<<< HEAD
+>
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s')
-        />),
-      </Helm, e, t>
+        />),</meta>      </Helm, e, t>
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'></div>
         <Head, e, r / >
 );
 } {/* Hero, Sect, i, o, n */ }
-=======
+
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s
         
       <
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'><
         <Head, e, r / > {/* Hero, Sect, i, o, n *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l' /><
           <div, className='relative, ma, x-w-7xl, m, x-au, t, o'><
@@ -61,7 +57,7 @@ const AutonomousDevOpsServic, e = () => {
                   Eliminate, manual, configuration and, intervention, completely;
                 <
                   Getted, Today;
-<<<<<<< HEAD
+
                   <Link, className='w-5 h-5' />
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
@@ -76,8 +72,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'></div>
                 <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' /></Rocket>
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'></span>
-=======
-                  
           <div, className='m, a, x-w-7xl, m, x-au, t, o'><
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
 const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression *
@@ -89,7 +83,7 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression *
               <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'><
                 <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' /><
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
                   New, Service, Launch - October, 202, 5;
                 <
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'><

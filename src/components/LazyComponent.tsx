@@ -15,7 +15,7 @@ const DefaultFallback = () => (
   </div>
 );
 ;
-const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
+const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback>
 }) => {
 return (
 
@@ -40,7 +40,7 @@ const LazyWrappedComponent = (props: P) => (
     </LazyComponent>
   );
 
-  LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
+  LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;`
   
   return LazyWrappedComponent};
 

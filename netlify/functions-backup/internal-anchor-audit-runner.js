@@ -30,4 +30,4 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' return {/* TODO: Fix JSX expression */}
   k: 'internal-anchor-audit-runner' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

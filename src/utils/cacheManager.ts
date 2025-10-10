@@ -154,7 +154,7 @@ export class CacheManager {// TODO: Add content}
   private getStorageKey(key: string): string {// TODO: Add content}
 
 }
-    return `cache_${key}`}
+    return `cache_${key}`}`
   /**
    * Set cache entry;
    */
@@ -175,7 +175,7 @@ export class CacheManager {// TODO: Add content}
       timestam,
   p: Date.now(),
 //       ttl};`
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');`
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -219,7 +219,7 @@ export class CacheManager {// TODO: Add content}
   y: string): T | undefined {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');`
     let,
   entry: CacheEntry;
           <T> | null = null;
@@ -270,17 +270,17 @@ export class CacheManager {// TODO: Add content}
   O: Add content}
 }
       this.stats.misses++;`
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');`
       return undefined}
     if (this.isExpired(entry)) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
       this.delete(key);
       this.stats.misses++;`
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');`
       return undefined}
     this.stats.hits++`
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')`
     return entry.value}
   /**
    * Check if key exists and is not expired;
@@ -393,7 +393,7 @@ export class CacheManager {// TODO: Add content}
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');`
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -429,7 +429,7 @@ export class CacheManager {// TODO: Add content}
     const start = performance.now();
 const value = await fn();
 const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')`
     this.set(key, value, options)
     return value}
   /**

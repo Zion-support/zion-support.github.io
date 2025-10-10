@@ -172,14 +172,6 @@ export const _validationRules = {// TODO: Add content}
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
           <React.Fragment>]/.test(value);
 const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength},
@@ -365,7 +357,7 @@ export function debounce;
     }
     timeout = setTimeout(later, wait)
   }
-}"`
+}"`"`
 
 
 

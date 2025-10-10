@@ -71,20 +71,20 @@ export function validateLength()
   O: Add content}
 }
     return {/* TODO: Fix JSX expression */}
-  r: `${fieldName} is required` }}
+  r: `${fieldName} is required` }}`
   if (value.length;)
           < minLength) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     return {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} must be at least ${minLength} characters long` }}
+  r: `${fieldName} must be at least ${minLength} characters long` }}`
   if (value.length > maxLength) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
 
-    return { isValid: false, error: `${fieldName} must be no more than ${maxLength} characters long` }}
+    return { isValid: false, error: `${fieldName} must be no more than ${maxLength} characters long` }}`
     return {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} must be no more than ${maxLength} characters long` }
+  r: `${fieldName} must be no more than ${maxLength} characters long` }`
   }
   return {/* TODO: Fix JSX expression */}
   d: true }
@@ -117,14 +117,6 @@ export function validatePassword(passwor)
 const hasLowerCase = /[a-z]/.test(password);
 const hasNumbers = /\d/.test(password);
 const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
           <React.Fragment>]/.test(password);
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -173,7 +165,7 @@ export function sanitizeHTML(inpu)
           
           )
           </g, '&lt;')
-    .replace(/>/g, '&gt;')"
+    .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\// g, '&#x2F;')
@@ -336,7 +328,7 @@ export const isValidDate = (dat)
 export const isValidCreditCard = (car)
   d: string) => validateCreditCard(card).isValid;
 export const isValidJSON = (jso)
-  n: string) => validateJSON(json).isValid;"`
+  n: string) => validateJSON(json).isValid;"`"`
 
 
 

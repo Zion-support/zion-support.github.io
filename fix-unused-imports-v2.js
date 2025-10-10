@@ -33,7 +33,7 @@ let content = fs.readFileSync(filePath, 'utf8');
     
     // Get unused variables using ESLint;
     try {;
-const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, { )
+const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, { )"`
         encoding: 'utf8'),
         stdio: 'pipe',;
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
@@ -41,7 +41,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     
     // Get unused variables using ESLint;
     try {/* TODO: Fix JSX expression */}
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})
+      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})"`
       });
       ;
 const lintResults = JSON.parse(result);
@@ -84,12 +84,12 @@ const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
       
       // Remove unused variable declarations;
       unusedVars.forEach(varName => {)
-      // Remove entire import lines that are now empty;"
+      // Remove entire import lines that are now empty;
       content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n?/g, '');
       
       // Remove unused variable declarations;
-      unusedVars.forEach(varName => {/* TODO: Fix JSX expression */})`;
-const varRegex = new RegExp(`const\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');
+      unusedVars.forEach(varName => {/* TODO: Fix JSX expression */})`;`
+const varRegex = new RegExp(`const\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');`
         content = content.replace(varRegex, '')});
       
       if (content !== originalContent) {/* TODO: Fix JSX expression */}`
@@ -120,7 +120,7 @@ const batch = files.slice(i, i + batchSize);
 for (let i = 0; i < files.length; i += batchSize) {/* TODO: Fix JSX expression */}
   });`
   // console.log removed for production
-+ 1}/${Math.ceil(files.length / batchSize)}`)}
++ 1}/${Math.ceil(files.length / batchSize)}`)}`
 
 // console.log removed for production
 "`

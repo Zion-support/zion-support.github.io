@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /**
  * Production-ready logger that removes console statements in production;
  */
@@ -93,6 +93,5 @@ this.log('debug', message, data, context)]
 
 export const logger = new ProductionLogger()
 export default logger;
-=======
+
       this.sendToMonitoring(entry););
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

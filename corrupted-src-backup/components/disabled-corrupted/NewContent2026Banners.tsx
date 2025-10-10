@@ -250,7 +250,6 @@
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0'>99.9%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>
                 Se, l, f-healing, infrastructur, e;
               </div>
@@ -299,7 +298,6 @@
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>95%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Process, efficienc, y</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
@@ -309,7 +307,6 @@
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>99.9%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g</div>
             </div>
           </div>
@@ -351,7 +348,6 @@
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0'>3, 0, 0%</div>
-
               <div, className='te, x, t-sm, opacit, y-90'>Performance, gain, s</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>

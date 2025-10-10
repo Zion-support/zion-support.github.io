@@ -43,7 +43,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       
       .focus-trap {/* TODO: Fix JSX expression */}
       }
-    `;
+    `;`
     document.head.appendChild(style)}
 
   private setupKeyboardNavigation(): void {
@@ -73,7 +73,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       padding: 8 px;
       text-decoration: none;
       z-index: 1000;
-    `;
+    `;`
 ,
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
@@ -97,13 +97,13 @@ const _style = document.createElement('style');
   private setupHighContrast(): void {/* TODO: Fix JSX expression */}
         }
       }`
-    `;
+    `;`
     document.head.appendChild(style)}
 
   private setupReducedMotion(): void {/* TODO: Fix JSX expression */}
         }
       }`
-    `;
+    `;`
     document.head.appendChild(style)}
 
   private handleTabNavigation(event: KeyboardEvent): void {;

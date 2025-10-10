@@ -25,7 +25,7 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('.map(') && !content.includes('key=')) {
     if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}`
       // // console.log removed for production
-without key props`)}
+without key props`)}`
     
     // Check for inline object/function definitions in JSX;
     if (content.includes('style={{') || content.includes('onClick={()')) {}
@@ -72,12 +72,12 @@ function createPerformanceMonitor() {
   analyzed: ${totalFiles}`);`
   // // console.log removed for production
 `
-  opportunities: ${optimizedFiles}`)}
+  opportunities: ${optimizedFiles}`)}`
 
 // Function to create a performance monitoring component;
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
-}`;
-const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
+}`;`
+const performanceMonitorContent = `import React, { useEffect, useState } from 'react';`
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
@@ -92,8 +92,8 @@ export default PerformanceMonitor;`
 // Function to optimize images;
 function createImageOptimization() {;
 function createImageOptimization() {/* TODO: Fix JSX expression */}
-}`;
-const imageOptimizationContent = `import React from 'react';
+}`;`
+const imageOptimizationContent = `import React from 'react';`
 
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }

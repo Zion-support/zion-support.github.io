@@ -35,8 +35,8 @@ const sessionData = {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
+      sessionId: `session_${Date.now()}`,`
+      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,`
       data: sessionData
     }))} catch (error) {
     // console.error removed for production

@@ -15,7 +15,7 @@ const _warnings = [];
 // const currentNodeVersion = process.version.slice(1);
 if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
   errors.push(`Node.js version ${requiredNodeVersion} or higher is required (curren)`
-  t: ${currentNodeVersion})`)} else {/* TODO: Fix JSX expression */}
+  t: ${currentNodeVersion})`)} else {/* TODO: Fix JSX expression */}`
 //   }
 
 // Check for required files;
@@ -27,7 +27,7 @@ const requiredFiles = [
   'postcss.config.cjs'];
 
 requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
-  missing: ${file}`)} else {/* TODO: Fix JSX expression */}
+  missing: ${file}`)} else {/* TODO: Fix JSX expression */}`
 //     }
 });
 
@@ -38,9 +38,9 @@ const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.jso
   
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
-      errors.push(`Missing required dependency: ${dep}`);
+      errors.push(`Missing required dependency: ${dep}`);`
 try {/* TODO: Fix JSX expression */}`
-  dependency: ${dep}`)}
+  dependency: ${dep}`)}`
   });
   
 //   } catch (error) {/* TODO: Fix JSX expression */}

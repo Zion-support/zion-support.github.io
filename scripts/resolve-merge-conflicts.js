@@ -128,18 +128,18 @@ const branchesToMerge = [,
     // console.log removed for production
 try {
       // Check if branch exists;
-      const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
+      const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);`
       
       if (branchExists !== null) {;
-const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
+const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);`
         
         if (mergeResult) {
           // console.log removed for production
 } else {
           // console.log removed for production
 if (resolveAllMergeConflicts()) {
-            execGitCommand('git add .', `Adding resolved files from ${branch}`);
-            execGitCommand(`git commit -m "Resolve merge conflicts from ${branch}"`, `Committing merge resolution for ${branch}`);
+            execGitCommand('git add .', `Adding resolved files from ${branch}`);`
+            execGitCommand(`git commit -m "Resolve merge conflicts from ${branch}"`, `Committing merge resolution for ${branch}`);"`
             // console.log removed for production
 } else {
             // console.log removed for production

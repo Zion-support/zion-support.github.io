@@ -23,9 +23,9 @@ const name = imp.split(' as ')[0].trim();
             // Check if the name is used in the content (excluding the import line itself);
 const contentWithoutImport = content.replace(line, '');
             return contentWithoutImport.includes(name) && 
-                   !contentWithoutImport.includes(`import ${name}`) &&
-                   !contentWithoutImport.includes(`{ ${name}`) &&
-                   !contentWithoutImport.includes(`{${name}`)});
+                   !contentWithoutImport.includes(`import ${name}`) &&`
+                   !contentWithoutImport.includes(`{ ${name}`) &&`
+                   !contentWithoutImport.includes(`{${name}`)});`
           
           if (usedImports.length === 0) {
             // No used imports, remove the entire line;
@@ -42,7 +42,7 @@ const contentWithoutImport = content.replace(line, '');
 const name = defaultImportMatch[1];
             const contentWithoutImport = content.replace(line, '');
             if (contentWithoutImport.includes(name) && 
-                !contentWithoutImport.includes(`import ${name}`)) {
+                !contentWithoutImport.includes(`import ${name}`)) {`
               newLines.push(line)}
             // If not used, skip the line (don't add it)
           } else {
@@ -53,14 +53,14 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
         if (importMatch) {/* TODO: Fix JSX expression */}
                    !contentWithoutImport.includes(`import ${name}`) &&`
                    !contentWithoutImport.includes(`{ ${name}`) &&`
-                   !contentWithoutImport.includes(`{${name}`)});
+                   !contentWithoutImport.includes(`{${name}`)});`
           
           if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
           } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
           }
         } else {/* TODO: Fix JSX expression */}`
-                !contentWithoutImport.includes(`import ${name}`)) {/* TODO: Fix JSX expression */}
+                !contentWithoutImport.includes(`import ${name}`)) {/* TODO: Fix JSX expression */}`
             }
             // If not used, skip the line (don't add it)
           } else {/* TODO: Fix JSX expression */}
@@ -72,7 +72,7 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     ;
 const newContent = newLines.join('\n');
     if (newContent !== content) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true}
     
   } catch (error) {/* TODO: Fix JSX expression */}`
@@ -93,7 +93,7 @@ const content = fs.readFileSync(filePath, 'utf8');
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true}
     
     // Check for missing closing braces;
@@ -106,7 +106,7 @@ const closeBraces = (content.match(/\}/g) || []).length;
       fs.writeFileSync(filePath, newContent, 'utf8');`
       // console.log removed for production
 `
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true}
     
   } catch (error) {/* TODO: Fix JSX expression */}`
@@ -150,7 +150,7 @@ let changed = false;
     });
     
     if (changed) {/* TODO: Fix JSX expression */}`
-  in: ${filePath}`);
+  in: ${filePath}`);`
       return true}
     
   } catch (error) {/* TODO: Fix JSX expression */}`

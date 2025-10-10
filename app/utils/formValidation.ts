@@ -61,22 +61,22 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    */
   minLength: (min: number, message?: string): ValidationRule<string> => ({}
     validate: (value: string) => value.length >= min}
-    message: message || `Must be at least ${min} characters;
+    message: message || `Must be at least ${min} characters;`
   minLengt,
   h: (mi)
   n: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
-  e: message || `Must be at least ${min} characters`)
+  e: message || `Must be at least ${min} characters`)`
   }),
   /**
    * Validate maximum length;
    */
   maxLength: (max: number, message?: string): ValidationRule<string> => ({}
-    validate: (value: string) => value.length <= max,`}
-    message: message || `Must be no more than ${max} characters;
+    validate: (value: string) => value.length <= max,`}`
+    message: message || `Must be no more than ${max} characters;`
   maxLengt,
   h: (ma)
   x: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`
-  e: message || `Must be no more than ${max} characters`)
+  e: message || `Must be no more than ${max} characters`)`
   }),
   /**
    * Validate phone number (US format)
@@ -121,13 +121,13 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    * Validate number range;
    */
   numberRange: (min: number, max: number, message?: string): ValidationRule<number> => ({}
-    validate: (value: number) => value >= min && value <= max,`}
-    message: message || `Must be between ${min} and ${max}
+    validate: (value: number) => value >= min && value <= max,`}`
+    message: message || `Must be between ${min} and ${max}`
   numberRang,
   e: (mi,
   n: number, ma)
   x: number, message?: string): ValidationRule<number> => ({/* TODO: Fix JSX expression */}`
-  e: message || `Must be between ${min} and ${max}`)
+  e: message || `Must be between ${min} and ${max}`)`
   }),
   /**
    * Validate pattern match;
@@ -181,7 +181,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    */
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
-    validate: (value: string) => value === otherFieldValue,`}
+    validate: (value: string) => value === otherFieldValue,`}`
     message: 'Must match ${fieldName}
   matche,
   s: (otherFieldValu,
@@ -200,20 +200,20 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024
       return file.size <= maxSizeInBytes;}
     },
-    message: message || `File size must not exceed ${maxSizeInMB}MB;
+    message: message || `File size must not exceed ${maxSizeInMB}MB;`
   fileSiz,
   e: (maxSizeInM)
   B: number, message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */}
     },
     messag,`
-  e: message || `File size must not exceed ${maxSizeInMB}MB`)
+  e: message || `File size must not exceed ${maxSizeInMB}MB`)`
   }),
   /**
    * Validate file type;
    */
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
-    validate: (file: File) => allowedTypes.includes(file.type),`}
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}
+    validate: (file: File) => allowedTypes.includes(file.type),`}`
+    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
   fileTyp,
   e: (allowedType)
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`
@@ -358,4 +358,4 @@ export function debounce<T extends (...arg)
     timeout = setTimeout(later, wait);
   };
 }
-"`
+"`"`

@@ -2,9 +2,8 @@
 // 1. Add ARIA labels to interactive elements
 // Example JSX:
 // <button aria-label="Close dialog">×</button>
-// <input aria-describedby="email-help" type="email" />
+// <input aria-describedby="email-help" type="email />"
 // <div id="email-help">Enter your email address</div>
-
 // 2. Implement focus management;
 const trapFocus = (element) => {;
 const focusableElements = element.querySelectorAll(
@@ -32,19 +31,16 @@ const focusableElements = element.querySelectorAll(
 // <div aria-live="polite" aria-atomic="true" className="sr-only">
 //   {announcement}
 // </div>
-
 // 4. Ensure proper heading hierarchy
 // Example JSX:
 // <h1>Main Page Title</h1>
 // <h2>Section Title</h2>
 // <h3>Subsection Title</h3>
-
 // 5. Add skip links
 // Example JSX:
 // <a href="#main-content" className="skip-link">
 //   Skip to main content
 // </a>
-
 // 6. Use semantic HTML
 // Example JSX:
 // <main>
@@ -60,7 +56,6 @@ const focusableElements = element.querySelectorAll(
 //     </article>
 //   </section>
 // </main>
-
 // 7. Form accessibility
 // Example JSX:
 // <form>
@@ -69,10 +64,9 @@ const focusableElements = element.querySelectorAll(
 //     <label htmlFor="email">Email:</label>
 //     <input id="email" type="email" required />
 //     <label htmlFor="phone">Phone:</label>
-//     <input id="phone" type="tel" />
+//     <input id="phone" type="tel />"
 //   </fieldset>
 // </form>
-
 // 8. Color contrast and visual indicators
 // Example CSS:
 // .focus-visible:focus {
@@ -85,11 +79,9 @@ const focusableElements = element.querySelectorAll(
 // <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
 //   Clickable div
 // </div>
-
 // 10. Screen reader announcements
 // Example JSX:
 // <div aria-live="assertive" aria-atomic="true">
 //   {errorMessage}
 // </div>
-
 export { trapFocus };

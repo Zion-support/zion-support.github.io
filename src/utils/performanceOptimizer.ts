@@ -415,7 +415,7 @@ const lastEntry = entries[entries.length - 1]
                 (element as HTMLImageElement).src = src} else {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-                element.style.backgroundImage = `url(${src})`}
+                element.style.backgroundImage = `url(${src})`}`
               element.removeAttribute('data-lazy')
               lazyObserver.unobserve(element)
             }
@@ -494,7 +494,7 @@ const lastEntry = entries[entries.length - 1]
   generateReport(): string {// TODO: Add content}
 }
     const score = this.getPerformanceScore();
-    return `Performance Score: ${score}`}
+    return `Performance Score: ${score}`}`
   /**
    * Lazy load images for better performance;
    */
@@ -647,7 +647,7 @@ ${score}
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
-    `.trim()
+    `.trim()`
   }
   /**
    * Optimize the entire application;
@@ -667,7 +667,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 }
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer()
-export default PerformanceOptimizer;"`
+export default PerformanceOptimizer;"`"`
 
 
 

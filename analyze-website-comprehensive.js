@@ -125,7 +125,7 @@ async function analyzeUrl(url, depth = 0) {
 
   visitedUrls.add(url);
   // console.log removed for production
-`);
+`);`
 
   try {;
 const response = await makeRequest(url);
@@ -206,7 +206,7 @@ if (brokenLinks.length > 0) {
       // console.log removed for production
 brokenLinks.forEach(link => {)
         // console.log removed for production
-- ${link.reason}`)})}
+- ${link.reason}`)})}`
 
     if (analysisResults.errors.length > 0) {
       // console.log removed for production
@@ -266,7 +266,7 @@ constructor(baseUrl) {
 
     this.visitedUrls.add(url);
     // console.log removed for production
-`);
+`);`
 
     try {;
 const content = await this.fetchPage(url);
@@ -401,7 +401,7 @@ const report = {
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyze().catch(console.error);
 // Main execution
-if (import.meta.url === `file://${process.argv[1]}`) {;
+if (import.meta.url === `file://${process.argv[1]}`) {;`
 const baseUrl = process.argv[2] || 'https://ziontechgroup.com';
   const analyzer = new WebsiteAnalyzer(baseUrl);
   analyzer.analyze()}

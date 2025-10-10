@@ -70,9 +70,9 @@ exports.config = {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('node scripts/generate-search-index.js || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       }); // Commit and push' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true}); ' return {/* TODO: Fix JSX expression */}
   k: 'content-refresh-runner' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

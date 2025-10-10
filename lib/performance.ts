@@ -312,7 +312,7 @@ export function reportWebVitals(): void {
       event_category: 'Performance'})}
 
   if (process.env['NODE_ENV'] === 'development') {
-//     // }ms`)}
+//     // }ms`)}`
 
   // Monitor Core Web Vitals;
   onCLS(sendToAnalytics);
@@ -367,7 +367,7 @@ const _duration = performance.now() - startTime;
   if (process.env['NODE_ENV'] === 'development') {
 
     // eslint-disable-next-line no-console;
-//     // }ms`)}
+//     // }ms`)}`
 
   return duration}
 
@@ -590,20 +590,20 @@ const metrics: PerformanceMetric[] = [];
   if (navigationTiming) {,
     Object.entries(navigationTiming).forEach(([name, value]) => {
       metrics.push({)
-        name: `navigation.${name}`)
+        name: `navigation.${name}`)`
         value)
         id: `nav-${name}`
       })})}
-        id: `nav-${name}`})})}
+        id: `nav-${name}`})})}`
 
-        id: `nav-${name}`})})}
+        id: `nav-${name}`})})}`
 
         rating: getRating(name, value),
         delta: value;
         id: `nav-${name}-${Date.now()}`
       })})}
 
-        id: `nav-${name}`})})}
+        id: `nav-${name}`})})}`
 
   return {
     metrics,
@@ -640,7 +640,7 @@ const start = performance.now();
     name,
     value: end - start,
     delta: end - start,
-    id: `${name}-${Date.now()}`})}
+    id: `${name}-${Date.now()}`})}`
 
 export function measureAsyncPerformance<T>(
   name: string,
@@ -653,7 +653,7 @@ const end = performance.now();
       name,
       value: end - start,
       delta: end - start,
-      id: `${name}-${Date.now()}`});
+      id: `${name}-${Date.now()}`});`
     return result})}
 
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -2148,7 +2147,7 @@ i,
   e: 'Neuromorphic Computing Platform 2026', taglin,
   e:  ,' 'Brain - inspired computing for next - generation AI and cognitive systems',' pric,
   e: '$1, 499',' perio,
-  d: '/month', descriptio,"
+  d: '/month', descriptio,
   n:  ,' "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, cognitive computing, and adaptive learning systems.", feature,
   s: [,' 'Brain - inspired neural architecture', ' 'Spiking neural networks (SNNs)',' 'Ultra - low power consumption',' 'Real - time learning and adaptation',' 'Cognitive computing capabilities',' 'Advanced pattern recognition',' 'Neuromorphic hardware integration',' 'Custom neural model development',' 'Performance optimization tools',' 'Research collaboration platform'], popula,
   r: true,' ico,
@@ -2771,11 +2770,9 @@ i,
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price})} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price}) }; '"
-=======
+  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price}) }; '
       market_size: '$12.8B market'
       growth_rate: '380% annual growth';
 variant: 'quantum - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -54,7 +54,6 @@ const interval = setInterval(updateMetrics, 1000);
       >
         Perf
       </button>
-
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-64">
           <h3 className="text-sm font-semibold text-gray-900 mb-3">Performance Metrics</h3>

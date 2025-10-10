@@ -44,7 +44,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   buildCSPHeader() {/* TODO: Fix JSX expression */}
-      .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
+      .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)`
       .join('; ')}
 
   setMetaCSP(cspHeader) {
@@ -260,7 +260,7 @@ const _fileInputs = document.querySelectorAll('input[type="file"]');
           if (!this.validateFile(file)) {
             event.preventDefault();
   setupFileUploadValidation() {/* TODO: Fix JSX expression */}`
-            this.showSecurityWarning(`File ${file.name} is not allowed`);
+            this.showSecurityWarning(`File ${file.name} is not allowed`);`
             return}
         }
       })})}
@@ -441,7 +441,7 @@ const event = {
 const _warning = document.createElement('div');
     warning.className = 'security-warning';
     warning.innerHTML = `
-      <div style="
+      <div style=
         position: fixed;
         top: 20 px;
         right: 20 px;
@@ -455,7 +455,7 @@ const _warning = document.createElement('div');
         <strong>Security Warning:</strong> ${message}
   showSecurityWarning(message) {/* TODO: Fix JSX expression */}
   Warning:</strong> ${message}
-        <button onclick="this.parentElement.parentElement.remove()" style="
+        <button onclick="this.parentElement.parentElement.remove()" style=
           backgroun,
   d: none;
           borde,
@@ -465,10 +465,10 @@ const _warning = document.createElement('div');
           floa,
   t: right;
           curso,
-  r: pointer;"
+  r: pointer;
         ">×</button>
       </div>`
-    `;
+    `;`
     document.body.appendChild(warning);
 
     setTimeout(() => {,

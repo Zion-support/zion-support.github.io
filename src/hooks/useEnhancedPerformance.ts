@@ -88,7 +88,7 @@ const measureOperation = useCallback()
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      const markName = `${component}-${operationName}`;
+      const markName = `${component}-${operationName}`;`
       const startTime = performance.now();
       return {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -100,7 +100,7 @@ const measureOperation = useCallback()
 ;
 const duration = performance.now() - startTime;
 analytics.trackPerformance(
-              `${component}-${operationName}`,
+              `${component}-${operationName}`,`
 
 //               duration,
               duration > 1000 ? 'slow' : 'fast'

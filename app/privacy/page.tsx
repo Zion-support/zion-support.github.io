@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
@@ -83,12 +83,11 @@ icon: Database]
             Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
           <div>
-            <Calendar className="h-4 w-4 mr-2" />
+            <Calendar className="h-4 w-4 mr-2 />"
             Last updated: {lastUpdated}
           </div>
         </div>
       </div>
-
       <div>
         <div>
           <div className="max-w-4xl mx-auto space-y-12"></div>
@@ -102,7 +101,6 @@ icon: Database]
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
-
             {/* Information We Collect */}
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
@@ -110,7 +108,7 @@ icon: Database]
                 {dataTypes.map((type, index) => (</div>
                   <div>
                     <div>
-                      <type.icon className="h-6 w-6 text-blue-600 mr-3" />
+                      <type.icon className="h-6 w-6 text-blue-600 mr-3 />"
                       <h3 className="text-lg font-semibold text-gray-900"></h>{type.category}</h3>
                     </div>
                     <p className="text-gray-700 mb-3">{type.description}</p>
@@ -123,7 +121,6 @@ icon: Database]
                 ));
               </div>
             </section>
-
             {/* How We Use Information */}
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
@@ -131,7 +128,7 @@ icon: Database]
                 {purposes.map((purpose, index) => (</div>
                   <div>
                     <div>
-                      <purpose.icon className="h-6 w-6 text-blue-600" />
+                      <purpose.icon className="h-6 w-6 text-blue-600 />"
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>{purpose.title}</h3>
@@ -141,13 +138,12 @@ icon: Database]
                 ));
               </div>
             </section>
-
             {/* Data Security */}
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
               <div>
                 <div>
-                  <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
+                  <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1 />"
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Security Measures</h3>
                     <p className="text-gray-700 mb-4"></p>
@@ -163,7 +159,6 @@ icon: Database]
                 </div>
               </div>
             </section>
-
             {/* Your Rights */}
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
@@ -171,7 +166,7 @@ icon: Database]
                 {rights.map((right, index) => (</div>
                   <div>
                     <div>
-                      <right.icon className="h-6 w-6 text-green-600 mr-3" />
+                      <right.icon className="h-6 w-6 text-green-600 mr-3 />"
                       <h3 className="text-lg font-semibold text-gray-900"></h>{right.title}</h3>
                     </div>
                     <p className="text-gray-700">{right.description}</p>
@@ -179,7 +174,6 @@ icon: Database]
                 ));
               </div>
             </section>
-
             {/* Contact Information */}
             <section className="bg-gray-50 rounded-lg p-8"></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Contact Us</h2>
@@ -188,29 +182,28 @@ icon: Database]
               </p>
               <div>
                 <div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                  <Mail className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>privacy@ziontechgroup.com</span>
                 </div>
                 <div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                  <Phone className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>(302) 464-0950</span>
                 </div>
                 <div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
+                  <Globe className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>ziontechgroup.com</span>
                 </div>
                 <div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
+                  <User className="h-5 w-5 text-blue-600 mr-3 />"
                   <span className="text-gray-700"></spa>Zion Tech Group Privacy Team</span>
                 </div>
               </div>
             </section>
-
             {/* Updates */}
             <section></section>
               <div>
                 <div>
-                  <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
+                  <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1 />"
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Policy Updates</h3>
                     <p className="text-gray-700"></p>
@@ -226,6 +219,5 @@ icon: Database]
     </div>
 )]
     }
-=======
+
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

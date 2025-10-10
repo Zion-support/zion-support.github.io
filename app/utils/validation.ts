@@ -7,7 +7,7 @@ export interface ValidationResult {
   isValid: boolean;
   error?: string;
   errors?: string[];
-<<<<<<< HEAD
+
 }
 
 /**
@@ -58,8 +58,7 @@ export function validateName(name: string): ValidationResult {
   if (!nameRegex.test(name)) {
     return { isValid: false, error: 'Name contains invalid characters' };
   }
-  
-=======
+
 }
 
 /**
@@ -194,7 +193,6 @@ export function validateCompanyName(companyName: string): ValidationResult {
     return { isValid: false, error: 'Company name must be less than 100 characters' };
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   return { isValid: true };
 }
 
@@ -202,7 +200,7 @@ export function validateCompanyName(companyName: string): ValidationResult {
  * Message validation
  */
 export function validateMessage(message: string): ValidationResult {
-<<<<<<< HEAD
+
   if (!message || message.trim().length === 0) {
     return { isValid: false, error: 'Message is required' };
   }
@@ -210,8 +208,7 @@ export function validateMessage(message: string): ValidationResult {
   if (message.length > 1000) {
     return { isValid: false, error: 'Message is too long' };
   }
-  
-=======
+
   if (!message || message.trim() === '') {
     return { isValid: false, error: 'Message is required' };
   }
@@ -224,12 +221,11 @@ export function validateMessage(message: string): ValidationResult {
     return { isValid: false, error: 'Message must be less than 1000 characters' };
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   return { isValid: true };
 }
 
 /**
-<<<<<<< HEAD
+
  * URL validation
  */
 export function validateUrl(url: string): ValidationResult {
@@ -278,8 +274,7 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
       errors.push(messageResult.error || 'Invalid message');
     }
   }
-  
-=======
+
  * Form validation
  */
 export function validateForm(data: Record<string, any>): ValidationResult {
@@ -312,7 +307,6 @@ export function validateForm(data: Record<string, any>): ValidationResult {
     errors.push('Invalid message format');
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
   return {
     isValid: errors.length === 0,
     errors: errors.length > 0 ? errors : undefined

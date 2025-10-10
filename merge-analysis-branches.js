@@ -41,10 +41,10 @@ import fs from 'fs';
 function mergeAnalysisBranch(branchName) {,
 //   try {,
     //Fetch the branch;
-    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
+    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });`
 
     //Try direct merge first;
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`)
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`)"`
       { stdio: 'inherit' }
     );
 
@@ -56,11 +56,11 @@ function mergeAnalysisBranch(branchName) {,
 // //Step,
   3: Enhanced merge function with conflict resolution;
 function mergeAnalysisBranch(branchName) {/* TODO: Fix JSX expression */}
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})`
   o: 'inherit' });
 
     //Try direct merge first;`
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`,
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Analysis and improvement"`,"`
       {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     );
@@ -68,8 +68,8 @@ function mergeAnalysisBranch(branchName) {/* TODO: Fix JSX expression */}
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -77,8 +77,8 @@ function mergeAnalysisBranch(branchName) {/* TODO: Fix JSX expression */}
 //       return {/* TODO: Fix JSX expression */}
   d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-        execSync(")`
-          `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
+        execSync(")`"`
+          `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,"`
           {/* TODO: Fix JSX expression */}
   o: 'inherit' }
         );

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 ;
 const SitemapPage: React.FC = () => {const pages = [
@@ -39,16 +39,14 @@ const SitemapPage: React.FC = () => {const pages = [
             Navigate through all pages on our website
           </p>
         </div>
-
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {pages.map((page, index) => (</div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
-                  <a 
+                  <a >
                     href={page.path} 
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
-                  ></a>
+                    className="text-blue-600 hover:text-blue-700 transition-colors"</a>                  ></a>
                     {page.title}
                   </a>
                 </h3>
@@ -62,7 +60,6 @@ const SitemapPage: React.FC = () => {const pages = [
             ));
           </div>
         </div>
-
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
             Need Help Finding Something?
@@ -71,16 +68,14 @@ const SitemapPage: React.FC = () => {const pages = [
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
           <div>
-            <a 
+            <a >
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-            ></a>
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"</a>            ></a>
               Contact Us
             </a>
-            <a 
+            <a >
               href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
-            ></a>
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"</a>            ></a>
               Call Us: (302) 464-0950
             </a>
           </div>
@@ -90,6 +85,5 @@ const SitemapPage: React.FC = () => {const pages = [
 )]
     };
 export default SitemapPage;
-=======
+
   );)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

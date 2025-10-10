@@ -171,7 +171,6 @@ const culture = [
           </div>
         </div>
       </section>
-
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,7 +186,7 @@ const culture = [
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -196,7 +195,6 @@ const culture = [
           </div>
         </div>
       </section>
-
       {/* Company Culture */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -213,7 +211,7 @@ const culture = [
               <ul className="space-y-4">
                 {culture.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 />"
                     <span className="text-gray-600">{item}</span>
                   </li>
                 ))}
@@ -243,7 +241,6 @@ const culture = [
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,19 +261,19 @@ const culture = [
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                         <span className="flex items-center">
-                          <Briefcase className="w-4 h-4 mr-1" />
+                          <Briefcase className="w-4 h-4 mr-1 />"
                           {position.department}
                         </span>
                         <span className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-1" />
+                          <MapPin className="w-4 h-4 mr-1 />"
                           {position.location}
                         </span>
                         <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                          <Clock className="w-4 h-4 mr-1 />"
                           {position.type}
                         </span>
                         <span className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
+                          <Users className="w-4 h-4 mr-1 />"
                           {position.experience}
                         </span>
                       </div>
@@ -285,19 +282,17 @@ const culture = [
                       to="/contact"
                       className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center"
                     >
-                      Apply Now <ArrowRight className="w-4 h-4 ml-2" />
+                      Apply Now <ArrowRight className="w-4 h-4 ml-2 />"
                     </Link>
                   </div>
-                  
                   <p className="text-gray-600 mb-6">{position.description}</p>
-                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
                       <ul className="space-y-2">
                         {position.requirements.map((req, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0 />"
                             {req}
                           </li>
                         ))}
@@ -308,7 +303,7 @@ const culture = [
                       <ul className="space-y-2">
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0 />"
                             {benefit}
                           </li>
                         ))}
@@ -321,7 +316,6 @@ const culture = [
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -347,7 +341,6 @@ const culture = [
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )};

@@ -1,12 +1,10 @@
-<<<<<<< HEAD
+
 #!/usr/bin/env node
 
-=======
 #!/usr/bin
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 import fs from 'fs';
 
-<<<<<<< HEAD
 function fixJSXSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -68,7 +66,7 @@ function fixJSXSyntax(filePath) {
 
     patterns.forEach(pattern => {
       const newContent = content.replace(pattern.regex, pattern.replacement);
-=======
+
 /
 function fixJSXSyntax(content) {
 
@@ -100,7 +98,7 @@ function fixJSXSyntax(content) {/* TODO: Fix JSX expression *
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression *)
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\)}/g, '{/* TODO: Fix JSX expression *
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
+    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }
   );
 
   return fixed;
@@ -132,25 +130,22 @@ function fixFile(filePath) {
     
     fixes.forEach(fix => {)
       const newContent = content.replace(fix.pattern, fix.replacement);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
       if (newContent !== content) {
         content = newContent;
         modified = true;
       }
     });
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed JSX syntax in: ${filePath}`);
+      console.log(`Fixed JSX syntax in: ${filePath}`);`
       return true;
     }
     return false;
-<<<<<<< HEAD
+
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);`
     return false;
   }
 }
@@ -162,7 +157,7 @@ if (fixJSXSyntax(filePath)) {
 } else {
   console.log('No JSX syntax issues found');
 }
-=======
+
   } catch (error) {/* TODO: Fix JSX expression *
   }
 }
@@ -171,7 +166,7 @@ if (fixJSXSyntax(filePath)) {
 async function main() {
   /
   const files = await glob('app/**)
-  console.log(`Found ${files.length} TSX files to check...`);
+  console.log(`Found ${files.length} TSX files to check...`);`
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -207,10 +202,9 @@ async function main() {/* TODO: Fix JSX expression *
   /
 
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression *
+  e://${process.argv[1]}`) {/* TODO: Fix JSX expression *`
 }
 
 export { fixJSXSyntax, processFile };
 
-}"`
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+}"`"`

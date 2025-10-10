@@ -87,11 +87,11 @@ const cleanImports = imports;
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
   });
 
-  //Fix corrupted string literals;"
+  //Fix corrupted string literals;
   fixed = fixed.replace(/['"]([^'"]*),\s*([^'"]*)['"]/g, '"$1$2"');
 
   //Fix corrupted template literals;
-  fixed = fixed.replace(/`([^`]*),\s*([^`]*)`/g, '`$1$2`');
+  fixed = fixed.replace(/`([^`]*),\s*([^`]*)`/g, '`$1$2`');`
 
   //Fix corrupted variable declarations;
   fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'const $1 = $2;');

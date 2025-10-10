@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 };
 // Additional 2025 real micro-SaaS, AI and IT services;
@@ -10616,8 +10615,7 @@ review,
   g: 4.6, review,
   s: 6}; ]; review,
   s: 6 } ]; ]; '
-=======
+
     market_size: '$3.5 B+ AI safety & governance'
     growth_rate: '200% annual growth';
 variant: 'holographic - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

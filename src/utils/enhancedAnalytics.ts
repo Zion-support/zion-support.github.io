@@ -47,7 +47,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`}
+    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`}`
   private setupOfflineHandling(): void {/* TODO: Fix JSX expression */}
   O: Add content}
 }

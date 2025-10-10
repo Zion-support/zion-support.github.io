@@ -294,7 +294,7 @@ $4});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;`
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -316,7 +316,7 @@ const getSeverityColor = (severity: string) => {
       default: return 'text-gray-600 bg-gray-100';
   if (!metrics) {
     return (
-      <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
+      <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>`
 );
 }
         <div className="flex items-center justify-center">
@@ -324,12 +324,12 @@ const getSeverityColor = (severity: string) => {
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
     );
-    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
+    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>`
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
+            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>`
             <span className="text-sm text-gray-600">
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
@@ -352,7 +352,7 @@ const getSeverityColor = (severity: string) => {
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
+              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>`
                 {metrics.performance.score}
               <span className="text-sm font-medium text-gray-600">Load Time</span>
               <span className="text-lg font-semibold text-gray-900">
@@ -393,12 +393,11 @@ const getSeverityColor = (severity: string) => {
                 <span>Limit</span>
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
               <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className={`h-2 rounded-full ${
+                <div className={`h-2 rounded-full ${`
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
-                  }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  }`}`
+                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}`
                 ></div>
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
                 <span>Connection</span>
@@ -417,7 +416,7 @@ const getSeverityColor = (severity: string) => {
               <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>`
                     {error.severity}
                 <div className="flex items-center justify-between text-xs text-gray-500">
                   <span>{error.type}</span>
@@ -521,94 +520,94 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   t: 0,
       saveDat,
   a: false;
-          <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}></div>
-      <div className="flex items-center justify-between mb-6"></div>"
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>"
-        <div className="flex items-center space-x-4"></div>"
-          <div className="flex items-center space-x-2"></div>`
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>"
+          <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}></div>`
+      <div className="flex items-center justify-between mb-6"></div>
+        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
+        <div className="flex items-center space-x-4"></div>
+          <div className="flex items-center space-x-2"></div>`"`
+            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>"`
             <span className="text-sm text-gray-600"></span>
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           {enableExport && ()}
           <button></button>
-              onClick={handleExport}"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md,
+              onClick={handleExport}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md,"
   hover:bg-blue-700,
   focus:outline-none,
-  focus:ring-2,"
-  focus:ring-blue-500"
+  focus:ring-2,
+  focus:ring-blue-500
 // >
 //               Export Data;
           </button>
           )}
-      {lastUpdate && ()}"
+      {lastUpdate && ()}
           <p className="text-sm text-gray-500 mb-4"></p>
           Last,
   updated: {lastUpdate.toLocaleTimeString()}
         </p>
-      {/* Performance Metrics */}"
-      <div className="mb-8"></div>"
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>"
-        <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-4"></div>"
-          <div className="bg-gray-50 p-4 rounded-lg"></div>"
-            <div className="flex items-center justify-between"></div>"
-              <span className="text-sm font-medium text-gray-600">Performance Score</span>`
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}></span>
-                {metrics.performance.score}"
-              <span className="text-sm font-medium text-gray-600">Load Time</span>"
+      {/* Performance Metrics */}
+      <div className="mb-8"></div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
+        <div className="grid grid-cols-1,"
+  md:grid-cols-2,
+  lg:grid-cols-3 gap-4"></div>
+          <div className="bg-gray-50 p-4 rounded-lg"></div>
+            <div className="flex items-center justify-between"></div>
+              <span className="text-sm font-medium text-gray-600">Performance Score</span>`"`
+              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}></span>`
+                {metrics.performance.score}
+              <span className="text-sm font-medium text-gray-600">Load Time</span>
               <span className="text-lg font-semibold text-gray-900"></span>
-                {metrics.performance.loadTime.toFixed(0)}ms;"
+                {metrics.performance.loadTime.toFixed(0)}ms;
               <span className="text-sm font-medium text-gray-600">FCP</span>
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;"
+                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
               <span className="text-sm font-medium text-gray-600">LCP</span>
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;"
+                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
               <span className="text-sm font-medium text-gray-600">FID</span>
-                {metrics.performance.firstInputDelay.toFixed(0)}ms;"
+                {metrics.performance.firstInputDelay.toFixed(0)}ms;
               <span className="text-sm font-medium text-gray-600">CLS</span>
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
-      {/* Error Metrics */}"
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>"
-        <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-4"></div>"
-              <span className="text-sm font-medium text-gray-600">Total Errors</span>"
+      {/* Error Metrics */}
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
+        <div className="grid grid-cols-1,"
+  md:grid-cols-2,
+  lg:grid-cols-4 gap-4"></div>
+              <span className="text-sm font-medium text-gray-600">Total Errors</span>
               <span className="text-2xl font-bold text-red-600"></span>
-                {metrics.errors.total}"
-              <span className="text-sm font-medium text-gray-600">Critical</span>"
+                {metrics.errors.total}
+              <span className="text-sm font-medium text-gray-600">Critical</span>
               <span className="text-lg font-semibold text-red-600"></span>
-                {metrics.errors.bySeverity.critical || 0}"
-              <span className="text-sm font-medium text-gray-600">High</span>"
+                {metrics.errors.bySeverity.critical || 0}
+              <span className="text-sm font-medium text-gray-600">High</span>
               <span className="text-lg font-semibold text-red-500"></span>
-                {metrics.errors.bySeverity.high || 0}"
-              <span className="text-sm font-medium text-gray-600">Medium</span>"
+                {metrics.errors.bySeverity.high || 0}
+              <span className="text-sm font-medium text-gray-600">Medium</span>
               <span className="text-lg font-semibold text-yellow-600"></span>
                 {metrics.errors.bySeverity.medium || 0}
-      {/* Memory and Network */}"
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>"
+      {/* Memory and Network */}
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
         <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-4"></div>"
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>"
-            <div className="space-y-2"></div>"
+  md:grid-cols-2 gap-4"></div>
+            <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
+            <div className="space-y-2"></div>
               <div className="flex justify-between text-sm"></div>
                 <span>Used</span>
                 <span>{metrics.memory.used.toFixed(2)} MB</span>
                 <span>Total</span>
                 <span>{metrics.memory.total.toFixed(2)} MB</span>
                 <span>Limit</span>
-                <span>{metrics.memory.limit.toFixed(2)} MB</span>"
+                <span>{metrics.memory.limit.toFixed(2)} MB</span>
               <div className="w-full bg-gray-200 rounded-full h-2"></div>
                 <div></div>`
-className={`h-2 rounded-full ${}
+className={`h-2 rounded-full ${}`
   // TOD,
   O: Add content}
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`
-                  }`}
+                  }`}`
                   style={/* TODO: Fix JSX expression */}`
-  h: `${Math.min(metrics.memory.percentage, 100)}%` }}
+  h: `${Math.min(metrics.memory.percentage, 100)}%` }}`
           
           
           
@@ -617,33 +616,32 @@ className={`h-2 rounded-full ${}
           
           
           
-          "
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>"
+          
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto"></div>
-            {metrics.errors.recent.map((error) => ()}"
-          <div key={error.id} className="bg-gray-50 p-3 rounded-lg"></div>"
-                <div className="flex items-center justify-between mb-2"></div>"
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>`
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}></span>
-                    {error.severity}"
+            {metrics.errors.recent.map((error) => ()}
+          <div key={error.id} className="bg-gray-50 p-3 rounded-lg"></div>
+                <div className="flex items-center justify-between mb-2"></div>
+                  <span className="text-sm font-medium text-gray-900">{error.message}</span>`"`
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}></span>`
+                    {error.severity}
                 <div className="flex items-center justify-between text-xs text-gray-500"></div>
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
             ))}
       {/* Error Distribution */}
-      {showDetails && (}"
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>"
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>"
+      {showDetails && (}
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
+              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
               <div className="space-y-1"></div>)
-                {Object.entries(metrics.errors.byType).map(([type, count]) => ()}"
-          <div key={type} className="flex justify-between text-sm"></div>"
+                {Object.entries(metrics.errors.byType).map(([type, count]) => ()}
+          <div key={type} className="flex justify-between text-sm"></div>
                     <span className="capitalize">{type}</span>
-                    <span>{count}</span>"
+                    <span>{count}</span>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-                {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}"
-          <div key={category} className="flex justify-between text-sm"></div>"
+                {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}
+          <div key={category} className="flex justify-between text-sm"></div>
                     <span className="capitalize">{category}</span>
-
 export default SystemMonitor;
 
 

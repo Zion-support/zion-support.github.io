@@ -7,10 +7,10 @@ import fs from 'fs';
 function canMergeWithoutConflicts(branchName) {
   try {
     // Check if branch exists
-    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'ignore' });
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'ignore' });`
     
     // Try to merge without actually merging
-    execSync(`git merge-tree $(git merge-base origin/main origin/${branchName}) origin/main origin/${branchName}`, { stdio: 'pipe' });
+    execSync(`git merge-tree $(git merge-base origin/main origin/${branchName}) origin/main origin/${branchName}`, { stdio: 'pipe' });`
     
     return true;
   } catch (error) {
@@ -21,39 +21,39 @@ function canMergeWithoutConflicts(branchName) {
 // Function to merge a branch into main
 function mergeBranch(branchName) {
   try {
-    console.log(`Attempting to merge ${branchName}...`);
+    console.log(`Attempting to merge ${branchName}...`);`
     
     // Checkout the branch
-    execSync(`git checkout ${branchName}`, { stdio: 'pipe' });
+    execSync(`git checkout ${branchName}`, { stdio: 'pipe' });`
     
     // Merge main into the branch first to resolve conflicts
     try {
-      execSync(`git merge origin/main --no-edit`, { stdio: 'pipe' });
-      console.log(`✓ Successfully merged main into ${branchName}`);
+      execSync(`git merge origin/main --no-edit`, { stdio: 'pipe' });`
+      console.log(`✓ Successfully merged main into ${branchName}`);`
     } catch (mergeError) {
-      console.log(`⚠ Merge conflicts in ${branchName}, resolving...`);
+      console.log(`⚠ Merge conflicts in ${branchName}, resolving...`);`
       
       // Try to resolve conflicts automatically
       try {
-        execSync(`git add .`, { stdio: 'pipe' });
-        execSync(`git commit -m "Resolve merge conflicts with main"`, { stdio: 'pipe' });
-        console.log(`✓ Resolved conflicts in ${branchName}`);
+        execSync(`git add .`, { stdio: 'pipe' });`
+        execSync(`git commit -m "Resolve merge conflicts with main"`, { stdio: 'pipe' });`
+        console.log(`✓ Resolved conflicts in ${branchName}`);`
       } catch (commitError) {
-        console.log(`✗ Could not resolve conflicts in ${branchName}`);
+        console.log(`✗ Could not resolve conflicts in ${branchName}`);`
         return false;
       }
     }
     
     // Switch back to main
-    execSync(`git checkout main`, { stdio: 'pipe' });
+    execSync(`git checkout main`, { stdio: 'pipe' });`
     
     // Merge the branch into main
-    execSync(`git merge ${branchName} --no-edit`, { stdio: 'pipe' });
-    console.log(`✓ Successfully merged ${branchName} into main`);
+    execSync(`git merge ${branchName} --no-edit`, { stdio: 'pipe' });`
+    console.log(`✓ Successfully merged ${branchName} into main`);`
     
     return true;
   } catch (error) {
-    console.log(`✗ Failed to merge ${branchName}: ${error.message}`);
+    console.log(`✗ Failed to merge ${branchName}: ${error.message}`);`
     return false;
   }
 }
@@ -83,14 +83,14 @@ async function main() {
   for (const branch of branches) {
     try {
       if (canMergeWithoutConflicts(branch)) {
-        console.log(`✓ ${branch} can be merged without conflicts`);
+        console.log(`✓ ${branch} can be merged without conflicts`);`
         if (mergeBranch(branch)) {
           mergedCount++;
         } else {
           failedCount++;
         }
       } else {
-        console.log(`⚠ ${branch} has conflicts, attempting to resolve...`);
+        console.log(`⚠ ${branch} has conflicts, attempting to resolve...`);`
         if (mergeBranch(branch)) {
           mergedCount++;
         } else {
@@ -98,21 +98,21 @@ async function main() {
         }
       }
     } catch (error) {
-      console.log(`✗ Error processing ${branch}: ${error.message}`);
+      console.log(`✗ Error processing ${branch}: ${error.message}`);`
       failedCount++;
     }
   }
   
-  console.log(`\nMerge Summary:`);
-  console.log(`Successfully merged: ${mergedCount} branches`);
-  console.log(`Failed to merge: ${failedCount} branches`);
+  console.log(`\nMerge Summary:`);`
+  console.log(`Successfully merged: ${mergedCount} branches`);`
+  console.log(`Failed to merge: ${failedCount} branches`);`
   
   // Push changes to main
   try {
-    execSync(`git push origin main`, { stdio: 'pipe' });
-    console.log(`✓ Pushed changes to main`);
+    execSync(`git push origin main`, { stdio: 'pipe' });`
+    console.log(`✓ Pushed changes to main`);`
   } catch (error) {
-    console.log(`✗ Failed to push to main: ${error.message}`);
+    console.log(`✗ Failed to push to main: ${error.message}`);`
   }
 }
 

@@ -10,13 +10,13 @@ const,
       alt={alt}
       width={width}
       height={height}
-      className={`${className}`}
+      className={`${className}`}`
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
       style={/* TODO: Fix JSX expression */}`
-  h: width ? `${width}px` : 'auto',
+  h: width ? `${width}px` : 'auto',`
         heigh,`
-  t: height ? `${height}px` : 'auto'
+  t: height ? `${height}px` : 'auto'`
       }}
     />
   )};

@@ -174,7 +174,7 @@ if (fs.existsSync(viteConfigPath)) {/* TODO: Fix JSX expression */}
 }
 
 // Enhanced Vite configuration;
-// const improvedViteConfig = `import { defineConfig } from 'vite';
+// const improvedViteConfig = `import { defineConfig } from 'vite';`
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
@@ -238,12 +238,12 @@ export default defineConfig({/* TODO: Fix JSX expression */}
   defin,
   e: {/* TODO: Fix JSX expression */}
   },`
-});`;
+});`;`
 
 fs.writeFileSync(viteConfigPath, improvedViteConfig);
 // // 6. Create performance monitoring setup;
 // // 6. Create performance monitoring setup;`
-// const performanceSetup = `// Performance monitoring setup;
+// const performanceSetup = `// Performance monitoring setup;`
 import { errorHandler } from './src/utils/errorHandler';
 import performanceOptimizer from './src/utils/performanceOptimizer';
 
@@ -317,7 +317,7 @@ const report = {
           "Added service worker for caching",
           "Generated manifest.json for PWA support",
           "Created robots.txt and sitemap.xml for SEO",
-          "Optimized component structure for better loading"
+          "Optimized component structure for better loading
         ]
       },
       {
@@ -327,7 +327,7 @@ const report = {
           "Created meta tags for better search visibility",
           "Added FAQ schema for rich snippets",
           "Generated breadcrumb schema for navigation",
-          "Created local business schema for local SEO"
+          "Created local business schema for local SEO
         ]
       },
       {
@@ -336,7 +336,7 @@ const report = {
           "Generated accessibility audit report",
           "Created accessibility checklist for ongoing testing",
           "Identified accessibility improvement opportunities",
-          "Generated testing guide for manual and automated testing"
+          "Generated testing guide for manual and automated testing
         ]
       },
       {
@@ -345,7 +345,7 @@ const report = {
           "Resolved merge conflicts in Navigation component",
           "Cleaned up corrupted page.tsx file",
           "Organized service data into separate modules",
-          "Improved component structure and maintainability"
+          "Improved component structure and maintainability
         ]
       }
     ],
@@ -360,7 +360,7 @@ const report = {
       "Monitor performance metrics",
       "Continue accessibility testing",
       "Update SEO based on search console data",
-      "Regular maintenance and updates"
+      "Regular maintenance and updates
     ]
   };
 
@@ -394,11 +394,11 @@ process.exit(1)}
 
 runAllImprovements();
 `
-export { analytics, errorHandler, performanceOptimizer };`;
+export { analytics, errorHandler, performanceOptimizer };`;`
 
 fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup);
 // // 7. Create development utilities;`
-// const devUtils = `/**
+// const devUtils = `/**`
  * Development Utilities;
  * Tools and helpers for development and debugging;
  */
@@ -441,7 +441,7 @@ export const createDebugger = (componentNam)
   n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn)});
 
 export default {/* TODO: Fix JSX expression */}`
-};`;
+};`;`
 
 fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devUtils);
 // // 8. Run final checks;
@@ -456,4 +456,4 @@ fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devU
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 
-// // // // // // // // // // // "`
+// // // // // // // // // // // "`"`

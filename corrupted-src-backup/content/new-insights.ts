@@ -20,7 +20,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 - Real-time optimization recommendations reduce costs by 40%
 - Comprehensive ROI tracking enables data-driven decisions;
 - Automated performance tuning increases efficiency by 60%,
-    `},
+    `},`
   {
     id: 'quantum-ai-security-insights',
     title: 'Quantum AI Security: Next-Generation Protection Framework',
@@ -39,7 +39,7 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Advanced threat detection identifies zero-day attacks;
 - Zero-trust architecture eliminates security vulnerabilities;
 - Real-time monitoring provides instant threat response;
-    `,
+    `,`
 export const,
   newInsights: Insight[] = [
   {/* TODO: Fix JSX expression */}

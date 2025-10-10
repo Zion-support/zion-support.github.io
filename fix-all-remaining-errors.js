@@ -14,17 +14,17 @@ const importFixes = [
     // Fix malformed import statements with missing commas
     {
       pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1, $2, $3 } from '$4';"
+      replacement: "import { $1, $2, $3 } from '$4';
     },
     // Fix malformed import statements with missing commas
     {
       pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1, $2 } from '$3';"
+      replacement: "import { $1, $2 } from '$3';
     },
     // Fix malformed import statements
     {
       pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1 } from '$2';"
+      replacement: "import { $1 } from '$2';
     }
   ];
   

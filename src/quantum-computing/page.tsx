@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -12,14 +12,12 @@ return (
     <React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
+        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business. />"
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning />"
       </Helmet>
-      
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-=======
 import Navigation from '../components
 import Footer from '../components
 
@@ -30,7 +28,6 @@ const QuantumComputingPage: React.FC = () => {
         <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" 
       <
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
@@ -67,18 +64,18 @@ const QuantumComputingPage: React.FC = () => {
                 <
               <
             <
-            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500
+            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500"
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Applications<
               <div className="space-y-4">
-                <div className="bg-white
+                <div className="bg-white"
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Portfolio Optimization<
                   <p className="text-gray-300">Optimize investment portfolios with quantum algorithms<
                 <
-                <div className="bg-white
+                <div className="bg-white"
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Drug Discovery<
                   <p className="text-gray-300">Accelerate pharmaceutical research with quantum simulation<
                 <
-                <div className="bg-white
+                <div className="bg-white"
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Supply Chain<
                   <p className="text-gray-300">Optimize complex logistics and supply chain networks<
                 <
@@ -90,34 +87,29 @@ const QuantumComputingPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8">Ready for Quantum Computing?<
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300"
+                href=
+                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">
               >
-                Explore Quantum Solutions
-              <
+                Explore Quantum Solutions</a>              <
               <a
-                href="
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hove,
-    r:text-white transition-all duration-300"
+                href=
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hove,"
+    r:text-white transition-all duration-300">
               >
-                Schedule Consultation
-              <
+                Schedule Consultation</a>              <
             <
           <
         <
       <
-      
-<<<<<<< HEAD
+
       <Footer />
     </React.Fragment>
 );
 }
   )};
-=======
+
       <Footer 
     <)
-  );
+  );>
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-export default QuantumComputingPage;
+</Footer>export default QuantumComputingPage;

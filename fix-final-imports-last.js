@@ -46,4 +46,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed}
 
 // Process the app directory;
-// Process the app directory;"
+// Process the app directory;

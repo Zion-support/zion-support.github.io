@@ -36,9 +36,9 @@ conflictedFiles.forEach(file => // console.log removed for production
     conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */})`
         // console.log removed for production
 try {/* TODO: Fix JSX expression */}`
-          execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"`
-          execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
+          execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})"`
+  o: 'pipe' });"`"`
+          execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})"`
   o: 'pipe' });`
           // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
@@ -113,7 +113,7 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
-  n: ${error.message}`)}
+  n: ${error.message}`)}`
   }
 }
 
@@ -173,8 +173,8 @@ try {/* TODO: Fix JSX expression */}
   6: Commit all changes;
     // console.log removed for production
 execSync('git add .', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"
-    execSync('git commit -m "Comprehensive,"
+  o: 'pipe' });
+    execSync('git commit -m "Comprehensive,
   improvements: resolve conflicts, clean console.logs, optimize performance"', {/* TODO: Fix JSX expression */})
   o: 'pipe' });
     

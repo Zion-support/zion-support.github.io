@@ -88,14 +88,14 @@ function fixCorruptedText(text) {
   //Fix object property syntax;
   fixed = fixed.replace(
     /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
-    "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
+    "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }
   );
   //Fix array syntax;
   fixed = fixed.replace(/\[\s*\{/g, '[{');
 function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   d:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
-    "{/* TODO: Fix JSX expression */}"
-  e: $7 }"
+    "{/* TODO: Fix JSX expression */}
+  e: $7 }
   );
   //Fix array syntax;
   fixed = fixed.replace(/\[\s*\{/* TODO: Fix JSX expression */})
@@ -156,4 +156,3 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 
-"

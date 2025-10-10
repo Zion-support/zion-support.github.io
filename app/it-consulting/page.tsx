@@ -5,8 +5,7 @@ const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCa
 const [searchTerm, setSearchTerm] = useState('');
 ;
 const itServices = [
-<<<<<<< HEAD
-=======
+
   Webcam as WebcamIcon, Speaker as SpeakerIcon]
     } from 'lucide-react';
 
@@ -15,7 +14,7 @@ const ITConsultingPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -374,24 +373,21 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
           <div>
-            <a
+            <a>
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Phone className="w-5 h-5 inline mr-2" />
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"</a>            ></a>
+              <Phone className="w-5 h-5 inline mr-2 />"
               Call (302) 464-0950
             </a>
-            <a
+            <a>
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Mail className="w-5 h-5 inline mr-2" />
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"</a>            ></a>
+              <Mail className="w-5 h-5 inline mr-2 />"
               Get IT Consultation
             </a>
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
@@ -399,17 +395,15 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
             {/* Search */}</div>
             <div>
               <div>
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 />"
                 <input
                   type="text"
                   placeholder="Search IT services..."
-                  value={searchTerm}
+                  value={searchTerm}>
                   onChange={(e) => setSearchTerm(e.target.value);
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"</input>                />
               </div>
             </div>
-            
             {/* Category Filter */}
             <div>
               <select
@@ -425,18 +419,17 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               </select>
             </div>
           </div>
-
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
               <button
                 key={category.id}
                 onClick={() =></button> setSelectedCategory(category.id);
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${`
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400']
-    }`}
+    }`}`
               >
                 {category.name}
               </button>
@@ -444,7 +437,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
@@ -453,43 +445,39 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               <div>
                 <div>
                   <div>
-                    <service.icon className="w-12 h-12" />
+                    <service.icon className="w-12 h-12 />"
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white"></di>{service.price}</div>
                     <div className="text-sm text-gray-400"></di>starting price</div>
                   </div>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h>{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                
                 <div>
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Key Features:</h4>
                     <ul className="space-y-1"></ul>
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0 />"
                           <span>{feature}</span>
                         </li>
                       ));
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
                     <ul className="space-y-1"></ul>
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
-                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />"
                           <span>{benefit}</span>
                         </li>
                       ));
                     </ul>
                   </div>
                 </div>
-
                 <div>
                   <div>
                     <span className="text-gray-400"></spa>Setup Time:</span>
@@ -504,27 +492,24 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     <span className="text-white"></spa>{service.targetAudience}</span>
                   </div>
                 </div>
-
                 {service.caseStudy && (
                   <div>
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
+                    <p className="text-sm text-green-300 italic">{service.caseStudy}</p>
                   </div>
                 );
 
                 <div>
                   <a
                     href={service.link}
-                    target="_blank"
+                    target="_blank">
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  ></a>
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"</a>                  ></a>
                     Get Free Consultation
                   </a>
-                  <a
+                  <a>
                     href="tel:+13024640950"
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                  ></a>
-                    <Phone className="w-4 h-4 inline mr-2" />
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"</a>                  ></a>
+                    <Phone className="w-4 h-4 inline mr-2 />"
                     Call for Quote
                   </a>
                 </div>
@@ -533,7 +518,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div>
@@ -545,18 +529,16 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
             All services include free consultations and ongoing support.
           </p>
           <div>
-            <a
+            <a>
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Phone className="w-5 h-5" />
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"</a>            ></a>
+              <Phone className="w-5 h-5 />"
               Call (302) 464-0950
             </a>
-            <a
+            <a>
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Mail className="w-5 h-5" />
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"</a>            ></a>
+              <Mail className="w-5 h-5 />"
               Get Custom IT Strategy
             </a>
           </div>
@@ -566,5 +548,4 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
 )]
     };
 export default ITConsultingPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

@@ -7,7 +7,7 @@ async function askZionGPT(prompt) {,
       method: 'POST')
       headers: {)
         'Content-Type': 'application/json'})
-        Authorization: `Bearer ${OPENAI_API_KEY}`)
+        Authorization: `Bearer ${OPENAI_API_KEY}`)`
       })
       body: JSON.stringify({model: 'gpt-3.5-turbo'),
         messages: [{ role: 'user'} content: prompt }]);
@@ -18,7 +18,7 @@ async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
         'Content-Type': 'application/json'}
         Authorizatio,
-  n: `Bearer ${OPENAI_API_KEY}`},
+  n: `Bearer ${OPENAI_API_KEY}`},`
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: 'user'} conten)
@@ -38,16 +38,16 @@ chrome.runtime.onMessage.addListener((message, sender) sendResponse) => {/* TODO
     return true}
   }
   if (message.type === 'post-job') {/* TODO: Fix JSX expression */}`
-  l: `${BASE_URL}/jobs/new` })}
+  l: `${BASE_URL}/jobs/new` })}`
   if (message.type === 'resume-search') {/* TODO: Fix JSX expression */}`
-  l: `${BASE_URL}/talent` })}
+  l: `${BASE_URL}/talent` })}`
   if (message.type === 'view-notifications') {/* TODO: Fix JSX expression */}`
-  l: `${BASE_URL}/notifications` })}
+  l: `${BASE_URL}/notifications` })}`
 });
 // const OPENAI_API_KEY = ''; // Base URL for opening Zion pages in a new tab' const BASE_URL = 'http,
   s://app.ziontechgroup.com' async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
   r: 'Model key missing' }; try {/* TODO: Fix JSX expression */}`
-  s: {' 'Content-Type': 'application/json'}' 'Authorization': `Bearer ${OPENAI_API_KEY}` }, bod,
+  s: {' 'Content-Type': 'application/json'}' 'Authorization': `Bearer ${OPENAI_API_KEY}` }, bod,`
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: 'user'} conten)
   t: prompt }] }) }); if (!res.ok) {' // // console.error removed for production

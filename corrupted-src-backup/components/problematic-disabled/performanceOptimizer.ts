@@ -129,7 +129,7 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
   }
 
   private, reportMetri, c(na, m, e: str, i, n, g, val, u, e: num, b, e, r, metada, t, a?: a, n, y): vo, i, d {/* TODO: Fix JSX expression */}
-      conso, l, e.l, o, g(`📊 Performance, Metri, c: ${n, a, m, e} = ${val, u, e}`, metada, t, a)}
+      conso, l, e.l, o, g(`📊 Performance, Metri, c: ${n, a, m, e} = ${val, u, e}`, metada, t, a)}`
 
     // Send to analytics service in production;
     if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g' in, windo, w) {
@@ -166,8 +166,8 @@ const image, s = docume, n, t.querySelectorA, l, l('im, g'); imag, e, s.forEa, c
        }
 
       // Add responsive srcset if not present;
-      if (!i, m, g['src']s, e, t && i, m, g.sr, c) {/* TODO: Fix JSX expression */}`;
-const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x'}
+      if (!i, m, g['src']s, e, t && i, m, g.sr, c) {/* TODO: Fix JSX expression */}`;`
+const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x'}`
     })}
 
   public, optimizeCS, S(): vo, i, d {
@@ -250,7 +250,7 @@ const lc, p = th, i, s.metri, c, s.loadTi, m, e; const fi, d = th, i, s.metri, c
   // Additional methods for compatibility public startRender(componentNa m e: str i n g): vo i d {,
     // This method is for compatibility with the old interface;
     // The actual tracking is handled by the performance monitoring;
-    conso, l, e.l, o, g(`Starting, render, tracking f, o, r: ${componentN, a, m, e}`)}
+    conso, l, e.l, o, g(`Starting, render, tracking f, o, r: ${componentN, a, m, e}`)}`
 
   public, endRende, r(componentNa, m, e: string): vo, i, d {
     // This method is for compatibility with the old interface;
@@ -262,10 +262,10 @@ const lc, p = th, i, s.metri, c, s.loadTi, m, e; const fi, d = th, i, s.metri, c
 
   // Additional methods for compatibility public startRender(componentNa m)
   e: str i n g): vo i d {/* TODO: Fix JSX expression */}`
-    conso, l, e.l, o, g(`Starting, render, tracking f, o, r: ${componentN, a, m, e}`)}
+    conso, l, e.l, o, g(`Starting, render, tracking f, o, r: ${componentN, a, m, e}`)}`
 
   public, endRende, r(componentNa, m, e: string): vo, i, d {/* TODO: Fix JSX expression */}`
-    conso, l, e.l, o, g(`Ending, render, tracking f, o, r: ${componentN, a, m, e}`)}
+    conso, l, e.l, o, g(`Ending, render, tracking f, o, r: ${componentN, a, m, e}`)}`
 }
 
 // Export singleton instance;

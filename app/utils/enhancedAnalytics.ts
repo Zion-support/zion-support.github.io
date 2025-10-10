@@ -195,7 +195,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   constructor() {/* TODO: Fix JSX expression */}
   }
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
-    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+    return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;`
   }
   private setupOfflineHandling(): void {/* TODO: Fix JSX expression */}
       });
@@ -314,7 +314,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       category: 'Conversion',
       action: conversionType,
       value,
-      metadata: {`}
+      metadata: {`}`
         conversionId: 'conv-${Date.now()}
   public trackConversion(conversionTyp)
   e: string, value?: number): void {/* TODO: Fix JSX expression */}',

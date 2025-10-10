@@ -32,17 +32,17 @@ function fixImportsInFile(filePath) {
   try {
     //Fix lucide-react imports;
     for (const [broken, correct] of Object.entries(iconMappings)) {
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
+      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;`
 const iconMappings = {/* TODO: Fix JSX expression */}
 };
 
 //Function to fix imports in a file;
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;`
-      //       const newImport = `lucide-react`;
+      //       const newImport = `lucide-react`;`
 
       if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'));
+          new RegExp(`import ${correct} from '${oldImport}';`, 'g'));`
         modified = true}
     }
 

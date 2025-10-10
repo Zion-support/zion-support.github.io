@@ -41,11 +41,11 @@ execGitCommand('git status --porcelain', 'Checking git status');
     // console.log removed for production
 try {
       // Check if branch exists;
-      const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
+      const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);`
       
       if (branchExists !== null) {
         // Try to merge;
-        const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
+        const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);`
         
         if (mergeResult) {
           // console.log removed for production

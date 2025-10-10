@@ -9,13 +9,13 @@ const missingPages = analysisData.missingPagesList;
 // Generate import statements for missing pages;
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `const ${componentName} = lazy(() => import('.${route}/page'));`;
+  return `const ${componentName} = lazy(() => import('.${route}/page'));`;`
 };
 
 // Generate route statements;
 const generateRouteStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />} />`;
+  return `            <Route path="${route}" element={<${componentName} />} />`;"`
 };
 
 // Generate all import statements;

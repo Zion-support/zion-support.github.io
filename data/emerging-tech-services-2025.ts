@@ -82,9 +82,9 @@ export const emergingTechServices2025: EmergingTechService2025[] = [,
     tagline: "Create immersive virtual experiences", price: '$249/month',
     description: 'Advanced metaverse development platform for building virtual worlds and experiences.',
     features: [;
-      "3 D world building"
-      "Avatar customization"
-      "Virtual commerce"
+      "3 D world building
+      "Avatar customization
+      "Virtual commerce
       "Social interactions",
       "Cross-platform support"],
     link: "/services/metaverse-platform", category: "Emerging Tech 2025",
@@ -99,7 +99,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -127,45 +127,45 @@ export const emergingTechServices2025: EmergingTechService2025[] = [,
 }
 export const,
   emergingTechServices2025: EmergingTechService2025[] = [,
-    i,"
-  d: "metaverse-platform", nam,"
+    i,
+  d: "metaverse-platform", nam,
   e: "Metaverse Development Platform",
-    taglin,"
-  e: "Create immersive virtual experiences", pric,"
+    taglin,
+  e: "Create immersive virtual experiences", pric,
   e: "$249/month",
-    descriptio,"
+    descriptio,
   n: "Advanced metaverse development platform for building virtual worlds and experiences.",
     feature,
-  s: [;"
-      "3D world building""
-      "Avatar customization""
-      "Virtual commerce""
-      "Social interactions""
-      "Cross-platform support"
+  s: [;
+      "3D world building"
+      "Avatar customization"
+      "Virtual commerce"
+      "Social interactions"
+      "Cross-platform support
     ],
-    lin,"
-  k: "/services/metaverse-platform", categor,"
+    lin,
+  k: "/services/metaverse-platform", categor,
   y: "Emerging Tech 2025",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -180,7 +180,7 @@ export const,
       "Avatar customization",
       "Virtual commerce",
       "Social interactions",
-      "Cross-platform support"
+      "Cross-platform support
     ],
     link: '/services/metaverse-platform',
     category: 'Emerging Tech 2025',
@@ -196,35 +196,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "metaverse-platform",
-    nam,"
+    nam,
   e: "Metaverse Development Platform",
-    taglin,"
+    taglin,
   e: "Create immersive virtual experiences",
-    pric,"
+    pric,
   e: "$249/month",
-    descriptio,"
+    descriptio,
   n: "Advanced metaverse development platform for building virtual worlds and experiences.",
     feature,
-  s: [,"
-      "3D world building","
-      "Avatar customization","
-      "Virtual commerce","
-      "Social interactions","
-      "Cross-platform support"
+  s: [,
+      "3D world building",
+      "Avatar customization",
+      "Virtual commerce",
+      "Social interactions",
+      "Cross-platform support
     ],
-    lin,"
+    lin,
   k: "/services/metaverse-platform",
-    categor,"
+    categor,
   y: "Emerging Tech 2025",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -232,16 +232,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -270,7 +270,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} } } addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -285,42 +285,42 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  emergingTechServices2025: EmergingTechService2025[] = [ i,"
-  d: "metaverse-platform", nam,"
-  e: "Metaverse Development Platform", taglin,"
-  e: "Create immersive virtual experiences", pric,"
-  e: "$249/month", descriptio,"
-  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature,"
-  s: [ "3D world building" "Avatar customization" "Virtual commerce" "Social interactions" "Cross-platform support" ], lin,"
-  k: "/services/metaverse-platform", categor,"
+  emergingTechServices2025: EmergingTechService2025[] = [ i,
+  d: "metaverse-platform", nam,
+  e: "Metaverse Development Platform", taglin,
+  e: "Create immersive virtual experiences", pric,
+  e: "$249/month", descriptio,
+  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature,
+  s: [ "3D world building" "Avatar customization" "Virtual commerce" "Social interactions" "Cross-platform support" ], lin,
+  k: "/services/metaverse-platform", categor,
   y: "Emerging Tech 2025", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "metaverse-platform", nam,"
-  e: "Metaverse Development Platform", taglin,"
-  e: "Create immersive virtual experiences", pric,"
-  e: "$249/month", descriptio,"
-  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature,"
-  s: [ "3D world building", "Avatar customization", "Virtual commerce", "Social interactions", "Cross-platform support" ], lin,"
-  k: "/services/metaverse-platform", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "metaverse-platform", nam,
+  e: "Metaverse Development Platform", taglin,
+  e: "Create immersive virtual experiences", pric,
+  e: "$249/month", descriptio,
+  n: "Advanced metaverse development platform for building virtual worlds and experiences.", feature,
+  s: [ "3D world building", "Avatar customization", "Virtual commerce", "Social interactions", "Cross-platform support" ], lin,
+  k: "/services/metaverse-platform", categor,
   y: "Emerging Tech 2025", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

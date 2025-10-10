@@ -138,7 +138,7 @@ const resourceEntry = entry as PerformanceResourceTiming;
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,
+        message: `Unhandled Promise Rejection: ${event.reason}`,`
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -187,8 +187,8 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
 const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
         // // console.log removed for production
-}MB`,
-        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
+}MB`,`
+        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,`
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
       }
@@ -200,12 +200,12 @@ const memory = (performance as Performance & { memory?: { usedJSHeapSize: number
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         // // console.log removed for production
-}ms`,
-        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
+}ms`,`
+        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,`
+        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,`
+        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,`
+        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,`
+        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,`
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         // })
       }

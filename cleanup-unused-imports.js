@@ -14,12 +14,12 @@ const content = fs.readFileSync(filePath, 'utf8');
     
     // Run ESLint with --fix to remove unused imports;
     try {
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' });
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' });`
       // console.log removed for production
 } catch (error) {
       // If ESLint fails, try a simpler approach;
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})
+      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})`
   o: 'pipe' });`
       // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
@@ -87,7 +87,7 @@ const files = findFiles(srcDir);
 ;
 let processed = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  s: ${processed}/${files.length} files processed`)}
+  s: ${processed}/${files.length} files processed`)}`
 }
 `
 // console.log removed for production

@@ -42,7 +42,7 @@ openGraphPages.forEach(pagePath => {)
 
     // Fix authors format to match Author type;
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
-      "authors: [{ name: 'Zion Tech Group' }]"
+      "authors: [{ name: 'Zion Tech Group' }]
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' }]")
     );
@@ -69,7 +69,7 @@ if (fs.existsSync(seoOptimizerPath)) {
 
   // Update the interface to include all missing props;
   content = content.replace(/interface AdvancedSEOOptimizerProps \{[^}]*\}/)
-    `interface AdvancedSEOOptimizerProps {
+    `interface AdvancedSEOOptimizerProps {`
   config?: {
     title: string;
     description: string;
@@ -79,7 +79,7 @@ if (fs.existsSync(seoOptimizerPath)) {
     structuredData?: unknown;,
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
+    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}`
   };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
@@ -111,7 +111,7 @@ declare global {/* TODO: Fix JSX expression */}
   }
 }
 `
-${content}`;
+${content}`;`
 
   fs.writeFileSync(analyticsTrackerPath, content);
   //     }
@@ -147,18 +147,18 @@ if (fs.existsSync(performancePath)) {
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;
-  content = `declare global {
+  content = `declare global {`
   interface Window {
     gtag: (...args: unknown[]) => void;
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;`
-  content = `declare global {/* TODO: Fix JSX expression */}
+  content = `declare global {/* TODO: Fix JSX expression */}`
   }
 }
 `
-${content}`;
+${content}`;`
 
   fs.writeFileSync(performancePath, content);
   //     }

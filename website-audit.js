@@ -161,7 +161,7 @@ for (let i = 0; i < routes.length; i++) {;
 const route = routes[i];
     const fullUrl = baseUrl + route;
     
-    process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... `);
+    process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... `);`
     ;
 const result = await checkUrl(fullUrl);
     
@@ -191,15 +191,15 @@ const result = await checkUrl(fullUrl);
   // console.log removed for production
 results.working.forEach(item => {)
     // console.log removed for production
-`)});
+`)});`
 
   // console.log removed for production
 results.broken.forEach(item => {)
     // console.log removed for production
-`)});
+`)});`
 
   // console.log removed for production
-: ${results.missing.length}`);
+: ${results.missing.length}`);`
   results.missing.forEach(item => {)
     // console.log removed for production
 });
@@ -226,7 +226,7 @@ const route = item.url.replace(baseUrl, '');
     // console.log removed for production
 results.broken.forEach(item => {),
       // console.log removed for production
-`)})}
+`)})}`
 
   if (results.errors.length > 0) {
     // console.log removed for production

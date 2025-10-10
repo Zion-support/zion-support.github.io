@@ -193,8 +193,7 @@ const getTypeColor = (type: string) => {
   return (
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
       {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
       
@@ -202,23 +201,21 @@ const getTypeColor = (type: string) => {
       <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
         {/* Header */}
         <div className="flex items-center p-4 border-b border-cyan-400/20">
-          <Search className="w-5 h-5 text-cyan-400 mr-3" />
+          <Search className="w-5 h-5 text-cyan-400 mr-3 />"
           <input
             ref={inputRef}
             type="text"
             placeholder="Search services, pages, documentation..."
             value={query}
             onChange={handleInputChange}
-            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
-          />
+            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg />"
           <button
             onClick={onClose}
             className="p-2 text-gray-400 hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 />"
           </button>
         </div>
-
         {/* Content */}
         <div className="max-h-96 overflow-y-auto">
           {showSuggestions && !query && (
@@ -226,7 +223,7 @@ const getTypeColor = (type: string) => {
               {/* Recent Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />
+                  <Clock className="w-4 h-4 mr-2 />"
                   Recent Searches
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -241,11 +238,10 @@ const getTypeColor = (type: string) => {
                   ))}
                 </div>
               </div>
-
               {/* Popular Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-2" />
+                  <TrendingUp className="w-4 h-4 mr-2 />"
                   Popular Searches
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -276,18 +272,18 @@ const getTypeColor = (type: string) => {
                     <button
                       key={result.id}
                       onClick={() => handleResultClick(result)}
-                      className={`w-full text-left p-3 rounded-lg transition-colors ${
+                      className={`w-full text-left p-3 rounded-lg transition-colors ${`
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
                           : 'hover:bg-slate-800/50 text-gray-300'
-                      }`}
+                      }`}`
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-1">
                             <span className="text-lg">{getCategoryIcon(result.category)}</span>
                             <h3 className="font-medium">{result.title}</h3>
-                            <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}>
+                            <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}>`
                               {result.type}
                             </span>
                           </div>
@@ -296,7 +292,7 @@ const getTypeColor = (type: string) => {
                             <span>{result.category}</span>
                             {result.popularity && (
                               <div className="flex items-center space-x-1">
-                                <Star className="w-3 h-3" />
+                                <Star className="w-3 h-3 />"
                                 <span>{result.popularity}%</span>
                               </div>
                             )}
@@ -305,14 +301,14 @@ const getTypeColor = (type: string) => {
                             )}
                           </div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 />"
                       </div>
                     </button>
                   ))}
                 </div>
               ) : (
                 <div className="text-center py-8">
-                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4 />"
                   <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3>
                   <p className="text-sm text-gray-500">
                     Try searching for something else or check your spelling

@@ -293,8 +293,7 @@ const stats = [
       <SEOOptimizer 
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."
-        keywords="micro SAAS, AI tools, business applications, productivity software, marketing automation, analytics dashboard"
-      />
+        keywords="micro SAAS, AI tools, business applications, productivity software, marketing automation, analytics dashboard />"
       <Navigation />
       
       {/* Hero Section */}
@@ -312,7 +311,7 @@ const stats = [
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-5 w-5 mr-2 />"
                 Call (302) 464-0950
               </a>
               <Link
@@ -325,7 +324,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -343,7 +341,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -359,13 +356,12 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSaasServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>`
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -374,7 +370,7 @@ const stats = [
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <service.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <service.icon className="h-8 w-8 text-purple-400 mr-3 />"
                   <div>
                     <h3 className="text-lg font-semibold text-white">{service.title}</h3>
                     <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span>
@@ -384,7 +380,7 @@ const stats = [
                 <ul className="space-y-1 mb-4">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                      <CheckCircle className="h-3 w-3 text-green-500 mr-2 />"
                       {feature}
                     </li>
                   ))}
@@ -411,7 +407,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -427,7 +422,7 @@ const stats = [
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-purple-400" />
+                  <benefit.icon className="h-8 w-8 text-purple-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
@@ -436,7 +431,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -454,19 +448,19 @@ const stats = [
               <div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   5 Micro SAAS Apps
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Basic Support
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Standard Features
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Email Support
                 </li>
               </ul>
@@ -487,23 +481,23 @@ const stats = [
               <div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   15 Micro SAAS Apps
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Priority Support
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Advanced Features
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Phone & Email Support
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   API Access
                 </li>
               </ul>
@@ -519,23 +513,23 @@ const stats = [
               <div className="text-4xl font-bold text-cyan-400 mb-4">$99<span className="text-lg text-gray-400">/month</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   All 50+ Apps
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   24/7 Premium Support
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Custom Features
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   Dedicated Manager
                 </li>
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 />"
                   White-label Options
                 </li>
               </ul>
@@ -549,7 +543,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -565,7 +558,7 @@ const stats = [
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-5 w-5 mr-2 />"
                 Call (302) 464-0950
               </a>
               <Link
@@ -578,7 +571,6 @@ const stats = [
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )}

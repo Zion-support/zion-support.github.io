@@ -40,7 +40,7 @@ function fixJSXSyntax(filePath) {
     /
     content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
       if (!inner.includes('<') && !inner.includes('return') && inner.trim()) {
-        return `return (\n    <div>\n      {${inner.trim()}}\n    <
+        return `return (\n    <div>\n      {${inner.trim()}}\n    <`
       }
       return match;
     });
@@ -62,7 +62,7 @@ function fixJSXSyntax(filePath) {
     /
     content = content.replace(/(\w+):\s*([^,}]+)(?=[,}])
       if (value.includes('(') && !value.includes(')')) {
-        return `${key}: ${value})`;
+        return `${key}: ${value})`;`
       }
       return match;
     });
@@ -79,7 +79,7 @@ function fixJSXSyntax(filePath) {
     /)
     content = content.replace(/\(\s*([^)]*)\s*$
       if (inner && !inner.includes('(') && !inner.includes(')') && inner.trim()) {
-        return `(${inner.trim()})`;
+        return `(${inner.trim()})`;`
       }
       return match;
     });
@@ -97,13 +97,13 @@ function fixJSXSyntax(filePath) {
     content = content.replace(/\n\s*\n\s*\n)
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed JSX syntax in: ${filePath}`);
+      console.log(`Fixed JSX syntax in: ${filePath}`);`
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
     return false;
   }
 }
@@ -134,7 +134,7 @@ function findProblematicFiles(dir) {
 const workspaceDir = process.argv[2] || '
 const allFiles = findProblematicFiles(workspaceDir);
 
-console.log(`Processing ${allFiles.length} files for JSX syntax fixes`);
+console.log(`Processing ${allFiles.length} files for JSX syntax fixes`);`
 
 let fixedCount = 0;
 allFiles.forEach(file => {)

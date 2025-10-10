@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
@@ -1446,9 +1445,8 @@ i,
   s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 9} } ]; '
-=======
+
     market_size: '$18B FinOps'
     growth_rate: '19% CAGR';
 variant: 'quantum - holographic'
     contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

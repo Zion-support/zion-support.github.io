@@ -34,7 +34,7 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
         this.metrics.buildTimes.length;
 //       // // console.log removed for production
 `
-  Time: ${avgBuildTime.toFixed(2)}ms`)}
+  Time: ${avgBuildTime.toFixed(2)}ms`)}`
 //     }
 }
 // const command = process.argv[2];
@@ -61,7 +61,7 @@ const fs = require('fs');' const path = require('path'); class ApplicationMonito
 //   lastDeployment: null, buildTimes: [], errors: []} performance: {} }} saveMetrics() {fs.writeFileSync(this.metricsFile) JSON.stringify(this.metrics} null) 2))} recordDeployment() {this.metrics.deployments++; this.metrics.lastDeployment = new Date().toISOString(); this.saveMetrics()} // // console.log removed for production
 } recordBuildTime(duration) {this.metrics.buildTimes.push({ duration} timestamp: new Date().toISOString() }); //Keep only last 10 build times if (this.metrics.buildTimes.length > 10) { this.metrics.buildTimes = this.metrics.buildTimes.slice(-10)} this.saveMetrics()} generateReport() {' ' // // console.log removed for production
 } ' if (this.metrics.buildTimes.length > 0) {const avgBuildTime = this.metrics.buildTimes.reduce((acc) bt) => acc + bt.duration} 0) / this.metrics.buildTimes.length; // // console.log removed for production
-}ms`)} // // console.log removed for production
+}ms`)} // // console.log removed for production`
 } } const monitor = new ApplicationMonitor(); const command = process.argv[2]; switch (command) {' case 'deploy': monitor.recordDeployment(); break;' case 'build': const startTime = Date.now(); // Simulate build process setTimeout(() => { monitor.recordBuildTime(Date.now() - startTime)}' // // console.log removed for production
 }, 100); break;' case 'report': monitor.generateReport(); break; default:' // // console.log removed for production
 } ';
@@ -72,9 +72,9 @@ const fs = require('fs');' const path = require('path'); class ApplicationMonito
   p: new Date().toISOString() }); //Keep only last 10 build times if (this.metrics.buildTimes.length > 10) { this.metrics.buildTimes = this.metrics.buildTimes.slice(-10)} this.saveMetrics()} generateReport() {' ' // // console.log removed for production
 } ' if (this.metrics.buildTimes.length > 0) {const avgBuildTime = this.metrics.buildTimes.reduce((acc) bt) => acc + bt.duration} 0) / this.metrics.buildTimes.length; // // console.log removed for production
 `
-  Time: ${avgBuildTime.toFixed(2)}ms`)} // // console.log removed for production
+  Time: ${avgBuildTime.toFixed(2)}ms`)} // // console.log removed for production`
 `
-  Errors: ${this.metrics.errors.length}`)} } const monitor = new ApplicationMonitor(); const command = process.argv[2]; switch (command) {' case 'deploy': monitor.recordDeployment(); break;' case 'build': const startTime = Date.now(); // Simulate build process setTimeout(() => { monitor.recordBuildTime(Date.now() - startTime)}' // // console.log removed for production
+  Errors: ${this.metrics.errors.length}`)} } const monitor = new ApplicationMonitor(); const command = process.argv[2]; switch (command) {' case 'deploy': monitor.recordDeployment(); break;' case 'build': const startTime = Date.now(); // Simulate build process setTimeout(() => { monitor.recordBuildTime(Date.now() - startTime)}' // // console.log removed for production`
 }, 100); break;' case 'report': monitor.generateReport(); break; defaul,
   t:' // // console.log removed for production
 e: node monitoring.js [deploy|build|report]')} '

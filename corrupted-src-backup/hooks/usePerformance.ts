@@ -30,7 +30,6 @@ export const usePerformance = (option)
   } = options;
 ;
 const _mountTimeRef = useRef<number>(0);</number>const</number> _renderStartTimeRef = useRef<number>(0);</number>
-
   // Track component mount time;
   useEffect(() => {
     mountTimeRef.current = performance.now();
@@ -38,7 +37,7 @@ const _mountTimeRef = useRef<number>(0);</number>const</number> _renderStartTime
     return () => {
       //       const mountDuration = performance.now() - mountTimeRef.current;
   useEffect(() => {/* TODO: Fix JSX expression */}
-      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration)}}, [componentName]);
+      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration)}}, [componentName]);`
 
   // Track render performance;
   const trackRender = useCallback(() => {
@@ -74,7 +73,7 @@ const _memory = (performance as any).memory;
       }
 
       // Send to analytics;`
-      analytics.trackPerformance(`${componentName}_render_time`, renderTime);
+      analytics.trackPerformance(`${componentName}_render_time`, renderTime);`
 
       if (isSlowRender) {/* TODO: Fix JSX expression */}
       }
@@ -115,7 +114,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
 
           // Track each metric;
           Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
-            analytics.trackPerformance(`page_load_${key}`, value)});
+            analytics.trackPerformance(`page_load_${key}`, value)});`
 
           // Track overall page load performance;
           analytics.track('page_load_complete')
@@ -154,7 +153,7 @@ const observer = new PerformanceObserver(list => {)
 const _resourceEntry = entry as PerformanceResourceTiming;
           analytics.trackPerformance(
 export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`
-            `resource_${resourceEntry.name.split('.').pop()}`,
+            `resource_${resourceEntry.name.split('.').pop()}`,`
             resourceEntry.duration,
             'ms'
           )}

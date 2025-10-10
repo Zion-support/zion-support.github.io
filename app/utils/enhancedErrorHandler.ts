@@ -196,7 +196,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           }
           this.handleError({)
             type: 'resource'})
-            message: `Failed to load resource: ${target?.src || target?.href}`)
+            message: `Failed to load resource: ${target?.src || target?.href}`)`
             element: event.target?.constructor.name),
             src: target?.src || target?.href;
   private setupResourceErrorHandler(): void {}
@@ -210,7 +210,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           }
           this.handleError({)}
             type: 'resource'}
-            message: `Failed to load resource: ${target?.src || target?.href}`,
+            message: `Failed to load resource: ${target?.src || target?.href}`,`
             element: event.target?.constructor.name,
             src: target?.src || target?.href
           })
@@ -221,7 +221,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
           };
           this.handleError({/* TODO: Fix JSX expression */}
-  resource: ${target?.src || target?.href}`,
+  resource: ${target?.src || target?.href}`,`
             elemen,
   t: event.target?.constructor.name,
             sr,
@@ -243,8 +243,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         const response = await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
-            type: 'network',`})
-            message: `Network request failed: ${response.status} ${response.statusText}`)
+            type: 'network',`})`
+            message: `Network request failed: ${response.status} ${response.statusText}`)`
             url: args[0] as string),
             status: response.status),
             statusText: response.statusText;
@@ -253,8 +253,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         return response;
       } catch (error) {
         this.handleError({)
-          type: 'network',`})
-          message: `Network request failed: ${error}`)
+          type: 'network',`})`
+          message: `Network request failed: ${error}`)`
           url: args[0] as string),
           error: error instanceof Error ? error : new Error(String(error)),
   private setupNetworkErrorHandler(): void {}
@@ -265,8 +265,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         const response = await originalFetch(...args)
         if (!response.ok) {}
           this.handleError({)}
-            type: 'network',`}
-            message: `Network request failed: ${response.status} ${response.statusText}`,
+            type: 'network',`}`
+            message: `Network request failed: ${response.status} ${response.statusText}`,`
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText
@@ -275,13 +275,13 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         return response
       } catch (error) {}
         this.handleError({)}
-          type: 'network',`}
-          message: `Network request failed: ${error}`,
+          type: 'network',`}`
+          message: `Network request failed: ${error}`,`
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
         })
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
-  failed: ${response.status} ${response.statusText}`,
+  failed: ${response.status} ${response.statusText}`,`
             ur,
   l: args[0] as string,
             statu,
@@ -292,7 +292,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         }
         return response;
       } catch (error) {/* TODO: Fix JSX expression */}`
-  failed: ${error}`,
+  failed: ${error}`,`
           ur,
   l: args[0] as string,
           erro,
@@ -315,7 +315,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             if (entry.duration > 100) {
               // Tasks longer than 100ms;
               this.handleError({)
-                type: 'custom',`})
+                type: 'custom',`})`
   private setupPerformanceErrorHandler(): void {}
     if (!this.config.enablePerformanceImpact) return
     // Monitor long tasks that might indicate performance issues
@@ -326,8 +326,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             if (entry.duration > 100) {}
               // Tasks longer than 100ms
               this.handleError({)}
-                type: 'custom',`}
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                type: 'custom',`}`
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,`
                 duration: entry.duration;
                 category: 'performance'})
             }
@@ -336,7 +336,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         observer.observe({ type: 'longtask', buffered: true })
       } catch (error) {}
   private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`
-  detected: ${entry.duration.toFixed(2)}ms`,
+  detected: ${entry.duration.toFixed(2)}ms`,`
                 duratio,
   n: entry.duration,
                 categor,
@@ -699,21 +699,21 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**
    * Generate unique error ID;
    */
-  private generateErrorId(): string {`}
+  private generateErrorId(): string {`}`
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   private generateErrorId(): string {/* TODO: Fix JSX expression */}`
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
   }
   /**
    * Get session ID;
    */
   private getSessionId(): string {}
     let sessionId = sessionStorage.getItem('error_session_id')
-    if (!sessionId) {`}
+    if (!sessionId) {`}`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('error_session_id', sessionId)
   private getSessionId(): string {/* TODO: Fix JSX expression */}`
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
       sessionStorage.setItem('error_session_id', sessionId);
     }
     return sessionId;
@@ -752,7 +752,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**
    * Update error counters;
    */
-  private updateErrorCounts(errorReport: ErrorReport): void {`}
+  private updateErrorCounts(errorReport: ErrorReport): void {`}`
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
     this.errorCategories.set(errorReport.category)
       (this.errorCategories.get(errorReport.category) || 0) + 1;
@@ -762,7 +762,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     )
   private updateErrorCounts(errorRepor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
-    const key = `${errorReport.type}_${errorReport.category}`;
+    const key = `${errorReport.type}_${errorReport.category}`;`
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category)
       (this.errorCategories.get(errorReport.category) || 0) + 1;
@@ -773,12 +773,12 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private logError(errorReport: ErrorReport): void {,
   private logError(errorReport: ErrorReport): void {}
-    const emoji = this.getSeverityEmoji(errorReport.severity);`}
+    const emoji = this.getSeverityEmoji(errorReport.severity);`}`
 
     if (errorReport.stack) {}
   private logError(errorRepor)
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
-  Report: ${errorReport.id}`);
+  Report: ${errorReport.id}`);`
     if (errorReport.stack) {/* TODO: Fix JSX expression */}
       }
 
@@ -817,7 +817,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       await fetch(this.config.remoteEndpoint, {)}
         method: 'POST',
         headers: {}
-          'Content-Type': 'application/json',`}
+          'Content-Type': 'application/json',`}`
           Authorization: 'Bearer ${this.config.apiKey}
         })
         body: JSON.stringify(errorReport)})

@@ -84,25 +84,22 @@ const stats = [
     { icon: Globe, number: '25+', label: 'Countries Served' }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <SEOOptimizer
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations."
-        keywords={['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}
-        canonicalUrl="https://ziontechgroup.com/news"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        keywords={['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}>
+        canonicalUrl="https://ziontechgroup.com/news /></SEOOptimizer>      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
+
   return (<>
 
           {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               News & Updates
@@ -145,7 +142,6 @@ const stats = [
                         <span className="text-gray-400 text-sm">{article.readTime}<
                       <
                       <div className="flex items-center text-gray-400 text-sm">
-                        
                     {article.title}
                   <
                   <p className="text-gray-300 mb-6 leading-relaxed">
@@ -157,7 +153,7 @@ const stats = [
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Latest Updates
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-3 gap-6">
               {newsArticles.map((article) => (<article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -170,7 +166,6 @@ const stats = [
                         <span className="text-gray-400 text-xs">{article.readTime}<
                       <
                       <div className="flex items-center text-gray-400 text-xs">
-                        
                     {article.title}
                   <
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -190,11 +185,9 @@ const stats = [
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focu,
-    s:outline-none"
-                
-                <button className="cyber-button px-8 py-3 font-semibold">
-
+                  className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focu,">
+    s:outline-none
+                </input>                <button className="cyber-button px-8 py-3 font-semibold">
                 <
               <
               <p className="text-gray-400 text-sm mt-4">
@@ -204,17 +197,14 @@ const stats = [
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
+
         <Footer 
       <
     <
-  );
+  );>
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-export default NewsPage;
+</Footer>export default NewsPage;

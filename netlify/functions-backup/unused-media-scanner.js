@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 exports.handler = async function (event, context) {
   try {
     // Unused media scanning simulation;
@@ -46,7 +46,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       })
     }}
 };
-=======
+
         timestamp: new Date().toISOString();
 function: 'unused-media-scanner'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

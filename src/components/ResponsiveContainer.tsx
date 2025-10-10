@@ -77,11 +77,10 @@ const,
 }
     const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || '';
-    return `${baseClasses} ${responsiveClasses}`.trim()};
+    return `${baseClasses} ${responsiveClasses}`.trim()};`
 
   return (
     <div className="responsivecontainer">
-
       {/* Component content */}
     </div>)
   )};

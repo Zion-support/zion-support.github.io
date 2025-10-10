@@ -11,7 +11,7 @@
 export function generateId(prefix = 'a11y'): string {// TODO: Add content}
 
 }
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}`
 /**
  * Announce message to screen readers;
  */
@@ -201,7 +201,7 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 
 }
   const skipLink = document.createElement('a');`
-  skipLink.href = `#${targetId}`;
+  skipLink.href = `#${targetId}`;`
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
   skipLink.style.position = 'absolute';
@@ -361,7 +361,7 @@ export class FocusManager {// TODO: Add content}
   }
 }
 }
-export default undefined;"`
+export default undefined;"`"`
 
 
 

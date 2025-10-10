@@ -33,10 +33,10 @@ const quoteCount = (line.match(/'/g) || []).length;
       }
       
       // Fix unterminated template literals;
-      if (line.includes('`') && !line.match(/`[^`]*`/)) {;
-const backtickCount = (line.match(/`/g) || []).length;
+      if (line.includes('`') && !line.match(/`[^`]*`/)) {;`
+const backtickCount = (line.match(/`/g) || []).length;`
         if (backtickCount % 2 === 1) {
-          line = line + '`';
+          line = line + '`';`
           modified = true}
       }
       
@@ -106,12 +106,12 @@ const backtickCount = (line.match(/`/g) || []).length;
     
     // Fix empty files;
     if (content.trim().length === 0) {
-      content = `export default function Page() {
+      content = `export default function Page() {`
   return(<div>)
       <h1>Page</h1>)
       <p>Content coming soon...</p>)
     </div>)
-  )}`;
+  )}`;`
       modified = true}
     
     // Ensure file ends with newline;

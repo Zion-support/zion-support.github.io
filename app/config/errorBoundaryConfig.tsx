@@ -1,12 +1,10 @@
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;)
 };);
-<<<<<<< HEAD
-=======
+
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>]
     }]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Default error messages
  */;
@@ -44,19 +42,15 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
     <div>
       <div>
         <div>
-          <svg
-            className="w-6 h-6 text-red-600"
-            fill="none"
+          <svg className="w-6 h-6 text-red-600"
+            fill="none">
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          ></svg>
+            viewBox="0 0 24 24"</svg>          ></svg>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+              strokeWidth={2}>
+              d="M6 18L18 6M6 6l12 12 /></path>          </svg>"
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900"></h2>
           Oops! Something went wrong
@@ -69,9 +63,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         );
         <div>
           <button
-            onClick={resetError}
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          ></button>
+                onClick={resetError}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              ></button>
             Try Again
           </button>
           <button
@@ -93,19 +87,15 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
     <div>
       <div>
         <div>
-          <svg
-            className="w-6 h-6 text-yellow-600"
-            fill="none"
+          <svg className="w-6 h-6 text-yellow-600"
+            fill="none">
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          ></svg>
+            viewBox="0 0 24 24"</svg>          ></svg>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
-            />
-          </svg>
+              strokeWidth={2}>
+              d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414 /></path>          </svg>"
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900"></h>Connection Issue</h2>
         <p className="mt-2 text-center text-gray-600"></p>
@@ -113,9 +103,9 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </p>
         <div>
           <button
-            onClick={resetError}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          ></button>
+                onClick={resetError}
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              ></button>
             Retry Connection
           </button>
         </div>
@@ -185,16 +175,14 @@ export function formatErrorForLogging(error: Error): Record<string, unknown></st
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-<<<<<<< HEAD
+
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',;)
 };)
-=======
+
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',]
     }]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default getErrorBoundaryConfig;
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

@@ -24,7 +24,7 @@ let mergedCount = 0;
     try {
       // console.log removed for production
 // Check if branch has unique commits;
-      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });
+      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' });`
       
       if (!uniqueCommits.trim()) {
         // console.log removed for production
@@ -37,7 +37,7 @@ skippedCount++;
 
       // Try to merge the branch;
       // console.log removed for production
-execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' });
+execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' });`
       
       // console.log removed for production
 mergedCount++} catch (error) {

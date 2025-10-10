@@ -34,10 +34,8 @@ import {
   ChevronRight,
   Phone,
   Mail,
-<<<<<<< HEAD
+
   MapPin
-=======
-<<<<<<< HEAD
 
 } from 'lucide-react';
 
@@ -57,9 +55,8 @@ const AboutPage: React.FC = () => {
                 About Zion Tech Group
               <
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
   MapPin;)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 } from 'lucide-react';
 ;
 const AboutPage: React.FC = () => {
@@ -67,10 +64,9 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
-        <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation. />"
+        <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation />"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
@@ -79,21 +75,16 @@ const AboutPage: React.FC = () => {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About Zion Tech Group
               </h1>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               <
             <
           <
         <
 
-<<<<<<< HEAD
         {/* Mission Section *
-<section className="py-20 bg-slate-800
+<section className="py-20 bg-slate-800"
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -108,7 +99,6 @@ const AboutPage: React.FC = () => {
                   sustainable growth.
                 <
                 <div className="flex flex-col sm: flex-row gap-4">
-=======
         {/* Mission Section */}
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
@@ -124,34 +114,27 @@ const AboutPage: React.FC = () => {
                   that can transform their operations, enhance their capabilities, and drive 
                   sustainable growth.
                 </p>
-<<<<<<< HEAD
                 <div className="flex flex-col sm:flex-row gap-4">
-=======
                 <div className="flex flex-col sm:flex-row gap-4"></div>
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   <a
-                    href="
+                    href=
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-<<<<<<< HEAD
+>
                   >
-=======
-<<<<<<< HEAD
-                  >
+</a>                  >
                     <MessageCircle className="w-5 h-5" 
                     <span>Get in Touch<
                   <
                   <a
-                    href="
-                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white
-                  >
-                    <Settings className="w-5 h-5" 
+                    href=">"
+                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white"
+                  ></a>                    <Settings className="w-5 h-5" 
                     <span>Our Services<
                   <
                 <
               <
               <div className="relative">
-                <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white
+                <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white"
                   <div className="space-y-6">
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-red-500 rounded-full"><
@@ -167,17 +150,15 @@ const AboutPage: React.FC = () => {
                       <div className="text-2xl font-bold">AI Dashboard<
                       <div className="text-sm text-gray-300">Real-time Analytics<
                     <
-=======
+
                   ></a>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                    <MessageCircle className="w-5 h-5" />
+                    <MessageCircle className="w-5 h-5 />"
                     <span>Get in Touch</span>
                   </a>
                   <a
-                    href="/services"
+                    href="/services">
                     className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <Settings className="w-5 h-5" />
+                  ></a>                    <Settings className="w-5 h-5 />"
                     <span>Our Services</span>
                   </a>
                 </div>
@@ -187,53 +168,47 @@ const AboutPage: React.FC = () => {
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
                       <div className="bg-cyan-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <Users className="w-8 h-8 text-cyan-400" />
+                        <Users className="w-8 h-8 text-cyan-400 />"
                       </div>
                       <h3 className="text-white font-semibold mb-2">Expert Team</h3>
                       <p className="text-gray-300 text-sm">50+ professionals</p>
                     </div>
                     <div className="text-center">
                       <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <Award className="w-8 h-8 text-purple-400" />
+                        <Award className="w-8 h-8 text-purple-400 />"
                       </div>
                       <h3 className="text-white font-semibold mb-2">Years Experience</h3>
                       <p className="text-gray-300 text-sm">10+ years</p>
                     </div>
                     <div className="text-center">
                       <div className="bg-green-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <Target className="w-8 h-8 text-green-400" />
+                        <Target className="w-8 h-8 text-green-400 />"
                       </div>
                       <h3 className="text-white font-semibold mb-2">Projects Completed</h3>
                       <p className="text-gray-300 text-sm">500+ projects</p>
                     </div>
                     <div className="text-center">
                       <div className="bg-orange-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <Globe className="w-8 h-8 text-orange-400" />
+                        <Globe className="w-8 h-8 text-orange-400 />"
                       </div>
                       <h3 className="text-white font-semibold mb-2">Global Reach</h3>
                       <p className="text-gray-300 text-sm">25+ countries</p>
                     </div>
-<<<<<<< HEAD
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-=======
->>>>>>> main
-
                   <
                 <
               <
             <
           <
 <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
-<<<<<<< HEAD
         {/* Values Section *
-        <section className="py-16 px-4 bg-slate-800
+        <section className="py-16 px-4 bg-slate-800"
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Values<
@@ -276,17 +251,16 @@ const AboutPage: React.FC = () => {
               <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Started
               <
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hove,
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hove,">
     r:text-cyan-600 transition-colors">
-                Contact Us
-              <
+                Contact Us</button>              <
             <
           <
         <
       <
     <)
 );
-=======
+
         {/* Values Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -299,7 +273,7 @@ const AboutPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-cyan-400" />
+                  <Shield className="w-6 h-6 text-cyan-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Innovation</h3>
                 <p className="text-gray-300">
@@ -308,7 +282,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <Heart className="w-6 h-6 text-purple-400" />
+                  <Heart className="w-6 h-6 text-purple-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Integrity</h3>
                 <p className="text-gray-300">
@@ -317,7 +291,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-green-500/50 transition-all duration-300">
                 <div className="bg-green-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-green-400" />
+                  <Zap className="w-6 h-6 text-green-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Excellence</h3>
                 <p className="text-gray-300">
@@ -326,7 +300,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-300">
                 <div className="bg-orange-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-orange-400" />
+                  <Users className="w-6 h-6 text-orange-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Collaboration</h3>
                 <p className="text-gray-300">
@@ -335,7 +309,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-red-500/50 transition-all duration-300">
                 <div className="bg-red-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-red-400" />
+                  <Brain className="w-6 h-6 text-red-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Learning</h3>
                 <p className="text-gray-300">
@@ -344,7 +318,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-yellow-500/50 transition-all duration-300">
                 <div className="bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                  <TrendingUp className="w-6 h-6 text-yellow-400" />
+                  <TrendingUp className="w-6 h-6 text-yellow-400 />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Growth</h3>
                 <p className="text-gray-300">
@@ -354,7 +328,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
@@ -367,7 +340,7 @@ const AboutPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 text-center">
                 <div className="bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                  <User className="w-12 h-12 text-white" />
+                  <User className="w-12 h-12 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Sarah Johnson</h3>
                 <p className="text-cyan-400 mb-4">CEO & Founder</p>
@@ -377,7 +350,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 text-center">
                 <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                  <Cpu className="w-12 h-12 text-white" />
+                  <Cpu className="w-12 h-12 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Michael Chen</h3>
                 <p className="text-purple-400 mb-4">CTO</p>
@@ -387,7 +360,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 text-center">
                 <div className="bg-gradient-to-br from-green-500 to-teal-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
-                  <BarChart className="w-12 h-12 text-white" />
+                  <BarChart className="w-12 h-12 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Emily Rodriguez</h3>
                 <p className="text-green-400 mb-4">Head of Strategy</p>
@@ -398,7 +371,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -409,17 +381,15 @@ const AboutPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  href="/contact">
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <MessageCircle className="w-5 h-5" />
+                ></a>                  <MessageCircle className="w-5 h-5 />"
                   <span>Start Your Journey</span>
                 </a>
                 <a
-                  href="/services"
+                  href="/services">
                   className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <Settings className="w-5 h-5" />
+                ></a>                  <Settings className="w-5 h-5 />"
                   <span>Explore Services</span>
                 </a>
               </div>
@@ -428,15 +398,11 @@ const AboutPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
   );
-=======
+
 );)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
 
 export default AboutPage;

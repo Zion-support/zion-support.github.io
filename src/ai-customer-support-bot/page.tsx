@@ -4,19 +4,19 @@ import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} 
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AICustomerSupportBotPage: React.FC = () => {;
 const features = [
-=======
+
 import Navigation from '../components
 import Footer from '../components
 
 const AICustomerSupportBotPage: React.FC = () => {
   const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       ico,
     n: Bot,
@@ -83,7 +83,6 @@ const stats = [
     { icon: Star, value: '4.8
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AI Customer Support Bot | Zion Tech Group<)
         <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance), natural language processing, and seamless human handoff." 
       <
@@ -96,7 +95,7 @@ const stats = [
           <
         <
 
-        <div className="grid md: grid-cols-2 l,
+        <div className="grid md: grid-cols-2 l,"
     g:grid-cols-4 gap-8 mb-16">
           {stats.map((stat), index) => (<div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" 
@@ -105,7 +104,7 @@ const stats = [
           ))}
 
         <div className="grid md: grid-cols-2 gap-8 mb-16">
-          {features.map((feature), index) => (<div key={index} className="bg-slate-800
+          {features.map((feature), index) => (<div key={index} className="bg-slate-800"
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" 
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
               <p className="text-gray-300 mb-4">{feature.description}<
@@ -119,7 +118,7 @@ const stats = [
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans<
           <div className="grid md: grid-cols-3 gap-8">)
             {pricingPlans.map((plan), index) => (
-              <div key={index} className = { `bg-slate-800
+              <div key={index} className = { `bg-slate-800`
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
@@ -142,23 +141,20 @@ const stats = [
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Schedule Demo
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,">
     r:text-slate-900 transition-colors">
-              View Case Studies
-      
-<<<<<<< HEAD
+              View Case Studies</button>
       <Footer />
   )};
-=======
+
       <Footer)
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';>
 
-export default AICustomerSupportBotPage;
+export default AICustomerSupportBotPage;</Footer>

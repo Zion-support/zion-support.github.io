@@ -24,14 +24,14 @@ const completion = await openai.chat.completions.create({
           content: 'You are a professional translator for policy and development documents.'},
         {)
           role: 'user')
-          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`)
+          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`)`
         })
       ])
       temperature: 0.2),;
 const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
         },
         {/* TODO: Fix JSX expression */}
-  t: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`}],
+  t: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`}],`
       temperatur,
   e: 0.2)
     });

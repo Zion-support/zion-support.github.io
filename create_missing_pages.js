@@ -509,7 +509,7 @@ const config = pageConfigs[pageName];)
     // console.log removed for production
 return}
 ;
-const pageContent = `'use client';
+const pageContent = `'use client';`
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -524,8 +524,7 @@ return (
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
         keywords={${JSON.stringify(config.keywords)}}
-        canonicalUrl="https://ziontechgroup.com/${pageName}"
-      />
+        canonicalUrl="https://ziontechgroup.com/${pageName} />"
 );
 }
       <Navigation />
@@ -534,7 +533,7 @@ return (
         <section className="text-center mb-16"></section>
           <div className="max-w-4 xl mx-auto"></div>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2 xl flex items-center justify-center mx-auto mb-6"></div>
-              <${config.icon} className="w-10 h-10 text-white" />
+              <${config.icon} className="w-10 h-10 text-white />"
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
               ${config.title}
@@ -553,7 +552,7 @@ return (
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 />"
                 +1 302 464 0950;
               </a>
             </div>
@@ -570,17 +569,15 @@ return (
               Powerful capabilities designed to transform your business;
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            ${config.features.map(feature => `)
+            ${config.features.map(feature => `)`
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />),
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4 />),"
               <h3 className="text-xl font-semibold text-white mb-2">${feature}</h3>
               <p className="text-gray-300">Advanced ${feature.toLowerCase()} capabilities powered by AI</p>
-            </div>`).join('')}
+            </div>`).join('')}`
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -591,17 +588,15 @@ return (
               Proven results and measurable impact for your business;
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            ${config.benefits.map(benefit => `)
+            ${config.benefits.map(benefit => `)`
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4 />),"
               <h3 className="text-xl font-semibold text-white mb-2">${benefit}</h3>
               <p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>`).join('')}
+            </div>`).join('')}`
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -638,28 +633,25 @@ return (
               Contact our experts to discuss your specific needs;
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4 xl mx-auto"></div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20"></div>
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></Phone>
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4 /></Phone>"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
                 +1 302 464 0950;
               </a>
             </div>
-            
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" /></Mail>
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4 /></Mail>"
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
                 kleber@ziontechgroup.com;
               </a>
             </div>
-            
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" /></MapPin>
+              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4 /></MapPin>"
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
@@ -670,19 +662,18 @@ return (
           </div>
         </section>
       </main>
-
       <Footer />,
     </div>)};
 
-export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
+export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;`
 
   // Create directory if it doesn't exist;
-  const dirPath = `app/${pageName}`;
+  const dirPath = `app/${pageName}`;`
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })}
 
   // Write the page file;
-  fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
+  fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);`
   // console.log removed for production
 });
 

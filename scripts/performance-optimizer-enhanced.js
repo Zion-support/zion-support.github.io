@@ -27,7 +27,7 @@ const minified = styles;
         .replace(/;\s*/g, ';')
         .replace(/:\s*/g, ':')
         .trim();
-      return `style="${minified}"`})},
+      return `style="${minified}"`})},"`
 
   // Remove empty lines and extra whitespace;
   removeExtraWhitespace: (content) => {,
@@ -60,10 +60,10 @@ return (
 const preloadHints = `
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
     <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
-      content = content.replace('<head>', `<head>
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;"`
+      content = content.replace('<head>', `<head>`
 );
-}${preloadHints}`)}
+}${preloadHints}`)}`
     return content}
 };
 
@@ -147,7 +147,7 @@ const files = await glob(pattern, {)
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {`
   main()}
 
 export { processFile, optimizations };

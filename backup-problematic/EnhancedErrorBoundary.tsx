@@ -98,27 +98,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   a: errorInfo })}
   }
 
-      return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
-            <div className="text-6xl mb-4">⚠️</div>"
+      return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+            <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
               Oops! Something went wrong;
-            </h1>"
+            </h1>
             <p className="text-gray-600 mb-6"></p>
               We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>"
+            </p>
             <div className="space-y-4"></div>
               <button></button>)
-                onClick={() => window.location.reload()}"
+                onClick={() => window.location.reload()}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
+  hover:bg-indigo-700 transition-colors
               >
                 Refresh Page;
               </button>
               <button></button>
-                onClick={() => window.history.back()}"
+                onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-gray-300 transition-colors"
+  hover:bg-gray-300 transition-colors
               >
                 Go Back;
               </button>
@@ -142,4 +142,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     return this.props.children}
 }
 
-export default EnhancedErrorBoundary;"
+export default EnhancedErrorBoundary;

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client'
 /**
  * Advanced Error Tracking and Reporting System;
@@ -47,12 +47,12 @@ class ErrorTrackingService {
 
   static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
-<<<<<<< HEAD
+
       ErrorTrackingService.instance = new ErrorTrackingService(););
-=======
+
       ErrorTrackingService.instance = new ErrorTrackingService()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
     return ErrorTrackingService.instance});
 }
 
@@ -73,7 +73,7 @@ class ErrorTrackingService {
 
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {
-      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
+      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {`
         category: ErrorCategory.Runtime;
         severity: ErrorSeverity.High;
 context: { reason: event.reason });]
@@ -152,29 +152,29 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});]
   /**
    * Set up global error handlers;
    */
-<<<<<<< HEAD
+
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */});;);
       });;)
 });;
     // Handle unhandled promise rejections;
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});
-  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
+  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}`
   n: event.reason });;)
 });;)
 });;);
-=======
+
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */});]
     }
       });]
     });;
     // Handle unhandled promise rejections;
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});
-  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
+  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}`
   n: event.reason });]
     });]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
   /**
    * Track an error with metadata;
    */
@@ -183,48 +183,47 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});]
     metadat,
   a: Partial<ErrorMetadata></ErrorMetadata> & {/* TODO: Fix JSX expression */}
   y: ErrorSeverity });
-<<<<<<< HEAD
+
   ): string {/* TODO: Fix JSX expression */});;);
 const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */});;)
 } else {/* TODO: Fix JSX expression */});;);
-=======
+
   ): string {/* TODO: Fix JSX expression */});]
     };
     const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */});]
     } else {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
       this.errors.set(errorId, trackedError);
       // Notify listeners;
       this.notifyListeners(trackedError);
       // Maintain max stored errors;
-<<<<<<< HEAD
+
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */});;);
-=======
+
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
     }
     // Log the error;`
-    logger.error(`[${metadata.severity.toUpperCase();] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */});]
+    logger.error(`[${metadata.severity.toUpperCase();] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */});]`
     });;
     // Send to external service if critical;
-<<<<<<< HEAD
+
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */});;);
-=======
+
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */});]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return errorId});
 }
 
   private generateErrorId(message: string): string {,;
 const timestamp = Date.now().toString(36),;
 const hash = this.simpleHash(message),
-    return `err_${timestamp}_${hash}`});
+    return `err_${timestamp}_${hash}`});`
 }
 
   private simpleHash(str: string): string {;
@@ -253,35 +252,35 @@ return Math.abs(hash).toString(36)]
   private generateErrorId(messag)
   e: string): string {/* TODO: Fix JSX expression */});]
     }`
-    return `err_${Math.abs(hash).toString(36);`});
+    return `err_${Math.abs(hash).toString(36);`});`
 }
   /**
    * Add an error listener;
    */
   addListener(listene,
   r: (erro),
-<<<<<<< HEAD
+
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */});;);
-=======
+
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
   /**
    * Remove an error listener;
    */
   removeListener(listene,
   r: (erro),
-<<<<<<< HEAD
+
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */});;);
-=======
+
   r: TrackedError) => void): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
   /**
    * Notify all listeners of a new error;
    */
   private notifyListeners(erro)
-<<<<<<< HEAD
+
   r: TrackedError): void {/* TODO: Fix JSX expression */});;)
 } catch (listenerError) {/* TODO: Fix JSX expression */});;);
     });;);
@@ -291,7 +290,7 @@ return Math.abs(hash).toString(36)]
     logger.info('Error reported to external service', { errorId });;);
   getErrors(): TrackedError[] {
     return Array.from(this.errors.values()););
-=======
+
   r: TrackedError): void {/* TODO: Fix JSX expression */});]
     } catch (listenerError) {/* TODO: Fix JSX expression */});]
     }
@@ -308,7 +307,6 @@ return Math.abs(hash).toString(36)]
     return Array.from(this.errors.values())]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   getErrorById(id: string): TrackedError | undefined {,
     return this.errors.get(id);
 
@@ -383,21 +381,21 @@ y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */});]
   getStatistics(): {/* TODO: Fix JSX expression */});]
     } {/* TODO: Fix JSX expression */}
     const byCategory = {} as Record<ErrorCategory></ErrorCategory>;
-<<<<<<< HEAD
+
 const bySeverity = {} as Record<ErrorSeverity></ErrorSeverity>;
     errors.forEach(error => {/* TODO: Fix JSX expression */});;)
 });
 const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */});;)
 }});
-=======
+
     const bySeverity = {} as Record<ErrorSeverity></ErrorSeverity>;
     errors.forEach(error => {/* TODO: Fix JSX expression */});]
     });;
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */});]
     }});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
 }
   /**
    * Clear all errors;
@@ -408,23 +406,23 @@ clearErrors(): void {/* TODO: Fix JSX expression */});]
    * Clear errors older than specified time;
    */
   clearOldErrors(maxAg)
-<<<<<<< HEAD
+
   e: number): void {/* TODO: Fix JSX expression */});;);
     });;);
 }
 export const errorTracking = ErrorTrackingService.getInstance()
-=======
+
   e: number): void {/* TODO: Fix JSX expression */});]
     }
     });]
     }
 }
 export const errorTracking = ErrorTrackingService.getInstance();
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
 export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage
 export const trackError = (erro)
-<<<<<<< HEAD
+
   r: Error, options?: Partial<Omit></Omit>>) => {/* TODO: Fix JSX expression */});;)
 });;)
 export const getErrorStatistics = () => {/* TODO: Fix JSX expression */});;)
@@ -433,7 +431,7 @@ export const getErrorStatistics = () => {/* TODO: Fix JSX expression */});;)
 }});
 }
 export const clearErrorHistory = () => errorTracking.clearErrors()
-=======
+
   r: Error, options?: Partial<Omit></Omit>>) => {/* TODO: Fix JSX expression */});]
     });]
     };
@@ -443,7 +441,7 @@ export const getErrorStatistics = () => {/* TODO: Fix JSX expression */});]
     }});
 };
 export const clearErrorHistory = () => errorTracking.clearErrors();
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
 export const addErrorListener = (listene,
   r: (erro),
   r: TrackedError) => void) =>
@@ -454,6 +452,5 @@ export const removeErrorListener = (listene,
   errorTracking.removeListener(listener);
 `
 }
-=======
+
 export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

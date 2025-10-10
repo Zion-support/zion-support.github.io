@@ -88,9 +88,9 @@ exports.config = {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('node automation/front-visionary-expander.cjs || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       }); // Commit and push' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(front-autopilot): refresh front + homepage [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true}); ' return {/* TODO: Fix JSX expression */}
   k: 'front-autopilot' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

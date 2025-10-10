@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client';
 
 import React from 'react';
@@ -23,7 +23,7 @@ const Breadcrumb: React.FC = () => {
 
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
-      currentPath += `/${segment}`;
+      currentPath += `/${segment}`;`
       const isLast = index === pathSegments.length - 1;
       
       // Convert segment to readable name
@@ -56,15 +56,14 @@ const Breadcrumb: React.FC = () => {
           {breadcrumbs.map((item, index) => (
             <li key={item.href} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true />"
               )}
               {index === 0 ? (
                 <Link
                   to={item.href}
-                  className="flex items-center text-gray-300 hover:text-white transition-colors"
+                  className="flex items-center text-gray-300 hover:text-white transition-colors">
                   aria-label="Home"
-                >
-                  <Home className="w-4 h-4" aria-hidden="true" />
+                ></Link>                  <Home className="w-4 h-4" aria-hidden="true />"
                   <span className="sr-only">Home</span>
                 </Link>
               ) : item.current ? (
@@ -74,10 +73,9 @@ const Breadcrumb: React.FC = () => {
               ) : (
                 <Link
                   to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors">
                 >
-                  {item.name}
-                </Link>
+                  {item.name}</Link>                </Link>
               )}
             </li>
           ))}
@@ -88,5 +86,4 @@ const Breadcrumb: React.FC = () => {
 };
 
 export default Breadcrumb;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

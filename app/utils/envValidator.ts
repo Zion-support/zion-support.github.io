@@ -48,9 +48,9 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     const validation = this.validate()
     if (!validation.isValid) {}
       throw new Error()
-        `Environment validation failed:\n${validation.errors.join('\n')}`);
+        `Environment validation failed:\n${validation.errors.join('\n')}`);`
     if (validation.warnings.length > 0) {}
-      }`);
+      }`);`
     return {}
       NODE_ENV: this.getNodeEnv(),
       NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
@@ -64,7 +64,7 @@ const validEnvs = ['development', 'production', 'test']
       return}
     if (!validEnvs.includes(nodeEnv)) {}
       this.errors.push()
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`);
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`);`
   }
   private validateOptionalVars(): void {}
     const nodeEnv = this.getNodeEnv()
@@ -88,9 +88,9 @@ const validEnvs = ['development', 'production', 'test']
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:
 ${validation.errors.join('
-')}`);
+')}`);`
     if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */}`
-      }`);
+      }`);`
     return {/* TODO: Fix JSX expression */}
     }}
 
@@ -100,7 +100,7 @@ ${validation.errors.join('
 
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`);
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`);`
   }
   private validateOptionalVars(): void {/* TODO: Fix JSX expression */}
       }

@@ -3,13 +3,12 @@ import React, { useEffect, useState } from 'react';
 
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
+
 ;
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
-=======
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ),
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   children;
   enableReporting = true,
   enableLongTaskMonitoring = true}) => {
@@ -20,7 +19,6 @@ const [metrics, setMetrics] = useState<WebVitalsMetrics>
 }({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Initialize performance monitoring;
     // Add critical resource hints manually;
@@ -30,7 +28,7 @@ const hints = [
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-=======
+
   useEffect (() => {
     /
     /
@@ -44,7 +42,7 @@ const hints = [
         { re,
     l: 'preconnect', href: 'http,
     s:/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
       ];
       
       hints.forEach(hint => {);
@@ -70,34 +68,31 @@ const,
   ,
     n: 'anonymous' }
       ];
-      
-<<<<<<< HEAD
+
       hints.forEach(hint => {/* TODO: Fix JSX expression */}
         })
         document.head.appendChild(link)})}
-=======
+
       hints.forEach(hint => {/* TODO: Fix JSX expression *)
         });
         document.head.appendChild(link);
       });
     }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    
+
     /
 /
     if (pageLoadMetrics) {/* TODO: Fix JSX expression *
       }
     }
 
-<<<<<<< HEAD
     // Monitor long tasks if enabled;
     if (enableLongTaskMonitoring) {;
 const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
-=======
+
     /
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks ((entries: PerformanceEntryList) => {,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         setLongTasks(prev => [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression *
 /
@@ -106,7 +101,7 @@ const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntr
       {) => {/* TOD,
     O: Fix JSX expression *
         }
-<<<<<<< HEAD
+
       }}
   }, [enableReporting, enableLongTaskMonitoring]);
 
@@ -117,7 +112,7 @@ const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntr
 const observer = new PerformanceObserver((list) => {;
 const _entries = list.getEntries();
       entries.forEach((entry) => {
-=======
+
       };
     }
   }, [enableReporting, enableLongTaskMonitoring]}
@@ -130,13 +125,13 @@ const _entries = list.getEntries();
     const observer = new PerformanceObserver ((list) => {
       const _entries = list.getEntries();
       entries.forEach ((entry) => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         if (entry.entryType === 'largest-contentful-paint') {
 /
           setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
-<<<<<<< HEAD
+
   useEffect(() => {/* TODO: Fix JSX expression */}
   P: lcp }));
           if (enableReporting) {/* TODO: Fix JSX expression */}
@@ -165,7 +160,7 @@ const _entries = list.getEntries();
 
   // Development mode: Log performance metrics;
   useEffect(() => {,
-=======
+
   useEffect (() => {/* TODO: Fix JSX expression *
   ,
     P: lcp }));
@@ -209,7 +204,7 @@ const _entries = list.getEntries();
   );
   /
   useEffect (() => {,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
   /
   mode: Log performance metrics;
@@ -223,7 +218,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
+
 ;
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   enabled = true;
@@ -232,7 +227,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
     maxImageSize: 100, // 100KB;
     maxFirstLoad: 3000, // 3 seconds;
     maxInteractive: 2000 // 2 seconds},
-=======
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({),
   enabled = true;
@@ -242,35 +236,35 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({),
     maxFirstLoad: 3000, /
     maxInteractive: 2000 /
   },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   onMetricsUpdate,
   onBudgetViolation}) => {
 return (
 ;
 const,
-<<<<<<< HEAD
+
   PerformanceMonitor: React.FC<PerformanceMonitorProps>
 );
 } = ({/* TODO: Fix JSX expression */}
   },
-=======
+
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TOD,
     O: Fix JSX expression *)
   )},
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   onMetricsUpdate,
   onBudgetViolation;)
 }) => {/* TODO: Fix JSX expression *
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
+
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
   s: string[] }>({/* TODO: Fix JSX expression */})
   s: [] });
 ;
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
-=======
+
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression *
   ,
     s: string[] }>({/* TODO: Fix JSX expression *)
@@ -278,7 +272,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     s: [] });
   const updateMetrics = useCallback (() => {/* TODO: Fix JSX expression *
       setMetrics(prev => ({ ...prev), ...newMetrics }));
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
       onMetricsUpdate?.(newMetrics);
       
       /
@@ -312,7 +306,6 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics)};
 
-<<<<<<< HEAD
     // Set up performance monitoring;
     if ('PerformanceObserver' in window) {;
 const observer = new PerformanceObserver((list) => {
@@ -337,7 +330,6 @@ const _paintEntry = entry as PerformancePaintTiming;
     return () => {/* TODO: Fix JSX expression */}
     }}, [enabled, updateMetrics]);
 
-=======
     /
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver ((list) => {
@@ -370,7 +362,7 @@ const _paintEntry = entry as PerformancePaintTiming;
   }, [enabled, updateMetrics]}
     </div>
   );
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   if (!enabled) return null;
 
   return(<div className="performance-monitor">)
@@ -378,28 +370,26 @@ const _paintEntry = entry as PerformancePaintTiming;
       <button;)
   return (<div className="performance-monitor">
       {/* Toggle button */}<
-      <button)
+      <button)>
         onClick = { () => setIsVisible(!isVisible) };
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
-        aria-label="Toggle performance monitor",
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"</button>        aria-label="Toggle performance monitor",
       >,
         📊,
       <
 ,
       {/* Performance panel *
-      {isVisible && (<div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dar,
+      {isVisible && (<div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dar,"
     k:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">,
           <div className="flex justify-between items-center mb-3">,
             <h3 className="text-lg font-semibold text-gray-900 dark: text-white">Performance Monitor<
             <button;
         <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"><
           <div className="flex justify-between items-center mb-3"><
-            <h3 className="text-lg font-semibold text-gray-900 dar,
+            <h3 className="text-lg font-semibold text-gray-900 dar,"
     k:text-white">Performance Monitor<
-            <button)
+            <button)>
               onClick = { () => setIsVisible(false) };
-              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hove,
-    r:text-gray-200"
+              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hove,"</button>    r:text-gray-200
               aria-label="Close performance monitor"
             >,
               ✕,
@@ -414,8 +404,8 @@ const _paintEntry = entry as PerformancePaintTiming;
             <div className="text-sm"><
               <span className="font-medium text-gray-700 dark:text-gray-300">FC,
     P:<
-              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}>
-                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N
+              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}>`
+                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N`
               <
             <
             <div className="text-sm">
@@ -423,8 +413,8 @@ const _paintEntry = entry as PerformancePaintTiming;
             <div className="text-sm"><
               <span className="font-medium text-gray-700 dark:text-gray-300">LC,
     P:<
-              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>
-                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N
+              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>`
+                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N`
               <
             <
             <div className="text-sm">
@@ -432,13 +422,13 @@ const _paintEntry = entry as PerformancePaintTiming;
             <div className="text-sm"><
               <span className="font-medium text-gray-700 dark:text-gray-300">TTF,
     B:<
-              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>`
   return (<div className="performance-monitor"><
       {/* Toggle button *
       <button><)
-        onClick={() => setIsVisible(!isVisible)}"
+        onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,"
-  hover: bg-blue-700 transition-colors""
+  hover: bg-blue-700 transition-colors"
         aria-label="Toggle performance monitor"
       >
         📊
@@ -447,12 +437,12 @@ const _paintEntry = entry as PerformancePaintTiming;
       {/* Performance panel *
       {/* TOD,
     O: Fix JSX expression *
-              onClick={() => setIsVisible(false)}"
-              className="text-gray-500,
+              onClick={() => setIsVisible(false)}
+              className="text-gray-500,"
   hover:text-gray-700,
   dark:text-gray-400,
-  dark:hove,"
-  r:text-gray-200""
+  dark:hove,
+  r:text-gray-200"
               aria-label="Close performance monitor"
             >
               ✕
@@ -465,24 +455,24 @@ const _paintEntry = entry as PerformancePaintTiming;
               <span className="font-medium text-gray-700,"
   dark:text-gray-300">FC,
   P:<
-              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}><
-                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N
+              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}><`
+                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N`
               <
             <
             <div className="text-sm"><
               <span className="font-medium text-gray-700,"
   dark:text-gray-300">LC,
   P:<
-              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}><
-                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N
+              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}><`
+                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N`
               <
             <
             <div className="text-sm"><
               <span className="font-medium text-gray-700,"
   dark:text-gray-300">TTF,
   B:<
-              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}><
-                {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N
+              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}><`
+                {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N`
               <
             <
           <
@@ -495,7 +485,7 @@ const _paintEntry = entry as PerformancePaintTiming;
             <div className="flex items-center gap-2 mb-2"><
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Statu,
     s:<
-              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>`
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
               <
             <
@@ -508,7 +498,7 @@ const _paintEntry = entry as PerformancePaintTiming;
               <span className="text-sm font-medium text-gray-700,"
   dark:text-gray-300">Budget,
   Status:<
-              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}><
+              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}><`
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
               <
             <
@@ -565,13 +555,12 @@ const _paintEntry = entry as PerformancePaintTiming;
           <
         <
       )}
-<<<<<<< HEAD
+
     </div>
   )};
-=======
+
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default PerformanceMonitor}"`

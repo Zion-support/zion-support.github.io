@@ -30,13 +30,13 @@ export const validateLength = (
   fieldName: string = 'Field'
 ): ValidationResult => {
   if (!value) {
-    return { isValid: false, error: `${fieldName} is required` }}
+    return { isValid: false, error: `${fieldName} is required` }}`
   
   if (value.length < min) {
-    return { isValid: false, error: `${fieldName} must be at least ${min} characters long` }}
+    return { isValid: false, error: `${fieldName} must be at least ${min} characters long` }}`
   
   if (value.length > max) {
-    return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` }}
+    return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` }}`
   
   return { isValid: true }};
 
@@ -157,7 +157,7 @@ export const validateJSON = (jsonString: string): ValidationResult => {
 // Required Field Validation
 export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {
   if (value === null || value === undefined || value === '') {
-    return { isValid: false, error: `${fieldName} is required` }}
+    return { isValid: false, error: `${fieldName} is required` }}`
   
   return { isValid: true }};
 

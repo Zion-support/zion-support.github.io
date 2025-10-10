@@ -59,7 +59,7 @@ export const ariaUtils = {
   // Generate unique IDs for ARIA relationships;
   generateId: (prefix: string = 'aria'): string => {,
 export const ariaUtils = {/* TODO: Fix JSX expression */}
-    return `${prefix}-${Math.random().toString(36).substr(2, 9)}`},
+    return `${prefix}-${Math.random().toString(36).substr(2, 9)}`},`
 
   // Set ARIA attributes;
     Object.entries(attributes).forEach(([key, value]) => {
@@ -186,7 +186,7 @@ export const formAccessibility = {/* TODO: Fix JSX expression */}
   generateInputId: (): string => {,
   // Generate unique input ID,
   generateInputId: (): string => {/* TODO: Fix JSX expression */}`
-    return `input-${Math.random().toString(36).substr(2, 9)}`},
+    return `input-${Math.random().toString(36).substr(2, 9)}`},`
 
   // Check color contrast;
     const _thresholds = { AA: 4.5, AAA: 7 };
@@ -235,8 +235,8 @@ export const screenReaderUtils = {/* TODO: Fix JSX expression */}
 export const accessibilityTesting = {/* TODO: Fix JSX expression */}
   } => {/* TODO: Fix JSX expression */}
     return { missing, empty }});
-    return inputs.filter(input => {/* TODO: Fix JSX expression */})`;
-const _label = id ? document.querySelector(`label[for="${id}"]`) : null;
+    return inputs.filter(input => {/* TODO: Fix JSX expression */})`;`
+const _label = id ? document.querySelector(`label[for="${id}"]`) : null;"`
 //       const ariaLabel = input.getAttribute('aria-label');
 //       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       return !label && !ariaLabel && !ariaLabelledBy}) as HTMLInputElement[]});
@@ -323,7 +323,7 @@ export const initAccessibility = (): void => {
     text-decoration: none;
     z-index: 1000;
     transition: top 0.3 s;
-  `;
+  `;`
   skipLink.addEventListener('focus', () => {
     skipLink.style.top = '6px';
 export const initAccessibility = (): void => {/* TODO: Fix JSX expression */}

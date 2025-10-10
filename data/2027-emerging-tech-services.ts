@@ -1317,7 +1317,7 @@ i,
   i: string; lin,
   k: string, i,
   d: 'neuromorphic-computing'' nam,
-  e: 'Neuromorphic Computing Platform' descriptio,"
+  e: 'Neuromorphic Computing Platform' descriptio,
   n:' "Advanced computing platform that mimics the human brain's neural structure for ultra-efficient AI processing and learning."' categor,
   y: 'AI & Computing'' pric,
   e: '$8,999/month' feature,
@@ -1569,4 +1569,4 @@ i,
   s://ziontechgroup.com/services/quantum-financial-modeling'}' tag,
   s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-climate-modeling'}' tag,
-  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} } ]; '"
+  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} } ]; '

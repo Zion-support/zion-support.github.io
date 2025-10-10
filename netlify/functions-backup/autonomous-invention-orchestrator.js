@@ -53,10 +53,10 @@ exports.config = {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' execSync('node automation/home-index-visionary.cjs || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(autonomy): invention orchestrator updates [ci skip]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' return {/* TODO: Fix JSX expression */}
   k: 'autonomous-invention-orchestrator' }) }} catch (e) {/* TODO: Fix JSX expression */}
       }) }} }; ' exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/30 * * * *' };'"
+  e: '*/30 * * * *' };'

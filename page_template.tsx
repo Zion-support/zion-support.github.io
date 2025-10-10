@@ -17,7 +17,7 @@ return (
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)
-        title={`${title} - Zion Tech Group`})
+        title={`${title} - Zion Tech Group`})`
         description={description})
         keywords={keywords})
   return (
@@ -25,10 +25,10 @@ return (
 );
 }</div>
       <SEOOptimizer
-        title={`${title} - Zion Tech Group`}
+        title={`${title} - Zion Tech Group`}`
         description={description}
         keywords={keywords}
-        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}
+        canonicalUrl={`https://ziontechgroup.com/${title.toLowerCase().replace(/\s+/g, '-')}`}`
       />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -36,7 +36,7 @@ return (
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto"></section>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
-              <Icon className="w-10 h-10 text-white" />
+              <Icon className="w-10 h-10 text-white />"
             </div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
               {title}
@@ -57,7 +57,7 @@ return (
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 />"
                 +1 302 464 0950;
               </a>
             </div>
@@ -81,20 +81,18 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">,
-                <CheckCircle className="w-8 h-8 text-green-400 mb-4" />,
+                <CheckCircle className="w-8 h-8 text-green-400 mb-4 />,"
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-                <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
+                <CheckCircle className="w-8 h-8 text-green-400 mb-4 />"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
                 <p className="text-gray-300">Advanced {feature.toLowerCase()} capabilities powered by AI</p>
               </div>
             ))}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -107,22 +105,20 @@ return (
               Proven results and measurable impact for your business;
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">,
-                <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />,
+                <TrendingUp className="w-8 h-8 text-purple-400 mb-4 />,"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-                <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
+                <TrendingUp className="w-8 h-8 text-purple-400 mb-4 />"
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
                 <p className="text-gray-300">Measurable improvement in your business metrics</p>
               </div>
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -139,7 +135,6 @@ return (
           ,
           <div className="max-w-md mx-auto">,
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
-          
           <div className="max-w-md mx-auto"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center"></div>
               <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
@@ -167,28 +162,25 @@ return (
               Contact our experts to discuss your specific needs;
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20"></div>
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4 />"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
                 +1 302 464 0950;
               </a>
             </div>
-            
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4 />"
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
                 kleber@ziontechgroup.com;
               </a>
             </div>
-            
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4 />"
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
@@ -201,7 +193,6 @@ return (
           </div>
         </section>
       </main>
-
       <Footer />,
     </div>)};
 

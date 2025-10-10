@@ -27,7 +27,7 @@ function fixUnusedVariables(content) {
 const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {;
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-        return `_${trimmed}`}
+        return `_${trimmed}`}`
       return trimmed}).join(', ');
     return match.replace(params, newParams)});
 
@@ -36,7 +36,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
   content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
-        return `_${trimmed}`}
+        return `_${trimmed}`}`
       return trimmed}).join(', ');
     return match.replace(params, newParams)});
 
@@ -46,7 +46,7 @@ const newParams = params.split(',').map(param => {)
       return match}
   content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
     }`
-    return match.replace(varName, `_${varName}`)});
+    return match.replace(varName, `_${varName}`)});`
 
   return content}
 
@@ -144,10 +144,10 @@ function main() {/* TODO: Fix JSX expression */}
   })}
 
 // Run if this is the main module;
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {`
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}`
 }
 
 export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports, fixNonNullAssertions, fixAnyTypes };`

@@ -183,30 +183,28 @@ const teamMembers = [
             </p>
           </div>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
-            <Users className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+            <Users className="h-12 w-12 text-cyan-400 mx-auto mb-4 />"
             <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
             <p className="text-gray-300">50+ skilled professionals</p>
           </div>
           <div className="text-center">
-            <Target className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+            <Target className="h-12 w-12 text-cyan-400 mx-auto mb-4 />"
             <h3 className="text-xl font-semibold text-white mb-2">Focused Solutions</h3>
             <p className="text-gray-300">Tailored to your needs</p>
           </div>
           <div className="text-center">
-            <Brain className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+            <Brain className="h-12 w-12 text-cyan-400 mx-auto mb-4 />"
             <h3 className="text-xl font-semibold text-white mb-2">AI Innovation</h3>
             <p className="text-gray-300">Cutting-edge technology</p>
           </div>
           <div className="text-center">
-            <Shield className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+            <Shield className="h-12 w-12 text-cyan-400 mx-auto mb-4 />"
             <h3 className="text-xl font-semibold text-white mb-2">Secure & Reliable</h3>
             <p className="text-gray-300">Enterprise-grade security</p>
           </div>
         </div>
-
         {/* Stats Section */}
         <section className="py-16 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +222,6 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,7 +256,6 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -271,12 +267,11 @@ const teamMembers = [
                 The principles that guide everything we do
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
+                    <value.icon className="w-8 h-8 text-white />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {value.title}
@@ -289,7 +284,6 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* Team Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -301,13 +295,12 @@ const teamMembers = [
                 The experts behind our innovative solutions
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                      <Users className="w-16 h-16 text-gray-600" />
+                      <Users className="w-16 h-16 text-gray-600 />"
                     </div>
                   </div>
                   <div className="p-6">
@@ -326,7 +319,6 @@ const teamMembers = [
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -378,15 +370,15 @@ const teamMembers = [
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Award className="w-5 h-5 text-cyan-400" />
+                <Award className="w-5 h-5 text-cyan-400 />"
                 <span className="text-white font-medium">ISO 27001 Certified</span>
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-purple-400" />
+                <Shield className="w-5 h-5 text-purple-400 />"
                 <span className="text-white font-medium">Enterprise Security</span>
               </div>
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Globe className="w-5 h-5 text-green-400" />
+                <Globe className="w-5 h-5 text-green-400 />"
                 <span className="text-white font-medium">Global Reach</span>
               </div>
             </div>
@@ -407,15 +399,15 @@ const teamMembers = [
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0 />"
                   <p className="text-gray-300">Transform businesses through AI-powered solutions</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0 />"
                   <p className="text-gray-300">Accelerate digital transformation initiatives</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0 />"
                   <p className="text-gray-300">Drive sustainable innovation and growth</p>
                 </div>
               </div>
@@ -433,15 +425,15 @@ const teamMembers = [
                 <h3 className="text-xl font-bold text-white mb-3">Core Values</h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
-                    <Brain className="w-5 h-5 text-cyan-400" />
+                    <Brain className="w-5 h-5 text-cyan-400 />"
                     <span className="text-gray-300">Innovation & Excellence</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Shield className="w-5 h-5 text-purple-400" />
+                    <Shield className="w-5 h-5 text-purple-400 />"
                     <span className="text-gray-300">Integrity & Trust</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Users className="w-5 h-5 text-green-400" />
+                    <Users className="w-5 h-5 text-green-400 />"
                     <span className="text-gray-300">Collaboration & Respect</span>
                   </div>
                 </div>
@@ -465,7 +457,7 @@ const teamMembers = [
             {values.map((value, index) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-8 h-8 text-white" />
+                  <value.icon className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
@@ -523,7 +515,7 @@ const teamMembers = [
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <achievement.icon className="w-10 h-10 text-white" />
+                  <achievement.icon className="w-10 h-10 text-white />"
                 </div>
                 <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
                   {achievement.number}
@@ -551,8 +543,8 @@ const teamMembers = [
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
               {timeline.map((item, index) => (
-                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>`
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>`
                     <div className="bg-slate-800/50 p-6 rounded-lg">
                       <div className="text-cyan-400 font-bold text-lg mb-2">{item.year}</div>
                       <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
@@ -581,14 +573,14 @@ const teamMembers = [
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <MessageSquare className="w-5 h-5 mr-2" />
+              <MessageSquare className="w-5 h-5 mr-2 />"
               Get Started Today
             </a>
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" />
+              <Calendar className="w-5 h-5 mr-2 />"
               Free Consultation
             </a>
           </div>

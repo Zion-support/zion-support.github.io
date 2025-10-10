@@ -4,7 +4,7 @@ import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
 import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
-<<<<<<< HEAD
+
 ;
 const SitemapPage: React.FC = () => {;
 const mainPages = [
@@ -78,15 +78,12 @@ const blogCategories = [
       <SEOOptimizer
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily."
-        keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}
-        canonicalUrl="https://ziontechgroup.com/sitemap"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}>
+        canonicalUrl="https://ziontechgroup.com/sitemap /></SEOOptimizer>      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
 
 const SitemapPage: React.FC = () => {
   const mainPages = [
@@ -206,12 +203,11 @@ const SitemapPage: React.FC = () => {
   return (<>
 
           {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
           <section className="text-center mb-16">
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m,>"
     d:text-6xl font-bold text-white mb-6 neon-text">
-              Site Map
-            <
+              Site Map</h1>            <
             <p className="text-xl text-cyan-400 mb-8">
               Navigate through all our pages and services
             <
@@ -226,10 +222,9 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Main Pages
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {mainPages.map((page), index) => (
-                  <div className="flex items-center justify-between mb-4">
+              {mainPages.map((page), index) => (</div>                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                       {page.name}
                     <
@@ -246,10 +241,9 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Micro SAAS Services
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {microSaasServices.map((service), index) => (
-                  <div className="flex items-center justify-between mb-4">
+              {microSaasServices.map((service), index) => (</div>                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     <
@@ -266,10 +260,9 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Services
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {aiServices.map((service), index) => (
-                  <div className="flex items-center justify-between mb-4">
+              {aiServices.map((service), index) => (</div>                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">
                       {service.name}
                     <
@@ -286,10 +279,9 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {itServices.map((service), index) => (
-                  <div className="flex items-center justify-between mb-4">
+              {itServices.map((service), index) => (</div>                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                       {service.name}
                     <
@@ -306,10 +298,9 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Specialized Solutions
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {specializedServices.map((service), index) => (
-                  <div className="flex items-center justify-between mb-4">
+              {specializedServices.map((service), index) => (</div>                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors">
                       {service.name}
                     <
@@ -326,10 +317,9 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Blog Categories
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-6">
-              {blogCategories.map((category), index) => (
-                  <div className="flex items-center justify-between mb-4">
+              {blogCategories.map((category), index) => (</div>                  <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">
                       {category.name}
                     <
@@ -351,7 +341,6 @@ const SitemapPage: React.FC = () => {
                 Contact our team for personalized assistance and recommendations
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                
                   Contact Us
                 <
                 
@@ -362,17 +351,14 @@ const SitemapPage: React.FC = () => {
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
+
         <Footer 
       <
     <
-  );
+  );>
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
-export default SitemapPage;
+</Footer>export default SitemapPage;

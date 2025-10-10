@@ -52,8 +52,7 @@ const timer = setInterval(() => {
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
         ></div>
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
@@ -85,8 +84,7 @@ const timer = setInterval(() => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
+                  d="M17 8l4 4m0 0l-4 4m4-4H3 />"
               </svg>
             </Link>
               to="/contact"
@@ -96,8 +94,7 @@ const timer = setInterval(() => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <svg
-                  className="w-8 h-8 text-white"
+                <svg className="w-8 h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -136,10 +133,10 @@ const timer = setInterval(() => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${`
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
+                }`}`
+                aria-label={`Go to slide ${index + 1}`}`
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -231,14 +228,14 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           
           <div className="flex flex-col,"
   sm:flex-row items-center justify-center gap-6"></div>
-                href={currentContent.url}"
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600,
+                href={currentContent.url}
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600,"
   hover:from-cyan-600,
   hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform,
   hover:-translate-y-1,
-  hover:shadow-2xl,"
-  hover:shadow-cyan-500/25"
-        {/* Stats Section */}"
+  hover:shadow-2xl,
+  hover:shadow-cyan-500/25
+        {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2,"
   md:grid-cols-4 gap-8"></div>
           {[}
@@ -260,14 +257,11 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           
           
           
-          "
-          <div key={index} className="text-center"></div>"
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
+          
+          <div key={index} className="text-center"></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
     </section>
   )};
 
-export default UltimateBusinessIntelligence2025Banner;"
-
-
-
+export default UltimateBusinessIntelligence2025Banner;

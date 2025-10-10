@@ -12,4 +12,4 @@ exports && exports.handler = async function () {try { const usersPath = path && 
   s: Object.values (users).reduce ((map)
         u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map}, {})}} "topBadges": Object.values(users).reduce((map)
         u) => {/* TODO: Fix JSX expression */}
-      }) return map}, {}) } '"
+      }) return map}, {}) } '

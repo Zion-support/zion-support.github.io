@@ -431,7 +431,7 @@ const images = document.querySelectorAll('img');
    */
   public setupLazyLoading(): void {/* TODO: Fix JSX expression */}
               } else {/* TODO: Fix JSX expression */}
-                element.style.backgroundImage = `url(${src})`}
+                element.style.backgroundImage = `url(${src})`}`
               element.removeAttribute('data-lazy');
               lazyObserver.unobserve(element);
           }
@@ -468,7 +468,7 @@ const images = document.querySelectorAll('img');
    * Generate performance report;
    */
   generateReport(): string {/* TODO: Fix JSX expression */}`
-  Score: ${score}`}
+  Score: ${score}`}`
   /**
    * Lazy load images for better performance;
    */
@@ -527,7 +527,7 @@ Recommendation,
 ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
-    `.trim();
+    `.trim();`
   /**
    * Optimize the entire application;
    */

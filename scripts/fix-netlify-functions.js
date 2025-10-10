@@ -39,7 +39,7 @@ const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*
     if (handlerMatch) {;
 const _body = handlerMatch[1].trim();
       fixed = fixed.replace(/exports\.handler = async function[^{]*{[^}]*}/)
-        `exports.handler = async function (event, context) {
+        `exports.handler = async function (event, context) {`
   try {
     ${body}
   } catch (error) {
@@ -58,7 +58,7 @@ const _body = handlerMatch[1].trim();
 const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {/* TODO: Fix JSX expression */}
         /exports\.handler = async function[^{]*{[^}]*}/,
-        `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+        `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}`
     ${body}
   } catch (error) {/* TODO: Fix JSX expression */}
       }),
@@ -92,11 +92,11 @@ const _content = fs.readFileSync(filePath, 'utf8');
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8');
         // // console.log removed for production
-}`);
+}`);`
   files.forEach(filePath => {/* TODO: Fix JSX expression */})`
-  d: ${path.basename(filePath)}`);
+  d: ${path.basename(filePath)}`);`
         fixedCount++} else {/* TODO: Fix JSX expression */}`
-  d: ${path.basename(filePath)} (no changes needed)`)}
+  d: ${path.basename(filePath)} (no changes needed)`)}`
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   });
@@ -109,7 +109,7 @@ const _content = fs.readFileSync(filePath, 'utf8');
 }
 `
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}`
 }
 
 export { fixNetlifyFunction };`

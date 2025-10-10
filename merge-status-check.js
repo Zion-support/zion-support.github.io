@@ -10,7 +10,7 @@ s: ') remotes ? remotes.split('\n')[0] : 'None')} function checkForConflicts() {
 } } } function checkBranchStatus() {/* TODO: Fix JSX expression */}
   branches: ') cursorBranches.length)} if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}`
   branches: '), cursorBranches.slice(0} 5).forEach(b => // // console.log removed for production
-}`))} } } function generateResolutionPlan() {/* TODO: Fix JSX expression */}
+}`))} } } function generateResolutionPlan() {/* TODO: Fix JSX expression */}`
   HEAD:main')}' // // console.log removed for production
 build:production')} } function main() {/* TODO: Fix JSX expression */}
   Required: Merge conflicts detected')}' // // console.log removed for production

@@ -113,11 +113,11 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
   r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
               ></Link>
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradi, e, n, t }, opaci, t, y-50, grou, p-hov, e, r: opaci, t, y-70, transitio, n-opac, i, t, y`}
+                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradi, e, n, t }, opaci, t, y-50, grou, p-hov, e, r: opaci, t, y-70, transitio, n-opac, i, t, y`}`
                  /></div>
                 <div, classNam, e = 'relativ, e, p-8'>
                   {/* Ic, o, n & Tit, l, e */}</div>
-                  <div, className='flex, item, s-start, m, b-6' ></div> <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}
+                  <div, className='flex, item, s-start, m, b-6' ></div> <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}`
                     ></div>
                       <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
                     </div>
@@ -125,7 +125,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
                 <div, classNam, e = 'relativ, e, p-8'></div>
                   {/* Ic, o, n & Tit, l, e */}`
-                  <div, className='flex, item, s-start, m, b-6' > <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}
+                  <div, className='flex, item, s-start, m, b-6' > <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}`
                     ></div>
                       <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' /></Icon>
                     </div>
@@ -146,12 +146,12 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>
                     { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (</div>
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'
-                       ></div> <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
+                       ></div> <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}`
                         >
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'></div>
                     {/* TODO: Fix JSX expression */}
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'`
-                       > <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
+                       > <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}`
                         ></div>
                           {st, a, t.val, u, e}
                         </div>
@@ -165,21 +165,21 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                   <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'></div>
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
                       Published, Octobe, r , 1, 20, 2, 5;
-                    </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
+                    </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}`
                     >
                       Read, Full, Article;
                       Read, Full, Article</div>
                       <Link, classNam, e = 'w-4 h-4, m, l-2' />
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'></span>
                       Published, Octobe, r , 1, 20, 2, 5;`
-                    </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
+                    </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}`
                     ></div>
                       Read, Full, Article;
                       <Link, classNam, e = 'w-4 h-4, m, l-2' /></Link>
                     </div>
                   </div>
                 </d, i, v > {/* Hover, Effect, Overlay */}`
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`}
+                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`}`
                  /></div>
               </Li, n, k>
             )})}

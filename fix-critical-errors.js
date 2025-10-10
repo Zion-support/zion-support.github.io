@@ -15,7 +15,7 @@ let content = fs.readFileSync(filePath, 'utf8');
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       // console.log removed for production
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
-  in: ${filePath}`);
+  in: ${filePath}`);`
       const lines = content.split('\n');
       const result = [];
       let inConflict = false;

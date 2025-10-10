@@ -114,7 +114,7 @@ const files = await glob(pattern, {)
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {`
   main()}
 
 export { processFile, fixReactMemo };

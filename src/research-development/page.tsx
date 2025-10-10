@@ -258,15 +258,12 @@ $4},
 $4}
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -283,13 +280,12 @@ $4}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">)
               {researchAreas.map((area) => (<button
-                  key = { area.id };)
+                  key = { area.id };)>
                   onClick = { () => setActiveTab(area.id) };
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === area.id
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${</button>                    activeTab === area.id`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
-                  }`}
+                  }`}`
                 >
                   <area.icon className="w-5 h-5 mr-2" 
                   <span className="font-medium">{area.name}<
@@ -307,14 +303,14 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'ai',
@@ -329,14 +325,14 @@ $4}
       descriptio,
   n: 'Advancing the frontiers of AI and machine learning'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'quantum',
@@ -351,14 +347,14 @@ $4}
       descriptio,
   n: 'Exploring quantum algorithms and quantum advantage'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'autonomous',
@@ -373,14 +369,14 @@ $4}
       descriptio,
   n: 'Developing self-managing and intelligent systems'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'emerging',
@@ -396,27 +392,27 @@ $4}
   n: 'Researching next-generation technologies'
     }
   ];
-<<<<<<< HEAD
+
   const researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
   const researchProjects = { /* TODO: Fix JSX expression *
   ,
     O: Add content; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   a,
   i: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Consensus Intelligence Framework',
@@ -444,14 +440,14 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Autonomous Business Intelligence',
@@ -479,14 +475,14 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Neural Architecture Search for Enterprise',
@@ -519,14 +515,14 @@ $4}
   m: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Quantum Machine Learning Algorithms',
@@ -554,14 +550,14 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Quantum Error Correction for Business Applications',
@@ -594,14 +590,14 @@ $4}
   s: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Autonomous Enterprise Operations',
@@ -629,14 +625,14 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Multi-Agent Coordination Systems',
@@ -669,14 +665,14 @@ $4}
   g: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Neuromorphic Computing for AI',
@@ -704,14 +700,14 @@ $4}
         colo,
   r: 'text-yellow-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Edge AI for IoT Systems',
@@ -745,14 +741,14 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Consensus,
@@ -768,14 +764,14 @@ $4}
       lin,
   k: '#'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
@@ -790,14 +786,14 @@ $4}
       lin,
   k: '#'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
@@ -812,14 +808,14 @@ $4}
       lin,
   k: '#'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
@@ -839,14 +835,14 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Award,
@@ -855,14 +851,14 @@ $4}
       descriptio,
   n: 'Published in top-tier conferences and journals'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Users,
@@ -871,14 +867,14 @@ $4}
       descriptio,
   n: 'World-class research team across multiple disciplines'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Target,
@@ -887,14 +883,14 @@ $4}
       descriptio,
   n: 'Innovative technologies and methodologies'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Globe,
@@ -906,22 +902,19 @@ $4}
   ];
   return (<div>Coming Soon<)
   )
-    
-<<<<<<< HEAD
+
           <React.Fragment>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-16"></div>"
-=======
+          {/* Header */}
+          <div className="text-center mb-16"></div>
           <>
       <Navigation /><
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
         <div className="container mx-auto px-4 py-16 pt-24"><
           {/* Header *
           <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
@@ -936,31 +929,31 @@ $4}
           <div className="mb-12"><
             <div className="flex flex-wrap justify-center gap-4 mb-8"><
               {researchAreas.map((area) => ()}
-<<<<<<< HEAD
+
           <button></button>
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}`
   // TOD,
   O: Add content}
-=======
+
           <button><
                   key = { area.id };
                   onClick = { () => setActiveTab(area.id) };
-                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };
+                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };`
   /
   O: Add content;
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800
   hover:bg-slate-700
-                  }`}
+                  }`}`
 /
 
-          "
-          <area.icon className="w-5 h-5 mr-2" /><
+          
+          <area.icon className="w-5 h-5 mr-2 /><"
                   <span className="font-medium">{area.name}<
                 <
               ))}
@@ -978,10 +971,10 @@ $4}
               Current Research Projects
             <
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
+              {researchProjects[activeTab as keyof typeof researchProjects].map((project), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400"
                   <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700
-                      <project.icon className={`w-6 h-6 ${project.color}`} 
+                    <div className={`w-12 h-12 bg-slate-700`
+                      <project.icon className={`w-6 h-6 ${project.color}`} `
                     <
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}<
@@ -992,12 +985,11 @@ $4}
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Status<
-                      <div className={`text-sm font-medium ${
+                      <div className={`text-sm font-medium ${`
                         project.status === 'Completed' ? 'text-green-400' : 
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
-                      }`}>
-                        {project.status}
-                      <
+                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'>
+                      }`}>`
+                        {project.status}</div>                      <
                     <
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Timeline<
@@ -1023,34 +1015,32 @@ $4}
 /
           <
             <div className="grid grid-cols-1,"
-<<<<<<< HEAD
   lg:grid-cols-2 gap-8"></div>
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
+              {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
-                  <div className="flex items-start mb-4"></div>`
+  hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="flex items-start mb-4"></div>`"`
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>`
-                      <project.icon className={`w-6 h-6 ${project.color}`} /></project>
-                    </div>"
-                    <div className="flex-1"></div>"
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
+                      <project.icon className={`w-6 h-6 ${project.color}`} /></project>`
+                    </div>
+                    <div className="flex-1"></div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
                     </div>
-                  </div>"
+                  </div>
                   <div className="grid grid-cols-2 gap-4 mb-4"></div>
-                    <div></div>"
-                      <div className="text-sm text-gray-400 mb-1">Status</div>`
-                      <div className={`text-sm font-medium ${}
-  // TOD,
+                    <div></div>
+                      <div className="text-sm text-gray-400 mb-1">Status</div>`"`
+                      <div className={`text-sm font-medium ${}`
+  // TOD,>
   O: Add content}
-=======
-  lg: grid-cols-2 gap-8"><)
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project), index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
+</div>  lg: grid-cols-2 gap-8"><)
+              {researchProjects[activeTab as keyof typeof researchProjects].map((project), index) => ()}
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700"
   hover:border-cyan-400/50 transition-all duration-300"><
                   <div className="flex items-start mb-4"><
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}><
-                      <project.icon className={`w-6 h-6 ${project.color}`} /><
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}><`
+                      <project.icon className={`w-6 h-6 ${project.color}`} /><`
                     <
                     <div className="flex-1"><
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}<
@@ -1060,14 +1050,13 @@ $4}
                   <div className="grid grid-cols-2 gap-4 mb-4"><
                     <div><
                       <div className="text-sm text-gray-400 mb-1">Status<
-                      <div className = { `text-sm font-medium ${ };
+                      <div: className = { `text-sm font-medium ${ };`
   /
   O: Add content;
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+>
                         project.status === 'Completed' ? 'text-green-400' :
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
-                      }`}><
+                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`</div>                      }`}><`
                         {project.status}
 
           <
@@ -1089,7 +1078,7 @@ $4}
                     <div className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Outcomes: <
                     <ul className="space-y-1"><
-                      {project.outcomes.map((outcome), outcomeIndex) => ()}"
+                      {project.outcomes.map((outcome), outcomeIndex) => ()}
           <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"><
                           <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"><
                           {outcome}
@@ -1109,7 +1098,7 @@ $4}
             <
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
-                {publications.map((pub, index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
+                {publications.map((pub, index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400"
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}<
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}<
                     <div className="flex items-center justify-between">
@@ -1117,42 +1106,39 @@ $4}
                         <span>{pub.journal}<
                         <span>•<
                         <span>{pub.year}<
-                        <span className={`px-2 py-1 rounded text-xs ${
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500
-                        }`}>
-                          {pub.impact} Impact
-                        <
+                        <span className={`px-2 py-1 rounded text-xs ${`
+                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500>
+                        }`}>`
+                          {pub.impact} Impact</span>                        <
                       <
                       <a
                         href = { pub.link };
-                        className="text-cyan-400 hover: text-cyan-300 text-sm font-medium"
+                        className="text-cyan-400 hover: text-cyan-300 text-sm font-medium">
                       >
-                        Read Paper →
-<<<<<<< HEAD
+                        Read Paper →</a>
                       </a>
-          {/* Publications */}"
-          <div className="mb-16"></div>"
+          {/* Publications */}
+          <div className="mb-16"></div>
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Recent Publications;
-          </h2>"
-            <div className="max-w-4xl mx-auto"></div>"
+          </h2>
+            <div className="max-w-4xl mx-auto"></div>
               <div className="space-y-6"></div>
-                {publications.map((pub, index) => ()}"
+                {publications.map((pub, index) => ()}
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
-  hover:border-cyan-400/50 transition-all duration-300"></div>"
-                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>"
-                    <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>"
-                    <div className="flex items-center justify-between"></div>"
+  hover:border-cyan-400/50 transition-all duration-300"></div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
+                    <div className="text-sm text-gray-300 mb-2">{pub.authors}</div>
+                    <div className="flex items-center justify-between"></div>
                       <div className="flex items-center space-x-4 text-sm text-gray-400"></div>
                         <span>{pub.journal}</span>
                         <span></span>
                         <span>{pub.year}</span>`
-                        <span className={`px-2 py-1 rounded text-xs ${}
-  // TOD,
+                        <span className={`px-2 py-1 rounded text-xs ${}`
+  // TOD,>
   O: Add content}
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
-                        }`}></span>
-=======
+                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`</span>                        }`}></span>`
+
                       <
           {/* Publications *
           <div className="mb-16"><
@@ -1161,8 +1147,8 @@ $4}
           <
             <div className="max-w-4xl mx-auto"><
               <div className="space-y-6"><)
-                {publications.map((pub), index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
+                {publications.map((pub), index) => ()}
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700"
   hover:border-cyan-400/50 transition-all duration-300"><
                     <h3 className="text-lg font-semibold text-white mb-2">{pub.title}<
                     <div className="text-sm text-gray-300 mb-2">{pub.authors}<
@@ -1171,20 +1157,19 @@ $4}
                         <span>{pub.journal}<
                         <span><
                         <span>{pub.year}<
-                        <span className = { `px-2 py-1 rounded text-xs ${ };
+                        <span: className = { `px-2 py-1 rounded text-xs ${ };`
   /
-  O: Add content;
+  O: Add content;>
 }
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500
-                        }`}><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500</span>                        }`}><`
+
                           {pub.impact} Impact;
           <
                       <
                       <a><
-                        href={pub.link}"
+                        href={pub.link}
                         className="text-cyan-400,"
-  hover:text-cyan-300 text-sm font-medium"
+  hover:text-cyan-300 text-sm font-medium
 /
 /
           <
@@ -1200,10 +1185,10 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Research Achievements
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-6">
               {achievements.map((achievement), index) => (<div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500
+                  <div className="w-16 h-16 bg-cyan-500"
                     <achievement.icon className="w-8 h-8 text-cyan-400" 
                   <
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}<
@@ -1212,13 +1197,13 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"><
 /
           <
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg: grid-cols-4 gap-6"><)
-              {achievements.map((achievement), index) => ()}"
+              {achievements.map((achievement), index) => ()}
           <div key={index} className="text-center"><
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><
-                    <achievement.icon className="w-8 h-8 text-cyan-400" /><
+                    <achievement.icon className="w-8 h-8 text-cyan-400 /><"
                   <
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}<
                   <p className="text-gray-300 text-sm">{achievement.description}<
@@ -1228,7 +1213,7 @@ $4}
           <
 
           {/* CTA Section *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900"
             <h2 className="text-2xl font-bold text-white mb-4">
               Collaborate With Our Research Team
             <
@@ -1238,12 +1223,11 @@ $4}
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
-                href="
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hove,
-    r:scale-105"
+                href=
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hove,"
+    r:scale-105">
               >
-
-                <Mail className="w-4 h-4 mr-2" 
+</a>                <Mail className="w-4 h-4 mr-2" 
                 Email Us
               <
           {/* CTA Section *
@@ -1258,33 +1242,23 @@ $4}
           <
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
-                href="
+                href= />
 
-/
-
-          "
-          <BookOpen className="w-5 h-5 mr-2" /><
+          "</a>          <BookOpen className="w-5 h-5 mr-2 /><"
 /
           <
 
               <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
-/
-
-          "
-          <Phone className="w-4 h-4 mr-2" /><
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center />"
+          "</a>          <Phone className="w-4 h-4 mr-2 /><"
 /
           <
 
               <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
-    r:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,"
+    r:text-slate-900 transition-all duration-300 inline-flex items-center />
 
-/
-
-          "
-          <Mail className="w-4 h-4 mr-2" /><
+          "</a>          <Mail className="w-4 h-4 mr-2 /><"
 /
           <
             <
@@ -1292,20 +1266,17 @@ $4}
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-
     </div>
   )};
-=======
+
       <Footer 
     <
 
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
+>
 export default ResearchDevelopmentPage;
-
+</Footer>

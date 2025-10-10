@@ -104,15 +104,12 @@ const errorData = {
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-red-400 cursor-pointer mb-2">
@@ -129,10 +126,8 @@ const errorData = {
                         {this.state.error.stack}
                       </pre>
                     </div>
-<<<<<<< HEAD
                   )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
@@ -140,10 +135,8 @@ const errorData = {
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
-<<<<<<< HEAD
                   )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
                 </div>
                 </details>
               )}
@@ -155,21 +148,19 @@ const errorData = {
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20"
               >
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4 />"
                 Go Home
               </button>
             </div>
-
             <div className="mt-6 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team:</p>
               <p className="mt-2">
                 <a 
-                  href="mailto:support@ziontechgroup.com" 
+                  href="mailto:support@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300"
                 >
                   support@ziontechgroup.com
@@ -178,14 +169,13 @@ const errorData = {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       );
     }
     return this.props.children;
   }
-=======
+
     return this.props.children}
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
 }
 
 export default ErrorBoundary;

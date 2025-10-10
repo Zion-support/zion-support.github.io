@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
@@ -58,10 +58,10 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],
       marketPrice: '$60,000-300,000
       category: 'Interoperability',
-<<<<<<< HEAD
+
       technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink']
     },
-=======
+
       technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink'];)
 },
     {
@@ -97,27 +97,27 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       category: 'Infrastructure',
       technologies: ['Ethereum', 'Bitcoin', 'Polygon', 'AWS', 'Kubernetes'];)
 },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       title: 'Web3 Application Development',
       description: 'Full-stack Web3 applications with wallet integration, smart contract interaction, and decentralized storage.',
       icon: '🌐',
-<<<<<<< HEAD
+
       price: 'Starting at $12,000/project',
       features: ['dApp development', 'Wallet integration', 'Smart contract integration', 'IPFS storage', 'User authentication'],
       benefits: ['Build decentralized applications', 'Enable user ownership', 'Create new business models'],
       marketPrice: '$25,000-100,000/project',
-=======
+
       price: 'Starting at $12,000
       features: ['Frontend development', 'Wallet integration', 'Smart contract integration', 'User authentication', 'Mobile support'],
       benefits: ['Enable Web3 adoption', 'Improve user experience', 'Increase accessibility'],
       marketPrice: '$25,000-100,000
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
       category: 'Web3',
 technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
-=======
+
       technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
 },
     {
       title: 'Blockchain Analytics Platform',
@@ -152,13 +152,13 @@ technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
       marketPrice: '$500-1,500
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];);
-<<<<<<< HEAD
+
   ];
 ;
 const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD
+
     <div>
         <title>Blockchain Services - Zion Tech Group<
         <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." 
@@ -183,14 +183,12 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                   Explore Blockchain Solutions
                 <
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-=======
     <>
       <Helmet>
         <title>Blockchain Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
-        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
+        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications. />"
+        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3 />"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
@@ -202,38 +200,33 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Transform your business with cutting-edge blockchain technology and decentralized solutions
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
                 >
-                  Get Started
-                </a>
+                  Get Started</a>                </a>
                 <a
                   href="#services"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300">
                 >
-                  View Services
-                </a>
+                  View Services</a>                </a>
               </div>
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section id="services" className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Services
-=======
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"></button>
                   Explore Blockchain Solutions
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></button>
->>>>>>> main
                   Schedule Blockchain Consultation
                 <
               <
@@ -241,20 +234,18 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         <
 
-<<<<<<< HEAD
         {/* Key Benefits *
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
             <div className="text-center mb-12"><
-              <h2 className="text-3xl m,
+              <h2 className="text-3xl m,>"
     d:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Blockchain Services?
-              <
+                Why Choose Our Blockchain Services?</h2>              <
               <p className="text-xl text-gray-600">
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
               <
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-8"><
               <div className="text-center"><
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"><
@@ -287,58 +278,54 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
             <
           <
         <
-=======
+
         {/* Key Benefits */}
         <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Why Choose Our Blockchain Services?
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 From smart contracts to enterprise solutions, we provide comprehensive blockchain development services
               </p>
             </div>
-<<<<<<< HEAD
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blockchainServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                     <span className="text-sm text-gray-500 ml-2">(Market: {service.marketPrice})</span>
                   </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Link className="w-8 h-8 text-blue-600" />
+                  <Link className="w-8 h-8 text-blue-600 />"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Blockchain Experts</h3>
                 <p className="text-gray-600">Certified blockchain developers and architects</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Shield className="w-8 h-8 text-green-600" />
+                  <Shield className="w-8 h-8 text-green-600 />"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Security First</h3>
                 <p className="text-gray-600">Comprehensive security audits and best practices</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Zap className="w-8 h-8 text-purple-600" />
+                  <Zap className="w-8 h-8 text-purple-600 />"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Rapid Development</h3>
                 <p className="text-gray-600">Fast delivery with proven development frameworks</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Target className="w-8 h-8 text-orange-600" />
+                  <Target className="w-8 h-8 text-orange-600 />"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Custom Solutions</h3>
                 <p className="text-gray-600">Tailored blockchain solutions for your specific needs</p>
@@ -346,32 +333,27 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
             </div>
           </div>
         </section>
->>>>>>> main
-
         {/* Services by Category *
         {categories.map(category => (
-<<<<<<< HEAD
+
           <section key={category)} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
               <div className="text-center mb-12"><
-                <h2 className="text-3xl m,
+                <h2 className="text-3xl m,>"
     d:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
-                <
+                  {category} Services</h2>                <
                 <p className="text-xl text-gray-600">
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
                 <
               <
-              <div className="grid grid-cols-1 md: grid-cols-2 l,
+              <div className="grid grid-cols-1 md: grid-cols-2 l,">
     g:grid-cols-3 gap-8">
-                {blockchainServices
-                  .filter(service => service.category === category)
+                {blockchainServices</div>                  .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"><
                       <div className="text-4xl mb-4">{service.icon}<
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}<
                       <p className="text-gray-600 mb-4">{service.description}<
-                      
                       <div className="mb-4"><
                         <div className="flex items-center justify-between mb-2"><
                           <span className="text-2xl font-bold text-blue-600">{service.price}<
@@ -408,7 +390,6 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: <
                         <ul className="space-y-1">
                           {service.benefits.map((benefit), benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              
                         Get Blockchain Quote
                       <
                     <
@@ -471,7 +452,6 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
               Ready to Transform with Blockchain?
             <
             <p className="text-xl mb-8 text-blue-100">
-=======
           <section key={category} className="py-16 bg-gray-50"></section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
@@ -490,7 +470,6 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                       <div className="text-4xl mb-4"></di>{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3"></h>{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4"></div>
                         <div className="flex items-center justify-between mb-2"></div>
                           <span className="text-2xl font-bold text-blue-600"></spa>{service.price}</span>
@@ -500,32 +479,28 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                           Save up to 50% vs market rates
                         </div>
                       </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 />"
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0 />"
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -536,7 +511,6 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                       ))}
                     </div>
                   </div>
-
                   <div className="pt-4 border-t">
                     <span className="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">
                       {service.category}
@@ -547,49 +521,41 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Build on Blockchain?
             </h2>
-<<<<<<< HEAD
             <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
               Let's discuss your blockchain project and create a solution that transforms your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
               >
-                Start Your Project
-              </a>
+                Start Your Project</a>              </a>
               <a
                 href="/pricing"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300">
               >
-                View Pricing
-=======
+                View Pricing</a>
             <p className="text-xl mb-8 text-blue-100"></p>
->>>>>>> main
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-              <a 
+              <a >
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-              ></a>
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"</a>              ></a>
                 📞 +1 302 464 0950
               <
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
-    r:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,"
+    r:text-blue-600 transition-colors">
               >
-                ✉️ kleber@ziontechgroup.com
-              <
+                ✉️ kleber@ziontechgroup.com</a>              <
             <
             <div className="mt-8 text-sm text-blue-200"><
               <p>📍 364 E Main St STE 1008, Middletown DE 19709<
@@ -599,24 +565,22 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
       <
     <
   );
-=======
+
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               ></a>
                 ✉️ kleber@ziontechgroup.com
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
               </a>
             </div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
+
 );
-=======
+
   );)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
 export default BlockchainPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

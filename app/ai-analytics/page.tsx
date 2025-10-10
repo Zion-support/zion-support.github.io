@@ -15,14 +15,7 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -38,19 +31,11 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-<<<<<<< HEAD
+
     },
     {
       icon: Globe,
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -60,11 +45,10 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
->>>>>>> main
+
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ;
 const benefits = [
     'Increase efficiency by up to 50%',
@@ -74,28 +58,19 @@ const benefits = [
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return (<title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-=======
-<<<<<<< HEAD
-=======
+        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses. />"
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation />"
   return (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     <>
       <Helmet>
         <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />;
+        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses. />"
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation />;"
 const useCases = [
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />  const useCases = [;
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation />  const useCases = [;"
 const useCases = [
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 
   const benefits = [
     'Transform raw data into actionable insights',
@@ -133,11 +108,9 @@ const useCases = [
     <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
-<<<<<<< HEAD
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, business intelligence, predictive analytics, data visualization" />
+        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting. />"
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, business intelligence, predictive analytics, data visualization />"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -154,29 +127,23 @@ const useCases = [
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  href="/contact">
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
+                ></a>                  <span>Get Started</span>
+                  <ArrowRight className="w-5 h-5 />"
                 </a>
                 <a
-                  href="#features"
+                  href="#features">
                   className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-5 h-5" />
+                ></a>                  <span>Learn More</span>
+                  <ArrowRight className="w-5 h-5 />"
                 </a>
               </div>
-=======
->>>>>>> main
       </Helmet>
-
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse />"
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
@@ -189,85 +156,67 @@ const useCases = [
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,
+              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,">
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+                View Demo</button>              </button>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Analytics Features</h2>
-=======
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
               </h2>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our comprehensive analytics platform provides everything you need to make data-driven decisions.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-cyan-400" />
-=======
-
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+                    <feature.icon className="w-6 h-6 text-cyan-400 />"
+            <div className="grid grid-cols-1 md:grid-cols-2 l,">
     g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
+              {features.map((feature, index) => (</div>                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,"
     r:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+                    <feature.icon className="w-8 h-8 text-white />"
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          
                           {benefit}
-<<<<<<< HEAD
+
                         </li>
                       ));
                     </ul>);
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />"
                         <span className="text-sm">{benefit}</span>
                       </li>
                     ))}
                   </ul>
-=======
                         </li>)
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
@@ -281,7 +230,7 @@ const useCases = [
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
                   <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <useCase.icon className="w-8 h-8 text-purple-400" />
+                    <useCase.icon className="w-8 h-8 text-purple-400 />"
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -290,9 +239,8 @@ const useCases = [
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
-<<<<<<< HEAD
+
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -305,7 +253,7 @@ const useCases = [
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1 />"
                       <span className="text-gray-300">{benefit}</span>
                     </li>
                   ))}
@@ -315,7 +263,7 @@ const useCases = [
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                   <div className="text-center">
                     <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <BarChart className="w-10 h-10 text-cyan-400" />
+                      <BarChart className="w-10 h-10 text-cyan-400 />"
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">Real-Time Insights</h3>
                     <p className="text-gray-300 mb-6">
@@ -333,13 +281,9 @@ const useCases = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               ));
-=======
+
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -350,28 +294,23 @@ const useCases = [
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,>"
     r:scale-110 transition-transform">
-                    
-                  </div>
+                    </div>                  </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>)
               ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
+
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-<<<<<<< HEAD
+
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
@@ -382,20 +321,17 @@ const useCases = [
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  href="/contact">
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started Now</span>
-                  <ArrowRight className="w-5 h-5" />
+                ></a>                  <span>Get Started Now</span>
+                  <ArrowRight className="w-5 h-5 />"
                 </a>
                 <a
-                  href="/pricing"
+                  href="/pricing">
                   className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>View Pricing</span>
-                  <ArrowRight className="w-5 h-5" />
+                ></a>                  <span>View Pricing</span>
+                  <ArrowRight className="w-5 h-5 />"
                 </a>
-=======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -409,32 +345,24 @@ const useCases = [
                 <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,
+                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,">
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+                  Learn More</button>                </button>
               </div>
             </div>
           </div>
         </section>
-
         <Footer />
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
-=======
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   );
 }
 export default AiAnalyticsPage;
     </React.Fragment>)
-=======
+
     </>
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
 export default AiAnalyticsPage;

@@ -1,21 +1,19 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
 import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
 import Navigation from '../components
 import Footer from '../components
-=======
+
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
+
 ;
 const DemoPage: React.FC = () => {const demos = [
-=======
->>>>>>> main
 
 const DemoPage: React.FC = () => {
   const demos = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
     {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
@@ -23,7 +21,7 @@ const DemoPage: React.FC = () => {
       features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
     },
     {
-<<<<<<< HEAD
+
       id: 'ai-chatbot',
       title: 'AI Customer Service Bot',
       description: 'See how our AI chatbot handles customer inquiries with natural language processing.',
@@ -36,12 +34,12 @@ const DemoPage: React.FC = () => {
       icon: Users,
       duration: '3 min demo',
       category: 'AI Solutions'
-=======
+
       title: 'AI Customer Support Bot',
       description: 'Experience our intelligent customer support automation',
       duration: '3 min',
       features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
->>>>>>> main
+
     },
     {
       title: 'AI Content Generation',
@@ -51,7 +49,6 @@ const DemoPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -79,23 +76,20 @@ const DemoPage: React.FC = () => {
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>Live Demos - Zion Tech Group | See Our Solutions in Action<
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations." 
         <meta name="keywords" content="AI demos, technology demos, live demonstrations, AI solutions, cloud services, cybersecurity demos" 
       <
       
-      <Navigation 
+      <Navigation >
       
-      {/* Hero Section *
-      <section className="relative py-20 px-4 overflow-hidden">)
+      {/* Hero Section *</meta>      <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
             See It in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-
             <
           <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -104,7 +98,6 @@ const DemoPage: React.FC = () => {
           <
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
-              
               Schedule Live Demo
             <
           <
@@ -119,16 +112,15 @@ const DemoPage: React.FC = () => {
             <p className="text-xl text-gray-300">Select a solution to see it in action<
           <
           
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-4 gap-6">
             {demos.map((demo) => (<button
-                key = { demo.id };)
+                key = { demo.id };)>
                 onClick = { () => setSelectedDemo(demo.id) };
-                className={`p-6 rounded-xl border transition-all duration-300 text-left ${
-                  selectedDemo === demo.id
+                className={`p-6 rounded-xl border transition-all duration-300 text-left ${</button>                  selectedDemo === demo.id`
                     ? 'border-purple-500 bg-purple-500
                     : 'border-white/10 bg-white/5 hover:bg-white
-                }`}
+                }`}`
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
                   <demo.icon className="w-6 h-6 text-white" 
@@ -148,7 +140,7 @@ const DemoPage: React.FC = () => {
       {/* Selected Demo Details *
       {selectedDemoData && (<section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white
+            <div className="bg-white/5 backdrop-blur-sm border border-white"
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <div className="flex items-center mb-6">
@@ -162,7 +154,6 @@ const DemoPage: React.FC = () => {
                   <
                   
                   <p className="text-gray-300 mb-6">{selectedDemoData.description}<
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features<
                     <ul className="space-y-2">)
@@ -175,12 +166,11 @@ const DemoPage: React.FC = () => {
                   <
                   
                   <div className="flex flex-col sm: flex-row gap-4">
-                    <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hove,
+                    <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hove,>"
     r:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
+                      </button>                      Schedule Live Demo
                       
-                      Schedule Live Demo
-                      
-                    <div className="w-24 h-24 bg-white
+                    <div className="w-24 h-24 bg-white"
                       <Play className="w-12 h-12 text-white" 
                     <
                     <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo<
@@ -202,10 +192,10 @@ const DemoPage: React.FC = () => {
           <
           
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {testimonials.map((testimonial), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white
+            {testimonials.map((testimonial), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white"
                 <div className="flex items-center mb-4">)
                   {[...Array(testimonial.rating)].map((_, i) => (
-                  "{testimonial.quote}"
+                  "{testimonial.quote}
                 <
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}<
@@ -231,25 +221,22 @@ const DemoPage: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Schedule Live Demo
             <
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hove,
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hove,">
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            <
+              Contact Sales</button>            <
           <
         <
       <
 
       <Footer 
-    <
-=======
-  return (
-    <React.Fragment>
+    <>
+
+  return (</Footer>    <React.Fragment>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business. />"
+        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo />"
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -261,14 +248,13 @@ const DemoPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {demos.map((demo, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                   <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
-                    <Play className="w-8 h-8 text-cyan-400" />
+                    <Play className="w-8 h-8 text-cyan-400 />"
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{demo.title}</h3>
                   <p className="text-gray-300 mb-4">{demo.description}</p>
@@ -276,13 +262,13 @@ const DemoPage: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {demo.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0 />"
                         {feature}
                       </li>
                     ))
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                    <Play className="w-4 h-4 mr-2" />
+                    <Play className="w-4 h-4 mr-2 />"
                     Watch Demo
                   </button>
                 </div>
@@ -290,7 +276,6 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -300,22 +285,19 @@ const DemoPage: React.FC = () => {
               </p>
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors"
+                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
               >
-                Schedule Demo
-                <ArrowRight className="w-4 h-4 ml-2" />
+                Schedule Demo</a>                <ArrowRight className="w-4 h-4 ml-2 />"
               </a>
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </React.Fragment>)
-=======
+
     </>
->>>>>>> main
+
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default DemoPage;

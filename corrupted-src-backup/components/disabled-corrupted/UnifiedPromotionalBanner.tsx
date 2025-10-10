@@ -41,7 +41,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
         ${classNa, m, e}
-      `}
+      `}`
     >
       {/* Header, Sectio, n */})
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)
@@ -82,20 +82,20 @@ varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
            }
         <h2, classNam, e = {/* TODO: Fix JSX expression */}
            }`
-        `}
+        `}`
         ></h2>
           {title}
         </h2 > {/* Descripti, o, n */}
         <p, classNam, e = {/* TODO: Fix JSX expression */}
            }`
-        `}
+        `}`
         ></p>
           {description}
         </p>
         {/* Featured, Item, s */}
         {/* TODO: Fix JSX expression */}
                }`
-          `}
+          `}`
           >
             { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (</div>
               <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
@@ -133,7 +133,7 @@ varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
           </div>
         )}
         {/* CTA, Butto, n */}
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `}
+        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `}`
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' ></div> <Link, t, o = { ctaL, i, n, k }, className={ `
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
@@ -148,9 +148,9 @@ varia, n, t === 'compa, c, t'
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
               ${/* TODO: Fix JSX expression */}
                }`
-            `}
+            `}`
            > {ctaTe, x, t}`
-            <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
+            <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}`
             /></ArrowRight>
           </Li, n, k>
           {/* TODO: Fix JSX expression */}

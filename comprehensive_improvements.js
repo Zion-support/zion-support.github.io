@@ -16,7 +16,7 @@ packageJson.scripts = {/* TODO: Fix JSX expression */}
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script;
-// const performanceScript = `import { execSync } from 'child_process';
+// const performanceScript = `import { execSync } from 'child_process';`
 
 // // Optimize images;
 // try {
@@ -39,48 +39,48 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `
-// `;
+// `;`
 
 fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScript);
 // // 3. Create accessibility improvements;
-// // const accessibilityScript = `import { execSync } from 'child_process';
+// // const accessibilityScript = `import { execSync } from 'child_process';`
 
 // // Check for accessibility issues;
 // try {
     // This would run accessibility tests in a real scenario;
 //     } catch (error) {
 // // 3. Create accessibility improvements;`
-// // const accessibilityScript = `import { execSync } from 'child_process';
+// // const accessibilityScript = `import { execSync } from 'child_process';`
 
 // // Check for accessibility issues;
 // try {/* TODO: Fix JSX expression */}
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `
-// `;
+// `;`
 
 fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilityScript);
 // // 4. Create SEO improvements;
-// // const seoScript = `import { execSync } from 'child_process';
+// // const seoScript = `import { execSync } from 'child_process';`
 
 // // Check for SEO issues;
 // try {
     // This would run SEO tests in a real scenario;
 //     } catch (error) {
 // // 4. Create SEO improvements;`
-// // const seoScript = `import { execSync } from 'child_process';
+// // const seoScript = `import { execSync } from 'child_process';`
 
 // // Check for SEO issues;
 // try {/* TODO: Fix JSX expression */}
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `
-// `;
+// `;`
 
 fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript);
 // // 5. Create comprehensive test suite;
 // // 5. Create comprehensive test suite;`
-// // const testSuite = `import { describe, it, expect } from '@jest/globals';
+// // const testSuite = `import { describe, it, expect } from '@jest/globals';`
 
 describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
@@ -103,7 +103,7 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
 
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 // // 6. Create monitoring script;
-// // const monitoringScript = `import { execSync } from 'child_process';
+// // const monitoringScript = `import { execSync } from 'child_process';`
 
 // // Monitor performance;
 // try {
@@ -112,7 +112,7 @@ rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
 // // 6. Create monitoring script;`
-// // const monitoringScript = `import { execSync } from 'child_process';
+// // const monitoringScript = `import { execSync } from 'child_process';`
 
 // // Monitor performance;
 // try {/* TODO: Fix JSX expression */}
@@ -120,12 +120,12 @@ rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
 `
-// `;
+// `;`
 
 fs.writeFileSync('/workspace/scripts/monitor.js', monitoringScript);
 // // 7. Update README with improvements;
 // // 7. Update README with improvements;`
-// const readmeContent = `# Zion Tech Group - Advanced AI and IT Solutions Website;
+// const readmeContent = `# Zion Tech Group - Advanced AI and IT Solutions Website;`
 ## Recent Improvements;
 ### Performance Optimizations;
 - ✅ Bundle size optimization;

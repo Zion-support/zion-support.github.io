@@ -34,7 +34,7 @@ class EnhancedErrorTracker {
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler()}
   private generateSessionId(): string {
-    return `${Date.now()}-${Math.random().toString(36).substring(7)}`}
+    return `${Date.now()}-${Math.random().toString(36).substring(7)}`}`
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {
@@ -142,7 +142,7 @@ class EnhancedErrorTracker {// TODO: Add content}
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-    return `${Date.now()}-${Math.random().toString(36).substring(7)}`}
+    return `${Date.now()}-${Math.random().toString(36).substring(7)}`}`
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
   O: Add content}
 }

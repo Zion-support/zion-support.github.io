@@ -2,41 +2,41 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Briefcase, GraduationCap } from 'lucide-react';
 
 interface JobPosition {
   id: number;
-=======
+
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
+
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-=======
+
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight } from 'lucide-react';
 
 interface JobPosition {
   id: string;
->>>>>>> origin/main
+
   title: string;
   department: string;
   location: string;
   type: string;
   experience: string;
-<<<<<<< HEAD
+
   posted: string;
   description: string;
   requirements: string[];
   benefits: string[];
   featured: boolean;
-=======
+
   description: string;
   requirements: string[];
   benefits: string[];
   posted: string;
   featured: boolean});
->>>>>>> origin/main
+
 }
 
 const CareersPage: React.FC = () => {
@@ -45,7 +45,7 @@ const CareersPage: React.FC = () => {
 
   const positions: JobPosition[] = [
     {
-<<<<<<< HEAD
+
       id: 1,
       title: 'Senior AI Engineer',
       department: 'Engineering',
@@ -223,14 +223,13 @@ const CareersPage: React.FC = () => {
 
   const featuredPositions = filteredPositions.filter(position => position.featured);
   const regularPositions = filteredPositions.filter(position => !position.featured);
-=======
-<<<<<<< HEAD
+
       id: '1',
       title: 'Senior AI Engineer',
-=======
+
       titl,
     e: 'Senior AI Engineer',
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+
       department: 'AI Solutions',
       location: 'Remote',
       type: 'Full-time',
@@ -326,97 +325,78 @@ const CareersPage: React.FC = () => {
       description: 'Highly rated workplace'});;)
 }
   ];
->>>>>>> origin/main
 
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us." />
-        <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions" />
-        <meta property="og:title" content="Careers - Zion Tech Group" />
-        <meta property="og:description" content="Join our team and work on the future of technology" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/careers" />
-=======
+        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />"
+        <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions />"
+        <meta property="og:title" content="Careers - Zion Tech Group />"
+        <meta property="og:description" content="Join our team and work on the future of technology />"
+        <meta property="og:type" content="website />"
+        <meta property="og:url" content="https://ziontechgroup.com/careers />"
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
->>>>>>> origin/main
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business. />"
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group />"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
+
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
->>>>>>> origin/main
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Page
               </span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Build the future of technology with us. We're looking for passionate individuals to join our mission of advancing AI and emerging technologies.
             </p>
-            
             {/* Filter Controls */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <select
-                value={selectedDepartment}
+                value={selectedDepartment}>
                 onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-              >
+                className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"</select>              >
                 {departments.map((dept) => (
                   <option key={dept.id} value={dept.id} className="bg-slate-800">
                     {dept.name}
                   </option>
                 ))}
               </select>
-              
               <select
-                value={selectedLocation}
+                value={selectedLocation}>
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-              >
+                className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"</select>              >
                 {locations.map((loc) => (
                   <option key={loc.id} value={loc.id} className="bg-slate-800">
                     {loc.name}
                   </option>
                 ))}
               </select>
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300">
               >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
+                Get Started</Link>                <ArrowRight className="w-5 h-5 />"
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300">
               >
-                Learn More
-                <ArrowRight className="w-5 h-5" />
+                Learn More</Link>                <ArrowRight className="w-5 h-5 />"
               </Link>
->>>>>>> origin/main
             </div>
           </div>
         </section>
-=======
   return (<div>
         <title>Careers - Zion Tech Group | Join Our Team<
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." 
@@ -436,9 +416,7 @@ const CareersPage: React.FC = () => {
             <
           <
         <
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
 
-<<<<<<< HEAD
         {/* Featured Positions */}
         {featuredPositions.length > 0 && (
           <section className="py-16 px-4">
@@ -458,38 +436,34 @@ const CareersPage: React.FC = () => {
                         Featured
                       </span>
                     </div>
-                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {position.description}
                     </p>
-                    
                     <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
+                        <MapPin className="w-4 h-4 />"
                         <span>{position.location}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Briefcase className="w-4 h-4" />
+                        <Briefcase className="w-4 h-4 />"
                         <span>{position.type}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <GraduationCap className="w-4 h-4" />
+                        <GraduationCap className="w-4 h-4 />"
                         <span>{position.experience}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
+                        <Users className="w-4 h-4 />"
                         <span>Posted {position.posted}</span>
                       </div>
                     </div>
-                    
                     <button className="w-full flex items-center justify-center gap-2 bg-cyan-400 text-slate-900 font-semibold py-3 rounded-lg hover:bg-cyan-300 transition-colors">
                       <span>Apply Now</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 />"
                     </button>
                   </div>
                 ))}
-=======
-<<<<<<< HEAD
+
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -497,60 +471,52 @@ const CareersPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-=======
+                  <CheckCircle className="w-8 h-8 text-white />"
         {/* Company Values */}
-<<<<<<< HEAD
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
         <section></section>
           <div></div>
             <div></div>
               <h></h>Our Values</h2>
               <p></p>
->>>>>>> main
                 These core values guide everything we do and shape our company culture.
               </p>
             </div>
-
             <div></div>
               {values.map((value, index) => (
                 <div></div>
                   <div></div>
-                    <value.icon className="w-8 h-8" />
+                    <value.icon className="w-8 h-8 />"
                   </div>
                   <h></h>{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Expert Solutions</h3>
                 <p className="text-gray-300">Professional Page services with proven results</p>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+                  <CheckCircle className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
                 <p className="text-gray-300">Round-the-clock assistance for your business needs</p>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+                  <CheckCircle className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Custom Solutions</h3>
                 <p className="text-gray-300">Tailored Page solutions for your specific requirements</p>
->>>>>>> origin/main
               </div>
             </div>
           </section>
         )}
 
-<<<<<<< HEAD
         {/* All Positions */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -564,43 +530,38 @@ const CareersPage: React.FC = () => {
                     </h3>
                     <p className="text-cyan-400 font-medium text-sm">{position.department}</p>
                   </div>
-                  
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {position.description}
                   </p>
-                  
                   <div className="flex flex-wrap gap-3 mb-4 text-xs text-gray-400">
                     <div className="flex items-center gap-1">
-                      <MapPin className="w-3 h-3" />
+                      <MapPin className="w-3 h-3 />"
                       <span>{position.location}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Briefcase className="w-3 h-3" />
+                      <Briefcase className="w-3 h-3 />"
                       <span>{position.type}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Users className="w-3 h-3" />
+                      <Users className="w-3 h-3 />"
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
-                  
                   <button className="w-full flex items-center justify-center gap-2 bg-white/10 text-white font-medium py-2 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors text-sm">
                     <span>View Details</span>
-                    <ArrowRight className="w-3 h-3" />
+                    <ArrowRight className="w-3 h-3 />"
                   </button>
                 </div>
               ))}
             </div>
-
             {regularPositions.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4">No positions found</h3>
                 <p className="text-gray-300 mb-8">Try adjusting your filters or check back later for new opportunities</p>
-                <button
+                <button>
                   onClick={() => {
-                    setSelectedDepartment('all');
-                    setSelectedLocation('all');
+                    setSelectedDepartment('all');</button>                    setSelectedLocation('all');
                   }}
                   className="px-8 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors"
                 >
@@ -610,7 +571,6 @@ const CareersPage: React.FC = () => {
             )}
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -618,23 +578,21 @@ const CareersPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Star className="w-8 h-8 text-cyan-400" />
+                  <Star className="w-8 h-8 text-cyan-400 />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Cutting-Edge Technology</h3>
                 <p className="text-gray-300">Work with the latest AI, quantum computing, and emerging technologies that shape the future.</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-purple-400" />
+                  <Users className="w-8 h-8 text-purple-400 />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Collaborative Culture</h3>
                 <p className="text-gray-300">Join a diverse team of experts who value collaboration, innovation, and continuous learning.</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-8 h-8 text-green-400" />
+                  <CheckCircle className="w-8 h-8 text-green-400 />"
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Comprehensive Benefits</h3>
                 <p className="text-gray-300">Enjoy competitive compensation, health benefits, flexible work arrangements, and professional development opportunities.</p>
@@ -642,7 +600,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -660,9 +617,6 @@ const CareersPage: React.FC = () => {
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
                   Learn About Our Culture
                 </button>
-=======
-<<<<<<< HEAD
-=======
         {/* Open Positions */}
         <section></section>
           <div></div>
@@ -672,109 +626,80 @@ const CareersPage: React.FC = () => {
                 Explore our current job openings and find the perfect role for you.
               </p>
             </div>
-
             <div></div>
               {openPositions.map((position) => (
-<<<<<<< HEAD
+
                 <div
                   key={position.id}
-                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
-                  } hover:border-purple-400 transition-all duration-300 group`}
-=======
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions<
-            <div className="grid grid-cols-1 m,
+                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${`
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'>
+                  } hover:border-purple-400 transition-all duration-300 group`}`
+</div>            <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions<
+            <div className="grid grid-cols-1 m,"
     d:grid-cols-2 gap-6 mb-16">
               {openPositions.map((position), index) => (<div
                   key = { index };
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400"
+>
                 >
-=======
-                <div></div>
->>>>>>> main
+</div>                <div></div>
                   {position.featured && (
                     <div></div>
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star className="w-5 h-5 text-yellow-400 fill-current />"
                       <spa></spa>Featured Position</span>
                     </div>
                   );
 
-<<<<<<< HEAD
                   <div className="flex items-start justify-between mb-4">
                     <div>
-<<<<<<< HEAD
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-=======
                   <div></div>
                     <div></div>
                       <h3></h3>
->>>>>>> main
                         {position.title}
                       </h3>
                       <p className="text-cyan-400 font-medium">{position.department}</p>
                     </div>
-<<<<<<< HEAD
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
-=======
-                      <h3 className="text-xl font-bold text-white mb-2 group-hove,
+                      <h3 className="text-xl font-bold text-white mb-2 group-hove,">
     r:text-cyan-400 transition-colors">
-                        {position.title}
-                      <
+                        {position.title}</h3>                      <
                       <p className="text-gray-300">{position.department}<
                     <
-                    <span className="px-3 py-1 bg-cyan-500
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
-=======
+                    <span className="px-3 py-1 bg-cyan-500"
                     <span></span>
->>>>>>> main
                       {position.type}
                     <
                   <
 
-<<<<<<< HEAD
                   <p className="text-gray-300 mb-6">{position.description}</p>
-=======
                   <p className="text-gray-300 mb-4">{position.description}<
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
-
-<<<<<<< HEAD
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" 
                       <span>{position.location}<
                     <
                     <div className="flex items-center gap-1">
-<<<<<<< HEAD
-=======
                   <div></div>
                     <div></div>
-                      <MapPin className="w-4 h-4" />
+                      <MapPin className="w-4 h-4 />"
                       <spa></spa>{position.location}</span>
                     </div>
                     <div></div>
->>>>>>> main
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4 />"
                       <spa></spa>{position.experience}</span>
                     </div>
                     <div></div>
-                      <Users className="w-4 h-4" />
+                      <Users className="w-4 h-4 />"
                       <spa></spa>Posted {position.posted}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Requirements:</h4>
                     <ul className="space-y-1">
                       {position.requirements.slice(0, 3).map((req, index) => (
                         <li key={index} className="text-sm text-gray-300 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-=======
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0 />"
                       <Clock className="w-4 h-4" 
                       <span>{position.experience}<
                     <
@@ -785,43 +710,33 @@ const CareersPage: React.FC = () => {
                     <ul className="space-y-1">)
                       {position.requirements.map((req), reqIndex) => (<li key={reqIndex} className="text-gray-300 text-sm flex items-center">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" 
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
                           {req}
                         <)
-                      ))}
-<<<<<<< HEAD
-                      {position.requirements.length > 3 && (
-                        <li className="text-sm text-gray-400">
+                      ))}>
+
+                      {position.requirements.length > 3 && (</CheckCircle>                        <li className="text-sm text-gray-400">
                           +{position.requirements.length - 3} more requirements
                         </li>
                       )}
                     </ul>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-gray-400">
                       {position.benefits.length} benefits included
                     </div>
                     <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                       Apply Now
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 />"
                     </button>
                   </div>
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
           </div>
         </section>
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -834,31 +749,26 @@ const CareersPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+13024640950"
+                  href="tel:+13024640950">
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
+                ></a>                  <Phone className="w-5 h-5 />"
                   Call Now
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
+                  href="mailto:kleber@ziontechgroup.com">
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300"
-                >
-                  <Mail className="w-5 h-5" />
+                ></a>                  <Mail className="w-5 h-5 />"
                   Email Us
                 </a>
->>>>>>> origin/main
               </div>
             </div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
+
   );
-=======
-<<<<<<< HEAD
-=======
+
                     <
                   <
 
@@ -871,16 +781,13 @@ const CareersPage: React.FC = () => {
         <
       <
     <
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+
   );
-=======
+
   ));)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
 
-<<<<<<< HEAD
 export default CareersPage;
-=======
+
 export default PagePage;
->>>>>>> origin/main

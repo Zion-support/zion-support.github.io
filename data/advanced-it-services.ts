@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -2922,10 +2921,9 @@ i,
   s: 89; ratin,
   g: 4.8; review,
   s: 45} export interface AdvancedITService {} ]; '
-=======
+
     marketSize: '$500M quantum computing market'
     growthRate: '500% annual growth';
 variant: 'quantum-cloud'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

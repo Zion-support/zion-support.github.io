@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 
   id: string;
@@ -1918,8 +1918,7 @@ i,
   s: 38, ratin,
   g: 4.7, review,
   s: 26} ]; '
-=======
+
     marketSize: '$5.2 B sales intelligence market'
     growthRate: '30% annual growth';
 variant: 'ai-sales',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

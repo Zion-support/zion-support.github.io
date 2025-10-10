@@ -67,10 +67,10 @@ const _meta = getProposal(id);
     // Email submission;
     if (channels.includes('email')) {
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;
-const text = `Please find the proposal attached.
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;`
+const text = `Please find the proposal attached.`
 
 Titl,
   e: ${meta.title}
@@ -85,12 +85,12 @@ Budget/Resolutio,
 
 DAO Governance: See document.,
 ,
-Delegate Note: ${delegateNote || 'N/A'}`;
+Delegate Note: ${delegateNote || 'N/A'}`;`
 DAO,
   Governance: See document.
 
 Delegate,`
-  Note: ${delegateNote || 'N/A'}`;
+  Note: ${delegateNote || 'N/A'}`;`
 
       await submitByEmail(to, subject, text)}
 
@@ -98,7 +98,7 @@ Delegate,`
 let ensRecordHash: string | undefined;
     try {,;
 const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
-      ensRecordHash = `0 x${hash}`;
+      ensRecordHash = `0 x${hash}`;`
       updateArtifacts(id, { ensRecordHash })} catch {
       // ignore}
 ;
@@ -113,7 +113,7 @@ const updated = updateProposalMeta(id, m => ({)
 let,
   ensRecordHash: string | undefined;
     try {/* TODO: Fix JSX expression */}`
-      ensRecordHash = `0x${hash}`;
+      ensRecordHash = `0x${hash}`;`
       updateArtifacts(id, { ensRecordHash })} catch {/* TODO: Fix JSX expression */}
     }
 ;

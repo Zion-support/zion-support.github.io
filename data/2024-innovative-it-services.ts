@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 export interface InnovativeITService2024 {id: string;
   name: string;
@@ -55,7 +55,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       "Multi-cloud orchestration",
       "Advanced logging and analytics",
       "Integration with popular DevOps tools",
-      "White-label solution for MSPs"
+      "White-label solution for MSPs
     ],
     popular: true;
     icon: '',
@@ -106,89 +106,89 @@ export const,
   innovativeITServices2024: InnovativeITService2024[] = [,
     i,
   d: "autonomous-devops-platform",
-    nam,"
+    nam,
   e: "Autonomous DevOps Platform",
-    taglin,"
+    taglin,
   e: "Self-healing infrastructure with zero downtime",
-    pric,"
+    pric,
   e: "$799",
-    perio,"
+    perio,
   d: "/month",
-    descriptio,"
+    descriptio,
   n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.",
     feature,
-  s: [,"
-      "AI-powered infrastructure monitoring and alerting","
-      "Automatic performance optimization and scaling","
-      "Self-healing deployment pipelines","
-      "Intelligent resource allocation","
-      "Real-time security threat detection","
-      "Automated backup and disaster recovery","
-      "Multi-cloud orchestration","
-      "Advanced logging and analytics","
-      "Integration with popular DevOps tools","
-      "White-label solution for MSPs"
+  s: [,
+      "AI-powered infrastructure monitoring and alerting",
+      "Automatic performance optimization and scaling",
+      "Self-healing deployment pipelines",
+      "Intelligent resource allocation",
+      "Real-time security threat detection",
+      "Automated backup and disaster recovery",
+      "Multi-cloud orchestration",
+      "Advanced logging and analytics",
+      "Integration with popular DevOps tools",
+      "White-label solution for MSPs
     ],
     popula,
   r: true,
-    ico,"
+    ico,
   n: "",
-    colo,"
+    colo,
   r: "from-blue-500 to-cyan-600",
-    textColo,"
+    textColo,
   r: "text-blue-400",
-    lin,"
+    lin,
   k: 'http,',
   s:
         s://ziontechgroup.com/autonomous-devops",
-    marketPositio,"
+    marketPositio,
   n: 'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,',
   advantage:
         advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.",
-    targetAudienc,"
+    targetAudienc,
   e: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups",
     trialDay,
   s: 14,
-    setupTim,"
+    setupTim,
   e: "2 hours",
-    categor,"
+    categor,
   y: "DevOps & Infrastructure",
     realServic,
   e: true,
-    technolog,"
+    technolog,
   y: ["React", "Node.js", "Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
-    integration,"
+    integration,
   s: ["GitHub", "GitLab", "Jenkins", "CircleCI", "AWS CodePipeline", "Azure DevOps"],
-    useCase,"
+    useCase,
   s: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery"],
-    ro,"
+    ro,
   i: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.",
-    competitor,"
+    competitor,
   s: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
-    marketSiz,"
+    marketSiz,
   e: "$8.2B market",
-    growthRat,"
+    growthRat,
   e: "20.1% annual growth",;
-varian,"
+varian,
   t: "ai-futuristic",
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,
   s: "364 E Main St STE 1008 Middletown DE 19709",
-      websit,"
+      websit,
   e: 'http,',
   s:
-        s://ziontechgroup.com"
+        s://ziontechgroup.com
     },
     realImplementatio,
   n: true,
-    implementationDetail,"
+    implementationDetail,
   s: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
-    launchDat,"
+    launchDat,
   e: "2024-01-15",
     customer,
   s: 950,
@@ -235,55 +235,53 @@ export interface InnovativeITService2024,
   s: string; launchDat,
   e: string; review,
   s: number} export const,
-  innovativeITServices2024: InnovativeITService2024[] = [ i,"
-  d: "autonomous-devops-platform", nam,"
-  e: "Autonomous DevOps Platform", taglin,"
-  e: "Self-healing infrastructure with zero downtime", pric,"
-  e: "$799", perio,"
-  d: "/month", descriptio,"
-  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", feature,"
+  innovativeITServices2024: InnovativeITService2024[] = [ i,
+  d: "autonomous-devops-platform", nam,
+  e: "Autonomous DevOps Platform", taglin,
+  e: "Self-healing infrastructure with zero downtime", pric,
+  e: "$799", perio,
+  d: "/month", descriptio,
+  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", feature,
   s: [ "AI-powered infrastructure monitoring and alerting", "Automatic performance optimization and scaling", "Self-healing deployment pipelines", "Intelligent resource allocation", "Real-time security threat detection", "Automated backup and disaster recovery", "Multi-cloud orchestration", "Advanced logging and analytics", "Integration with popular DevOps tools", "White-label solution for MSPs" ], popula,
-  r: true, ico,"
-  n: "⚡", colo,"
-  r: "from-blue-500 to-cyan-600", textColo,"
-  r: "text-blue-400", lin,"
+  r: true, ico,
+  n: "⚡", colo,
+  r: "from-blue-500 to-cyan-600", textColo,
+  r: "text-blue-400", lin,
   k: 'http,',
   s:
-        s://ziontechgroup.com/autonomous-devops", marketPositio,"
+        s://ziontechgroup.com/autonomous-devops", marketPositio,
   n: 'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,',
   advantage:
-        advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.", targetAudienc,"
+        advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.", targetAudienc,
   e: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups", trialDay,
-  s: 14, setupTim,"
-  e: "2 hours", categor,"
+  s: 14, setupTim,
+  e: "2 hours", categor,
   y: "DevOps & Infrastructure", realServic,
-  e: true, technolog,"
-  y: ["React", "Node.js", "Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP"], integration,"
-  s: ["GitHub", "GitLab", "Jenkins", "CircleCI", "AWS CodePipeline", "Azure DevOps"], useCase,"
-  s: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery"], ro,"
-  i: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.", competitor,"
-  s: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"], marketSiz,"
-  e: "$8.2B market", growthRat,"
-  e: "20.1% annual growth", varian,"
+  e: true, technolog,
+  y: ["React", "Node.js", "Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP"], integration,
+  s: ["GitHub", "GitLab", "Jenkins", "CircleCI", "AWS CodePipeline", "Azure DevOps"], useCase,
+  s: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery"], ro,
+  i: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.", competitor,
+  s: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"], marketSiz,
+  e: "$8.2B market", growthRat,
+  e: "20.1% annual growth", varian,
   t: "ai-futuristic", contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709", websit,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709", websit,
   e: 'http,',
   s:
         s://ziontechgroup.com" }, realImplementatio,
-  n: true, implementationDetail,"
-  s: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.", launchDat,"
+  n: true, implementationDetail,
+  s: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.", launchDat,
   e: "2024-01-15", customer,
   s: 950, ratin,
   g: 4.8, review,
-  s: 520 } ];"
-=======
-    marketSize: "$8.2B market"
+  s: 520 } ];
+    marketSize: "$8.2B market
     growthRate: "20.1% annual growth";
-variant: "ai-futuristic"
+variant: "ai-futuristic
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
+      mobile: "+1 302 464 0950
       email: "kleber@ziontechgroup.com",
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -70,15 +70,13 @@ const filteredDocs = docCategories.map(category => ({
       <SEOOptimizer 
         title="Documentation - Zion Tech Group"
         description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
-        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
-      />
+        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation />"
       <Navigation />
       
             </div>
           </div>
         </div>
       </section>
-
       {/* Popular Docs */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -88,7 +86,7 @@ const filteredDocs = docCategories.map(category => ({
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-5 h-5 text-white" />
+                    <BookOpen className="w-5 h-5 text-white />"
                   </div>
                   <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
                 </div>
@@ -101,14 +99,13 @@ const filteredDocs = docCategories.map(category => ({
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"
                 >
                   Read More
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 />"
                 </a>
               </div>
             ))
           </div>
         </div>
       </section>
-
       {/* Documentation Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -118,14 +115,13 @@ const filteredDocs = docCategories.map(category => ({
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-6 h-6 text-white" />
+                    <BookOpen className="w-6 h-6 text-white />"
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
-                
                 <div className="space-y-4">
                   {category.docs.map((doc, docIndex) => (
                     <a
@@ -140,7 +136,7 @@ const filteredDocs = docCategories.map(category => ({
                           </h4>
                           <p className="text-gray-300 text-sm">{doc.description}</p>
                         </div>
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors />"
                       </div>
                     </a>
                   ))
@@ -150,7 +146,6 @@ const filteredDocs = docCategories.map(category => ({
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -170,6 +165,5 @@ const filteredDocs = docCategories.map(category => ({
           </div>
         </div>
       </section>
-
       <Footer />
     </div>

@@ -6,4 +6,3 @@
   r: 'Missing address' }); const data = store[String(address).toLowerCase()] || null; return res.status(200).json({ data }) } } catch (error) {/* TODO: Fix JSX expression */}
   r: ") error)} return res.status(500).json({/* TODO: Fix JSX expression */}")
   r: "Internal server error" })} } '
-"

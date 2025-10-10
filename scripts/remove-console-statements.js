@@ -66,7 +66,7 @@ const matches = newContent.match(pattern);
         newContent = newContent.replace(pattern, '');
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
-  from: ${filePath}`)}
+  from: ${filePath}`)}`
     
     return modified} catch (error) {/* TODO: Fix JSX expression */}`
     // // console.error removed for production
@@ -131,7 +131,7 @@ const files = await glob(pattern, {)
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {`
   main()}
 
 export { processFile, consolePatterns }}
@@ -147,7 +147,7 @@ export { processFile, consolePatterns }}
   modified: ${modifiedFiles}`);`
   // // console.log removed for production
 `
-  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
+  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);`
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

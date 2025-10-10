@@ -28,22 +28,22 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
     this.checks.push({ name, fn })}
 
   async runCheck(check) {/* TODO: Fix JSX expression */}
-  g: ${check.name}`, 'cyan');
+  g: ${check.name}`, 'cyan');`
     try {/* TODO: Fix JSX expression */}`
-        this.log(`✅ ${check.name}: PASSED`, 'green');
+        this.log(`✅ ${check.name}: PASSED`, 'green');`
         if (result.message) {/* TODO: Fix JSX expression */}`
-          this.log(`   ${result.message}`, 'blue')}
+          this.log(`   ${result.message}`, 'blue')}`
       } else {/* TODO: Fix JSX expression */}
   k: check.name, ...result });`
-          this.log(`⚠️  ${check.name}: WARNING`, 'yellow')} else {/* TODO: Fix JSX expression */}
+          this.log(`⚠️  ${check.name}: WARNING`, 'yellow')} else {/* TODO: Fix JSX expression */}`
   k: check.name, ...result });`
-          this.log(`❌ ${check.name}: FAILED`, 'red')}
+          this.log(`❌ ${check.name}: FAILED`, 'red')}`
         if (result.message) {/* TODO: Fix JSX expression */}`
-          this.log(`   ${result.message}`, result.severity === 'warning' ? 'yellow' : 'red')}
+          this.log(`   ${result.message}`, result.severity === 'warning' ? 'yellow' : 'red')}`
       }
       return result.success} catch (error) {/* TODO: Fix JSX expression */}
   r: error.message });`
-      this.log(`❌ ${check.name}: ERROR - ${error.message}`, 'red');
+      this.log(`❌ ${check.name}: ERROR - ${error.message}`, 'red');`
       return false}
   }
 
@@ -60,13 +60,13 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
     this.log(`⚠️  Warning)`
   s: ${this.warnings.length}`, 'yellow');`
     this.log(`❌ Faile)`
-  d: ${this.failures.length}`, 'red');
+  d: ${this.failures.length}`, 'red');`
 
     if (this.failures.length > 0) {/* TODO: Fix JSX expression */}`
-        this.log(`${index + 1}. ${failure.check}: ${failure.message}`, 'red')})}
+        this.log(`${index + 1}. ${failure.check}: ${failure.message}`, 'red')})}`
 
     if (this.warnings.length > 0) {/* TODO: Fix JSX expression */}`
-        this.log(`${index + 1}. ${warning.check}: ${warning.message}`, 'yellow')})}
+        this.log(`${index + 1}. ${warning.check}: ${warning.message}`, 'yellow')})}`
 
     this.log('\n' + '='.repeat(60), 'blue');
 
@@ -252,7 +252,7 @@ const _requiredEnvVars = ['NODE_ENV'];
         message: 'Security vulnerabilities found. Run: pnpm audit',
   // Check,
   7: Environment variables (warning only)
-  checker.addCheck('Environment Variables', async () => {/* TODO: Fix JSX expression */}`;
+  checker.addCheck('Environment Variables', async () => {/* TODO: Fix JSX expression */}`;`
 vars: ${missing.join(', ')}`
       }}
     

@@ -14,7 +14,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 6-trustle s s-evaluati o n-bluepri n t')
         />),
       </Helm, e, t>
-
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Ai, 2026, Trustless Evaluation, Blueprin, t;

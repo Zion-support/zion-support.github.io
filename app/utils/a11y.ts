@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /**
  * Accessibility (A11Y) Utilities
  * Provides helpers for improving web accessibility
@@ -8,7 +8,7 @@
  * Generate unique ID for aria-describedby and aria-labelledby
  */
 export function generateId(prefix = 'a11y'): string {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}`
 
 /**
  * Announce message to screen readers
@@ -130,7 +130,7 @@ const ratio = getContrastRatio(color1, color2);
  */
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {;
 const skipLink = document.createElement('a');
-  skipLink.href = `#${targetId}`;
+  skipLink.href = `#${targetId}`;`
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
   skipLink.style.position = 'absolute';
@@ -199,20 +199,20 @@ const triggerRect = trigger.getBoundingClientRect();
     
     switch (placement) {
       case 'top':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
-        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;`
+        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`;`
         break;
       case 'bottom':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
-        tooltip.style.top = `${triggerRect.bottom + 5}px`;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;`
+        tooltip.style.top = `${triggerRect.bottom + 5}px`;`
         break;
       case 'left':
-        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`;
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
+        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`;`
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;`
         break;
       case 'right':
-        tooltip.style.left = `${triggerRect.right + 5}px`;
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
+        tooltip.style.left = `${triggerRect.right + 5}px`;`
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;`
         break}
   };
   ;
@@ -253,6 +253,5 @@ const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
 }
   }
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

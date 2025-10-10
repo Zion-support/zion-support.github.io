@@ -13,10 +13,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData}) => {;
-const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
-    : `https://zion.app${canonicalUrl}`;
+    : `https://zion.app${canonicalUrl}`;`
 ;
 const defaultStructuredData = {
     '@context': 'https: //schema.org',
@@ -38,7 +38,7 @@ const defaultStructuredData = {
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:type" content={ogType} />
-      <meta property="og: site_name" content="Zion Tech Group" />,
+      <meta property="og: site_name" content="Zion Tech Group />,"
 ,
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
@@ -46,68 +46,68 @@ const defaultStructuredData = {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#2563eb" />
+      <meta name="robots" content="index, follow />"
+      <meta name="author" content="Zion Tech Group />"
+      <meta name="viewport" content="width=device-width, initial-scale=1 />"
+      <meta name="theme-color" content="#2563eb />"
       {/* Performance hints */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />)
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />)
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />)
+      <link rel="preconnect" href="https: //fonts.googleapis.com />)"
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous />)"
+      <link rel="dns-prefetch" href="//www.google-analytics.com />)"
 ),
       {/* Structured Data */}
       <script type="application/ld+json">;
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
-  s://zion.app${canonicalUrl}`;
+  s://zion.app${canonicalUrl}`;`
 ;
 const defaultStructuredData = {/* TODO: Fix JSX expression */}
   };
 
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} /></meta>"
-      <meta name="keywords" content={keywords} /></meta>"
+      <meta name="description" content={description} /></meta>
+      <meta name="keywords" content={keywords} /></meta>
       <link rel="canonical" href={fullCanonicalUrl} /></link>
-      {/* Open Graph */}"
+      {/* Open Graph */}
       <meta property="o,"
-  g:title" content={fullTitle} /></meta>"
+  g:title" content={fullTitle} /></meta>
       <meta property="o,"
-  g:description" content={description} /></meta>"
+  g:description" content={description} /></meta>
       <meta property="o,"
-  g:image" content={ogImage} /></meta>"
+  g:image" content={ogImage} /></meta>
       <meta property="o,"
-  g:url" content={fullCanonicalUrl} /></meta>"
+  g:url" content={fullCanonicalUrl} /></meta>
       <meta property="o,"
-  g:type" content={ogType} /></meta>"
+  g:type" content={ogType} /></meta>
       <meta property="o,"
-  g:site_name" content="Zion Tech Group" /></meta>
-      {/* Twitter */}"
+  g:site_name" content="Zion Tech Group /></meta>"
+      {/* Twitter */}
       <meta name="twitte,"
-  r:card" content={twitterCard} /></meta>"
+  r:card" content={twitterCard} /></meta>
       <meta name="twitte,"
-  r:title" content={fullTitle} /></meta>"
+  r:title" content={fullTitle} /></meta>
       <meta name="twitte,"
-  r:description" content={description} /></meta>"
+  r:description" content={description} /></meta>
       <meta name="twitte,"
   r:image" content={ogImage} /></meta>
-      {/* Additional SEO */}"
-      <meta name="robots" content="index, follow" /></meta>"
-      <meta name="author" content="Zion Tech Group" /></meta>"
-      <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>"
-      <meta name="theme-color" content="#2563eb" /></meta>
-      {/* Performance hints */}"
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow /></meta>"
+      <meta name="author" content="Zion Tech Group /></meta>"
+      <meta name="viewport" content="width=device-width, initial-scale=1 /></meta>"
+      <meta name="theme-color" content="#2563eb /></meta>"
+      {/* Performance hints */}
       <link rel="preconnect" href="http,"
-  s://fonts.googleapis.com" /></link>"
+  s://fonts.googleapis.com /></link>
       <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
-      {/* Structured Data */}"
+  s://fonts.gstatic.com" crossOrigin="anonymous /></link>"
+      <link rel="dns-prefetch" href="//www.google-analytics.com /></link>"
+      {/* Structured Data */}
       <script type="application/ld+json"></script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>

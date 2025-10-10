@@ -36,24 +36,18 @@ const AccessibilityCheckerPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AccessibilityChecker | Zion Tech Group<
         <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." 
         <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" 
-      <
+      <>
 
-      {/* Hero Section *
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      {/* Hero Section *</meta>      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-
               <
               <br 
               <span className="text-white">Solutions<
@@ -65,15 +59,13 @@ const AccessibilityCheckerPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AccessibilityChecker | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
+        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business. />"
+        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker />"
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -93,9 +85,8 @@ const AccessibilityCheckerPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 />"
               </button>
-<<<<<<< HEAD
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
@@ -103,9 +94,7 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
               <button></button>
->>>>>>> main
                 Learn More
               <
             <
@@ -113,18 +102,14 @@ const AccessibilityCheckerPage: React.FC = () => {
         <
       <
 
-<<<<<<< HEAD
       {/* Features Section *
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl m,
+            <h2 className="text-3xl m,>"
     d:text-4xl font-bold text-white mb-4">
-              Why Choose Our AccessibilityChecker?
-            <
+              Why Choose Our AccessibilityChecker?</h2>            <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -132,23 +117,19 @@ const AccessibilityCheckerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AccessibilityChecker?
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             <p></p>
->>>>>>> main
               Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
             <
           <
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-8">)
-            {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
+            {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white"
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" 
                 <
@@ -161,20 +142,18 @@ const AccessibilityCheckerPage: React.FC = () => {
       <
 
       {/* Benefits Section *
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white"
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
           <div></div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+                  <feature.icon className="h-6 w-6 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -190,21 +169,17 @@ const AccessibilityCheckerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our accessibilitychecker solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
             <p></p>
->>>>>>> main
               Experience the power of our accessibilitychecker solutions for your business.
             <
           <
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 m,
+          <div className="grid grid-cols-1 m,"
     d:grid-cols-2 gap-6">
             {benefits.map((benefit), index) => (<div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" 
@@ -226,24 +201,21 @@ const AccessibilityCheckerPage: React.FC = () => {
               Contact our experts to discuss your accessibilitychecker needs and get a customized solution.
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,>"
     r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                
-                <Mail className="mr-2 h-5 w-5" 
+                </button>                <Mail className="mr-2 h-5 w-5" 
                 Email Us
               <
             <
           <
         <
       <
-    <
+    <>
   );
-=======
-          <div></div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+</Mail>          <div></div>
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />"
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -262,11 +234,11 @@ const AccessibilityCheckerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-5 w-5 />"
                 Call Now
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+                <Mail className="mr-2 h-5 w-5 />"
                 Email Us
               </button>
             </div>
@@ -274,12 +246,10 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-=======
+
     </>
   ));)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
 export default AccessibilityCheckerPage;

@@ -223,8 +223,8 @@ const event = {
         url: window.location.href;
         userAgent: navigator.userAgent;
         language: navigator.language;
-        screenResolution: `${screen.width}x${screen.height}`,
-        viewportSize: `${window.innerWidth}x${window.innerHeight}`,
+        screenResolution: `${screen.width}x${screen.height}`,`
+        viewportSize: `${window.innerWidth}x${window.innerHeight}`,`
   setupPrivacyCompliance() {/* TODO: Fix JSX expression */}
     }
 
@@ -238,9 +238,9 @@ const event = {
   }
 
   track(eventName, properties = {}) {/* TODO: Fix JSX expression */}
-  n: `${screen.width}x${screen.height}`,
+  n: `${screen.width}x${screen.height}`,`
         viewportSiz,`
-  e: `${window.innerWidth}x${window.innerHeight}`}};
+  e: `${window.innerWidth}x${window.innerHeight}`}};`
 
     this.eventQueue.push(event);
 
@@ -334,7 +334,7 @@ const response = await fetch('/api/analytics', {)
   y: JSON.stringify(payload)});
 
       if (!response.ok) {/* TODO: Fix JSX expression */}`
-  s: ${response.status}`)}
+  s: ${response.status}`)}`
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }

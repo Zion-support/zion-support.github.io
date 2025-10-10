@@ -8,7 +8,7 @@
           
           
           
-          <reference types="vite/client" />
+          <reference types="vite/client />"
 interface ImportMetaEnv {// TODO: Add content}
 }
 

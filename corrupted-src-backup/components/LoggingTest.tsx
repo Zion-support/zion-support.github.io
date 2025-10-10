@@ -8,10 +8,10 @@ const Button: React.FC<{
   variant?: string;
   className?: string;
   children: React.ReactNode}> = ({ onClick, className = '', children }) => (
-  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>;
+  <button onClick={onClick} className={`px-4 py-2 rounded ${className}`}>;`
 const,
   Button: React.FC<{/* TODO: Fix JSX expression */}
-}> = ({ onClick, className = '', children }) => (<button onClick={onClick} className={`px-4 py-2 rounded ${className}`}></button>
+}> = ({ onClick, className = '', children }) => (<button onClick={onClick} className={`px-4 py-2 rounded ${className}`}></button>`
     {children}
   </button>)
 );

@@ -57,15 +57,15 @@ try {/* TODO: Fix JSX expression */}
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
     //Fetch the branch;
-    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
+    execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });`
 
     //Check if branch exists and has commits;
     try {
-      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' })} catch (e) {
+      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' })} catch (e) {`
 //       return { success: false, method: 'not_found' }}
 
     //Try initial merge;
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`)"`
       { stdio: 'inherit' }
     );
 
@@ -77,17 +77,17 @@ function resolveConflictsAndMerge(branchName) {,
 // //Step,
   4: Enhanced conflict resolution function;
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})`
   o: 'inherit' });
 
     //Check if branch exists and has commits;
     try {/* TODO: Fix JSX expression */}`
-      execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
+      execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})`
   o: 'pipe' })} catch (e) {/* TODO: Fix JSX expression */}
   d: 'not_found' }}
 
     //Try initial merge;`
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,"`
       {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     );
@@ -95,8 +95,8 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 //     return {/* TODO: Fix JSX expression */}
   d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -110,8 +110,8 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       execSync(
     try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-      execSync(")`
-        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
+      execSync(")`"`
+        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,"`
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
@@ -140,13 +140,13 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
         if (file.trim()) {
           try {
             //Try to resolve by taking the incoming version;
-            execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit' });
-            execSync(`git add "${file}"`, { stdio: 'inherit' });
+            execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit' });`
+            execSync(`git add "${file}"`, { stdio: 'inherit' });`
 //             } catch (fileError) {
-      for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
-            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'inherit' });"`
-            execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
+      for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`"`
+            execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})"`
+  o: 'inherit' });"`"`
+            execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})"`
   o: 'inherit' });
 //             } catch (fileError) {/* TODO: Fix JSX expression */}
 //             }
@@ -154,10 +154,10 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       }
 
       //Complete the merge;
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)"`
         stdio: 'inherit'),
-      //Complete the merge;"`
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
+      //Complete the merge;"`"`
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})"`
       });
 //       return {/* TODO: Fix JSX expression */}
   d: 'manual' }} catch (manualError) {/* TODO: Fix JSX expression */}

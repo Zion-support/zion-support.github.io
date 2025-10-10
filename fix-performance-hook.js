@@ -6,7 +6,7 @@ import fs from 'fs';
 // const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
 
 // Fix the duplicate analytics definitions and syntax errors;
-const fixedContent = `/**
+const fixedContent = `/**`
  * Performance Monitoring Hook;
  * Provides React hooks for performance monitoring and optimization;
  */

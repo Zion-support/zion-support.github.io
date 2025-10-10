@@ -20,11 +20,11 @@ exports.config = {/* TODO: Fix JSX expression */}
 };
 exports.handler = async () => {const logs = []}
   const step = (name} fn) => {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
+    logs.push(`\n=== ${name} ===`);`
     const {status, stdout} stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
+    logs.push(`exit=${status}`);`
     return status};
   step('front-index: auto-advertiser') () =>
     runNode('automation/front-index-auto-advertiser.cjs')
@@ -58,7 +58,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
   r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/20 * * * *'} }; exports.handler = async () => {const logs = []} const step = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status}; ' step('front-inde)
+  e: '*/20 * * * *'} }; exports.handler = async () => {const logs = []} const step = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status}; ' step('front-inde)`
   x: auto-advertiser') () => runNode('automation/front-index-auto-advertiser.cjs'));' step('fron)
   t: futurizer') () => runNode('automation/front-futurizer.cjs'));' step('homepag)
   e: auto-advertiser') () => runNode('automation/homepage-auto-advertiser.cjs'));' step('homepag)

@@ -39,17 +39,17 @@ const importFixes = [
       // Fix malformed import statements
       {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-        replacement: "import { $1 } from '$2';"
+        replacement: "import { $1 } from '$2';
       },
       // Fix missing commas in imports
       {
         pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-        replacement: "import { $1, $2 } from '$3';"
+        replacement: "import { $1, $2 } from '$3';
       },
       // Fix malformed import with semicolon
       {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-        replacement: "import { $1 } from '$2';"
+        replacement: "import { $1 } from '$2';
       }
     ];
     

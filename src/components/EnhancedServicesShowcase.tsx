@@ -13,7 +13,7 @@ const [isHovered, setIsHovered] = useState(false);
 const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
       return 'Custom Pricing'}
-    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`};
+    return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`};`
 ;
 const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -27,14 +27,13 @@ const getCategoryIcon = (category: string) => {
 const CategoryIcon = getCategoryIcon(service.category);
 
   return (
-    <div
-      className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
+    <div className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${`
         isHovered ? 'shadow-2xl' : 'shadow-lg'
-      }`}
+      }`}`
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        animationDelay: `${index * 100}ms`,
+        animationDelay: `${index * 100}ms`,`
         background: isHovered 
           ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
           : 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1))'
@@ -46,7 +45,7 @@ const CategoryIcon = getCategoryIcon(service.category);
           <div className="text-4xl">{service.icon}</div>
           <div>
             <div className="flex items-center space-x-2">
-              <CategoryIcon className="w-5 h-5 text-cyan-400" />
+              <CategoryIcon className="w-5 h-5 text-cyan-400 />"
               <span className="text-xs text-cyan-400 font-medium uppercase tracking-wide">
                 {serviceCategories.find(cat => cat.id === service.category)?.name}
               </span>
@@ -59,34 +58,32 @@ const CategoryIcon = getCategoryIcon(service.category);
         <div className="flex space-x-2">
           {service.popular && (
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
-              <Star className="w-3 h-3 mr-1" />
+              <Star className="w-3 h-3 mr-1 />"
               Popular
             </span>
           )}
           {service.new && (
             <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
-              <Sparkles className="w-3 h-3 mr-1" />
+              <Sparkles className="w-3 h-3 mr-1 />"
               New
             </span>
           )}
         </div>
       </div>
-
       {/* Description */}
       <p className="text-gray-300 mb-4 leading-relaxed">
         {service.description}
       </p>
-
       {/* Key Features */}
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
-          <CheckCircle className="w-4 h-4 mr-2" />
+          <CheckCircle className="w-4 h-4 mr-2 />"
           Key Features
         </h4>
         <ul className="space-y-1">
           {service.features.slice(0, 3).map((feature, idx) => (
             <li key={idx} className="text-xs text-gray-300 flex items-center">
-              <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
+              <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0 />"
               {feature}
             </li>
           ))}
@@ -97,11 +94,10 @@ const CategoryIcon = getCategoryIcon(service.category);
           )}
         </ul>
       </div>
-
       {/* Benefits */}
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
-          <TrendingUp className="w-4 h-4 mr-2" />
+          <TrendingUp className="w-4 h-4 mr-2 />"
           Key Benefits
         </h4>
         <div className="grid grid-cols-2 gap-2">
@@ -112,7 +108,6 @@ const CategoryIcon = getCategoryIcon(service.category);
           ))}
         </div>
       </div>
-
       {/* Pricing */}
       <div className="mb-4 p-3 bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-lg">
         <div className="flex items-center justify-between">
@@ -132,22 +127,21 @@ const CategoryIcon = getCategoryIcon(service.category);
           </div>
         </div>
       </div>
-
       {/* Contact Actions */}
       <div className="space-y-2">
         <a
-          href={`tel:${contactInfo.phone}`}
+          href={`tel:${contactInfo.phone}`}`
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
         >
-          <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+          <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform />"
           Call Now
         </a>
         <div className="grid grid-cols-2 gap-2">
           <a
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}`
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group"
           >
-            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
+            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform />"
             Email
           </a>
           <a
@@ -156,12 +150,11 @@ const CategoryIcon = getCategoryIcon(service.category);
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group"
           >
-            <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
+            <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform />"
             Demo
           </a>
         </div>
       </div>
-
       {/* Use Cases */}
       <div className="mt-4 pt-4 border-t border-slate-700">
         <h4 className="text-xs font-semibold text-gray-400 mb-2">Perfect For:</h4>
@@ -204,26 +197,25 @@ const popularServices = services.filter(service => service.popular);
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations
           </p>
-          
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400 />"
                 <div>
                   <div className="text-white font-medium">{contactInfo.phone}</div>
                   <div className="text-gray-400 text-sm">Call us anytime</div>
                 </div>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400 />"
                 <div>
                   <div className="text-white font-medium">{contactInfo.email}</div>
                   <div className="text-gray-400 text-sm">Email us</div>
                 </div>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <ExternalLink className="w-5 h-5 text-cyan-400" />
+                <ExternalLink className="w-5 h-5 text-cyan-400 />"
                 <div>
                   <div className="text-white font-medium">{contactInfo.website}</div>
                   <div className="text-gray-400 text-sm">Visit our site</div>
@@ -232,16 +224,15 @@ const popularServices = services.filter(service => service.popular);
             </div>
           </div>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${`
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-            }`}
+            }`}`
           >
             All Services
           </button>
@@ -249,25 +240,23 @@ const popularServices = services.filter(service => service.popular);
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${`
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                   : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-              }`}
+              }`}`
             >
               <span className="text-lg">{category.icon}</span>
               <span>{category.name}</span>
             </button>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredServices.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </div>
-
         {/* Popular Services Section */}
         {selectedCategory === 'all' && (
           <div className="mb-12">
@@ -285,7 +274,7 @@ const popularServices = services.filter(service => service.popular);
                       ${service.pricing.starting.toLocaleString()}/{service.pricing.period === 'month' ? 'mo' : 'yr'}
                     </div>
                     <a
-                      href={`tel:${contactInfo.phone}`}
+                      href={`tel:${contactInfo.phone}`}`
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >
                       Call Now →
@@ -307,18 +296,18 @@ const popularServices = services.filter(service => service.popular);
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`tel:${contactInfo.phone}`}
+              href={`tel:${contactInfo.phone}`}`
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2 />"
               Call {contactInfo.phone}
             </a>
             <a
-              href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
+              href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}`
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2 />"
               Get Free Consultation
             </a>
           </div>

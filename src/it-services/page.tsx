@@ -399,7 +399,6 @@ const benefits = [
             </a>
           </div>
         </section>
-
         {/* Main Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
@@ -416,7 +415,7 @@ const benefits = [
                   <ul className="text-sm text-gray-400 space-y-1">
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0 />"
                         {feature}
                       </li>
                     ))}
@@ -427,7 +426,7 @@ const benefits = [
                   <ul className="text-sm text-gray-400 space-y-1">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
                       <li key={idx} className="flex items-center">
-                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
+                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0 />"
                         {benefit}
                       </li>
                     ))}
@@ -450,25 +449,24 @@ const benefits = [
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div>
+                  <div className={`text-lg font-bold ${service.color || 'text-cyan-400'} mb-2`}>{service.price}</div>`
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}
+                    className={`inline-flex items-center text-sm font-medium ${service.color || 'text-cyan-400'} hover:opacity-80 transition-opacity`}`
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                    Learn More <ArrowRight className="w-4 h-4 ml-1 />"
                   </a>
                 </div>
               </div>
             ))}
           </div>
         </section>
-
         {/* Additional Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
@@ -485,7 +483,6 @@ const benefits = [
             ))}
           </div>
         </section>
-
         {/* Support Tiers */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
@@ -495,15 +492,15 @@ const benefits = [
               <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Business hours support
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Remote assistance
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Basic monitoring
                 </li>
               </ul>
@@ -519,19 +516,19 @@ const benefits = [
               <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   24/7 support
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   On-site visits
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Advanced monitoring
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Priority response
                 </li>
               </ul>
@@ -547,19 +544,19 @@ const benefits = [
               <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Dedicated team
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Custom SLAs
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Proactive monitoring
                 </li>
                 <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 />"
                   Strategic consulting
                 </li>
               </ul>
@@ -572,7 +569,6 @@ const benefits = [
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">

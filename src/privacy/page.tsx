@@ -89,22 +89,21 @@ const securityMeasures = [
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
+                <Shield className="w-5 h-5 text-cyan-400 />"
                 <span className="text-white font-medium">GDPR Compliant</span>
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Lock className="w-5 h-5 text-purple-400" />
+                <Lock className="w-5 h-5 text-purple-400 />"
                 <span className="text-white font-medium">Secure Data</span>
               </div>
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <CheckCircle className="w-5 h-5 text-green-400" />
+                <CheckCircle className="w-5 h-5 text-green-400 />"
                 <span className="text-white font-medium">Transparent</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Last Updated */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -120,7 +119,6 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
       {/* Introduction */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -140,7 +138,6 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -150,7 +147,7 @@ const securityMeasures = [
               {dataTypes.map((type, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <type.icon className="w-8 h-8 text-cyan-400" />
+                    <type.icon className="w-8 h-8 text-cyan-400 />"
                     <h3 className="text-xl font-bold text-white">{type.category}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{type.description}</p>
@@ -159,7 +156,7 @@ const securityMeasures = [
                     <ul className="space-y-1">
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0 />"
                           {example}
                         </li>
                       ))}
@@ -171,7 +168,6 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
       {/* How We Use Your Information */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -212,7 +208,6 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
       {/* Data Security */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -224,7 +219,7 @@ const securityMeasures = [
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {securityMeasures.map((measure, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 />"
                   <span className="text-gray-300">{measure}</span>
                 </div>
               ))}
@@ -232,7 +227,6 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
       {/* Your Rights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -241,7 +235,7 @@ const securityMeasures = [
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {rights.map((right, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                  <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 />"
                   <h3 className="text-xl font-bold text-white mb-3">{right.title}</h3>
                   <p className="text-gray-300 text-sm">{right.description}</p>
                 </div>
@@ -250,7 +244,6 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
@@ -261,15 +254,15 @@ const securityMeasures = [
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400 />"
                 <span className="text-white">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400 />"
                 <span className="text-white">+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Globe className="w-5 h-5 text-cyan-400" />
+                <Globe className="w-5 h-5 text-cyan-400 />"
                 <span className="text-white">Middletown, DE</span>
               </div>
             </div>
@@ -277,7 +270,7 @@ const securityMeasures = [
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2 />"
               Contact Us
             </a>
           </div>

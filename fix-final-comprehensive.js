@@ -28,10 +28,10 @@ function processFile(filePath) {
 const keywordArray = fix.keywords;
           .split(', ');
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-          .map(k => `'${k}'`)
+          .map(k => `'${k}'`)`
           .join(', ');
         if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
-  s: [${keywordArray}],`);
+  s: [${keywordArray}],`);`
           modified = true}
       }
     }
@@ -56,7 +56,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix import paths for root-level files;
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacemen,"
+        replacemen,
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
       }];
@@ -88,4 +88,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed}
 
 // Process the app directory;
-// Process the app directory;"`
+// Process the app directory;"`"`

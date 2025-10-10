@@ -15,10 +15,10 @@ let content = fs.readFileSync(filePath, 'utf8');
     content = content.replace(/const (\w+) = /g, (match, varName) => {
       if (varName.startsWith('_')) return match;
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
-      return `const _${varName} = `});
+      return `const _${varName} = `});`
     
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
-      return `let _${varName} = `});
+      return `let _${varName} = `});`
     
     // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '');

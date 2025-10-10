@@ -70,7 +70,7 @@ constructor(config: SEOConfig) {
   private updateMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return;
 ;
-let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;"`
     if (!meta) {
       meta = document.createElement('meta');
       meta.name = name;
@@ -115,7 +115,7 @@ const twitterTags = [
   private updateMetaTagByProperty(property: string, content: string): void {
     if (typeof document === 'undefined') return;
 ;
-let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;"`
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute('property', property);

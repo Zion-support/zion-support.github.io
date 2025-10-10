@@ -40,7 +40,7 @@ const csp = [
       "connect-src 'self' https://api.zion.app",
       "frame-ancestors 'none'",
       "base-uri 'self'",
-      "form-action 'self'"
+      "form-action 'self'
     ].join('; ');
 const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'
@@ -130,7 +130,4 @@ const url = typeof input === 'string' ? input : input instanceof Request ? input
   }
 }
 
-export default SecurityEnhancer;"
-
-
-
+export default SecurityEnhancer;

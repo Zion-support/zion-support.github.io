@@ -5,12 +5,12 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
 }
   return (<div><Helmet><
         <title>AI Project Management Solutions - Zion Tech Group<
-        <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /><
-        <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /><
+        <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month. /><"
+        <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management /><"
         <link rel="canonical" href="http,"
-  s://ziontechgroup.com/ai-project-management" /><
+  s://ziontechgroup.com/ai-project-management /><
       <
-      "
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"><
         <Navigation /><
         <main className="container mx-auto px-4 py-16 pt-24"><
@@ -31,8 +31,8 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           {/* Features Grid *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features<
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg:grid-cols-3 gap-8"><
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🔮<
@@ -41,7 +41,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">⚡<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Task Allocation<
@@ -49,7 +49,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   Automatically assign tasks to the right team members based on skills, workload, and availability.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">📊<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Insights<
@@ -57,7 +57,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   Get instant visibility into project health, team performance, and budget utilization.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🎯<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Resource Optimization<
@@ -65,7 +65,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   AI optimizes resource allocation to maximize efficiency and minimize project costs.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🚨<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Risk Management<
@@ -73,7 +73,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   Proactive risk identification and mitigation strategies powered by machine learning.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">📈<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking<
@@ -101,7 +101,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <
                 <a href="/contact" className="cyber-button w-full">Get Started<
               <
-              "
+              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"><
                 <h3 className="text-2xl font-bold text-white mb-4">Professional<
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$499<span className="text-lg">/month</span><
@@ -115,7 +115,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <
                 <a href="/contact" className="cyber-button w-full">Get Started<
               <
-              "
+              
               <div className="cyber-card p-8 text-center"><
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise<
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom<
@@ -135,27 +135,27 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           {/* Benefits Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results<
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg:grid-cols-4 gap-8"><
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl font-bold text-cyan-400 mb-4">40%<
                 <h3 className="text-xl font-bold text-white mb-2">Faster Delivery<
                 <p className="text-gray-300">Projects completed 40% faster with AI optimization<
               <
-              "
+              
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl font-bold text-green-400 mb-4">30%<
                 <h3 className="text-xl font-bold text-white mb-2">Cost Reduction<
                 <p className="text-gray-300">Average 30% reduction in project costs<
               <
-              "
+              
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl font-bold text-pink-400 mb-4">95%<
                 <h3 className="text-xl font-bold text-white mb-2">On-Time Delivery<
                 <p className="text-gray-300">95% of projects delivered on time<
               <
-              "
+              
               <div className="cyber-card p-6 text-center"><
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%<
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity<
@@ -177,25 +177,21 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 📞 Cal)
   l: (302) 464-0950;
               <
-              <a href="
+              <a href=">"
   hove,
-    r:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"><
+    r:bg-white,"</a>  hover:text-indigo-600 transition-all duration-300"><
                 Get Free Trial;
               <
             <
           <
         <
-        
-<<<<<<< HEAD
+
         <Footer /></Footer>
       </div>
     </div>
-  )}"
-=======
+  )}
         <Footer /><
       <
     <
   );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+}

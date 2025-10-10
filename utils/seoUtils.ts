@@ -18,16 +18,16 @@ export const generateMetaTags = (confi)
   const { title, description, keywords, ogImage, canonicalUrl } = config;
 ;
 let _tags = `<title>${title}</title>`;`
-  tags += `<meta name="description" content="${description}" />`;
+  tags += `<meta name="description" content="${description} />`;"`
 
-  if (keywords && keywords.length > 0) {/* TODO: Fix JSX expression */}"`
-    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`}
+  if (keywords && keywords.length > 0) {/* TODO: Fix JSX expression */}"`"`
+    tags += `<meta name="keywords" content="${keywords.join(', ')} />`}`"
 
-  if (ogImage) {/* TODO: Fix JSX expression */}"`
-  g:image" content="${ogImage}" />`}
+  if (ogImage) {/* TODO: Fix JSX expression */}"`"`
+  g:image" content="${ogImage} />`}"`
 
-  if (canonicalUrl) {/* TODO: Fix JSX expression */}"`
-    tags += `<link rel="canonical" href="${canonicalUrl}" />`}
+  if (canonicalUrl) {/* TODO: Fix JSX expression */}"`"`
+    tags += `<link rel="canonical" href="${canonicalUrl} />`}"`
 
   return tags};
 

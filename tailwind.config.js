@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [,
@@ -109,10 +109,10 @@ export default {
           '100%': {
             backgroundPosition: '-200% 0'}}},
       backgroundImage: {,
-        'cyber-grid': `,
+        'cyber-grid': `,`
           linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
           linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-        `,
+        `,`
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180 deg at 50% 50%, var(--tw-gradient-stops))'},
       backgroundSize: {,
@@ -159,10 +159,10 @@ const newUtilities = {
           backdropFilter: 'blur(10 px)',
           border: '1 px solid rgba(255, 255, 255, 0.2)'},
         '.cyber-grid': {
-          backgroundImage: `,
+          backgroundImage: `,`
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-          `,
+          `,`
           backgroundSize: '20 px 20 px'},
         '.cyber-button': {
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
@@ -217,7 +217,7 @@ border: 'none',
       addUtilities(newUtilities)
     }
   ]}
-=======
+
           border: 'none'
           color: 'white'
           padding: '12px 24px'
@@ -225,4 +225,3 @@ border: 'none',
           fontWeight: '600'
           textTransform: 'uppercase',;
 letterSpacing: '1 px',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

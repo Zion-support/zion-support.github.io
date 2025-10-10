@@ -1,47 +1,92 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Find all tsx files in src directory
-const files = execSync('find src -name "*.tsx" -type f', { encoding: 'utf8' }).trim().split('\n');
+// Function to fix all JSX syntax issues
+function fixAllJSX(content) {
+  // Fix malformed JSX tags with colons
+  content = content.replace(/(\w+):\s*className=/g, '$1 className=');
+  
+  // Fix malformed closing tags
+  content = content.replace(/(\w+):\s*\/>/g, '$1 />');
+  
+  // Fix malformed opening tags
+  content = content.replace(/(\w+):\s*>/g, '$1>');
+  
+  // Fix extra quotes at the end of lines
+  content = content.replace(/"\s*$/gm, '');
+  
+  // Fix missing closing quotes in className
+  content = content.replace(/className="([^"]*?)(\n)/g, 'className="$1"\n');
+  
+  // Fix missing closing quotes in other attributes
+  content = content.replace(/(\w+)="([^"]*?)(\n)/g, '$1="$2"\n');
+  
+  // Fix malformed closing tags with extra characters
+  content = content.replace(/(\w+)>\s*$/gm, '$1>');
+  
+  return content;
+}
 
-files.forEach(filePath => {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix all JSX structure issues
-      
-      // 1. Fix duplicate divs and fragments
-      content = content.replace(
-        /return \(\s*<>\s*<div className="min-h-screen[^"]*">\s*<div className="min-h-screen[^"]*">/g,
-        'return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">'
-      );
-      
-      // 2. Fix missing closing fragments
-      if (content.includes('return (\n    <>') && !content.includes('</>')) {
-        content = content.replace(
-          /(\s*\);\s*};?\s*$)/,
-          '\n    </>\n  );'
-        );
-      }
-      
-      // 3. Fix any remaining fragment issues
-      content = content.replace(/<>\s*<div/g, '<div');
-      content = content.replace(/<\/div>\s*<\/>/g, '</div>');
-      
-      // 4. Fix any remaining structure issues
-      content = content.replace(
-        /(\s*\);\s*};?\s*$)/,
-        '\n  );'
-      );
-      
-      fs.writeFileSync(filePath, content);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixAllJSX(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('All JSX structure fixed!');
+// Find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting comprehensive JSX fixes...');
+
+const files = findFiles('.');
+let processedCount = 0;
+
+for (const file of files) {
+  if (processFile(file)) {
+    processedCount++;
+  }
+}
+
+console.log(`\nComprehensive JSX fixes complete!`);
+console.log(`Files processed: ${processedCount}`);

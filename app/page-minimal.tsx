@@ -48,20 +48,17 @@ const HomePage: React.FC = () => {
         >
           Skip to main content
         </a>
-        
         {/* Content Promotion Banner */}
         <Suspense fallback={<div>Loading...</div>}>
           <ContentPromotionBanner />
         </Suspense>
-        
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-          <section
-            className={`text-center mb-16 transition-all duration-1000 ${
+          <section className={`text-center mb-16 transition-all duration-1000 ${`
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
-            }`}
+            }`}`
             aria-labelledby="hero-heading"
           >
             <div className="max-w-6xl mx-auto">
@@ -78,7 +75,6 @@ const HomePage: React.FC = () => {
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
-              
               {/* CTA Buttons */}
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -98,7 +94,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-          
           {/* Services Section */}
           <section className="mb-16" aria-labelledby="services-heading">
             <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
@@ -107,7 +102,6 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive AI and IT solutions designed to transform your business operations
             </p>
-            
             {/* Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
@@ -119,7 +113,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>
@@ -129,7 +122,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
@@ -139,7 +131,6 @@ const HomePage: React.FC = () => {
                   </p>
                 </article>
               </Suspense>
-              
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🌐</div>
@@ -152,7 +143,6 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </main>
-        
         {/* Footer */}
         <Footer />
       </div>

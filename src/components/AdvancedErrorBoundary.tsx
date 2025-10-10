@@ -106,7 +106,7 @@ const errorReport: ErrorReport = {
             <div className="flex items-center mb-4">
               <div className="flex-shrink-0">
                 <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z />"
                 </svg>
               </div>
               <div className="ml-3">
@@ -118,13 +118,12 @@ const errorReport: ErrorReport = {
                 </p>
               </div>
             </div>
-            
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:</h4>
                 <pre className="text-xs text-red-700 overflow-auto">
                   {this.state.error.message}
-                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
+                  {this.state.error.stack && `\n\n${this.state.error.stack}`}`
                 </pre>
               </div>
             )}
@@ -143,7 +142,6 @@ const errorReport: ErrorReport = {
                 Reload Page
               </button>
             </div>
-
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">
                 Error ID: {this.state.errorId}

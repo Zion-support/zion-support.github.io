@@ -123,7 +123,7 @@ export interface A11yCheckResult {
  * Provides comprehensive accessibility checking and reporting
  *
  * @example
- * ```typescript
+ * ```typescript`
  * const result = checker.checkElement(document.getElementById('main'));
  * if (import.meta.env.DEV) {}
  * ```
@@ -167,7 +167,7 @@ export interface A11yCheckResult {// TODO: Add content}
  * Provides comprehensive accessibility checking and reporting;
  *
  * @example;
- * ```typescript;
+ * ```typescript;`
  * const result = checker.checkElement(document.getElementById('main'));
  * if (import.meta.env.DEV) {}`
  * ```
@@ -298,10 +298,10 @@ const alt = img.getAttribute('alt');
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
-          message: `Image ${index + 1} is missing alt text`,
-          element: `img[src="${img['src']}"]`,
+          message: `Image ${index + 1} is missing alt text`,`
+          element: `img[src="${img['src']}"]`,"`
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img src="..." alt="Description of image />'"
         })}
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
@@ -317,8 +317,8 @@ const alt = img.getAttribute('alt');
           
           
           
-          "
-          <img src="..." alt="Description of image" />'
+          
+          <img src="..." alt="Description of image />'"
         })
   )
       }
@@ -334,10 +334,10 @@ const alt = img.getAttribute('alt');
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
-          message: `Image ${index + 1} has empty alt without role="presentation"`,
-          element: `img[src="${img['src']}"]`,
+          message: `Image ${index + 1} has empty alt without role="presentation"`,"`
+          element: `img[src="${img['src']}"]`,"`
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img src="..." alt="" role="presentation />'"
         })}
     })}
   /**
@@ -367,8 +367,8 @@ const level = parseInt(heading.tagName.charAt(1));
           
           
           
-          "
-          <img src="..." alt="" role="presentation" />
+          
+          <img src="..." alt="" role="presentation />"
 );
 }'
         })
@@ -405,7 +405,7 @@ const level = parseInt(heading.tagName.charAt(1));
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.6',
-          message: `Heading level skipped from h${previousLevel} to h${level}`,
+          message: `Heading level skipped from h${previousLevel} to h${level}`,`
           element: heading.tagName.toLowerCase(),
           fix: 'Maintain sequential heading hierarchy',
           codeExample: `Use h${previousLevel + 1} instead of h${level}`
@@ -428,7 +428,7 @@ const level = parseInt(heading.tagName.charAt(1));
           severity: A11ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.6',
-          message: `Empty ${heading.tagName} at position ${index + 1}`,
+          message: `Empty ${heading.tagName} at position ${index + 1}`,`
           element: heading.tagName.toLowerCase(),
           fix:         ,
 $4})}
@@ -457,7 +457,7 @@ const h1Count = element.querySelectorAll('h1').length;
         severity: A11ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.6',
-        message: `Found ${h1Count} h1 elements (should have only one)`,
+        message: `Found ${h1Count} h1 elements (should have only one)`,`
         element: 'h1',
         fix:       ,
 $4})}
@@ -511,8 +511,8 @@ const links = element.querySelectorAll('a');
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has no accessible text`,
-          element: `a[to="${link.getAttribute('href')}"]`,
+          message: `Link ${index + 1} has no accessible text`,`
+          element: `a[to="${link.getAttribute('href')}"]`,"`
           fix: 'Add descriptive text or aria-label to the link',
           codeExample: '<Link to="..." aria-label="Description">...</Link>'
         })}
@@ -530,7 +530,7 @@ const links = element.querySelectorAll('a');
           
           
           
-          "
+          
           <Link to="..." aria-label="Description">...</Link>'
         }
   )
@@ -547,8 +547,8 @@ const links = element.querySelectorAll('a');
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has generic text: "${text}"`,
-          element: `a[to="${link.getAttribute('href')}"]`,
+          message: `Link ${index + 1} has generic text: "${text}"`,"`
+          element: `a[to="${link.getAttribute('href')}"]`,"`
           fix: 'Use descriptive link text that explains the destination',
           codeExample: 'Use "Read full article" instead of "Read more"'
         })}
@@ -581,8 +581,8 @@ const target = link.getAttribute('target')
           severity: A11ySeverity.MINOR,
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
-          message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[to="${link.getAttribute('href')}"]`,
+          message: `Link ${index + 1} opens in new window without warning`,`
+          element: `a[to="${link.getAttribute('href')}"]`,"`
           fix: 'Add indication that link opens in new window',
           codeExample:
             '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
@@ -615,7 +615,7 @@ const text = button.textContent?.trim();
           
           
           
-          "
+          
           <Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>
 );
 }'
@@ -654,7 +654,7 @@ const text = button.textContent?.trim();
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
-          message: `Button ${index + 1} has no accessible text`,
+          message: `Button ${index + 1} has no accessible text`,`
           element: 'button',
           fix: 'Add text content or aria-label to the button',
           codeExample: '<button aria-label="Close dialog">×</button>'
@@ -672,7 +672,7 @@ const inputs = element.querySelectorAll('input, select, textarea');
 const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
-      const label = id ? element.querySelector(`label[for="${id}"]`) : null;
+      const label = id ? element.querySelector(`label[for="${id}"]`) : null;"`
       const type = input.getAttribute('type');
       // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === 'button') return;
@@ -690,7 +690,7 @@ const id = input.getAttribute('id');
           
           
           
-          "
+          
           <button aria-label="Close dialog"></button>'
         })
   )
@@ -714,8 +714,8 @@ const id = input.getAttribute('id');
 }
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');"`;
-const label = id ? element.querySelector(`label[for="${id}"]`) : null;
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');"`;"`
+const label = id ? element.querySelector(`label[for="${id}"]`) : null;"`
       const type = input.getAttribute('type');
       // Skip hidden and submit inputs;
       if (type === 'hidden' || type === 'submit' || type === 'button') return;
@@ -731,10 +731,10 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;
           severity: A11ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.3.1',
-          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
-          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
+          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,`
+          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,"`
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<label for="email">Email:</label><input id="email" name="email />'"
         })}
     });
           codeExample: '
@@ -746,9 +746,9 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;
           
           
           
-          "
-          <label for="email">Emai,"
-  l:</label><input id="email" name="email" />'
+          
+          <label for="email">Emai,
+  l:</label><input id="email" name="email />'"
         }
   )
       }
@@ -850,7 +850,7 @@ const tabindex = el.getAttribute('tabindex');
           severity: A11ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',
-          message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
+          message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,`
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
           codeExample: '<button tabindex="0">Accessible button</button>'
@@ -877,7 +877,7 @@ const role = el.getAttribute('role');
           
           
           
-          "
+          
           <button tabindex="0">Accessible button</button>
 );
 }'
@@ -904,7 +904,7 @@ const role = el.getAttribute('role');
           severity: A11ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',
-          message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
+          message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,`
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
           codeExample:         ,
@@ -1015,7 +1015,7 @@ const validRoles = [
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: "${role}"`,
+          message: `Invalid ARIA role: "${role}"`,"`
           element: el.tagName.toLowerCase(),
           fix:         ,
 $4})}
@@ -1048,7 +1048,7 @@ const labelledBy = el.getAttribute('aria-labelledby');
             severity: A11ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
             wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: "${labelledBy}"`,
+            message: `aria-labelledby references non-existent element: "${labelledBy}"`,"`
             element: el.tagName.toLowerCase(),
             fix:           ,
 $4})}
@@ -1121,7 +1121,7 @@ $4})}
    * @returns Unique identifier
    */
   private generateIssueId(): string {
-    return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   /**
    * Calculate accessibility score based on issues
    *
@@ -1202,7 +1202,7 @@ const score = Math.max(0, 100 - totalPenalty);
   private generateIssueId(): string {// TODO: Add content}
 }
 
-    return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   /**
    * Calculate accessibility score based on issues;
    *
@@ -1264,7 +1264,7 @@ const score = Math.max(0, 100 - totalPenalty);
 }
       return 'No accessibility issues found. Great job!'}
   }
-}"`
+}"`"`
 
 
 

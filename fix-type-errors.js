@@ -19,8 +19,8 @@ function processFile(filePath) {
       if (!content.includes("import { Link } from 'react-router-dom';")) {
         content = content.replace(/import React from 'react';/);
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-      if (!content.includes("import { Link } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}"
-          "import React from 'react';\nimport { Link } from 'react-router-dom';"
+      if (!content.includes("import { Link } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}
+          "import React from 'react';\nimport { Link } from 'react-router-dom';
         );
         modified = true}
 
@@ -43,9 +43,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix dynamic imports from Next.js to React lazy;
-    if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}"
-      if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}"
-          "import React, { lazy } from 'react';"
+    if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}
+      if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}
+          "import React, { lazy } from 'react';
         );
         modified = true}
 
@@ -84,4 +84,4 @@ filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
 });
 
 // 
-}}}}}}}}}}"
+}}}}}}}}}}

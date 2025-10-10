@@ -42,7 +42,7 @@ function fixAllSyntaxErrors(content) {
     .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
       // Only add closing tag if it's not a self-closing tag
       if (!match.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tag)) {
-        return match + `</${tag}>`;
+        return match + `</${tag}>`;`
       }
       return match;
     });
@@ -89,7 +89,7 @@ async function processFiles() {
             content.includes('Expected ")"') ||
             content.includes('</') && content.includes('></')) {
           
-          console.log(`Processing syntax errors in: ${file}`);
+          console.log(`Processing syntax errors in: ${file}`);`
           
           let fixed = fixAllSyntaxErrors(content);
           
@@ -97,15 +97,15 @@ async function processFiles() {
           processedCount++;
         }
       } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+        console.error(`Error processing ${file}:`, error.message);`
         errorCount++;
       }
     }
   }
   
-  console.log(`\nComprehensive syntax fixes complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
+  console.log(`\nComprehensive syntax fixes complete!`);`
+  console.log(`Files processed: ${processedCount}`);`
+  console.log(`Errors encountered: ${errorCount}`);`
 }
 
 // Run the script

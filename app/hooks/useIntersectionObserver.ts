@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -52,7 +52,6 @@ const observer = new IntersectionObserver(
   return { ref, isIntersecting, entry }}
 
 export default useIntersectionObserver;
-=======
+
       },
       {
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

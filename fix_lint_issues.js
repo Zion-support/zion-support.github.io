@@ -133,7 +133,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     for (const icon of unusedIcons) {/* TODO: Fix JSX expression */}
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {/* TODO: Fix JSX expression */}`
         content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');`
-        content = content.replace(new RegExp(`${icon},\\s*`, 'g'), '');
+        content = content.replace(new RegExp(`${icon},\\s*`, 'g'), '');`
         modified = true}
     }
     

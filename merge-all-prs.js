@@ -22,25 +22,25 @@ async function getOpenPRs() {/* TODO: Fix JSX expression */}
 function mergePRBranch(branchName, prNumber) {
   try {
     // console.log removed for production
-...`);
+...`);`
     
     // Fetch the branch;
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });`
     
     // Try to merge;
     try {
-      execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });
+      execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });`
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
     // console.log removed for production
-...`);
+...`);`
     
     // Fetch the branch;`
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})`
   o: 'pipe' });
     
     // Try to merge;
     try {/* TODO: Fix JSX expression */}`
-      execSync(`git merge origin/${branchName} --no-commit`, {/* TODO: Fix JSX expression */})
+      execSync(`git merge origin/${branchName} --no-commit`, {/* TODO: Fix JSX expression */})`
   o: 'pipe' });`
       // console.log removed for production
 return true} catch (mergeError) {/* TODO: Fix JSX expression */}`
@@ -57,12 +57,12 @@ const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TOD
         conflictedFiles.forEach(file => {)
           if (fs.existsSync(file)) {
             try {
-              execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
-              execSync(`git add "${file}"`, { stdio: 'pipe' });
+              execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });`
+              execSync(`git add "${file}"`, { stdio: 'pipe' });`
         conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`
-              execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"`
-              execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
+              execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})"`
+  o: 'pipe' });"`"`
+              execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})"`
   o: 'pipe' });`
               // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
@@ -72,9 +72,9 @@ const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TOD
         });
         
         // Commit the merge;
-        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' });
-        // Commit the merge;"`
-        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, {/* TODO: Fix JSX expression */}
+        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' });`
+        // Commit the merge;"`"`
+        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, {/* TODO: Fix JSX expression */}"`
   o: 'pipe' });`
         // console.log removed for production
 return true} else {/* TODO: Fix JSX expression */}`
@@ -152,7 +152,7 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
-  n: ${error.message}`)}
+  n: ${error.message}`)}`
   }
 }
 
@@ -185,7 +185,7 @@ const branchName = pr.head.ref;
 `
       // console.log removed for production
 `
-  h: ${branchName}`);
+  h: ${branchName}`);`
       
       try {/* TODO: Fix JSX expression */}`
           // console.log removed for production
@@ -202,8 +202,8 @@ const branchName = pr.head.ref;
 // Final commit;
     // console.log removed for production
 execSync('git add .', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"
-    execSync('git commit -m "Final,"
+  o: 'pipe' });
+    execSync('git commit -m "Final,
   optimizations: clean console.logs, optimize build, resolve all conflicts"', {/* TODO: Fix JSX expression */})
   o: 'pipe' });
     

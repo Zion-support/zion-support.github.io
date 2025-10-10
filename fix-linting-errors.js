@@ -47,7 +47,7 @@ const fixedImports = importList;
         });
 
         if (unusedImports.length > 0) {/* TODO: Fix JSX expression */}
-                return imp.replace(varName, `_${varName}`)}
+                return imp.replace(varName, `_${varName}`)}`
               return imp})
             .join(', ');
           return match.replace(imports, fixedImports)}
@@ -61,7 +61,7 @@ return (
         if (varName.startsWith('_')) return match;
         if (matches && matches.length <= 1) {
     {/* TODO: Fix JSX expression */}`
-          return match.replace(varName, `_${varName}`)}
+          return match.replace(varName, `_${varName}`)}`
         return match}},
     // Unused function parameters;
     {
@@ -73,7 +73,7 @@ const fixedParams = paramList;
           .map(param => {)
             if (!paramName.startsWith('_') && !paramName.includes('=')) {
     {/* TODO: Fix JSX expression */}`
-              return param.replace(paramName, `_${paramName}`)}
+              return param.replace(paramName, `_${paramName}`)}`
             return param})
           .join(', ');
         return match.replace(params, fixedParams)}}];

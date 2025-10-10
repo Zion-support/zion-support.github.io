@@ -20,11 +20,11 @@ exports.config = {/* TODO: Fix JSX expression */}
 };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
+    logs.push(`\n=== ${name} ===`);`
     const {status, stdout} stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
+    logs.push(`exit=${status}`);`
     return status}
   process.env.CANONICAL_URL =
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com'
@@ -49,7 +49,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
   r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/30 * * * *'} }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'http,
+  e: '*/30 * * * *'} }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'http,`
   s: //ziontechgroup.com' ' logStep('fron,
   t:inde)
   x:advertise') () => runNode('automation/front-index-advertiser.cjs'));' logStep('homepag)

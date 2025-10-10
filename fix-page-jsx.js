@@ -40,9 +40,9 @@ const fixes = [
       // Fix specific broken patterns
       { pattern: /<\/<</g, replacement: '</' },
       { pattern: /<</g, replacement: '<' },
-      { pattern: />>/g, replacement: '>' },
+      { pattern />>/g, replacement: '>' },
       { pattern: /<<</g, replacement: '<' },
-      { pattern: />>>/g, replacement: '>' },
+      { pattern />>>/g, replacement: '>' },
       
       // Fix malformed JSX expressions
       { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
@@ -52,9 +52,9 @@ const fixes = [
 return (
 ;
 const firstTag = match.match(/<\/(\w+)>/)[1];
-        return `</${firstTag}>
+        return `</${firstTag}>`
 );
-}`}}
+}`}}`
     ];
     ;
 let modified = false;

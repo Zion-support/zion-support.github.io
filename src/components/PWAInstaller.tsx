@@ -68,13 +68,11 @@ const handleInstallClick = async () => {
             📱
           </div>
         </div>
-        
         <div className="flex-1 min-w-0">
           <h3 className="text-sm font-semibold mb-1">Install App</h3>
           <p className="text-xs text-white/90 mb-3">
             Install Zion Tech Group app for a better experience with offline access and faster loading.
           </p>
-          
           <div className="flex space-x-2">
             <button
               onClick={handleInstallClick}
@@ -82,7 +80,6 @@ const handleInstallClick = async () => {
             >
               Install
             </button>
-            
             <button
               onClick={() => setShowInstallButton(false)}
               className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
@@ -91,7 +88,6 @@ const handleInstallClick = async () => {
             </button>
           </div>
         </div>
-        
         <button
           onClick={() => setShowInstallButton(false)}
           className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"

@@ -73,7 +73,7 @@ const _chart = this.charts.get(id);
   public exportChart(i,
   d: string, forma)
   t: 'json' | 'csv' = 'json'): string {/* TODO: Fix JSX expression */}
-    if (!chart) throw new Error(`Chart with id ${id} not found`);
+    if (!chart) throw new Error(`Chart with id ${id} not found`);`
 
     if (format === 'json') {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
@@ -89,8 +89,8 @@ const _chart = JSON.parse(data) as StoredChart;
   public importChart(dat,
   a: string, forma)
   t: 'json' | 'csv' = 'json'): StoredChart {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}`;
-const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line');
+    } else {/* TODO: Fix JSX expression */}`;`
+const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line');`
       return chart}
   }
 

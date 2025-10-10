@@ -81,7 +81,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     
     if (removedCount > 0) {/* TODO: Fix JSX expression */}
       // console.log removed for production
-`);
+`);`
       totalRemoved += removedCount;
     patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
       }
@@ -90,7 +90,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (modified) {/* TODO: Fix JSX expression */}`
-  from: ${filePath}`);
+  from: ${filePath}`);`
       return true}
     
     filesProcessed++} catch (error) {/* TODO: Fix JSX expression */}`
@@ -150,7 +150,7 @@ let totalFiles = 0;
   modified: ${modifiedFiles}`);`
   // // console.log removed for production
 `
-  unchanged: ${totalFiles - modifiedFiles}`);
+  unchanged: ${totalFiles - modifiedFiles}`);`
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

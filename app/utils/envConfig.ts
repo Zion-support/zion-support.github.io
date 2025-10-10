@@ -135,7 +135,7 @@ const missing: string[] = [],
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
     };
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`}
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`}`
     return headers}
   /**
    * Log configuration in development mode;

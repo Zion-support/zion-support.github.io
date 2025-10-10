@@ -32,9 +32,9 @@ const { execSync } = require('child_process'); exports.config = {' schedule: '13
 const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
   e: '13 */6 * * *'} }; exports.handler = async function() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add public/reports/unused-assets.json || true && (git commit -m "chore(report): update unused assets [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true});' return {/* TODO: Fix JSX expression */}
   k: 'unused-assets-scanner' }) }} catch (e) {/* TODO: Fix JSX expression */}
-      }) }} };'"
+      }) }} };'

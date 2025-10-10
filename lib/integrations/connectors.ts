@@ -20,7 +20,7 @@ export async function simulateAction<T = any>(
   details: Record<string, any> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {;
 const log: SyncLogEntry = {,
-    id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,`
     id: uuidv4()
     id: uuidv4()
     id: generateId()
@@ -46,7 +46,7 @@ export async function simulateAction<T = any>(connectio,
   s: Record<string, any> = {})
 ): Promise<{/* TODO: Fix JSX expression */}
   t: T }> {/* TODO: Fix JSX expression */}
-  d: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+  d: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,`
     i,
   d: uuidv4(),
     i,
@@ -81,7 +81,7 @@ export async function simulateAction<T = any>(connectio,
     statu,
   s: 'success',
     messag,`
-  e: `Action ${action} completed successfully`,
+  e: `Action ${action} completed successfully`,`
     details,
     timestam,
   p: new Date()};
@@ -89,23 +89,23 @@ export async function simulateAction<T = any>(connectio,
   // Simulate occasional errors;
   if (Math.random() < 0.1) {
     log.status = 'error';
-    log.message = `Action ${action} failed: Simulated error`;
+    log.message = `Action ${action} failed: Simulated error`;`
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
-  d: Simulated error`;
+  d: Simulated error`;`
     throw new Error(log.message)}
 
   // Simulate occasional warnings;
   if (Math.random() < 0.2) {
     log.status = 'warning';
-    log.message = `Action ${action} completed with warnings`}
+    log.message = `Action ${action} completed with warnings`}`
 ;
 const result = {
     success: true;
     data: details;
     timestamp: new Date().toISOString(),
   if (Math.random() < 0.2) {/* TODO: Fix JSX expression */}`
-    log.message = `Action ${action} completed with warnings`}
+    log.message = `Action ${action} completed with warnings`}`
 ;
 const result = {/* TODO: Fix JSX expression */}
   } as T;

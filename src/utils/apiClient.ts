@@ -163,7 +163,7 @@ const {
       timeout = this.config.timeout,
       ...fetchConfig
     } = config;
-    const cacheKey = `${method}:${fullUrl}`;
+    const cacheKey = `${method}:${fullUrl}`;`
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {;
 const cached = cacheManager.get<T>(cacheKey);
@@ -196,7 +196,7 @@ const response = await fetch(fullUrl, {
         this.abortControllers.delete(cacheKey);
         if (!response.ok) {
           throw new ApiError(
-            `HTTP ${response.status}: ${response.statusText}`,
+            `HTTP ${response.status}: ${response.statusText}`,`
             response.status,
             await response.text()
           )}
@@ -219,12 +219,12 @@ const response = await fetch(fullUrl, {
         // Log error
         if (attempt === retries) {
           if (error instanceof ApiError && error.status >= 500) {
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {
+            logCritical(`API request failed after ${retries} attempts`, error as Error, {`
               url: fullUrl,
               method,
               attempt
             })} else {
-            logError(`API request failed`, error as Error, {
+            logError(`API request failed`, error as Error, {`
               url: fullUrl,
               method,
               attempt
@@ -422,7 +422,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
       retries = this.config.retries,
       timeout = this.config.timeout,
 //       ...fetchConfig} = config;
-    const cacheKey = `${method}:${fullUrl}`;
+    const cacheKey = `${method}:${fullUrl}`;`
     // Check cache for GET requests;
     if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -481,7 +481,7 @@ const controller = new AbortController();
 
           throw new ApiError()
 
-            `HTTP ${response.status}: ${response.statusText}`,
+            `HTTP ${response.status}: ${response.statusText}`,`
 //             response.status,
 //             await response.text()
           )
@@ -522,7 +522,7 @@ const controller = new AbortController();
           if (error instanceof ApiError && error.status >= 500) {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */}
+            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */}`
   O: Add content}
 };
   ur,
@@ -532,7 +532,7 @@ const controller = new AbortController();
             })} else {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-            logError(`API request failed`, error as Error, {/* TODO: Fix JSX expression */}
+            logError(`API request failed`, error as Error, {/* TODO: Fix JSX expression */}`
   O: Add content}
 };
   ur,
@@ -562,7 +562,7 @@ const controller = new AbortController();
    * Cancel a pending request
    */
   cancel(url: string, method: string = 'GET'): void {;
-const cacheKey = `${method}:${url}`;
+const cacheKey = `${method}:${url}`;`
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {
     clearTimeout(timeoutId)
@@ -576,7 +576,7 @@ const cacheKey = `${method}:${url}`;
   cancel(url: string, method: string = 'GET'): void {// TODO: Add content}
 }
 ;
-const cacheKey = `${method}:${url}`;
+const cacheKey = `${method}:${url}`;`
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -618,7 +618,7 @@ const cacheKey = `${method}:${url}`;
    * Set authorization header
    */
   setAuthToken(token: string): void {
-    this.config.headers['Authorization'] = `Bearer ${token}`}
+    this.config.headers['Authorization'] = `Bearer ${token}`}`
   /**
    * Remove authorization header
    */
@@ -665,7 +665,7 @@ const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
   setAuthToken(token: string): void {// TODO: Add content}
 }
 
-    this.config.headers['Authorization'] = `Bearer ${token}`}
+    this.config.headers['Authorization'] = `Bearer ${token}`}`
   /**
    * Remove authorization header;
    */

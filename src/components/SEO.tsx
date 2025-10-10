@@ -80,7 +80,7 @@ export const,
   O: Add content}
 };
   titl,
-  e: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+  e: title ? `${title} | Zion Tech Group` : defaultSEO.title,`
     descriptio,
   n: description || defaultSEO.description,
     keyword,

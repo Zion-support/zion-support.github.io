@@ -1,9 +1,8 @@
   CRITICAL = 'critical'});;)
-<<<<<<< HEAD
-=======
+
   CRITICAL = 'critical'});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
 export interface ErrorLogEntry {
   timestamp: string,
   severity: ErrorSeverity,
@@ -45,7 +44,7 @@ const entry: ErrorLogEntry = {,
       context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
       url: typeof window !== 'undefined' ? window.location.href : undefined;
-<<<<<<< HEAD
+
       stackTrace: error?.stack});;);
     // Add to internal log;
     this.logs.push(entry)
@@ -54,7 +53,7 @@ const entry: ErrorLogEntry = {,
     // Console logging in development;
     if (process.env['NODE_ENV'] === 'development') {
       this.logToConsole(entry);});;);
-=======
+
       stackTrace: error?.stack});]
     }
     // Add to internal log;
@@ -66,12 +65,12 @@ const entry: ErrorLogEntry = {,
     if (process.env['NODE_ENV'] === 'development') {
       this.logToConsole(entry);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
     // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {}
-<<<<<<< HEAD
+
       this.logToConsole(entry);});;);
     // Send to external logging service in production
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
@@ -86,7 +85,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */});;);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;);
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});;);
-=======
+
       this.logToConsole(entry);});]
     }
     // Send to external logging service in production
@@ -108,7 +107,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */});]
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
   }
   /**
    * Log to console with appropriate styling;
@@ -122,7 +121,7 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
       [ErrorSeverity.HIGH]: 'color: #fb923 c',
 [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'});]
     }
-    }] ${entry.message}`, styles[entry.severity])
+    }] ${entry.message}`, styles[entry.severity])`
     if (entry.error) {});]
     }
     if (entry.context) {});]
@@ -181,7 +180,7 @@ stack: entry.error.stack});]
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr)
-<<<<<<< HEAD
+
   y: ErrorLogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});;);
       await fetch(endpoint, {/* TODO: Fix JSX expression */});;)
 },
@@ -191,7 +190,7 @@ stack: entry.error.stack});]
 });;)
 });;)
 } catch (error) {/* TODO: Fix JSX expression */});;);
-=======
+
   y: ErrorLogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});]
     }
       await fetch(endpoint, {/* TODO: Fix JSX expression */});]
@@ -204,7 +203,7 @@ stack: entry.error.stack});]
     });]
     } catch (error) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
   }
   /**
    * Get recent logs;
@@ -213,12 +212,12 @@ stack: entry.error.stack});]
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     return this.logs.slice(-count);
   getRecentLogs(coun)
-<<<<<<< HEAD
+
   t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
+
   t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
   /**
    * Get logs by severity;
    */
@@ -275,5 +274,4 @@ export const logInfo = (messag)
 export default errorLogger;
 `
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

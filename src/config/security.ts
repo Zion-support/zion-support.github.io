@@ -14,22 +14,22 @@ export const _securityHeaders = {// TODO: Add content}
 // defaultSr,
   c: ["'self'"],
 // scriptSr,
-  c: ["
-// "'self'","
-// "'unsafe-inline'","
+  c: [
+// "'self'",
+// "'unsafe-inline'",
 // "'unsafe-eval'",
 // 'http,
   s://www.googletagmanager.com',
 // 'http,
   s://www.google-analytics.com',
 // ],
-// styleSr,"
+// styleSr,
   c: ["'self'", "'unsafe-inline'", 'http,
   s://fonts.googleapis.com'],
-// fontSr,"
+// fontSr,
   c: ["'self'", 'http,
   s://fonts.gstatic.com'],
-// imgSr,"
+// imgSr,
   c: ["'self'", 'dat,
   a:', 'http,
   s:', 'blo,
@@ -39,9 +39,9 @@ export const _securityHeaders = {// TODO: Add content}
         c: ["'self'", 'http,
   s://www.google-analytics.com', 'http,
   s://analytics.google.com'],
-// frameSr,"
+// frameSr,
   c: ["'self'"],
-// objectSr,"
+// objectSr,
   c: ["'none'"],
 // upgradeInsecureRequest,
   s: true}
@@ -173,7 +173,4 @@ export default {securityHeaders}
   sanitizeInput,
   validateEmail,
   validateUrl,
-  generateSecureToken;"
-
-
-
+  generateSecureToken;

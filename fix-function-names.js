@@ -22,12 +22,12 @@ let line = lines[i];
       
       // Fix function declarations with hyphens;
       if (line.includes('function ') && line.includes('(')) {
-        line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);
+        line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);`
         modified = true}
       
       // Fix export default function declarations;
       if (line.includes('export default function ') && line.includes('(')) {
-        line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
+        line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);`
         modified = true}
       
       newLines.push(line)}

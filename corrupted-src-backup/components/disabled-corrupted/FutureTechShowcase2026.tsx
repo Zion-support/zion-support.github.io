@@ -81,9 +81,9 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}`
              > {/* Card, glow, effect */}</div>
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}`
                /></div>
               <div, classNam, e = 'relativ, e, p-8'>
                 {/* Ic, o, n & Badg, e, s */}</div>
@@ -100,9 +100,9 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>
           {/* TODO: Fix JSX expression */}
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}`
              > {/* Card, glow, effect */}`
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}`
                /></div>
               <div, classNam, e = 'relativ, e, p-8'></div>
                 {/* Ic, o, n & Badg, e, s */}
@@ -113,7 +113,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'></div>
                     {/* TODO: Fix JSX expression */})
                       </di, v  > )  }`
-                    <span, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${artic, l, e.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-semibold, border, border-whi, t, e/30`}
+                    <span, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${artic, l, e.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-semibold, border, border-whi, t, e/30`}`
                     ></span>
                       {artic, l, e.bad, g, e}
                     </sp, a, n>
@@ -164,7 +164,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                 </d, i, v > {/* CTA, Butto, n */}`
                 <a, hre, f = {`/bl, o, g/${artic, l, e.slug}`}`
                   classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${artic, l, e.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,`
-  r:-transla, t, e-y-, 1`}
+  r:-transla, t, e-y-, 1`}`
                 ></a>
                   <sp, a, n>Explore, Technolog, y</sp, a, n>
                   <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>

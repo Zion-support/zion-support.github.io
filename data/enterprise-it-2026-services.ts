@@ -82,9 +82,9 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
     tagline: "Future-ready enterprise IT", price: '$399/month',
     description: 'Comprehensive enterprise IT solutions designed for 2026 and beyond.',
     features: [;
-      "Enterprise architecture"
-      "Future-ready solutions"
-      "Scalable infrastructure"
+      "Enterprise architecture
+      "Future-ready solutions
+      "Scalable infrastructure
       "Advanced security",
       "24/7 support"],
     link: "/services/2026-enterprise-it", category: "Enterprise IT 2026",
@@ -99,7 +99,7 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -127,45 +127,45 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
 }
 export const,
   enterpriseIT2026Services: EnterpriseIt2026Service[] = [,
-    i,"
-  d: "2026-enterprise-it", nam,"
+    i,
+  d: "2026-enterprise-it", nam,
   e: "2026 Enterprise IT Solutions",
-    taglin,"
-  e: "Future-ready enterprise IT", pric,"
+    taglin,
+  e: "Future-ready enterprise IT", pric,
   e: "$399/month",
-    descriptio,"
+    descriptio,
   n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
     feature,
-  s: [;"
-      "Enterprise architecture""
-      "Future-ready solutions""
-      "Scalable infrastructure""
-      "Advanced security""
-      "24/7 support"
+  s: [;
+      "Enterprise architecture"
+      "Future-ready solutions"
+      "Scalable infrastructure"
+      "Advanced security"
+      "24/7 support
     ],
-    lin,"
-  k: "/services/2026-enterprise-it", categor,"
+    lin,
+  k: "/services/2026-enterprise-it", categor,
   y: "Enterprise IT 2026",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -180,7 +180,7 @@ export const,
       "Future-ready solutions",
       "Scalable infrastructure",
       "Advanced security",
-      "24/7 support"
+      "24/7 support
     ],
     link: '/services/2026-enterprise-it',
     category: 'Enterprise IT 2026',
@@ -196,35 +196,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "2026-enterprise-it",
-    nam,"
+    nam,
   e: "2026 Enterprise IT Solutions",
-    taglin,"
+    taglin,
   e: "Future-ready enterprise IT",
-    pric,"
+    pric,
   e: "$399/month",
-    descriptio,"
+    descriptio,
   n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
     feature,
-  s: [,"
-      "Enterprise architecture","
-      "Future-ready solutions","
-      "Scalable infrastructure","
-      "Advanced security","
-      "24/7 support"
+  s: [,
+      "Enterprise architecture",
+      "Future-ready solutions",
+      "Scalable infrastructure",
+      "Advanced security",
+      "24/7 support
     ],
-    lin,"
+    lin,
   k: "/services/2026-enterprise-it",
-    categor,"
+    categor,
   y: "Enterprise IT 2026",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -232,16 +232,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -270,7 +270,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} } } addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -285,42 +285,42 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  enterpriseIT2026Services: EnterpriseIt2026Service[] = [ i,"
-  d: "2026-enterprise-it", nam,"
-  e: "2026 Enterprise IT Solutions", taglin,"
-  e: "Future-ready enterprise IT", pric,"
-  e: "$399/month", descriptio,"
-  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature,"
-  s: [ "Enterprise architecture" "Future-ready solutions" "Scalable infrastructure" "Advanced security" "24/7 support" ], lin,"
-  k: "/services/2026-enterprise-it", categor,"
+  enterpriseIT2026Services: EnterpriseIt2026Service[] = [ i,
+  d: "2026-enterprise-it", nam,
+  e: "2026 Enterprise IT Solutions", taglin,
+  e: "Future-ready enterprise IT", pric,
+  e: "$399/month", descriptio,
+  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature,
+  s: [ "Enterprise architecture" "Future-ready solutions" "Scalable infrastructure" "Advanced security" "24/7 support" ], lin,
+  k: "/services/2026-enterprise-it", categor,
   y: "Enterprise IT 2026", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2026-enterprise-it", nam,"
-  e: "2026 Enterprise IT Solutions", taglin,"
-  e: "Future-ready enterprise IT", pric,"
-  e: "$399/month", descriptio,"
-  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature,"
-  s: [ "Enterprise architecture", "Future-ready solutions", "Scalable infrastructure", "Advanced security", "24/7 support" ], lin,"
-  k: "/services/2026-enterprise-it", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "2026-enterprise-it", nam,
+  e: "2026 Enterprise IT Solutions", taglin,
+  e: "Future-ready enterprise IT", pric,
+  e: "$399/month", descriptio,
+  n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.", feature,
+  s: [ "Enterprise architecture", "Future-ready solutions", "Scalable infrastructure", "Advanced security", "24/7 support" ], lin,
+  k: "/services/2026-enterprise-it", categor,
   y: "Enterprise IT 2026", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

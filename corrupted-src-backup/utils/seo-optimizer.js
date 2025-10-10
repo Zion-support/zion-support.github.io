@@ -54,7 +54,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   addMetaTag(name, content) {/* TODO: Fix JSX expression */}
-    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */}
+    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */}"`
     }
   }
 
@@ -104,16 +104,16 @@ let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
 return (
 ),
       xml += '  <url>\n';),
-      xml += `    <loc>
+      xml += `    <loc>`
 );
-}${baseUrl}${page.url}</loc>\n`;
-      xml += `    <lastmod>${lastmod}</lastmod>\n`;
-      xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
+}${baseUrl}${page.url}</loc>\n`;`
+      xml += `    <lastmod>${lastmod}</lastmod>\n`;`
+      xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
   buildSitemapXML(pages) {/* TODO: Fix JSX expression */}`
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;`
       xml += `    <lastmod>${lastmod}</lastmod>\n`;`
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
-      xml += `    <priority>${page.priority}</priority>\n`;
+      xml += `    <priority>${page.priority}</priority>\n`;`
       xml += '  </url>\n'});
 
     xml += '</urlset>';
@@ -125,7 +125,7 @@ return (
     document.documentElement.setAttribute('data-sitemap', sitemap)}
 
   setupRobotsTxt() {;
-const robotsTxt = `User-agent: *,
+const robotsTxt = `User-agent: *,`
 Allow: /,
 ,
 Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml;
@@ -167,7 +167,7 @@ Disallow: /src/pages/blog-disabled/
 Disallow: /hooks/,
 Disallow: /lib_backup/,
 Disallow: /services/,
-Disallow: /middleware/`;
+Disallow: /middleware/`;`
 ,
     document.documentElement.setAttribute('data-robots-txt', robotsTxt)}
 
@@ -267,7 +267,7 @@ Disallo,
 Disallo,
   w: /services/
 Disallo,`
-  w: /middleware/`;
+  w: /middleware/`;`
 
     document.documentElement.setAttribute('data-robots-txt', robotsTxt)}
 
@@ -277,8 +277,8 @@ Disallo,`
   setupOpenGraph() {/* TODO: Fix JSX expression */}
   }
 
-  addOGTag(property, content) {/* TODO: Fix JSX expression */}"`
-    if (!document.querySelector(`meta[property="${property}"]`)) {/* TODO: Fix JSX expression */}
+  addOGTag(property, content) {/* TODO: Fix JSX expression */}"`"`
+    if (!document.querySelector(`meta[property="${property}"]`)) {/* TODO: Fix JSX expression */}"`
     }
   }
 
@@ -293,8 +293,8 @@ Disallo,`
   setupTwitterCards() {/* TODO: Fix JSX expression */}
   }
 
-  addTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`
-    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */}
+  addTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`"`
+    if (!document.querySelector(`meta[name="${name}"]`)) {/* TODO: Fix JSX expression */}"`
     }
   }
 
@@ -321,9 +321,9 @@ Disallo,`
       description: this.seoConfig.siteDescription;
       potentialAction: {,
         '@type': 'SearchAction',
-        target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
+        target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,`
   getHomePageSchema() {/* TODO: Fix JSX expression */}`
-  t: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
+  t: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,`
         'query-input': 'required name=search_term_string'}}}
 
   getAboutPageSchema() {
@@ -332,7 +332,7 @@ Disallo,`
       '@type': 'AboutPage',
       name: 'About Zion Tech Group',
       description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
-      url: `${this.seoConfig.siteUrl}/about`,
+      url: `${this.seoConfig.siteUrl}/about`,`
       mainEntity: this.seoConfig.structuredData.organization}}
 
   getServicesPageSchema() {
@@ -351,7 +351,7 @@ Disallo,`
       '@type': 'ContactPage',
       name: 'Contact Zion Tech Group',
       description: 'Get in touch with our team for AI and IT solutions',
-      url: `${this.seoConfig.siteUrl}/contact`,
+      url: `${this.seoConfig.siteUrl}/contact`,`
       mainEntity: this.seoConfig.structuredData.organization}}
 
   getBlogPageSchema() {
@@ -360,7 +360,7 @@ Disallo,`
       '@type': 'Blog',
       name: 'Zion Tech Group Blog',
       description: 'Latest insights on AI, technology, and IT solutions',
-      url: `${this.seoConfig.siteUrl}/blog`,
+      url: `${this.seoConfig.siteUrl}/blog`,`
       publisher: this.seoConfig.structuredData.organization}}
 
   setupPerformanceSEO() {
@@ -386,7 +386,7 @@ const _images = document.querySelectorAll('img');
           img.width = img.naturalWidth;
           img.height = img.naturalHeight;
   getAboutPageSchema() {/* TODO: Fix JSX expression */}`
-  l: `${this.seoConfig.siteUrl}/about`,
+  l: `${this.seoConfig.siteUrl}/about`,`
       mainEntit,
   y: this.seoConfig.structuredData.organization}}
 
@@ -394,12 +394,12 @@ const _images = document.querySelectorAll('img');
     }}
 
   getContactPageSchema() {/* TODO: Fix JSX expression */}`
-  l: `${this.seoConfig.siteUrl}/contact`,
+  l: `${this.seoConfig.siteUrl}/contact`,`
       mainEntit,
   y: this.seoConfig.structuredData.organization}}
 
   getBlogPageSchema() {/* TODO: Fix JSX expression */}`
-  l: `${this.seoConfig.siteUrl}/blog`,
+  l: `${this.seoConfig.siteUrl}/blog`,`
       publishe,
   r: this.seoConfig.structuredData.organization}}
 
@@ -456,7 +456,7 @@ const _link = document.createElement('link');
   n: center}
       .btn {/* TODO: Fix JSX expression */}
   y: inline-block}`
-    `;
+    `;`
 ;
 const _style = document.createElement('style');
     style.textContent = criticalCSS;
@@ -505,22 +505,22 @@ const _style = document.createElement('style');
     }
   }
 
-  updateMetaTag(name, content) {/* TODO: Fix JSX expression */}"`;
-const _meta = document.querySelector(`meta[name="${name}"]`);
+  updateMetaTag(name, content) {/* TODO: Fix JSX expression */}"`;"`
+const _meta = document.querySelector(`meta[name="${name}"]`);"`
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
-  updateOGTag(property, content) {/* TODO: Fix JSX expression */}"`;
-const _meta = document.querySelector(`meta[property="${property}"]`);
+  updateOGTag(property, content) {/* TODO: Fix JSX expression */}"`;"`
+const _meta = document.querySelector(`meta[property="${property}"]`);"`
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }
 
-  updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`;
-const _meta = document.querySelector(`meta[name="${name}"]`);
+  updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}"`;"`
+const _meta = document.querySelector(`meta[name="${name}"]`);"`
     if (meta) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }

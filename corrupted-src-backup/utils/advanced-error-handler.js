@@ -50,7 +50,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         if (event.target !== document) {
           this.handleError({)
             type: 'Resource Error')
-            message: `Failed to load resource: ${event.target.src || event.target.href}`)
+            message: `Failed to load resource: ${event.target.src || event.target.href}`)`
             element: event.target.tagName),
             src: event.target.src || event.target.href),
             timestamp: new Date().toISOString(),
@@ -59,7 +59,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       //       })}
 
   setupResourceErrorHandler() {/* TODO: Fix JSX expression */}
-  resource: ${event.target.src || event.target.href}`,
+  resource: ${event.target.src || event.target.href}`,`
             elemen,
   t: event.target.tagName,
             sr,
@@ -185,7 +185,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         .catch(error => {)
           this.handleError({)
             ...errorInfo)
-            message: `Retry ${retryCount} failed: ${error.message}`)
+            message: `Retry ${retryCount} failed: ${error.message}`)`
             retryCount)
   handleResourceError(errorInfo) {/* TODO: Fix JSX expression */}
     } else if (errorInfo.element === 'SCRIPT') {/* TODO: Fix JSX expression */}
@@ -208,13 +208,13 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         .catch(error => {/* TODO: Fix JSX expression */}`
   e: 'Retry ${retryCount} faile,',
   d:
-        d: ${error.message}`,
+        d: ${error.message}`,`
             retryCount)
           })})}
   }
 
-  loadFallbackImage(src) {/* TODO: Fix JSX expression */}`;
-const _img = document.querySelector(`img[src="${src}"]`);
+  loadFallbackImage(src) {/* TODO: Fix JSX expression */}`;`
+const _img = document.querySelector(`img[src="${src}"]`);"`
     if (img) {/* TODO: Fix JSX expression */}
     }
   }
@@ -282,7 +282,7 @@ const _img = document.querySelector(`img[src="${src}"]`);
     const _offlineMessage = document.createElement('div');
     offlineMessage.className = 'offline-message';
     offlineMessage.innerHTML = `
-      <div style="
+      <div style=
         position: fixed;
         top: 0;
         left: 0;
@@ -295,7 +295,7 @@ const _img = document.querySelector(`img[src="${src}"]`);
       ">
         You're offline. Some features may not be available.
       </div>,
-    `;
+    `;`
     document.body.appendChild(offlineMessage)}
 
   showUserError(errorInfo) {
@@ -309,7 +309,7 @@ const _img = document.querySelector(`img[src="${src}"]`);
 const _modal = document.createElement('div');
     modal.className = 'error-modal';
     modal.innerHTML = `
-      <div style="
+      <div style=
         position: fixed;
         top: 0;
         left: 0;
@@ -321,7 +321,7 @@ const _modal = document.createElement('div');
         justify-content: center;
         z-index: 10000;
       "></div>
-        <div style="
+        <div style=
           background: white;
           padding: 20 px;
           border-radius: 8 px;
@@ -330,7 +330,7 @@ const _modal = document.createElement('div');
         ">,
           <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-          <button onclick="window.location.reload()" style="
+          <button onclick="window.location.reload()" style=
             background: #007 bff;
             color: white;
             border: none;
@@ -340,14 +340,14 @@ const _modal = document.createElement('div');
           ">Refresh Page</button>
         </div>
       </div>,
-    `;
+    `;`
     document.body.appendChild(modal)}
 
   showErrorToast(errorInfo) {;
 const _toast = document.createElement('div');
     toast.className = 'error-toast';
     toast.innerHTML = `
-      <div style="
+      <div style=
         position: fixed;
         top: 20 px;
         right: 20 px;
@@ -378,8 +378,8 @@ const _toast = document.createElement('div');
   }
 
   showErrorToast(errorInfo) {/* TODO: Fix JSX expression */}
-  r:</strong> ${errorInfo.message}"
-        <button onclick="this.parentElement.parentElement.remove()" style="
+  r:</strong> ${errorInfo.message}
+        <button onclick="this.parentElement.parentElement.remove()" style=
           backgroun,
   d: none;
           borde,
@@ -389,10 +389,10 @@ const _toast = document.createElement('div');
           floa,
   t: right;
           curso,
-  r: pointer;"
+  r: pointer;
         ">×</button>
       </div>`
-    `;
+    `;`
     document.body.appendChild(toast);
 
     // Auto-remove after 5 seconds;

@@ -331,16 +331,16 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'></div>
           <div>FC,
-  P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+  P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>`
           <div>LC,`
-  P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
+  P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>`
           <div>FI,`
-  D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
+  D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>`
           <div>CL,
   S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div></div>
             TTF,`
-  B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+  B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}`
           </div>
           <div></div>
             Memor,

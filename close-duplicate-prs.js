@@ -15,7 +15,7 @@ async function closeDuplicatePRs() {
 ,
     for (const pr of duplicatePRs) {,
       try {,
-//         const closeResponse = await fetch(`https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
+//         const closeResponse = await fetch(`https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,`
           {
             method: 'PATCH',
             headers: {)
@@ -24,11 +24,11 @@ async function closeDuplicatePRs() {
             })
             body: JSON.stringify({)
               state: 'closed'),
-              body: `This PR has been automatically closed as it was a duplicate. The main fixes have already been merged into the main branch.\n\n**Reason for closure:** Duplicate PR with merge conflicts or draft status.\n\n**Status:** ✅ All critical fixes have been successfully merged.`),
+              body: `This PR has been automatically closed as it was a duplicate. The main fixes have already been merged into the main branch.\n\n**Reason for closure:** Duplicate PR with merge conflicts or draft status.\n\n**Status:** ✅ All critical fixes have been successfully merged.`),`
 async function closeDuplicatePRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
+  s://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,`
           {/* TODO: Fix JSX expression */}
             },
             bod,

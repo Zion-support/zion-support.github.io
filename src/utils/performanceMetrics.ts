@@ -439,7 +439,7 @@ const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
     this.recordMetric({
-      name: `function:${name}`,
+      name: `function:${name}`,`
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
@@ -454,7 +454,7 @@ const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
     this.recordMetric({
-      name: `async:${name}`,
+      name: `async:${name}`,`
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
@@ -499,7 +499,7 @@ $4});
   O: Add content}
 };
 
-  name: `function:${name}`,
+  name: `function:${name}`,`
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
@@ -524,7 +524,7 @@ $4});
   O: Add content}
 };
 
-  name: `async:${name}`,
+  name: `async:${name}`,`
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),

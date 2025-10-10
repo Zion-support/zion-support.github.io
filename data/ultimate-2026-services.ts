@@ -76,7 +76,7 @@ export interface Ultimate2026Service {/* TODO: Fix JSX expression */}
     addres,
   s: string}
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ]}
@@ -121,9 +121,9 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
     description: 'The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.',
     features:
         features: [;
-      "Ultimate platform"
-      "All technologies"
-      "Maximum capabilities"
+      "Ultimate platform
+      "All technologies
+      "Maximum capabilities
       "Premium features",
       "24/7 support"],
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
@@ -150,12 +150,12 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
   s: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  emai,
+  l: "kleber@ziontechgroup.com
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -183,62 +183,62 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
 }
 export const,
   ultimate2026Services: Ultimate2026Service[] = [,
-    i,"
-  d: "2026-ultimate-service", nam,"
+    i,
+  d: "2026-ultimate-service", nam,
   e: "2026 Ultimate Service Platform",
-    taglin,"
-  e: "The ultimate platform for 2026", pric,"
+    taglin,
+  e: "The ultimate platform for 2026", pric,
   e: "$699/month",
-    descriptio,"
+    descriptio,
   n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
   feature,
-  s: [;"
-      "Ultimate platform""
-      "All technologies""
-      "Maximum capabilities""
-      "Premium features""
-      "24/7 support"
+  s: [;
+      "Ultimate platform"
+      "All technologies"
+      "Maximum capabilities"
+      "Premium features"
+      "24/7 support
     ],
-    lin,"
-  k: "/services/2026-ultimate-service", categor,"
+    lin,
+  k: "/services/2026-ultimate-service", categor,
   y: "Ultimate 2026 Services",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
 ;
-    i,"
+    i,
   d: "2026-ultimate-service",
-    nam,"
+    nam,
   e: "2026 Ultimate Service Platform",
-    taglin,"
+    taglin,
   e: "The ultimate platform for 2026",
-    pric,"
+    pric,
   e: "$699/month",
-    descriptio,"
+    descriptio,
   n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
     feature,
-  s: [,"
-      "Ultimate platform","
-      "All technologies","
-      "Maximum capabilities","
-      "Premium features","
-      "24/7 support"
+  s: [,
+      "Ultimate platform",
+      "All technologies",
+      "Maximum capabilities",
+      "Premium features",
+      "24/7 support
     ];
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true;
@@ -247,22 +247,22 @@ export const,
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    lin,"
-  k: "/services/2026-ultimate-service", categor,"
+    lin,
+  k: "/services/2026-ultimate-service", categor,
   y: "Ultimate 2026 Services",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -290,7 +290,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} addres,"
+  s: string} addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]} } addres,
   s: string} export const,
   ultimate2026Services: Ultimate2026Service[] = [ feature,
@@ -301,10 +301,10 @@ i,
   contactInfo: ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" addres,"
+  emai,
+  l: "kleber@ziontechgroup.com" addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -319,35 +319,35 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  ultimate2026Services: Ultimate2026Service[] = [ i,"
-  d: "2026-ultimate-service", nam,"
-  e: "2026 Ultimate Service Platform", taglin,"
-  e: "The ultimate platform for 2026", pric,"
-  e: "$699/month", descriptio,"
+  ultimate2026Services: Ultimate2026Service[] = [ i,
+  d: "2026-ultimate-service", nam,
+  e: "2026 Ultimate Service Platform", taglin,
+  e: "The ultimate platform for 2026", pric,
+  e: "$699/month", descriptio,
   n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
-  feature,"
-  s: [ "Ultimate platform" "All technologies" "Maximum capabilities" "Premium features" "24/7 support" ], lin,"
-  k: "/services/2026-ultimate-service", categor,"
+  feature,
+  s: [ "Ultimate platform" "All technologies" "Maximum capabilities" "Premium features" "24/7 support" ], lin,
+  k: "/services/2026-ultimate-service", categor,
   y: "Ultimate 2026 Services", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2026-ultimate-service", nam,"
-  e: "2026 Ultimate Service Platform", taglin,"
-  e: "The ultimate platform for 2026", pric,"
-  e: "$699/month", descriptio,"
-  n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.", feature,"
-  s: [ "Ultimate platform", "All technologies", "Maximum capabilities", "Premium features", "24/7 support" ]; lin,"
-  k: "/services/2026-ultimate-service", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "2026-ultimate-service", nam,
+  e: "2026 Ultimate Service Platform", taglin,
+  e: "The ultimate platform for 2026", pric,
+  e: "$699/month", descriptio,
+  n: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.", feature,
+  s: [ "Ultimate platform", "All technologies", "Maximum capabilities", "Premium features", "24/7 support" ]; lin,
+  k: "/services/2026-ultimate-service", categor,
   y: "Ultimate 2026 Services", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

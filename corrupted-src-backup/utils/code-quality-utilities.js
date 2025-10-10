@@ -5,7 +5,7 @@ export const codeQualityUtils = {
     //     const actualType = typeof value;
     if (actualType !== expectedType) {
 export const codeQualityUtils = {/* TODO: Fix JSX expression */}
-      throw new Error(`Expected ${expectedType}, got ${actualType}`)}
+      throw new Error(`Expected ${expectedType}, got ${actualType}`)}`
     return true},
 
   // Deep object comparison;

@@ -66,21 +66,18 @@ const standards = [
     }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
-        <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" />
+        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities. />"
+        <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group />"
       </Helmet>
-=======
   return (<div>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences<
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." 
         <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" 
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section *
@@ -89,9 +86,7 @@ const standards = [
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-
               <
             <
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -99,7 +94,7 @@ const standards = [
               your applications are usable by people of all abilities and comply with international standards.
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500"
                 Get Accessibility Audit
               <
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -121,25 +116,23 @@ const standards = [
               <
             <
 
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">
               {features.map((feature), index) => (<div
-                  key = { index };
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  key = { index };>
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400"
+                ></div>                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" 
                   <
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hove,
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hove,">
     r:text-cyan-400 transition-colors">
-                    {feature.title}
-<<<<<<< HEAD
+                    {feature.title}</feature>
                   </h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0 />"
                         {benefit}
                       </li>
                     ))
@@ -149,16 +142,12 @@ const standards = [
             </div>
           </div>
         </section>
-
         {/* Standards Compliance */}
         <section className="py-20 px-4">
-=======
                   <
                   <p className="text-gray-300 mb-6">{feature.description}<
                   <ul className="space-y-2">)
                     {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -169,39 +158,35 @@ const standards = [
               <
             <
 
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
+            <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-4 gap-8">
               {standards.map((standard), index) => (<div
-                  key = { index };
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  key = { index };>
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white"
+                ></div>                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" 
                   <
                   <h3 className="text-xl font-bold text-white mb-2">{standard.name}<
                   <p className="text-gray-300 mb-4 text-sm">{standard.description}<
-                  <span className="inline-block px-4 py-2 bg-green-500
+                  <span className="inline-block px-4 py-2 bg-green-500>"
                     {standard.status}
-<<<<<<< HEAD
-                  </span>
+</span>                  </span>
                 </div>
               ))
             </div>
           </div>
         </section>
-=======
                   <
                 <)
               ))}
             <
           <
         <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* CTA Section *
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white
+            <div className="bg-white"
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Make Your Digital Experience Accessible?
               <
@@ -212,10 +197,9 @@ const standards = [
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Get Accessibility Audit
                 <
-                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hove,
+                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hove,">
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us
-<<<<<<< HEAD
+                  Contact Us</button>
                 </button>
               </div>
             </div>
@@ -223,7 +207,7 @@ const standards = [
         </section>
       </div>
     </React.Fragment>)
-=======
+
                 <
               <
             <
@@ -234,5 +218,4 @@ const standards = [
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default AccessibilityPage;

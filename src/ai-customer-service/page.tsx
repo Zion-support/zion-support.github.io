@@ -5,12 +5,12 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
 }
   return (<div><Helmet><
         <title>AI Customer Service Solutions - Zion Tech Group<
-        <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /><
-        <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /><
+        <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month. /><"
+        <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support /><"
         <link rel="canonical" href="http,"
-  s://ziontechgroup.com/ai-customer-service" /><
+  s://ziontechgroup.com/ai-customer-service /><
       <
-      "
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"><
         <Navigation /><
         <main className="container mx-auto px-4 py-16 pt-24"><
@@ -31,8 +31,8 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           {/* Features Grid *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg:grid-cols-3 gap-8"><
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🤖<
@@ -41,7 +41,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🌍<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Multilingual Support<
@@ -49,7 +49,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   Support customers in 50+ languages with real-time translation and cultural context awareness.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">📊<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Analytics Dashboard<
@@ -57,7 +57,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   Real-time insights into customer satisfaction, response times, and conversation quality.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">⚡<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Instant Response<
@@ -65,7 +65,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   Sub-second response times with 99.9% uptime guarantee for uninterrupted customer support.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🔗<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Easy Integration<
@@ -73,7 +73,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   Seamless integration with existing CRM, helpdesk, and communication platforms.
                 <
               <
-              "
+              
               <div className="cyber-card p-6 energy-pulse"><
                 <div className="text-4xl mb-4 text-center">🎯<
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Personalization<
@@ -101,7 +101,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 <
                 <a href="/contact" className="cyber-button w-full">Get Started<
               <
-              "
+              
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"><
                 <h3 className="text-2xl font-bold text-white mb-4">Professional<
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className="text-lg">/month</span><
@@ -115,7 +115,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 <
                 <a href="/contact" className="cyber-button w-full">Get Started<
               <
-              "
+              
               <div className="cyber-card p-8 text-center"><
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise<
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom<
@@ -143,21 +143,21 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.
                 <
               <
-              "
+              
               <div className="cyber-card p-6"><
                 <h3 className="text-xl font-bold text-white mb-4">70% Cost Reduction<
                 <p className="text-gray-300"><
                   Reduce customer service costs by up to 70% while maintaining high-quality support standards.
                 <
               <
-              "
+              
               <div className="cyber-card p-6"><
                 <h3 className="text-xl font-bold text-white mb-4">24/7 Availability<
                 <p className="text-gray-300"><
                   Never miss a customer inquiry with round-the-clock AI support that never sleeps or takes breaks.
                 <
               <
-              "
+              
               <div className="cyber-card p-6"><
                 <h3 className="text-xl font-bold text-white mb-4">Instant Scalability<
                 <p className="text-gray-300"><
@@ -180,25 +180,21 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 📞 Cal)
   l: (302) 464-0950;
               <
-              <a href="
+              <a href=">"
   hove,
-    r:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"><
+    r:bg-white,"</a>  hover:text-indigo-600 transition-all duration-300"><
                 Get Free Demo;
               <
             <
           <
         <
-        
-<<<<<<< HEAD
+
         <Footer /></Footer>
       </div>
     </div>
-  )}"
-=======
+  )}
         <Footer /><
       <
     <
   );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+}

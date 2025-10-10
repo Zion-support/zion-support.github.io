@@ -78,16 +78,14 @@ const benefits = [
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-      
         <title>Financial IT Solutions | Zion Tech Group<
         <meta name="description" content="Professional financial IT solutions by Zion Tech Group. SOX compliance, security, and regulatory solutions for financial services." 
         <meta name="keywords" content="financial IT, SOX compliance, banking solutions, financial security, Zion Tech Group" 
       <
       
-      <Navigation 
+      <Navigation >
 
-      {/* Hero Section *
-      <section className="relative py-20 px-4 overflow-hidden">)
+      {/* Hero Section *</meta>      <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
         <div className="relative max-w-7xl mx-auto text-center">
@@ -102,17 +100,16 @@ const benefits = [
             Built for banks, credit unions, investment firms, and fintech companies.
           <
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500
+            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500"
               Get Started Today
               
               Schedule Demo
             <
           <
         <
-      <
+      <>
 
-      {/* Features Section *
-      <section className="py-20 px-4">
+      {/* Features Section *</button>      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions<
@@ -120,20 +117,19 @@ const benefits = [
               Comprehensive IT solutions designed specifically for financial services industry
             <
           <
-          
-<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+                  <feature.icon className="w-6 h-6 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />"
                       {benefit}
                     </li>
                   ))
@@ -143,14 +139,12 @@ const benefits = [
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l,"
     g:grid-cols-3 gap-8">
-            {features.map((feature), index) => (<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-green-400
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hove,
+            {features.map((feature), index) => (<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-green-400"
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hove,"
     r:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" 
                 <
@@ -158,8 +152,6 @@ const benefits = [
                 <p className="text-gray-300 mb-4">{feature.description}<
                 <ul className="space-y-2">)
                   {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -169,8 +161,7 @@ const benefits = [
               Comprehensive IT solutions for all aspects of financial services and banking operations.
             <
           <
-          
-<<<<<<< HEAD
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -182,10 +173,9 @@ const benefits = [
           </div>
         </div>
       </section>
-=======
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-8">
-            {services.map((service), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white
+            {services.map((service), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white"
                 <div className="text-4xl mb-4">{service.icon}<
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}<
                 <p className="text-gray-300">{service.description}<
@@ -194,7 +184,6 @@ const benefits = [
           <
         <
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       {/* Benefits Section *
       <section className="py-20 px-4">
@@ -208,12 +197,11 @@ const benefits = [
             <
           <
           
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
+          <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-3 gap-6">
-            {benefits.map((benefit), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white
+            {benefits.map((benefit), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-<<<<<<< HEAD
-                  <CheckCircle className="w-8 h-8 text-white" />
+                  <CheckCircle className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -221,7 +209,6 @@ const benefits = [
           </div>
         </div>
       </section>
-=======
                   <CheckCircle className="w-8 h-8 text-white" 
                 <
                 <h3 className="text-lg font-semibold text-white">{benefit}<
@@ -230,7 +217,6 @@ const benefits = [
           <
         <
       <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       {/* CTA Section *
       <section className="py-20 px-4">
@@ -243,22 +229,18 @@ const benefits = [
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             <
-            <button className="border border-green-400 text-green-400 hover:bg-green-400 hove,
+            <button className="border border-green-400 text-green-400 hover:bg-green-400 hove,">
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            <
+              Contact Sales</button>            <
           <
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </div>)
-=======
+
       <Footer 
     <
-  );
+  );>
 };
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default FinancialITPage;
+</Footer>export default FinancialITPage;

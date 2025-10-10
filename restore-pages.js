@@ -67,7 +67,7 @@ const displayName = pageName.split('/')[0]
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
-  return `import React from 'react';
+  return `import React from 'react';`
 ;
 const ${componentName}: React.FC = () => {
 return (
@@ -81,8 +81,8 @@ return (
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">;
 function createPageComponent(pageName) {/* TODO: Fix JSX expression */}
 const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
-        <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>"
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>"
+        <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>
+        <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
           Contact Us;
@@ -90,7 +90,7 @@ const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
       </div>,
     </div>)};
 
-export default ${componentName};`}
+export default ${componentName};`}`
 
 // Function to restore a page file;
 function restorePageFile(pagePath) {;
@@ -109,7 +109,7 @@ const pageName = pagePath.replace('.tsx', '');
   fs.writeFileSync(fullPath, content, 'utf8');`
   // console.log removed for production
 `
-  d: ${pagePath}`)}
+  d: ${pagePath}`)}`
 
 // Main execution;
 // console.log removed for production

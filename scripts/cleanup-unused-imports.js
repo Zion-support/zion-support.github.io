@@ -31,7 +31,7 @@ const importedItems = match[1].split(',').map(item => item.trim());
         const unusedItems = importedItems.filter(item => {);
 const itemName = item.split(' as ')[0].trim();
           // Check if the imported item is actually used in the file;
-          const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
+          const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');`
           const matches = content.match(usageRegex) || [];
           return matches.length <= 1; // Only appears in the import statement});
         
@@ -41,7 +41,7 @@ const itemName = item.split(' as ')[0].trim();
           modified = true} else if (unusedItems.length > 0) {
           // Remove unused items from import;
           const usedItems = importedItems.filter(item => !unusedItems.includes(item));
-          const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]};`;
+          const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]};`;"`
           content = content.replace(importStatement, newImport);
           modified = true}
       }

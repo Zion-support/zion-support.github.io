@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
@@ -57,11 +57,11 @@ const pages = [
   q: 'weekly' }
   ];
 ;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+${pages.map(page => `  <url>),`
     <loc>https://ziontechgroup.com${page.url}</loc>;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
@@ -70,7 +70,7 @@ ${/* TODO: Fix JSX expression */}
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>`
   </url>`).join('\n')}`
-</urlset>`;
+</urlset>`;`
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
   // // console.log removed for production
@@ -81,22 +81,22 @@ function generateRobots() {;
 function generateRobots() {/* TODO: Fix JSX expression */}
 }
   // // console.log removed for production
-`;
-const robots = `User-agen,
+`;`
+const robots = `User-agen,`
   t: *
 Allo,
   w: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for better server performance;
-Crawl-delay: 1`;
+Crawl-delay: 1`;`
 ,
 Sitema,
   p: http,
   s://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for better server performance;
 Crawl-dela,`
-  y: 1`;
+  y: 1`;`
 
   fs.writeFileSync('public/robots.txt', robots);
   // // console.log removed for production
@@ -115,14 +115,14 @@ const issues = [];
   for (const file of files) {;
 const stats = fs.statSync(file);
     if (stats.size > 100000) { // 100KB;
-      issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
+      issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}`
   }
   
   if (issues.length > 0) {
 // console.log('⚠️  Performance issues found: ');
   for (const file of files) {/* TODO: Fix JSX expression */}',
   detected:
-        detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+        detected: ${file} (${Math.round(stats.size / 1024)}KB)`);`
     }
   }
   
@@ -169,9 +169,8 @@ process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
 
 // Run optimization;
 optimize();
-optimize();"`
-=======
+optimize();"`"`
+
     // // console.log removed for production
 for (const file of files) {/* TODO: Fix JSX expression */}`
-  detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+  detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}`

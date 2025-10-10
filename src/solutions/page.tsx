@@ -230,15 +230,12 @@ $4},
 $4}
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -255,13 +252,12 @@ $4}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">)
               {solutionCategories.map((category) => (<button
-                  key = { category.id };)
+                  key = { category.id };)>
                   onClick = { () => setActiveTab(category.id) };
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === category.id
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${</button>                    activeTab === category.id`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
-                  }`}
+                  }`}`
                 >
                   <category.icon className="w-5 h-5 mr-2" 
                   <span className="font-medium">{category.name}<
@@ -279,14 +275,14 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'ai',
@@ -301,14 +297,14 @@ $4}
       descriptio,
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'it',
@@ -323,14 +319,14 @@ $4}
       descriptio,
   n: 'Robust and scalable IT infrastructure solutions'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'security',
@@ -345,14 +341,14 @@ $4}
       descriptio,
   n: 'Comprehensive security solutions for your digital assets'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   i,
   d: 'automation',
@@ -368,27 +364,27 @@ $4}
   n: 'Streamline operations with intelligent automation'
     }
   ];
-<<<<<<< HEAD
+
   const solutions = {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
   const solutions = { /* TODO: Fix JSX expression *
   ,
     O: Add content; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   a,
   i: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'AI-Powered Analytics',
@@ -403,14 +399,14 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'AI Marketing Automation',
@@ -425,14 +421,14 @@ $4}
         colo,
   r: 'text-pink-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'AI Customer Support',
@@ -447,14 +443,14 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'AI Process Automation',
@@ -474,14 +470,14 @@ $4}
   t: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Cloud Migration',
@@ -496,14 +492,14 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'IT Infrastructure Management',
@@ -518,14 +514,14 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'DevOps & CI
@@ -540,14 +536,14 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Database Management',
@@ -567,14 +563,14 @@ $4}
   y: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Cybersecurity Suite',
@@ -589,14 +585,14 @@ $4}
         colo,
   r: 'text-red-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'AI Security Monitoring',
@@ -611,14 +607,14 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Compliance Management',
@@ -633,14 +629,14 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Security Training',
@@ -660,14 +656,14 @@ $4}
   n: [
   /
   O: Add items]
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Business Process Automation',
@@ -682,14 +678,14 @@ $4}
         colo,
   r: 'text-yellow-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'IT Automation',
@@ -704,14 +700,14 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Marketing Automation',
@@ -726,14 +722,14 @@ $4}
         colo,
   r: 'text-pink-400'
       },
-<<<<<<< HEAD
+
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   titl,
   e: 'Data Automation',
@@ -754,14 +750,14 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Star,
@@ -770,14 +766,14 @@ $4}
       descriptio,
   n: '300% average ROI and 95% process automation for our clients'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Shield,
@@ -786,14 +782,14 @@ $4}
       descriptio,
   n: 'Bank-level security and compliance for all our solutions'
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Globe,
@@ -802,14 +798,14 @@ $4}
       descriptio,
   n: '24
     },
-<<<<<<< HEAD
+
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
+
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
 };
   ico,
   n: Users,
@@ -821,22 +817,19 @@ $4}
   ];
   return (<div>Coming Soon<)
   )
-    
-<<<<<<< HEAD
+
           <React.Fragment>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-16"></div>"
-=======
+          {/* Header */}
+          <div className="text-center mb-16"></div>
           <>
       <Navigation /><
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
         <div className="container mx-auto px-4 py-16 pt-24"><
           {/* Header *
           <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
@@ -851,31 +844,31 @@ $4}
           <div className="mb-12"><
             <div className="flex flex-wrap justify-center gap-4 mb-8"><
               {solutionCategories.map((category) => ()}
-<<<<<<< HEAD
+
           <button></button>
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}`
   // TOD,
   O: Add content}
-=======
+
           <button><
                   key = { category.id };
                   onClick = { () => setActiveTab(category.id) };
-                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };
+                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };`
   /
   O: Add content;
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800
   hover:bg-slate-700
-                  }`}
+                  }`}`
 /
 
-          "
-          <category.icon className="w-5 h-5 mr-2" /><
+          
+          <category.icon className="w-5 h-5 mr-2 /><"
                   <span className="font-medium">{category.name}<
                 <
               ))}
@@ -890,10 +883,10 @@ $4}
           {/* Solutions Grid *
           <div className="mb-16">
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
+              {solutions[activeTab as keyof typeof solutions].map((solution), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400"
                   <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} 
+                    <div className={`w-12 h-12 bg-slate-700`
+                      <solution.icon className={`w-6 h-6 ${solution.color}`} `
                     <
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}<
@@ -910,12 +903,12 @@ $4}
           <div className="mb-16"><
             <div className="grid grid-cols-1,"
   md: grid-cols-2 gap-8"><)
-              {solutions[activeTab as keyof typeof solutions].map((solution), index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
+              {solutions[activeTab as keyof typeof solutions].map((solution), index) => ()}
+          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700"
   hover:border-cyan-400/50 transition-all duration-300"><
                   <div className="flex items-start mb-4"><
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}><
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} /><
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}><`
+                      <solution.icon className={`w-6 h-6 ${solution.color}`} /><`
                     <
                     <div className="flex-1"><
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}<
@@ -926,9 +919,9 @@ $4}
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features: <
                     <ul className="space-y-1"><
-                      {solution.features.map((feature), featureIndex) => ()}"
+                      {solution.features.map((feature), featureIndex) => ()}
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"><
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /><
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 /><"
                           {feature}
                         <
                       ))}
@@ -936,27 +929,25 @@ $4}
                   <
                   
                   <div className="flex items-center justify-between">
-                    <div className={`text-lg font-bold ${solution.color}`}>
+                    <div className={`text-lg font-bold ${solution.color}`}>`
                       {solution.pricing}
                     <
                     <a
-                      href="
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                      href=
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                     >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" 
+                      Learn More</a>                      <ArrowRight className="w-4 h-4 ml-1" 
                   <
                   <div className="flex items-center justify-between"><
-                    <div className={`text-lg font-bold ${solution.color}`}><
+                    <div className={`text-lg font-bold ${solution.color}`}><`
                       {solution.pricing}
                     <
 
                     <a
-                      href="
-
+                      href=
+>
 /
-/
-          <ArrowRight className="w-4 h-4 ml-1" /><
+/</a>          <ArrowRight className="w-4 h-4 ml-1 /><"
                     <
                   <
                 <
@@ -969,10 +960,10 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Solutions?
             <
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
+            <div className="grid grid-cols-1 md: grid-cols-2 l,"
     g:grid-cols-4 gap-6">
               {benefits.map((benefit), index) => (<div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500
+                  <div className="w-16 h-16 bg-cyan-500"
                     <benefit.icon className="w-8 h-8 text-cyan-400" 
                   <
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
@@ -982,13 +973,13 @@ $4}
 /
 
           <
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className="grid grid-cols-1,"
+  md:grid-cols-2,
   lg: grid-cols-4 gap-6"><)
-              {benefits.map((benefit), index) => ()}"
+              {benefits.map((benefit), index) => ()}
           <div key={index} className="text-center"><
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"><
-                    <benefit.icon className="w-8 h-8 text-cyan-400" /><
+                    <benefit.icon className="w-8 h-8 text-cyan-400 /><"
                   <
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
                   <p className="text-gray-300 text-sm">{benefit.description}<
@@ -998,7 +989,7 @@ $4}
           <
 
           {/* CTA Section *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900"
             <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             <
@@ -1008,11 +999,10 @@ $4}
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
-                href="
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                href=
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
               >
-
-                <Mail className="w-4 h-4 mr-2" 
+</a>                <Mail className="w-4 h-4 mr-2" 
                 Email Us
               <
           {/* CTA Section *
@@ -1028,33 +1018,23 @@ $4}
           <
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="
+                href= />
 
-/
-
-          "
-          <Phone className="w-5 h-5 mr-2" /><
+          "</a>          <Phone className="w-5 h-5 mr-2 /><"
 /
           <
 
               <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-
-/
-
-          "
-          <Phone className="w-4 h-4 mr-2" /><
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center />"
+          "</a>          <Phone className="w-4 h-4 mr-2 /><"
 /
           <
 
               <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
-    r:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,"
+    r:text-slate-900 transition-all duration-300 inline-flex items-center />
 
-/
-
-          "
-          <Mail className="w-4 h-4 mr-2" /><
+          "</a>          <Mail className="w-4 h-4 mr-2 /><"
 /
           <
             <
@@ -1062,20 +1042,17 @@ $4}
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-
     </div>
   )};
-=======
+
       <Footer 
     <
 
     <
   );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
+>
 export default SolutionsPage;
-
+</Footer>

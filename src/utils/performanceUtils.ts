@@ -119,7 +119,7 @@ export async function measureTime;
   const result = await func();
   const duration = performance.now() - start;
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // // console.log removed for production
-}ms`)} }
+}ms`)} }`
   return { result, duration }
 }
 /**

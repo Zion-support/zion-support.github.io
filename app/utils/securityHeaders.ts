@@ -1,9 +1,8 @@
     'magnetometer=()'].join(', '););
-<<<<<<< HEAD
-=======
+
     'magnetometer=()'].join(', ')]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+
 /**
  * Get security headers as key-value pairs;
  */
@@ -80,5 +79,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 });)]
     }
 export default defaultSecurityHeaders;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+

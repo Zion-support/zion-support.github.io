@@ -36,13 +36,13 @@ const _images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.getAttribute('alt')) {
         this.addIssue('critical')
-          `img[${index}]`)
+          `img[${index}]`)`
           'Missing alt attribute')
 export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   }
 
   private checkImages(): void {/* TODO: Fix JSX expression */}
-          `img[${index}]`,
+          `img[${index}]`,`
           'Missing alt attribute',
           'Add descriptive alt text for all images'
         )}
@@ -57,10 +57,10 @@ const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
       if (level > previousLevel + 1) {
         this.addIssue('serious')
-          `heading[${index}]`)
+          `heading[${index}]`)`
           'Heading level skipped')
   private checkHeadings(): void {/* TODO: Fix JSX expression */}`
-          `heading[${index}]`,
+          `heading[${index}]`,`
           'Heading level skipped',
           'Use proper heading hierarchy'
         )}
@@ -72,10 +72,10 @@ const _links = document.querySelectorAll('a');
     links.forEach((link, index) => {
       if (!link.getAttribute('href') && !link.getAttribute('role')) {
         this.addIssue('serious')
-          `a[${index}]`)
+          `a[${index}]`)`
           'Link without href')
   private checkLinks(): void {/* TODO: Fix JSX expression */}`
-          `a[${index}]`,
+          `a[${index}]`,`
           'Link without href',
           'Add href attribute or role="button"'
         )}
@@ -86,10 +86,10 @@ const _inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input, index) => {
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {
         this.addIssue('serious')
-          `input[${index}]`)
+          `input[${index}]`)`
           'Form control without label')
   private checkForms(): void {/* TODO: Fix JSX expression */}`
-          `input[${index}]`,
+          `input[${index}]`,`
           'Form control without label',
           'Add id and associated label or aria-label'
         )}
@@ -100,10 +100,10 @@ const _buttons = document.querySelectorAll('button');
     buttons.forEach((button, index) => {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
         this.addIssue('serious')
-          `button[${index}]`)
+          `button[${index}]`)`
           'Button without accessible name')
   private checkButtons(): void {/* TODO: Fix JSX expression */}`
-          `button[${index}]`,
+          `button[${index}]`,`
           'Button without accessible name',
           'Add text content or aria-label'
         )}
@@ -123,13 +123,13 @@ const focusableElements = document.querySelectorAll('button, a, input, select, t
     focusableElements.forEach((element, index) => {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         this.addIssue('moderate')
-          `element[${index}]`)
+          `element[${index}]`)`
           'Focusable element hidden from keyboard')
   private checkColorContrast(): void {/* TODO: Fix JSX expression */}
   }
 
   private checkKeyboardNavigation(): void {/* TODO: Fix JSX expression */}`
-          `element[${index}]`,
+          `element[${index}]`,`
           'Focusable element hidden from keyboard',
           'Consider if element should be focusable'
         )}
@@ -143,10 +143,10 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
 
       if (ariaLabel && ariaLabelledBy) {
         this.addIssue('moderate')
-          `element[${index}]`)
+          `element[${index}]`)`
           'Conflicting ARIA labels')
   private checkARIALabels(): void {/* TODO: Fix JSX expression */}`
-          `element[${index}]`,
+          `element[${index}]`,`
           'Conflicting ARIA labels',
           'Use either aria-label or aria-labelledby, not both'
         )}

@@ -25,18 +25,10 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
+
       description: 'Worldwide deployment and support for international businesses'});;)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> origin/main
+
     focusableElements[nextIndex]?.focus();
     event.preventDefault(););)
 }
@@ -53,7 +45,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
+      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;"`
       trigger?.click(););)
 });;);)
 }
@@ -78,7 +70,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private handleRadioGroupNavigation(event: KeyboardEvent, currentElement: HTMLInputElement): void {
     const name = currentElement.name;
     if (!name) return;
-    const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
+    const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];"`
     const currentIndex = radioButtons.indexOf(currentElement);
     let nextIndex: number;
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
@@ -133,7 +125,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
       <a href="#footer" class="skip-link">Skip to footer</a>
-    `;
+    `;`
     // Add styles
     const style = document.createElement('style');
     style.textContent = `
@@ -158,7 +150,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       .skip-link:focus {;
   top: 6px});;)
 }
-    `;
+    `;`
     document.head.appendChild(style);
     document.body.insertBefore(skipLinks, document.body.firstChild););)
 }
@@ -248,7 +240,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     element.classList.add('focus-visible');
     // Announce focus changes for important elements
     if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {
-      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`););)
+      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`););)`
 }
   }
   /**
@@ -357,10 +349,10 @@ const AccessibilityEnhancerPage: React.FC = () => {
       const inputs = form.querySelectorAll('input, textarea, select');
       inputs.forEach((input) => {
         const element = input as HTMLElement;
-        const id = element.id || `input-${Math.random().toString(36).substr(2, 9);`;
+        const id = element.id || `input-${Math.random().toString(36).substr(2, 9);`;`
         element.id = id;
         if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
-          const label = form.querySelector(`label[for="${id}"]`);
+          const label = form.querySelector(`label[for="${id}"]`);"`
           if (label) {
             element.setAttribute('aria-labelledby', id););)
 }
@@ -521,15 +513,11 @@ Recommendations:
 - Ensure all interactive elements are keyboard accessible
 - Implement proper ARIA labels and roles
 - Test with screen readers regularly
-`});;)
+`});;)`
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
 }
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+
   ];
 
   const benefits = [
@@ -547,10 +535,9 @@ Recommendations:
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
+        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business. />"
+        <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer />"
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -569,7 +556,7 @@ Recommendations:
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 />"
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -578,7 +565,6 @@ Recommendations:
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -590,12 +576,11 @@ Recommendations:
               Our accessibilityenhancer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+                  <feature.icon className="h-6 w-6 text-white />"
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -604,7 +589,6 @@ Recommendations:
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -616,18 +600,16 @@ Recommendations:
               Experience the power of our accessibilityenhancer solutions for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />"
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -640,11 +622,11 @@ Recommendations:
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-5 w-5 />"
                 Call Now
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+                <Mail className="mr-2 h-5 w-5 />"
                 Email Us
               </button>
             </div>
@@ -656,10 +638,4 @@ Recommendations:
 };
 
 export default AccessibilityEnhancerPage;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
->>>>>>> origin/main
+

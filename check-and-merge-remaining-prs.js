@@ -29,13 +29,13 @@ process.exit(0)}
     try {
       // console.log removed for production
 // Check if branch has changes;
-      const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' });
+      const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' });`
       if (!diff.trim()) {
         // console.log removed for production
 continue}
 
       // Try to merge;
-      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });
+      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });`
       // console.log removed for production
 } catch (error) {
       // console.log removed for production

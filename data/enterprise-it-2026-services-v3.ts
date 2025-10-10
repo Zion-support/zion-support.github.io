@@ -82,9 +82,9 @@ export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
     tagline: "Third generation enterprise IT", price: '$499/month',
     description: 'Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.',
     features: [;
-      "Third generation IT"
-      "Enhanced solutions"
-      "Advanced infrastructure"
+      "Third generation IT
+      "Enhanced solutions
+      "Advanced infrastructure
       "Improved security",
       "Better performance"],
     link: "/services/2026-enterprise-it-v3", category: "Enterprise IT 2026 V3",
@@ -99,7 +99,7 @@ export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -127,45 +127,45 @@ export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
 }
 export const,
   enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [,
-    i,"
-  d: "2026-enterprise-it-v3", nam,"
+    i,
+  d: "2026-enterprise-it-v3", nam,
   e: "2026 Enterprise IT Solutions V3",
-    taglin,"
-  e: "Third generation enterprise IT", pric,"
+    taglin,
+  e: "Third generation enterprise IT", pric,
   e: "$499/month",
-    descriptio,"
+    descriptio,
   n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
     feature,
-  s: [;"
-      "Third generation IT""
-      "Enhanced solutions""
-      "Advanced infrastructure""
-      "Improved security""
-      "Better performance"
+  s: [;
+      "Third generation IT"
+      "Enhanced solutions"
+      "Advanced infrastructure"
+      "Improved security"
+      "Better performance
     ],
-    lin,"
-  k: "/services/2026-enterprise-it-v3", categor,"
+    lin,
+  k: "/services/2026-enterprise-it-v3", categor,
   y: "Enterprise IT 2026 V3",
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
+      mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -180,7 +180,7 @@ export const,
       "Enhanced solutions",
       "Advanced infrastructure",
       "Improved security",
-      "Better performance"
+      "Better performance
     ],
     link: '/services/2026-enterprise-it-v3',
     category: 'Enterprise IT 2026 V3',
@@ -196,35 +196,35 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
+    i,
   d: "2026-enterprise-it-v3",
-    nam,"
+    nam,
   e: "2026 Enterprise IT Solutions V3",
-    taglin,"
+    taglin,
   e: "Third generation enterprise IT",
-    pric,"
+    pric,
   e: "$499/month",
-    descriptio,"
+    descriptio,
   n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
     feature,
-  s: [,"
-      "Third generation IT","
-      "Enhanced solutions","
-      "Advanced infrastructure","
-      "Improved security","
-      "Better performance"
+  s: [,
+      "Third generation IT",
+      "Enhanced solutions",
+      "Advanced infrastructure",
+      "Improved security",
+      "Better performance
     ],
-    lin,"
+    lin,
   k: "/services/2026-enterprise-it-v3",
-    categor,"
+    categor,
   y: "Enterprise IT 2026 V3",
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
       mobil,
   e: '+1 302 464 0950',
@@ -232,16 +232,16 @@ export const,
   l: 'kleber@ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
+];      mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
+  emai,
+  l: "kleber@ziontechgroup.com
+      mobil,
   e: "+1 302 464 0950",
-      emai,"
+      emai,
   l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709
     }
   }
 ];
@@ -270,7 +270,7 @@ i,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
+  s: string} } } addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -285,42 +285,42 @@ i,
   e: string, emai,
   l: string, addres,
   s: string } } export const,
-  enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [ i,"
-  d: "2026-enterprise-it-v3", nam,"
-  e: "2026 Enterprise IT Solutions V3", taglin,"
-  e: "Third generation enterprise IT", pric,"
-  e: "$499/month", descriptio,"
-  n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.", feature,"
-  s: [ "Third generation IT" "Enhanced solutions" "Advanced infrastructure" "Improved security" "Better performance" ], lin,"
-  k: "/services/2026-enterprise-it-v3", categor,"
+  enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [ i,
+  d: "2026-enterprise-it-v3", nam,
+  e: "2026 Enterprise IT Solutions V3", taglin,
+  e: "Third generation enterprise IT", pric,
+  e: "$499/month", descriptio,
+  n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.", feature,
+  s: [ "Third generation IT" "Enhanced solutions" "Advanced infrastructure" "Improved security" "Better performance" ], lin,
+  k: "/services/2026-enterprise-it-v3", categor,
   y: "Enterprise IT 2026 V3", realImplementatio,
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
+  o: addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,
   l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2026-enterprise-it-v3", nam,"
-  e: "2026 Enterprise IT Solutions V3", taglin,"
-  e: "Third generation enterprise IT", pric,"
-  e: "$499/month", descriptio,"
-  n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.", feature,"
-  s: [ "Third generation IT", "Enhanced solutions", "Advanced infrastructure", "Improved security", "Better performance" ], lin,"
-  k: "/services/2026-enterprise-it-v3", categor,"
+  addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  d: "2026-enterprise-it-v3", nam,
+  e: "2026 Enterprise IT Solutions V3", taglin,
+  e: "Third generation enterprise IT", pric,
+  e: "$499/month", descriptio,
+  n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.", feature,
+  s: [ "Third generation IT", "Enhanced solutions", "Advanced infrastructure", "Improved security", "Better performance" ], lin,
+  k: "/services/2026-enterprise-it-v3", categor,
   y: "Enterprise IT 2026 V3", realImplementatio,
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
+  o: mobil,
+  e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
   e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  emai,
+  l: "kleber@ziontechgroup.com" mobil,
+  e: "+1 302 464 0950", emai,
+  l: "kleber@ziontechgroup.com", addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

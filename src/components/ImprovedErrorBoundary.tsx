@@ -246,7 +246,6 @@ p: Date.now(),
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
           <details style={styles.details}></details>
-
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
                 <div style={styles.errorDetails}></div>
                   <p style={styles.errorMessage}></p>
@@ -261,7 +260,6 @@ p: Date.now(),
                   {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
                       <strong>Component Stack:</strong>
-
                   {this.state.error.stack && ()}
           <pre style={styles.stack}></pre>
                       {this.state.error.stack}
@@ -271,7 +269,6 @@ p: Date.now(),
           <pre style={styles.stack}></pre>
                       <strong>Component,
   Stack:</strong>
-
                       {this.state.errorInfo.componentStack}
                     </pre>
                   )}
@@ -281,7 +278,7 @@ p: Date.now(),
             <div style={styles.actions}></div>
               <button></button>
                 onClick={this.resetErrorBoundary}
-                style={styles.button}"
+                style={styles.button}
                 aria-label="Try Again"
               >
                 Try Again
@@ -292,9 +289,8 @@ p: Date.now(),
 //                 Try Again;
           </button>
               <button></button>
-
                 onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}"
+                style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
               >
                 Reload Page
@@ -305,9 +301,8 @@ p: Date.now(),
 //                 Reload Page;
           </button>
               <button></button>
-
                 onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}"
+                style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
               >
                 Go Home
@@ -445,7 +440,7 @@ const styles = {// TODO: Add content}
   g: '20px',
     backgroundColo,
   r: '#f5f5f5',
-    fontFamil,"
+    fontFamil,
   y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },
   conten,

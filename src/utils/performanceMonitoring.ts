@@ -18,7 +18,7 @@ const logger = {/* TODO: Fix JSX expression */}
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      console.debug(`[${context}] ${message}`, data)}
+      console.debug(`[${context}] ${message}`, data)}`
   },
   inf,
   o: (messag,
@@ -26,7 +26,7 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }`
-    console.info(`[${context}] ${message}`, data)},
+    console.info(`[${context}] ${message}`, data)},`
   war,
   n: (messag,
   e: string, contex)
@@ -204,7 +204,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     };
     this.webVitals[name] = metric;`
     logger.info(`Web)`
-  Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
+  Vital: ${name}`, 'PerformanceMonitoring', { value, rating });`
     // Send to analytics;
     this.sendToAnalytics(metric)}
   /**
@@ -259,7 +259,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 }
       this.customMetrics.shift()}
-    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }
+    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }`
 
   )
   }
@@ -394,7 +394,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     const start = performance.now();
     const result = fn();
     const duration = performance.now() - start;`
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms');
+    this.recordCustomMetric(`fn_${name}`, duration, 'ms');`
     return result}
   /**
    * Measure async function execution time;
@@ -408,7 +408,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     const start = performance.now();
     const result = await fn();
     const duration = performance.now() - start;`
-    this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
+    this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');`
     return result}
   /**
    * Mark a custom performance mark;

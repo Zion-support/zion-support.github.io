@@ -28,14 +28,14 @@ const content = fs.readFileSync(file, 'utf8');
         const hasOgImage = content.includes('property="og:image"');
         const hasTwitterCard = content.includes('name="twitter: card"');
         ,
-        if (!hasTitle) this.issues.push(`${file}: Missing title tag`);
-        if (!hasDescription) this.issues.push(`${file}: Missing meta description`);
-        if (!hasViewport) this.issues.push(`${file}: Missing viewport meta tag`);
-        if (!hasCharset) this.issues.push(`${file}: Missing charset declaration`);
-        if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title`);
-        if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description`);
-        if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image`);
-        if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`)} catch (error) {
+        if (!hasTitle) this.issues.push(`${file}: Missing title tag`);`
+        if (!hasDescription) this.issues.push(`${file}: Missing meta description`);`
+        if (!hasViewport) this.issues.push(`${file}: Missing viewport meta tag`);`
+        if (!hasCharset) this.issues.push(`${file}: Missing charset declaration`);`
+        if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title`);`
+        if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description`);`
+        if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image`);`
+        if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`)} catch (error) {`
         // console.error removed for production
 }
     }
@@ -62,10 +62,10 @@ const content = fs.readFileSync(file, 'utf8');
         const h3Count = (content.match(/<h3/g) || []).length;
         
         if (h1 Count === 0) {
-          this.issues.push(`${file}: No h1 tag found`);
+          this.issues.push(`${file}: No h1 tag found`);`
           headingIssues++}
         if (h1 Count ></h3></h2></h1> 1) {
-          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
+          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);`
           headingIssues++}
         
       } catch (error) {
@@ -96,7 +96,7 @@ const content = fs.readFileSync(file, 'utf8');
         const imgTags = content.match(/<img[^>]*>/g) || [];
         for (const imgTag of imgTags) {
           if (!imgTag.includes('alt=')) {
-            this.issues.push(`${file}: Image without alt attribute`);
+            this.issues.push(`${file}: Image without alt attribute`);`
             altIssues++}
         }
         
@@ -187,7 +187,7 @@ try {
 }
 
 // Run the optimizer;
-if (import.meta.url === `file://${process.argv[1]}`) {;
+if (import.meta.url === `file://${process.argv[1]}`) {;`
 const optimizer = new SEOOptimizer();
   optimizer.run()}
 
@@ -273,7 +273,7 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
     '/team'
   ];
   ;
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
@@ -282,7 +282,7 @@ ${/* TODO: Fix JSX expression */}
     <changefreq>weekly</changefreq>
     <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
   </url>`).join('\n')}`
-</urlset>`;
+</urlset>`;`
   
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
   // // console.log removed for production
@@ -302,8 +302,8 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 optimized: seo-optimizations.json')}
 ;
 function generateRobotsTxt() {/* TODO: Fix JSX expression */}
-}`;
-const robotsTxt = `User-agen,
+}`;`
+const robotsTxt = `User-agen,`
   t: *
 Allo,
   w: /
@@ -327,7 +327,7 @@ Allo,
   Allow: /services,
   Allow: /contact,
   Allow: /ai-services,`
-  Allow: /it-services`;
+  Allow: /it-services`;`
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
   // // console.log removed for production
@@ -336,14 +336,14 @@ generated: public/robots.txt')}
 function generateStructuredData() {/* TODO: Fix JSX expression */}
 }
   const structuredData = {/* TODO: Fix JSX expression */}
-    },"
+    },
     "address": {/* TODO: Fix JSX expression */}
-    },"
-    "sameAs": ["
-      "http,"
-  s://twitter.com/ziontechgroup","
-      "http,"
-  s://linkedin.com/company/ziontechgroup"
+    },
+    "sameAs": [
+      "http,
+  s://twitter.com/ziontechgroup",
+      "http,
+  s://linkedin.com/company/ziontechgroup
     ]
   };
   
@@ -356,4 +356,4 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
 generated: public/structured-data.json')}
 
 // Run SEO optimization;
-optimizeSEO();"`
+optimizeSEO();"`"`

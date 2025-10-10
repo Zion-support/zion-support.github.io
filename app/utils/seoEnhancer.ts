@@ -387,7 +387,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   private updateMetaTag(nameOrProperty: string, content: string) {,
     if (typeof document === 'undefined') return;
     let meta = document.querySelector(})
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])"`
     ) as HTMLMetaElement;
     if (!meta) {
       meta = document.createElement('meta')
@@ -410,7 +410,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   private updateMetaTag(nameOrProperty: string, content: string) {}
     if (typeof document === 'undefined') return
     let meta = document.querySelector(})
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]"`
     ) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
@@ -435,7 +435,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   private updateMetaTag(nameOrPropert,
   y: string, conten)
   t: string) {/* TODO: Fix JSX expression */}
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`"`
     ) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
@@ -447,7 +447,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Generate sitemap;
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>)
   ) {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages;
   .map(,
@@ -455,11 +455,11 @@ ${pages;
   generateSitemap()
     pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
   ) {}
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"`
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages}
   .map()
-    page => `  <url>}
+    page => `  <url>}`
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>)
@@ -472,12 +472,12 @@ ${pages}
   }
   // Generate robots.txt;
   generateRobotsTxt(disallowPaths: string[] = []) {,
-    const robots = `User-agent: *,
+    const robots = `User-agent: *,`
   // Generate robots.txt
   generateRobotsTxt(disallowPaths: string[] = []) {}
-    const robots = `User-agent: *
-Allow: /`}
-${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
+    const robots = `User-agent: *`
+Allow: /`}`
+${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}`
 Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
     return robots;
   }
@@ -568,16 +568,16 @@ export const generateAdvancedStructuredData = (data: {}
   )
   .join('
 ')}`
-</urlset>`;
+</urlset>`;`
     return sitemap;
   }
   // Generate robots.txt;
   generateRobotsTxt(disallowPath)
   s: string[] = []) {/* TODO: Fix JSX expression */}`
-  w: ${path}`).join('
+  w: ${path}`).join('`
 ')}
 Sitema,`
-  p: ${this.config.canonicalUrl}/sitemap.xml`;
+  p: ${this.config.canonicalUrl}/sitemap.xml`;`
     return robots;
   }
   // Initialize SEO;
@@ -624,8 +624,8 @@ export const generateAdvancedStructuredData = (dat,
       potentialAction: {}
         '@type': 'SearchAction',
         target: {}
-          '@type': 'EntryPoint',`}
-          urlTemplate: `${data.url}/search?q={search_term_string}
+          '@type': 'EntryPoint',`}`
+          urlTemplate: `${data.url}/search?q={search_term_string}`
   if (data.type === 'WebSite') {/* TODO: Fix JSX expression */}`
   e: `${data.url}/search?q={search_term_string}`
         },
@@ -685,9 +685,9 @@ export const generateSitemapData = useCallback((...args) => {}
   }
 }
 // Generate robots.txt content;
-export const generateRobotsTxt = useCallback((...args) => {`}
-  const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
-  return `User-agent: *,
+export const generateRobotsTxt = useCallback((...args) => {`}`
+  const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')`
+  return `User-agent: *,`
 ${disallowRules}
 Sitemap: ${sitemapUrl}`
 }
@@ -720,13 +720,13 @@ export const generateSitemapData = (page,
 export const generateRobotsTxt = (sitemapUr,
   l: string, disallowPath)
   s: string[] = []) => {/* TODO: Fix JSX expression */}`
-  w: ${path}`).join('
+  w: ${path}`).join('`
 ');`
-  return `User-agen,
+  return `User-agen,`
   t: *
 ${disallowRules}
 Sitema,`
-  p: ${sitemapUrl}`;
+  p: ${sitemapUrl}`;`
 };
 
 // SEO validation
@@ -834,4 +834,4 @@ export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */}
   script.textContent = JSON.stringify(organizationData);
   document.head.appendChild(script);
 };
-"`
+"`"`

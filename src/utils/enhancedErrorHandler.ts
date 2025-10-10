@@ -116,7 +116,7 @@ class EnhancedErrorHandler {
             href?: string};
           this.handleError({
             type: 'resource',
-            message: `Failed to load resource: ${target?.src || target?.href}`,
+            message: `Failed to load resource: ${target?.src || target?.href}`,`
             element: event.target?.constructor.name,
             src: target?.src || target?.href
           })}
@@ -135,7 +135,7 @@ const response = await originalFetch(...args);
         if (!response.ok) {
           this.handleError({
             type: 'network',
-            message: `Network request failed: ${response.status} ${response.statusText}`,
+            message: `Network request failed: ${response.status} ${response.statusText}`,`
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText
@@ -143,7 +143,7 @@ const response = await originalFetch(...args);
         return response} catch (error) {
         this.handleError({
           type: 'network',
-          message: `Network request failed: ${error}`,
+          message: `Network request failed: ${error}`,`
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
         });
@@ -163,7 +163,7 @@ const observer = new PerformanceObserver(list => {
               // Tasks longer than 100ms
               this.handleError({
                 type: 'custom',
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,`
                 duration: entry.duration,
                 category:               ,
 $4})}
@@ -357,13 +357,13 @@ const tags: string[] = [];
    * Generate unique error ID
    */
   private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}`
   /**
    * Get session ID
    */
   private getSessionId(): string {
     if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
       sessionStorage.setItem('error_session_id', sessionId)}
     return sessionId}
   /**
@@ -390,7 +390,7 @@ const now = Date.now();
    * Update error counters
    */
   private updateErrorCounts(errorReport: ErrorReport): void {;
-const key = `${errorReport.type}_${errorReport.category}`;
+const key = `${errorReport.type}_${errorReport.category}`;`
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(
       errorReport.category,
@@ -401,7 +401,7 @@ const key = `${errorReport.type}_${errorReport.category}`;
    */
   private logError(errorReport: ErrorReport): void {;
 const emoji = this.getSeverityEmoji(errorReport.severity);
-    console.group(`${emoji} Error Report: ${errorReport.id}`);
+    console.group(`${emoji} Error Report: ${errorReport.id}`);`
     // // // console.error removed for production
 // // // console.error removed for production
 // // // console.error removed for production
@@ -750,7 +750,7 @@ class EnhancedErrorHandler {// TODO: Add content}
             messag,
   e: 'Failed to load,',
   resource:
-        resource: ${target?.src || target?.href}`,
+        resource: ${target?.src || target?.href}`,`
             elemen,
   t: event.target?.constructor.name,
             sr,
@@ -785,7 +785,7 @@ const originalFetch = window.fetch;
 };
 
   type: 'network',
-            message: `Network request failed: ${response.status} ${response.statusText}`,
+            message: `Network request failed: ${response.status} ${response.statusText}`,`
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText})}
@@ -797,7 +797,7 @@ const originalFetch = window.fetch;
 };
 
   type: 'network',
-          message: `Network request failed: ${error}`,
+          message: `Network request failed: ${error}`,`
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
 
@@ -836,7 +836,7 @@ const originalFetch = window.fetch;
 };
 
   type: 'custom',
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,`
                 duration: entry.duration,
                 category: 'performance'
 
@@ -885,7 +885,7 @@ const originalFetch = window.fetch;
   private handleError(errorData: {if (!sessionId) {}
   // TODO: Add content}
 
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`
       sessionStorage.setItem('error_session_id', sessionId)}
     return sessionId}
   /**
@@ -928,7 +928,7 @@ const originalFetch = window.fetch;
   private updateErrorCounts(errorReport: ErrorReport): void {// TODO: Add content}
 }
 ;
-const key = `${errorReport.type}_${errorReport.category}`;
+const key = `${errorReport.type}_${errorReport.category}`;`
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
 //     this.errorCategories.set()
 //       errorReport.category,
@@ -941,7 +941,7 @@ const key = `${errorReport.type}_${errorReport.category}`;
   private logError(errorReport: ErrorReport): void {// TODO: Add content}
 }
     const emoji = this.getSeverityEmoji(errorReport.severity);
-    console.group(`${emoji} Error Report: ${errorReport.id}`);
+    console.group(`${emoji} Error Report: ${errorReport.id}`);`
     // // // console.error removed for production
 // // // console.error removed for production
 // // // console.error removed for production

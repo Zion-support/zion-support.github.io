@@ -15,7 +15,7 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     fs.writeFileSync(filePath, content);
     // console.log removed for production
 `
-  in: ${filePath}`);
+  in: ${filePath}`);`
     return true} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}

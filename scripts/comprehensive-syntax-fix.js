@@ -11,7 +11,7 @@ const fixes = [
   // Fix semicolons in object properties;
   { pattern: /color: 'text-\w+-\d+'\};/g, replacement: "color: 'text-\\w+-\\d+'" },
   // Fix semicolons in JSX attributes;
-  { pattern: /className=\{`[^`]+`\};/g, replacement: (match) => match.replace(';', '') },
+  { pattern: /className=\{`[^`]+`\};/g, replacement: (match) => match.replace(';', '') },`
   // Fix semicolons in JSX props;
   { pattern: /keywords=\{[^}]+\}\};/g, replacement: (match) => match.replace('};', '}') },
   // Fix missing commas in arrays;

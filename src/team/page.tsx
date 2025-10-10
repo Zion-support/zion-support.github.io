@@ -107,7 +107,6 @@ const values = [
           </p>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,7 +114,7 @@ const values = [
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                  <stat.icon className="w-8 h-8 text-white />"
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -124,7 +123,6 @@ const values = [
           </div>
         </div>
       </section>
-
       {/* Team Members */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,14 +139,13 @@ const values = [
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
                   <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                    <Users className="w-16 h-16 text-gray-600" />
+                    <Users className="w-16 h-16 text-gray-600 />"
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-cyan-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.bio}</p>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
@@ -159,7 +156,6 @@ const values = [
                       ))}
                     </div>
                   </div>
-                  
                   <div className="flex space-x-3">
                     <a
                       href={member.linkedin}
@@ -167,13 +163,13 @@ const values = [
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-cyan-600 transition-colors"
                     >
-                      <Linkedin className="w-5 h-5" />
+                      <Linkedin className="w-5 h-5 />"
                     </a>
                     <a
-                      href={`mailto:${member.email}`}
+                      href={`mailto:${member.email}`}`
                       className="text-gray-400 hover:text-cyan-600 transition-colors"
                     >
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-5 h-5 />"
                     </a>
                   </div>
                 </div>
@@ -182,7 +178,6 @@ const values = [
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,7 +193,7 @@ const values = [
             {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-white" />
+                  <value.icon className="w-8 h-8 text-white />"
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -207,7 +202,6 @@ const values = [
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -233,7 +227,6 @@ const values = [
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )};

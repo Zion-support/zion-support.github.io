@@ -141,7 +141,7 @@ class EnvironmentConfig {// TODO: Add content}
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   O: Add content}
 }
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`}
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`}`
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
   }`
       headers['Authorization'] = `Bearer ${this.config.apiKey}`

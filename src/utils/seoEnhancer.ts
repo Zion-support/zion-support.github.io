@@ -46,7 +46,4 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 }
 
-export default SEOEnhancer;"
-
-
-
+export default SEOEnhancer;

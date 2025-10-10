@@ -15,7 +15,7 @@ const missingPages = analysisData.missingPagesList;
 const missingRoutes = [];
 
 for (const route of missingPages) {;
-const routePattern = `path="${route}"`;
+const routePattern = `path="${route}"`;"`
   if (!appContent.includes(routePattern)) {
     missingRoutes.push(route)}
 }
@@ -27,16 +27,16 @@ missingRoutes.forEach(route => // console.log removed for production
 // Generate import statements for missing routes;
 const generateImportStatement = (route) => {;
 const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `const ${componentName} = lazy(() => import('.${route}/page'));`};
+  return `const ${componentName} = lazy(() => import('.${route}/page'));`};`
 
 // Generate route statements;
 const generateRouteStatement = (route) => {
 return (
 ;
 const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />
+  return `            <Route path="${route}" element={<${componentName} />"`
 );
-}} />`;</Route>
+}} />`;</Route>`
 };
 
 if (missingRoutes.length > 0) {

@@ -19,14 +19,14 @@ let content = fs.readFileSync(filePath, 'utf8');
 function fixImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {/* TODO: Fix JSX expression */}
-        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`}
+        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`}`
     );
     
     // Fix any remaining syntax issues;
     content = content.replace(/,\s*,/g, ',');
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/{/* TODO: Fix JSX expression */})`
-  in: ${filePath}`);
+  in: ${filePath}`);`
     return true} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
 return false}

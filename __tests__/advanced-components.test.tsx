@@ -64,7 +64,7 @@ describe('Advanced Components', () => {
     it('renders with title and description', () => {
       render(
         <HelmetProvider>
-          <AdvancedSEOOptimizer title="Test Title" description="Test Description" />
+          <AdvancedSEOOptimizer title="Test Title" description="Test Description />"
         </HelmetProvider>
       );
 

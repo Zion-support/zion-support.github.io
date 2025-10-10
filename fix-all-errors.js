@@ -40,7 +40,7 @@ const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;
 const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',') && !match.includes(';') && !match.includes(')')) {
-      return `${key}: ${value},`}
+      return `${key}: ${value},`}`
     return match});
 
   // Fix missing commas in object properties;

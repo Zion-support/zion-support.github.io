@@ -55,12 +55,12 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {;
 const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`}
+            return `assets/css/[name]-[hash].${ext}`}`
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`}
+            return `assets/images/[name]-[hash].${ext}`}`
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`}
-          return `assets/[name]-[hash].${ext}`}
+            return `assets/fonts/[name]-[hash].${ext}`}`
+          return `assets/[name]-[hash].${ext}`}`
       }
     },
     terserOptions: {

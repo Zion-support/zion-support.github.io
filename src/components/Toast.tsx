@@ -78,8 +78,8 @@ const,
   )
     
           <div></div>
-className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert""
+className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}`
+      role="alert"
       aria-live="polite"
 // >
       
@@ -90,7 +90,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           
-          "
+          
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button></button>
@@ -98,9 +98,9 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
   // TOD,
   O: Add content}
           setIsVisible(false);
-          if (onClose) onClose()}}"
+          if (onClose) onClose()}}
         className="ml-4,"
-  hover:opacity-80 transition-opacity""
+  hover:opacity-80 transition-opacity"
         aria-label="Close notification"
 //       >
 //
@@ -117,7 +117,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
     </div>
   )};
 
-export default Toast;"`
+export default Toast;"`"`
 
 
 

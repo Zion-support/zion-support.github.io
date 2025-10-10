@@ -13,34 +13,33 @@ const replacements = [
     to: "import { useNavigate, useLocation } from 'react-router-dom';",
   {/* TODO: Fix JSX expression */}
   o: "import { Link } from 'react-router-dom';" },
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   m: "import { useRouter } from 'next/router';",
-    t,"
+    t,
   o: "import { useNavigate, useLocation } from 'react-router-dom';"},
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   m: "import { useRouter } from 'next/navigation';",
-    t,"
+    t,
   o: "import { useNavigate, useLocation } from 'react-router-dom';"},
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   m: "import { usePathname } from 'next/navigation';",
-    t,"
+    t,
   o: "import { useLocation } from 'react-router-dom';"},
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   m: "import { useSearchParams } from 'next/navigation';",
-    t,"
+    t,
   o: "import { useSearchParams } from 'react-router-dom';"},
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   o: "import { Helmet } from 'react-helmet-async';" },
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   o: "import { lazy, Suspense } from 'react';" },
-  {/* TODO: Fix JSX expression */}"
-  m: "import { Metadata } from 'next';", t,"
+  {/* TODO: Fix JSX expression */}
+  m: "import { Metadata } from 'next';", t,
   o: "import { Helmet } from 'react-helmet-async';" },
-  {/* TODO: Fix JSX expression */}"
+  {/* TODO: Fix JSX expression */}
   m: "import type { Metadata } from 'next';",
-    t,"
+    t,
   o: "import { Helmet } from 'react-helmet-async';"},
-
   // Next.js specific patterns;
   { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component' },
   { from: 'export const metadata = {', to: '// Metadata moved to Helmet component' },
@@ -126,11 +125,11 @@ function processFile(filePath) {
         const regex = new RegExp(;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     replacements.forEach(({ from, to, context }) => {/* TODO: Fix JSX expression */}
-          `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
+          `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,`
           'g'
         );
         if (regex.test(content)) {/* TODO: Fix JSX expression */}`
-          content = content.replace(regex, `$1${to}`);
+          content = content.replace(regex, `$1${to}`);`
           modified = true}
       } else {
         // Simple replacement;
@@ -155,7 +154,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 const [, importsStr, module] = match;
             if (!imports[module]) imports[module] = [];
             imports[module].push(importsStr)}
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
           })
@@ -214,7 +213,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 `
 if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}`
 }
 
 export { processFile, replacements }}}}}}}}}}}}"`
