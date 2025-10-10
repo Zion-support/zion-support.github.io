@@ -183,7 +183,7 @@ const Navigation: React.FC = () => {
   ];
 
   const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
+    setServicesOpen(!servicesOpen);
   };
 
   const microSAASServices = [
