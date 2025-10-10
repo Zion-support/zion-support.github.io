@@ -43,8 +43,8 @@ const HomePage: React.FC = React.memo((props) => {
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer)
+  }, [])
   
   // Analytics tracking for phone clicks - optimized
   return (
@@ -79,8 +79,11 @@ const HomePage: React.FC = React.memo((props) => {
             areaServed: 'US',
             availableLanguage: 'en'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
           },
           address: {
             '@type': 'PostalAddress',
@@ -89,7 +92,10 @@ const HomePage: React.FC = React.memo((props) => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
           }
         }
       }}
@@ -142,7 +148,7 @@ const HomePage: React.FC = React.memo((props) => {
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'`}
+              : 'opacity-0 translate-y-8'
           }`}
           aria-labelledby="hero-heading"
         >
