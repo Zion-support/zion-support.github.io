@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight, Cpu } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -39,8 +39,16 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
-  ]
+  ];
 
+  const microSaasServices = [
+    { name: 'AI Video Generator', url: '/ai-video-generator', description: 'Create videos with AI' },
+    { name: 'AI Code Assistant Pro', url: '/ai-code-assistant-pro', description: 'Intelligent coding assistant' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'Clone any voice with AI' },
+    { name: 'AI 3D Model Generator', url: '/ai-3d-model-generator', description: 'Generate 3D models with AI' },
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' }
+  ];
 
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
@@ -116,7 +124,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3 group">
@@ -191,31 +199,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
-              Micro SAAS Tools
-            </h3>
-            <ul className="space-y-3">
-              {microSaasServices.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
-                  >
-                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div>
-                      <div className="font-medium">{service.name}</div>
-                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
-                        {service.description}
-                      </div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* IT Services */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">
