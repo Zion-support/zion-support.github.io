@@ -1,35 +1,50 @@
-'use client'
-import React from 'react'
-import { useLocation } from 'react-router-dom'
-import { ChevronRight, Home } from 'lucide-react'
-const Breadcrumb: React.FC = () => {
-  const location = useLocation()
-  // Don't show breadcrumb on home page
-  if (location.pathname === '/') {
-    return null
-  }
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { ChevronRight, Home } from 'lucide-react';
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
-  const breadcrumbItems = [
-    { name: 'Home', path: '/', icon: Home }
-  ]
-  pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/')
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
-    breadcrumbItems.push({ name, path, icon: null })
-  })
-  return (
-    <nav> </nav><div> </div><ol>{breadcrumbItems.map((item, index) => (
-            </ol><li>{index > 0 && (
-                </li><ChevronRight>)}
-              </ChevronRight><a>{item.icon && </a><item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </nav>
-  )
+interface BreadcrumbItem {
+  name: string;
+  path: string;
+  icon?: React.ComponentType<any>;
 }
-export default Breadcrumb
+
+const Breadcrumb: React.FC = () => {
+  const pathname = usePathname();
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: 'Home', path: '/', icon: Home }
+  ];
+
+  // Parse pathname to create breadcrumb items
+  const pathSegments = pathname.split('/').filter(segment => segment !== '');
+  
+  pathSegments.forEach((segment, index) => {
+    const path = '/' + pathSegments.slice(0, index + 1).join('/');
+    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+    breadcrumbItems.push({ name, path, icon: null });
+  });
+
+  return (
+    <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-6">
+      <ol className="flex items-center space-x-2">
+        {breadcrumbItems.map((item, index) => (
+          <li key={item.path} className="flex items-center">
+            {index > 0 && (
+              <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
+            )}
+            <Link
+              href={item.path}
+              className="flex items-center hover:text-purple-600 transition-colors"
+            >
+              {item.icon && <item.icon className="w-4 h-4 mr-1" />}
+              <span>{item.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+};
+
+export default Breadcrumb;
