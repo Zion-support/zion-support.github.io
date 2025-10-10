@@ -48,44 +48,34 @@ const AICRMAssistantPage: React.FC = () => {
   const benefits = [
     'Increase sales by 40%',
     'Improve lead conversion by 60%',
-    'Reduce manual tasks by 80%',
-    'Enhance customer satisfaction by 50%',
-    'Enable data-driven decisions',
-    'Automate sales processes',
-    'Scale sales operations',
-    'Improve team productivity'
+    'Reduce manual work by 80%',
+    'Enhance customer satisfaction by 90%',
+    'Accelerate sales cycles by 50%',
+    'Improve data accuracy by 95%',
+    'Enable predictive insights',
+    'Scale sales operations'
   ];
 
   const useCases = [
     {
-      title: 'Sales Management',
-      description: 'Streamline sales processes and improve team performance with AI insights',
-      icon: '💼'
+      title: 'Sales Teams',
+      description: 'AI-powered CRM for sales teams to manage leads and close deals faster',
+      icon: Target
     },
     {
-      title: 'Lead Generation',
-      description: 'Identify and qualify high-value leads with AI-powered scoring and analysis',
-      icon: '🎯'
+      title: 'Marketing Teams',
+      description: 'Lead management and customer insights for marketing campaigns',
+      icon: BarChart
     },
     {
       title: 'Customer Support',
-      description: 'Enhance customer support with AI-powered insights and automation',
-      icon: '🎧'
+      description: 'Customer service management and support ticket automation',
+      icon: MessageSquare
     },
     {
-      title: 'Marketing Automation',
-      description: 'Automate marketing campaigns and improve customer engagement',
-      icon: '📢'
-    },
-    {
-      title: 'Sales Forecasting',
-      description: 'Predict sales outcomes and optimize revenue with AI forecasting',
-      icon: '📈'
-    },
-    {
-      title: 'Customer Analytics',
-      description: 'Gain deep insights into customer behavior and preferences',
-      icon: '📊'
+      title: 'Business Development',
+      description: 'Lead generation and relationship management for business growth',
+      icon: TrendingUp
     }
   ];
 
@@ -93,27 +83,29 @@ const AICRMAssistantPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI CRM Assistant - Zion Tech Group</title>
-        <meta name="description" content="Transform your customer relationship management with our AI CRM Assistant. Intelligent automation, lead scoring, and sales insights for better business growth." />
-        <meta name="keywords" content="AI CRM, customer relationship management, sales automation, lead scoring, CRM AI, business intelligence" />
+        <meta name="description" content="Advanced AI-powered CRM assistant. Intelligent customer management, lead scoring, and sales automation for better business relationships and growth." />
+        <meta name="keywords" content="AI CRM, customer relationship management, lead scoring, sales automation, CRM assistant, Zion Tech Group" />
       </Helmet>
 
-
+      <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-8">
-              <Users className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI CRM Assistant
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI CRM
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Assistant
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer relationship management with our AI CRM Assistant. Intelligent automation, 
-              lead scoring, and sales insights for better business growth.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered CRM assistant. Intelligent customer management, lead scoring, 
+              and sales automation for better business relationships and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
@@ -124,6 +116,109 @@ const AICRMAssistantPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Advanced CRM Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Cutting-edge AI technology for intelligent customer relationship management
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our CRM Assistant?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the future of customer relationship management with our revolutionary AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Perfect for Every Team
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From sales teams to customer support, our CRM adapts to your needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your CRM?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Start managing customer relationships better with our AI-powered CRM platform today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started Free
+                </button>
+                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Schedule Demo
+                </button>
               </div>
             </div>
           </div>
