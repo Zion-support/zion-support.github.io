@@ -1,6 +1,12 @@
 'use client';
 
-import React, { useEffect } from 'react';
+interface AccessibilitySettings {
+  fontSize: 'small' | 'medium' | 'large';
+  highContrast: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+}
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {

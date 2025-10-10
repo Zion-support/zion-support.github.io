@@ -4,19 +4,19 @@
  * Provides comprehensive SEO enhancements and monitoring;
  */
 interface SEOConfig {
-  siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+  siteName: string,
+  siteUrl: string,
+  defaultTitle: string,
+  defaultDescription: string,
+  defaultImage: string,
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;}
 }
 interface PageSEOData {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
 interface SEOConfig {}
   siteName: string
   siteUrl: string
@@ -44,7 +44,7 @@ interface PageSEOData {}
   nofollow?: boolean;}
 }
 class SEOOptimizer {
-  private config: SEOConfig;
+  private config: SEOConfig,
   private currentPageData: PageSEOData | null = null;
   constructor(config: SEOConfig) {,
 class SEOOptimizer {}

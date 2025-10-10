@@ -11,14 +11,26 @@ interface State {
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -32,7 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20">
             <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
             <button
               onClick={() => window.location.reload()}

@@ -5,9 +5,11 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 // Static assets to cache;
 const STATIC_ASSETS = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
+  '/css/critical.css',
+  '/manifest.json',
+  '/assets/index-CZCxnxi7.css',
+  '/assets/index-D5QfCfme.js',
+  '/assets/vendor-DDcd4RNL.js'
 ];
 
 // Install event - cache resources;

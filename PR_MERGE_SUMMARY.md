@@ -87,7 +87,7 @@ pnpm run type-check
 pnpm run build
 
 # Check for remaining conflicts
-grep -r "<<<<<<< HEAD" src/ app/
+grep -r "" src/ app/
 
 # Merge all PRs
 node merge_all_prs.cjs

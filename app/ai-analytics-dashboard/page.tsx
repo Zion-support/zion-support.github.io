@@ -99,7 +99,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       icon: Database,
       benefits: ["100+ connectors", "Real-time sync", "Data transformation"]
     }
-  ];
+  ],
 
   const benefits = [
     'Reduce data analysis time by 90%',
@@ -143,7 +143,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Track sales metrics and forecast revenue',
       icon: '🎯'
     }
-  ];
+  ],
 
   return (
     <>

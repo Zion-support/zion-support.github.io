@@ -1,203 +1,202 @@
-# Zion Tech Group Website
+# Zion Tech Group - Advanced AI and IT Solutions
 
-A modern, high-performance website built with React, TypeScript, and Vite, showcasing advanced AI and IT solutions.
+A modern, high-performance website built with Next.js 15, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, quantum computing, autonomous systems, and digital transformation services.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
-- **Performance Optimized**: Code splitting, lazy loading, image optimization
-- **SEO Ready**: Meta tags, structured data, sitemap generation
-- **Accessibility**: WCAG 2.1 compliant, keyboard navigation, screen reader support
-- **Responsive Design**: Mobile-first approach with cyberpunk aesthetics
-- **Error Handling**: Comprehensive error boundaries and monitoring
-- **Analytics**: Google Analytics, GTM, and custom event tracking
+### Core Technologies
+- **Next.js 15** - Latest React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful, customizable icons
 
-## 🛠️ Tech Stack
+### Performance Optimizations
+- **Image Optimization** - Next.js Image component with lazy loading
+- **Code Splitting** - Dynamic imports for better performance
+- **Bundle Analysis** - Webpack bundle analyzer integration
+- **Performance Monitoring** - Real-time Core Web Vitals tracking
+- **SEO Optimization** - Comprehensive meta tags and structured data
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS 4.x
-- **Icons**: Lucide React, Heroicons
-- **Animations**: Framer Motion
-- **Charts**: Recharts
-- **Testing**: Jest, Testing Library
-- **Linting**: ESLint, Prettier
-- **Build**: Vite with Terser optimization
+### Accessibility Features
+- **WCAG 2.1 AA Compliance** - Full accessibility support
+- **Keyboard Navigation** - Complete keyboard accessibility
+- **Screen Reader Support** - ARIA landmarks and labels
+- **High Contrast Mode** - Support for high contrast displays
+- **Focus Management** - Proper focus indicators and management
 
-## 📦 Installation
+### SEO & Marketing
+- **Structured Data** - Rich snippets for search engines
+- **Sitemap** - XML sitemap for better crawling
+- **Robots.txt** - Search engine crawling instructions
+- **PWA Support** - Progressive Web App capabilities
+- **Open Graph** - Social media sharing optimization
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-org/zion-tech-group-website.git
-   cd zion-tech-group-website
-   ```
+## 🛠️ Development
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   pnpm install
-   ```
+### Prerequisites
+- Node.js 18.0.0 or higher
+- pnpm 8.0.0 or higher (recommended) or npm
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   
-   Update the following variables:
-   ```env
-   VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-   VITE_GTM_ID=GTM-XXXXXXX
-   VITE_FB_PIXEL_ID=XXXXXXXXXXXXXXX
-   ```
+### Installation
 
-## 🚀 Development
-
-1. **Start development server**
-   ```bash
-   npm run dev
-   # or
-   pnpm dev
-   ```
-
-2. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-## 🏗️ Building for Production
-
-1. **Build the project**
-   ```bash
-   npm run build
-   # or
-   pnpm build
-   ```
-
-2. **Preview the build**
-   ```bash
-   npm run preview
-   # or
-   pnpm preview
-   ```
-
-## 📊 Performance Optimization
-
-The project includes several performance optimizations:
-
-- **Code Splitting**: Automatic chunk splitting for optimal loading
-- **Lazy Loading**: Components and images load on demand
-- **Image Optimization**: WebP format with fallbacks
-- **Bundle Analysis**: Built-in bundle size monitoring
-- **Critical CSS**: Inline critical styles for faster rendering
-
-## 🧪 Testing
-
+1. Clone the repository:
 ```bash
-# Run unit tests
-npm run test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in watch mode
-npm run test:watch
+git clone https://github.com/ziontechgroup/website.git
+cd website
 ```
 
-## 🔍 Code Quality
-
+2. Install dependencies:
 ```bash
-# Lint code
-npm run lint
-
-# Fix linting issues
-npm run lint:fix
-
-# Type checking
-npm run type-check
-
-# Format code
-npm run format
+pnpm install
+# or
+npm install
 ```
 
-## 📈 Analytics & Monitoring
+3. Start the development server:
+```bash
+pnpm dev
+# or
+npm run dev
+```
 
-The website includes comprehensive analytics:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- **Google Analytics 4**: Page views, events, conversions
-- **Google Tag Manager**: Advanced tracking and tag management
-- **Custom Events**: Button clicks, form submissions, scroll depth
-- **Performance Monitoring**: Core Web Vitals tracking
-- **Error Tracking**: Automatic error reporting and monitoring
+### Available Scripts
 
-## 🎨 Design System
-
-The website uses a custom cyberpunk design system:
-
-- **Color Palette**: Neon cyan, purple, pink with dark backgrounds
-- **Typography**: Inter font with custom cyber effects
-- **Components**: Reusable cyber-themed components
-- **Animations**: Smooth transitions and hover effects
-- **Responsive**: Mobile-first responsive design
-
-## 🚀 Deployment
-
-### Netlify (Recommended)
-
-1. **Connect your repository** to Netlify
-2. **Set build settings**:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-3. **Deploy** automatically on git push
-
-### Vercel
-
-1. **Install Vercel CLI**: `npm i -g vercel`
-2. **Deploy**: `vercel --prod`
-
-### Manual Deployment
-
-1. **Build the project**: `npm run build`
-2. **Upload** the `dist` folder to your web server
-3. **Configure** your server for SPA routing
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm lint:fix` - Fix ESLint issues
+- `pnpm type-check` - Run TypeScript type checking
+- `pnpm test` - Run tests
+- `pnpm build:analyze` - Analyze bundle size
 
 ## 📁 Project Structure
 
 ```
-├── app/                    # Next.js app directory
+├── app/                    # Next.js App Router
 │   ├── components/         # Reusable components
-│   ├── pages/             # Page components
-│   ├── utils/             # Utility functions
-│   ├── types/             # TypeScript type definitions
-│   └── globals.css        # Global styles
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── loading.tsx        # Loading UI
+│   ├── error.tsx          # Error UI
+│   └── not-found.tsx      # 404 page
 ├── public/                # Static assets
-├── scripts/               # Build and optimization scripts
-├── __tests__/             # Test files
-├── dist/                  # Build output
+│   ├── sitemap.xml        # XML sitemap
+│   ├── robots.txt         # Robots.txt
+│   └── site.webmanifest   # PWA manifest
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
 └── package.json           # Dependencies and scripts
 ```
 
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Cyan (#00ffff) - Tech and innovation
+- **Secondary**: Purple (#8b5cf6) - Creativity and AI
+- **Accent**: Pink (#ec4899) - Energy and growth
+- **Background**: Dark slate gradient for modern look
+
+### Typography
+- **Headings**: Bold, large sizes with neon effects
+- **Body**: Clean, readable text with proper contrast
+- **Code**: Monospace font for technical content
+
+### Components
+- **Cyber Cards**: Glassmorphism design with neon borders
+- **Hologram Cards**: Animated cards with scanning effects
+- **Quantum Cards**: Energy pulse animations
+- **Buttons**: Gradient backgrounds with hover effects
+
 ## 🔧 Configuration
 
-### Vite Configuration
+### Environment Variables
+Create a `.env.local` file in the root directory:
 
-The project uses Vite with custom optimizations:
+```env
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
+```
 
-- **Terser minification** for production builds
-- **Manual chunk splitting** for optimal loading
-- **Asset optimization** with size limits
-- **Source map generation** for debugging
+### Performance Monitoring
+The application includes built-in performance monitoring that tracks:
+- **LCP** (Largest Contentful Paint)
+- **FID** (First Input Delay)
+- **CLS** (Cumulative Layout Shift)
+- **FCP** (First Contentful Paint)
+- **TTFB** (Time to First Byte)
 
-### TypeScript Configuration
+## 🚀 Deployment
 
-- **Strict mode** enabled for better type safety
-- **Path mapping** for clean imports
-- **Incremental compilation** for faster builds
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main branch
+
+### Other Platforms
+The application can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## 📊 Analytics & Monitoring
+
+### Google Analytics
+- Page views and user interactions
+- Performance metrics
+- Error tracking
+- Custom events for service clicks
+
+### Performance Monitoring
+- Real-time Core Web Vitals
+- Bundle size analysis
+- Image optimization tracking
+- Loading performance metrics
+
+## 🔒 Security
+
+### Security Headers
+- Content Security Policy (CSP)
+- X-Frame-Options
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+
+### Best Practices
+- Input sanitization
+- XSS protection
+- CSRF protection
+- Secure cookie settings
+
+## 📱 Mobile Optimization
+
+- **Responsive Design** - Mobile-first approach
+- **Touch Optimization** - Touch-friendly interactions
+- **Performance** - Optimized for mobile networks
+- **PWA Features** - Installable and offline-capable
+
+## 🌐 Internationalization
+
+The website is prepared for internationalization with:
+- Language detection
+- RTL support
+- Localized content structure
+- SEO-friendly URLs
 
 ## 🤝 Contributing
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## 📄 License
 
@@ -206,18 +205,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For support and questions:
-
+- **Phone**: +1 (302) 464-0950
 - **Email**: kleber@ziontechgroup.com
-- **Phone**: +1 302 464 0950
-- **Website**: https://ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
 
-## 🙏 Acknowledgments
+## 🔗 Links
 
-- React team for the amazing framework
-- Vite team for the fast build tool
-- Tailwind CSS for the utility-first CSS framework
-- All contributors and supporters
+- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
+- **Twitter**: [@ziontechgroup](https://twitter.com/ziontechgroup)
+- **LinkedIn**: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
 
 ---
 
-**Zion Tech Group** - Transforming businesses with cutting-edge AI and IT solutions.
+Built with ❤️ by the Zion Tech Group team

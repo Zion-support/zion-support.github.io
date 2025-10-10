@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
 }
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number,
   [key: string]: number;
 }
 
@@ -122,10 +122,8 @@ const PerformanceDashboard: React.FC = () => {
 
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
-            Last updated: {new Date().toLocaleTimeString()}
-          </div>
+            Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
-      </div>
     </div>
   );
 };

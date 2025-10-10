@@ -8,7 +8,7 @@ export interface ValidationRule<T = unknown> {
   message: string;}
 }
 export interface ValidationResult {
-  valid: boolean;
+  valid: boolean,
 export interface ValidationRule<T = unknown> {}
   validate: (value: T) => boolean
   message: string;}
@@ -143,7 +143,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    * Validate custom condition;
    */
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
-    validate: validator;
+    validate: validator,
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({}
     validate: validator,
     message}
@@ -255,7 +255,7 @@ export function validateField<T>(valu,
  * Validate entire form;
  */
 export function validateForm<T extends Record<string, unknown>>(
-  formData: T;
+  formData: T,
   validationSchema: Record<keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {}
   const results = {} as Record<keyof T, ValidationResult>
@@ -323,8 +323,8 @@ export function sanitizeInput(inpu)
  * Debounce function for form validation;
  */
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
-  func: T;
-  wait: number;
+  func: T,
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {,

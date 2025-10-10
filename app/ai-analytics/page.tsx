@@ -43,7 +43,7 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Transform complex data into clear, actionable insights with advanced visualization tools.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export options']
     }
-  ];
+  ],
 
   const benefits = [
     'Increase data accuracy by 95%',
@@ -87,7 +87,7 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Optimize operations with data-driven insights',
       icon: '⚙️'
     }
-  ];
+  ],
 
   return (
     <>
@@ -231,7 +231,7 @@ const AIAnalyticsPage: React.FC = () => {
 
       <Footer />
     </>
-  );
-};
+  ),
+},
 
 export default AIAnalyticsPage;

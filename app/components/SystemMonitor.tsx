@@ -70,7 +70,6 @@ const SystemMonitorPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
         </div>
       </section>
 

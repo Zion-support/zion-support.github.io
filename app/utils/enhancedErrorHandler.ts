@@ -6,16 +6,16 @@
 interface ErrorContext {
   userId?: string;
   sessionId?: string;
-  url: string;
-  userAgent: string;
-  timestamp: string;
+  url: string,
+  userAgent: string,
+  timestamp: string,
   component?: string;
   action?: string;
   props?: Record<string, unknown>
   state?: Record<string, unknown>;}
 }
 interface ErrorReport {
-  id: string;
+  id: string,
 interface ErrorContext {}
   userId?: string
   sessionId?: string
@@ -29,9 +29,9 @@ interface ErrorContext {}
 interface ErrorReport {}
   id: string
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
-  message: string;
+  message: string,
   stack?: string;
-  context: ErrorContext;
+  context: ErrorContext,
   severity: 'low' | 'medium' | 'high' | 'critical'
   category:
     | 'syntax'
@@ -42,24 +42,24 @@ interface ErrorReport {}
     | 'unknown',
   tags: string[],
   metadata: Record<string, unknown>
-  resolved: boolean;
+  resolved: boolean,
   resolvedAt?: string;
   resolvedBy?: string;}
 }
 interface ErrorHandlerConfig {
-  enableConsoleLogging: boolean;
-  enableRemoteReporting: boolean;
-  enableErrorRecovery: boolean;
-  enableErrorCategorization: boolean;
-  enableErrorAggregation: boolean;
-  enablePerformanceImpact: boolean;
-  maxErrorsPerMinute: number;
-  errorRetentionDays: number;
+  enableConsoleLogging: boolean,
+  enableRemoteReporting: boolean,
+  enableErrorRecovery: boolean,
+  enableErrorCategorization: boolean,
+  enableErrorAggregation: boolean,
+  enablePerformanceImpact: boolean,
+  maxErrorsPerMinute: number,
+  errorRetentionDays: number,
   remoteEndpoint?: string;
   apiKey?: string;}
 }
 class EnhancedErrorHandler {
-  private config: ErrorHandlerConfig;
+  private config: ErrorHandlerConfig,
   private errors: ErrorReport[] = [],
 interface ErrorHandlerConfig {}
   enableConsoleLogging: boolean
@@ -83,14 +83,14 @@ class EnhancedErrorHandler {}
   private isInitialized: boolean = false;}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = {
-      enableConsoleLogging: true;
-      enableRemoteReporting: false;
-      enableErrorRecovery: true;
-      enableErrorCategorization: true;
-      enableErrorAggregation: true;
-      enablePerformanceImpact: true;
-      maxErrorsPerMinute: 10;
-      errorRetentionDays: 30;
+      enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
     this.config = {}
       enableConsoleLogging: true,
@@ -387,7 +387,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private handleError(errorData: {)}
 // type: ErrorReport['type'];
-// message: string;
+// message: string,
 // stack?: string;
 // filename?: string;
 // lineno?: number;
@@ -425,7 +425,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private createErrorReport(errorData: {)}
 // type: ErrorReport['type'];
-// message: string;
+// message: string,
 // stack?: string;
 // filename?: string;
 // lineno?: number;
@@ -484,14 +484,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         statusText: errorData.statusText,
         duration: errorData.duration}
       },
-      resolved: false;
+      resolved: false,
     }
   private createErrorReport(errorDat,
   a: {/* TODO: Fix JSX expression */})
   }): ErrorReport {/* TODO: Fix JSX expression */}
       },
       resolve,
-  d: false;
+  d: false,
     };
   }
   /**
@@ -913,7 +913,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Get error statistics;
    */
   public getErrorStatistics(): {
-    totalErrors: number;
+    totalErrors: number,
   public getErrorStatistics(): {}
     totalErrors: number
     errorsByType: Record<string, number>

@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, CheckCircle, ArrowRight, Star } from 'lucide-react';
@@ -28,7 +27,27 @@ const DemoPage: React.FC = () => {
     }
   ];
 
-  return (
+const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp',
+      role: 'CEO',
+      content: 'The AI dashboard demo showed us exactly how we could transform our data analytics. Incredible insights!',
+
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+company: 'DataFlow Inc',
+      role: 'CTO',
+      content: 'The quantum computing demo was mind-blowing. We could see immediate applications for our optimization problems.',
+
+      rating: 5
+    }
+  ];
+
+return (
+
     <>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
@@ -140,7 +159,5 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default DemoPage;
+);
+}

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group." />
