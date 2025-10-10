@@ -1,49 +1,55 @@
 /**
  * Analytics Tracker
- * Provides comprehensive analytics tracking for the application
+ * Comprehensive analytics tracking for user interactions and performance
  */
 
+<<<<<<< HEAD
 interface AnalyticsEvent {
   action: string;
   category: string;
+=======
+export interface AnalyticsEvent {
+  name: string;
+  category: string;
+  action: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   label?: string;
   value?: number;
-  nonInteraction?: boolean;
+  customParameters?: Record<string, any>;
 }
 
-interface PerformanceMetrics {
-  metric: string;
-  value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
 }
 
-interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+export interface UserProperties {
+  userId?: string;
+  sessionId: string;
+  userAgent: string;
+  language: string;
+  timezone: string;
+  screenResolution: string;
+  viewportSize: string;
 }
 
 class AnalyticsTracker {
   private isInitialized = false;
-  private queue: Array<() => void> = [];
+  private sessionId: string;
+  private userId?: string;
+  private eventQueue: AnalyticsEvent[] = [];
+  private performanceObserver?: PerformanceObserver;
 
-  /**
-   * Initialize the analytics tracker
-   */
-  initialize(): void {
-    if (typeof window === 'undefined') return;
-    
-    this.isInitialized = true;
-    
-    // Process queued events
-    this.queue.forEach(fn => fn());
-    this.queue = [];
-    
-    // Track initial page view
-    this.trackPageView(window.location.pathname);
+  constructor() {
+    this.sessionId = this.generateSessionId();
+    this.initialize();
   }
 
+<<<<<<< HEAD
   /**
    * Track a page view
    */
@@ -51,17 +57,145 @@ class AnalyticsTracker {
     const event = () => {
       // Add your analytics implementation here
     };
+=======
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
 
-    if (this.isInitialized) {
-      event();
-    } else {
-      this.queue.push(event);
+  private initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      this.setupPerformanceMonitoring();
+      this.setupErrorTracking();
+      this.setupUserInteractionTracking();
+      this.isInitialized = true;
+    } catch (error) {
+      console.error('Failed to initialize analytics tracker:', error);
+    }
+  }
+
+  private setupPerformanceMonitoring(): void {
+    if ('PerformanceObserver' in window) {
+      this.performanceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            this.trackPageLoad(entry as PerformanceNavigationTiming);
+          } else if (entry.entryType === 'paint') {
+            this.trackPaintMetrics(entry as PerformancePaintTiming);
+          }
+        });
+      });
+
+      this.performanceObserver.observe({ entryTypes: ['navigation', 'paint'] });
+    }
+  }
+
+  private setupErrorTracking(): void {
+    window.addEventListener('error', (event) => {
+      this.trackError({
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        error: event.error,
+      });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.trackError({
+        message: 'Unhandled Promise Rejection',
+        reason: event.reason,
+        promise: event.promise,
+      });
+    });
+  }
+
+  private setupUserInteractionTracking(): void {
+    // Track clicks
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        this.trackEvent({
+          name: 'click',
+          category: 'user_interaction',
+          action: 'click',
+          label: this.getElementLabel(target),
+        });
+      }
+    });
+
+    // Track form submissions
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      if (form) {
+        this.trackEvent({
+          name: 'form_submit',
+          category: 'user_interaction',
+          action: 'submit',
+          label: form.id || form.className || 'unknown_form',
+        });
+      }
+    });
+
+    // Track scroll depth
+    let maxScrollDepth = 0;
+    window.addEventListener('scroll', () => {
+      const scrollDepth = Math.round(
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      );
+      if (scrollDepth > maxScrollDepth) {
+        maxScrollDepth = scrollDepth;
+        this.trackEvent({
+          name: 'scroll_depth',
+          category: 'user_engagement',
+          action: 'scroll',
+          value: maxScrollDepth,
+        });
+      }
+    });
+  }
+
+  private getElementLabel(element: HTMLElement): string {
+    return (
+      element.id ||
+      element.className ||
+      element.tagName ||
+      element.textContent?.slice(0, 50) ||
+      'unknown_element'
+    );
+  }
+
+  private trackPageLoad(entry: PerformanceNavigationTiming): void {
+    const metrics: PerformanceMetrics = {
+      loadTime: entry.loadEventEnd - entry.loadEventStart,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      firstInputDelay: 0,
+      cumulativeLayoutShift: 0,
+      timeToInteractive: entry.domInteractive - entry.navigationStart,
+    };
+
+    this.trackPerformance(metrics);
+  }
+
+  private trackPaintMetrics(entry: PerformancePaintTiming): void {
+    if (entry.name === 'first-contentful-paint') {
+      this.trackEvent({
+        name: 'first_contentful_paint',
+        category: 'performance',
+        action: 'paint',
+        value: entry.startTime,
+      });
     }
   }
 
   /**
    * Track a custom event
    */
+<<<<<<< HEAD
   trackEvent(event: AnalyticsEvent): void {
     const trackFn = () => {
       // Add your analytics implementation here
@@ -71,12 +205,36 @@ class AnalyticsTracker {
       trackFn();
     } else {
       this.queue.push(trackFn);
+=======
+  public trackEvent(event: AnalyticsEvent): void {
+    if (!this.isInitialized) {
+      this.eventQueue.push(event);
+      return;
+    }
+
+    try {
+      // Send to Google Analytics if available
+      if (typeof gtag !== 'undefined') {
+        gtag('event', event.action, {
+          event_category: event.category,
+          event_label: event.label,
+          value: event.value,
+          custom_parameters: event.customParameters,
+        });
+      }
+
+      // Send to custom analytics endpoint
+      this.sendToAnalytics(event);
+    } catch (error) {
+      console.error('Failed to track event:', error);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
     }
   }
 
   /**
    * Track performance metrics
    */
+<<<<<<< HEAD
   trackPerformance(metrics: PerformanceMetrics): void {
     const trackFn = () => {
       // Add your performance tracking implementation here
@@ -87,11 +245,21 @@ class AnalyticsTracker {
     } else {
       this.queue.push(trackFn);
     }
+=======
+  public trackPerformance(metrics: PerformanceMetrics): void {
+    this.trackEvent({
+      name: 'performance_metrics',
+      category: 'performance',
+      action: 'measure',
+      customParameters: metrics,
+    });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   }
 
   /**
    * Track an error
    */
+<<<<<<< HEAD
   trackError(error: ErrorReport): void {
     const trackFn = () => {
       // Add your error tracking implementation here
@@ -106,87 +274,150 @@ class AnalyticsTracker {
 
   /**
    * Track user interaction
-   */
-  trackInteraction(action: string, element?: string): void {
+=======
+  public trackError(error: any): void {
     this.trackEvent({
-      action,
-      category: 'user-interaction',
-      label: element
+      name: 'error',
+      category: 'error',
+      action: 'occurred',
+      label: error.message || 'Unknown error',
+      customParameters: {
+        stack: error.stack,
+        filename: error.filename,
+        lineno: error.lineno,
+        colno: error.colno,
+      },
+    });
+  }
+
+  /**
+   * Track page view
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
+   */
+  public trackPageView(page: string, title?: string): void {
+    this.trackEvent({
+      name: 'page_view',
+      category: 'navigation',
+      action: 'view',
+      label: page,
+      customParameters: {
+        page_title: title || document.title,
+        page_url: window.location.href,
+        referrer: document.referrer,
+      },
+    });
+  }
+
+  /**
+   * Track user identification
+   */
+  public identifyUser(userId: string, properties?: Record<string, any>): void {
+    this.userId = userId;
+    this.trackEvent({
+      name: 'user_identify',
+      category: 'user',
+      action: 'identify',
+      customParameters: {
+        user_id: userId,
+        ...properties,
+      },
+    });
+  }
+
+  /**
+   * Set user properties
+   */
+  public setUserProperties(properties: Partial<UserProperties>): void {
+    this.trackEvent({
+      name: 'user_properties',
+      category: 'user',
+      action: 'update',
+      customParameters: properties,
     });
   }
 
   /**
    * Track conversion
    */
-  trackConversion(conversionType: string, value?: number): void {
+  public trackConversion(conversionId: string, value?: number, currency?: string): void {
     this.trackEvent({
+<<<<<<< HEAD
       action: 'conversion',
       category: conversionType,
       value
     });
-  }
-
-  /**
-   * Track external link clicks
-   */
-  trackExternalLink(url: string, linkText?: string): void {
-    this.trackEvent({
-      category: 'Outbound',
-      action: 'click',
-      label: linkText || url
+=======
+      name: 'conversion',
+      category: 'conversion',
+      action: 'completed',
+      label: conversionId,
+      value: value,
+      customParameters: {
+        conversion_id: conversionId,
+        currency: currency || 'USD',
+      },
     });
   }
 
-  /**
-   * Track search queries
-   */
-  trackSearch(query: string, resultsCount?: number): void {
-    this.trackEvent({
-      category: 'Search',
-      action: 'search',
-      label: query,
-      value: resultsCount
-    });
+  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
+    try {
+      const payload = {
+        ...event,
+        sessionId: this.sessionId,
+        userId: this.userId,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+      };
+
+      // Send to your analytics endpoint
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+    } catch (error) {
+      console.error('Failed to send analytics data:', error);
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   }
 
   /**
-   * Track video interactions
+   * Flush queued events
    */
-  trackVideoInteraction(videoId: string, action: 'play' | 'pause' | 'complete', progress?: number): void {
-    this.trackEvent({
-      category: 'Video',
-      action,
-      label: videoId,
-      value: progress
-    });
+  public flush(): void {
+    while (this.eventQueue.length > 0) {
+      const event = this.eventQueue.shift();
+      if (event) {
+        this.trackEvent(event);
+      }
+    }
   }
 
   /**
-   * Track download events
+   * Get current session ID
    */
-  trackDownload(fileName: string, fileType: string): void {
-    this.trackEvent({
-      category: 'Download',
-      action: 'download',
-      label: `${fileName}.${fileType}`
-    });
+  public getSessionId(): string {
+    return this.sessionId;
   }
 
   /**
-   * Get analytics data (for debugging)
+   * Get current user ID
    */
-  getAnalyticsData(): {
-    isInitialized: boolean;
-    queueLength: number;
-  } {
-    return {
-      isInitialized: this.isInitialized,
-      queueLength: this.queue.length
-    };
+  public getUserId(): string | undefined {
+    return this.userId;
   }
 }
 
+<<<<<<< HEAD
 // Create singleton instance
 export const analyticsTracker = new AnalyticsTracker();
 
 export default AnalyticsTracker;
+=======
+// Export singleton instance
+export const analyticsTracker = new AnalyticsTracker();
+export default analyticsTracker;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595

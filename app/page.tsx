@@ -472,6 +472,7 @@ const HomePage: React.FC = () => {
                       Enterprise
                     </span>
                   </div>
+<<<<<<< HEAD
                 )}
                 
                 <div className="text-center">
@@ -501,6 +502,19 @@ const HomePage: React.FC = () => {
             ))}
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
           </div>
         </div>
       </section>
@@ -522,8 +536,29 @@ const HomePage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-center">
+<<<<<<< HEAD
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <service.icon className="w-6 h-6 text-white" />
+=======
+                  <div className="text-2xl mb-2">📞</div>
+                  <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                    +1 (302) 464-0950
+                  </a>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {service.name}
+                </h3>
+
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-2xl font-bold text-white">
+                    {service.price}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -770,6 +805,10 @@ const HomePage: React.FC = () => {
       <Footer />
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
     </div>
+<<<<<<< HEAD
+=======
+    </ErrorBoundary>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1595
   );
 };
 
