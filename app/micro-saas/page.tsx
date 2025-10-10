@@ -935,7 +935,6 @@ export default function MicroSaasPage() {
                 Schedule Demo
               </a>
             </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
           </div>
         </section>
 
