@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Next.js type definitions
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
@@ -53,7 +52,6 @@ declare global {
 }
 
 export {};
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -207,4 +205,3 @@ const Next.dPage: React.FC = () => {
 };
 
 export default Next.dPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-975f

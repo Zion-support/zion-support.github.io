@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
 
 const CompliancePage: React.FC = () => {
@@ -94,7 +93,6 @@ const CompliancePage: React.FC = () => {
         </section>
       </div>
     </>
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
@@ -245,7 +243,6 @@ const CompliancePage: React.FC = () => {
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
 };
 

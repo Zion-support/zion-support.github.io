@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Users, MessageCircle, Calendar, Award, Globe, Heart } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
@@ -10,7 +9,6 @@ const CommunityPage: React.FC = () => {
       icon: Users,
       title: 'Expert Network',
       description: 'Connect with industry professionals and AI experts from around the world.'
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Users, MessageCircle, Calendar, Award } from 'lucide-react';
@@ -21,31 +19,26 @@ const CommunityPage: React.FC = () => {
       icon: Users,
       title: 'Expert Community',
       description: 'Connect with industry experts and like-minded professionals'
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
     },
     {
       icon: MessageCircle,
       title: 'Knowledge Sharing',
-<<<<<<< HEAD
       description: 'Share insights, ask questions, and learn from the community.'
     },
     {
       icon: Calendar,
       title: 'Events & Webinars',
       description: 'Join our regular events, workshops, and educational sessions.'
-=======
       description: 'Share insights and learn from community discussions'
     },
     {
       icon: Calendar,
       title: 'Events & Workshops',
       description: 'Participate in exclusive events and training sessions'
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
     },
     {
       icon: Award,
       title: 'Recognition',
-<<<<<<< HEAD
       description: 'Get recognized for your contributions and achievements.'
     },
     {
@@ -78,7 +71,6 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Connect with like-minded professionals, share knowledge, and grow together in the world of AI and technology.
             </p>
-=======
       description: 'Get recognized for your contributions and achievements'
     }
   ];
@@ -154,11 +146,9 @@ const CommunityPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Community Features */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -194,7 +184,6 @@ const CommunityPage: React.FC = () => {
         </section>
       </div>
     </>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -242,7 +231,6 @@ const CommunityPage: React.FC = () => {
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
   );
 };
 

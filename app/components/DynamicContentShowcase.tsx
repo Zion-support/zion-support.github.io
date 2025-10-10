@@ -301,7 +301,6 @@ const DynamicContentShowcase: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -317,7 +316,6 @@ const DynamicContentShowcase: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
               Schedule Demo
             </button>
-=======
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Experience the Future?
@@ -334,7 +332,6 @@ const DynamicContentShowcase: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
           </div>
         </div>
       </section>

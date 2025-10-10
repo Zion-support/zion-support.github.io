@@ -17,27 +17,21 @@ interface PerformanceMonitorProps {
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
   onMetricsUpdate,
-<<<<<<< HEAD
   enableRealTimeMonitoring = true,;)
 }); => {
   const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
-=======
   enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
     memory: null,;)
 });;
-=======
     memory: null
   });
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 
   const [isMonitoring, setIsMonitoring] = useState(false);
 
@@ -58,7 +52,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
     }
 
     // Measure Largest Contentful Paint (LCP)
-<<<<<<< HEAD
     if ('PerformanceObserver' in window) {
       try {
         const lcpObserver = new PerformanceObserver(list => {
@@ -219,7 +212,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
       // web-vitals not available, continue without it;)
 }
   }, []);
-=======
     const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
     if (lcpEntries.length > 0) {
       const lcp = lcpEntries[lcpEntries.length - 1];
@@ -255,7 +247,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
       updateMetrics({ memory: memory.usedJSHeapSize / 1024 / 1024 }); // Convert to MB
     }
   }, [updateMetrics]);
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
@@ -266,7 +257,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
       // Initial measurement
       measurePerformance();
 
-<<<<<<< HEAD
     // Monitor performance every 5 seconds
     const interval = setInterval(() => {
       measureResourceTiming();)
@@ -288,7 +278,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
       onMetricsUpdate(metrics);)
 }
   }, [metrics, onMetricsUpdate]);
-=======
       // Set up periodic monitoring
       const interval = setInterval(measurePerformance, 5000);
 
@@ -324,7 +313,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
     const cleanup = startMonitoring();
     return cleanup;
   }, [enableRealTimeMonitoring, measurePerformance, updateMetrics]);
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
 
   const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string => {
     if (metric === null) return 'N/A';
@@ -333,7 +321,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
     return 'Poor';
   };
 
-<<<<<<< HEAD
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
@@ -396,7 +383,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
                 <li key={index}></l>• {rec}</li>
               ));
             </ul>
-=======
   const fcpScore = getPerformanceScore(metrics.fcp, { good: 1800, poor: 3000 });
   const lcpScore = getPerformanceScore(metrics.lcp, { good: 2500, poor: 4000 });
   const fidScore = getPerformanceScore(metrics.fid, { good: 100, poor: 300 });
@@ -480,11 +466,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
             <div className="text-lg font-mono text-white">
               {metrics.memory.toFixed(2)} MB
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
           </div>
         );
       </div>
-<<<<<<< HEAD
     );)
 }
 
@@ -493,7 +477,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></Performance
 
 export default AdvancedPerformanceMonitor;
 }
-=======
 
       <div className="mt-4 pt-4 border-t border-white/10">
         <div className="flex items-center justify-between">
@@ -511,4 +494,3 @@ export default AdvancedPerformanceMonitor;
 };
 
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11

@@ -32,15 +32,12 @@ const SupportPage: React.FC = () => {
       category: 'implementation'
     },
     {
-<<<<<<< HEAD
       question: 'Do you provide training for our team?',
       answer: 'Yes! We offer comprehensive training programs including online courses, hands-on workshops, and ongoing support to ensure your team can effectively use our solutions.',
       category: 'technical'
-=======
       question: 'Do you offer training for our team?',
       answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.',
       category: 'training'
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
     },
     {
       question: 'What are your pricing options?',
@@ -58,7 +55,6 @@ const SupportPage: React.FC = () => {
       category: 'technical'
     },
     {
-<<<<<<< HEAD
       question: 'What happens if I need to scale up?',
       answer: 'Our solutions are designed to scale with your business. We can easily upgrade your plan or add additional features as your needs grow.',
       category: 'general'
@@ -66,7 +62,6 @@ const SupportPage: React.FC = () => {
   ];
 
   const categories = ['all', 'general', 'technical', 'billing', 'implementation'];
-=======
       question: 'Do you provide custom development?',
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
       category: 'development'
@@ -109,7 +104,6 @@ const SupportPage: React.FC = () => {
   ];
 
   const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -118,7 +112,6 @@ const SupportPage: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
   const supportChannels = [
     {
       icon: <Phone className="w-6 h-6" />,
@@ -149,29 +142,23 @@ const SupportPage: React.FC = () => {
       availability: 'Always Available'
     }
   ];
-=======
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Support - Zion Tech Group</title>
         <meta name="description" content="Get help and support for your AI and IT solutions. Find answers to common questions, contact our support team, and access comprehensive documentation." />
         <meta name="keywords" content="support, help, FAQ, technical support, customer service, documentation" />
-=======
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
         <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -193,7 +180,6 @@ const SupportPage: React.FC = () => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -253,7 +239,6 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <p className={`${channel.color} font-medium mb-2`}>{channel.contact}</p>
                   <p className="text-sm text-gray-400">{channel.availability}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
                 </div>
               </div>
             </div>
@@ -293,7 +278,6 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-600">Find answers to common questions</p>
             </div>
 
-<<<<<<< HEAD
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
@@ -308,7 +292,6 @@ const SupportPage: React.FC = () => {
                 >
                   {category === 'all' ? 'All Topics' : category.charAt(0).toUpperCase() + category.slice(1)}
                 </button>
-=======
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
@@ -327,7 +310,6 @@ const SupportPage: React.FC = () => {
                     </div>
                   )}
                 </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
               ))}
             </div>
 
@@ -373,7 +355,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 bg-blue-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -388,7 +369,6 @@ const SupportPage: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
                 Schedule a Call
               </button>
-=======
         {/* Contact CTA */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -407,7 +387,6 @@ const SupportPage: React.FC = () => {
                   Email Support
                 </button>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
           </div>
         </section>

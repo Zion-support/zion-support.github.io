@@ -14,8 +14,6 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-<<<<<<< HEAD
-=======
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
     const breadcrumbs: BreadcrumbItem[] = [
@@ -32,7 +30,7 @@ const Breadcrumb: React.FC = () => {
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-
+      
       breadcrumbs.push({
         name,
         href: currentPath,
@@ -44,47 +42,6 @@ const Breadcrumb: React.FC = () => {
   };
 
   const breadcrumbs = generateBreadcrumbs();
-
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
-  // Don't show breadcrumb on home page
-  if (location.pathname === '/') {
-    return null;
-  }
-<<<<<<< HEAD
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-  
-  const breadcrumbItems = [
-    { name: 'Home', path: '/', icon: Home }
-  ];
-
-  pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/');
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
-  });
-
-  return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
-              <a
-                href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`}
-              >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
-=======
 
   return (
     <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb">
@@ -117,7 +74,6 @@ const Breadcrumb: React.FC = () => {
                   {item.name}
                 </Link>
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
             </li>
           ))}
         </ol>
