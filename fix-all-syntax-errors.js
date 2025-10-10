@@ -13,13 +13,13 @@ function fixAllSyntaxErrors(content) {
     // Fix ;) -> }
 
     .replace(/;\)/g, '})
-    // Fix ,) -> }
-
+    // Fix ,) -> }';
+'
     .replace(/,\)/g, '})
     // Fix ,; -> ;
-
+'
     .replace(/,;/g, ';)
-    // Fix malformed TypeScript generics
+    // Fix malformed TypeScript generics'
     .replace(/<([^>]+)><\/\1>/g, '<$1>)
     // Fix malformed JSX closing tags
     .replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
@@ -32,22 +32,22 @@ function fixAllSyntaxErrors(content) {
       return match;
 
     })
-    // Fix missing semicolons
+    // Fix missing semicolons'
     .replace(/([^;}])\n\s*}/g, '$1;\n})
-    // Fix missing closing parentheses
-    .replace(/([^)])\n\s*}/g, '$1)\n})
-    // Fix missing commas in object literals
-    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2)
-    // Fix malformed function calls
-    .replace(/\)\}/g, ');)
+    // Fix missing closing parentheses'
+    .replace(/([^)])\n\s*}/g, '$1)\n})';
+    // Fix missing commas in object literals'
+    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2)';
+    // Fix malformed function calls'
+    .replace(/\)\}/g, ');)'
     .replace(/\}\)/g, '});)
-    // Fix missing closing braces
-    .replace(/([^}])\n\s*$/g, '$1\n})
-    // Fix malformed JSX elements
+    // Fix missing closing braces'
+    .replace(/([^}])\n\s*$/g, '$1\n})';
+    // Fix malformed JSX elements'
     .replace(/<(\w+)[^>]*><\/\1>/g, '<$1>)
     // Fix missing closing tags for common elements
-    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
-      // Only add closing tag if its not a self-closing tag
+    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {';
+      // Only add closing tag if its not a self-closing tag'
       if (!match.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link].includes(tag)) {
         return match + `</${tag}>;
 
@@ -66,7 +66,7 @@ async function processFiles() {
   console.log(Starting comprehensive syntax error fixes...);
 
   const patterns = [;;
-
+'
     'app/**/*.tsx,
     app/**/*.ts
   ];
@@ -78,12 +78,12 @@ async function processFiles() {
   for (const pattern of patterns) {
     const files = await glob(pattern, {;;
 
-      ignore: [
-        'node_modules/**,
-        'dist/**,
-        '*.disabled/**,
-        '*-disabled/**,
-        'backup*/**,
+      ignore: ['
+        'node_modules/**,'
+        'dist/**,'
+        '*.disabled/**,'
+        '*-disabled/**,'
+        'backup*/**,'
         '**/*.backup,
         **/*.broken
       ]
@@ -93,12 +93,12 @@ async function processFiles() {
       try {
         const content = fs.readFileSync(file, utf8);;
 
-        // Check if file has syntax issues
-        if (content.includes(';)) || 
-            content.includes(',)) ||
-            content.includes(',;) ||
-            content.includes('Property assignment expected) ||
-            content.includes('Declaration or statement expected) ||
+        // Check if file has syntax issues'
+        if (content.includes(';)) || '
+            content.includes(',)) ||'
+            content.includes(',;) ||'
+            content.includes('Property assignment expected) ||'
+            content.includes('Declaration or statement expected) ||'
             content.includes('Unexpected ")") ||
             content.includes('Expected ")") ||
             content.includes('</') && content.includes('></)) {
@@ -134,3 +134,4 @@ async function processFiles() {
 
 // Run the script
 processFiles().catch(console.error);
+'

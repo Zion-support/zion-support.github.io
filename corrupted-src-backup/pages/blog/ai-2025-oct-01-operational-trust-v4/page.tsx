@@ -31,7 +31,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 
           </Li, n, k>
         </div>
-        <div, className=mt-8></div>
+        <div, className=mt-8></div>'
           <Link, t, o='/<bl, o, g' className=te, x, t-cy, a, n-300, hove, r:underli, n, e>
             ← Back, to, Blog;
 
@@ -43,3 +43,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 
  }
+'

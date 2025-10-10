@@ -18,5 +18,5 @@ try {const { target_institution, type, regional_scope, budgetOrResolution, suppo
 
   n: contentMarkdown }) } catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
-
+'
   r: error?.message || 'Failed to generate proposal' }) } } ' import type {NextApiRequest} NextApiResponse } from 'next' } } '"`

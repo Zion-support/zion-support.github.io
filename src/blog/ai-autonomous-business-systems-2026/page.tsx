@@ -15,7 +15,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
           </div>
             <span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4>AUTONOMOUS 2026</span>
             <h1 className=text-4xl font-bold text-gray-900 mb-4>AI Autonomous Business Systems,
-  2026: 95% Automation Achievement</h1>
+  2026: '95% Automation Achievement</h1>',
             <p className="text-gray-600 text-lg>January 28, 2026 · 40 min read · Autonomous Systems</p>
             <h2 className="text-2xl font-bold text-gray-900 mb-6>🎯 Automation Results</h2>
             <p className=text-gray-700 mb-6></p>
@@ -37,15 +37,15 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
             <h3 className="text-xl font-semibold text-gray-800 mb-4>Core Components</h3>
             <ul className=list-disc list-inside text-gray-700 mb-6 space-y-2></ul>
               <li> <strong>AI Decision,
-  Engine:</strong> Real-time autonomous decision making</li>
+  Engine: '</strong> Real-time autonomous decision making</li>',
               <li> <strong>Process,
-  Orchestrator:</strong> Automated workflow management</li>
+  Orchestrator: '</strong> Automated workflow management</li>',
               <li> <strong>Learning,
-  System:</strong> Continuous improvement and adaptation</li>
+  System: '</strong> Continuous improvement and adaptation</li>',
               <li> <strong>Monitoring,
-  Hub:</strong> Real-time system health and performance</li>
+  Hub: '</strong> Real-time system health and performance</li>
             </ul>
-<h2 className=text-2xl font-bold text-gray-900 mb-6>🚀 Implementation Strategy</h2>
+<h2 className=text-2xl font-bold text-gray-900 mb-6>🚀 Implementation Strategy</h2>',
               The path to 95% automation requires a systematic approach across multiple business,;
 
 functions:
@@ -57,12 +57,12 @@ functions:
               <li>• Establish real-time monitoring and alerting</li>
               <li>• Train AI models on historical business data</li>
             <h3 className=text-xl font-semibold text-gray-800 mb-4>Phase,
-  2: Scale (Months 7-12)</h3>
+  2: 'Scale (Months 7-12)</h3>
               <li>• Expand automation to all business functions</li>
               <li>• Implement self-healing system capabilities</li>
               <li>• Deploy predictive maintenance and optimization</li>
               <li>• Achieve 80%+ process automation</li>
-            <h2 className=text-2xl font-bold text-gray-900 mb-6>💰 ROI & Impact</h2>
+            <h2 className=text-2xl font-bold text-gray-900 mb-6>💰 ROI & Impact</h2>',
               Autonomous business systems deliver measurable value across multiple,
   dimensions:
             <h3 className=text-xl font-semibold text-gray-800 mb-4>Operational Benefits</h3>

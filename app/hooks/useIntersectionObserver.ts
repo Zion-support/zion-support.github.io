@@ -26,7 +26,7 @@ export function useIntersectionObserver(
 
 const {
     threshold = 0,
-    root = null,
+    root = null,'
     rootMargin = '0%,
     freezeOnceVisible = false} = options;
 
@@ -72,3 +72,4 @@ const observer = new IntersectionObserver(;;
   return { ref, isIntersecting, entry }}
 
 export default useIntersectionObserver;
+'

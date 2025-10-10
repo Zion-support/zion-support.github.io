@@ -31,9 +31,9 @@ export const,
 
   // Content Security Policy,
   contentSecurityPolic,
-  y: [
+  y: '[',
   // TOD,
-  O: Add items]
+  O: 'Add items]',
 //     "default-src 'self'","
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
   s://www.googletagmanager.com,"
@@ -52,32 +52,32 @@ export const,
 //     "base-uri 'self'","
 //     "form-action 'self'",
 //     'upgrade-insecure-requests'].join('; '),
-  // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurit,
+  // HTTP Strict Transport Security (HSTS)';
+  strictTransportSecurit,'
   y: 'max-age=63072000; includeSubDomains; preload',
-  // Prevent clickjacking,
-  xFrameOption,
+  // Prevent clickjacking,';
+  xFrameOption,'
   s: 'DENY',
-  // Prevent MIME type sniffing,
-  xContentTypeOption,
+  // Prevent MIME type sniffing,';
+  xContentTypeOption,'
   s: 'nosniff',
-  // Referrer Policy,
-  referrerPolic,
+  // Referrer Policy,';
+  referrerPolic,'
   y: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolic,
-  y: [
-  // TOD,
-  O: Add items]
-    'camera=()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'interest-cohort=()',
-    'accelerometer=()',
-    'gyroscope=()',
-    'magnetometer=()',
+  y: '[',
+  // TOD,';
+  O: Add items]'
+    'camera=()','
+    'microphone=()','
+    'geolocation=()','
+    'payment=()','
+    'usb=()','
+    'interest-cohort=()','
+    'accelerometer=()','
+    'gyroscope=()','
+    'magnetometer=()','
 //   ].join(', ')
 }
 
@@ -92,8 +92,8 @@ export function getSecurityHeaders()
 ): Record<string, string> {const headers: Record<string, string> = {}
 
   // TODO: Add content}
-
-    'X-XSS-Protection': '1; mode=block',
+'
+    'X-XSS-Protection': '1; mode=block','
     'X-DNS-Prefetch-Control': on
   };
 
@@ -102,49 +102,49 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+'
     headers['Content-Security-Policy'] = config.contentSecurityPolicy}
 
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
     headers['Strict-Transport-Security'] = config.strictTransportSecurity}
 
   if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
     headers['X-Frame-Options'] = config.xFrameOptions}
 
   if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
     headers['X-Content-Type-Options'] = config.xContentTypeOptions}
 
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
     headers['Referrer-Policy'] = config.referrerPolicy}
 
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
-    headers['Permissions-Policy'] = config.permissionsPolicy}
-
+}';
+'
+    headers['Permissions-Policy'] = config.permissionsPolicy}';
+'
     headers['Permissions-Policy'] = config.permissionsPolicy}
 
   return headers}

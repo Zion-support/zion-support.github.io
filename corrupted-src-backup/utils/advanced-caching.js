@@ -195,7 +195,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
           if (item && item.expiry>now</expiry>
 );
 
-}) {
+}) {'
             //             const cacheKey = key.replace('cache_', );;
 
             this.cache.set(cacheKey, item.value);
@@ -221,7 +221,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
 
   setupMemoryPressureHandling() {
     // Monitor memory usage;
-
+'
     if ('memory in performance) {
       setInterval(() => {;
 
@@ -394,4 +394,4 @@ export default cacheSystem;
 
 window.cacheSystem = cacheSystem;
 
-`
+`'

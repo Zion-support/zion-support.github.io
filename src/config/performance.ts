@@ -8,23 +8,23 @@ export const _performanceConfig = {;;
   metrics: {
 // lcp: {
 // good: 2500,
-// needsImprovement: 4000
+// needsImprovement: '4000',
     },
     fid: {
       good: 100,
-      needsImprovement: 300
+      needsImprovement: '300',
     },
     cls: {
       good: 0.1,
-      needsImprovement: 0.25
+      needsImprovement: '0.25',
     },
     fcp: {
       good: 1800,
-      needsImprovement: 3000
+      needsImprovement: '3000',
     },
     ttfb: {
       good: 800,
-      needsImprovement: 1800
+      needsImprovement: '1800',
     }
 
   },
@@ -45,18 +45,18 @@ export const _performanceConfig = {;;
 
   },
   // Resource hints
-  preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
-  prefetch: [
-    '/api/health',
+  preload: '[',
+    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],';
+  prefetch: ['
+    '/api/health','
     '/api/config'],
   // Image optimization
   images: {
-// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],';
+// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],'
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
-// dangerouslyAllowSVG: false
+// dangerouslyAllowSVG: 'false',
   },
   // Bundle optimization
   bundle: {
@@ -67,12 +67,12 @@ export const _performanceConfig = {;;
 // vendor: {
 // test: /[\\/]node_modules[\\/]/,
 // priority: -10,
-// reuseExistingChunk: true
+// reuseExistingChunk: 'true',
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
+          reuseExistingChunk: 'true',
         }
 
       }
@@ -172,18 +172,18 @@ export const _performanceConfig = {// TODO: Add content};;
   },
   // Resource hints,
   preloa,
-  d: [
+  d: '[',
   // TOD,
-  O: Add items]
+  O: 'Add items]',
     {/* TODO: Fix JSX expression */}
-
+'
   n: 'anonymous' },
 //   ],
   prefetc,
-  h: [
-  // TOD,
-  O: Add items]
-//     '/api/health',
+  h: '[',
+  // TOD,';
+  O: Add items]'
+//     '/api/health','
 //     '/api/config',
 //   ],
   // Image optimization,
@@ -193,8 +193,8 @@ export const _performanceConfig = {// TODO: Add content};;
   s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]}
 
 // imageSize,
-  s: [16, 32, 48, 64, 96, 128, 256, 384],
-// format,
+  s: [16, 32, 48, 64, 96, 128, 256, 384],';
+// format,'
   s: ['image/avif', 'image/webp'],
 // minimumCacheTT,
   L: 60,
@@ -251,7 +251,7 @@ export const _performanceConfig = {// TODO: Add content};;
 // sendToAnalytic,
   s: true,
 // logThreshol,
-  d: needsImprovement
+  d: 'needsImprovement',
   }
 
 }
@@ -259,3 +259,4 @@ export const _performanceConfig = {// TODO: Add content};;
 export type PerformanceConfig = typeof performanceConfig;
 
 export default performanceConfig;
+'

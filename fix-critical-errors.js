@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -21,7 +21,7 @@ let content = fs.readFileSync(filePath, utf8);;
     let modified = false;;
 
     // Fix merge conflict markers;
-
+'
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
@@ -39,15 +39,15 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
       for (let i = 0; i < lines.length; i++) {;;
 
 const line = lines[i];;
-
+'
         if (line.startsWith('<<<<<<<)) {
           inConflict = true;
 
           keepCurrent = true;
-
+'
           continue} else if (line.startsWith(')) {
           keepCurrent = false;
-
+'
           continue} else if (line.startsWith('>>>>>>>)) {
           inConflict = false;
 
@@ -77,9 +77,9 @@ const line = lines[i];;
     content = content.replace(/<div[^>]*>\s*$/gm, <div>);
 
       for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
-
-        } else if (line.startsWith(')) {/* TODO: Fix JSX expression */}
-
+'
+        } else if (line.startsWith(')) {/* TODO: Fix JSX expression */}';
+'
         } else if (line.startsWith(']*>\s*$/gm, <div>);
 
     content = content.replace(/<\/div>\s*$/gm, </div>);
@@ -93,11 +93,11 @@ const line = lines[i];;
     content = content.replace(/(\w+)\s*$/gm, $1;);
 
     // Fix specific patterns;
-
+'
     if (filePath.includes('App.tsx)) {
       content = content.replace(/catch\s*{\s*}/g, catch (error) { // console.warn removed for production
 });
-
+'
     if (filePath.includes('App.tsx)) {/* TODO: Fix JSX expression */}
 
       content = content.replace(/catch\s*{\s*}/g, catch (error) {/* TODO: Fix JSX expression */}
@@ -136,13 +136,13 @@ const items = fs.readdirSync(currentPath);;
 const fullPath = path.join(currentPath, item);;
 
       const stat = fs.statSync(fullPath);;
-
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
+'
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {'
         walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
         files.push(fullPath);
 
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
-
+'
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {/* TODO: Fix JSX expression */}
 
       }

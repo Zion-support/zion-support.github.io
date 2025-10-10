@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 import, React, from 'rea, c, t;
 
 impo, r, t { Li, n, k } fr, o, m rea, c, t-rout, e, r-d, o, m;
@@ -18,7 +18,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
           <p, classNam, e=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12>)
             Access, the, most comprehensive, collection, of AI, insig, h, t, s)
   retu, r, n (
-
+'
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {  }</div>
           <h2, classNam, e=te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t></h2>
             <span, classNam, e=bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t>
@@ -26,7 +26,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
           <p, classNam, e=te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12>;
 
 const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-
+'
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {  }
 
           <h2, classNam, e=te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t></h2>
@@ -161,3 +161,4 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
 
               <Users, classNam, e=w-5 h-5 /></Users>
               Join, AI, Community}
+'

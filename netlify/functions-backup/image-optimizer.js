@@ -51,12 +51,12 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: true),
         task: image-optimizer }) }} catch (e) {return { statusCode: 200;
 
-        body: JSON.stringify({ok: false),
+        body: JSON.stringify({ok: false),'
         error: String(e;)}) }} }; exports.config = {' schedule: 0 */8 * * *} };
 
 exports.handler = async function() { const { execSync } = require(child_process); try {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,'
   l: true});' execSync(node automation/git-sync.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -67,3 +67,4 @@ exports.handler = async function() { const { execSync } = require(child_process)
       }) }} }; exports.config = {/* TODO: Fix JSX expression */}
 
   e: 0 */8 * * *} };
+'

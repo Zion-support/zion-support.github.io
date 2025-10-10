@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -12,18 +12,18 @@ const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
 // Read the footer component to extract all links;
-
+'
 const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', utf8);;
 
 // Extract all href values from the footer;
-
+'
 const hrefMatches = footerContent.match(/href: \s*'([^]+)/g);;
-
+'
 const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^]+)/)[1]) : [];;
 
 ,
 // Read the navigation component to extract all links;
-
+'
 const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', utf8);;
 
 const navMatches = navContent.match(/to="([^"]+)/g);;
@@ -55,13 +55,13 @@ const fullPath = path.join(dir, item);;
     if (stat.isDirectory()) {
       scanDirectory(fullPath)} else if (item === 'page.tsx) {
       // Extract the route from the path;
-
+'
       const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || /;;
 
       existingPages.push(route);
 
 // Read the App.tsx file to extract routes;
-
+'
 const appTsxContent = fs.readFileSync('src/App.tsx', utf8);;
 
 // Extract route paths using regex;
@@ -75,7 +75,7 @@ const routes = routeMatches ? routeMatches.map(match => match.replace('path="', 
 const existingPages = [];;
 
 function findPages(dir) {/* TODO: Fix JSX expression */}
-
+'
     } else if (file === 'page.tsx) {/* TODO: Fix JSX expression */}
 
     }
@@ -111,7 +111,7 @@ existingPages.sort().forEach(page => // console.log removed for production
 );
 
 // Write missing pages to a file;
-
+'
 fs.writeFileSync('/workspace/missing-pages.json, JSON.stringify({
   totalLinks: allLinks.length;)
   existingPages: existingPages.length;)

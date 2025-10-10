@@ -3,21 +3,21 @@
 import { execSync } from 'child_process';
 
 // console.log removed for production
-try {
+try {'
   // Get all remote branches';
-
+'
   const branches = execSync('git branch -r', { encoding: 'utf8 });;
-
-    .split('\n')
-    .filter(branch => branch.trim() && !branch.includes('HEAD'))
+'
+    .split('\n')'
+    .filter(branch => branch.trim() && !branch.includes('HEAD'))'
     .map(branch => branch.trim().replace('origin/', '));
 
   // Filter for cursor branches that might have PRs;
 
   const cursorBranches = branches.filter(branch => );;
-
-    branch.includes('cursor/') && 
-    !branch.includes('enhance-app-with-new-services-and-futuristic-design-c013') &&
+'
+    branch.includes('cursor/') && '
+    !branch.includes('enhance-app-with-new-services-and-futuristic-design-c013') &&'
     !branch.includes('aggressive-merge-backup')
   );
 
@@ -36,7 +36,7 @@ process.exit(0)}
     try {
       // console.log removed for production
 // Check if branch has changes;
-
+'
       const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8 });;
 
       if (!diff.trim()) {
@@ -44,7 +44,7 @@ process.exit(0)}
 continue}
 
       // Try to merge;
-
+'
       execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit });
 
       // console.log removed for production
@@ -52,7 +52,7 @@ continue}
       // console.log removed for production
 // Try to abort the merge if it failed;
 
-      try {
+      try {'
         execSync('git merge --abort', { stdio: 'pipe' })} catch (abortError) {
         // Ignore abort errors}
 
@@ -62,10 +62,11 @@ continue}
 
   // Push all changes;
 
-  // console.log removed for production
+  // console.log removed for production'
 execSync('git push origin main', { stdio: 'inherit });
 
   // console.log removed for production
 } catch (error) {
   // console.error removed for production
 }
+'

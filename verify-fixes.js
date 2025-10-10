@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
-
+'
 import { fileURLToPath } from 'url;
 
 // const __filename = fileURLToPath(import.meta.url);;;
@@ -16,7 +16,7 @@ import { fileURLToPath } from 'url;
 
   //   //   //   // Check for syntax issues;
 
-  //   // // console.log removed for production
+  //   // // console.log removed for production'
 ' : NOT FOUND (GOOD));
 
   if(classMatches &&
@@ -39,3 +39,4 @@ import { fileURLToPath } from 'url;
 } catch (error) {/* TODO: Fix JSX expression */}
 
 }
+'

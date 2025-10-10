@@ -14,8 +14,8 @@ const focusableElements = element.querySelectorAll();;
     const _firstElement = focusableElements[0];;
 
     const _lastElement = focusableElements[focusableElements.length - 1];;
-
-    element.addEventListener('keydown, e => {)
+'
+    element.addEventListener('keydown, e => {)'
       if (e.key === 'Tab) {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -42,9 +42,9 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */};;
   announceToScreenReader: message => {,;
 
 const _announcement = document.createElement(div);;
-
+'
     announcement.setAttribute('aria-live', polite);
-
+'
     announcement.setAttribute('aria-atomic', true);
 
     announcement.className = sr-only;
@@ -64,7 +64,7 @@ const _announcement = document.createElement(div);;
 ;
 
 const getLuminance = color => {;;
-
+'
       //       const rgb = parseInt(color.replace('#', ), 16);;
 
       const _r = (rgb >> 16) & 0 xff;;
@@ -109,3 +109,4 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
     return {/* TODO: Fix JSX expression */}
 
     }}};
+'

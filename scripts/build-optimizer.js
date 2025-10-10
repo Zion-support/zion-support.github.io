@@ -68,8 +68,8 @@ const stats = fs.statSync(file);;
 
       return total + stats.size}, 0);
 
-    this.optimizations.push({)
-      name: 'Bundle Analysis),
+    this.optimizations.push({)'
+      name: 'Bundle Analysis),'
       status: 'completed),
       details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB
     });
@@ -96,7 +96,7 @@ const stats = fs.statSync(file);;
   async optimizeImages() {
     // console.log removed for production
 ;
-
+'
 const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', .webp];;
 
     const images = this.getFilesRecursively(this.distPath).filter(file => );;
@@ -105,13 +105,13 @@ const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', .webp];;
     );
 
     if (images.length === 0) {
-      this.optimizations.push({)
-        name: 'Image Optimization),
+      this.optimizations.push({)'
+        name: 'Image Optimization),'
         status: 'skipped),
         details: No images found});
 
-      return}
-
+      return;
+  }
     // Add image optimization metadata;
 
     images.forEach(image => {
@@ -136,7 +136,7 @@ let content = fs.readFileSync(image, utf8);;
     });
 
     this.optimizations.push({)
-      name: 'Image Optimization),
+      name: 'Image Optimization),'
       status: 'completed),
       details: `Optimized ${images.length} images
     })}
@@ -149,7 +149,7 @@ const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>;;
 
 );
 
-})
+})'
       file.endsWith('.css)
     );
 
@@ -173,8 +173,8 @@ let content = fs.readFileSync(cssFile, utf8);;
 
       fs.writeFileSync(cssFile, content)});
 
-    this.optimizations.push({)
-      name: 'CSS Optimization),
+    this.optimizations.push({)'
+      name: 'CSS Optimization),'
       status: 'completed),
       details: `Optimized ${cssFiles.length} CSS files
     })}
@@ -184,7 +184,7 @@ let content = fs.readFileSync(cssFile, utf8);;
 ;
 
 const jsFiles = this.getFilesRecursively(this.distPath).filter(file => );;
-
+'
       file.endsWith('.js)
     );
 
@@ -193,8 +193,8 @@ const jsFiles = this.getFilesRecursively(this.distPath).filter(file => );;
 let content = fs.readFileSync(jsFile, utf8);;
 
       // Remove console.log statements in production;
-
-      if (process.env.NODE_ENV === 'production) {
+'
+      if (process.env.NODE_ENV === 'production) {'
         content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, ')}
 
       // Remove unnecessary whitespace;
@@ -203,8 +203,8 @@ let content = fs.readFileSync(jsFile, utf8);;
 
       fs.writeFileSync(jsFile, content)});
 
-    this.optimizations.push({)
-      name: 'JavaScript Optimization),
+    this.optimizations.push({)'
+      name: 'JavaScript Optimization),'
       status: 'completed),
       details: `Optimized ${jsFiles.length} JS files
     })}
@@ -214,7 +214,7 @@ let content = fs.readFileSync(jsFile, utf8);;
 ;
 
 const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => );;
-
+'
       file.endsWith('.html)
     );
 
@@ -222,7 +222,7 @@ const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => );;
 
 const securityHeaders = ;;
 
-<!-- Security Headers -->
+<!-- Security Headers -->'
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests>
 <meta http-equiv="X-Frame-Options" content="DENY>,
 <meta http-equiv="X-Content-Type-Options" content="nosniff>,
@@ -248,8 +248,8 @@ let content = fs.readFileSync(htmlFile, utf8);;
 
       fs.writeFileSync(htmlFile, content)});
 
-    this.optimizations.push({)
-      name: 'Security Headers),
+    this.optimizations.push({)'
+      name: 'Security Headers),'
       status: 'completed),
       details: `Added to ${htmlFiles.length} HTML files
     })}
@@ -296,8 +296,8 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
     fs.writeFileSync(path.join(this.distPath, sitemap.xml), sitemap);
 
     this.optimizations.push({)
-      name: 'Sitemap Generation),
-      status: 'completed),
+      name: 'Sitemap Generation),'
+      status: 'completed),'
       details: 'Generated sitemap.xml})}
 
   async generateRobotsTxt() {
@@ -324,9 +324,9 @@ Disallow: /private/;
 ,
     fs.writeFileSync(path.join(this.distPath, robots.txt), robotsTxt);
 
-    this.optimizations.push({)
-      name: 'Robots.txt Generation),
-      status: 'completed),
+    this.optimizations.push({)'
+      name: 'Robots.txt Generation),'
+      status: 'completed),'
       details: 'Generated robots.txt})}
 
   async optimizeManifest() {
@@ -355,15 +355,15 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, utf8));;
 
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2))}
 
-    this.optimizations.push({)
-      name: 'Manifest Optimization),
-      status: 'completed),
+    this.optimizations.push({)'
+      name: 'Manifest Optimization),'
+      status: 'completed),'
       details: 'Optimized manifest.json})}
 
   async generateServiceWorker() {
     // console.log removed for production
 // Service worker is already created, just ensure its in dist;
-
+'
     const swSource = path.join(process.cwd(), 'public', sw.js);;
 
     const swDest = path.join(this.distPath, sw.js);;
@@ -371,9 +371,9 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, utf8));;
     if (fs.existsSync(swSource)) {
       fs.copyFileSync(swSource, swDest)}
 
-    this.optimizations.push({)
-      name: 'Service Worker),
-      status: 'completed),
+    this.optimizations.push({)'
+      name: 'Service Worker),'
+      status: 'completed),'
       details: 'Service worker ready})}
 
   getFilesRecursively(dir) {;
@@ -405,9 +405,9 @@ const fullPath = path.join(dir, item);;
     // console.log removed for production
 // console.log removed for production
 this.optimizations.forEach(opt => {);
-
+'
 const status = opt.status === 'completed' ? ✅ : ),;;
-
+'
                     opt.status === 'skipped' ? '⏭️ ' : '❌;),
       // console.log removed for production
 });
@@ -426,3 +426,4 @@ const optimizer = new BuildOptimizer();;
   optimizer.optimize().catch(console.error)}
 
 export default BuildOptimizer;
+'

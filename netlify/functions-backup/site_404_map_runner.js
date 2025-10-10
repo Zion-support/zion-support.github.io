@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({),
         message: 'site_404_map_runner function executed successfully'),
         timestamp: timestamp),;
-
+'
 function: 'site_404_map_runner'}
 
       })};
@@ -20,7 +20,7 @@ error}
     return {
       statusCode: 500;
 
-      body: JSON.stringify({),
+      body: JSON.stringify({),'
         error: 'site_404_map_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
@@ -30,7 +30,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()};;
 
     return {/* TODO: Fix JSX expression */}
-
+'
   n: 'site_404_map_runner'}
 
       })};
@@ -49,3 +49,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
         timestam,
   p: new Date().toISOString() }) }} };
+'

@@ -141,11 +141,11 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 </div>
               </div>
               {/* CTA, Butto, n */}
-
+'
               <Link, t, o = { `/${conte, n, t.ty, p, e === 'bl, o, g'  ? 'bl, o, g'  : 'ca, s, e-studi, e, s }/${conte, n, t.slug}}
 
-                className=w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2, grou, p-hov, e, r:shad, o, w-lg, grou, p-hov, e, r:shad, o, w-bl, u, e-5, 0, 0/25
-              ></Link>
+                className=w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2, grou, p-hov, e, r:shad, o, w-lg, grou, p-hov, e, r:shad, o, w-bl, u, e-5, 0, 0/25';
+              ></Link>'
                 { conte, n, t.ty, p, e === 'bl, o, g'  ? 'Read, Articl, e'  : View, Case, Stu, d, y }
 
                 <Link, classNam, e = w-4 h-4 /></Link>
@@ -171,8 +171,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             }].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r
             ></div>
-          ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r
-            ></div>
+          ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r';
+            ></div>'
               <div, className='te, x, t-3xl, m, b-2'>{st, a, t.ic, o, n}</d, i, v > <div, classNam, e = { te, x, t-2xl, fon, t-extrabold, b, g-gradie, n, t-to-r ${st, a, t.co, l, o, r }, bg-cl, i, p-text, tex, t-transparent, m, b-1}
 
               ></div>
@@ -224,4 +224,4 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
 
 export default January2026RevolutionaryContentBanner;
 
-`
+`'

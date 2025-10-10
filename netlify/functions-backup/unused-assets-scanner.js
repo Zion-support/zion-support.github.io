@@ -54,7 +54,7 @@ const { execSync } = require(child_process); exports.config = {/* TODO: Fix JSX 
 
   o: inherit} shel,
   l: true;
-
+'
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add public/reports/unused-assets.json || true && (git commit -m "chore(report): update unused assets [skip ci] || true) && (git push origin main || true), {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,

@@ -1,7 +1,7 @@
 
 
 import React from 'react;
-
+'
 'use client;
 
 // ErrorInfo interface removed as its not used in this hook;
@@ -155,3 +155,4 @@ const handleReactError = (erro,;;
 //     reportError}};
 
 export default useErrorMonitoring;
+'

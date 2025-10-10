@@ -3,20 +3,20 @@
 
 export const getAllPages = () => [;;
 
-  // TODO: Add items]
-  { path: '/', priority: 1.0 },
-  { path: '/services', priority: 0.8 },
-  { path: '/contact', priority: 0.7 },
+  // TODO: 'Add items]',
+  { path: '/', priority: 1.0 },'
+  { path: '/services', priority: 0.8 },'
+  { path: '/contact', priority: 0.7 },'
   { path: '/about', priority: 0.6 }
 
 ];
 
-export const generateSitemap = (pages: Array;);;
-
+export const generateSitemap = (pages: 'Array;);;
+',
           <{ path: string; priority: number }>) => {// TODO: Add content}
 
 }
-
+'
   const baseUrl = 'https://ziontechgroup.com;;
 
   let sitemap = ;;
@@ -65,3 +65,4 @@ export const generateStaticSitemap = () => {// TODO: Add content};;
 }
 
   return generateSitemap(getAllPages())};
+'

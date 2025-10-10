@@ -2,9 +2,9 @@
 
 
 import { Link } from 'react-router-dom;
-
+'
 import { ArrowLeft } from 'lucide-react;
-
+'
 // import { Metadata } from 'next; // Removed for Vite;
 
 // Metadata removed for Vite compatibility;
@@ -47,7 +47,7 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
               The path to autonomous operations requires a systematic approach across multiple business,;
 
 functions:
-            </p><h3 className="text-xl font-semibold text-gray-800 mb-4>Phase,)
+            </p><h3 className="text-xl font-semibold text-gray-800 mb-4>Phase,)">
   1: Foundation (Months 1-6)</h3><ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"><li>• Deploy AI decision engines for core business processes</li><li>• Implement automated workflow orchestration</li><li>• Establish real-time monitoring and alerting</li><li>• Train AI models on historical business data</li></ul><h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact</h2><p className=text-gray-700 mb-6></p>
               Autonomous business processes deliver measurable value across multiple,
   dimensions:
@@ -58,17 +58,17 @@ functions:
             </p><div className="bg-blue-50 p-6 rounded-lg text-center"><h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Autonomous Transformation</h3><p className=text-gray-700 mb-4></p>
                 Join leading enterprises achieving autonomous operations with AI-powered business processes;
 
-              </p><div className="space-x-4><a></a>
+              </p><div className="space-x-4><a></a>">
                   href="/contact" className=inline-block bg-blue-600 text-white px-6 py-3 rounded-lg,
-  hover:bg-blue-700 transition-colors>
+  hover: 'bg-blue-700 transition-colors>
                   Get Autonomous Assessment;
 
-                </a><a></a>
+                </a><a></a>',
                   href="/services" className=inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,
-  hover:bg-blue-50 transition-colors>
+  hover: 'bg-blue-50 transition-colors>
                   Explore AI Services;
 
-                </a></div></div></div></div></div></div>
+                </a></div></div></div></div></div></div>',
   )};
 
 export default AiPoweredAutonomousBusinessProcesses2026Page;

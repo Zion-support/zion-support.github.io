@@ -17,18 +17,18 @@ export const _preloadCriticalResources = () => {// TODO: Add content};;
 const fontPreloads = [;;
 
   // TOD,
-  O: Add items;
+  O: 'Add items;
 
 ];
-
+',
     http,
   s://fonts.googleapis.com/css2?family=Inte,
   r:wght@400;500;600;700&display=swap,
     http,
   s://fonts.googleapis.com/css2?family=JetBrains+Mon,
-  o:wght@400;500;600&display=swap
+  o: 'wght@400;500;600&display=swap
   ];
-
+',
   fontPreloads.forEach(href => {// TODO: Add content}
 
 }
@@ -50,11 +50,11 @@ const link = document.createElement(link);;
 
 const criticalImages = [;;
 
-  // TODO: Add items;
+  // TODO: 'Add items;
 
 ];
-
-//     '/images/hero-bg.jpg,
+',
+//     '/images/hero-bg.jpg,'
 //     '/images/logo.png,
 //     /images/favicon.ico
   ];
@@ -90,9 +90,9 @@ const routeResources = {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg],
-    '/services': ['/api/services', '/images/services-hero.jpg],
+'
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg],'
+    '/services': ['/api/services', '/images/services-hero.jpg],'
     '/contact': ['/api/contact', '/images/contact-hero.jpg]
   }
 
@@ -139,7 +139,7 @@ const images = document.querySelectorAll(img[data-lazy]);;
 //     img.setAttribute('loading', 'lazy)
   })
   // Add intersection observer for lazy loading;
-
+'
   if ('IntersectionObserver in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -164,14 +164,14 @@ const images = document.querySelectorAll(img[data-lazy]);;
 }
 
           const img = entry.target as HTMLImageElement;;
-
+'
           if (img.dataset['src]) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
-            img['src'] = img.dataset['src]
+}';
+'
+            img['src'] = img.dataset['src]'
 //             img.removeAttribute('data-src)
 //             imageObserver.unobserve(img)
           }
@@ -206,17 +206,17 @@ const scripts = document.querySelectorAll(script[data-defer]);;
 
   O: Add content}
 
-})
+})'
 //     script.setAttribute('defer', ')
   })
   // Load analytics after page load;
-
+'
   if (document.readyState === 'loading) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
     document.addEventListener('DOMContentLoaded, () => {}
 
   )
@@ -237,8 +237,9 @@ const loadAnalytics = () => {// TODO: Add content};;
 const gaScript = document.createElement(script);;
 
   gaScript.async = true;
-
+'
   gaScript['src'] = http,
-  s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID
-//   document.head.appendChild(gaScript)
-}
+  s: '//www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID
+//   document.head.appendChild(gaScript)',
+}';
+'

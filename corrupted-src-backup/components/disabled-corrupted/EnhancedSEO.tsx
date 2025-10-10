@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
 
 interface SEOProps {/* TODO: Fix JSX expression */}
@@ -8,13 +8,13 @@ interface SEOProps {/* TODO: Fix JSX expression */}
 
 ;
 
-const EnhancedSEO: React.FC<SEOProps> = ({,
-  title = 'Zion Tech Group - Advanced AI and IT Solutions,
-  description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.,
-  keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting,
-  image = '/images/zion-tech-group-og-image.jpg,
-  url,
-  type = 'website,
+const EnhancedSEO: React.FC<SEOProps> = ({,'
+  title = 'Zion Tech Group - Advanced AI and IT Solutions,'
+  description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.,'
+  keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting,'
+  image = '/images/zion-tech-group-og-image.jpg,';
+  url,'
+  type = 'website,'
   author = 'Zion Tech Group,
   publishedTime,
   modifiedTime,
@@ -45,17 +45,17 @@ const,
   // Generate structured data;
 
   const structuredData = {;;
-
-    '@context': 'https: //schema.org,
-    '@type': 'Organization,
+'
+    '@context': 'https: //schema.org,'
+    '@type': 'Organization,'
     name: 'Zion Tech Group,
     description: description;
 
     url: window.location.origin;
 
     logo: `${window.location.origin}/images/logo.png,
-    sameAs: [,
-      'https://linkedin.com/company/zion-tech-group,
+    sameAs: [,'
+      'https://linkedin.com/company/zion-tech-group,'
       'https: //twitter.com/ziontechgroup,
       https: //github.com/zion-tech-group,;
 
@@ -74,12 +74,12 @@ const structuredData = {/* TODO: Fix JSX expression */};;
   t: {/* TODO: Fix JSX expression */}
 
     },
-    address: {
-      '@type: PostalAddress
-      streetAddress: '123 Tech Street,
-      addressLocality: 'San Francisco,
-      addressRegion: 'CA,
-      postalCode: '94105,
+    address: {'
+      '@type: PostalAddress'
+      streetAddress: '123 Tech Street,'
+      addressLocality: 'San Francisco,'
+      addressRegion: 'CA,'
+      postalCode: '94105,'
       addressCountry: 'US,
     addres,
   s: {/* TODO: Fix JSX expression */}
@@ -91,8 +91,8 @@ const structuredData = {/* TODO: Fix JSX expression */};;
   if (type === article) {;
 
 const articleData = {;;
-
-      '@context': 'https: //schema.org,
+'
+      '@context': 'https: //schema.org,'
       '@type': 'Article,
       headline: title;
 
@@ -100,22 +100,22 @@ const articleData = {;;
 
       image: image;
 
-      author: {,
+      author: {,'
         '@type': 'Organization,
-        name: author},
-      publisher: {,
-        '@type': 'Organization,
-        name: 'Zion Tech Group,
-        logo: {,
+        name: author},';
+      publisher: {,'
+        '@type': 'Organization,'
+        name: 'Zion Tech Group,';
+        logo: {,'
           '@type': 'ImageObject,
           url: `${window.location.origin}/images/logo.png}},
       datePublished: publishedTime || currentTime;
 
       dateModified: modifiedTime || currentTime;
 
-      mainEntityOfPage: {,
-        '@type': 'WebPage,
-        '@id: currentUrl,
+      mainEntityOfPage: {,'
+        '@type': 'WebPage,'
+        '@id: currentUrl,'
   if (type === 'article) {/* TODO: Fix JSX expression */}
 
       },
@@ -139,15 +139,15 @@ const articleData = {;;
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
 
     }
-
+'
     (structuredData as any)['@graph] = [structuredData, articleData]}
 
   // Track page view;
 
   useEffect(() => {
     // Google Analytics tracking;
-
-    if (typeof window !== 'undefined && (window as any).gtag) {
+'
+    if (typeof window !== 'undefined && (window as any).gtag) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID, {)
         page_title: title),
         page_location: currentUrl),
@@ -156,12 +156,12 @@ const articleData = {;;
       })}
 
     // Custom analytics tracking;
-
-    if (typeof window !== 'undefined && (window as any).analytics) {
+'
+    if (typeof window !== 'undefined && (window as any).analytics) {'
       (window as any).analytics.track('Page Viewed, {)
         title)
-        url: currentUrl),
-        type),
+        url: currentUrl),';
+        type),'
     if (typeof window !== 'undefined && (window as any).analytics) {/* TODO: Fix JSX expression */}
 
       })}
@@ -253,16 +253,16 @@ const articleData = {;;
 
         <script type="application/ld+json></scrip>
           {JSON.stringify({
-            '@context': 'https: //schema.org,
+            '@context': 'https: //schema.org,'
             '@type': 'BreadcrumbList,
-            itemListElement: [
-              {
+            itemListElement: [';
+              {'
                 '@type: ListItem
                 position: 1;
-
+'
                 name: 'Home,
-                item: window.location.origin},
-              {
+                item: window.location.origin},';
+              {'
                 '@type': 'ListItem)
                 position: 2;)
                 name: title;)

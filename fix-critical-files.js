@@ -13,17 +13,17 @@ const criticalFiles = [;;
     {
       path: '/workspace/src/metadata.ts,
       content: export const metadata = {;;
-
-  title: 'Zion Tech Group - Advanced AI and IT Solutions,
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.,
-  keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise],
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions,
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.,
+'
+  title: 'Zion Tech Group - Advanced AI and IT Solutions,'
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.,'
+  keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise],';
+  openGraph: {'
+    title: 'Zion Tech Group - Advanced AI and IT Solutions,'
+    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.,'
     type: 'website'}};
 
     },
-    {
+    {'
       path: '/workspace/src/vite-env.d.ts,
       content: `/// <reference types="vite/client />
 
@@ -96,14 +96,14 @@ function cleanProblematicFiles() {;
 
 const problematicFiles = [;;
 
-    '/workspace/src/page-minimal-metadata.ts,
-    '/workspace/src/page-minimal.tsx,
-    '/workspace/src/page-optimized.tsx,
-    '/workspace/src/setupTests.tsx,
-    '/workspace/src/sitemap-utils.ts,
-    '/workspace/src/sitemap.ts,
-    '/workspace/src/sitemap.tsx,
-    '/workspace/src/services/BaseService.ts,
+    '/workspace/src/page-minimal-metadata.ts,'
+    '/workspace/src/page-minimal.tsx,'
+    '/workspace/src/page-optimized.tsx,'
+    '/workspace/src/setupTests.tsx,'
+    '/workspace/src/sitemap-utils.ts,'
+    '/workspace/src/sitemap.ts,'
+    '/workspace/src/sitemap.tsx,'
+    '/workspace/src/services/BaseService.ts,'
     '/workspace/src/middleware/rateLimiter.ts,
     /workspace/src/middleware/requestMiddleware.ts
   ];
@@ -114,9 +114,9 @@ const problematicFiles = [;;
         // Create minimal valid content for each file type;
 
 let content = ;;
-
-        if (filePath.endsWith('.tsx)) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`} else if (filePath.endsWith('.ts)) {
+'
+        if (filePath.endsWith('.tsx)) {'
+          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`} else if (filePath.endsWith('.ts)) {'
           content = `// TypeScript file placeholder\nexport {};`} else if (filePath.endsWith('.js)) {
           content = `// JavaScript file placeholder\nexport {};}
 
@@ -141,3 +141,4 @@ fixCriticalFiles();
 cleanProblematicFiles();
 
 // console.log removed for production
+'

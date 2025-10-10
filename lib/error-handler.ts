@@ -53,18 +53,18 @@ export const errorHandler = (er,;;
   if (process.env['NODE_ENV'] === 'development) {
     // eslint-disable-next-line no-console;
 
-//     // .toISOString(),
+//     // .toISOString(),'
     userAgent: req.headers['user-agent],
     ip: req.headers[x-forwarded-for] || req.connection.remoteAddress});
 
-    timestamp: new Date().toISOString(),
-    userAgent: req.headers['user-agent],
+    timestamp: new Date().toISOString(),'
+    userAgent: req.headers['user-agent],'
     ip: req.headers['x-forwarded-for] || req.connection.remoteAddress})}
 
   res.status(statusCode).json({)
-    error: {)
-      message:)
-        process.env['NODE_ENV'] === 'production)
+    error: {)';
+      message:)'
+        process.env['NODE_ENV'] === 'production)'
           ? 'Internal Server Error)
           : message)
       statusCode)
@@ -94,21 +94,21 @@ export const errorHandler = (er,;;
   
 
 
-  // Log error for monitoring
+  // Log error for monitoring'
   if (process.env['NODE_ENV'] === 'development) {
     // eslint-disable-next-line no-console
-    // console.error removed for production
-.toISOString(),
-      userAgent: req.headers['user-agent],
+    // console.error removed for production';
+.toISOString(),'
+      userAgent: req.headers['user-agent],'
       ip: req.headers['x-forwarded-for] || req.connection.remoteAddress
 
   });
 
     timestam,
   p: new Date().toISOString(),
-    userAgen,
-  t: req.headers['user-agent],
-    i,
+    userAgen,'
+  t: req.headers['user-agent],';
+    i,'
   p: req.headers['x-forwarded-for] || req.connection.remoteAddress})}
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */}
@@ -146,9 +146,9 @@ export const asyncHandler =;;
     stack: err.stack});
 
   res.status(statusCode).json({)
-    error: {)
-      message: message || 'Internal Server Error),
-      statusCode),
+    error: {)'
+      message: message || 'Internal Server Error),';
+      statusCode),'
       ...(process.env['NODE_ENV'] === 'development && { stack: err.stack })
 export const asyncHandler = {};;
 
@@ -329,3 +329,4 @@ export const asyncHandler = {};;
   t: Function) => {/* TODO: Fix JSX expression */}
 
   };
+'

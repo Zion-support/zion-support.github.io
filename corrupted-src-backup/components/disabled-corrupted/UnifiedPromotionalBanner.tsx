@@ -12,7 +12,7 @@ export interface FeaturedItem {
   metri, c, s ?  : str, i, n, g}
 
 export interface UnifiedPromotionalBannerProps {;
-
+'
 varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | me, g, a;
 
   title: string;
@@ -22,7 +22,7 @@ varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | me, g
   ctaTe, x, t: string;
 
   ctaLi, n, k: string;
-
+'
   the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | cy, a, n;
 
   featuredIte, m, s?: FeaturedIt, e, m[];
@@ -30,7 +30,7 @@ varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | me, g
   showCou, n, t?: number;
 
   classNa, m, e?: string;
-
+'
   ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | no, n, e;
 
   animat, e, d?: boolean;
@@ -62,7 +62,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
     defau, l, t: py-8 p, x-, 6,
     premi, u, m: py-12, p, x-, 8,
     he, r, o: py-16, p, x-1, 0,
-    compa, c, t: py-6, p, x-, 4,
+    compa, c, t: py-6, p, x-, 4,'
     me, g, a: 'py-20, p, x-1, 2}; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { 
   // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */}
 
@@ -71,7 +71,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
 
         ${variantClass, e, s[varia, n, t]}
-
+'
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  :  }
 
         ${classNa, m, e}
@@ -122,7 +122,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
 
           ${;
-
+'
 varia, n, t === 'he, r, o' || varia, n, t === me, g, a
               ? te, x, t-4 xl, m, d: te, x, t-5, x, l
               : varia, n, t === premi, u, m
@@ -207,18 +207,18 @@ varia, n, t === 'he, r, o' || varia, n, t === me, g, a
           </div>
         )}
 
-        {/* CTA, Butto, n */}
-
+        {/* CTA, Butto, n */}';
+'
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4 > <Link, t, o = { ctaL, i, n, k }, className={ }
 
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
-
+'
         <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4 ></div> <Link, t, o = { ctaL, i, n, k }, className={ 
               inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
               ${ ;
 
 varia, n, t === compa, c, t
-                  ? px-6, p, y-3, tex, t-sm
+                  ? px-6, p, y-3, tex, t-sm'
                   : varia, n, t === 'he, r, o' || varia, n, t === me, g, a
                      ? px-10, p, y-5, tex, t-lg
                      : te, x, t-ba, s, e
@@ -235,7 +235,7 @@ varia, n, t === compa, c, t
             }
 
            > {ctaTe, x, t}
-
+'
             <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5 }}
 
             /></ArrowRight>
@@ -246,7 +246,7 @@ varia, n, t === compa, c, t
             >
             ></Link>
               +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h;
-
+'
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  :  }
 
             </Li, n, k>
@@ -259,4 +259,4 @@ varia, n, t === compa, c, t
 
 export default UnifiedPromotionalBanner;
 
-`
+`'

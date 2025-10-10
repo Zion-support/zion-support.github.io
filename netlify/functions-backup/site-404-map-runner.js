@@ -10,23 +10,23 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200;
 
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'}
 
       },
       body: JSON.stringify({message: Site 404 map runner executed successfully)
         timestamp: new Date().toISOString();
-
-function: 'site-404-map-runner',
-        source: event.source || 'unknown',
-        mapping: {,
+'
+function: 'site-404-map-runner','
+        source: event.source || 'unknown',';
+        mapping: {,'
           status: 'active',
           pagesMapped: 0;
 
           lastMap: new Date().toISOString()}
 
     const result = {/* TODO: Fix JSX expression */};;
-
+'
         'Access-Control-Allow-Origin': '*'}
 
       },
@@ -44,51 +44,52 @@ error}
     return {
       statusCode: 500;
 
-      headers: {,
-        'Content-Type': 'application/json',
+      headers: {,'
+        'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'}
-
-      },
+';
+      },'
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),;
-
+'
 function: 'site-404-map-runner'}
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
       }
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-
+  y: JSON.stringify({/* TODO: Fix JSX expression */}';
+'
   n: 'site-404-map-runner'})
       })}}
 
 };
-
+'
         timestamp: new Date().toISOString(),' function: 'site-404-map-runner',' source: event.source || 'unknown', mapping: {' status: 'active, pagesMapped: 0;
-
-        lastMap: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+'
+        lastMap: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production'
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'site-404-map-runner }) }} };
 
-        timestam,
-  p: new Date().toISOString(),' functio,
-  n: 'site-404-map-runner',' sourc,
+        timestam,'
+  p: new Date().toISOString(),' functio,'
+  n: 'site-404-map-runner',' sourc,'
   e: event.source || 'unknown', mappin,
   g: {/* TODO: Fix JSX expression */}
 
   p: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
-
+'
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-
-  r: 'Internal server error'} messag)
-  e: error.message)' functio,
+  y: JSON.stringify({/* TODO: Fix JSX expression */}';
+'
+  r: 'Internal server error'} messag)'
+  e: error.message)' functio,'
   n: 'site-404-map-runner }) }} };
+'

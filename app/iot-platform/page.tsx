@@ -1,18 +1,18 @@
 'use client;
-
+'
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
-
+'
 import Navigation from '../components/Navigation;
-
+'
 import Footer from '../components/Footer;
 
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from lucide-react},
     {
       icon: Clock,
       title: 24/7 Monitoring,
-      description: Continuous monitoring of IoT devices and systems with intelligent alerting.,
+      description: Continuous monitoring of IoT devices and systems with intelligent alerting.,';
       benefits: ['Continuous monitoring', 'Smart alerts', Predictive maintenance]
     },
     {
@@ -51,7 +51,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
             {useCases.map((useCase, index) => (
 
-              <div key={index} className=bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300>
+              <div key={index} className=bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: 'bg-white/10 transition-all duration-300>',
                 <div className=text-4xl mb-4>{useCase.icon}</div>
                 <h3 className=text-xl font-semibold text-white mb-3>{useCase.title}</h3>
                 <p className=text-gray-300>{useCase.description}</p>
@@ -104,3 +104,4 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       <Footer />
 </div>)
 export default PagePage;
+'

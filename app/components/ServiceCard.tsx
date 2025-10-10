@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React from 'react;
 
 import { ArrowRight, CheckCircle } from lucide-react;
@@ -42,11 +42,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             Most Popular
           </span>
         </div>
-      <div className="text-center mb-6>
-        <h3 className="text-xl font-bold text-gray-900 mb-2>{title}</h3>
+      <div className="text-center mb-6>">
+        <h3 className="text-xl font-bold text-gray-900 mb-2>{title}</h3>">
         <p className="text-gray-600 mb-4>{description}</p>
         {price && (
-
+">
           <div className="text-3xl font-bold text-blue-600 mb-2>{price}</div>      </div>
 
       <ul className=space-y-3 mb-6>
@@ -63,7 +63,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <button
           onClick={onClick}
 
-          className=w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center
+          className=w-full bg-blue-600 hover: 'bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center
         >
           Get Started
           <ArrowRight className=w-4 h-4 ml-2 />
@@ -71,7 +71,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
     </div>
   );
-
+',
 }
 
 export default ServiceCard;
+">

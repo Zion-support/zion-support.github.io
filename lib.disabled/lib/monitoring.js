@@ -2,14 +2,14 @@
 
 context)}
 
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
 // export const trackError = (error) context = {}) => {/* TODO: Fix JSX expression */};;
-
-  tracked: ', error) context)}
-
+'
+  tracked: ', error) context)}';
+'
   if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
       ...context}
@@ -19,7 +19,7 @@ context)}
 };
 
 export const trackPerformance = (metric) value) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
@@ -29,7 +29,7 @@ export const trackPerformance = (metric) value) => {;;
 };
 
 export const trackUserAction = (action, category) label) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -41,8 +41,8 @@ export const trackUserAction = (action, category) label) => {;;
 // export const trackError = (error) context = {}) => {// // console.error removed for production;;
 
 context)}
-
-  if (typeof window !== 'undefined' && window.gtag) {
+'
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -63,9 +63,9 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 // export const trackError = (error) context = {}) => {/* TODO: Fix JSX expression */};;
-
-  tracked: ', error) context)}
-
+'
+  tracked: ', error) context)}';
+'
   if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
       ...context}
@@ -75,7 +75,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 export const trackPerformance = (metric) value) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
@@ -85,7 +85,7 @@ export const trackPerformance = (metric) value) => {;;
 };
 
 export const trackUserAction = (action, category) label) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -97,8 +97,8 @@ export const trackUserAction = (action, category) label) => {;;
 // export const trackError = (error) context = {}) => {// // console.error removed for production;;
 
 context)}
-
-  if (typeof window !== 'undefined' && window.gtag) {
+'
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -119,9 +119,9 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 // export const trackError = (error) context = {}) => {/* TODO: Fix JSX expression */};;
-
-  tracked: ', error) context)}
-
+'
+  tracked: ', error) context)}';
+'
   if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
       ...context}
@@ -131,7 +131,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 export const trackPerformance = (metric) value) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
@@ -141,7 +141,7 @@ export const trackPerformance = (metric) value) => {;;
 };
 
 export const trackUserAction = (action, category) label) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -153,8 +153,8 @@ export const trackUserAction = (action, category) label) => {;;
 // export const trackError = (error) context = {}) => {// // console.error removed for production;;
 
 context)}
-
-  if (typeof window !== 'undefined' && window.gtag) {
+'
+  if (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -175,9 +175,9 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 // export const trackError = (error) context = {}) => {/* TODO: Fix JSX expression */};;
-
-  tracked: ', error) context)}
-
+'
+  tracked: ', error) context)}';
+'
   if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
       ...context}
@@ -187,7 +187,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 export const trackPerformance = (metric) value) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
@@ -197,7 +197,7 @@ export const trackPerformance = (metric) value) => {;;
 };
 
 export const trackUserAction = (action, category) label) => {;;
-
+'
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -219,7 +219,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 };
 
 // export const trackError = (error)context = {}) => {/* TODO: Fix JSX expression */};;
-
+'
   tracked: ',error)context)} if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
   l: false}...context })} }; export const trackPerformance = (metric)value) => {/* TODO: Fix JSX expression */};;
@@ -229,7 +229,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 
   y: category}event_labe,
   l: label })} }; export const trackError = (error)context = {}) => {/* TODO: Fix JSX expression */};;
-
+'
   tracked: ',error)context)} if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
   l: false}...context })} }; export const trackPerformance = (metric)value) => {/* TODO: Fix JSX expression */};;
@@ -239,7 +239,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 
   y: category}event_labe,
   l: label })} }; export const trackError = (error)context = {}) => {/* TODO: Fix JSX expression */};;
-
+'
   tracked: ',error)context)} if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
   l: false}...context })} }; export const trackPerformance = (metric)value) => {/* TODO: Fix JSX expression */};;
@@ -249,7 +249,7 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
 
   y: category}event_labe,
   l: label })} }; export const trackError = (error)context = {}) => {/* TODO: Fix JSX expression */};;
-
+'
   tracked: ',error)context)} if (typeof window !== 'undefined' && window.gtag) {/* TODO: Fix JSX expression */}
 
   l: false}...context })} }; export const trackPerformance = (metric)value) => {/* TODO: Fix JSX expression */};;
@@ -257,5 +257,5 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
   e: metric}valu,
   e: Math.round(value) })} }; export const trackUserAction = (action,category)label) => {/* TODO: Fix JSX expression */};;
 
-  y: category}event_labe,
+  y: category}event_labe,'
   l: label })} }; '

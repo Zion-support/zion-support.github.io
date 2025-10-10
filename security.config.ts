@@ -14,7 +14,7 @@ export const securityConfig = {;
         "'unsafe-eval'","
         'https: //www.googletagmanager.com'],'
       'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],'
-      'img-src': ["'self'", 'data:', 'https:', 'blob: '],'
+      'img-src': ["'self'", 'data:', 'https:', 'blob: '],','
       'font-src': ["'self'", 'https: //fonts.gstatic.com'],'
       'connect-src': ["'self'", 'https: //www.google-analytics.com'],'
       'frame-ancestors': ["'none'"],"
@@ -33,7 +33,7 @@ export const securityConfig = {;
 
   // Input validation;
   validation: {,
-    maxInputLength: 10000;
+    maxInputLength: 10000;'
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],'
     maxFileSize: 10 * 1024 * 1024, // 10MB},
 
@@ -45,7 +45,7 @@ export const securityConfig = {;
     skipFailedRequests: false},
 
   // CORS configuration;
-  cors: {,
+  cors: {,'
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],'
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],'
     allowedHeaders: ['Content-Type', 'Authorization'],'
@@ -98,3 +98,4 @@ export const securityConfig = {/* TODO: Fix JSX expression */};
   }};
 
 export default securityConfig;
+'

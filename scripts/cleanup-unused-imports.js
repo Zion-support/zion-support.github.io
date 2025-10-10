@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
-
+'
 import { execSync } from 'child_process;
 
 import { fileURLToPath } from url;
@@ -33,7 +33,7 @@ let content = fs.readFileSync(filePath, utf8);;
       modified = true}
 
     // Remove unused imports (basic cleanup);
-
+'
 const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['];?\s*$/gm;;
 
     const imports = content.match(importRegex) || [];;
@@ -68,7 +68,7 @@ const itemName = item.split( as )[0].trim();;
           // Remove unused items from import;
 
           const usedItems = importedItems.filter(item => !unusedItems.includes(item));;;
-
+'
           const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]};;;
 
           content = content.replace(importStatement, newImport);
@@ -108,7 +108,7 @@ const fullPath = path.join(dir, item);;
       const stat = fs.statSync(fullPath);;
 
       if (stat.isDirectory()) {
-        // Skip node_modules, .git, dist, etc.
+        // Skip node_modules, .git, dist, etc.'
         if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
           files = files.concat(findFiles(fullPath, extensions))}
 
@@ -139,7 +139,7 @@ files.forEach(file => {)
 // Run ESLint fix to clean up remaining issues;
 
 // console.log removed for production
-try {
+try {'
   execSync('npm run lint:fix', { stdio: inherit });
 
   // console.log removed for production
@@ -148,3 +148,4 @@ try {
 }
 
 // console.log removed for production
+'

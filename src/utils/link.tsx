@@ -13,8 +13,8 @@ interface LinkProps {// TODO: Add content}
   aria-label?: string
 }
 
-export const Link: React.FC;
-
+export const Link: 'React.FC;
+',
           <LinkProps> = ({// TODO: Add content}
 
 }
@@ -32,7 +32,7 @@ export const Link: React.FC;
     }
 
     // Handle internal navigation;
-
+'
     if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -71,3 +71,4 @@ export const Link: React.FC;
 }
 
 export default Link;
+'

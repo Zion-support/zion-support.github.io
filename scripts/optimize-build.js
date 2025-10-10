@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { glob } from glob;
@@ -68,25 +68,25 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 const pages = [;;;
 
     {/* TODO: Fix JSX expression */}
-
+'
   q: 'daily },
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
   q: 'monthly },
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
   q: 'weekly },
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
   q: 'weekly },
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
   q: 'weekly },
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
   q: 'monthly },
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
   q: 'weekly }
 
   ];
@@ -107,8 +107,8 @@ ${/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com${page.url}</loc>
     <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    <changefreq>${page.changefreq}</changefreq>';
+    <priority>${page.priority}</priority>'
   </url>`).join('\n')}
 
 </urlset>;
@@ -208,7 +208,7 @@ async function optimize() {
   // // console.log removed for production
 try {
     // Create public directory if it doesnt exist;
-
+'
     if (!fs.existsSync('public)) {
       fs.mkdirSync(public);
 

@@ -38,7 +38,7 @@ constructor(props: Props) {
 
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === production) {
-      // Example: Send to error reporting service
+      // Example: 'Send to error reporting service',
       // errorReportingService.captureException(error, { extra: errorInfo })}
 
   }
@@ -79,12 +79,12 @@ constructor(props: Props) {
               <button
                 onClick={() => window.location.reload()}
 
-                className=w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200
+                className=w-full bg-cyan-600 hover: 'bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200
               >
                 Refresh Page
               </button>
               
-              <button
+              <button',
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
 
                 className=w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200

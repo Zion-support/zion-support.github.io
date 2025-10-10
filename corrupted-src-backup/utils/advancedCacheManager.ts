@@ -34,7 +34,7 @@ constructor(config: Partial<CacheConfig> = {}) {
       maxAge: 5 * 60 * 1000, // 5 minutes;
 
       maxSize: 1000;
-
+'
       strategy: 'LRU',
       ...config}}
 
@@ -238,3 +238,4 @@ const _now = Date.now();;
 }
 
 export default AdvancedCacheManager;
+'

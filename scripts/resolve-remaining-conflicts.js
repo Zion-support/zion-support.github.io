@@ -13,7 +13,7 @@ function resolveMergeConflicts(filePath) {
 const content = fs.readFileSync(filePath, utf8);;
 
     // Check if file has merge conflicts;
-
+'
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Advanced conflict resolution strategy;
@@ -41,7 +41,7 @@ const incoming = parts[1].replace(/            return incoming;);;
           return match;)
         })
         // Clean up any remaining conflict markers;
-
+'
         .replace(/        .replace(//g, ')
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
@@ -58,11 +58,11 @@ return false}
 // List of files with conflicts;
 
 const conflictedFiles = [;;
-
-  'App.tsx,
-  'app/ai-services/page.tsx,
-  'app/components/Navigation.tsx,
-  'app/it-services/page.tsx,
+'
+  'App.tsx,'
+  'app/ai-services/page.tsx,'
+  'app/components/Navigation.tsx,'
+  'app/it-services/page.tsx,'
   'app/micro-saas/page.tsx,
   public/sitemap.xml
 ];
@@ -84,7 +84,7 @@ if (resolvedCount > 0) {
     // Add resolved files;
 
     // console.log removed for production
-try {
+try {'
       execSync('git add .', { encoding: utf8, cwd: process.cwd() });
 
       // console.log removed for production
@@ -95,7 +95,7 @@ try {
     // Commit the resolution;
 
     // console.log removed for production
-try {
+try {'
       execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: utf8, cwd: process.cwd() });
 
       // console.log removed for production
@@ -109,7 +109,7 @@ try {
 
   // console.log removed for production
 try {,;
-
+'
 const status = execSync('git status', { encoding: utf8, cwd: process.cwd() });;
 
     // console.log removed for production
@@ -121,3 +121,4 @@ const status = execSync('git status', { encoding: utf8, cwd: process.cwd() });;
 }
 
 main().catch(console.error);
+'

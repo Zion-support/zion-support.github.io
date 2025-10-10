@@ -80,8 +80,8 @@ const files = [];;
 const fullPath = path.join(dir, item);;
 
     const stat = fs.statSync(fullPath);;
-
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
+'
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {'
       files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
       files.push(fullPath)}
 
@@ -105,3 +105,4 @@ tsxFiles.forEach(file => {
 
 // console.log removed for production
 // console.log removed for production
+'

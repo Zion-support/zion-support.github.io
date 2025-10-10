@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 
 import fs from 'fs';
-
+'
 import path from 'path';
-
+'
 import { fileURLToPath } from 'url;
 
 ;
@@ -31,31 +31,31 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     { usedJSHeapSize: number }
-
+'
   )';
 
   content = content.replace(/\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g)
     { value: number }
-
+'
   )';
-
+'
   // Fix variable name issues';
 
   content = content.replace(
 
   content = content.replace(/\{/* TODO: Fix JSX expression */}
 
-  e:\s*number\s*\/\*\/\}/g,
-    '{/* TODO: Fix JSX expression */}
-
+  e:\s*number\s*\/\*\/\}/g,'
+    '{/* TODO: Fix JSX expression */}';
+'
   e: number }')
   );
 
   content = content.replace(/\{/* TODO: Fix JSX expression */}
 
-  e:\s*number\s*\/\*\/\}/g,
-    '{/* TODO: Fix JSX expression */}
-
+  e:\s*number\s*\/\*\/\}/g,'
+    '{/* TODO: Fix JSX expression */}';
+'
   e: number }')
   );
 
@@ -75,7 +75,7 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
 function processFile(filePath) {
   try {;
-
+'
 let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
@@ -86,7 +86,7 @@ let content = fs.readFileSync(filePath, 'utf8);;
 
     content = fixTypeAnnotations(content);
 
-    if (content !== originalContent) {
+    if (content !== originalContent) {'
       fs.writeFileSync(filePath, content, 'utf8);
 
       modified = true;
@@ -121,7 +121,7 @@ const fullPath = path.join(currentPath, item);;
 
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
-
+'
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           walkDir(fullPath)}
 
@@ -153,9 +153,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 
 // console.log removed for production
 ;
-
+'
 const srcDir = path.join(__dirname, 'src);;
-
+'
 const appDir = path.join(__dirname, 'app);;
 
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
@@ -174,4 +174,4 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 `
 // console.log removed for production
 // console.log removed for production
-`
+`'

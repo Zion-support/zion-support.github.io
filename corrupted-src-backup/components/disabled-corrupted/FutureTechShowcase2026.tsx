@@ -230,9 +230,9 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = grid, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-16></div>
           {/* TODO: Fix JSX expression */}
 
-            { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: ⚛️ },
-            { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: 🧠 },
-            { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: 🎯 },
+            { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: ⚛️ },'
+            { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: 🧠 },'
+            { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: 🎯 },'
             { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: 💰 }].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = te, x, t-cent, e, r></div>
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = te, x, t-cent, e, r></div>
@@ -291,4 +291,4 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
 
 export default FutureTechShowcase2026;
 
-`
+`'

@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import { execSync } from 'child_process;
-
+'
 import fs from 'fs;
 
 import path from path;
@@ -13,7 +13,7 @@ function execGitCommand(command, description) {
   try {
     // console.log removed for production
 const result = execSync(command, { );;;
-
+'
       encoding: 'utf8),
       cwd: process.cwd(),
       stdio: pipe});
@@ -33,7 +33,7 @@ function resolveMergeConflicts(filePath) {
 const content = fs.readFileSync(filePath, utf8);;
 
     // Check if file has merge conflicts;
-
+'
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Advanced conflict resolution strategy;
@@ -61,7 +61,7 @@ const incoming = parts[1].replace(/            return incoming;);;
           return match;)
         })
         // Clean up any remaining conflict markers;
-
+'
         .replace(/        .replace(//g, ')
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
@@ -81,7 +81,7 @@ function resolveAllMergeConflicts() {
   // console.log removed for production
 try {
     // Find all files with merge conflicts;
-
+'
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
 
     const conflictedFiles = result.trim().split(\n).filter(file => file.length > 0);;
@@ -115,14 +115,14 @@ return false}
 
 function getAllRemoteBranches() {
   try {;
-
+'
 const result = execSync('git branch -r', { encoding: utf8 });;
 
     const branches = result;;
-
-      .split('\n)
-      .map(line => line.trim())
-      .filter(line => line && !line.includes('HEAD))
+'
+      .split('\n)';
+      .map(line => line.trim())'
+      .filter(line => line && !line.includes('HEAD))'
       .map(line => line.replace('origin/', '))
       .filter(branch => !branch.includes(main));
 
@@ -149,7 +149,7 @@ const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `
         // console.log removed for production
 return true} else {
         // console.log removed for production
-if (resolveAllMergeConflicts()) {
+if (resolveAllMergeConflicts()) {'
           execGitCommand('git add .', `Adding resolved files from ${branchName}`);
 
           execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName});
@@ -181,12 +181,12 @@ async function main() {
 execGitCommand('git status --porcelain', Checking git status);
 
   // Step 2: Fetch latest changes;
-
+'
   execGitCommand('git fetch origin', Fetching latest changes from origin);
 
   // Step 3: Try to merge with main first;
 
-  // console.log removed for production
+  // console.log removed for production'
 const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging with origin/main);;
 
   if (mergeResult) {
@@ -199,18 +199,18 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging wi
       // console.log removed for production
 ,
       // Step 5: Add resolved files;
-
+'
       execGitCommand('git add .', Adding resolved files);
 
       // Step 6: Commit the merge;
-
+'
       execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', Committing merge resolution);
 
       // console.log removed for production
 } else {
       // console.log removed for production
-return}
-
+return;
+  }
   }
 
   // Step 7: Get all remote branches and merge them;
@@ -230,13 +230,13 @@ allBranches.slice(0, 10).forEach(branch => // console.log removed for production
   // Priority branches to merge first;
 
   const priorityBranches = [;;
-
-    'cursor/website-audit-and-update-with-deployment-f31 a,
-    'add-new-2026-content,
-    'add-revolutionary-content-2026,
-    'ai-2027-content-integration,
-    'ai-dashboard-improvements,
-    'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e,
+'
+    'cursor/website-audit-and-update-with-deployment-f31 a,'
+    'add-new-2026-content,'
+    'add-revolutionary-content-2026,'
+    'ai-2027-content-integration,'
+    'ai-dashboard-improvements,'
+    'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e,'
     'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2,
     cursor/enhance-app-with-new-services-and-futuristic-design-80 f7
   ];
@@ -273,9 +273,9 @@ const batch = otherBranches.slice(i, i + batchSize);;
 
   // Step 8: Final status check;
 
-  // console.log removed for production
+  // console.log removed for production'
 execGitCommand('git status', Final git status);
-
+'
   execGitCommand('git log --oneline -10', Recent commits);
 
   // console.log removed for production
@@ -284,3 +284,4 @@ execGitCommand('git status', Final git status);
 // Run the main function;
 
 main().catch(console.error);
+'

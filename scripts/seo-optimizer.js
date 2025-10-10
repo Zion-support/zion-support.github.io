@@ -1,5 +1,5 @@
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { glob } from glob;
@@ -29,7 +29,7 @@ const content = fs.readFileSync(file, utf8);;
         // Check for essential meta tags;
 
         const hasTitle = content.includes(<title>);;
-
+'
         const hasDescription = content.includes('name="description);;
 
         const hasViewport = content.includes('name="viewport);;
@@ -75,7 +75,7 @@ this.optimizations.push('Meta tags validation)}
 ;
 
 const tsxFiles = await glob(src/**/*.tsx, {);;
-
+'
       ignore: ['**/node_modules/**', '**/dist/**])
     });
 
@@ -116,7 +116,7 @@ const content = fs.readFileSync(file, utf8);;
 if (headingIssues > 0) {
       // console.log removed for production
 }
-
+'
     this.optimizations.push('Heading structure validation)}
 
   // Check alt attributes;
@@ -126,7 +126,7 @@ if (headingIssues > 0) {
 ;
 
 const tsxFiles = await glob(src/**/*.tsx, {);;
-
+'
       ignore: ['**/node_modules/**', '**/dist/**])
     });
 
@@ -143,7 +143,7 @@ const content = fs.readFileSync(file, utf8);;
 
         const imgTags = content.match(/<img[^>]*>/g) || [];;
 
-        for (const imgTag of imgTags) {
+        for (const imgTag of imgTags) {'
           if (!imgTag.includes('alt=)) {
             this.issues.push(`${file}: Image without alt attribute);
 
@@ -161,7 +161,7 @@ const content = fs.readFileSync(file, utf8);;
 if (altIssues > 0) {
       // console.log removed for production
 }
-
+'
     this.optimizations.push('Alt attributes validation)}
 
   // Check internal links;
@@ -171,7 +171,7 @@ if (altIssues > 0) {
 ;
 
 const tsxFiles = await glob(src/**/*.tsx, {);;
-
+'
       ignore: ['**/node_modules/**', '**/dist/**])
     });
 
@@ -185,7 +185,7 @@ let linkCount = 0;;
 const content = fs.readFileSync(file, utf8);;
 
         // Count internal links;
-
+'
         const internalLinks = content.match(/href=["']\/(?!\/)[^"']*[]/g) || [];;
 
         linkCount += internalLinks.length} catch (error) {
@@ -194,7 +194,7 @@ const content = fs.readFileSync(file, utf8);;
 
     }
 
-    // console.log removed for production
+    // console.log removed for production'
 this.optimizations.push('Internal links analysis)}
 
   // Generate SEO report;
@@ -307,58 +307,58 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 }
 
   const pages = [;;;
-
-    '/,
-    '/about,
-    '/ai-services,
-    '/it-services,
-    '/contact,
-    '/ai-analytics-dashboard,
-    '/ai-chatbot-builder,
-    '/ai-content-generation,
-    '/ai-crm,
-    '/ai-customer-support,
-    '/ai-cybersecurity,
-    '/ai-data-analytics,
-    '/ai-data-visualization,
-    '/ai-document-processing,
-    '/ai-ecommerce-solutions,
-    '/ai-email-assistant,
-    '/ai-fintech,
-    '/ai-healthcare,
-    '/ai-lead-generation,
-    '/ai-marketing,
-    '/ai-mobile-app-development,
-    '/ai-sales-automation,
-    '/ai-scheduler,
-    '/ai-workflow-automation,
-    '/ai-writing-assistant,
-    '/analytics-tools,
-    '/autonomous-systems,
-    '/blockchain,
-    '/business-intelligence,
-    '/careers,
-    '/case-studies,
-    '/cloud-services,
-    '/compliance,
-    '/cybersecurity,
-    '/database,
-    '/developer-tools,
-    '/devops,
-    '/enterprise,
-    '/expense-tracker,
-    '/iot-edge-computing,
-    '/it-infrastructure,
-    '/marketing-tools,
-    '/micro-saas,
-    '/networking,
-    '/news,
-    '/productivity,
-    '/quantum-computing,
-    '/robotics,
-    '/security,
-    '/smart-analytics,
-    '/support,
+'
+    '/,'
+    '/about,'
+    '/ai-services,'
+    '/it-services,'
+    '/contact,'
+    '/ai-analytics-dashboard,'
+    '/ai-chatbot-builder,'
+    '/ai-content-generation,'
+    '/ai-crm,'
+    '/ai-customer-support,'
+    '/ai-cybersecurity,'
+    '/ai-data-analytics,'
+    '/ai-data-visualization,'
+    '/ai-document-processing,'
+    '/ai-ecommerce-solutions,'
+    '/ai-email-assistant,'
+    '/ai-fintech,'
+    '/ai-healthcare,'
+    '/ai-lead-generation,'
+    '/ai-marketing,'
+    '/ai-mobile-app-development,'
+    '/ai-sales-automation,'
+    '/ai-scheduler,'
+    '/ai-workflow-automation,'
+    '/ai-writing-assistant,'
+    '/analytics-tools,'
+    '/autonomous-systems,'
+    '/blockchain,'
+    '/business-intelligence,'
+    '/careers,'
+    '/case-studies,'
+    '/cloud-services,'
+    '/compliance,'
+    '/cybersecurity,'
+    '/database,'
+    '/developer-tools,'
+    '/devops,'
+    '/enterprise,'
+    '/expense-tracker,'
+    '/iot-edge-computing,'
+    '/it-infrastructure,'
+    '/marketing-tools,'
+    '/micro-saas,'
+    '/networking,'
+    '/news,'
+    '/productivity,'
+    '/quantum-computing,'
+    '/robotics,'
+    '/security,'
+    '/smart-analytics,'
+    '/support,'
     '/task-manager-pro,
     /team
   ];
@@ -372,9 +372,9 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
 ${/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com${page}</loc>
-    <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
+    <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>';
+    <changefreq>weekly</changefreq>'
+    <priority>${page === '/' ? '1.0' : '0.8'}</priority>'
   </url>`).join('\n')}
 
 </urlset>;
@@ -394,7 +394,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 
   };
 
-  fs.writeFileSync()
+  fs.writeFileSync()'
     path.join(__dirname, '../seo-optimizations.json),
     JSON.stringify(metaOptimizations, null, 2)
   );

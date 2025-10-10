@@ -13,7 +13,7 @@ function resolveConflicts(filePath) {
 const content = readFileSync(filePath, utf8);;
 
     // Check if file has conflict markers;
-
+'
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>)) {
       return false; // No conflicts}
 
@@ -29,17 +29,17 @@ const lines = content.split(\n);;
     for (let i = 0; i < lines.length; i++) {;;
 
 const line = lines[i];;
-
+'
       if (line.includes(')) {
         skipUntilNextMarker = true;
 
         continue}
-
+'
       if (line.includes(')) {
         skipUntilNextMarker = false;
 
         continue}
-
+'
       if (line.includes('>>>>>>>)) {
         continue}
 
@@ -96,7 +96,7 @@ const files = conflictFiles.trim().split(\n);;
 
       // console.log removed for production
 // Add all resolved files;
-
+'
       execSync('git add .', { stdio: inherit });
 
       // Commit the resolution;
@@ -117,9 +117,9 @@ try {
 
 const branchesToMerge = [;;
 
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae,
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44,
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72,
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae,'
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44,'
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72,'
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1,
     origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c
   ];
@@ -159,10 +159,11 @@ failedCount++}
 // console.log removed for production
 // Push all changes;
 
-  // console.log removed for production
+  // console.log removed for production'
 execSync('git push origin main', { stdio: inherit });
 
   // console.log removed for production
 } catch (error) {
   // console.error removed for production
 process.exit(1)}
+'

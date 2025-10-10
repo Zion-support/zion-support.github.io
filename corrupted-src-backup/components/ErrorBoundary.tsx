@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 import { Component, ErrorInfo, ReactNode } from 'react;
 
 import { AlertTriangle, RefreshCw, Home } from lucide-react;
@@ -45,7 +45,7 @@ constructor(props: Props) {,
 
 ,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== undefined && (window as any).gtag) {
+    if (typeof window !== undefined && (window as any).gtag) {'
       (window as any).gtag('event', exception, {)
         description: error.message;)
         fatal: false)

@@ -127,8 +127,8 @@ let canonical = document.querySelector('link[rel="canonical]) as HTMLLinkElement
 
 const ogTags = [;;
 
-      { property: 'og:title, content: this.config.ogTitle || this.config.title },
-      { property: 'og:description, content: this.config.ogDescription || this.config.description },
+      { property: 'og:title, content: this.config.ogTitle || this.config.title },'
+      { property: 'og:description, content: this.config.ogDescription || this.config.description },'
       { property: 'og:type', content: this.config.ogType || 'website },
       { property: og:url, content: this.config.canonicalUrl || window.location.href }];
 
@@ -144,8 +144,8 @@ const ogTags = [;;
 ;
 
 const twitterTags = [;;
-
-      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image },
+'
+      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image },'
       { name: 'twitter:title, content: this.config.twitterTitle || this.config.title },
       { name: twitter:description, content: this.config.twitterDescription || this.config.description }];
 
@@ -213,3 +213,4 @@ const script = document.createElement(script);;
   script.textContent = createStructuredData(data);
 
   document.head.appendChild(script);
+'

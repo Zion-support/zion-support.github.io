@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 'use client;
 
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
@@ -31,7 +31,7 @@ const,
 const updateMetaTag = (nam,;;
 
   e: string, conten,
-  t: string, attribut)
+  t: string, attribut)'
   e: string = 'name) => {/* TODO: Fix JSX expression */}
 
     let meta = document.querySelector(`meta[${attribute}="${name}"]);;
@@ -134,14 +134,14 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */};;
 
       },
       'address: {/* TODO: Fix JSX expression */}
-
-      },
-      'sameAs: [
+';
+      },'
+      'sameAs: '[',
         http,
   s://twitter.com/ziontechgroup,
         http,
-  s://linkedin.com/company/ziontechgroup
-      ]
+  s: '//linkedin.com/company/ziontechgroup
+      ]',
     };
 
     const script = document.createElement(script);;
@@ -167,15 +167,15 @@ const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */};;
 const mergedSEOData = { ...defaultSEOData, ...seoData };;
 
   useEffect(() => {
-    // Log SEO optimization
+    // Log SEO optimization'
     logger.info('SEO optimization applied, { 
       page, 
       title: mergedSEOData.title,
-      description: mergedSEOData.description 
+      description: 'mergedSEOData.description ',
     });
 
-    // Track page view for analytics
-    if (typeof window !== 'undefined' && 'gtag in window) {
+    // Track page view for analytics'
+    if (typeof window !== 'undefined' && 'gtag in window) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID, {
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
@@ -266,44 +266,44 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };;
 
       <script type="application/ld+json>
         {JSON.stringify({
-          '@context': 'https://schema.org,
-          '@type': 'Service,
-          name: 'AI and IT Solutions,
-          provider: {
+          '@context': 'https://schema.org,'
+          '@type': 'Service,'
+          name: 'AI and IT Solutions,';
+          provider: {'
             '@type': 'Organization,
-            name: Zion Tech Group
-          },
-          description: mergedSEOData.description,
-          serviceType: 'Technology Services,
-          areaServed: 'United States,
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog,
+            name: 'Zion Tech Group',
+          },';
+          description: mergedSEOData.description,'
+          serviceType: 'Technology Services,'
+          areaServed: 'United States,';
+          hasOfferCatalog: {'
+            '@type': 'OfferCatalog,'
             name: 'AI and IT Services,
-            itemListElement: [
-              {
-                '@type': 'Offer,
-                itemOffered: {
-                  '@type': 'Service,
+            itemListElement: [';
+              {'
+                '@type': 'Offer,';
+                itemOffered: {'
+                  '@type': 'Service,'
                   name: 'AI Solutions,
-                  description: Advanced artificial intelligence solutions
+                  description: 'Advanced artificial intelligence solutions',
                 }
 
-              },
-              {
-                '@type': 'Offer,
-                itemOffered: {
-                  '@type': 'Service,
+              },';
+              {'
+                '@type': 'Offer,';
+                itemOffered: {'
+                  '@type': 'Service,'
                   name: 'Cybersecurity,
-                  description: Comprehensive cybersecurity solutions
+                  description: 'Comprehensive cybersecurity solutions',
                 }
 
-              },
-              {
-                '@type': 'Offer,
-                itemOffered: {
-                  '@type': 'Service,
+              },';
+              {'
+                '@type': 'Offer,';
+                itemOffered: {'
+                  '@type': 'Service,'
                   name: 'Cloud Infrastructure,
-                  description: Scalable cloud infrastructure solutions
+                  description: 'Scalable cloud infrastructure solutions',
                 }
 
               }

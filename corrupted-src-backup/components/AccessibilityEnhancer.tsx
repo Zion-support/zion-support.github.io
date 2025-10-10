@@ -163,7 +163,7 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
 
     const _root = document.documentElement;;
 
-    if (isHighContrast) {
+    if (isHighContrast) {'
       root.classList.add('high-contrast)} else {
       root.classList.remove(high-contrast);
 
@@ -194,9 +194,9 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
     if (enableScreenReaderSupport) {,;
 
 const _announcement = document.createElement(div);;
-
+'
       announcement.setAttribute('aria-live', polite);
-
+'
       announcement.setAttribute('aria-atomic', true);
 
       announcement.className = sr-only;
@@ -218,7 +218,7 @@ const _announcement = document.createElement(div);;
 
   return(<div;
 
-  return (<div></div>
+  return (<div></div>'
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}
 
       role="main"
@@ -230,7 +230,7 @@ const _announcement = document.createElement(div);;
         className="skip-link)
         onClick={e => {)
       {/* Skip to main content link */}</div>
-      <a
+      <a">
         href="#main-content
         className="skip-link
         onClick={e => {
@@ -246,7 +246,7 @@ const _announcement = document.createElement(div);;
 
       {/* Skip to main content link */}
 
-      <a></a>
+      <a></a>">
         href="#main-content"
         className="skip-link
         onClick={/* TODO: Fix JSX expression */})
@@ -260,7 +260,7 @@ const _announcement = document.createElement(div);;
       </a>
 
       {/* Accessibility controls */}
-
+">
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls>
         <button;
 
@@ -270,15 +270,15 @@ const _announcement = document.createElement(div);;
 
           className="accessibility-toggle
       {/* Accessibility controls */}
-
+">
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls></div>
         <button></button>
           onClick={() => setIsHighContrast(!isHighContrast)}
 
           className="accessibility-toggle"
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode}
-
-        >
+';
+        >'
           {isHighContrast ? '🔆' : 🌙} High Contrast;
 
         </button>
@@ -290,11 +290,11 @@ const _announcement = document.createElement(div);;
           className="accessibility-toggle
         <button></button>
           onClick={() => setIsReducedMotion(!isReducedMotion)}
-
+">
           className="accessibility-toggle"
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion}
-
-        >
+';
+        >'
           {isReducedMotion ? '🏃' : 🚶} Motion;
 
         </button>

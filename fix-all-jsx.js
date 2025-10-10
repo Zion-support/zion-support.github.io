@@ -3,7 +3,7 @@
 import fs from 'fs';
 
 function fixAllJSXIssues(filePath) {
-  try {
+  try {'
     let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
@@ -88,7 +88,7 @@ function fixAllJSXIssues(filePath) {
 
     });
 
-    if (modified) {
+    if (modified) {'
       fs.writeFileSync(filePath, content, 'utf8);
 
       console.log(`Fixed JSX issues in: ${filePath}`);
@@ -108,13 +108,14 @@ function fixAllJSXIssues(filePath) {
 
 }
 
-// Fix the main page file
+// Fix the main page file'
 const filePath = '/workspace/app/page.tsx;;
 
-if (fixAllJSXIssues(filePath)) {
+if (fixAllJSXIssues(filePath)) {'
   console.log('All JSX issues fixed successfully);
 
-} else {
+} else {'
   console.log('No JSX issues found);
 
 }
+'

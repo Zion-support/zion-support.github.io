@@ -26,9 +26,9 @@ export class SecurityManager {}
  * Generate,
   d: 2025-10-08T0,
   2:0,
-  6:22.083Z;
+  6: '22.083Z;
 
- */
+ */',
 export class SecurityManager {/* TODO: Fix JSX expression */}
 
   private constructor() {}
@@ -49,8 +49,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeInput(input: string): string {}
 
     return input
-      .replace(/[<React.Fragment>]/g, ')
-      .replace(/javascript:/gi, ')
+      .replace(/[<React.Fragment>]/g, ')'
+      .replace(/javascript:/gi, ')'
       .replace(/on\w+=/gi, ')
       .trim();
 
@@ -67,14 +67,14 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     try {,;
 
 const parsed = new URL(url),;;
-
+'
       if (!['http:', 'https: ].includes(parsed.protocol)) {,
   sanitizeUrl(url: string): string {}
 
     try {}
 
       const parsed = new URL(url);;
-
+'
       if (!['http:', 'https:].includes(parsed.protocol)) {}
 
         throw new Error(Invalid protocol);
@@ -83,7 +83,7 @@ const parsed = new URL(url),;;
 
       return parsed.toString()
     } catch {}
-
+'
       return '}
 
   sanitizeUrl(ur)
@@ -104,7 +104,7 @@ const parsed = new URL(url),;;
   generateSecureToken(length: number = 32): string {,;
 
 const array = new Uint8Array(length),;;
-
+'
     if (typeof window !== 'undefined && window.crypto) {,
       window.crypto.getRandomValues(array);
 
@@ -114,7 +114,7 @@ const array = new Uint8Array(length),;;
   generateSecureToken(length: number = 32): string {}
 
     const array = new Uint8Array(length);;
-
+'
     if (typeof window !== 'undefined && window.crypto) {}
 
       window.crypto.getRandomValues(array);
@@ -159,8 +159,8 @@ const validRequests = requests.filter((time: number) => time > windowStart),;;
     if (validRequests.length >= limit) {,
     // Remove old requests;
 
-const validRequests = requests.filter((time: number) => time > windowStart);;
-
+const validRequests = requests.filter((time: 'number) => time > windowStart);;
+',
     if (validRequests.length >= limit) {}
 
       return false}
@@ -191,3 +191,4 @@ const validRequests = requests.filter((time: number) => time > windowStart);;
 }
 
 export default SecurityManager.getInstance();
+'

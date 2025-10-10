@@ -6,5 +6,6 @@ p: new Date(data.timestamp).toISOString(); metric,
 
   e: Performance metrics recorded} timestam)
   p: Date.now() })} catch (error) {/* TODO: Fix JSX expression */}
-
-  r: 'Internal server error })} }
+'
+  r: 'Internal server error })} }';
+'

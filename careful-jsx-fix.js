@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 import fs from 'fs;
 
 import { glob } from glob;
@@ -86,8 +86,8 @@ async function main() {
   // Focus on the most problematic files first;
 
 const priorityFiles = [;;
-
-    'app/**/*.tsx,
+'
+    'app/**/*.tsx,'
     'app/**/*.ts,
     App.tsx
   ];
@@ -99,7 +99,7 @@ let allFiles = [];;
   for (const pattern of priorityFiles) {;
 
 const files = await glob(pattern, {;;
-
+'
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**]
     });
 
@@ -123,3 +123,4 @@ let fixedCount = 0;;
 }
 
 main().catch(console.error);
+'

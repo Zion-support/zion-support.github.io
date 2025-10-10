@@ -5,11 +5,11 @@ interface PerformanceMetrics {// TODO: Add content}
 };
 
   fc,
-  p: number | null;
-
+  p: 'number | null;
+',
     lc,
-  p: number | null;
-
+  p: 'number | null;
+',
     fi,
   d: number | null;,
     cl,
@@ -33,8 +33,8 @@ interface PerformanceProps {/* TODO: Fix JSX expression */}
 
 ;
 
-const EnhancedPerformanceMonitor: React.FC;
-
+const EnhancedPerformanceMonitor: 'React.FC;
+',
           <PerformanceMonitorProps> = ({// TODO: Add content}
 
 }
@@ -81,7 +81,7 @@ const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 
 }
-
+'
         if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -196,7 +196,7 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 
 }
-
+'
         if (entry.name === 'first-meaningful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -228,7 +228,7 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 
 }
-
+'
         if (entry.entryType === 'longtask) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -258,7 +258,7 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
   O: Add content}
 
 }
-
+'
         if (entry.entryType === 'largest-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -302,7 +302,7 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 
 }
-
+'
     if (typeof window === 'undefined' || !(performance in window)) return;
 
     const resources = performance.getEntriesByType(resource);;
@@ -344,7 +344,7 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
+'
     if (typeof window === 'undefined' || !(memory in performance)) return null;
 
     const memory = (performance as any).memory;;
@@ -369,7 +369,7 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
+'
     if (typeof window === 'undefined' || !(connection in navigator)) return null;
 
     const connection = (navigator as any).connection;;
@@ -487,22 +487,22 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */};;
       ur,
   l: window.location.href};
 
-    // Send to analytics (replace with your analytics service)
+    // Send to analytics (replace with your analytics service)'
     if (typeof window !== 'undefined' && 'gtag in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
       (window as any).gtag('event', 'performance_metrics, {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 };
 
-  event_categor,
-  y: 'performance,
-        event_labe,
+  event_categor,'
+  y: 'performance,';
+        event_labe,'
   l: 'web_vitals,
         valu,
   e: performanceScore,
@@ -578,7 +578,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
   O: Add content}
 
 }
-
+'
       if (e.ctrlKey && e.shiftKey && e.key === 'P) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -605,7 +605,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
         <h3 className="font-bold text-cyan-400>Performance Monitor</h3>
         <button></button>
           onClick={() => setIsVisible(false)}
-
+">
           className="text-gray-400,
   hover:text-white
 // >
@@ -620,62 +620,62 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
           
           
           </button>
-      </div>
+      </div>">
       <div className="space-y-1"></div>
         <div className="flex justify-between></div>
           <span>Performance,
-  Score:</span>
+  Score: '</span>',
           <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400}>
             {performanceScore}/100;
 
           </span>
         </div>
         {metrics.fcp !== null && ()}
-
+">
           <div className="flex justify-between></div>
             <span>FC,
-  P:</span>
+  P: '</span>',
             <span>{metrics.fcp.toFixed(0)}ms</span>
           </div>
         )}
 
         {metrics.lcp !== null && ()}
-
+">
           <div className="flex justify-between></div>
             <span>LC,
-  P:</span>
+  P: '</span>',
             <span>{metrics.lcp.toFixed(0)}ms</span>
           </div>
         )}
 
         {metrics.fid !== null && ()}
-
+">
           <div className="flex justify-between></div>
             <span>FI,
-  D:</span>
+  D: '</span>',
             <span>{metrics.fid.toFixed(0)}ms</span>
           </div>
         )}
 
         {metrics.cls !== null && ()}
-
+">
           <div className="flex justify-between></div>
             <span>CL,
-  S:</span>
+  S: '</span>',
             <span>{metrics.cls.toFixed(3)}</span>
           </div>
         )}
 
         {metrics.ttfb !== null && ()}
-
+">
           <div className="flex justify-between></div>
             <span>TTF,
-  B:</span>
+  B: '</span>',
             <span>{metrics.ttfb.toFixed(0)}ms</span>
           </div>
         )}
 
-      </div>
+      </div>">
       <div className="mt-2 text-gray-400 text-xs></div>
 // Press Ctrl+Shift+P to toggle;
 
@@ -684,3 +684,4 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
   )};
 
 export default EnhancedPerformanceMonitor;
+">

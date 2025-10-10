@@ -1,7 +1,7 @@
 import React from 'react';
-#!/usr/bin/env node;
+#!/usr/bin/env node;'
 import fs from 'fs';
-
+'
 // let content = fs.readFileSync('App.tsx', 'utf8');
 
 // Remove the second ErrorBoundary class and its interfaces;
@@ -11,4 +11,4 @@ content = content.replace(/interface ErrorBoundaryState \{/* TODO: Fix JSX expre
   r: Error \| null;\s*\}\s*interface ErrorBoundaryProps \{/* TODO: Fix JSX expression */}
   n: React\.ReactNode;\s*\}\s*class ErrorBoundary extends React\.Component<ErrorBoundaryProps, ErrorBoundaryState> \{[\s\S]*?\}\s*const)
   App: React\.FC = \(\) => \{/* TODO: Fix JSX expression */}
-}
+}'

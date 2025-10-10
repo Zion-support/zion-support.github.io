@@ -15,7 +15,7 @@ interface AnimatedCounterProps {
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
-  prefix = ',
+  prefix = ','
   suffix = ',
   className = 
 }) => {
@@ -103,3 +103,4 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4);;
   )};
 
 export default AnimatedCounter;
+'

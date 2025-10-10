@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React from 'react;
 
 import { Helmet } from react-helmet-async;
@@ -31,24 +31,24 @@ interface EnhancedSEOHeadProps {
 
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions,
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],
-  canonicalUrl = 'https://ziontechgroup.com,
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({'
+  title = 'Zion Tech Group - Advanced AI and IT Solutions,'
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,'
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],'
+  canonicalUrl = 'https://ziontechgroup.com,'
   ogImage = 'https://ziontechgroup.com/og-image.jpg,
-  structuredData,
-  noIndex = false,
+  structuredData,';
+  noIndex = false,'
   author = 'Zion Tech Group,
-  publishedTime,
-  modifiedTime,
+  publishedTime,';
+  modifiedTime,'
   section = 'Technology,
-  tags = []
-}) => {
+  tags = []';
+}) => {'
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
   const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;;
-
+'
   const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', IT services];;
 
   return (
@@ -130,34 +130,34 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 
       <script type="application/ld+json>
         {JSON.stringify({
-          '@context': 'https://schema.org,
-          '@type': 'Organization,
-          name: 'Zion Tech Group,
-          url: 'https://ziontechgroup.com,
-          logo: 'https://ziontechgroup.com/logo.png,
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,
-          foundingDate: '2020,
-          numberOfEmployees: '50-100,
-          industry: 'Technology,
-          address: {
-            '@type': 'PostalAddress,
-            streetAddress: '364 E Main St STE 1008,
-            addressLocality: 'Middletown,
-            addressRegion: 'DE,
+          '@context': 'https://schema.org,'
+          '@type': 'Organization,'
+          name: 'Zion Tech Group,'
+          url: 'https://ziontechgroup.com,'
+          logo: 'https://ziontechgroup.com/logo.png,'
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,'
+          foundingDate: '2020,'
+          numberOfEmployees: '50-100,'
+          industry: 'Technology,';
+          address: {'
+            '@type': 'PostalAddress,'
+            streetAddress: '364 E Main St STE 1008,'
+            addressLocality: 'Middletown,'
+            addressRegion: 'DE,'
             postalCode: '19709,
-            addressCountry: US
-          },
-          contactPoint: {
-            '@type': 'ContactPoint,
-            telephone: '+1-302-464-0950,
-            contactType: 'Customer Service,
+            addressCountry: 'US',
+          },';
+          contactPoint: {'
+            '@type': 'ContactPoint,'
+            telephone: '+1-302-464-0950,'
+            contactType: 'Customer Service,'
             areaServed: 'US,
-            availableLanguage: en
-          },
-          sameAs: [
+            availableLanguage: 'en',
+          },';
+          sameAs: ['
             'https://linkedin.com/company/ziontechgroup,
-            https://twitter.com/ziontechgroup
-          ]
+            https: '//twitter.com/ziontechgroup
+          ]',
         })}
 
       </script>
@@ -167,3 +167,4 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 };
 
 export default EnhancedSEOHead;
+'

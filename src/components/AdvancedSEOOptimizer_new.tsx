@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React, { useEffect, useCallback, useRef } from 'react;
 
 import { Helmet } from react-helmet-async;
@@ -87,22 +87,22 @@ const faqData = {/* TODO: Fix JSX expression */};;
 
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
-
+'
   t: seoData.keywords.join(', ) },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: seoData.author || 'Zion Tech Group },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: seoData.robots || 'index, follow },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: 'width=device-width, initial-scale=1.0 },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: '#3B82F6 },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: '#3B82F6 },
       {/* TODO: Fix JSX expression */}
 
@@ -127,7 +127,7 @@ const structuredData = generateStructuredData();;
       metaDescription.setAttribute(content, seoData.description);
 
       // Update canonical URL;
-
+'
       let canonicalLink = document.querySelector('link[rel="canonical]);;
 
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
@@ -227,7 +227,7 @@ const script = document.createElement(script);;
       <link rel="preconnect" href="http,
   s://www.google-analytics.com" /></link>
       <link rel="preconnect" href="http,
-  s://www.googletagmanager.com /></link>
+  s: '//www.googletagmanager.com /></link>',
       {/* DNS Prefetch */}
 
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>

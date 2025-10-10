@@ -1,7 +1,7 @@
 #!/usr/bin
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 function fixJSXErrors(filePath) {
@@ -10,7 +10,7 @@ function fixJSXErrors(filePath) {
 
     let modified = false;;
 
-    /
+    /'
     const jsxElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', Fragment];;
 
     jsxElements.forEach(element => {
@@ -22,7 +22,7 @@ function fixJSXErrors(filePath) {
       if (openTags > closeTags) {
         const missing = openTags - closeTags;;
 
-        /
+        /'
         if (element === 'Fragment) {
           content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, $1<
         } else {
@@ -40,7 +40,7 @@ function fixJSXErrors(filePath) {
     content = content.replace(/^\s*<\/>\s*$
     
     /
-    content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
+    content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$'
       if (!content.includes('<') && !content.includes('return)) {
         return return (\n    <div>\n      ${content}\n    <
       }
@@ -72,7 +72,7 @@ function fixJSXErrors(filePath) {
     content = content.replace(/^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*$
     
     /)
-    content = content.replace(/\(\s*([^)]*)\s*$
+    content = content.replace(/\(\s*([^)]*)\s*$'
       if (inner && !inner.includes('(') && !inner.includes('))) {
         return `(${inner});
 
@@ -112,7 +112,7 @@ function findFilesWithJSXErrors(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+'
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
         searchDir(fullPath);
 
@@ -120,10 +120,10 @@ function findFilesWithJSXErrors(dir) {
         try {
           const content = fs.readFileSync(fullPath, utf8);;
 
-          /
-          if (content.includes('Expected corresponding closing tag) || 
-              content.includes('JSX expressions must have one parent element) ||
-              content.includes('Declaration or statement expected) ||
+          /'
+          if (content.includes('Expected corresponding closing tag) || '
+              content.includes('JSX expressions must have one parent element) ||'
+              content.includes('Declaration or statement expected) ||'
               content.includes('Expression expected)) {
             files.push(fullPath);
 
@@ -182,3 +182,4 @@ problematicFiles.forEach(file => {)
 });
 
 console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files);
+'

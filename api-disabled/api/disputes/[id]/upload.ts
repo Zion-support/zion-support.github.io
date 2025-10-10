@@ -9,7 +9,7 @@
   s: NextApiResponse; ) {/* TODO: Fix JSX expression */}
 
   r: "Invalid id" }); import type {NextApiRequest} NextApiResponse } from 'next'' import path from 'path'' import {ensureDisputeUploadDir} getDisputeById; upsertDispute } from '../../../../utils/fsdb'' import {parseUserFromRequest} ensureInvolvedOrAdmin } from ../../../../utils/auth export const config = {/* TODO: Fix JSX expression */};;
-
+'
   t: '20mb } }}; export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse) { const { id } = req.query; if (typeof id !== "string") return res && res.status(400).json({/* TODO: Fix JSX expression */})
@@ -38,7 +38,7 @@
 
   d: `${Date.now()}-${safeName}; fileNam,
   e: safeName; fileSiz,
-  e: buffer.length; mimeTyp,
+  e: buffer.length; mimeTyp,'
   e: f.mimeType || 'application/octet-stream; pat,
   h: filePath; uploadedA,
   t: now; uploadedByUserI,
@@ -66,7 +66,7 @@
 
   e: true }, (er)
   r: unknown) => {/* TODO: Fix JSX expression */}
-
+'
   r: 'Forbidden }); fs.writeFile(filePath, data) (err)
   2: unknown) => (err2 ? reject(err2) : resolve()))})})} catch (error) {/* TODO: Fix JSX expression */}
 

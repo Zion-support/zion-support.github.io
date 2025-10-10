@@ -21,30 +21,31 @@ export default async function handler(req, res) {
       name,
       email,
       phone,
-      details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
+      details,'
+      country: country || 'Not specified','
+      service: service || 'General inquiry',';
+      timestamp: new Date().toISOString(),'
+      status: 'pending',
     };
 
     // console.log removed for production
     res.statusCode = 200;
-
+'
     res.setHeader('Content-Type', 'application/json');
 
     res.end(JSON.stringify({ 
-      success: true, 
+      success: true, '
       message: 'Quote request submitted successfully',
       quoteId: `quote_${Date.now()}`,
-      data: quoteData
+      data: 'quoteData',
     }));
   } catch (error) {
     // console.error removed for production
     res.statusCode = 500;
-
+'
     res.setHeader('Content-Type', 'application/json');
-
+'
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
+'

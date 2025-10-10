@@ -20,16 +20,16 @@ const fixes = [;;
 
   { pattern: /color: 'text-\w+-\d+'\};/g, replacement: "color: 'text-\\w+-\\d+' },
   // Fix semicolons in JSX attributes;
-
+'
   { pattern: /className=\{`[^`]+`\};/g, replacement: (match) => match.replace(';', ') },
   // Fix semicolons in JSX props;
-
+'
   { pattern: /keywords=\{[^}]+\}\};/g, replacement: (match) => match.replace('};', '}) },
   // Fix missing commas in arrays;
-
+'
   { pattern: /}\s*;\s*$/gm, replacement: '} },
   // Fix stray semicolons;
-
+'
   { pattern: /;\s*$/gm, replacement: ' },
   // Fix console statements;
 
@@ -68,7 +68,7 @@ return false}
 }
 
 // Find all TypeScript/JavaScript files;
-
+'
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 let files = [];;
@@ -83,7 +83,7 @@ const fullPath = path.join(dir, item);;
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {'
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic].includes(item)) {
           files = files.concat(findFiles(fullPath, extensions))}
 
@@ -111,3 +111,4 @@ files.forEach(file => {)
 });
 
 // console.log removed for production
+'

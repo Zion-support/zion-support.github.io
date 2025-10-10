@@ -33,8 +33,8 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
     this.setupFocusIndicators()}
 
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
-
-      // Add keyboard navigation support;)
+';
+      // Add keyboard navigation support;)'
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
 
           // Handle tab navigation;
@@ -48,11 +48,11 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
     }
 
   }
-
+'
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
 
       // Add focus indicators;
-
+'
       const style = document.createElement('style);;
 
       style.textContent = `
@@ -77,3 +77,4 @@ export default AccessibilityEnhancer;`
 
 
 
+'

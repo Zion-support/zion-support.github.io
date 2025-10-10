@@ -77,7 +77,7 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
 
   name: entry.name,
             value: entry.startTime,
-            timestamp: Date.now()
+            timestamp: Date.now()'
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint] }
 
   )
@@ -85,4 +85,5 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   }, [reportWebVitals])
   return { reportWebVitals }
 
-}
+}';
+'

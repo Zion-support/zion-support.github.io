@@ -12,7 +12,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     cumulativeLayoutShift: number;,
-    firstInputDelay: number
+    firstInputDelay: 'number',
 }
 
 export const _usePerformanceOptimization = () => {// TODO: Add content};;
@@ -24,7 +24,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content};;
   O: Add content}
 
 }
-
+'
     if (typeof window === 'undefined' || !('performance in window)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -51,13 +51,13 @@ export const _usePerformanceOptimization = () => {// TODO: Add content};;
 };
 
   loadTim,
-  e: navigation;
+  e: 'navigation;
 
 //         ? navigation.loadEventEnd - navigation.loadEventStart;
-
+',
         : 0,
       firstContentfulPain,
-  t:
+  t:'
         paintEntries.find(entry => entry.name === 'first-contentful-paint)
 //           ?.startTime || 0,
 
@@ -195,7 +195,7 @@ const entries = list.getEntries();;
   O: Add content}
 
 }
-
+'
     const criticalResources = ['/fonts/inter-var.woff2', /css/critical.css];;
 
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
@@ -209,9 +209,9 @@ const link = document.createElement(link);;
       link.rel = preload;
 
       link.href = resource;
-
+'
       link.as = resource.endsWith('.woff2') ? 'font' : style;
-
+'
       if (resource.endsWith('.woff2)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -245,7 +245,7 @@ const timer = setTimeout(() => {/* TODO: Fix JSX expression */};;
 }
 
         // Send metrics to analytics in production;
-
+'
         if (process.env['NODE_ENV'] === 'production) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -253,7 +253,7 @@ const timer = setTimeout(() => {/* TODO: Fix JSX expression */};;
 }
 
           // Track metrics in production;
-
+'
 if (process.env['NODE_ENV'] === 'development) {if (import.meta.env.DEV) {}
 
     }, 1000);
@@ -268,3 +268,4 @@ if (process.env['NODE_ENV'] === 'development) {if (import.meta.env.DEV) {}
 
     optimizeImages,
     preloadCriticalResources;
+'

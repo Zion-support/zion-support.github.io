@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React from 'react;
 
 import React, { useState, useEffect } from react;
@@ -46,7 +46,7 @@ const loadTime = navigation;;
       // Measure render time// Measure memory usage;
 
 let _memoryUsage = 0;;;
-
+'
       if ('memory in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
 
       // Measure FPS (simplified);
@@ -90,49 +90,50 @@ const measureFPS = (currentTime: number) => {;;
       </button>);
 
   return (
-
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto>
-      <div className="flex justify-between items-center mb-4>
+">
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto>">
+      <div className="flex justify-between items-center mb-4>">
         <h3 className="text-lg font-semibold text-gray-800>Performance Dashboard</h3>
         <button
           onClick={() => setIsVisible(false);
-
+">
           className="text-gray-500 hover:text-gray-700
         >
           ×
         </button>
       </div>
-
-      <div className="space-y-3>
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>Load Time:</span>
+">
+      <div className="space-y-3>">
+        <div className="flex justify-between>">
+          <span className="text-sm text-gray-600>Load Time:</span>">
           <span className="text-sm font-mono>
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>
-
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>Render Time:</span>
+">
+        <div className="flex justify-between>">
+          <span className="text-sm text-gray-600>Render Time:</span>">
           <span className="text-sm font-mono>
             {metrics.renderTime.toFixed(2)}ms
           </span>
         </div>
-
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>Memory Usage:</span>
+">
+        <div className="flex justify-between>">
+          <span className="text-sm text-gray-600>Memory Usage:</span>">
           <span className="text-sm font-mono>
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
           </span>
         </div>
-
-        <div className="flex justify-between>
-          <span className="text-sm text-gray-600>FPS:</span>
+">
+        <div className="flex justify-between>">
+          <span className="text-sm text-gray-600>FPS:</span>">
           <span className="text-sm font-mono>{metrics.fps}</span>
         </div>
-
-        <div className="pt-2 border-t border-gray-200>
+">
+        <div className="pt-2 border-t border-gray-200>">
           <div className="text-xs text-gray-500>
             Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
     </div>)
 export default PerformanceDashboard;
+">

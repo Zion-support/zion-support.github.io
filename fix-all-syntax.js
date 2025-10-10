@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-
+'
 import path from 'path';
 
 function fixAllSyntaxErrors(filePath) {
-  try {
+  try {'
     let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
 
-    // Fix duplicate property patterns: property: value
+    // Fix duplicate property patterns: property: value'
     content = content.replace(/(\w+):\s*\1:\s*['"`][^'"`]*['"`]/g, (match, prop) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
@@ -18,7 +18,7 @@ function fixAllSyntaxErrors(filePath) {
 
     });
 
-    // Fix missing commas before properties
+    // Fix missing commas before properties'
     content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {
       const lines = match.split('\n);;
 
@@ -26,8 +26,8 @@ function fixAllSyntaxErrors(filePath) {
         const firstLine = lines[0];;
 
         const secondLine = lines[1];;
-
-        if (!firstLine.includes(',') && secondLine.trim().startsWith(p2 + ':')) {
+'
+        if (!firstLine.includes(',') && secondLine.trim().startsWith(p2 + ':')) {'
           return firstLine + ',' + '\n + secondLine;
 
         }
@@ -38,7 +38,7 @@ function fixAllSyntaxErrors(filePath) {
 
     });
 
-    // Fix duplicate website properties
+    // Fix duplicate website properties'
     content = content.replace(/website:\s*\n\s*website:\s*['"`][^'"`]*['"`]/g, (match) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
@@ -46,7 +46,7 @@ function fixAllSyntaxErrors(filePath) {
 
     });
 
-    // Fix duplicate image properties
+    // Fix duplicate image properties'
     content = content.replace(/image:\s*\n\s*image:\s*['"`][^'"`]*['"`]/g, (match) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
@@ -54,14 +54,14 @@ function fixAllSyntaxErrors(filePath) {
 
     });
 
-    // Fix duplicate tier properties
+    // Fix duplicate tier properties'
     content = content.replace(/tier:\s*\n\s*tier:\s*['"`][^'"`]*['"`]/g, (match) => {
       const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
       return `tier: '${value}'`;
 
     });
-
+'
     if (content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
 
@@ -92,10 +92,10 @@ function findFilesWithSyntaxErrors(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+'
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
-
+'
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
 
@@ -111,7 +111,7 @@ function findFilesWithSyntaxErrors(dir) {
 
 }
 
-// Main execution
+// Main execution'
 const files = findFilesWithSyntaxErrors('/workspace);;
 
 console.log(`Checking ${files.length} files for syntax errors`);
@@ -127,3 +127,4 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
+'

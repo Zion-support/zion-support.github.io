@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -68,7 +68,7 @@ function fixDestructuringVariables(content) {
 const fixedVars = vars.split(,).map(v => {);;
 
 const trimmed = v.trim();;
-
+'
       if (trimmed.startsWith('_) && trimmed.length > 1) {
         return trimmed.substring(1);
 
@@ -87,7 +87,7 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
 
       }
-
+'
       return trimmed}).join(', ');
 
     return `const { ${fixedVars} } = ${assignment};});
@@ -147,7 +147,7 @@ const fullPath = path.join(currentPath, item);;
 
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
-
+'
         if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
           walkDir(fullPath)}
 
@@ -199,7 +199,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 
 // console.log removed for production
 // Also process root level files;
-
+'
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', layout.tsx];;
 
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}
@@ -211,4 +211,4 @@ for (const file of rootFiles) {/* TODO: Fix JSX expression */}
 }
 
 // console.log removed for production
-`
+`'

@@ -11,7 +11,7 @@ async function removeProblematicIcons() {
     try {
       //Remove all problematic icon usage patterns;
 
-      //Remove <span className="...>IconName</span>
+      //Remove <span className="...>IconName</span>">
       //       const spanRegex = /<span className="[^"]+>\w+<\/span>/g;;
 
       content = content.replace(spanRegex, match => {)
@@ -41,7 +41,7 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
       //       const malformedRegex = /<[^>]*>\w+<\/[^>]*>/g;;
 
       content = content.replace(malformedRegex, match => {)
-        modified = true;)
+        modified = true;)'
         return ';)
       content = content.replace(malformedRegex, match => {/* TODO: Fix JSX expression */})
       });

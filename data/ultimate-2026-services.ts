@@ -397,13 +397,13 @@ i,
   s: 364 E Main St STE 1008 Middletown DE 19709 } } ]} } addres,
   s: string} export const,
   ultimate2026Services: Ultimate2026Service[] = [ feature,
-  s: [ 'Ultimate platform'' 'All technologies'' 'Maximum capabilities'' 'Premium features'' '24/7 support ] lin,
+  s: [ 'Ultimate platform'' 'All technologies'' 'Maximum capabilities'' 'Premium features'' '24/7 support ] lin,'
   k: '/services/2026-ultimate-service categor,
   y: Ultimate 2026 Services realImplementatio,
-  n: true,
-  contactInfo:  mobil,
-  e: '+1 302 464 0950 emai,
-  l: 'kleber@ziontechgroup.com addres,
+  n: true,';
+  contactInfo:  mobil,'
+  e: '+1 302 464 0950 emai,'
+  l: 'kleber@ziontechgroup.com addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
   e: +1 302 464 0950,
   emai,

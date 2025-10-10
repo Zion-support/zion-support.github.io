@@ -1,13 +1,13 @@
 #!/usr/bin/env node;
 
 import { execSync } from 'child_process;
-
+'
 import fs from 'fs;
 
 // //Function to safely execute git commands;
 
 function safeGitCommand(command, description) {
-  try {
+  try {'
     //     //     const result = execSync(command, { encoding: 'utf8', stdio: pipe });;
 
     //     return { success: true, result }} catch (error) {
@@ -26,17 +26,17 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 }
 
 //Ensure were on main branch;
-
+'
 safeGitCommand('git checkout main', Switch to main branch);
-
+'
 safeGitCommand('git pull origin main', Pull latest changes from main);
 
 //List of PR branches to try merging;
 
 const prBranches = [;;;
-
-  'cursor/fix-web-application-console-errors-0 bf5,
-  'cursor/build-and-deploy-with-vite-and-netlify-8 b37,
+'
+  'cursor/fix-web-application-console-errors-0 bf5,'
+  'cursor/build-and-deploy-with-vite-and-netlify-8 b37,'
   'cursor/fix-errors-and-merge-to-main-fcbd,
   cursor/fix-errors-and-merge-to-main-e6 e1];
 
@@ -111,7 +111,7 @@ const summary = {;;
   conflictedBranches: conflictCount;
 
   totalProcessed: prBranches.length;
-
+'
   status: mergedCount > 0 ? 'success' : no-changes,;
 
 const summary = {/* TODO: Fix JSX expression */};;

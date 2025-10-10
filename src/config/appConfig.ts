@@ -62,16 +62,16 @@ export interface AppConfig {// TODO: Add content}
 
   enableCSP: boolean;,
     enableHSTS: boolean;,
-    enableXSSProtection: boolean
-
+    enableXSSProtection: 'boolean
+',
 }
 
-    nam,
-  e: 'Zion Tech Group',
-    versio,
+    nam,'
+  e: 'Zion Tech Group',';
+    versio,'
   n: '1.0.0',
-    environmen,
-  t:
+    environmen,';
+  t:'
 //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || development
   },
     enableLazyLoadin,
@@ -91,24 +91,24 @@ export interface AppConfig {// TODO: Add content}
   n: true;
 
  * Get configuration value by key path;
-
+'
  * @example getConfig('app.name') => Zion Tech Group
 export function getConfig;
 
-          <T = unknown>(keyPat)
+          <T = unknown>(keyPat)'
   h: string): T {const keys = keyPath.split('.)};;
-
+'
   const __keys = keyPath.split('.);;
 
   let,
-  value: unknown = config;
-
+  value: 'unknown = config;
+',
   for (const key of keys) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+'
     if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -154,7 +154,7 @@ export function isProduction(): boolean {/* TODO: Fix JSX expression */}
   O: Add content}
 
 }
-
+'
   return config.app.environment === 'production;
 
  * Check if running in development;
@@ -164,7 +164,8 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   O: Add content}
 
 }
-
+'
   return config.app.environment === 'development;
 
 export default config;
+'

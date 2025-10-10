@@ -179,15 +179,15 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
             analytics.trackPerformance(`page_load_${key}, value)});
 
           // Track overall page load performance;
-
-          analytics.track('page_load_complete)
-            'performance)
+'
+          analytics.track('page_load_complete)'
+            'performance)'
             'complete)
             undefined)
             metrics.totalLoadTime;
-
-          analytics.track('page_load_complete,
-            'performance,
+'
+          analytics.track('page_load_complete,'
+            'performance,'
             'complete,
             undefined,
             metrics.totalLoadTime;)
@@ -198,7 +198,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
     };
 
     // Track immediately if page is already loaded;
-
+'
     if (document.readyState === 'complete) {
       trackPageLoad()} else {
       // Wait for load event;
@@ -206,7 +206,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
       window.addEventListener(load, trackPageLoad);
 
       return () => window.removeEventListener(load, trackPageLoad);
-
+'
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
@@ -233,7 +233,7 @@ const _resourceEntry = entry as PerformanceResourceTiming;;
           analytics.trackPerformance(
 
 export const useResourcePerformance = () => {/* TODO: Fix JSX expression */};;
-
+'
             `resource_${resourceEntry.name.split('.').pop()},
             resourceEntry.duration,
             ms
@@ -256,7 +256,7 @@ export const useLongTaskMonitoring = () => {;;
 
 const observer = performanceOptimizer.monitorLongTasks(entries => {);;
 
-      entries.forEach(entry => {)
+      entries.forEach(entry => {)'
         analytics.track('long_task', 'performance', detected, undefined, entry.duration);
 
 export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */};;
@@ -271,4 +271,4 @@ export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 export default usePerformance;
 
-`
+`'

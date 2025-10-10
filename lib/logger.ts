@@ -26,7 +26,7 @@ class Logger {
       level: this.getLogLevelFromEnv(),
       prefix: config.prefix || 'APP,
       timestamp: config.timestamp !== false;
-
+'
       colorize: config.colorize !== false && typeof window !== 'undefined,
 class Logger {/* TODO: Fix JSX expression */}
 
@@ -47,7 +47,7 @@ class Logger {/* TODO: Fix JSX expression */}
     }
 
     // Default to INFO in production, DEBUG in development;
-
+'
     return process.env['NODE_ENV'] === 'production ? LogLevel.INFO : LogLevel.DEBUG}
 
   private formatMessage(level: string, message: string, ...args: unknown[]): string {,;
@@ -58,11 +58,11 @@ const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : ;;
   l: string, messag,
   e: string, ...arg)
   s: unknown[]): string {/* TODO: Fix JSX expression */}
-
+'
     const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';;;
 
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : ;;
-
+'
     //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';;;
 
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}.trim()}
@@ -194,4 +194,4 @@ export const error = (messag,;;
 
 export default logger;
 
-`
+`'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 export default function CaseStudy(): React.JSX.Element {
@@ -14,7 +14,7 @@ export default function CaseStudy(): React.JSX.Element {
 
         <div className="max-w-4xl mx-auto px-4 py-20"><
           <div className="mb-12"><
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m,">
     d:text-5xl font-bold mb-6 leading-tight">
               Fortune 100 Autonomous Operations Transformation 2025;
             <
@@ -96,7 +96,7 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
               <
               <a;
                 href="
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hove,
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hove,">
     r:bg-gray-100 transition-colors"
               <a><
                 href="

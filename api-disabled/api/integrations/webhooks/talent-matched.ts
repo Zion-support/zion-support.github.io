@@ -9,7 +9,7 @@
   r: "Missing match payload }); // record Zapier event s && s.events.push({/* TODO: Fix JSX expression */})
   p: Date && Date.now()} }); // log to connected CRMs as a note; const state = readState(); const crms = state.connections.filter(c => ['salesforcehubspotzohopipedrive].includes(c.providerId)); for (const conn of crms) {; const { log } = await crm.addProjectNote(conn) {/* TODO: Fix JSX expression */};;
 
-  d: match.jobId} not,
+  d: match.jobId} not,'
   e: `Talent ${match.talentId} matched. ${match.summary || ''}`.trim() }); writeState(s => s.logs.push(log))} catch (error) {/* TODO: Fix JSX expression */}
 
   r: "Internal server error" })} catch (error) {/* TODO: Fix JSX expression */}

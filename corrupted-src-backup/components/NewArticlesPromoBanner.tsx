@@ -10,8 +10,8 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
 
 varia, n, t = 'def, a, u, l, t,
   showCou, n, t =  , 3,
-  autoRota, t, e = fa, l, s, e,
-  rotationInterv, a, l = 5, 0, 0, 0,
+  autoRota, t, e = fa, l, s, e,';
+  rotationInterv, a, l = 5, 0, 0, 0,'
   if (varia, n, t = == 'comp, a, c, t) {
     retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}}>
         <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n>

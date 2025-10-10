@@ -13,15 +13,15 @@ export function generateId(prefix = 'a11y): string {
  * Announce message to screen readers
  */
 export function announceToScreenReader(
-
-  message: string,
+';
+  message: string,'
   priority: 'polite' | 'assertive = polite
 ): void {;
 
 const announcement = document.createElement(div);;
 
   announcement.setAttribute(aria-live, priority);
-
+'
   announcement.setAttribute('aria-atomic', true);
 
   announcement.className = sr-only;
@@ -40,7 +40,7 @@ const announcement = document.createElement(div);;
 export function trapFocus(element: HTMLElement): () => void {;
 
 const focusableElements = element.querySelectorAll(;;
-
+'
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
 
@@ -51,7 +51,7 @@ const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLEle
 ;
 
 const handleKeyDown = (e: KeyboardEvent) => {;;
-
+'
     if (e.key === 'Tab) {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {
@@ -75,7 +75,7 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 
   firstFocusable?.focus();
 
-  return () => {
+  return () => {'
     element.removeEventListener('keydown, handleKeyDown)}}
 
 /**
@@ -84,7 +84,7 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 export function isKeyboardAccessible(element: HTMLElement): boolean {;
 
 const tabIndex = element.getAttribute(tabindex);;
-
+'
   return tabIndex !== null && tabIndex !== '-1}
 
 /**
@@ -110,7 +110,7 @@ const { role = button, tabindex = 0 } = options;
   ;
 
 const handleKeyDown = (e: KeyboardEvent) => {;;
-
+'
     if (e.key === 'Enter' || e.key === ' ) {
       e.preventDefault();
 
@@ -124,7 +124,7 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 
   return () => {
     element.removeEventListener(click, onClick);
-
+'
     element.removeEventListener('keydown, handleKeyDown)}}
 
 /**
@@ -163,13 +163,13 @@ const darkest = Math.min(lum1, lum2);;
 export function meetsContrastRequirements(
 
   color1: string,
-  color2: string,
-  level: 'AA' | 'AAA' = 'AA,
+  color2: string,'
+  level: 'AA' | 'AAA' = 'AA,'
   fontSize: 'normal' | 'large = normal
 ): boolean {;
 
 const ratio = getContrastRatio(color1, color2);;
-
+'
   return fontSize === 'large ? ratio >
 );
 
@@ -203,10 +203,10 @@ const skipLink = document.createElement(a);;
   skipLink.style.textDecoration = none;
 
   skipLink.style.zIndex = 100;
-
+'
   skipLink.addEventListener('focus, () => {
     skipLink.style.top = 0});
-
+'
   skipLink.addEventListener('blur, () => {
     skipLink.style.top = -40px});
 
@@ -215,20 +215,20 @@ const skipLink = document.createElement(a);;
 /**
  * Detect if user prefers reduced motion
  */
-export function prefersReducedMotion(): boolean {
+export function prefersReducedMotion(): boolean {'
   return window.matchMedia('(prefers-reduced-motion: reduce)).matches}
 
 /**
  * Detect if user prefers dark mode
- */
-export function prefersDarkMode(): boolean {
+ */';
+export function prefersDarkMode(): boolean {'
   return window.matchMedia('(prefers-color-scheme: dark)).matches}
 
 /**
  * Get ARIA label for form validation error
  */
-export function getAriaInvalid(hasError: boolean): Record<string, string> {
-  return {
+export function getAriaInvalid(hasError: boolean): Record<string, string> {';
+  return {'
     ...(hasError && { 'aria-describedby': generateId('error) })
   }}
 
@@ -237,8 +237,8 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {
  */
 export function createAccessibleTooltip(
 
-  trigger: HTMLElement,
-  content: string,
+  trigger: HTMLElement,';
+  content: string,'
   placement: 'top' | 'bottom' | 'left' | 'right = top
 ): () => void {;
 
@@ -247,7 +247,7 @@ const tooltip = document.createElement(div);;
   tooltip.textContent = content;
 
   tooltip.className = tooltip;
-
+'
   tooltip.setAttribute('role', tooltip);
 
   tooltip.style.position = absolute;
@@ -276,28 +276,28 @@ const showTooltip = () => {;;
 
 const triggerRect = trigger.getBoundingClientRect();;
 
-    switch (placement) {
+    switch (placement) {'
       case 'top:
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px;
 
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px;
 
         break;
-
+'
       case 'bottom:
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px;
 
         tooltip.style.top = `${triggerRect.bottom + 5}px;
 
         break;
-
+'
       case 'left:
         tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px;
 
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px;
 
         break;
-
+'
       case 'right:
         tooltip.style.left = `${triggerRect.right + 5}px;
 
@@ -350,7 +350,7 @@ export class FocusManager {
   moveFocusInside(container: HTMLElement): void {;
 
 const focusableElements = container.querySelectorAll(;;
-
+'
       'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     );
 
@@ -361,3 +361,4 @@ const firstFocusable = focusableElements[0] as HTMLElement;;
 }
 
   }
+'

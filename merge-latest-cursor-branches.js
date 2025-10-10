@@ -10,23 +10,23 @@ import fs from fs;
 //Latest cursor branches to merge;
 
 const latestCursorBranches = [;;;
-
-  'cursor/fix-errors-and-merge-to-main-19 db,
-  'cursor/fix-errors-and-merge-to-main-40 d9,
-  'cursor/fix-errors-and-merge-to-main-5 fb2,
-  'cursor/fix-errors-and-merge-to-main-8510,
-  'cursor/fix-errors-and-merge-to-main-9658,
-  'cursor/fix-errors-and-merge-to-main-afb8,
-  'cursor/fix-errors-and-merge-to-main-afbc,
-  'cursor/fix-errors-and-merge-to-main-b319,
-  'cursor/fix-errors-and-merge-to-main-bb50,
+'
+  'cursor/fix-errors-and-merge-to-main-19 db,'
+  'cursor/fix-errors-and-merge-to-main-40 d9,'
+  'cursor/fix-errors-and-merge-to-main-5 fb2,'
+  'cursor/fix-errors-and-merge-to-main-8510,'
+  'cursor/fix-errors-and-merge-to-main-9658,'
+  'cursor/fix-errors-and-merge-to-main-afb8,'
+  'cursor/fix-errors-and-merge-to-main-afbc,'
+  'cursor/fix-errors-and-merge-to-main-b319,'
+  'cursor/fix-errors-and-merge-to-main-bb50,'
   'cursor/fix-errors-and-merge-to-main-cf0 f,
   cursor/fix-errors-and-merge-to-main-e15 f];
 
 //Function to safely execute git commands;
 
 function safeGitCommand(command, description) {
-  try {
+  try {'
     //     const result = execSync(command, { encoding: 'utf8', stdio: pipe });;
 
     return { success: true, result }} catch (error) {
@@ -63,9 +63,9 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Ensure were on main branch;
-
+'
 safeGitCommand('git checkout main', Switch to main branch);
-
+'
 safeGitCommand('git pull origin main', Pull latest changes from main);
 
 //Process each branch;
@@ -79,7 +79,7 @@ for (const branch of latestCursorBranches) {
     notFoundCount++;
 
     results.push({)
-      branch)
+      branch)'
       status: 'not_found),
 for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */}
 
@@ -102,11 +102,11 @@ for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */}
       branch)
       status: 'merged)})} else {
     //Try to abort the merge if there was a conflict;
-
+'
     safeGitCommand('git merge --abort', `Abort merge for ${branch});
 
     results.push({)
-      branch)
+      branch)'
       status: 'conflict),
       error: mergeResult.error),
   //Try to merge the branch;;
@@ -166,7 +166,7 @@ const report = {;;
 
     allPassed: typeCheck.success && lintCheck.success && testCheck.success && buildCheck.success},
   results: results;
-
+'
   status: mergedCount > 0 ? 'success' : no-changes,;
 
 const report = {/* TODO: Fix JSX expression */};;
@@ -178,7 +178,7 @@ const report = {/* TODO: Fix JSX expression */};;
   },
   result,
   s: results,
-  statu,
+  statu,'
   s: mergedCount > 0 ? 'success' : no-changes};
 
 // Save detailed report;

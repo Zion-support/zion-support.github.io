@@ -38,12 +38,12 @@ const quoteCount = (line.match(//g) || []).length;;
       }
 
       // Fix unterminated single quotes;
-
+'
       if (line.includes("'") && !line.match(/'[^]*/)) {;
 
 const quoteCount = (line.match(//g) || []).length;;
 
-        if (quoteCount % 2 === 1) {
+        if (quoteCount % 2 === 1) {'
           line = line + "';
 
           modified = true}
@@ -51,12 +51,12 @@ const quoteCount = (line.match(//g) || []).length;;
       }
 
       // Fix unterminated template literals;
-
+'
       if (line.includes('`') && !line.match(/`[^`]*/)) {;
 
 const backtickCount = (line.match(//g) || []).length;;
 
-        if (backtickCount % 2 === 1) {
+        if (backtickCount % 2 === 1) {'
           line = line + ';
 
           modified = true}
@@ -64,14 +64,14 @@ const backtickCount = (line.match(//g) || []).length;;
       }
 
       // Fix incomplete imports;
-
+'
       if (line.startsWith('import ') && !line.endsWith(';') && !line.includes('{') && !line.includes('()) {
         line = line + ;
 
         modified = true}
 
       // Fix incomplete exports;
-
+'
       if (line.startsWith('export ') && !line.endsWith(';') && !line.includes('{') && !line.includes('()) {
         line = line + ;
 
@@ -141,7 +141,7 @@ const backtickCount = (line.match(//g) || []).length;;
         modified = true}
 
       // Fix incomplete single-line comments;
-
+'
       if (line.trim() === '//) {
         line = // TODO: Add comment;
 
@@ -164,7 +164,7 @@ const backtickCount = (line.match(//g) || []).length;;
       modified = true}
 
     // Ensure file ends with newline;
-
+'
     if (!content.endsWith('\n)) {
       content += \n;
 
@@ -183,7 +183,7 @@ return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
-
+'
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 const files = [];;
@@ -203,7 +203,7 @@ const fullPath = path.join(currentDir, item);;
 
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
-
+'
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             traverse(fullPath)}
 
@@ -260,3 +260,4 @@ if (fixedCount > 0) {
 } else {
   // console.log removed for production
 }
+'

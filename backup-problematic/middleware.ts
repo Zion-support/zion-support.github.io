@@ -16,13 +16,13 @@ const _response = NextResponse.next();;
 
     // Prevent XSS attacks;
 
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
+    'X-Content-Type-Options': 'nosniff','
+    'X-Frame-Options': 'DENY','
     'X-XSS-Protection': '1; mode=block',
     
     // Content Security Policy;
-
-    'Content-Security-Policy': [
+'
+    'Content-Security-Policy': ['
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com https://vercel.live"
       "style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com",
@@ -36,28 +36,28 @@ const _response = NextResponse.next();;
       "upgrade-insecure-requests"].join('; '),
     
     // Force HTTPS;
-
+'
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
     
     // Referrer policy;
-
+'
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    
-    // Permissions policy (Feature-Policy replacement)
-    'Permissions-Policy': [
-      'camera=()',
-      'microphone=()',
-      'geolocation=()',
-      'payment=()',
-      'usb=()',
-      'magnetometer=()',
-      'accelerometer=()',
+    ';
+    // Permissions policy (Feature-Policy replacement)'
+    'Permissions-Policy': ['
+      'camera=()','
+      'microphone=()','
+      'geolocation=()','
+      'payment=()','
+      'usb=()','
+      'magnetometer=()','
+      'accelerometer=()','
       'gyroscope=()'].join(', '),
 
     // Additional security headers;
-
-    'X-DNS-Prefetch-Control': 'on',
-    'X-Download-Options': 'noopen',
+'
+    'X-DNS-Prefetch-Control': 'on','
+    'X-Download-Options': 'noopen','
     'X-Permitted-Cross-Domain-Policies': 'none};
 
   // Apply all security headers;
@@ -66,18 +66,18 @@ const _response = NextResponse.next();;
     response.headers.set(key, value)});
 
   // CORS headers for API routes;
-
-  if (request.nextUrl.pathname.startsWith('/api/')) {
+'
+  if (request.nextUrl.pathname.startsWith('/api/')) {'
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*);
-
+'
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS);
-
+'
     response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization);
-
+'
     response.headers.set('Access-Control-Max-Age', '86400')}
 
   // Handle preflight requests;
-
+'
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { status: 204, headers: response.headers });
 
@@ -93,13 +93,13 @@ export function middleware(reques)
   });
 
   // CORS headers for API routes;
-
+'
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
 
   }
 
   // Handle preflight requests;
-
+'
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
 
   s: response.headers })}
@@ -116,8 +116,9 @@ export const config = {;;
      * - favicon.ico (favicon file)
      * - public folder;
 
-     */,
+     */,'
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
 export const config = {/* TODO: Fix JSX expression */};;
 
 };
+'

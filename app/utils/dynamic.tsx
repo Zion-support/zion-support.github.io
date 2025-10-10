@@ -51,3 +51,4 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
     }
 
 export default dynamic;
+'

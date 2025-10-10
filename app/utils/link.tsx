@@ -1,7 +1,7 @@
 
 interface LinkProps {
   href: string,
-    children: React.ReactNode
+    children: 'React.ReactNode',
 interface LinkProps {}
 
   href: string,
@@ -55,9 +55,9 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
 }
 
     // Handle internal navigation;
-
-    if (href.startsWith('/') && !href.startsWith('//)) {
-    // Handle internal navigation
+'
+    if (href.startsWith('/') && !href.startsWith('//)) {';
+    // Handle internal navigation'
     if (href.startsWith('/') && !href.startsWith('//)) {}
 
       e.preventDefault()
@@ -84,7 +84,7 @@ export const,
 }
 
     // Handle internal navigation;
-
+'
     if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */});
 
 }
@@ -131,3 +131,4 @@ export default Link;
 export default Link;
 
 }
+'

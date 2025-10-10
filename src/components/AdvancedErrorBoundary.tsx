@@ -12,8 +12,8 @@ interface ErrorBoundaryState {
   errorId: string | null}
 
 interface ErrorBoundaryProps {
-  children: ReactNode;
-
+  children: 'ReactNode;
+',
   fallback?: ReactNode}
 
 interface ErrorReport {
@@ -46,7 +46,7 @@ constructor(props: ErrorBoundaryProps) {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: 'null',
     }}
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
@@ -95,7 +95,7 @@ const errorReport: ErrorReport = {
       // Send to error reporting service
       await fetch(/api/error-report, {
         method: POST,
-        headers: {
+        headers: {'
           'Content-Type': application/json},
         body: JSON.stringify(errorReport)})} catch (reportError) {
       // console.error removed for production
@@ -108,7 +108,7 @@ const errorReport: ErrorReport = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: 'null',
     })};
 
   private handleReload = () => {
@@ -145,8 +145,8 @@ const errorReport: ErrorReport = {
             {process.env.NODE_ENV === development && this.state.error && (
 
               <div className=mb-4 p-3 bg-red-50 border border-red-200 rounded-md>
-                <h4 className=text-sm font-medium text-red-800 mb-2>Error Details:</h4>
-                <pre className=text-xs text-red-700 overflow-auto>
+                <h4 className=text-sm font-medium text-red-800 mb-2>Error Details: '</h4>
+                <pre className=text-xs text-red-700 overflow-auto>',
                   {this.state.error.message}
 
                   {this.state.error.stack && \n\n${this.state.error.stack}}

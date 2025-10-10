@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
 
 import {
@@ -41,19 +41,19 @@ import {
 
 const AboutPage: React.FC = () => {
   return (<div>
-        <title>About Us - Zion Tech Group | Advanced AI and IT Solutions<
+        <title>About Us - Zion Tech Group | Advanced AI and IT Solutions<'
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation. 
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation 
       <
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-        {/* Hero Section *
-        <section className="pt-20 pb-16 px-4>
-          <div className="max-w-7xl mx-auto>
-            <div className="text-center mb-16>
+        {/* Hero Section *">
+        <section className="pt-20 pb-16 px-4>">
+          <div className="max-w-7xl mx-auto>">
+            <div className="text-center mb-16>">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6>
                 About Zion Tech Group
-              <
+              <">
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
 } from 'lucide-react;
 
@@ -78,43 +78,43 @@ const AboutPage: React.FC = () => {              <
                   We believe that every organization deserves access to cutting-edge technology 
                   that can transform their operations, enhance their capabilities, and drive 
                   sustainable growth.
-                <
-                <div className="flex flex-col sm: flex-row gap-4>
+                <">
+                <div className="flex flex-col sm: flex-row gap-4>">
                 <div className="flex flex-col sm:flex-row gap-4>
                   <a
-                    href=
+                    href=">
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2
                   >
-                  >
+                  >">
                     <MessageCircle className="w-5 h-5 
                     <span>Get in Touch<
                   <
                   <a
                     href=
                     className=border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white
-                  >
+                  >">
                     <Settings className="w-5 h-5 
                     <span>Our Services<
                   <
                 <
-              <
+              <">
               <div className="relative>
-                <div className=bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white
-                  <div className="space-y-6>
-                    <div className="flex items-center space-x-3>
-                      <div className="w-3 h-3 bg-red-500 rounded-full><
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full><
+                <div className=bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white">
+                  <div className="space-y-6>">
+                    <div className="flex items-center space-x-3>">
+                      <div className="w-3 h-3 bg-red-500 rounded-full><">
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full><">
                       <div className="w-3 h-3 bg-green-500 rounded-full><
-                    <
-                    <div className="space-y-4>
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded><
-                      <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4><
+                    <">
+                    <div className="space-y-4>">
+                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded><">
+                      <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4><">
                       <div className="h-4 bg-gradient-to-r from-pink-500 to-red-500 rounded w-1/2><
-                    <
-                    <div className="text-center text-white>
-                      <div className="text-2xl font-bold>AI Dashboard<
+                    <">
+                    <div className="text-center text-white>">
+                      <div className="text-2xl font-bold>AI Dashboard<">
                       <div className="text-sm text-gray-300>Real-time Analytics<
-                    <
+                    <">
                     <MessageCircle className="w-5 h-5 />                    <span>Get in Touch</span>
                   </a>
                   <a
@@ -170,3 +170,4 @@ const AboutPage: React.FC = () => {              <
             <
           <
 <
+">

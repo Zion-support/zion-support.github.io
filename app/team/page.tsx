@@ -1,11 +1,11 @@
 'use client;
-
+'
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
-
+'
 import Navigation from '../components/Navigation;
-
+'
 import Footer from '../components/Footer;
 
 ;
@@ -23,7 +23,7 @@ const TeamPage: React.FC = () => {  return (<div>
                 Our Team<
               <
               
-              <div className="prose prose-lg max-w-none><
+              <div className="prose prose-lg max-w-none><">
                 <p className="text-xl text-gray-600 mb-8>
                   Meet the experts behind our success.                <
                 
@@ -49,4 +49,4 @@ export default TeamPage;
 
 }
 
-  );)
+  );)">

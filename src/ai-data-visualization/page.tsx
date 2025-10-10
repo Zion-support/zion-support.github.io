@@ -1,13 +1,13 @@
 'use client;
-
+'
 import { Helmet } from 'react-helmet-async;
-
+'
 import React from 'react;
 
 import Navigation from ../components
 import Footer from ../components
 
-export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
+export default function AIDataVisualizationPage() {/* TODO: 'Fix JSX expression *',
 }
 
   return (<div><Helmet><
@@ -24,7 +24,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Hero Section *
           <section className=text-center mb-16><
             <h1 className=text-4xl,
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text><
+  md: 'text-6xl font-bold text-white mb-6 neon-text cyber-text><
               AI Data Visualization;
 
             <
@@ -32,7 +32,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               Transform data into actionable insights with AI;
 
             <
-            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><
+            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><',
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
             <
           <
@@ -42,7 +42,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>AI-Powered Features<
             <div className=grid grid-cols-1,
   md:grid-cols-2,
-  lg:grid-cols-3 gap-8><
+  lg: 'grid-cols-3 gap-8><
               <div className=cyber-card p-6 energy-pulse><
                 <div className=text-4xl mb-4 text-center>🎨<
                 <h3 className=text-xl font-bold text-white mb-4 text-center>Auto-Generated Charts<
@@ -54,7 +54,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className=cyber-card p-6 energy-pulse><
                 <div className=text-4xl mb-4 text-center>🔍<
                 <h3 className=text-xl font-bold text-white mb-4 text-center>Smart Insights<
-                <p className=text-gray-300 text-center><
+                <p className=text-gray-300 text-center><',
                   AI analyzes your data and provides intelligent insights, trends, and recommendations.
                 <
               <
@@ -146,7 +146,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>Perfect For<
             <div className=grid grid-cols-1,
   md:grid-cols-2,
-  lg:grid-cols-4 gap-8><
+  lg: 'grid-cols-4 gap-8><
               <div className=cyber-card p-6 text-center><
                 <div className=text-4xl mb-4>📊<
                 <h3 className=text-xl font-bold text-white mb-4>Business Intelligence<
@@ -155,7 +155,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               
               <div className=cyber-card p-6 text-center><
                 <div className=text-4xl mb-4>📈<
-                <h3 className=text-xl font-bold text-white mb-4>Sales Analytics<
+                <h3 className=text-xl font-bold text-white mb-4>Sales Analytics<',
                 <p className=text-gray-300>Track sales performance, identify trends, and optimize revenue strategies.<
               <
               
@@ -180,7 +180,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               Join 2,000+ companies using our AI data visualization platform to make better decisions with their data.
             <
             <div className=flex flex-col,
-  sm:flex-row gap-4 justify-center><
+  sm: 'flex-row gap-4 justify-center><',
               <a href=te,
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
@@ -190,7 +190,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <a href=
   hove,
     r:bg-white,
-  hover:text-indigo-600 transition-all duration-300><
+  hover: 'text-indigo-600 transition-all duration-300><
                 Get Free Demo;
 
               <
@@ -200,5 +200,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         
         <Footer /></Footer>
       </div>
-    </div>
+    </div>',
   )}"

@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { readdir } from fs/promises;
@@ -13,42 +13,42 @@ function fixNetlifyFunction(content) {
 
   let fixed = content;;;
 
-    // Fix malformed function signatures like (event) context) -> (event, context)
-    .replace(/\(event\)\s+context\)/g, '(event, context))
+    // Fix malformed function signatures like (event) context) -> (event, context)'
+    .replace(/\(event\)\s+context\)/g, '(event, context))'
     .replace(/\(event,\s*context\)\s+callback\)/g, '(event, context))
     // Fix missing commas in object literals;
-
-    .replace(/(\w+)\s*\)\s*(\w+)/g, '$1,\n        $2)
+'
+    .replace(/(\w+)\s*\)\s*(\w+)/g, '$1,\n        $2)'
     .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2)
     // Fix malformed JSON.stringify calls;
-
-    .replace(/JSON\.stringify\(\{\s*'([^']+)'\s*:\s*'([^']+)'\)/g, 'JSON.stringify({\n        $1: $2),
+'
+    .replace(/JSON\.stringify\(\{\s*'([^']+)'\s*:\s*'([^']+)'\)/g, 'JSON.stringify({\n        $1: $2),'
     .replace(/(\w+)\s*:\s*'([^']+)'\)\s*(\w+)/g, '$1: $2,\n        $3)
     // Remove duplicate exports and malformed code;
-
+'
     .replace(/\/\/ exports\.handler = .*$/gm, ')
     // Fix missing commas in arrays and objects;
 
 function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
-
+'
     .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2)
     // Fix malformed JSON.stringify calls;
 
-    .replace(/JSON\.stringify\(\{/* TODO: Fix JSX expression */})
-    .replace(/(\w+)\s*}\s*\)/g, '$1\n      }))
+    .replace(/JSON\.stringify\(\{/* TODO: Fix JSX expression */})'
+    .replace(/(\w+)\s*}\s*\)/g, '$1\n      }))'
     .replace(/(\w+)\s*\)\s*}/g, '$1\n      })
     // Clean up extra whitespace and newlines;
-
+'
     .replace(/\n\s*\n\s*\n/g, '\n\n)
     .replace(/\s+$/gm, );
 
   // Ensure proper function structure;
-
+'
   if (!fixed.includes('exports.handler = async function)) {
     return content; // Skip if no proper function found}
 
   // Add proper error handling if missing;
-
+'
   if (!fixed.includes('try {') && !fixed.includes(catch)) {;
 
 const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);;
@@ -67,10 +67,10 @@ const _body = handlerMatch[1].trim();;
     return {
       statusCode: 500;
 
-      body: JSON.stringify({)
+      body: JSON.stringify({)'
         error: 'Function failed),
-        message: error.message),
-        timestamp: new Date().toISOString(),
+        message: error.message),';
+        timestamp: new Date().toISOString(),'
   if (!fixed.includes('exports.handler = async function)) {/* TODO: Fix JSX expression */}
 
   }
@@ -91,7 +91,7 @@ const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*
   } catch (error) {/* TODO: Fix JSX expression */}
 
       }),
-      header,
+      header,'
   s: {'Content-Type': 'application/json}
 
     }}
@@ -118,7 +118,7 @@ async function main() {/* TODO: Fix JSX expression */}
 ;
 
 const files = (await readdir(functionsDir));;
-
+'
     .filter(file => file.endsWith('.js))
     .map(file => path.join(functionsDir, file));
 
@@ -163,4 +163,4 @@ if (import.meta.url === `fil)
 
 }
 
-export { fixNetlifyFunction };`
+export { fixNetlifyFunction };`'

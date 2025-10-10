@@ -75,8 +75,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     );
 
-    interactiveElements.forEach(element => {)
-      if (!element.hasAttribute('tabindex)) {
+    interactiveElements.forEach(element => {)'
+      if (!element.hasAttribute('tabindex)) {'
         element.setAttribute('tabindex', '0)}
 
     interactiveElements.forEach(element => {/* TODO: Fix JSX expression */}
@@ -96,15 +96,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const _element = target as HTMLElement;;
 
     // Skip to main content;
-
+'
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main) {
       e.preventDefault();
-
+'
       const _main = document.querySelector('main') || document.querySelector(#main);;
 
       if (main) {
         (main as HTMLElement).focus();
-
+'
     if (key === 'Tab' && e.shiftKey && element.id === 'skip-to-main) {/* TODO: Fix JSX expression */}
 
       }
@@ -114,7 +114,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Escape key to close modals;
 
     if (key === Escape) {;
-
+'
 const _modal = document.querySelector('.modal[aria-hidden="false]);;
 
       if (modal) {
@@ -127,10 +127,10 @@ const _modal = document.querySelector('.modal[aria-hidden="false]);;
     }
 
     // Arrow keys for menu navigation;
-
+'
     if (['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight].includes(key)) {
       this.handleArrowNavigation(e);
-
+'
     if (['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight].includes(key)) {/* TODO: Fix JSX expression */}
 
     }
@@ -147,7 +147,7 @@ const _modal = document.querySelector('.modal[aria-hidden="false]);;
     const { key, target } = e;
 
     const _element = target as HTMLElement;;
-
+'
     const _menu = element.closest('[role="menu"], [role="menubar]);;
 
     if (!menu) return;
@@ -179,8 +179,8 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem]));;
       this.manageFocus(e.target as HTMLElement)});
 
     // Trap focus in modals;
-
-    document.addEventListener('keydown, e => {)
+'
+    document.addEventListener('keydown, e => {)'
       if (e.key === 'Tab) {
         this.trapFocusInModal(e)}
 
@@ -189,7 +189,7 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem]));;
     });
 
     // Trap focus in modals;
-
+'
     document.addEventListener('keydown, e => {/* TODO: Fix JSX expression */}
 
       })
@@ -206,7 +206,7 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem]));;
 
 ,
     // Remove focus indicator after blur;
-
+'
     element.addEventListener('blur, () => {
       element.classList.remove(focus-visible)});
 
@@ -231,7 +231,7 @@ const _items = Array.from(menu.querySelectorAll('[role="menuitem]));;
 
    */
   private trapFocusInModal(e: KeyboardEvent): void {;
-
+'
 const _modal = document.querySelector('.modal[aria-hidden="false]);;
 
     if (!modal) return;
@@ -298,7 +298,7 @@ const _label = this.generateARIALabel(button);;
 
 const _label = this.findAssociatedLabel(input as HTMLInputElement);;
 
-      if (label) {,
+      if (label) {,'
         input.setAttribute('aria-labelledby, label.id || this.generateId(label))}
 
     const _inputs = document.querySelectorAll(inpu);;
@@ -341,18 +341,18 @@ const _styles = window.getComputedStyle(element);;
 const _contrast = this.calculateContrast(color, backgroundColor);;
 
         if (contrast < 4.5) {
-          this.addIssue({)
+          this.addIssue({)'
             type: 'warning),
-            element: element as HTMLElement),
-            message: `Low color contrast: ${contrast.toFixed(2)}:1,
-            fix: 'Increase color contrast to at least 4.5:1,
+            element: element as HTMLElement),';
+            message: `Low color contrast: ${contrast.toFixed(2)}:1,'
+            fix: 'Increase color contrast to at least 4.5:1,'
             severity: 'high,
   private checkColorContrast(): void {/* TODO: Fix JSX expression */}
 
-  contrast: ${contrast.toFixed(2)}:1,
-            fi,
-  x: 'Increase color contrast to at least 4.5:1,
-            severit,
+  contrast: ${contrast.toFixed(2)}:1,';
+            fi,'
+  x: 'Increase color contrast to at least 4.5:1,';
+            severit,'
   y: 'high})}
 
       }
@@ -375,20 +375,20 @@ const _images = document.querySelectorAll(img);;
       if (!img.alt) {
         img.alt = this.generateAltText(img);
 
-        this.addIssue({)
-          type: 'error)
-          element: img;)
-          message: 'Image missing alt text),
-          fix: 'Add descriptive alt text),
+        this.addIssue({)'
+          type: 'error)';
+          element: img;)'
+          message: 'Image missing alt text),'
+          fix: 'Add descriptive alt text),'
           severity: 'high)})}
 
       // Add loading="lazy for non-critical images;
 
-      if (!img.hasAttribute('loading)) {
+      if (!img.hasAttribute('loading)) {'
         img.loading = 'lazy}
 
       // Add width and height attributes;
-
+'
       if (!img.hasAttribute('width') || !img.hasAttribute('height)) {
         img.width = img.naturalWidth || 800;
 
@@ -405,7 +405,7 @@ const _images = document.querySelectorAll(img);;
       }
 
       // Add width and height attributes;
-
+'
       if (!img.hasAttribute('width') || !img.hasAttribute('height)) {/* TODO: Fix JSX expression */}
 
       }
@@ -425,7 +425,7 @@ const _forms = document.querySelectorAll(form);;
 
 const _inputs = form.querySelectorAll(input, select, textarea);;
 
-      inputs.forEach(input => {)
+      inputs.forEach(input => {)'
         if (!input.hasAttribute('aria-label') && !input.hasAttribute(aria-labelledby)) {;
 
 const _label = this.findAssociatedLabel(input as HTMLInputElement);;
@@ -453,10 +453,10 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);;
       });
 
       // Add form validation;
-
+'
       form.addEventListener('submit, e => {)
         this.validateForm(form as HTMLFormElement, e);
-
+'
       form.addEventListener('submit, e => {/* TODO: Fix JSX expression */})
       })})}
 
@@ -478,9 +478,9 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);;
     // Add live region for announcements;
 
     const _liveRegion = document.createElement(div);;
-
+'
     liveRegion.setAttribute('aria-live', polite);
-
+'
     liveRegion.setAttribute('aria-atomic', true);
 
     liveRegion.className = sr-only;
@@ -549,17 +549,17 @@ const _generatedLabel = this.generateFormLabel(input as HTMLInputElement);;
 let _score = 100;;
 
     this.issues.forEach(issue => {)
-      switch (issue.severity) {
+      switch (issue.severity) {'
         case 'high:
           score -= 20;
 
           break;
-
+'
         case 'medium:
           score -= 10;
 
           break;
-
+'
         case 'low:
           score -= 5;
 
@@ -594,11 +594,11 @@ const recommendations: string[] = [];
     if (warningCount > 0) {/* TODO: Fix JSX expression */}
 
       recommendations.push(`Address ${warningCount} accessibility warnings)}
-
+'
     if (this.issues.some(i => i.message.includes('alt text))) {/* TODO: Fix JSX expression */}
 
-    }
-
+    }';
+'
     if (this.issues.some(i => i.message.includes('contrast))) {/* TODO: Fix JSX expression */}
 
     }
@@ -614,14 +614,14 @@ const _icon = element.querySelector(svg, i);;
     if (icon) {;
 
 const _iconClass = icon.className;;
-
+'
       return iconClass.replace(/fa-|icon-|svg-/g, '').replace(/-/g,  );
 
   private generateARIALabel(elemen)
   t: HTMLElement): string {/* TODO: Fix JSX expression */}
 
     }
-
+'
     return 'Button}
 
   private findAssociatedLabel(input: HTMLInputElement): HTMLLabelElement | null {,
@@ -640,9 +640,9 @@ const _iconClass = icon.className;;
   private generateAltText(img: HTMLImageElement): string {,;
 
 const _src = img[src];,;;
-
+'
     //     const filename = src.split('/').pop()?.split('.')[0] || image;,;;
-
+'
     return filename.replace(/[-_]/g, ' ).replace(/\b\w/g, l => l.toUpperCase())}
 
   private generateFormLabel(input: HTMLInputElement): string {
@@ -652,20 +652,20 @@ const _src = img[src];,;;
 
     if (placeholder) return placeholder;
 
-    switch (type) {
+    switch (type) {'
       case 'email:
         return Email address;
-
+'
       case 'password:
         return Password;
-
+'
       case 'tel:
         return Phone number;
-
+'
       case 'url:
         return Website URL;
 
-      default:,
+      default:,'
         return 'Input field}
 
   }
@@ -744,7 +744,7 @@ const _liveRegion = document.getElementById(live-region);;
 
   }
 
-  private closeModal(modal: HTMLElement): void {,
+  private closeModal(modal: HTMLElement): void {,'
     modal.setAttribute('aria-hidden', true);
 
     const _focusableElement = modal.querySelector([data-focus-trap-start]) as HTMLElement;;
@@ -796,10 +796,10 @@ const _liveRegion = document.getElementById(live-region);;
 export const accessibilityEnhancer = new AccessibilityEnhancer();;
 
 // Auto-initialize in browser environment;
-
+'
 if (typeof window !== 'undefined) {
   accessibilityEnhancer.init();
-
+'
 if (typeof window !== 'undefined) {/* TODO: Fix JSX expression */}
 
 }

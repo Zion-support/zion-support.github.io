@@ -13,12 +13,12 @@ export const usePerformanceMonitor = () => {;;;
 
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;;
 
-        // Track performance metrics
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'performance_metric, {
-            event_category: 'Performance,
+        // Track performance metrics'
+        if (typeof window !== 'undefined && window.gtag) {'
+          window.gtag('event', 'performance_metric, {'
+            event_category: 'Performance,'
             event_label: 'Page Load Time,
-            value: Math.round(loadTime)
+            value: 'Math.round(loadTime)',
           });
 
         }
@@ -30,7 +30,7 @@ export const usePerformanceMonitor = () => {;;;
   }, []);
 
   const measureResourceTiming = useCallback(() => {;;
-
+'
     if (typeof window !== 'undefined' && 'performance in window) {
       const resources = performance.getEntriesByType(resource);;
 
@@ -38,12 +38,12 @@ export const usePerformanceMonitor = () => {;;;
         const loadTime = resource.responseEnd - resource.startTime;;
 
         // Track slow resources
-        if (loadTime > 1000) {
-          if (typeof window !== 'undefined && window.gtag) {
-            window.gtag('event', 'slow_resource, {
+        if (loadTime > 1000) {'
+          if (typeof window !== 'undefined && window.gtag) {'
+            window.gtag('event', 'slow_resource, {'
               event_category: 'Performance,
               event_label: resource.name,
-              value: Math.round(loadTime)
+              value: 'Math.round(loadTime)',
             });
 
           }
@@ -57,7 +57,7 @@ export const usePerformanceMonitor = () => {;;;
   }, []);
 
   const measureMemoryUsage = useCallback(() => {;;
-
+'
     if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
       const memory = (performance as any).memory;;
 
@@ -65,15 +65,15 @@ export const usePerformanceMonitor = () => {;;;
 
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
+        limit: 'Math.round(memory.jsHeapSizeLimit / 1024 / 1024)',
       };
 
-      if (memoryUsage.used > memoryUsage.limit * 0.8) {
-        if (typeof window !== 'undefined && window.gtag) {
-          window.gtag('event', 'high_memory_usage, {
-            event_category: 'Performance,
+      if (memoryUsage.used > memoryUsage.limit * 0.8) {'
+        if (typeof window !== 'undefined && window.gtag) {'
+          window.gtag('event', 'high_memory_usage, {'
+            event_category: 'Performance,'
             event_label: 'Memory Usage,
-            value: memoryUsage.used
+            value: 'memoryUsage.used',
           });
 
         }
@@ -94,7 +94,7 @@ export const usePerformanceMonitor = () => {;;;
       measureMemoryUsage();
 
     };
-
+'
     if (document.readyState === 'complete) {
       handleLoad();
 
@@ -126,3 +126,4 @@ export const usePerformanceMonitor = () => {;;;
   };
 
 };
+'

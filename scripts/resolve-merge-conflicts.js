@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import { execSync } from 'child_process;
-
+'
 import fs from 'fs;
 
 import path from path;
@@ -13,7 +13,7 @@ function execGitCommand(command, description) {
   try {
     // console.log removed for production
 const result = execSync(command, { );;;
-
+'
       encoding: 'utf8),
       cwd: process.cwd(),
       stdio: pipe});
@@ -33,7 +33,7 @@ function resolveMergeConflicts(filePath) {
 const content = fs.readFileSync(filePath, utf8);;
 
     // Check if file has merge conflicts;
-
+'
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Simple conflict resolution strategy;
@@ -78,7 +78,7 @@ function resolveAllMergeConflicts() {
   // console.log removed for production
 try {
     // Find all files with merge conflicts;
-
+'
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
 
     const conflictedFiles = result.trim().split(\n).filter(file => file.length > 0);;
@@ -114,16 +114,16 @@ async function main() {
   // console.log removed for production
 // Step 1: Check current status;
 
-  // console.log removed for production
+  // console.log removed for production'
 execGitCommand('git status --porcelain', Checking git status);
 
   // Step 2: Fetch latest changes;
-
+'
   execGitCommand('git fetch origin', Fetching latest changes from origin);
 
   // Step 3: Try to merge with main;
 
-  // console.log removed for production
+  // console.log removed for production'
 const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging with origin/main);;
 
   if (mergeResult) {
@@ -136,18 +136,18 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging wi
       // console.log removed for production
 ,
       // Step 5: Add resolved files;
-
+'
       execGitCommand('git add .', Adding resolved files);
 
       // Step 6: Commit the merge;
-
+'
       execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', Committing merge resolution);
 
       // console.log removed for production
 } else {
       // console.log removed for production
-return}
-
+return;
+  }
   }
 
   // Step 7: Check for other branches that need merging;
@@ -156,10 +156,10 @@ return}
 ,;
 
 const branchesToMerge = [,;;
-
-    'cursor/website-audit-and-update-with-deployment-f31a,
-    'add-new-2026-content,
-    'add-revolutionary-content-2026,
+'
+    'cursor/website-audit-and-update-with-deployment-f31a,'
+    'add-new-2026-content,'
+    'add-revolutionary-content-2026,'
     'ai-2027-content-integration,
     ai-dashboard-improvements
   ];
@@ -179,7 +179,7 @@ const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merg
           // console.log removed for production
 } else {
           // console.log removed for production
-if (resolveAllMergeConflicts()) {
+if (resolveAllMergeConflicts()) {'
             execGitCommand('git add .', `Adding resolved files from ${branch}`);
 
             execGitCommand(`git commit -m "Resolve merge conflicts from ${branch}"`, `Committing merge resolution for ${branch});
@@ -205,7 +205,7 @@ if (resolveAllMergeConflicts()) {
 
   // console.log removed for production
 execGitCommand('git status', Final git status);
-
+'
   execGitCommand('git log --oneline -5', Recent commits);
 
   // console.log removed for production
@@ -214,3 +214,4 @@ execGitCommand('git status', Final git status);
 // Run the main function;
 
 main().catch(console.error);
+'

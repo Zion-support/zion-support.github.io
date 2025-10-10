@@ -10,24 +10,24 @@ import path from path;
 
 const filesToFix = [;;
 
-  '/workspace/src/about/page.tsx,
-  '/workspace/src/ai-ab-testing/page.tsx,
-  '/workspace/src/ai-analytics-dashboard/page.tsx,
-  '/workspace/src/ai-analytics/page.tsx,
-  '/workspace/src/ai-automation/page.tsx,
-  '/workspace/src/ai-computer-vision/page.tsx,
-  '/workspace/src/ai-content-generation/page.tsx,
-  '/workspace/src/ai-content-studio/page.tsx,
-  '/workspace/src/ai-crm/page.tsx,
-  '/workspace/src/ai-customer-insights/page.tsx,
-  '/workspace/src/ai-customer-support-bot/page.tsx,
-  '/workspace/src/ai-customer-support/page.tsx,
-  '/workspace/src/ai-cybersecurity/page.tsx,
-  '/workspace/src/ai-data-analytics/page.tsx,
-  '/workspace/src/ai-data-visualization/page.tsx,
-  '/workspace/src/ai-design-assistant/page.tsx,
-  '/workspace/src/ai-document-processing/page.tsx,
-  '/workspace/src/ai-document-processor/page.tsx,
+  '/workspace/src/about/page.tsx,'
+  '/workspace/src/ai-ab-testing/page.tsx,'
+  '/workspace/src/ai-analytics-dashboard/page.tsx,'
+  '/workspace/src/ai-analytics/page.tsx,'
+  '/workspace/src/ai-automation/page.tsx,'
+  '/workspace/src/ai-computer-vision/page.tsx,'
+  '/workspace/src/ai-content-generation/page.tsx,'
+  '/workspace/src/ai-content-studio/page.tsx,'
+  '/workspace/src/ai-crm/page.tsx,'
+  '/workspace/src/ai-customer-insights/page.tsx,'
+  '/workspace/src/ai-customer-support-bot/page.tsx,'
+  '/workspace/src/ai-customer-support/page.tsx,'
+  '/workspace/src/ai-cybersecurity/page.tsx,'
+  '/workspace/src/ai-data-analytics/page.tsx,'
+  '/workspace/src/ai-data-visualization/page.tsx,'
+  '/workspace/src/ai-design-assistant/page.tsx,'
+  '/workspace/src/ai-document-processing/page.tsx,'
+  '/workspace/src/ai-document-processor/page.tsx,'
   '/workspace/src/ai-ecommerce-optimizer/page.tsx,
   /workspace/src/ai-ecommerce-solutions/page.tsx
 ];
@@ -46,20 +46,20 @@ let content = fs.readFileSync(filePath, utf8);;
 const importFixes = [;;
 
       // Fix malformed import statements
-      {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+      {'
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,'
         replacement: "import { $1 } from '$2';
 
       },
       // Fix missing commas in imports
-      {
-        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+      {'
+        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,'
         replacement: "import { $1, $2 } from '$3';
 
       },
       // Fix malformed import with semicolon
-      {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+      {'
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,'
         replacement: "import { $1 } from '$2';
 
       }
@@ -199,3 +199,4 @@ for (const file of filesToFix) {
 }
 
 // console.log removed for production
+'

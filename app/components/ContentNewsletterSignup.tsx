@@ -1,4 +1,4 @@
-    text: string;)
+    text: 'string;)',
 }>;
 
   onSubscribe?: (email: string) => void;);
@@ -37,7 +37,7 @@ const [isSubscribed, setIsSubscribed] = useState(false);
 
 const [isLoading, setIsLoading] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent) => {;
+const handleSubmit = async (e: React.FormEvent) => {;'
   const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +64,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
       }
 
             setIsSubscribed(true);
-
+'
       setEmail(');)
 } catch (error) {
       // console.error removed for production
@@ -76,9 +76,9 @@ const handleSubmit = async (e: React.FormEvent) => {;
     }
 
       setIsSubscribed(true);
-
-      setEmail(')]
-    } catch (error) {
+'
+      setEmail(')]';
+    } catch (error) {'
       console.error('Subscription failed:, error)]
     } finally {
       setIsLoading(false)]
@@ -87,46 +87,46 @@ const handleSubmit = async (e: React.FormEvent) => {;
   };
 
   if (isSubscribed) {
-    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
+    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>">
         <div className="max-w-4xl mx-auto text-center>
           <div className=w-16 h-16 bg-white
             
             Welcome to Our Community!
-          <
+          <">
           <p className="text-xl text-blue-100 mb-8>
             Thank you for subscribing. Youll receive our latest insights and updates soon.
           <
           <button)
             onClick = { () => setIsSubscribed(false) };
-
-            className="text-white underline hover:text-blue-200 transition-colors
+">
+            className="text-white underline hover: 'text-blue-200 transition-colors
           >
             Subscribe another email
           <
         <
       <
     );
-
+',
   }
-
-  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>
-      <div className="max-w-6xl mx-auto>
+">
+  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>">
+      <div className="max-w-6xl mx-auto>">
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center>
           {/* Content *
           <div>
             <h2 className=text-4xl m,
-    d:text-5xl font-bold text-white mb-6>
+    d: 'text-5xl font-bold text-white mb-6>',
               {title}
 
-            <
+            <">
             <p className="text-xl text-blue-100 mb-8>
               {subtitle}            <
-            
-            <div className="space-y-4>)
+            ">
+            <div className="space-y-4>)">
               {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3>
-                  <div className=w-6 h-6 bg-white
+                  <div className=w-6 h-6 bg-white">
                     <feature.icon className="w-4 h-4 text-white 
-                  <
+                  <">
                   <span className="text-blue-100>{feature.text}<
                 <)
               ))}
@@ -135,12 +135,12 @@ const handleSubmit = async (e: React.FormEvent) => {;
           <
 
           {/* Newsletter Form *
-          <div className=bg-white/10 backdrop-blur-sm border border-white
+          <div className=bg-white/10 backdrop-blur-sm border border-white">
             <form onSubmit={handleSubmit} className="space-y-6>
-              <div>
+              <div>">
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2>
                   Email Address                <
-                <input
+                <input">
                   type="email
                   id="email
                   value = { email };
@@ -189,3 +189,4 @@ const handleSubmit = async (e: React.FormEvent) => {;
 };
 
 export default ContentNewsletterSignup;}
+">

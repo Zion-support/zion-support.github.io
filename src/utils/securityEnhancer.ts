@@ -43,15 +43,15 @@ class SecurityEnhancer {private config: SecurityConfig}
     if (!this.config.enableContentSecurityPolicy) return;
 
 const csp = [;;
-
-      "default-src 'self',
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net,
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,
-      "font-src 'self' https://fonts.gstatic.com,
-      "img-src 'self' data: https:,
-      "connect-src 'self' https://api.zion.app,
-      "frame-ancestors 'none',
-      "base-uri 'self',
+'
+      "default-src 'self','
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net,'
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,'
+      "font-src 'self' https://fonts.gstatic.com,'
+      "img-src 'self' data: https:,'
+      "connect-src 'self' https://api.zion.app,'
+      "frame-ancestors 'none','
+      "base-uri 'self','
       "form-action 'self'
     ].join(; );
 
@@ -87,7 +87,7 @@ const token = this.generateCSRFToken();;
 
 const array = new Uint8Array(32);;
 
-    crypto.getRandomValues(array)
+    crypto.getRandomValues(array)'
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
   }
 
@@ -120,7 +120,7 @@ const originalConsole = {;;
       log: console.log.bind(console),
       warn: console.warn.bind(console),
       error: console.error.bind(console),
-      info: console.info.bind(console)
+      info: 'console.info.bind(console)',
     };
 
     // Override console methods to detect debugging
@@ -130,13 +130,13 @@ const originalConsole = {;;
 
 const observer = new MutationObserver((mutations) => {;;
 
-      mutations.forEach((mutation) => {
+      mutations.forEach((mutation) => {'
         if (mutation.type === 'childList) {
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {;
 
 const element = node as Element;;
-
+'
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src)) {
                 this.metrics.securityViolations++
                 }
@@ -150,7 +150,7 @@ const element = node as Element;;
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: 'true',
     })
     this.eventListeners.push(() => observer.disconnect())
   }
@@ -165,8 +165,8 @@ const url = typeof input === string ? input : input instanceof Request ? input.u
 
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
-        this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed)
+        this.metrics.blockedRequests++'
+        throw new Error('Request blocked: 'Origin not allowed)',
       }
 
       return originalFetch(input, init)
@@ -181,3 +181,4 @@ const url = typeof input === string ? input : input instanceof Request ? input.u
 }
 
 export default SecurityEnhancer;
+'

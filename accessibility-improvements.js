@@ -18,7 +18,7 @@ const focusableElements = element.querySelectorAll(;;
 
   const lastElement = focusableElements[focusableElements.length - 1];;
 
-  element.addEventListener('keydown', (e) => {
+  element.addEventListener('keydown', (e) => {'
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {

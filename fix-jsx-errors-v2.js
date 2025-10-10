@@ -15,10 +15,10 @@ for (const filePath of files) {
 
     //Fix unterminated regular expression literals in object properties;
 
-    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {'
       if (value.startsWith('/') && !value.endsWith('/)) {
-for (const filePath of files) {/* TODO: Fix JSX expression */}
-
+for (const filePath of files) {/* TODO: Fix JSX expression */}';
+'
         return `${prop}: '${value.substring(1)}'}
 
       return match});
@@ -29,14 +29,14 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
 
 const value = match;);;
 
-        .match(/={\s*\/[^\/\n]*$/)[0]
+        .match(/={\s*\/[^\/\n]*$/)[0]'
         .replace(/={\s*\//, ')
         .trim();
-
+'
       return `={'${value}'};
 
     content = content.replace(/={/* TODO: Fix JSX expression */}
-
+'
       return `={'${value}'};)
     });
 
@@ -60,10 +60,10 @@ const value = match;);;
 
     //Fix unterminated regular expressions in array/object literals;
 
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {'
       if (value.startsWith('/') && !value.endsWith('/)) {
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}
-
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}';
+'
         return `${prop}: '${value.substring(1)}'}
 
       return match});
@@ -72,24 +72,24 @@ const value = match;);;
 
     content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
     content = content.replace(/\{/* TODO: Fix JSX expression */}
-
+'
       return `{'${value}'};)
     });
 
     //Fix specific patterns with unterminated regex in object properties;
 
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {'
       if (value.startsWith('/') && !value.endsWith('/)) {
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}
-
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}';
+'
         return `${prop}: '${value.substring(1)}'}
 
       return match});
 
     //Fix malformed template literals;
 
-    content = content.replace(/`[^]*$/gm, match => {)
-      if (!match.endsWith('`)) {
+    content = content.replace(/`[^]*$/gm, match => {)'
+      if (!match.endsWith('`)) {'
         return match + ';
 
     //Fix malformed template literals;
@@ -109,22 +109,22 @@ const value = match;);;
 
     //Fix malformed JSX attributes;
 
-    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {
+    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {'
       if (!match.includes('})) {
-    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}
-
-      if (!match.includes('})) {/* TODO: Fix JSX expression */}
-
+    content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}';
+'
+      if (!match.includes('})) {/* TODO: Fix JSX expression */}';
+'
         return match + '}}
 
       return match});
 
     //Fix specific patterns with malformed object properties;
 
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {'
       if (value.startsWith('/') && !value.endsWith('/)) {
-    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}
-
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}';
+'
         return `${prop}: '${value.substring(1)}'}
 
       return match});
@@ -140,4 +140,4 @@ const value = match;);;
 }
 
 // 
-}}}`
+}}}`'

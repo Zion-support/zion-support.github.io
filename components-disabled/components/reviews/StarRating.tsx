@@ -7,7 +7,7 @@ import React from 'react;
   r: false }; static getDerivedStateFromError(error) {/* TODO: Fix JSX expression */}
 
   r: true }; componentDidCatch(error) errorInfo) {/* TODO: Fix JSX expression */}
-
+'
   boundary: ') error} errorInfo); render() {if (this.state.hasError) { return <div>Something went wrong.</div> > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) } </polygon> }</div>) ; export const,
   StarRating: React.FC<Props> = ({value, onChange) size = 24} readOnly }) => {
   return (

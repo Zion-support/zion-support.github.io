@@ -31,7 +31,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
   O: Add content}
 
 }
-
+'
     if (typeof window === 'undefined' || !('PerformanceObserver in window)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -84,7 +84,7 @@ const entries = list.getEntries();;
             const fid =;;
 
               (entry.processingStart || entry.startTime) - entry.startTime;
-
+'
             reportMetric('FID, fid)
           }
 
@@ -153,13 +153,13 @@ const entries = list.getEntries();;
 
   O: Add content}
 
-})
+})'
           if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
             reportMetric('FCP, entry.startTime)}
 
         })});
@@ -182,7 +182,7 @@ const entries = list.getEntries();;
   O: Add content}
 
 }
-
+'
           if (entry.entryType === 'navigation) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -192,7 +192,7 @@ const entries = list.getEntries();;
             const navEntry = entry as PerformanceNavigationTiming;;
 
             const ttfb = navEntry.responseStart - navEntry.requestStart;;
-
+'
             reportMetric('TTFB, ttfb)}
 
         })});
@@ -215,7 +215,7 @@ const entries = list.getEntries();;
   O: Add content}
 
 }
-
+'
           if (entry.entryType === 'resource) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -233,7 +233,7 @@ const entries = list.getEntries();;
 }
 
               // Only track slow resources;
-
+'
               reportMetric('SLOW_RESOURCE, loadTime)}
 
           }
@@ -304,8 +304,7 @@ const entries = list.getEntries();;
 
 };
 
-  domContentLoaded:
-//             navigation.domContentLoadedEventEnd -
+  domContentLoaded: '//             navigation.domContentLoadedEventEnd -',
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
@@ -334,3 +333,4 @@ const entries = list.getEntries();;
 //     reportMetric}};
 
 export default usePerformanceMonitoring;
+'

@@ -1,29 +1,29 @@
 #!/usr/bin/env node;
 
 import fs from 'fs';
-
+'
 import path from 'path';
-
+'
 import { fileURLToPath } from 'url;
 
 ;
 
 const __filename = fileURLToPath(import.meta.url);;
 
-// __dirname removed
+// __dirname removed'
 // Function to fix malformed comment blocks';
 
-function fixCommentBlocks(content) {
+function fixCommentBlocks(content) {'
   // Fix malformed console.log comments';
 
   content = content.replace(
 
-    /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
+    /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,'
     (match, method, body) => {';
-
+'
 const fixedBody = body.split('\n).map(line => {);;
-
-        if (line.trim() && !line.trim().startsWith('//')) {
+'
+        if (line.trim() && !line.trim().startsWith('//')) {'
           return '//  + line.trim();
 
 function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
@@ -32,7 +32,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     (match, method, body) => {/* TODO: Fix JSX expression */}
 
         }
-
+'
         return line}).join('\n);
 
       return `// console.${method}(...): {\n${fixedBody}\n// }`}
@@ -45,10 +45,10 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
 
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
     (match, body) => {;
-
+'
 const fixedBody = body.split('\n).map(line => {);;
-
-        if (line.trim() && !line.trim().startsWith('//')) {
+'
+        if (line.trim() && !line.trim().startsWith('//')) {'
           return '//  + line.trim();
 
   content = content.replace()
@@ -56,7 +56,7 @@ const fixedBody = body.split('\n).map(line => {);;
     (match, body) => {/* TODO: Fix JSX expression */}
 
         }
-
+'
         return line}).join('\n);
 
       return match.replace(body, fixedBody)}
@@ -69,12 +69,12 @@ const fixedBody = body.split('\n).map(line => {);;
 
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {;
-
+'
 const lines = body.split('\n);;
 
       const fixedLines = lines.map(line => {);;
-
-        if (line.trim() && !line.trim().startsWith('//')) {
+'
+        if (line.trim() && !line.trim().startsWith('//')) {'
           return '//  + line.trim();
 
   content = content.replace()
@@ -83,7 +83,7 @@ const lines = body.split('\n);;
 
         }
 
-        return line});`
+        return line});`'
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`}
 
   );
@@ -94,7 +94,7 @@ const lines = body.split('\n);;
 
 function processFile(filePath) {
   try {;
-
+'
 let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
@@ -105,7 +105,7 @@ let content = fs.readFileSync(filePath, 'utf8);;
 
     content = fixCommentBlocks(content);
 
-    if (content !== originalContent) {
+    if (content !== originalContent) {'
       fs.writeFileSync(filePath, content, 'utf8);
 
       modified = true;
@@ -140,7 +140,7 @@ const fullPath = path.join(currentPath, item);;
 
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
-
+'
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           walkDir(fullPath)}
 
@@ -172,9 +172,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 
 // console.log removed for production
 ;
-
+'
 const srcDir = path.join(__dirname, 'src);;
-
+'
 const appDir = path.join(__dirname, 'app);;
 
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
@@ -193,4 +193,4 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 `
 // console.log removed for production
 // console.log removed for production
-`
+`'

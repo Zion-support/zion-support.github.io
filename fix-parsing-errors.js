@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { glob } from glob;
@@ -11,56 +11,56 @@ import { glob } from glob;
 function fixEmojis(content) {;
 
 const emojiMap = {;;;
-
-    '🎧': 'headphones,
-    '📈': 'trending-up,
-    '💰': 'dollar-sign,
-    '👥': 'users,
-    '📧': 'Email:,
-    '📍': 'Address:,
-    '🚀': 'rocket,
-    '⚡': 'zap,
-    '🔒': 'lock,
-    '💡': 'lightbulb,
-    '🎯': 'target,
-    '📊': 'bar-chart,
-    '🔧': 'settings,
-    '🌟': 'star,
-    '💼': 'briefcase,
-    '🎨': 'palette,
-    '📱': 'smartphone,
-    '💻': 'laptop,
-    '🌐': 'globe,
-    '🔍': 'search,
-    '📝': 'edit,
-    '✅': 'check,
-    '❌': 'x,
-    '⚠️': 'alert-triangle,
-    'ℹ️': 'info,
-    '🎉': 'party-popper,
-    '🔥': 'flame,
-    '💪': 'muscle,
-    '🎪': 'circus-tent,
-    '🎭': 'theater-masks,
-    '🎨': 'art-palette,
-    '🎵': 'music,
-    '🎬': 'film,
-    '🎮': 'gamepad,
-    '🎲': 'dice,
-    '🎯': 'bullseye,
-    '🎪': 'circus-tent,
-    '🎨': 'palette,
-    '🎵': 'music,
-    '🎬': 'film,
-    '🎮': 'gamepad,
-    '🎲': 'dice,
-    '🎯': 'target,
-    '🎪': 'circus-tent,
-    '🎨': 'palette,
-    '🎵': 'music,
-    '🎬': 'film,
-    '🎮': 'gamepad,
-    '🎲': 'dice,
+'
+    '🎧': 'headphones,'
+    '📈': 'trending-up,'
+    '💰': 'dollar-sign,'
+    '👥': 'users,'
+    '📧': 'Email:,'
+    '📍': 'Address:,'
+    '🚀': 'rocket,'
+    '⚡': 'zap,'
+    '🔒': 'lock,'
+    '💡': 'lightbulb,'
+    '🎯': 'target,'
+    '📊': 'bar-chart,'
+    '🔧': 'settings,'
+    '🌟': 'star,'
+    '💼': 'briefcase,'
+    '🎨': 'palette,'
+    '📱': 'smartphone,'
+    '💻': 'laptop,'
+    '🌐': 'globe,'
+    '🔍': 'search,'
+    '📝': 'edit,'
+    '✅': 'check,'
+    '❌': 'x,'
+    '⚠️': 'alert-triangle,'
+    'ℹ️': 'info,'
+    '🎉': 'party-popper,'
+    '🔥': 'flame,'
+    '💪': 'muscle,'
+    '🎪': 'circus-tent,'
+    '🎭': 'theater-masks,'
+    '🎨': 'art-palette,'
+    '🎵': 'music,'
+    '🎬': 'film,'
+    '🎮': 'gamepad,'
+    '🎲': 'dice,'
+    '🎯': 'bullseye,'
+    '🎪': 'circus-tent,'
+    '🎨': 'palette,'
+    '🎵': 'music,'
+    '🎬': 'film,'
+    '🎮': 'gamepad,'
+    '🎲': 'dice,'
+    '🎯': 'target,'
+    '🎪': 'circus-tent,'
+    '🎨': 'palette,'
+    '🎵': 'music,'
+    '🎬': 'film,'
+    '🎮': 'gamepad,'
+    '🎲': 'dice,'
     '🎯: target
   };
 
@@ -68,7 +68,7 @@ const emojiMap = {;;;
 
 let fixed = content;;
 
-  for (const [emoji, replacement] of Object.entries(emojiMap)) {
+  for (const [emoji, replacement] of Object.entries(emojiMap)) {'
     fixed = fixed.replace(new RegExp(emoji, 'g), replacement)}
 
   return fixed}
@@ -85,7 +85,7 @@ let fixed = content;;
   // Fix common emoji issues in JSX
   fixed = fixEmojis(fixed);
 
-  // Fix common syntax issues
+  // Fix common syntax issues'
   fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"); // Fix single quotes in JSX expressions
   fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"); // Normalize quotes
   
@@ -117,7 +117,7 @@ async function processFiles() {;
 
 const patterns = [;;
 
-    'app/**/*.tsx,
+    'app/**/*.tsx,'
     'app/**/*.ts,
     App.tsx
   ];
@@ -132,10 +132,10 @@ let processedCount = 0;;
 
 const files = await glob(pattern, {;;
 
-      ignore: [
-        'node_modules/**,
-        'dist/**,
-        'build/**,
+      ignore: ['
+        'node_modules/**,'
+        'dist/**,'
+        'build/**,'
         '**/*.d.ts,
         **/node_modules/**
       ]
@@ -173,3 +173,4 @@ errorCount++}
 
 // Run the script
 processFiles().catch(console.error);
+'

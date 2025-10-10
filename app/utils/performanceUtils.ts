@@ -19,7 +19,7 @@ const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNav
     this.measureCoreWebVitals();
 
   private measureCoreWebVitals(): void {
-    // First Contentful Paint
+    // First Contentful Paint'
     this.observePaint('first-contentful-paint, (entry) => {
       this.metrics.firstContentfulPaint = entry.startTime});
 
@@ -32,7 +32,7 @@ const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNav
     // Cumulative Layout Shift
     this.observeCLS();
 
-  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
+  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {'
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
@@ -55,7 +55,7 @@ const observer = new PerformanceObserver((list) => {;;
 
   }
 
-  private observeLCP(): void {
+  private observeLCP(): void {'
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
@@ -76,7 +76,7 @@ const lastEntry = entries[entries.length - 1];;
 
   }
 
-  private observeFID(): void {
+  private observeFID(): void {'
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
@@ -96,7 +96,7 @@ const observer = new PerformanceObserver((list) => {;;
 
   }
 
-  private observeCLS(): void {
+  private observeCLS(): void {'
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
@@ -157,14 +157,14 @@ const observer = new PerformanceObserver((list) => {;;
 export const performanceMonitor = new PerformanceMonitor();;
 
 // Utility functions
-export const measureFunction = <T extends (...args: any[]) => any>(;;
-
+export const measureFunction = <T extends (...args: 'any[]) => any>(;;
+',
   fn: T,
   name?: string
 ): T => {
-return ((...args: Parameters<T>
+return ((...args: 'Parameters<T>
 );
-
+',
 }) => {;
 
 const start = performance.now();;
@@ -179,8 +179,8 @@ const end = performance.now();;
 
     return result}) as T}
 
-export const debounce = <T extends (...args: any[]) => any>(;;
-
+export const debounce = <T extends (...args: 'any[]) => any>(;;
+',
   func: T,
   wait: number
 ): T => {
@@ -198,8 +198,8 @@ let timeout: NodeJS.Timeout;
 
     timeout = setTimeout(() => func(...args), wait)}) as T}
 
-export const throttle = <T extends (...args: any[]) => any>(;;
-
+export const throttle = <T extends (...args: 'any[]) => any>(;;
+',
   func: T,
   limit: number
 ): T => {
@@ -223,7 +223,7 @@ let inThrottle: boolean;
   }) as T}
 
 export const lazyLoad = (callback: () => void): void => {;;
-
+'
   if ('requestIdleCallback in window) {
     requestIdleCallback(callback)} else {
     setTimeout(callback, 1);
@@ -244,3 +244,4 @@ const img = new Image();;
 export const preloadImages = (srcs: string[]): Promise<void[]> => {;;
 
   return Promise.all(srcs.map(preloadImage));
+'

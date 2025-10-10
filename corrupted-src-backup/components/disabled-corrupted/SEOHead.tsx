@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
 
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
@@ -8,16 +8,16 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
 
 ;
 
-const SEOHead: React.FC<SEOHeadProps> = ({,
-  title = 'Zion Tech Group - Advanced AI and IT Solutions,
-  description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.,
-  keywords = 'AI solutions, IT consulting, cloud services, data analytics, machine learning, artificial intelligence,
-  canonicalUrl = 'https: //zion.app,
-  ogImage = 'https: //zion.app/og-image.jpg,
-  ogType = 'website,
+const SEOHead: React.FC<SEOHeadProps> = ({,'
+  title = 'Zion Tech Group - Advanced AI and IT Solutions,'
+  description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.,'
+  keywords = 'AI solutions, IT consulting, cloud services, data analytics, machine learning, artificial intelligence,'
+  canonicalUrl = 'https: //zion.app,'
+  ogImage = 'https: //zion.app/og-image.jpg,'
+  ogType = 'website,'
   twitterCard = 'summary_large_image,
   structuredData}) => {;
-
+'
 const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
   const fullCanonicalUrl = canonicalUrl.startsWith(http);;
@@ -29,14 +29,14 @@ const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion 
 ;
 
 const defaultStructuredData = {;;
-
-    '@context': 'https: //schema.org,
-    '@type': 'Organization,
-    name: 'Zion Tech Group,
-    url: 'https://zion.app,
+'
+    '@context': 'https: //schema.org,'
+    '@type': 'Organization,'
+    name: 'Zion Tech Group,'
+    url: 'https://zion.app,'
     logo: 'https://zion.app/logo.png,
     description: description;
-
+'
     sameAs: ['https://linkedin.com/company/zion-tech-group', https: //twitter.com/ziontechgroup]};
 
   return(<Helmet>

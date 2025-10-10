@@ -10,30 +10,30 @@ import fs from fs;
 // //List of new branches to merge (from the fetch output);
 
 const newBranches = [;;;
-
-  'cursor/fix-errors-and-merge-to-main-214 f,
-  'cursor/fix-errors-and-merge-to-main-25 ca,
-  'cursor/fix-errors-and-merge-to-main-277 a,
-  'cursor/fix-errors-and-merge-to-main-2 bbe,
-  'cursor/fix-errors-and-merge-to-main-3 bb0,
-  'cursor/fix-errors-and-merge-to-main-4415,
-  'cursor/fix-errors-and-merge-to-main-451 b,
-  'cursor/fix-errors-and-merge-to-main-4 c51,
-  'cursor/fix-errors-and-merge-to-main-4 dbc,
-  'cursor/fix-errors-and-merge-to-main-4 feb,
-  'cursor/fix-errors-and-merge-to-main-6 b3 f,
-  'cursor/fix-errors-and-merge-to-main-7795,
-  'cursor/fix-errors-and-merge-to-main-7 f81,
-  'cursor/fix-errors-and-merge-to-main-85 b7,
-  'cursor/fix-errors-and-merge-to-main-8 f2 f,
-  'cursor/fix-errors-and-merge-to-main-90 a6,
-  'cursor/fix-errors-and-merge-to-main-921 e,
-  'cursor/fix-errors-and-merge-to-main-9 ff4,
-  'cursor/fix-errors-and-merge-to-main-b024,
-  'cursor/fix-errors-and-merge-to-main-b122,
-  'cursor/fix-errors-and-merge-to-main-bba2,
-  'cursor/fix-errors-and-merge-to-main-d4 d4,
-  'cursor/fix-errors-and-merge-to-main-e1 bd,
+'
+  'cursor/fix-errors-and-merge-to-main-214 f,'
+  'cursor/fix-errors-and-merge-to-main-25 ca,'
+  'cursor/fix-errors-and-merge-to-main-277 a,'
+  'cursor/fix-errors-and-merge-to-main-2 bbe,'
+  'cursor/fix-errors-and-merge-to-main-3 bb0,'
+  'cursor/fix-errors-and-merge-to-main-4415,'
+  'cursor/fix-errors-and-merge-to-main-451 b,'
+  'cursor/fix-errors-and-merge-to-main-4 c51,'
+  'cursor/fix-errors-and-merge-to-main-4 dbc,'
+  'cursor/fix-errors-and-merge-to-main-4 feb,'
+  'cursor/fix-errors-and-merge-to-main-6 b3 f,'
+  'cursor/fix-errors-and-merge-to-main-7795,'
+  'cursor/fix-errors-and-merge-to-main-7 f81,'
+  'cursor/fix-errors-and-merge-to-main-85 b7,'
+  'cursor/fix-errors-and-merge-to-main-8 f2 f,'
+  'cursor/fix-errors-and-merge-to-main-90 a6,'
+  'cursor/fix-errors-and-merge-to-main-921 e,'
+  'cursor/fix-errors-and-merge-to-main-9 ff4,'
+  'cursor/fix-errors-and-merge-to-main-b024,'
+  'cursor/fix-errors-and-merge-to-main-b122,'
+  'cursor/fix-errors-and-merge-to-main-bba2,'
+  'cursor/fix-errors-and-merge-to-main-d4 d4,'
+  'cursor/fix-errors-and-merge-to-main-e1 bd,'
   'cursor/fix-errors-and-merge-to-main-e6 b7,
   cursor/fix-errors-and-merge-to-main-fcbc];
 
@@ -47,11 +47,11 @@ function mergeBranch(branchName) {
       { stdio: 'inherit }
 
     );
-
+'
 //     return { success: true, method: 'direct }} catch (error) {
 //     try {
       //Try auto-resolve with theirs strategy;
-
+'
       execSync('git reset --hard HEAD', { stdio: inherit });
 
       execSync(;
@@ -66,7 +66,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-
+'
   d: 'direct }} catch (error) {/* TODO: Fix JSX expression */}
 
   o: inherit });
@@ -80,14 +80,14 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'theirs }} catch (theirsError) {/* TODO: Fix JSX expression */}
 
 //       }
 
     try {
       //Try auto-resolve with ours strategy;
-
+'
       execSync('git reset --hard HEAD', { stdio: inherit });
 
       execSync(
@@ -105,20 +105,20 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'ours }} catch (oursError) {/* TODO: Fix JSX expression */}
 
 //       }
 
     try {
       //Try manual conflict resolution;
-
+'
       execSync('git reset --hard HEAD', { stdio: inherit });
 
       //Get conflicted files;
 
       const conflictedFiles = execSync(git diff --name-only --diff-filter=U, {);;
-
+'
         encoding: 'utf8),
     try {/* TODO: Fix JSX expression */}
 
@@ -128,7 +128,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
       const conflictedFiles = execSync(git diff --name-only --diff-filter=U, {/* TODO: Fix JSX expression */});;
 
-      })
+      })'
         .split('\n)
         .filter(file => file.trim());
 
@@ -172,10 +172,10 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
     //If all strategies fail, abort and skip;
 
-    try {
+    try {'
       execSync('git merge --abort', { stdio: inherit });
 
-//       } catch (abortError) {
+//       } catch (abortError) {'
       execSync('git reset --hard HEAD', { stdio: inherit });
 
     try {/* TODO: Fix JSX expression */}
@@ -183,11 +183,11 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: inherit });
 
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit })}
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
   d: 'failed }}
 
 }

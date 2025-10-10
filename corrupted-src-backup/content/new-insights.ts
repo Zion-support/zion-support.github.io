@@ -3,13 +3,13 @@ export interface Insight {/* TODO: Fix JSX expression */}
 
 export const newInsights: Insight[] = [
   {
-    id: 'ai-platform-optimization-insights',
-    title: 'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards',
-    summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.',
-    category: 'AI Strategy',
+    id: 'ai-platform-optimization-insights','
+    title: 'AI Platform Optimization: Maximizing ROI with Intelligent Scorecards','
+    summary: 'Revolutionary AI platform optimization delivering unprecedented ROI through intelligent scorecards and performance monitoring.','
+    category: 'AI Strategy','
     date: '2025-10-03',
     readMinutes: 7;
-    featured: true;
+    featured: true;'
     tags: ['Platform', 'ROI', 'Scorecards'],
     content: `
 # AI Platform Optimization Insights;
@@ -21,14 +21,14 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 - Comprehensive ROI tracking enables data-driven decisions;
 - Automated performance tuning increases efficiency by 60%,
     `},
-  {
-    id: 'quantum-ai-security-insights',
-    title: 'Quantum AI Security: Next-Generation Protection Framework',
-    summary: 'Advanced quantum AI security framework providing unprecedented protection against emerging threats.',
-    category: 'AI Security',
+  {'
+    id: 'quantum-ai-security-insights','
+    title: 'Quantum AI Security: Next-Generation Protection Framework','
+    summary: 'Advanced quantum AI security framework providing unprecedented protection against emerging threats.','
+    category: 'AI Security','
     date: '2025-10-04',
     readMinutes: 9;
-    featured: true;
+    featured: true;'
     tags: ['Security', 'Quantum', 'AI'],
     content: `
 # Quantum AI Security Insights;
@@ -46,3 +46,4 @@ export const,
   },
   {/* TODO: Fix JSX expression */}
   }];
+'

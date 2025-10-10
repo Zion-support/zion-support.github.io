@@ -1,7 +1,7 @@
 import React from 'react;
-
+'
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -31,7 +31,7 @@ const fullPath = path.join(dir, item);;
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {'
         scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
         files.push(fullPath)}
 
@@ -68,9 +68,9 @@ const oldName = componentNameMatch[1];,;;
 
 const newName = oldName.replace(/\s+/g, ).replace(/^([a-z])/, (match, letter) => letter.toUpperCase());;
 
-        if (oldName !== newName) {
+        if (oldName !== newName) {'
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC);
-
+'
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page);
 
           modified = true}
@@ -112,3 +112,4 @@ const oldTitle = titleMatch[1];;
 };
 
 fixComponentNames();
+'

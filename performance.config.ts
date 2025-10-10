@@ -31,7 +31,7 @@ export const performanceConfig = {;
     dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},'
 
   // Lazy loading configuration;
-  lazyLoading: {,
+  lazyLoading: {,'
     imagePlaceholder: 'blur','
     rootMargin: '50px','
     threshold: 0.01;
@@ -106,3 +106,4 @@ export const performanceConfig = {/* TODO: Fix JSX expression */};
   }};
 
 export default performanceConfig;
+'

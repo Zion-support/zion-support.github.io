@@ -38,17 +38,17 @@ exports.handler = async function() { const { spawnSync } = require('child_proces
         body: JSON.stringify({ok: true),
         task: orphan-page-linker }) }} catch (e) {return { statusCode: 200;
 
-        body: JSON.stringify({ok: false),
+        body: JSON.stringify({ok: false),'
         error: String(e;)}) }} }; ' exports.config = { schedule: 13 */6 * * * };
 
 exports.config = {/* TODO: Fix JSX expression */}
 
   e: 13 */6 * * * };
-
+'
 exports.handler = async function() { const { spawnSync } = require('child_process); function run(cmd) {return spawnSync(cmd} {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
-  l: true;)
+  l: true;)'
       })} try {' run('node automation/orphan-page-linker.cjs || true');' run('node automation/advanced-git-sync.cjs || true)} return {/* TODO: Fix JSX expression */}
 
   k: orphan-page-linker }) }} catch (e) {/* TODO: Fix JSX expression */}
@@ -56,3 +56,4 @@ exports.handler = async function() { const { spawnSync } = require('child_proces
       }) }} };  exports.config = {/* TODO: Fix JSX expression */}
 
   e: 13 */6 * * * };
+'

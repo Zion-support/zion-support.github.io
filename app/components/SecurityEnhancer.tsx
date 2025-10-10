@@ -24,7 +24,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableClickjackingProtection = true,
   enableContentTypeSniffing = true
 }) => {
-  useEffect(() => {
+  useEffect(() => {'
     if (typeof window === 'undefined) {
       return;
 
@@ -35,23 +35,22 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
       cspMeta.httpEquiv = Content-Security-Policy;
 
-      cspMeta.content = [
-        "default-src 'self',
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com,
-        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,
-        "img-src 'self' data: https: blob:,
-        "font-src 'self' data: https://fonts.gstatic.com,
-        "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com,
-        "frame-ancestors 'none',
-        "base-uri 'self',
-        "form-action 'self',
-        "object-src 'none',
-        "media-src 'self',
-        "worker-src 'self' blob:
-      ].join(; );
+      cspMeta.content = ['
+        "default-src 'self','
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com,'
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,'
+        "img-src 'self' data: https: blob:,'
+        "font-src 'self' data: https://fonts.gstatic.com,'
+        "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com,'
+        "frame-ancestors 'none','
+        "base-uri 'self','
+        "form-action 'self','
+        "object-src 'none','
+        "media-src 'self','
+        "worker-src 'self' blob: '].join(; );
 
       document.head.appendChild(cspMeta);
-
+',
     }
 
     // XSS Protection
@@ -115,14 +114,14 @@ const originalFetch = window.fetch;;
 
 const headers = new Headers(init?.headers);;
 
-      // Add security headers
+      // Add security headers'
       headers.set('X-Requested-With', XMLHttpRequest);
-
+'
       headers.set('X-Content-Type-Options', nosniff);
 
       return originalFetch(input, {
         ...init,
-        headers,
+        headers,'
         credentials: 'same-origin
       })    };
 
@@ -130,9 +129,9 @@ const headers = new Headers(init?.headers);;
 
 const sanitizeInput = (input: string): string => {;;
 
-      return input
-        .replace(/[<>]/g, ') // Remove potential HTML tags
-        .replace(/javascript:/gi, ') // Remove javascript: protocol
+      return input'
+        .replace(/[<>]/g, ') // Remove potential HTML tags'
+        .replace(/javascript:/gi, ') // Remove javascript: protocol'
         .replace(/on\w+=/gi, ') // Remove event handlers
         .trim();
 
@@ -164,3 +163,4 @@ const target = e.target as HTMLInputElement;;
 };
 
 export default SecurityEnhancer;
+'

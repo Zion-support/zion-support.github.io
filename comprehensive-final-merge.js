@@ -6,14 +6,14 @@
  * This script processes all remaining branches in batches to avoid conflicts;
 
  */ import { execSync } from 'child_process;
-
+'
 import fs from 'fs;
 
 // //Step 1: Ensure were on main and up to date;
 
-// try {,
+// try {,'
   execSync('git checkout main', { stdio: inherit });
-
+'
   execSync('git pull origin main', { stdio: inherit });
 
 //   } catch (error) {
@@ -26,7 +26,7 @@ import fs from 'fs;
 try {,;
 
 const branchOutput = execSync();;
-
+'
     'git branch -r | grep -v backup | grep -E "(cursor|codex|pr|feature|bugfix)",
     { encoding: 'utf8 }
 
@@ -36,7 +36,7 @@ const branchOutput = execSync();;
 // try {/* TODO: Fix JSX expression */}
 
   o: inherit });
-
+'
   execSync('git pull origin main, {/* TODO: Fix JSX expression */})
   o: inherit });
 
@@ -50,17 +50,17 @@ const branchOutput = execSync();;
 // let allBranches = [];;
 
 try {/* TODO: Fix JSX expression */}
-
+'
   g: 'utf8 }
 
   );
 
   allBranches = branchOutput;
-
-    .split('\n)
-    .filter(branch => branch.trim())
-    .map(branch => branch.trim().replace('origin/', '))
-    .filter()
+'
+    .split('\n)';
+    .filter(branch => branch.trim())'
+    .map(branch => branch.trim().replace('origin/', '))';
+    .filter()'
       branch => branch && !branch.includes('backup') && !branch.includes('main)
     )} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -84,8 +84,8 @@ function resolveConflictsAndMerge(branchName) {,
 
     //Check if branch exists and has commits;
 
-    try {
-      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe })} catch (e) {
+    try {'
+      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe })} catch (e) {'
 //       return { success: false, method: 'not_found }}
 
     //Check if branch is already merged;
@@ -97,7 +97,7 @@ const mergeBase = execSync(`git merge-base HEAD origin/${branchName}, {);;
         encoding: utf8)}).trim();
 
       const branchCommit = execSync(`git rev-parse origin/${branchName}, {);;
-
+'
         encoding: 'utf8),
 // //Step,
   3: Process branches in batches to avoid conflicts;
@@ -120,9 +120,9 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     try {/* TODO: Fix JSX expression */}
 
-      execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix JSX expression */})
-  o: 'pipe })} catch (e) {/* TODO: Fix JSX expression */}
-
+      execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix JSX expression */})'
+  o: 'pipe })} catch (e) {/* TODO: Fix JSX expression */}';
+'
   d: 'not_found }}
 
     //Check if branch is already merged;
@@ -138,7 +138,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
       }).trim();
 
       if (mergeBase === branchCommit) {/* TODO: Fix JSX expression */}
-
+'
   d: 'already_merged }}
 
     } catch (e) {
@@ -150,11 +150,11 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
       { stdio: 'pipe }
 
     );
-
+'
 //     return { success: true, method: 'direct }} catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs for most conflicts;
-
+'
       execSync('git reset --hard HEAD', { stdio: pipe });
 
       execSync(
@@ -172,7 +172,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
     );
 
 //     return {/* TODO: Fix JSX expression */}
-
+'
   d: 'direct }} catch (error) {/* TODO: Fix JSX expression */}
 
   o: pipe });
@@ -186,14 +186,14 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'theirs }} catch (theirsError) {/* TODO: Fix JSX expression */}
 
 //       }
 
     try {
       //Strategy 2: Auto-resolve with ours;
-
+'
       execSync('git reset --hard HEAD', { stdio: pipe });
 
       execSync(
@@ -211,20 +211,20 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'ours }} catch (oursError) {/* TODO: Fix JSX expression */}
 
 //       }
 
     try {
       //Strategy 3: Manual conflict resolution;
-
+'
       execSync('git reset --hard HEAD', { stdio: pipe });
 
       //Get conflicted files;
 
       const conflictedFiles = execSync(git diff --name-only --diff-filter=U, {);;
-
+'
         encoding: 'utf8),
     try {/* TODO: Fix JSX expression */}
 
@@ -234,7 +234,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
 
       const conflictedFiles = execSync(git diff --name-only --diff-filter=U, {/* TODO: Fix JSX expression */});;
 
-      })
+      })'
         .split('\n)
         .filter(file => file.trim());
 
@@ -280,10 +280,10 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
 
     //If all strategies fail, abort and skip;
 
-    try {
+    try {'
       execSync('git merge --abort', { stdio: pipe });
 
-//       } catch (abortError) {
+//       } catch (abortError) {'
       execSync('git reset --hard HEAD', { stdio: pipe });
 
     try {/* TODO: Fix JSX expression */}
@@ -291,11 +291,11 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}, {/* TODO: Fix
   o: pipe });
 
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-
+'
   o: 'pipe })}
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
   d: 'failed }}
 
 }
@@ -388,7 +388,7 @@ const batchResults = {;;
   //Push changes after each batch to avoid conflicts;
 
   if (i % 5 === 0 || i === batches.length - 1) {
-//     try {
+//     try {'
       execSync('git push origin main', { stdio: pipe });
 
 //       } catch (error) {
@@ -419,7 +419,7 @@ results.summary = {
 
   successRate: ((results.total.successful / results.total.branches) * 100).toFixed(2) +,
     %};
-
+'
 fs.writeFileSync('comprehensive-final-merge-report.json)
   JSON.stringify(results, null, 2)
 );
@@ -428,7 +428,7 @@ fs.writeFileSync('comprehensive-final-merge-report.json)
 
 // // // // // // // // // // // // // // // // Step 8: Final push;
 
-// try {,
+// try {,'
   execSync('git push origin main', { stdio: inherit });
 
 //   } catch (error) {
@@ -440,7 +440,7 @@ fs.writeFileSync('comprehensive-final-merge-report.json)
 results.summary = {/* TODO: Fix JSX expression */}
 
 };
-
+'
 fs.writeFileSync('comprehensive-final-merge-report.json)
   JSON.stringify(results, null, 2)
 );

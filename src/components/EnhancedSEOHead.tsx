@@ -47,15 +47,15 @@ const structuredData = {;;
       "contactType": "customer service,
       "email": "kleber@ziontechgroup.com
     },
-    "sameAs: [
+    "sameAs: '[',
       "https://linkedin.com/company/zion-tech-group,
       "https://twitter.com/ziontechgroup,
-      "https://github.com/zion-tech-group
+      "https: '//github.com/zion-tech-group',
     ],
     "foundingDate": "2020,
     "numberOfEmployees": "50-100,
     "industry": "Information Technology,
-    "services: [
+    "services: '[',
       "AI Solutions,
       "Machine Learning,
       "Quantum Computing,
@@ -200,10 +200,10 @@ const structuredData = {;;
       
       {/* Rich Snippets */}
 
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 /></meta>
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 /></meta>
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1 /></meta>
-      
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: '-1 /></meta>',
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: '-1 /></meta>',
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: '-1 /></meta>
+      ',
       {/* Enhanced Open Graph */}
 
       <meta property="og:image:width" content="1200 /></meta>

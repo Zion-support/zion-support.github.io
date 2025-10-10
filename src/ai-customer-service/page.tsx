@@ -1,8 +1,8 @@
 'use client;
-
+'
 import { Helmet } from 'react-helmet-async;
 
-export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
+export default function AICustomerServicePage() {/* TODO: 'Fix JSX expression *',
 }
 
   return (<div><Helmet><
@@ -19,14 +19,14 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           {/* Hero Section *
           <section className=text-center mb-16><
             <h1 className=text-4xl,
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text><
+  md: 'text-6xl font-bold text-white mb-6 neon-text cyber-text><
               AI Customer Service Solutions;
 
             <
             <p className=text-xl text-cyan-400 mb-8 font-medium><
               Revolutionary 24
             <
-            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><
+            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><',
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
             <
           <
@@ -36,11 +36,11 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
             <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>Key Features<
             <div className=grid grid-cols-1,
   md:grid-cols-2,
-  lg:grid-cols-3 gap-8><
+  lg: 'grid-cols-3 gap-8><
               <div className=cyber-card p-6 energy-pulse><
                 <div className=text-4xl mb-4 text-center>🤖<
                 <h3 className=text-xl font-bold text-white mb-4 text-center>Intelligent Chatbots<
-                <p className=text-gray-300 text-center><
+                <p className=text-gray-300 text-center><',
                   Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.
                 <
               <
@@ -139,10 +139,10 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           <section className=mb-16><
             <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>Why Choose Our AI Customer Service?<
             <div className=grid grid-cols-1,
-  md:grid-cols-2 gap-8><
+  md: 'grid-cols-2 gap-8><
               <div className=cyber-card p-6><
                 <h3 className=text-xl font-bold text-white mb-4>95% Customer Satisfaction<
-                <p className=text-gray-300><
+                <p className=text-gray-300><',
                   Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.
                 <
               <
@@ -177,7 +177,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
               Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.
             <
             <div className=flex flex-col,
-  sm:flex-row gap-4 justify-center><
+  sm: 'flex-row gap-4 justify-center><',
               <a href=te,
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
@@ -187,7 +187,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
               <a href=
   hove,
     r:bg-white,
-  hover:text-indigo-600 transition-all duration-300><
+  hover: 'text-indigo-600 transition-all duration-300><
                 Get Free Demo;
 
               <
@@ -197,5 +197,5 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
         
         <Footer /></Footer>
       </div>
-    </div>
+    </div>',
   )}"

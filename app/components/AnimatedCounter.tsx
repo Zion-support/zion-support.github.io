@@ -17,8 +17,8 @@ interface AnimatedCounterProps {
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
-  duration = 2000,
-  prefix = ',
+  duration = 2000,'
+  prefix = ','
   suffix = ',
   className = 
 }) => {
@@ -69,3 +69,4 @@ const currentCount = Math.floor(easeOutQuart * end);;
 
     </span>)
 export default AnimatedCounter;
+'

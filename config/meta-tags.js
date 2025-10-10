@@ -6,13 +6,13 @@ export const metaTags = {;
   author: 'Zion Tech Group','
   viewport: 'width=device-width, initial-scale=1','
   robots: 'index, follow','
-  og: {
+  og: {'
     title: 'Bolt.new Zion App - Advanced Web Development Solutions','
     description: 'Professional web development services with cutting-edge technology and innovative solutions.','
     type: 'website','
     url: 'https://bolt.new.zion.app','
     image: 'https://bolt.new.zion.app/og-image.jpg'},'
-  twitter: {,
+  twitter: {,'
     card: 'summary_large_image','
     title: 'Bolt.new Zion App - Advanced Web Development Solutions','
     description: 'Professional web development services with cutting-edge technology and innovative solutions.','
@@ -24,3 +24,4 @@ export const metaTags = {/* TODO: Fix JSX expression */};
   }};
 
 export default metaTags;
+'

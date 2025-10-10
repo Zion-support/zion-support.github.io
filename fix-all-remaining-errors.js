@@ -20,19 +20,19 @@ const importFixes = [;;
 
     // Fix malformed import statements with missing commas
     {
-      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,'
       replacement: "import { $1, $2, $3 } from '$4';
 
     },
     // Fix malformed import statements with missing commas
-    {
-      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+    {'
+      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,'
       replacement: "import { $1, $2 } from '$3';
 
     },
     // Fix malformed import statements
-    {
-      pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+    {'
+      pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,'
       replacement: "import { $1 } from '$2';
 
     }
@@ -220,9 +220,9 @@ return false}
 
 function findFilesWithSyntaxErrors() {
   try {;
-
+'
 const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: utf8 });;
-
+'
     return result.trim().split('\n).filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
 return []}
@@ -249,7 +249,7 @@ for (const file of filesWithErrors) {
 // console.log removed for production
 // Verify no more syntax errors exist
 try {;
-
+'
 const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: utf8 });;
 
   const count = parseInt(remainingErrors.trim());;
@@ -263,3 +263,4 @@ const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing er
 } catch (error) {
   // console.log removed for production
 }
+'

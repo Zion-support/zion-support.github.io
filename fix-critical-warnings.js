@@ -1,21 +1,21 @@
 #!/usr/bin/env node;
 
 import fs from 'fs';
-
+'
 import path from 'path';
-
+'
 // Get all TypeScript and JavaScript files';
-
+'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   
   for (const item of items) {
     
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories;
-
+'
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
         files = files.concat(getAllFiles(fullPath, extensions));
-
+'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
 
       }
@@ -32,9 +32,9 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 
 function fixConsoleStatements(content) {
   // Remove console.log, console.warn, console.error, console.info, console.debug;
-
+'
   content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, ');
-
+'
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, ');
 
   return content}
@@ -75,9 +75,8 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 
     }
 
-    return true;)
-  })';
-
+    return true;)'
+  })';'
   return filteredLines.join('\n')}
 
 // Fix unused variables by prefixing with underscore;
@@ -85,7 +84,7 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 function fixUnusedVariables(content) {
   // Only fix obvious unused variable declarations, not function parameters;
 
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (match, decl, varName) => {
+  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (match, decl, varName) => {'
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match;
 
@@ -113,7 +112,7 @@ function main() {
 
       // Only write if content changed;
 
-      if (content !== originalContent) {
+      if (content !== originalContent) {'
         fs.writeFileSync(file, content, 'utf8);
 
         fixedFiles++}
@@ -142,4 +141,4 @@ if (import.meta.url === `fil)`
 
 }
 
-export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`
+export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`'

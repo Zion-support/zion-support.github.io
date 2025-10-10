@@ -1,17 +1,17 @@
 const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0}
-    {/* TODO: Fix JSX expression */}
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-    {
-      title: 'Neur, a, l-Synaptic, Fusion, A, I',
-      date: 'March, 20, 2, 6',
-      impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
-      reade, r, s: '2, 0, 3, K+',
-      ic, o, n: '🚀',
-      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0'
+      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0}';
+    {/* TODO: Fix JSX expression */}'
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}';
+    {'
+      title: 'Neur, a, l-Synaptic, Fusion, A, I','
+      date: 'March, 20, 2, 6','
+      impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t','
+      reade, r, s: '2, 0, 3, K+','
+      ic, o, n: '🚀','
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>'
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>
           <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, Content, Just Releas, e, d;

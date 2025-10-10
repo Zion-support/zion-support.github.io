@@ -35,10 +35,10 @@ export const throttle =;;
 }
 
   let,
-  inThrottle: boolean;
-
+  inThrottle: 'boolean;
+',
   return (...arg,
-  s: Parameters;)
+  s: 'Parameters;)',
           <T>) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -84,7 +84,7 @@ export const useIntersectionObserver = ();;
 
   threshol,
   d: 0.1,
-            rootMargi,
+            rootMargi,'
   n: '50px,
 //             ...options;)
           })
@@ -265,29 +265,29 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 //         fcp,
 //         lcp,
         ttf,
-  b: navigation?.responseStart - navigation?.requestStart;)
+  b: 'navigation?.responseStart - navigation?.requestStart;)',
       })};
 
     // Monitor performance after page load;
-
+'
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
       window.addEventListener('load, updateMetrics)}
 
     // Monitor Core Web Vitals;
-
+'
     if ('web-vitals in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
       import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -346,7 +346,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
+'
     if (typeof window === 'undefined' || !(memory in performance)) return;
 
     const updateMemoryInfo = () => {/* TODO: Fix JSX expression */};;
@@ -374,7 +374,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
           totalJSHeapSiz,
   e: memory.totalJSHeapSize,
           jsHeapSizeLimi,
-  t: memory.jsHeapSizeLimit;)
+  t: 'memory.jsHeapSizeLimit;)',
         })}
 
     };
@@ -419,19 +419,19 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;
   if (typeof window === undefined) return;
 
   // Preload critical fonts;
-
+'
   preloadResource('/fonts/inter-var.woff2', font);
-
+'
   preloadResource('/fonts/inter-var.woff', font);
 
   // Preload critical images;
-
+'
   preloadResource('/images/hero-bg.webp', image);
-
+'
   preloadResource('/images/logo.svg', image);
 
   // Preload critical CSS;
-
+'
   preloadResource('/styles/critical.css', style)};
 
 // Bundle size monitoring;
@@ -489,13 +489,13 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
         const size = (resource as PerformanceResourceTiming).transferSize || 0;;
 
         totalSize += size;
-
+'
         if (resource.name.includes('.js)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
           jsSize += size} else if (resource.name.includes('.css)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -525,15 +525,15 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
       })};
 
     // Calculate after page load;
-
+'
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
       window.addEventListener('load, calculateBundleSize)}
 
     return () => {/* TODO: Fix JSX expression */}
@@ -561,3 +561,4 @@ export default {/* TODO: Fix JSX expression */}
 //   preloadResource,
 //   preloadCriticalResources,
 //   useBundleSizeMonitoring};
+'

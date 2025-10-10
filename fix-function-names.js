@@ -1,15 +1,15 @@
 #!/usr/bin/env node;
 
 import fs from 'fs';
-
+'
 import path from 'path;
 
-// console.log removed for production
+// console.log removed for production'
 // Function to fix function names';
 
-function fixFunctionNames(filePath) {
+function fixFunctionNames(filePath) {'
   try {';
-
+'
 let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
@@ -17,11 +17,11 @@ let content = fs.readFileSync(filePath, 'utf8);;
     // Fix function names with hyphens;
 
     const fileName = path.basename(filePath, path.extname(filePath));;
-
+'
     const validFunctionName = fileName.replace(/[^a-zA-Z0-9 _$]/g, '_);;
 
     // Replace invalid function names;
-
+'
     const lines = content.split('\n);;
 
     const newLines = [];;
@@ -31,21 +31,21 @@ let content = fs.readFileSync(filePath, 'utf8);;
 let line = lines[i];;
 
       // Fix function declarations with hyphens;
-
+'
       if (line.includes('function ') && line.includes('(')) {
         line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);
 
         modified = true}
 
       // Fix export default function declarations;
-
+'
       if (line.includes('export default function ') && line.includes('(')) {
         line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
 
         modified = true}
 
       newLines.push(line)}
-
+'
     content = newLines.join('\n);
 
     if (modified) {
@@ -61,7 +61,7 @@ return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
-
+'
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) {;
 
 const files = [];;
@@ -81,7 +81,7 @@ const fullPath = path.join(currentDir, item);;
 
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
-
+'
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath)}
 
@@ -96,7 +96,7 @@ const ext = path.extname(item);;
 
       }
 
-    } catch (error) {
+    } catch (error) {'
       // Skip directories we can't read}
 
   }
@@ -106,7 +106,7 @@ const ext = path.extname(item);;
   return files}
 
 // Main execution;
-
+'
 const srcDir = path.join(process.cwd(), 'src);;
 
 const files = findFiles(srcDir);;
@@ -138,3 +138,4 @@ if (fixedCount > 0) {
 } else {
   // console.log removed for production
 }
+'

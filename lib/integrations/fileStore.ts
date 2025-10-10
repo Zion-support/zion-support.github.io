@@ -1,11 +1,11 @@
 import * as fs from 'fs;
-
+'
 import * as path from 'path;
-
+'
 import type { IntegrationsState } from './types;
 
 ;
-
+'
 const DATA_DIR = path.resolve(process.cwd(), 'data', integrations);;
 
 const STATE_FILE = path.join(DATA_DIR, state.json);;
@@ -28,7 +28,7 @@ const initial: IntegrationsState = {,
       logs: [],
       overrides: [],
       events: []};
-
+'
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8)}
 
 }
@@ -173,7 +173,7 @@ const fullPath = path.join(this.basePath, filePath);;
 //     const fullPath = path.join(this.basePath, filePath);;
 
     await fs.promises.unlink(fullPath)}
-
+'
   async listFiles(dirPath: string = '): Promise<string[]> {,
 //     const fullPath = path.join(this.basePath, dirPath);;
 
@@ -227,3 +227,4 @@ export const createFileStore = (options: FileStoreOptions) =>,;;
 ,
 
 
+'

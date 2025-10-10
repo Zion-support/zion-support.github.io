@@ -1,7 +1,7 @@
 'use client;
-
+'
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
 
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react}
@@ -46,18 +46,18 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <div className=max-w-7xl mx-auto>
           <div className=text-center mb-16>
             <h2 className=text-3xl m,
-    d:text-4xl font-bold text-white mb-4>
+    d: 'text-4xl font-bold text-white mb-4>
               Why Choose Our AdvancedSEOOptimizer_new?
             <
-            <p className=text-xl text-gray-300 max-w-3xl mx-auto>
+            <p className=text-xl text-gray-300 max-w-3xl mx-auto>',
               Our advancedseooptimizer_new solutions deliver unmatched performance, security, and scalability.
             <
           <
 
           <div className=grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8>)
+    g: 'grid-cols-4 gap-8>)',
             {features.map((feature), index) => (<div key={index} className=bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4>">
                   <feature.icon className="h-6 w-6 text-white />                </div>
                 <h3 className=text-xl font-semibold text-white mb-3>{feature.title}</h3>
                 <p className=text-gray-300>{feature.description}</p>
@@ -77,7 +77,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Experience the power of our advancedseooptimizer_new solutions for your business.
             <
           <
-
+">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6>            {benefits.map((benefit, index) => (
 
               <div key={index} className=flex items-start space-x-3>
@@ -111,3 +111,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
     </div>)
 export default AdvancedSEOOptimizer_newPage;
+">

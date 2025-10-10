@@ -7,8 +7,8 @@ import { glob } from glob;
 // Files to process;
 
 const filePatterns = [;;;
-
-  'app/**/*.{ts,tsx},
+'
+  'app/**/*.{ts,tsx},'
   'src/**/*.{ts,tsx},
   components/**/*.{ts,tsx}
 
@@ -17,18 +17,18 @@ const filePatterns = [;;;
 // Files to exclude;
 
 const excludePatterns = [;;
-
-  '**/node_modules/**,
-  '**/dist/**,
-  '**/.next/**,
-  '**/build/**,
-  '**/coverage/**,
-  '**/*.test.{ts,tsx},
-  '**/*.spec.{ts,tsx},
-  '**/scripts/**,
-  '**/automation/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+'
+  '**/node_modules/**,'
+  '**/dist/**,'
+  '**/.next/**,'
+  '**/build/**,'
+  '**/coverage/**,'
+  '**/*.test.{ts,tsx},'
+  '**/*.spec.{ts,tsx},'
+  '**/scripts/**,'
+  '**/automation/**,'
+  '**/backup*/**,'
+  '**/disabled*/**,'
   '**/corrupted*/**,
   **/temp*/**
 ];
@@ -56,8 +56,8 @@ let newContent = content;;
   const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm;;
 
   if (setStatePattern.test(newContent)) {
-    newContent = newContent.replace(setStatePattern, (match) => {
-      if (!match.includes('});)) {
+    newContent = newContent.replace(setStatePattern, (match) => {'
+      if (!match.includes('});)) {'
         return match + '\n    });}
 
       return match});
@@ -69,8 +69,8 @@ let newContent = content;;
   const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm;;
 
   if (functionCallPattern.test(newContent)) {
-    newContent = newContent.replace(functionCallPattern, (match) => {
-      if (!match.includes('});') && !match.includes('});)) {
+    newContent = newContent.replace(functionCallPattern, (match) => {'
+      if (!match.includes('});') && !match.includes('});)) {'
         return match + '\n      });}
 
       return match});
@@ -82,8 +82,8 @@ let newContent = content;;
   const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;;
 
   if (ifStatementPattern.test(newContent)) {
-    newContent = newContent.replace(ifStatementPattern, (match) => {
-      if (!match.includes('})) {
+    newContent = newContent.replace(ifStatementPattern, (match) => {'
+      if (!match.includes('})) {'
         return match + '\n    }}
 
       return match});
@@ -95,8 +95,8 @@ let newContent = content;;
   const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;;
 
   if (forEachPattern.test(newContent)) {
-    newContent = newContent.replace(forEachPattern, (match) => {
-      if (!match.includes('});)) {
+    newContent = newContent.replace(forEachPattern, (match) => {'
+      if (!match.includes('});)) {'
         return match + '\n    });}
 
       return match});
@@ -108,8 +108,8 @@ let newContent = content;;
   const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm;;
 
   if (objectMethodPattern.test(newContent)) {
-    newContent = newContent.replace(objectMethodPattern, (match) => {
-      if (!match.includes('})) {
+    newContent = newContent.replace(objectMethodPattern, (match) => {'
+      if (!match.includes('})) {'
         return match + '\n  }}
 
       return match});
@@ -179,7 +179,8 @@ if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
 export { processFile, fixSyntaxErrors };
-
+'
 // #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob(src/**/*.{ts,tsx,js}jsx}) {/* TODO: Fix JSX expression */};;
 
   d: /workspace }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */};;
+'

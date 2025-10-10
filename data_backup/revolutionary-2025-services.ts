@@ -4,31 +4,31 @@ realImplementatio,
   d: AI cybersecurity platform with quantum capabilities. Competes with CrowdStrike, SentinelOne, and traditional security tools.'; targetAudienc,
   e: Enterpris,
   e: organization,s, Government agencies, Financial institutions, Healthcare providers, Critical infrastructure; trialDay,
-  s: 3,0, setupTim,
+  s: 3,0, setupTim,'
   e:,' 1-3: weeks'; categor,
   y: A,
-  I: Cybersecurity & Defens,e; realServic,
-  e: tru,e, technology[' AI/ML''; Quantu,
-  m: computing''; Behaviora,
-  l: analysis''; Real-tim,
-  e: monitoring''; Threa,
-  t: intelligence']'; integrations[ SIE,
-  M: systems''; ED,
-  R: platforms'';' 'Firewalls''; Identit,
-  y: management''; Complianc,
-  e: tools']'; useCases[ Threa,
-  t: detection''; Inciden,
-  t: response''; Vulnerabilit,
-  y: management''; Complianc,
-  e: monitoring''; Securit,
+  I: Cybersecurity & Defens,e; realServic,'
+  e: tru,e, technology[' AI/ML''; Quantu,'
+  m: computing''; Behaviora,'
+  l: analysis''; Real-tim,'
+  e: monitoring''; Threa,'
+  t: intelligence']'; integrations[ SIE,'
+  M: systems''; ED,'
+  R: platforms'';' 'Firewalls''; Identit,'
+  y: management''; Complianc,'
+  e: tools']'; useCases[ Threa,'
+  t: detection''; Inciden,'
+  t: response''; Vulnerabilit,'
+  y: management''; Complianc,'
+  e: monitoring''; Securit,'
   y: automation']; ro,
-  i: Organization,
-  s: achieve 500% ROI through reduced security incidents and automated threat response,.'; competitors[' CrowdStrike'';' 'SentinelOne''; Carbo,
-  n: Black''; Traditiona,
+  i: Organization,'
+  s: achieve 500% ROI through reduced security incidents and automated threat response,.'; competitors[' CrowdStrike'';' 'SentinelOne''; Carbo,'
+  n: Black''; Traditiona,'
   l: security tools']; marketSiz,
   e: $15.2,
   B: marke,t; growthRat,
-  e:, 220% annua,
+  e:, 220% annua,'
   l: growth'; varian,
   t: ai-futuristi,c; contactInf,
   o: {/* TODO: Fix JSX expression */}
@@ -57,5 +57,5 @@ realImplementatio,
 
   e: 2025-02-1,0} customer,
   s: 9,5, ratin,
-  g: 4.,9} review,
+  g: 4.,9} review,'
   s: 67]}} '

@@ -12,30 +12,30 @@ const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n,
       lin, k, s: [,;
 
 const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
-
-        { lab, e, l: 'H, o, m, e', pa, t, h: /  },
-        { lab, e, l: 'Soluti, o, n, s', pa, t, h: /solution, s },
-        { lab, e, l: 'Servi, c, e, s', pa, t, h: /servi, c, e, s },
-        { lab, e, l: 'Resour, c, e, s', pa, t, h: /resour, c, e, s },
-        { lab, e, l: 'Case, Studi, e, s', pa, t, h: /ca, s, e-stud, i, e, s },
-        { lab, e, l: 'B, l, o, g', pa, t, h: /b, l, o, g },
+'
+        { lab, e, l: 'H, o, m, e', pa, t, h: /  },'
+        { lab, e, l: 'Soluti, o, n, s', pa, t, h: /solution, s },'
+        { lab, e, l: 'Servi, c, e, s', pa, t, h: /servi, c, e, s },'
+        { lab, e, l: 'Resour, c, e, s', pa, t, h: /resour, c, e, s },'
+        { lab, e, l: 'Case, Studi, e, s', pa, t, h: /ca, s, e-stud, i, e, s },'
+        { lab, e, l: 'B, l, o, g', pa, t, h: /b, l, o, g },'
         { lab, e, l: 'Ab, o, u, t', pa, t, h: /ab, o, u, t }]},
     {
       title: AI, Servic, e, s,
       lin, k, s: [,
-    {/* TODO: Fix JSX expression */}
-
-        { lab, e, l: 'AI, Solutio, n, s', pa, t, h: /servic, e, s/ai-servi, c, e, s },
-        { lab, e, l: 'Micro, Sa, a, S', pa, t, h: /servic, e, s/mic, r, o-s, a, a, s },
-        { lab, e, l: 'Data, Analyti, c, s', pa, t, h: /servic, e, s/analyt, i, c, s },
+    {/* TODO: Fix JSX expression */}';
+'
+        { lab, e, l: 'AI, Solutio, n, s', pa, t, h: /servic, e, s/ai-servi, c, e, s },'
+        { lab, e, l: 'Micro, Sa, a, S', pa, t, h: /servic, e, s/mic, r, o-s, a, a, s },'
+        { lab, e, l: 'Data, Analyti, c, s', pa, t, h: /servic, e, s/analyt, i, c, s },'
         { lab, e, l: 'Workflow, Automati, o, n', pa, t, h: /servic, e, s/automat, i, o, n }]},
     {
       title: IT, Servic, e, s,
       lin, k, s: [,
-    {/* TODO: Fix JSX expression */}
-
-        { lab, e, l: 'IT, Servic, e, s', pa, t, h: /servic, e, s/it-servi, c, e, s },
-        { lab, e, l: 'Clo, u, d & Dev, O, p, s', pa, t, h: /servic, e, s/cl, o, u, d },
+    {/* TODO: Fix JSX expression */}';
+'
+        { lab, e, l: 'IT, Servic, e, s', pa, t, h: /servic, e, s/it-servi, c, e, s },'
+        { lab, e, l: 'Clo, u, d & Dev, O, p, s', pa, t, h: /servic, e, s/cl, o, u, d },'
         { lab, e, l: 'Cybersecur, i, t, y', pa, t, h: /servic, e, s/secur, i, t, y },
         {/* TODO: Fix JSX expression */}
 
@@ -43,9 +43,9 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
     {
       title: To, o, l, s,
       lin, k, s: [,
-    {/* TODO: Fix JSX expression */}
-
-        { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: /servic, e, s/s, e, o-spl, i, t-test, i, n, g },
+    {/* TODO: Fix JSX expression */}';
+'
+        { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: /servic, e, s/s, e, o-spl, i, t-test, i, n, g },'
         { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' }]}]; return(<aside, classNam, e = bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24>)
       <div, className=spa, c, e-y-6>)
         { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
@@ -111,4 +111,4 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
 
 export default Sidebar;
 
-`
+`'

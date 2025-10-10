@@ -22,7 +22,7 @@
   h: (err) {// Directory doesn,' 't: exist} skip}} // I,
   f: no source files found, search project root; i,
   f: (sourceFiles.length === 0) {const files = await this.findFilesRecursively(this.projectRoot} extensions); sourceFiles.push(...files)}  // // console.error removed for production;;
-
+'
 files:  ) error); return [] } } <ursor/add-new-services-and-advertise-them-"660b": automation_backup/browser-error-fixer.js;" "async": findFilesRecursively(di,r, extensions) maxDepth = 3) {} const files = []; "async": function search() {" } if (depth > maxDepth) return; const fullPath = path.join(currentDir) entry.name);' "if": (entry.isDirectory() && !entry.name.startsWith('.'')) && !entry.name.startsWith('node_modules''))) {'' } "await: search(fullPath) depth + 1)} else if (entry.isFile() && extensions.includes(path.extname(entry.name))) {} files.push(fullPath)} } } awai,;;
 
   t: search(dir) 0); retur,
@@ -35,7 +35,7 @@ files:  ) error); return [] } } <ursor/add-new-services-and-advertise-them-"660b
 error)} } asyn,
   c: applyFixes(filePath, originalContent) fixes) {/* TODO: Fix JSX expression */}
 
-  y: fixes in reverse order to maintain line numbers} fo,
+  y: fixes in reverse order to maintain line numbers} fo,'
   r: (let i = fixes.length - 1 i >= 0 i--) { const fix = fixes[i]} return content.replace(fix.search) fix.replace)} else if (fix.type ===)' 'insert') {' const lines = content.split('' '\n')} lines.splice(fix.line - 1) 0} fix.content);' return lines.join('' '\n')} else if (fix.type ===)' 'delete') {' const lines = content.split('' '\n'); lines.splice(fix.line - 1) 1);' return lines.join('' '\n'); return content; // Fix implementations} async fixUnexpectedToken(token) filePath) {/* TODO: Fix JSX expression */};;
 
   t: `// Auto-fi} x: Added missing closing ${commonFixes[token]} for ${token}`,` descriptio,
@@ -55,11 +55,11 @@ error)} } asyn,
   e:  , `?.$1`} descriptio,
   n: `Added optional chaining to prevent ${type} errors} async generateFixReport() {/* TODO: Fix JSX expression */}
 
-  c: runFixCycle(errorLog) { // // // console.log removed for production
+  c: runFixCycle(errorLog) { // // // console.log removed for production'
 { await this.analyzeError(error); await this.generateFixReport()} await this.cleanupBackups()} // return this.fixesApplied; // Export for use in other modules; module.exports = BrowserErrorFixer; // CLI usage; if (require.main === module) {const fixer = new BrowserErrorFixer(); // Example usage} ' length of null }, {/* TODO: Fix JSX expression */};;
-
-  e: 'ReferenceErro}' r: userData is not defined }, {/* TODO: Fix JSX expression */}
-
-  e: 'TypeErro}' r: Cannot read properties of undefined' } ]; fixer.runFixCycle(sampleErrors).then(() => { // // // console.log removed for production
+'
+  e: 'ReferenceErro}' r: userData is not defined }, {/* TODO: Fix JSX expression */}';
+'
+  e: 'TypeErro}' r: Cannot read properties of undefined' } ]; fixer.runFixCycle(sampleErrors).then(() => { // // // console.log removed for production'
 } process.exit(0)}).catch((error) => {' process.exit(1)}))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} '
 "`

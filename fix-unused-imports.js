@@ -10,33 +10,33 @@ import { fileURLToPath } from url;
 
 const commonUnusedImports = [;;
 
-  'ArrowRight', 'Star', 'TrendingUp', 'Cpu', 'Database', 'BarChart, 
-  'Code', 'Cloud', 'Users', 'Globe', 'Lock', 'Award', 'Mail', 'MapPin,
-  'Image', 'Zap', 'Shield', 'CheckCircle', 'Phone', 'Calendar', 'Target,
+  'ArrowRight', 'Star', 'TrendingUp', 'Cpu', 'Database', 'BarChart, '
+  'Code', 'Cloud', 'Users', 'Globe', 'Lock', 'Award', 'Mail', 'MapPin,'
+  'Image', 'Zap', 'Shield', 'CheckCircle', 'Phone', 'Calendar', 'Target,'
   'Brain', 'Navigation', 'Footer, SEOOptimizer
 ];
 
 // Files to process;
 
 const filesToProcess = [;;
-
-  'src/ai-ab-testing/page.tsx,
-  'src/ai-analytics-dashboard/page.tsx,
-  'src/ai-analytics/page.tsx,
-  'src/ai-automation/page.tsx,
-  'src/ai-computer-vision/page.tsx,
-  'src/ai-content-generation/page.tsx,
-  'src/ai-content-studio/page.tsx,
-  'src/ai-crm/page.tsx,
-  'src/ai-customer-insights/page.tsx,
-  'src/ai-customer-support-bot/page.tsx,
-  'src/ai-customer-support/page.tsx,
-  'src/ai-cybersecurity/page.tsx,
-  'src/ai-data-analytics/page.tsx,
-  'src/ai-data-visualization/page.tsx,
-  'src/ai-design-assistant/page.tsx,
-  'src/ai-document-processing/page.tsx,
-  'src/ai-document-processor/page.tsx,
+'
+  'src/ai-ab-testing/page.tsx,'
+  'src/ai-analytics-dashboard/page.tsx,'
+  'src/ai-analytics/page.tsx,'
+  'src/ai-automation/page.tsx,'
+  'src/ai-computer-vision/page.tsx,'
+  'src/ai-content-generation/page.tsx,'
+  'src/ai-content-studio/page.tsx,'
+  'src/ai-crm/page.tsx,'
+  'src/ai-customer-insights/page.tsx,'
+  'src/ai-customer-support-bot/page.tsx,'
+  'src/ai-customer-support/page.tsx,'
+  'src/ai-cybersecurity/page.tsx,'
+  'src/ai-data-analytics/page.tsx,'
+  'src/ai-data-visualization/page.tsx,'
+  'src/ai-design-assistant/page.tsx,'
+  'src/ai-document-processing/page.tsx,'
+  'src/ai-document-processor/page.tsx,'
   'src/ai-ecommerce-optimizer/page.tsx,
   src/ai-ecommerce-solutions/page.tsx;
 
@@ -48,7 +48,7 @@ let content = fs.readFileSync(filePath, utf8);;
     let modified = false;;
 
     // Remove unused imports from lucide-react;
-
+'
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['];?/);;
 
     if (lucideImportMatch) {;
@@ -59,7 +59,7 @@ const imports = lucideImportMatch[1].split(,).map(imp => imp.trim());;
 
       // Check which imports are actually used in the file;
 
-      imports.forEach(imp => {)
+      imports.forEach(imp => {)'
         if (content.includes(imp) && !imp.includes('//)) {
           usedImports.push(imp)}
 
@@ -70,7 +70,7 @@ const imports = lucideImportMatch[1].split(,).map(imp => imp.trim());;
 const newImport = usedImports.length > 0;;
 
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-
+'
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['];?/);;
 
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
@@ -80,7 +80,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       });
 
       if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}
-
+'
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';
 
           : ;
@@ -90,11 +90,11 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
         modified = true;
 
     // Remove unused component imports;
-
+'
     const componentImports = ['Navigation', 'Footer', SEOOptimizer];;
 
     componentImports.forEach(comp => {);
-
+'
 const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, g);;
 
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.)) {
@@ -168,7 +168,7 @@ const line = lines[i];;
         currentImport = line;
 
         // Check if this is a single-line import;
-
+'
         if (trimmedLine.endsWith(';') || trimmedLine.endsWith('from)) {
           // This is a single-line import, check if its used;
 
@@ -181,7 +181,7 @@ const line = lines[i];;
           const importLines = [line];;
 
           let j = i + 1;;
-
+'
           while (j < lines.length && !trimmedLine.endsWith(';)) {
             importLines.push(lines[j]);
 
@@ -195,7 +195,7 @@ const line = lines[i];;
 
           if (isImportUsed(content, fullImport)) {
             newLines.push(...importLines);
-
+'
           i = j - 1; // Skip the processed lines} else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from))) {
         // End of multi-line import;
 
@@ -234,7 +234,7 @@ import { execSync } from child_process;
 function removeUnusedImportsFromFile(filePath) {/* TODO: Fix JSX expression */}
 
         } else {/* TODO: Fix JSX expression */}
-
+'
       } else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from'))) {/* TODO: Fix JSX expression */}
 
   in: ${filePath});
@@ -287,7 +287,7 @@ function isImportUsed(content, importLine) {/* TODO: Fix JSX expression */}
   return true; // If we cant determine, keep the import;
 
 // Get all TypeScript/JavaScript files;
-
+'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 let results = [];;
@@ -302,7 +302,7 @@ const filePath = path.join(dir, file);;
 
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
-
+'
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build].includes(file)) {
         results = results.concat(getAllFiles(filePath, extensions));
 
@@ -317,17 +317,17 @@ const filePath = path.join(dir, file);;
 
 // console.log removed for production
 ;
-
+'
 const files = getAllFiles('.', ['.ts', '.tsx', '.js', .jsx]);;
 
-  .filter(file => )
-    !file.includes('node_modules) && 
-    !file.includes('.git) &&
-    !file.includes('dist) &&
-    !file.includes('.next) &&
-    !file.includes('out) &&
-    !file.includes('build) &&
-    !file.includes('remove-unused-imports.js) &&
+  .filter(file => )'
+    !file.includes('node_modules) && '
+    !file.includes('.git) &&'
+    !file.includes('dist) &&'
+    !file.includes('.next) &&'
+    !file.includes('out) &&'
+    !file.includes('build) &&'
+    !file.includes('remove-unused-imports.js) &&'
     !file.includes('fix-unused-imports.js)
   );
 
@@ -340,7 +340,7 @@ files.forEach(file => {)
     fixedCount++;
 
 ;
-
+'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
 
 // console.log removed for production

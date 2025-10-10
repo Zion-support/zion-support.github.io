@@ -8,7 +8,7 @@
  */
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -70,10 +70,10 @@ const skipLink = document.createElement(a);;
             transition: top 0.3 s;
 
           \;
-
+'
           skipLink.addEventListener('focus, function() {
             this.style.top = 6 px});
-
+'
           skipLink.addEventListener('blur, function() {
             this.style.top = -40 px});
 
@@ -113,10 +113,10 @@ const toggle = document.createElement(button);;
             font-size: 14 px;
 
           \;
-
+'
           toggle.addEventListener('click, function() {
             document.body.classList.toggle(high-contrast);
-
+'
             this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : High Contrast});
 
           document.body.appendChild(toggle)}
@@ -183,7 +183,7 @@ const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSi
 const resetBtn = document.createElement(button);;
 
           resetBtn.textContent = Reset;
-
+'
           resetBtn.addEventListener('click, () => {
             document.documentElement.style.fontSize = 16 px});
 
@@ -198,10 +198,10 @@ const resetBtn = document.createElement(button);;
         // Focus management for modals and dropdowns;
 
 function enhanceFocusManagement() {
-          // Trap focus in modals
+          // Trap focus in modals'
           document.addEventListener('keydown, function(e) {
             if (e.key === Tab) {;
-
+'
 const modal = document.querySelector('.modal:not([style*="display: none]));;
 
               if (modal) {;
@@ -235,7 +235,7 @@ const focusableElements = modal.querySelectorAll(;;
 
             // Close modals with Escape key
             if (e.key === Escape) {;
-
+'
 const modal = document.querySelector('.modal:not([style*="display: none]));;
 
               if (modal) {;
@@ -272,19 +272,19 @@ const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();;
 const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer]);;
 
           clickableDivs.forEach(div => {
-            if (!div.getAttribute('role)) {
+            if (!div.getAttribute('role)) {'
               div.setAttribute('role', button);
-
+'
               div.setAttribute('tabindex', '0)}
 
           });
 
           // Add aria-expanded to collapsible elements;
-
+'
 const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse]);;
 
           collapsibles.forEach(element => {
-            if (!element.getAttribute('aria-expanded)) {
+            if (!element.getAttribute('aria-expanded)) {'
               element.setAttribute('aria-expanded', 'false)}
 
           })}
@@ -294,9 +294,9 @@ const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="co
 function addLiveRegion() {;
 
 const liveRegion = document.createElement(div);;
-
+'
           liveRegion.setAttribute('aria-live', polite);
-
+'
           liveRegion.setAttribute('aria-atomic', true);
 
           liveRegion.className = sr-only;
@@ -330,10 +330,10 @@ const originalPushState = history.pushState;;
 
           history.pushState = function() {
             originalPushState.apply(history, arguments);
-
+'
             liveRegion.textContent = 'Page navigation complete}}
-
-        // Initialize accessibility features
+';
+        // Initialize accessibility features'
         document.addEventListener('DOMContentLoaded, function() {
           addSkipLink();
 
@@ -374,7 +374,7 @@ const styleSheet = document.createElement(style);;
     </script>
   ;
 
-  // Insert accessibility script before closing body tag
+  // Insert accessibility script before closing body tag'
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>);
 
   fs.writeFileSync(indexPath, indexContent);
@@ -394,7 +394,7 @@ function generateAccessibilityReport() {
 
 const accessibilityReport = {;;
 
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString()'
     version: '1.0.0,
     summary:
         summary: {

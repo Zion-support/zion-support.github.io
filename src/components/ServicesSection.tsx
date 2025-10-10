@@ -5,7 +5,7 @@ export default function ServicesSection() {;
 const services = [;;;
 
     {
-      title: 'AI & Machine Learning,
+      title: 'AI & Machine Learning,'
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.,
       icon: (
 
@@ -14,9 +14,9 @@ const services = [;;;
         </svg>
       ),
       features: ['Predictive Analytics', 'NLP Solutions', 'Computer Vision', 'Deep Learning]
-    },
-    {
-      title: 'Cloud Solutions,
+    },';
+    {'
+      title: 'Cloud Solutions,'
       description: 'Scalable cloud infrastructure, migration services, and cloud-native application development.,
       icon: (
 
@@ -25,9 +25,9 @@ const services = [;;;
         </svg>
       ),
       features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Containerization]
-    },
-    {
-      title: 'Web Development,
+    },';
+    {'
+      title: 'Web Development,'
       description: 'Modern, responsive web applications using cutting-edge technologies and frameworks.,
       icon: (
 
@@ -36,9 +36,9 @@ const services = [;;;
         </svg>
       ),
       features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps]
-    },
-    {
-      title: 'Data Analytics,
+    },';
+    {'
+      title: 'Data Analytics,'
       description: 'Transform your data into actionable insights with advanced analytics and visualization.,
       icon: (
 
@@ -47,9 +47,9 @@ const services = [;;;
         </svg>
       ),
       features: ['Business Intelligence', 'Data Visualization', 'ETL Processes', 'Real-time Analytics]
-    },
-    {
-      title: 'Cybersecurity,
+    },';
+    {'
+      title: 'Cybersecurity,'
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.,
       icon: (
 
@@ -58,9 +58,9 @@ const services = [;;;
         </svg>
       ),
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response]
-    },
-    {
-      title: 'Mobile Development,
+    },';
+    {'
+      title: 'Mobile Development,'
       description: 'Native and cross-platform mobile applications for iOS and Android platforms.,
       icon: (
 
@@ -75,14 +75,14 @@ const services = [;;;
 
   return (
 
-    <section id="services" className="py-20 relative>
+    <section id="services" className="py-20 relative>">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
         {/* Section Header */}
-
-        <div className="text-center mb-16>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6>
+">
+        <div className="text-center mb-16>">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6>">
             <span className="holographic-text>Our Services</span>
-          </h2>
+          </h2>">
           <p className="text-xl text-gray-300 max-w-3xl mx-auto>
             Comprehensive technology solutions designed to accelerate your business growth 
             and digital transformation journey.
@@ -90,40 +90,40 @@ const services = [;;;
         </div>
 
         {/* Services Grid */}
-
+">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
           {services.map((service, index) => (
 
             <div
               key={index}
-
-              className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300
-            >
+">
+              className="cyber-card-advanced p-8 group hover: 'scale-105 transition-all duration-300
+            >',
               {/* Icon */}
-
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300>
+">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover: 'scale-110 transition-transform duration-300>',
                 {service.icon}
 
               </div>
 
               {/* Content */}
-
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300>
+">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover: 'text-cyan-400 transition-colors duration-300>',
                 {service.title}
 
               </h3>
-              
+              ">
               <p className="text-gray-400 mb-6 leading-relaxed>
                 {service.description}
 
               </p>
 
               {/* Features */}
-
+">
               <ul className="space-y-2>
                 {service.features.map((feature, featureIndex) => (
-
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-300>
+">
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-300>">
                     <svg className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7 />
                     </svg>
@@ -137,11 +137,11 @@ const services = [;;;
               {/* Learn More Button */}
 
               <div className="mt-6>
-                <a
+                <a">
                   href="#contact
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300
                 >
-                  Learn More
+                  Learn More">
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7 />
                   </svg>
@@ -154,22 +154,22 @@ const services = [;;;
 
         {/* CTA Section */}
 
-        <div className="text-center mt-16>
-          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto>
+        <div className="text-center mt-16>">
+          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto>">
             <h3 className="text-2xl font-bold text-white mb-4>
               Ready to Transform Your Business?
-            </h3>
+            </h3>">
             <p className="text-gray-300 mb-8 text-lg>
               Lets discuss how our AI and IT solutions can drive your success.
-            </p>
+            </p>">
             <div className="flex flex-col sm:flex-row gap-4 justify-center>
-              <a
+              <a">
                 href="#contact
                 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105
               >
                 Get Free Consultation
               </a>
-              <a
+              <a">
                 href="tel:+1234567890
                 className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow
               >
@@ -181,3 +181,4 @@ const services = [;;;
       </div>
     </section>
   )}
+">

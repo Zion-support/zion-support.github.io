@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import fs from 'fs;
-
+'
 import path from 'path;
-
+'
 import { execSync } from 'child_process;
 
 // Function to fix common merge conflicts
@@ -88,14 +88,14 @@ function findFilesWithMergeConflicts(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+'
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         scanDirectory(fullPath);
-
+'
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
         try {
           const content = fs.readFileSync(fullPath, utf8);;
-
+'
           if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
             files.push(fullPath);
 
@@ -147,3 +147,4 @@ if (remainingConflicts.length > 0) {
   remainingConflicts.forEach(file => console.log(`  - ${file}));
 
 }
+'

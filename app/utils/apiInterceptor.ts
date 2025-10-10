@@ -395,7 +395,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   e: Response): Promise<T> {/* TODO: Fix JSX expression */}
 
     }
-
+'
     if (contentType?.includes('text/)) {/* TODO: Fix JSX expression */}
 
     }
@@ -492,3 +492,4 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 export const apiInterceptor = APIInterceptor.getInstance();;
 
 export default APIInterceptor;
+'

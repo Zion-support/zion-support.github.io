@@ -1,28 +1,28 @@
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react;
-
+'
 'use client;
-
+'
 import React, { useState } from 'react;
-
+'
 import { Link } from 'react-router-dom;
-
+'
 import Navigation from '../components/Navigation;
-
+'
 import Footer from '../components/Footer;
 
 ;
 
 const SignupPage: React.FC = () => {;
 
-const [formData, setFormData] = useState({
-    firstName: '',    lastName: ',
-    email: ',
-    company: ',
-    phone: ',
-    password: ',
+const [formData, setFormData] = useState({'
+    firstName: '',    lastName: ','
+    email: ','
+    company: ','
+    phone: ','
+    password: ','
     confirmPassword: ',
     agreeToTerms: false,
-    subscribeNewsletter: false)
+    subscribeNewsletter: 'false)',
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -38,7 +38,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
 const { name, value, type, checked } = e.target;
 
     setFormData(prev => ({
-      ...prev,
+      ...prev,'
       [name]: type === 'checkbox ? checked : value
     }))};
 
@@ -51,8 +51,8 @@ const handleSubmit = async (e: React.FormEvent) => {;;
     if (formData.password !== formData.confirmPassword) {
       alert(Passwords do not match);
 
-      return}
-
+      return;
+  }
     if (!formData.agreeToTerms) {
       alert(Please agree to the terms and conditions);
 
@@ -63,20 +63,20 @@ const handleSubmit = async (e: React.FormEvent) => {;;
 
     setIsLoading(false);
 
-    // Redirect to dashboard or home page
+    // Redirect to dashboard or home page'
     window.location.href = '/;
 
 ;
 
 const features = [;
-    {      icon: Shield,
+    {      icon: Shield,'
       title: 'Enterprise Security,
       description:     ,
-$4},
-      icon: Award,
+$4},';
+      icon: Award,'
       title: 'Proven Results,
-      description:       ,
-icon$5: Globe,
+      description:       ,';
+icon$5: Globe,'
       title: 'Global Support,
       description:   ,
 $4];
@@ -84,11 +84,11 @@ $4];
 ;
 
 const benefits = [;;
-
-    'Free 14-day trial,
-    'No setup fees,
-    24
-    'Custom integrations,
+'
+    'Free 14-day trial,'
+    'No setup fees,';
+    24'
+    'Custom integrations,'
     'Scalable solutions,
     Regular updates
 
@@ -103,24 +103,24 @@ const benefits = [;;
 
   O: Add content}
 
-};  firstNam,
-  e: ',
-    lastNam,
-  e: ',
-    emai,
-  l: ',
-    compan,
-  y: ',
-    phon,
-  e: ',
-    passwor,
-  d: ',
-    confirmPasswor,
+};  firstNam,'
+  e: ',';
+    lastNam,'
+  e: ',';
+    emai,'
+  l: ',';
+    compan,'
+  y: ',';
+    phon,'
+  e: ',';
+    passwor,'
+  d: ',';
+    confirmPasswor,'
   d: ',
     agreeToTerm,
   s: false,
     subscribeNewslette,)
-  r: false;)
+  r: 'false;)',
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -129,17 +129,17 @@ const benefits = [;;
 
   const [isLoading, setIsLoading] = useState(false);
 
-const handleInputChange = (e: React.ChangeEvent;);;
-
+const handleInputChange = (e: 'React.ChangeEvent;);;
+',
           <HTMLInputElement>) => {/* TOD,
-    O: Fix JSX expression *
+    O: 'Fix JSX expression *',
     const { name, value, type, checked } = e.target;
 
     setFormData(prev => ({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}/
+}/'
       [name]: type === 'checkbox ? checked : value;)
     }))};
 
@@ -159,14 +159,14 @@ const handleInputChange = (e: React.ChangeEvent;);;
 
       alert(Passwords do not match);
 
-      return}
-
+      return;
+  }
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+'
       alert('Please agree to the terms and conditions);    setIsLoading(true);
 
     /
@@ -179,24 +179,24 @@ const handleInputChange = (e: React.ChangeEvent;);;
   const features = [;;
 
   /
-  O: Add items;
+  O: 'Add items;
 
 ];
-
+',
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 };  ico,
   n: Shield,
-      titl,
+      titl,'
   e: 'Enterprise Security,
       descriptio,
-  n: Bank-level security with advanced encryption and compliance
+  n: 'Bank-level security with advanced encryption and compliance',
     },
-
-icon: Award,
-      title: 'Proven Results,
+';
+icon: Award,'
+      title: 'Proven Results,'
       description: '300% average ROI and 95% process automation for our clients,;
 
 const PagePage: React.FC = () => {
@@ -206,34 +206,34 @@ const PagePage: React.FC = () => {
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12>
-        <div className="max-w-6xl mx-auto px-4>
+      <Navigation />">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12>">
+        <div className="max-w-6xl mx-auto px-4>">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center>
 );
 
 }
 
             {/* Left Side - Signup Form */}
-
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50>
+">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50>">
               <div className="text-center mb-8">                <h1 className="text-3xl font-bold text-white mb-2 neon-text>
                   Create Your Account
-                <
+                <">
                 <p className="text-gray-300>
                   Join thousands of businesses transforming with AI and IT solutions
                 <
               <
-
-              <form onSubmit={handleSubmit} className="space-y-6>
+">
+              <form onSubmit={handleSubmit} className="space-y-6>">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4>
-                  <div>
+                  <div>">
                     <label className="block text-sm font-medium text-gray-300 mb-2>
                       First Name
-                    <
-                    <div className="relative>
+                    <">
+                    <div className="relative>">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
-                      <input
+                      <input">
                         type="text
                         name="firstName
                         value = { formData.firstName };
@@ -251,7 +251,7 @@ const PagePage: React.FC = () => {
                         placeholder="Enter your last name
 
                     Email Address
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 ">
                       type="email
                       name="email
                       value = { formData.email };
@@ -259,14 +259,14 @@ const PagePage: React.FC = () => {
                       placeholder="Enter your email
 
                     Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
+                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 ">
                       name="company
                       value = { formData.company };
 
                       placeholder="Enter your company name
 
                     Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 ">
                       type="tel
                       name="phone
                       value = { formData.phone };
@@ -275,7 +275,7 @@ const PagePage: React.FC = () => {
 
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
                       type = { showPassword ? 'text' : password };
-
+">
                       name="password
                       value = { formData.password };
 
@@ -293,39 +293,39 @@ const PagePage: React.FC = () => {
 
                     Confirm Password
                       type = { showConfirmPassword ? 'text' : password };
-
+">
                       name="confirmPassword
                       value = { formData.confirmPassword };
 
                       placeholder="Confirm your password
                       onClick = { () => setShowConfirmPassword(!showConfirmPassword) };
 
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5 /> : 
-                  <label className="flex items-start>
+                      {showConfirmPassword ? <EyeOff className="w-5 h-5 /> : ">
+                  <label className="flex items-start>">
                       type="checkbox
                       name="agreeToTerms
 
             {/* Left Side - Signup Form *
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50><
-              <div className="text-center mb-8><
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50><">
+              <div className="text-center mb-8><">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text><
 /
-          <
+          <">
                 <p className="text-gray-300><
 /
           <
-              <
-              <form onSubmit={handleSubmit} className="space-y-6><
+              <">
+              <form onSubmit={handleSubmit} className="space-y-6><">
                 <div className="grid grid-cols-1,
   md:grid-cols-2 gap-4><
-                  <div><
+                  <div><">
                     <label className="block text-sm font-medium text-gray-300 mb-2><
 /
 
-          <
-                    <div className="relative>
+          <">
+                    <div className="relative>">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
-                      <input
+                      <input">
 type="text" name="firstName
                         value = { formData.firstName };
 
@@ -333,26 +333,26 @@ type="text" name="firstName
 
 /
 className=w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
+    s: 'ring-cyan-400
 
                       Last Name;
-
+',
                         name="lastName value = { formData.lastName };
 
                         placeholder="Enter your last name Email Address;
 
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
+          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 ">
                       type="email" name="email
                       value = { formData.email };
 
                       placeholder="Enter your email Company Name;
 
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
+                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 ">
                       name="company value = { formData.company };
 
                       placeholder="Enter your company name Phone Number;
 
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
+                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 ">
                       type="tel" name="phone
                       value = { formData.phone };
 
@@ -360,12 +360,12 @@ className=w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg 
 
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 
                       type = { showPassword ? 'text' : password };
-
+">
                       name="password value = { formData.password };
 
                       className=w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                    <button
+    s: 'ring-cyan-400
+                    <button',
                       type="button onClick = { () => setShowPassword(!showPassword) };
 
                       className=absolute right-3 top-1/2 transform -translate-y-1
@@ -378,13 +378,13 @@ className=w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg 
 Confirm Password;
 
                       type = { showConfirmPassword ? 'text' : password };
-
+">
                       name="confirmPassword value = { formData.confirmPassword };
 
                       placeholder="Confirm your password onClick = { () => setShowConfirmPassword(!showConfirmPassword) };
 
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5 /> : 
-                  <label className="flex items-start>
+                      {showConfirmPassword ? <EyeOff className="w-5 h-5 /> : ">
+                  <label className="flex items-start>">
                       type="checkbox" name="agreeToTerms
                       checked = { formData.agreeToTerms };
 
@@ -394,15 +394,15 @@ Confirm Password;
                       I agree to the{' }
 
                       <a href=
-                        Terms of Service
-                      <
+                        Terms of Service';
+                      <'
                       and{' }
 
                       <a href=
                         Privacy Policy
                       <
                     <
-                  
+                  ">
                       name="subscribeNewsletter
                       checked = { formData.subscribeNewsletter };
 
@@ -413,51 +413,51 @@ Confirm Password;
 
                   className=w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed
-                  {isLoading ? (<div className="flex items-center justify-center>
+                  {isLoading ? (<div className="flex items-center justify-center>">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2><
                       Creating Account...)
                   ) : ('Create Account)
                   )}
 
               <
-
+">
               <div className="mt-8 text-center>
                   Already have an account?{' }
 
                   <a
-                    href=
+                    href=">
                     className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors
                     Sign in here
 
-            {/* Right Side - Features and Benefits *
-            <div className="space-y-8>
+            {/* Right Side - Features and Benefits *">
+            <div className="space-y-8>">
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text>
                   Transform Your Business Today
-                <
+                <">
                 <p className="text-xl text-gray-300 mb-8>
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
-
-              <div className="space-y-6>
+">
+              <div className="space-y-6>">
                 {features.map((feature), index) => (<div key={index} className="flex items-start>
-                    <div className=w-12 h-12 bg-cyan-500
-                      <feature.icon className="w-6 h-6 text-cyan-400 
-                      <h3 className="text-lg font-semibold text-white mb-2>{feature.title}<
+                    <div className=w-12 h-12 bg-cyan-500">
+                      <feature.icon className="w-6 h-6 text-cyan-400 ">
+                      <h3 className="text-lg font-semibold text-white mb-2>{feature.title}<">
                       <p className="text-gray-300>{feature.description}<)
                 ))}
 
-              <div className=bg-gradient-to-r from-indigo-900/50 to-purple-900
+              <div className=bg-gradient-to-r from-indigo-900/50 to-purple-900">
                 <h3 className="text-lg font-semibold text-white mb-4>
-                  What You Get: <
+                  What You Get: '<',
                 <div className=grid grid-cols-1 m,
-    d:grid-cols-2 gap-2>
+    d:grid-cols-2 gap-2>">
                   {benefits.map((benefit), index) => (<div key={index} className="flex items-center text-sm text-gray-300>
-                      
+                      ">
                 <p className="text-gray-400 text-sm mb-4>
-                  Trusted by 1000+ companies worldwide
-                <div className="flex justify-center items-center space-x-6 opacity-60>
-                  <div className="text-2xl font-bold text-white>Microsoft</div>
-                  <div className="text-2xl font-bold text-white>Google</div>
+                  Trusted by 1000+ companies worldwide">
+                <div className="flex justify-center items-center space-x-6 opacity-60>">
+                  <div className="text-2xl font-bold text-white>Microsoft</div>">
+                  <div className="text-2xl font-bold text-white>Google</div>">
                   <div className="text-2xl font-bold text-white>Amazon</div>
       <Footer />
     </React.Fragment>
@@ -471,7 +471,7 @@ Confirm Password;
 /
           <
 
-                    <
+                    <">
 name="subscribeNewsletter checked = { formData.subscribeNewsletter };
 
                       Subscribe to our newsletter for updates and tips;
@@ -479,18 +479,18 @@ name="subscribeNewsletter checked = { formData.subscribeNewsletter };
                   type="submit disabled = { isLoading };
 
                   className=w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
-    d:cursor-not-allowed)
+    d: 'cursor-not-allowed)',
                   {isLoading ? ()}
 
           <div className="flex items-center justify-center>
-
+">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2><
 Creating Account...
                   ) : ()
 /
                   )}
 
-          <
+          <">
               <div className="mt-8 text-center><
                   Already have an account?{' }
 
@@ -499,45 +499,45 @@ Creating Account...
 
 Sign in here;
 
-            {/* Right Side - Features and Benefits *
-            <div className="space-y-8><
+            {/* Right Side - Features and Benefits *">
+            <div className="space-y-8><">
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text><
 /
-          <
+          <">
                 <p className="text-xl text-gray-300 mb-8><
 Join thousands of businesses already using our AI and IT solutions;
 
-                  to achieve unprecedented growth and efficiency.
+                  to achieve unprecedented growth and efficiency.">
               <div className="space-y-6><
                 {features.map((feature, index) => ()}
-
-          <div key={index} className="flex items-start><
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0><
-                      <feature.icon className="w-6 h-6 text-cyan-400 /><
-                      <h3 className="text-lg font-semibold text-white mb-2>{feature.title}<
+">
+          <div key={index} className="flex items-start><">
+                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0><">
+                      <feature.icon className="w-6 h-6 text-cyan-400 /><">
+                      <h3 className="text-lg font-semibold text-white mb-2>{feature.title}<">
                       <p className="text-gray-300>{feature.description}<
                 ))}
-
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6><
+">
+              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6><">
                 <h3 className="text-lg font-semibold text-white mb-4><
                   What You,
   Get:
-                <
+                <">
                 <div className="grid grid-cols-1,
-  md: grid-cols-2 gap-2><
+  md: 'grid-cols-2 gap-2><',
                   {benefits.map((benefit), index) => ()}
-
-          <div key={index} className="flex items-center text-sm text-gray-300><
+">
+          <div key={index} className="flex items-center text-sm text-gray-300><">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 /><
                       {benefit}
-
-<div className="text-center><
+">
+<div className="text-center><">
                 <p className="text-gray-400 text-sm mb-4><
                   Trusted by 1000+ companies worldwide;
-
-                <div className="flex justify-center items-center space-x-6 opacity-60><
-                  <div className="text-2xl font-bold text-white>Microsoft<
-                  <div className="text-2xl font-bold text-white>Google<
+">
+                <div className="flex justify-center items-center space-x-6 opacity-60><">
+                  <div className="text-2xl font-bold text-white>Microsoft<">
+                  <div className="text-2xl font-bold text-white>Google<">
                   <div className="text-2xl font-bold text-white>Amazon<
 
       <Footer 
@@ -546,3 +546,4 @@ Join thousands of businesses already using our AI and IT solutions;
   );
 
 export default SignupPage;
+">

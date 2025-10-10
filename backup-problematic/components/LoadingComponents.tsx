@@ -4,9 +4,9 @@ interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
-  size = 'md,
-  className = ',
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,'
+  size = 'md,'
+  className = ','
   color = 'blue,
   text}) => {
   return (
@@ -14,9 +14,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
 ;
 
 const sizeClasses = {;;
-
-    sm: 'h-4 w-4,
-    md: 'h-8 w-8,
+'
+    sm: 'h-4 w-4,'
+    md: 'h-8 w-8,'
     lg: 'h-12 w-12,
 export const,
   LoadingSpinner: React.FC<LoadingSpinnerProps>
@@ -45,7 +45,7 @@ const colorClasses = {/* TODO: Fix JSX expression */};;
       <div
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}}
 
-      ></div>
+      ></div>">
       {text && <span className="ml-2 text-sm text-gray-600>{text}</span>}
 
     </div>
@@ -53,12 +53,12 @@ const colorClasses = {/* TODO: Fix JSX expression */};;
       <div></div>
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}}
 
-      ></div>
+      ></div>">
       {text && <span className="ml-2 text-sm text-gray-600>{text}</span>}
 
     </div>)
   )};
 
 export default LoadingSpinner;
-
+">
 "`

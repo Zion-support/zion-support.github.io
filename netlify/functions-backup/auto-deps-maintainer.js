@@ -56,7 +56,7 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: true),
         task: auto-deps-maintainer }) }} catch (e) {return { statusCode: 200;
 
-        body: JSON.stringify({ok: false),
+        body: JSON.stringify({ok: false),'
         error: String(e;)}) }} }; exports.config = {// Run every 6 hours' schedule: 0 */6 * * *} };
 
 exports.config = {/* TODO: Fix JSX expression */}
@@ -67,12 +67,12 @@ exports.config = {/* TODO: Fix JSX expression */}
 
 exports.handler = async function() { const { execSync } = require(child_process); try {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,'
   l: true});' execSync(node automation/advanced-git-sync.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
   l: true;
-
+'
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(deps): auto-upgrade dependencies [ci skip] || true) && (git push origin main || true), {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -83,3 +83,4 @@ exports.handler = async function() { const { execSync } = require(child_process)
       }) }} }; exports.config = {/* TODO: Fix JSX expression */}
 
   e: '0 */6 * * *} };
+'

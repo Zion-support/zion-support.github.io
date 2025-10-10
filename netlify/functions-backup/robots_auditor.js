@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
       body: JSON.stringify({),
         message: 'robots_auditor function executed successfully'),
         timestamp: timestamp),;
-
+'
 function: 'robots_auditor'}
 
       })};
@@ -20,7 +20,7 @@ error}
     return {
       statusCode: 500;
 
-      body: JSON.stringify({),
+      body: JSON.stringify({),'
         error: 'robots_auditor function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
@@ -30,7 +30,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()};;
 
     return {/* TODO: Fix JSX expression */}
-
+'
   n: 'robots_auditor'}
 
       })};
@@ -49,3 +49,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
         timestam,
   p: new Date().toISOString() }) }} };
+'

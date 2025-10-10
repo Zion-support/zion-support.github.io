@@ -6,9 +6,9 @@ export const analyticsUtils = {;;
 
   measurePerformance: () => {
     if (typeof window !== 'undefined' && 'performance in window) {;
-
+'
 const _navigation = performance.getEntriesByType('navigation)[0];;
-
+'
       const _paint = performance.getEntriesByType('paint);;
 
 ;
@@ -19,9 +19,9 @@ const metrics = {;;
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
 
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-
+'
         firstPaint: paint.find(entry => entry.name === 'first-paint)?.startTime || 0;
-
+'
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint)?.startTime || 0;
 
 export const analyticsUtils = {/* TODO: Fix JSX expression */};;
@@ -83,8 +83,8 @@ const interactionData = {;;
 
   // Core Web Vitals;
 
-  measureCoreWebVitals: () => {,
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {,
+  measureCoreWebVitals: () => {,'
+    if (typeof window !== 'undefined' && 'web-vitals' in window) {,'
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         //           getCLS(console.log);
 
@@ -98,9 +98,10 @@ const interactionData = {;;
 
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
-
+'
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
 
       })}
 
   }};
+'

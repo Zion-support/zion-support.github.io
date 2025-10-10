@@ -1,61 +1,61 @@
 #!/usr/bin/env node
 
 import fs from 'fs;
-
+'
 import path from 'path;
-
+'
 import { execSync } from 'child_process;
 
 // Function to clean merge conflict markers from a file;
 
 function cleanMergeConflicts(filePath) {
   try {;
-
+'
 let content = fs.readFileSync(filePath, 'utf8);;
 
     let originalContent = content;;
 
-    // Remove merge conflict markers and keep the HEAD version
+    // Remove merge conflict markers and keep the HEAD version'
     content = content.replace(/\n?/g, ');
-
+'
     content = content.replace(/\n?/g, ');
 
     content = content.replace(/    
-    // Clean up any remaining merge conflict artifacts
+    // Clean up any remaining merge conflict artifacts'
     content = content.replace(/    content = content.replace(/\n?/g, ');
 
     content = content.replace(/    
-    // Fix common syntax issues that might result from merge conflicts
+    // Fix common syntax issues that might result from merge conflicts'
     content = content.replace(/,\s*\)/g, '));
-
+'
     content = content.replace(/,\s*}/g, '});
-
+'
     content = content.replace(/,\s*]/g, ']);
-
+'
     content = content.replace(/,\s*;/g, ';);
-
+'
     content = content.replace(/\(\s*\)/g, '());
-
+'
     content = content.replace(/{\s*}/g, '{});
-
+'
     content = content.replace(/\[\s*\]/g, '[]);
 
-    // Fix common JSX issues
+    // Fix common JSX issues'
     content = content.replace(/<\s*\/\s*>/g, '</React.Fragment>);
-
+'
     content = content.replace(/<\s*\/\s*div\s*>/g, '</div>);
-
+'
     content = content.replace(/<\s*\/\s*span\s*>/g, '</span>);
-
+'
     content = content.replace(/<\s*\/\s*p\s*>/g, '</p>);
 
-    // Fix function syntax issues
+    // Fix function syntax issues'
     content = content.replace(/function\s*\(\s*\)\s*{\s*}/g, 'function() {});
-
+'
     content = content.replace(/\(\s*\)\s*=>\s*{\s*}/g, '() => {});
 
     // Only write if content changed
-    if (content !== originalContent) {
+    if (content !== originalContent) {'
       fs.writeFileSync(filePath, content, 'utf8);
 
       // console.log removed for production
@@ -83,8 +83,8 @@ const fullPath = path.join(dirPath, item);;
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory()) {
-        // Skip node_modules and other directories we don't want to process
+      if (stat.isDirectory()) {'
+        // Skip node_modules and other directories we don't want to process'
         if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
           continue}
 
@@ -92,7 +92,7 @@ const fullPath = path.join(dirPath, item);;
         // Only process certain file types;
 
 const ext = path.extname(item);;
-
+'
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
             cleanedCount++}
@@ -109,18 +109,18 @@ const ext = path.extname(item);;
 
   return cleanedCount}
 
-// Main execution
-// console.log removed for production
+// Main execution';
+// console.log removed for production'
 const cleanedCount = cleanDirectory('/workspace);;
 
 // console.log removed for production
 // Also clean specific problematic files;
 
 const criticalFiles = [;;
-
-  '/workspace/App.tsx',
-  '/workspace/jest.setup.js',
-  '/workspace/package.json',
+'
+  '/workspace/App.tsx','
+  '/workspace/jest.setup.js','
+  '/workspace/package.json','
   '/workspace/vite.config.ts',
   /workspace/tailwind.config.ts
 ];
@@ -137,3 +137,4 @@ for (const file of criticalFiles) {
 }
 
 // console.log removed for production
+'

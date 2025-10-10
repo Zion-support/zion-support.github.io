@@ -67,14 +67,14 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 
       throw new Error()
         `Environment validation,`
-  failed:
+  failed:'
 ${validation.errors.join('
 ')}`
 //       )
-    }
-
+    }';
+'
     if (validation.warnings.length > 0) {const nodeEnv = process.env['NODE_ENV]};;
-
+'
     const validEnvs = ['development', 'production', 'test];;
 
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
@@ -82,15 +82,15 @@ ${validation.errors.join('
   O: Add content}
 
 }
-
+'
 //       this.errors.push('NODE_ENV is not set')
-//       return}
-
+//       return;
+  }
     if (!validEnvs.includes(nodeEnv)) {// TODO: Add content}
 
 }
 
-//       this.errors.push()
+//       this.errors.push()'
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
 //       )
     }
@@ -104,13 +104,13 @@ ${validation.errors.join('
     const nodeEnv = this.getNodeEnv();;
 
     // In production, these should be set;
-
+'
     if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-}
-
+}';
+'
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -120,8 +120,8 @@ ${validation.errors.join('
 //         this.warnings.push()
           NEXT_PUBLIC_SITE_URL is not set (recommended for production)
 //         )
-      }
-
+      }';
+'
       if (!process.env['NEXT_PUBLIC_GA_ID']) {// TODO: Add content}
 
 }
@@ -133,14 +133,14 @@ ${validation.errors.join('
 
     }
 
-  }
-
+  }';
+'
   private getNodeEnv(): 'development' | 'production' | 'test' {// TODO: Add content}
 
-}
-
+}';
+'
     const env = process.env['NODE_ENV'] || 'development;;
-
+'
     return env as 'development' | 'production' | test
   }
 
@@ -165,3 +165,4 @@ export default envValidator;`
 
 
 
+'

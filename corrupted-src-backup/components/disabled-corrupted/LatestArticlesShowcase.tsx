@@ -131,3 +131,4 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
   )};
 
 export default LatestArticlesShowcase;
+'

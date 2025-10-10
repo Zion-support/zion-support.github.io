@@ -14,8 +14,7 @@ export const wait = (ms: number): Promise<void> =>
 export const waitFor = async (
   condition: () => boolean,
   timeout = 5000,  interval = 100
-): Promise<void></void> => {}
-
+): Promise<void></void> => {};
   const startTime = Date.now();;
 
   while (!condition()) {}
@@ -39,8 +38,7 @@ export const mockFetch = (
 
 ): void => {}
 
-  if (typeof global !== 'undefined') {}
-
+  if (typeof global !== 'undefined') {};
     (global as typeof global & { fetch: typeof fetch });.fetch = jest.fn(() =>
       Promise.resolve({)
         ok: status >= 200 && status < 300),
@@ -135,15 +133,15 @@ export const createMockStorage = (): MockStorage => {};;
 
  */
 export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {;;
-
-  if (typeof global !== 'undefined') {
+'
+  if (typeof global !== 'undefined') {'
     Object.defineProperty(global, 'window', {)
       value: {)
         ...global.window),
 export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {};;
-
-  if (typeof global !== 'undefined') {}
-
+'
+  if (typeof global !== 'undefined') {}';
+'
     Object.defineProperty(global, 'window, {);
 
       value: {}
@@ -166,7 +164,7 @@ export const wait = (m);;
     status,
     headers: new Headers(headers),
     json: async () => response,
-    text: async () => JSON.stringify(response)
+    text: 'async () => JSON.stringify(response)',
   } as Response);
 };
 
@@ -279,7 +277,7 @@ export const createMockPerformance = (): Performance => {};;
     now: () => Date.now(),
   mark: (name: string) => {,
       entries.push({),
-        name),
+        name),'
         entryType: 'mark'),
   return {}
 
@@ -288,7 +286,7 @@ export const createMockPerformance = (): Performance => {};;
 
       entries.push({);
 
-        name,
+        name,'
         entryType: 'mark',
         startTime: Date.now(),
         duration: 0}
@@ -298,13 +296,13 @@ export const createMockPerformance = (): Performance => {};;
     },
     measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({)
-        name)
+        name)'
         entryType: 'measure'),
     measure: (name: string, startMark?: string, endMark?: string) => {}
 
       entries.push({);
 
-        name,
+        name,'
         entryType: 'measure',
         startTime: Date.now(),
         duration: 100}
@@ -314,8 +312,8 @@ export const createMockPerformance = (): Performance => {};;
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries;
-
+    getEntries: '() => entries;
+',
     clearMarks: () => {,
       entries.length = 0;});
 
@@ -337,8 +335,8 @@ export const createMockPerformance = (): Performance => {};;
     toJSON: () => ({});,
     addEventListener: () => {},
     removeEventListener: () => {},
-    dispatchEvent: () => true;
-
+    dispatchEvent: '() => true;
+',
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
 export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */};;
@@ -384,7 +382,7 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     onresourcetimingbufferful,
   l: null,
     timeOrigi,
-n: Date.now()]
+n: 'Date.now()]',
     } as unknown as Performance]
     }
 
@@ -513,25 +511,25 @@ constructor() {}
 this.mock()]
     }
 
-  private mock(): void {
+  private mock(): void {'
       this.logs.push(args.map(String).join(' ));});
 
 }
-
+'
       this.errors.push(args.map(String).join(' ));});
 
 }
 
   private mock(): void {}
-
+'
       this.logs.push(args.map(String).join(' ));});
 
 }
-
+'
       this.errors.push(args.map(String).join(' ));});
 
 }
-
+'
       this.warnings.push(args.map(String).join(' ));});
 
 }
@@ -560,7 +558,7 @@ this.mock()]
 /**
  * Mock window.matchMedia
  */
-export const mockMatchMedia = (matches: boolean) => {
+export const mockMatchMedia = (matches: boolean) => {'
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: jest.fn().mockImplementation(query => ({
@@ -682,7 +680,7 @@ let lastError: Error,
   initialDelay = 1000
 ): Promise<T></T> => {}
 
-  let lastError: Error
+  let lastError: 'Error',
   for (let i = 0; i < maxRetries; i++) {};;
 
     try {}
@@ -718,7 +716,7 @@ throw lastError as any]
 export const measureExecutionTime = async <T></T>(;;
 
   fn: () => T | Promise<T></T>): Promise<{ result: T; duration: number }> => {
-  fn: () => T | Promise<T></T>
+  fn: '() => T | Promise<T></T>',
 ): Promise<{ result: T; duration: number }> => {}
 
   const start = performance.now();;
@@ -751,7 +749,7 @@ export default {}
 
 export const measureExecutionTime = async <T></T>(f);;
 
-  n: () => T | Promise<T></T>
+  n: '() => T | Promise<T></T>',
 ): Promise<{/* TODO: Fix JSX expression */}
 
   n: number }> => {/* TODO: Fix JSX expression */}
@@ -771,7 +769,7 @@ export const mockResizeObserver = () => {
   mockResizeObserver.mockReturnValue({
     observe: () => null,
     unobserve: () => null,
-    disconnect: () => null
+    disconnect: '() => null',
   });
   window.ResizeObserver = mockResizeObserver;
 };
@@ -786,9 +784,9 @@ export const mockScrollTo = () => {
 /**
  * Mock console methods
  */
-export const mockConsole = () => {
-  jest.spyOn(console, 'log').mockImplementation(() => {});
-  jest.spyOn(console, 'warn').mockImplementation(() => {});
+export const mockConsole = () => {'
+  jest.spyOn(console, 'log').mockImplementation(() => {});'
+  jest.spyOn(console, 'warn').mockImplementation(() => {});'
   jest.spyOn(console, 'error').mockImplementation(() => {});
 };
 
@@ -837,7 +835,7 @@ export const mockFetchError = (error: Error) => {
 /**
  * Mock fetch with network error
  */
-export const mockFetchNetworkError = () => {
+export const mockFetchNetworkError = () => {'
   return jest.fn().mockRejectedValue(new Error('Network error'));
 };
 
@@ -846,7 +844,7 @@ export const mockFetchNetworkError = () => {
  */
 export const mockFetchTimeout = () => {
   return jest.fn().mockImplementation(() => 
-    new Promise((_, reject) => 
+    new Promise((_, reject) => '
       setTimeout(() => reject(new Error('Request timeout')), 100)
     )
   );
@@ -869,4 +867,4 @@ export const setupTestEnvironment = () => {
 export const cleanupTestEnvironment = () => {
   restoreConsole();
   jest.clearAllMocks();
-};
+};'

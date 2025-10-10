@@ -6,14 +6,14 @@
  * This script will merge all the new service branches that havent been merged yet;
 
  */ import { execSync } from 'child_process';
-
+'
 import fs from 'fs';
-
+'
 // //Step 1: Ensure were on main and up to date';
 
-// try {,
+// try {,'
   execSync('git checkout main', { stdio: 'inherit });
-
+'
   execSync('git pull origin main', { stdio: 'inherit });
 
 //   } catch (error) {
@@ -27,10 +27,10 @@ import fs from 'fs';
   1: Ensure were on main and up to date;
 
 // try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
-
-  execSync('git pull origin main', {/* TODO: Fix JSX expression */})
+'
+  execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit });
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
@@ -41,26 +41,26 @@ import fs from 'fs';
   2: Get new service branches;
 
 // const newServiceBranches = [;;
-
-  'cursor/add-new-services-and-deploy-updates-0c4f',
-  'cursor/add-new-services-and-deploy-updates-0f78',
-  'cursor/add-new-services-and-deploy-updates-1399',
-  'cursor/add-new-services-and-deploy-updates-1503',
-  'cursor/add-new-services-and-deploy-updates-1817',
-  'cursor/add-new-services-and-deploy-updates-19 c7',
-  'cursor/add-new-services-and-deploy-updates-27 d2',
-  'cursor/add-new-services-and-deploy-updates-45 bb',
-  'cursor/add-new-services-and-deploy-updates-483 a',
-  'cursor/add-new-services-and-deploy-updates-4 d5 b',
-  'cursor/add-new-services-and-deploy-updates-5200',
-  'cursor/add-new-services-and-deploy-updates-54 f2',
-  'cursor/add-new-services-and-deploy-updates-591 d',
-  'cursor/add-new-services-and-deploy-updates-6225',
-  'cursor/add-new-services-and-deploy-updates-6455',
-  'cursor/add-new-services-and-deploy-updates-67 cb',
-  'cursor/add-new-services-and-deploy-updates-6 de5',
-  'cursor/add-new-services-and-deploy-updates-6 e7 c',
-  'cursor/add-new-services-and-deploy-updates-6 e90',
+'
+  'cursor/add-new-services-and-deploy-updates-0c4f','
+  'cursor/add-new-services-and-deploy-updates-0f78','
+  'cursor/add-new-services-and-deploy-updates-1399','
+  'cursor/add-new-services-and-deploy-updates-1503','
+  'cursor/add-new-services-and-deploy-updates-1817','
+  'cursor/add-new-services-and-deploy-updates-19 c7','
+  'cursor/add-new-services-and-deploy-updates-27 d2','
+  'cursor/add-new-services-and-deploy-updates-45 bb','
+  'cursor/add-new-services-and-deploy-updates-483 a','
+  'cursor/add-new-services-and-deploy-updates-4 d5 b','
+  'cursor/add-new-services-and-deploy-updates-5200','
+  'cursor/add-new-services-and-deploy-updates-54 f2','
+  'cursor/add-new-services-and-deploy-updates-591 d','
+  'cursor/add-new-services-and-deploy-updates-6225','
+  'cursor/add-new-services-and-deploy-updates-6455','
+  'cursor/add-new-services-and-deploy-updates-67 cb','
+  'cursor/add-new-services-and-deploy-updates-6 de5','
+  'cursor/add-new-services-and-deploy-updates-6 e7 c','
+  'cursor/add-new-services-and-deploy-updates-6 e90','
   'cursor/add-new-services-and-deploy-updates-6 ed4];
 
 // //Step 3: Enhanced merge function with conflict resolution;
@@ -68,7 +68,7 @@ import fs from 'fs';
 function mergeServiceBranch(branchName) {,
 //   try {,
     //Fetch the branch;
-
+'
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit });
 
     //Try direct merge first;
@@ -77,10 +77,10 @@ function mergeServiceBranch(branchName) {,
       { stdio: 'inherit' }
 
     );
-
+'
 //     return { success: true, method: 'direct' }} catch (error) {
-//     try {
-      //Strategy 1: Auto-resolve with theirs (prefer incoming changes for new services),
+//     try {';
+      //Strategy 1: Auto-resolve with theirs (prefer incoming changes for new services),'
       execSync('git reset --hard HEAD', { stdio: 'inherit });
 
       execSync(
@@ -90,7 +90,7 @@ function mergeServiceBranch(branchName) {,
 
 function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
 
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})'
   o: 'inherit });
 
     //Try direct merge first;`
@@ -101,9 +101,9 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-
-  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
-
+'
+  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit });
 
       execSync(")`
@@ -115,9 +115,9 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
-  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}
-
+'
+  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit });
 
         execSync(")`
@@ -127,24 +127,24 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
 
         );
-
+'
 //         return { success: true, method: 'ours' }} catch (oursError) {
 //         //Abort and skip;
 
-        try {
+        try {'
           execSync('git reset --hard HEAD', { stdio: 'inherit' })} catch (resetError) {
           //Continue anyway;
 
 //         return {/* TODO: Fix JSX expression */}
-
-  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
-
+'
+  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit' })} catch (resetError) {/* TODO: Fix JSX expression */}
 
         }
 
-        return {/* TODO: Fix JSX expression */}
-
+        return {/* TODO: Fix JSX expression */}';
+'
   d: 'failed' }}
 
     }
@@ -193,7 +193,7 @@ for (const branch of newServiceBranches) {/* TODO: Fix JSX expression */}
 }
 
 //Step 5: Generate report;
-
+'
 fs.writeFileSync('new-services-merge-report.json'),
   JSON.stringify(results, null, 2)
 );
@@ -206,13 +206,13 @@ fs.writeFileSync('new-services-merge-report.json'),
 
 // Step 7: Push changes;
 
-// try {,
+// try {,'
   execSync('git push origin main', { stdio: 'inherit });
 
 //   } catch (error) {
 //Step,
   5: Generate report;
-
+'
 fs.writeFileSync('new-services-merge-report.json')
   JSON.stringify(results, null, 2)
 );
@@ -228,7 +228,7 @@ fs.writeFileSync('new-services-merge-report.json')
   7: Push changes;
 
 // try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
 //   } catch (error) {/* TODO: Fix JSX expression */}

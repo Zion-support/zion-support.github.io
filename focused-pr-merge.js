@@ -4,14 +4,14 @@
  * Focused PR Merger - Merges specific recent branches that are likely open PRs;
 
  */ import { execSync } from 'child_process';
-
+'
 import fs from 'fs';
-
+'
 // //Step 1: Ensure were on main and up to date';
 
-// try {,
+// try {,'
   execSync('git checkout main', { stdio: 'inherit });
-
+'
   execSync('git pull origin main', { stdio: 'inherit });
 
 //   } catch (error) {
@@ -25,10 +25,10 @@ const branchesToMerge = [,;;
   1: Ensure were on main and up to date;
 
 // try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
-
-  execSync('git pull origin main', {/* TODO: Fix JSX expression */})
+'
+  execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit });
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
@@ -41,29 +41,29 @@ const branchesToMerge = [,;;
 const branchesToMerge = [;;
 
   //Recent error fixing branches;
-
-  'cursor/build-and-fix-errors-008f',
-  'cursor/build-and-fix-errors-079c',
-  'cursor/build-and-fix-errors-0ebf',
-  'cursor/build-and-fix-errors-0ec8',
+'
+  'cursor/build-and-fix-errors-008f','
+  'cursor/build-and-fix-errors-079c','
+  'cursor/build-and-fix-errors-0ebf','
+  'cursor/build-and-fix-errors-0ec8','
   'cursor/build-and-fix-errors-0f78',
   //Enhancement branches;
-
-  'cursor/automate-futuristic-front-page-enhancements-738d',
-  'cursor/automate-futuristic-front-page-enhancements-aafa',
-  'cursor/automate-project-enhancement-and-merge-cac0',
+'
+  'cursor/automate-futuristic-front-page-enhancements-738d','
+  'cursor/automate-futuristic-front-page-enhancements-aafa','
+  'cursor/automate-project-enhancement-and-merge-cac0','
   'cursor/automate-site-navigation-enhancement-285c',
   //Build improvement branches;
-
-  'cursor/automate-automation-redundancy-and-build-improvement-e3e4',
-  'cursor/automate-automation-redundancy-and-build-improvement-ea74',
-  'cursor/automate-netlify-build-fixes-and-monitoring-43ee',
+'
+  'cursor/automate-automation-redundancy-and-build-improvement-e3e4','
+  'cursor/automate-automation-redundancy-and-build-improvement-ea74','
+  'cursor/automate-netlify-build-fixes-and-monitoring-43ee','
   'cursor/automate-netlify-build-fixing-and-monitoring-f10e',
   //AI-powered features;
-
-  'cursor/build-ai-powered-project-teams-dcf8',
-  'cursor/build-ai-powered-smart-contract-generator-b22 e',
-  'cursor/build-ai-pricing-suggestion-engine-ea4 e',
+'
+  'cursor/build-ai-powered-project-teams-dcf8','
+  'cursor/build-ai-powered-smart-contract-generator-b22 e','
+  'cursor/build-ai-pricing-suggestion-engine-ea4 e','
   'cursor/build-ai-resume-and-portfolio-builder-workflow-2029];
 
 // //Step 3: Enhanced conflict resolution function;
@@ -71,7 +71,7 @@ const branchesToMerge = [;;
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
     //Check if branch exists;
-
+'
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe });
 
     //Check if already merged;
@@ -85,7 +85,7 @@ function resolveConflictsAndMerge(branchName) {,
 
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})'
   o: 'pipe });
 
     //Check if already merged;`;
@@ -96,9 +96,9 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
   g: 'utf8' })
     ).trim();
-
-    if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */}
-
+'
+    if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */}';
+'
   d: 'already_merged' }}
 
     //Try direct merge;
@@ -107,20 +107,20 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
       { stdio: 'inherit' }
 
     );
-
+'
 //     return { success: true, method: 'direct' }} catch (error) {
 //     try {
       //Check for merge conflicts;
 
       if (
-
-        status.includes('UU') ||
-        status.includes('AA') ||
+'
+        status.includes('UU') ||'
+        status.includes('AA') ||'
         status.includes('DD')
       ) {
 //         //Strategy 1: Auto-resolve with theirs;
 
-        try {,
+        try {,'
           execSync('git reset --hard HEAD', { stdio: 'inherit });
 
           execSync(
@@ -133,9 +133,9 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
     );
 
 //     return {/* TODO: Fix JSX expression */}
-
-  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
-
+'
+  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit });
 
           execSync(")`
@@ -147,14 +147,14 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
+'
   d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}
 
 //           }
 
         //Strategy 2: Auto-resolve with ours;
 
-        try {,
+        try {,'
           execSync('git reset --hard HEAD', { stdio: 'inherit });
 
           execSync(
@@ -163,7 +163,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   2: Auto-resolve with ours;
 
         try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
           execSync(")`
@@ -175,37 +175,37 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
+'
   d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
 
 //           }
 
         //Strategy 3: Manual conflict resolution;
 
-        try {,
+        try {,'
           execSync('git reset --hard HEAD', { stdio: 'inherit });
 
           //Get conflicted files;
-
+'
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U);;
-
+'
             { encoding: 'utf8' }
 
         //Strategy,
   3: Manual conflict resolution;
 
         try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
           //Get conflicted files;
-
+'
           const conflictedFiles = execSync('git diff --name-only --diff-filter=U,;;
 
             {/* TODO: Fix JSX expression */}
-
-  g: 'utf8' })
-          )
+'
+  g: 'utf8' })';
+          )'
             .split('\n')
             .filter(file => file.trim());
 
@@ -218,7 +218,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
                 execSync(`git checkout --theirs "${file}"`, {)
                   stdio: 'inherit)});
-
+'
                 execSync(`git add "${file}"`, { stdio: 'inherit });
 
 //                 } catch (fileError) {
@@ -249,7 +249,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
+'
   d: 'manual' }} catch (manualError) {/* TODO: Fix JSX expression */}
 
 //           }
@@ -262,22 +262,22 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
     //If all strategies fail, abort and skip;
 
-    try {
+    try {'
       execSync('git merge --abort', { stdio: 'inherit });
 
-//       } catch (abortError) {
+//       } catch (abortError) {'
       execSync('git reset --hard HEAD', { stdio: 'inherit });
 
     try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit' })}
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
   d: 'failed' }}
 
 }
@@ -350,20 +350,20 @@ for (const branch of branchesToMerge) {/* TODO: Fix JSX expression */}
 //Save report;
 
 results.timestamp = new Date().toISOString();
-
-fs.writeFileSync('focused-pr-merge-report.json')
+'
+fs.writeFileSync('focused-pr-merge-report.json')'
 fs.writeFileSync('focused-pr-merge-report.json')
   JSON.stringify(results, null, 2)
 );
 
 // Push changes;
 
-// try {
+// try {'
   execSync('git push origin main', { stdio: 'inherit });
 
 //   } catch (error) {
 // try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
 //   } catch (error) {/* TODO: Fix JSX expression */}

@@ -13,7 +13,7 @@ export const announceToScreenReader = (message: string): void => {;;
 const announcement = document.createElement(div);;
 
   announcement.setAttribute('aria-live', polite);
-
+'
   announcement.setAttribute('aria-atomic', true);
 
   announcement.className = sr-only;
@@ -34,7 +34,7 @@ export const focusElement = (element: HTMLElement | null): void => {;;
 export const trapFocus = (container: HTMLElement): (() => void) => {;;
 
 const focusableElements = container.querySelectorAll(;;
-
+'
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
 
@@ -47,7 +47,7 @@ const lastElement = focusableElements[focusableElements.length - 1] as HTMLEleme
   ;
 
 const handleTabKey = (e: KeyboardEvent) => {;;
-
+'
     if (e.key === 'Tab) {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -69,15 +69,15 @@ const handleTabKey = (e: KeyboardEvent) => {;;
 
   container.addEventListener(keydown, handleTabKey);
 
-  return () => {
+  return () => {'
     container.removeEventListener('keydown, handleTabKey)}}
 
 export const validateAriaAttributes = (element: HTMLElement): string[] => {;;
 
 const errors: string[] = [];
 
-  // Check for required ARIA attributes
-  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label) && !element.textContent?.trim()) {
+  // Check for required ARIA attributes'
+  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label) && !element.textContent?.trim()) {'
     errors.push('Button with role="button must have aria-label or accessible text);
 
   if (element.getAttribute('aria-expanded') !== null && !element.getAttribute('aria-controls)) {
@@ -91,10 +91,10 @@ const ariaLabelledBy = element.getAttribute(aria-labelledby);;
   return errors}
 
 export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;;
-
+'
   element.setAttribute('tabindex', 0);
-
-  element.addEventListener('keydown, (e) => {
+'
+  element.addEventListener('keydown, (e) => {'
     if (e.key === 'Enter' || e.key === ' ) {
       e.preventDefault();
 
@@ -156,8 +156,8 @@ const style = document.createElement(style);;
 
   style.textContent = 
     *:focus {
-      outline: 2px solid #3b82f6;
-
+      outline: '2px solid #3b82f6;
+',
       outline-offset: 2px}
 
     .sr-only {
@@ -165,8 +165,8 @@ const style = document.createElement(style);;
       width: 1px,
       height: 1px,
       padding: 0,
-      margin: -1px;
-
+      margin: '-1px;
+',
       overflow: hidden,
       clip: rect(0, 0, 0, 0);
 
@@ -177,8 +177,8 @@ const style = document.createElement(style);;
       position: static,
       width: auto,
       height: auto,
-      padding: 0.5rem 1rem;
-
+      padding: '0.5rem 1rem;
+',
       margin: 0,
       overflow: visible,
       clip: auto,
@@ -208,3 +208,4 @@ const interactiveElements = document.querySelectorAll(button, a, input, select, 
 
   interactiveElements.forEach((element) => {
     enhanceKeyboardNavigation(element as HTMLElement)});
+'

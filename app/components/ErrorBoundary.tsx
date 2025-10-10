@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React, { Component, ErrorInfo, ReactNode } from 'react;
 
 import { AlertTriangle, RefreshCw, Home } from lucide-react;
@@ -9,8 +9,8 @@ interface Props {
 
   fallback?: ReactNode;
 
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-
+  onError?: (error: Error, errorInfo: 'ErrorInfo) => void;
+',
 }
 
 interface State {
@@ -30,7 +30,7 @@ constructor(props: Props) {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: 'null',
     };
 
   }
@@ -39,7 +39,7 @@ constructor(props: Props) {
     return {
       hasError: true,
       error,
-      errorInfo: null
+      errorInfo: 'null',
     };
 
   }
@@ -49,12 +49,12 @@ constructor(props: Props) {
       error,
       errorInfo
     })
-    // Log error to console in development
+    // Log error to console in development'
     if (process.env.NODE_ENV === 'development) {
       // console.error removed for production
 }
-
-    // Log error to external service in production
+';
+    // Log error to external service in production'
     if (process.env.NODE_ENV === 'production) {
       this.logErrorToService(error, errorInfo);
 
@@ -79,15 +79,15 @@ const errorData = {;;
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: 'window.location.href',
     };
 
-    // Example: Send to analytics
+    // Example: 'Send to analytics',
     if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;;
-
+'
       gtag('event', 'exception, {
         description: error.message,
-        fatal: false
+        fatal: 'false',
       })    }
 
     // console.error removed for production
@@ -97,7 +97,7 @@ const errorData = {;;
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: 'null',
     })  };
 
   handleGoHome = () => {
@@ -116,35 +116,35 @@ const errorData = {;;
       // Default error UI
       return (
 
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4>
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center>
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4>">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center>">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6>">
               <AlertTriangle className="w-8 h-8 text-red-400 />
             </div>
-            
+            ">
             <h1 className="text-2xl font-bold text-white mb-4>
               Oops! Something went wrong
             </h1>
-            
+            ">
             <p className="text-gray-300 mb-6>
               Were sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
             {process.env.NODE_ENV === 'development && this.state.error && (
-
-              <details className="mb-6 text-left>
+">
+              <details className="mb-6 text-left>">
                 <summary className="text-red-400 cursor-pointer mb-2>
                   Error Details (Development)
-                </summary>
-                <div className="bg-red-900/20 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto>
+                </summary>">
+                <div className="bg-red-900/20 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto>">
                   <div className="mb-2>
                     <strong>Error:</strong> {this.state.error.message}
 
                   </div>
                   {this.state.error.stack && (
-
+">
                     <div className="mb-2>
-                      <strong>Stack:</strong>
+                      <strong>Stack:</strong>">
                       <pre className="whitespace-pre-wrap mt-1>
                         {this.state.error.stack}
 
@@ -155,7 +155,7 @@ const errorData = {;;
                   {this.state.errorInfo && (
 
                     <div>
-                      <strong>Component Stack:</strong>
+                      <strong>Component Stack:</strong>">
                       <pre className="whitespace-pre-wrap mt-1>
                         {this.state.errorInfo.componentStack}
 
@@ -166,31 +166,31 @@ const errorData = {;;
                 </div>
                 </details>
               )}
-
-            <div className="flex flex-col sm:flex-row gap-4>
-              <button
+">
+            <div className="flex flex-col sm: 'flex-row gap-4>
+              <button',
                 onClick={this.handleRetry}
-
+">
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300
-              >
+              >">
                 <RefreshCw className="w-4 h-4 />
                 Try Again
               </button>
               
               <button
                 onClick={this.handleGoHome}
-
+">
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20
-              >
+              >">
                 <Home className="w-4 h-4 />
                 Go Home
               </button>
             </div>
-
+">
             <div className="mt-6 text-sm text-gray-400>
-              <p>If this problem persists, please contact our support team:</p>
+              <p>If this problem persists, please contact our support team:</p>">
               <p className="mt-2>
-                <a 
+                <a ">
                   href="mailto:support@ziontechgroup.com 
                   className="text-cyan-400 hover:text-cyan-300
                 >
@@ -211,3 +211,4 @@ const errorData = {;;
 }
 
 export default ErrorBoundary;
+">

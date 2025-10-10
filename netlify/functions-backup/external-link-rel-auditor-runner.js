@@ -51,6 +51,6 @@ const { execSync } = require(child_process); function run(cmd) {/* TODO: Fix JSX
 
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-
-  k: false} erro)
+';
+  k: false} erro)'
   r: String(e) }) }} };'"

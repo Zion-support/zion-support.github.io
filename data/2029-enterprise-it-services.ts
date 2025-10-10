@@ -127,7 +127,7 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
 }
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
-    tagline: "Enterprise IT services for 2029", price: '$599/month',
+    tagline: "Enterprise IT services for 2029", price: '$599/month','
     description: 'Advanced enterprise IT service platform designed for large organizations in 2029.',
     features: [;
       "Enterprise IT services"
@@ -218,7 +218,7 @@ export const,
   }
 ];
 ;
-    id: '2029-enterprise-it',
+    id: '2029-enterprise-it','
     name: '2029 Enterprise IT Service Platform',
     tagline: "Enterprise IT services for 2029",
     price: "$599/month",
@@ -230,14 +230,14 @@ export const,
       "24/7 support",
       "Custom integration"
     ],
-    link: '/services/2029-enterprise-it',
+    link: '/services/2029-enterprise-it','
     category: 'Enterprise IT Services 2029',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+    contactInfo: unknown;'
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup.com','
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -275,10 +275,10 @@ export const,
       emai,"
   l: "kleber@ziontechgroup.com",
       mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup.com',
-      addres,
+  e: '+1 302 464 0950',';
+      emai,'
+  l: 'kleber@ziontechgroup.com',';
+      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobil,"
   e: "+1 302 464 0950",
@@ -379,8 +379,8 @@ i,
   o: mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
   e: "+1 302 464 0950",
   emai,"

@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 'use client;
 
 ;
@@ -80,9 +80,9 @@ const,
  };
 
  // Measure after page load;
-
- if (document.readyState === 'complete) {
- measurePerformance()} else {
+'
+ if (document.readyState === 'complete) {';
+ measurePerformance()} else {'
  window.addEventListener('load, measurePerformance)}
 
  // Preload critical resources;
@@ -90,8 +90,8 @@ const,
  const preloadCriticalResources = () => {;;
 
 const criticalImages = [;;
-
- '/og-image.jpg,
+'
+ '/og-image.jpg,'
  '/logo.png,
  /favicon.ico
  ];
@@ -106,7 +106,7 @@ const link = document.createElement(link);;
 
  link.href = src;
 
- document.head.appendChild(link);origin/
+ document.head.appendChild(link);origin/'
  if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
  } else {/* TODO: Fix JSX expression */}
@@ -127,12 +127,12 @@ const images = document.querySelectorAll(img);;
 
  images.forEach(img => {)
  // Add loading="lazy to non-critical images;)
- if (!img.hasAttribute('loading)) {
+ if (!img.hasAttribute('loading)) {'
  img.setAttribute('loading', 'lazy)}
 
  // Add decoding="async for better performance;
 
- if (!img.hasAttribute('decoding)) {
+ if (!img.hasAttribute('decoding)) {'
  img.setAttribute('decoding', async);
 
  const optimizeImages = () => {/* TODO: Fix JSX expression */};;

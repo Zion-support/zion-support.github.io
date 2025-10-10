@@ -8,23 +8,23 @@ function fixBlogPage(content) {
 
   // Fix malformed JSX elements
   fixed = fixed
-    // Fix malformed closing tags
-    .replace(/<\/di><\/div>/g, '</div>)
-    .replace(/<\/sectio><\/section>/g, '</section>)
-    .replace(/<\/titl>/g, '</title>)
-    .replace(/<\/h1>/g, '</h1>)
-    .replace(/<\/p>/g, '</p>)
-    // Fix malformed opening tags
-    .replace(/<h1[^>]*><\/h1>/g, '<h1>)
-    .replace(/<p[^>]*><\/p>/g, '<p>)
-    // Fix missing closing tags
-    .replace(/<h1[^>]*>([^<]+)<\/h1>/g, '<h1>$1</h1>)
-    .replace(/<p[^>]*>([^<]+)<\/p>/g, '<p>$1</p>)
-    // Fix syntax errors
-    .replace(/\)\}/g, ');)
+    // Fix malformed closing tags'
+    .replace(/<\/di><\/div>/g, '</div>)'
+    .replace(/<\/sectio><\/section>/g, '</section>)'
+    .replace(/<\/titl>/g, '</title>)'
+    .replace(/<\/h1>/g, '</h1>)'
+    .replace(/<\/p>/g, '</p>)';
+    // Fix malformed opening tags'
+    .replace(/<h1[^>]*><\/h1>/g, '<h1>)'
+    .replace(/<p[^>]*><\/p>/g, '<p>)';
+    // Fix missing closing tags'
+    .replace(/<h1[^>]*>([^<]+)<\/h1>/g, '<h1>$1</h1>)'
+    .replace(/<p[^>]*>([^<]+)<\/p>/g, '<p>$1</p>)';
+    // Fix syntax errors'
+    .replace(/\)\}/g, ');)'
+    .replace(/\}\)/g, '});)'
     .replace(/\}\)/g, '});)
-    .replace(/\}\)/g, '});)
-    // Fix missing semicolons
+    // Fix missing semicolons'
     .replace(/([^;}])\n\s*}/g, '$1;\n})
     // Fix missing closing parentheses
     .replace(/([^)])\n\s*}/g, $1)\n});
@@ -34,7 +34,7 @@ function fixBlogPage(content) {
 }
 
 // Read and fix the blog page
-try {
+try {'
   const content = fs.readFileSync('app/blog/page.tsx', utf8);;
 
   const fixed = fixBlogPage(content);;
@@ -47,3 +47,4 @@ try {
   console.error(Error fixing blog page:, error.message);
 
 }
+'

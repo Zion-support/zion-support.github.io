@@ -68,7 +68,7 @@ const lines = body.split(\n);;
 
     // Fix missing semicolons;
 
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
+    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {'
       if (!match.endsWith(';)) {
         return match + ;
 
@@ -82,7 +82,7 @@ const lines = body.split(\n);;
 
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
   return (
-
+'
       if (tag.includes('<div') && !match.includes('</div>)) {
         return match + </div>;
 
@@ -133,7 +133,7 @@ const fullPath = path.join(currentPath, item);;
 
         const stat = fs.statSync(fullPath);;
 
-        if (stat.isDirectory()) {
+        if (stat.isDirectory()) {'
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             walkDir(fullPath);
 
@@ -192,4 +192,4 @@ try {/* TODO: Fix JSX expression */}
 }
 
 // console.log removed for production
-`
+`'

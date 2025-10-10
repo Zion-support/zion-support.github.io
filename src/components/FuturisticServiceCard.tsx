@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React, { useState } from 'react;
 
 import { ArrowRight, Star, Zap, CheckCircle } from lucide-react;
@@ -63,7 +63,7 @@ const currentColor = colorClasses[color];;;
         className={/* TODO: Fix JSX expression */}
 
         } ${currentColor.hover} ${/* TODO: Fix JSX expression */}
-
+'
           isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'
         }}
 
@@ -77,7 +77,7 @@ const currentColor = colorClasses[color];;;
 
             }}
 
-          >
+          >">
             <Icon className="w-8 h-8 text-white /></Icon>
           </div>
           
@@ -86,22 +86,22 @@ const currentColor = colorClasses[color];;;
           <div $2></div>
 
         {/* Title */}
-
+">
         <h3 className="text-2xl font-bold text-white mb-3 group-hove,
-  r:text-cyan-400 transition-colors duration-300></h3>
+  r: 'text-cyan-400 transition-colors duration-300></h3>',
           {title}
 
         </h3>
 
         {/* Description */}
-
+">
         <p className="text-gray-300 mb-6 leading-relaxed></p>
           {description}
 
         </p>
 
         {/* Price */}
-
+">
         <div className="mb-6"></div>
           <div className={`text-3xl font-bold ${currentColor.text} mb-2}></div>
             {price}
@@ -111,10 +111,10 @@ const currentColor = colorClasses[color];;;
         </div>
 
         {/* Features */}
-
+">
         <ul className="space-y-3 mb-8></ul>
           {/* TODO: Fix JSX expression */}
-
+">
             <li key={index} className="flex items-center text-sm text-gray-300"></li>
               <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 /></CheckCircle>
               {feature}
@@ -142,11 +142,11 @@ const currentColor = colorClasses[color];;;
 
         >
           Get Started;
-
+">
           <ArrowRight className="w-4 h-4 ml-2 group-hove,
-  r:translate-x-1 transition-transform /></ArrowRight>
+  r: 'translate-x-1 transition-transform /></ArrowRight>
         </button>
-
+',
         {/* Hover Effect Overlay */}
 
         <div></div>
@@ -165,5 +165,5 @@ const currentColor = colorClasses[color];;;
       ></div>
     </div>
   )};
-
+">
 export default FuturisticServiceCard;"`

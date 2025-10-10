@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { glob } from glob;
@@ -29,12 +29,12 @@ const consolePatterns = [;;
 // Files to process;
 
 const filePatterns = [;;;
-
-  'app/**/*.{ts,tsx,js,jsx},
-  'src/**/*.{ts,tsx,js,jsx},
-  'components/**/*.{ts,tsx,js,jsx},
-  'pages/**/*.{ts,tsx,js,jsx},
-  'utils/**/*.{ts,tsx,js,jsx},
+'
+  'app/**/*.{ts,tsx,js,jsx},'
+  'src/**/*.{ts,tsx,js,jsx},'
+  'components/**/*.{ts,tsx,js,jsx},'
+  'pages/**/*.{ts,tsx,js,jsx},'
+  'utils/**/*.{ts,tsx,js,jsx},'
   'hooks/**/*.{ts,tsx,js,jsx},
   lib/**/*.{ts,tsx,js,jsx}
 
@@ -43,18 +43,18 @@ const filePatterns = [;;;
 // Files to exclude;
 
 const excludePatterns = [;;
-
-  '**/node_modules/**,
-  '**/dist/**,
-  '**/.next/**,
-  '**/build/**,
-  '**/coverage/**,
-  '**/*.test.{ts,tsx,js,jsx},
-  '**/*.spec.{ts,tsx,js,jsx},
-  '**/scripts/**,
-  '**/automation/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+'
+  '**/node_modules/**,'
+  '**/dist/**,'
+  '**/.next/**,'
+  '**/build/**,'
+  '**/coverage/**,'
+  '**/*.test.{ts,tsx,js,jsx},'
+  '**/*.spec.{ts,tsx,js,jsx},'
+  '**/scripts/**,'
+  '**/automation/**,'
+  '**/backup*/**,'
+  '**/disabled*/**,'
   '**/corrupted*/**,
   **/temp*/**
 ];
@@ -112,11 +112,11 @@ async function main() {/* TODO: Fix JSX expression */}
 // Get all TypeScript and JavaScript files in the app directory;
 
   const patterns = [;;;
-
-    'app/**/*.{ts,tsx,js,jsx},
-    '!app/**/*.test.{ts,tsx,js,jsx},
-    '!app/**/*.spec.{ts,tsx,js,jsx},
-    '!**/node_modules/**,
+'
+    'app/**/*.{ts,tsx,js,jsx},'
+    '!app/**/*.test.{ts,tsx,js,jsx},'
+    '!app/**/*.spec.{ts,tsx,js,jsx},'
+    '!**/node_modules/**,'
     '!**/.next/**,
     !**/dist/**
   ];
@@ -199,7 +199,7 @@ export { processFile, consolePatterns }}
   modified: ${modifiedFiles}`);
 
   // // console.log removed for production
-
+'
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'});
 
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
@@ -215,3 +215,4 @@ export { processFile, consolePatterns }}
 main().catch(console.error);
 
 export { removeConsoleStatements };
+'

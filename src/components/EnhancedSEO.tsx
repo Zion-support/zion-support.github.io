@@ -40,8 +40,8 @@ interface SEOProps {// TODO: Add content}
 
 ;
 
-const EnhancedSEO: React.FC;
-
+const EnhancedSEO: 'React.FC;
+',
           <SEOProps> = ({// TODO: Add content}
 
 }
@@ -50,18 +50,18 @@ const EnhancedSEO: React.FC;
 
 const EnhancedSEO: React.FC<SEOProps> = ({
 
-  title = 'Zion Tech Group - Advanced AI and IT Solutions,
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.,
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services],
-//   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg,
-  ogType = 'website,
-  twitterCard = 'summary_large_image,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions,'
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.,'
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services],';
+//   canonicalUrl,'
+  ogImage = 'https://ziontechgroup.com/og-image.jpg,'
+  ogType = 'website,'
+  twitterCard = 'summary_large_image,'
   twitterSite = '@ziontechgroup,
 //   structuredData,
-  noindex = false,
-  nofollow = false,
-  lang = 'en,
+  noindex = false,';
+  nofollow = false,'
+  lang = 'en,'
   author = 'Zion Tech Group,
 //   publishedTime,
 //   modifiedTime,
@@ -73,7 +73,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   return (
 
     // Update meta description;
-
+'
 let metaDescription = document.querySelector('meta[name="description]);;
 
     if (!metaDescription) {/* TODO: Fix JSX expression */}
@@ -135,7 +135,7 @@ let metaDescription = document.querySelector('meta[name="description]);;
           <link rel="preconnect" href="http,
   s:// www.google-analytics.com" /></link>
           <link rel="preconnect" href="http,
-  s:// www.googletagmanager.com /></link>
+  s: '// www.googletagmanager.com /></link>',
       {/* DNS Prefetch */}
 
           <link rel="dns-prefetch" href="// fonts.googleapis.com" /></link>

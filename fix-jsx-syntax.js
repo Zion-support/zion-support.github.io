@@ -19,10 +19,11 @@
   }
 }
 
-// Fix the main page file
+// Fix the main page file'
 const filePath = '/workspace/app/page.tsx';
-if (fixJSXSyntax(filePath)) {
+if (fixJSXSyntax(filePath)) {'
   console.log('JSX syntax fixed successfully');
-} else {
+} else {'
   console.log('No JSX syntax issues found');
 }
+'

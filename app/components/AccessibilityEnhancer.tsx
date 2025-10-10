@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React, { useEffect } from 'react;
 
 interface AccessibilityEnhancerProps {
@@ -20,12 +20,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-    // Keyboard navigation enhancements
+    // Keyboard navigation enhancements'
     if (enableKeyboardNavigation && typeof window !== 'undefined) {
       const handleKeyDown = (event: KeyboardEvent) => {;;
 
-        // Skip to main content
-        if (event.key === 'Tab && event.shiftKey && event.target === document.body) {
+        // Skip to main content'
+        if (event.key === 'Tab && event.shiftKey && event.target === document.body) {'
           const skipLink = document.querySelector('a[href="#main-content]) as HTMLAnchorElement;;
 
           if (skipLink) {
@@ -38,7 +38,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
 
         // Close dropdowns with Escape key
-        if (event.key === 'Escape) {
+        if (event.key === 'Escape) {'
           const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;
 
           openDropdowns.forEach(dropdown => {
@@ -54,8 +54,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     }
 
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined) {
+    // Focus management'
+    if (enableFocusManagement && typeof window !== 'undefined) {'
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1]);;
 
       const trapFocus = (container: HTMLElement) => {;;
@@ -107,9 +107,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableScreenReaderSupport && typeof window !== 'undefined) {
       // Add live region for dynamic content updates
       const liveRegion = document.createElement(div);;
-
+'
       liveRegion.setAttribute('aria-live', polite);
-
+'
       liveRegion.setAttribute('aria-atomic', true);
 
       liveRegion.className = sr-only;
@@ -160,7 +160,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     }
 
-    // High contrast mode support
+    // High contrast mode support'
     if (enableHighContrast && typeof window !== 'undefined) {
       const prefersHighContrast = window.matchMedia((prefers-contrast: high));;
 
@@ -191,3 +191,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
+'

@@ -1,5 +1,5 @@
-// 'use client' ' import React {Component} ErrorInfo; ReactNode } from 'react' interface Props {children: ReactNode} fallback?: ReactNode, onError?: (error: Error) errorInfo: ErrorInfo) => void} showDetails?: boolean} interface State {hasError: boolean} error: Error | null} errorInfo: ErrorInfo | null} class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) { super(props), this.state = { hasError: false, error: null} errorInfo: null }} static getDerivedStateFromError(error: Error): State {return { hasError: true, error} errorInfo: null }} override componentDidCatch(error: Error) errorInfo: ErrorInfo) {this.setState({ error} errorInfo }); // Log error to console in development' if (process.env['NODE_ENV'] === 'development) { // // console.error removed for production
-error} errorInfo)} // Send error to monitoring service this.logErrorToService(error) errorInfo); // Call custom error handler this.props.onError?.(error) errorInfo)} private logErrorToService = (error: Error) errorInfo: ErrorInfo) => {// In a real application, you would send this to your error monitoring service // like Sentry, LogRocket, or Bugsnag try { // Example: Send to analytics' if (typeof gtag !== 'undefined') {' gtag('event)exception' { description: error.message} fatal: false })} // Example: Send to custom endpoint' fetch('/api/error-reporting' {' method: 'POST'} headers: {' 'Content-Type': 'application/json }, body: JSON.stringify({error: { message: error.message, stack: error.stack} componentStack: errorInfo.componentStack }) timestamp: new Date().toISOString(), userAgent: navigator.userAgent, url: window.location.href }) }).catch(console.error)} catch (loggingError) { // // console.error removed for production
+// 'use client' ' import React {Component} ErrorInfo; ReactNode } from 'react' interface Props {children: ReactNode} fallback?: ReactNode, onError?: (error: Error) errorInfo: ErrorInfo) => void} showDetails?: boolean} interface State {hasError: boolean} error: Error | null} errorInfo: ErrorInfo | null} class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) { super(props), this.state = { hasError: false, error: null} errorInfo: null }} static getDerivedStateFromError(error: Error): State {return { hasError: true, error} errorInfo: null }} override componentDidCatch(error: Error) errorInfo: ErrorInfo) {this.setState({ error} errorInfo }); // Log error to console in development' if (process.env['NODE_ENV'] === 'development) { // // console.error removed for production'
+error} errorInfo)} // Send error to monitoring service this.logErrorToService(error) errorInfo); // Call custom error handler this.props.onError?.(error) errorInfo)} private logErrorToService = (error: Error) errorInfo: ErrorInfo) => {// In a real application, you would send this to your error monitoring service // like Sentry, LogRocket, or Bugsnag try { // Example: Send to analytics' if (typeof gtag !== 'undefined') {' gtag('event)exception' { description: error.message} fatal: false })} // Example: Send to custom endpoint' fetch('/api/error-reporting' {' method: 'POST'} headers: {' 'Content-Type': 'application/json }, body: JSON.stringify({error: { message: error.message, stack: error.stack} componentStack: errorInfo.componentStack }) timestamp: new Date().toISOString(), userAgent: navigator.userAgent, url: window.location.href }) }).catch(console.error)} catch (loggingError) { // // console.error removed for production'
 } }; render() { if (this.state.hasError) { // Custom fallback UI if (this.props.fallback) { return this.props.fallback} // Default error UI return ( <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div> <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /> </svg> </div> <div></div> <h2 className="text-left" > Something went wrong </h2> <p className="text-left" >' We're sorry for the inconvenience </p> </div> </div> <div className="text-left" ></div> <p className="text-left" > An unexpected error occurred. Our team has been notified and is working to fix this issue. </p> </div> {this.props.showDetails && this.state.error && ( <details className="text-left" > <summary className="text-left" > Error Details </summary> <div className="text-left" ></div> <div className="text-left" ></div> <strong>Error:</strong> {this.state.error.message} </div> {this.state.error.stack && ( <div></div> <strong>Stack:</strong> <pre className="text-left" > {this.state.error.stack} </pre> </div> )} </div> </details> )} <div className="text-left" ></div> <button onClick={() => window.location.reload()} className="text-left" > Reload Page </button> <button onClick={() => window.history.back()} className="text-left > Go Back </button> </div> </div> </div> )} return this.props.children} } export default EnhancedErrorBoundary;
 
 // 'use client' ' import React {Component} ErrorInfo; ReactNode } from react interface Props {/* TODO: Fix JSX expression */}
@@ -18,7 +18,7 @@ error} errorInfo)} // Send error to monitoring service this.logErrorToService(er
 
   r: true, error} errorInf,
   o: null }} override componentDidCatch(erro)
-  r: Error) errorInf,
+  r: Error) errorInf,'
   o: ErrorInfo) {this.setState({ error} errorInfo }); // Log error to console in development' if (process.env['NODE_ENV'] === development) {/* TODO: Fix JSX expression */}
 
   boundary: ) error} errorInfo)} // Send error to monitoring service this.logErrorToService(error) errorInfo); // Call custom error handler this.props.onError?.(error) errorInfo)} private logErrorToService = (erro)
@@ -26,10 +26,10 @@ error} errorInfo)} // Send error to monitoring service this.logErrorToService(er
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
 
   n: error.message} fata,
-  l: false })} // Exampl,
+  l: false })} // Exampl,'
   e: Send to custom endpoint' fetch(/api/error-reporting {/* TODO: Fix JSX expression */}
-
-  d: POST} header,
+';
+  d: POST} header,'
   s: {' 'Content-Type': application/json }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
 
@@ -37,8 +37,8 @@ error} errorInfo)} // Send error to monitoring service this.logErrorToService(er
   k: errorInfo.componentStack }) timestam,
   p: new Date().toISOString(), userAgen,
   t: navigator.userAgent, ur,
-  l: window.location.href }) }).catch(console.error)} catch (loggingError) {/* TODO: Fix JSX expression */}
-
+  l: window.location.href }) }).catch(console.error)} catch (loggingError) {/* TODO: Fix JSX expression */}';
+'">
   service: '} loggingError)} }; render() { if (this.state.hasError) { // Custom fallback UI if (this.props.fallback) { return this.props.fallback} // Default error UI return (<div className="text-left" > <div className="text-left" > <div className="text-left" > <div className="text-left" > <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24" > <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /> </svg> </div> <div> <h2 className="text-left" > Something went wrong </h2> <p className="text-left" >' We're sorry for the inconvenience </p> </div> </div> <div className="text-left" > <p className=text-left > An unexpected error occurred. Our team has been notified and is working to fix this issue. </p> </div> {/* TODO: Fix JSX expression */}
 
   r:</strong> {this.state.error.message} </div> {/* TODO: Fix JSX expression */})

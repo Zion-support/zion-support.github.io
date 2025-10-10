@@ -4,10 +4,10 @@ import { execSync } from 'child_process';
 
 // Function to merge a branch into main
 function mergeBranch(branchName) {
-  try {
+  try {'
     console.log(`Merging ${branchName} into main...`)';
 
-    // Merge the branch
+    // Merge the branch'
     execSync(`git merge ${branchName} --no-edit`, { stdio: 'pipe });
 
     console.log(`✓ Successfully merged ${branchName}`);
@@ -24,21 +24,21 @@ function mergeBranch(branchName) {
 }
 
 // Main function
-async function main() {
+async function main() {'
   console.log('Starting branch merge process...);
 
   // List of branches to merge
   const branches = [;;
-
-    'cursor/enhance-app-with-new-services-and-futuristic-design-068b',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-4b6a',
-    'cursor/fix-errors-and-merge-to-main-31f3',
-    'cursor/fix-errors-and-merge-to-main-50fa',
-    'cursor/fix-errors-and-merge-to-main-6183',
-    'cursor/fix-errors-and-merge-to-main-9991',
-    'cursor/fix-errors-and-merge-to-main-9a18',
-    'cursor/fix-errors-and-merge-to-main-ba79',
-    'cursor/fix-errors-and-merge-to-main-c8e9',
+'
+    'cursor/enhance-app-with-new-services-and-futuristic-design-068b','
+    'cursor/enhance-app-with-new-services-and-futuristic-design-4b6a','
+    'cursor/fix-errors-and-merge-to-main-31f3','
+    'cursor/fix-errors-and-merge-to-main-50fa','
+    'cursor/fix-errors-and-merge-to-main-6183','
+    'cursor/fix-errors-and-merge-to-main-9991','
+    'cursor/fix-errors-and-merge-to-main-9a18','
+    'cursor/fix-errors-and-merge-to-main-ba79','
+    'cursor/fix-errors-and-merge-to-main-c8e9','
     'cursor/fix-errors-and-merge-to-main-de3b',
     cursor/fix-errors-and-merge-to-main-e05a
   ];
@@ -73,7 +73,7 @@ async function main() {
   console.log(`Failed to merge: ${failedCount} branches`);
 
   // Push changes to main
-  try {
+  try {'
     execSync(`git push origin main`, { stdio: 'pipe });
 
     console.log(`✓ Pushed changes to main`);
@@ -86,3 +86,4 @@ async function main() {
 }
 
 main().catch(console.error);
+'

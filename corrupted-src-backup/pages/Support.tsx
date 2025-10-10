@@ -45,10 +45,10 @@ const, Suppor, t: Rea, c, t.FC = () => {
     {
       ic, o, n: Vid, e, o;
 
-      tit, l, e: 'Video, Cal, l
-      descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s
-      availabili, t, y: 'Business, Hour, s
-      responseTi, m, e: '< 4, hour, s
+      tit, l, e: 'Video, Cal, l'
+      descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
+      availabili, t, y: 'Business, Hour, s'
+      responseTi, m, e: '< 4, hour, s'
       conta, c, t: 'Schedule, Cal, l;
 
 const, Suppor, t: Rea, c, t.FC = () =>
@@ -135,22 +135,22 @@ const, Suppor, t: Rea, c, t.FC = () =>
               <h1, className=te, x, t-4x, l, m;
 
       <div, className=m, i, n-h-screen, b, g-gr, a, y-50>
-        {/* Hero, Sectio, n */}<
-        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20>
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><
+        {/* Hero, Sectio, n */}<">
+        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20>">
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><">
             <div, className="te, x, t-cent, e, r><
               <h1, className=te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6>
   return (<React.Fragment>
       <Helmet></Helmet>
-        <title>Suppo, r, t - Zion, Tech, Group</title>
+        <title>Suppo, r, t - Zion, Tech, Group</title>">
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t  /></link>
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50></div>
         {/* Hero, Sectio, n */}
-
+">
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"></section>
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>
             <div, className="te, x, t-cent, e, r"></div>
@@ -179,7 +179,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
                 <div, className=relati, v, e><
                   <Search, className=absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, h-5 w-5  /><
                   <inp, u, t;
-
+">
   ty, p, e="te, x, t
                     placehold, e, r=Search, for, help articl, e, s, FA, Q, s, or, topic, s...
                     val, u, e={searchQue, r, y});
@@ -300,9 +300,9 @@ const, Suppor, t: Rea, c, t.FC = () =>
   ];
 
   const, quickAction, s = [
-    { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know, li, n, k: 
-    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t, li, n, k: 
-    { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m, li, n, k: 
+    { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know, li, n, k: '
+    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t, li, n, k: '
+    { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m, li, n, k: '
     { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e, li, n, k: 
   ];
 
@@ -513,5 +513,5 @@ const, Suppor, t: Rea, c, t.FC = () =>
       </secti, o, n>
     </d, i, v>
   )};
-
+">
 export default Support;"`

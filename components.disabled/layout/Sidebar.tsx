@@ -3,89 +3,89 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   n: boolean} onClos,
   e: () => void}} } ; const,
   Sidebar: React.FC<SidebarProps> = ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}
-
+'
   e: \'Micro SaaS\} service,
-  s: [, {/* TODO: Fix JSX expression */}
-
-  e: \'AI Email Responder Pro\}hre,
+  s: [, {/* TODO: Fix JSX expression */}';
+'
+  e: \'AI Email Responder Pro\}hre,'
   f: \'/services/ai-email-responder\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Smart Inventory Predictor\}hre,
+'
+  e: \'Smart Inventory Predictor\}hre,'
   f: \'/services/smart-inventory-predictor\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'AI Customer Insights Platform\}hre,
+'
+  e: \'AI Customer Insights Platform\}hre,'
   f: \'/services/ai-customer-insights\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Smart Contract Security Auditor\}hre,
+'
+  e: \'Smart Contract Security Auditor\}hre,'
   f: \'/services/smart-contract-auditor\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'AI Video Editor Pro\}hre,
+'
+  e: \'AI Video Editor Pro\}hre,'
   f: \'/services/ai-video-editor\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Smart Energy Monitor\}hre,
+'
+  e: \'Smart Energy Monitor\}hre,'
   f: \'/services/smart-energy-monitor\ }; ]}; {/* TODO: Fix JSX expression */}
-
+'
   e: \'IT Services\} service,
-  s: [, {/* TODO: Fix JSX expression */}
-
-  e: \'Zero Trust Security Implementation\}hre,
+  s: [, {/* TODO: Fix JSX expression */}';
+'
+  e: \'Zero Trust Security Implementation\}hre,'
   f: \'/services/zero-trust-security\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Hybrid Cloud Management Platform\}hre,
+'
+  e: \'Hybrid Cloud Management Platform\}hre,'
   f: \'/services/hybrid-cloud-management\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'IoT Platform Development\}hre,
+'
+  e: \'IoT Platform Development\}hre,'
   f: \'/services/iot-platform-development\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'API Security Gateway\}hre,
+'
+  e: \'API Security Gateway\}hre,'
   f: \'/services/api-security-gateway\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Edge Computing Solutions\}hre,
+'
+  e: \'Edge Computing Solutions\}hre,'
   f: \'/services/edge-computing-solutions\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Quantum-Ready Security\}hre,
+'
+  e: \'Quantum-Ready Security\}hre,'
   f: \'/services/quantum-ready-security\ }; ]}; {/* TODO: Fix JSX expression */}
-
+'
   e: \'AI Services\} service,
-  s: [, {/* TODO: Fix JSX expression */}
-
-  e: \'AI Voice Synthesis Platform\}hre,
+  s: [, {/* TODO: Fix JSX expression */}';
+'
+  e: \'AI Voice Synthesis Platform\}hre,'
   f: \'/services/ai-voice-synthesis\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'AI Medical Diagnosis Assistant\}hre,
+'
+  e: \'AI Medical Diagnosis Assistant\}hre,'
   f: \'/services/ai-medical-diagnosis\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'AI Legal Document Analyzer\}hre,
+'
+  e: \'AI Legal Document Analyzer\}hre,'
   f: \'/services/ai-legal-document-analyzer\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'AI Autonomous Vehicle Systems\}hre,
+'
+  e: \'AI Autonomous Vehicle Systems\}hre,'
   f: \'/services/ai-autonomous-vehicles\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'AI Robotic Process Automation\}hre,
+'
+  e: \'AI Robotic Process Automation\}hre,'
   f: \'/services/ai-robotic-process-automation\ }; {/* TODO: Fix JSX expression */}
-
+'
   e: \'AI Drug Discovery Platform\}hre,
   f: \/services/ai-drug-discovery\ }; ]} ]; const quickLinks = [; {/* TODO: Fix JSX expression */};;
-
-  e: \'About Us\}hre,
+'
+  e: \'About Us\}hre,'
   f: \'/about\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Careers\}hre,
+'
+  e: \'Careers\}hre,'
   f: \'/careers\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Contact\}hre,
+'
+  e: \'Contact\}hre,'
   f: \'/contact\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Blog\}hre,
+'
+  e: \'Blog\}hre,'
   f: \'/blog\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Case Studies\}hre,
+'
+  e: \'Case Studies\}hre,'
   f: \'/case-studies\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Privacy Policy\}hre,
+'
+  e: \'Privacy Policy\}hre,'
   f: \'/privacy\ }; {/* TODO: Fix JSX expression */}
-
-  e: \'Terms of Service\}hre,
+'
+  e: \'Terms of Service\}hre,'
   f: \'/terms\' }; ]; return (; <React.Fragment> {} {isOpen && () <div } className=\"fixed inset-0 bg-black bg-opacity-50 z-40,
   lg:hidden\" onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}
 
@@ -197,85 +197,85 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   e: Micro SaaS} service,
   s: [, {/* TODO: Fix JSX expression */}
 
-  e: AI Email Responder Pro}hre,
+  e: AI Email Responder Pro}hre,'
   f: '/services/ai-email-responder }; {/* TODO: Fix JSX expression */}
 
-  e: Smart Inventory Predictor}hre,
+  e: Smart Inventory Predictor}hre,'
   f: '/services/smart-inventory-predictor }; {/* TODO: Fix JSX expression */}
 
-  e: AI Customer Insights Platform}hre,
+  e: AI Customer Insights Platform}hre,'
   f: '/services/ai-customer-insights }; {/* TODO: Fix JSX expression */}
 
-  e: Smart Contract Security Auditor}hre,
+  e: Smart Contract Security Auditor}hre,'
   f: '/services/smart-contract-auditor }; {/* TODO: Fix JSX expression */}
 
-  e: AI Video Editor Pro}hre,
+  e: AI Video Editor Pro}hre,'
   f: '/services/ai-video-editor }; {/* TODO: Fix JSX expression */}
 
-  e: Smart Energy Monitor}hre,
+  e: Smart Energy Monitor}hre,'
   f: '/services/smart-energy-monitor }; ]}; {/* TODO: Fix JSX expression */}
 
   e: IT Services} service,
   s: [, {/* TODO: Fix JSX expression */}
 
-  e: Zero Trust Security Implementation}hre,
+  e: Zero Trust Security Implementation}hre,'
   f: '/services/zero-trust-security }; {/* TODO: Fix JSX expression */}
 
-  e: Hybrid Cloud Management Platform}hre,
+  e: Hybrid Cloud Management Platform}hre,'
   f: '/services/hybrid-cloud-management }; {/* TODO: Fix JSX expression */}
 
-  e: IoT Platform Development}hre,
+  e: IoT Platform Development}hre,'
   f: '/services/iot-platform-development }; {/* TODO: Fix JSX expression */}
 
-  e: API Security Gateway}hre,
+  e: API Security Gateway}hre,'
   f: '/services/api-security-gateway }; {/* TODO: Fix JSX expression */}
 
-  e: Edge Computing Solutions}hre,
+  e: Edge Computing Solutions}hre,'
   f: '/services/edge-computing-solutions }; {/* TODO: Fix JSX expression */}
 
-  e: Quantum-Ready Security}hre,
+  e: Quantum-Ready Security}hre,'
   f: '/services/quantum-ready-security }; ]}; {/* TODO: Fix JSX expression */}
 
   e: AI Services} service,
   s: [, {/* TODO: Fix JSX expression */}
 
-  e: AI Voice Synthesis Platform}hre,
+  e: AI Voice Synthesis Platform}hre,'
   f: '/services/ai-voice-synthesis }; {/* TODO: Fix JSX expression */}
 
-  e: AI Medical Diagnosis Assistant}hre,
+  e: AI Medical Diagnosis Assistant}hre,'
   f: '/services/ai-medical-diagnosis }; {/* TODO: Fix JSX expression */}
 
-  e: AI Legal Document Analyzer}hre,
+  e: AI Legal Document Analyzer}hre,'
   f: '/services/ai-legal-document-analyzer }; {/* TODO: Fix JSX expression */}
 
-  e: AI Autonomous Vehicle Systems}hre,
+  e: AI Autonomous Vehicle Systems}hre,'
   f: '/services/ai-autonomous-vehicles }; {/* TODO: Fix JSX expression */}
 
-  e: AI Robotic Process Automation}hre,
+  e: AI Robotic Process Automation}hre,'
   f: '/services/ai-robotic-process-automation }; {/* TODO: Fix JSX expression */}
 
   e: AI Drug Discovery Platform}hre,
   f: /services/ai-drug-discovery }; ]} ]; const quickLinks = [; {/* TODO: Fix JSX expression */};;
 
-  e: About Us}hre,
+  e: About Us}hre,'
   f: '/about }; {/* TODO: Fix JSX expression */}
 
-  e: Careers}hre,
+  e: Careers}hre,'
   f: '/careers }; {/* TODO: Fix JSX expression */}
 
-  e: Contact}hre,
+  e: Contact}hre,'
   f: '/contact }; {/* TODO: Fix JSX expression */}
 
-  e: Blog}hre,
+  e: Blog}hre,'
   f: '/blog }; {/* TODO: Fix JSX expression */}
 
-  e: Case Studies}hre,
+  e: Case Studies}hre,'
   f: '/case-studies }; {/* TODO: Fix JSX expression */}
 
-  e: Privacy Policy}hre,
+  e: Privacy Policy}hre,'
   f: '/privacy }; {/* TODO: Fix JSX expression */}
-
-  e: 'Terms of Service}hre,
+'
+  e: 'Terms of Service}hre,'
   f: '/terms' }; ]; return (; <React.Fragment> {} {isOpen && (; <div ) className="text-left" } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}"
   lg: hidden ${, isOpen ? 'translate-x-0' : 'translate-x-full'}}`}> <div className="text-left" > {} <div className="text-left" > <h2 className="text-left" >Services & Solutions></div> <button; onClick={onClose} className="text-left" > </button><X className="text-left" /> ></div> ></div> {} <div className="text-left" > {} <div className="text-left" > <h3 className="text-left" >Get in Touch></div> <div className="text-left" > <div className="text-left" > <Phone className="text-left" /> <a href="te,
   l: +<13024640950" className="text-left" > +1 302 464 0950; ></div> ></div> <div className="text-left" > <Mail className="text-left" /> <a href="mailt,
@@ -288,94 +288,94 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
     n: boolean} onClos,
   e: () => void}} } ; const,
   Sidebar: React.FC<SidebarProps> = ({isOpen)}onClose }) => {/* TODO: Fix JSX expression *
-  ,
+  ,'
     e: \'Micro SaaS\} service,
-  s: [, {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Email Responder Pro\}hre,
+  s: [, {/* TODO: Fix JSX expression *';
+  ,'
+    e: \'AI Email Responder Pro\}hre,'
   f: \'/services/ai-email-responder\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Smart Inventory Predictor\}hre,
+  ,'
+    e: \'Smart Inventory Predictor\}hre,'
   f: \'/services/smart-inventory-predictor\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Customer Insights Platform\}hre,
+  ,'
+    e: \'AI Customer Insights Platform\}hre,'
   f: \'/services/ai-customer-insights\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Smart Contract Security Auditor\}hre,
+  ,'
+    e: \'Smart Contract Security Auditor\}hre,'
   f: \'/services/smart-contract-auditor\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Video Editor Pro\}hre,
+  ,'
+    e: \'AI Video Editor Pro\}hre,'
   f: \'/services/ai-video-editor\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Smart Energy Monitor\}hre,
+  ,'
+    e: \'Smart Energy Monitor\}hre,'
   f: \'/services/smart-energy-monitor\ }; ];}; {/* TODO: Fix JSX expression *
-  ,
+  ,'
     e: \'IT Services\} service,
-  s: [, {/* TODO: Fix JSX expression *
-  ,
-    e: \'Zero Trust Security Implementation\}hre,
+  s: [, {/* TODO: Fix JSX expression *';
+  ,'
+    e: \'Zero Trust Security Implementation\}hre,'
   f: \'/services/zero-trust-security\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Hybrid Cloud Management Platform\}hre,
+  ,'
+    e: \'Hybrid Cloud Management Platform\}hre,'
   f: \'/services/hybrid-cloud-management\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'IoT Platform Development\}hre,
+  ,'
+    e: \'IoT Platform Development\}hre,'
   f: \'/services/iot-platform-development\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'API Security Gateway\}hre,
+  ,'
+    e: \'API Security Gateway\}hre,'
   f: \'/services/api-security-gateway\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Edge Computing Solutions\}hre,
+  ,'
+    e: \'Edge Computing Solutions\}hre,'
   f: \'/services/edge-computing-solutions\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Quantum-Ready Security\}hre,
+  ,'
+    e: \'Quantum-Ready Security\}hre,'
   f: \'/services/quantum-ready-security\ }; ];}; {/* TODO: Fix JSX expression *
-  ,
+  ,'
     e: \'AI Services\} service,
-  s: [, {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Voice Synthesis Platform\}hre,
+  s: [, {/* TODO: Fix JSX expression *';
+  ,'
+    e: \'AI Voice Synthesis Platform\}hre,'
   f: \'/services/ai-voice-synthesis\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Medical Diagnosis Assistant\}hre,
+  ,'
+    e: \'AI Medical Diagnosis Assistant\}hre,'
   f: \'/services/ai-medical-diagnosis\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Legal Document Analyzer\}hre,
+  ,'
+    e: \'AI Legal Document Analyzer\}hre,'
   f: \'/services/ai-legal-document-analyzer\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Autonomous Vehicle Systems\}hre,
+  ,'
+    e: \'AI Autonomous Vehicle Systems\}hre,'
   f: \'/services/ai-autonomous-vehicles\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'AI Robotic Process Automation\}hre,
+  ,'
+    e: \'AI Robotic Process Automation\}hre,'
   f: \'/services/ai-robotic-process-automation\ }; {/* TODO: Fix JSX expression *
-  ,
+  ,'
     e: \'AI Drug Discovery Platform\}hre,
   f: \/services/ai-drug-discovery\ }; ];} ]; const quickLinks = [; {/* TODO: Fix JSX expression *;;
 
-  ,
-    e: \'About Us\}hre,
+  ,'
+    e: \'About Us\}hre,'
   f: \'/about\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Careers\}hre,
+  ,'
+    e: \'Careers\}hre,'
   f: \'/careers\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Contact\}hre,
+  ,'
+    e: \'Contact\}hre,'
   f: \'/contact\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Blog\}hre,
+  ,'
+    e: \'Blog\}hre,'
   f: \'/blog\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Case Studies\}hre,
+  ,'
+    e: \'Case Studies\}hre,'
   f: \'/case-studies\ }; {/* TODO: Fix JSX expression *
-  ,
-    e: \'Privacy Policy\}hre,
+  ,'
+    e: \'Privacy Policy\}hre,'
   f: \'/privacy\ }; {/* TODO: Fix JSX expression *
-  ,
+  ,'
     e: \'Terms of Service\}hre,
   f: \
   l,
     g:hidden\ onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression *
-  l,
+  l,'">
     g: hidden ${, isOpen ? \'translate-x-0\' : \'translate-x-full\'}}`}> <div className=\\"flex flex-col h-full\\"> {} <div className=\\"flex items-center justify-between p-6 border-b border-gray-200\\"> <h2 className=\\"text-xl font-bold text-gray-900\\>Services & Solutions><
   hover:bg-gray-100 rounded-lg transition-colors\\"> </button><X className=\\"w-6 h-6 text-gray-600\\" /> ></> ></> {} <div className=\\"flex-1 overflow-y-auto\\"> {} <div className=\\"p-6 bg-blue-50 border-b border-gray-200\\"> <h3 className=\\"text-lg font-semibold text-gray-900 mb-4\\">Get in Touch></> <div className=\\"space-y-3\\"> <div className=\\"flex items-center space-x-3\\"> <Phone className=\\"w-5 h-5 text-blue-600\\ 
   l: +13024640950\\" className=\\"text-gray-700,
@@ -475,10 +475,10 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   ,
     e: "Terms of Service"}hre,
   f: "/terms" }; ]; return (; <> {} {isOpen && (; <div ) className="text-left } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression *
-  l,
-    g: hidden ${, isOpen ? "translate-x-0" : "translate-x-full"}}`}> <div className="text-left" > {} <div className="text-left" > <h2 className="text-left" >Services & Solutions></> <button; onClick={onClose} className="text-left" > </button><X className="text-left" /> ></> ></> {} <div className="text-left" > {} <div className="text-left" > <h3 className="text-left" >Get in Touch></> <div className="text-left" > <div className="text-left" > <Phone className="text-left 
+  l,">
+    g: hidden ${, isOpen ? "translate-x-0" : "translate-x-full"}}`}> <div className="text-left" > {} <div className="text-left" > <h2 className="text-left" >Services & Solutions></> <button; onClick={onClose} className="text-left" > </button><X className="text-left" /> ></> ></> {} <div className="text-left" > {} <div className="text-left" > <h3 className="text-left" >Get in Touch></> <div className="text-left" > <div className="text-left" > <Phone className="text-left ">
   l: +<13024640950" className="text-left" > +1 302 464 0950; ></> ></> <div className="text-left" > <Mail className="text-left 
-  ,
+  ,">
     o:kleber@ziontechgroup.<com" className="text-left" > kleber@ziontechgroup.com; ></> ></> <div className="text-left" > <MapPin className="text-left" /> <span className="text-left" > 364 E Main St STE 1008<br /> Middletown DE 19709, ></> ></> ></> ></> {} <div className="text-left" > {serviceCategories.map((category) => (} <div key={category.title} className="text-left" > <h3 className="text-left" >{category.title}></> <ul className="text-left" > {category.services.map((service) => (} <li key={service.name}> <Link; href={service.href} className="text-left" ) onClick={onClose} > <span className="text-left" >{service.name}></> <Link className="text-left" /> ></> ></> ))} ></> ></> ))} ></> {} <div className="text-left" > <h3 className="text-left" >Quick Links></> <ul className="text-left" > {quickLinks.map((link) => (} <li key={link.name}> <Link; href={link.href} className="text-left" ) onClick={onClose} > {link.name} ></> ></> ))} ></> ></> ></> {} <div className="text-left" > <Link; href="/<contact" className="text-left" ; onClick={onClose} > Get Free Quote; ></> ></> ></> ></> ></> );}; export default Sidebar;'"`'"`' import _React from 'react' import { Link } from 'react-router-dom' import {X,Phone,Mail}MapPin;ArrowRight } from 'lucide-react interface SidebarProps {/* TODO: Fix JSX expression *
   ,
     n: boolean} onClos,
@@ -488,91 +488,91 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
     e: Micro SaaS} service,
   s: [, {/* TODO: Fix JSX expression *
   ,
-    e: AI Email Responder Pro}hre,
+    e: AI Email Responder Pro}hre,'
   f: '/services/ai-email-responder }; {/* TODO: Fix JSX expression *
   ,
-    e: Smart Inventory Predictor}hre,
+    e: Smart Inventory Predictor}hre,'
   f: '/services/smart-inventory-predictor }; {/* TODO: Fix JSX expression *
   ,
-    e: AI Customer Insights Platform}hre,
+    e: AI Customer Insights Platform}hre,'
   f: '/services/ai-customer-insights }; {/* TODO: Fix JSX expression *
   ,
-    e: Smart Contract Security Auditor}hre,
+    e: Smart Contract Security Auditor}hre,'
   f: '/services/smart-contract-auditor }; {/* TODO: Fix JSX expression *
   ,
-    e: AI Video Editor Pro}hre,
+    e: AI Video Editor Pro}hre,'
   f: '/services/ai-video-editor }; {/* TODO: Fix JSX expression *
   ,
-    e: Smart Energy Monitor}hre,
+    e: Smart Energy Monitor}hre,'
   f: '/services/smart-energy-monitor }; ];}; {/* TODO: Fix JSX expression *
   ,
     e: IT Services} service,
   s: [, {/* TODO: Fix JSX expression *
   ,
-    e: Zero Trust Security Implementation}hre,
+    e: Zero Trust Security Implementation}hre,'
   f: '/services/zero-trust-security }; {/* TODO: Fix JSX expression *
   ,
-    e: Hybrid Cloud Management Platform}hre,
+    e: Hybrid Cloud Management Platform}hre,'
   f: '/services/hybrid-cloud-management }; {/* TODO: Fix JSX expression *
   ,
-    e: IoT Platform Development}hre,
+    e: IoT Platform Development}hre,'
   f: '/services/iot-platform-development }; {/* TODO: Fix JSX expression *
   ,
-    e: API Security Gateway}hre,
+    e: API Security Gateway}hre,'
   f: '/services/api-security-gateway }; {/* TODO: Fix JSX expression *
   ,
-    e: Edge Computing Solutions}hre,
+    e: Edge Computing Solutions}hre,'
   f: '/services/edge-computing-solutions }; {/* TODO: Fix JSX expression *
   ,
-    e: Quantum-Ready Security}hre,
+    e: Quantum-Ready Security}hre,'
   f: '/services/quantum-ready-security }; ];}; {/* TODO: Fix JSX expression *
   ,
     e: AI Services} service,
   s: [, {/* TODO: Fix JSX expression *
   ,
-    e: AI Voice Synthesis Platform}hre,
+    e: AI Voice Synthesis Platform}hre,'
   f: '/services/ai-voice-synthesis }; {/* TODO: Fix JSX expression *
   ,
-    e: AI Medical Diagnosis Assistant}hre,
+    e: AI Medical Diagnosis Assistant}hre,'
   f: '/services/ai-medical-diagnosis }; {/* TODO: Fix JSX expression *
   ,
-    e: AI Legal Document Analyzer}hre,
+    e: AI Legal Document Analyzer}hre,'
   f: '/services/ai-legal-document-analyzer }; {/* TODO: Fix JSX expression *
   ,
-    e: AI Autonomous Vehicle Systems}hre,
+    e: AI Autonomous Vehicle Systems}hre,'
   f: '/services/ai-autonomous-vehicles }; {/* TODO: Fix JSX expression *
   ,
-    e: AI Robotic Process Automation}hre,
+    e: AI Robotic Process Automation}hre,'
   f: '/services/ai-robotic-process-automation }; {/* TODO: Fix JSX expression *
   ,
     e: AI Drug Discovery Platform}hre,
   f: /services/ai-drug-discovery }; ];} ]; const quickLinks = [; {/* TODO: Fix JSX expression *;;
 
   ,
-    e: About Us}hre,
+    e: About Us}hre,'
   f: '/about }; {/* TODO: Fix JSX expression *
   ,
-    e: Careers}hre,
+    e: Careers}hre,'
   f: '/careers }; {/* TODO: Fix JSX expression *
   ,
-    e: Contact}hre,
+    e: Contact}hre,'
   f: '/contact }; {/* TODO: Fix JSX expression *
   ,
-    e: Blog}hre,
+    e: Blog}hre,'
   f: '/blog }; {/* TODO: Fix JSX expression *
   ,
-    e: Case Studies}hre,
+    e: Case Studies}hre,'
   f: '/case-studies }; {/* TODO: Fix JSX expression *
   ,
-    e: Privacy Policy}hre,
+    e: Privacy Policy}hre,'
   f: '/privacy }; {/* TODO: Fix JSX expression *
-  ,
-    e: 'Terms of Service}hre,
+  ,'
+    e: 'Terms of Service}hre,'
   f: '/terms' }; ]; return (; <> {} {isOpen && (; <div ) className="text-left } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression *
-  l,
-    g: hidden ${, isOpen ? 'translate-x-0' : 'translate-x-full'}}`}> <div className="text-left" > {} <div className="text-left" > <h2 className="text-left" >Services & Solutions></> <button; onClick={onClose} className="text-left" > </button><X className="text-left" /> ></> ></> {} <div className="text-left" > {} <div className="text-left" > <h3 className="text-left" >Get in Touch></> <div className="text-left" > <div className="text-left" > <Phone className="text-left 
+  l,">
+    g: hidden ${, isOpen ? 'translate-x-0' : 'translate-x-full'}}`}> <div className="text-left" > {} <div className="text-left" > <h2 className="text-left" >Services & Solutions></> <button; onClick={onClose} className="text-left" > </button><X className="text-left" /> ></> ></> {} <div className="text-left" > {} <div className="text-left" > <h3 className="text-left" >Get in Touch></> <div className="text-left" > <div className="text-left" > <Phone className="text-left ">
   l: +<13024640950" className="text-left" > +1 302 464 0950; ></> ></> <div className="text-left" > <Mail className="text-left 
-  ,
+  ,">
     o:kleber@ziontechgroup.<com" className="text-left" > kleber@ziontechgroup.com; ></> ></> <div className="text-left" > <MapPin className="text-left" /> <span className="text-left" > 364 E Main St STE 1008<br /> Middletown DE 19709, ></> ></> ></> ></> {} <div className="text-left" > {serviceCategories.map((category) => (} <div key={category.title} className="text-left" > <h3 className="text-left" >{category.title}></> <ul className="text-left" > {category.services.map((service) => (} <li key={service.name}> <Link; href={service.href} className="text-left" ) onClick={onClose} > <span className="text-left" >{service.name}></> <Link className="text-left" /> ></> ></> ))} ></> ></> ))} ></> {} <div className="text-left" > <h3 className="text-left" >Quick Links></> <ul className="text-left" > {quickLinks.map((link) => (} <li key={link.name}> <Link; href={link.href} className="text-left" ) onClick={onClose} > {link.name} ></> ></> ))} ></> ></> ></> {} <div className="text-left" > <Link; href="/<contact" className="text-left ; onClick={onClose} > Get Free Quote; ></> ></> ></> ></> ><
-  e: 'Terms of Service}hre,
+  e: 'Terms of Service}hre,'">
   f: '/terms' }; ]; return (; <React.Fragment> {} {isOpen && (; <div ) className="text-left" } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}"

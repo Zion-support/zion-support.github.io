@@ -1,5 +1,5 @@
 import React from 'react';
-
+'
 import './index.css';
 
 async function reportWebVitals() {/* TODO: Fix JSX expression */}
@@ -7,7 +7,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
 }
 
   try {/* TODO: Fix JSX expression */}
-
+'
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals);
 
     const log = (metri,;;
@@ -30,7 +30,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
     //     }
 
 }
-
+'
 // const container = document.getElementById('root);;
 
 if (!container) {/* TODO: Fix JSX expression */}
@@ -49,3 +49,4 @@ root.render(<React.StrictMode></React>
 );
 
 reportWebVitals();
+'

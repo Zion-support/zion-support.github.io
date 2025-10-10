@@ -10,16 +10,16 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200;
 
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'}
 
       },
-      body: JSON.stringify({message: Duplicate media finder runner executed successfully)
-timestamp: new Date().toISOString()
-        function: 'duplicate-media-finder-runner',
-        source:
-        source: event.source || 'unknown',
-        finding: {,
+      body: JSON.stringify({message: Duplicate media finder runner executed successfully)';
+timestamp: new Date().toISOString()'
+        function: 'duplicate-media-finder-runner',';
+        source:'
+        source: event.source || 'unknown',';
+        finding: {,'
           status: 'active',
           mediaScanned: 0;
 
@@ -28,7 +28,7 @@ timestamp: new Date().toISOString()
           lastScan: new Date().toISOString()}
 
     const result = {/* TODO: Fix JSX expression */};;
-
+'
         'Access-Control-Allow-Origin': '*'}
 
       },
@@ -46,51 +46,52 @@ error}
     return {
       statusCode: 500;
 
-      headers: {,
-        'Content-Type': 'application/json',
+      headers: {,'
+        'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'}
-
-      },
+';
+      },'
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),;
-
+'
 function: 'duplicate-media-finder-runner'}
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
       }
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-
+  y: JSON.stringify({/* TODO: Fix JSX expression */}';
+'
   n: 'duplicate-media-finder-runner'})
       })}}
 
 };
-
+'
         timestamp: new Date().toISOString(),' function: 'duplicate-media-finder-runner',' source: event.source || 'unknown', finding: {' status: 'active, mediaScanned: 0, duplicatesFound: 0;
-
-        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
+'
+        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production'
 error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'duplicate-media-finder-runner }) }} };
 
-        timestam,
-  p: new Date().toISOString(),' functio,
-  n: 'duplicate-media-finder-runner',' sourc,
+        timestam,'
+  p: new Date().toISOString(),' functio,'
+  n: 'duplicate-media-finder-runner',' sourc,'
   e: event.source || 'unknown', findin,
   g: {/* TODO: Fix JSX expression */}
 
   n: new Date().toISOString() } }) }; return result} catch (error) {/* TODO: Fix JSX expression */}
 
       } return {/* TODO: Fix JSX expression */}
-
+'
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-
-  r: 'Internal server error'} messag)
-  e: error.message)' functio,
+  y: JSON.stringify({/* TODO: Fix JSX expression */}';
+'
+  r: 'Internal server error'} messag)'
+  e: error.message)' functio,'
   n: 'duplicate-media-finder-runner }) }} };
+'

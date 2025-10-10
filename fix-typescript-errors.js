@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -14,21 +14,21 @@ const __filename = fileURLToPath(import.meta.url);;;
 // List of files with known TypeScript errors;
 
 const filesToFix = [;;;
-
-  'app/ai-automation/page.tsx,
-  'app/ai-cloud-infrastructure/page.tsx,
-  'app/ai-code-assistant/page.tsx,
-  'app/ai-code-security-auditor/page.tsx,
-  'app/ai-cybersecurity-monitor/page.tsx,
-  'app/ai-cybersecurity/page.tsx,
-  'app/ai-expense-tracker/page.tsx,
-  'app/ai-healthcare/page.tsx,
-  'app/ai-investment-optimizer/page.tsx,
-  'app/ai-mental-health-companion/page.tsx,
-  'app/ai-sentiment-analyzer/page.tsx,
-  'app/ai-services/page.tsx,
-  'app/ai-smart-home-controller/page.tsx,
-  'app/ai-social-media-scheduler/page.tsx,
+'
+  'app/ai-automation/page.tsx,'
+  'app/ai-cloud-infrastructure/page.tsx,'
+  'app/ai-code-assistant/page.tsx,'
+  'app/ai-code-security-auditor/page.tsx,'
+  'app/ai-cybersecurity-monitor/page.tsx,'
+  'app/ai-cybersecurity/page.tsx,'
+  'app/ai-expense-tracker/page.tsx,'
+  'app/ai-healthcare/page.tsx,'
+  'app/ai-investment-optimizer/page.tsx,'
+  'app/ai-mental-health-companion/page.tsx,'
+  'app/ai-sentiment-analyzer/page.tsx,'
+  'app/ai-services/page.tsx,'
+  'app/ai-smart-home-controller/page.tsx,'
+  'app/ai-social-media-scheduler/page.tsx,'
   'app/ai-video-generator/page.tsx,
   app/ai-voice-cloning-studio/page.tsx
 // Pattern to match commented-out variable declarations;
@@ -36,19 +36,19 @@ const filesToFix = [;;;
 const patterns = [;;
 
   // Match commented-out const/let/var declarations;
-
+'
   { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 = },
   // Match commented-out variable assignments;
-
+'
   { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 = },
   // Match commented-out variable references;
-
+'
   { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1 },
   // Match commented-out object property assignments;
-
+'
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2 },
   // Match commented-out function calls;
-
+'
   { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1( })
 ];
 
@@ -65,7 +65,7 @@ let content = fs.readFileSync(filePath, utf8);;
 
 const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm;;
 
-    content = content.replace(useStatePattern, (match, objContent) => {
+    content = content.replace(useStatePattern, (match, objContent) => {'
       if (!objContent.includes('})) {
     patterns.forEach(pattern => {)
       if (newContent !== content) {
@@ -82,22 +82,22 @@ const patterns = [;;
   // Match commented-out const/let/var declarations;
 
   {/* TODO: Fix JSX expression */}
-
+'
   t: '$1 $2 = },
   // Match commented-out variable assignments;
 
   {/* TODO: Fix JSX expression */}
-
+'
   t: '$1 = },
   // Match commented-out variable references;
 
   {/* TODO: Fix JSX expression */}
-
+'
   t: '$1 },
   // Match commented-out object property assignments;
 
   {/* TODO: Fix JSX expression */}
-
+'
   t: '$1: $2 },
   // Match commented-out function calls;
 
@@ -114,13 +114,13 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       return match});
 
     // Fix 2: Fix malformed JSX attributes with quotes;
-
+'
 const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)[']/g;;
 
-    content = content.replace(malformedJsxPattern, (match, attr, value) => {
+    content = content.replace(malformedJsxPattern, (match, attr, value) => {'
       if (value.includes('"') && value.includes("')) {
         modified = true;
-
+'
         const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, &#39;);;
 
         return `${attr}="${fixedValue}"}
@@ -162,7 +162,7 @@ const nextLine = lines[lineIndex + 1];;
 
 const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;;
 
-    content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
+    content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {'
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('})) {
         modified = true;
 
@@ -171,7 +171,7 @@ const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;;
       return match});
 
     // Fix 5: Fix malformed SVG URLs in className;
-
+'
 const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^]+)\)\]/g;;
 
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
@@ -179,14 +179,14 @@ const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^]+)\)\]/g;;
 const encodedSvg = encodeURIComponent(svgContent);;
 
       modified = true;
-
+'
       return `bg-[url('data:image/svg+xml,${encodedSvg}')]});
 
     // Fix 6: Fix missing closing parentheses in function calls;
 
 const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;;
 
-    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
+    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {'
       if (!funcCall.includes(')') && !nextToken.startsWith('))) {
         modified = true;
 
@@ -256,3 +256,4 @@ async function main() {/* TODO: Fix JSX expression */}
   });
 
 // console.log removed for production
+'

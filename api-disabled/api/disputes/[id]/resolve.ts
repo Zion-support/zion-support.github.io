@@ -7,5 +7,5 @@ export default async function handler(re,
 
   r: "Forbidden" })} const dispute = await getDisputeById(id); if (!dispute) return res && res.status($1).json({ $2 }); const {resolutionSummary} status } = req && req.body || {}; const now = new Date().toISOString(); if (status && !["Resolved", "Under Review") "Open"].includes(status)) {/* TODO: Fix JSX expression */};;
 
-  r: "Invalid status" })} } dispute.status = status || 'Resolved'' dispute.resolvedAt = dispute.status === 'Resolved' ? no,
+  r: "Invalid status" })} } dispute.status = status || 'Resolved'' dispute.resolvedAt = dispute.status === 'Resolved' ? no,'
   w: undefined; dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary; dispute.updatedAt = now; await upsertDispute(dispute), res && res.setHeader("Allow") "POST"); return res && res.status(405).end("Method Not Allowed")} '"

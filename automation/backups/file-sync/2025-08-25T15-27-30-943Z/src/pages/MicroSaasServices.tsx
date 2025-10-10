@@ -7,10 +7,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
   const microSaasServices = [;;;
 
     {id: 1;
-
-      name: 'TaskFlow Pro,
-      category: 'Productivity,
-      pricing: 'Freemium,
+'
+      name: 'TaskFlow Pro,'
+      category: 'Productivity,'
+      pricing: 'Freemium,'
       description: 'Simple yet powerful task management and project collaboration tool for small teams,
       price: 15;
 
@@ -29,9 +29,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 16;
 
-      name: 'AI CodeGen Pro,
-      category: 'Development,
-      pricing: 'Freemium,
+      name: 'AI CodeGen Pro,'
+      category: 'Development,'
+      pricing: 'Freemium,'
       description: 'AI-powered code generation and development assistance for developers and teams,
       price: 45;
 
@@ -50,9 +50,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 17;
 
-      name: 'Quantum Analytics,
-      category: 'Analytics,
-      pricing: 'Freemium,
+      name: 'Quantum Analytics,'
+      category: 'Analytics,'
+      pricing: 'Freemium,'
       description: 'Advanced predictive analytics and business intelligence using quantum computing principles,
       price: 55;
 
@@ -71,9 +71,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 18;
 
-      name: 'Blockchain Business Suite,
-      category: 'Blockchain,
-      pricing: 'Freemium,
+      name: 'Blockchain Business Suite,'
+      category: 'Blockchain,'
+      pricing: 'Freemium,'
       description: 'Complete blockchain solution for business operations and smart contract management,
       price: 65;
 
@@ -92,9 +92,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 19;
 
-      name: 'IoT Enterprise Hub,
-      category: 'IoT,
-      pricing: 'Freemium,
+      name: 'IoT Enterprise Hub,'
+      category: 'IoT,'
+      pricing: 'Freemium,'
       description: 'Comprehensive IoT platform for enterprise device management and data collection,
       price: 75;
 
@@ -113,9 +113,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 20;
 
-      name: 'AR/VR Studio Pro,
-      category: 'Immersive Tech,
-      pricing: 'Freemium,
+      name: 'AR/VR Studio Pro,'
+      category: 'Immersive Tech,'
+      pricing: 'Freemium,'
       description: 'Professional AR/VR development platform for immersive experiences and training,
       price: 85;
 
@@ -134,9 +134,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 2;
 
-      name: 'InvoiceGenius,
-      category: 'Finance,
-      pricing: 'Freemium,
+      name: 'InvoiceGenius,'
+      category: 'Finance,'
+      pricing: 'Freemium,'
       description: 'AI-powered invoice generation and financial management for small businesses,
       price: 25;
 
@@ -155,9 +155,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 3;
 
-      name: 'SocialSync Pro,
-      category: 'Marketing,
-      pricing: 'Freemium,
+      name: 'SocialSync Pro,'
+      category: 'Marketing,'
+      pricing: 'Freemium,'
       description: 'Comprehensive social media management and analytics platform for businesses,
       price: 30;
 
@@ -176,9 +176,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 4;
 
-      name: 'CustomerFlow CRM,
-      category: 'CRM,
-      pricing: 'Freemium,
+      name: 'CustomerFlow CRM,'
+      category: 'CRM,'
+      pricing: 'Freemium,'
       description: 'Lightweight customer relationship management system for growing businesses,
       price: 20;
 
@@ -197,9 +197,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 5;
 
-      name: 'DataViz Studio,
-      category: 'Analytics,
-      pricing: 'Freemium,
+      name: 'DataViz Studio,'
+      category: 'Analytics,'
+      pricing: 'Freemium,'
       description: 'Easy-to-use data visualization and analytics platform for business insights,
       price: 35;
 
@@ -218,9 +218,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 6;
 
-      name: 'ScheduleMaster,
-      category: 'Scheduling,
-      pricing: 'Freemium,
+      name: 'ScheduleMaster,'
+      category: 'Scheduling,'
+      pricing: 'Freemium,'
       description: 'Intelligent scheduling and appointment booking system for service businesses,
       price: 18;
 
@@ -239,9 +239,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 7;
 
-      name: 'ContentCraft AI,
-      category: 'Content,
-      pricing: 'Freemium,
+      name: 'ContentCraft AI,'
+      category: 'Content,'
+      pricing: 'Freemium,'
       description: 'AI-powered content creation and optimization tool for marketers and creators,
       price: 40;
 
@@ -260,9 +260,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 8;
 
-      name: 'SecureVault,
-      category: 'Security,
-      pricing: 'Freemium,
+      name: 'SecureVault,'
+      category: 'Security,'
+      pricing: 'Freemium,'
       description: 'Enterprise-grade security and compliance management for small businesses,
       price: 45;
 
@@ -281,9 +281,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 9;
 
-      name: 'MediaHub Pro,
-      category: 'Media,
-      pricing: 'Freemium,
+      name: 'MediaHub Pro,'
+      category: 'Media,'
+      pricing: 'Freemium,'
       description: 'Digital asset management and media organization platform for creative teams,
       price: 28;
 
@@ -302,9 +302,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 10;
 
-      name: 'LearnFlow LMS,
-      category: 'Education,
-      pricing: 'Freemium,
+      name: 'LearnFlow LMS,'
+      category: 'Education,'
+      pricing: 'Freemium,'
       description: 'Learning management system for corporate training and online education,
       price: 32;
 
@@ -323,9 +323,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 11;
 
-      name: 'EcoTrack Pro,
-      category: 'Sustainability,
-      pricing: 'Freemium,
+      name: 'EcoTrack Pro,'
+      category: 'Sustainability,'
+      pricing: 'Freemium,'
       description: 'Sustainability tracking and environmental impact management for businesses,
       price: 38;
 
@@ -344,9 +344,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 12;
 
-      name: 'LegalAssist AI,
-      category: 'Legal,
-      pricing: 'Freemium,
+      name: 'LegalAssist AI,'
+      category: 'Legal,'
+      pricing: 'Freemium,'
       description: 'AI-powered legal document generation and contract management for small businesses,
       price: 50;
 
@@ -365,9 +365,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 13;
 
-      name: 'HealthTrack Plus,
-      category: 'Healthcare,
-      pricing: 'Freemium,
+      name: 'HealthTrack Plus,'
+      category: 'Healthcare,'
+      pricing: 'Freemium,'
       description: 'Health monitoring and wellness tracking platform for individuals and small clinics,
       price: 22;
 
@@ -386,9 +386,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 14;
 
-      name: 'EventMaster Pro,
-      category: 'Events,
-      pricing: 'Freemium,
+      name: 'EventMaster Pro,'
+      category: 'Events,'
+      pricing: 'Freemium,'
       description: 'Comprehensive event management and ticketing platform for event organizers,
       price: 35;
 
@@ -407,9 +407,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 15;
 
-      name: 'InventorySmart,
-      category: 'Inventory,
-      pricing: 'Freemium,
+      name: 'InventorySmart,'
+      category: 'Inventory,'
+      pricing: 'Freemium,'
       description: 'Intelligent inventory management and supply chain optimization for small businesses,
       price: 25;
 
@@ -428,9 +428,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 21;
 
-      name: 'Cybersecurity Shield,
-      category: 'Security,
-      pricing: 'Freemium,
+      name: 'Cybersecurity Shield,'
+      category: 'Security,'
+      pricing: 'Freemium,'
       description: 'Advanced cybersecurity platform with AI-powered threat detection and response,
       price: 95;
 
@@ -449,9 +449,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 22;
 
-      name: 'GreenTech Monitor,
-      category: 'Sustainability,
-      pricing: 'Freemium,
+      name: 'GreenTech Monitor,'
+      category: 'Sustainability,'
+      pricing: 'Freemium,'
       description: 'Environmental impact tracking and sustainability reporting for eco-conscious businesses,
       price: 42;
 
@@ -470,9 +470,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 23;
 
-      name: 'VoiceAI Assistant,
-      category: 'AI,
-      pricing: 'Freemium,
+      name: 'VoiceAI Assistant,'
+      category: 'AI,'
+      pricing: 'Freemium,'
       description: 'Voice-powered AI assistant for business automation and customer interaction,
       price: 38;
 
@@ -491,9 +491,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 24;
 
-      name: 'Quantum Finance Pro,
-      category: 'Finance,
-      pricing: 'Freemium,
+      name: 'Quantum Finance Pro,'
+      category: 'Finance,'
+      pricing: 'Freemium,'
       description: 'Quantum computing-powered financial modeling and risk assessment platform,
       price: 120;
 
@@ -512,9 +512,9 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     },
     {id: 25;
 
-      name: 'Edge Computing Hub,
-      category: 'Infrastructure,
-      pricing: 'Freemium,
+      name: 'Edge Computing Hub,'
+      category: 'Infrastructure,'
+      pricing: 'Freemium,'
       description: 'Edge computing platform for distributed applications and real-time processing,
       price: 68;
 
@@ -806,68 +806,68 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     }
 
   ];
-
+'
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', Infrastructure];;
-
+'
   const _pricingModels = ['all', 'Freemium', 'Subscription', One-time];;
 
     <div className="text-left>
-      {/* Animated Background */}</div>
-      <div className="text-left></div>
+      {/* Animated Background */}</div>">
+      <div className="text-left></div>">
+        <div className="text-left></div>">
         <div className="text-left></div>
-        <div className="text-left></div>
-        <div $2></div>
+        <div $2></div>">
       <div className="text-left>
-        {/* Header */}</div>
-        <div className="text-left></div>
-          <div className="text-left></div>
-            <div className="text-left></div>
+        {/* Header */}</div>">
+        <div className="text-left></div>">
+          <div className="text-left></div>">
+            <div className="text-left></div>">
               <Zap className="text-left />
               Innovation at Scale;
 
             </div>
-          </div>
+          </div>">
           <h1 className="text-left>
             Micro SAAS Services;
 
-          </h1>
+          </h1>">
           <p className="text-left>
-            Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.</p>
+            Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.</p>">
             <span className="text-left> Affordable, powerful, and future-ready.</span><
-          </p>
-          <div className="text-left></div>
-            <div className="text-left></div>
+          </p>">
+          <div className="text-left></div>">
+            <div className="text-left></div>">
               <div className="text-left></div>
               <span>25+ Services Available</span><
-            </div>
-            <div className="text-left></div>
+            </div>">
+            <div className="text-left></div>">
               <div className="text-left></div>
               <span>Starting from $15/month</span><
-            </div>
-            <div className="text-left></div>
+            </div>">
+            <div className="text-left></div>">
               <div className="text-left></div>
               <span>24/7 Support</span><
         {/* Search and Filters */}
-
-        <div className="text-left></div>
-          <div className="text-left></div>
+">
+        <div className="text-left></div>">
+          <div className="text-left></div>">
             <Search className="text-left />
             <input;
-
+">
               type="text;
 
 const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
 
     <div className="text-left></div>
       {/* Animated Background */}
-
+">
       <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
         <div $2></div>
       <div className="text-left></div>
         {/* Header */}
-
+">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
@@ -875,33 +875,33 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
               Innovation at Scale;
 
             </div>
-          </div>
+          </div>">
           <h1 className="text-left></h1>
             Micro SAAS Services;
 
-          </h1>
+          </h1>">
           <p className="text-left></p>
-            Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.
+            Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.">
             <span className="text-left> Affordable, powerful, and future-ready.<
-          </p>
+          </p>">
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left></div>
               <span>25+ Services Available<
-            </div>
+            </div>">
             <div className="text-left"></div>
               <div className="text-left></div>
               <span>Starting from $15/month<
-            </div>
+            </div>">
             <div className="text-left"></div>
               <div className="text-left></div>
               <span>24/7 Support<
         {/* Search and Filters */}
-
+">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Search className="text-left /></Search>
-            <input></input>
+            <input></input>">
               type="text"
               placeholder="Search for innovative micro SAAS solutions...
               value={searchTerm}
@@ -909,81 +909,81 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
               onChange={(e) => setSearchTerm(e.target.value)}
 
               className="text-left
-            />
-            <div className="text-left></div>
+            />">
+            <div className="text-left></div>">
               <div className="text-left>
                 {filteredServices.length} services found;
 
               </div>
             </div>
-          </div>
+          </div>">
           <div className="text-left>
             <select;
-
+">
           <div className="text-left></div>
             <select
-            />
+            />">
             <div className="text-left"></div>
               <div className="text-left></div>
                 {filteredServices.length} services found;
 
               </div>
             </div>
-          </div>
+          </div>">
           <div className="text-left></div>
             <select></select>
               value={selectedCategory}
 
               onChange={(e) => setSelectedCategory(e.target.value)}
-
+">
               className="text-left
             >
               {/* TODO: Fix JSX expression */}
-
+">
                 <option key={category} value={category} className="text-left></option>
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}
-
+">
               className="text-left
             >
-              {pricingModels.map(pricing => ()
+              {pricingModels.map(pricing => ()">
                 <option key={pricing} value={pricing} className="text-left>)
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}})
-        {/* Services Grid */})
+        {/* Services Grid */})">
         <div className="text-left>)
           {filteredServices.map((service) => (
 
               {pricingModels.map(pricing => (
-
+">
                 <option key={pricing} value={pricing} className="text-left></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}}
 
         {/* Services Grid */}
-
+">
         <div className="text-left>
-          {filteredServices.map((service) => (</div>
+          {filteredServices.map((service) => (</div>">
             <div key={service.id} className="text-left>
-              {/* Service Header */}</div>
-              <div className="text-left></div>
-                <div className="text-left></div>
-                  <div className="text-left></div>
+              {/* Service Header */}</div>">
+              <div className="text-left></div>">
+                <div className="text-left></div>">
+                  <div className="text-left></div>">
                     <div className="text-left>
                       {getCategoryIcon(service.category)}
 
                     </div>
                   </div>
-                  <div></div>
+                  <div></div>">
                     <h3 className="text-left>
                       {service.name}
 
-                    </h3>
+                    </h3>">
                     <div className="text-left></div>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current}>
                         {service.pricing}</span>
-                      <
+                      <">
                       <span className="text-left>
                         {service.category}</span>
               {/* TODO: Fix JSX expression */}
-
+">
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}}
 
@@ -991,10 +991,10 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
 
         <div className="text-left></div>
           {/* TODO: Fix JSX expression */}
-
+">
             <div key={service.id} className="text-left></div>
               {/* Service Header */}
-
+">
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
@@ -1003,11 +1003,11 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
 
                     </div>
                   </div>
-                  <div></div>
+                  <div></div>">
                     <h3 className="text-left></h3>
                       {service.name}
 
-                    </h3>
+                    </h3>">
                     <div className="text-left"></div>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current}></span>
                         {service.pricing}
@@ -1022,34 +1022,34 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                 </div>
               </div>
               {/* Description */}
-
+">
               <p className="text-left></p>
                 {service.description}
 
               </p>
               {/* Pricing */}
-
-              <div className="text-left></div>
+">
+              <div className="text-left></div>">
                 <div className="text-left>
               {/* Pricing */}
-
+">
               <div className="text-left"></div>
                 <div className="text-left></div>
                   {formatPrice(service.price} service.pricingModel)}
 
-                </div>
+                </div>">
                 <div className="text-left>{service.userLimit}</div>
               </div>
               {/* Features */}
-
-              <div className="text-left></div>
-                <h4 className="text-left>
+">
+              <div className="text-left></div>">
+                <h4 className="text-left>">
                   <Zap className="text-left />
                   Key Features;
 
-                </h4>
+                </h4>">
                 <div className="text-left>
-                  {service.features.slice(0) 3).map((feature} index) => (</div>
+                  {service.features.slice(0) 3).map((feature} index) => (</div>">
                     <span key={index} className="text-left>
                       {feature}</span>
                     <
@@ -1058,15 +1058,15 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                 </div>
               </div>
               {/* Target Audience */}
-
-              <div className="text-left></div>
-                <h4 className="text-left>
+">
+              <div className="text-left></div>">
+                <h4 className="text-left>">
                   <Users className="text-left />
                   Perfect For;
 
-                </h4>
+                </h4>">
                 <div className="text-left>
-                  {service.targetAudience.slice(0) 2).map((audience} index) => (</div>
+                  {service.targetAudience.slice(0) 2).map((audience} index) => (</div>">
                     <span key={index} className="text-left>
                       {audience}</span>
                     <
@@ -1075,19 +1075,19 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                 </div>
               </div>
               {/* CTA */}
-
-              <div className="text-left>
-                <div className="text-left>
+">
+              <div className="text-left>">
+                <div className="text-left>">
                   <span className="text-left>Ready to transform your business?<
                   <a;
-
-              <div className="text-left></div>
-                <div className="text-left></div>
+">
+              <div className="text-left></div>">
+                <div className="text-left></div>">
                   <span className="text-left>Ready to transform your business?</span><
                   <a
                     href={service.contactInfo.website}
-
-                    className="text-left
+">
+                    className="text-left">
                     target="_blank
                     rel="noopener noreferrer
                   >
@@ -1096,77 +1096,77 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                     <Link className="text-left />
                   </a>
         {/* Contact Information */}
-
-        <div className="text-left></div>
+">
+        <div className="text-left></div>">
           <div className="text-left>
-            {/* Background Elements */}</div>
-            <div className="text-left></div>
-            <div className="text-left></div>
-              <div className="text-left></div>
-                <div className="text-left></div>
+            {/* Background Elements */}</div>">
+            <div className="text-left></div>">
+            <div className="text-left></div>">
+              <div className="text-left></div>">
+                <div className="text-left></div>">
                   <Rocket className="text-left />
                   Ready to Transform Your Business?
                 </div>
-              </div>
+              </div>">
               <h2 className="text-left>
                 Lets Build the Future Together;
 
-              </h2>
+              </h2>">
               <p className="text-left>
-                Our cutting-edge micro SAAS solutions are designed to scale with your business needs.</p>
+                Our cutting-edge micro SAAS solutions are designed to scale with your business needs.</p>">
                 <span className="text-left> Start your digital transformation journey today.</span><
-              </p>
-              <div className="text-left></div>
-                <div className="text-left></div>
-                  <div className="text-left></div>
+              </p>">
+              <div className="text-left></div>">
+                <div className="text-left></div>">
+                  <div className="text-left></div>">
                     <Phone className="text-left />
-                  </div>
-                  <p className="text-left>Phone</p>
+                  </div>">
+                  <p className="text-left>Phone</p>">
                   <p className="text-left>{microSaasServices[0].contactInfo.phone}</p>
-                </div>
-                <div className="text-left></div>
-                  <div className="text-left></div>
+                </div>">
+                <div className="text-left></div>">
+                  <div className="text-left></div>">
                     <Mail className="text-left />
-                  </div>
-                  <p className="text-left>Email</p>
+                  </div>">
+                  <p className="text-left>Email</p>">
                   <p className="text-left>{microSaasServices[0].contactInfo.email}</p>
-                </div>
-                <div className="text-left></div>
-                  <div className="text-left></div>
+                </div>">
+                <div className="text-left></div>">
+                  <div className="text-left></div>">
                     <MapPin className="text-left />
-                  </div>
-                  <p className="text-left>Address</p>
+                  </div>">
+                  <p className="text-left>Address</p>">
                   <p className="text-left>364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
-              </div>
+              </div>">
               <div className="text-left>
                 <a;
-
+">
               <div className="text-left></div>
-                <a
+                <a">
                   href="mailto: kleber@ziontechgroup.<com" className="text-left
-                >
+                >">
                   <Mail className="text-left />
                   Get Started Today;
 
                 </a>
                 <a;
-
+">
                   href="tel:+<13024640950" className="text-left
-                >,
+                >,">
                   <Phone className="text-left />,
                   Call Now;
 
               {/* Features */}
-
+">
               <div className="text-left"></div>
                 <h4 className="text-left"></h4>
                   <Zap className="text-left /></Zap>
                   Key Features;
 
-                </h4>
+                </h4>">
                 <div className="text-left></div>
-                  {service.features.slice(0) 3).map((feature} index) => (
+                  {service.features.slice(0) 3).map((feature} index) => (">
                     <span key={index} className="text-left></span>
                       {feature}
 
@@ -1176,15 +1176,15 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                 </div>
               </div>
               {/* Target Audience */}
-
+">
               <div className="text-left"></div>
                 <h4 className="text-left"></h4>
                   <Users className="text-left /></Users>
                   Perfect For;
 
-                </h4>
+                </h4>">
                 <div className="text-left></div>
-                  {service.targetAudience.slice(0) 2).map((audience} index) => (
+                  {service.targetAudience.slice(0) 2).map((audience} index) => (">
                     <span key={index} className="text-left></span>
                       {audience}
 
@@ -1194,13 +1194,13 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                 </div>
               </div>
               {/* CTA */}
-
+">
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <span className="text-left>Ready to transform your business?<
                   <a></a>
                     href={service.contactInfo.website}
-
+">
                     className="text-left"
                     target="_blank"
                     rel="noopener noreferrer
@@ -1210,11 +1210,11 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                     <Link className="text-left /></Link>
                   </a>
         {/* Contact Information */}
-
+">
         <div className="text-left"></div>
           <div className="text-left></div>
             {/* Background Elements */}
-
+">
             <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
@@ -1222,50 +1222,50 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];;;
                   <Rocket className="text-left /></Rocket>
                   Ready to Transform Your Business?
                 </div>
-              </div>
+              </div>">
               <h2 className="text-left></h2>
                 Lets Build the Future Together;
 
-              </h2>
+              </h2>">
               <p className="text-left></p>
-                Our cutting-edge micro SAAS solutions are designed to scale with your business needs.
+                Our cutting-edge micro SAAS solutions are designed to scale with your business needs.">
                 <span className="text-left> Start your digital transformation journey today.<
-              </p>
+              </p>">
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Phone className="text-left /></Phone>
-                  </div>
+                  </div>">
                   <p className="text-left">Phone</p>
                   <p className="text-left>{microSaasServices[0].contactInfo.phone}</p>
-                </div>
+                </div>">
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <Mail className="text-left /></Mail>
-                  </div>
+                  </div>">
                   <p className="text-left">Email</p>
                   <p className="text-left>{microSaasServices[0].contactInfo.email}</p>
-                </div>
+                </div>">
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <MapPin className="text-left /></MapPin>
-                  </div>
+                  </div>">
                   <p className="text-left">Address</p>
                   <p className="text-left>364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-              </div>
+              </div>">
               <div className="text-left></div>
-                <a></a>
+                <a></a>">
                   href="mailt,
   o: kleber@ziontechgroup.<com" className="text-left
-                ></com>
+                ></com>">
                   <Mail className="text-left /></Mail>
                   Get Started Today;
 
                 </a>
-                <a></a>
+                <a></a>">
                   href="te,
   l:+<13024640950" className="text-left
-                ></13024640950>
-                  <Phone className="text-left /></Phone>
+                ></13024640950>">
+                  <Phone className="text-left /></Phone>">
                   Call Now;"

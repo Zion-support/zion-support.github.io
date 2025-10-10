@@ -7,19 +7,19 @@ import { execSync } from child_process;
 // Get all TypeScript/JavaScript files that need fixing;
 
 const filesToFix = [;;;
-
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
-  '/workspace/app/components/AdvancedPerformanceMonitor.tsx,
-  '/workspace/app/components/AdvancedSEOOptimizer.tsx,
-  '/workspace/app/components/ImprovedErrorBoundary.tsx,
-  '/workspace/app/components/PWAInstaller.tsx,
-  '/workspace/app/components/PerformanceMonitor.tsx,
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx,
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx,
-  '/workspace/app/hooks/useEnhancedPerformance.ts,
-  '/workspace/app/hooks/useForm.ts,
-  '/workspace/app/page-minimal.tsx,
+'
+  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,'
+  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,'
+  '/workspace/app/components/AdvancedPerformanceMonitor.tsx,'
+  '/workspace/app/components/AdvancedSEOOptimizer.tsx,'
+  '/workspace/app/components/ImprovedErrorBoundary.tsx,'
+  '/workspace/app/components/PWAInstaller.tsx,'
+  '/workspace/app/components/PerformanceMonitor.tsx,'
+  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx,'
+  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx,'
+  '/workspace/app/hooks/useEnhancedPerformance.ts,'
+  '/workspace/app/hooks/useForm.ts,'
+  '/workspace/app/page-minimal.tsx,'
   '/workspace/app/page-optimized.tsx,
   /workspace/app/utils/__tests__/performanceMonitoring.test.ts];
 
@@ -35,7 +35,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 
     // Unused imports;
 
-    {
+    {'
       pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['];?\s*$/gm,
       fix: (match, imports) => {
   return (
@@ -56,7 +56,7 @@ const fixedImports = importList;;;
             .map(imp => {)
               if (unusedImports.includes(imp)) {
     {/* TODO: Fix JSX expression */}
-
+'
   n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['];?\s*$/gm,
       fi,
   x: (match, imports) => {/* TODO: Fix JSX expression */}
@@ -101,7 +101,7 @@ const fixedImports = importList;;;
 
 const fixedParams = paramList;;
 
-          .map(param => {)
+          .map(param => {)'
             if (!paramName.startsWith('_') && !paramName.includes('=)) {
     {/* TODO: Fix JSX expression */}
 
@@ -138,11 +138,11 @@ filesToFix.forEach(fixUnusedVariables);
 
 // Run linter to check results;
 
-try {
+try {'
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit })} catch (error) {
 
-try {/* TODO: Fix JSX expression */}
-
+try {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit })} catch (error) {/* TODO: Fix JSX expression */}
 
 }

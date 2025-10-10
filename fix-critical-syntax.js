@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 // Function to fix critical syntax errors
@@ -65,7 +65,7 @@ function fixCriticalSyntax(filePath) {
     content = content.replace(/const\s+__dirname\s*=\s*[^;]+;?\s*\n?/g, // __dirname removed\n);
 
     content = content.replace(/const\s+withSentry\s*=\s*[^;]+;?\s*\n?/g, // withSentry removed\n);
-
+'
     if (content !== fs.readFileSync(filePath, 'utf8)) {
       fs.writeFileSync(filePath, content, utf8);
 
@@ -95,10 +95,10 @@ function findAppFiles(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+'
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         searchDirectory(fullPath);
-
+'
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts))) {
         files.push(fullPath);
 
@@ -136,5 +136,6 @@ for (const file of appFiles) {
 }
 
 console.log(`Fixed syntax in ${fixedCount} files);
-
+'
 console.log('Critical syntax fixes complete!);
+'

@@ -1,7 +1,7 @@
 'use client;
-
+'
 import React, { useEffect, useState, useCallback } from 'react;
-
+'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
 
 interface PerformanceOptimizerProps {
@@ -15,7 +15,7 @@ interface PerformanceOptimizerProps {
 
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({'
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), className = ' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
 
@@ -23,16 +23,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
 
-  const optimizeImages = useCallback (() => {;
+  const optimizeImages = useCallback (() => {;'
     const images = document.querySelectorAll('img);;
 
     images.forEach ((img) => {
-      if (!img.loading) {
+      if (!img.loading) {'
         img.loading = 'lazy;
 
       }
 
-      if (!img.decoding) {
+      if (!img.decoding) {'
         img.decoding = 'async;
 
       }
@@ -41,7 +41,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
   }, []);
 
-  const optimizeMemory = useCallback (() => {;
+  const optimizeMemory = useCallback (() => {;'
     if ('memory in performance) {
       const memory = (performance as any).memory;;
 
@@ -65,12 +65,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
     /
     optimizeImages();
-
+'
     newOptimizations.push('Images optimized for lazy loading);
 
     /
     optimizeMemory();
-
+'
     newOptimizations.push('Memory optimization applied);
 
     /
@@ -119,9 +119,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
       {children}
 
       <div className={`bg-white rounded-lg shadow-lg p-6 ${className}}>
-        <div className="flex items-center justify-between mb-4>
+        <div className="flex items-center justify-between mb-4>">
           <h3 className="text-lg font-semibold text-gray-900 flex items-center>
-            
+            ">
             <Zap className="h-4 w-4 mr-2 
             {isOptimizing ? 'Optimizing...' : 'Optimize}
 
@@ -129,18 +129,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
         <
 
         {optimizations.length > 0 && (
-
-          <div className="space-y-2 mb-4>
+">
+          <div className="space-y-2 mb-4>">
             {optimizations.map((optimization, index) => (<div key={index} className="flex items-center text-sm text-green-600>
-                
-            <div className="flex items-center justify-between mb-2>
-              <span className="text-sm font-medium text-gray-700>Performance Score<
+                ">
+            <div className="flex items-center justify-between mb-2>">
+              <span className="text-sm font-medium text-gray-700>Performance Score<">
               <span className="text-sm font-bold text-gray-900>{performanceScore}/100<
-            <
+            <">
             <div className="w-full bg-gray-200 rounded-full h-2>
               <div
                 className={h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500 : 
+                  performanceScore >= 90 ? 'bg-green-500 : '
                   performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500
                 }}
 
@@ -148,7 +148,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
             <
             {performanceScore < 90 && (
-
+">
               <div className="mt-2 flex items-center>
                 
                   Performance can be improved. Consider additional optimizations.
@@ -183,7 +183,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
       // Preload critical images
       const criticalImages = [;;
-
+'
         '/images/hero-bg.jpg,
         /images/logo.png
       ];
@@ -201,11 +201,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
       })    }
 
-    // Optimize images
+    // Optimize images'
     if (enableImageOptimization && typeof window !== 'undefined) {
       const images = document.querySelectorAll(img);;
 
-      images.forEach(img => {
+      images.forEach(img => {">
         // Add loading="lazy for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading)) {
           img.loading = lazy;
@@ -220,7 +220,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
       })    }
 
-    // Intersection Observer for lazy loading
+    // Intersection Observer for lazy loading'
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver in window) {
       const imageObserver = new IntersectionObserver((entries, observer) => {;;
 
@@ -241,21 +241,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 
         })
       })
-
+'
       const lazyImages = document.querySelectorAll('img[data-src]);;
 
       lazyImages.forEach(img => imageObserver.observe(img))    }
 
-    // Performance monitoring
+    // Performance monitoring'
     if (typeof window !== 'undefined' && 'performance in window) {
       const observer = new PerformanceObserver((list) => {;;
 
-        list.getEntries().forEach((entry) => {
+        list.getEntries().forEach((entry) => {'
           if (entry.entryType === 'largest-contentful-paint) {
             console.log(LCP:, entry.startTime);
 
           }
-
+'
           if (entry.entryType === 'first-input) {
             console.log(FID:, entry.processingStart - entry.startTime);
 
@@ -264,7 +264,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
         })
       })
 
-      try {
+      try {'
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input] })      } catch (e) {
         // Fallback for browsers that dont support these entry types
       }
@@ -278,3 +278,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
 };
 
 export default PerformanceOptimizer;
+'

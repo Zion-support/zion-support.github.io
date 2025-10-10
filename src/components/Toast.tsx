@@ -1,7 +1,7 @@
 import React from 'react;
-
+'
 'use client;
-
+'
 export type ToastType = 'success' | 'error' | 'warning' | info;
 
 export interface ToastProps {/* TODO: Fix JSX expression */}
@@ -22,15 +22,15 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   w: boolean}
 
 const,
-  Toast: React.FC;
-
+  Toast: 'React.FC;
+',
           <ToastProps> = ({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-//   message,
+//   message,'
   type = 'success,
   duration = 3000,
 //   onClose,
@@ -76,21 +76,21 @@ const,
   O: Add content}
 
 }
-
+'
       case 'success:
         return bg-green-600 text-white;
-
+'
       case 'error:
         return bg-red-600 text-white;
-
+'
       case 'warning:
         return bg-yellow-500 text-white;
-
+'
       case 'info:
         return bg-blue-600 text-white;
 
       defaul,
-  t:
+  t:'
         return 'bg-gray-800 text-white}
 
   };
@@ -106,21 +106,21 @@ const,
   O: Add content}
 
 }
-
+'
       case 'success:
         return ;
-
+'
       case 'error:
         return ;
-
+'
       case 'warning:
         return ;
-
+'
       case 'info:
         return ;
 
       defaul,
-  t:
+  t:'
         return '}
 
   };
@@ -154,8 +154,8 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           setIsVisible(false);
 
           if (onClose) onClose()}}
-
-        className="ml-4,
+">
+        className="ml-4,">
   hover:opacity-80 transition-opacity"
         aria-label="Close notification
 //       >

@@ -1,9 +1,9 @@
 import React from 'react';
-
+'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-
+'
 import { HelmetProvider } from 'react-helmet-async';
-
+'
 import { MemoryRouter } from 'react-router-dom';
 
 // Mock components
@@ -25,13 +25,13 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
     throw new Error('Test error');  }
   return <div>Test content</div>;
 };
-
+'
 describe('Advanced Components', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-
-  describe('AdvancedErrorBoundary', () => {
+'
+  describe('AdvancedErrorBoundary', () => {'
     it('renders children when there is no error', () => {
       render(
         <MemoryRouter>
@@ -40,12 +40,12 @@ describe('Advanced Components', () => {
           </AdvancedErrorBoundary>
         </MemoryRouter>
       );
-
+'
       expect(screen.getByText('Test content')).toBeInTheDocument();
     });
-
-    it('renders error UI when there is an error', () => {
-      const consoleSpy = jest
+'
+    it('renders error UI when there is an error', () => {';
+      const consoleSpy = jest'
         .spyOn(console, 'error')
         .mockImplementation(() => {});
       render(
@@ -60,8 +60,8 @@ describe('Advanced Components', () => {
       consoleSpy.mockRestore();
     });
   });
-
-  describe('AdvancedSEOOptimizer', () => {
+'
+  describe('AdvancedSEOOptimizer', () => {'
     it('renders with title and description', () => {
       render(
         <HelmetProvider>
@@ -69,27 +69,27 @@ describe('Advanced Components', () => {
         </HelmetProvider>
       );
 
-      expect(screen.getByTestId('seo-optimizer')).toBeInTheDocument();
+      expect(screen.getByTestId('seo-optimizer')).toBeInTheDocument();'
       expect(screen.getByText('Test Title - Test Description')).toBeInTheDocument();
     });
-
+'
     it('renders without title and description', () => {
       render(
         <HelmetProvider>
           <AdvancedSEOOptimizer />
         </HelmetProvider>
       );
-
+'
       expect(screen.getByTestId('seo-optimizer')).toBeInTheDocument();
     });
   });
-
-  describe('AdvancedPerformanceMonitor', () => {
+'
+  describe('AdvancedPerformanceMonitor', () => {'
     it('renders performance monitor', () => {
       render(<AdvancedPerformanceMonitor />);
-
-      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+'
+      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();'
       expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
     });
   });
-});
+});'

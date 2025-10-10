@@ -142,7 +142,7 @@ const memor, y = (performance, as, any).memo, r, y; th, i, s.metri, c, s.memoryU
 
   }
 
-  private, observeError, s(): vo, i, d {
+  private, observeError, s(): vo, i, d {'
     wind, o, w.addEventListen, e, r('err, o, r, (eve, n, t) = > {
       th, i, s.metri, c, s.errorRa, t, e += 1;
 
@@ -151,7 +151,7 @@ const memor, y = (performance, as, any).memo, r, y; th, i, s.metri, c, s.memoryU
   private, observeError, s(): vo, i, d {/* TODO: Fix JSX expression */}
 
      });
-
+'
     wind, o, w.addEventListen, e, r('unhandledrejecti, o, n, (eve, n, t) => {/* TODO: Fix JSX expression */}
 
     })}
@@ -162,7 +162,7 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
 
     // Report slow resources;
 
-    if (loadTi, m, e  > 1, 0, 0, 0) {
+    if (loadTi, m, e  > 1, 0, 0, 0) {'
       th, i, s.reportMetr, i, c('SlowResou, r, c, e, loadTi, m, e, {)
         na, m, e: ent, r, y.n, a, m, e)
         si, z, e: s, i, z, e)
@@ -172,7 +172,7 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
        })}
 
     // Report large resources;
-
+'
     if (si, z, e > 10, 2, 4 * 10, 2, 4) { // 1MB thi s.reportMetr i c('LargeResour c e si z e {)
         na, m, e: ent, r, y.n, a, m, e)
         loadTi, m, e: loadT, i, m, e)
@@ -188,12 +188,12 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
       conso, l, e.l, o, g(`📊 Performance, Metri, c: ${n, a, m, e} = ${val, u, e}, metada, t, a)}
 
     // Send to analytics service in production;
-
-    if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g in, windo, w) {
+'
+    if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g in, windo, w) {'
       (window, as, any).gt, a, g('eve, n, t', 'performance_metr, i, c, {)
         metric_na, m, e: n, a, m, e)
-        metric_val, u, e: va, l, u, e)
-        ...metada, t, a)
+        metric_val, u, e: va, l, u, e)';
+        ...metada, t, a)'
     if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g in, windo, w) {/* TODO: Fix JSX expression */}
 
       })}
@@ -202,12 +202,12 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
 
   private, reportErro, r(err, o, r: Err, o, r): vo, i, d {/* TODO: Fix JSX expression */}
 
-    }
-
-    // Send to error tracking service if (typeof windo w !== 'undefin e d' && 'gt a g in windo w) {
+    }';
+'
+    // Send to error tracking service if (typeof windo w !== 'undefin e d' && 'gt a g in windo w) {'
       (window, as, any).gt, a, g('eve, n, t', 'excepti, o, n, {)
-        description: err, o, r.mess, a, g, e)
-        fat, a, l: fa, l, s, e)
+        description: err, o, r.mess, a, g, e)';
+        fat, a, l: fa, l, s, e)'
     // Send to error tracking service if (typeof windo w !== 'undefin e d' && 'gt a g in windo w) {/* TODO: Fix JSX expression */}
 
       })}
@@ -218,24 +218,24 @@ const loadTim, e = ent, r, y.responseE, n, d - ent, r, y.requestSta, r, t; const
     if (!th, i, s.conf, i, g.enableImageOptimizati, o, n) retu, r, n;
 
 ;
-
+'
 const image, s = docume, n, t.querySelectorA, l, l('im, g); imag, e, s.forEa, c, h((i, m, g) =  > {
       // Lazy load images;
 
-      if (!i, m, g.loadi, n, g) {
+      if (!i, m, g.loadi, n, g) {'
         i, m, g.loadi, n, g = 'la, z, y}
 
       // Add responsive srcset if not present;
-
+'
       if (!i, m, g['src]s, e, t && i, m, g.sr, c) {
   // Public methods for optimization public optimizeImages(): vo i d {/* TODO: Fix JSX expression */}
 
        }
 
       // Add responsive srcset if not present;
-
+'
       if (!i, m, g['src']s, e, t && i, m, g.sr, c) {/* TODO: Fix JSX expression */};
-
+'
 const sr, c = i, m, g.s, r, c; const baseNam, e = s, r, c.substring(, 0, s, r, c.lastIndex, O, f('.')); const extensio, n = s, r, c.substring(s, r, c.lastInde, x, O, f('.')); i, m, g['src']s, e, t = `${baseNa, m, e}-32, 0, w${extensi, o, n} 3, 2, 0, w, ${baseNa, m, e}-64, 0, w${extensi, o, n} 64, 0, w, ${baseNa, m, e}-102, 4, w${extensi, o, n} 102, 4, w`; i, m, g.siz, e, s = '(m, a, x-wid, t, h: 32, 0, p, x) 32, 0, p, x, (m, a, x-wid, t, h: 640, p, x) 64, 0, p, x, 1024, p, x}
 
     })}
@@ -274,15 +274,15 @@ const rule, s = she, e, t.cssRul, e, s || she, e, t.rul, e, s; if (ru, l, e, s) 
 
   public, preloadCriticalResource, s(): vo, i, d {;
 
-const criticalResource, s = [
-      '/asse, t, s/c, s, s/ma, i, n.cs, s,
+const criticalResource, s = ['
+      '/asse, t, s/c, s, s/ma, i, n.cs, s,'
       '/asse, t, s/js/vend, o, r.js,
       /asse, t, s/js/ma, i, n.js]; criticalResourc, e, s.forEa, c, h((resour, c, e) = > {;
-
+'
 const lin, k = docume, n, t.createEleme, n, t('l, i, n, k'); li, n, k.r, e, l = 'prelo, a, d'; li, n, k.hr, e, f = resour, c, e; li, n, k.as = resour, c, e.endsWi, t, h('.cs, s')  ? 'sty, l, e'  : 'scri, p, t; docume, n, t.he, a, d.appendChi, l, d(li, n, k)})}
 
-  public, enableServiceWorke, r(): vo, i, d {
-    if ('serviceWork, e, r in, navigato, r) {
+  public, enableServiceWorke, r(): vo, i, d {'
+    if ('serviceWork, e, r in, navigato, r) {'
       navigat, o, r.serviceWork, e, r.regist, e, r('/sw.js)
         .th, e, n((registrati, o, n) = > {
           conso, l, e.l, o, g(Service, Worker, registered:, registrati, o, n);
@@ -390,4 +390,4 @@ const interva, l = setInterv, a, l(updateMetr, i, c, s, 50, 0, 0); return () => 
 
   return { metri, c, s, sco, r, e, optimiz, e, r: performanceOptimi, z, e, r }};
 
-`
+`'

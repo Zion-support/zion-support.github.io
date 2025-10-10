@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React, { useEffect, useCallback, useRef } from 'react;
 
 import { Helmet } from react-helmet-async;
@@ -71,29 +71,29 @@ const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptEl
 ;
 
 const baseStructuredData = {;;;
-
- '@context': 'https: //schema.org,
- '@type': 'Organization,
- name: 'Zion Tech Group,
- url: 'https://ziontechgroup.com,
+'
+ '@context': 'https: //schema.org,'
+ '@type': 'Organization,'
+ name: 'Zion Tech Group,'
+ url: 'https://ziontechgroup.com,'
  logo: 'https://ziontechgroup.com/logo.png,
  description:
         description: seoData.description;
 
- address: {
- '@type: PostalAddress
- streetAddress: '364 E Main St STE 1008,
- addressLocality: 'Middletown,
- addressRegion: 'DE,
- postalCode: '19709,
- addressCountry: 'US},
- contactPoint: {,
- '@type': 'ContactPoint,
- telephone: '+1-302-464-0950,
- contactType: 'customer service,
- email: 'kleber@ziontechgroup.com},
- sameAs: [,
- 'https://linkedin.com/company/zion-tech-group,
+ address: {'
+ '@type: PostalAddress'
+ streetAddress: '364 E Main St STE 1008,'
+ addressLocality: 'Middletown,'
+ addressRegion: 'DE,'
+ postalCode: '19709,'
+ addressCountry: 'US},';
+ contactPoint: {,'
+ '@type': 'ContactPoint,'
+ telephone: '+1-302-464-0950,'
+ contactType: 'customer service,'
+ email: 'kleber@ziontechgroup.com},';
+ sameAs: [,'
+ 'https://linkedin.com/company/zion-tech-group,'
  'https: //twitter.com/ziontechgroup,
  https: //github.com/Zion-Holdings,;
 
@@ -124,17 +124,17 @@ const generateBreadcrumbStructuredData = useCallback(() => {;;
 
  if (!enableSchemaMarkup) return null;
 
- return {
- '@context': 'https: //schema.org,
+ return {'
+ '@context': 'https: //schema.org,'
  '@type': 'BreadcrumbList,
- itemListElement: [
- {
+ itemListElement: [';
+ {'
  '@type: ListItem
  position: 1;
-
- name: 'Home,
- item: 'https://ziontechgroup.com},
- {
+'
+ name: 'Home,'
+ item: 'https://ziontechgroup.com},';
+ {'
  '@type': 'ListItem,
  position: 2;
 
@@ -158,26 +158,26 @@ const generateFAQStructuredData = useCallback(() => {;;
 ;
 
 const faqData = {;;
-
- '@context': 'https: //schema.org,
+'
+ '@context': 'https: //schema.org,'
  '@type': 'FAQPage,
- mainEntity: [
- {,
- '@type': 'Question,
- name: 'What services does Zion Tech Group offer?,
- acceptedAnswer: {,
- '@type': 'Answer,
- text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.}},
- {
- '@type': 'Question,
- name: 'How can I contact Zion Tech Group?,
- acceptedAnswer: {,
- '@type': 'Answer,
- text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.}},
- {
- '@type': 'Question,
- name: 'What makes Zion Tech Group different?,
- acceptedAnswer: {,
+ mainEntity: [';
+ {,'
+ '@type': 'Question,'
+ name: 'What services does Zion Tech Group offer?,';
+ acceptedAnswer: {,'
+ '@type': 'Answer,'
+ text: 'Zion Tech Group offers comprehensive AI-powered enterprise solutions, digital transformation services, automation, cloud services, AI consulting, business intelligence, and machine learning solutions.}},';
+ {'
+ '@type': 'Question,'
+ name: 'How can I contact Zion Tech Group?,';
+ acceptedAnswer: {,'
+ '@type': 'Answer,'
+ text: 'You can contact us at kleber@ziontechgroup.com or call +1 302 464 0950. Our office is located at 364 E Main St STE 1008, Middletown DE 19709.}},';
+ {'
+ '@type': 'Question,'
+ name: 'What makes Zion Tech Group different?,';
+ acceptedAnswer: {,'
  '@type': 'Answer,
  text: We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.,;
 
@@ -203,12 +203,12 @@ const _structuredData = generateStructuredData();;
 
  useEffect(() => {
  // Update page title and meta description for better SEO;
-
+'
  if (typeof document !== 'undefined) {
  document.title = seoData.title;
 
  ;
-
+'
 let _metaDescription = document.querySelector('meta[name="description]);;
 
  if (!metaDescription) {
@@ -225,7 +225,7 @@ let _metaDescription = document.querySelector('meta[name="description]);;
  metaDescription.setAttribute(content, seoData.description);
 
  // Update canonical URL;
-
+'
  let _canonicalLink = document.querySelector('link[rel="canonical]);;
 
  if (!canonicalLink) {/* TODO: Fix JSX expression */}
@@ -249,7 +249,7 @@ let _metaDescription = document.querySelector('meta[name="description]);;
  // };
 
  // const _updateCanonicalUrl = (url: string) => {;;
-
+'
  // let canonicalLink = document.querySelector('link[rel="canonical]) as HTMLLinkElement;;
 
  // ,
@@ -331,11 +331,11 @@ const _trackPageView = (config: SEOData) => {;;
 
 return (
 
-,
+,'
  if (typeof window !== 'undefined' && 'gtag in window) {,
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>
 );
-
+'
 }) => void }).gtag('config', 'GA_MEASUREMENT_ID, {)
  page_title: config.title),
  page_location: config.canonicalUrl),;
@@ -343,7 +343,7 @@ return (
 const _trackPageView = (confi);;
 
   g: SEOData) => {/* TODO: Fix JSX expression */}
-
+'
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID, {/* TODO: Fix JSX expression */})
  })}
 
@@ -354,23 +354,23 @@ const _trackPageView = (confi);;
 const _trackPerformanceMetrics = () => {;;
 
 return (
-
+'
  if (typeof window !== 'undefined' && 'performance in window) {
  window.addEventListener(load, () => {;
 
 const _perfData = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
-
+'
  if (perfData && typeof window !== 'undefined' && 'gtag in window) {
  (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>
 );
-
-}) => void }).gtag('event', 'page_load_performance, {)
- event_category: 'Performance),
+'
+}) => void }).gtag('event', 'page_load_performance, {)'
+ event_category: 'Performance),'
  event_label: 'Page Load),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),;
 
 const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */};;
-
+'
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance, {/* TODO: Fix JSX expression */})
  })}
 

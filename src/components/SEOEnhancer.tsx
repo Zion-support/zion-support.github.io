@@ -2,19 +2,19 @@ import React, { ReactNode } from 'react;
 
 import { Helmet } from react-helmet-async;
 
-interface SEOEnhancerProps {/* TODO: Fix JSX expression *
+interface SEOEnhancerProps {/* TODO: 'Fix JSX expression *',
 }
 
 ;
 
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TOD,
-    O: Fix JSX expression *)
-)}) => {/* TODO: Fix JSX expression *
+    O: 'Fix JSX expression *)',
+)}) => {/* TODO: 'Fix JSX expression *',
     },
     addres,
   s: {/* TOD,
-    O: Fix JSX expression *
+    O: 'Fix JSX expression *',
     }};
 
 ;
@@ -42,11 +42,11 @@ const finalStructuredData = structuredData || defaultStructuredData;;;
 
         {/* Preconnect to external domains *
         <link rel="preconnect" href="http,
-  s://fonts.googleapis.com /><
+  s: '//fonts.googleapis.com /><',
         <link rel="preconnect" href="http,
   s://fonts.gstatic.com" crossOrigin="anonymous /><
         <link rel="preconnect" href="http,
-  s://www.google-analytics.com /><
+  s: '//www.google-analytics.com /><',
         <link rel="preconnect" href="http,
   s://www.googletagmanager.com /><
         {/* DNS Prefetch *

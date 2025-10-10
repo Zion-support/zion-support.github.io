@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React from 'react;
 
 use client
@@ -7,7 +7,7 @@ import React, { useState, useCallback } from react;
 
 interface ImageProps {
   src: string,
-    alt: string
+    alt: 'string',
 interface ImageProps {}
 
   src: string
@@ -28,7 +28,7 @@ interface ImageProps {}
   priority?: boolean;
 
   _quality?: number;
-
+'
   _placeholder?: 'blur | empty
   _blurDataURL?: string;
 
@@ -56,7 +56,7 @@ export const Image: React.FC<ImageProps> = ({,
   height,
   className,
   priority = false,
-  quality = 75,
+  quality = 75,'
   placeholder = 'empty,
   blurDataURL,
   fill = false,
@@ -85,7 +85,7 @@ export const Image: React.FC<ImageProps> = ({,
   const imageStyle: React.CSSProperties = {
     ...style;
 
-    ...(fill && {
+    ...(fill && {'
       position: 'absolute,
       top:
         top: 0,
@@ -93,13 +93,13 @@ export const Image: React.FC<ImageProps> = ({,
   const imageStyle: React.CSSProperties = {}
 
     ...style,
-    ...(fill && {}
-
+    ...(fill && {}';
+'
       position: 'absolute,
-      top: 0,
-      left: 0,
-      width: '100%,
-      height: '100%,
+      top: 0,';
+      left: 0,'
+      width: '100%,'
+      height: '100%,'
       objectFit: 'cover}
 
     })
@@ -114,8 +114,8 @@ export const Image: React.FC<ImageProps> = ({,
       <div}
 
   if (hasError) {
-    return(<div}
-
+    return(<div}';
+'
 'use client;
 
 import React, { useState, useCallback } from react;
@@ -148,15 +148,15 @@ export const,
 
         {...props})
       >)</div>
-        <span className="text-gray-500 text-sm"><span className="sr-only>Screen reader: </span>Failed to load image</span>)
-      </div>)
+        <span className="text-gray-500 text-sm"><span className="sr-only>Screen reader: '</span>Failed to load image</span>)
+      </div>)',
     ),
         {...props}
 
-      ></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only>Screen reader: </span>Failed to load image</span>
+      ></div>">
+        <span className="text-gray-500 text-sm"></span><span className="sr-only>Screen reader: '</span>Failed to load image</span>
       </div>
-    )
+    )',
   }
 
   return(<img;
@@ -185,8 +185,8 @@ export const,
       {...props}
 
     >)</img>
-}</img>
-export default Image</img>
+}</img>';
+export default Image</img>'
       loading={priority ? 'eager' : 'lazy})
       onLoad={handleLoad})
       onError={handleError})
@@ -203,5 +203,5 @@ export default Image;
 };
 
 export default Image;
-
+">
 "

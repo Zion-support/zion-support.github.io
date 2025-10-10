@@ -96,8 +96,8 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
 
               <Link, ke, y = { conte, n, t., i, d  }, to = {/bl, o, g/${conte, n, t.slug}}
 
-                className=group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0
-              ></Link>
+                className=group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0';
+              ></Link>'
                 <div, className='flex, item, s-start, ga, p-4, m, b-6' > <div, classNam, e = { bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg}
 
                   ></div>
@@ -347,4 +347,4 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
 
 export default October2025NewBreakthroughBanner;
 
-`
+`'

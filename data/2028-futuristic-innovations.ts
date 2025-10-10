@@ -31,9 +31,9 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
     address: string}
 ;
 export const futuristic2028Services: FuturisticInnovation2028[] = [
-    id: '2028 - futuristic - innovation',
-    name: '2028 Futuristic Innovation Platform',
-    tagline: 'Futuristic innovations for 2028',
+    id: '2028 - futuristic - innovation','
+    name: '2028 Futuristic Innovation Platform','
+    tagline: 'Futuristic innovations for 2028','
     price: '$399 / month',
     description: unknown;
     addres,
@@ -45,31 +45,31 @@ export const,
 ;
 export const,
   futuristic2028Services: FuturisticInnovation2028[] = [,
-    i,
-  d: '2028 - futuristic - innovation',
-    nam,
-  e: '2028 Futuristic Innovation Platform',
-    taglin,
-  e: 'Futuristic innovations for 2028',
-    pric,
+    i,'
+  d: '2028 - futuristic - innovation',';
+    nam,'
+  e: '2028 Futuristic Innovation Platform',';
+    taglin,'
+  e: 'Futuristic innovations for 2028',';
+    pric,'
   e: '$399 / month',
-    descriptio,
-  n: unknown,
+    descriptio,';
+  n: unknown,'
       'Futuristic innovation platform that showcases breakthrough technologies for 2028.',
-    feature,
-  s: [,
-      'Futuristic innovations',
-      'Breakthrough technologies',
-      'Future capabilities',
-      'Innovation platform',
-      'Expert insights'],
-    link: '/services / 2028 - futuristic - innovation',
+    feature,';
+  s: [,'
+      'Futuristic innovations','
+      'Breakthrough technologies','
+      'Future capabilities','
+      'Innovation platform','
+      'Expert insights'],'
+    link: '/services / 2028 - futuristic - innovation','
     category: 'Futuristic Innovations 2028',
     real_implementation: true;
-    contact_info: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: '+1 302 464 0950',
+    contact_info: unknown;'
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup && ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: '+1 302 464 0950','
     id: '2028-futuristic-innovation',
     name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028",
@@ -82,7 +82,7 @@ export const,
       "Innovation platform",
       "Expert insights"
     ],
-    link: '/services/2028-futuristic-innovation',
+    link: '/services/2028-futuristic-innovation','
     category: 'Futuristic Innovations 2028',
     realImplementation: true;
     contactInfo: unknown;
@@ -104,7 +104,7 @@ export const,
 }
 export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
-    tagline: "Futuristic innovations for 2028", price: '$399/month',
+    tagline: "Futuristic innovations for 2028", price: '$399/month','
     description: 'Futuristic innovation platform that showcases breakthrough technologies for 2028.',
     features: [;
       "Futuristic innovations"
@@ -122,18 +122,18 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,
-  k: '/services / 2028 - futuristic - innovation',
-    categor,
+  k: '/services / 2028 - futuristic - innovation',';
+    categor,'
   y: 'Futuristic Innovations 2028',
     real_implementatio,
   n: true,
     contact_inf,
-  o: unknown,
-      mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-      addres,
+  o: unknown,';
+      mobil,'
+  e: '+1 302 464 0950',';
+      emai,'
+  l: 'kleber@ziontechgroup && ziontechgroup.com',';
+      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,
   e: "+1 302 464 0950",
   i,"
@@ -237,7 +237,7 @@ export const,
   }
 ];
 ;
-    id: '2028-futuristic-innovation',
+    id: '2028-futuristic-innovation','
     name: '2028 Futuristic Innovation Platform',
     tagline: "Futuristic innovations for 2028",
     price: "$399/month",
@@ -249,14 +249,14 @@ export const,
       "Innovation platform",
       "Expert insights"
     ],
-    link: '/services/2028-futuristic-innovation',
+    link: '/services/2028-futuristic-innovation','
     category: 'Futuristic Innovations 2028',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+    contactInfo: unknown;'
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup.com','
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -294,10 +294,10 @@ export const,
       emai,"
   l: "kleber@ziontechgroup.com",
       mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup.com',
-      addres,
+  e: '+1 302 464 0950',';
+      emai,'
+  l: 'kleber@ziontechgroup.com',';
+      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobil,"
   e: "+1 302 464 0950",
@@ -322,18 +322,18 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   futuristic2028Services: FuturisticInnovation2028[] = [ addres,
   s: string} ; export const,
   futuristic2028Services: FuturisticInnovation2028[] = [, i,
-  d: '2028 - futuristic - innovation',' nam,
-  e: '2028 Futuristic Innovation Platform',' taglin,
-  e: 'Futuristic innovations for 2028',' pric,
-  e: '$399 / month', descriptio,
-  n:  ,' 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature,
-  s: [,' 'Futuristic innovations',' 'Breakthrough technologies',' 'Future capabilities',' 'Innovation platform',' 'Expert insights'],' lin,
-  k: '/services / 2028 - futuristic - innovation',' categor,
-  y: 'Futuristic Innovations 2028', real_implementatio,
-  n: true, contact_inf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
+  d: '2028 - futuristic - innovation',' nam,'
+  e: '2028 Futuristic Innovation Platform',' taglin,'
+  e: 'Futuristic innovations for 2028',' pric,'
+  e: '$399 / month', descriptio,'
+  n:  ,' 'Futuristic innovation platform that showcases breakthrough technologies for 2028.', feature,'
+  s: [,' 'Futuristic innovations',' 'Breakthrough technologies',' 'Future capabilities',' 'Innovation platform',' 'Expert insights'],' lin,'
+  k: '/services / 2028 - futuristic - innovation',' categor,'
+  y: 'Futuristic Innovations 2028', real_implementatio,';
+  n: true, contact_inf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",
   i,"
@@ -392,9 +392,9 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   n: true, contactInf,
   o: mobil,"
   e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
+  l: "kleber@ziontechgroup.com",' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
   e: "+1 302 464 0950",
   emai,"

@@ -7,7 +7,7 @@ const { execSync } = require('child_process);
 function fixFile(filePath) {
   try {
     //Check if file has conflicts;
-
+'
     if(!content.includes('      return false}
 
     )
@@ -25,4 +25,4 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     const sections = content.split(/;;
 
-})
+})'

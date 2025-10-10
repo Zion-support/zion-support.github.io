@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression *
@@ -7,20 +7,20 @@ interface SEOEnhancerProps {/* TODO: Fix JSX expression *
 
 ;
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.,
-  keywords = [
-    'AI,
-    'artificial intelligence,
-    'enterprise solutions,
-    'automation,
-    'digital transformation,
-    'IT consulting,
-    'machine learning,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,'
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.,';
+  keywords = ['
+    'AI,'
+    'artificial intelligence,'
+    'enterprise solutions,'
+    'automation,'
+    'digital transformation,'
+    'IT consulting,'
+    'machine learning,'
     'data analytics],
-  canonicalUrl,
-  ogImage = 
-  ogType = 'website,
+  canonicalUrl,';
+  ogImage = '
+  ogType = 'website,'
   twitterCard = 'summary_large_image,
   structuredData,
   children}) => {
@@ -30,9 +30,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
     // Add structured data to the page;
 
     if (structuredData) {;
-
+'
 const _script = document.createElement('script);;
-
+'
       script.type = 'application/ld+json;
 
       script.text = JSON.stringify(structuredData);      document.head.appendChild(script);
@@ -57,9 +57,9 @@ const,
 
   /
   const defaultStructuredData = {;;
-
-    '@context': https: /
-    '@type': 'Organization,
+'
+    '@context': https: /'
+    '@type': 'Organization,'
     name: 'Zion Tech Group,
     description: description;
 
@@ -68,13 +68,13 @@ const,
     log,
     o: ${window.location.origin };
 
-    sameAs: [http,
+    sameAs: [http,'
     s://linkedin.com/company/zion-tech-group', https: //twitter.com
-    contactPoin,
-    t: {,
-      '@type': 'ContactPoint,
-      telephone: '+1-555-0123,
-      contactType: 'customer service,
+    contactPoin,';
+    t: {,'
+      '@type': 'ContactPoint,'
+      telephone: '+1-555-0123,'
+      contactType: 'customer service,'
       availableLanguage: 'English,;
 
 const defaultStructuredData = {/* TODO: Fix JSX expression */};

@@ -18,14 +18,14 @@ const breakthroughConten, t = [
 const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX expression */}
 
       metri, c, s: { val, u, e: '10, x', lab, e, l: Performance, Gai, n, s }},
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
       metri, c, s: { val, u, e: '$3, 0, 0, M', lab, e, l: ROI, Achiev, e, d }},
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
       metri, c, s: { val, u, e: '10, 0, 0, x', lab, e, l: Performance, Boo, s, t }},
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+'
       metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}]; return(<div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}
 
@@ -80,26 +80,26 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
           {/* Key, Stat, s */}
 
           <div, classNam, e = grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12>)
-            {[)
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: ⚡ })
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: 💰 })
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: 🤖 })
+            {[)'
+              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: ⚡ })'
+              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: 💰 })'
+              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: 🤖 })'
               { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: 🎯 })
             ].m, a, p((st, a, t, ind, e, x) => (
 
-          <div, classNam, e = grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12>
-            {[
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: ⚡ },
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: 💰 },
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: 🤖 },
+          <div, classNam, e = grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12>';
+            {['
+              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: ⚡ },'
+              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: 💰 },'
+              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: 🤖 },'
               { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: 🎯 }].m, a, p((st, a, t, ind, e, x) => (</div>
               <div, ke, y = { in, d, e, x }, classNa, m, e = bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0
           <div, classNam, e = grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12></div>
-            {/* TODO: Fix JSX expression */}
-
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: ⚡ },
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: 💰 },
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: 🤖 },
+            {/* TODO: Fix JSX expression */}';
+'
+              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: ⚡ },'
+              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: 💰 },'
+              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: 🤖 },'
               { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: 🎯 })
             ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0
               ></div>
@@ -232,7 +232,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
 
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}
-
+'
                 <Link, t, o = { `/${conte, n, t.slug.includ, e, s('ca, s, e-stud, i, e, s')  ? 'ca, s, e-studi, e, s'  : 'bl, o, g }/${conte, n, t.slug}}
 
                   classNa, m, e = gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,
@@ -284,10 +284,10 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
 
         <div, classNam, e = grid, m, d: gr, i, d-co, l, s-4, ga, p-8, m, t-20></div>
           {/* TODO: Fix JSX expression */}
-
-            { val, u, e: '5, 0, 0+', lab, e, l: Enterprise, Clients, Transforme, d },
-            { val, u, e: '$2, B+', lab, e, l: Total, ROI, Generate, d },
-            { val, u, e: '99., 9%', lab, e, l: Success, Ra, t, e },
+'
+            { val, u, e: '5, 0, 0+', lab, e, l: Enterprise, Clients, Transforme, d },'
+            { val, u, e: '$2, B+', lab, e, l: Total, ROI, Generate, d },'
+            { val, u, e: '99., 9%', lab, e, l: Success, Ra, t, e },'
             { val, u, e: '24/, 7', lab, e, l: Expert, Suppo, r, t }].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = te, x, t-cent, e, r></div>
               <div, className=te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2>
@@ -310,4 +310,4 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
 
 export default RevolutionaryBreakthrough2026Banner;
 
-`
+`'

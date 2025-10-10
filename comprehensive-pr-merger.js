@@ -6,23 +6,23 @@
  * This script will systematically find, resolve conflicts, and merge all open PRs;
 
  */ import { execSync } from 'child_process;
-
+'
 import fs from 'fs;
 
 // //Step 1: Ensure were on main and up to date;
 
-// try {,
+// try {,'
   execSync('git checkout main', { stdio: inherit });
-
+'
   execSync('git reset --hard HEAD', { stdio: inherit });
-
+'
   execSync('git pull origin main', { stdio: inherit });
 
 //   } catch (error) {
 //   process.exit(1)}
 
 //Step 2: Get all remote branches that could be PRs;
-
+'
 // const branches = execSync('git branch -r', { encoding: utf8 });;
 
 // //Step,
@@ -31,10 +31,10 @@ import fs from 'fs;
 // try {/* TODO: Fix JSX expression */}
 
   o: inherit });
-
+'
   execSync('git reset --hard HEAD, {/* TODO: Fix JSX expression */})
   o: inherit });
-
+'
   execSync('git pull origin main, {/* TODO: Fix JSX expression */})
   o: inherit });
 
@@ -46,11 +46,11 @@ import fs from 'fs;
   2: Get all remote branches that could be PRs;
 
 // const branches = execSync(git branch -r, {/* TODO: Fix JSX expression */});;
-
-  g: 'utf8 })
-  .split('\n)
-  .filter(branch => branch.trim())
-  .map(branch => branch.trim().replace('origin/', '))
+'
+  g: 'utf8 })'
+  .split('\n)';
+  .filter(branch => branch.trim())'
+  .map(branch => branch.trim().replace('origin/', '))'
   .filter(branch => branch.startsWith('cursor/') && branch !== HEAD);
 
 // //Step 3: Create merge strategy with conflict resolution;
@@ -58,29 +58,29 @@ import fs from 'fs;
 const mergeStrategy = {;;
 
   //Branches that should be merged first (foundational)
-  priority: branches.filter(branch =>)
-      branch.includes('build-fixes) ||
-      branch.includes('error-fixing) ||
+  priority: branches.filter(branch =>)'
+      branch.includes('build-fixes) ||'
+      branch.includes('error-fixing) ||'
       branch.includes('merge-to-main)
   )
   //Feature branches;
 
-  features: branches.filter(branch =>)
-      branch.includes('build-) ||
-      branch.includes('enhance-) ||
+  features: branches.filter(branch =>)'
+      branch.includes('build-) ||'
+      branch.includes('enhance-) ||'
       branch.includes('add-new-services)
   )
   //Content branches;
 
-  content: branches.filter(branch =>)
-      branch.includes('content-) ||
-      branch.includes('blog-) ||
+  content: branches.filter(branch =>)'
+      branch.includes('content-) ||'
+      branch.includes('blog-) ||'
       branch.includes('update-)
   )
   //Skip problematic branches;
 
-  skip: branches.filter(branch =>)
-      branch.includes('disabled) ||
+  skip: branches.filter(branch =>)'
+      branch.includes('disabled) ||'
       branch.includes('backup) ||,
       branch.includes(old))};
 
@@ -98,20 +98,20 @@ function resolveConflictsAndMerge(branchName) {,
       { stdio: 'inherit }
 
     );
-
+'
 //     return { success: true, method: 'direct }} catch (error) {
 //     //Check for merge conflicts;
 
     try {
       if (
-
-        status.includes('UU) ||
-        status.includes('AA) ||
+'
+        status.includes('UU) ||'
+        status.includes('AA) ||'
         status.includes('DD)
       ) {
 //         //Strategy 1: Auto-resolve with theirs for most conflicts;
 
-        try {,
+        try {,'
           execSync('git reset --hard HEAD', { stdio: inherit });
 
           execSync(
@@ -140,7 +140,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-
+'
   d: 'direct }} catch (error) {/* TODO: Fix JSX expression */}
 
   o: inherit });
@@ -154,14 +154,14 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
+'
   d: 'theirs }} catch (theirsError) {/* TODO: Fix JSX expression */}
 
 //           }
 
         //Strategy 2: Auto-resolve with ours;
 
-        try {,
+        try {,'
           execSync('git reset --hard HEAD', { stdio: inherit });
 
           execSync(
@@ -182,20 +182,20 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
+'
   d: 'ours }} catch (oursError) {/* TODO: Fix JSX expression */}
 
 //           }
 
         //Strategy 3: Manual conflict resolution;
 
-        try {,
+        try {,'
           execSync('git reset --hard HEAD', { stdio: inherit });
 
           //Get conflicted files;
 
           const conflictedFiles = execSync(git diff --name-only --diff-filter=U);;
-
+'
             { encoding: 'utf8 }
 
         //Strategy,
@@ -210,9 +210,9 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           const conflictedFiles = execSync(git diff --name-only --diff-filter=U,;;
 
             {/* TODO: Fix JSX expression */}
-
-  g: 'utf8 })
-          )
+'
+  g: 'utf8 })';
+          )'
             .split('\n)
             .filter(file => file.trim());
 
@@ -256,7 +256,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
+'
   d: 'manual }} catch (manualError) {/* TODO: Fix JSX expression */}
 
 //           }
@@ -269,10 +269,10 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
     //If all strategies fail, abort and skip;
 
-    try {
+    try {'
       execSync('git merge --abort', { stdio: inherit });
 
-//       } catch (abortError) {
+//       } catch (abortError) {'
       execSync('git reset --hard HEAD', { stdio: inherit });
 
     try {/* TODO: Fix JSX expression */}
@@ -280,11 +280,11 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   o: inherit });
 
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit })}
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
   d: 'failed }}
 
 }
@@ -381,7 +381,7 @@ results.branchCounts = {
   content: mergeStrategy.content.length;
 
   skipped: mergeStrategy.skip.length};
-
+'
 fs.writeFileSync('comprehensive-merge-report.json)
   JSON.stringify(results, null, 2)
 );
@@ -394,7 +394,7 @@ fs.writeFileSync('comprehensive-merge-report.json)
 
 // Step 8: Push changes;
 
-// try {,
+// try {,'
   execSync('git push origin main', { stdio: inherit });
 
 //   } catch (error) {
@@ -406,7 +406,7 @@ fs.writeFileSync('comprehensive-merge-report.json)
 results.branchCounts = {/* TODO: Fix JSX expression */}
 
 };
-
+'
 fs.writeFileSync('comprehensive-merge-report.json)
   JSON.stringify(results, null, 2)
 );

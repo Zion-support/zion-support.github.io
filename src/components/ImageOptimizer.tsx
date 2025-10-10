@@ -60,7 +60,7 @@ const observer = new IntersectionObserver(;;
           observer.disconnect()}
 
       },
-      {
+      {'
         rootMargin: '50px 0px,
         threshold: 0.01}
 
@@ -99,9 +99,9 @@ return (
 
 const svg = ;;
 
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg>
+      <svg width="${width || 400}" height="${height || 300}" xmlns="http: '//www.w3.org/2000/svg>
 );
-
+',
 }
 
         <rect width="100%" height="100%" fill="#1e293b/>
@@ -126,8 +126,8 @@ const svg = ;;
         style={{ width, height }}
 
       ></div>
-        <div className="text-gray-400 text-center></div>
-          <div className="text-4xl mb-2>⚠️</div>
+        <div className="text-gray-400 text-center></div>">
+          <div className="text-4xl mb-2>⚠️</div>">
           <div className="text-sm>Image failed to load</div>)
         </div>)
       </div>)
@@ -150,7 +150,7 @@ const svg = ;;
       {!isLoaded && (</div>
         <img
           src={generatePlaceholder()}
-
+">
           alt="
           className="absolute inset-0 w-full h-full object-cover animate-pulse
           style={{ filter: 'blur(1 px) }}
@@ -169,13 +169,13 @@ const svg = ;;
           alt={alt}
 
           className={w-full h-full object-cover transition-opacity duration-300 ${}
-
+'
             isLoaded ? 'opacity-100' : 'opacity-0}
 
-          }}
-
+          }}';
+'
           loading={priority ? 'eager' : 'lazy}
-
+">
           decoding="async
           onLoad={handleLoad}
 

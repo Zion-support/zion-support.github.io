@@ -12,7 +12,7 @@ export interface ValidationRule<T = unknown> {// TODO: Add content}
 };
 
   validate: (value: T) => boolean;,
-    message: string
+    message: 'string',
 }
 
 export interface ValidationResult {// TODO: Add content}
@@ -20,7 +20,7 @@ export interface ValidationResult {// TODO: Add content}
 };
 
   valid: boolean;,
-    errors: string[]
+    errors: 'string[]',
 }
 
 export interface FieldValidation {// TODO: Add content}
@@ -64,7 +64,7 @@ export const _validationRules = {// TODO: Add content};;
 };
 
   validat,
-  e: (valu)
+  e: '(valu)',
   e: string) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -116,7 +116,7 @@ export const _validationRules = {// TODO: Add content};;
 };
 
   validat,
-  e: (valu)
+  e: '(valu)',
   e: string) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -124,7 +124,7 @@ export const _validationRules = {// TODO: Add content};;
 }
 
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
-
+'
       return phoneRegex.test(value.replace(/\s/g, '))},
 //     message}),
   /**
@@ -139,7 +139,7 @@ export const _validationRules = {// TODO: Add content};;
 };
 
   validat,
-  e: (valu)
+  e: '(valu)',
   e: string) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -186,7 +186,7 @@ export const _validationRules = {// TODO: Add content};;
    * Validate pattern match;
 
    */
-
+'
   pattern: (regex: RegExp, message = 'Invalid format): ValidationRule<string> => ({// TODO: Add content}
 
 };
@@ -199,16 +199,8 @@ export const _validationRules = {// TODO: Add content};;
 
    */
   custo,
-  m: 
-          
-          
-          
-          
-          
-          
-          
-          
-
+  m: '
+',
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({// TODO: Add content}
 
 };
@@ -220,7 +212,7 @@ export const _validationRules = {// TODO: Add content};;
 
    */
   strongPasswor,
-  d: ()
+  d: '()',
     message = Password must be at least 8 characters with uppercase, lowercase, number, and special character
   ): ValidationRule;
 
@@ -231,7 +223,7 @@ export const _validationRules = {// TODO: Add content};;
 };
 
   validat,
-  e: (valu)
+  e: '(valu)',
   e: string) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -278,7 +270,7 @@ const hasMinLength = value.length >= 8;;
 };
 
   validat,
-  e: (fil)
+  e: '(fil)',
   e: File) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -302,7 +294,7 @@ const hasMinLength = value.length >= 8;;
 
 };
 
-  validate: (file: File) => allowedTypes.includes(file.type),
+  validate: (file: File) => allowedTypes.includes(file.type),'
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
 
   }
@@ -325,8 +317,8 @@ export function validateField;
 }
 
   const,
-  errors: string[] = [];
-
+  errors: 'string[] = [];
+',
   for (const rule of rules) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -362,8 +354,8 @@ export function validateForm;
           <T extends Record<string, unknown>>()
 
   formData: T,
-  validationSchema: Record;
-
+  validationSchema: 'Record;
+',
           <keyof T, ValidationRule[]>
 ): Record<keyof T, ValidationResult> {// TODO: Add content}
 
@@ -402,8 +394,8 @@ export function isFormValid;
 
           <T extends Record<string, unknown>>()
 
-  validationResults: Record;
-
+  validationResults: 'Record;
+',
           <keyof T, ValidationResult>
 ): boolean {// TODO: Add content}
 
@@ -419,8 +411,8 @@ export function getFormErrors;
 
           <T extends Record<string, unknown>>()
 
-  validationResults: Record;
-
+  validationResults: 'Record;
+',
           <keyof T, ValidationResult>
 ): Record<keyof T, string[]> {// TODO: Add content}
 
@@ -472,7 +464,7 @@ export function sanitizeInput(input: string): string {// TODO: Add content}
           
           )
           <React.Fragment>]/g, ) // Remove potential HTML tags;
-
+'
     .replace(/[^\w\s@.-]/gi, '); // Keep only alphanumeric, spaces, @, ., -
 }
 
@@ -491,10 +483,10 @@ export function debounce;
 }
 
   let,
-  timeout: NodeJS.Timeout | null = null;
-
+  timeout: 'NodeJS.Timeout | null = null;
+',
   return function executedFunction(...arg,
-  s: Parameters;)
+  s: 'Parameters;)',
           <T>) {/* TODO: Fix JSX expression */}
 
   O: Add content}

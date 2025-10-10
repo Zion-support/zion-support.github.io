@@ -8,34 +8,35 @@ const nextConfig = {;;
   poweredByHeader: false,
   generateEtags: false,
   experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion']},
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'},
-  images: {
+    optimizeCss: true,'
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion']},';
+  compiler: {'
+    removeConsole: process.env.NODE_ENV === 'production'},';
+  images: {'
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
+    minimumCacheTTL: 60,';
+    dangerouslyAllowSVG: true,'
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
   async headers() {
     return [
       {
         source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'},
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'},
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'}]},
-      {
+        headers: [';
+          {'
+            key: 'X-Frame-Options','
+            value: 'DENY'},';
+          {'
+            key: 'X-Content-Type-Options','
+            value: 'nosniff'},';
+          {'
+            key: 'Referrer-Policy','
+            value: 'origin-when-cross-origin'}]},';
+      {'
         source: '/api/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
+        headers: [';
+          {'
+            key: 'Cache-Control','
             value: 'public, max-age=3600, s-maxage=3600}]}]}};
 
 module.exports = nextConfig;
+'

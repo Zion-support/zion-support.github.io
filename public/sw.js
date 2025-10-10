@@ -3,14 +3,14 @@
 const CACHE_NAME = 'zion-tech-v1;;
 
 const urlsToCache = [;;
-
-  '/',
-  '/static/js/bundle.js',
+'
+  '/','
+  '/static/js/bundle.js','
   '/static/css/main.css',
   /site.webmanifest
 ];
 
-// Install event
+// Install event'
 self.addEventListener('install', (event) => {
   event.waitUntil(
 
@@ -22,22 +22,22 @@ self.addEventListener('install', (event) => {
 })
   )});
 
-// Fetch event
+// Fetch event'
 self.addEventListener('fetch', (event) => {
   event.respondWith(
 
     caches.match(event.request)
       .then((response) => {
         // Return cached version or fetch from network
-        return response || fetch(event.request).catch(() => {
-          // Return offline page if available
-          if (event.request.destination === 'document') {
+        return response || fetch(event.request).catch(() => {';
+          // Return offline page if available'
+          if (event.request.destination === 'document') {'
             return caches.match('/')}
 
         })})
   )});
 
-// Activate event
+// Activate event'
 self.addEventListener('activate', (event) => {
   event.waitUntil(
 
@@ -52,14 +52,14 @@ self.addEventListener('activate', (event) => {
       )})
   )});
 
-// Message event handler
-self.addEventListener('message', (event) => {
+// Message event handler'
+self.addEventListener('message', (event) => {'
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting()}
 
 });
 
-// Push event handler
+// Push event handler'
 self.addEventListener('push', (event) => {
   if (event.data) {;
 
@@ -67,8 +67,8 @@ const data = event.data.json();;
 
     const options = {;;
 
-      body: data.body,
-      icon: '/favicon.ico',
+      body: data.body,'
+      icon: '/favicon.ico','
       badge: '/favicon.ico',
       vibrate: [100, 50, 100],
       data: {
@@ -84,3 +84,4 @@ const data = event.data.json();;
     )}
 
 });
+'

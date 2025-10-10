@@ -12,7 +12,7 @@ global.TextEncoder = TextEncoder;
 
 global.TextDecoder = TextDecoder;
 
-// Mock files that use import.meta.env
+// Mock files that use import.meta.env'
 jest.mock('./src/utils/logger.ts, () => ({
   logger: {
     debug: jest.fn(),
@@ -20,21 +20,21 @@ jest.mock('./src/utils/logger.ts, () => ({
     warn: jest.fn(),
     error: jest.fn(),
     log: jest.fn()}}));
-
+'
 jest.mock('./src/utils/analytics.ts, () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn()}));
-
+'
 jest.mock('./src/utils/errorTracking.ts, () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn()}));
-
+'
 jest.mock('./src/hooks/usePerformance.ts, () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn()}))}));
-
+'
 jest.mock('./src/hooks/usePerformanceMonitoring.ts, () => ({
   usePerformanceMonitoring: jest.fn(() => ({
     metrics: {},
@@ -50,15 +50,15 @@ const actual = jest.requireActual(react-router-dom);;
   return {
     ...actual,
     useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/,
-      search: ',
+    useLocation: () => ({'
+      pathname: '/,'
+      search: ','
       hash: ',
       state: null}),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      return React.createElement('a, { href: to, ...props }, children)},
-    NavLink: ({ children, to, ...props }) => {
+    useParams: () => ({}),';
+    Link: ({ children, to, ...props }) => {'
+      return React.createElement('a, { href: to, ...props }, children)},';
+    NavLink: ({ children, to, ...props }) => {'
       return React.createElement('a, { href: to, ...props }, children)},
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => {;
@@ -67,16 +67,16 @@ const { createMemoryRouter, RouterProvider } = actual;
 
       const router = createMemoryRouter([;;
 
-        {
-          path: '/,
-          element: children}], {
+        {'
+          path: '/,';
+          element: children}], {'
         initialEntries: ['/],
         initialIndex: 0});
 
       return React.createElement(RouterProvider, { router })},
     RouterProvider: ({ router }) => null}});
 
-// Mock window.matchMedia
+// Mock window.matchMedia'
 Object.defineProperty(window, 'matchMedia, {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
@@ -112,14 +112,15 @@ const originalError = console.error;;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if (
-
-      typeof args[0] === 'string &&
-      (args[0].includes('Warning: ReactDOM.render) ||
+'
+      typeof args[0] === 'string &&'
+      (args[0].includes('Warning: ReactDOM.render) ||'
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit))
     ) {
-      return}
-
+      return;
+  }
     originalError.call(console, ...args)})});
 
 afterAll(() => {
   console.error = originalError});
+'

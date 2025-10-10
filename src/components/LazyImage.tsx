@@ -1,5 +1,5 @@
 import React from 'react;
-
+'
 'use client;
 
 interface LazyImageProps {/* TODO: Fix JSX expression */}
@@ -18,8 +18,8 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
 ;
 
 const,
-  LazyImage: React.FC;
-
+  LazyImage: 'React.FC;
+',
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -28,9 +28,9 @@ const,
 /
 /
   placeholder = dat,
-  a:image
+  a: 'image
 /
-/
+/',
   priority = false,
 //   onLoad,
 //   onError)
@@ -75,7 +75,7 @@ const,
 
 };  threshol,
   d: 0.1,
-        rootMargi,
+        rootMargi,'
   n: '50px}
 
     );
@@ -137,7 +137,7 @@ const,
             onLoad = { handleLoad };
 
             onError = { handleError };
-
+'
             loading={priority ? 'eager' : 'lazy'}
 
             decoding="async
@@ -154,3 +154,4 @@ const,
   )};
 
 export default LazyImage;
+">

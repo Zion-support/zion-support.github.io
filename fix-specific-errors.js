@@ -21,14 +21,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true}
 
     // Fix malformed closing tags with semicolons;
-
+'
     if (content.includes('</div>;)) {
       content = content.replace(/<\/div>;/g, ;);
 
       modified = true}
 
     // Fix malformed closing tags with commas;
-
+'
     if (content.includes('</div>,') && !content.includes('</div>, )) {
       content = content.replace(/<\/div>,/g, ,);
 
@@ -60,13 +60,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           );
 
           modified = true}
-
+'
     if (content.includes('</div>;)) {/* TODO: Fix JSX expression */}
 
     }
 
     // Fix malformed closing tags with commas;
-
+'
     if (content.includes('</div>,') && !content.includes('</div>, )) {/* TODO: Fix JSX expression */}
 
     }
@@ -121,3 +121,4 @@ async function main() {/* TODO: Fix JSX expression */}
   })}
 
 main().catch(console.error);
+'

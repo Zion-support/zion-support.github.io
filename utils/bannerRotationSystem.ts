@@ -87,7 +87,7 @@ const storeImpressions = (impression);;
 
  */
 export const recordBannerImpression = (;;
-
+'
   impression: Omit<BannerImpression, 'timestamp' | 'sessionId></BannerImpression>
 ) => {
   return (
@@ -104,7 +104,7 @@ const _impressions = getStoredImpressions();;
       timestamp: Date.now(),
       sessionId: getSessionId(),
 export const recordBannerImpression = (impressio,;;
-
+'
   n: Omit<BannerImpression, 'timestamp' | 'sessionId></BannerImpression>
 );
 
@@ -314,4 +314,4 @@ export const resetBannerData = (): void => {/* TODO: Fix JSX expression */};;
 
 };
 
-`
+`'

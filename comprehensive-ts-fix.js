@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -25,7 +25,7 @@ const fullPath = path.join(dir, item);;;
 
     const stat = fs.statSync(fullPath);;;
 
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {'
       files.push(...getAllTsxFiles(fullPath))} else if (item.endsWith('.tsx)) {
       files.push(fullPath)}
 
@@ -65,7 +65,7 @@ const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
 
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
   return (
-
+'
       if (text.trim() && !text.includes('<)) {
         modified = true;
 
@@ -80,7 +80,7 @@ const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
 
 const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;;
 
-    content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
+    content = content.replace(missingBracePattern, (match, key1, value1, key2) => {'
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('})) {
         modified = true;
 
@@ -89,7 +89,7 @@ const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;;
       return match});
 
     // Fix 4: Fix malformed SVG URLs;
-
+'
 const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^]+)\)\]/g;;
 
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
@@ -97,14 +97,14 @@ const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^]+)\)\]/g;;
 const encodedSvg = encodeURIComponent(svgContent);;
 
       modified = true;
-
+'
       return `bg-[url('data:image/svg+xml,${encodedSvg}')]});
 
     // Fix 5: Fix missing closing parentheses in function calls;
 
 const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;;
 
-    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
+    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {'
       if (!funcCall.includes(')') && !nextToken.startsWith('))) {
         modified = true;
 
@@ -221,3 +221,4 @@ tsxFiles.forEach(filePath => {
 });
 
 // console.log removed for production
+'

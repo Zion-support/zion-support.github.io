@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
-
+'
 import { execSync } from 'child_process;
 
 import { readFileSync, writeFileSync } from fs;
@@ -17,7 +17,7 @@ function resolveConflicts(filePath) {
 const content = readFileSync(filePath, utf8);;
 
     // Check if file has conflict markers;
-
+'
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>)) {
       return false; // No conflicts;
 
@@ -28,8 +28,8 @@ const gitStatus = execSync(git status --porcelain, {/* TODO: Fix JSX expression 
   g: utf8 });
 
 const conflictFiles = gitStatus;;
-
-  .split('\n)
+'
+  .split('\n)'
   .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD))
   .map(line => line.substring(3).trim())
   .filter(file => file);
@@ -55,17 +55,17 @@ const lines = content.split(\n);;
     for (let i = 0; i < lines.length; i++) {;;
 
 const line = lines[i];;
-
+'
       if (line.includes(')) {
         skipUntilNextMarker = true;
 
         continue}
-
+'
       if (line.includes(')) {
         skipUntilNextMarker = false;
 
         continue}
-
+'
       if (line.includes('>>>>>>>)) {
         continue}
 
@@ -87,7 +87,7 @@ return false}
 
 try {
   // Get list of files with conflicts;
-
+'
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
 
   if (!conflictFiles.trim()) {
@@ -122,11 +122,11 @@ const files = conflictFiles.trim().split(\n);;
 
   // console.log removed for production
 // Add all resolved files;
-
+'
   execSync('git add .', { stdio: inherit });
 
   // Commit the resolution;
-
+'
   execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: inherit });
 
   // console.log removed for production
@@ -136,3 +136,4 @@ process.exit(1)}
 
 // console.log removed for production
 
+'

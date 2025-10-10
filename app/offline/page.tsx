@@ -1,7 +1,7 @@
 'use client;
-
+'
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
 
   return (<div className=min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
@@ -28,7 +28,7 @@ import { Helmet } from 'react-helmet-async;
             <
             <div className=flex flex-col sm:flex-row gap-4 justify-center>
               <button className=bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hove,
-    r:to-blue-700 transition-all duration-300 flex items-center>
+    r: 'to-blue-700 transition-all duration-300 flex items-center>
                 Get Started
                 
                 Learn More
@@ -39,3 +39,4 @@ import { Helmet } from 'react-helmet-async;
       </section>
     </div>)
 export default PagePage;
+',

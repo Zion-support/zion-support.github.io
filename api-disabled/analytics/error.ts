@@ -5,5 +5,6 @@ k: data.errorInfo.componentStack }); // For now, well just acknowledge receipt r
 
   e: Error logged successfully} timestam)
   p: Date.now() })} catch (error) {/* TODO: Fix JSX expression */}
-
-  r: 'Internal server error })} }
+'
+  r: 'Internal server error })} }';
+'

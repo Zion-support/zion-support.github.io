@@ -71,7 +71,7 @@ export const,
     tags: ["quantum", "AI", "optimization", "real-time", "hybrid"]
     estimatedDelivery: "8-12 weeks",
     supportLevel: "24/7 dedicated support",
-    marketPrice: '$25,000/month',
+    marketPrice: '$25,000/month','
     roi: '500-2000% within 6 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -189,7 +189,7 @@ export const,
     tags: ["neuromorphic", "AI", "brain simulation", "cognitive computing", "energy efficient"]
     estimatedDelivery: "6-10 weeks",
     supportLevel: "24/7 technical support",
-    marketPrice: '$15,000/month',
+    marketPrice: '$15,000/month','
     roi: '300-800% within 12 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -281,7 +281,7 @@ export const,
     tags: ["synthetic biology", "AI", "DNA design", "protein engineering", "biotechnology"]
     estimatedDelivery: "10-16 weeks",
     supportLevel: "24/7 specialized support",
-    marketPrice: '$20,000/month',
+    marketPrice: '$20,000/month','
     roi: '400-1200% within 18 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -290,12 +290,12 @@ export const,
     uniqueValue: "First commercial synthetic biology AI platform with automated safety and compliance protocols"}
     id: "space-ai-autonomous-systems",
     title: "Space AI Autonomous Systems Platform",
-    description: 'Advanced AI platform for autonomous space operations including satellite management, space exploration, and orbital optimization. Features autonomous decision-making and real-time space analytics.',
-    category: 'Space Technology',
+    description: 'Advanced AI platform for autonomous space operations including satellite management, space exploration, and orbital optimization. Features autonomous decision-making and real-time space analytics.','
+    category: 'Space Technology','
     subcategory: 'AI Autonomous Systems',
-    price:
-        price: 19999;
-    currency: 'USD',
+    price:';
+        price: 19999;'
+    currency: 'USD','
     pricingModel: 'monthly',
     features: [;
       "Autonomous satellite operations"
@@ -390,7 +390,7 @@ export const,
     tags: ["space technology", "AI", "autonomous systems", "satellites", "orbital optimization"]
     estimatedDelivery: "12-20 weeks",
     supportLevel: "24/7 mission-critical support",
-    marketPrice: '$35,000/month',
+    marketPrice: '$35,000/month','
     roi: '600-1500% within 24 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -482,7 +482,7 @@ export const,
     tags: ["advanced materials", "AI", "quantum materials", "material discovery", "synthesis"]
     estimatedDelivery: "8-14 weeks",
     supportLevel: "24/7 research support",
-    marketPrice: '$25,000/month',
+    marketPrice: '$25,000/month','
     roi: '500-1000% within 18 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -574,7 +574,7 @@ export const,
     tags: ["brain-computer interface", "AI", "neural technology", "accessibility", "medical"]
     estimatedDelivery: "16-24 weeks",
     supportLevel: "24/7 medical-grade support",
-    marketPrice: '$40,000/month',
+    marketPrice: '$40,000/month','
     roi: '800-2000% within 36 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -666,7 +666,7 @@ export const,
     tags: ["digital twin", "AI", "simulation", "predictive analytics", "optimization"]
     estimatedDelivery: "10-16 weeks",
     supportLevel: "24/7 operational support",
-    marketPrice: '$30,000/month',
+    marketPrice: '$30,000/month','
     roi: '400-1200% within 12 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -675,12 +675,12 @@ export const,
     uniqueValue: "Most advanced commercial digital twin platform with AI-powered predictive analytics and autonomous optimization"}
     id: "extended-reality-ai-platform",
     title: "Extended Reality AI Platform",
-    description: 'Revolutionary extended reality platform combining VR, AR, and AI for immersive experiences. Features AI-powered content generation and adaptive environments.',
-    category: 'Extended Reality',
+    description: 'Revolutionary extended reality platform combining VR, AR, and AI for immersive experiences. Features AI-powered content generation and adaptive environments.','
+    category: 'Extended Reality','
     subcategory: 'AI Platform',
-    price:
-        price: 15999;
-    currency: 'USD',
+    price:';
+        price: 15999;'
+    currency: 'USD','
     pricingModel: 'monthly',
     features: [;
       "AI-powered content generation"
@@ -775,7 +775,7 @@ export const,
     tags: ["extended reality", "AI", "VR", "AR", "immersive technology"]
     estimatedDelivery: "8-12 weeks",
     supportLevel: "24/7 immersive support",
-    marketPrice: '$25,000/month',
+    marketPrice: '$25,000/month','
     roi: '500-1000% within 12 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -867,7 +867,7 @@ export const,
     tags: ["edge AI", "computing", "IoT", "real-time", "distributed learning"]
     estimatedDelivery: "6-10 weeks",
     supportLevel: "24/7 edge support",
-    marketPrice: '$22,000/month',
+    marketPrice: '$22,000/month','
     roi: '400-800% within 12 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -959,7 +959,7 @@ export const,
     tags: ["federated learning", "AI", "privacy", "distributed learning", "collaboration"]
     estimatedDelivery: "10-16 weeks",
     supportLevel: "24/7 privacy support",
-    marketPrice: '$28,000/month',
+    marketPrice: '$28,000/month','
     roi: '500-1200% within 18 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",
@@ -1051,7 +1051,7 @@ export const,
     tags: ["sustainable technology", "AI", "environmental", "renewable energy", "circular economy"]
     estimatedDelivery: "12-18 weeks",
     supportLevel: "24/7 sustainability support",
-    marketPrice: '$32,000/month',
+    marketPrice: '$32,000/month','
     roi: '600-1500% within 24 months',
     innovationLevel: "Revolutionary",
     contactInfo: phone: "+1 302 464 0950",

@@ -130,7 +130,7 @@ return true}
 
 function getFilesWithErrors() {
   try {;
-
+'
 const output = execSync('pnpm run type-check 2>&1', { encoding: utf8 });;
 
     const files = new Set();;
@@ -171,7 +171,7 @@ let fixedCount = 0;;
   // console.log removed for production
 // Run type check again
   // console.log removed for production
-try {
+try {'
     execSync('pnpm run type-check', { stdio: inherit });
 
     // console.log removed for production
@@ -182,3 +182,4 @@ try {
 }
 
 main();
+'

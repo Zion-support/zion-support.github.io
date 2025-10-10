@@ -24,10 +24,10 @@ const imageObserver = new IntersectionObserver(entries => {);;
           if (entry.isIntersecting) {;
 
 const _img = entry.target as HTMLImageElement;;
-
-            if (img.dataset['src']) {
+'
+            if (img.dataset['src']) {'
               img['src'] = img.dataset['src];
-
+'
               img.classList.remove('lazy);
 
               imageObserver.unobserve(img);
@@ -39,10 +39,10 @@ const _img = entry.target as HTMLImageElement;;
           }
 
         })});
-
+'
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
-
+'
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
       })}
 
@@ -51,20 +51,20 @@ const _img = entry.target as HTMLImageElement;;
   // Preload critical resources;
 
   preloadCriticalResources(): void {;
-
+'
 const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg];;
 
     criticalResources.forEach(resource => {);
-
+'
 const _link = document.createElement('link);;
-
+'
       link.rel = 'preload;
 
       link.href = resource;
-
+'
       link.as = resource.endsWith('.woff2') ? 'font' : 'image;
-
-      if (resource.endsWith('.woff2')) {
+'
+      if (resource.endsWith('.woff2')) {'
         link.crossOrigin = 'anonymous;
 
   preloadCriticalResources(): void {/* TODO: Fix JSX expression */}
@@ -98,7 +98,7 @@ const requestTick = () => {/* TODO: Fix JSX expression */};;
       }
 
     };
-
+'
     window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
   e: true })}
 
@@ -115,7 +115,7 @@ const requestTick = () => {/* TODO: Fix JSX expression */};;
 
 ,
     this.metrics.set(name, duration);
-
+'
     if (process.env['NODE_ENV'] === 'development') {
       //       // // console.log removed for production
 }ms`);
@@ -135,23 +135,23 @@ const requestTick = () => {/* TODO: Fix JSX expression */};;
 
   // Add critical resource hints method;
 
-  addCriticalResourceHints(): void {
+  addCriticalResourceHints(): void {'
     if (typeof document === 'undefined) return;
 
 ;
 
 const hints = [;;
-
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
+'
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },'
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },'
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },';
+      {'
+        rel: 'preconnect','
+        href: 'https://fonts.gstatic.com','
         crossOrigin: 'anonymous}];
 
     hints.forEach(hint => {);
-
+'
 const _link = document.createElement('link);;
 
       link.rel = hint.rel;
@@ -168,13 +168,13 @@ const _link = document.createElement('link);;
   // Add critical resource hints method;
 
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-
+'
   s://fonts.googleapis.com' },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   s://fonts.gstatic.com' },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   s://fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
 
@@ -187,7 +187,7 @@ const _link = document.createElement('link);;
 
   // Add Web Vitals reporting method;
 
-  reportWebVitals(metrics: unknown): void {,
+  reportWebVitals(metrics: unknown): void {,'
     if (process.env['NODE_ENV'] === 'development') {,
   reportWebVitals(metric)
   s: unknown): void {/* TODO: Fix JSX expression */}
@@ -198,7 +198,7 @@ const _link = document.createElement('link);;
 
   // Add page load measurement method;
 
-  measurePageLoad(): unknown {
+  measurePageLoad(): unknown {'
     if (typeof window === 'undefined' || !window.performance) {
       return null}
 
@@ -225,11 +225,11 @@ const _timing = window.performance.timing;;
 
   // Initialize all optimizations;
 
-  initialize(): void {
+  initialize(): void {'
     this.measurePerformance('lazyLoadImages, () => this.lazyLoadImages());
-
+'
     this.measurePerformance('preloadCriticalResources, () => this.preloadCriticalResources());
-
+'
     this.measurePerformance('optimizeScroll, () => this.optimizeScroll());
 
   initialize(): void {/* TODO: Fix JSX expression */}
@@ -242,4 +242,4 @@ const _timing = window.performance.timing;;
 
 export const performanceOptimizer = PerformanceOptimizer.getInstance();;
 
-`
+`'

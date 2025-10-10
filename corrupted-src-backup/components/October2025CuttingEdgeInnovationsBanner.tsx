@@ -1,8 +1,8 @@
 const, October2025CuttingEdgeInnovationsBanne, r = () => {
   return (<div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm>)
-      <div, className=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
+      <div, className=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),">
   g:px-8, p, y-6">
-        <div, className="flex, item, s-start, ga, p-4>
+        <div, className="flex, item, s-start, ga, p-4>">
           <div, className="hidden, s, m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">
             <Sparkles, className=w-8 h-8, tex, t-whi, t, e  />
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">;
@@ -18,9 +18,9 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   return (
 
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm></div>
-      <div, className=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className=m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l">
   g:px-8, p, y-6"></div>
-        <div, className="flex, item, s-start, ga, p-4></div>
+        <div, className="flex, item, s-start, ga, p-4></div>">
           <div, className="hidden, s, m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50"></div>
             <Sparkles, className=w-8 h-8, tex, t-whi, t, e  />
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">;</div>
@@ -64,11 +64,11 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
             <p, className="te, x, t-base, s, m: te, x, t-lg, tex, t-indi, g, o-1, 0, 0/90, m, b-4, leadin, g-relax, e, d">;
 
               ⚡ <strong, className="te, x, t-indi, g, o-2, 0, 0>BRAND, NEW, TODA;
-
+">
               ⚡</p> <strong, className="te, x, t-indi, g, o-2, 0, 0>BRAND, NEW, TODA
   Y:</stro, n, g>
 );
-
+">
 } Deploy, neur, o-symbolic, AI, achieving{" "};
 
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">99.7% reasoning, accurac, y</sp, a, n> wi, t, h{" "};
@@ -98,8 +98,8 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
   r:shad, o, w-bl, u, e-5, 0, 0/25
               >
                 <div, className="flex, item, s-start, ga, p-2, m, b-2></div>
-                  <Brain, className=w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5  />
-                  <div, className="fl, e, x-1, mi, n-w-0></div>
+                  <Brain, className=w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5  />">
+                  <div, className="fl, e, x-1, mi, n-w-0></div>">
                     <h3, className="fo, n, t-bold, tex, t-sm, tex, t-bl, u, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-bl, u, e-1, 0, 0"></h3>
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">;</div>
                   <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5" />;
@@ -133,7 +133,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
   r:shad, o, w-bl, u, e-5, 0, 0/25
               ></Li>
                 <div, className="flex, item, s-start, ga, p-2, m, b-2"></div>
-                  <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5  /></Brain>
+                  <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5  /></Brain>">
                   <div, className="fl, e, x-1, mi, n-w-0"></div>
                     <h3, className="fo, n, t-bold, tex, t-sm, tex, t-bl, u, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-bl, u, e-1, 0, 0">"
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">";
@@ -154,11 +154,11 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                     </p>
                   </d, i, v>
                 </d, i, v>
-                <div, className="flex, item, s-center, justif, y-between, tex, t-xs></div>
+                <div, className="flex, item, s-center, justif, y-between, tex, t-xs></div>">
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d>Hybrid, Intelligenc, e</sp, a, n>
                   <ArrowRight, className=w-4 h-4, tex, t-bl, u, e-400, grou, p-ho, v, e;
 
-  r: transla, t, e-x-1, transitio, n-transfo, r, m/>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m/>">
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">;</div>
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>;
 
@@ -174,8 +174,8 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
   r:shad, o, w-cy, a, n-5, 0, 0/25
               >
                 <div, className="flex, item, s-start, ga, p-2, m, b-2></div>
-                  <Sparkles, className=w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
-                  <div, className="fl, e, x-1, mi, n-w-0></div>
+                  <Sparkles, className=w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />">
+                  <div, className="fl, e, x-1, mi, n-w-0></div>">
                     <h3, className="fo, n, t-bold, tex, t-sm, tex, t-cy, a, n-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-cy, a, n-1, 0, 0"></h3>
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">;</div>
                   <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />;
@@ -184,7 +184,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                 </d, i, v>
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs"></div>
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-ho, v, e,
+                  <ArrowRight, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
 
@@ -201,7 +201,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
   r:shad, o, w-cy, a, n-5, 0, 0/25
               ></Li>
                 <div, className="flex, item, s-start, ga, p-2, m, b-2"></div>
-                  <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  /></Sparkles>
+                  <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  /></Sparkles>">
                   <div, className="fl, e, x-1, mi, n-w-0"></div>
                     <h3, className="fo, n, t-bold, tex, t-sm, tex, t-cy, a, n-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-cy, a, n-1, 0, 0">"
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">";
@@ -222,11 +222,11 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                     </p>
                   </d, i, v>
                 </d, i, v>
-                <div, className="flex, item, s-center, justif, y-between, tex, t-xs></div>
+                <div, className="flex, item, s-center, justif, y-between, tex, t-xs></div>">
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d>Immersive, Intelligenc, e</sp, a, n>
                   <ArrowRight, className=w-4 h-4, tex, t-cy, a, n-400, grou, p-ho, v, e;
 
-  r: transla, t, e-x-1, transitio, n-transfo, r, m/>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m/>">
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">;</div>
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>;
 
@@ -242,8 +242,8 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
   r:shad, o, w-oran, g, e-5, 0, 0/25
               >
                 <div, className="flex, item, s-start, ga, p-2, m, b-2></div>
-                  <TrendingUp, className=w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5  />
-                  <div, className="fl, e, x-1, mi, n-w-0></div>
+                  <TrendingUp, className=w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5  />">
+                  <div, className="fl, e, x-1, mi, n-w-0></div>">
                     <h3, className="fo, n, t-bold, tex, t-sm, tex, t-oran, g, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-oran, g, e-1, 0, 0"></h3>
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">;</div>
                   <TrendingUp, className="w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5" />;
@@ -252,7 +252,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                 </d, i, v>
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs"></div>
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-ho, v, e,
+                  <ArrowRight, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
 
@@ -269,7 +269,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
   r:shad, o, w-oran, g, e-5, 0, 0/25
               ></Li>
                 <div, className="flex, item, s-start, ga, p-2, m, b-2"></div>
-                  <TrendingUp, className="w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5  /></TrendingUp>
+                  <TrendingUp, className="w-5 h-5, tex, t-oran, g, e-400, fle, x-shri, n, k-0, m, t-0.5  /></TrendingUp>">
                   <div, className="fl, e, x-1, mi, n-w-0"></div>
                     <h3, className="fo, n, t-bold, tex, t-sm, tex, t-oran, g, e-200, m, b-1, leadin, g-snug, grou, p-hov, e, r: te, x, t-oran, g, e-1, 0, 0">"
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">";
@@ -290,18 +290,18 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                     </p>
                   </d, i, v>
                 </d, i, v>
-                <div, className="flex, item, s-center, justif, y-between, tex, t-xs></div>
+                <div, className="flex, item, s-center, justif, y-between, tex, t-xs></div>">
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d>Autonomous, Operation, s</sp, a, n>
                   <ArrowRight, className=w-4 h-4, tex, t-oran, g, e-400, grou, p-ho, v, e;
 
-  r: transla, t, e-x-1, transitio, n-transfo, r, m/>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m/>">
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">;</div>
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>;
 
                 </d, i, v>
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs"></div>
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>
-                  <ArrowRight, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-ho, v, e,
+                  <ArrowRight, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";
 
@@ -325,7 +325,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
             ></Li>
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>;
 
-              <Link, className=w-5 h-5  /></Link>
+              <Link, className=w-5 h-5  /></Link>'
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>';
 
               <Link, className="w-5 h-5" />;

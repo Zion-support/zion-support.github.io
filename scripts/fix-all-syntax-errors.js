@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -17,22 +17,22 @@ const __filename = fileURLToPath(import.meta.url);;
 const fixes = [;;;
 
   // Fix missing commas in object arrays;
-
+'
   { pattern: /color: 'text-\w+-\d+'}[\s]*},/g, replacement: (match) => match.replace('}', ') },
   // Fix missing opening parentheses in map functions;
-
+'
   { pattern: /\.map\([^)]*\)\s*=>\s*\(}/g, replacement: (match) => match.replace('(}', '() },
   // Fix stray backticks;
-
+'
   { pattern: /`\s*$/gm, replacement: ' },
   // Fix missing closing parentheses;
-
+'
   { pattern: /\)\s*;[\s]*$/gm, replacement: '); },
   // Fix template literal issues;
-
+'
   { pattern: /className=\{`([^`]+)`\}/g, replacement: 'className={`$1`} },
   // Fix missing semicolons;
-
+'
   { pattern: /}\s*$/gm, replacement: '}; },
   // Fix console statements;
 
@@ -71,7 +71,7 @@ return false}
 }
 
 // Find all TypeScript/JavaScript files;
-
+'
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 let files = [];;
@@ -86,7 +86,7 @@ const fullPath = path.join(dir, item);;
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {'
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic].includes(item)) {
           files = files.concat(findFiles(fullPath, extensions))}
 
@@ -114,3 +114,4 @@ files.forEach(file => {)
 });
 
 // console.log removed for production
+'

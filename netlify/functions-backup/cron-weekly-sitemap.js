@@ -21,8 +21,8 @@ const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL 
   h: 'public/sitemap-autogen && autogen.xml'}' const { upsert_file } = require ('./_lib / github'); exports.handler = async function() {}' try {'' const base_url = process.env.URL || process.env.DEPLOY_URL || '';' const pages = [;'' '/','' '/about','' '/learn','' '/dao','' '/certifications','' '/blog','' '/services','' '/talent']; const xml =;"` `<?xml version="1.0" encoding="UTF - 8"?>\\n` +}"`' `<urlset xmlns="htt,";;
 
   p: //www.sitemaps.org / schemas / sitemap / 0.9">` +}'`' pages.map (p => `<url><loc>${base_url}${p}</loc></url>`).join ('') +` `</urlset>`; const owner = process.env.GITHUB_OWNER; const repo = process.env.GITHUB_REPO; const token = process.env.GITHUB_TOKEN; // Check condition; if ( {) {} $2} await upsert_file ({} owner,' repo, pat,;;
-
-  h: 'public / sitemap - autogen.xml, conten)
+'
+  h: 'public / sitemap - autogen.xml, conten)'
   t: xml) ' messag,"
   e: 'chore (automation): weekly sitemap refresh', token})} return { try {}' const baseUrl = process.env.URL || process.env.DEPLOY_URL || '';'' const pages = ['//about/learn/dao/certifications/blog/services/talent'],'' const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +` `<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">` +` pages.map((p) => `<url><loc>${baseUrl}${`}</loc></url>`).join('') +' "status_code": 200, "body": JSON.stringify ({"ok": true} "pages": pages.length;);;
 

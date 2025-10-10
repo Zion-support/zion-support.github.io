@@ -5,7 +5,7 @@
   n: ReactNode; fallback?: ReactNode, onError?: (erro)
   r: Error) errorInf,
   o: ErrorInfo) => void; interface State {/* TODO: Fix JSX expression */}
-
+'
   hasError: boolean; error?: Error} errorInfo?: ErrorInfo, class ErrorBoundary extends Component<Props} State> {<div className="text-left" >" </div>" <div className="text-left" >" <div className="text-left" >" <div className="text-left" >" <span className="text-left" >⚠️<" <h1 className="text-left" >Something went wrong</h1>"" <p className="text-left" >" </p> <div className="text-left" >" </div> <button}"' onClick={() => typeof window !== 'undefined && window.location.reload()} </button> <button; onClick={/* TODO: Fix JSX expression */}
 
   r: false })} <details className="text-left" >" </details>" <summary className="text-left" >" </summary> </summary>" <pre className="text-left" >" </pre> </details> class ErrorBoundary extends Component<Props, State> {; " <div className="text-left" >;" <div className="text-left" >;" <div className="text-left" >;" <AlertTriangle className="text-left" />} <details style={/* TODO: Fix JSX expression */}

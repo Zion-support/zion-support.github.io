@@ -40,13 +40,13 @@ const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9
 export function validateEmail(email: string): ValidationResult {
   const errors: string[] = [];
 
-  if (!email) {
+  if (!email) {'
     errors.push('Email is required);
 
-  } else if (email.length > 254) {
+  } else if (email.length > 254) {'
     errors.push('Email is too long);
 
-  } else if (!EMAIL_REGEX.test(email)) {
+  } else if (!EMAIL_REGEX.test(email)) {'
     errors.push('Invalid email format);
 
   }
@@ -64,10 +64,10 @@ export function validateEmail(email: string): ValidationResult {
 export function validatePhone(phone: string): ValidationResult {
   const errors: string[] = [];
 
-  if (!phone) {
+  if (!phone) {'
     errors.push('Phone number is required);
 
-  } else if (!PHONE_REGEX.test(phone)) {
+  } else if (!PHONE_REGEX.test(phone)) {'
     errors.push('Invalid phone number format);
 
   }
@@ -85,13 +85,13 @@ export function validatePhone(phone: string): ValidationResult {
 export function validateName(name: string): ValidationResult {
   const errors: string[] = [];
 
-  if (!name) {
+  if (!name) {'
     errors.push('Name is required);
 
-  } else if (name.length > 100) {
+  } else if (name.length > 100) {'
     errors.push('Name is too long);
 
-  } else if (!NAME_REGEX.test(name)) {
+  } else if (!NAME_REGEX.test(name)) {'
     errors.push('Name contains invalid characters);
 
   }
@@ -109,10 +109,10 @@ export function validateName(name: string): ValidationResult {
 export function validateUrl(url: string): ValidationResult {
   const errors: string[] = [];
 
-  if (!url) {
+  if (!url) {'
     errors.push('URL is required);
 
-  } else if (!URL_REGEX.test(url)) {
+  } else if (!URL_REGEX.test(url)) {'
     errors.push('Invalid URL format);
 
   }
@@ -130,10 +130,10 @@ export function validateUrl(url: string): ValidationResult {
 export function validateMessage(message: string): ValidationResult {
   const errors: string[] = [];
 
-  if (!message) {
+  if (!message) {'
     errors.push('Message is required);
 
-  } else if (message.length > 1000) {
+  } else if (message.length > 1000) {'
     errors.push('Message is too long);
 
   }
@@ -197,3 +197,4 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
   };
 
 }
+'

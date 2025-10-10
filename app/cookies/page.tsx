@@ -1,11 +1,11 @@
 'use client;
-
+'
 import React from 'react;
-
+'
 import { Helmet } from 'react-helmet-async;
-
+'
 import Navigation from '../components/Navigation;
-
+'
 import Footer from '../components/Footer;
 
 ;
@@ -30,17 +30,17 @@ const CookiesPage: React.FC = () => {  return (<div>
 
                 <
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4>What Are Cookies<
+                <h2 className="text-2xl font-bold text-gray-900 mb-4>What Are Cookies<">
                 <p className="text-gray-700 mb-6>
                   Cookies are small text files that are placed on your computer or mobile device when you visit our website.
                 <
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4>How We Use Cookies<
+                ">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4>How We Use Cookies<">
                 <p className="text-gray-700 mb-6>
                   We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
                 <
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4>Managing Cookies<
+                ">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4>Managing Cookies<">
                 <p className="text-gray-700 mb-6>                  You can control and
                 <
               <
@@ -60,4 +60,4 @@ const CookiesPage: React.FC = () => {  return (<div>
 
 export default CookiesPage;
 
-  );)
+  );)">

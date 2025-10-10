@@ -85,16 +85,16 @@ const THRESHOLDS = {;;
  * Get performance rating based on thresholds;
 
  */;
-
+'
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | poor {,;
 
 function getRating(name: string),
   value: number;
-
+'
 ): 'good' | 'needs-improvement' | poor {,;
-
+'
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | poor {,;
-
+'
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | poor {;
 
 const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];;
@@ -102,8 +102,8 @@ const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];;
   if (!threshold) return good;
 
   if (value <= threshold.good) return good;
-
-  if (value <= threshold.poor) return 'needs-improvement;,
+'
+  if (value <= threshold.poor) return 'needs-improvement;,'
   return 'poor}
 
 /**
@@ -158,12 +158,12 @@ const performanceMetric: PerformanceMetric = {,
     id: metric.id};
 
   // Log in development;
-
+'
   if (process.env['NODE_ENV'] === 'development) {
     // eslint-disable-next-line no-console;
 
 //     }
-
+'
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | poor {;
 
 const thresholds = {;;
@@ -181,7 +181,7 @@ const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
   if (value <= good) return good;
 
   if (value <= poor) return needs-improvement;
-
+'
   return 'poor}
 
 ;
@@ -196,16 +196,16 @@ const performanceMetric: PerformanceMetric = {
     id: metric.id
   };
 
-  // Log in development
+  // Log in development'
   if (process.env.NODE_ENV === 'development) {
     // console.log removed for production
 }
 
   // Send to analytics;
-
-  if (typeof window !== 'undefined && window.gtag) {
-    window.gtag('event, metric.name, {)
-      event_category: 'Web Vitals)
+'
+  if (typeof window !== 'undefined && window.gtag) {'
+    window.gtag('event, metric.name, {)'
+      event_category: 'Web Vitals)'
       value: Math.round(metric.name === 'CLS ? metric.value * 1000 : metric.value;)
       )
       event_label: metric.id;
@@ -225,11 +225,11 @@ const performanceMetric: PerformanceMetric = {
       non_interaction: true;
 
       non_interaction: true;
-
-    window.gtag('event, metric.name, {
+'
+    window.gtag('event, metric.name, {'
       event_category: 'Web Vitals,
-      value: Math.round(
-
+      value: Math.round(';
+'
         metric.name === 'CLS ? metric.value * 1000 : metric.value
       ),
       event_label: metric.id,
@@ -240,14 +240,14 @@ const performanceMetric: PerformanceMetric = {
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
-    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
-  if (process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT]) {
+    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)'
+  if (process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT]) {'
+    fetch(process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT], {)'
+  if (process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT]) {'
     fetch(process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT], {)
-  if (process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT]) {
-    fetch(process.env['NEXT_PUBLIC_PERFORMANCE_ENDPOINT], {)
-  if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
-    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
-      method: 'POST),
+  if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {';
+    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)'
+      method: 'POST),'
       headers: { 'Content-Type': 'application/json })
       body: JSON.stringify({)
         ...performanceMetric)
@@ -274,29 +274,29 @@ const performanceMetric: PerformanceMetric = {
 //     }).catch(error => // )}
 
     })}
-
-  if (typeof window !== 'undefined && (window as any).gtag) {
-    (window as any).gtag('event, metric.name, {)
+'
+  if (typeof window !== 'undefined && (window as any).gtag) {'
+    (window as any).gtag('event, metric.name, {)'
       event_category: 'Web Vitals),
       event_label: performanceMetric.rating),
       value: Math.round(metric.value),
       non_interaction: true})}
 
   // Send to analytics;
-
-  if (typeof window !== 'undefined && (window as any).gtag) {
-    (window as any).gtag('event, metric.name, {)
+'
+  if (typeof window !== 'undefined && (window as any).gtag) {'
+    (window as any).gtag('event, metric.name, {)'
       event_category: 'Web Vitals),
       event_label: metric.id),
       value: Math.round(metric.value),
       non_interaction: true})}
 
   // Send to analytics;
-
-  if (typeof window !== 'undefined && (window as any).gtag) {
-    (window as any).gtag('event, metric.name, {)
-      event_category: 'Web Vitals),
-      event_label: metric.id),
+'
+  if (typeof window !== 'undefined && (window as any).gtag) {'
+    (window as any).gtag('event, metric.name, {)'
+      event_category: 'Web Vitals),';
+      event_label: metric.id),'
       value: Math.round(metric.name === 'CLS ? metric.value * 1000 : metric.value),
       non_interaction: true})}
 
@@ -365,16 +365,16 @@ const metrics: PerformanceMetric[] = [];
   return {
     metrics;
 
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString(),'
     url: typeof window !== 'undefined' ? window.location.href : '}
 
   if (typeof window === undefined) return;
 
   // Track Core Web Vitals;
 
-    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
-      method: 'POST,
-      headers: {
+    fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {'
+      method: 'POST,';
+      headers: {'
         'Content-Type': 'application/json},
       body: JSON.stringify(performanceMetric)}).catch(console.error)}
 
@@ -395,44 +395,44 @@ export function reportWebVitals(): void {
 /**
  * Get current performance report;
 
- */
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && (window as any).gtag) {,
+ */'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && (window as any).gtag) {,'
     (window as any).gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && window.gtag) {,
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && window.gtag) {,'
     window.gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && window.gtag) {,
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && window.gtag) {,'
     window.gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && (window as any).gtag) {,
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && (window as any).gtag) {,'
     (window as any).gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && window.gtag) {,
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && window.gtag) {,'
     window.gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && (window as any).gtag) {,
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && (window as any).gtag) {,'
     (window as any).gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance,
-  if (typeof window !== 'undefined && (window as any).gtag) {,
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance,'
+  if (typeof window !== 'undefined && (window as any).gtag) {,'
     (window as any).gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance})}
-
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance})}';
+'
   if (process.env['NODE_ENV'] === 'development) {
 //     // }ms)}
 
@@ -447,7 +447,7 @@ export function reportWebVitals(): void {
   onTTFB(sendToAnalytics);
 
   // Monitor custom metrics;
-
+'
   if (typeof window !== 'undefined) {
     // Monitor long tasks;
 
@@ -496,13 +496,13 @@ export function measurePerformance(name: string, startTime: number): number {;
 
 const _duration = performance.now() - startTime;;
 
-,
-  if (typeof window !== 'undefined && window.gtag) {,
+,'
+  if (typeof window !== 'undefined && window.gtag) {,'
     window.gtag('event', 'timing_complete, {)
-      name: name),
-      value: Math.round(duration),
-      event_category: 'Performance})}
-
+      name: name),';
+      value: Math.round(duration),'
+      event_category: 'Performance})}';
+'
   if (process.env['NODE_ENV'] === 'development) {
 
     // eslint-disable-next-line no-console;
@@ -609,7 +609,7 @@ const _timing = performance.timing;;
  * Measure between two marks;
 
  */,
-export function measureBetween(name: string, startMark: string, endMark: string): number {,
+export function measureBetween(name: string, startMark: string, endMark: string): number {,'
   if (typeof performance !== 'undefined && performance.measure) {,
     try {,
       performance.measure(name, startMark, endMark);
@@ -658,7 +658,7 @@ const navigation = performance.getEntriesByType(navigation);;
 
 /**
 
-  try {
+  try {'
     return performance.getEntriesByType('resource) as PerformanceResourceTiming[]} catch (error) {
 //     return []}
 
@@ -677,7 +677,7 @@ const _resources = getResourceTiming();;
 /**
  * Get memory usage (if available)
  */
-export function getMemoryUsage(): Record<string, number> | null {
+export function getMemoryUsage(): Record<string, number> | null {'
   if(typeof performance === 'undefined ||)
     !(performance as any).memory;
 
@@ -687,12 +687,12 @@ export function getMemoryUsage(): Record<string, number> | null {
 ;
 
 const _memory = (performance as any).memory;;
-
+'
   if (typeof performance === 'undefined || !(performance as any).memory) {
     return null}
 
   const _memory = (performance as any).memory;;
-
+'
   if (typeof performance === 'undefined || !(performance as any).memory) {
     return null}
 
@@ -707,7 +707,7 @@ const _memory = (performance as any).memory;;
 ;
 
 const _memory = (performance as any).memory;;
-
+'
   if (typeof performance === 'undefined || !(performance as any).memory) {
     return null}
 
@@ -720,7 +720,7 @@ const _memory = (performance as any).memory;;
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
   if (typeof window === undefined || !window.performance) return [];
-
+'
   return performance.getEntriesByType('resource)
   ) as PerformanceResourceTiming[]}
 
@@ -734,7 +734,7 @@ export function getSlowResources(threshold: number = 1000;)): PerformanceResourc
 /**
  * Get memory usage (Chrome only)
  */
-export function getMemoryUsage(): Record<string, number> | null {
+export function getMemoryUsage(): Record<string, number> | null {'
   if(typeof window === 'undefined ||)
     !()
       window as Window & {)
@@ -878,7 +878,7 @@ const metrics: PerformanceMetric[] = [];
   return {
     metrics;
 
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString()'
     url: typeof window !== 'undefined ? window.location.href : 
     userAgent: navigator.userAgent;
 
@@ -887,8 +887,8 @@ const metrics: PerformanceMetric[] = [];
 export function generatePerformanceReport(): PerformanceReport {
   return {
     metrics: []
-    timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : ',
+    timestamp: new Date().toISOString(),'
+    url: typeof window !== 'undefined' ? window.location.href : ','
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : };
 
 export function measurePerformance(name: string, fn: () => void): void {;
@@ -978,7 +978,7 @@ export function isSlowConnection(): boolean {
 ;
 
 const _connection = (navigator as NavigatorWithConnection).connection;;
-
+'
   const _slowTypes = ['slow-2 g', 2 g];;
 
   return (
@@ -991,17 +991,17 @@ const _connection = (navigator as NavigatorWithConnection).connection;;
  * Get connection type;
 
  */
-export function getConnectionType(): string {
+export function getConnectionType(): string {'
   if(typeof navigator === 'undefined ||)
     !(navigator as NavigatorWithConnection).connection;
 
-  ) {
+  ) {'
     return 'unknown}
 
 ;
 
 const _connection = (navigator as NavigatorWithConnection).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
 ;
@@ -1102,14 +1102,14 @@ const _entries = list.getEntries();;
   ) {
     return false;
 
-export function getConnectionType(): string | null {
+export function getConnectionType(): string | null {'
   if (typeof navigator === 'undefined' || !('connection in navigator)) {
     return null}
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   const _slowTypes = ['slow-2 g', 2 g];;
 
   return (
@@ -1119,7 +1119,7 @@ const _connection = (navigator as any).connection;;
 
   const _connection = (navigator as any).connection;;
 
-export function isSlowConnection(): boolean {
+export function isSlowConnection(): boolean {'
   if (typeof navigator === 'undefined || !(navigator as any).connection) {
     return false}
 
@@ -1127,7 +1127,7 @@ export function isSlowConnection(): boolean {
 
 const _connection = (navigator as any).connection;;
 
-export function isSlowConnection(): boolean {
+export function isSlowConnection(): boolean {'
   if (typeof navigator === 'undefined || !(navigator as any).connection) {
     return false}
 
@@ -1135,14 +1135,14 @@ export function isSlowConnection(): boolean {
 
 const _connection = (navigator as any).connection;;
 
-export function isSlowConnection(): boolean {
+export function isSlowConnection(): boolean {'
   if (typeof navigator === 'undefined || !(navigator as any).connection) {
     return false}
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   const _slowTypes = ['slow-2 g', 2 g];;
 
   return (
@@ -1152,7 +1152,7 @@ const _connection = (navigator as any).connection;;
  * Check if connection is slow;
 
  */
-export function isSlowConnection(): boolean {
+export function isSlowConnection(): boolean {'
   if(typeof navigator === 'undefined ||)
     !(navigator as any).connection;
 
@@ -1162,14 +1162,14 @@ export function isSlowConnection(): boolean {
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   const _slowTypes = ['slow-2 g', 2 g];;
 
   return (
 
     slowTypes.includes(connection.effectiveType) || connection.saveData === true;
 
-export function isSlowConnection(): boolean {
+export function isSlowConnection(): boolean {'
   if(typeof navigator === 'undefined ||)
       !(navigator as Record<string, unknown>).connection;
 
@@ -1177,7 +1177,7 @@ export function isSlowConnection(): boolean {
     return false}
 
 ;
-
+'
 const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>const</string> _slowTypes = ['slow-2 g', 2 g];;
 
   return (
@@ -1191,7 +1191,7 @@ const _connection = (navigator as Record<string, unknown>).connection as Record<
  * Get connection type;
 
  */
-export function getConnectionType(): string {
+export function getConnectionType(): string {'
   if(typeof navigator === 'undefined ||)
     !(navigator as any).connection;
 
@@ -1203,50 +1203,50 @@ export function getConnectionType(): string {
 
     !(navigator as any).connection;
 
-  ) {
+  ) {'
     return 'unknown}
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
     !(navigator as any).connection;
 
-  ) {
+  ) {'
     return 'unknown}
 
   const _connection = (navigator as any).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
 ;
-
+'
 const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown};;
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
 ;
 
 const _connection = (navigator as any).connection;;
-
+'
   return connection.effectiveType || connection.type || 'unknown}
 
 export default {
@@ -1280,7 +1280,7 @@ export {
   sendToAnalytics};
 
   getPerformanceScore};
-
+'
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '}}
 
 /**
@@ -1297,7 +1297,7 @@ export function isPerformanceAcceptable(): boolean {
 
   return true;
 
-export function isPerformanceMonitoringSupported(): boolean {
+export function isPerformanceMonitoringSupported(): boolean {'
   return typeof window !== 'undefined' && 'performance in window}
 
 };
@@ -1307,7 +1307,7 @@ export function isPerformanceMonitoringSupported(): boolean {
   // Send to analytics service;
 
 //   // You can send this to your analytics service;
-
+'
   // analytics.track('performance_metric, performanceMetric)}
 
 // Initialize performance monitoring;
@@ -1328,8 +1328,8 @@ export function initPerformanceMonitoring() {
 export function generatePerformanceReport(): PerformanceReport {
   return {
     metrics: [],
-    timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : ',
+    timestamp: new Date().toISOString(),'
+    url: typeof window !== 'undefined' ? window.location.href : ','
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '}}
 
   getConnectionType};
@@ -1357,3 +1357,4 @@ export function usePerformanceMonitoring() {
   getConnectionType};
 
 export default performanceUtils;
+'

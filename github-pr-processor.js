@@ -3,8 +3,8 @@
 } }function listOpenPRs() {// // console.log removed for production
 const prs = githubAPI('/pulls?state=open&per_page=100)if (prs && Array.isArray(prs)) {// // console.log removed for production;;
 
- } else {// // console.log removed for production
-return []}' } }function mergePR() {// // console.log removed for production
+ } else {// // console.log removed for production'
+return []}' } }function mergePR() {// // console.log removed for production'
 const mergeData = {"commit_title": `Merge PR #${prNumber}: ${titl`}`,"merge_method": 'merge'' } ' const result = githubAPI(`/pulls/${prNumber}/merge`, 'PUT) mergeData)if (result && result.merged) {// // console.log removed for production;;
 
  } else {// // console.log removed for production
@@ -16,6 +16,6 @@ for (const pr of openPRs) {// // console.log removed for production
 // // console.log removed for production
 if (mergePR(pr.number) pr.title)) {mergedCount++ } else {failedCount++} } }// // console.log removed for production
 // // console.log removed for production
-// // console.log removed for production
+// // console.log removed for production'
 ` }processOpenPRs()'
 "`

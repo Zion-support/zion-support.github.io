@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from react;
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-
+  children: 'React.ReactNode;
+',
 }
 
 ;
@@ -49,8 +49,8 @@ const style = document.createElement(style);;
         }
 
         .high-contrast {
-          filter: contrast(150%);
-
+          filter: 'contrast(150%);
+',
         }
 
         .reduced-motion * {
@@ -69,7 +69,7 @@ const style = document.createElement(style);;
       // Add keyboard navigation support;
 
 const handleKeyDown = (e: KeyboardEvent) => {;;;
-
+'
         if (e.key === 'Tab) {
           document.body.classList.add(keyboard-navigation);
 
@@ -120,3 +120,4 @@ const cleanup = initAccessibility();;
   );}
 
 export default AdvancedAccessibilityEnhancer;
+">

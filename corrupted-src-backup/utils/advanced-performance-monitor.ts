@@ -166,7 +166,7 @@ const _entries = list.getEntries();;
         this.handlePerformanceEntry(entry)})});
 
     try {
-      this.observer.observe({)
+      this.observer.observe({)'
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
 
@@ -184,26 +184,25 @@ const _entries = list.getEntries();;
    * Setup Web Vitals monitoring;
 
    */
-  private setupWebVitals(): void {
+  private setupWebVitals(): void {'
     if (typeof window === 'undefined) return;
-
-    // Dynamic import to avoid bundle size impact';
-
+'
+    // Dynamic import to avoid bundle size impact';'
     import('web-vitals')
-      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(metric => {)
+      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {';
+        getCLS(metric => {)'
           this.updateMetric('cumulativeLayoutShift, metric.value)});
 
-        getFID(metric => {)
+        getFID(metric => {)'
           this.updateMetric('firstInputDelay, metric.value)});
 
-        getFCP(metric => {)
+        getFCP(metric => {)'
           this.updateMetric('firstContentfulPaint, metric.value)});
 
-        getLCP(metric => {)
+        getLCP(metric => {)'
           this.updateMetric('largestContentfulPaint, metric.value)});
 
-        getTTFB(metric => {)
+        getTTFB(metric => {)'
           this.updateMetric('loadTime', metric.value)})})
       .catch(error => {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
@@ -272,12 +271,12 @@ const data: Partial<PerformanceData> = {,
         }
 
         break;
-
+'
       case 'largest-contentful-paint':
         data.largestContentfulPaint = entry.startTime;
 
         break;
-
+'
       case 'layout-shift:;
 
 const _layoutShiftEntry = entry as any;;
@@ -505,4 +504,4 @@ let _score = 100;;
 
 export default performanceMonitor;
 
-`
+`'

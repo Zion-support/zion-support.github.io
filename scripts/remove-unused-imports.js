@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { glob } from glob;
@@ -9,12 +9,12 @@ import { glob } from glob;
 // Files to process;
 
 const filePatterns = [;;;
-
-  'app/**/*.{ts,tsx},
-  'src/**/*.{ts,tsx},
-  'components/**/*.{ts,tsx},
-  'pages/**/*.{ts,tsx},
-  'utils/**/*.{ts,tsx},
+'
+  'app/**/*.{ts,tsx},'
+  'src/**/*.{ts,tsx},'
+  'components/**/*.{ts,tsx},'
+  'pages/**/*.{ts,tsx},'
+  'utils/**/*.{ts,tsx},'
   'hooks/**/*.{ts,tsx},
   lib/**/*.{ts,tsx}
 
@@ -23,18 +23,18 @@ const filePatterns = [;;;
 // Files to exclude;
 
 const excludePatterns = [;;
-
-  '**/node_modules/**,
-  '**/dist/**,
-  '**/.next/**,
-  '**/build/**,
-  '**/coverage/**,
-  '**/*.test.{ts,tsx},
-  '**/*.spec.{ts,tsx},
-  '**/scripts/**,
-  '**/automation/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+'
+  '**/node_modules/**,'
+  '**/dist/**,'
+  '**/.next/**,'
+  '**/build/**,'
+  '**/coverage/**,'
+  '**/*.test.{ts,tsx},'
+  '**/*.spec.{ts,tsx},'
+  '**/scripts/**,'
+  '**/automation/**,'
+  '**/backup*/**,'
+  '**/disabled*/**,'
   '**/corrupted*/**,
   **/temp*/**
 ];
@@ -56,7 +56,7 @@ let newContent = content;;
   let removedCount = 0;;
 
   // Find all import statements;
-
+'
   const importRegex = /import\s+.*?from\s+['"][^'"]+['];?\s*\n/g;;
 
   const imports = content.match(importRegex) || [];;
@@ -69,8 +69,8 @@ const importMatch = importStatement.match(/import\s+{([^}]+)}/);;
     if (importMatch) {;
 
 const importedNames = importMatch[1];;;
-
-        .split(',)
+'
+        .split(',)'
         .map(name => name.trim().split(' as )[0].trim())
         .filter(name => name);
 
@@ -78,7 +78,7 @@ const importedNames = importMatch[1];;;
 
       const usedNames = importedNames.filter(name => {);;;
 
-        // Skip default imports and special cases;)
+        // Skip default imports and special cases;)'
         if (name === 'default' || name === '*' || name.includes( )) return true;
 
         // Create regex to find usage of this name;
@@ -105,7 +105,7 @@ const importedNames = importMatch[1];;;
 
         const newImportStatement = importStatement.replace(;;;
 
-          /{([^}]+)}/,
+          /{([^}]+)}/,'
           `{ ${usedNames.join(', ')} }
 
         );
@@ -203,3 +203,4 @@ if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
 export { processFile, removeUnusedImports };
+'

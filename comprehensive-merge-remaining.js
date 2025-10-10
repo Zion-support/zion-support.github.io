@@ -6,14 +6,14 @@
  * This script targets the remaining branches that need to be merged;
 
  */ import { execSync } from 'child_process';
-
+'
 import fs from 'fs';
-
+'
 // //Step 1: Ensure were on main and up to date';
 
-// try {,
+// try {,'
   execSync('git checkout main', { stdio: 'inherit });
-
+'
   execSync('git pull origin main', { stdio: 'inherit });
 
 //   } catch (error) {
@@ -27,10 +27,10 @@ const remainingBranches = [,;;
   1: Ensure were on main and up to date;
 
 // try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
-
-  execSync('git pull origin main', {/* TODO: Fix JSX expression */})
+'
+  execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit });
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
@@ -41,20 +41,20 @@ const remainingBranches = [,;;
   2: Define remaining branches to merge;
 
 const remainingBranches = [;;
-
-  'ai-dashboard-improvements-merged',
-  'bw06 m0-codex/fix-typescript-errors-in-components',
-  'bwren1-codex/fix-typescript-errors-in-files',
-  'candidate/build-fix-postcss-esm',
-  'cursor/add-new-services-and-deploy-updates-0 c4 f',
-  'cursor/add-new-services-and-deploy-updates-0 f78',
-  'cursor/add-new-services-and-deploy-updates-1399',
-  'cursor/add-new-services-and-deploy-updates-1503',
-  'cursor/add-new-services-and-deploy-updates-1817',
-  'cursor/add-new-services-and-deploy-updates-19 c7',
-  'cursor/add-new-services-and-deploy-updates-27 d2',
-  'cursor/add-new-services-and-deploy-updates-45 bb',
-  'cursor/add-new-services-and-deploy-updates-483 a',
+'
+  'ai-dashboard-improvements-merged','
+  'bw06 m0-codex/fix-typescript-errors-in-components','
+  'bwren1-codex/fix-typescript-errors-in-files','
+  'candidate/build-fix-postcss-esm','
+  'cursor/add-new-services-and-deploy-updates-0 c4 f','
+  'cursor/add-new-services-and-deploy-updates-0 f78','
+  'cursor/add-new-services-and-deploy-updates-1399','
+  'cursor/add-new-services-and-deploy-updates-1503','
+  'cursor/add-new-services-and-deploy-updates-1817','
+  'cursor/add-new-services-and-deploy-updates-19 c7','
+  'cursor/add-new-services-and-deploy-updates-27 d2','
+  'cursor/add-new-services-and-deploy-updates-45 bb','
+  'cursor/add-new-services-and-deploy-updates-483 a','
   'cursor/add-new-services-and-deploy-updates-4 d5 b];
 
 // //Step 3: Enhanced conflict resolution function;
@@ -62,13 +62,13 @@ const remainingBranches = [;;
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
     //Fetch the branch;
-
+'
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit });
 
     //Check if branch exists and has commits;
 
-    try {
-      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' })} catch (e) {
+    try {'
+      execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' })} catch (e) {'
 //       return { success: false, method: 'not_found' }}
 
     //Check if branch is already merged;
@@ -76,26 +76,26 @@ function resolveConflictsAndMerge(branchName) {,
     try {;
 
 const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {);;
-
+'
         encoding: 'utf8)}).trim();
 
       const branchCommit = execSync(`git rev-parse origin/${branchName}`, {);;
-
+'
         encoding: 'utf8'),
 // //Step,
   3: Enhanced conflict resolution function;
 
 function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
+    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})'
   o: 'inherit });
 
     //Check if branch exists and has commits;
 
     try {/* TODO: Fix JSX expression */}`
-      execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' })} catch (e) {/* TODO: Fix JSX expression */}
-
+      execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})'
+  o: 'pipe' })} catch (e) {/* TODO: Fix JSX expression */}';
+'
   d: 'not_found' }}
 
     //Check if branch is already merged;
@@ -111,7 +111,7 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       }).trim();
 
       if (mergeBase === branchCommit) {/* TODO: Fix JSX expression */}
-
+'
   d: 'already_merged' }}
 
     } catch (e) {
@@ -123,11 +123,11 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       { stdio: 'inherit' }
 
     );
-
+'
 //     return { success: true, method: 'direct' }} catch (error) {
 //     try {
       //Strategy 1: Auto-resolve with theirs for most conflicts;
-
+'
       execSync('git reset --hard HEAD', { stdio: 'inherit });
 
       execSync(
@@ -144,9 +144,9 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
     );
 
 //     return {/* TODO: Fix JSX expression */}
-
-  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}
-
+'
+  d: 'direct' }} catch (error) {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit });
 
       execSync(")`
@@ -158,20 +158,20 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}
 
 //       }
 
     try {
       //Strategy 2: Auto-resolve with ours;
-
+'
       execSync('git reset --hard HEAD', { stdio: 'inherit });
 
       execSync(
 
     try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
       execSync(")`
@@ -183,30 +183,30 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
 
 //       }
 
     try {
       //Strategy 3: Manual conflict resolution;
-
+'
       execSync('git reset --hard HEAD', { stdio: 'inherit });
 
       //Get conflicted files;
-
+'
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U, {);;
-
+'
         encoding: 'utf8'),
-    try {/* TODO: Fix JSX expression */}
-
+    try {/* TODO: Fix JSX expression */}';
+'
   o: 'inherit });
 
       //Get conflicted files;
-
+'
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U, {/* TODO: Fix JSX expression */});;
 
-      })
+      })'
         .split('\n')
         .filter(file => file.trim());
 
@@ -216,9 +216,9 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
         if (file.trim()) {
           try {
             //Try to resolve by taking the incoming version;
-
+'
             execSync(`git checkout --theirs "${file}"`, { stdio: 'inherit });
-
+'
             execSync(`git add "${file}"`, { stdio: 'inherit });
 
 //             } catch (fileError) {
@@ -252,22 +252,22 @@ const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fi
 
     //If all strategies fail, abort and skip;
 
-    try {
+    try {'
       execSync('git merge --abort', { stdio: 'inherit });
 
-//       } catch (abortError) {
+//       } catch (abortError) {'
       execSync('git reset --hard HEAD', { stdio: 'inherit });
 
     try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit' })}
 
-    return {/* TODO: Fix JSX expression */}
-
+    return {/* TODO: Fix JSX expression */}';
+'
   d: 'failed' }}
 
 }
@@ -334,7 +334,7 @@ results.branchCounts = {,
   total: remainingBranches.length;
 
   processed: results.branches.length};
-
+'
 fs.writeFileSync('comprehensive-remaining-merge-report.json')
   JSON.stringify(results, null, 2)
 );
@@ -347,7 +347,7 @@ fs.writeFileSync('comprehensive-remaining-merge-report.json')
 
 // Step 7: Push changes;
 
-// try {,
+// try {,'
   execSync('git push origin main', { stdio: 'inherit });
 
 //   } catch (error) {
@@ -359,7 +359,7 @@ fs.writeFileSync('comprehensive-remaining-merge-report.json')
 results.branchCounts = {/* TODO: Fix JSX expression */}
 
 };
-
+'
 fs.writeFileSync('comprehensive-remaining-merge-report.json')
   JSON.stringify(results, null, 2)
 );
@@ -375,7 +375,7 @@ fs.writeFileSync('comprehensive-remaining-merge-report.json')
   7: Push changes;
 
 // try {/* TODO: Fix JSX expression */}
-
+'
   o: 'inherit });
 
 //   } catch (error) {/* TODO: Fix JSX expression */}

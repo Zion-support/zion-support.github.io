@@ -1,11 +1,11 @@
 import React from 'react;
 
 #!/usr/bin/env node;
-
+'
 import fs from 'fs;
-
+'
 import path from 'path;
-
+'
 import { execSync } from 'child_process;
 
 import { fileURLToPath } from url;
@@ -43,7 +43,7 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
 
     content = content;
 
-      .replace(/[\s\S]*?)
+      .replace(/[\s\S]*?)'
       .replace(//g, ')
       .replace(/)
 )
@@ -77,7 +77,7 @@ return false}
 }
 
 // Function to find all TypeScript/React files;
-
+'
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
 
 const files = [];;
@@ -93,11 +93,11 @@ const items = fs.readdirSync(currentDir);;
 const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+'
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-
+'
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fix JSX expression */}
 
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -180,4 +180,4 @@ try {/* TODO: Fix JSX expression */}
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
 
-}`
+}`'

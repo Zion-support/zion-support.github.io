@@ -6,25 +6,25 @@ exports.handler = async function (event, context) {
       headers: {,
         'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'},'
-      body: JSON.stringify({)
+      body: JSON.stringify({)'
         message: 'Todo summary runner executed successfully')'
-timestamp: new Date().toISOString()
+timestamp: new Date().toISOString()'
         function: 'todo-summary-runner','
-        source:
+        source:'
         source: event.source || 'unknown','
-        summary: {,
+        summary: {,'
           status: 'active','
           summaries: 0;
           lastSummary: new Date().toISOString()}})};
     return result} catch (error) {
     //     return {
       statusCode: 500;
-      headers: {,
+      headers: {,'
         'Content-Type': 'application/json','
         'Access-Control-Allow-Origin': '*'},'
-      body: JSON.stringify({)
+      body: JSON.stringify({)'
         error: 'Internal server error')'
-        message: error.message),;
+        message: error.message),;'
 function: 'todo-summary-runner'),'
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
       },
@@ -38,3 +38,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })}}
 };
+'

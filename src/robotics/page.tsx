@@ -1,11 +1,11 @@
 'use client;
-
+'
 import React from 'react;
-
+'
 import { Bot, ArrowRight } from 'lucide-react;
-
+'
 import Navigation from '../components/Navigation;
-
+'
 import Footer from '../components/Footer;
 
 export default function RoboticsPage() {
@@ -37,3 +37,4 @@ export default function RoboticsPage() {
       </div>
     </div>
   )}
+'

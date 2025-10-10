@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react;
-
+'
 import React, { useState } from 'react;
 
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
@@ -49,8 +49,8 @@ const,
             {navigationItems.map(item => (</div>
               <Link
   return (<nav className={bg-white shadow-md ${className}}></nav>
-      <div className="container mx-auto px-4></div>
-        <div className="flex justify-between items-center py-4></div>
+      <div className="container mx-auto px-4></div>">
+        <div className="flex justify-between items-center py-4></div>">
           <Link href="/" className=text-xl font-bold text-blue-600></Link>
             Zion Tech Group;
 

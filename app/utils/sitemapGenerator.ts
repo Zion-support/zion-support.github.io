@@ -6,46 +6,46 @@ const staticPages = [,;;
 
 export const generateSitemap = useCallback((...args) => {};;
 
-  const baseUrl = https://ziontechgroup.com;;
+  const baseUrl = https: '//ziontechgroup.com;;
 
 const staticPages = [;;
-
-    ',
-    '/services,
-    '/contact,
-    '/ai-solutions,
-    '/it-services,
-    '/about,
-    '/blog,
-    '/case-studies,
-    '/pricing,
-    '/ai-project-manager,
-    '/ai-social-media-manager,
-    '/ai-analytics,
-    '/ai-email-marketing,
-    '/ai-customer-support-bot,
-    '/ai-code-generation,
-    '/ai-video-generation,
-    '/ai-voice-cloning,
-    '/ai-workflow-automation,
-    '/ai-sales-automation,
-    '/ai-content-writer,
-    '/ai-financial-advisor,
-    '/ai-data-visualization,
-    '/ai-3 d-generation,
-    '/ai-customer-support,
-    '/ai-inventory-manager,
-    '/ai-hr-assistant,
-    '/ai-legal-assistant,
-    '/cloud-migration,
-    '/it-consulting,
-    '/cybersecurity,
-    '/devops,
-    '/database-services,
-    '/network-infrastructure,
-    '/it-support,
-    '/compliance,
-    '/developer-tools,
+',
+    ','
+    '/services,'
+    '/contact,'
+    '/ai-solutions,'
+    '/it-services,'
+    '/about,'
+    '/blog,'
+    '/case-studies,'
+    '/pricing,'
+    '/ai-project-manager,'
+    '/ai-social-media-manager,'
+    '/ai-analytics,'
+    '/ai-email-marketing,'
+    '/ai-customer-support-bot,'
+    '/ai-code-generation,'
+    '/ai-video-generation,'
+    '/ai-voice-cloning,'
+    '/ai-workflow-automation,'
+    '/ai-sales-automation,'
+    '/ai-content-writer,'
+    '/ai-financial-advisor,'
+    '/ai-data-visualization,'
+    '/ai-3 d-generation,'
+    '/ai-customer-support,'
+    '/ai-inventory-manager,'
+    '/ai-hr-assistant,'
+    '/ai-legal-assistant,'
+    '/cloud-migration,'
+    '/it-consulting,'
+    '/cybersecurity,'
+    '/devops,'
+    '/database-services,'
+    '/network-infrastructure,'
+    '/it-support,'
+    '/compliance,'
+    '/developer-tools,'
     '/marketing-tools,
     /productivity
   ];
@@ -96,7 +96,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
   l: `${baseUrl}/,
       lastmo,
   d: currentDate,
-      changefre,
+      changefre,'
   q: 'daily,
       priorit,
   y: 1.0},
@@ -104,8 +104,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/about,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'monthly,
       priorit,
   y: 0.8},
@@ -113,8 +113,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/services,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.9},
@@ -122,8 +122,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/ai-services,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.9},
@@ -131,8 +131,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/it-services,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.9},
@@ -140,8 +140,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/quantum-computing,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.9},
@@ -149,8 +149,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/autonomous-systems,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.9},
@@ -158,8 +158,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/micro-saas,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.8},
@@ -167,8 +167,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/enterprise,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.9},
@@ -176,8 +176,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/contact,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'monthly,
       priorit,
   y: 0.8},
@@ -185,8 +185,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/team,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'monthly,
       priorit,
   y: 0.7},
@@ -194,8 +194,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/case-studies,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'weekly,
       priorit,
   y: 0.8},
@@ -203,8 +203,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/blog,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'daily,
       priorit,
   y: 0.8},
@@ -212,8 +212,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/privacy,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'yearly,
       priorit,
   y: 0.3},
@@ -221,8 +221,8 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   l: `${baseUrl}/terms,
       lastmo,
-  d: currentDate,
-      changefre,
+  d: currentDate,';
+      changefre,'
   q: 'yearly,
       priorit,
   y: 0.3}
@@ -232,3 +232,4 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};;
 
 };
+'

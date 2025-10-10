@@ -20,7 +20,7 @@ const line = lines[i];;
       const trimmedLine = line.trim();;
 
       // Check if this is an import line;
-
+'
       if (trimmedLine.startsWith('import )) {
         // Extract the imported names from the import line;
 
@@ -139,7 +139,7 @@ function fixParsingErrors(filePath) {
 const content = fs.readFileSync(filePath, utf8);;
 
     // Check if file has parsing errors;
-
+'
     if (content.includes('export default') && !content.includes('export default )) {
       // Add missing export statement;
 
@@ -163,9 +163,9 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 const closeBraces = (content.match(/\}/g) || []).length;;
 
     if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
-
+'
       const newContent = content + '\n' + }.repeat(missingBraces);;
-
+'
       fs.writeFileSync(filePath, newContent, 'utf8');
 
       // console.log removed for production
@@ -193,10 +193,10 @@ const content = fs.readFileSync(filePath, utf8);;
     // Fix common unused variable patterns;
 
     const patterns = [;;
-
-      { regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2 =  },
-      { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 =  },
-      { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1 =  },
+'
+      { regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2 =  },'
+      { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 =  },'
+      { regex: /let\s+(\w+)\s*=\s*/, replacement: 'let _$1 =  },'
       { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1 =  }
 
     ];
@@ -212,16 +212,16 @@ let changed = false;;
         changed = true}
 
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
-
+'
   t: '_$1: $2 =  },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: 'const _$1 =  },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: 'let _$1 =  },
-      {/* TODO: Fix JSX expression */}
-
+      {/* TODO: Fix JSX expression */}';
+'
   t: 'var _$1 =  }
 
     ];
@@ -249,7 +249,7 @@ let changed = false;;
   return false}
 
 // Get all TypeScript/JavaScript files in src directory;
-
+'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 let results = [];;
@@ -264,10 +264,10 @@ const filePath = path.join(dir, file);;
 
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
-
+'
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build].includes(file)) {
         results = results.concat(getAllFiles(filePath, extensions));
-
+'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) {/* TODO: Fix JSX expression */}
 
       }
@@ -286,7 +286,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) {/* TODO: 
 
 // console.log removed for production
 ;
-
+'
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', .jsx]);;
 
 ;
@@ -334,4 +334,4 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
 });
 
 // console.log removed for production
-`
+`'

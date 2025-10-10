@@ -20,7 +20,7 @@ export const securityHeaders = [;
   },
   {
     key: 'Content-Security-Policy','
-    value: [,
+    value: [,'
       "default-src 'self'","
       "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com","
       "style-src 'self' 'unsafe-inline'","
@@ -32,3 +32,4 @@ export const securityHeaders = [;
   }];
 
 export default securityHeaders;
+'

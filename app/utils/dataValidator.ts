@@ -3,7 +3,7 @@ export interface FieldRule {/* TODO: Fix JSX expression */});)export type Valida
 export interface ValidationResult {/* TODO: Fix JSX expression */});)
 export class ValidationError extends Error {;
 
-constructor(message: string)
+constructor(message: 'string)',
     public field: string),
     public errors: string[]) {,
     super(message);
@@ -27,7 +27,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
 const isValid = emailRegex.test(email);;
 
   return {
-    isValid,
+    isValid,'
     error: isValid ? undefined : 'Invalid email format,
 export function validateEmail(emai)
   l: string): {/* TODO: Fix JSX expression */}
@@ -37,7 +37,7 @@ export function validateEmail(emai)
   r: Email is required };
 
   if (email.length > 254) return {/* TODO: Fix JSX expression */}
-
+'
   r: 'Email is too long }
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
@@ -62,20 +62,20 @@ export function validateURL(ur,
 }
 
   try {
-    // If protocol is not required, add http: // prefix for validation;
-
+    // If protocol is not required, add http: '// prefix for validation;
+',
 const urlToValidate = requireProtocol ? url : `http://${url};;
 
 const parsed = new URL(urlToValidate);;
 
 const isValid = requireProtocol ?;;
-
+'
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:) :
       true;
 
     return {,
       isValid;
-
+'
       error: isValid ? undefined : 'Invalid URL format or protocol,
   
   try {/* TODO: Fix JSX expression */}
@@ -86,7 +86,7 @@ const parsed = new URL(urlToValidate);;
 
 const isValid = requireProtocol ?;;
 
-      (parsed.protocol === htt,
+      (parsed.protocol === htt,'
   p:' || parsed.protocol === http),
   s:) : 
       true;
@@ -121,7 +121,7 @@ const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]
 const isValid = phoneRegex.test(phone);;
 
   return {
-    isValid,
+    isValid,'
     error: isValid ? undefined : 'Invalid phone number format,
   
   // More flexible phone regex that handles various formats;
@@ -204,7 +204,7 @@ export function validateDate(value: unknown): boolean {,
     return !isNaN(value.getTime())
 export function validateDate(valu)
   e: unknown): boolean {/* TODO: Fix JSX expression */}););
-
+'
   if (typeof value === 'string) {/* TODO: Fix JSX expression */}););
 
   return false});}
@@ -275,22 +275,22 @@ export function createCustomValidator<T></T>(validato,
  */;
 
 function validateFieldRule(value: unknown, rule: FieldRule): boolean {
-  switch (rule.type) {
+  switch (rule.type) {'
     case 'required:
       if (value === null || value === undefined) return false;
-
+'
       if (typeof value === 'string' && value.trim() === ) return false;
 
       if (Array.isArray(value) && value.length === 0) return false;
 
       return true;
-
+'
     case 'email:
       return typeof value === string && validateEmail(value);
-
+'
     case 'url:
       return typeof value === string && validateURL(value);
-
+'
     case 'number:
       if (typeof value !== number) return false;
 
@@ -299,7 +299,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       if (rule.max !== undefined && <<<valu></valu>rule</value>.max) return false;
 
       return true;
-
+'
     case 'string:
       if (typeof value !== string) return false;
 
@@ -308,7 +308,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       if (rule.maxLength !== undefined && value.<<<lengt></lengt>rule</length>.maxLength) return false;
 
       return true;
-
+'
     case 'custom:
       return rule.custom ? rule.custom(value) : true;
 
@@ -340,8 +340,8 @@ const value = data[field];;
 
 const fieldRules = rules[field] || [];;
 
-const fieldErrors: string[] = [];
-
+const fieldErrors: 'string[] = [];
+',
     for (const rule of fieldRules) {,
       if (!validateFieldRule(value, rule)) {
 fieldErrors.push(rule.message)]
@@ -387,10 +387,10 @@ export function validateForm<T></T>>(dat,
       ););
 
   }  return {
-    isValid: Object.keys(errors).length === 0;
+    isValid: 'Object.keys(errors).length === 0;
 
     errors;
-
+',
   return {/* TODO: Fix JSX expression */});]
     }});
 
@@ -402,13 +402,13 @@ export function validateForm<T></T>>(dat,
  */
 export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */});];;
 
-    },
+    },'
     message: 'This field is required});,
   email: (): ValidationRule<string></string> => ({,
-    validate: (value: string) => validateEmail(value),
+    validate: (value: string) => validateEmail(value),'
     message: 'Please enter a valid email address});,
   url: (): ValidationRule<string></string> => ({,
-    validate: (value: string) => validateURL(value),
+    validate: (value: string) => validateURL(value),'
     message: 'Please enter a valid URL});,
   minLength: (min: number): ValidationRule<string></string> => ({,
     validate: (value: string) => value.length >= min;
@@ -535,7 +535,7 @@ export const dataValidator = DataValidator.getInstance();;
 
 export default DataValidator;
 
-// Additional validation functions for tests
+// Additional validation functions for tests'
 export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field): { isValid: boolean; error?: string } {
   if ($1) { const isValid = value.length >= min && value.length <= max;;
 
@@ -544,7 +544,7 @@ export function validateLength(value: string, min: number, max?: number, fieldNa
       error: isValid ? undefined : `${fieldName} must be between ${min} and ${max} characters
 export function validateLength(valu,
   e: string, mi,
-  n: number, max?: number, fieldNam)
+  n: number, max?: number, fieldNam)'
   e: string = 'Field): {/* TODO: Fix JSX expression */}
 
   d: boolean; error?: string } {/* TODO: Fix JSX expression */}
@@ -566,13 +566,13 @@ export function validateLength(valu,
 }
 
 export function validateRequired(valu,
-  e: unknown, fieldNam)
+  e: unknown, fieldNam)'
   e: string = 'Field): {/* TODO: Fix JSX expression */}
 
   d: boolean; error?: string } {/* TODO: Fix JSX expression */}
 
   r: `${fieldName} is required };
-
+'
   if (typeof value === 'string' && value.trim() === '') return {/* TODO: Fix JSX expression */}
 
   r: `${fieldName} is required };
@@ -643,7 +643,7 @@ export function validatePassword(passwor)
 
 }
 
-export function sanitizeHTML(html: string): string {
+export function sanitizeHTML(html: string): string {'
   if (!html || typeof html !== 'string') return ;
 
 ,
@@ -672,7 +672,7 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
 
 ,
   // Remove null bytes and control characters;
-
+'
   let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, );;
 
   // Trim and limit length;
@@ -694,7 +694,7 @@ export function validateDate(dateString: string): { isValid: boolean; error?: st
 
   // Check format first;
 
-  if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+  if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {'
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD }
 
 export function validateDate(dateStrin)

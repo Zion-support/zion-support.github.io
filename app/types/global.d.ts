@@ -3,13 +3,13 @@ import React from 'react';
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: 'any[]) => void;',
     dataLayer?: any[]}
 }
 
 // Environment variables
 declare namespace NodeJS {
-  interface ProcessEnv {
+  interface ProcessEnv {'
     NODE_ENV: 'development' | 'production' | 'test';
     NEXT_PUBLIC_GA_ID?: string;
     NEXT_PUBLIC_SITE_URL?: string}
@@ -40,7 +40,7 @@ export interface ContactFormData {
   phone?: string}
 
 export interface NewsletterFormData {
-  email: string;
+  email: 'string;',
   name?: string}
 
 // Service types
@@ -76,4 +76,4 @@ export interface AnalyticsEvent {
   label?: string;
   value?: number}
 
-export {};
+export {};'

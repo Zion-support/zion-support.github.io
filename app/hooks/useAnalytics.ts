@@ -6,7 +6,7 @@ interface AnalyticsEvent {
   value?: number}
 
 export const useAnalytics = () => {const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {;;;
-
+'
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.(event, eventName, parameters);
 
@@ -15,8 +15,8 @@ export const useAnalytics = () => {const trackEvent = useCallback((eventName: st
 ;
 
 const trackPageView = useCallback((pagePath: string, pageTitle: string) => {;;
-
-    if (typeof window !== 'undefined' && 'gtag in window) {
+'
+    if (typeof window !== 'undefined' && 'gtag in window) {'
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('config', 'GA_MEASUREMENT_ID, {
         page_path: pagePath,
         page_title: pageTitle});
@@ -26,8 +26,8 @@ const trackPageView = useCallback((pagePath: string, pageTitle: string) => {;;
 ;
 
 const trackConversion = useCallback((conversionId: string, value?: number) => {;;
-
-    if (typeof window !== 'undefined' && 'gtag in window) {
+'
+    if (typeof window !== 'undefined' && 'gtag in window) {'
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'conversion, {
         send_to: conversionId,
         value: value});
@@ -38,3 +38,4 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {;
     trackEvent,
     trackPageView,
     trackConversion}};
+'

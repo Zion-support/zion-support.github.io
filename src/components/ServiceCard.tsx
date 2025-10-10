@@ -1,5 +1,5 @@
 'use client;
-
+'
 import React, { memo } from 'react;
 
 import { LucideIcon, ArrowRight } from lucide-react;
@@ -23,7 +23,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */};;;
   };
 
   return (<article></article>
-      className="quantum-card p-4,
+      className="quantum-card p-4,">
   sm:p-6 energy-pulse group relative"
       role="article)
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title}
@@ -45,25 +45,25 @@ const bgColorClasses = {/* TODO: Fix JSX expression */};;;
 
         className=text-xl,
   sm:text-2xl font-bold text-white mb-3,
-  sm:mb-4 text-center neon-text
-      >
+  sm: 'mb-4 text-center neon-text
+      >',
         {title}
 
       </h3>
       
       <p className=text-gray-300 mb-4,
   sm:mb-6 text-center leading-relaxed text-sm,
-  sm:text-base></p>
+  sm: 'text-base></p>',
         {description}
 
       </p>
-      
+      ">
       <div className="mb-4"></div>
         <h4 className="text-sm font-semibold text-cyan-400 mb-2>Key,
-  Features:</h4>
+  Features:</h4>">
         <ul className="text-sm text-gray-300 space-y-1></ul>
           {/* TODO: Fix JSX expression */}
-
+">
             <li key={idx} className="flex items-center"></li>
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0 /></div>
               {feature}
@@ -80,10 +80,10 @@ const bgColorClasses = {/* TODO: Fix JSX expression */};;;
 
         </ul>
       </div>
-      
+      ">
       <div className="mb-4"></div>
         <h4 className="text-sm font-semibold text-cyan-400 mb-2>Technologie,
-  s:</h4>
+  s:</h4>">
         <div className="flex flex-wrap gap-1></div>
           {/* TODO: Fix JSX expression */}
 
@@ -106,9 +106,9 @@ const bgColorClasses = {/* TODO: Fix JSX expression */};;;
 
         </div>
       </div>
-      
+      ">
       <div className="text-center mb-4"></div>
-        <div className="text-lg,
+        <div className="text-lg,">
   sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price></div>
           {price}
 
@@ -133,12 +133,12 @@ const bgColorClasses = {/* TODO: Fix JSX expression */};;;
 
       >
         Learn More;
-
+">
         <ArrowRight className="w-4 h-4 ml-1 /></ArrowRight>
       </a>
     </article>
   )});
 
 ServiceCard.displayName = ServiceCard;
-
+">
 export default ServiceCard;"`

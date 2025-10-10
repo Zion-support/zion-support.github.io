@@ -15,8 +15,8 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     memoryUsag,
   e: number;,
     fp,
-  s: number;
-
+  s: 'number;
+',
 }
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
@@ -70,3 +70,4 @@ const,
 };
 
 export default PerformanceDashboard;
+'

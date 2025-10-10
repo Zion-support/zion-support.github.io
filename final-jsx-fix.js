@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -25,7 +25,7 @@ const fullPath = path.join(dir, item);;;
 
     const stat = fs.statSync(fullPath);;;
 
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {'
       files.push(...getAllTsxFiles(fullPath))} else if (item.endsWith('.tsx)) {
       files.push(fullPath)}
 
@@ -42,14 +42,14 @@ let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
-    // Fix 1: Remove all </undefined>tags</undefined>
+    // Fix 1: Remove all </undefined>tags</undefined>'
     if (content.includes('</undefined>)) {
       content = content.replace(/<\/undefined>/g, );
 
       modified = true}
 
-    // Fix 2: Fix malformed quotes in className
-    if (content.includes('&quot;)) {
+    // Fix 2: Fix malformed quotes in className'
+    if (content.includes('&quot;)) {'
       content = content.replace(/&quot;/g, ');
 
       modified = true}
@@ -77,7 +77,7 @@ const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
 
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
   return (
-
+'
       if (text.trim() && !text.includes('<)) {
         modified = true;
 
@@ -111,7 +111,7 @@ const malformedClosingPattern = /<\/undefined><\/undefined>/g;;
 const malformedSelfClosingPattern = /\/><\/undefined>/g;;
 
     content = content.replace(malformedSelfClosingPattern, />);
-
+'
     if (content.includes('/></undefined>)) {
       modified = true}
 
@@ -137,14 +137,14 @@ const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;;
 const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;;
 
     content = content.replace(malformedReturnPattern, return (\n    <div);
-
+'
     if (content.includes('</LoadingSpinner></div><div)) {
       modified = true}
 
     // Fix 10: Fix malformed conditional returns;
 
 const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;;
-
+'
     content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />');</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >)) {</LoadingSpinner>modified</LoadingSpinner> = true}
 
     // Fix 11: Fix malformed JSX with incorrect closing tags;
@@ -309,7 +309,7 @@ const missingClosingTagPattern = /<(\w+)([^>]*)>\s*([^<]+)\s*$/gm;;
 
     content = content.replace(missingClosingTagPattern, (match, tagName, attributes, text) => {
   return (
-
+'
       if (text.trim() && !text.includes('</)) {
         modified = true;
 
@@ -420,3 +420,4 @@ tsxFiles.forEach(filePath => {
 });
 
 // console.log removed for production
+'

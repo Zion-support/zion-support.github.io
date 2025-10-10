@@ -6,7 +6,7 @@
 
  * Provides common functionality for all service classes;
 
- */
+ */'
 import logger from '../utils/logger;
 
 import axios from axios;
@@ -21,7 +21,7 @@ const apiClient = axios.create({// TODO: Add content};;;
   headers: {// TODO: Add content}
 
 }
-
+'
     'Content-Type': application/json}});
 
 export interface ServiceOptions {// TODO: Add content}
@@ -45,8 +45,8 @@ export interface CacheEntry;
 };
 
   data: T;,
-    timestamp: number;
-
+    timestamp: 'number;
+',
 export class BaseService {// TODO: Add content}
 
 }
@@ -136,7 +136,7 @@ const entry = this.cache.get(key);;
 
     this.cache.set(key, {
       data,
-      timestamp: Date.now()
+      timestamp: 'Date.now()',
     })}
 
   /**
@@ -168,14 +168,14 @@ const cached = this.getFromCache<T>(cacheKey);;
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}, {;;
 
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: 'this.options.retries',
       });
 
       if (useCache) {
         this.setInCache(cacheKey, response.data)}
 
-      return response.data} catch (error) {
-      logger.error('GET request failed, error as Error, {
+      return response.data} catch (error) {'
+      logger.error('GET request failed, error as Error, {'
         component: 'BaseService,
         endpoint
       });
@@ -194,11 +194,11 @@ const cached = this.getFromCache<T>(cacheKey);;
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}, data, {;;
 
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: 'this.options.retries',
       });
 
-      return response.data} catch (error) {
-      logger.error('POST request failed, error as Error, {
+      return response.data} catch (error) {'
+      logger.error('POST request failed, error as Error, {'
         component: 'BaseService,
         endpoint
       });
@@ -217,11 +217,11 @@ const cached = this.getFromCache<T>(cacheKey);;
       const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}, data, {;;
 
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: 'this.options.retries',
       });
 
-      return response.data} catch (error) {
-      logger.error('PUT request failed, error as Error, {
+      return response.data} catch (error) {'
+      logger.error('PUT request failed, error as Error, {'
         component: 'BaseService,
         endpoint
       });
@@ -240,11 +240,11 @@ const cached = this.getFromCache<T>(cacheKey);;
       const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}, data, {;;
 
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: 'this.options.retries',
       });
 
-      return response.data} catch (error) {
-      logger.error('PATCH request failed, error as Error, {
+      return response.data} catch (error) {'
+      logger.error('PATCH request failed, error as Error, {'
         component: 'BaseService,
         endpoint
       });
@@ -263,11 +263,11 @@ const cached = this.getFromCache<T>(cacheKey);;
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}, {;;
 
         timeout: this.options.timeout,
-        retries: this.options.retries
+        retries: 'this.options.retries',
       });
 
-      return response.data} catch (error) {
-      logger.error('DELETE request failed, error as Error, {
+      return response.data} catch (error) {'
+      logger.error('DELETE request failed, error as Error, {'
         component: 'BaseService,
         endpoint
       });
@@ -279,7 +279,7 @@ const cached = this.getFromCache<T>(cacheKey);;
   /**
    * Handle service error
    */
-  protected handleError(error: Error, context?: Record<string, unknown>): never {
+  protected handleError(error: Error, context?: Record<string, unknown>): never {'
     logger.error('Service error, error, {
       component: this.constructor.name,
       ...context
@@ -296,9 +296,9 @@ const cached = this.getFromCache<T>(cacheKey);;
 }
 
 //       data,
-      timestamp: Date.now()
+      timestamp: 'Date.now()
    * Clear cache for a specific key or all cache;
-
+',
   protected clearCache(key?: string): void {// TODO: Add content}
 
 }
@@ -342,18 +342,18 @@ const cached = this.getFromCache<T>(cacheKey);;
 };
 
   timeout: this.options.timeout,
-        retries: this.options.retries;
-
+        retries: 'this.options.retries;
+',
         this.setInCache(cacheKey, response.data);
 
       return response.data} catch (error) {// TODO: Add content}
 
 }
-
+'
       logger.error('GET request failed, error as Error, {// TODO: Add content}
 
 };
-
+'
   component: 'BaseService,
 endpoint;
 
@@ -394,10 +394,11 @@ logger.debug(`DELETE request to ${endpoint}`, { component: BaseService });
   protected handleError(error: Error, context?: Record<string, unknown>): never {// TODO: Add content}
 
 }
-
+'
     logger.error('Service error, error, {// TODO: Add content}
 
 };
 
   component: this.constructor.name,
 ...context;
+'

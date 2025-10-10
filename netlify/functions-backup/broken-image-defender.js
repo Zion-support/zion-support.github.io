@@ -62,12 +62,12 @@ const { execSync } = require(child_process); exports.config = {/* TODO: Fix JSX 
 
   e: 0 */3 * * * // every 3 hours }; exports.handler = async function() {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,'
   l: true});' execSync(node automation/optimize-images.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
   l: true;
-
+'
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): fix broken refs and optimize [skip ci] || true) && (git push origin main || true), {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,

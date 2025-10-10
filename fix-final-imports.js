@@ -1,5 +1,5 @@
 import fs from 'fs;
-
+'
 import { fileURLToPath } from 'url;
 
 ;
@@ -12,17 +12,17 @@ function processFile(filePath) {
 
       // Fix SEOOptimizer component;
 
-      {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
+      {'
+        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,'
         replacement: "import { useRouter } from '../utils/navigation';"},
       // Fix root-level files;
 
       {
-        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
+        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,'
         replacement: "import { Metadata } from './types/next';"},
       {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link;/g;
-
+'
         replacement: "import Link from './utils/link';"},
       // Fix MetadataRoute namespace issue;
 
@@ -32,9 +32,9 @@ function processFile(filePath) {
         replacement: 'MetadataRoute,;
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-
+'
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
-        replacemen,
+        replacemen,'
   t: "import { useRouter } from '../utils/navigation';"},
       // Fix root-level files;
 
@@ -80,7 +80,7 @@ function processDirectory(dirPath) {
         totalFixed++;
 
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
-
+'
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
 
       }

@@ -6,7 +6,7 @@ interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 
 ;
 
-const,
+const,'
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', size = 'md }) => {/* TODO: Fix JSX expression */}
 
   };
@@ -30,4 +30,4 @@ const,
 
 export default LoadingSpinner;
 
-`
+`'

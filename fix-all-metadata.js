@@ -7,15 +7,15 @@ import fs from fs;
 // List of files that still have metadata issues;
 
 const filesToFix = [;;;
-
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx,
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx,
-  '/workspace/app/offline/page.tsx,
-  '/workspace/app/page-minimal.tsx,
-  '/workspace/app/page-optimized.tsx,
-  '/workspace/app/privacy/page.tsx,
+'
+  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,'
+  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,'
+  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx,'
+  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx,'
+  '/workspace/app/offline/page.tsx,'
+  '/workspace/app/page-minimal.tsx,'
+  '/workspace/app/page-optimized.tsx,'
+  '/workspace/app/privacy/page.tsx,'
   '/workspace/app/team/page.tsx,
   /workspace/app/terms/page.tsx];
 
@@ -36,7 +36,7 @@ function processFile(filePath) {
         if (urlMatch) metadata.url = urlMatch[1]} catch (e) {
         // If parsing fails, use defaults;
 
-        metadata = {
+        metadata = {'
           title: 'Zion Tech Group,
           description: Advanced AI and IT Solutions,;
 
@@ -57,7 +57,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     for (let i = 0; i < lines.length; i++) {;;
 
       // Skip broken metadata lines;
-
+'
       if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>)) {,
         skipUntilSemicolon = true;
 
@@ -68,10 +68,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
       }
 
-      if (skipUntilSemicolon &&)
-        (line.trim() === '}; ||
-          line.trim() === '} ||
-          line.includes('const ) ||
+      if (skipUntilSemicolon &&)'
+        (line.trim() === '}; ||'
+          line.trim() === '} ||'
+          line.includes('const ) ||'
           line.includes('function ))
       ) {/* TODO: Fix JSX expression */}
 
@@ -100,7 +100,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     );
 
     // Add proper export at the end if missing;
-
+'
     if (!content.includes('export default') && content.includes('const )) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
 
@@ -124,8 +124,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 const newHelmet = <Helmet>;;
 
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
-
-        <title>${metadata.title || 'Zion Tech Group}</title>
+'
+        <title>${metadata.title || 'Zion Tech Group}</title>'
         <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'} /></meta>
         ${/* TODO: Fix JSX expression */}"
   g:type" content="${metadata.type}" />` : '}
@@ -140,7 +140,7 @@ const newHelmet = <Helmet>;;
         modified = true}
 
     }
-
+'
     if (modified || content !== fs.readFileSync(filePath, 'utf8)) {/* TODO: Fix JSX expression */}
 
     }

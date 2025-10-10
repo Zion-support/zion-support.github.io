@@ -69,9 +69,9 @@ export interface InnovativeITService2024 {id: string;
 };
 
   realImplementation: boolean;
-
+'
   implementationDetails: string';
-
+'
   launchDate: string';
 
   reviews: number}
@@ -97,7 +97,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     ],
     popular: true;
 
-    icon: ',
+    icon: ','
     color: 'from-blue-500 to-cyan-600,
     textColor: "text-blue-400,
     link: "https://ziontechgroup.com/autonomous-devops,
@@ -114,13 +114,13 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     useCases: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery],
     roi: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.,
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps],
-marketSize: '$8.2B market,
-    growthRate: '20.1% annual growth,
+marketSize: '$8.2B market,'
+    growthRate: '20.1% annual growth,'
     variant: 'ai-futuristic,
     contactInfo:
         contactInfo: unknown;
-
-      mobile: '+1 302 464 0950,
+'
+      mobile: '+1 302 464 0950,'
       email: 'kleber@ziontechgroup.com,
       address: "364 E Main St STE 1008 Middletown DE 19709,
       website: "https://ziontechgroup.com},
@@ -194,8 +194,8 @@ export const,
     lin,
   k: 'http,,
   s:
-        s://ziontechgroup.com/autonomous-devops,
-    marketPositio,
+        s://ziontechgroup.com/autonomous-devops,';
+    marketPositio,'
   n: 'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our,,
   advantage:
         advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.,

@@ -7,46 +7,46 @@ const, featuredConten, t = [
     {
       id: 1;
 
-      tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6,
-      catego, r, y: 'AI, Architectur, e,
+      tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6,'
+      catego, r, y: 'AI, Architectur, e,'
       readTi, m, e: '12, mi, n,
       rati, n, g: 5.0;
-
-      reade, r, s: '18, 0, K+,
-      bad, g, e: 'BREAKTHROU, G, H,
+'
+      reade, r, s: '18, 0, K+,'
+      bad, g, e: 'BREAKTHROU, G, H,'
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0,
       ic, o, n: <Brain, className=w-6 h-6/>,</Brain>li</Brain>
 );
-
+'
 }, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s,
       descripti, o, n: Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
 
     {
       id: 2;
-
-      tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n,
-      catego, r, y: 'Edge, Computin, g,
+'
+      tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n,'
+      catego, r, y: 'Edge, Computin, g,'
       readTi, m, e: '15, mi, n,
       rati, n, g: 4.9;
-
-      reade, r, s: '15, 6, K+,
-      bad, g, e: 'FEATUR, E, D,
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0,
+'
+      reade, r, s: '15, 6, K+,'
+      bad, g, e: 'FEATUR, E, D,'
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0,'
       ic, o, n: <Zap, className="w-6 h-6/>,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g,
       descripti, o, n: Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
 
     {
       id: 3;
-
-      tit, l, e: 'Me, t, a-Cognitive, AI, Systems,
-      catego, r, y: 'AI, Psycholog, y,
+'
+      tit, l, e: 'Me, t, a-Cognitive, AI, Systems,'
+      catego, r, y: 'AI, Psycholog, y,'
       readTi, m, e: '18, mi, n,
       rati, n, g: 5.0;
-
-      reade, r, s: '20, 3, K+,
-      bad, g, e: 'REVOLUTIONA, R, Y,
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0,
-      ic, o, n: <Sparkles, className=w-6 h-6/>,
+'
+      reade, r, s: '20, 3, K+,'
+      bad, g, e: 'REVOLUTIONA, R, Y,'
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0,';
+      ic, o, n: <Sparkles, className=w-6 h-6/>,'
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s,;
 
 const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
@@ -60,21 +60,21 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
     {/* TODO: Fix JSX expression */}
 
       descripti, o, n: AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g}
-
+'
       tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6,;
-
+'
       catego, r, y: 'AI, Architectur, e,;
-
+'
       readTi, m, e: '12, mi, n,;
 
       rati, n, g: 5.0;
-
+'
       reade, r, s: '18, 0, K+,;
-
+'
       bad, g, e: 'BREAKTHROU, G, H,;
-
+'
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0,;
-
+'
       ic, o, n: <Brain, className="w-6 h-6" />,";</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s,;
 
       descripti, o, n: Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g
@@ -82,21 +82,21 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
 
     {
       id: 2;
-
+'
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n,;
-
+'
       catego, r, y: 'Edge, Computin, g,;
-
+'
       readTi, m, e: '15, mi, n,;
 
       rati, n, g: 4.9;
-
+'
       reade, r, s: '15, 6, K+,;
-
+'
       bad, g, e: 'FEATUR, E, D,;
-
+'
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0,;
-
+'
       ic, o, n: <Zap, className="w-6 h-6" />,";</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g,;
 
       descripti, o, n: Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times
@@ -104,21 +104,21 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
 
     {
       id: 3;
-
+'
       tit, l, e: 'Me, t, a-Cognitive, AI, Systems,;
-
+'
       catego, r, y: 'AI, Psycholog, y,;
-
+'
       readTi, m, e: '18, mi, n,;
 
       rati, n, g: 5.0;
-
+'
       reade, r, s: '20, 3, K+,;
-
+'
       bad, g, e: 'REVOLUTIONA, R, Y,;
-
+'
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0,;
-
+'
       ic, o, n: <Sparkles, className="w-6 h-6" />,";</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s,;
 
       descripti, o, n: AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g
@@ -131,7 +131,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       {/* Animated, background, effects */}
 
       <div, classNam, e=absolute, inse, t-0, overflo, w-hidden, opacit, y-20>
-        <div, classNam, e=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e />
+        <div, classNam, e=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e />">
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 2, s }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 4, s }} />
           <h2, classNam, e=te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t>
@@ -148,7 +148,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
 
       {/* Animated, background, effects */}</div>
       <div, classNam, e=absolute, inse, t-0, overflo, w-hidden, opacit, y-20></div>
-        <div, classNam, e=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e /></div>
+        <div, classNam, e=absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e /></div>">
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 2, s }} /></div>
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: , 4, s }} /></div>
           <h2, classNam, e=te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t>
@@ -205,10 +205,10 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n>;
 
       {/* Animated, background, effects */}
-
+">
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20></div>
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e /></div>
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s }} /></div>
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s }} /></div>'
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s }} /></div>
           <h2, classNam, e=te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t></h2>
             The, Future, of AI, is, Now;

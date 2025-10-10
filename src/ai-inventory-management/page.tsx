@@ -1,8 +1,8 @@
 'use client;
-
+'
 import { Helmet } from 'react-helmet-async;
 
-export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression *
+export default function AIInventoryManagementPage() {/* TODO: 'Fix JSX expression *',
 }
 
   return (<div><Helmet><
@@ -19,7 +19,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
           {/* Hero Section *
           <section className=text-center mb-16><
             <h1 className=text-4xl,
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text><
+  md: 'text-6xl font-bold text-white mb-6 neon-text cyber-text><
               AI Inventory Management;
 
             <
@@ -27,7 +27,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               Intelligent inventory optimization powered by AI;
 
             <
-            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><
+            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><',
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
             <
           <
@@ -37,11 +37,11 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
             <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>AI-Powered Features<
             <div className=grid grid-cols-1,
   md:grid-cols-2,
-  lg:grid-cols-3 gap-8><
+  lg: 'grid-cols-3 gap-8><
               <div className=cyber-card p-6 energy-pulse><
                 <div className=text-4xl mb-4 text-center>🔮<
                 <h3 className=text-xl font-bold text-white mb-4 text-center>Demand Forecasting<
-                <p className=text-gray-300 text-center><
+                <p className=text-gray-300 text-center><',
                   AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.
                 <
               <
@@ -207,7 +207,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.
             <
             <div className=flex flex-col,
-  sm:flex-row gap-4 justify-center><
+  sm: 'flex-row gap-4 justify-center><',
               <a href=te,
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
@@ -217,7 +217,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <a href=
   hove,
     r:bg-white,
-  hover:text-indigo-600 transition-all duration-300><
+  hover: 'text-indigo-600 transition-all duration-300><
                 Get Free Demo;
 
               <
@@ -227,5 +227,5 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         
         <Footer /></Footer>
       </div>
-    </div>
+    </div>',
   )}"

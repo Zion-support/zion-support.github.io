@@ -25,8 +25,8 @@ const optimizations = {;;
 
     return content;
 
-      .replace(/\.jpg/g, '.webp)
-      .replace(/\.png/g, '.webp)
+      .replace(/\.jpg/g, '.webp)'
+      .replace(/\.png/g, '.webp)'
       .replace(/\.jpeg/g, '.webp)},
 
   // Minify inline styles;
@@ -36,8 +36,8 @@ const optimizations = {;;
 
 const minified = styles;;
 
-        .replace(/\s+/g, ' )
-        .replace(/;\s*/g, ';)
+        .replace(/\s+/g, ' )'
+        .replace(/;\s*/g, ';)'
         .replace(/:\s*/g, ':)
         .trim();
 
@@ -48,20 +48,20 @@ const minified = styles;;
   removeExtraWhitespace: (content) => {,
     return content;
 
-      .replace(/\n\s*\n\s*\n/g, '\n\n)
-      .replace(/[ \t]+$/gm, ')
+      .replace(/\n\s*\n\s*\n/g, '\n\n)'
+      .replace(/[ \t]+$/gm, ')'
       .replace(/\n{3}/g, '\n\n)},
 
   // Optimize React components;
 
   optimizeReactComponents: (content) => {
     // Add React.memo to functional components;
-
+'
     if (content.includes('const ') && content.includes(': React.FC)) {
       content = content.replace(
 
         /const (\w+): React\.FC = \(/g;
-
+'
         'const $1: React.FC = React.memo(()
       );
 
@@ -69,7 +69,7 @@ const minified = styles;;
 
       content = content.replace()
         /(\w+)\.displayName = \w+;/g;
-
+'
         '$1.displayName = \$1\;\n});
 
       )}
@@ -103,13 +103,13 @@ const preloadHints = ;;
 // Files to process;
 
 const filePatterns = [;;
-
-  'app/**/*.{ts,tsx,js,jsx},
-  'src/**/*.{ts,tsx,js,jsx},
-  'components/**/*.{ts,tsx,js,jsx},
-  'pages/**/*.{ts,tsx,js,jsx},
-  'utils/**/*.{ts,tsx,js,jsx},
-  'hooks/**/*.{ts,tsx,js,jsx},
+'
+  'app/**/*.{ts,tsx,js,jsx},'
+  'src/**/*.{ts,tsx,js,jsx},'
+  'components/**/*.{ts,tsx,js,jsx},'
+  'pages/**/*.{ts,tsx,js,jsx},'
+  'utils/**/*.{ts,tsx,js,jsx},'
+  'hooks/**/*.{ts,tsx,js,jsx},'
   'lib/**/*.{ts,tsx,js,jsx},
   dist/**/*.{html,css,js}
 
@@ -118,17 +118,17 @@ const filePatterns = [;;
 // Files to exclude;
 
 const excludePatterns = [;;
-
-  '**/node_modules/**,
-  '**/.next/**,
-  '**/build/**,
-  '**/coverage/**,
-  '**/*.test.{ts,tsx,js,jsx},
-  '**/*.spec.{ts,tsx,js,jsx},
-  '**/scripts/**,
-  '**/automation/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+'
+  '**/node_modules/**,'
+  '**/.next/**,'
+  '**/build/**,'
+  '**/coverage/**,'
+  '**/*.test.{ts,tsx,js,jsx},'
+  '**/*.spec.{ts,tsx,js,jsx},'
+  '**/scripts/**,'
+  '**/automation/**,'
+  '**/backup*/**,'
+  '**/disabled*/**,'
   '**/corrupted*/**,
   **/temp*/**
 ];
@@ -213,3 +213,4 @@ if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
 export { processFile, optimizations };
+'

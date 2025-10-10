@@ -8,7 +8,7 @@
  */
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -321,11 +321,11 @@ process.exit(1)}
 
 runSEOEnhancements();
 
-// #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,
+// #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,'
   by: * - Generating comprehensive sitemaps * - Optimizing meta tags * - Adding structured data * - Improving page performance metrics */ import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url const __filename = fileURLToPath(import.meta.url); // __dirname removed;;;
 
 class SEOEnhancer {/* TODO: Fix JSX expression */}
-
+'
   s: //ziontechgroup.com' this.pages = []; this.blogPosts = []; this.services = []} this.caseStudies = []} } async generateSitemap() {' // Read blog posts try {' const blogPostsPath = path.join(__dirname) '../src/content/blog-posts.ts');' const blogContent = fs.readFileSync(blogPostsPath) utf8)} // Extract blog post slugs (simplified extraction) const blogMatches = blogContent.match(/slu);;
 
   g: \\s*"([^"]+)"/g), if (blogMatches) {/* TODO: Fix JSX expression */}
@@ -344,7 +344,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   w: /_next/ Disallo,
   w: /static/ # Allow important pages,
   Allow: /blog/ Allo,
-  w: /services/ Allo,
+  w: /services/ Allo,'
   w: /case-studies/ `, ' const robotsPath = path.join(__dirname) '../public/robots.txt'); fs.writeFileSync(robotsPath) robotsContent);  } generateStructuredData() { // // console.log removed for production;;
 
 } const organizationSchema = {/* TODO: Fix JSX expression */}";;
@@ -353,5 +353,5 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   s: //linkedin.com/company/zion-tech-group", "http,
   s: //twitter.com/ziontechgroup" ], "foundingDate": "2020", "numberOfEmployees": "50-100", "services": [ "AI Workflow Automation", "AI Virtual Assistant", "AI Data Analytics", "Quantum Computing Consulting", "Edge AI Solutions", "Zero Trust Security", "Cybersecurity", "Cloud Infrastructure" ] }; ' const structuredDataPath = path.join(__dirname) '../public/structured-data.json'); fs.writeFileSync(structuredDataPath, JSON.stringify(organizationSchema, null) 2)); ' } async run() {' await this.generateSitemap(); this.generateRobotsTxt(); this.generateStructuredData(); ' ' '   // // console.log removed for production;;
 
-} // // console.log removed for production
+} // // console.log removed for production'
 } } } // Run the SEO enhancer const seoEnhancer = new SEOEnhancer(); seoEnhancer.run().catch(console.error);'";;

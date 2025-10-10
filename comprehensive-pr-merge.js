@@ -4,14 +4,14 @@
  * Comprehensive PR Merge - Handles all remaining branches and PRs;
 
  */ import { execSync } from 'child_process;
-
+'
 import fs from 'fs;
 
 // //Step 1: Ensure were on main and up to date;
 
-// try {,
+// try {,'
   execSync('git checkout main', { stdio: inherit });
-
+'
   execSync('git pull origin main', { stdio: inherit });
 
 //   } catch (error) {
@@ -22,7 +22,7 @@ import fs from 'fs;
 // //Get recent branches (last 7 days),;
 
 const recentBranches = execSync();;
-
+'
   'git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)",
   { encoding: 'utf8 }
 
@@ -32,7 +32,7 @@ const recentBranches = execSync();;
 // try {/* TODO: Fix JSX expression */}
 
   o: inherit });
-
+'
   execSync('git pull origin main, {/* TODO: Fix JSX expression */})
   o: inherit });
 
@@ -44,7 +44,7 @@ const recentBranches = execSync();;
   2: Get all branches that might need merging;
 
 // //Get recent branches (last 7 days);
-
+'
 const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/remotes/origin --format=%(committerdat);;
 
   e:short) %(refnam,)
@@ -52,17 +52,17 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
   {/* TODO: Fix JSX expression */}
 
   g: 'utf8 }
-
-)
-  .split('\n)
-  .map(line => line.trim())
-  .filter(line => line && !line.includes('HEAD))
-  .filter(line => !line.includes('backup))
-  .filter(line => !line.includes('aggressive))
+';
+)'
+  .split('\n)';
+  .map(line => line.trim())'
+  .filter(line => line && !line.includes('HEAD))'
+  .filter(line => !line.includes('backup))'
+  .filter(line => !line.includes('aggressive))'
   .filter(line => !line.includes('automation))
   .map(line => {)
-    return {)
-      date: parts[0]),
+    return {)';
+      date: parts[0]),'
       branch: parts[1].replace('origin/', ')}})
   .filter(item => {)
 //     const branchDate = new Date(item.date);;
@@ -78,14 +78,14 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
   .filter(item => {/* TODO: Fix JSX expression */})
   })
   .map(item => item.branch)
-  .filter(branch =>)
-      branch.includes('cursor) ||
-      branch.includes('fix) ||
-      branch.includes('merge) ||
-      branch.includes('candidate) ||
-      branch.includes('chore) ||
-      branch.includes('add-new) ||
-      branch.includes('ai-) ||
+  .filter(branch =>)'
+      branch.includes('cursor) ||'
+      branch.includes('fix) ||'
+      branch.includes('merge) ||'
+      branch.includes('candidate) ||'
+      branch.includes('chore) ||'
+      branch.includes('add-new) ||'
+      branch.includes('ai-) ||'
       branch.includes('codex)
   );
 
@@ -120,9 +120,9 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
   g: 'utf8 })
     ).trim();
-
-    if (isMerged !== 'not_merged) {/* TODO: Fix JSX expression */}
-
+'
+    if (isMerged !== 'not_merged) {/* TODO: Fix JSX expression */}';
+'
   d: 'already_merged }}
 
     //Try to merge;
@@ -132,7 +132,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
         { stdio: 'inherit }
 
       );
-
+'
 //       return { success: true, method: 'direct }} catch (mergeError) {
 //       //Try different conflict resolution strategies;
 
@@ -143,7 +143,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
           { stdio: 'inherit }
 
         );
-
+'
 //         return { success: true, method: 'theirs }} catch (theirsError) {
         try {
           //Strategy 2: Use ours;
@@ -160,7 +160,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
       );
 
 //       return {/* TODO: Fix JSX expression */}
-
+'
   d: 'direct' }} catch (mergeError) {/* TODO: Fix JSX expression */}"
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy",
           {/* TODO: Fix JSX expression */}
@@ -170,7 +170,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
         );
 
 //         return {/* TODO: Fix JSX expression */}
-
+'
   d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}"
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy",
             {/* TODO: Fix JSX expression */}
@@ -180,17 +180,17 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
           );
 
 //           return {/* TODO: Fix JSX expression */}
-
-  d: 'ours }} catch (oursError) {/* TODO: Fix JSX expression */}
-
+'
+  d: 'ours }} catch (oursError) {/* TODO: Fix JSX expression */}';
+'
   d: 'failed }}
 
       }
 
     }
 
-  } catch (error) {/* TODO: Fix JSX expression */}
-
+  } catch (error) {/* TODO: Fix JSX expression */}';
+'
   d: 'not_found }}
 
 }
@@ -274,7 +274,7 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
   //Push changes after each batch;
 
   if (batch % 3 === 0 || batch === totalBatches - 1) {
-    try {
+    try {'
       execSync('git push origin main', { stdio: inherit });
 
 //       } catch (error) {
@@ -297,14 +297,14 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
   ...results;
 
   timestamp: new Date().toISOString()};
-
+'
 fs.writeFileSync('comprehensive-pr-merge-report.json)
   JSON.stringify(report, null, 2)
 );
 
 //Step 6: Final push;
 
-// try {,
+// try {,'
   execSync('git push origin main', { stdio: inherit });
 
 //   } catch (error) {
@@ -319,7 +319,7 @@ fs.writeFileSync('comprehensive-pr-merge-report.json)
 // const report = {/* TODO: Fix JSX expression */};;
 
 };
-
+'
 fs.writeFileSync('comprehensive-pr-merge-report.json)
   JSON.stringify(report, null, 2)
 );

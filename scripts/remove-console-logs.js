@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 import fs from 'fs;
-
+'
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
 // Find all TypeScript and JavaScript files;
-
+'
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', .jsx]) => {;;
 
 let files = [];;
@@ -24,7 +24,7 @@ let files = [];;
 const fullPath = path.join(dir, item);;
 
     const stat = fs.statSync(fullPath);;
-
+'
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
       files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath)}
@@ -70,18 +70,18 @@ let content = fs.readFileSync(filePath, utf8);;
 // Files to exclude from console.log removal;
 
 const excludePatterns = [;;;
-
-  '**/node_modules/**,
-  '**/dist/**,
-  '**/build/**,
-  '**/.next/**,
-  '**/coverage/**,
-  '**/__tests__/**,
-  '**/*.test.*,
-  '**/*.spec.*,
-  '**/scripts/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+'
+  '**/node_modules/**,'
+  '**/dist/**,'
+  '**/build/**,'
+  '**/.next/**,'
+  '**/coverage/**,'
+  '**/__tests__/**,'
+  '**/*.test.*,'
+  '**/*.spec.*,'
+  '**/scripts/**,'
+  '**/backup*/**,'
+  '**/disabled*/**,'
   '**/api-disabled/**,
   **/api.disabled/**
 ];
@@ -100,11 +100,11 @@ let filesProcessed = 0;;
 
 // console.log removed for production
 for (const file of files) {/* TODO: Fix JSX expression */}
-
-      .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() => {}))
+'
+      .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() => {}))'
       .replace(/\.catch\([^)]*console\.log[^)]*\)/g, '.catch(() => {}))
       // Clean up empty lines;
-
+'
       .replace(/\n\s*\n\s*\n/g, '\n\n)
       // Remove empty catch blocks;
 
@@ -160,9 +160,9 @@ return false}
 };
 
 // Main execution;
-
+'
 const srcDir = path.join(__dirname, '..', src);;
-
+'
 const appDir = path.join(__dirname, '..', app);;
 
 // console.log removed for production
@@ -194,8 +194,8 @@ async function processFiles() {/* TODO: Fix JSX expression */}
 }
 
   const patterns = [;;
-
-    'app/**/*.{ts,tsx,js,jsx},
+'
+    'app/**/*.{ts,tsx,js,jsx},'
     'components/**/*.{ts,tsx,js,jsx},
     src/**/*.{ts,tsx,js,jsx},;
 
@@ -220,3 +220,4 @@ let totalFiles = 0;;
   } else {/* TODO: Fix JSX expression */}
 
 export { removeConsoleLogs, processFiles };
+'

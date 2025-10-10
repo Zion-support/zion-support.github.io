@@ -22,7 +22,7 @@ ctaTe, x, t: stri, n, g;
 ctaL, i, n;
 
   k: stri, n, g;
-
+'
 the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | cy, a, n;
 
 featuredIte, m, s?: FeaturedIt, e, m[];
@@ -30,7 +30,7 @@ featuredIte, m, s?: FeaturedIt, e, m[];
 showCou, n, t?: numb, e, r;
 
 classNa, m, e?: stri, n, g;
-
+'
 ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | no, n, e;
 
 animat, e, d?: boole, a, n;
@@ -59,7 +59,7 @@ varia, n, t = defau, l, t
   animat, e, d = tr, u, e;
 
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({;
-
+'
 varia, n, t = 'defau, l, t,;
 
   tit, l, e;
@@ -69,14 +69,14 @@ varia, n, t = 'defau, l, t,;
   ctaTe, x, t;
 
   ctaLi, n, k;
-
+'
   the, m, e = 'gradie, n, t,;
 
   featuredIte, m, s = []
   showCou, n, t = 3;
-
+'
   classNa, m, e = ',;
-
+'
   ic, o, n = 'sparkl, e, s,;
 
   animat, e, d = tr, u, e;
@@ -103,12 +103,12 @@ varia, n, t = 'defau, l, t,;
     defau, l, t: py-8 p, x-, 6,
     premi, u, m: py-12, p, x-, 8,
     he, r, o: py-16, p, x-1, 0,
-    compa, c, t: py-6, p, x-, 4,
+    compa, c, t: py-6, p, x-, 4,'
     me, g, a: 'py-20, p, x-1, 2}; const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<div, classNam, e = { 
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
 
         ${variantClass, e, s[varia, n, t]}
-
+'
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  :  }
 
               <span, classNam, e=inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d>
@@ -118,7 +118,7 @@ varia, n, t = 'defau, l, t,;
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
 
           ${;
-
+'
 varia, n, t === 'he, r, o' || varia, n, t === me, g, a
               ? te, x, t-4 xl, m, d: te, x, t-5, x, l
               : varia, n, t === premi, u, m
@@ -144,7 +144,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
 
         ${variantClass, e, s[varia, n, t]}
-
+'
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  :  }
 
               <span, classNam, e=inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d></div>
@@ -178,7 +178,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
           <div, classNam, e = {grid, ga, p-4, m, b-6 ${;
 
 varia, n, t === me, g, a
-                ? md: gr, i, d-co, l, s-3
+                ? md: gr, i, d-co, l, s-3'
                 : varia, n, t === 'he, r, o' || varia, n, t === premi, u, m
                    ? md:gr, i, d-co, l, s-2
                   : md : gr, i, d-c, o, l, s-, 1
@@ -214,7 +214,7 @@ varia, n, t === me, g, a
 
                   <Link, classNam, e = fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y /></Link>
               +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h;
-
+'
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  :  }
-
-}}}}}})`
+';
+}}}}}})`'

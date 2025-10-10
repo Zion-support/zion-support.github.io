@@ -36,8 +36,8 @@ const transporter = nodemailer.createTransporter({);;
     attachments)
   })}
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,'
+  if (req.method !== 'POST') {,'
     return res.status(405).json({ error: 'Method not allowed });
 
 async function submitByEmail(t,
@@ -65,15 +65,15 @@ const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-
+'
   r: 'Method not allowed' })}
 
-  try {/* TODO: Fix JSX expression */}
-
+  try {/* TODO: Fix JSX expression */}';
+'
     const { id, channels = ['email], emailTo, delegateNote } = req.body || {};
 
     if (!id) {/* TODO: Fix JSX expression */}
-
+'
   r: 'Proposal ID required' })}
 
 ;
@@ -81,16 +81,16 @@ export default async function handler(re,
 const _meta = getProposal(id);;
 
     if (!meta) {/* TODO: Fix JSX expression */}
-
+'
   r: 'Proposal not found' })}
 
     // Email submission;
-
-    if (channels.includes('email')) {
+'
+    if (channels.includes('email')) {'
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org;;
 
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;;
-
+'
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
 
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;;
@@ -113,13 +113,13 @@ Budget/Resolutio,
   n: ${meta.budgetOrResolution}
 
 DAO Governance: See document.,
-,
+,'
 Delegate Note: ${delegateNote || 'N/A'}`;
 
 DAO,
   Governance: See document.
 
-Delegate,`
+Delegate,`'
   Note: ${delegateNote || 'N/A'}`;
 
       await submitByEmail(to, subject, text)}
@@ -129,7 +129,7 @@ Delegate,`
 let ensRecordHash: string | undefined;
 
     try {,;
-
+'
 const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex);;
 
       ensRecordHash = `0 x${hash}`;
@@ -141,10 +141,10 @@ const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('h
 
 const updated = updateProposalMeta(id, m => ({);;
 
-      ...m)
+      ...m)'
       status: 'Submitted)}));
 
-    return res.status(200).json({ meta: updated })} catch (error: unknown) {,
+    return res.status(200).json({ meta: updated })} catch (error: unknown) {,'
     return res.status(500).json({ error: error?.message || 'Submission failed });
 
     // ENS record hash (defaul)
@@ -169,9 +169,9 @@ const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */});;
     return res.status(200).json({/* TODO: Fix JSX expression */})
   a: updated })} catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
-
+'
   r: error?.message || 'Submission failed' })}
 
 }
-
-`
+';
+`'

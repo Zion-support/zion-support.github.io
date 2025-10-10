@@ -27,11 +27,11 @@ constructor(element: HTMLElement) {,
 
 const focusableSelectors = [;;
 
-      'button: not([disabled])',
-      'input: not([disabled])',
-      'select: not([disabled])',
-      'textarea: not([disabled])',
-      'a[href]',
+      'button: not([disabled])','
+      'input: not([disabled])','
+      'select: not([disabled])','
+      'textarea: not([disabled])','
+      'a[href]','
       '[tabindex]:not([tabindex="-1"])'].join(', );
 
     this.focusableElements = Array.from(
@@ -43,7 +43,7 @@ const focusableSelectors = [;;
 
     this.lastFocusableElement = this.focusableElements[this.focusableElements.length - 1]}
 
-  public trapFocus(event: KeyboardEvent): void {
+  public trapFocus(event: KeyboardEvent): void {'
     if (event.key === 'Tab') {,
       if (event.shiftKey) {,
         if (document.activeElement === this.firstFocusableElement) {,
@@ -86,16 +86,16 @@ export class FocusTrap {/* TODO: Fix JSX expression */}
  */
 export const ariaHelpers = {;;
 
-  setAriaExpanded(element: HTMLElement, expanded: boolean): void {,
+  setAriaExpanded(element: HTMLElement, expanded: boolean): void {,'
     element.setAttribute('aria-expanded', expanded.toString())},
-
-  setAriaHidden(element: HTMLElement, hidden: boolean): void {,
+';
+  setAriaHidden(element: HTMLElement, hidden: boolean): void {,'
     element.setAttribute('aria-hidden', hidden.toString())},
-
-  setAriaLabel(element: HTMLElement, label: string): void {,
+';
+  setAriaLabel(element: HTMLElement, label: string): void {,'
     element.setAttribute('aria-label', label)},
-
-  setAriaDescribedBy(element: HTMLElement, describedBy: string): void {,
+';
+  setAriaDescribedBy(element: HTMLElement, describedBy: string): void {,'
     element.setAttribute('aria-describedby, describedBy);
 
 export const ariaHelpers = {/* TODO: Fix JSX expression */};;
@@ -125,13 +125,13 @@ export const ariaHelpers = {/* TODO: Fix JSX expression */};;
 
  */
 export const announceToScreenReader = (message: string): void => {,;;
-
+'
 const _announcement = document.createElement('div);;
-
+'
   announcement.setAttribute('aria-live', 'polite);
-
+'
   announcement.setAttribute('aria-atomic', 'true);
-
+'
   announcement.className = 'sr-only;
 
   announcement.textContent = message;
@@ -155,12 +155,12 @@ export const keyboardNavigation = {;;
 
   handleArrowKeys(event: KeyboardEvent, items: HTMLElement[]): void {
     //     const currentIndex = items.indexOf(document.activeElement as HTMLElement);;
-
+'
     if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
       event.preventDefault();
 
       //       const nextIndex = (currentIndex + 1) % items.length;,;;
-
+'
       items[nextIndex]?.focus()} else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       event.preventDefault();
 
@@ -170,14 +170,14 @@ export const keyboardNavigation = {;;
 
   },
 
-  handleEscapeKey(event: KeyboardEvent, callback: () => void): void {,
+  handleEscapeKey(event: KeyboardEvent, callback: () => void): void {,'
     if (event.key === 'Escape') {,
       event.preventDefault();
 
       callback();
 
 export const keyboardNavigation = {/* TODO: Fix JSX expression */};;
-
+'
     } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {/* TODO: Fix JSX expression */}
 
     }
@@ -191,3 +191,4 @@ export const keyboardNavigation = {/* TODO: Fix JSX expression */};;
     }
 
   }};
+'

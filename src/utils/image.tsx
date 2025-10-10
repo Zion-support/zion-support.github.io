@@ -19,7 +19,7 @@ interface ImageProps {
   priority?: boolean;
 
   _quality?: number;
-
+'
   _placeholder?: 'blur' | empty;
 
   _blurDataURL?: string;
@@ -41,7 +41,7 @@ export const Image: React.FC<ImageProps> = ({
   height,
   className,
   priority = false,
-  quality = 75,
+  quality = 75,'
   placeholder = 'empty,
   blurDataURL,
   fill = false,
@@ -70,11 +70,11 @@ const [, setIsLoaded] = useState(false);
 
   const imageStyle: React.CSSProperties = {
     ...style,
-    ...(fill && {
+    ...(fill && {'
       position: 'absolute,
-      top: 0,
-      left: 0,
-      width: '100%,
+      top: 0,';
+      left: 0,'
+      width: '100%,'
       height: '100%,
       objectFit:     ,
 $4})
@@ -124,9 +124,9 @@ $4})
   )};
 
 export default Image;
-
+'
 'use client;
-
+'
 import React, { useState, useCallback } from 'react;
 
 const,
@@ -142,7 +142,7 @@ const,
   className?: string
   priority?: boolean
   _quality?: number
-
+'
   _placeholder?: 'blur | empty
   _blurDataURL?: string;
 
@@ -156,8 +156,8 @@ const,
 
   onError?: () => void}
 
-export const Image: React.FC;
-
+export const Image: 'React.FC;
+',
           <ImageProps> = ({// TODO: Add content}
 
 }
@@ -168,7 +168,7 @@ export const Image: React.FC;
 //   height,
 //   className,
   priority = false,
-quality = 75,
+quality = 75,'
   placeholder = 'empty,
   blurDataURL,
   fill = false,
@@ -218,14 +218,14 @@ quality = 75,
   O: Add content}
 
 };
-
+'
   position: 'absolute,
-      top: 0,
-      left: 0,
-      width: '100%,
+      top: 0,';
+      left: 0,'
+      width: '100%,'
       height: '100%,
-      objectFit: cover
-
+      objectFit: 'cover
+',
     })
   };
 
@@ -257,7 +257,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
           
           
           
-          
+          ">
           <span className="text-gray-500 text-sm>Failed to load image</span>
       </div>
     )
@@ -292,7 +292,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
 //     />
   )
 }
-
+">
 export default Image;"
 
 

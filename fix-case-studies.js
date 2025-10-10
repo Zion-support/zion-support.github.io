@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-
+'
 const filePath = '/workspace/app/case-studies/page.tsx;;
-
+'
 let content = fs.readFileSync(filePath, 'utf8);;
 
-// Fix the specific pattern: team: value
+// Fix the specific pattern: team: value'
 content = content.replace(/team:\s*team:\s*['"`][^'"`]*['"`]/g, (match) => {
   const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
@@ -14,7 +14,7 @@ content = content.replace(/team:\s*team:\s*['"`][^'"`]*['"`]/g, (match) => {
 
 });
 
-// Fix duplicate image properties
+// Fix duplicate image properties'
 content = content.replace(/image:\s*\n\s*image:\s*['"`][^'"`]*['"`]/g, (match) => {
   const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
@@ -22,7 +22,7 @@ content = content.replace(/image:\s*\n\s*image:\s*['"`][^'"`]*['"`]/g, (match) =
 
 });
 
-// Fix any remaining malformed properties
+// Fix any remaining malformed properties'
 content = content.replace(/(\w+):\s*\1:\s*['"`][^'"`]*['"`]/g, (match, prop) => {
   const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
 
@@ -31,5 +31,6 @@ content = content.replace(/(\w+):\s*\1:\s*['"`][^'"`]*['"`]/g, (match, prop) => 
 });
 
 fs.writeFileSync(filePath, content);
-
+'
 console.log('Fixed case-studies page');
+'

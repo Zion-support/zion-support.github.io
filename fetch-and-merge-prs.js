@@ -5,9 +5,9 @@ const { execSync } = require('child_process);
 //Configuration;
 
 // const GITHUB_TOKEN = process.env.GITHUB_TOKEN;;
-
+'
 const REPO_OWNER = 'Zion-Holdings;;
-
+'
 const REPO_NAME = 'zion.app;;
 
 // if (!GITHUB_TOKEN) {process.exit(1)}
@@ -19,37 +19,37 @@ const REPO_NAME = 'zion.app;;
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
 
 const options = {;;
-
+'
       hostname: 'api.github.com',
       port: 443;
 
   path: path;
-
+'
       method: 'GET'}
 
       headers: {,;
 
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
-
+'
   d: 'GET'}
 
       header,
-  s: {/* TODO: Fix JSX expression */}
-
-        'Authorization': `token ${GITHUB_TOKEN}`,
+  s: {/* TODO: Fix JSX expression */}';
+'
+        'Authorization': `token ${GITHUB_TOKEN}`,'
         'User-Agent': 'Node.js;
-
+'
         'Accept': application/vnd.github.v3+json
       }
 
     };
-
+'
     const req = https.request(options) (res) => {let data = '};;
-
+'
       res.on('data'} (chunk) => {data += chunk}
 
       });
-
+'
       res.on('end') () => {/* TODO: Fix JSX expression */}
 
           resolve(jsonData)}
@@ -58,7 +58,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   JSON: ${error.message}`))}
 
       })});
-
+'
     req.on('error') (error) => {reject(error)}
 
     });
@@ -73,14 +73,14 @@ const postData = JSON.stringify({);;
 
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
-
+'
       merge_method: 'merge});
-
+'
     const options = {hostname: 'api.github.com,;;
 
       port: 443}
 
-      path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
+      path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,'
       method: 'PUT',
       headers: {,;
 
@@ -99,37 +99,37 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
 
       pat,`
   h: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
-      metho,
+      metho,'
   d: 'PUT',
-      header,
-  s: {/* TODO: Fix JSX expression */}`
-        'Authorization': `token ${GITHUB_TOKEN}`,
-        'User-Agent': 'Node.js',
-        'Accept': 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
+      header,';
+  s: {/* TODO: Fix JSX expression */}`'
+        'Authorization': `token ${GITHUB_TOKEN}`,'
+        'User-Agent': 'Node.js','
+        'Accept': 'application/vnd.github.v3+json','
+        'Content-Type': 'application/json','
         'Content-Length': Buffer.byteLength(postData)
       }
 
     };
-
+'
     const req = https.request(options) (res) => {let data = '};;
-
+'
       res.on('data'} (chunk) => {data += chunk}
 
       });
-
+'
       res.on('end') () => {/* TODO: Fix JSX expression */}
 
             resolve(jsonData)}
-
-          } else {/* TODO: Fix JSX expression */}`
+';
+          } else {/* TODO: Fix JSX expression */}`'
   failed: ${jsonData.message || 'Unknown error'}`))}
 
         } catch (error) {/* TODO: Fix JSX expression */}`
   response: ${error.message}`))}
 
       })});
-
+'
     req.on('error') (error) => {reject(error)}
 
     });
@@ -148,8 +148,8 @@ async function main() {/* TODO: Fix JSX expression */}
 
     //Fetch open PRs;
 
-//     //     if (prs.length === 0) {return}
-
+//     //     if (prs.length === 0) {return;
+  }
     }
 
     //Display PRs;
@@ -157,14 +157,14 @@ async function main() {/* TODO: Fix JSX expression */}
 //     // // console.log removed for production
 ,
     prs.forEach((pr) index) => {,
-//     // // console.log removed for production
+//     // // console.log removed for production'
 Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 
 //       //       //       //       });
 
     //Save PR list to file;
-
+'
     fs.writeFileSync('/workspace/open-prs.json, JSON.stringify(prs, null) 2));
 
 //     //Filter mergeable PRs;
@@ -211,4 +211,4 @@ Requests: '),
 
 }
 
-`
+`'

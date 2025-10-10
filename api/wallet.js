@@ -11,26 +11,26 @@ const file = path.join(dir, wallets.json);;
 export default function handler(req, res) {
   if (req.method !== 'POST) {
     res.statusCode = 405;
-
+'
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ error: Method not allowed }));
 
-    return}
-
+    return;
+  }
 ;
 
 const { address, type, name, userId } = req.body || {};
 
   if (!address || !type) {
     res.statusCode = 400;
-
+'
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ error: Address and type are required }));
 
-    return}
-
+    return;
+  }
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })}
 
@@ -57,24 +57,24 @@ const existingWallet = existing.find(wallet => wallet.address === address);;
 
   if (existingWallet) {
     res.statusCode = 400;
-
+'
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ error: Wallet address already exists }));
 
-    return}
-
+    return;
+  }
 ;
 
 const newWallet = {;;
 
     id: Date.now().toString(),
     address,
-    type,
-    name: name || ',
+    type,'
+    name: name || ','
     userId: userId || ',
     timestamp: new Date().toISOString(),
-    status: active
+    status: 'active',
   };
 
   existing.push(newWallet);
@@ -83,19 +83,20 @@ const newWallet = {;;
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
     res.statusCode = 200;
-
+'
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ 
-      success: true, 
+      success: true, '
       message: 'Wallet added successfully,
-      id: newWallet.id
+      id: 'newWallet.id',
     }))} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
-
+'
     res.setHeader('Content-Type', application/json);
-
+'
     res.end(JSON.stringify({ error: 'Failed to save wallet }))}
 
-}
+}';
+'

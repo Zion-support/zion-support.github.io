@@ -56,7 +56,7 @@ const entries = list.getEntries();;
         entries.forEach((entry: any) => {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: 'entry.processingStart - entry.startTime ',
           }))})});
 
       fidObserver.observe({ entryTypes: [first-input] });
@@ -85,7 +85,7 @@ const fcpObserver = new PerformanceObserver((list) => {;;
 
 const entries = list.getEntries();;
 
-        entries.forEach((entry) => {
+        entries.forEach((entry) => {'
           if (entry.name === 'first-contentful-paint) {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }))}
 
@@ -100,7 +100,7 @@ const navigationEntry = performance.getEntriesByType(navigation)[0] as Performan
       if (navigationEntry) {
         setMetrics(prev => ({ 
           ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+          ttfb: 'navigationEntry.responseStart - navigationEntry.requestStart ',
         }))}
 
       // Cleanup observers
@@ -120,26 +120,26 @@ const cleanup = measureWebVitals();;
     // Send metrics to analytics (if available);
 
 const sendToAnalytics = (metrics: PerformanceMetrics) => {;;
-
+'
       if (typeof window !== 'undefined' && gtag in window) {;
 
 const gtag = (window as any).gtag;;
 
-        if (metrics.lcp !== null) {
-          gtag('event', 'web_vitals, {
-            event_category: 'Performance,
+        if (metrics.lcp !== null) {'
+          gtag('event', 'web_vitals, {'
+            event_category: 'Performance,'
             event_label: 'LCP,
             value: Math.round(metrics.lcp)})}
-
-        if (metrics.fid !== null) {
-          gtag('event', 'web_vitals, {
-            event_category: 'Performance,
+';
+        if (metrics.fid !== null) {'
+          gtag('event', 'web_vitals, {'
+            event_category: 'Performance,'
             event_label: 'FID,
             value: Math.round(metrics.fid)})}
-
-        if (metrics.cls !== null) {
-          gtag('event', 'web_vitals, {
-            event_category: 'Performance,
+';
+        if (metrics.cls !== null) {'
+          gtag('event', 'web_vitals, {'
+            event_category: 'Performance,'
             event_label: 'CLS,
             value: Math.round(metrics.cls * 1000) / 1000})}
 
@@ -158,20 +158,21 @@ const timeoutId = setTimeout(() => {;;
 
       clearTimeout(timeoutId)}}, [metrics]);
 
-  // Dont render anything in production
+  // Dont render anything in production'
   if (process.env.NODE_ENV === 'production) {
     return null}
 
   return (
 
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50>">
       <div className="mb-2 font-bold>Performance Metrics</div>
-      <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...}</div>
-      <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...}</div>
-      <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...}</div>
+      <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...}</div>'
+      <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...}</div>'
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...}</div>'
+      <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...}</div>'
       <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...}</div>
     </div>
   )};
 
 export default PerformanceMonitor;
+'">
