@@ -517,6 +517,105 @@ body {
   }
 }
 
+/* Quantum Pulse Enhanced */
+.quantum-pulse-enhanced {
+  position: relative;
+}
+
+.quantum-pulse-enhanced::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  animation: quantumPulseEnhanced 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes quantumPulseEnhanced {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(0.8); 
+    opacity: 0.3; 
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.4); 
+    opacity: 0.6; 
+  }
+}
+
+/* Cyber Scan Line Effect */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: cyberScan 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes cyberScan {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Holographic Text Effect */
+.holographic-text {
+  background: var(--gradient-holographic);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographicShift 4s ease-in-out infinite;
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Cyber Text Effect */
+.cyber-text {
+  position: relative;
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  animation: cyberFlicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes cyberFlicker {
+  0%, 100% { 
+    opacity: 1; 
+    text-shadow: 
+      0 0 5px var(--neon-cyan),
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan),
+      0 0 20px var(--neon-cyan);
+  }
+  50% { 
+    opacity: 0.8; 
+    text-shadow: 
+      0 0 2px var(--neon-cyan),
+      0 0 5px var(--neon-cyan),
+      0 0 8px var(--neon-cyan),
+      0 0 12px var(--neon-cyan);
+  }
+}
+
 /* Enhanced Loading Animation */
 .loading-dots-enhanced {
   display: inline-block;

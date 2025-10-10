@@ -126,6 +126,72 @@ const HomePage: React.FC = () => {
       benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
       category: 'Automation',
       popular: true
+    },
+    {
+      icon: Heart,
+      title: 'AI Healthcare Solutions',
+      description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: ['Medical image analysis', 'Drug discovery algorithms', 'Patient risk assessment', 'Treatment recommendations', 'Clinical trial optimization'],
+      benefits: ['Improved diagnosis accuracy', 'Faster drug development', 'Better patient outcomes', 'Cost reduction'],
+      category: 'Healthcare',
+      popular: false
+    },
+    {
+      icon: DollarSign,
+      title: 'AI Financial Services',
+      description: 'Advanced AI for fraud detection, algorithmic trading, and financial risk management',
+      price: '$699/month',
+      marketPrice: '$1200-4000/month',
+      features: ['Fraud detection algorithms', 'Algorithmic trading systems', 'Credit risk assessment', 'Market prediction models', 'Regulatory compliance'],
+      benefits: ['Reduced fraud losses', 'Better trading performance', 'Risk mitigation', 'Compliance automation'],
+      category: 'Fintech',
+      popular: true
+    },
+    {
+      icon: Globe,
+      title: 'AI E-commerce Optimization',
+      description: 'AI-powered solutions for product recommendations, pricing, and customer experience',
+      price: '$449/month',
+      marketPrice: '$800-2500/month',
+      features: ['Personalized recommendations', 'Dynamic pricing optimization', 'Inventory management', 'Customer behavior analysis', 'Conversion optimization'],
+      benefits: ['Increased sales', 'Better customer experience', 'Optimized pricing', 'Reduced inventory costs'],
+      category: 'E-commerce',
+      popular: true
+    },
+    {
+      icon: Users,
+      title: 'AI HR & Recruitment',
+      description: 'Intelligent HR solutions for talent acquisition, employee analytics, and workforce optimization',
+      price: '$399/month',
+      marketPrice: '$600-2000/month',
+      features: ['Resume screening AI', 'Candidate matching algorithms', 'Employee performance analytics', 'Predictive attrition models', 'Skills gap analysis'],
+      benefits: ['Faster hiring', 'Better candidate fit', 'Reduced turnover', 'Data-driven HR decisions'],
+      category: 'Human Resources',
+      popular: false
+    },
+    {
+      icon: Shield,
+      title: 'AI Cybersecurity',
+      description: 'Advanced AI for threat detection, vulnerability assessment, and security automation',
+      price: '$599/month',
+      marketPrice: '$1000-3000/month',
+      features: ['Threat detection algorithms', 'Vulnerability scanning', 'Security incident response', 'Behavioral analysis', 'Compliance monitoring'],
+      benefits: ['Proactive security', 'Faster threat response', 'Reduced false positives', 'Compliance assurance'],
+      category: 'Cybersecurity',
+      popular: true
+    },
+    {
+      icon: Settings,
+      title: 'AI IoT & Edge Computing',
+      description: 'AI solutions for Internet of Things devices and edge computing optimization',
+      price: '$549/month',
+      marketPrice: '$900-2500/month',
+      features: ['Edge AI processing', 'IoT device optimization', 'Real-time data analysis', 'Predictive maintenance', 'Energy efficiency optimization'],
+      benefits: ['Reduced latency', 'Lower bandwidth usage', 'Predictive maintenance', 'Energy savings'],
+      category: 'IoT',
+      popular: false
     }
   ];
 
@@ -174,6 +240,72 @@ const HomePage: React.FC = () => {
       benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support'],
       category: 'Database',
       popular: false
+    },
+    {
+      icon: Globe,
+      title: 'Web Development & Design',
+      description: 'Modern web applications with responsive design, SEO optimization, and performance tuning',
+      price: '$3,500/project',
+      marketPrice: '$5000-25000/project',
+      features: ['React/Next.js development', 'Responsive design', 'SEO optimization', 'Performance optimization', 'E-commerce solutions', 'CMS integration'],
+      benefits: ['Modern web presence', 'Better user experience', 'SEO optimization', 'Mobile responsiveness'],
+      category: 'Web Development',
+      popular: true
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX',
+      price: '$8,000/project',
+      marketPrice: '$12000-50000/project',
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'App store optimization', 'Push notifications', 'Offline functionality', 'API integration'],
+      benefits: ['Native performance', 'Cross-platform reach', 'App store presence', 'Modern UI/UX'],
+      category: 'Mobile Development',
+      popular: true
+    },
+    {
+      icon: Code,
+      title: 'API Development & Integration',
+      description: 'Custom API development, third-party integrations, and microservices architecture',
+      price: '$1,500/month',
+      marketPrice: '$2500-8000/month',
+      features: ['RESTful API development', 'GraphQL APIs', 'Third-party integrations', 'Microservices architecture', 'API documentation', 'Rate limiting & security'],
+      benefits: ['Seamless integrations', 'Scalable architecture', 'Better performance', 'Developer-friendly APIs'],
+      category: 'API Development',
+      popular: false
+    },
+    {
+      icon: Server,
+      title: 'Server Management & Monitoring',
+      description: '24/7 server monitoring, maintenance, and optimization for maximum uptime and performance',
+      price: '$800/month',
+      marketPrice: '$1200-4000/month',
+      features: ['24/7 server monitoring', 'Performance optimization', 'Security updates', 'Backup management', 'Incident response', 'Capacity planning'],
+      benefits: ['Maximum uptime', 'Proactive maintenance', 'Security assurance', 'Performance optimization'],
+      category: 'Server Management',
+      popular: false
+    },
+    {
+      icon: Network,
+      title: 'Network Infrastructure',
+      description: 'Complete network design, implementation, and management for enterprise environments',
+      price: '$2,000/month',
+      marketPrice: '$3000-10000/month',
+      features: ['Network design & implementation', 'Wireless solutions', 'VPN setup', 'Network security', 'Performance monitoring', 'Disaster recovery'],
+      benefits: ['Reliable connectivity', 'Enhanced security', 'Scalable infrastructure', 'Expert support'],
+      category: 'Networking',
+      popular: false
+    },
+    {
+      icon: Package,
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT planning, digital transformation, and technology roadmap development',
+      price: '$200/hour',
+      marketPrice: '$300-500/hour',
+      features: ['IT strategy development', 'Digital transformation planning', 'Technology assessment', 'Vendor evaluation', 'ROI analysis', 'Implementation planning'],
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Future-proof solutions'],
+      category: 'Consulting',
+      popular: true
     }
   ];
 
@@ -226,6 +358,102 @@ const HomePage: React.FC = () => {
       category: 'Storage',
       popular: false,
       users: 'Up to 30 users'
+    },
+    {
+      icon: FileText,
+      title: 'Zion Content Studio',
+      description: 'AI-powered content creation and management platform with multi-format support',
+      price: '$129/month',
+      marketPrice: '$200-600/month',
+      features: ['AI content generation for blogs, social media, and marketing', 'Multi-format support (text, images, videos, infographics)', 'Brand voice customization and consistency', 'SEO optimization and keyword research', 'Content calendar and scheduling', 'Collaboration tools and approval workflows', 'Performance analytics and ROI tracking', 'White-label content creation for agencies'],
+      benefits: ['10x faster content creation', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
+      category: 'Content',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      icon: Users,
+      title: 'Zion HR Assistant',
+      description: 'Intelligent human resources management with AI-powered recruitment and employee analytics',
+      price: '$199/month',
+      marketPrice: '$300-1000/month',
+      features: ['AI-powered resume screening and candidate matching', 'Automated interview scheduling and feedback collection', 'Employee performance analytics and insights', 'Compliance tracking and reporting', 'Benefits administration and enrollment', 'Learning management system integration', 'Employee engagement surveys and analytics', 'Custom HR workflows and automation'],
+      benefits: ['Faster hiring process', 'Better candidate matching', 'Reduced HR workload', 'Data-driven insights'],
+      category: 'HR',
+      popular: false,
+      users: 'Up to 100 employees'
+    },
+    {
+      icon: DollarSign,
+      title: 'Zion Finance Pro',
+      description: 'AI-powered financial management and accounting automation platform',
+      price: '$179/month',
+      marketPrice: '$250-800/month',
+      features: ['Automated invoice generation and payment processing', 'AI-powered expense categorization and tracking', 'Real-time financial reporting and analytics', 'Tax preparation and compliance assistance', 'Budget planning and forecasting', 'Multi-currency support and exchange rates', 'Integration with banks and payment processors', 'Custom financial dashboards and KPIs'],
+      benefits: ['Automated accounting', 'Real-time insights', 'Tax compliance', 'Cost savings'],
+      category: 'Finance',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      icon: Target,
+      title: 'Zion Lead Gen AI',
+      description: 'Advanced lead generation and sales automation platform with AI-powered prospecting',
+      price: '$249/month',
+      marketPrice: '$400-1200/month',
+      features: ['AI-powered lead scoring and qualification', 'Automated prospecting across multiple channels', 'Email sequence automation and personalization', 'CRM integration and pipeline management', 'Social media monitoring and engagement', 'Lead nurturing workflows and follow-ups', 'Performance analytics and conversion tracking', 'Custom lead generation strategies'],
+      benefits: ['Higher quality leads', 'Automated prospecting', 'Better conversion rates', 'Time savings'],
+      category: 'Sales',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      icon: Calendar,
+      title: 'Zion Project Manager',
+      description: 'AI-powered project management and team collaboration platform',
+      price: '$159/month',
+      marketPrice: '$200-700/month',
+      features: ['AI-powered project planning and resource allocation', 'Automated task assignment and deadline tracking', 'Real-time collaboration and communication tools', 'Progress monitoring and milestone tracking', 'Risk assessment and mitigation suggestions', 'Time tracking and productivity analytics', 'Integration with popular tools (Slack, Teams, Jira)', 'Custom project templates and workflows'],
+      benefits: ['Better project visibility', 'Improved team collaboration', 'Risk mitigation', 'Higher success rates'],
+      category: 'Project Management',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      icon: Mail,
+      title: 'Zion Email Marketing AI',
+      description: 'Intelligent email marketing platform with AI-powered personalization and automation',
+      price: '$119/month',
+      marketPrice: '$180-500/month',
+      features: ['AI-powered email content generation and optimization', 'Advanced segmentation and targeting algorithms', 'Automated email sequences and drip campaigns', 'A/B testing and performance optimization', 'Deliverability monitoring and improvement', 'Advanced analytics and ROI tracking', 'Integration with e-commerce platforms', 'White-label email marketing for agencies'],
+      benefits: ['Higher open rates', 'Better engagement', 'Automated campaigns', 'ROI optimization'],
+      category: 'Marketing',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: Database,
+      title: 'Zion Data Sync',
+      description: 'AI-powered data integration and synchronization platform for seamless data flow',
+      price: '$139/month',
+      marketPrice: '$200-600/month',
+      features: ['AI-powered data mapping and transformation', 'Real-time data synchronization across platforms', 'Data quality monitoring and cleansing', 'Custom data connectors and APIs', 'Automated data validation and error handling', 'Data lineage tracking and documentation', 'Compliance and security features', 'Custom data workflows and automation'],
+      benefits: ['Seamless data flow', 'Data quality assurance', 'Reduced manual work', 'Better insights'],
+      category: 'Data Integration',
+      popular: false,
+      users: 'Up to 40 users'
+    },
+    {
+      icon: Smartphone,
+      title: 'Zion Mobile App Builder',
+      description: 'No-code mobile app development platform with AI-powered design and deployment',
+      price: '$199/month',
+      marketPrice: '$300-1000/month',
+      features: ['Drag-and-drop app builder with AI suggestions', 'Native iOS and Android app generation', 'Real-time preview and testing', 'App store deployment automation', 'Push notification management', 'Analytics and user behavior tracking', 'Custom integrations and API connections', 'White-label app development for clients'],
+      benefits: ['Faster app development', 'No coding required', 'Native performance', 'Easy deployment'],
+      category: 'Mobile Development',
+      popular: true,
+      users: 'Up to 20 users'
     }
   ];
 
@@ -290,7 +518,7 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -308,7 +536,7 @@ const HomePage: React.FC = () => {
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
-            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -332,7 +560,7 @@ const HomePage: React.FC = () => {
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
               </p>
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
                 <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
@@ -413,9 +641,9 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Comprehensive AI solutions designed to transform your business operations
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -472,9 +700,9 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -531,9 +759,9 @@ const HomePage: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Ready-to-use business tools that solve specific problems with AI and automation
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
               {microSaasServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />

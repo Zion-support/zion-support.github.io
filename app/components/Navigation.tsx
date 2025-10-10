@@ -80,7 +80,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
+    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
+    { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image & video analysis' },
+    { name: 'AI Voice Processing', href: '/ai-voice-processing', icon: Mic, description: 'Speech recognition' },
+    { name: 'AI E-commerce', href: '/ai-ecommerce-optimizer', icon: Globe, description: 'E-commerce optimization' },
+    { name: 'AI HR Solutions', href: '/ai-hr', icon: Users, description: 'Human resources AI' }
   ];
 
   const itServices = [
@@ -89,16 +93,26 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' }
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
+    { name: 'DevOps & CI/CD', href: '/devops-ci-cd', icon: Settings, description: 'Development operations' },
+    { name: 'Server Management', href: '/server-management', icon: Server, description: '24/7 server monitoring' },
+    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Wifi, description: 'Network design & setup' },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Package, description: 'Strategic IT planning' }
   ];
 
   const microSaasServices = [
-    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
-    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
-    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' }
+    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
+    { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
+    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
+    { name: 'Zion HR Assistant', href: '/zion-hr-assistant', icon: Users, description: 'HR management AI' },
+    { name: 'Zion Finance Pro', href: '/zion-finance-pro', icon: DollarSign, description: 'Financial management' },
+    { name: 'Zion Lead Gen AI', href: '/zion-lead-gen-ai', icon: Target, description: 'Lead generation platform' },
+    { name: 'Zion Project Manager', href: '/zion-project-manager', icon: Calendar, description: 'Project management AI' },
+    { name: 'Zion Email Marketing', href: '/zion-email-marketing', icon: Mail, description: 'Email marketing AI' },
+    { name: 'Zion Data Sync', href: '/zion-data-sync', icon: Database, description: 'Data integration platform' },
+    { name: 'Zion Mobile Builder', href: '/zion-mobile-builder', icon: Smartphone, description: 'No-code app builder' }
   ];
 
   const emergingTech = [
@@ -107,7 +121,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
+    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
+    { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
   ];
 
   return (

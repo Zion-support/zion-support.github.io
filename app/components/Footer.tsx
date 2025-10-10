@@ -7,30 +7,36 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
-    { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
-    { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
-    { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
-    { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
-    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' }
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
+    { name: 'AI Content Generation', url: '/ai-content-writer', description: 'Automated content' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
+    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
+    { name: 'AI Voice Processing', url: '/ai-voice-processing', description: 'Speech recognition' },
+    { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
+    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Fintech AI' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automation pipelines' },
-    { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
-    { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' },
-    { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
-    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
+    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'AWS, Azure, GCP' },
+    { name: 'DevOps & CI/CD', url: '/devops-ci-cd', description: 'Automation pipelines' },
+    { name: 'Cybersecurity Solutions', url: '/ai-cybersecurity-suite', description: 'Security solutions' },
+    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
+    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
+    { name: 'API Development', url: '/ai-api-management', description: 'API solutions' },
+    { name: 'Server Management', url: '/server-management', description: '24/7 monitoring' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic planning' }
   ];
 
   const microSaasServices = [
-    { name: 'Business Intelligence', url: '/micro-saas', description: 'Analytics dashboard' },
-    { name: 'AI Customer Support', url: '/micro-saas', description: 'Chatbot solutions' },
-    { name: 'Email Marketing', url: '/micro-saas', description: 'Marketing automation' },
-    { name: 'Project Management', url: '/micro-saas', description: 'Team collaboration' },
-    { name: 'Lead Generation', url: '/micro-saas', description: 'Sales automation' },
-    { name: 'Financial Analytics', url: '/micro-saas', description: 'Financial management' }
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup' },
+    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'Content creation' },
+    { name: 'Zion HR Assistant', url: '/zion-hr-assistant', description: 'HR management' },
+    { name: 'Zion Finance Pro', url: '/zion-finance-pro', description: 'Financial management' },
+    { name: 'Zion Lead Gen AI', url: '/zion-lead-gen-ai', description: 'Lead generation' }
   ];
 
   const companyLinks = [
