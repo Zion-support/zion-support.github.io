@@ -258,8 +258,29 @@ const Navigation: React.FC = () => {
             <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
+            <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Case Studies
+            </Link>
             <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
+            </Link>
+            <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Careers
+            </Link>
+            <Link href="/partners" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Partners
+            </Link>
+            <Link href="/support" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Support
+            </Link>
+            <Link href="/faq" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              FAQ
+            </Link>
+            <Link href="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Demo
+            </Link>
+            <Link href="/consultation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Consultation
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
@@ -404,8 +425,29 @@ const Navigation: React.FC = () => {
               <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>
+              <Link href="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Case Studies
+              </Link>
               <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Blog
+              </Link>
+              <Link href="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Careers
+              </Link>
+              <Link href="/partners" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Partners
+              </Link>
+              <Link href="/support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Support
+              </Link>
+              <Link href="/faq" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                FAQ
+              </Link>
+              <Link href="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Demo
+              </Link>
+              <Link href="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Consultation
               </Link>
               <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
