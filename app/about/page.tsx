@@ -1,197 +1,76 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {
-  Brain,
-  Users,
-  Target,
-  Award,
-  Globe,
-  CheckCircle,
-  ArrowRight,
-  BarChart,
-  Zap,
-  Shield,
-  Code,
-  Cloud,
-  Database,
-  Smartphone,
-  Lock,
-  TrendingUp,
-  Settings,
-  Calendar,
-  CheckSquare,
-  FileText
-} from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const AboutPage: React.FC = () => {
-  const teamMembers = [
-    {
-      name: 'Dr. Sarah Johnson',
-      role: 'Chief Executive Officer',
-      expertise: 'AI Strategy & Leadership',
-      image: '/images/team/sarah-johnson.jpg',
-      bio: '20+ years in AI research and enterprise technology leadership.'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Chief Technology Officer',
-      expertise: 'Quantum Computing & Cloud Architecture',
-      image: '/images/team/michael-chen.jpg',
-      bio: 'Leading expert in quantum computing and distributed systems.'
-    },
-    {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Head of AI Research',
-      expertise: 'Machine Learning & Neural Networks',
-      image: '/images/team/emily-rodriguez.jpg',
-      bio: 'Pioneer in advanced machine learning algorithms and applications.'
-    },
-    {
-      name: 'James Wilson',
-      role: 'Head of Cybersecurity',
-      expertise: 'Cybersecurity & Risk Management',
-      image: '/images/team/james-wilson.jpg',
-      bio: 'Cybersecurity expert with 15+ years protecting enterprise systems.'
-    }
-  ]
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation First',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Trust',
-      description: 'Your data and systems are protected with enterprise-grade security measures.'
-    },
-    {
-      icon: Users,
-      title: 'Client Success',
-      description: 'Your success is our success. We\'re committed to delivering exceptional results.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world better for everyone.'
-    }
-  ]
-  const achievements = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Expert Team Members' },
-    { number: '99.9%', label: 'Client Satisfaction Rate' },
-    { number: '24/7', label: 'Support Available' }
-  ]
   return (
     <>
-      <Helmet> </Helmet><title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta> </meta><meta> </meta></Helmet>
+      <Helmet>
+        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission is to empower businesses with cutting-edge technology." />
+        <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, company history, team" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              About <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Us</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are a leading provider of AI and IT solutions, empowering businesses with cutting-edge technology.
+            </p>
+          </div>
+        </section>
 
-      <Navigation> </Navigation><main>{/* Hero Section */}
-        </main><section> </section><div> </div><div> </div><div> </div><h1>About </h1><span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Zion Tech Group</span>
-              </h1>
-              <p>We're a team of passionate technologists dedicated to transforming businesses through 
-                cutting-edge AI and IT solutions. Our mission is to make advanced technology accessible 
-                and beneficial for organizations of all sizes.
-              </p></p>
+        {/* Mission Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                To transform businesses through innovative AI and IT solutions that drive growth, efficiency, and success.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Mission & Vision */}
-        <section> </section><div> </div><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p>To democratize access to advanced AI and IT technologies, enabling businesses to 
-                  innovate, grow, and thrive in the digital age. We believe that every organization, 
-                  regardless of size, should have access to world-class technology solutions.
-                </p></p>
-                <div> </div><div> </div><CheckCircle> </CheckCircle><p className="text-gray-300">Empowering businesses with AI-driven solutions</p>
-                  </div>
-                  <div> </div><CheckCircle> </CheckCircle><p className="text-gray-300">Building secure, scalable, and efficient systems</p>
-                  </div>
-                  <div> </div><CheckCircle> </CheckCircle><p className="text-gray-300">Fostering innovation through cutting-edge technology</p>
-                  </div>
-                </div>
+        {/* Values Section */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Values
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
+                <p className="text-gray-600">We constantly push the boundaries of what's possible with technology.</p>
               </div>
-              
-              <div> </div><h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                <p>To be the world's leading provider of AI and IT solutions, recognized for our 
-                  innovation, reliability, and commitment to client success. We envision a future 
-                  where technology seamlessly integrates with business operations to create 
-                  unprecedented value and opportunities.
-                </p></p>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
+                <p className="text-gray-600">We deliver high-quality solutions that exceed expectations.</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Values */}
-        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
-              <p>These core values guide everything we do and shape how we work with our clients and each other.
-              </p></p>
-            </div>
-
-            <div>{values.map((value, index) => (
-                </div><div> </div><div> </div><value> </value></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Team */}
-        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Meet Our Team</h2>
-              <p>Our diverse team of experts brings together decades of experience in AI, 
-                cybersecurity, cloud computing, and digital transformation.
-              </p></p>
-            </div>
-
-            <div>{teamMembers.map((member, index) => (
-                </div><div> </div><div> </div><Users> </Users></div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-cyan-400 font-semibold mb-2">{member.role}</p>
-                  <p className="text-sm text-gray-400 mb-3">{member.expertise}</p>
-                  <p className="text-sm text-gray-300">{member.bio}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Achievements */}
-        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Our Achievements</h2>
-              <p>Numbers that reflect our commitment to excellence and client success.
-              </p></p>
-            </div>
-
-            <div>{achievements.map((achievement, index) => (
-                </div><div> </div><div>{achievement.number}
-                  </div></div>
-                  <div className="text-gray-300">{achievement.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section> </section><div> </div><h2>Ready to Work With Us?
-            </h2></h2>
-            <p>Let's discuss how our team can help transform your business with cutting-edge technology.
-            </p></p>
-            <div> </div><a> </a><span className="relative z-10">Get In Touch</span>
-                <div> </div></a>
-              <a>Join Our Team
-              </a></a>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Integrity</h3>
+                <p className="text-gray-600">We maintain the highest standards of honesty and transparency.</p>
+              </div>
             </div>
           </div>
         </section>
       </main>
+      
+      <Footer />
+    </>
+  );
+};
 
-      <Footer> </Footer></>
-  )
-}
-export default AboutPage
+export default AboutPage;

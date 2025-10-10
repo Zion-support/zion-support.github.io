@@ -1,198 +1,102 @@
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  BarChart,
-  Users,
-  Zap,
-  Globe,
-  Database,
-  Smartphone,
-  Lock,
-  TrendingUp,
-  Settings,
-  Calendar,
-  CheckSquare,
-  FileText,
-  Search,
-  Filter
-} from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, Cloud, Shield, Code, BarChart, Users } from 'lucide-react';
+
 const ServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [searchTerm, setSearchTerm] = useState('')
   const services = [
     {
-      id: 1,
-      name: 'AI Strategy & Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and develop a comprehensive AI roadmap.',
-      category: 'ai',
       icon: Brain,
-      features: ['AI Roadmap Development', 'Technology Assessment', 'Implementation Planning', 'ROI Analysis']
+      title: 'AI Solutions',
+      description: 'Comprehensive artificial intelligence services including machine learning, natural language processing, and computer vision.',
+      features: ['Machine Learning Models', 'NLP Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      id: 2,
-      name: 'Machine Learning Solutions',
-      description: 'Custom machine learning models tailored to your specific business needs and data.',
-      category: 'ai',
-      icon: Brain,
-      features: ['Custom ML Models', 'Data Preprocessing', 'Model Training', 'Performance Optimization']
-    },
-    {
-      id: 3,
-      name: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and reliable cloud solutions for your business operations.',
-      category: 'it',
       icon: Cloud,
-      features: ['Cloud Migration', 'Auto-scaling', 'Security Implementation', '24/7 Monitoring']
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud Platform integration.',
+      features: ['Cloud Migration', 'Auto-scaling', 'Security', 'Cost Optimization']
     },
     {
-      id: 4,
-      name: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      category: 'security',
       icon: Shield,
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets and ensure compliance.',
+      features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response']
     },
     {
-      id: 5,
-      name: 'Custom Development',
-      description: 'Bespoke software solutions designed to meet your unique business requirements.',
-      category: 'development',
       icon: Code,
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      title: 'Custom Development',
+      description: 'Tailored software solutions built with modern technologies and best practices.',
+      features: ['Web Applications', 'Mobile Apps', 'APIs', 'Database Design']
     },
     {
-      id: 6,
-      name: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      category: 'analytics',
       icon: BarChart,
-      features: ['Data Visualization', 'Real-time Dashboards', 'Predictive Modeling', 'Custom Reports']
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+      features: ['Data Visualization', 'Business Intelligence', 'Reporting', 'Predictive Modeling']
     },
     {
-      id: 7,
-      name: 'IT Consulting',
-      description: 'Strategic technology consulting to optimize your IT infrastructure and processes.',
-      category: 'consulting',
       icon: Users,
-      features: ['Technology Assessment', 'Digital Transformation', 'Process Optimization', 'Change Management']
-    },
-    {
-      id: 8,
-      name: 'Automation Solutions',
-      description: 'Streamline your operations with intelligent automation and workflow optimization.',
-      category: 'automation',
-      icon: Zap,
-      features: ['Process Automation', 'Workflow Optimization', 'RPA Implementation', 'Integration Services']
-    },
-    {
-      id: 9,
-      name: 'Database Management',
-      description: 'Optimize your database performance and ensure data integrity and security.',
-      category: 'database',
-      icon: Database,
-      features: ['Performance Tuning', 'Data Migration', 'Backup Solutions', 'Security Hardening']
+      title: 'Consulting',
+      description: 'Expert guidance on technology strategy, digital transformation, and process optimization.',
+      features: ['Strategy Planning', 'Digital Transformation', 'Process Optimization', 'Training']
     }
-  ]
-  const categories = ['all', 'ai', 'it', 'security', 'development', 'analytics', 'consulting', 'automation', 'database']
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
+  ];
+
   return (
     <>
-      <Helmet> </Helmet><title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta> </meta><meta> </meta></Helmet>
-
-      <Navigation> </Navigation><main>{/* Hero Section */}
-        </main><section> </section><div> </div><div> </div><div> </div><h1>Our </h1><span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Services</span>
-              </h1>
-              <p>Comprehensive AI and IT solutions designed to accelerate your digital transformation 
-                and drive business growth. From strategy to implementation, we're your technology partner.
-              </p></p>
-            </div>
+      <Helmet>
+        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Discover our comprehensive AI and IT services. From AI solutions to cloud infrastructure, we provide cutting-edge technology solutions." />
+        <meta name="keywords" content="AI services, IT services, cloud infrastructure, cybersecurity, custom development, data analytics, consulting" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions designed to accelerate your digital transformation and drive business success.
+            </p>
           </div>
         </section>
 
-        {/* Filter Section */}
-        <section> </section><div> </div><div> </div><div> </div><Search> </Search><input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="bg-slate-800 border border-cyan-500/20 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
-                />
-              </div>
-              
-              <div> </div><Filter> </Filter><select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="bg-slate-800 border border-cyan-500/20 rounded-lg px-4 py-2 text-white focus:border-cyan-400 focus:outline-none"
-                >
-                  {categories.map((category) => (
-                    <option>{category === 'all' ? 'All Services' : category}
-                    </option></option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section> </section><div> </div><div>{filteredServices.map((service) => (
-                </div><div> </div><div> </div><div> </div><service> </service></div>
-                    <h3>{service.name}
-                    </h3></h3>
+        {/* Services Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
-                  <p>{service.description}
-                  </p></p>
-                  
-                  <ul>{service.features.map((feature, index) => (
-                      </ul><li> </li><CheckSquare>{feature}
-                      </CheckSquare></li>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-500">
+                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                        {feature}
+                      </li>
                     ))}
                   </ul>
-                  
-                  <button>Learn More
-                  </button></button>
                 </div>
               ))}
-            </div>
-            
-            {filteredServices.length === 0 && (
-              <div> </div><div> </div><Search> </Search></div>
-                <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section> </section><div> </div><h2>Ready to Transform Your Business?
-            </h2></h2>
-            <p>Let's discuss how our services can help you achieve your technology goals.
-            </p></p>
-            <div> </div><a> </a><span className="relative z-10">Get Started Today</span>
-                <div> </div></a>
-              <a>View Pricing
-              </a></a>
             </div>
           </div>
         </section>
       </main>
+      
+      <Footer />
+    </>
+  );
+};
 
-      <Footer> </Footer></>
-  )
-}
-export default ServicesPage
+export default ServicesPage;

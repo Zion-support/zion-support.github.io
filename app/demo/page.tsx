@@ -1,64 +1,69 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Play, ArrowRight, CheckCircle } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const DemoPage: React.FC = () => {
-  const demos = [
-    {
-      title: 'AI Analytics Dashboard',
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
-    },
-    {
-      title: 'AI Customer Support Bot',
-      description: 'Experience our intelligent customer support automation',
-      duration: '3 min',
-      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
-    },
-    {
-      title: 'AI Content Generation',
-      description: 'Watch our AI create high-quality content in seconds',
-      duration: '4 min',
-      features: ['Blog posts', 'Social media content', 'Product descriptions']
-    }
-  ]
   return (
-    <React> </React><Helmet> </Helmet><title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
-        <meta> </meta><meta> </meta></Helmet>
-      <div> </div><section> </section><div> </div><h1>See Our </h1><span className="text-cyan-400">Solutions</span> in Action
+    <>
+      <Helmet>
+        <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
+        <meta name="keywords" content="demo, AI demo, IT solutions demo, interactive demo, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              See Our <span className="text-cyan-400">Solutions</span> in Action
             </h1>
-            <p>Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
-            </p></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience our AI and IT solutions through interactive demos and case studies.
+            </p>
           </div>
         </section>
-        <section> </section><div> </div><div>{demos.map((demo, index) => (
-                </div><div> </div><div> </div><Play> </Play></div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{demo.title}</h3>
-                  <p className="text-gray-300 mb-4">{demo.description}</p>
-                  <div className="text-sm text-cyan-400 mb-4">Duration: {demo.duration}</div>
-                  <ul>{demo.features.map((feature, featureIndex) => (
-                      </ul><li> </li><CheckCircle>{feature}
-                      </CheckCircle></li>
-                    ))}
-                  </ul>
-                  <button> </button><Play>Watch Demo
-                  </Play></button>
-                </div>
-              ))}
+
+        {/* Demo Content Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Interactive Demos
+              </h2>
+              <p className="text-xl text-gray-600">
+                Explore our solutions through hands-on demonstrations.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Chatbot Demo</h3>
+                <p className="text-gray-600 mb-6">Experience our AI-powered customer service chatbot.</p>
+                <button className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition-colors">
+                  Try Demo
+                </button>
+              </div>
+              
+              <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Data Analytics Demo</h3>
+                <p className="text-gray-600 mb-6">See how our analytics platform transforms your data.</p>
+                <button className="bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition-colors">
+                  Try Demo
+                </button>
+              </div>
             </div>
           </div>
         </section>
-        <section> </section><div> </div><div> </div><h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?</h2>
-              <p>Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.
-              </p></p>
-              <a>Schedule Demo
-                </a><ArrowRight> </ArrowRight></a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
-  )
-}
-export default DemoPage
+      </main>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default DemoPage;

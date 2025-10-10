@@ -1,79 +1,78 @@
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([])
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    )
-  }
   const faqs = [
     {
-      question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."
+      question: 'What AI services do you offer?',
+      answer: 'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and process automation.'
     },
     {
-      question: "How can AI benefit my business?",
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."
+      question: 'How long does a typical project take?',
+      answer: 'Project timelines vary depending on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months.'
     },
     {
-      question: "Do you provide IT infrastructure services?",
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack."
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes, we offer 24/7 support for all our clients. Our support includes monitoring, maintenance, updates, and technical assistance.'
     },
     {
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote."
+      question: 'What industries do you serve?',
+      answer: 'We serve a wide range of industries including healthcare, finance, technology, manufacturing, retail, and government sectors.'
     },
     {
-      question: "Do you offer 24/7 support?",
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock."
+      question: 'How do you ensure data security?',
+      answer: 'We implement enterprise-grade security measures including encryption, access controls, regular audits, and compliance with industry standards.'
     },
     {
-      question: "How long does implementation take?",
-      answer: "Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during consultation."
-    },
-    {
-      question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
+      question: 'Can you work with our existing systems?',
+      answer: 'Absolutely. We specialize in integrating AI solutions with existing systems and can work with any technology stack or platform.'
     }
-  ]
+  ];
+
   return (
-    <React> </React><Helmet> </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta> </meta><meta> </meta></Helmet>
-      <div> </div><section> </section><div> </div><h1>Frequently Asked </h1><span className="text-cyan-400">Questions</span>
+    <>
+      <Helmet>
+        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, and support." />
+        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
-            <p>Find answers to common questions about our AI and IT services, pricing, and implementation.
-            </p></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find answers to common questions about our AI and IT services.
+            </p>
           </div>
         </section>
-        <section> </section><div> </div><div>{faqs.map((faq, index) => (
-                </div><div> </div><button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {openItems.includes(index) ? (
-                      <ChevronUp>) : (
-                      </ChevronUp><ChevronDown>)}
-                  </ChevronDown></button>
-                  {openItems.includes(index) && (
-                    <div> </div><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
+
+        {/* FAQ Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-      </div>
-    </React.Fragment>
-  )
-}
-export default FAQPage
+      </main>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default FAQPage;

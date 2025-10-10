@@ -1,213 +1,126 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Check } from 'lucide-react';
+
 const PricingPage: React.FC = () => {
-  const pricingPlans = [
+  const plans = [
     {
       name: 'Starter',
-      price: '$1,500',
+      price: '$999',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
       features: [
         'Basic AI consultation',
-        'Up to 5 AI models',
         'Email support',
-        'Monthly reporting',
-        'Basic analytics dashboard',
-        'Standard security features',
-        'Basic AI integration',
-        'Email support',
-        'Standard analytics',
-        'Up to 5 users',
-        'Basic automation'
-      ],
-      popular: false,
-      cta: 'Get Started'
+        'Monthly reports',
+        'Up to 5 users'
+      ]
     },
     {
       name: 'Professional',
-      price: '$3,500',
+      price: '$2,999',
       period: '/month',
       description: 'Ideal for growing businesses with advanced needs',
       features: [
-        'Advanced AI consultation',
-        'Up to 20 AI models',
+        'Advanced AI solutions',
         'Priority support',
-        'Weekly reporting',
-        'Advanced analytics dashboard',
-        'Enhanced security features'
+        'Weekly reports',
+        'Up to 25 users',
+        'Custom integrations'
       ],
-      popular: true,
-      cta: 'Most Popular'
+      popular: true
     },
     {
       name: 'Enterprise',
-      price: '$7,500',
-      period: '/month',
-      description: 'Comprehensive solution for large organizations',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
       features: [
-        'Custom AI solutions',
-        'Unlimited AI models',
+        'Custom AI development',
         '24/7 dedicated support',
-        'Real-time reporting',
-        'Custom analytics dashboard',
-        'Enterprise security features',
-        'Custom integrations',
-        'Dedicated team',
-        'SLA guarantee',
-        'On-site support',
-        'Custom AI solutions',
-        '24/7 dedicated support',
-        'Custom analytics',
+        'Real-time monitoring',
         'Unlimited users',
-        'White-label options',
         'On-premise deployment',
-        'Custom training'
-      ],
-      popular: false,
-      cta: 'Contact Sales'
+        'Dedicated account manager'
+      ]
     }
-  ]
-  const addOnServices = [
-    {
-      name: 'AI Consulting',
-      price: '$299/hour',
-      description: 'Expert guidance on AI strategy and implementation'
-    },
-    {
-      name: 'Cloud Migration',
-      price: '$5,000/project',
-      description: 'Seamless migration to cloud infrastructure'
-    },
-    {
-      name: 'Security Audit',
-      price: '$2,500/audit',
-      description: 'Comprehensive security assessment and recommendations'
-    },
-    {
-      name: 'Custom Development',
-      price: '$150/hour',
-      description: 'Bespoke software solutions for your specific needs'
-    },
-    {
-      name: 'Data Analytics',
-      price: '$200/hour',
-      description: 'Advanced data analysis and visualization services'
-    },
-    {
-      name: 'Training & Support',
-      price: '$100/hour',
-      description: 'Team training and ongoing technical support'
-    }
-  ]
+  ];
+
   return (
     <>
-      <Helmet> </Helmet><title>Pricing - Zion Tech Group | AI & IT Solutions</title>
-        <meta> </meta><meta> </meta></Helmet>
-
-      <Navigation> </Navigation><main>{/* Hero Section */}
-        </main><section> </section><div> </div><div> </div><div> </div><h1>Simple, </h1><span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Transparent</span> Pricing
-              </h1>
-              <p>Choose the perfect plan for your business. All plans include our core AI and IT services 
-                with flexible options to scale as you grow.
-              </p></p>
-            </div>
+      <Helmet>
+        <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Choose the perfect plan for your business. Transparent pricing for AI and IT solutions that scale with your needs." />
+        <meta name="keywords" content="pricing, plans, AI solutions, IT services, enterprise, professional, starter" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Simple, <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Transparent</span> Pricing
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your business. No hidden fees, no surprises.
+            </p>
           </div>
         </section>
 
-        {/* Pricing Plans */}
-        <section> </section><div> </div><div>{pricingPlans.map((plan, index) => (
-                </div><div>{plan.popular && (
-                    </div><div> </div><span>Most Popular
-                      </span></span>
+        {/* Pricing Plans Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {plans.map((plan, index) => (
+                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-purple-500 relative' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
                     </div>
                   )}
                   
-                  <div> </div><h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div> </div><span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                    <div className="text-4xl font-bold text-gray-900 mb-2">
+                      {plan.price}
+                      <span className="text-lg text-gray-500">{plan.period}</span>
                     </div>
-                    <p className="text-gray-300">{plan.description}</p>
+                    <p className="text-gray-600">{plan.description}</p>
                   </div>
-
-                  <ul>{plan.features.map((feature, featureIndex) => (
-                      </ul><li> </li><CheckCircle> </CheckCircle><span className="text-gray-300">{feature}</span>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <Check className="w-5 h-5 text-green-500 mr-3" />
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-
-                  <Link>{plan.cta}
-                  </Link></Link>
+                  
+                  <button className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
+                    plan.popular
+                      ? 'bg-purple-500 text-white hover:bg-purple-600'
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                  }`}>
+                    Get Started
+                  </button>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Add-on Services */}
-        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Add-on Services</h2>
-              <p>Enhance your package with additional services tailored to your specific needs.
-              </p></p>
-            </div>
-
-            <div>{addOnServices.map((service, index) => (
-                </div><div> </div><h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</p>
-                  <p className="text-gray-300">{service.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section> </section><div> </div><div> </div><h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-              <p>Common questions about our pricing and services.
-              </p></p>
-            </div>
-
-            <div> </div><div> </div><h3 className="text-xl font-bold text-white mb-4">Can I change my plan anytime?</h3>
-                <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.
-                </p></p>
-              </div>
-
-              <div> </div><h3 className="text-xl font-bold text-white mb-4">Do you offer custom pricing?</h3>
-                <p>Yes, we offer custom pricing for enterprise clients with specific requirements. Contact us to discuss your needs.
-                </p></p>
-              </div>
-
-              <div> </div><h3 className="text-xl font-bold text-white mb-4">What's included in support?</h3>
-                <p>All plans include email support. Professional and Enterprise plans include priority support and dedicated account managers.
-                </p></p>
-              </div>
-
-              <div> </div><h3 className="text-xl font-bold text-white mb-4">Is there a free trial?</h3>
-                <p>We offer a 30-day free trial for all plans. No credit card required to get started.
-                </p></p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section> </section><div> </div><h2>Ready to Get Started?
-            </h2></h2>
-            <p>Choose your plan and start transforming your business today.
-            </p></p>
-            <div> </div><Link> </Link><span className="relative z-10">Start Free Trial</span>
-                <div> </div></Link>
-              <Link> </Link><Phone> </Phone><span>Free Consultation</span>
-              </Link>
             </div>
           </div>
         </section>
       </main>
+      
+      <Footer />
+    </>
+  );
+};
 
-      <Footer> </Footer></>
-  )
-}
-export default PricingPage
+export default PricingPage;

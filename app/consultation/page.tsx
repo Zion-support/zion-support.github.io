@@ -1,239 +1,108 @@
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Target, Award } from 'lucide-react'
-interface ConsultationType {
-  id: string
-  name: string
-  description: string
-  duration: string
-  price: string
-  features: string[]
-  popular: boolean
-}
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: '',
-    consultationType: '',
-    urgency: 'medium'
-  })
-  const consultationTypes: ConsultationType[] = [
-    {
-      id: 'strategy',
-      name: 'AI Strategy Consultation',
-      description: 'Comprehensive AI strategy development and implementation planning',
-      duration: '2 hours',
-      price: 'Free',
-      features: [
-        'AI readiness assessment',
-        'Technology roadmap development',
-        'ROI analysis and projections',
-        'Implementation timeline',
-        'Resource planning'
-      ],
-      popular: true
-    },
-    {
-      id: 'technical',
-      name: 'Technical Deep Dive',
-      description: 'Detailed technical analysis and solution architecture design',
-      duration: '3 hours',
-      price: '$500',
-      features: [
-        'Technical architecture review',
-        'Integration planning',
-        'Security assessment',
-        'Performance optimization',
-        'Scalability planning'
-      ],
-      popular: false
-    },
-    {
-      id: 'security',
-      name: 'Security & Compliance',
-      description: 'Cybersecurity assessment and compliance strategy development',
-      duration: '2 hours',
-      price: 'Free',
-      features: [
-        'Security vulnerability assessment',
-        'Compliance gap analysis',
-        'Security framework implementation',
-        'Incident response planning',
-        'Training recommendations'
-      ],
-      popular: false
-    }
-  ]
-  const services = [
-    {
-      icon: Zap,
-      title: 'AI & Machine Learning',
-      description: 'Transform your business with intelligent automation and data-driven insights'
-    },
-    {
-      icon: Target,
-      title: 'Cloud Solutions',
-      description: 'Scale your infrastructure with secure, reliable cloud computing solutions'
-    },
-    {
-      icon: Award,
-      title: 'Cybersecurity',
-      description: 'Protect your business with comprehensive security solutions and compliance'
-    }
-  ]
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // In a real app, this would submit the form data
-    alert('Thank you for your interest! We will contact you within 24 hours.')
-  }
   return (
-    <div> </div><Helmet> </Helmet><title>Free Consultation - Zion Tech Group | Expert Technology Consulting</title>
-        <meta> </meta><meta> </meta></Helmet>
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group | Expert Technology Consulting</title>
+        <meta name="description" content="Get a free consultation with our AI and IT experts. Discover how we can help transform your business." />
+        <meta name="keywords" content="consultation, free consultation, AI consulting, IT consulting, technology advice, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Free <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Consultation</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get expert advice on how AI and IT solutions can transform your business.
+            </p>
+          </div>
+        </section>
 
-      {/* Hero Section */}
-      <section> </section><div> </div><h1>Free
-            </h1><span>Consultation
-            </span></span>
-          </h1>
-          <p>Get expert advice on your technology needs. Our consultants will help you identify opportunities and create a roadmap for success.
-          </p></p>
-          <div> </div><Link> </Link><span>Schedule Now</span>
-              <Calendar> </Calendar></Link>
-            <Link> </Link><span>Our Services</span>
-              <ArrowRight> </ArrowRight></Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section> </section><div> </div><div> </div><h2 className="text-3xl font-bold text-white mb-6">What We Consult On</h2>
-            <p>Our experts provide strategic guidance across all areas of technology and digital transformation.
-            </p></p>
-          </div>
-          
-          <div>{services.map((service, index) => (
-              </div><div> </div><div> </div><div> </div><service> </service></div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Consultation Types */}
-      <section> </section><div> </div><div> </div><h2 className="text-3xl font-bold text-white mb-6">Consultation Types</h2>
-            <p>Choose the consultation type that best fits your needs and schedule.
-            </p></p>
-          </div>
-          
-          <div>{consultationTypes.map((type) => (
-              </div><div>{type.popular && (
-                  </div><div> </div><div>Most Popular
-                    </div></div>
+        {/* Consultation Form Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Schedule Your Free Consultation
+              </h2>
+              <p className="text-xl text-gray-600">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="John"
+                    />
                   </div>
-                )}
-                
-                <div> </div><h3 className="text-2xl font-bold text-white mb-2">{type.name}</h3>
-                  <p className="text-gray-300 mb-4">{type.description}</p>
-                  <div> </div><span> </span><Clock>{type.duration}
-                    </Clock></span>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="Doe"
+                    />
                   </div>
-                  <div className="text-3xl font-bold text-cyan-400 mt-4">{type.price}</div>
                 </div>
                 
-                <ul>{type.features.map((feature, index) => (
-                    </ul><li> </li><CheckCircle> </CheckCircle><span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="john@example.com"
+                  />
+                </div>
                 
-                <button>Book Consultation
-                </button></button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section> </section><div> </div><div> </div><h2 className="text-3xl font-bold text-white mb-6">Request a Consultation</h2>
-            <p>Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.
-            </p></p>
-          </div>
-          
-          <div> </div><form> </form><div> </div><div> </div><label>Full Name *
-                  </label></label>
-                  <input> </input></div>
-                <div> </div><label>Email Address *
-                  </label></label>
-                  <input> </input></div>
-              </div>
-              
-              <div> </div><div> </div><label>Company
-                  </label></label>
-                  <input> </input></div>
-                <div> </div><label>Phone Number
-                  </label></label>
-                  <input> </input></div>
-              </div>
-              
-              <div> </div><div> </div><label>Consultation Type
-                  </label></label>
-                  <select> </select><option value="">Select consultation type</option>
-                    <option value="strategy">AI Strategy Consultation</option>
-                    <option value="technical">Technical Deep Dive</option>
-                    <option value="security">Security & Compliance</option>
-                  </select>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Your Company"
+                  />
                 </div>
-                <div> </div><label>Urgency
-                  </label></label>
-                  <select> </select><option value="low">Low - Within 2 weeks</option>
-                    <option value="medium">Medium - Within 1 week</option>
-                    <option value="high">High - Within 2-3 days</option>
-                  </select>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
+                  <textarea
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Tell us about your project and how we can help..."
+                  ></textarea>
                 </div>
-              </div>
-              
-              <div> </div><label>Message
-                </label></label>
-                <textarea> </textarea></div>
-              
-              <button> </button><span>Request Consultation</span>
-                <ArrowRight> </ArrowRight></button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section> </section><div> </div><div> </div><h2>Ready to Transform Your Business?
-            </h2></h2>
-            <p>Don't wait to start your digital transformation journey. Schedule your free consultation today.
-            </p></p>
-            <div> </div><Link> </Link><span>Contact Us</span>
-                <Phone> </Phone></Link>
-              <Link> </Link><span>View Services</span>
-                <ArrowRight> </ArrowRight></Link>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Consultation
+                </button>
+              </form>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-export default ConsultationPage
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default ConsultationPage;
