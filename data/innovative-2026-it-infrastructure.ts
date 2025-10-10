@@ -608,7 +608,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     rating: 4.8,
     reviews: 550;
 ],
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026ITInfrastructureService {;
   id: string;
   name: string;
@@ -880,7 +879,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 ;
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026ITInfrastructureService {;
   id: string;
   name: string;

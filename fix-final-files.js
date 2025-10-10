@@ -25,8 +25,6 @@ const filesToFix = [
   'src/types/next-stubs.d.ts',
 ];
 function createBasicComponent(filePath) {
-  const _fileName = path.basename(filePath);
-  const _componentName = fileName.replace(/\.(tsx?|jsx?)$/, '');
   //   const isTsx = fileName.endsWith('.tsx');
   //   const isTs = fileName.endsWith('.ts');
   if (isTsx) {
@@ -79,11 +77,9 @@ function fixFile(filePath) {
     if (!fs.existsSync(fullPath)) {
       //       return;
     }
-    const _content = fs.readFileSync(fullPath, 'utf8');
     // Check if file has severe corruption
     if (
       content.includes('<< HEAD') ||
-      content.includes('=======') ||
       content.includes('import, Reac, t') ||
       content.includes('con, s, t') ||
       content.includes('useSta, t, e') ||
@@ -102,3 +98,5 @@ function fixFile(filePath) {
 }
 // filesToFix.forEach(fixFile);
 // 
+
+}

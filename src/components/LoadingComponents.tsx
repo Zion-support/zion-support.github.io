@@ -1,9 +1,26 @@
 import React from 'react';
-export const LoadingSpinner: React.FC = () => {
+
+interface LoadingComponentsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function LoadingComponents({ 
+  className = '', 
+  children 
+}: LoadingComponentsProps) {
   return (
-    <div className='flex items-center justify-center min-h-screen'>
-      <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+    <div className={`loadingcomponents ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">
+            Loading Components
+          </h3>
+          <p className="text-gray-600">
+            Component content will be added here.
+          </p>
+        </div>
+      )}
     </div>
   );
-};
-export default LoadingSpinner;
+}

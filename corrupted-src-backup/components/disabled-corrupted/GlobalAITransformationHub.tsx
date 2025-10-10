@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
 const GlobalAITransformationHu, b = () => { 
   const transformationArea, s = [

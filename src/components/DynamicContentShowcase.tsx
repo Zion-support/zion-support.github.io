@@ -1,62 +1,170 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
+
 const DynamicContentShowcase: React.FC = () => {
-  const features = [
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = [
     {
-      icon: "🚀",
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence that transforms your business operations",
-      benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+      id: 'ai-solutions',
+      title: 'AI Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      content: {
+        title: 'Revolutionary AI Solutions',
+        description: 'Transform your business with cutting-edge artificial intelligence technologies',
+        features: [
+          { name: 'Machine Learning Models', description: 'Custom ML models for your specific needs', icon: '🧠' },
+          { name: 'Natural Language Processing', description: 'Advanced text analysis and understanding', icon: '💬' },
+          { name: 'Computer Vision', description: 'Image and video analysis capabilities', icon: '👁️' },
+          { name: 'Predictive Analytics', description: 'Forecast trends and make data-driven decisions', icon: '📊' }
+        ],
+        stats: [
+          { label: 'Accuracy', value: '99.5%', icon: TrendingUp },
+          { label: 'Processing Speed', value: '10x Faster', icon: Zap },
+          { label: 'Cost Reduction', value: '60%', icon: TrendingUp }
+        ]
+      }
     },
     {
-      icon: "⚡",
-      title: "Lightning Fast Performance",
-      description: "Optimized for speed with 99.9% uptime and sub-second response times",
-      benefits: ["Edge Computing", "CDN Optimization", "Real-time Processing"]
+      id: 'it-services',
+      title: 'IT Services',
+      icon: Shield,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      content: {
+        title: 'Enterprise IT Solutions',
+        description: 'Comprehensive IT services to keep your business running smoothly',
+        features: [
+          { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions', icon: '☁️' },
+          { name: 'Cybersecurity', description: 'Advanced security measures and monitoring', icon: '🔒' },
+          { name: 'Network Management', description: 'Optimized network performance and reliability', icon: '🌐' },
+          { name: '24/7 Support', description: 'Round-the-clock technical assistance', icon: '🛠️' }
+        ],
+        stats: [
+          { label: 'Uptime', value: '99.9%', icon: Clock },
+          { label: 'Response Time', value: '< 1min', icon: Zap },
+          { label: 'Client Satisfaction', value: '98%', icon: Star }
+        ]
+      }
     },
     {
-      icon: "🔒",
-      title: "Enterprise Security",
-      description: "Bank-level security with comprehensive compliance and data protection",
-      benefits: ["End-to-End Encryption", "SOC 2 Compliance", "GDPR Ready"]
-    },
-    {
-      icon: "📊",
-      title: "Advanced Analytics",
-      description: "Real-time insights and predictive analytics for data-driven decisions",
-      benefits: ["Business Intelligence", "Predictive Modeling", "Custom Dashboards"]
+      id: 'digital-transformation',
+      title: 'Digital Transformation',
+      icon: Zap,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      content: {
+        title: 'Digital Transformation',
+        description: 'Modernize your business processes with our digital transformation services',
+        features: [
+          { name: 'Process Automation', description: 'Streamline workflows with intelligent automation', icon: '⚙️' },
+          { name: 'Legacy Modernization', description: 'Update outdated systems and technologies', icon: '🔄' },
+          { name: 'Data Migration', description: 'Secure and efficient data transfer solutions', icon: '📦' },
+          { name: 'Change Management', description: 'Support your team through digital transitions', icon: '👥' }
+        ],
+        stats: [
+          { label: 'Efficiency Gain', value: '300%', icon: TrendingUp },
+          { label: 'Time Saved', value: '40hrs/week', icon: Clock },
+          { label: 'ROI', value: '250%', icon: TrendingUp }
+        ]
+      }
     }
   ];
+
+  const currentTab = tabs[activeTab];
+
   return (
-    <section className="mb-16" aria-labelledby="showcase-heading">
-      <h2 id="showcase-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Why Choose Zion Tech Group?
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {features.map((feature, index) => (
-          <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-            <div className="flex items-start space-x-4">
-              <div className="text-4xl flex-shrink-0">{feature.icon}</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">
-                  {feature.title}
+    <section className="py-16" aria-labelledby="showcase-heading">
+      <div className="container mx-auto px-4">
+        <h2 id="showcase-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          Our Solutions
+        </h2>
+        
+        <div className="max-w-6xl mx-auto">
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {tabs.map((tab, index) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(index)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
+                  activeTab === index
+                    ? `${tab.bgColor} ${tab.color} border-2 border-current`
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                }`}
+                aria-selected={activeTab === index}
+                role="tab"
+              >
+                <tab.icon className="w-5 h-5" />
+                <span className="font-medium">{tab.title}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Content */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Content */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  {currentTab.content.title}
                 </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {feature.description}
+                <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                  {currentTab.content.description}
                 </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-cyan-400">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></span>
-                      {benefit}
-                    </li>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {currentTab.content.features.map((feature, index) => (
+                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors">
+                      <div className="flex items-start space-x-3">
+                        <span className="text-2xl">{feature.icon}</span>
+                        <div>
+                          <h4 className="font-semibold text-white mb-1">{feature.name}</h4>
+                          <p className="text-gray-400 text-sm">{feature.description}</p>
+                        </div>
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
+              </div>
+
+              {/* Stats */}
+              <div className="space-y-6">
+                <h4 className="text-xl font-semibold text-white mb-6">Key Metrics</h4>
+                
+                <div className="space-y-4">
+                  {currentTab.content.stats.map((stat, index) => (
+                    <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4">
+                      <div className="flex items-center space-x-3">
+                        <stat.icon className={`w-6 h-6 ${currentTab.color}`} />
+                        <span className="text-gray-300">{stat.label}</span>
+                      </div>
+                      <span className={`text-2xl font-bold ${currentTab.color}`}>
+                        {stat.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-6">
+                  <a
+                    href={`/${currentTab.id}`}
+                    className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
 };
+
 export default DynamicContentShowcase;

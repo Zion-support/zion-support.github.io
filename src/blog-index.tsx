@@ -1,7 +1,6 @@
-import React from 'react';
+// blog-index file
+// This file is under development
 
-const BlogPage: React.FC = () => {
-  // Redirect to the main blog page
-  return <a href="/blog">Go to Blog</a>;
-};
-export default BlogPage;
+export default function blog_index() {
+  return null;
+}

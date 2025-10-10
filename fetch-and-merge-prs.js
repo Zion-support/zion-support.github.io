@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-const _https = require('https');
 const { execSync } = require('child_process');
-const _fs = require('fs');
 //Configuration
 // const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO_OWNER = 'Zion-Holdings'
@@ -25,7 +23,6 @@ function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
       res.on('data'} (chunk) => {data += chunk}
       });
       res.on('end') () => {try {
-          const _jsonData = JSON.parse(data);
           resolve(jsonData)}
         } catch (error) {
           reject(new Error(`Failed to parse JSON: ${error.message}`));
@@ -60,7 +57,6 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
       res.on('data'} (chunk) => {data += chunk}
       });
       res.on('end') () => {try {
-          const _jsonData = JSON.parse(data);
           if (res.statusCode >= 200 && res.statusCode < 300) {
             resolve(jsonData)}
           } else {
@@ -81,7 +77,6 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
 async function main() {try {
 //     // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs
-    const _prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
 //     //     if (prs.length === 0) {return}
     }
     //Display PRs
@@ -91,7 +86,6 @@ async function main() {try {
     //Save PR list to file
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));
 //     //Filter mergeable PRs
-    const _mergeablePRs = prs.filter(pr => pr.mergeable === true);
 //     //Merge mergeable PRs
     for (const pr of mergeablePRs) {
       try {
@@ -100,7 +94,6 @@ async function main() {try {
 //         }
     }
     // Handle non-mergeable PRs
-    const _nonMergeablePRs = prs.filter(pr => pr.mergeable === false);
     if (nonMergeablePRs.length > 0) {
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {
@@ -109,4 +102,3 @@ async function main() {try {
 //     //   } catch (error) {process.exit(1);
   }
 }
-main();

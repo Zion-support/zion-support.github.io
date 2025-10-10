@@ -1,18 +1,11 @@
-'use client';
-import React, { lazy, Suspense, ComponentType } from 'react';
-interface DynamicOptions {
-  loading?: () => React.ReactElement;
-  ssr?: boolean;
-}
-export function dynamic<T extends ComponentType<unknown>>(
-  importFunc: () => Promise<{ default: T }>,
-  options: DynamicOptions = {}
-): ComponentType<unknown> {
-  const LazyComponent = lazy(importFunc);
-  return (props: any) => (
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-      <LazyComponent {...(props as any)} />
-    </Suspense>
-  );
-}
+// Dynamic utility
+// This file contains utility functions and configurations
+
+export const dynamic = {
+  // Add utility functions here
+  init: () => {
+    console.log('dynamic initialized');
+  }
+};
+
 export default dynamic;

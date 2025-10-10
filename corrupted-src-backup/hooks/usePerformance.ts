@@ -3,9 +3,6 @@
  * Provides React hooks for performance monitoring and optimization
  */
 
-import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
-import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
   renderTime: number;

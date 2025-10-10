@@ -1,146 +1,106 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
+  keywords?: string;
+  canonical?: string;
   ogImage?: string;
-  structuredData?: any;
-  preload?: Array<{ href: string; as: string; type?: string }>;
-  prefetch?: Array<{ href: string; as: string }>;
-  dnsPrefetch?: string[];
-  preconnect?: string[];
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData,
-  preload = [],
-  prefetch = [],
-  dnsPrefetch = [],
-  preconnect = []
+const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
+  title = "Zion Tech Group - AI & IT Solutions",
+  description = "Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.",
+  keywords = "AI, artificial intelligence, enterprise solutions, digital transformation, IT services",
+  canonical,
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
 }) => {
   useEffect(() => {
-    // Update document title
+    // Update page title
     document.title = title;
-
+    
     // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
     }
-    metaDescription.setAttribute('content', description);
-
+    
     // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
     }
-    metaKeywords.setAttribute('content', keywords.join(', '));
+  }, [title, description, keywords]);
 
-    // Update canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', canonicalUrl);
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    description: description,
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-302-464-0950",
+      contactType: "customer service",
+      email: "kleber@ziontechgroup.com",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "364 E Main St STE 1008",
+      addressLocality: "Middletown",
+      addressRegion: "DE",
+      postalCode: "19709",
+      addressCountry: "US",
+    },
+    sameAs: [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ],
+    offers: {
+      "@type": "Offer",
+      name: "AI Enterprise Transformation Services",
+      description: "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
+      price: "50000",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  };
 
-    // Update Open Graph tags
-    const ogTags = [
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:image', content: ogImage },
-      { property: 'og:url', content: canonicalUrl },
-      { property: 'og:type', content: 'website' }
-    ];
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+      <meta property="og:image" content={ogImage} />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+    </Helmet>
+  );
+});
 
-    ogTags.forEach(({ property, content }) => {
-      let ogTag = document.querySelector(`meta[property="${property}"]`);
-      if (!ogTag) {
-        ogTag = document.createElement('meta');
-        ogTag.setAttribute('property', property);
-        document.head.appendChild(ogTag);
-      }
-      ogTag.setAttribute('content', content);
-    });
-
-    // Update Twitter Card tags
-    const twitterTags = [
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: ogImage }
-    ];
-
-    twitterTags.forEach(({ name, content }) => {
-      let twitterTag = document.querySelector(`meta[name="${name}"]`);
-      if (!twitterTag) {
-        twitterTag = document.createElement('meta');
-        twitterTag.setAttribute('name', name);
-        document.head.appendChild(twitterTag);
-      }
-      twitterTag.setAttribute('content', content);
-    });
-
-    // Add structured data
-    if (structuredData) {
-      let structuredDataScript = document.querySelector('script[type="application/ld+json"]');
-      if (!structuredDataScript) {
-        structuredDataScript = document.createElement('script');
-        structuredDataScript.setAttribute('type', 'application/ld+json');
-        document.head.appendChild(structuredDataScript);
-      }
-      structuredDataScript.textContent = JSON.stringify(structuredData);
-    }
-
-    // Add preload links
-    preload.forEach(({ href, as, type }) => {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'preload');
-      link.setAttribute('href', href);
-      link.setAttribute('as', as);
-      if (type) link.setAttribute('type', type);
-      document.head.appendChild(link);
-    });
-
-    // Add prefetch links
-    prefetch.forEach(({ href, as }) => {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'prefetch');
-      link.setAttribute('href', href);
-      link.setAttribute('as', as);
-      document.head.appendChild(link);
-    });
-
-    // Add DNS prefetch
-    dnsPrefetch.forEach((domain) => {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'dns-prefetch');
-      link.setAttribute('href', domain);
-      document.head.appendChild(link);
-    });
-
-    // Add preconnect
-    preconnect.forEach((domain) => {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'preconnect');
-      link.setAttribute('href', domain);
-      document.head.appendChild(link);
-    });
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, preload, prefetch, dnsPrefetch, preconnect]);
-
-  return null;
-};
-
+SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;

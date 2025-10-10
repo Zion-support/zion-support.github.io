@@ -1,5 +1,3 @@
-import React from "react";
-import React from "react";';
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   const, futureTechArticle, s = [
     {
@@ -201,3 +199,4 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
                 >
                   <Sparkles, classNam, e='w-5 h-5' />
                   <Link, classNam, e='w-5 h-5' />
+}

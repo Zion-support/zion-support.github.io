@@ -19,3 +19,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>Au, t, h-A, w, a, r, e, Fre, s, h, Sign, e, d</p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+}

@@ -1,6 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '../../../utils/sync/storage';
-import { filterEventsByScope } from '../../../utils/sync/storage';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const _state = readState();

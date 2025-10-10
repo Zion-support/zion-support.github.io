@@ -33,7 +33,6 @@ try {
 
 // //Step 3: Process branches in batches to avoid conflicts
 // const BATCH_SIZE = 50;
-const _batches = [];
 for (let i = 0; i < allBranches.length; i += BATCH_SIZE) {
   batches.push(allBranches.slice(i, i + BATCH_SIZE));
 }
@@ -159,7 +158,6 @@ const results = {
 };
 
 for (let i = 0; i < batches.length; i++) {
-  const _batch = batches[i];
 //   // console.log(
     `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
   );
@@ -181,7 +179,6 @@ for (let i = 0; i < batches.length; i++) {
   };
 
   for (const branch of batch) {
-    const _result = resolveConflictsAndMerge(branch);
     batchResults.branches.push({ branch, ...result });
     batchResults.totalBranches = batch.length;
 

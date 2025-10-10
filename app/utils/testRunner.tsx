@@ -3,8 +3,7 @@
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
-import React, { ReactElement, useCallback } from 'react'
-import { render, RenderOptions, RenderResult } from '@testing-library/react'
+import React, { ReactElement, useCallback } from 'react';
 // Test result types
 export interface PerformanceMetrics {
   renderTime: number
@@ -191,9 +190,9 @@ export class TestRunner {
       const { unmount } = this.customRender(component)
       const renderTime = performance.now() - startTime
       // Measure memory usage if available
-      let memoryUsage = 0
-      if ('memory' in performance) {}
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+      let memoryUsage = 0;
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: {// usedJSHeapSize: number} }).memory;
         if (memory) {
           memoryUsage = memory.usedJSHeapSize;}
         }
@@ -690,8 +689,8 @@ export class TestRunner {
         default:}
           result = { passed: false, error: 'Unknown test type' }
       }
-    const results: any[] = []
-      results.push({ ...result, name: test.name, type: test.type })
+    const results: unknown[] = [];
+      results.push({ ...result, name: test.name, type: test.type });
     }
     const passed = results.every(result => result.passed)
     return { passed, results }

@@ -1,7 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-import crypto from 'crypto';
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 
 async function submitByEmail(
   to: string,

@@ -160,7 +160,6 @@ function resolveConflictsAndMerge(branchName) {
 
 //Merge all additional branches
 for (const branch of additionalBranches) {
-  const _result = resolveConflictsAndMerge(branch);
   results.branches.push({ branch, ...result });
   results.summary.total++;
   if (result.success) {
