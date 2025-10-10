@@ -19,108 +19,109 @@ const DynamicContentShowcase: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
+      description: 'Bank-level security with end-to-end encryption and compliance with industry standards'
     },
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+      description: 'Built to scale with your business, supporting millions of users worldwide'
+    },
+    {
+      icon: Users,
+      title: '24/7 Expert Support',
+      description: 'Dedicated support team available around the clock to ensure your success'
+    },
+    {
+      icon: Award,
+      title: 'Proven Results',
+      description: 'Trusted by Fortune 500 companies with measurable ROI and business impact'
     }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
   ];
 
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
+      company: 'TechCorp Solutions',
       role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
+      content: 'Zion Tech Group transformed our operations with their AI solutions. The results exceeded our expectations.',
+      rating: 5,
+      avatar: '👩‍💼'
     },
     {
       name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
-      rating: 5
+      company: 'Global Retail Inc',
+      role: 'VP of Technology',
+      content: 'The implementation was seamless and the support team is exceptional. Highly recommended!',
+      rating: 5,
+      avatar: '👨‍💻'
     },
     {
       name: 'Emily Rodriguez',
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month.',
-      rating: 5
+      company: 'Healthcare Plus',
+      role: 'IT Director',
+      content: 'Their AI solutions have revolutionized our patient care and operational efficiency.',
+      rating: 5,
+      avatar: '👩‍⚕️'
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+      setCurrentIndex((prev) => (prev + 1) % features.length);
+    }, 3000);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [features.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Dynamic <span className="text-cyan-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
+    <div className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the key features and benefits that make us the leading choice for AI and IT solutions
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-              <span>Start Demo</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
-          </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions deliver unmatched performance, security, and scalability for modern businesses.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="cyber-card hologram-card p-8 text-center hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <feature.icon className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
+
+        {/* Testimonials */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="cyber-card hologram-card p-8">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">{testimonial.avatar}</div>
+                <div>
+                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  <p className="text-gray-500 text-sm">{testimonial.company}</p>
+                </div>
+              </div>
+              <div className="flex mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-gray-300 italic">"{testimonial.content}"</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
 
+export default DynamicContentShowcase;

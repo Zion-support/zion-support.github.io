@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -73,17 +71,6 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   useEffect(() => {
     const duration = 2000; // 2 seconds
     const steps = 60;
@@ -113,7 +100,41 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-          </div>
+    <div className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Our Success in Numbers
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Trusted by businesses worldwide with proven results and exceptional performance
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div key={index} className="cyber-card hologram-card p-8 text-center">
+              <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-8 h-8 text-cyan-400" />
+              </div>
+              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300 font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="cyber-card hologram-card p-8 text-center">
+              <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300 text-sm">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -2,10 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Mic, 
-  Volume2, 
-  Brain, 
-  Globe, 
+  Calculator, 
+  FileText, 
+  TrendingUp, 
   Shield, 
   Zap, 
   CheckCircle, 
@@ -13,99 +12,102 @@ import {
   Phone,
   Mail,
   Clock,
-  Users,
   Star,
-  TrendingUp,
-  BarChart3
+  BarChart3,
+  Receipt,
+  CreditCard,
+  PieChart
 } from 'lucide-react';
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AIAccountingAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: Mic,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP with 99.5% accuracy for voice recognition and understanding across 50+ languages',
-      benefits: ['Multi-language support', 'Context awareness', 'Intent recognition', 'Sentiment analysis']
+      icon: Calculator,
+      title: 'Automated Bookkeeping',
+      description: 'AI-powered bookkeeping that categorizes transactions, reconciles accounts, and maintains accurate records',
+      benefits: ['99% accuracy rate', 'Real-time processing', 'Auto-categorization', 'Bank reconciliation']
     },
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Machine learning algorithms that learn from interactions to provide increasingly accurate responses',
-      benefits: ['Continuous learning', 'Personalized responses', 'Predictive capabilities', 'Adaptive behavior']
+      icon: FileText,
+      title: 'Tax Preparation',
+      description: 'Automated tax preparation with compliance checking and optimization suggestions',
+      benefits: ['Tax optimization', 'Compliance checking', 'Form generation', 'Deduction maximization']
     },
     {
-      icon: Globe,
-      title: 'Enterprise Integration',
-      description: 'Seamless integration with existing business systems, CRMs, and workflows',
-      benefits: ['API connectivity', 'Custom integrations', 'Real-time sync', 'Scalable architecture']
+      icon: BarChart3,
+      title: 'Financial Reporting',
+      description: 'Generate comprehensive financial reports with insights and recommendations',
+      benefits: ['Real-time reports', 'Custom dashboards', 'Trend analysis', 'KPI tracking']
+    },
+    {
+      icon: Receipt,
+      title: 'Expense Management',
+      description: 'Intelligent expense tracking with receipt scanning and approval workflows',
+      benefits: ['Receipt scanning', 'Expense categorization', 'Approval workflows', 'Policy compliance']
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance with industry standards',
-      benefits: ['SOC 2 compliance', 'GDPR ready', 'Data encryption', 'Access controls']
+      title: 'Compliance & Security',
+      description: 'Ensure regulatory compliance with automated checks and enterprise-grade security',
+      benefits: ['Regulatory compliance', 'Data encryption', 'Audit trails', 'Access controls']
     },
     {
       icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Ultra-low latency voice processing with sub-200ms response times',
-      benefits: ['Instant responses', 'High availability', 'Auto-scaling', 'Global CDN']
-    },
-    {
-      icon: Users,
-      title: 'Multi-user Support',
-      description: 'Support for unlimited concurrent users with role-based access and permissions',
-      benefits: ['Unlimited users', 'Role management', 'Team collaboration', 'Usage analytics']
+      title: 'Workflow Automation',
+      description: 'Automate repetitive accounting tasks and streamline financial processes',
+      benefits: ['Process automation', 'Workflow optimization', 'Time savings', 'Error reduction']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$149',
       period: '/month',
-      description: 'Perfect for small businesses getting started with AI voice technology',
+      description: 'Perfect for small businesses and freelancers with basic accounting needs',
       features: [
-        'Up to 1,000 voice interactions/month',
-        '5 languages supported',
-        'Basic integrations (5)',
+        'Up to 1,000 transactions/month',
+        'Basic bookkeeping',
+        'Tax preparation',
+        'Expense tracking',
         'Email support',
-        '99.5% uptime SLA',
-        'Standard security'
+        'Standard reporting',
+        '99% uptime SLA'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for growing businesses with advanced voice AI needs',
+      description: 'Ideal for growing businesses with complex accounting requirements',
       features: [
-        'Up to 10,000 voice interactions/month',
-        '25 languages supported',
-        'Advanced integrations (25)',
+        'Up to 5,000 transactions/month',
+        'Advanced bookkeeping',
+        'Comprehensive tax prep',
+        'Advanced expense management',
         'Priority support',
-        '99.9% uptime SLA',
-        'Advanced security & compliance',
-        'Custom wake words',
-        'Analytics dashboard'
+        'Advanced reporting',
+        '99.5% uptime SLA',
+        'API integration',
+        'Custom workflows'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$999',
       period: '/month',
-      description: 'Complete voice AI solution for large organizations',
+      description: 'Complete accounting solution for large organizations',
       features: [
-        'Unlimited voice interactions',
-        '50+ languages supported',
-        'Unlimited integrations',
+        'Unlimited transactions',
+        'AI-powered accounting',
+        'Enterprise tax management',
+        'Full automation suite',
         '24/7 dedicated support',
-        '99.99% uptime SLA',
-        'Enterprise security & compliance',
+        'Enterprise reporting',
+        '99.9% uptime SLA',
         'Custom AI training',
-        'Advanced analytics & reporting',
         'White-label options',
         'Dedicated account manager'
       ],
@@ -115,65 +117,88 @@ const AIVoiceAssistantPage: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Customer Service Automation',
-      description: 'Handle 80% of customer inquiries automatically with intelligent voice responses',
-      metrics: 'Reduce support costs by 60%',
-      icon: Users
+      title: 'Small Businesses',
+      description: 'Streamline accounting for small businesses with automated bookkeeping and tax preparation',
+      metrics: 'Save 20 hours/week',
+      icon: Calculator
     },
     {
-      title: 'Sales Qualification',
-      description: 'Qualify leads and schedule appointments through natural voice conversations',
-      metrics: 'Increase conversion rates by 45%',
-      icon: TrendingUp
+      title: 'E-commerce',
+      description: 'Handle complex e-commerce accounting with multi-channel sales tracking and inventory management',
+      metrics: 'Reduce errors by 90%',
+      icon: CreditCard
     },
     {
-      title: 'Internal Operations',
-      description: 'Streamline internal processes with voice-activated workflows and commands',
-      metrics: 'Save 20 hours/week on admin tasks',
-      icon: Zap
+      title: 'Professional Services',
+      description: 'Manage project-based accounting with time tracking and client billing automation',
+      metrics: 'Improve cash flow by 35%',
+      icon: FileText
     },
     {
-      title: 'Data Collection',
-      description: 'Gather customer feedback and survey data through conversational interfaces',
-      metrics: 'Improve response rates by 300%',
-      icon: BarChart3
+      title: 'Manufacturing',
+      description: 'Complex cost accounting with inventory management and production cost tracking',
+      metrics: 'Optimize costs by 25%',
+      icon: PieChart
+    }
+  ];
+
+  const benefits = [
+    {
+      title: 'Save Time',
+      description: 'Automate repetitive accounting tasks and focus on strategic financial decisions',
+      value: '20 hours/week saved'
+    },
+    {
+      title: 'Reduce Errors',
+      description: 'AI-powered accuracy reduces human errors and ensures compliance',
+      value: '90% fewer errors'
+    },
+    {
+      title: 'Improve Cash Flow',
+      description: 'Better financial insights and automated processes improve cash flow management',
+      value: '35% better cash flow'
+    },
+    {
+      title: 'Ensure Compliance',
+      description: 'Automated compliance checking ensures you meet all regulatory requirements',
+      value: '100% compliance'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'VP of Customer Experience',
-      content: 'Zion Tech\'s AI Voice Assistant transformed our customer service. We\'ve reduced response times by 75% and our customers love the natural interactions.',
+      name: 'David Martinez',
+      company: 'Small Business Solutions',
+      role: 'Owner',
+      content: 'The AI accounting assistant has transformed my business. I save 25 hours per week and my books are always accurate and up-to-date.',
+      rating: 5,
+      avatar: '👨‍💼'
+    },
+    {
+      name: 'Jennifer Liu',
+      company: 'E-commerce Plus',
+      role: 'CFO',
+      content: 'Handling multi-channel sales accounting used to be a nightmare. Now it\'s completely automated and 100% accurate.',
       rating: 5,
       avatar: '👩‍💼'
     },
     {
-      name: 'Michael Chen',
-      company: 'Global Retail Inc',
-      role: 'CTO',
-      content: 'The integration was seamless and the voice recognition accuracy is incredible. We\'re processing 10x more customer inquiries with the same team.',
+      name: 'Robert Thompson',
+      company: 'Professional Services Inc',
+      role: 'Accounting Manager',
+      content: 'The tax preparation feature is incredible. We\'ve maximized our deductions and never missed a deadline.',
       rating: 5,
       avatar: '👨‍💻'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'Healthcare Plus',
-      role: 'Operations Director',
-      content: 'The AI voice assistant handles appointment scheduling perfectly. Our staff can focus on patient care while the AI manages routine tasks.',
-      rating: 5,
-      avatar: '👩‍⚕️'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant Platform - Zion Tech Group | Enterprise Voice AI Solutions</title>
-        <meta name="description" content="Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration. 99.5% accuracy, 50+ languages, real-time processing." />
-        <meta name="keywords" content="AI voice assistant, voice AI, natural language processing, voice recognition, enterprise voice solutions, voice automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <title>AI Accounting Assistant - Zion Tech Group | Automate Your Accounting with AI</title>
+        <meta name="description" content="Automate your accounting with AI-powered bookkeeping, tax preparation, and financial reporting. Save 20 hours/week and reduce errors by 90%." />
+        <meta name="keywords" content="AI accounting, automated bookkeeping, tax preparation, financial reporting, accounting software, expense management" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-accounting-assistant" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -185,11 +210,11 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text">
-                AI Voice Assistant Platform
+                AI Accounting Assistant
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Build intelligent voice assistants that understand, learn, and respond naturally. 
-                Enterprise-grade voice AI with 99.5% accuracy across 50+ languages.
+                Automate your accounting with AI-powered bookkeeping, tax preparation, and financial reporting. 
+                Save 20 hours per week and reduce errors by 90% with intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -202,7 +227,7 @@ const AIVoiceAssistantPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  📧 Get Free Demo
+                  📧 Start Free Trial
                 </a>
               </div>
             </div>
@@ -210,20 +235,20 @@ const AIVoiceAssistantPage: React.FC = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
               <div className="cyber-card hologram-card p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
-                <div className="text-gray-300">Voice Recognition Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">20</div>
+                <div className="text-gray-300">Hours Saved/Week</div>
               </div>
               <div className="cyber-card hologram-card p-6 text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages Supported</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">99%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
               <div className="cyber-card hologram-card p-6 text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">&lt;200ms</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
+                <div className="text-gray-300">Error Reduction</div>
               </div>
               <div className="cyber-card hologram-card p-6 text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300">Availability</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">35%</div>
+                <div className="text-gray-300">Better Cash Flow</div>
               </div>
             </div>
           </div>
@@ -234,10 +259,10 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Powerful Voice AI Features
+                Comprehensive Accounting Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced voice AI capabilities designed for enterprise use cases
+                AI-powered tools that handle every aspect of your accounting needs
               </p>
             </div>
 
@@ -267,15 +292,39 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Real-World Applications
+                Proven Business Benefits
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using our AI Voice Assistant to transform operations
+                Transform your accounting operations with measurable improvements and better financial control
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="cyber-card hologram-card p-8 text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-4">{benefit.value}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                Industry Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Tailored accounting solutions for different business types and industries
               </p>
             </div>
 
@@ -301,14 +350,14 @@ const AIVoiceAssistantPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Flexible Pricing Plans
+                Simple Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your voice AI needs. All plans include our core features.
+                Choose the perfect plan for your accounting needs. Start with a free trial.
               </p>
             </div>
 
@@ -344,7 +393,7 @@ const AIVoiceAssistantPage: React.FC = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600' 
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}>
-                    Get Started
+                    Start Free Trial
                   </button>
                 </div>
               ))}
@@ -353,14 +402,14 @@ const AIVoiceAssistantPage: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 bg-slate-800/50">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                What Our Clients Say
+                Success Stories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of satisfied customers who trust our AI Voice Assistant platform
+                See how businesses are transforming their accounting with AI
               </p>
             </div>
 
@@ -392,10 +441,10 @@ const AIVoiceAssistantPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="cyber-card hologram-card p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Business with Voice AI?
+                Ready to Automate Your Accounting?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Get a free consultation and see how our AI Voice Assistant can revolutionize your customer interactions.
+                Start your free trial today and see how AI can revolutionize your accounting process.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -408,7 +457,7 @@ const AIVoiceAssistantPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  📧 Schedule Demo
+                  📧 Start Free Trial
                 </a>
               </div>
               <div className="mt-8 text-sm text-gray-400">
@@ -423,4 +472,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   );
 };
 
-export default AIVoiceAssistantPage;
+export default AIAccountingAssistantPage;
