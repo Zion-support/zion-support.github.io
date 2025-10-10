@@ -1,248 +1,42 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap,
-  Star,
-  TrendingUp,
-  Settings,
-  Globe,
-  Target,
-  ArrowRight,
-  Sparkles,
-  Database,
-  MessageSquare,
-  Eye,
-  Cpu,
-  Lock,
-  BarChart3,
-  FileText,
-  Search,
-  Bot,
-  Palette,
-  Camera,
-  Music,
-  Video,
-  Gamepad2,
-  ShoppingCart,
-  CreditCard,
-  Building,
-  Factory,
-  Car,
-  Plane,
-  Ship,
-  Train,
-  Home,
-  Heart,
-  Stethoscope,
-  GraduationCap,
-  Briefcase,
-  Wrench,
-  Hammer,
-  Paintbrush,
-  Scissors,
-  BookOpen,
-  Calculator,
-  Calendar,
-  Clock3,
-  Compass,
-  Navigation as NavIcon,
-  PieChart,
-  TrendingDown,
-  Activity,
-  Zap as Lightning,
-  Target as Crosshair,
-  Shield as Security,
-  Users as People,
-  Star as StarIcon,
-  CheckCircle as Check,
-  ArrowRight as Arrow,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as Location,
-  Truck,
-  Smartphone,
-  ChefHat,
-  Rocket,
-  Sprout,
-  Scale
-} from 'lucide-react';
-import Sidebar from './Sidebar';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+      }
+    };
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-        setServicesOpen(false);
-        setAiServicesOpen(false);
-        setItServicesOpen(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const closeAllMenus = () => {
     setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
     setIsOpen(false);
   };
 
-  const serviceCategories = [
-    {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      services: [
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'AI Marketing', path: '/ai-marketing' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization' },
-        { name: 'AI Sentiment Analyzer', path: '/ai-sentiment-analyzer' },
-        { name: 'AI Video Generator', path: '/ai-video-generator' },
-        { name: 'AI Code Assistant', path: '/ai-code-assistant' },
-        { name: 'AI Social Media Scheduler', path: '/ai-social-media-scheduler' },
-        { name: 'AI Cybersecurity Monitor', path: '/ai-cybersecurity-monitor' },
-        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
-        { name: 'IT Services', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
-        { name: 'DevOps', path: '/ai-workflow-automation' },
-        { name: 'Database Services', path: '/ai-data-analytics' },
-        { name: 'Network Services', path: '/networking' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      services: [
-        { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/micro-saas' },
-        { name: 'Business Apps', path: '/micro-saas' },
-        { name: 'Productivity Tools', path: '/micro-saas' },
-        { name: 'Marketing Tools', path: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence' }
-      ]
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      closeAllMenus();
     }
-<<<<<<< HEAD
   };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const microSAASServices = [
-    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
-    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$59/mo' },
-    { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio', icon: Mic, category: 'Creative', price: '$149/mo' },
-    { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor', icon: Shield, category: 'Security', price: '$199/mo' },
-    { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion', icon: Heart, category: 'Health', price: '$79/mo' },
-    { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller', icon: Home, category: 'IoT', price: '$99/mo' },
-    { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer', icon: TrendingUp, category: 'Finance', price: '$199/mo' },
-    { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor', icon: GraduationCap, category: 'Education', price: '$69/mo' },
-    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Activity, category: 'Health', price: '$59/mo' },
-    { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield', icon: Shield, category: 'Security', price: '$89/mo' },
-    { name: 'AI Recipe Generator Pro', href: '/ai-recipe-generator', icon: ChefHat, category: 'Lifestyle', price: '$39/mo' },
-    { name: 'AI Travel Planner Pro', href: '/ai-travel-planner', icon: Plane, category: 'Travel', price: '$79/mo' }
-  ];
-
-  const aiServices = [
-    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
-    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
-    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
-    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
-    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
-    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
-    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
-    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
-  ];
-
-  const itServices = [
-    { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
-    { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
-    { name: 'AI-Powered API Management Pro', href: '/ai-api-management', icon: Settings, price: '$1,400/mo' },
-    { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration', icon: Database, price: '$2,200/mo' },
-    { name: 'AI-Powered Load Testing Pro', href: '/ai-load-testing', icon: BarChart, price: '$1,200/mo' },
-    { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit', icon: Shield, price: '$3,000/mo' },
-    { name: 'AI-Powered Content Delivery Network Pro', href: '/ai-content-delivery-network', icon: Globe, price: '$1,600/mo' },
-    { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure', icon: Mail, price: '$1,000/mo' }
-  ];
-
-  const specializedServices = [
-    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, price: '$5,000/mo' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$4,000/mo' },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,500/mo' },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$1,800/mo' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
-=======
->>>>>>> origin/main
-  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -251,133 +45,95 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
-            onClick={closeAllMenus}
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
-            <span className="text-white neon-text">
-              Zion Tech Group
-            </span>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+              className="text-white hover:text-cyan-400 transition-colors"
             >
               Home
             </Link>
-            
-            <Link 
-              to="/about" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+            <Link
+              to="/about"
+              className="text-white hover:text-cyan-400 transition-colors"
             >
               About
             </Link>
-            <Link 
-              to="/services" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Services
-            </Link>
-
+            
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
               >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                          </div>
-                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
-                        </div>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 6).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
-                    <Link
-                      to="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
-                  </div>
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <Link
+                    to="/ai-services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    AI Services
+                  </Link>
+                  <Link
+                    to="/it-services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    IT Services
+                  </Link>
+                  <Link
+                    to="/micro-saas"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Micro SAAS
+                  </Link>
                 </div>
               )}
             </div>
 
-            <Link 
-              to="/case-studies" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Case Studies
-            </Link>
-            <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog
-            </Link>
             <Link
               to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+              className="text-white hover:text-cyan-400 transition-colors"
             >
               Contact
             </Link>
-            
-            {/* CTA Button */}
             <Link
-              to="/contact"
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
+              to="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors"
+            >
+              Pricing
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/demo"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
-            aria-label="Toggle menu"
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+            onClick={toggleMenu}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -386,91 +142,59 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
-            <div className="space-y-4">
+            <div className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
-              
-              <Link 
-                to="/about" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+              <Link
+                to="/about"
+                className="text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 About
               </Link>
-              <Link 
-                to="/services" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Services
-              </Link>
-
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                >
-                  <div className="flex items-center space-x-2">
-                    <Code className="w-4 h-4" />
-                    <span>Services</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-gray-300 font-semibold text-sm mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 4).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
               <Link
-                to="/case-studies"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                to="/ai-services"
+                className="text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
-                Case Studies
+                AI Services
               </Link>
               <Link
-                to="/blog"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                to="/it-services"
+                className="text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
-                Blog
+                IT Services
+              </Link>
+              <Link
+                to="/micro-saas"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
               </Link>
               <Link
                 to="/contact"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                className="text-white hover:text-cyan-400 transition-colors"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-              
-              {/* Mobile CTA */}
               <Link
-                to="/contact"
-                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
+                to="/pricing"
+                className="text-white hover:text-cyan-400 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/demo"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center"
                 onClick={closeAllMenus}
               >
                 Get Started

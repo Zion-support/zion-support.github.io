@@ -2,8 +2,8 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
+import Navigation from './src/components/Navigation';
+import Footer from './src/components/Footer';
 import LoadingSpinner from './src/components/LoadingSpinner';
 import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
@@ -53,26 +53,26 @@ const structuredData = {
 };
 
 // Lazy load pages for better performance
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const TeamPage = React.lazy(() => import('./app/team/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
-const TermsPage = React.lazy(() => import('./app/terms/page'));
-const CookiesPage = React.lazy(() => import('./app/cookies/page'));
-const DocsPage = React.lazy(() => import('./app/docs/page'));
-const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const StatusPage = React.lazy(() => import('./app/status/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
+const AboutPage = React.lazy(() => import('./src/about/page'));
+const ContactPage = React.lazy(() => import('./src/contact/page'));
+const PricingPage = React.lazy(() => import('./src/pricing/page'));
+const AIServicesPage = React.lazy(() => import('./src/ai-services/page'));
+const ITServicesPage = React.lazy(() => import('./src/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./src/micro-saas/page'));
+const BlogPage = React.lazy(() => import('./src/blog/page'));
+const CaseStudiesPage = React.lazy(() => import('./src/case-studies/page'));
+const TeamPage = React.lazy(() => import('./src/team/page'));
+const CareersPage = React.lazy(() => import('./src/careers/page'));
+const PrivacyPage = React.lazy(() => import('./src/privacy/page'));
+const TermsPage = React.lazy(() => import('./src/terms/page'));
+const CookiesPage = React.lazy(() => import('./src/cookies/page'));
+const DocsPage = React.lazy(() => import('./src/docs/page'));
+const ApiDocsPage = React.lazy(() => import('./src/api-docs/page'));
+const SupportPage = React.lazy(() => import('./src/support/page'));
+const StatusPage = React.lazy(() => import('./src/status/page'));
+const DemoPage = React.lazy(() => import('./src/demo/page'));
+const ConsultationPage = React.lazy(() => import('./src/consultation/page'));
+const ServicesPage = React.lazy(() => import('./src/services/page'));
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -198,4 +198,8 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
+
+export default App;
