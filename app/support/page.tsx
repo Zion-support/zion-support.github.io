@@ -6,11 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
   const supportChannels = [
     {
