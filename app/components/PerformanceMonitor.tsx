@@ -1,4 +1,5 @@
-'use client'import React, { useEffect, useState } from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
   lcp?: number
   fid?: number
