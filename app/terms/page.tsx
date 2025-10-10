@@ -19,12 +19,12 @@ export default function TermsPage() {
     {
       title: 'Service Availability',
       icon: Server,
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.'
+      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.',
     },
     {
       title: 'Limitation of Liability',
       icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.'
+      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.',
     },
     {
       title: 'Privacy Policy',
@@ -44,7 +44,7 @@ export default function TermsPage() {
     {
       title: 'Governing Law',
       icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.',
     }
   ];
 
@@ -60,7 +60,7 @@ export default function TermsPage() {
           </p>
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
+            Last updated: {lastUpdated,}
           </div>
         </div>
       </div>

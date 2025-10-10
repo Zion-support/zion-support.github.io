@@ -7,7 +7,7 @@ interface SecurityEnhancerProps {
   children: React.ReactNode;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children ,}) => {
   useEffect(() => {
     // Security enhancement logic
     const enhanceSecurity = () => {
@@ -41,7 +41,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     enhanceSecurity();
   }, []);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default SecurityEnhancer;

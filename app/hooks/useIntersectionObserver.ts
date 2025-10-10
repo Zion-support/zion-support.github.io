@@ -14,7 +14,7 @@ interface UseIntersectionObserverReturn {
 }
 
 export function useIntersectionObserver(
-  options: UseIntersectionObserverOptions = {}
+  options: UseIntersectionObserverOptions = {,}
 ): UseIntersectionObserverReturn {
   const {
     threshold = 0,

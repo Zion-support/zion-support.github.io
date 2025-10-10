@@ -52,12 +52,12 @@ const HomePage: React.FC = memo(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
+        event_label: 'main_phone_number',
       });
     }
   }, []);
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -86,7 +86,7 @@ const HomePage: React.FC = memo(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en',
           },
           address: {
             '@type': 'PostalAddress',
@@ -94,7 +94,7 @@ const HomePage: React.FC = memo(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: 'US',
           }
         }}
       />
@@ -1472,7 +1472,7 @@ const HomePage: React.FC = memo(() => {
       {/* Footer */}
       <Footer />
     </div>
-    </>
+    </React.Fragment>
   );
 });
 

@@ -39,7 +39,7 @@ import {
 
 const AboutPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
-            </div>
+            </div></div></div>
           </div>
         </section>
 
@@ -91,23 +91,23 @@ const AboutPage: React.FC = () => {
                     <Settings className="w-5 h-5" />
                     <span>Our Services</span>
                   </a>
-                </div>
+                </div></div></div></div>
               </div>
               <div className="relative">
                 <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
                   <div className="space-y-6">
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div></div></div></div></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
                     <div className="space-y-4">
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"></div>
+                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"></div></div>
                       <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4"></div>
                       <div className="h-4 bg-gradient-to-r from-pink-500 to-red-500 rounded w-1/2"></div>
                     </div>
                     <div className="text-center text-white">
-                      <div className="text-2xl font-bold">AI Dashboard</div>
+                      <div className="text-2xl font-bold">AI Dashboard</div></div>
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
                     </div>
 
@@ -124,26 +124,26 @@ const AboutPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
               <p className="text-xl text-gray-300">The principles that guide everything we do</p>
-            </div>
+            </div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-white" />
-                </div>
+                </div></div></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
                 <p className="text-gray-300">We constantly push the boundaries of what's possible with technology.</p>
               </div>
               <div className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-white" />
-                </div>
+                </div></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Collaboration</h3>
                 <p className="text-gray-300">We work closely with our clients to achieve their goals.</p>
               </div>
               <div className="cyber-card p-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
-                </div>
+                </div></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Excellence</h3>
                 <p className="text-gray-300">We deliver exceptional results that exceed expectations.</p>
               </div>
@@ -165,11 +165,11 @@ const AboutPage: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
                 Contact Us
               </button>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
 );
 };
 

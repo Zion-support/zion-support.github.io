@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
@@ -79,7 +79,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default EnhancedAccessibility;

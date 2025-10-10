@@ -8,7 +8,7 @@ export const createAriaLabel = (text: string, context?: string): string => {
   return context ? `${text}, ${context}` : text;
 };
 
-export const announceToScreenReader = (message: string): void => {
+export const announceToScreenReader = (message: string,): void => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -28,7 +28,7 @@ export const focusElement = (element: HTMLElement | null): void => {
   }
 };
 
-export const trapFocus = (container: HTMLElement): (() => void) => {
+export const trapFocus = (container: HTMLElement,): (() => void) => {
   const focusableElements = container.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
@@ -36,7 +36,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
   
-  const handleTabKey = (e: KeyboardEvent) => {
+  const handleTabKey = (e: KeyboardEvent,) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -59,7 +59,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {
   };
 };
 
-export const validateAriaAttributes = (element: HTMLElement): string[] => {
+export const validateAriaAttributes = (element: HTMLElement,): string[] => {
   const errors: string[] = [];
   
   // Check for required ARIA attributes
@@ -79,7 +79,7 @@ export const validateAriaAttributes = (element: HTMLElement): string[] => {
   return errors;
 };
 
-export const enhanceKeyboardNavigation = (element: HTMLElement): void => {
+export const enhanceKeyboardNavigation = (element: HTMLElement,): void => {
   element.setAttribute('tabindex', '0');
   
   element.addEventListener('keydown', (e) => {
@@ -99,9 +99,9 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   return skipLink;
 };
 
-export const checkColorContrast = (foreground: string, background: string): boolean => {
+export const checkColorContrast = (foreground: string, background: string,): boolean => {
   // Simple contrast ratio calculation (simplified)
-  const getLuminance = (color: string): number => {
+  const getLuminance = (color: string,): number => {
     const rgb = color.match(/\d+/g);
     if (!rgb) return 0;
     
@@ -126,7 +126,7 @@ export const addFocusIndicators = (): void => {
   style.textContent = `
     *:focus {
       outline: 2px solid #3b82f6;
-      outline-offset: 2px,
+      outline-offset: 2px;
     }
     
     .sr-only {
@@ -138,7 +138,7 @@ export const addFocusIndicators = (): void => {
       overflow: hidden,
       clip: rect(0, 0, 0, 0);
       white-space: nowrap,
-      border: 0,
+      border: 0;
     }
     
     .focus\\:not-sr-only:focus {
@@ -149,7 +149,7 @@ export const addFocusIndicators = (): void => {
       margin: 0,
       overflow: visible,
       clip: auto,
-      white-space: normal,
+      white-space: normal;
     }
   `;
   

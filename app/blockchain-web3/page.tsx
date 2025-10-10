@@ -33,7 +33,7 @@ const BlockchainWeb3Page: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
@@ -48,7 +48,7 @@ const BlockchainWeb3Page: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
             </p>
-          </div>
+          </div></div></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -56,7 +56,7 @@ const BlockchainWeb3Page: React.FC = () => {
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
-                  </div>
+                  </div></div></div></div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -75,7 +75,7 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

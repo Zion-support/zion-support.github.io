@@ -42,7 +42,7 @@ const AiApiManagementPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI API Management - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered API management solution for modern businesses." />
@@ -69,7 +69,7 @@ const AiApiManagementPage: React.FC = () => {
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Learn More
                 </button>
-              </div>
+              </div></div></div>
             </div>
           </div>
         </section>
@@ -84,7 +84,7 @@ const AiApiManagementPage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI API management platform can revolutionize your development workflow.
               </p>
-            </div>
+            </div></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -92,7 +92,7 @@ const AiApiManagementPage: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
+                  </div></div></div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -115,7 +115,7 @@ const AiApiManagementPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our AI API Management?
               </h2>
-            </div>
+            </div></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -123,7 +123,7 @@ const AiApiManagementPage: React.FC = () => {
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
                     <p className="text-lg font-medium text-gray-900">{benefit}</p>
-                  </div>
+                  </div></div></div>
                 </div>
               ))}
             </div>
@@ -147,7 +147,7 @@ const AiApiManagementPage: React.FC = () => {
       </main>
       
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
 

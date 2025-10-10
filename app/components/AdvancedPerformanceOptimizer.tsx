@@ -15,7 +15,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0
+    totalSavings: 0;
   });
 
   const optimizeImages = useCallback(() => {
@@ -87,7 +87,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,
     });
 
     setIsOptimized(true);
@@ -133,12 +133,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
-          zIndex: 1000
+          zIndex: 1000;
         }}>
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
+          <div>Images: {optimizationMetrics.imagesOptimized,}</div></div></div>
+          <div>Scripts: {optimizationMetrics.scriptsOptimized,}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized,}</div>
+          <div>Total: {optimizationMetrics.totalSavings,}</div>
         </div>
       )}
     </div>

@@ -57,7 +57,7 @@ import React from 'react';
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
+            </div></div></div>
           </div>
         </div>
       </section>

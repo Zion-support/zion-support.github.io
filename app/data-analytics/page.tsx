@@ -34,17 +34,17 @@ const DataAnalyticsPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
+      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.',
     },
     {
       icon: Database,
       title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
+      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.',
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.',
     }
   ];
 
@@ -60,7 +60,7 @@ const DataAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
@@ -88,7 +88,7 @@ const DataAnalyticsPage: React.FC = () => {
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
                 </button>
-              </div>
+              </div></div></div></div>
             </div>
           </div>
         </section>
@@ -103,14 +103,14 @@ const DataAnalyticsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We provide comprehensive data analytics services to help you unlock the power of your data.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
-                  </div>
+                  </div></div></div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -129,14 +129,14 @@ const DataAnalyticsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Drive business success with our comprehensive data analytics services.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                </div></div>
               ))}
             </div>
           </div>
@@ -161,12 +161,12 @@ const DataAnalyticsPage: React.FC = () => {
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us
                 </button>
-              </div>
+              </div></div></div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

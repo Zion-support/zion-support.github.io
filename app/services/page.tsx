@@ -26,7 +26,7 @@ const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true;
     },
     {
       icon: Brain,
@@ -34,7 +34,7 @@ const ServicesPage: React.FC = () => {
       description: 'Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration.',
       features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Enterprise Integration', 'Custom Wake Words'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -42,7 +42,7 @@ const ServicesPage: React.FC = () => {
       description: 'Prevent equipment failures with AI-powered predictive maintenance and real-time monitoring systems.',
       features: ['Failure Prediction', 'Real-time Monitoring', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration'],
       price: 'Starting at $599/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -50,7 +50,7 @@ const ServicesPage: React.FC = () => {
       description: 'Optimize supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning.',
       features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment'],
       price: 'Starting at $899/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -58,7 +58,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated quality inspection using computer vision and machine learning for manufacturing and production lines.',
       features: ['Computer Vision', 'Defect Detection', 'Real-time Inspection', 'Quality Reports', 'Integration APIs'],
       price: 'Starting at $1,199/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -66,7 +66,7 @@ const ServicesPage: React.FC = () => {
       description: 'Optimize energy consumption with AI-powered smart grid management and renewable energy integration.',
       features: ['Energy Optimization', 'Smart Grid Management', 'Renewable Integration', 'Cost Analysis', 'Carbon Footprint'],
       price: 'Starting at $799/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -74,7 +74,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated legal document review, contract analysis, and compliance monitoring with AI technology.',
       features: ['Document Review', 'Contract Analysis', 'Compliance Monitoring', 'Risk Assessment', 'Legal Research'],
       price: 'Starting at $1,299/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -82,7 +82,7 @@ const ServicesPage: React.FC = () => {
       description: 'Property valuation, market analysis, and investment recommendations powered by artificial intelligence.',
       features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Trend Prediction', 'Portfolio Management'],
       price: 'Starting at $499/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -90,7 +90,7 @@ const ServicesPage: React.FC = () => {
       description: 'Streamline HR processes with AI-powered recruitment, employee analytics, and performance management.',
       features: ['Resume Screening', 'Candidate Matching', 'Performance Analytics', 'Employee Engagement', 'Retention Analysis'],
       price: 'Starting at $399/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -98,7 +98,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced risk evaluation and fraud detection for insurance companies using machine learning algorithms.',
       features: ['Risk Evaluation', 'Fraud Detection', 'Claims Processing', 'Underwriting Support', 'Compliance Monitoring'],
       price: 'Starting at $1,499/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -106,7 +106,7 @@ const ServicesPage: React.FC = () => {
       description: 'Personalized learning experiences with AI-powered content adaptation and student performance analytics.',
       features: ['Personalized Learning', 'Content Adaptation', 'Performance Analytics', 'Learning Paths', 'Progress Tracking'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -114,7 +114,7 @@ const ServicesPage: React.FC = () => {
       description: 'Optimize transportation routes, fleet management, and logistics with AI-powered decision making.',
       features: ['Route Optimization', 'Fleet Management', 'Demand Prediction', 'Fuel Optimization', 'Driver Scheduling'],
       price: 'Starting at $699/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -122,7 +122,7 @@ const ServicesPage: React.FC = () => {
       description: 'Monitor environmental conditions and predict climate impacts using AI and IoT sensor data.',
       features: ['Environmental Sensing', 'Climate Prediction', 'Pollution Monitoring', 'Data Analysis', 'Alert Systems'],
       price: 'Starting at $599/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -130,7 +130,7 @@ const ServicesPage: React.FC = () => {
       description: 'Create personalized shopping experiences with AI-driven product recommendations and customer insights.',
       features: ['Product Recommendations', 'Customer Segmentation', 'Price Optimization', 'Inventory Management', 'Customer Analytics'],
       price: 'Starting at $799/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -138,7 +138,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced sports performance analysis, injury prediction, and team optimization using AI technology.',
       features: ['Performance Analysis', 'Injury Prediction', 'Team Optimization', 'Player Scouting', 'Game Strategy'],
       price: 'Starting at $999/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -146,7 +146,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered mental health monitoring, mood tracking, and therapeutic support applications.',
       features: ['Mood Tracking', 'Stress Analysis', 'Therapeutic Support', 'Crisis Detection', 'Wellness Recommendations'],
       price: 'Starting at $199/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -154,7 +154,7 @@ const ServicesPage: React.FC = () => {
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
       features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -162,7 +162,7 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
       features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', '24/7 Support'],
       price: 'Starting at $199/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -170,7 +170,7 @@ const ServicesPage: React.FC = () => {
       description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
       features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'ML Models'],
       price: 'Starting at $399/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -178,7 +178,7 @@ const ServicesPage: React.FC = () => {
       description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
       features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization', 'Multi-language'],
       price: 'Starting at $149/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -186,7 +186,7 @@ const ServicesPage: React.FC = () => {
       description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, and patient care optimization.',
       features: ['Medical Imaging', 'Drug Discovery', 'Patient Analytics', 'Diagnostic Support', 'HIPAA Compliance'],
       price: 'Starting at $1,999/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -194,7 +194,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced AI solutions for fraud detection, risk assessment, and algorithmic trading.',
       features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Compliance'],
       price: 'Starting at $1,499/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     {
       icon: Brain,
@@ -202,7 +202,7 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
       features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting'],
       price: 'Starting at $799/month',
-      category: 'AI Services'
+      category: 'AI Services',
     },
     
     // Cloud Services
@@ -213,7 +213,7 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
       price: 'Starting at $1,299/month',
       category: 'Cloud Services',
-      popular: true
+      popular: true;
     },
     {
       icon: Cloud,
@@ -221,7 +221,7 @@ const ServicesPage: React.FC = () => {
       description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime and data integrity.',
       features: ['Zero Downtime', 'Data Integrity', 'Cost Optimization', 'Security Compliance', '24/7 Support'],
       price: 'Starting at $2,999/project',
-      category: 'Cloud Services'
+      category: 'Cloud Services',
     },
     {
       icon: Cloud,
@@ -229,7 +229,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive cloud security solutions with threat detection and compliance management.',
       features: ['Threat Detection', 'Compliance Management', 'Access Control', 'Data Encryption', 'Monitoring'],
       price: 'Starting at $599/month',
-      category: 'Cloud Services'
+      category: 'Cloud Services',
     },
     {
       icon: Cloud,
@@ -237,7 +237,7 @@ const ServicesPage: React.FC = () => {
       description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
       features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure Monitoring', 'Version Control', 'Collaboration'],
       price: 'Starting at $799/month',
-      category: 'Cloud Services'
+      category: 'Cloud Services',
     },
     
     // Cybersecurity
@@ -248,7 +248,7 @@ const ServicesPage: React.FC = () => {
       features: ['Security Audits', 'Penetration Testing', 'Incident Response', 'Compliance', 'Threat Intelligence'],
       price: 'Starting at $799/month',
       category: 'Cybersecurity',
-      popular: true
+      popular: true;
     },
     {
       icon: Shield,
@@ -256,7 +256,7 @@ const ServicesPage: React.FC = () => {
       description: '24/7 security monitoring with AI-powered threat detection and automated response.',
       features: ['24/7 Monitoring', 'AI Threat Detection', 'Automated Response', 'Incident Management', 'Compliance Reporting'],
       price: 'Starting at $499/month',
-      category: 'Cybersecurity'
+      category: 'Cybersecurity',
     },
     {
       icon: Shield,
@@ -264,7 +264,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive security testing to identify vulnerabilities and strengthen your defenses.',
       features: ['Vulnerability Assessment', 'Social Engineering Tests', 'Network Security', 'Web Application Testing', 'Reporting'],
       price: 'Starting at $2,999/assessment',
-      category: 'Cybersecurity'
+      category: 'Cybersecurity',
     },
     {
       icon: Shield,
@@ -272,7 +272,7 @@ const ServicesPage: React.FC = () => {
       description: 'Ensure regulatory compliance with automated monitoring and reporting solutions.',
       features: ['Regulatory Compliance', 'Automated Monitoring', 'Audit Trails', 'Risk Assessment', 'Documentation'],
       price: 'Starting at $399/month',
-      category: 'Cybersecurity'
+      category: 'Cybersecurity',
     },
     
     // Data Analytics
@@ -283,7 +283,7 @@ const ServicesPage: React.FC = () => {
       features: ['Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Reporting', 'Predictive Modeling'],
       price: 'Starting at $599/month',
       category: 'Data Analytics',
-      popular: true
+      popular: true;
     },
     {
       icon: BarChart3,
@@ -291,7 +291,7 @@ const ServicesPage: React.FC = () => {
       description: 'Handle massive datasets with scalable big data processing and analytics platforms.',
       features: ['Data Processing', 'Real-time Analytics', 'Scalable Infrastructure', 'Machine Learning', 'Data Lakes'],
       price: 'Starting at $1,299/month',
-      category: 'Data Analytics'
+      category: 'Data Analytics',
     },
     {
       icon: BarChart3,
@@ -299,7 +299,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive BI solutions with interactive dashboards and automated reporting.',
       features: ['Interactive Dashboards', 'Automated Reports', 'Data Integration', 'Self-service Analytics', 'Mobile Access'],
       price: 'Starting at $899/month',
-      category: 'Data Analytics'
+      category: 'Data Analytics',
     },
     
     // Mobile Development
@@ -310,7 +310,7 @@ const ServicesPage: React.FC = () => {
       features: ['Native Apps', 'Cross-platform', 'UI/UX Design', 'App Store Optimization', 'Push Notifications'],
       price: 'Starting at $1,999/month',
       category: 'Mobile Development',
-      popular: true
+      popular: true;
     },
     {
       icon: Smartphone,
@@ -318,7 +318,7 @@ const ServicesPage: React.FC = () => {
       description: 'Ongoing maintenance and updates for your mobile applications with performance optimization.',
       features: ['Bug Fixes', 'Performance Optimization', 'Security Updates', 'Feature Enhancements', 'App Store Management'],
       price: 'Starting at $299/month',
-      category: 'Mobile Development'
+      category: 'Mobile Development',
     },
     
     // Database Services
@@ -329,7 +329,7 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration', 'Monitoring'],
       price: 'Starting at $399/month',
       category: 'Database Services',
-      popular: true
+      popular: true;
     },
     {
       icon: Database,
@@ -337,7 +337,7 @@ const ServicesPage: React.FC = () => {
       description: 'Seamless database migration with zero downtime and data integrity preservation.',
       features: ['Zero Downtime', 'Data Integrity', 'Performance Optimization', 'Testing', 'Documentation'],
       price: 'Starting at $1,999/migration',
-      category: 'Database Services'
+      category: 'Database Services',
     },
     
     // Automation
@@ -348,7 +348,7 @@ const ServicesPage: React.FC = () => {
       features: ['Workflow Automation', 'RPA Implementation', 'Integration', 'Monitoring', 'Optimization'],
       price: 'Starting at $599/month',
       category: 'Automation',
-      popular: true
+      popular: true;
     },
     {
       icon: Zap,
@@ -356,7 +356,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automate IT operations with intelligent monitoring, deployment, and maintenance solutions.',
       features: ['Infrastructure Automation', 'Deployment Automation', 'Monitoring', 'Self-healing', 'Cost Optimization'],
       price: 'Starting at $799/month',
-      category: 'Automation'
+      category: 'Automation',
     },
     
     // Web Development
@@ -367,7 +367,7 @@ const ServicesPage: React.FC = () => {
       features: ['React/Next.js', 'Full-stack Development', 'API Development', 'Performance Optimization', 'SEO'],
       price: 'Starting at $1,299/month',
       category: 'Web Development',
-      popular: true
+      popular: true;
     },
     {
       icon: Globe,
@@ -375,7 +375,7 @@ const ServicesPage: React.FC = () => {
       description: 'Custom e-commerce solutions with advanced features and integrations.',
       features: ['Custom E-commerce', 'Payment Integration', 'Inventory Management', 'Analytics', 'Mobile Optimization'],
       price: 'Starting at $1,999/month',
-      category: 'Web Development'
+      category: 'Web Development',
     },
     
     // IT Services
@@ -385,7 +385,7 @@ const ServicesPage: React.FC = () => {
       description: 'Complete IT infrastructure setup and management for enterprise environments.',
       features: ['Server Setup', 'Network Configuration', 'Security Implementation', 'Monitoring', 'Maintenance'],
       price: 'Starting at $1,499/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Shield,
@@ -393,7 +393,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive IT management with 24/7 support and proactive monitoring.',
       features: ['24/7 Support', 'Proactive Monitoring', 'Help Desk', 'Security Management', 'Backup Solutions'],
       price: 'Starting at $999/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: BarChart3,
@@ -401,7 +401,7 @@ const ServicesPage: React.FC = () => {
       description: 'Strategic IT consulting to optimize your technology infrastructure and processes.',
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
       price: 'Starting at $299/hour',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Cloud,
@@ -409,7 +409,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive cloud infrastructure management with 99.9% uptime guarantee and 24/7 monitoring.',
       features: ['99.9% Uptime SLA', '24/7 Monitoring', 'Auto-scaling', 'Cost Optimization', 'Security Management'],
       price: 'Starting at $1,299/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Shield,
@@ -417,7 +417,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced network security with firewall management, intrusion detection, and threat prevention.',
       features: ['Firewall Management', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring'],
       price: 'Starting at $599/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Database,
@@ -425,7 +425,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive data backup and disaster recovery solutions with automated backups and instant recovery.',
       features: ['Automated Backups', 'Instant Recovery', 'Disaster Recovery', 'Data Encryption', 'Compliance'],
       price: 'Starting at $199/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Settings,
@@ -433,7 +433,7 @@ const ServicesPage: React.FC = () => {
       description: 'Complete IT asset lifecycle management with inventory tracking, maintenance scheduling, and cost optimization.',
       features: ['Asset Tracking', 'Maintenance Scheduling', 'Cost Optimization', 'License Management', 'Depreciation Tracking'],
       price: 'Starting at $149/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Globe,
@@ -441,7 +441,7 @@ const ServicesPage: React.FC = () => {
       description: 'Reliable website hosting with SSL certificates, CDN, and regular maintenance for optimal performance.',
       features: ['99.9% Uptime', 'SSL Certificates', 'CDN Integration', 'Regular Updates', 'Performance Monitoring'],
       price: 'Starting at $49/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Smartphone,
@@ -449,7 +449,7 @@ const ServicesPage: React.FC = () => {
       description: 'Enterprise mobile device management with security policies, app management, and remote control.',
       features: ['Device Security', 'App Management', 'Remote Control', 'Policy Enforcement', 'Data Protection'],
       price: 'Starting at $99/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Shield,
@@ -457,7 +457,7 @@ const ServicesPage: React.FC = () => {
       description: 'Ensure regulatory compliance with automated monitoring, audit trails, and compliance reporting.',
       features: ['Regulatory Compliance', 'Audit Trails', 'Compliance Reporting', 'Risk Assessment', 'Documentation'],
       price: 'Starting at $399/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: BarChart3,
@@ -465,7 +465,7 @@ const ServicesPage: React.FC = () => {
       description: 'Real-time IT performance monitoring with alerting, reporting, and optimization recommendations.',
       features: ['Real-time Monitoring', 'Performance Alerts', 'Optimization Recommendations', 'Capacity Planning', 'Trend Analysis'],
       price: 'Starting at $299/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Users,
@@ -473,7 +473,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive IT training programs and ongoing support for your team and end users.',
       features: ['Custom Training Programs', 'End-user Support', 'Technical Documentation', 'Video Tutorials', 'Certification'],
       price: 'Starting at $199/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Settings,
@@ -481,7 +481,7 @@ const ServicesPage: React.FC = () => {
       description: 'Professional IT project management with planning, execution, and delivery of technology initiatives.',
       features: ['Project Planning', 'Resource Management', 'Timeline Tracking', 'Risk Management', 'Quality Assurance'],
       price: 'Starting at $399/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Shield,
@@ -489,7 +489,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive security vulnerability assessment with penetration testing and remediation guidance.',
       features: ['Vulnerability Scanning', 'Penetration Testing', 'Remediation Guidance', 'Security Reports', 'Follow-up Testing'],
       price: 'Starting at $1,999/assessment',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Cloud,
@@ -497,7 +497,7 @@ const ServicesPage: React.FC = () => {
       description: 'Seamless hybrid cloud solutions combining on-premises and cloud infrastructure for optimal performance.',
       features: ['Hybrid Architecture', 'Data Synchronization', 'Workload Migration', 'Cost Optimization', 'Security Integration'],
       price: 'Starting at $1,599/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Database,
@@ -505,7 +505,7 @@ const ServicesPage: React.FC = () => {
       description: 'Secure and efficient data migration between systems with zero downtime and data integrity.',
       features: ['Zero Downtime', 'Data Integrity', 'Migration Planning', 'Testing & Validation', 'Rollback Capability'],
       price: 'Starting at $2,999/project',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Globe,
@@ -513,7 +513,7 @@ const ServicesPage: React.FC = () => {
       description: 'Custom API development and integration services for seamless data exchange between systems.',
       features: ['Custom API Development', 'System Integration', 'API Documentation', 'Testing & Validation', 'Performance Optimization'],
       price: 'Starting at $799/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
     {
       icon: Settings,
@@ -521,7 +521,7 @@ const ServicesPage: React.FC = () => {
       description: 'Strategic IT governance and technology roadmap development for long-term business success.',
       features: ['IT Strategy Development', 'Technology Roadmaps', 'Governance Frameworks', 'Risk Management', 'Performance Metrics'],
       price: 'Starting at $499/month',
-      category: 'IT Services'
+      category: 'IT Services',
     },
 
     // Micro SAAS Services
@@ -532,7 +532,7 @@ const ServicesPage: React.FC = () => {
       features: ['AI Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Contact Management', 'Sales Pipeline'],
       price: '$149/month',
       category: 'Micro SAAS',
-      popular: true
+      popular: true;
     },
     {
       icon: BarChart3,
@@ -541,7 +541,7 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Analytics', 'Custom Dashboards', 'Automated Reports', 'Data Visualization', 'Predictive Insights'],
       price: '$199/month',
       category: 'Micro SAAS',
-      popular: true
+      popular: true;
     },
     {
       icon: Code,
@@ -550,7 +550,7 @@ const ServicesPage: React.FC = () => {
       features: ['AI Writing', 'Image Generation', 'Video Editing', 'Social Media Automation', 'SEO Optimization'],
       price: '$299/month',
       category: 'Micro SAAS',
-      popular: true
+      popular: true;
     },
     {
       icon: Users,
@@ -558,7 +558,7 @@ const ServicesPage: React.FC = () => {
       description: 'Create intelligent chatbots for customer support, sales, and lead generation with no coding required.',
       features: ['No-code Builder', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard', 'Custom Training'],
       price: '$99/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Mail,
@@ -566,7 +566,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated email campaigns with AI optimization, personalization, and advanced analytics for maximum ROI.',
       features: ['AI Optimization', 'Personalization', 'A/B Testing', 'Advanced Analytics', 'Automation Workflows'],
       price: '$179/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Smartphone,
@@ -574,7 +574,7 @@ const ServicesPage: React.FC = () => {
       description: 'Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment.',
       features: ['Drag-and-drop Builder', 'AI Code Generation', 'Instant Deployment', 'Cross-platform', 'App Store Publishing'],
       price: '$399/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Search,
@@ -582,7 +582,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated SEO analysis, keyword research, content optimization, and ranking tracking with AI insights.',
       features: ['Keyword Research', 'Content Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO'],
       price: '$129/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -590,7 +590,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.',
       features: ['Automated Invoicing', 'Payment Tracking', 'Financial Reports', 'Tax Calculations', 'Client Portal'],
       price: '$79/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Code,
@@ -598,7 +598,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.',
       features: ['50+ Templates', 'Multi-language Support', 'Plagiarism Check', 'SEO Optimization', 'Tone Adjustment'],
       price: '$29/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -606,7 +606,7 @@ const ServicesPage: React.FC = () => {
       description: 'Real-time business analytics with AI insights, automated reports, and predictive forecasting.',
       features: ['Real-time Analytics', 'Predictive Forecasting', 'Automated Reports', 'Custom Metrics', 'Data Integration'],
       price: '$49/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Calendar,
@@ -614,7 +614,7 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent scheduling with calendar optimization, meeting coordination, and time management.',
       features: ['Calendar Optimization', 'Meeting Coordination', 'Time Management', 'Auto-scheduling', 'Integration APIs'],
       price: '$19/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -622,7 +622,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered expense management with receipt scanning, categorization, and budget insights.',
       features: ['Receipt Scanning', 'Auto-categorization', 'Budget Insights', 'Tax Preparation', 'Multi-currency'],
       price: '$15/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: CheckSquare,
@@ -630,7 +630,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking.',
       features: ['AI Prioritization', 'Team Collaboration', 'Progress Tracking', 'Time Tracking', 'Project Templates'],
       price: '$39/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Users,
@@ -638,7 +638,7 @@ const ServicesPage: React.FC = () => {
       description: 'Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.',
       features: ['AI Lead Scoring', 'Contact Management', 'Sales Pipeline', 'Email Integration', 'Mobile App'],
       price: '$59/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Mail,
@@ -646,7 +646,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.',
       features: ['Subject Line AI', 'Send Time Optimization', 'A/B Testing', 'Open Rate Tracking', 'Spam Analysis'],
       price: '$25/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Globe,
@@ -654,7 +654,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-driven social media management with content creation, scheduling, and performance analytics.',
       features: ['Content Creation', 'Auto-scheduling', 'Performance Analytics', 'Multi-platform', 'Engagement Tracking'],
       price: '$45/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Code,
@@ -662,7 +662,7 @@ const ServicesPage: React.FC = () => {
       description: 'Create stunning graphics, logos, and marketing materials with AI-powered design tools.',
       features: ['AI Design Tools', 'Logo Generation', 'Marketing Materials', 'Brand Kit', 'Template Library'],
       price: '$35/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Globe,
@@ -670,7 +670,7 @@ const ServicesPage: React.FC = () => {
       description: 'Build high-converting landing pages with AI optimization and A/B testing capabilities.',
       features: ['Drag-and-drop Builder', 'AI Optimization', 'A/B Testing', 'Conversion Tracking', 'Mobile Responsive'],
       price: '$29/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Search,
@@ -678,7 +678,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered SEO analysis and optimization with keyword research and content suggestions.',
       features: ['SEO Analysis', 'Keyword Research', 'Content Suggestions', 'Ranking Tracking', 'Technical Audits'],
       price: '$49/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -686,7 +686,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.',
       features: ['Multi-platform Ads', 'AI Optimization', 'Budget Management', 'Performance Tracking', 'Auto-bidding'],
       price: '$79/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Code,
@@ -694,7 +694,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered code completion, debugging, and optimization for multiple programming languages.',
       features: ['Code Completion', 'Debugging Help', 'Code Optimization', 'Multi-language Support', 'Documentation'],
       price: '$39/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Settings,
@@ -702,7 +702,7 @@ const ServicesPage: React.FC = () => {
       description: 'Create and manage APIs with AI assistance, documentation generation, and testing tools.',
       features: ['API Creation', 'Documentation Generation', 'Testing Tools', 'Version Control', 'Rate Limiting'],
       price: '$59/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Shield,
@@ -710,7 +710,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.',
       features: ['AI Issue Detection', 'Priority Scoring', 'Resolution Suggestions', 'Team Collaboration', 'Integration APIs'],
       price: '$25/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: FileText,
@@ -718,7 +718,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automatically generate technical documentation, API docs, and user guides from code.',
       features: ['Auto Documentation', 'API Docs', 'User Guides', 'Code Comments', 'Multiple Formats'],
       price: '$19/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Users,
@@ -726,7 +726,7 @@ const ServicesPage: React.FC = () => {
       description: 'Streamline hiring with AI-powered resume screening, candidate matching, and interview scheduling.',
       features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Skills Assessment', 'Background Checks'],
       price: '$199/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Shield,
@@ -734,7 +734,7 @@ const ServicesPage: React.FC = () => {
       description: 'HIPAA-compliant medical records management with AI-powered data extraction and analysis.',
       features: ['HIPAA Compliance', 'Data Extraction', 'Medical Analysis', 'Patient Portal', 'Integration APIs'],
       price: '$299/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -742,7 +742,7 @@ const ServicesPage: React.FC = () => {
       description: 'Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting.',
       features: ['Automated Bookkeeping', 'Tax Preparation', 'Financial Reports', 'Expense Tracking', 'Compliance'],
       price: '$149/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -750,7 +750,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered property management with tenant screening, maintenance scheduling, and rent optimization.',
       features: ['Tenant Screening', 'Maintenance Scheduling', 'Rent Optimization', 'Property Analytics', 'Tenant Portal'],
       price: '$179/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Shield,
@@ -758,7 +758,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered legal document management with contract analysis, compliance tracking, and risk assessment.',
       features: ['Contract Analysis', 'Compliance Tracking', 'Risk Assessment', 'Document Templates', 'Legal Research'],
       price: '$249/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: Users,
@@ -766,7 +766,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered educational platform with personalized learning paths and progress tracking.',
       features: ['Personalized Learning', 'Progress Tracking', 'Course Creation', 'Assessment Tools', 'Certification'],
       price: '$99/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     },
     {
       icon: BarChart3,
@@ -774,7 +774,7 @@ const ServicesPage: React.FC = () => {
       description: 'AI-powered supply chain optimization with demand forecasting and inventory management.',
       features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization'],
       price: '$399/month',
-      category: 'Micro SAAS'
+      category: 'Micro SAAS',
     }
   ];
 
@@ -815,7 +815,7 @@ const ServicesPage: React.FC = () => {
   }, [selectedCategory, searchTerm]);
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
@@ -826,7 +826,7 @@ const ServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
@@ -834,7 +834,7 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business and drive growth.
             </p>
-          </div>
+          </div></div></div></div>
         </section>
 
         {/* Search and Filter Section */}
@@ -852,7 +852,7 @@ const ServicesPage: React.FC = () => {
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     />
-                  </div>
+                  </div></div></div></div></div>
                 </div>
                 <div className="md:w-64">
                   <div className="relative">
@@ -868,7 +868,7 @@ const ServicesPage: React.FC = () => {
                         </option>
                       ))}
                     </select>
-                  </div>
+                  </div></div>
                 </div>
               </div>
               
@@ -880,7 +880,7 @@ const ServicesPage: React.FC = () => {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                        : 'bg-white/10 text-gray-300 hover: bg-white/20',
                     }`}
                   >
                     {category}
@@ -901,7 +901,7 @@ const ServicesPage: React.FC = () => {
               <span className="text-gray-300">
                 {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
               </span>
-            </div>
+            </div></div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service, index) => (
@@ -909,13 +909,13 @@ const ServicesPage: React.FC = () => {
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Popular
-                    </div>
+                    </div></div></div>
                   )}
                   
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
                       <service.icon className="w-8 h-8 text-cyan-400" />
-                    </div>
+                    </div></div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                       <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
@@ -946,7 +946,7 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div></div>
                     <div className="text-sm text-gray-300">Contact for custom pricing</div>
                   </div>
                   
@@ -975,20 +975,20 @@ const ServicesPage: React.FC = () => {
                 </button>
                 
                 <div className="flex space-x-2">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  {Array.from({ length: totalPages; }, (_, i) => i + 1).map(page => (
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
                       className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                         currentPage === page
                           ? 'bg-cyan-500 text-white'
-                          : 'bg-white/10 text-white hover:bg-white/20'
+                          : 'bg-white/10 text-white hover: bg-white/20',
                       }`}
                     >
                       {page}
                     </button>
                   ))}
-                </div>
+                </div></div>
                 
                 <button
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
@@ -1018,11 +1018,11 @@ const ServicesPage: React.FC = () => {
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
                 View Portfolio
               </button>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

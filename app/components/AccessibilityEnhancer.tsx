@@ -1,10 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent,) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
@@ -37,7 +37,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default AccessibilityEnhancer;

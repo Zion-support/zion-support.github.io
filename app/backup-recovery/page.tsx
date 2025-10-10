@@ -8,22 +8,22 @@ const BackupRecoveryPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure Backup Solutions',
-      description: 'Advanced encryption and secure storage for your critical business data'
+      description: 'Advanced encryption and secure storage for your critical business data',
     },
     {
       icon: Zap,
       title: 'Fast Recovery',
-      description: 'Lightning-fast data recovery with minimal downtime for your business'
+      description: 'Lightning-fast data recovery with minimal downtime for your business',
     },
     {
       icon: Brain,
       title: 'AI-Powered Monitoring',
-      description: 'Intelligent monitoring and automated backup scheduling'
+      description: 'Intelligent monitoring and automated backup scheduling',
     },
     {
       icon: Globe,
       title: 'Global Redundancy',
-      description: 'Worldwide backup storage with multiple redundancy layers'
+      description: 'Worldwide backup storage with multiple redundancy layers',
     }
   ];
 
@@ -58,7 +58,7 @@ const BackupRecoveryPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our backup solutions deliver unmatched performance, security, and scalability.
           </p>
-        </div>
+        </div></div></div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -66,7 +66,7 @@ const BackupRecoveryPage: React.FC = () => {
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-            </div>
+            </div></div>
           ))}
         </div>
 
@@ -79,7 +79,7 @@ const BackupRecoveryPage: React.FC = () => {
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
+              </div></div></div>
             ))}
           </div>
         </div>
@@ -100,7 +100,7 @@ const BackupRecoveryPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>

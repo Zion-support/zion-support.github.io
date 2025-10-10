@@ -30,22 +30,22 @@ export default function PrivacyPage() {
     {
       title: 'Service Provision',
       icon: Globe,
-      description: 'To provide and maintain our services'
+      description: 'To provide and maintain our services',
     },
     {
       title: 'Communication',
       icon: Mail,
-      description: 'To communicate with you about our services'
+      description: 'To communicate with you about our services',
     },
     {
       title: 'Improvement',
       icon: ArrowRight,
-      description: 'To improve and develop new features'
+      description: 'To improve and develop new features',
     },
     {
       title: 'Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse'
+      description: 'To protect against fraud and abuse',
     }
   ];
 
@@ -53,22 +53,22 @@ export default function PrivacyPage() {
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye
+      icon: Eye;
     },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle
+      icon: CheckCircle;
     },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: Lock
+      icon: Lock;
     },
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
+      icon: Database;
     }
   ];
 
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
           </p>
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
+            Last updated: {lastUpdated,}
           </div>
         </div>
       </div>

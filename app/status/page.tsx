@@ -24,7 +24,7 @@ export default function StatusPage() {
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'
+      description: 'Core API endpoints and authentication',
     },
     {
       name: 'AI Services',
@@ -32,7 +32,7 @@ export default function StatusPage() {
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'
+      description: 'Machine learning and AI processing',
     },
     {
       name: 'Cloud Infrastructure',
@@ -40,7 +40,7 @@ export default function StatusPage() {
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'
+      description: 'Cloud hosting and storage services',
     },
     {
       name: 'Database',
@@ -48,7 +48,7 @@ export default function StatusPage() {
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'
+      description: 'Primary and backup databases',
     },
     {
       name: 'CDN',
@@ -56,7 +56,7 @@ export default function StatusPage() {
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network'
+      description: 'Content delivery network',
     },
     {
       name: 'Monitoring',
@@ -64,7 +64,7 @@ export default function StatusPage() {
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'
+      description: 'System monitoring and alerts',
     }
   ];
 
@@ -91,7 +91,7 @@ export default function StatusPage() {
     }
   ];
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string,) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -104,7 +104,7 @@ export default function StatusPage() {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string,) => {
     switch (status) {
       case 'operational':
         return 'text-green-400';
@@ -117,7 +117,7 @@ export default function StatusPage() {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (severity: string,) => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500/20 text-red-400 border-red-500/50';
@@ -150,7 +150,7 @@ export default function StatusPage() {
                 {overallStatus === 'operational' ? 'All Systems Operational' : 
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
-            </div>
+            </div></div>
             <button
               onClick={refreshStatus}
               disabled={isRefreshing}
@@ -162,7 +162,7 @@ export default function StatusPage() {
           </div>
           
           <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
+            Last updated: {lastUpdated.toLocaleString(),}
           </p>
         </div>
       </section>
@@ -178,7 +178,7 @@ export default function StatusPage() {
                   <div className="flex items-center gap-3">
                     {getStatusIcon(service.status)}
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                  </div>
+                  </div></div></div></div></div>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
                   </span>
@@ -190,7 +190,7 @@ export default function StatusPage() {
                   <div className="flex justify-between">
                     <span className="text-gray-400">Uptime:</span>
                     <span className="text-white">{service.uptime}</span>
-                  </div>
+                  </div></div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Response Time:</span>
                     <span className="text-white">{service.responseTime}</span>
@@ -217,9 +217,9 @@ export default function StatusPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
                     <div className="flex items-center gap-4 text-sm text-gray-400">
-                      <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
-                      <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
-                    </div>
+                      <span>Started: {new Date(incident.startTime).toLocaleString(),}</span>
+                      <span>Ended: {new Date(incident.endTime).toLocaleString(),}</span>
+                    </div></div></div></div></div></div>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
@@ -255,7 +255,7 @@ export default function StatusPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-6 h-6 text-white" />
-              </div>
+              </div></div></div></div>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
@@ -263,7 +263,7 @@ export default function StatusPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-6 h-6 text-white" />
-              </div>
+              </div></div>
               <div className="text-3xl font-bold text-white mb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
@@ -271,7 +271,7 @@ export default function StatusPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-white" />
-              </div>
+              </div></div>
               <div className="text-3xl font-bold text-white mb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
@@ -279,7 +279,7 @@ export default function StatusPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-6 h-6 text-white" />
-              </div>
+              </div></div>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
@@ -303,7 +303,7 @@ export default function StatusPage() {
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Contact Support
             </button>
-          </div>
+          </div></div>
         </div>
       </section>
 

@@ -9,22 +9,22 @@ const DynamicContentShowcase: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
+      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
     },
     {
       icon: Zap,
       title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
+      description: 'Optimized for speed with sub-second response times and seamless user experience',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
+      description: 'Bank-level security with end-to-end encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+      description: 'Scale effortlessly across multiple regions with automatic load balancing',
     }
   ];
 
@@ -45,21 +45,21 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-      rating: 5
+      rating: 5;
     }
   ];
 
@@ -81,7 +81,7 @@ const DynamicContentShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
           </p>
-        </div>
+        </div></div></div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -89,54 +89,8 @@ const DynamicContentShowcase: React.FC = () => {
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
+              </div></div></div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     </div>
   );
 };

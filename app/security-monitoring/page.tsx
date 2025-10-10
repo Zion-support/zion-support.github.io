@@ -28,22 +28,22 @@ const SecurityMonitoringPage: React.FC = () => {
     {
       icon: Eye,
       title: '24/7 Real-time Monitoring',
-      description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
+      description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.',
     },
     {
       icon: AlertTriangle,
       title: 'Advanced Threat Detection',
-      description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
+      description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.',
     },
     {
       icon: BarChart,
       title: 'Comprehensive Analytics',
-      description: 'Detailed security reports and insights to help you understand and improve your security posture.'
+      description: 'Detailed security reports and insights to help you understand and improve your security posture.',
     },
     {
       icon: Zap,
       title: 'Instant Response',
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'
+      description: 'Automated incident response and immediate notification systems to minimize security breaches.',
     }
   ];
 
@@ -59,7 +59,7 @@ const SecurityMonitoringPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
         <meta name="description" content="Professional 24/7 security monitoring services by Zion Tech Group. Advanced threat detection, real-time alerts, and comprehensive cybersecurity protection." />
@@ -87,7 +87,7 @@ const SecurityMonitoringPage: React.FC = () => {
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
                 </button>
-              </div>
+              </div></div></div></div>
             </div>
           </div>
         </section>
@@ -102,14 +102,14 @@ const SecurityMonitoringPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
-                  </div>
+                  </div></div></div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -128,14 +128,14 @@ const SecurityMonitoringPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our advanced monitoring services.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                </div></div>
               ))}
             </div>
           </div>
@@ -160,12 +160,12 @@ const SecurityMonitoringPage: React.FC = () => {
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us
                 </button>
-              </div>
+              </div></div></div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

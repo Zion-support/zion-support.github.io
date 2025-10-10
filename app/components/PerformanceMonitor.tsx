@@ -30,7 +30,7 @@ const PerformanceMonitor: React.FC = () => {
             loadTime: Math.round(loadTime),
             memoryUsage,
             connectionSpeed,
-            renderTime: Math.round(domContentLoaded)
+            renderTime: Math.round(domContentLoaded),
           });
         }
       }
@@ -44,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Keyboard shortcut to toggle visibility
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent,) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         e.preventDefault();
         setIsVisible(prev => !prev);

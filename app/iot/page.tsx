@@ -141,7 +141,7 @@ const IoTPage: React.FC = () => {
   const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
@@ -241,7 +241,7 @@ const IoTPage: React.FC = () => {
                       <div className="mb-4"></div>
                         <div className="flex items-center justify-between mb-2"></div>
                           <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-500">Market: {service.marketPrice,}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates</div>
@@ -368,7 +368,7 @@ const IoTPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

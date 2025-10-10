@@ -8,22 +8,22 @@ const AccessibilityEnhancerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
@@ -31,7 +31,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   /**
    * Handle escape key
    */
-  private handleEscapeKey(event: KeyboardEvent): void {
+  private handleEscapeKey(event: KeyboardEvent,): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
@@ -48,7 +48,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   /**
    * Handle arrow key navigation
    */
-  private handleArrowNavigation(event: KeyboardEvent): void {
+  private handleArrowNavigation(event: KeyboardEvent,): void {
     const currentElement = document.activeElement as HTMLElement;
     if (!currentElement) return;
     // Handle radio button groups
@@ -63,7 +63,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   /**
    * Handle radio group navigation
    */
-  private handleRadioGroupNavigation(event: KeyboardEvent, currentElement: HTMLInputElement): void {
+  private handleRadioGroupNavigation(event: KeyboardEvent, currentElement: HTMLInputElement,): void {
     const name = currentElement.name;
     if (!name) return;
     const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}"]`)) as HTMLInputElement[];
@@ -81,7 +81,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   /**
    * Handle menu navigation
    */
-  private handleMenuNavigation(event: KeyboardEvent, currentElement: HTMLElement): void {
+  private handleMenuNavigation(event: KeyboardEvent, currentElement: HTMLElement,): void {
     const menu = currentElement.closest('[role="menu"]');
     if (!menu) return;
     const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
@@ -230,19 +230,19 @@ const AccessibilityEnhancerPage: React.FC = () => {
   /**
    * Handle focus in
    */
-  private handleFocusIn(event: FocusEvent): void {
+  private handleFocusIn(event: FocusEvent,): void {
     const element = event.target as HTMLElement;
     // Add focus indicator
     element.classList.add('focus-visible');
     // Announce focus changes for important elements
     if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {
-      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`);
+      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button',}`);
     }
   }
   /**
    * Handle focus out
    */
-  private handleFocusOut(event: FocusEvent): void {
+  private handleFocusOut(event: FocusEvent,): void {
     const element = event.target as HTMLElement;
     element.classList.remove('focus-visible');
   }
@@ -252,11 +252,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupHighContrastMode(): void {
     if (!this.config.enableHighContrast) return;
     // Check for high contrast preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
+    if (window.matchMedia('(prefers-contrast: high,)').matches) {
       document.body.classList.add('high-contrast');
     }
     // Listen for changes
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
+    window.matchMedia('(prefers-contrast: high,)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
       } else {
@@ -270,11 +270,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupReducedMotion(): void {
     if (!this.config.enableReducedMotion) return;
     // Check for reduced motion preference
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce,)').matches) {
       document.body.classList.add('reduced-motion');
     }
     // Listen for changes
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+    window.matchMedia('(prefers-reduced-motion: reduce,)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');
       } else {
@@ -395,7 +395,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     });
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true;
     });
     this.observers.push(observer);
   }
@@ -497,12 +497,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
   getReport(): string {
     const metrics = this.getMetrics();
     return `
-Accessibility Report:
-- Color Contrast Score: ${metrics.colorContrastScore}/100
-- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
-- Screen Reader Score: ${metrics.screenReaderScore}/100
-- ARIA Implementation Score: ${metrics.ariaImplementationScore}/100
-- Overall Score: ${metrics.overallScore}/100
+Accessibility Report: - Color Contrast Score: ${metrics.colorContrastScore,}/100
+- Keyboard Navigation Score: ${metrics.keyboardNavigationScore,}/100
+- Screen Reader Score: ${metrics.screenReaderScore,}/100
+- ARIA Implementation Score: ${metrics.ariaImplementationScore,}/100
+- Overall Score: ${metrics.overallScore,}/100
 
 Recommendations:
 - Focus on improving color contrast for better accessibility

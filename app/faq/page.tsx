@@ -33,12 +33,12 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "How do I get started?",
-      answer: "Contact us through our consultation form or call +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal."
+      answer: "Contact us through our consultation form or call +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal.",
     }
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Frequently Asked Questions - Zion Tech Group</title>
         <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
@@ -54,7 +54,7 @@ const FAQPage: React.FC = () => {
               Find answers to common questions about our AI and IT solutions, 
               services, and how we can help transform your business.
             </p>
-          </div>
+          </div></div></div>
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
@@ -69,7 +69,7 @@ const FAQPage: React.FC = () => {
                   <p className="text-gray-300 leading-relaxed">
                     {faq.answer}
                   </p>
-                </div>
+                </div></div></div>
               ))}
             </div>
 
@@ -93,12 +93,12 @@ const FAQPage: React.FC = () => {
                 >
                   Free Consultation
                 </a>
-              </div>
+              </div></div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

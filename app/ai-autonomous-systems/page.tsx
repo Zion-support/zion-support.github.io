@@ -34,7 +34,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge autonomous systems powered by advanced AI technology." />
@@ -61,7 +61,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Learn More
                 </button>
-              </div>
+              </div></div></div>
             </div>
           </div>
         </section>
@@ -76,7 +76,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI platform can revolutionize your business operations.
               </p>
-            </div>
+            </div></div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -84,7 +84,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
+                  </div></div></div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -117,7 +117,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
       </main>
       
       <Footer />
-    </>
+    </React.Fragment>
   );
 };
 

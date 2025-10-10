@@ -111,7 +111,7 @@ const ITConsultingPage: React.FC = () => {
       support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
-      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
+      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design',
     },
     {
       id: 'cloud-migration-services',
@@ -143,7 +143,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
-      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
+      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure',
     },
     {
       id: 'cybersecurity-services',
@@ -175,7 +175,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
-      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
+      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations',
     },
     {
       id: 'network-design-optimization',
@@ -207,7 +207,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
-      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
+      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues',
     },
     {
       id: 'database-management',
@@ -239,7 +239,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
-      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
+      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%',
     },
     {
       id: 'it-support-services',
@@ -271,7 +271,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
-      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
+      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity',
     },
     {
       id: 'software-development',
@@ -303,7 +303,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
-      caseStudy: 'Logistics company automated 80% of manual processes with custom software'
+      caseStudy: 'Logistics company automated 80% of manual processes with custom software',
     },
     {
       id: 'it-consulting',
@@ -335,7 +335,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
-      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
+      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning',
     },
     {
       id: 'disaster-recovery',
@@ -367,7 +367,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
-      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
+      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution',
     },
     {
       id: 'compliance-auditing',
@@ -399,22 +399,22 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits',
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'networking', name: 'Networking', icon: Network },
-    { id: 'database', name: 'Database', icon: Database },
-    { id: 'support', name: 'IT Support', icon: Headphones },
-    { id: 'development', name: 'Development', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Briefcase },
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
+    { id: 'all', name: 'All IT Services', icon: Grid3X3; },
+    { id: 'infrastructure', name: 'Infrastructure', icon: Server; },
+    { id: 'cloud', name: 'Cloud Services', icon: Cloud; },
+    { id: 'security', name: 'Cybersecurity', icon: Shield; },
+    { id: 'networking', name: 'Networking', icon: Network; },
+    { id: 'database', name: 'Database', icon: Database; },
+    { id: 'support', name: 'IT Support', icon: Headphones; },
+    { id: 'development', name: 'Development', icon: Code; },
+    { id: 'consulting', name: 'Consulting', icon: Briefcase; },
+    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw; },
+    { id: 'compliance', name: 'Compliance', icon: CheckSquare; }
   ];
 
   const filteredServices = itServices.filter(service => {
@@ -499,7 +499,7 @@ const ITConsultingPage: React.FC = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
+                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-cyan-400',
                 }`}
               >
                 {category.name}

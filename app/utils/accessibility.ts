@@ -51,7 +51,7 @@ export class AccessibilityManager {
     root.setAttribute('data-color-scheme', this.config.colorScheme);
   }
 
-  public announceToScreenReader(message: string): void {
+  public announceToScreenReader(message: string,): void {
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return;
 
     const announcement = document.createElement('div');
@@ -67,7 +67,7 @@ export class AccessibilityManager {
     }, 1000);
   }
 
-  public focusElement(selector: string): boolean {
+  public focusElement(selector: string,): boolean {
     if (typeof document === 'undefined') return false;
 
     const element = document.querySelector(selector) as HTMLElement;
@@ -78,7 +78,7 @@ export class AccessibilityManager {
     return false;
   }
 
-  public trapFocus(container: HTMLElement): () => void {
+  public trapFocus(container: HTMLElement,): () => void {
     const focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     ) as NodeListOf<HTMLElement>;
@@ -86,7 +86,7 @@ export class AccessibilityManager {
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
 
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEvent,) => {
       if (e.key !== 'Tab') return;
 
       if (e.shiftKey) {
@@ -114,7 +114,7 @@ export class AccessibilityManager {
 export const accessibilityManager = new AccessibilityManager();
 
 // Utility functions
-export const isAccessible = (element: HTMLElement): boolean => {
+export const isAccessible = (element: HTMLElement,): boolean => {
   const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex');
@@ -122,11 +122,11 @@ export const isAccessible = (element: HTMLElement): boolean => {
   return isInteractive && (hasAriaLabel || hasTextContent);
 };
 
-export const addAriaLabel = (element: HTMLElement, label: string): void => {
+export const addAriaLabel = (element: HTMLElement, label: string,): void => {
   element.setAttribute('aria-label', label);
 };
 
-export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
+export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string,): void => {
   element.setAttribute('aria-describedby', descriptionId);
 };
 
@@ -134,6 +134,6 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
   element.setAttribute('tabindex', tabIndex.toString());
 };
 
-export const removeElementFocus = (element: HTMLElement): void => {
+export const removeElementFocus = (element: HTMLElement,): void => {
   element.setAttribute('tabindex', '-1');
 };

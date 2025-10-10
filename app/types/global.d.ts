@@ -23,8 +23,8 @@ export interface BaseComponentProps {
 }
 
 export interface PageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { [key: string]: string ,};
+  searchParams: { [key: string]: string | string[] | undefined ,};
 }
 
 // API response types

@@ -8,10 +8,10 @@ interface ContentNewsletterSignupProps {
   placeholder?: string;
   buttonText?: string;
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
+    icon: React.ComponentType<{ className?: string ,}>;
     text: string;
   }>;
-  onSubscribe?: (email: string) => void;
+  onSubscribe?: (email: string,) => void;
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
@@ -22,11 +22,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   features = [
     {
       icon: CheckCircle,
-      text: "Weekly industry insights"
+      text: "Weekly industry insights",
     },
     {
       icon: Star,
-      text: "Exclusive content and tips"
+      text: "Exclusive content and tips",
     },
     {
       icon: Users,
@@ -34,7 +34,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     },
     {
       icon: Globe,
-      text: "Global community access"
+      text: "Global community access",
     }
   ],
   onSubscribe
@@ -72,7 +72,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-8 h-8 text-white" />
-          </div>
+          </div></div></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Welcome to Our Community!
           </h2>
@@ -108,7 +108,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 <div key={index} className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                     <feature.icon className="w-4 h-4 text-white" />
-                  </div>
+                  </div></div></div></div></div></div></div>
                   <span className="text-blue-100">{feature.text}</span>
                 </div>
               ))}
@@ -131,7 +131,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   required
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                 />
-              </div>
+              </div></div>
               
               <button
                 type="submit"
@@ -139,15 +139,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
                 {isLoading ? (
-                  <>
+                  <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
+                  </React.Fragment>
                 )}
               </button>
               

@@ -9,7 +9,7 @@ export default function APIDocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const copyToClipboard = (code: string, id: string) => {
+  const copyToClipboard = (code: string, id: string,) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
@@ -134,7 +134,7 @@ export default function APIDocsPage() {
               <Download className="mr-2 h-5 w-5" />
               Download SDK
             </button>
-          </div>
+          </div></div></div>
         </div>
       </section>
 
@@ -146,7 +146,7 @@ export default function APIDocsPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
-              </div>
+              </div></div></div></div>
               <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
               <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
@@ -157,7 +157,7 @@ export default function APIDocsPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
-              </div>
+              </div></div>
               <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
               <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
@@ -168,7 +168,7 @@ export default function APIDocsPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
-              </div>
+              </div></div>
               <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
@@ -189,7 +189,7 @@ export default function APIDocsPage() {
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-6 h-6 text-white" />
-                  </div>
+                  </div></div></div></div></div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
@@ -209,21 +209,21 @@ export default function APIDocsPage() {
                             {endpoint.method}
                           </span>
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
-                        </div>
+                        </div></div></div></div>
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <>
+                            <React.Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </>
+                            </React.Fragment>
                           ) : (
-                            <>
+                            <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </>
+                            </React.Fragment>
                           )}
                         </button>
                       </div>
@@ -260,7 +260,7 @@ export default function APIDocsPage() {
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               View SDKs
             </button>
-          </div>
+          </div></div>
         </div>
       </section>
 

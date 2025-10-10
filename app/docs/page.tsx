@@ -14,9 +14,9 @@ export default function DocsPage() {
       icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
       docs: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
+        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' ,},
+        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' ,},
+        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' ,}
       ]
     },
     {
@@ -24,9 +24,9 @@ export default function DocsPage() {
       icon: 'code',
       description: 'Complete API documentation and endpoints',
       docs: [
-        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
-        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
-        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
+        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' ,},
+        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' ,},
+        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' ,}
       ]
     },
     {
@@ -34,9 +34,9 @@ export default function DocsPage() {
       icon: 'brain',
       description: 'AI and machine learning documentation',
       docs: [
-        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
-        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
-        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
+        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' ,},
+        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' ,},
+        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' ,}
       ]
     },
     {
@@ -44,18 +44,18 @@ export default function DocsPage() {
       icon: 'cloud',
       description: 'Cloud infrastructure and services',
       docs: [
-        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
-        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
-        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
+        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' ,},
+        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' ,},
+        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' ,}
       ]
     }
   ];
 
   const popularDocs = [
-    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
-    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
-    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
-    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
+    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' ,},
+    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' ,},
+    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' ,},
+    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' ,}
   ];
 
   const filteredDocs = docCategories.map(category => ({
@@ -90,7 +90,7 @@ export default function DocsPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-white" />
-                  </div>
+                  </div></div></div></div></div>
                   <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
@@ -120,7 +120,7 @@ export default function DocsPage() {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-6 h-6 text-white" />
-                  </div>
+                  </div></div></div></div></div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
@@ -140,7 +140,7 @@ export default function DocsPage() {
                             {doc.title}
                           </h4>
                           <p className="text-gray-300 text-sm">{doc.description}</p>
-                        </div>
+                        </div></div></div>
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                       </div>
                     </a>
@@ -168,7 +168,7 @@ export default function DocsPage() {
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Join Community
             </button>
-          </div>
+          </div></div>
         </div>
       </section>
 

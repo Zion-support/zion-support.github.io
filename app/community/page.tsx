@@ -23,7 +23,7 @@ const CommunityPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Network',
-      description: 'Connect with professionals from around the world'
+      description: 'Connect with professionals from around the world',
     }
   ];
 
@@ -58,7 +58,7 @@ const CommunityPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our community provides opportunities for networking, learning, and collaboration.
           </p>
-        </div>
+        </div></div></div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -66,7 +66,7 @@ const CommunityPage: React.FC = () => {
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-            </div>
+            </div></div>
           ))}
         </div>
 
@@ -79,7 +79,7 @@ const CommunityPage: React.FC = () => {
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
+              </div></div></div>
             ))}
           </div>
         </div>
@@ -100,7 +100,7 @@ const CommunityPage: React.FC = () => {
               <MessageCircle className="mr-2 h-5 w-5" />
               Learn More
             </button>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>

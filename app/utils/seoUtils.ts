@@ -17,7 +17,7 @@
 export class SEOManager {
   private config: SEOConfig;
 
-  constructor(config: SEOConfig) {
+  constructor(config: SEOConfig,) {
     this.config = config;
   }
 
@@ -84,7 +84,7 @@ export class SEOManager {
     }
   }
 
-  private updateMetaTag(name: string, content: string): void {
+  private updateMetaTag(name: string, content: string,): void {
     if (typeof document === 'undefined') return;
 
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
@@ -112,14 +112,14 @@ export class SEOManager {
     if (typeof document === 'undefined') return;
 
     const ogTags = [
-      { property: 'og:title', content: this.config.ogTitle || this.config.title },
-      { property: 'og:description', content: this.config.ogDescription || this.config.description },
-      { property: 'og:type', content: this.config.ogType || 'website' },
-      { property: 'og:url', content: this.config.canonicalUrl || window.location.href },
+      { property: 'og:title', content: this.config.ogTitle || this.config.title ,},
+      { property: 'og:description', content: this.config.ogDescription || this.config.description ,},
+      { property: 'og:type', content: this.config.ogType || 'website' ,},
+      { property: 'og:url', content: this.config.canonicalUrl || window.location.href ,},
     ];
 
     if (this.config.ogImage) {
-      ogTags.push({ property: 'og:image', content: this.config.ogImage });
+      ogTags.push({ property: 'og:image', content: this.config.ogImage ,});
     }
 
     ogTags.forEach(tag => {
@@ -131,13 +131,13 @@ export class SEOManager {
     if (typeof document === 'undefined') return;
 
     const twitterTags = [
-      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
-      { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },
-      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },
+      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' ,},
+      { name: 'twitter:title', content: this.config.twitterTitle || this.config.title ,},
+      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description ,},
     ];
 
     if (this.config.twitterImage) {
-      twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage });
+      twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage ,});
     }
 
     twitterTags.forEach(tag => {
@@ -145,7 +145,7 @@ export class SEOManager {
     });
   }
 
-  private updateMetaTagByProperty(property: string, content: string): void {
+  private updateMetaTagByProperty(property: string, content: string,): void {
     if (typeof document === 'undefined') return;
 
     let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
@@ -157,7 +157,7 @@ export class SEOManager {
     meta.content = content;
   }
 
-  private addMetaTag(name: string, content: string): void {
+  private addMetaTag(name: string, content: string,): void {
     if (typeof document === 'undefined') return;
 
     const meta = document.createElement('meta');
@@ -179,7 +179,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   });
 };
 
-export const addStructuredData = (data: any): void => {
+export const addStructuredData = (data: any,): void => {
   if (typeof document === 'undefined') return;
 
   const script = document.createElement('script');

@@ -13,7 +13,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Revenue Optimization',
-      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.'
+      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.',
     },
     {
       icon: Users,
@@ -23,22 +23,22 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     {
       icon: ShoppingCart,
       title: 'Inventory Management',
-      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.'
+      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.',
     },
     {
       icon: DollarSign,
       title: 'Pricing Intelligence',
-      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.'
+      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',
     },
     {
       icon: Target,
       title: 'Conversion Tracking',
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
+      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.',
     }
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
@@ -55,7 +55,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
               </p>
-            </div>
+            </div></div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -65,7 +65,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
-                  </div>
+                  </div></div></div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -74,7 +74,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

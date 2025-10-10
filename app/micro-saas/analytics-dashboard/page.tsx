@@ -7,32 +7,32 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.'
+      description: 'Live data visualization with instant updates and interactive charts.',
     },
     {
       icon: TrendingUp,
       title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.'
+      description: 'AI-powered forecasting and trend analysis for better decision making.',
     },
     {
       icon: Users,
       title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.'
+      description: 'Comprehensive user analytics and engagement metrics tracking.',
     },
     {
       icon: DollarSign,
       title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.'
+      description: 'Detailed financial metrics and revenue optimization insights.',
     },
     {
       icon: Zap,
       title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.'
+      description: 'Build personalized dashboards tailored to your business needs.',
     },
     {
       icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
+      description: 'Monitor KPIs and business objectives with automated alerts.',
     }
   ];
 
@@ -46,14 +46,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ];
 
   const metrics = [
-    { label: 'Data Sources', value: '50+', icon: BarChart },
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
+    { label: 'Data Sources', value: '50+', icon: BarChart; },
+    { label: 'Update Frequency', value: 'Real-time', icon: Clock; },
+    { label: 'Accuracy Rate', value: '99.9%', icon: Shield; },
+    { label: 'User Satisfaction', value: '4.9/5', icon: Star; }
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
@@ -200,7 +200,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

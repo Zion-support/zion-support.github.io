@@ -34,14 +34,14 @@ export function announceToScreenReader(
 /**
  * Trap focus within a container (useful for modals)
  */
-export function trapFocus(element: HTMLElement): () => void {
+export function trapFocus(element: HTMLElement,): () => void {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent,) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {
@@ -68,7 +68,7 @@ export function trapFocus(element: HTMLElement): () => void {
 /**
  * Check if element is keyboard accessible
  */
-export function isKeyboardAccessible(element: HTMLElement): boolean {
+export function isKeyboardAccessible(element: HTMLElement,): boolean {
   const tabIndex = element.getAttribute('tabindex');
   return tabIndex !== null && tabIndex !== '-1';
 }
@@ -78,7 +78,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  */
 export function makeKeyboardAccessible(
   element: HTMLElement,
-  onClick: (e: Event) => void,
+  onClick: (e: Event,) => void,
   options: {
     role?: string;
     tabindex?: number;
@@ -89,7 +89,7 @@ export function makeKeyboardAccessible(
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent,) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       onClick(e);
@@ -108,8 +108,8 @@ export function makeKeyboardAccessible(
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
-export function getContrastRatio(color1: string, color2: string): number {
-  const getLuminance = (color: string): number => {
+export function getContrastRatio(color1: string, color2: string,): number {
+  const getLuminance = (color: string,): number => {
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
       c = c / 255;
@@ -171,20 +171,20 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
  * Detect if user prefers reduced motion
  */
 export function prefersReducedMotion(): boolean {
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return window.matchMedia('(prefers-reduced-motion: reduce,)').matches;
 }
 
 /**
  * Detect if user prefers dark mode
  */
 export function prefersDarkMode(): boolean {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return window.matchMedia('(prefers-color-scheme: dark,)').matches;
 }
 
 /**
  * Get ARIA label for form validation error
  */
-export function getAriaInvalid(hasError: boolean): Record<string, string> {
+export function getAriaInvalid(hasError: boolean,): Record<string, string> {
   return {
     ...(hasError && { 'aria-describedby': generateId('error') })
   };
@@ -271,7 +271,7 @@ export class FocusManager {
     }
   }
 
-  moveFocusInside(container: HTMLElement): void {
+  moveFocusInside(container: HTMLElement,): void {
     const focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );

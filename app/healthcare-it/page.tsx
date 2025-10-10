@@ -1,3 +1,4 @@
+const Component: React.FC = () => {
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -56,7 +57,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Healthcare
@@ -73,7 +74,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
-</div>
+</div></div></div></div>
         </div>
       </section>
 
@@ -87,7 +88,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="text-4xl mb-4">{service.icon}</div></div></div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
@@ -106,14 +107,14 @@ import SEOOptimizer from '../components/SEOOptimizer';
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of modern healthcare technology with our proven solutions.
             </p>
-          </div>
+          </div></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
-                </div>
+                </div></div></div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
 
               </div>

@@ -78,7 +78,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     fallbackComponents: {
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
+      notFound: NotFoundFallback;
     },
   };
 }
@@ -206,7 +206,7 @@ function NotFoundFallback(): JSX.Element {
 /**
  * Get error type from error object
  */
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
+export function getErrorType(error: Error,): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network';
   }
@@ -228,7 +228,7 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**
  * Format error for logging
  */
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
+export function formatErrorForLogging(error: Error,): Record<string, unknown> {
   return {
     message: error.message,
     stack: error.stack,

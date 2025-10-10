@@ -51,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true
+      send_page_view: true;
     });
   };
 
@@ -93,7 +93,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        error: event.error?.stack
+        error: event.error?.stack,
       });
     });
 
@@ -101,7 +101,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
-        promise: event.promise
+        promise: event.promise,
       });
     });
 
@@ -111,7 +111,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         trackEvent('error', 'resource_error', {
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
-          error: event.type
+          error: event.type,
         });
       }
     }, true);
@@ -122,7 +122,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     trackEvent('page_view', 'page_view', {
       page_title: document.title,
       page_location: window.location.href,
-      page_path: window.location.pathname
+      page_path: window.location.pathname,
     });
 
     // Track scroll depth
@@ -153,12 +153,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
           link_url: href,
-          link_text: target.textContent?.trim()
+          link_text: target.textContent?.trim(),
         });
       } else if (tagName === 'button') {
         trackEvent('engagement', 'button_click', {
           button_text: target.textContent?.trim(),
-          button_class: target.className
+          button_class: target.className,
         });
       }
     });
@@ -169,7 +169,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       trackEvent('engagement', 'form_submit', {
         form_id: form.id,
         form_class: form.className,
-        form_action: form.action
+        form_action: form.action,
       });
     });
   };
@@ -179,7 +179,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       (window as any).gtag('event', action, {
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
-        value: typeof value === 'number' ? value : undefined
+        value: typeof value === 'number' ? value : undefined,
       });
     }
   };
@@ -198,11 +198,11 @@ declare global {
 export default Analytics;
 
 // Analytics Provider for context
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
   return (
-    <>
+    <React.Fragment>
       <Analytics />
       {children}
-    </>
+    </React.Fragment>
   );
 };

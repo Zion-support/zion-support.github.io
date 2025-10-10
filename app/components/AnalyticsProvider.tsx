@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
+  trackPageView: (pageName: string,) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -16,7 +16,7 @@ export const useAnalytics = () => {
   return context;
 };
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
@@ -33,7 +33,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     }
   };
 
-  const trackPageView = (pageName: string) => {
+  const trackPageView = (pageName: string,) => {
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
       gtag('event', 'page_view', {
         page_title: pageName,

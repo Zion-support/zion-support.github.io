@@ -20,7 +20,7 @@ class ProductionLogger {}
     const entry: LogEntry = {,
       level;
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
-    const entry: LogEntry = {}
+    const entry: LogEntry = {,}
       level,
       message,
       data,
@@ -53,7 +53,7 @@ class ProductionLogger {}
     }
   }
 
-  private sendToMonitoring(entry: LogEntry): void {,
+  private sendToMonitoring(entry: LogEntry,): void {,
     // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {,
       (window as any).gtag('event', 'error_log', {)
@@ -62,14 +62,14 @@ class ProductionLogger {}
         error_timestamp: entry.timestamp),
         event_category: 'Error',
 ,
-  private sendToMonitoring(entry: LogEntry): void {}
+  private sendToMonitoring(entry: LogEntry,): void {,}
     // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,
-        event_category: 'Error'
+        event_category: 'Error',
 
     }
   }

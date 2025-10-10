@@ -7,11 +7,11 @@ const MicroSaaSPage: React.FC = () => {
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
+        <link rel="canonical" href={`https: //ziontechgroup.com/micro-saas/${serviceName,}`} />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -51,7 +51,7 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -111,7 +111,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   };
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -119,17 +119,17 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og: title" content={title,} />
+        <meta property="og: description" content={description,} />
+        <meta property="og: image" content={ogImage,} />
         <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+        {canonicalUrl && <meta property="og: url" content={canonicalUrl,} />}
         
         {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter: card" content={twitterCard,} />
+        <meta name="twitter: title" content={title,} />
+        <meta name="twitter: description" content={description,} />
+        <meta name="twitter: image" content={ogImage,} />
         
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -150,13 +150,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000,
-          maxWidth: '300px'
+          maxWidth: '300px',
         }}>
-          <div>SEO Score: {seoScore}/100</div>
+          <div>SEO Score: {seoScore,}/100</div></div>
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations:</div>
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <div>Recommendations:</div></div>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}</li>
                 ))}
@@ -165,7 +165,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           )}
         </div>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

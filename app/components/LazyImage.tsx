@@ -41,7 +41,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            </div></div></div>
           </div>
         </div>
       </section>
@@ -59,14 +59,14 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our lazyimage solutions for your business.
             </p>
-          </div>
+          </div></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              </div></div>
             ))}
           </div>
         </div>
@@ -91,7 +91,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
+            </div></div></div>
           </div>
         </div>
       </section>

@@ -29,7 +29,7 @@ const ProjectManagementProPage: React.FC = () => {
     {
       icon: CheckSquare,
       title: 'Task Management',
-      description: 'Organize and track tasks with advanced project management tools and AI-powered insights.'
+      description: 'Organize and track tasks with advanced project management tools and AI-powered insights.',
     },
     {
       icon: Users,
@@ -39,12 +39,12 @@ const ProjectManagementProPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Progress Tracking',
-      description: 'Comprehensive project analytics and reporting to track progress and performance.'
+      description: 'Comprehensive project analytics and reporting to track progress and performance.',
     },
     {
       icon: Zap,
       title: 'Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',
     }
   ];
 
@@ -60,7 +60,7 @@ const ProjectManagementProPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
@@ -88,7 +88,7 @@ const ProjectManagementProPage: React.FC = () => {
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
                 </button>
-              </div>
+              </div></div></div></div>
             </div>
           </div>
         </section>
@@ -103,14 +103,14 @@ const ProjectManagementProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our project management platform provides everything you need to succeed.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
-                  </div>
+                  </div></div></div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -129,14 +129,14 @@ const ProjectManagementProPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform your project management with our comprehensive platform.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                </div></div>
               ))}
             </div>
           </div>
@@ -161,12 +161,12 @@ const ProjectManagementProPage: React.FC = () => {
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us
                 </button>
-              </div>
+              </div></div></div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

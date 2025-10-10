@@ -22,7 +22,7 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: ''
+    message: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -53,7 +53,7 @@ phone: '',
         service: '',
         budget: '',
         timeline: '',
-        message: ''
+        message: '',
       });
     } catch (error) {
       setSubmitStatus('error');
@@ -79,30 +79,30 @@ phone: '',
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
+      description: 'Mon-Fri 9AM-6PM EST',
     },
     {
       icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      description: 'We respond within 24 hours',
     },
     {
       icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office'
+      description: 'Visit our office',
     },
     {
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
+      description: 'Eastern Time',
     }
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
@@ -124,7 +124,7 @@ phone: '',
               how our AI and IT solutions can help you achieve your goals.
             </p>
 
-          </div>
+          </div></div></div>
         </section>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -136,7 +136,7 @@ phone: '',
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
+                </div></div></div>
               )}
 
               {submitStatus === 'error' && (
@@ -162,7 +162,7 @@ phone: '',
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your full name"
                       />
-                    </div>
+                    </div></div></div>
                   </div>
                   
                   <div>
@@ -180,7 +180,7 @@ phone: '',
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
-                    </div>
+                    </div></div>
                   </div>
                 </div>
 
@@ -199,7 +199,7 @@ phone: '',
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your company"
                       />
-                    </div>
+                    </div></div></div>
                   </div>
                   
                   <div>
@@ -216,7 +216,7 @@ phone: '',
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
-                    </div>
+                    </div></div>
                   </div>
                 </div>
 
@@ -239,7 +239,7 @@ phone: '',
                         </option>
                       ))}
                     </select>
-                  </div>
+                  </div></div>
                 </div>
 
                 <div>
@@ -257,7 +257,7 @@ phone: '',
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
-                  </div>
+                  </div></div>
                 </div>
 
                 <button
@@ -269,12 +269,12 @@ phone: '',
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
-                    </>
+                    </React.Fragment>
                   )}
                 </button>
               </form>
@@ -289,7 +289,7 @@ phone: '',
                   and we'll get back to you as soon as possible.
                 </p>
 
-              </div>
+              </div></div>
 
               {/* Contact Information */}
               <div className="space-y-8">
@@ -298,13 +298,13 @@ phone: '',
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
-                </div>
+                </div></div>
 
                 <div className="space-y-6">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
                       <Phone className="w-6 h-6 text-white" />
-                    </div>
+                    </div></div></div>
                     <div>
 <h3 className="text-lg font-semibold text-white mb-1">
                         {info.title}
@@ -322,7 +322,7 @@ phone: '',
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                       <Mail className="w-6 h-6 text-white" />
-                    </div>
+                    </div></div>
                     <div>
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
@@ -332,7 +332,7 @@ phone: '',
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
                       <MapPin className="w-6 h-6 text-white" />
-                    </div>
+                    </div></div>
                     <div>
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
@@ -342,7 +342,7 @@ phone: '',
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                       <Clock className="w-6 h-6 text-white" />
-                    </div>
+                    </div></div>
                     <div>
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>

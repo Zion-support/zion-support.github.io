@@ -21,7 +21,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: BarChart,
       duration: '5 min demo',
-      category: 'AI Solutions'
+      category: 'AI Solutions',
     },
     {
       id: 'ai-chatbot',
@@ -35,7 +35,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: Users,
       duration: '3 min demo',
-      category: 'AI Solutions'
+      category: 'AI Solutions',
     },
     {
       id: 'cloud-migration',
@@ -49,7 +49,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: Zap,
       duration: '7 min demo',
-      category: 'Cloud Services'
+      category: 'Cloud Services',
     },
     {
       id: 'cybersecurity',
@@ -63,7 +63,7 @@ const DemoPage: React.FC = () => {
       ],
       icon: Shield,
       duration: '4 min demo',
-      category: 'Cybersecurity'
+      category: 'Cybersecurity',
     }
   ];
 
@@ -73,21 +73,21 @@ const DemoPage: React.FC = () => {
       company: 'TechCorp Inc.',
       role: 'CTO',
       quote: 'The AI analytics demo showed us exactly how we could transform our data insights. The implementation was seamless.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'RetailMax',
       role: 'Head of Operations',
       quote: 'The chatbot demo exceeded our expectations. It handled complex queries better than we imagined.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'FinanceFlow',
       role: 'IT Director',
       quote: 'The cloud migration demo convinced us to move forward. The automation saved us months of work.',
-      rating: 5
+      rating: 5;
     }
   ];
 
@@ -106,7 +106,7 @@ const DemoPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             See It in
@@ -126,7 +126,7 @@ const DemoPage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Live Demo
             </button>
-          </div>
+          </div></div></div></div></div>
         </div>
       </section>
 
@@ -136,7 +136,7 @@ const DemoPage: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Choose Your Demo</h2>
             <p className="text-xl text-gray-300">Select a solution to see it in action</p>
-          </div>
+          </div></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {demos.map((demo) => (
@@ -146,12 +146,12 @@ const DemoPage: React.FC = () => {
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${
                   selectedDemo === demo.id
                     ? 'border-purple-500 bg-purple-500/10'
-                    : 'border-white/10 bg-white/5 hover:bg-white/10'
+                    : 'border-white/10 bg-white/5 hover: bg-white/10',
                 }`}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
                   <demo.icon className="w-6 h-6 text-white" />
-                </div>
+                </div></div>
                 <h3 className="text-lg font-semibold text-white mb-2">{demo.title}</h3>
                 <p className="text-gray-300 text-sm mb-3">{demo.description}</p>
                 <div className="flex items-center justify-between">
@@ -174,7 +174,7 @@ const DemoPage: React.FC = () => {
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 flex items-center justify-center">
                       <selectedDemoData.icon className="w-8 h-8 text-white" />
-                    </div>
+                    </div></div></div></div></div></div>
                     <div>
                       <h3 className="text-2xl font-bold text-white">{selectedDemoData.title}</h3>
                       <p className="text-gray-400">{selectedDemoData.duration}</p>
@@ -211,7 +211,7 @@ const DemoPage: React.FC = () => {
                   <div className="text-center">
                     <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Play className="w-12 h-12 text-white" />
-                    </div>
+                    </div></div></div>
                     <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo</h4>
                     <p className="text-gray-300">Click play to experience this solution in action</p>
                   </div>
@@ -228,7 +228,7 @@ const DemoPage: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-300">See how our demos led to successful implementations</p>
-          </div>
+          </div></div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -237,12 +237,12 @@ const DemoPage: React.FC = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
+                </div></div></div>
                 <blockquote className="text-gray-300 mb-4 italic">
                   "{testimonial.quote}"
                 </blockquote>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="font-semibold text-white">{testimonial.name}</div></div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
@@ -268,7 +268,7 @@ const DemoPage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
             </button>
-          </div>
+          </div></div>
         </div>
       </section>
 

@@ -1,3 +1,4 @@
+const Component: React.FC = () => {
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -32,7 +33,7 @@ import { Helmet } from 'react-helmet-async';
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            </div></div></div></div>
           </div>
         </div>
       </section>
@@ -40,4 +41,6 @@ import { Helmet } from 'react-helmet-async';
   );
 };
 
-export default PagePage;
+};
+
+export default Component;

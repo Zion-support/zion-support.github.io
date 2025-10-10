@@ -30,22 +30,22 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     {
       icon: Monitor,
       title: 'Real-time Dashboard',
-      description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
+      description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.',
     },
     {
       icon: AlertTriangle,
       title: 'Advanced Alerts',
-      description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
+      description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.',
     },
     {
       icon: BarChart,
       title: 'Security Analytics',
-      description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
+      description: 'Detailed security reports and analytics to help you understand and improve your security posture.',
     },
     {
       icon: Zap,
       title: 'Automated Response',
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.',
     }
   ];
 
@@ -61,7 +61,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="Comprehensive security monitoring suite by Zion Tech Group. Advanced cybersecurity platform with real-time monitoring, alerts, and automated response." />
@@ -89,7 +89,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
                 </button>
-              </div>
+              </div></div></div></div>
             </div>
           </div>
         </section>
@@ -104,14 +104,14 @@ const SecurityMonitoringSuitePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our security monitoring suite provides everything you need to protect your business from cyber threats.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
-                  </div>
+                  </div></div></div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -130,14 +130,14 @@ const SecurityMonitoringSuitePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our all-in-one monitoring platform.
               </p>
-            </div>
+            </div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                </div></div>
               ))}
             </div>
           </div>
@@ -162,12 +162,12 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us
                 </button>
-              </div>
+              </div></div></div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

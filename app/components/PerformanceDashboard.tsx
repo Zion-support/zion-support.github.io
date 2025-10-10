@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-  fps: number,
+  fps: number;
 }
 
 interface PerformanceMetrics {
@@ -24,7 +24,7 @@ const PerformanceDashboard: React.FC = () => {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0,
+    fps: 0;
   });
   const [isVisible, setIsVisible] = useState(false);
 
@@ -47,7 +47,7 @@ const PerformanceDashboard: React.FC = () => {
       if ('requestAnimationFrame' in window) {
         let _lastTime = performance.now();
         let _frameCount = 0;
-        const measureFPS = (currentTime: number) => {
+        const measureFPS = (currentTime: number,) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
@@ -93,7 +93,7 @@ const PerformanceDashboard: React.FC = () => {
         >
           ×
         </button>
-      </div>
+      </div></div>
 
       <div className="space-y-3">
         <div className="flex justify-between">
@@ -101,7 +101,7 @@ const PerformanceDashboard: React.FC = () => {
           <span className="text-sm font-mono">
             {metrics.loadTime.toFixed(2)}ms
           </span>
-        </div>
+        </div></div>
 
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Render Time:</span>
@@ -124,7 +124,7 @@ const PerformanceDashboard: React.FC = () => {
 
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
-            Last updated: {new Date().toLocaleTimeString()}</div>
+            Last updated: {new Date().toLocaleTimeString(),}</div></div>
         </div>
     </div>
   );

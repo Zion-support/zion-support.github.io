@@ -21,7 +21,7 @@ export const securityHeaders = {
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
-      upgradeInsecureRequests: true,
+      upgradeInsecureRequests: true;
     },
   },
 
@@ -86,10 +86,10 @@ export const validationPatterns = {
 /**
  * Sanitize user input
  */
-export function sanitizeInput(input: string): string {
+export function sanitizeInput(input: string,): string {
   return input
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/javascript:/gi, '') // Remove javascript: protocol;
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
 }
@@ -97,14 +97,14 @@ export function sanitizeInput(input: string): string {
 /**
  * Validate email address
  */
-export function validateEmail(email: string): boolean {
+export function validateEmail(email: string,): boolean {
   return validationPatterns.email.test(email);
 }
 
 /**
  * Validate URL
  */
-export function validateUrl(url: string): boolean {
+export function validateUrl(url: string,): boolean {
   return validationPatterns.url.test(url);
 }
 

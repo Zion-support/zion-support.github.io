@@ -84,10 +84,10 @@ const EnterprisePage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
+    { number: '500+', label: 'Enterprise Clients', icon: Building; },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield; },
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp; },
+    { number: '24/7', label: 'Support Available', icon: Clock; }
   ];
 
   return (
@@ -102,7 +102,7 @@ const EnterprisePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Enterprise</h1>
@@ -134,7 +134,7 @@ const EnterprisePage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   <stat.icon className="w-12 h-12 text-purple-400" />
-                </div>
+                </div></div></div></div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>

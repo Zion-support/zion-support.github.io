@@ -7,7 +7,7 @@ interface UserExperienceEnhancerProps {
   children: React.ReactNode;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children ,}) => {
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       style.textContent = `
         *:focus {
           outline: 2px solid #06b6d4;
-          outline-offset: 2px,
+          outline-offset: 2px;
         }
       `;
       document.head.appendChild(style);
@@ -41,7 +41,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
     enhanceUX();
   }, []);
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default UserExperienceEnhancer;

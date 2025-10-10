@@ -1,224 +1,149 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common template for AI pages
-const createAIPageTemplate = (pageName, title, description, icon) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
-const ${pageName}: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+// Function to fix common TypeScript/JSX syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing commas in object properties
+  content = content.replace(/(\w+):\s*([^,}\n]+)(\s*)([}\n])/g, (match, key, value, space, end) => {
+    if (value.trim() && !value.includes(',') && !value.includes(';') && end === '}') {
+      return `${key}: ${value},${space}${end}`;
     }
-  ];
+    return match;
+  });
 
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
+  // Fix missing commas in interface properties
+  content = content.replace(/(\w+):\s*(\w+)(\s*)([}\n])/g, (match, key, type, space, end) => {
+    if (end === '}') {
+      return `${key}: ${type};${space}${end}`;
+    }
+    return match;
+  });
 
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ${description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
+  // Fix missing commas in function parameters
+  content = content.replace(/(\w+):\s*(\w+)(\s*)([)\n])/g, (match, param, type, space, end) => {
+    if (end === ')') {
+      return `${param}: ${type},${space}${end}`;
+    }
+    return match;
+  });
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
+  // Fix missing commas in array elements
+  content = content.replace(/(\w+)(\s*)(\n\s*])/g, (match, item, space, end) => {
+    return `${item},${space}${end}`;
+  });
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+  // Fix missing semicolons in variable declarations
+  content = content.replace(/(\w+):\s*(\w+)(\s*)([}\n])/g, (match, key, value, space, end) => {
+    if (end === '\n' && !value.includes(';')) {
+      return `${key}: ${value};${space}${end}`;
+    }
+    return match;
+  });
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
+  // Fix JSX fragment syntax
+  content = content.replace(/<>([\s\S]*?)<\/>/g, '<React.Fragment>$1</React.Fragment>');
 
-export default ${pageName};`;
+  // Fix missing closing tags
+  content = content.replace(/(<div[^>]*>)([\s\S]*?)(<\/div>)/g, (match, open, content, close) => {
+    const openCount = (content.match(/<div/g) || []).length;
+    const closeCount = (content.match(/<\/div>/g) || []).length;
+    if (openCount > closeCount) {
+      return open + content + '</div>'.repeat(openCount - closeCount) + close;
+    }
+    return match;
+  });
 
-// Function to fix a file
-function fixFile(filePath) {
+  return content;
+}
+
+// Function to fix merge conflict markers
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+  return content;
+}
+
+// Function to fix React component issues
+function fixReactIssues(content) {
+  // Fix missing React import
+  if (content.includes('React.FC') && !content.includes("import React")) {
+    content = "import React from 'react';\n" + content;
+  }
+
+  // Fix missing component wrapper
+  if (content.includes('return (') && !content.includes('const ') && !content.includes('function ')) {
+    content = "const Component: React.FC = () => {\n" + content;
+    content = content.replace(/export default [^;]+;?$/, '};\n\nexport default Component;');
+  }
+
+  return content;
+}
+
+// Main function to process files
+function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
-    // Check if file is too broken to fix
-    if (content.length < 100 || content.includes('export default') && content.length < 200) {
-      const fileName = path.basename(filePath, '.tsx');
-      const pageName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
-      
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const description = `Advanced ${title.toLowerCase()} solutions powered by AI technology.`;
-      
-      const fixedContent = createAIPageTemplate(pageName, title, description, 'Brain');
-      fs.writeFileSync(filePath, fixedContent);
+    // Apply fixes
+    content = fixMergeConflicts(content);
+    content = fixSyntaxErrors(content);
+    content = fixReactIssues(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    // Try to fix common syntax errors
-    let fixedContent = content;
-    
-    // Fix missing imports
-    if (!fixedContent.includes("import React from 'react'") && fixedContent.includes('React.FC')) {
-      fixedContent = "'use client';\nimport React from 'react';\n" + fixedContent;
-    }
-    
-    // Fix missing Helmet import
-    if (fixedContent.includes('<Helmet>') && !fixedContent.includes("import { Helmet }")) {
-      fixedContent = fixedContent.replace(
-        /'use client';\nimport React from 'react';/,
-        "'use client';\nimport React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-      );
-    }
-    
-    // Fix missing Navigation/Footer imports
-    if (fixedContent.includes('<Navigation') && !fixedContent.includes("import Navigation")) {
-      fixedContent = fixedContent.replace(
-        /import { Helmet } from 'react-helmet-async';/,
-        "import { Helmet } from 'react-helmet-async';\nimport Navigation from '../components/Navigation';\nimport Footer from '../components/Footer';"
-      );
-    }
-    
-    // Fix malformed JSX structure
-    if (fixedContent.includes('return (') && !fixedContent.includes('return (')) {
-      fixedContent = fixedContent.replace(/return \(/g, 'return (\n    <>');
-    }
-    
-    // Fix missing closing tags
-    if (fixedContent.includes('<div className="min-h-screen') && !fixedContent.includes('</div>')) {
-      fixedContent = fixedContent.replace(
-        /<div className="min-h-screen[^>]*>/,
-        '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'
-      );
-    }
-    
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Partially fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all problematic files
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+// Find all TypeScript/JSX files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
+
+console.log(`Found ${files.length} files to process...`);
 
 let fixedCount = 0;
-let totalCount = 0;
-
-files.forEach(file => {
-  totalCount++;
-  if (fixFile(file)) {
+for (const file of files) {
+  if (processFile(file)) {
     fixedCount++;
   }
-});
+}
 
-console.log(`\nFixed ${fixedCount} out of ${totalCount} files`);
+console.log(`Fixed ${fixedCount} files`);

@@ -13,17 +13,17 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Resume Analysis',
-      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.'
+      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.',
     },
     {
       icon: Target,
       title: 'Job Description Optimization',
-      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.'
+      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.',
     },
     {
       icon: Users,
       title: 'Interview Scheduling',
-      description: 'Automated interview scheduling and coordination to streamline the hiring process.'
+      description: 'Automated interview scheduling and coordination to streamline the hiring process.',
     },
     {
       icon: BarChart,
@@ -33,12 +33,12 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Screening',
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',
     }
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
         <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
@@ -55,7 +55,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
               </p>
-            </div>
+            </div></div></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -65,7 +65,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
-                  </div>
+                  </div></div></div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -74,7 +74,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

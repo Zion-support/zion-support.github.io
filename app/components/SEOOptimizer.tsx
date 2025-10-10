@@ -52,7 +52,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     meta.setAttribute('content', content);
   };
-  const updateCanonicalUrl = (url: string) => {
+  const updateCanonicalUrl = (url: string,) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -82,7 +82,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
-          'item': 'https://ziontechgroup.com'
+          'item': 'https: //ziontechgroup.com',
         }
       ]
     };
@@ -145,13 +145,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta property="og: title" content={title,} />
+      <meta property="og: description" content={description,} />
+      <meta property="og: image" content={ogImage,} />
+      <meta property="og: url" content={canonicalUrl,} />
+      <meta name="twitter: title" content={title,} />
+      <meta name="twitter: description" content={description,} />
+      <meta name="twitter: image" content={ogImage,} />
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );

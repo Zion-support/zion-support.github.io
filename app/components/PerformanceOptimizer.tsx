@@ -51,7 +51,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     // Calculate performance score
     const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
     setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
+    newOptimizations.push(`Performance score: ${score,}/100`);
 
     setOptimizations(newOptimizations);
     setIsOptimizing(false);
@@ -63,7 +63,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     
     // Re-optimize on route changes
     const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, { childList: true, subtree: true; });
 
     return () => observer.disconnect();
   }, [optimizeImages]);
@@ -74,7 +74,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
   }, [optimizeMemory]);
 
   return (
-    <>
+    <React.Fragment>
       {children}
       <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
         <div className="flex items-center justify-between mb-4">
@@ -90,7 +90,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
             <Zap className="h-4 w-4 mr-2" />
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
           </button>
-        </div>
+        </div></div>
 
         {optimizations.length > 0 && (
           <div className="space-y-2 mb-4">
@@ -98,7 +98,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
               <div key={index} className="flex items-center text-sm text-green-600">
                 <CheckCircle className="h-4 w-4 mr-2" />
                 {optimization}
-              </div>
+              </div></div>
             ))}
           </div>
         )}
@@ -108,16 +108,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-700">Performance Score</span>
               <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
-            </div>
+            </div></div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div
                 className={`h-2 rounded-full transition-all duration-500 ${
                   performanceScore >= 90 ? 'bg-green-500' : 
                   performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
                 }`}
-                style={{ width: `${performanceScore}%` }}
+                style={{ width: `${performanceScore,}%` }}
               />
-            </div>
+            </div></div>
             {performanceScore < 90 && (
               <div className="mt-2 flex items-center">
                 <AlertTriangle className="h-4 w-4 text-yellow-600" />
@@ -129,7 +129,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
           </div>
         )}
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

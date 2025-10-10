@@ -33,7 +33,7 @@
     this.observeCLS();
   }
 
-  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
+  private observePaint(type: string, callback: (entry: PerformanceEntry,) => void): void {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
@@ -44,7 +44,7 @@
           }
         }
       });
-      observer.observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['paint'] ,});
       this.observers.push(observer);
     } catch (error) {
       console.warn('PerformanceObserver not supported:', error);
@@ -60,7 +60,7 @@
         const lastEntry = entries[entries.length - 1];
         this.metrics.largestContentfulPaint = lastEntry.startTime;
       });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] ,});
       this.observers.push(observer);
     } catch (error) {
       console.warn('LCP observer not supported:', error);
@@ -76,7 +76,7 @@
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         }
       });
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] ,});
       this.observers.push(observer);
     } catch (error) {
       console.warn('FID observer not supported:', error);
@@ -96,7 +96,7 @@
         }
         this.metrics.cumulativeLayoutShift = clsValue;
       });
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] ,});
       this.observers.push(observer);
     } catch (error) {
       console.warn('CLS observer not supported:', error);
@@ -164,7 +164,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(
 
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  wait: number,
 ): T => {
   let timeout: NodeJS.Timeout;
   
@@ -176,7 +176,7 @@ export const debounce = <T extends (...args: any[]) => any>(
 
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+  limit: number,
 ): T => {
   let inThrottle: boolean;
   
@@ -197,7 +197,7 @@ export const lazyLoad = (callback: () => void): void => {
   }
 };
 
-export const preloadImage = (src: string): Promise<void> => {
+export const preloadImage = (src: string,): Promise<void> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();

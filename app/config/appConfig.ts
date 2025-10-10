@@ -12,24 +12,24 @@ export interface AppConfig {
   api: {
     baseUrl: string,
     timeout: number,
-    retryAttempts: number,
+    retryAttempts: number;
   };
   features: {
     analytics: boolean,
     monitoring: boolean,
     errorTracking: boolean,
-    performanceOptimization: boolean,
+    performanceOptimization: boolean;
   };
   performance: {
     enableLazyLoading: boolean,
     imageLazyLoadThreshold: number,
     componentLazyLoadThreshold: number,
-    cacheMaxAge: number,
+    cacheMaxAge: number;
   };
   security: {
     enableCSP: boolean,
     enableHSTS: boolean,
-    enableXSSProtection: boolean,
+    enableXSSProtection: boolean;
   };
 }
 
@@ -43,13 +43,13 @@ const config: AppConfig = {
   api: {
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
     timeout: 30000,
-    retryAttempts: 3,
+    retryAttempts: 3;
   },
   features: {
     analytics: process.env['NODE_ENV'] === 'production',
     monitoring: true,
     errorTracking: true,
-    performanceOptimization: true,
+    performanceOptimization: true;
   },
   performance: {
     enableLazyLoading: true,
@@ -60,7 +60,7 @@ const config: AppConfig = {
   security: {
     enableCSP: true,
     enableHSTS: true,
-    enableXSSProtection: true,
+    enableXSSProtection: true;
   },
 };
 
@@ -68,7 +68,7 @@ const config: AppConfig = {
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
-export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config;
+export function getConfig<T = unknown>(keyPath: string,): T {let value: unknown = config;
 
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {

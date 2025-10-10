@@ -328,7 +328,7 @@ const ITServicesPage: React.FC = () => {
   const categories = [...new Set(itServices.map(service => service.category))];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." />
@@ -427,7 +427,7 @@ const ITServicesPage: React.FC = () => {
                       <div className="mb-4"></div>
                         <div className="flex items-center justify-between mb-2"></div>
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-sm text-gray-500">Market: {service.marketPrice,}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates</div>
@@ -508,7 +508,7 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -40,10 +40,9 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
       </Helmet>
 
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Case Studies
@@ -51,7 +50,7 @@ const CaseStudiesPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
           </p>
-        </div>
+        </div></div></div></div>
       </section>
 
       <section className="py-20 px-4">
@@ -65,7 +64,7 @@ const CaseStudiesPage: React.FC = () => {
                 <div className="h-48 bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center">
                   <div className="text-white text-center">
                     <Building className="w-16 h-16 mx-auto mb-4" />
-                    <div className="text-sm opacity-80">{study.industry}</div>
+                    <div className="text-sm opacity-80">{study.industry}</div></div></div></div></div></div>
                   </div>
                 </div>
                 
@@ -74,7 +73,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
                     <Users className="w-4 h-4" />
                     <span>{study.client}</span>
-                  </div>
+                  </div></div>
                   
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {study.description}
@@ -99,31 +98,6 @@ const CaseStudiesPage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold text-white mb-8 text-center">Case Studies</h1>
-            <p className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto">
-              Explore our successful implementations and see how we've helped businesses transform with AI and IT solutions.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="aspect-video bg-gray-700 rounded-lg mb-4"></div>
-                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-gray-300 mb-4">{study.client} - {study.industry}</p>
-                  <Link 
-                    to={`/case-studies/${index}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    Read More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              ))}
-            </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
           </div>
         </div>
       </section>
@@ -151,7 +125,7 @@ const CaseStudiesPage: React.FC = () => {
               View Our Services
               <ExternalLink className="w-5 h-5 ml-2" />
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>
