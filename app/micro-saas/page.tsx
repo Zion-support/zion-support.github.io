@@ -21,7 +21,11 @@ import {
   Globe,
   Rocket,
   Truck,
-  Stethoscope
+  Stethoscope,
+  Clock,
+  Database,
+  ShoppingCart,
+  Scale
 } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
@@ -32,16 +36,19 @@ const MicroSAASPage: React.FC = () => {
   }, []);
 
   const microSAASServices = [
+    // Productivity & Project Management
     { 
       name: 'AI Project Manager Pro', 
       href: '/ai-project-manager', 
       icon: BarChart, 
       category: 'Productivity', 
       price: '$199/mo',
-      description: 'Intelligent project management with AI-powered insights and automation',
-      features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization', 'Risk Assessment'],
+      description: 'Intelligent project management with AI-powered insights, predictive analytics, and automated resource allocation',
+      features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization', 'Risk Assessment', 'Predictive Analytics', 'Team Performance Insights'],
       popular: true,
-      rating: 4.8
+      rating: 4.8,
+      users: '2,500+',
+      trial: '14-day free trial'
     },
     { 
       name: 'AI Smart Calendar Pro', 
@@ -49,21 +56,53 @@ const MicroSAASPage: React.FC = () => {
       icon: Calendar, 
       category: 'Productivity', 
       price: '$89/mo',
-      description: 'AI-powered calendar management with smart scheduling and optimization',
-      features: ['Smart Scheduling', 'Conflict Resolution', 'Time Optimization', 'Meeting Insights'],
+      description: 'AI-powered calendar management with smart scheduling, conflict resolution, and productivity optimization',
+      features: ['Smart Scheduling', 'Conflict Resolution', 'Time Optimization', 'Meeting Insights', 'Energy Level Tracking', 'Focus Time Blocks'],
       popular: true,
-      rating: 4.7
+      rating: 4.7,
+      users: '1,800+',
+      trial: '7-day free trial'
     },
+    { 
+      name: 'AI Workflow Automation Studio', 
+      href: '/ai-workflow-automation', 
+      icon: Zap, 
+      category: 'Productivity', 
+      price: '$149/mo',
+      description: 'Visual workflow builder with AI-powered automation for complex business processes',
+      features: ['Visual Workflow Builder', 'AI Process Discovery', 'Smart Triggers', 'Error Handling', 'Performance Analytics', 'Integration Hub'],
+      popular: true,
+      rating: 4.9,
+      users: '3,200+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Time Tracker Pro', 
+      href: '/ai-time-tracker', 
+      icon: Clock, 
+      category: 'Productivity', 
+      price: '$59/mo',
+      description: 'Intelligent time tracking with automatic categorization and productivity insights',
+      features: ['Auto Time Tracking', 'Smart Categorization', 'Productivity Analytics', 'Focus Mode', 'Distraction Alerts', 'Team Reports'],
+      popular: false,
+      rating: 4.6,
+      users: '1,200+',
+      trial: '14-day free trial'
+    },
+
+    // Content Creation & Marketing
     { 
       name: 'AI Content Writer Pro', 
       href: '/ai-content-writer', 
       icon: FileText, 
       category: 'Content', 
       price: '$129/mo',
-      description: 'Advanced AI content creation with SEO optimization and brand consistency',
-      features: ['SEO Optimization', 'Brand Voice', 'Content Templates', 'Multi-language Support'],
+      description: 'Advanced AI content creation with SEO optimization, brand consistency, and multi-platform publishing',
+      features: ['SEO Optimization', 'Brand Voice Training', 'Content Templates', 'Multi-language Support', 'Plagiarism Check', 'Performance Analytics'],
       popular: true,
-      rating: 4.9
+      rating: 4.9,
+      users: '4,100+',
+      trial: '10-day free trial'
     },
     { 
       name: 'AI Video Generator Pro', 
@@ -71,10 +110,12 @@ const MicroSAASPage: React.FC = () => {
       icon: Video, 
       category: 'Content', 
       price: '$199/mo',
-      description: 'Create professional videos with AI-powered editing and effects',
-      features: ['Auto Editing', 'Voice Synthesis', 'Visual Effects', 'Template Library'],
-      popular: false,
-      rating: 4.6
+      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated storytelling',
+      features: ['Auto Editing', 'Voice Synthesis', 'Visual Effects', 'Template Library', 'Brand Kit', 'Social Media Optimization'],
+      popular: true,
+      rating: 4.6,
+      users: '2,800+',
+      trial: '7-day free trial'
     },
     { 
       name: 'AI Social Media Manager Pro', 
@@ -82,10 +123,12 @@ const MicroSAASPage: React.FC = () => {
       icon: Smartphone, 
       category: 'Marketing', 
       price: '$99/mo',
-      description: 'Automated social media management with AI content and scheduling',
-      features: ['Auto Posting', 'Content Generation', 'Analytics', 'Engagement Optimization'],
+      description: 'Automated social media management with AI content generation, scheduling, and engagement optimization',
+      features: ['Auto Posting', 'Content Generation', 'Analytics Dashboard', 'Engagement Optimization', 'Hashtag Research', 'Competitor Analysis'],
       popular: true,
-      rating: 4.8
+      rating: 4.8,
+      users: '3,500+',
+      trial: '14-day free trial'
     },
     { 
       name: 'AI Email Marketing Suite', 
@@ -93,14 +136,206 @@ const MicroSAASPage: React.FC = () => {
       icon: Mail, 
       category: 'Marketing', 
       price: '$79/mo',
-      description: 'Intelligent email marketing with personalization and automation',
-      features: ['Personalization', 'A/B Testing', 'Automation', 'Analytics'],
+      description: 'Intelligent email marketing with personalization, A/B testing, and automated campaign optimization',
+      features: ['Personalization Engine', 'A/B Testing', 'Automation Workflows', 'Advanced Analytics', 'Deliverability Optimization', 'Template Library'],
       popular: true,
-      rating: 4.7
+      rating: 4.7,
+      users: '2,900+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI SEO Optimizer Pro', 
+      href: '/ai-seo-optimizer', 
+      icon: Globe, 
+      category: 'Marketing', 
+      price: '$149/mo',
+      description: 'AI-powered SEO optimization with keyword research, content analysis, and ranking predictions',
+      features: ['Keyword Research', 'Content Optimization', 'Ranking Predictions', 'Competitor Analysis', 'Technical SEO Audit', 'Link Building'],
+      popular: false,
+      rating: 4.5,
+      users: '1,600+',
+      trial: '7-day free trial'
+    },
+
+    // Business & Finance
+    { 
+      name: 'AI Financial Advisor Pro', 
+      href: '/ai-financial-advisor', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$299/mo',
+      description: 'Personalized financial planning and investment advice powered by advanced AI algorithms',
+      features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Tax Optimization', 'Retirement Planning', 'Market Predictions'],
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Invoice Generator Pro', 
+      href: '/ai-invoice-generator', 
+      icon: FileText, 
+      category: 'Business', 
+      price: '$49/mo',
+      description: 'Automated invoice generation with smart templates, payment tracking, and financial reporting',
+      features: ['Smart Templates', 'Auto Calculations', 'Payment Tracking', 'Financial Reports', 'Tax Integration', 'Client Portal'],
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Expense Tracker Pro', 
+      href: '/ai-expense-tracker', 
+      icon: BarChart, 
+      category: 'Finance', 
+      price: '$39/mo',
+      description: 'Intelligent expense tracking with automatic categorization, receipt scanning, and budget management',
+      features: ['Receipt Scanning', 'Auto Categorization', 'Budget Management', 'Tax Preparation', 'Expense Reports', 'Spending Insights'],
+      popular: false,
+      rating: 4.6,
+      users: '1,800+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Lead Generation Suite', 
+      href: '/ai-lead-generation', 
+      icon: Users, 
+      category: 'Business', 
+      price: '$199/mo',
+      description: 'AI-powered lead generation with automated prospecting, qualification, and nurturing',
+      features: ['Lead Scoring', 'Auto Prospecting', 'Email Sequences', 'CRM Integration', 'Lead Nurturing', 'Conversion Analytics'],
+      popular: true,
+      rating: 4.8,
+      users: '2,700+',
+      trial: '21-day free trial'
+    },
+
+    // Development & Technical
+    { 
+      name: 'AI Code Assistant Pro', 
+      href: '/ai-code-assistant', 
+      icon: Code, 
+      category: 'Development', 
+      price: '$179/mo',
+      description: 'Advanced AI coding assistant with code generation, debugging, and optimization suggestions',
+      features: ['Code Generation', 'Debug Assistant', 'Code Review', 'Documentation', 'Test Generation', 'Performance Optimization'],
+      popular: true,
+      rating: 4.9,
+      users: '4,500+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI API Builder Pro', 
+      href: '/ai-api-builder', 
+      icon: Settings, 
+      category: 'Development', 
+      price: '$249/mo',
+      description: 'Build and manage APIs with AI-powered code generation, testing, and documentation',
+      features: ['API Generation', 'Auto Testing', 'Documentation', 'Rate Limiting', 'Authentication', 'Monitoring'],
+      popular: false,
+      rating: 4.7,
+      users: '1,300+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Database Optimizer', 
+      href: '/ai-database-optimizer', 
+      icon: Database, 
+      category: 'Development', 
+      price: '$199/mo',
+      description: 'AI-powered database optimization with query analysis, indexing suggestions, and performance monitoring',
+      features: ['Query Optimization', 'Index Suggestions', 'Performance Monitoring', 'Security Analysis', 'Backup Management', 'Scaling Recommendations'],
+      popular: false,
+      rating: 4.6,
+      users: '1,100+',
+      trial: '14-day free trial'
+    },
+
+    // Security & Compliance
+    { 
+      name: 'AI Security Monitor Pro', 
+      href: '/ai-security-monitor', 
+      icon: Shield, 
+      category: 'Security', 
+      price: '$299/mo',
+      description: 'AI-powered security monitoring with threat detection, vulnerability assessment, and incident response',
+      features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Compliance Monitoring', 'Security Reports', 'Risk Assessment'],
+      popular: true,
+      rating: 4.8,
+      users: '1,900+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Password Manager Pro', 
+      href: '/ai-password-manager', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$29/mo',
+      description: 'Advanced password management with AI-powered security recommendations and breach monitoring',
+      features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Multi-device Sync', 'Team Sharing', '2FA Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '3,800+',
+      trial: '14-day free trial'
+    },
+
+    // Specialized Industry Solutions
+    { 
+      name: 'AI Healthcare Assistant Pro', 
+      href: '/ai-healthcare-assistant', 
+      icon: Stethoscope, 
+      category: 'Healthcare', 
+      price: '$399/mo',
+      description: 'AI-powered healthcare management with patient scheduling, medical records, and diagnostic assistance',
+      features: ['Patient Scheduling', 'Medical Records', 'Diagnostic Support', 'Prescription Management', 'Insurance Processing', 'Compliance Tracking'],
+      popular: false,
+      rating: 4.9,
+      users: '800+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Legal Assistant Pro', 
+      href: '/ai-legal-assistant', 
+      icon: Scale, 
+      category: 'Legal', 
+      price: '$349/mo',
+      description: 'AI-powered legal research, document analysis, and case management for law firms',
+      features: ['Legal Research', 'Document Analysis', 'Case Management', 'Contract Review', 'Compliance Tracking', 'Client Communication'],
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI E-commerce Optimizer', 
+      href: '/ai-ecommerce-optimizer', 
+      icon: ShoppingCart, 
+      category: 'E-commerce', 
+      price: '$199/mo',
+      description: 'AI-powered e-commerce optimization with product recommendations, pricing strategies, and inventory management',
+      features: ['Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Customer Segmentation', 'Conversion Optimization', 'Analytics Dashboard'],
+      popular: true,
+      rating: 4.7,
+      users: '2,100+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI HR Assistant Pro', 
+      href: '/ai-hr-assistant', 
+      icon: Users, 
+      category: 'HR', 
+      price: '$179/mo',
+      description: 'AI-powered HR management with recruitment, employee engagement, and performance analytics',
+      features: ['Resume Screening', 'Interview Scheduling', 'Employee Onboarding', 'Performance Tracking', 'Engagement Surveys', 'Compliance Management'],
+      popular: true,
+      rating: 4.6,
+      users: '1,700+',
+      trial: '21-day free trial'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR'];
 
   if (!isLoaded) {
     return (
@@ -180,6 +415,16 @@ const MicroSAASPage: React.FC = () => {
                 </div>
                 <div className="text-sm text-gray-400">
                   {service.category}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-6 text-sm">
+                <div className="flex items-center text-gray-400">
+                  <Users className="w-4 h-4 mr-1" />
+                  {service.users}
+                </div>
+                <div className="text-cyan-400 font-medium">
+                  {service.trial}
                 </div>
               </div>
 

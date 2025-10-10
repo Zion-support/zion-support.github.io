@@ -15,7 +15,9 @@ import {
   ArrowRight,
   Star,
   Clock,
-  Award
+  Award,
+  Stethoscope,
+  Truck
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
@@ -26,10 +28,11 @@ const AIServicesPage: React.FC = () => {
   }, []);
 
   const services = [
+    // Core AI Services
     {
       id: 1,
-      name: 'AI-Powered Analytics',
-      description: 'Advanced analytics solutions powered by machine learning and artificial intelligence',
+      name: 'AI-Powered Analytics Platform',
+      description: 'Advanced analytics solutions powered by machine learning and artificial intelligence with real-time insights and predictive modeling',
       icon: BarChart,
       features: [
         'Predictive Analytics',
@@ -38,13 +41,16 @@ const AIServicesPage: React.FC = () => {
         'Ad Performance Analysis',
         'ROI Optimization',
         'A/B Testing Automation',
-        'Cross-Platform Integration'
+        'Cross-Platform Integration',
+        'Natural Language Queries',
+        'Automated Reporting'
       ],
-      category: 'Marketing',
+      category: 'Analytics',
       popular: true,
       rating: 4.8,
       users: '2,800+',
       color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $299/mo',
       capabilities: [
         '300% increase in conversion rates',
         'Automated campaign optimization',
@@ -54,58 +60,259 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 2,
-      name: 'AI Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation',
+      name: 'AI Workflow Automation Suite',
+      description: 'Comprehensive business process automation with intelligent decision-making and self-optimizing workflows',
       icon: Zap,
       features: [
-        'Process Automation',
-        'Smart Workflows',
-        'Error Detection',
-        'Performance Optimization'
+        'Visual Process Designer',
+        'Smart Workflow Engine',
+        'Error Detection & Recovery',
+        'Performance Optimization',
+        'Integration Hub',
+        'Custom Triggers',
+        'Analytics Dashboard',
+        'Compliance Monitoring'
       ],
       category: 'Automation',
       popular: true,
       rating: 4.9,
       users: '3,200+',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        '80% reduction in manual tasks',
+        '99.9% workflow reliability',
+        'Real-time process monitoring',
+        'Intelligent error handling'
+      ]
     },
     {
       id: 3,
-      name: 'AI Security Solutions',
-      description: 'Advanced security solutions powered by artificial intelligence',
+      name: 'AI Cybersecurity Platform',
+      description: 'Next-generation security solutions with AI-powered threat detection, prevention, and response capabilities',
       icon: Shield,
       features: [
-        'Threat Detection',
-        'Anomaly Detection',
-        'Automated Response',
-        'Security Analytics'
+        'Advanced Threat Detection',
+        'Behavioral Anomaly Analysis',
+        'Automated Incident Response',
+        'Security Analytics',
+        'Vulnerability Assessment',
+        'Compliance Monitoring',
+        'Zero Trust Architecture',
+        'Threat Intelligence'
       ],
       category: 'Security',
-      popular: false,
+      popular: true,
       rating: 4.7,
       users: '1,500+',
-      color: 'from-red-500 to-orange-600'
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '99.9% threat detection accuracy',
+        'Real-time security monitoring',
+        'Automated incident response',
+        'Compliance automation'
+      ]
     },
     {
       id: 4,
-      name: 'AI Document Processing',
-      description: 'Intelligent document processing and data extraction with OCR and NLP',
+      name: 'AI Document Intelligence Suite',
+      description: 'Intelligent document processing with advanced OCR, NLP, and automated data extraction capabilities',
       icon: FileText,
       features: [
-        'OCR Processing',
-        'Data Extraction',
+        'Advanced OCR Processing',
+        'Intelligent Data Extraction',
         'Document Classification',
-        'Automated Workflows'
+        'Automated Workflows',
+        'Multi-language Support',
+        'Quality Assurance',
+        'Integration APIs',
+        'Compliance Tracking'
       ],
       category: 'Document Processing',
       popular: false,
       rating: 4.6,
       users: '1,800+',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $149/mo',
+      capabilities: [
+        '95% accuracy in data extraction',
+        '50% faster processing times',
+        'Multi-format support',
+        'Automated validation'
+      ]
+    },
+    {
+      id: 5,
+      name: 'AI Customer Experience Platform',
+      description: 'Comprehensive customer experience management with AI-powered personalization and engagement optimization',
+      icon: Users,
+      features: [
+        'Customer Journey Mapping',
+        'Personalization Engine',
+        'Sentiment Analysis',
+        'Predictive Customer Behavior',
+        'Omnichannel Support',
+        'Real-time Recommendations',
+        'Customer Segmentation',
+        'Engagement Analytics'
+      ],
+      category: 'Customer Experience',
+      popular: true,
+      rating: 4.8,
+      users: '2,100+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $249/mo',
+      capabilities: [
+        '40% increase in customer satisfaction',
+        '60% improvement in engagement',
+        'Real-time personalization',
+        'Predictive customer insights'
+      ]
+    },
+    {
+      id: 6,
+      name: 'AI Content Generation Studio',
+      description: 'Advanced content creation platform with AI-powered writing, editing, and optimization capabilities',
+      icon: FileText,
+      features: [
+        'Multi-format Content Creation',
+        'SEO Optimization',
+        'Brand Voice Training',
+        'Content Templates',
+        'Plagiarism Detection',
+        'Performance Analytics',
+        'Multi-language Support',
+        'Collaboration Tools'
+      ],
+      category: 'Content Creation',
+      popular: true,
+      rating: 4.9,
+      users: '3,500+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $179/mo',
+      capabilities: [
+        '10x faster content creation',
+        'SEO-optimized content',
+        'Brand consistency',
+        'Multi-platform publishing'
+      ]
+    },
+    {
+      id: 7,
+      name: 'AI Predictive Maintenance',
+      description: 'Intelligent maintenance solutions with predictive analytics and automated scheduling for industrial equipment',
+      icon: Settings,
+      features: [
+        'Predictive Analytics',
+        'Equipment Monitoring',
+        'Automated Scheduling',
+        'Failure Prediction',
+        'Maintenance Optimization',
+        'Cost Analysis',
+        'Integration APIs',
+        'Reporting Dashboard'
+      ],
+      category: 'Industrial AI',
+      popular: false,
+      rating: 4.7,
+      users: '900+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $499/mo',
+      capabilities: [
+        '30% reduction in downtime',
+        '25% cost savings',
+        'Predictive maintenance',
+        'Real-time monitoring'
+      ]
+    },
+    {
+      id: 8,
+      name: 'AI Financial Intelligence',
+      description: 'Advanced financial analysis and forecasting with AI-powered risk assessment and investment optimization',
+      icon: BarChart,
+      features: [
+        'Financial Forecasting',
+        'Risk Assessment',
+        'Investment Analysis',
+        'Fraud Detection',
+        'Portfolio Optimization',
+        'Market Analysis',
+        'Compliance Monitoring',
+        'Real-time Alerts'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $349/mo',
+      capabilities: [
+        '95% accuracy in predictions',
+        'Real-time risk monitoring',
+        'Automated compliance',
+        'Investment optimization'
+      ]
+    },
+    {
+      id: 9,
+      name: 'AI Healthcare Diagnostics',
+      description: 'Advanced medical AI with diagnostic assistance, treatment recommendations, and patient monitoring capabilities',
+      icon: Stethoscope,
+      features: [
+        'Medical Image Analysis',
+        'Diagnostic Assistance',
+        'Treatment Recommendations',
+        'Patient Monitoring',
+        'Drug Interaction Analysis',
+        'Clinical Decision Support',
+        'Electronic Health Records',
+        'Compliance Tracking'
+      ],
+      category: 'Healthcare AI',
+      popular: false,
+      rating: 4.9,
+      users: '600+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '98% diagnostic accuracy',
+        'Faster diagnosis times',
+        'Reduced medical errors',
+        'Improved patient outcomes'
+      ]
+    },
+    {
+      id: 10,
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Logistics Automation',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      rating: 4.6,
+      users: '800+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '20% cost reduction',
+        '30% inventory optimization',
+        'Real-time tracking',
+        'Predictive analytics'
+      ]
     }
   ];
 
-  const categories = ['All', 'Marketing', 'Automation', 'Security', 'Document Processing'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain'];
 
   if (!isLoaded) {
     return (
@@ -186,6 +393,21 @@ const AIServicesPage: React.FC = () => {
                 <div className="text-sm text-gray-400">
                   {service.category}
                 </div>
+              </div>
+
+              <div className="mb-6">
+                <div className="text-lg font-semibold text-cyan-400 mb-2">
+                  {service.pricing}
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
+                <ul className="space-y-1">
+                  {service.capabilities.map((capability, index) => (
+                    <li key={index} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      {capability}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
