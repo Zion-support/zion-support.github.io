@@ -22,8 +22,15 @@ const PerformanceMonitor: React.FC = () => {
 
     if (!shouldMonitor) return;
 
+    // Debounce metric updates to avoid excessive re-renders
+    let updateTimeout: NodeJS.Timeout;
+
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
+      // Debounce updates to prevent excessive re-renders
+      clearTimeout(updateTimeout);
+      updateTimeout = setTimeout(() => {
+        setMetrics(prev => ({ ...prev, ...newMetrics }));
+      }, 100);
     }
 
     // Monitor Core Web Vitals

@@ -11,21 +11,14 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
 
 # Allow important pages
 Allow: /
 Allow: /about
 Allow: /services
 Allow: /contact
-Allow: /ai-services
-Allow: /it-services
 Allow: /pricing
-Allow: /blog
 Allow: /case-studies
+Allow: /blog
 Allow: /careers
-Allow: /partners
-Allow: /support
-Allow: /faq
-Allow: /demo
-Allow: /consultation
