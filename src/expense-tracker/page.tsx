@@ -3,7 +3,6 @@ import React from 'react';
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
@@ -222,8 +221,6 @@ $4}
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using AI Expense Tracker to streamline financial 
 
-
-
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [];
@@ -246,10 +243,8 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
 
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PagePage: React.FC = () => {
   return (
@@ -417,7 +412,5 @@ Most Popular;
   );
 };
 
-
 export default ExpenseTrackerPage;
-
 

@@ -158,5 +158,3 @@ const gaScript = document.createElement('script')
 //   document.head.appendChild(gaScript)
 }"
 
-
-

@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -100,6 +99,4 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
 </div>);
 }
 export default BusinessAppsPage;
-
-
 

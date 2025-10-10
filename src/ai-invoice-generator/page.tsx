@@ -5,7 +5,6 @@ import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 
-
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {

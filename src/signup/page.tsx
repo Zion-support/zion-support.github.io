@@ -2,12 +2,10 @@ import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Awa
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -457,7 +455,5 @@ Join thousands of businesses already using our AI and IT solutions;
     </div>
   );
 
-
 export default SignupPage;
-
 

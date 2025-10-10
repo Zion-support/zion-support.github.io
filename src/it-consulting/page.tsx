@@ -49,7 +49,6 @@ const ITConsultingPage: React.FC = () => {
               </p>
             </div>
 
-
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
               {consultingServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
@@ -75,7 +74,6 @@ const ITConsultingPage: React.FC = () => {
                       ))}
                     </ul>
 
-
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
@@ -85,7 +83,6 @@ const ITConsultingPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-
 
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
@@ -136,18 +133,14 @@ const ITConsultingPage: React.FC = () => {
             </div>
           </section>
 
-
         </main>
         
         <Footer />
       </div>
-
 
     </>
   );
 };
 
 export default ITConsultingPage;
-
-
 

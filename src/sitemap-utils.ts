@@ -54,4 +54,3 @@ export const generateStaticSitemap = () => {// TODO: Add content;}
   return generateSitemap(getAllPages());
 };
 
-

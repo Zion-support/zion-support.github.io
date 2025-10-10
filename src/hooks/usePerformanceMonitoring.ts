@@ -204,5 +204,3 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
 };
 export default usePerformanceMonitoring;
 
-
-

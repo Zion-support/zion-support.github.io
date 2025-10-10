@@ -162,8 +162,6 @@ href="/services" className="inline-block bg-white text-green-600 px-6 py-3 round
   );
 };
 
-
 export default AiCostOptimizationBreakthrough2026Page;
-
 
 export default AICostOptimizationBreakthrough2026Page;

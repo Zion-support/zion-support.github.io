@@ -675,5 +675,3 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 }
 export default ApiCache;`
 
-
-

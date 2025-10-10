@@ -78,4 +78,3 @@ Expected Efficiency Gain (%)
 
 export default InteractiveAIROICalculator;
 
-

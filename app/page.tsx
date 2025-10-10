@@ -321,12 +321,13 @@ const HomePage: React.FC = () => {
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI-Powered CRM</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.
+                    Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics. Features lead scoring, automated email sequences, and 360° customer view.
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">$149/month</div>
+                    <div className="text-xs text-gray-400 mb-2">Up to 5,000 contacts</div>
                     <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
-                      Learn More →
+                      Start Free Trial →
                     </a>
                   </div>
                 </article>
@@ -438,6 +439,135 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </div>
+          
+          {/* Additional Micro SAAS Services */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+              Specialized Business Tools
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏥</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Medical Records Manager</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  HIPAA-compliant patient data management with AI-powered diagnosis assistance and automated documentation.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">$299/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 1,000 patients</div>
+                  <a href="/medical-records-manager" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏠</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Property Management AI</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Complete property management solution with tenant screening, rent collection, and maintenance scheduling.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">$199/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 100 properties</div>
+                  <a href="/property-management-ai" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚖️</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Legal Document Manager</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered legal document analysis, contract review, and compliance monitoring for law firms.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">$399/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Unlimited documents</div>
+                  <a href="/legal-document-manager" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Online Learning Platform</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered educational platform with personalized learning paths, automated assessments, and progress tracking.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-yellow-400 mb-2">$149/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 500 students</div>
+                  <a href="/online-learning-platform" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏭</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Supply Chain Optimizer</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-driven supply chain management with demand forecasting, inventory optimization, and logistics tracking.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-indigo-400 mb-2">$499/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 1,000 SKUs</div>
+                  <a href="/supply-chain-optimizer" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">👥</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Recruitment Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent candidate screening, resume parsing, and interview scheduling with bias detection and diversity metrics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-pink-400 mb-2">$179/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 1,000 applications</div>
+                  <a href="/ai-recruitment-assistant" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Accounting Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Automated bookkeeping, expense categorization, tax preparation, and financial reporting with AI insights.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-teal-400 mb-2">$129/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 10,000 transactions</div>
+                  <a href="/ai-accounting-assistant" className="text-teal-400 hover:text-teal-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+              
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Security Monitoring Suite</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Real-time security monitoring, threat detection, and incident response with AI-powered analysis.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-red-400 mb-2">$249/month</div>
+                  <div className="text-xs text-gray-400 mb-2">Up to 50 endpoints</div>
+                  <a href="/security-monitoring-suite" className="text-red-400 hover:text-red-300 font-medium text-sm">
+                    Start Free Trial →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">

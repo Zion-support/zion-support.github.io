@@ -45,7 +45,6 @@ $4};
         )}
       </div>
 
-
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -115,6 +114,4 @@ const,
 export default ModernLoadingSpinner;
 
 export default ModernLoadingSpinner;"`
-
-
 

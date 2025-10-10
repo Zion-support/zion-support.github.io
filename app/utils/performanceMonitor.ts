@@ -64,7 +64,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
               this.recordMetric('FCP', entry.startTime);
             }
 
-
         // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {)
           const lastEntry = entries[entries.length - 1];)
@@ -435,5 +434,4 @@ Score: ${score}
 Metrics: ${JSON.stringify(metrics, null, 2)}
     `;
   }
-
 

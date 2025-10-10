@@ -502,5 +502,3 @@ export const captureComponentError = ()
 };
 export default ErrorReporter;
 
-
-

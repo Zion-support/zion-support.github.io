@@ -26,5 +26,3 @@ config?: GtagEvent
   dataLayer?: unknown[]
 }
 
-
-

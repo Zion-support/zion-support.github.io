@@ -6,26 +6,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const CloudSecurityPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      icon: Shield,
-      title: 'Advanced Cloud Security',
-      description: 'Comprehensive cloud security solutions with enterprise-grade protection'
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Monitoring',
-      description: 'Continuous monitoring and threat detection for your cloud infrastructure'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Security',
-      description: 'Intelligent security solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Global Compliance',
-      description: 'Worldwide compliance with security standards and regulations'
-=======
+
       icon: Lock,
       title: 'Data Encryption',
       description: 'End-to-end encryption for all data in transit and at rest'
@@ -44,24 +25,18 @@ const CloudSecurityPage: React.FC = () => {
       icon: ShieldCheck,
       title: 'Compliance',
       description: 'Meet industry compliance standards and regulations'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Advanced cloud security technology',
-    'Real-time threat monitoring and detection',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible security solutions',
-    '24/7 technical support',
-=======
+
     'Advanced security monitoring',
     'Real-time threat detection',
     'Enterprise-grade encryption',
     'Compliance with industry standards',
     '24/7 security support',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
@@ -72,14 +47,7 @@ const CloudSecurityPage: React.FC = () => {
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Security services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-        <meta name="keywords" content="cloud security, security services, IT services, Zion Tech Group, cybersecurity" />
-      </Helmet>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-=======
         <meta name="keywords" content="cloud security, cybersecurity, data protection, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -87,18 +55,14 @@ const CloudSecurityPage: React.FC = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
             Cloud Security
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our cloud security solutions deliver unmatched performance, security, and scalability.
-          </p>
-=======
+
         </div>
       </section>
 
@@ -123,32 +87,9 @@ const CloudSecurityPage: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
         </div>
 
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Cloud Security Solutions?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -190,7 +131,7 @@ const CloudSecurityPage: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Email Us
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
           </div>
         </div>
 

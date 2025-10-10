@@ -43,7 +43,6 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
    * Custom error messages by error type;
    */,
 
-
   customMessages: Record;
 
           <string, string>;
@@ -346,6 +345,4 @@ export function formatErrorForLogging(error: Error): Record;
 
   }
 }"
-
-
 

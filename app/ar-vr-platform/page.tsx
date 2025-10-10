@@ -43,11 +43,9 @@ const ARVRPlatformPage: React.FC = () => {
       <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
-        <meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, augmented reality, virtual reality" />
-=======
+
         <meta name="keywords" content="AR VR platform, virtual reality, augmented reality, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
       </Helmet>
 
       {/* Hero Section */}
@@ -86,16 +84,7 @@ const ARVRPlatformPage: React.FC = () => {
               Why Choose Our AR/VR Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Our AR/VR solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-=======
               Our AR/VR platform solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
@@ -104,7 +93,7 @@ const ARVRPlatformPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -121,11 +110,7 @@ const ARVRPlatformPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Experience the power of our AR/VR solutions for your business.
-            </p>
-          </div>
-=======
+
               Experience the power of our AR/VR platform solutions for your business.
             </p>
           </div>
@@ -138,7 +123,7 @@ const ARVRPlatformPage: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
         </div>
       </section>
 

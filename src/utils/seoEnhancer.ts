@@ -1,7 +1,6 @@
 // SeoEnhancer utility
 // This file contains utility functions and configurations
 
-
 interface SEOConfig {title: string;}
   description: string;
   keywords: string[];
@@ -51,6 +50,4 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default SEOEnhancer;"
-
-
 

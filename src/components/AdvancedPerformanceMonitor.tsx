@@ -409,5 +409,3 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
 
 export default AdvancedPerformanceMonitor;`
 
-
-

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface UnifiedContentPromotionProps {/* TODO: Fix JSX expression */}
 }
 
@@ -12,5 +11,4 @@ const,
 };
 
 export default UnifiedContentPromotion;
-
 

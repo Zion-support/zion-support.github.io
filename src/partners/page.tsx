@@ -2,12 +2,10 @@ import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail
 'use client';
 import React from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
@@ -392,7 +390,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-
 export default PartnersPage;
-
 

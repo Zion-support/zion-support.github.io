@@ -1301,5 +1301,3 @@ const score = Math.max(0, 100 - totalPenalty);
   }
 }"`
 
-
-

@@ -3,7 +3,6 @@ import React from 'react';
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
@@ -222,8 +221,6 @@ $4}
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more, 
 
-
-
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [];
@@ -246,10 +243,8 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
 
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PagePage: React.FC = () => {
   return (
@@ -417,7 +412,5 @@ Most Popular;
   );
 };
 
-
 export default TaskManagerProPage;
-
 

@@ -92,5 +92,3 @@ const handleUnhandledRejection = (even)
 };
 export default useErrorMonitoring;
 
-
-

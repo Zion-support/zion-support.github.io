@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 
@@ -327,7 +326,6 @@ valuevalue: '100%',
 };
 
 export default GreenITPage;
-
 
 import { Link } from 'react-router-dom';
 
@@ -778,7 +776,5 @@ Benefits of Green IT;"
   );
 };
 
-
 export default GreenItPage;
-
 

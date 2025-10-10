@@ -85,7 +85,6 @@ $4})
 };
 export default Image;
 
-
 'use client';
 import React, { useState, useCallback } from 'react';
 const,
@@ -220,6 +219,4 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
 }
 export default Image;"`
-
-
 

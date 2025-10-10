@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
@@ -474,5 +472,4 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
-
 

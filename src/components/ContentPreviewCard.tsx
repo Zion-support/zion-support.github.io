@@ -178,5 +178,3 @@ const,
 
 export default ContentPreviewCard;"`
 
-
-

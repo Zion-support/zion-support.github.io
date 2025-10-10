@@ -127,5 +127,3 @@ const validRequests = requests.filter((tim)
 }
 export default SecurityManager.getInstance()
 
-
-

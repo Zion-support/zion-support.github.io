@@ -869,4 +869,3 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 
-

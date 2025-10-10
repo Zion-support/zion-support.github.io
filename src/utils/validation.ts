@@ -379,5 +379,3 @@ export const isValidCreditCard = (car)
 export const isValidJSON = (jso)
   n: string) => validateJSON(json).isValid;"`
 
-
-

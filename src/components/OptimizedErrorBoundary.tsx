@@ -157,7 +157,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           </div>
         </div>
 
-
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
           Something went wrong
         </h1>
@@ -270,7 +269,4 @@ ErrorFallback.displayName = 'ErrorFallback';
 //   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
-
-
-
 

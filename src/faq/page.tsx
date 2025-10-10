@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -168,7 +167,6 @@ $4];
     </>
 
 export default FAQPage;
-
 
 import { Link } from 'react-router-dom';
 
@@ -448,9 +446,5 @@ type="text" placeholder="Search FAQs..."
     </>
 export default FAQPage;
 
-
-
-
 export default FaqPage;
-
 

@@ -127,4 +127,3 @@ delete (window as unknown as Record<string, unknown>).location;
   assign: jest.fn(),
   replace: jest.fn()
 
-

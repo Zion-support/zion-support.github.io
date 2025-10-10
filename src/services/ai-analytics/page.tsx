@@ -4,7 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -21,8 +20,6 @@ const AIAnalyticsPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-
-
 
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -403,7 +400,5 @@ export default AIAnalyticsPage;
   );
 };
 
-
 export default AiAnalyticsPage;
-
 

@@ -1078,5 +1078,3 @@ export const configManager = ConfigManager.getInstance();
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 
-
-

@@ -505,5 +505,3 @@ export default {/* TODO: Fix JSX expression */}
 //   measureExecutionTime;
 };
 
-
-

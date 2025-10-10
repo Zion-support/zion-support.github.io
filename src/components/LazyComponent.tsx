@@ -53,7 +53,6 @@ export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => 
 
 export default LazyComponent;
 
-
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -255,5 +254,4 @@ const imagePreloads = [
 };
 
 export default LazyComponent;
-
 

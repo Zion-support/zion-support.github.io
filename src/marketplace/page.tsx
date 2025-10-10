@@ -2,12 +2,10 @@ import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, A
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
@@ -457,6 +455,4 @@ const categories = [
                 Email Us;
       <Footer /></Footer>
 export default MarketplacePage;
-
-
 

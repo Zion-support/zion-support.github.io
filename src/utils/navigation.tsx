@@ -39,5 +39,3 @@ export }
 export const rateLimitingMiddleware = params;
 export default { useRouter, usePathname, useSearchParams }
 
-
-

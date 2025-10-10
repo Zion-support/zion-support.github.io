@@ -1,11 +1,9 @@
 import React from 'react';
 
-
 import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
@@ -470,7 +468,5 @@ $4}
   );
 };
 
-
 export default DeveloperToolsPage;
-
 

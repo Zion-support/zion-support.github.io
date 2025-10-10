@@ -69,7 +69,6 @@ interface SystemMetrics {
     saveData: boolean;
 interface SystemMonitorProps {
 
-
 'use client';
 /**
  * System Monitor Component;
@@ -649,5 +648,4 @@ className={`h-2 rounded-full ${}
                     <span className="capitalize">{category}</span>
 
 export default SystemMonitor;
-
 

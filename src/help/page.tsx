@@ -2,12 +2,10 @@ import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Downloa
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -411,6 +409,4 @@ const categories = [
       <Footer /></Footer>
     </>
 export default HelpPage;
-
-
 

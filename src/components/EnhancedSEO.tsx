@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface SEOProps {// TODO: Add content;}
 
 }
@@ -111,6 +110,4 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 };
 
 export default EnhancedSEO;"`
-
-
 

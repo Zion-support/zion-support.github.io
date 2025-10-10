@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -134,7 +134,11 @@ const Navigation: React.FC = () => {
     { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
     { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' },
+    { name: 'Security Monitoring Suite', href: '/security-monitoring-suite', icon: Shield, description: 'Cybersecurity' },
+    { name: 'Cloud Infrastructure Manager', href: '/cloud-infrastructure-manager', icon: Cloud, description: 'Cloud Management' },
+    { name: 'Project Management Pro', href: '/project-management-pro', icon: CheckSquare, description: 'Project Management' },
+    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro', icon: BarChart, description: 'E-commerce Analytics' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },

@@ -1,7 +1,5 @@
 import Analytics from './components/Analytics';
 
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -188,9 +186,6 @@ export default RootLayout;
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
 
-
-
 export default SrcPage;
-
 
 }

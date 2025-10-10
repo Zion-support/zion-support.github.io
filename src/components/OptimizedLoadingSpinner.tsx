@@ -5,7 +5,6 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
 
-
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -106,7 +105,6 @@ className="opacity-75""
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
-
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {

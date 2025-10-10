@@ -140,7 +140,6 @@ readingTimereadingTime: '45 min read',
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
 
-
 'use client';
 import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
@@ -280,6 +279,4 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025;
-
-
 

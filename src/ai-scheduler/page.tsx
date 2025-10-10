@@ -3,7 +3,6 @@ import React from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-
 const AISchedulerPage: React.FC = () => {
   const features = [
     {

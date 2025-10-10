@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 
 import { Star, Phone } from 'lucide-react';
@@ -57,7 +56,5 @@ const Status: React.FC = () => {
   );
 };
 
-
 export default StatusPage;
-
 

@@ -163,7 +163,6 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
           }ms`);
         }
 
-
     observer.observe({ entryTypes: ['longtask'] });
     this.observers.push(observer);
   }
@@ -234,7 +233,6 @@ export const lazyLoadImages = () => {}
 // Image lazy loading utility;
 export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
       }
-
 
   images.forEach((img) => imageObserver.observe(img));
 };
