@@ -25,7 +25,7 @@ export default defineConfig({
     target: 'es2020',
     cssTarget: 'chrome80',
     reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -95,7 +95,7 @@ export default defineConfig({
         ascii_only: true
       }
     },
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
