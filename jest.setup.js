@@ -7,33 +7,34 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
-}));
+// Note: These files don't exist in the current project structure
+// jest.mock('./src/utils/logger.ts', () => ({
+//   logger: {
+//     debug: jest.fn(),
+//     info: jest.fn(),
+//     warn: jest.fn(),
+//     error: jest.fn(),
+//     log: jest.fn(),
+//   },
+// }));
 
-jest.mock('./src/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
+// jest.mock('./src/utils/analytics.ts', () => ({
+//   trackEvent: jest.fn(),
+//   trackPageView: jest.fn(),
+//   initAnalytics: jest.fn(),
+// }));
 
-jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
+// jest.mock('./src/utils/errorTracking.ts', () => ({
+//   reportError: jest.fn(),
+//   initErrorReporting: jest.fn(),
+// }));
 
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
-  })),
-}));
+// jest.mock('./src/hooks/usePerformance.ts', () => ({
+//   usePerformance: jest.fn(() => ({
+//     metrics: {},
+//     optimize: jest.fn(),
+//   })),
+// }));
 
 // usePerformanceMonitoring hook mock removed - hook doesn't exist
 

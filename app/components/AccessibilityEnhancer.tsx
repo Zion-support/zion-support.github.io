@@ -7,23 +7,23 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   fontSize: 'small' | 'medium' | 'large';
   focusVisible: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  colorBlind: boolean;
+  dyslexia: boolean;
 }
 
 const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
-<<<<<<< HEAD
+    fontSize: 'medium',
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
     colorBlind: false,
     dyslexia: false
-=======
-    fontSize: 'medium',
-    focusVisible: true
   });
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
 
   useEffect(() => {
     // Check for user preferences
@@ -85,46 +85,40 @@ const AccessibilityEnhancer: React.FC = () => {
     } else {
       root.classList.remove('focus-visible');
     }
-  }, [settings]);
 
-<<<<<<< HEAD
     // Screen reader optimizations
-    if (newSettings.screenReader) {
+    if (settings.screenReader) {
       root.classList.add('screen-reader-optimized');
     } else {
       root.classList.remove('screen-reader-optimized');
     }
 
     // Keyboard navigation
-    if (newSettings.keyboardNavigation) {
+    if (settings.keyboardNavigation) {
       root.classList.add('keyboard-navigation');
     } else {
       root.classList.remove('keyboard-navigation');
     }
 
     // Color blind support
-    if (newSettings.colorBlind) {
+    if (settings.colorBlind) {
       root.classList.add('color-blind-support');
     } else {
       root.classList.remove('color-blind-support');
     }
 
     // Dyslexia support
-    if (newSettings.dyslexia) {
+    if (settings.dyslexia) {
       root.classList.add('dyslexia-support');
     } else {
       root.classList.remove('dyslexia-support');
     }
 
     // Store settings in localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
 
-    }, []);
-
-  // Initialize accessibility settings
-=======
   // Add CSS for accessibility features
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
