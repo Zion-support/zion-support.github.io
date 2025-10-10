@@ -255,6 +255,56 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
+  const services = [
+    {
+      icon: Cloud,
+      title: 'Cloud Migration & Management',
+      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
+      features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
+      price: 'Starting at $1,299/month',
+      color: 'text-blue-400'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity Suite',
+      description: 'Comprehensive security solutions with threat detection and automated response.',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
+      price: 'Starting at $799/month',
+      color: 'text-red-400'
+    },
+    {
+      icon: Settings,
+      title: 'DevOps & CI/CD',
+      description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
+      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
+      price: 'Starting at $599/month',
+      color: 'text-green-400'
+    },
+    {
+      icon: Database,
+      title: 'Database Management',
+      description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
+      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
+      price: 'Starting at $399/month',
+      color: 'text-teal-400'
+    },
+    {
+      icon: Globe,
+      title: 'Network Solutions',
+      description: 'Enterprise networking with high-speed connectivity and advanced security features.',
+      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
+      price: 'Starting at $699/month',
+      color: 'text-purple-400'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications with modern UI/UX design.',
+      features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
+      price: 'Starting at $2,500/project',
+      color: 'text-orange-400'
+    }
+  ];
 
   const additionalServices = [
     {
@@ -545,11 +595,10 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
   );
 };
 

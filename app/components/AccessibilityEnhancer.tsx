@@ -1,66 +1,46 @@
 'use client';
+import React from 'react';
+'use client';
+
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-}) => {
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Keyboard navigation
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]');
-          if (skipLink) {
-            (skipLink as HTMLElement).focus();
-          }
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    // Add focus indicators
+    const addFocusStyles = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2px solid #06b6d4 !important;
+          outline-offset: 2px !important;
         }
-      };
+      `;
+      document.head.appendChild(style);
+    };
 
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
+    // Initialize accessibility features
+    addFocusStyles();
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
 
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const handleTabKey = (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
-          const focusable = Array.from(document.querySelectorAll(focusableElements)) as HTMLElement[];
-          const firstFocusable = focusable[0];
-          const lastFocusable = focusable[focusable.length - 1];
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
 
-          if (event.shiftKey) {
-            if (document.activeElement === firstFocusable) {
-              lastFocusable?.focus();
-              event.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastFocusable) {
-              firstFocusable?.focus();
-              event.preventDefault();
-            }
-          }
-        }
-      };
-
-      document.addEventListener('keydown', handleTabKey);
-      return () => document.removeEventListener('keydown', handleTabKey);
-    }
-  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
-
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

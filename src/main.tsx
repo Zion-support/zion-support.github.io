@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from '../App';
 import './globals.css';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
+import { measureWebVitals } from './utils/performanceMonitor';
 
-// Initialize performance optimizations immediately
+// Initialize performance monitoring
 if (typeof window !== 'undefined') {
-  initializePerformanceOptimizations();
+  measureWebVitals();
 }
 
 // Register service worker
@@ -15,9 +15,15 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
         // Service Worker registered successfully
+        if (process.env.NODE_ENV === 'development') {
+          console.log('SW registered: ', registration);
+        }
       })
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently
+        if (process.env.NODE_ENV === 'development') {
+          console.log('SW registration failed: ', registrationError);
+        }
       });
   });
 }

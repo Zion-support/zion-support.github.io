@@ -32,7 +32,7 @@ const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
 const AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AISchedulerPage = lazy(() => import('./ai-scheduler/page'));
-const AIServicesPage = lazy(() => import('../app/ai-services/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
 
@@ -57,11 +57,6 @@ const QuantumAIPage = lazy(() => import('./quantum-ai/page'));
 const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
-
-// New Pages
-const WebDevelopmentPage = lazy(() => import('../app/web-development/page'));
-const AIFraudDetectionPage = lazy(() => import('../app/ai-fraud-detection/page'));
-const AIContentWriterPage = lazy(() => import('../app/ai-content-writer/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
@@ -211,11 +206,6 @@ const App: React.FC = () => {
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
-            
-            {/* New Pages */}
-            <Route path="/web-development" element={<WebDevelopmentPage />} />
-            <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-            <Route path="/ai-content-writer" element={<AIContentWriterPage />} />
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />

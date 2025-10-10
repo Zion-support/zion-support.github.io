@@ -1,0 +1,90 @@
+import { useEffect, useRef, useState } from 'react';
+
+interface UseIntersectionObserverOptions {
+  threshold?: number | number[];
+  root?: Element | null;
+  rootMargin?: string;
+  freezeOnceVisible?: boolean;
+}
+
+interface UseIntersectionObserverReturn {
+<<<<<<< HEAD
+  ref: React.RefObject<Element>;
+  isIntersecting: boolean;
+  entry?: IntersectionObserverEntry;
+=======
+  ref: React.RefObject<HTMLElement>;
+  isIntersecting: boolean;
+  entry: IntersectionObserverEntry | undefined;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+}
+
+export function useIntersectionObserver(
+  options: UseIntersectionObserverOptions = {}
+): UseIntersectionObserverReturn {
+  const {
+    threshold = 0,
+    root = null,
+    rootMargin = '0%',
+    freezeOnceVisible = false,
+  } = options;
+
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
+<<<<<<< HEAD
+  const ref = useRef<Element>(null);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isElementIntersecting = entry.isIntersecting;
+        setIsIntersecting(isElementIntersecting);
+        setEntry(entry);
+
+        if (isElementIntersecting && freezeOnceVisible) {
+=======
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+        setEntry(entry);
+
+        if (entry.isIntersecting && freezeOnceVisible) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+          observer.disconnect();
+        }
+      },
+      {
+        threshold,
+        root,
+        rootMargin,
+      }
+    );
+
+<<<<<<< HEAD
+    observer.observe(node);
+=======
+    observer.observe(element);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [threshold, root, rootMargin, freezeOnceVisible]);
+
+  return { ref, isIntersecting, entry };
+<<<<<<< HEAD
+}
+
+export default useIntersectionObserver;
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2d0

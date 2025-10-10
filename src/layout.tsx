@@ -1,9 +1,16 @@
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
+import Analytics from './components/Analytics';
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+import Analytics from './components/Analytics';
+
 export default function RootLayout({
-  children
-}: {
+  children}: {
   children: React.ReactNode;
 }) {
   const structuredData = {
@@ -30,22 +37,31 @@ export default function RootLayout({
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: 'en'
-    },
+      availableLanguage: 'en'},
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US'
-    },
+      addressCountry: 'US',
     offers: [
       {
+
+  const address = {
+    '@type': 'PostalAddress',
+    streetAddress: '364 E Main St STE 1008',
+    addressLocality: 'Middletown',
+    addressRegion: 'DE',
+    postalCode: '19709',
+    addressCountry: 'US',
+    offers: [
+  // TODO: Add items]
+      {// TODO: Add content;}
+}
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
@@ -53,64 +69,31 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: '1500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
-        }
-      },
-      {
-        '@type': 'Offer',
+          billingIncrement:         ,
+$4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          price: '2500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
-        }
-      }
-    ],
     serviceArea: {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
-        longitude: '-75.5795'
-      },
-      geoRadius: '1000000'
-    },
+        longitude:       ,
+geoRadiusgeoRadius: '1000000'
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [
-        {
-          '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Cloud Infrastructure',
-            description: 'Cloud migration and infrastructure optimization services'
-          }
-        }
-      ]
-    }
+            description:             ,
+name$5: 'Digital Automation',
+            description:             ,
+name$5: 'Cloud Infrastructure',
+            description:       ,
+$4]
   };
   return (
     <html lang='en'>
@@ -171,6 +154,13 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
+        {/* Enhanced Twitter Card tags */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Zion Tech Group - AI & Technology Solutions' />
+        <meta name='twitter:description' content='Transform your business with cutting-edge AI solutions and digital transformation services.' />
+        <meta name='twitter:image' content='https://ziontechgroup.com/og-image.jpg' />
+        <meta name='twitter:site' content='@ziontechgroup' />
+        <meta name='twitter:creator' content='@ziontechgroup' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -179,9 +169,28 @@ export default function RootLayout({
       <body className='antialiased'>
         <ErrorBoundary>
           <PerformanceMonitor />
+          <Analytics />
           {children}
         </ErrorBoundary>
       </body>
     </html>
   );
+
+export default RootLayout;
+        priceSpecification: {// TODO: Add content;}
+}
+          '@type': 'PriceSpecification',
+          billingIncrement: 'P1M'
+        };
+  itemOffered: {// TODO: Add content;}
+}
+            '@type': 'Service',
+            name: 'AI Enterprise Transformation',
+            description: 'Comprehensive AI implementation strategies for enterprise organizations'
+
+
+
+export default SrcPage;
+
+
 }

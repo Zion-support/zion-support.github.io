@@ -1,54 +1,47 @@
 'use client';
+import React from 'react';
+'use client';
 import React, { useEffect } from 'react';
 
 interface SecurityEnhancerProps {
-  enableCSP?: boolean;
-  enableHSTS?: boolean;
-  enableXSSProtection?: boolean;
-  enableClickjackingProtection?: boolean;
+  children: React.ReactNode;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  enableCSP = true,
-  enableHSTS = true,
-  enableXSSProtection = true,
-  enableClickjackingProtection = true,
-}) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Add security headers via meta tags
-      const addSecurityMeta = (name: string, content: string) => {
-        const existing = document.querySelector(`meta[http-equiv="${name}"]`);
-        if (!existing) {
-          const meta = document.createElement('meta');
-          meta.setAttribute('http-equiv', name);
-          meta.setAttribute('content', content);
-          document.head.appendChild(meta);
-        }
+    // Security enhancement logic
+    const enhanceSecurity = () => {
+      // Add security headers
+      const securityHeaders = {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',
+        'Referrer-Policy': 'strict-origin-when-cross-origin'
       };
 
-      if (enableXSSProtection) {
-        addSecurityMeta('X-Content-Type-Options', 'nosniff');
-        addSecurityMeta('X-Frame-Options', 'DENY');
-        addSecurityMeta('X-XSS-Protection', '1; mode=block');
-      }
+      // Add CSP meta tag
+      const cspMeta = document.createElement('meta');
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(cspMeta);
 
-      if (enableClickjackingProtection) {
-        addSecurityMeta('X-Frame-Options', 'DENY');
-      }
+      // Disable right-click context menu
+      document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+      });
 
-      if (enableHSTS) {
-        addSecurityMeta('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
-      }
+      // Disable F12 and other dev tools shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+          e.preventDefault();
+        }
+      });
+    };
 
-      if (enableCSP) {
-        const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none';";
-        addSecurityMeta('Content-Security-Policy', csp);
-      }
-    }
-  }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection]);
+    enhanceSecurity();
+  }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default SecurityEnhancer;

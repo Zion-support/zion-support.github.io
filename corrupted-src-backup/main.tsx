@@ -1,13 +1,13 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
 import './index.css';
 
-async function reportWebVitals() {
-  try {
+async function reportWebVitals() {/* TODO: Fix JSX expression */}
+}
+  try {/* TODO: Fix JSX expression */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
-    const log = (metric: { name: string; value: number }) => {
-      if (process.env['NODE_ENV'] === 'production') {
+    const log = (metri,
+  c: {/* TODO: Fix JSX expression */})
+  e: number }) => {/* TODO: Fix JSX expression */}
         //         }
     };
 
@@ -15,20 +15,20 @@ async function reportWebVitals() {
     onLCP(log);
     onFCP(log);
     onTTFB(log);
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }
 
 // const container = document.getElementById('root');
-if (!container) {
-  throw new Error('Root element not found');
+if (!container) {/* TODO: Fix JSX expression */}
 }
 
 const _root = createRoot(container);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+root.render(<React.StrictMode>)
+    <App />)
+root.render(<React.StrictMode></React>
+    <App /></App>
+  </React.StrictMode>)
 );
 
 reportWebVitals();

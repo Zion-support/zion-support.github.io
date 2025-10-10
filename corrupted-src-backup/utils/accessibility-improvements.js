@@ -1,32 +1,30 @@
-// Accessibility utilities and components
+// Accessibility utilities and components;
 export const accessibilityUtils = {
-  // Focus management
-  trapFocus: element => {
-    const focusableElements = element.querySelectorAll(
+  // Focus management;
+  trapFocus: element => {,
+    const focusableElements = element.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const _firstElement = focusableElements[0];
     const _lastElement = focusableElements[focusableElements.length - 1];
 
-    element.addEventListener('keydown', e => {
+    element.addEventListener('keydown', e => {)
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
             e.preventDefault();
+export const accessibilityUtils = {/* TODO: Fix JSX expression */}
           }
-        } else {
-          if (document.activeElement === lastElement) {
-            firstElement.focus();
-            e.preventDefault();
+        } else {/* TODO: Fix JSX expression */}
           }
         }
       }
     });
   },
 
-  // Screen reader announcements
-  announceToScreenReader: message => {
+  // Screen reader announcements;
+  announceToScreenReader: message => {,
     const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -39,17 +37,24 @@ export const accessibilityUtils = {
     }, 1000);
   },
 
-  // Color contrast checker
+  // Color contrast checker;
   checkColorContrast: (foreground, background) => {
     const getLuminance = color => {
       //       const rgb = parseInt(color.replace('#', ''), 16);
-      const _r = (rgb >> 16) & 0xff;
-      //       const g = (rgb >> 8) & 0xff;
-      //       const b = (rgb >> 0) & 0xff;
+      const _r = (rgb >> 16) & 0 xff;
+      //       const g = (rgb >> 8) & 0 xff;
+      //       const b = (rgb >> 0) & 0 xff;
 
-      const [rs, gs, bs] = [r, g, b].map(c => {
-        c = c / 255;
+      const [rs, gs, bs] = [r, g, b].map(c => {)
+        c = c / 255;)
         return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  // Screen reader announcements,
+  announceToScreenReader: message => {/* TODO: Fix JSX expression */}
+    }, 1000);
+  },
+
+  // Color contrast checker,
+  checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
       });
 
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
@@ -61,8 +66,8 @@ export const accessibilityUtils = {
 
     return {
       ratio,
-      meetsAA: ratio >= 4.5,
-      meetsAAA: ratio >= 7,
+      meetsAA: ratio >= 4.5;
+      meetsAAA: ratio >= 7;
+    return {/* TODO: Fix JSX expression */}
     };
-  },
-};
+  }};

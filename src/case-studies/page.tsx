@@ -78,10 +78,10 @@ const CaseStudiesPage: React.FC = () => {
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
-            </a>
+            </Link>
           </div>
         </header>
         {/* Hero Section */}
@@ -143,11 +143,12 @@ const CaseStudiesPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <a href="/contact"
+                      <Link 
+                        to="/contact"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
                         Learn More
-                      </a>
+                      </Link>
                       <div className="flex items-center text-green-600">
                         <CheckCircle className="w-4 h-4 mr-1" />
                         <span className="text-sm font-semibold">Verified Results</span>
@@ -200,17 +201,19 @@ const CaseStudiesPage: React.FC = () => {
               Join the companies that have transformed their business with our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact"
+              <Link 
+                to="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
                 Start Your Project
                 <TrendingUp className="w-4 h-4 ml-2" />
-              </a>
-              <a href="/services"
+              </Link>
+              <Link 
+                to="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
                 View Our Services
-              </a>
+              </Link>
             </div>
           </div>
         </section>

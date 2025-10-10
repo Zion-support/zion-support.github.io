@@ -1,8 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
-// Function to remove console.log statements from a file
+// Function to remove console.log statements from a file;
 function removeConsoleLogs(filePath) {
   try {
     let _content = fs.readFileSync(filePath, 'utf8');
@@ -19,16 +18,18 @@ function removeConsoleLogs(filePath) {
     if (content !== originalContent) {
       modified = true;
       fs.writeFileSync(filePath, content, 'utf8');
+function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 //       }
     
     return modified;
-  } catch (error) {
-//     return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-// Function to process all TypeScript and JavaScript files
+// Function to process all TypeScript and JavaScript files;
 async function processFiles() {
+async function processFiles() {/* TODO: Fix JSX expression */}
+}
   const patterns = [
     'src/**/*.{ts,tsx,js,jsx}',
     'app/**/*.{ts,tsx,js,jsx}'
@@ -38,25 +39,30 @@ async function processFiles() {
   let _modifiedFiles = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.test.*',
+    const files = await glob(pattern, { )
+      ignore: [)
+        '**/node_modules/**')
+        '**/dist/**')
+        '**/build/**')
+        '**/*.test.*')
         '**/*.spec.*'
       ]
     });
     
-    files.forEach(file => {
-      totalFiles++;
+    files.forEach(file => {)
+      totalFiles++;)
       if (removeConsoleLogs(file)) {
         modifiedFiles++;
       }
+  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
+    });
+    
+    files.forEach(file => {/* TODO: Fix JSX expression */}
+      })
     });
   });
   
 //   //   //   }
 
-// Run the cleanup
+// Run the cleanup;
 // processFiles().catch(console.error);

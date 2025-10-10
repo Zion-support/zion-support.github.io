@@ -1,45 +1,118 @@
+'use client';
 import React from 'react';
-import { Phone, CheckCircle, Mail, Target, TrendingUp } from 'lucide-react';
+import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
+
+const AiEmailMarketingPage: React.FC = () => {
+import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+
+const AIEmailMarketingPage: React.FC = () => {
+  const _features = [
+    {
+      icon: Mail,
+      title: 'AI Content Generation',
+      description:     ,
+$4},
+      icon: Target,
+      title: 'Smart Segmentation',
+      description:       ,
+icon$5: Send,
+      title: 'Optimal Send Times',
+      description:       ,
+icon$5: BarChart,
+      title: 'Predictive Analytics',
+      description:       ,
+icon$5: Users,
+      title: 'Behavioral Triggers',
+      description:       ,
+icon$5: TrendingUp,
+      title: 'A/B Testing',
+      description:     ,
+$4}
+  ];
+
+  const benefits = [
+    'Increase open rates by 200%',
+    'Boost click-through rates by 150%',
+    'Reduce unsubscribe rates by 60%',
+    'Improve conversion rates by 180%',
+    'Save 15+ hours per week'
+
+  const emailTypes = [
+    { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
+    { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
+    { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
+    { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
+    { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
+    { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
+
+  const pricing = [
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: [
+        '1,000 subscribers',
+        '10,000 emails/month',
+        'Basic AI features',
+        'Email templates',
+        'Basic analytics',
+        'Email support'
+      ],
+      popular: false
+      name: 'Professional',
+      price: '$79',
+      description: 'Ideal for growing businesses',
+        '10,000 subscribers',
+        '100,000 emails/month',
+        'Advanced AI features',
+        'Custom templates',
+        'Advanced analytics',
+        'Priority support',
+        'A/B testing'
+      popular: true
+      name: 'Enterprise',
+      price: '$199',
+      description: 'For large organizations',
+        'Unlimited subscribers',
+        'Unlimited emails',
+        'Full AI suite',
+        'White-label options',
+        'Custom integrations',
+        'Dedicated support',
+        'Advanced automation'
+
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIEmailMarketingPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Email Marketing | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />
+      </Helmet>
+      
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <main className="container mx-auto px-4 py-16 pt-24">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Email Marketing
-            </h1>
-            <p className="text-xl text-cyan-400 mb-8">
-              Transform your email marketing with AI-powered content generation
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Coming soon - Advanced AI email marketing automation platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold"
-              >
-                Get Notified
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950
-              </a>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Coming Soon - Advanced AI email marketing solutions that will transform your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+              Contact Us
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+              Learn More
+          </div>
+      
+      <Footer />
   );
 };
 
-export default AIEmailMarketingPage;
+
+export default $1;
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Mail as EmailIcon, Send, BarChart3 } from 'lucide-react';
