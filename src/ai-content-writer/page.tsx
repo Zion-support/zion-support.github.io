@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {PenTool, CheckCircle} from 'lucide-react';
+import {PenTool, CheckCircle, FileText, Target, Phone} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

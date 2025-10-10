@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, memo } from 'react';
-import {Brain, BarChart, MessageSquare, CheckCircle, Database, Cloud, Code, Settings, ShoppingCart, Atom, Layers, Server, Network} from 'lucide-react';
+import {Brain, BarChart, MessageSquare, CheckCircle, Database, Cloud, Code, Settings, ShoppingCart, Atom, Layers, Server, Network, Eye, Zap, Shield, Stethoscope, CreditCard, Briefcase, Wrench, Cpu, Smartphone, Phone, Mail, MapPin, ArrowRight} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
