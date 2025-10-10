@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,139 +1011,422 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
+    },
+    {
+      id: 'ai-parenting-assistant',
+      name: 'AI-Powered Parenting Assistant',
       description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
+      price: '$1,500/month',
       marketPrice: '$2,500-6,000/month',
+      features: [
+        'Development monitoring',
+        'Activity recommendations',
+        'Safety alerts',
+        'Progress tracking',
+        'Expert guidance',
+        'Behavioral analysis',
+        'Educational content curation',
+        'Family communication tools'
+      ],
+      benefits: [
+        'Support child development',
+        'Improve parenting confidence',
+        'Ensure child safety',
+        'Personalized recommendations'
+      ],
       category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
+      popular: false,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Elderly Care',
+      id: 'ai-elderly-care',
+      name: 'AI-Powered Elderly Care',
       description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
-      price: 'Starting at $2,500/month',
-      features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
-      benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
+      price: '$2,500/month',
       marketPrice: '$4,000-10,000/month',
-      category: 'Elderly Care AI',
-      technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
+      features: [
+        'Health monitoring',
+        'Safety assistance',
+        'Medication reminders',
+        'Emergency alerts',
+        'Family communication',
+        'Fall detection',
+        'Cognitive assessment',
+        'Care coordination'
+      ],
+      benefits: [
+        'Improve elderly care',
+        'Ensure safety',
+        'Reduce care costs',
+        'Peace of mind for families'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Accessibility Assistant',
+      id: 'ai-accessibility-assistant',
+      name: 'AI-Powered Accessibility Assistant',
       description: 'Intelligent accessibility support with adaptive interfaces and assistive technology.',
-      icon: '♿',
-      price: 'Starting at $1,800/month',
-      features: ['Adaptive interfaces', 'Voice control', 'Visual assistance', 'Mobility support', 'Communication aids'],
-      benefits: ['Improve accessibility', 'Enhance independence', 'Support inclusion'],
+      price: '$1,800/month',
       marketPrice: '$3,000-7,000/month',
-      category: 'Accessibility AI',
-      technologies: ['Accessibility APIs', 'Assistive Technology', 'Custom Accessibility Models', 'Mobile Apps', 'IoT Integration']
+      features: [
+        'Adaptive interfaces',
+        'Voice control',
+        'Visual assistance',
+        'Mobility support',
+        'Communication aids',
+        'Screen reader integration',
+        'Gesture recognition',
+        'Custom accessibility profiles'
+      ],
+      benefits: [
+        'Improve accessibility',
+        'Enhance independence',
+        'Support inclusion',
+        'Better user experience'
+      ],
+      category: 'Accessibility',
+      popular: false,
+      icon: Users
     },
     {
-      title: 'AI-Powered Environmental Monitoring',
+      id: 'ai-environmental-monitoring',
+      name: 'AI-Powered Environmental Monitoring',
       description: 'Intelligent environmental monitoring with pollution detection and sustainability recommendations.',
-      icon: '🌱',
-      price: 'Starting at $2,000/month',
-      features: ['Pollution monitoring', 'Sustainability analysis', 'Environmental alerts', 'Carbon tracking', 'Green recommendations'],
-      benefits: ['Monitor environmental impact', 'Improve sustainability', 'Reduce carbon footprint'],
+      price: '$2,000/month',
       marketPrice: '$3,500-8,000/month',
-      category: 'Environmental AI',
-      technologies: ['Environmental Sensors', 'Pollution Detection', 'Custom Environmental Models', 'IoT Integration', 'Analytics']
+      features: [
+        'Pollution monitoring',
+        'Sustainability analysis',
+        'Environmental alerts',
+        'Carbon tracking',
+        'Green recommendations',
+        'Air quality prediction',
+        'Water quality assessment',
+        'Climate impact analysis'
+      ],
+      benefits: [
+        'Monitor environmental impact',
+        'Improve sustainability',
+        'Reduce carbon footprint',
+        'Compliance reporting'
+      ],
+      category: 'Environmental',
+      popular: false,
+      icon: Globe
     },
     {
-      title: 'AI-Powered Wildlife Conservation',
+      id: 'ai-wildlife-conservation',
+      name: 'AI-Powered Wildlife Conservation',
       description: 'Intelligent wildlife monitoring and conservation with species identification and behavior analysis.',
-      icon: '🦁',
-      price: 'Starting at $3,500/month',
-      features: ['Species identification', 'Behavior analysis', 'Population monitoring', 'Threat detection', 'Conservation planning'],
-      benefits: ['Protect wildlife', 'Monitor populations', 'Prevent poaching'],
+      price: '$3,500/month',
       marketPrice: '$6,000-15,000/month',
-      category: 'Conservation AI',
-      technologies: ['Computer Vision', 'Wildlife Detection', 'Custom Conservation Models', 'Satellite Data', 'IoT Sensors']
+      features: [
+        'Species identification',
+        'Behavior analysis',
+        'Population monitoring',
+        'Threat detection',
+        'Conservation planning',
+        'Camera trap analysis',
+        'Migration tracking',
+        'Habitat assessment'
+      ],
+      benefits: [
+        'Protect wildlife',
+        'Monitor populations',
+        'Prevent poaching',
+        'Data-driven conservation'
+      ],
+      category: 'Conservation',
+      popular: false,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Disaster Response',
+      id: 'ai-disaster-response',
+      name: 'AI-Powered Disaster Response',
       description: 'Intelligent disaster prediction and response coordination with real-time monitoring.',
-      icon: '🚨',
-      price: 'Starting at $5,000/month',
-      features: ['Disaster prediction', 'Response coordination', 'Resource optimization', 'Evacuation planning', 'Damage assessment'],
-      benefits: ['Save lives', 'Reduce damage', 'Improve response time'],
+      price: '$5,000/month',
       marketPrice: '$8,000-20,000/month',
-      category: 'Emergency AI',
-      technologies: ['Disaster Prediction', 'Response Coordination', 'Custom Emergency Models', 'Satellite Data', 'IoT Sensors']
+      features: [
+        'Disaster prediction',
+        'Response coordination',
+        'Resource optimization',
+        'Evacuation planning',
+        'Damage assessment',
+        'Real-time monitoring',
+        'Risk mapping',
+        'Emergency communication'
+      ],
+      benefits: [
+        'Save lives',
+        'Reduce damage',
+        'Improve response time',
+        'Better resource allocation'
+      ],
+      category: 'Emergency',
+      popular: false,
+      icon: Shield
     },
     {
-      title: 'AI-Powered Urban Planning',
+      id: 'ai-urban-planning',
+      name: 'AI-Powered Urban Planning',
       description: 'Intelligent urban planning with traffic optimization and infrastructure analysis.',
-      icon: '🏙️',
-      price: 'Starting at $4,500/month',
-      features: ['Traffic optimization', 'Infrastructure analysis', 'Population modeling', 'Resource planning', 'Sustainability analysis'],
-      benefits: ['Improve city efficiency', 'Reduce traffic congestion', 'Optimize resource use'],
+      price: '$4,500/month',
       marketPrice: '$7,500-18,000/month',
-      category: 'Urban AI',
-      technologies: ['Traffic Analysis', 'Infrastructure Modeling', 'Custom Urban Models', 'Satellite Data', 'IoT Integration']
+      features: [
+        'Traffic optimization',
+        'Infrastructure analysis',
+        'Population modeling',
+        'Resource planning',
+        'Sustainability analysis',
+        'Smart city integration',
+        'Citizen engagement',
+        'Predictive modeling'
+      ],
+      benefits: [
+        'Improve city efficiency',
+        'Reduce traffic congestion',
+        'Optimize resource use',
+        'Better urban development'
+      ],
+      category: 'Urban Planning',
+      popular: false,
+      icon: Globe
     },
     {
-      title: 'AI-Powered Agriculture Optimization',
+      id: 'ai-agriculture-optimization',
+      name: 'AI-Powered Agriculture Optimization',
       description: 'Intelligent agricultural optimization with crop monitoring and yield prediction.',
-      icon: '🌾',
-      price: 'Starting at $3,000/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
-      benefits: ['Increase crop yields', 'Reduce resource use', 'Improve sustainability'],
+      price: '$3,000/month',
       marketPrice: '$5,000-12,000/month',
-      category: 'Agriculture AI',
-      technologies: ['Satellite Imagery', 'IoT Sensors', 'Custom Agriculture Models', 'Drone Data', 'Weather APIs']
+      features: [
+        'Crop monitoring',
+        'Yield prediction',
+        'Pest detection',
+        'Irrigation optimization',
+        'Soil analysis',
+        'Weather integration',
+        'Precision farming',
+        'Supply chain optimization'
+      ],
+      benefits: [
+        'Increase crop yields',
+        'Reduce resource use',
+        'Improve sustainability',
+        'Better farming decisions'
+      ],
+      category: 'Agriculture',
+      popular: false,
+      icon: Globe
     },
     {
-      title: 'AI-Powered Water Management',
+      id: 'ai-water-management',
+      name: 'AI-Powered Water Management',
       description: 'Intelligent water resource management with quality monitoring and distribution optimization.',
-      icon: '💧',
-      price: 'Starting at $2,800/month',
-      features: ['Water quality monitoring', 'Distribution optimization', 'Leak detection', 'Usage analysis', 'Treatment optimization'],
-      benefits: ['Improve water quality', 'Reduce waste', 'Optimize distribution'],
+      price: '$2,800/month',
       marketPrice: '$4,500-11,000/month',
-      category: 'Water AI',
-      technologies: ['Water Quality Sensors', 'Distribution Networks', 'Custom Water Models', 'IoT Integration', 'Analytics']
+      features: [
+        'Water quality monitoring',
+        'Distribution optimization',
+        'Leak detection',
+        'Usage analysis',
+        'Treatment optimization',
+        'Predictive maintenance',
+        'Smart metering',
+        'Conservation recommendations'
+      ],
+      benefits: [
+        'Improve water quality',
+        'Reduce waste',
+        'Optimize distribution',
+        'Better resource management'
+      ],
+      category: 'Water Management',
+      popular: false,
+      icon: Globe
     },
     {
-      title: 'AI-Powered Waste Management',
+      id: 'ai-waste-management',
+      name: 'AI-Powered Waste Management',
       description: 'Intelligent waste management with collection optimization and recycling analysis.',
-      icon: '♻️',
-      price: 'Starting at $2,200/month',
-      features: ['Collection optimization', 'Recycling analysis', 'Waste sorting', 'Route planning', 'Sustainability tracking'],
-      benefits: ['Reduce waste', 'Improve recycling', 'Optimize collection'],
+      price: '$2,200/month',
       marketPrice: '$3,500-8,000/month',
-      category: 'Waste AI',
-      technologies: ['Waste Sensors', 'Route Optimization', 'Custom Waste Models', 'IoT Integration', 'Analytics']
+      features: [
+        'Collection optimization',
+        'Recycling analysis',
+        'Waste sorting',
+        'Route planning',
+        'Sustainability tracking',
+        'Smart bins integration',
+        'Waste composition analysis',
+        'Circular economy insights'
+      ],
+      benefits: [
+        'Reduce waste',
+        'Improve recycling',
+        'Optimize collection',
+        'Better sustainability'
+      ],
+      category: 'Waste Management',
+      popular: false,
+      icon: Box
     },
     {
-      title: 'AI-Powered Energy Grid Management',
+      id: 'ai-energy-grid-management',
+      name: 'AI-Powered Energy Grid Management',
       description: 'Intelligent energy grid optimization with demand prediction and renewable integration.',
-      icon: '⚡',
-      price: 'Starting at $4,000/month',
-      features: ['Demand prediction', 'Grid optimization', 'Renewable integration', 'Load balancing', 'Outage prevention'],
-      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Prevent outages'],
+      price: '$4,000/month',
       marketPrice: '$6,500-16,000/month',
-      category: 'Energy AI',
-      technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
+      features: [
+        'Demand prediction',
+        'Grid optimization',
+        'Renewable integration',
+        'Load balancing',
+        'Outage prevention',
+        'Smart grid analytics',
+        'Energy storage optimization',
+        'Carbon footprint tracking'
+      ],
+      benefits: [
+        'Improve grid efficiency',
+        'Integrate renewables',
+        'Prevent outages',
+        'Reduce energy costs'
+      ],
+      category: 'Energy',
+      popular: false,
+      icon: Zap
     },
     {
-      title: 'AI-Powered Smart City Management',
+      id: 'ai-smart-city-management',
+      name: 'AI-Powered Smart City Management',
       description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
-      icon: '🏛️',
-      price: 'Starting at $8,000/month',
-      features: ['Integrated services', 'Citizen engagement', 'Resource optimization', 'Service delivery', 'Data analytics'],
-      benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
+      price: '$8,000/month',
       marketPrice: '$15,000-40,000/month',
-      category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
+      features: [
+        'Integrated services',
+        'Citizen engagement',
+        'Resource optimization',
+        'Service delivery',
+        'Data analytics',
+        'IoT integration',
+        'Predictive maintenance',
+        'Digital twin technology'
+      ],
+      benefits: [
+        'Improve city services',
+        'Enhance citizen experience',
+        'Optimize resources',
+        'Better urban governance'
+      ],
+      category: 'Smart City',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI solutions for complex optimization and machine learning problems.',
+      price: '$15,000/month',
+      marketPrice: '$25,000-100,000/month',
+      features: [
+        'Quantum machine learning',
+        'Complex optimization',
+        'Cryptographic security',
+        'Quantum simulation',
+        'Hybrid classical-quantum algorithms',
+        'Quantum neural networks',
+        'Optimization problems',
+        'Research collaboration'
+      ],
+      benefits: [
+        'Solve complex problems',
+        'Exponential speedup',
+        'Advanced security',
+        'Cutting-edge technology'
+      ],
+      category: 'Quantum Computing',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-metaverse-platform',
+      name: 'AI Metaverse Platform',
+      description: 'AI-powered metaverse platform with virtual worlds, avatars, and immersive experiences.',
+      price: '$5,000/month',
+      marketPrice: '$10,000-50,000/month',
+      features: [
+        'Virtual world creation',
+        'AI-powered avatars',
+        'Immersive experiences',
+        'Social interactions',
+        'Virtual commerce',
+        'AR/VR integration',
+        'AI content generation',
+        'Blockchain integration'
+      ],
+      benefits: [
+        'Create virtual experiences',
+        'Engage users',
+        'New revenue streams',
+        'Future-ready platform'
+      ],
+      category: 'Metaverse',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'ai-neural-interfaces',
+      name: 'AI Neural Interface Technology',
+      description: 'Brain-computer interface solutions with AI-powered neural signal processing.',
+      price: '$20,000/month',
+      marketPrice: '$50,000-200,000/month',
+      features: [
+        'Neural signal processing',
+        'Brain-computer interfaces',
+        'Cognitive enhancement',
+        'Medical applications',
+        'Research tools',
+        'Real-time analysis',
+        'Custom algorithms',
+        'Clinical validation'
+      ],
+      benefits: [
+        'Revolutionary technology',
+        'Medical breakthroughs',
+        'Enhanced capabilities',
+        'Research advancement'
+      ],
+      category: 'Neural Interfaces',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'ai-space-exploration',
+      name: 'AI Space Exploration Platform',
+      description: 'AI-powered space exploration and satellite management with autonomous operations.',
+      price: '$25,000/month',
+      marketPrice: '$50,000-500,000/month',
+      features: [
+        'Satellite management',
+        'Autonomous operations',
+        'Space data analysis',
+        'Mission planning',
+        'Orbital mechanics',
+        'Earth observation',
+        'Space weather prediction',
+        'Mission optimization'
+      ],
+      benefits: [
+        'Advanced space operations',
+        'Autonomous missions',
+        'Better data insights',
+        'Cost optimization'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      icon: Globe
     }
   ]
 
@@ -1176,7 +1458,21 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Family AI', name: 'Family AI', count: services.filter(s => s.category === 'Family AI').length },
+    { id: 'Accessibility', name: 'Accessibility', count: services.filter(s => s.category === 'Accessibility').length },
+    { id: 'Environmental', name: 'Environmental', count: services.filter(s => s.category === 'Environmental').length },
+    { id: 'Conservation', name: 'Conservation', count: services.filter(s => s.category === 'Conservation').length },
+    { id: 'Emergency', name: 'Emergency', count: services.filter(s => s.category === 'Emergency').length },
+    { id: 'Urban Planning', name: 'Urban Planning', count: services.filter(s => s.category === 'Urban Planning').length },
+    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length },
+    { id: 'Water Management', name: 'Water Management', count: services.filter(s => s.category === 'Water Management').length },
+    { id: 'Waste Management', name: 'Waste Management', count: services.filter(s => s.category === 'Waste Management').length },
+    { id: 'Smart City', name: 'Smart City', count: services.filter(s => s.category === 'Smart City').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Metaverse', name: 'Metaverse', count: services.filter(s => s.category === 'Metaverse').length },
+    { id: 'Neural Interfaces', name: 'Neural Interfaces', count: services.filter(s => s.category === 'Neural Interfaces').length },
+    { id: 'Space Technology', name: 'Space Technology', count: services.filter(s => s.category === 'Space Technology').length }
   ]
 
   const filteredServices = services.filter(service => 
