@@ -84,7 +84,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -93,7 +96,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'Community', href: '/community' },
+    { name: 'Training', href: '/training' }
   ];
 
   const legalLinks = [
@@ -102,7 +108,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Protection', href: '/data-protection' },
+    { name: 'Accessibility', href: '/accessibility' },
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 
   return (
