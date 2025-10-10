@@ -225,154 +225,16 @@ const HomePage: React.FC = () => {
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
-                  <div className="mb-8">
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                      <Sparkles className="w-4 h-4 mr-2" />
-                      Trusted by 500+ Companies Worldwide
-                    </div>
-                  </div>
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
-                      Advanced AI & IT Solutions
-                    </span>
-                    <br />
-                    <span className="text-3xl md:text-5xl lg:text-6xl">
-                      for the Future
-                    </span>
-                  </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                    Transform your business with cutting-edge artificial intelligence, quantum computing, 
-                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    <a
-                      href="/contact"
-                      className="cyber-button text-lg px-8 py-4 inline-flex items-center space-x-2 group"
-                      aria-label="Get started with our services">
-                      <span>Get Started</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a
-                      href="tel:+13024640950"
-                      onClick={handlePhoneClick}
-                      className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
-                      aria-label="Call us at (302) 464-0950">
-                      <Phone className="w-5 h-5" />
-                      <span>(302) 464-0950</span>
-                    </a>
-                  </div>
-                  
-                  {/* Stats Section */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                    <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                      <div className="text-sm text-gray-300">Projects Delivered</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                      <div className="text-sm text-gray-300">Uptime Guarantee</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                      <div className="text-sm text-gray-300">Support Available</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
-                      <div className="text-sm text-gray-300">Client Rating</div>
-                    </div>
-                  </div>
+                  <a
+                    href="/ai-services"
+                    className="cyber-button text-sm px-4 py-2 inline-flex items-center space-x-2 group"
+                    aria-label="Learn more about AI services">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </div>
-              </div>
-              {/* Quick Contact Form */}
-              <div className="cyber-card hologram-card p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
-                      <option value="">Select a service</option>
-                      <option value="ai-services">AI Services</option>
-                      <option value="it-services">IT Services</option>
-                      <option value="micro-saas">Micro SAAS Solutions</option>
-                      <option value="consulting">IT Consulting</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                      placeholder="Tell us about your project or requirements"
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full cyber-button text-center py-4">
-                    Send Message
-                  </button>
-                </form>
-              <button 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                aria-label="Get started with our AI and IT solutions"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" aria-hidden="true" />
-              </button>
-              <button 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                aria-label="View our portfolio and case studies"
-              >
-                View Our Work
-              </button>
-            </div>
+              </article>
+            </Suspense>
           </div>
         </section>
 
@@ -435,25 +297,30 @@ const HomePage: React.FC = () => {
                 Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
                   aria-label="Contact us to discuss your business transformation needs"
                 >
                   Contact Us
-                </button>
-                <button 
-                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+                </a>
+                <a
+                  href="/about"
+                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
                   aria-label="Learn more about our AI and IT solutions"
                 >
                   Learn More
-                </button>
+                </a>
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
                   Email kleber@ziontechgroup.com
                 </a>
-            </section>
+              </div>
+            </div>
+          </div>
+        </section>
 
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
@@ -648,14 +515,10 @@ const HomePage: React.FC = () => {
               </div>
             </section>
 
-            {/* Footer */}
-            <Footer />
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
+        </main>
+        
+        <Footer />
+      </div>
     </React.Fragment>
   );
 };
