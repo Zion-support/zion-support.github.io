@@ -1,68 +1,86 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  const features = [
+const CloudServicesPage: React.FC = () => {
+  const services = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
+      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Hybrid Cloud Solutions']
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      icon: Server,
+      title: 'Cloud Infrastructure',
+      description: 'Build and manage scalable cloud infrastructure tailored to your needs',
+      features: ['Auto-scaling', 'Load Balancing', 'Container Orchestration', 'Microservices Architecture']
+    },
+    {
+      icon: Database,
+      title: 'Cloud Databases',
+      description: 'Managed database solutions with high availability and performance',
+      features: ['MySQL/PostgreSQL', 'NoSQL Databases', 'Data Warehousing', 'Backup & Recovery']
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      title: 'Cloud Security',
+      description: 'Comprehensive security solutions to protect your cloud assets',
+      features: ['Identity Management', 'Data Encryption', 'Compliance', 'Security Monitoring']
+    },
+    {
+      icon: Zap,
+      title: 'Cloud Optimization',
+      description: 'Optimize your cloud resources for maximum performance and cost efficiency',
+      features: ['Cost Optimization', 'Performance Tuning', 'Resource Monitoring', 'Automated Scaling']
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'Multi-Cloud Strategy',
+      description: 'Implement multi-cloud strategies for enhanced reliability and flexibility',
+      features: ['Multi-Cloud Architecture', 'Cloud Governance', 'Vendor Management', 'Disaster Recovery']
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Reduced infrastructure costs by up to 40%',
+    'Improved scalability and flexibility',
+    'Enhanced security and compliance',
+    '24/7 monitoring and support',
+    'Faster time to market',
+    'Disaster recovery and backup solutions'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <title>Cloud Services | Zion Tech Group</title>
+        <meta name="description" content="Professional cloud services by Zion Tech Group. Cloud migration, infrastructure, and optimization solutions." />
+        <meta name="keywords" content="cloud services, cloud migration, cloud infrastructure, Zion Tech Group" />
       </Helmet>
+
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Cloud Services
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+              Transform your business with our comprehensive cloud services. 
+              From migration to optimization, we provide end-to-end cloud solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -74,46 +92,88 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Cloud Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
+              Comprehensive cloud solutions designed to accelerate your digital transformation
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <service.icon className="w-8 h-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Cloud Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
+              Experience the benefits of working with cloud experts
             </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start">
+                <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0 mt-1" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-              Ready to Get Started?
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Move to the Cloud?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our cloud experts to discuss your migration and optimization needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+              <button className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300">
+                Start Your Cloud Journey
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Schedule Consultation
               </button>
             </div>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
 
-export default PagePage;
+export default CloudServicesPage;
