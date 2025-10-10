@@ -1,10 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock, Star, Phone, Mail, MapPin, Award, TrendingUp, Building, Activity, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap, Music as MusicIcon } from 'lucide-react';
 import Header from './components/Header';
-
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
 
 import Footer from './components/Footer';
 
@@ -18,7 +16,7 @@ const microSAASServices = [
     category: "Productivity",
     popular: true,
     icon: BarChart,
-    link: "https://ziontechgroup.com/ai-project-manager"
+    link: "/ai-project-manager"
   },
   {
     name: "AI Analytics Dashboard",
@@ -28,7 +26,7 @@ const microSAASServices = [
     category: "Analytics",
     popular: true,
     icon: Target,
-    link: "https://ziontechgroup.com/ai-analytics-dashboard"
+    link: "/ai-analytics-dashboard"
   },
   {
     name: "AI Customer Support Bot",
@@ -38,7 +36,7 @@ const microSAASServices = [
     category: "Support",
     popular: false,
     icon: Users,
-    link: "https://ziontechgroup.com/ai-customer-support-bot"
+    link: "/ai-customer-support-bot"
   },
   {
     name: "AI Content Generator",
@@ -48,7 +46,7 @@ const microSAASServices = [
     category: "Content",
     popular: true,
     icon: Zap,
-    link: "https://ziontechgroup.com/ai-content-generation"
+    link: "/ai-content-generation"
   },
   {
     name: "AI Social Media Manager",
@@ -58,7 +56,7 @@ const microSAASServices = [
     category: "Marketing",
     popular: true,
     icon: Users,
-    link: "https://ziontechgroup.com/ai-social-media-manager"
+    link: "/ai-social-media-manager"
   },
   {
     name: "AI Email Marketing Suite",
@@ -68,7 +66,7 @@ const microSAASServices = [
     category: "Marketing",
     popular: true,
     icon: Mail,
-    link: "https://ziontechgroup.com/ai-email-marketing"
+    link: "/ai-email-marketing"
   },
   {
     name: "AI Financial Advisor",
@@ -78,7 +76,7 @@ const microSAASServices = [
     category: "Finance",
     popular: false,
     icon: BarChart,
-    link: "https://ziontechgroup.com/ai-financial-advisor"
+    link: "/ai-financial-advisor"
   },
   {
     name: "AI Workflow Automation",
@@ -88,7 +86,7 @@ const microSAASServices = [
     category: "Automation",
     popular: true,
     icon: Settings,
-    link: "https://ziontechgroup.com/ai-workflow-automation"
+    link: "/ai-workflow-automation"
   },
   {
     name: "AI Smart Calendar",
@@ -98,7 +96,7 @@ const microSAASServices = [
     category: "Productivity",
     popular: true,
     icon: Clock,
-    link: "https://ziontechgroup.com/ai-smart-calendar"
+    link: "/ai-smart-calendar"
   },
   {
     name: "AI Video Generator",
@@ -108,7 +106,7 @@ const microSAASServices = [
     category: "Content",
     popular: true,
     icon: Video,
-    link: "https://ziontechgroup.com/ai-video-generator"
+    link: "/ai-video-generator"
   },
   {
     name: "AI CRM Assistant",
@@ -118,7 +116,7 @@ const microSAASServices = [
     category: "Sales",
     popular: true,
     icon: Users,
-    link: "https://ziontechgroup.com/ai-crm-assistant"
+    link: "/ai-crm-assistant"
   },
   {
     name: "AI Logo Designer Pro",
@@ -128,7 +126,7 @@ const microSAASServices = [
     category: "Design",
     popular: true,
     icon: Palette,
-    link: "https://ziontechgroup.com/ai-logo-designer"
+    link: "/ai-logo-designer"
   },
   {
     name: "AI Invoice Generator",
@@ -138,7 +136,7 @@ const microSAASServices = [
     category: "Finance",
     popular: true,
     icon: FileText,
-    link: "https://ziontechgroup.com/ai-invoice-generator"
+    link: "/ai-invoice-generator"
   },
   {
     name: "AI Expense Tracker",
@@ -148,7 +146,7 @@ const microSAASServices = [
     category: "Finance",
     popular: true,
     icon: Calculator,
-    link: "https://ziontechgroup.com/ai-expense-tracker"
+    link: "/ai-expense-tracker"
   },
   {
     name: "AI Lead Generation",
@@ -158,7 +156,7 @@ const microSAASServices = [
     category: "Sales",
     popular: true,
     icon: Target,
-    link: "https://ziontechgroup.com/ai-lead-generation"
+    link: "/ai-lead-generation"
   },
   {
     name: "AI HR Assistant",
@@ -168,7 +166,7 @@ const microSAASServices = [
     category: "HR",
     popular: true,
     icon: Users,
-    link: "https://ziontechgroup.com/ai-hr-assistant"
+    link: "/ai-hr-assistant"
   },
   {
     name: "AI Legal Assistant",
@@ -178,7 +176,7 @@ const microSAASServices = [
     category: "Legal",
     popular: false,
     icon: Scale,
-    link: "https://ziontechgroup.com/ai-legal-assistant"
+    link: "/ai-legal-assistant"
   },
   {
     name: "AI Inventory Manager",
@@ -188,7 +186,7 @@ const microSAASServices = [
     category: "Operations",
     popular: true,
     icon: Package,
-    link: "https://ziontechgroup.com/ai-inventory-manager"
+    link: "/ai-inventory-manager"
   },
   {
     name: "AI Fitness Coach",
@@ -198,7 +196,7 @@ const microSAASServices = [
     category: "Health",
     popular: true,
     icon: Heart,
-    link: "https://ziontechgroup.com/ai-fitness-coach"
+    link: "/ai-fitness-coach"
   },
   {
     name: "AI E-commerce Optimizer",
@@ -208,7 +206,7 @@ const microSAASServices = [
     category: "E-commerce",
     popular: true,
     icon: ShoppingCart,
-    link: "https://ziontechgroup.com/ai-ecommerce-optimizer"
+    link: "/ai-ecommerce-optimizer"
   },
   {
     name: "AI Fraud Detection",
@@ -218,7 +216,7 @@ const microSAASServices = [
     category: "Security",
     popular: true,
     icon: Shield,
-    link: "https://ziontechgroup.com/ai-fraud-detection"
+    link: "/ai-fraud-detection"
   },
   {
     name: "AI Music Composer",
@@ -228,7 +226,7 @@ const microSAASServices = [
     category: "Creative",
     popular: true,
     icon: Music,
-    link: "https://ziontechgroup.com/ai-music-composition"
+    link: "/ai-music-composition"
   },
   {
     name: "AI Image Recognition",
@@ -238,7 +236,7 @@ const microSAASServices = [
     category: "Computer Vision",
     popular: true,
     icon: Eye,
-    link: "https://ziontechgroup.com/ai-image-recognition"
+    link: "/ai-image-recognition"
   },
   {
     name: "AI Document Processor",
@@ -248,7 +246,7 @@ const microSAASServices = [
     category: "Document Management",
     popular: true,
     icon: FileText,
-    link: "https://ziontechgroup.com/ai-document-processor"
+    link: "/ai-document-processor"
   },
   {
     name: "AI Load Testing",
@@ -258,7 +256,7 @@ const microSAASServices = [
     category: "Testing",
     popular: false,
     icon: Activity,
-    link: "https://ziontechgroup.com/ai-load-testing"
+    link: "/ai-load-testing"
   },
   {
     name: "AI Manufacturing Optimizer",
@@ -268,7 +266,7 @@ const microSAASServices = [
     category: "Manufacturing",
     popular: true,
     icon: Factory,
-    link: "https://ziontechgroup.com/ai-manufacturing"
+    link: "/ai-manufacturing"
   },
   {
     name: "AI Insurance Assistant",
@@ -278,7 +276,7 @@ const microSAASServices = [
     category: "Insurance",
     popular: false,
     icon: Shield,
-    link: "https://ziontechgroup.com/ai-insurance"
+    link: "/ai-insurance"
   },
   {
     name: "AI Education Platform",
@@ -288,7 +286,7 @@ const microSAASServices = [
     category: "Education",
     popular: true,
     icon: GraduationCap,
-    link: "https://ziontechgroup.com/ai-education"
+    link: "/ai-education"
   },
   {
     name: "AI Code Assistant",
@@ -298,7 +296,7 @@ const microSAASServices = [
     category: "Development",
     popular: true,
     icon: Code,
-    link: "https://ziontechgroup.com/ai-code-assistant"
+    link: "/ai-code-assistant"
   },
   {
     name: "AI Design Studio",
@@ -308,7 +306,7 @@ const microSAASServices = [
     category: "Design",
     popular: true,
     icon: Palette,
-    link: "https://ziontechgroup.com/ai-design-studio"
+    link: "/ai-design-studio"
   }
 ];
 
@@ -321,7 +319,7 @@ const aiServices = [
     category: "Healthcare AI",
     enterprise: true,
     icon: Brain,
-    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
+    link: "/ai-drug-discovery-pro"
   },
   {
     name: "AI Climate Solutions Pro",
@@ -331,7 +329,7 @@ const aiServices = [
     category: "Environmental AI",
     enterprise: false,
     icon: Globe,
-    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+    link: "/ai-climate-solutions-pro"
   },
   {
     name: "AI Space Technology Pro",
@@ -341,7 +339,7 @@ const aiServices = [
     category: "Space Technology",
     enterprise: true,
     icon: Rocket,
-    link: "https://ziontechgroup.com/ai-space-technology-pro"
+    link: "/ai-space-technology-pro"
   },
   {
     name: "AI Financial Crime Detection Pro",
@@ -351,7 +349,7 @@ const aiServices = [
     category: "Financial AI",
     enterprise: false,
     icon: Shield,
-    link: "https://ziontechgroup.com/ai-financial-crime-detection-pro"
+    link: "/ai-financial-crime-detection-pro"
   },
   {
     name: "AI Quantum Computing Platform",
@@ -361,7 +359,7 @@ const aiServices = [
     category: "Quantum AI",
     enterprise: true,
     icon: Brain,
-    link: "https://ziontechgroup.com/ai-quantum-computing"
+    link: "/ai-quantum-computing"
   },
   {
     name: "AI Healthcare Solutions",
@@ -371,7 +369,7 @@ const aiServices = [
     category: "Healthcare AI",
     enterprise: true,
     icon: Heart,
-    link: "https://ziontechgroup.com/ai-healthcare"
+    link: "/ai-healthcare"
   },
   {
     name: "AI Computer Vision Platform",
@@ -381,7 +379,7 @@ const aiServices = [
     category: "Computer Vision",
     enterprise: false,
     icon: Target,
-    link: "https://ziontechgroup.com/ai-computer-vision"
+    link: "/ai-computer-vision"
   },
   {
     name: "AI Supply Chain Optimization Pro",
@@ -391,7 +389,7 @@ const aiServices = [
     category: "Supply Chain AI",
     enterprise: true,
     icon: Settings,
-    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+    link: "/ai-supply-chain-optimization-pro"
   }
 ];
 
@@ -403,7 +401,7 @@ const itServices = [
     features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
     category: "Cloud Services",
     icon: Globe,
-    link: "https://ziontechgroup.com/cloud-migration"
+    link: "/cloud-migration"
   },
   {
     name: "Enterprise Cybersecurity Suite",
@@ -412,7 +410,7 @@ const itServices = [
     features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
     category: "Security",
     icon: Shield,
-    link: "https://ziontechgroup.com/cybersecurity"
+    link: "/cybersecurity"
   },
   {
     name: "IT Infrastructure Design",
@@ -421,7 +419,7 @@ const itServices = [
     features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
     category: "Infrastructure",
     icon: Settings,
-    link: "https://ziontechgroup.com/it-infrastructure"
+    link: "/it-infrastructure"
   },
   {
     name: "24/7 IT Support & Monitoring",
@@ -430,7 +428,7 @@ const itServices = [
     features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
     category: "Support",
     icon: Clock,
-    link: "https://ziontechgroup.com/it-support"
+    link: "/it-support"
   },
   {
     name: "Custom Software Development",
@@ -439,7 +437,7 @@ const itServices = [
     features: ["Custom Development", "API Integration", "Database Design", "Quality Assurance"],
     category: "Development",
     icon: Code,
-    link: "https://ziontechgroup.com/custom-development"
+    link: "/custom-development"
   },
   {
     name: "DevOps & CI/CD Implementation",
@@ -448,7 +446,7 @@ const itServices = [
     features: ["CI/CD Pipelines", "Automated Testing", "Deployment Automation", "Monitoring"],
     category: "DevOps",
     icon: Settings,
-    link: "https://ziontechgroup.com/devops-cicd"
+    link: "/devops-cicd"
   },
   {
     name: "Database Management & Optimization",
@@ -457,7 +455,7 @@ const itServices = [
     features: ["Performance Tuning", "Security Hardening", "Backup Solutions", "Monitoring"],
     category: "Database",
     icon: Database,
-    link: "https://ziontechgroup.com/database-management"
+    link: "/database-management"
   },
   {
     name: "Network Design & Implementation",
@@ -466,7 +464,7 @@ const itServices = [
     features: ["Network Architecture", "Security Implementation", "Performance Optimization", "Monitoring"],
     category: "Networking",
     icon: Globe,
-    link: "https://ziontechgroup.com/network-design"
+    link: "/network-design"
   },
   {
     name: "AI Infrastructure Monitoring",
@@ -475,7 +473,7 @@ const itServices = [
     features: ["AI Monitoring", "Predictive Analytics", "Automated Responses", "Performance Insights"],
     category: "AI Infrastructure",
     icon: Activity,
-    link: "https://ziontechgroup.com/ai-infrastructure-monitoring"
+    link: "/ai-infrastructure-monitoring"
   },
   {
     name: "Blockchain Integration Services",
@@ -484,7 +482,7 @@ const itServices = [
     features: ["Smart Contracts", "DApp Development", "Token Economics", "Security Audits"],
     category: "Blockchain",
     icon: Shield,
-    link: "https://ziontechgroup.com/blockchain-integration-services"
+    link: "/blockchain-integration-services"
   },
   {
     name: "AI API Management",
@@ -493,7 +491,7 @@ const itServices = [
     features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics"],
     category: "API Management",
     icon: Code,
-    link: "https://ziontechgroup.com/ai-api-management"
+    link: "/ai-api-management"
   },
   {
     name: "Smart Contract Security Audit",
@@ -502,8 +500,39 @@ const itServices = [
     features: ["Security Analysis", "Vulnerability Assessment", "Code Review", "Compliance Check"],
     category: "Blockchain Security",
     icon: Shield,
-    link: "https://ziontechgroup.com/smart-contract-security-audit"
+    link: "/smart-contract-security-audit"
   }
+];
+
+const testimonials = [
+  {
+    content: "Zion Tech Group transformed our operations with their AI solutions. We've seen a 300% increase in efficiency and 70% cost reduction.",
+    name: "Sarah Johnson",
+    role: "CEO",
+    company: "TechCorp Inc.",
+    avatar: "SJ"
+  },
+  {
+    content: "The AI-powered analytics platform has revolutionized our decision-making process. The insights are incredible and the ROI is outstanding.",
+    name: "Michael Chen",
+    role: "CTO",
+    company: "DataFlow Systems",
+    avatar: "MC"
+  },
+  {
+    content: "Outstanding service and cutting-edge technology. Zion Tech Group delivered exactly what they promised and more.",
+    name: "Emily Rodriguez",
+    role: "Operations Director",
+    company: "Global Manufacturing",
+    avatar: "ER"
+  }
+];
+
+const stats = [
+  { number: "500+", label: "Projects Completed", icon: Target },
+  { number: "100+", label: "Enterprise Clients", icon: Users },
+  { number: "300%", label: "Average ROI", icon: TrendingUp },
+  { number: "99.9%", label: "Uptime SLA", icon: Shield }
 ];
 
 const HomePage: React.FC = () => {
@@ -564,11 +593,32 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
             <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
           </div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+          
+          {/* Micro SAAS Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {microSAASServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 relative group cursor-pointer"
+                  onClick={() => window.open(service.link, '_blank')}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    </div>
+                  )}
+                  
                   <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
@@ -581,9 +631,9 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      <div className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors group-hover:underline">
                         Learn More →
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -658,7 +708,7 @@ const HomePage: React.FC = () => {
             {microSAASServices.map((service, index) => (
               <div
                 key={index}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group cursor-pointer"
+                className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 relative group cursor-pointer"
                 onClick={() => window.open(service.link, '_blank')}
               >
                 {service.popular && (

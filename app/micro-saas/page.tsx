@@ -65,7 +65,7 @@ link: 'https://ziontechgroup.com/ai-project-manager',
       rating: 4.7,
       users: '1,800+',
       trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-smart-calendar',
+      link: '/ai-smart-calendar',
       capabilities: ['35% time saved on scheduling', '90% reduction in double bookings', 'Smart meeting optimization', 'Energy-based scheduling']
     },
     { 
@@ -336,34 +336,8 @@ link: 'https://ziontechgroup.com/ai-project-manager',
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
-name: 'AI Holographic Workspace', 
-      href: '/ai-holographic-workspace', 
-      icon: Rocket, 
-      category: 'Immersive Tech', 
-      price: '$1,200/mo',
-      description: 'Next-generation 3D workspace with holographic interfaces and spatial computing capabilities',
-      features: ['3D Workspace', 'Holographic UI', 'Spatial Computing', 'Collaborative Environment', 'Virtual Meetings', 'AR Integration'],
-      popular: true,
-      rating: 4.7,
-users: '1,200+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Mobile App Builder Pro', 
-      href: '/ai-mobile-app-builder', 
-      icon: Smartphone, 
-      category: 'Development', 
-      price: '$399/mo',
-      description: 'AI-powered mobile app development with automated coding, testing, and deployment',
-      features: ['Auto Code Generation', 'UI/UX Design', 'Cross-platform Development', 'Automated Testing', 'App Store Optimization', 'Performance Monitoring'],
-      popular: true,
-      rating: 4.8,
-      users: '2,300+',
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7116
       trial: '21-day free trial',
-      link: 'https://ziontechgroup.com/ai-hr-assistant',
+      link: '/ai-hr-assistant',
       capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
     },
 
@@ -380,7 +354,7 @@ users: '1,200+',
       rating: 4.8,
       users: '3,200+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-voice-assistant',
+      link: '/ai-voice-assistant',
       capabilities: ['95% voice recognition accuracy', 'Support for 50+ languages', 'Real-time voice processing', 'Custom voice cloning']
     },
     { 
@@ -395,7 +369,7 @@ users: '1,200+',
       rating: 4.7,
       users: '2,100+',
       trial: '10-day free trial',
-      link: 'https://ziontechgroup.com/ai-document-scanner',
+      link: '/ai-document-scanner',
       capabilities: ['99% OCR accuracy', 'Process 1000+ docs/hour', 'Auto data extraction', 'Smart document sorting']
     },
     { 
@@ -410,7 +384,7 @@ users: '1,200+',
       rating: 4.9,
       users: '4,500+',
       trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-meeting-transcriber',
+      link: '/ai-meeting-transcriber',
       capabilities: ['98% transcription accuracy', 'Real-time processing', 'Auto action item detection', 'Meeting insights & analytics']
     },
     { 
@@ -425,7 +399,7 @@ users: '1,200+',
       rating: 4.8,
       users: '5,200+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-website-builder',
+      link: '/ai-website-builder',
       capabilities: ['Build websites in minutes', 'Auto SEO optimization', 'Mobile-first design', 'E-commerce ready']
     },
     { 
@@ -440,7 +414,7 @@ users: '1,200+',
       rating: 4.7,
       users: '2,800+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-data-visualizer',
+      link: '/ai-data-visualizer',
       capabilities: ['Auto chart recommendations', 'Interactive dashboards', 'AI-powered insights', 'Real-time data updates']
     },
     { 
@@ -455,7 +429,7 @@ users: '1,200+',
       rating: 4.6,
       users: '1,400+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-email-signature-manager',
+      link: '/ai-email-signature-manager',
       capabilities: ['Professional signatures', 'Brand consistency', 'Team-wide deployment', 'Mobile optimization']
     },
     { 
@@ -470,7 +444,7 @@ users: '1,200+',
       rating: 4.8,
       users: '6,800+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-password-generator',
+      link: '/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
 <<<<<<< HEAD
 users: '900+',
@@ -645,7 +619,7 @@ users: '900+',
       rating: 4.7,
       users: '3,600+',
       trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-logo-designer',
+      link: '/ai-logo-designer',
       capabilities: ['Unlimited logo variations', 'Professional quality', 'Brand consistency', 'Multiple file formats']
     },
     { 
@@ -660,7 +634,7 @@ users: '900+',
       rating: 4.8,
       users: '2,300+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-invoice-designer',
+      link: '/ai-invoice-designer',
       capabilities: ['Professional templates', 'Auto calculations', 'Payment tracking', 'Multi-currency support']
     },
     { 
@@ -675,7 +649,7 @@ users: '900+',
       rating: 4.7,
       users: '4,100+',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-social-media-scheduler',
+      link: '/ai-social-media-scheduler',
       capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
 <<<<<<< HEAD
 }
@@ -834,21 +808,6 @@ users: '120+',
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
                 <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Uptime SLA</div>
-              Micro SAAS Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
-              Powerful AI-powered micro SaaS tools to streamline your business operations
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">50+ AI Tools</span>
-              </div>
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-purple-400 font-semibold">50,000+ Users</span>
-              </div>
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-pink-400 font-semibold">99.9% Uptime</span>
-
               </div>
             </div>
           </div>
@@ -878,8 +837,6 @@ users: '120+',
 
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
-
               }`}
             >
               {/* Animated Background */}
@@ -938,11 +895,6 @@ users: '120+',
                 </div>
               )}
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
-                  {service.price}
-                </div>
-
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-2xl font-bold text-white">
                     {service.price}
@@ -955,7 +907,7 @@ users: '120+',
                 <div className="flex items-center justify-between mb-6 text-sm">
                   <div className="flex items-center text-gray-400">
                     <Users className="w-4 h-4 mr-1" />
-                    {service.users} users
+                    {service.users}
                   </div>
                   <div className="text-cyan-400 font-medium">
                     {service.trial}
@@ -964,7 +916,7 @@ users: '120+',
 
                 <div className="space-y-3">
                   <a
-                    href={service.link}
+                    href={service.link || '#'}
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                   >
                     Get Started
@@ -977,26 +929,6 @@ users: '120+',
                     Learn More
                   </a>
                 </div>
-              </div>
-<div className="flex items-center justify-between mb-6 text-sm">
-                <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
-                  {service.users}
-                </div>
-                <div className="text-cyan-400 font-medium">
-                  {service.trial}
-                </div>
-              </div>
-
-              <a
-                href={service.link || '#'}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
             </div>
           ))}
         </div>

@@ -739,13 +739,7 @@ const AIServicesPage: React.FC = () => {
 }
   ];
 
-<<<<<<< HEAD
-const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
-
-
-=======
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics'];
->>>>>>> cursor/analyze-improve-and-deploy-application-7116
 
   if (!isLoaded) {
     return (
@@ -845,8 +839,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
 
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
-
               }`}
             >
               {/* Animated Background */}

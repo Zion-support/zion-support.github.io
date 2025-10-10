@@ -543,7 +543,6 @@ name: 'AI-Powered Infrastructure Management',
 
   return (
 
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">
 
 
@@ -648,7 +647,6 @@ name: 'AI-Powered Infrastructure Management',
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex) => (
 
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
 <div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
 
 
@@ -713,22 +711,22 @@ name: 'AI-Powered Infrastructure Management',
                           </a>
                         </div>
                       </div>
-<div className="space-y-2">
-                        <a
-                          href={service.link}
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Learn More
-                        </a>
-                        <a
-                          href="/contact"
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Get Started
-                        </a>
+                        <div className="space-y-3">
+                          <a
+                            href={service.link}
+                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                          >
+                            Learn More
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          </a>
+                          <a
+                            href="/contact"
+                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                          >
+                            Get Started
+                          </a>
+                        </div>
                       </div>
-
-
                     </div>
                   ))}
                 </div>
@@ -865,21 +863,15 @@ name: 'AI-Powered Infrastructure Management',
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="https://ziontechgroup.com/contact"
-className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
-
+              href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-
-
             >
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
-
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: +1 (302) 464-0950
