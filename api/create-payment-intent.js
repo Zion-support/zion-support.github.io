@@ -4,28 +4,27 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', 'application/json');
 
-    res.end(JSON.stringify({ error: 'Method not allowed }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
 
-    return}
+    return;
+  }
 
-;
-
-const { amount, currency = 'usd } = req.body || {};
+  const { amount, currency = 'usd' } = req.body || {};
 
   if (!amount) {
     res.statusCode = 400;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', 'application/json');
 
-    res.end(JSON.stringify({ error: 'Amount is required }));
+    res.end(JSON.stringify({ error: 'Amount is required' }));
 
-    return}
+    return;
+  }
 
-  try {;
-
-const paymentIntent = {;;
+  try {
+    const paymentIntent = {
 
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
@@ -36,14 +35,15 @@ const paymentIntent = {;;
 
     res.statusCode = 200;
 
-    res.json({ paymentIntent })} catch (err) {
+    res.json({ paymentIntent });
+  } catch (err) {
     // console.error removed for production
-res.statusCode = 500;
+    res.statusCode = 500;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', 'application/json');
 
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }))}
-
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+  }
 }
 
 export default withErrorLogging(handler);

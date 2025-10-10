@@ -1,29 +1,27 @@
-const fs = require('fs);;
+const fs = require('fs');
 
-const path = require('path);;
+const path = require('path');
 
-;
+const dir = path.join(process.cwd(), 'data');
 
-const dir = path.join(process.cwd(), 'data);;
-
-const file = path.join(dir, 'shipping-rates.json);;
+const file = path.join(dir, 'shipping-rates.json');
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', 'application/json');
 
-    res.end(JSON.stringify({ error: 'Method not allowed }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
 
-    return}
+    return;
+  }
 
-;
-
-const { destination, weight, dimensions } = req.body || {};
+  const { destination, weight, dimensions } = req.body || {};
 
   if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' })}
+    return res.status(400).json({ error: 'Destination and weight are required' });
+  }
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })}
