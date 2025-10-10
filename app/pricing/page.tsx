@@ -1,9 +1,8 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -12,11 +11,11 @@ const PricingPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
       features: [
-        'Basic AI Integration',
+        'Basic AI Analytics',
         'Cloud Infrastructure Setup',
         'Email Support',
         'Monthly Reports',
-        'Basic Analytics Dashboard'
+        'Up to 5 Users'
       ],
       popular: false
     },
@@ -24,13 +23,13 @@ const PricingPage: React.FC = () => {
       name: 'Professional',
       price: '$7,999',
       period: '/month',
-      description: 'Ideal for growing companies with advanced needs',
+      description: 'Ideal for growing businesses with advanced needs',
       features: [
         'Advanced AI Solutions',
         'Custom Development',
         'Priority Support',
-        'Weekly Reports',
-        'Advanced Analytics',
+        'Real-time Monitoring',
+        'Up to 25 Users',
         'API Access',
         'Training Sessions'
       ],
@@ -42,183 +41,125 @@ const PricingPage: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations',
       features: [
-        'Custom AI Solutions',
-        'Dedicated Team',
-        '24/7 Support',
-        'Real-time Monitoring',
+        'Custom AI Development',
+        'Dedicated Support Team',
+        '24/7 Monitoring',
+        'Unlimited Users',
         'Custom Integrations',
-        'White-label Options',
         'On-site Training',
         'SLA Guarantee'
       ],
       popular: false
     }
-  ]
+  ];
 
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-const PagePage: React.FC = () => {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
-    <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
-      </Helmet>
-<<<<<<< HEAD
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Pricing Plans
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our core AI and IT solutions.
+          </p>
+        </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Transparent Pricing
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI and IT services.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
-                    plan.popular 
-                      ? 'border-cyan-400/50 scale-105' 
-                      : 'border-white/10 hover:border-cyan-400/30'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
-                      Most Popular
-                    </div>
-                  )}
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2">/month</span>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}>
-                    {plan.popular ? 'Get Started' : 'Choose Plan'}
-                  </button>
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`relative bg-slate-700/50 p-8 rounded-lg ${
+                plan.popular ? 'ring-2 ring-cyan-500 bg-slate-700/70' : ''
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                    <Star className="w-4 h-4 mr-1" />
+                    Most Popular
+                  </span>
                 </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-16">
-              <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
-
-export default PricingPage
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {plans.map((plan, index) => (
-              <div key={plan.name};
-                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                  plan.popular
-                    ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
-                    : 'border-white/20'
-                }`};>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                      <Star className="w-4 h-4 fill-current" />
-                      Most Popular
-                    </div>
-                  </div>
-                )};
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
+              )}
+              
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <div className="flex items-baseline justify-center mb-2">
+                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-gray-400 ml-1">{plan.period}</span>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature};
-                    </li>
-                  ))};
-                </ul>
-                <Link to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105'
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                  }`};>
-                  Get Started
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <p className="text-gray-300">{plan.description}</p>
               </div>
-            ))};
-          </div>
-          <div className="text-center mt-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Need a Custom Solution?
-              </h3>
-              <p className="text-gray-300 mb-6">
-                We understand that every business is unique. Contact us for a personalized quote tailored to your specific requirements.
-              </p>
-              <Link to="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
-                <Zap className="w-5 h-5" />
-                Get Custom Quote
+
+              <ul className="space-y-3 mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                to="/contact"
+                className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                    : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+                }`}
+              >
+                {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                <ArrowRight className="inline-block ml-2 w-4 h-4" />
               </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-slate-700/50 p-8 rounded-lg">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Can I change plans anytime?
+              </h3>
+              <p className="text-gray-300">
+                Yes, you can upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Is there a free trial?
+              </h3>
+              <p className="text-gray-300">
+                We offer a 14-day free trial for our Professional plan. No credit card required.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                What support do you provide?
+              </h3>
+              <p className="text-gray-300">
+                All plans include email support. Professional and Enterprise plans include priority support and phone support.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Do you offer custom solutions?
+              </h3>
+              <p className="text-gray-300">
+                Yes, our Enterprise plan includes custom development and tailored solutions for your specific needs.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-  );
-  ));)
 };
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+
+export default PricingPage;

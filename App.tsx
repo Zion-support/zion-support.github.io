@@ -17,17 +17,13 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
+import SecurityEnhancer from './app/components/SecurityEnhancer';
 
 // Lazy load pages for better performance
-=======
-import SecurityEnhancer from './app/components/SecurityEnhancer';
-// Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -51,6 +47,7 @@ const CommunityPage = React.lazy(() => import('./app/community/page'));
 const ApiPage = React.lazy(() => import('./app/api/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -71,43 +68,45 @@ const App: React.FC = () => {
               <PerformanceOptimizer>
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-rain particle-bg data-stream">
-                      <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/cookies" element={<CookiesPage />} />
-                            <Route path="/docs" element={<DocsPage />} />
-                            <Route path="/community" element={<CommunityPage />} />
-                            <Route path="/api" element={<ApiPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                            <Route path="/sitemap" element={<SitemapPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
+                    <SecurityEnhancer>
+                      <PerformanceMonitor />
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-rain particle-bg data-stream">
+                        <FuturisticBackground />
+                        <Navigation />
+                        <Breadcrumb />
+                        <main id="main-content" className="flex-1" tabIndex={-1}>
+                          <Suspense fallback={<PageLoader />}>
+                            <Routes>
+                              <Route path="/" element={<HomePage />} />
+                              <Route path="/about" element={<AboutPage />} />
+                              <Route path="/contact" element={<ContactPage />} />
+                              <Route path="/services" element={<ServicesPage />} />
+                              <Route path="/pricing" element={<PricingPage />} />
+                              <Route path="/blog" element={<BlogPage />} />
+                              <Route path="/case-studies" element={<CaseStudiesPage />} />
+                              <Route path="/careers" element={<CareersPage />} />
+                              <Route path="/partners" element={<PartnersPage />} />
+                              <Route path="/support" element={<SupportPage />} />
+                              <Route path="/faq" element={<FAQPage />} />
+                              <Route path="/demo" element={<DemoPage />} />
+                              <Route path="/consultation" element={<ConsultationPage />} />
+                              <Route path="/micro-saas" element={<MicroSaasPage />} />
+                              <Route path="/ai-services" element={<AiServicesPage />} />
+                              <Route path="/it-services" element={<ItServicesPage />} />
+                              <Route path="/privacy" element={<PrivacyPage />} />
+                              <Route path="/terms" element={<TermsPage />} />
+                              <Route path="/cookies" element={<CookiesPage />} />
+                              <Route path="/docs" element={<DocsPage />} />
+                              <Route path="/community" element={<CommunityPage />} />
+                              <Route path="/api" element={<ApiPage />} />
+                              <Route path="/tutorials" element={<TutorialsPage />} />
+                              <Route path="/sitemap" element={<SitemapPage />} />
+                            </Routes>
+                          </Suspense>
+                        </main>
+                        <Footer />
+                      </div>
+                    </SecurityEnhancer>
                   </AccessibilityEnhancer>
                 </EnhancedAccessibility>
               </PerformanceOptimizer>
@@ -115,15 +114,9 @@ const App: React.FC = () => {
           </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
-<<<<<<< HEAD
     </EnhancedErrorBoundary>
   );
 };
 
 App.displayName = 'App';
-=======
-    </ErrorBoundary>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default App;
