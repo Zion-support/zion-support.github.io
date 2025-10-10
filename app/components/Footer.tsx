@@ -16,10 +16,7 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Generation', href: '/ai-content-generation' },
         { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
         { name: 'AI Fintech Platform', href: '/ai-fintech' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-        { name: 'AI Machine Learning', href: '/ai-ml-platform' },
-        { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
         { name: 'AI Quantum Security Suite', href: '/ai-quantum-security-suite' }
@@ -34,11 +31,11 @@ const Footer: React.FC = memo(() => {
         { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
         { name: '24/7 IT Support', href: '/it-support' },
         { name: 'Custom Development', href: '/custom-development' },
-        { name: 'DevOps & CI/CD', href: '/devops-cicd' },
-        { name: 'Database Management', href: '/database-management' },
-        { name: 'Network Design', href: '/network-design' },
-        { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
+        { name: 'AI IT Operations (AIOps)', href: '/ai-ops' },
+        { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
+        { name: 'Financial Services IT', href: '/financial-it' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing' },
+        { name: 'Blockchain Integration', href: '/blockchain-integration' },
         { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
         { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' }
@@ -70,15 +67,17 @@ const Footer: React.FC = memo(() => {
       icon: Zap,
       services: [
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
-        { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
-        { name: 'Smart Cities', href: '/smart-cities' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Energy Management', href: '/ai-energy' },
+        { name: 'AI Music Composition', href: '/ai-music-composition' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Innovation Labs', href: '/innovation-labs' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
+        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
+        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' }
       ]
     }
   ];
