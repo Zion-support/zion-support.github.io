@@ -57,7 +57,10 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-analytics',
+      trial: '14-day free trial',
+      setup: 'Quick setup in 5 minutes'
     },
     {
       id: 11,
@@ -85,7 +88,10 @@ const AIServicesPage: React.FC = () => {
         'Unbreakable encryption',
         'Quantum advantage in ML',
         'Scientific breakthrough potential'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-computing',
+      trial: '30-day free trial',
+      setup: 'Expert setup in 2-4 weeks'
     },
     {
       id: 12,
@@ -113,7 +119,10 @@ const AIServicesPage: React.FC = () => {
         'Context-aware responses',
         'Emotional intelligence',
         'Long-term memory retention'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-neural-memory-assistant',
+      trial: '14-day free trial',
+      setup: 'Quick setup in 10 minutes'
     },
     {
       id: 13,
@@ -986,10 +995,27 @@ const AIServicesPage: React.FC = () => {
                 </ul>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
+              <div className="space-y-2">
+                <a
+                  href={service.link || 'https://ziontechgroup.com/contact'}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                {service.trial && (
+                  <div className="text-center text-sm text-cyan-400 font-medium">
+                    {service.trial}
+                  </div>
+                )}
+                {service.setup && (
+                  <div className="text-center text-xs text-gray-400">
+                    {service.setup}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>

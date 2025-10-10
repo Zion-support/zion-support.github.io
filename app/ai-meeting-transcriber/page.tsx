@@ -1,36 +1,35 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { 
-  Globe, 
-  Palette, 
-  Code, 
-  Smartphone, 
-  Search, 
-  Zap, 
+  Video, 
+  Mic, 
+  MicOff, 
+  Play, 
+  Pause, 
+  Download, 
+  Share, 
   Settings, 
-  Shield, 
+  Users, 
+  Clock, 
   CheckCircle, 
   Star, 
   ArrowRight, 
-  Users, 
-  Clock, 
   MessageSquare,
   Phone,
   Mail,
   MapPin,
-  Monitor,
-  Tablet,
-  Smartphone as Mobile,
-  Eye,
-  Download,
-  Upload,
-  Share
+  Calendar,
+  FileText,
+  Search,
+  Zap,
+  Brain,
+  Shield
 } from 'lucide-react';
 
-const AIWebsiteBuilderPage: React.FC = () => {
+const AIMeetingTranscriberPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isBuilding, setIsBuilding] = useState(false);
-  const [selectedTemplate, setSelectedTemplate] = useState('business');
+  const [isRecording, setIsRecording] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -38,142 +37,119 @@ const AIWebsiteBuilderPage: React.FC = () => {
 
   const features = [
     {
-      icon: Palette,
-      title: 'AI Design Suggestions',
-      description: 'Intelligent design recommendations based on your industry and brand',
-      benefits: ['Color palette generation', 'Layout optimization', 'Typography suggestions', 'Brand consistency']
+      icon: Mic,
+      title: 'Real-time Transcription',
+      description: '98% accuracy real-time transcription with speaker identification and live editing',
+      benefits: ['Live transcription', 'Speaker identification', 'Real-time editing', 'Multi-language support']
     },
     {
-      icon: Code,
-      title: 'Drag & Drop Builder',
-      description: 'Intuitive visual editor with real-time preview and instant updates',
-      benefits: ['Visual editing', 'Real-time preview', 'Component library', 'Custom elements']
+      icon: Users,
+      title: 'Speaker Identification',
+      description: 'Automatically identify and label different speakers with voice recognition',
+      benefits: ['Voice fingerprinting', 'Speaker labeling', 'Turn-taking analysis', 'Speaker analytics']
+    },
+    {
+      icon: FileText,
+      title: 'Action Items Extraction',
+      description: 'AI-powered extraction of action items, decisions, and key points from meetings',
+      benefits: ['Auto action items', 'Decision tracking', 'Key points summary', 'Follow-up reminders']
     },
     {
       icon: Search,
-      title: 'Auto SEO Optimization',
-      description: 'Automatic SEO optimization with meta tags, sitemaps, and performance tuning',
-      benefits: ['Meta tag generation', 'Sitemap creation', 'Performance optimization', 'Schema markup']
+      title: 'Smart Search & Playback',
+      description: 'Search through meeting transcripts and jump to specific moments instantly',
+      benefits: ['Full-text search', 'Timestamp navigation', 'Keyword highlighting', 'Playback controls']
     },
     {
-      icon: Smartphone,
-      title: 'Responsive Design',
-      description: 'Mobile-first design that looks perfect on all devices and screen sizes',
-      benefits: ['Mobile optimization', 'Tablet compatibility', 'Desktop enhancement', 'Cross-browser support']
-    },
-    {
-      icon: Zap,
-      title: 'E-commerce Integration',
-      description: 'Built-in e-commerce features with payment processing and inventory management',
-      benefits: ['Payment gateways', 'Product management', 'Order tracking', 'Inventory sync']
+      icon: Calendar,
+      title: 'Calendar Integration',
+      description: 'Seamless integration with calendar apps for automatic meeting detection',
+      benefits: ['Auto meeting detection', 'Calendar sync', 'Meeting reminders', 'Recurring meetings']
     },
     {
       icon: Shield,
-      title: 'Security & Performance',
-      description: 'Enterprise-grade security with SSL certificates and CDN optimization',
-      benefits: ['SSL certificates', 'CDN delivery', 'Security scanning', 'Performance monitoring']
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with encryption, access controls, and compliance features',
+      benefits: ['End-to-end encryption', 'Role-based access', 'Audit logs', 'GDPR compliance']
     }
   ];
 
-  const templates = [
+  const meetingTypes = [
     {
-      name: 'Business',
-      category: 'Corporate',
-      description: 'Professional business website with modern design',
-      features: ['About page', 'Services', 'Contact form', 'Blog', 'Team section'],
-      price: 'Free',
-      popular: true
+      type: 'Business Meetings',
+      icon: Users,
+      description: 'Board meetings, team standups, and corporate discussions',
+      accuracy: '98.5%',
+      features: ['Action items', 'Decision tracking', 'Attendee management', 'Follow-up tasks']
     },
     {
-      name: 'E-commerce',
-      category: 'Online Store',
-      description: 'Complete online store with shopping cart and checkout',
-      features: ['Product catalog', 'Shopping cart', 'Payment processing', 'Order management', 'Inventory'],
-      price: '$29',
-      popular: true
+      type: 'Client Calls',
+      icon: Phone,
+      description: 'Sales calls, client consultations, and customer support',
+      accuracy: '97.8%',
+      features: ['Client notes', 'Proposal tracking', 'Follow-up reminders', 'CRM integration']
     },
     {
-      name: 'Portfolio',
-      category: 'Creative',
-      description: 'Stunning portfolio for creatives and professionals',
-      features: ['Gallery', 'Project showcase', 'Resume', 'Contact', 'Social links'],
-      price: 'Free',
-      popular: false
+      type: 'Interviews',
+      icon: Video,
+      description: 'Job interviews, research interviews, and media interviews',
+      accuracy: '99.1%',
+      features: ['Candidate notes', 'Question tracking', 'Response analysis', 'Evaluation forms']
     },
     {
-      name: 'Restaurant',
-      category: 'Food & Dining',
-      description: 'Beautiful restaurant website with menu and reservations',
-      features: ['Menu display', 'Online ordering', 'Reservations', 'Location', 'Reviews'],
-      price: '$19',
-      popular: false
-    },
-    {
-      name: 'SaaS',
-      category: 'Technology',
-      description: 'Modern SaaS landing page with features and pricing',
-      features: ['Hero section', 'Features', 'Pricing', 'Testimonials', 'CTA'],
-      price: '$39',
-      popular: true
-    },
-    {
-      name: 'Nonprofit',
-      category: 'Charity',
-      description: 'Engaging nonprofit website with donation features',
-      features: ['Mission statement', 'Donation form', 'Events', 'Volunteer signup', 'Impact stories'],
-      price: 'Free',
-      popular: false
+      type: 'Training Sessions',
+      icon: Brain,
+      description: 'Employee training, workshops, and educational sessions',
+      accuracy: '98.2%',
+      features: ['Learning objectives', 'Key concepts', 'Quiz generation', 'Progress tracking']
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for personal websites and small businesses',
+      description: 'Perfect for small teams and individuals',
       features: [
-        'Up to 5 websites',
-        '10GB storage',
-        'Custom domain',
-        'SSL certificate',
+        'Up to 10 hours/month',
+        'Basic transcription',
+        'Speaker identification',
         'Email support',
-        'Basic templates',
-        'Mobile optimization'
+        'Standard accuracy',
+        'Basic search'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        'Up to 25 websites',
-        '50GB storage',
-        'Custom domains',
-        'SSL certificates',
+        'Up to 50 hours/month',
+        'Advanced transcription',
+        'AI action items extraction',
         'Priority support',
-        'Premium templates',
-        'E-commerce features',
-        'Analytics dashboard',
+        'High accuracy (98%+)',
+        'Advanced search',
+        'Calendar integration',
         'Team collaboration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$399',
       period: '/month',
-      description: 'For large organizations with complex needs',
+      description: 'For large organizations with high-volume needs',
       features: [
-        'Unlimited websites',
-        'Unlimited storage',
-        'Custom domains',
-        'SSL certificates',
+        'Unlimited hours',
+        'Premium transcription',
+        'AI meeting insights',
         '24/7 dedicated support',
-        'All templates',
-        'Advanced e-commerce',
+        'Maximum accuracy (99%+)',
+        'Advanced analytics',
         'Custom integrations',
         'White-label options',
         'SLA guarantees'
@@ -183,21 +159,21 @@ const AIWebsiteBuilderPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '5,200+', label: 'Active Users' },
-    { number: '50+', label: 'Templates' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '24/7', label: 'Support' }
+    { number: '98%', label: 'Transcription Accuracy' },
+    { number: '4,500+', label: 'Active Users' },
+    { number: '50+', label: 'Languages Supported' },
+    { number: '99.9%', label: 'Uptime SLA' }
   ];
 
   const integrations = [
-    { name: 'Google Analytics', icon: '📊' },
-    { name: 'Facebook Pixel', icon: '📘' },
-    { name: 'Mailchimp', icon: '📧' },
-    { name: 'Stripe', icon: '💳' },
-    { name: 'PayPal', icon: '💰' },
-    { name: 'Zapier', icon: '🔗' },
-    { name: 'HubSpot', icon: '🎯' },
-    { name: 'Salesforce', icon: '⚡' }
+    { name: 'Zoom', icon: '📹' },
+    { name: 'Microsoft Teams', icon: '👥' },
+    { name: 'Google Meet', icon: '🎥' },
+    { name: 'Slack', icon: '💬' },
+    { name: 'Notion', icon: '📝' },
+    { name: 'Confluence', icon: '📚' },
+    { name: 'Salesforce', icon: '⚡' },
+    { name: 'HubSpot', icon: '🎯' }
   ];
 
   if (!isLoaded) {
@@ -216,60 +192,61 @@ const AIWebsiteBuilderPage: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              AI Website Builder Pro
+              AI Meeting Transcriber Pro
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
-              Build professional websites in minutes with AI-powered design suggestions, 
-              drag-and-drop editor, and automatic SEO optimization. No coding required.
+              Real-time meeting transcription with 98% accuracy, speaker identification, 
+              and AI-powered action items extraction. Never miss important details again.
             </p>
             
             {/* Interactive Demo */}
             <div className="bg-slate-800/50 rounded-2xl p-8 mb-8 max-w-2xl mx-auto">
               <div className="flex items-center justify-center space-x-4 mb-6">
                 <button
-                  onClick={() => setIsBuilding(!isBuilding)}
+                  onClick={() => setIsRecording(!isRecording)}
                   className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    isBuilding 
-                      ? 'bg-green-500 hover:bg-green-600 animate-pulse' 
+                    isRecording 
+                      ? 'bg-red-500 hover:bg-red-600 animate-pulse' 
                       : 'bg-cyan-500 hover:bg-cyan-600'
                   }`}
                 >
-                  {isBuilding ? <CheckCircle className="w-8 h-8 text-white" /> : <Globe className="w-8 h-8 text-white" />}
+                  {isRecording ? <MicOff className="w-8 h-8 text-white" /> : <Mic className="w-8 h-8 text-white" />}
                 </button>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white mb-1">
-                    {isBuilding ? 'Building Website...' : 'Ready to Build'}
-                  </div>
-                  <div className="text-sm text-gray-300">
-                    {isBuilding ? 'AI is generating your website' : 'Choose a template to start'}
-                  </div>
-                </div>
+                <button
+                  onClick={() => setIsPlaying(!isPlaying)}
+                  className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    isPlaying 
+                      ? 'bg-green-500 hover:bg-green-600 animate-pulse' 
+                      : 'bg-purple-500 hover:bg-purple-600'
+                  }`}
+                >
+                  {isPlaying ? <Pause className="w-8 h-8 text-white" /> : <Play className="w-8 h-8 text-white" />}
+                </button>
               </div>
+              <p className="text-gray-300 text-sm mb-4">
+                {isRecording ? 'Recording meeting...' : isPlaying ? 'Playing back...' : 'Click to start recording your meeting'}
+              </p>
               <div className="flex justify-center space-x-4">
                 <button className="px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
-                  <Upload className="w-4 h-4 inline mr-2" />
-                  Upload
-                </button>
-                <button className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
                   <Download className="w-4 h-4 inline mr-2" />
                   Download
                 </button>
-                <button className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                <button className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
                   <Share className="w-4 h-4 inline mr-2" />
-                  Publish
+                  Share
                 </button>
               </div>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">Build in Minutes</span>
+                <span className="text-cyan-400 font-semibold">98% Accuracy</span>
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-purple-400 font-semibold">Auto SEO</span>
+                <span className="text-purple-400 font-semibold">Real-time Processing</span>
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-pink-400 font-semibold">Mobile-First</span>
+                <span className="text-pink-400 font-semibold">AI Action Items</span>
               </div>
             </div>
           </div>
@@ -295,10 +272,10 @@ const AIWebsiteBuilderPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Powerful Website Building Features
+              Advanced Meeting Transcription Features
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional websites with AI-powered assistance
+              Powerful AI-driven meeting transcription with industry-leading accuracy and intelligent insights
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -323,46 +300,34 @@ const AIWebsiteBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Templates Section */}
+      {/* Meeting Types Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Professional Templates
+              Perfect for Every Meeting Type
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose from 50+ professionally designed templates for every industry
+              Specialized AI models optimized for different types of meetings and conversations
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {templates.map((template, index) => (
-              <div
-                key={index}
-                className={`futuristic-card hover-lift p-6 cursor-pointer transition-all ${
-                  selectedTemplate === template.name.toLowerCase() ? 'ring-2 ring-purple-500' : ''
-                }`}
-                onClick={() => setSelectedTemplate(template.name.toLowerCase())}
-              >
-                {template.popular && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    Popular
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {meetingTypes.map((meetingType, index) => (
+              <div key={index} className="futuristic-card hover-lift p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                    <meetingType.icon className="w-6 h-6 text-white" />
                   </div>
-                )}
-                <div className="mb-4">
-                  <div className="w-full h-32 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg mb-4 flex items-center justify-center">
-                    <Globe className="w-12 h-12 text-gray-400" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{meetingType.type}</h3>
+                    <div className="text-cyan-400 font-semibold">{meetingType.accuracy} accuracy</div>
                   </div>
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold text-white">{template.name}</h3>
-                    <span className="text-cyan-400 font-bold">{template.price}</span>
-                  </div>
-                  <p className="text-gray-400 text-sm mb-2">{template.category}</p>
-                  <p className="text-gray-300 text-sm">{template.description}</p>
                 </div>
+                <p className="text-gray-300 mb-4">{meetingType.description}</p>
                 <div>
-                  <div className="text-sm text-gray-400 mb-2">Features:</div>
-                  <div className="flex flex-wrap gap-1">
-                    {template.features.map((feature, featureIndex) => (
+                  <div className="text-sm text-gray-400 mb-2">Key features:</div>
+                  <div className="flex flex-wrap gap-2">
+                    {meetingType.features.map((feature, featureIndex) => (
                       <span key={featureIndex} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                         {feature}
                       </span>
@@ -375,49 +340,15 @@ const AIWebsiteBuilderPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Device Preview Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Responsive Design Preview
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See how your website looks on all devices with real-time preview
-            </p>
-          </div>
-          <div className="flex justify-center items-center space-x-8">
-            <div className="text-center">
-              <div className="w-16 h-20 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
-                <Mobile className="w-8 h-8 text-gray-400" />
-              </div>
-              <div className="text-sm text-gray-300">Mobile</div>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-16 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
-                <Tablet className="w-8 h-8 text-gray-400" />
-              </div>
-              <div className="text-sm text-gray-300">Tablet</div>
-            </div>
-            <div className="text-center">
-              <div className="w-24 h-16 bg-slate-700 rounded-lg mb-2 flex items-center justify-center">
-                <Monitor className="w-8 h-8 text-gray-400" />
-              </div>
-              <div className="text-sm text-gray-300">Desktop</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Integrations Section */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Seamless Integrations
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and services for a complete website solution
+              Works with all your favorite meeting and productivity tools
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
@@ -432,14 +363,14 @@ const AIWebsiteBuilderPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your website building needs. All plans include our core features.
+              Choose the plan that fits your meeting transcription needs. All plans include our core features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -486,10 +417,10 @@ const AIWebsiteBuilderPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Build Your Dream Website?
+            Ready to Never Miss Meeting Details Again?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join 5,200+ businesses already using our AI Website Builder Pro. Start building today!
+            Join 4,500+ businesses already using our AI Meeting Transcriber Pro. Start your free trial today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -497,7 +428,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
-              Start Building
+              Start Free Trial
             </a>
             <a
               href="tel:+13024640950"
@@ -516,4 +447,4 @@ const AIWebsiteBuilderPage: React.FC = () => {
   );
 };
 
-export default AIWebsiteBuilderPage;
+export default AIMeetingTranscriberPage;

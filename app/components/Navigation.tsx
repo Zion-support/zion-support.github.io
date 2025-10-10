@@ -125,7 +125,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
         { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-<<<<<<< HEAD
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
@@ -133,10 +132,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
         { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
-        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
-=======
-        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true },
+        { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant', description: 'Advanced voice AI with NLP', icon: '🎤', popular: true },
+        { name: 'AI Document Scanner Pro', path: '/ai-document-scanner', description: 'Intelligent document processing', icon: '📄', popular: true },
+        { name: 'AI Meeting Transcriber Pro', path: '/ai-meeting-transcriber', description: 'Real-time meeting transcription', icon: '📝', popular: true },
+        { name: 'AI Website Builder Pro', path: '/ai-website-builder', description: 'AI-powered website creation', icon: '🌐', popular: true }
       ]
     },
     {

@@ -81,6 +81,10 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AIDocumentScannerPage = React.lazy(() => import('./app/ai-document-scanner/page'));
+const AIMeetingTranscriberPage = React.lazy(() => import('./app/ai-meeting-transcriber/page'));
+const AIWebsiteBuilderPage = React.lazy(() => import('./app/ai-website-builder/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -132,6 +136,10 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                      <Route path="/ai-document-scanner" element={<AIDocumentScannerPage />} />
+                      <Route path="/ai-meeting-transcriber" element={<AIMeetingTranscriberPage />} />
+                      <Route path="/ai-website-builder" element={<AIWebsiteBuilderPage />} />
                     </Routes>
                   </Suspense>
                   </main>
