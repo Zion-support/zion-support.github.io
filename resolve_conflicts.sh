@@ -1,41 +1,44 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the Next.js version (pr-26771)
-
 echo "Resolving merge conflicts..."
 
-# List of files with conflicts
-files=(
-  "app/App.tsx"
-  "app/components/PWAInstaller.tsx"
-  "app/components/AccessibilityEnhancer.tsx"
-  "app/components/GlobalErrorBoundary.tsx"
-  "app/components/Footer.tsx"
-  "app/components/PerformanceMonitor.tsx"
-  "app/components/AnalyticsProvider.tsx"
-  "app/components/OptimizedImage.tsx"
-  "app/components/Navigation.tsx"
-  "app/components/EnhancedErrorBoundary.tsx"
-  "app/autonomous-systems/page.tsx"
-  "app/business-intelligence/page.tsx"
-  "app/quantum-computing/page.tsx"
-  "app/ai-content-generation/page.tsx"
-  "app/sitemap/page.tsx"
-  "app/utils/accessibilityChecker.ts"
-  "app/utils/logger.ts"
-  "app/globals.css"
-)
-
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Processing $file..."
-    
-    # Use git checkout to get the version from pr-26771 (the Next.js version)
-    git checkout --theirs "$file" 2>/dev/null || echo "Could not resolve $file automatically"
-    
-    # Add the resolved file
-    git add "$file"
-  fi
+# Find all files with merge conflicts
+find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Resolving conflicts in: $file"
+        
+        # Create a temporary file
+        temp_file=$(mktemp)
+        
+        # Process the file line by line
+        in_conflict=false
+        keep_head=false
+        
+        while IFS= read -r line; do
+            if [[ "$line" == "<<<<<<< HEAD" ]]; then
+                in_conflict=true
+                keep_head=true
+                continue
+            elif [[ "$line" == "=======" ]]; then
+                keep_head=false
+                continue
+            elif [[ "$line" == ">>>>>>>"* ]]; then
+                in_conflict=false
+                keep_head=false
+                continue
+            fi
+            
+            if [[ "$in_conflict" == true && "$keep_head" == true ]]; then
+                echo "$line" >> "$temp_file"
+            elif [[ "$in_conflict" == false ]]; then
+                echo "$line" >> "$temp_file"
+            fi
+        done < "$file"
+        
+        # Replace the original file
+        mv "$temp_file" "$file"
+        echo "Resolved conflicts in: $file"
+    fi
 done
 
-echo "Conflict resolution complete!"
+echo "All merge conflicts resolved!"
