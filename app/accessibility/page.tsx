@@ -2,9 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
-
-const AccessibilityPage: React.FC = () => {
-  const features = [
+;
+const AccessibilityPage: React.FC = () => {const features = [
     {
       icon: Eye,
       title: 'Visual Accessibility',
@@ -42,8 +41,8 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
   ];
-
-  const standards = [
+;
+const standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
@@ -67,7 +66,7 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
@@ -132,10 +131,10 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    ));
                   </ul>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -167,7 +166,7 @@ const AccessibilityPage: React.FC = () => {
                     {standard.status}
                   </span>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -194,8 +193,5 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default AccessibilityPage;

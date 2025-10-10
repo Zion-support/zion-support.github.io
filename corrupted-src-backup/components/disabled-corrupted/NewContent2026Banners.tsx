@@ -37,8 +37,7 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
@@ -75,8 +74,7 @@
           </div>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
@@ -123,8 +121,7 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
@@ -171,8 +168,7 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
@@ -228,8 +224,7 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
@@ -277,8 +272,7 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
@@ -325,8 +319,7 @@
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // AI Retail Automation Banner export function AIRetailAutomationBann e r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
@@ -374,8 +367,7 @@
           </Li, n, k>)
         </div>)
       </div>)
-    </d, i, v > );
- }
+    </d, i, v > )}
 
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() { 
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>

@@ -9,7 +9,7 @@ interface LinkProps {}
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label'?: string;}
+  'aria-label'?: string}
 }
 export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
@@ -20,7 +20,7 @@ export const Link: React.FC<LinkProps> = ({}
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string;}
+  'aria-label'?: string}
 }
 export const Link: React.FC<LinkProps> = ({,
   href;
@@ -34,14 +34,14 @@ export const Link: React.FC<LinkProps> = ({,
 }) => {}
   const handleClick = useCallback((...args) => {}
     if (onClick) {}
-      onClick();}
+      onClick();
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault()
-      window.location.href = href;}
+      window.location.href = href}
     }
   }</LinkProps>
   return (<a
@@ -72,13 +72,9 @@ export const,
       {...props})
     >)
       {children})
-    </a>)
-  )
-}
+    </a>))
 export default Link;
     >
       {children}
-    </a>)
-  );
-};
+    </a>))
 export default Link;

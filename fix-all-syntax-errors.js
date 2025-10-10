@@ -4,41 +4,37 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// __dirname removed
 // Get all files with errors;
-const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
+const getAllFilesWithErrors = () => {;
+const srcDir = path.join(__dirname, 'src');
   const files = [];
-  
-  const scanDirectory = (dir) => {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
+  ;
+const scanDirectory = (dir) => {;
+const items = fs.readdirSync(dir);
+    for (const item of items) {;
+const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
+        scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath)}
     }
   };
   
   scanDirectory(srcDir);
-  return files;
-};
+  return files};
 
 // Template for a simple coming soon page;
-const createComingSoonPage = (filePath) => {
-  const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
+const createComingSoonPage = (filePath) => {;
+const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
   const fileName = path.basename(filePath, '.tsx');
   
   // Skip if it's a component or special file;
-  if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {
-    const dirName = path.basename(path.dirname(filePath));
+  if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {;
+const dirName = path.basename(path.dirname(filePath));
     const title = dirName.split('-').map(word => )
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ');
@@ -47,13 +43,17 @@ const createComingSoonPage = (filePath) => {
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
+;
 const ${title}Page: React.FC = () => {
+return (
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       <div className="flex items-center justify-center min-h-screen">)
         <div className="text-center">),
-          <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
+          <h1 className="text-4xl font-bold text-white mb-4">
+);
+}${title}</h1>
           <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
           <Link;
             to="/contact" 
@@ -64,21 +64,18 @@ const ${title}Page: React.FC = () => {
         </div>
       </div>
       <Footer />,
-    </div>);
-};
+    </div>)};
 
-export default ${title}Page;`;
-  }
+export default ${title}Page;`}
   
-  return null;
-};
+  return null};
 
 // Check if file has syntax errors by trying to parse it;
 const hasSyntaxErrors = (filePath) => {
-// Function to fix syntax errors in a file
+// Function to fix syntax errors in a file;
 function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Check for common syntax error patterns;
@@ -97,30 +94,28 @@ function fixSyntaxErrors(filePath) {
       /{\s*\/\/[^}]*$/m;
     ];
     
-    return errorPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
-    return true;
-  }
+    return errorPatterns.some(pattern => pattern.test(content))} catch (error) {
+    return true}
 };
 
 // Fix all files;
-const fixAllFiles = () => {
-  const files = getAllFilesWithErrors();
+const fixAllFiles = () => {;
+const files = getAllFilesWithErrors();
   let fixedCount = 0;
   
   for (const filePath of files) {
-    if (hasSyntaxErrors(filePath)) {
-      const newContent = createComingSoonPage(filePath);
+    if (hasSyntaxErrors(filePath)) {;
+const newContent = createComingSoonPage(filePath);
       if (newContent) {
         try {
           fs.writeFileSync(filePath, newContent);
-          console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-          fixedCount++;
-        } catch (error) {
-          console.error(`Error fixing ${filePath}:`, error.message);
-        }
-    // Fix common syntax patterns
-    const fixes = [
+          // console.log removed for production
+}`);
+          fixedCount++} catch (error) {
+          // console.error removed for production
+}
+    // Fix common syntax patterns;
+const fixes = [
       // Fix malformed object properties with missing commas
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -184,16 +179,15 @@ const fixAllFiles = () => {
       }
     ];
     
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const fix of fixes) {;
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
-    // Additional specific fixes
-    const specificFixes = [
+    // Additional specific fixes;
+const specificFixes = [
       // Fix the specific pattern in about/page.tsx
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -215,65 +209,57 @@ const fixAllFiles = () => {
       }
     ];
     
-    for (const fix of specificFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const fix of specificFixes) {;
+const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true}
     }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
+      // console.log removed for production
+return true}
     
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false} catch (error) {
+    // console.error removed for production
+return false}
 }
 
-// Function to find files with syntax errors
+// Function to find files with syntax errors;
 function findFilesWithSyntaxErrors() {
-  try {
-    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+  try {;
+const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
     return result.trim().split('
-').filter(file => file.length > 0);
-  } catch (error) {
-    console.error('Error finding files with syntax errors:', error.message);
-    return [];
-  }
+').filter(file => file.length > 0)} catch (error) {
+    // console.error removed for production
+return []}
 }
 
 // Main execution
-console.log('Starting syntax error resolution...');
-
+// console.log removed for production
+;
 const filesWithErrors = findFilesWithSyntaxErrors();
-console.log(`Found ${filesWithErrors.length} files with syntax errors`);
-
+// console.log removed for production
+;
 let fixedCount = 0;
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-
+// console.log removed for production
 // Verify no more syntax errors exist
-try {
-  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+try {;
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-    console.log('✅ All syntax errors resolved!');
-  } else {
-    console.log(`⚠️  ${count} syntax errors still remain`);
-  }
+    // console.log removed for production
+} else {
+    // console.log removed for production
+}
 } catch (error) {
-  console.log('✅ No syntax errors found');
+  // console.log removed for production
 }
 
 

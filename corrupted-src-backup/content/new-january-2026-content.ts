@@ -13,9 +13,7 @@ export interface January2026Content {
   valueProposition: string;
   pricing: {,
     starting: string;
-    enterprise: string;
-  };
-}
+    enterprise: string}}
 
 export const newJanuary2026 Content: January2026 Content[] = [
   {
@@ -69,8 +67,7 @@ The convergence of quantum computing and artificial intelligence opens new front
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',
 export interface January2026Content {/* TODO: Fix JSX expression */}
-  };
-}
+  }}
 
 export const,
   newJanuary2026Content: January2026Content[] = [

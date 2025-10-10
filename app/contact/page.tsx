@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+;
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -14,18 +13,17 @@ const ContactPage: React.FC = () => {
     service: '',
     message: ''
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+;
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+;
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
-    }));
-  }, []);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+    }))}, []);
+;
+const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -40,12 +38,9 @@ const ContactPage: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
+      })} catch (error) {
+      setSubmitStatus('error')} finally {
       setIsSubmitting(false);
-    }
   }, []);
 
   return (
@@ -88,15 +83,11 @@ const ContactPage: React.FC = () => {
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   <span className="text-green-400">Message sent successfully!</span>
-                </div>
-              )}
-
+                </div>);
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-              )}
-
+                </div>);
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -200,16 +191,15 @@ const ContactPage: React.FC = () => {
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
                   {isSubmitting ? (
-                    <>
+                    <React.Fragment>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-                    </>
-                  )}
+                    </React.Fragment>);
                 </button>
               </form>
             </div>
@@ -276,8 +266,5 @@ const ContactPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default ContactPage;

@@ -1,8 +1,8 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
-const, October2025NewContentBanner, 2 = () => {
-  const, newArticle, s = [
+const, October2025NewContentBanner, 2 = () => {;
+const, newArticle, s = [
     {
       tit, l, e: "AI-Powered, Sustainable, Data Cente, r, s","
       descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performance","
@@ -125,20 +125,28 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
           {newArticl, e, s.m, a, p((artic, l, e) => {
-            const, Ico, n = artic, l, e.ic, o, n;
+return (
+;
+const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
         {/* Articles, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"</div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
+);
+}"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
-            const, Ico, n = artic, l, e.ic, o, n;
+return (
+;
+const, Ico, n = artic, l, e.ic, o, n;
             return (</div>
               <Li, n, k
   k, e, y={artic, l, e.sl, u, g}
                 to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;
   r:-transla, t, e-y-1"
-              ></Li>
+              >
+);
+}</Li>
                 {/* Bad, g, e */}
                 <div, className="absolute, to, p-4, righ, t-4">";</div>
         {/* Articles, Gri, d */}"
@@ -200,8 +208,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 {/* Hover, Gradient, Effect */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`
               </Li, n, k>)
-            );
-          })}
+            )})}
         </d, i, v>
         {/* CTA, Sectio, n */}
         <div, className="te, x, t-cent, e, r">";
@@ -224,7 +231,6 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-  );
-};
+  )};
 export default October2025NewContentBanner2;
 ;"`

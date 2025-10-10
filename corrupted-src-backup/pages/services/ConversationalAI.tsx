@@ -8,8 +8,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
-const, ConversationalA, I: Rea, c, t.FC = () => {
-  const, feature, s = [
+const, ConversationalA, I: Rea, c, t.FC = () => {;
+const, feature, s = [
     {
       i, c, o;
   n: Bra, i, n;
@@ -76,8 +76,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "5, language, support"
         "Basic, customizatio, n"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
     {
       na, m, e: "Profession, a, l"
       pri, c, e: "$1,2, 9, 9"
@@ -96,8 +95,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "A/B, testin, g"
         "Sentiment, analysi, s"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e}
     {
       na, m, e: "Enterpri, s, e"
       pri, c, e: "$4,9, 9, 9"
@@ -134,8 +132,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "5, language, support",";
         "Basic, customizatio, n"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
     {
       na, m, e: "Profession, a, l",";
       pri, c, e: "$1,2, 9, 9",";
@@ -154,8 +151,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "A/B, testin, g",";
         "Sentiment, analysi, s"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e}
     {
       na, m, e: "Enterpri, s, e",";
       pri, c, e: "$4,9, 9, 9",";
@@ -176,8 +172,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         "On-premise, deploymen, t",";
         "Traini, n, g & consultati, o, n"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e}
   ];
   const, testimonial, s = [
     {
@@ -238,26 +233,22 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       tit, l, e: "Customer, Suppor, t",";
       ic, o, n: Use, r, s;
       descripti, o, n: "24/7, intelligent, customer service, with, instant responses, and, seamless human, handof, f.",";
-      benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]";
-    }
+      benefi, t, s: ["60% cost, reductio, n", "45% faster, resolutio, n", "95% customer, satisfactio, n"]"}
     {
       tit, l, e: "Sal, e, s & Lead, Generatio, n",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.",";
-      benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]";
-    }
+      benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]"}
     {
       tit, l, e: "Healthcare, Suppor, t",";
       ic, o, n: MessageCirc, l, e;
       descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.",";
-      benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]";
-    }
+      benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]"}
     {
       tit, l, e: "Educati, o, n & Traini, n, g",";
       ic, o, n: Bra, i, n;
       descripti, o, n: "Personalized, learning, assistants and, interactive, training experienc, e, s.",";
-      benefi, t, s: ["50% learning, retentio, n", "40% course, completio, n", "60% student, satisfactio, n"]";
-    }
+      benefi, t, s: ["50% learning, retentio, n", "40% course, completio, n", "60% student, satisfactio, n"]"}
   ];
   const, integration, s = [
     {
@@ -297,12 +288,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       descripti, o, n: "Connect, with, ERP, HR, system, s, and, enterprise, resource planning, platform, s."
     }
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>"
+          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>";
 const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -366,7 +357,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
         <me, t, a;"
@@ -605,15 +596,23 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = useCa, s, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = useCa, s, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -622,9 +621,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
+return (
+;
+const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
                     </d, i, v>
@@ -665,8 +668,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       ))}
                     </ul>
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -705,15 +707,23 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
-                const, Ico, n = integrati, o, n.ic, o, n;
+return (
+;
+const, Ico, n = integrati, o, n.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
+);
+}
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
-                const, Ico, n = integrati, o, n.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
+return (
+;
+const, Ico, n = integrati, o, n.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0"></div>
@@ -722,9 +732,13 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
-                const, Ico, n = integrati, o, n.ic, o, n;
+return (
+;
+const, Ico, n = integrati, o, n.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
                     </d, i, v>
@@ -748,8 +762,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{integrati, o, n.na, m, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{integrati, o, n.descripti, o, n}</p>";
                   </d, i, v>
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -791,8 +804,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</div>
@@ -806,17 +823,25 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
+                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
+return (
+;
+const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+);
+}";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";</div>
                       <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />";
                     </d, i, v>
@@ -849,8 +874,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                );
-              })}
+                )})}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -938,7 +962,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 pl, a, n.popul, a, r;
 ? 'bg-viol, e, t-600, tex, t-white, hove, r: bg-viol, e, t-7, 0, 0'
 ? 'bg-viol, e, t-600, tex, t-white, hov, e;
-  r: bg-viol, e, t-7, 0, 0',';}
+  r: bg-viol, e, t-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -1100,8 +1124,6 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
-  );
-};
-export default ConversationalAI;
-}}}}}}"`
+    </React.Fragment>
+  )};
+export default ConversationalAI}}}}}}"`

@@ -7,10 +7,9 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+;
+const SignupPage: React.FC = () => {;
+const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -24,22 +23,20 @@ const SignupPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+    }))};
+;
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
-    }
+      return}
     
     if (!formData.agreeToTerms) {
       alert('Please agree to the terms and conditions');
@@ -52,8 +49,8 @@ const SignupPage: React.FC = () => {
     setIsLoading(false);
     // Redirect to dashboard or home page
     window.location.href = '/';
-
-  const features = [
+;
+const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -66,8 +63,8 @@ icon$5: Globe,
       title: 'Global Support',
       description:   ,
 $4];
-
-  const benefits = [
+;
+const benefits = [
     'Free 14-day trial',
     'No setup fees',
     '24/7 expert support',
@@ -76,13 +73,12 @@ $4];
     'Regular updates'
 
   return (
-    <>
+    <React.Fragment>
     <div>Coming Soon</div>
 
-  );
-};
+  )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   firstNam,
   e: '',
@@ -110,24 +106,22 @@ const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+    }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       alert('Passwords do not match');
-      return;
-    }
+      return}
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -141,7 +135,7 @@ const handleInputChange = (e: React.ChangeEvent;)
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ico,
   n: Shield,
@@ -153,15 +147,18 @@ const handleInputChange = (e: React.ChangeEvent;)
 
 icon: Award,
       title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients',
-
+      description: '300% average ROI and 95% process automation for our clients',;
 const PagePage: React.FC = () => {
+return (
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+);
+}
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
@@ -377,7 +374,7 @@ Confirm Password;
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
-    </>
+    </React.Fragment>
 
 // Terms of Service;
           </a>{' '}

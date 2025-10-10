@@ -31,5 +31,4 @@ export default function AIHealthcarePage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

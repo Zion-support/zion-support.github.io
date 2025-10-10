@@ -74,12 +74,11 @@ import {
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
   Webcam as WebcamIcon, Speaker as SpeakerIcon
 } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
+;
+const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
+const [searchTerm, setSearchTerm] = useState('');
+;
+const itServices = [
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -402,8 +401,8 @@ const ITConsultingPage: React.FC = () => {
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
     }
   ];
-
-  const categories = [
+;
+const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -416,13 +415,12 @@ const ITConsultingPage: React.FC = () => {
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
-
-  const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+;
+const filteredServices = itServices.filter(service => {;
+const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -468,7 +466,7 @@ const ITConsultingPage: React.FC = () => {
                   type="text"
                   placeholder="Search IT services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={(e) => setSearchTerm(e.target.value);
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
@@ -478,14 +476,14 @@ const ITConsultingPage: React.FC = () => {
             <div className="lg:w-64"></div>
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={(e) => setSelectedCategory(e.target.value);
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
-                ))}
+                ));
               </select>
             </div>
           </div>
@@ -495,7 +493,7 @@ const ITConsultingPage: React.FC = () => {
             {categories.map((category) => (</div>
               <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={() => setSelectedCategory(category.id);
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
@@ -504,7 +502,7 @@ const ITConsultingPage: React.FC = () => {
               >
                 {category.name}
               </button>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -537,7 +535,7 @@ const ITConsultingPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ))}
+                      ));
                     </ul>
                   </div>
                   
@@ -549,7 +547,7 @@ const ITConsultingPage: React.FC = () => {
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      ))}
+                      ));
                     </ul>
                   </div>
                 </div>
@@ -572,9 +570,7 @@ const ITConsultingPage: React.FC = () => {
                 {service.caseStudy && (
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
-                  </div>
-                )}
-
+                  </div>);
                 <div className="space-y-3"></div>
                   <a
                     href={service.link}
@@ -593,7 +589,7 @@ const ITConsultingPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -626,8 +622,5 @@ const ITConsultingPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default ITConsultingPage;

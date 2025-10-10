@@ -8,7 +8,7 @@ export interface SecurityHeadersConfig {
   xFrameOptions?: string;
   xContentTypeOptions?: string;
   referrerPolicy?: string;
-  permissionsPolicy?: string;}
+  permissionsPolicy?: string}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
@@ -19,7 +19,7 @@ export interface SecurityHeadersConfig {}
   xFrameOptions?: string
   xContentTypeOptions?: string
   referrerPolicy?: string
-  permissionsPolicy?: string;}
+  permissionsPolicy?: string}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy
@@ -52,7 +52,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'interest-cohort=()',
     'accelerometer=()',
     'gyroscope=()',
-    'magnetometer=()'].join(', ')}
+    'magnetometer=()'].join(', ');
 }
 /**
  * Get security headers as key-value pairs;
@@ -67,22 +67,22 @@ export function getSecurityHeaders()
     'X-DNS-Prefetch-Control': 'on'}
   }
   if (config.contentSecurityPolicy) {}
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy}
   }
   if (config.strictTransportSecurity) {}
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
+    headers['Strict-Transport-Security'] = config.strictTransportSecurity}
   }
   if (config.xFrameOptions) {}
-    headers['X-Frame-Options'] = config.xFrameOptions;}
+    headers['X-Frame-Options'] = config.xFrameOptions}
   }
   if (config.xContentTypeOptions) {}
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
+    headers['X-Content-Type-Options'] = config.xContentTypeOptions}
   }
   if (config.referrerPolicy) {}
-    headers['Referrer-Policy'] = config.referrerPolicy;}
+    headers['Referrer-Policy'] = config.referrerPolicy}
   }
   if (config.permissionsPolicy) {}
-    headers['Permissions-Policy'] = config.permissionsPolicy;}
+    headers['Permissions-Policy'] = config.permissionsPolicy}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,
@@ -109,8 +109,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   }
-  return headers;
-}
+  return headers}
 /**
  * Get security headers in Next.js format;
  */
@@ -127,6 +126,5 @@ export function getNextSecurityHeaders()
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
-  }));
-}
+  }))
 export default defaultSecurityHeaders;

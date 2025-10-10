@@ -22,9 +22,8 @@ import {
   Send,
   PieChart
 } from 'lucide-react';
-
-const EmailMarketingAutomationPage: React.FC = () => {
-  const features = [
+;
+const EmailMarketingAutomationPage: React.FC = () => {const features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
@@ -46,8 +45,8 @@ const EmailMarketingAutomationPage: React.FC = () => {
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
     'Personalize customer experiences',
@@ -59,7 +58,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
@@ -113,7 +112,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -136,7 +135,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -165,8 +164,5 @@ const EmailMarketingAutomationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default EmailMarketingAutomationPage;

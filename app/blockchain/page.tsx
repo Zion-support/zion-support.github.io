@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-
-const BlockchainPage: React.FC = () => {
-  const blockchainServices = [
+;
+const BlockchainPage: React.FC = () => {const blockchainServices = [
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
@@ -137,11 +136,11 @@ const BlockchainPage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis']
     }
   ];
-
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
+;
+const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blockchain Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
@@ -256,7 +255,7 @@ const BlockchainPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          ))}
+                          ));
                         </ul>
                       </div>
 
@@ -267,7 +266,7 @@ const BlockchainPage: React.FC = () => {
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
+                          ));
                         </div>
                       </div>
 
@@ -279,7 +278,7 @@ const BlockchainPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          ))}
+                          ));
                         </ul>
                       </div>
 
@@ -287,12 +286,11 @@ const BlockchainPage: React.FC = () => {
                         Get Blockchain Quote
                       </button>
                     </div>
-                  ))}
+                  ));
               </div>
             </div>
           </section>
-        ))}
-
+        ));
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,8 +366,5 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default BlockchainPage;

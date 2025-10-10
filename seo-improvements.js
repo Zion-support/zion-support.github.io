@@ -1,13 +1,11 @@
 //SEO improvements;
 // //Optimize meta tags;
 const optimizeMetaTags = () => {
-  //   //Add meta tag optimization logic here;
-};
+  //   //Add meta tag optimization logic here};
 
 //Add structured data;
 const addStructuredData = () => {
-  //   //Add structured data logic here;
-};
+  //   //Add structured data logic here};
 
 //Optimize sitemap;
 const optimizeSitemap = () => {

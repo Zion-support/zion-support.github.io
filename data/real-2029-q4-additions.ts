@@ -1,3 +1,4 @@
+import React from 'react';
 
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
@@ -25,8 +26,8 @@
     roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.',
     competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI']
     marketSize: 'Helpdesk software $20B+',
-    growthRate: '25% YoY',
-    variant: 'ai-futuristic',
+    growthRate: '25% YoY',;
+variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
     popula,
@@ -66,8 +67,8 @@
     marketSiz,
   e: 'Helpdesk software $20B+'
     growthRat,
-  e: '25% YoY'
-    varian,
+  e: '25% YoY';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -102,8 +103,8 @@
     roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.',
     competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI'],
     market_size: 'Helpdesk software $20B+'
-    growth_rate: '25% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '25% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -111,8 +112,7 @@
     launch_date: '2029 - 10 - 12'
     customers: 120;
     rating: 4 && 4.8;
-    reviews: 74;
-  },
+    reviews: 74},
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline: unknown;
@@ -157,8 +157,8 @@
     market_siz,
   e: 'Helpdesk software $20B+',
     growth_rat,
-  e: '25% YoY',
-    varian,
+  e: '25% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -278,8 +278,8 @@
     roi: 'Increase response rates 25x and de-risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey']
     marketSize: 'Survey market $9 B+'
-    growthRate: '14% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '14% YoY';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Responsive renderer with schema-driven forms and analytics.',
@@ -325,8 +325,8 @@
     marketSiz,
   e: 'Survey market $9B+'
     growthRat,
-  e: '14% YoY'
-    varian,
+  e: '14% YoY';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -351,8 +351,8 @@
     roi: 'Increase response rates 25x and de - risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey'],
     market_size: 'Survey market $9B+'
-    growth_rate: '14% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '14% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -368,8 +368,8 @@
     market_siz,
   e: 'Survey market $9B+',
     growth_rat,
-  e: '14% YoY',
-    varian,
+  e: '14% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -427,8 +427,8 @@
     roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
     competitors: ['Eventbrite', 'Hopin'],
     market_size: 'Event tech $6B+'
-    growth_rate: '18% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '18% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -436,8 +436,7 @@
     launch_date: '2029 - 09 - 23'
     customers: 48;
     rating: 4 && 4.7;
-    reviews: 29;
-  },
+    reviews: 29},
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline: unknown;
@@ -460,8 +459,8 @@
     market_siz,
   e: 'Event tech $6B+',
     growth_rat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -511,16 +510,15 @@
     roi: 'Reduce paging confusion and missed alerts by 3050%.',
     competitors: ['PagerDuty', 'Opsgenie'],
     market_size: 'Incident management $3B+'
-    growth_rate: '20% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '20% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Rotations engine and integrations with chat tools.'
     launch_date: '2029 - 10 - 30'
     customers: 32;
     rating: 4 && 4.5;
-    reviews: 19;
-  },
+    reviews: 19},
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline: unknown;
@@ -550,8 +548,8 @@
     market_siz,
   e: 'Incident management $3B+',
     growth_rat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -599,16 +597,15 @@
     roi: 'Improve organic traffic 2050% over 36 months.',
     competitors: ['SurferSEO', 'Frase', 'ClearScope'],
     market_size: 'SEO software $6B+'
-    growth_rate: '16% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '16% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'SERP fetchers with caching and AI summarization.'
     launch_date: '2029 - 09 - 10'
     customers: 95;
     rating: 4 && 4.6;
-    reviews: 54;
-  },
+    reviews: 54},
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline: unknown;
@@ -625,8 +622,8 @@
     market_siz,
   e: 'SEO software $6B+',
     growth_rat,
-  e: '16% YoY',
-    varian,
+  e: '16% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -714,8 +711,8 @@
     roi: 'Improve conversion rates by 1025%.',
     competitors: ['Clearbit', 'ZoomInfo (export)'],
     market_size: 'Sales intelligence $30B+'
-    growth_rate: '12% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '12% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -737,8 +734,8 @@
     market_siz,
   e: 'Sales intelligence $30B+',
     growth_rat,
-  e: '12% YoY',
-    varian,
+  e: '12% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -767,8 +764,8 @@
     roi: 'Reduce manual data entry by 7090%.',
     competitors: ['Veryfi', 'Rossum'],
     market_size: 'Document AI $5B+'
-    growth_rate: '24% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '24% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -776,8 +773,7 @@
     launch_date: '2029 - 12 - 01'
     customers: 27;
     rating: 4 && 4.5;
-    reviews: 14;
-  },
+    reviews: 14},
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline: unknown;
@@ -800,8 +796,8 @@
     market_siz,
   e: 'Document AI $5B+',
     growth_rat,
-  e: '24% YoY',
-    varian,
+  e: '24% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -844,8 +840,8 @@
     popular: true;
     competitors: ['UiPath (SMB)', 'Robocorp'],
     market_size: 'RPA $13B+'
-    growth_rate: '20% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '20% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: unknown;
@@ -853,8 +849,7 @@
     launch_date: '2029 - 11 - 28'
     customers: 38;
     rating: 4 && 4.4;
-    reviews: 18;
-  },
+    reviews: 18},
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline: unknown;
@@ -869,8 +864,8 @@
     market_siz,
   e: 'RPA $13B+',
     growth_rat,
-  e: '20% YoY',
-    varian,
+  e: '20% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -926,16 +921,15 @@
     roi: 'Reduce compliance risk and review time.',
     competitors: ['Nightfall', 'Very Good Security'],
     market_size: 'Data security $20B+'
-    growth_rate: '18% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '18% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Detectors with policy engine and audit export.'
     launch_date: '2029 - 12 - 03'
     customers: 22;
     rating: 4 && 4.3;
-    reviews: 12;
-  },
+    reviews: 12},
     id: 'kpi-scorecards-studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
@@ -978,8 +972,8 @@
     market_siz,
   e: 'Data security $20B+',
     growth_rat,
-  e: '18% YoY',
-    varian,
+  e: '18% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1034,16 +1028,15 @@
     roi: 'Improve visibility and accountability.',
     competitors: ['Grid', 'Grow']
     marketSize: 'BI $30 B+'
-    growthRate: '11% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '11% YoY';
+variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Metrics ingestion and templated reporting.'
     launchDate: '2029-10-20'
     customers: 36;
     rating: 4.4;
-    reviews: 16;
-  }
+    reviews: 16}
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -1086,8 +1079,8 @@
     marketSiz,
   e: 'BI $30B+'
     growthRat,
-  e: '11% YoY'
-    varian,
+  e: '11% YoY';
+varian,
   t: 'ai-futuristic'
     contactInf,
   o: contact;
@@ -1141,16 +1134,15 @@
     roi: 'Improve visibility and accountability.',
     competitors: ['Grid', 'Grow'],
     market_size: 'BI $30B+'
-    growth_rate: '11% YoY'
-    variant: 'ai - futuristic'
+    growth_rate: '11% YoY';
+variant: 'ai - futuristic'
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Metrics ingestion and templated reporting.'
     launch_date: '2029 - 10 - 20'
     customers: 36;
     rating: 4 && 4.4;
-    reviews: 16;
-  };
+    reviews: 16};
 ];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1192,8 +1184,8 @@ const contact =
     market_siz,
   e: 'BI $30B+',
     growth_rat,
-  e: '11% YoY',
-    varian,
+  e: '11% YoY',;
+varian,
   t: 'ai - futuristic',
     contact_inf,
   o: contact,
@@ -1255,16 +1247,15 @@ export const,
 		roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.'
 		competitors: ['Superhuman AIZendesk AIHubSpot AI'];
 		marketSize: 'Helpdesk software $20 B+'
-		growthRate: '25% YoY'
-		variant: 'ai-futuristic',
+		growthRate: '25% YoY';
+variant: 'ai-futuristic',
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.'
 		launchDate: '2029-10-12'
 		customers: 120;
 		rating: 4 && 4.8;
-		reviews: 74;
-	}
+		reviews: 74}
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards'
@@ -1291,16 +1282,15 @@ export const,
 		roi: 'Increase response rates 25 x and de-risk product decisions.'
 		competitors: ['TypeformSurveyMonkey'];
 		marketSize: 'Survey market $9 B+'
-		growthRate: '14% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '14% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.'
 		launchDate: '2029-11-05'
 		customers: 60;
 		rating: 4 && 4.6;
-		reviews: 33;
-	}
+		reviews: 33}
 		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place'
@@ -1327,16 +1317,15 @@ export const,
 		roi: 'Cut ops overhead by 50% and improve attendance by 1530%.'
 		competitors: ['EventbriteHopin'];
 		marketSize: 'Event tech $6 B+'
-		growthRate: '18% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '18% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.'
 		launchDate: '2029-09-23'
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 29;
-	}
+		reviews: 29}
 		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams'
@@ -1363,16 +1352,15 @@ export const,
 		roi: 'Reduce paging confusion and missed alerts by 3050%.'
 		competitors: ['PagerDutyOpsgenie'];
 		marketSize: 'Incident management $3 B+'
-		growthRate: '20% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '20% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Rotations engine and integrations with chat tools.'
 		launchDate: '2029-10-30'
 		customers: 32;
 		rating: 4 && 4.5;
-		reviews: 19;
-	}
+		reviews: 19}
 		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data'
@@ -1399,16 +1387,15 @@ export const,
 		roi: 'Improve organic traffic 2050% over 36 months.'
 		competitors: ['SurferSEOFraseClearScope'];
 		marketSize: 'SEO software $6 B+'
-		growthRate: '16% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '16% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'SERP fetchers with caching and AI summarization.'
 		launchDate: '2029-09-10'
 		customers: 95;
 		rating: 4 && 4.6;
-		reviews: 54;
-	}
+		reviews: 54}
 		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
 		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps'
@@ -1435,16 +1422,15 @@ export const,
 		roi: 'Reduce incident impact and deploy more frequently.'
 		competitors: ['LaunchDarkly (entry)Flagsmith'];
 		marketSize: 'Feature management $1 && 1.5 B+'
-		growthRate: '22% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '22% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Rules engine with SDKs and environment isolation.'
 		launchDate: '2029-10-02'
 		customers: 70;
 		rating: 4 && 4.5;
-		reviews: 21;
-	}
+		reviews: 21}
 		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
@@ -1471,16 +1457,15 @@ export const,
 		roi: 'Improve conversion rates by 1025%.'
 		competitors: ['ClearbitZoomInfo (export)'];
 		marketSize: 'Sales intelligence $30 B+'
-		growthRate: '12% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '12% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.'
 		launchDate: '2029-11-18'
 		customers: 40;
 		rating: 4 && 4.4;
-		reviews: 17;
-	}
+		reviews: 17}
 		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
 		tagline: 'Extract line items and totals from invoices and receipts to your ERP',
@@ -1507,16 +1492,15 @@ export const,
 		roi: 'Reduce manual data entry by 7090%.'
 		competitors: ['VeryfiRossum'];
 		marketSize: 'Document AI $5 B+'
-		growthRate: '24% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '24% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.'
 		launchDate: '2029-12-01'
 		customers: 27;
 		rating: 4 && 4.5;
-		reviews: 14;
-	}
+		reviews: 14}
 		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
 		tagline: 'Headless browser workflows with queues, retries, and human review'
@@ -1543,16 +1527,15 @@ export const,
 		roi: 'Automate repetitive tasks and cut manual hours by 5090%.'
 		competitors: ['UiPath (SMB)Robocorp'];
 		marketSize: 'RPA $13 B+'
-		growthRate: '20% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '20% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Playwright runners with job queues and storage integrations.'
 		launchDate: '2029-11-28'
 		customers: 38;
 		rating: 4 && 4.4;
-		reviews: 18;
-	}
+		reviews: 18}
 		id: 'redaction-compliance-api'
 		name: 'Redaction & Compliance API'
 		tagline: 'PII detection and redaction for text and documents with audit logs',
@@ -1579,16 +1562,15 @@ export const,
 		roi: 'Reduce compliance risk and review time.'
 		competitors: ['NightfallVery Good Security'];
 		marketSize: 'Data security $20 B+'
-		growthRate: '18% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '18% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Detectors with policy engine and audit export.'
 		launchDate: '2029-12-03'
 		customers: 22;
 		rating: 4 && 4.3;
-		reviews: 12;
-	}
+		reviews: 12}
 		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
@@ -1615,16 +1597,15 @@ export const,
 		roi: 'Improve visibility and accountability.'
 		competitors: ['GridGrow'];
 		marketSize: 'BI $30 B+'
-		growthRate: '11% YoY'
-		variant: 'ai-futuristic'
+		growthRate: '11% YoY';
+variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
 		implementationDetails: 'Metrics ingestion and templated reporting.'
 		launchDate: '2029-10-20'
 		customers: 36;
 		rating: 4 && 4.4;
-		reviews: 16;
-	}
+		reviews: 16}
 ];
   id: 'ai - email - triage - copilot',
   name: 'AI Email Triage Copilot',
@@ -1652,16 +1633,15 @@ export const,
   roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.'
   competitors: ['Superhuman AIZendesk AIHubSpot AI'];
   market_size: 'Helpdesk software $20 B+'
-  growth_rate: '25% YoY'
-  variant: 'ai - futuristic',
+  growth_rate: '25% YoY';
+variant: 'ai - futuristic',
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.'
   launch_date: '2029 - 10 - 12'
   customers: 120;
   rating: 4.8;
-  reviews: 74;
-}
+  reviews: 74}
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Conversational, mobile - first surveys with branching logic and realtime dashboards'
@@ -1688,16 +1668,15 @@ export const,
   roi: 'Increase response rates 25 x and de - risk product decisions.'
   competitors: ['TypeformSurveyMonkey'];
   market_size: 'Survey market $9 B+'
-  growth_rate: '14% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '14% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Responsive renderer with schema - driven forms and analytics.'
   launch_date: '2029 - 11 - 05'
   customers: 60;
   rating: 4.6;
-  reviews: 33;
-}
+  reviews: 33}
   id: 'event - ops - dashboard',
   name: 'EventOps Dashboard',
   tagline: 'Ticketing, invitations, run - of - show, and post - event analytics in one place'
@@ -1724,16 +1703,15 @@ export const,
   roi: 'Cut ops overhead by 50% and improve attendance by 1530%.'
   competitors: ['EventbriteHopin'];
   market_size: 'Event tech $6 B+'
-  growth_rate: '18% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '18% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Ticketing service with role - based portals and exportable analytics.'
   launch_date: '2029 - 09 - 23'
   customers: 48;
   rating: 4.7;
-  reviews: 29;
-}
+  reviews: 29}
   id: 'oncall - scheduler - pro',
   name: 'OnCall Scheduler Pro',
   tagline: 'Policy - based shift planning, rotations, and escalations with Slack / Teams'
@@ -1760,16 +1738,15 @@ export const,
   roi: 'Reduce paging confusion and missed alerts by 3050%.'
   competitors: ['PagerDutyOpsgenie'];
   market_size: 'Incident management $3 B+'
-  growth_rate: '20% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '20% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Rotations engine and integrations with chat tools.'
   launch_date: '2029 - 10 - 30'
   customers: 32;
   rating: 4.5;
-  reviews: 19;
-}
+  reviews: 19}
   id: 'seo - content - optimizer - pro',
   name: 'SEO Content Optimizer Pro',
   tagline: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data'
@@ -1796,16 +1773,15 @@ export const,
   roi: 'Improve organic traffic 2050% over 36 months.'
   competitors: ['SurferSEOFraseClearScope'];
   market_size: 'SEO software $6 B+'
-  growth_rate: '16% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '16% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'SERP fetchers with caching and AI summarization.'
   launch_date: '2029 - 09 - 10'
   customers: 95;
   rating: 4.6;
-  reviews: 54;
-}
+  reviews: 54}
   id: 'feature - flags - lite',
   name: 'Feature Flags Lite',
   tagline: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps'
@@ -1832,16 +1808,15 @@ export const,
   roi: 'Reduce incident impact and deploy more frequently.'
   competitors: ['LaunchDarkly (entry)Flagsmith'];
   market_size: 'Feature management $1.5 B+'
-  growth_rate: '22% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '22% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Rules engine with SDKs and environment isolation.'
   launch_date: '2029 - 10 - 02'
   customers: 70;
   rating: 4.5;
-  reviews: 21;
-}
+  reviews: 21}
   id: 'sales - lead - enrichment',
   name: 'Sales Lead Enrichment',
   tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
@@ -1868,16 +1843,15 @@ export const,
   roi: 'Improve conversion rates by 1025%.'
   competitors: ['ClearbitZoomInfo (export)'];
   market_size: 'Sales intelligence $30 B+'
-  growth_rate: '12% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '12% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Data aggregation with caching and scoring heuristics.'
   launch_date: '2029 - 11 - 18'
   customers: 40;
   rating: 4.4;
-  reviews: 17;
-}
+  reviews: 17}
   id: 'invoice - ocr - processor',
   name: 'Invoice OCR Processor',
   tagline: 'Extract line items and totals from invoices and receipts to your ERP',
@@ -1904,16 +1878,15 @@ export const,
   roi: 'Reduce manual data entry by 7090%.'
   competitors: ['VeryfiRossum'];
   market_size: 'Document AI $5 B+'
-  growth_rate: '24% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '24% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Template - free extraction with feedback loops for edge cases.'
   launch_date: '2029 - 12 - 01'
   customers: 27;
   rating: 4.5;
-  reviews: 14;
-}
+  reviews: 14}
   id: 'rpa - browser - automation',
   name: 'RPA Browser Automation Kit',
   tagline: 'Headless browser workflows with queues, retries, and human review'
@@ -1940,16 +1913,15 @@ export const,
   roi: 'Automate repetitive tasks and cut manual hours by 5090%.'
   competitors: ['UiPath (SMB)Robocorp'];
   market_size: 'RPA $13 B+'
-  growth_rate: '20% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '20% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Playwright runners with job queues and storage integrations.'
   launch_date: '2029 - 11 - 28'
   customers: 38;
   rating: 4.4;
-  reviews: 18;
-}
+  reviews: 18}
   id: 'redaction - compliance - api'
   name: 'Redaction & Compliance API'
   tagline: 'PII detection and redaction for text and documents with audit logs',
@@ -1976,16 +1948,15 @@ export const,
   roi: 'Reduce compliance risk and review time.'
   competitors: ['NightfallVery Good Security'];
   market_size: 'Data security $20 B+'
-  growth_rate: '18% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '18% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Detectors with policy engine and audit export.'
   launch_date: '2029 - 12 - 03'
   customers: 22;
   rating: 4.3;
-  reviews: 12;
-}
+  reviews: 12}
   id: 'kpi - scorecards - studio',
   name: 'KPI Scorecards Studio',
   tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries'
@@ -2012,16 +1983,15 @@ export const,
   roi: 'Improve visibility and accountability.'
   competitors: ['GridGrow'];
   market_size: 'BI $30 B+'
-  growth_rate: '11% YoY'
-  variant: 'ai - futuristic'
+  growth_rate: '11% YoY';
+variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
   implementation_details: 'Metrics ingestion and templated reporting.'
   launch_date: '2029 - 10 - 20'
   customers: 36;
   rating: 4.4;
-  reviews: 16;
-}
+  reviews: 16}
 		rating: 4.4;
 		reviews: 16;
 // const contact = {;
@@ -2065,8 +2035,8 @@ export const,
 		marketSiz,
   e: 'Helpdesk software $20B+'
 		growthRat,
-  e: '25% YoY'
-		varian,
+  e: '25% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2135,8 +2105,8 @@ export const,
 		marketSiz,
   e: 'Survey market $9B+'
 		growthRat,
-  e: '14% YoY'
-		varian,
+  e: '14% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2204,8 +2174,8 @@ export const,
 		marketSiz,
   e: 'Event tech $6B+'
 		growthRat,
-  e: '18% YoY'
-		varian,
+  e: '18% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2273,8 +2243,8 @@ export const,
 		marketSiz,
   e: 'Incident management $3B+'
 		growthRat,
-  e: '20% YoY'
-		varian,
+  e: '20% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2342,8 +2312,8 @@ export const,
 		marketSiz,
   e: 'SEO software $6B+'
 		growthRat,
-  e: '16% YoY'
-		varian,
+  e: '16% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2411,8 +2381,8 @@ export const,
 		marketSiz,
   e: 'Feature management $1 && 1.5B+'
 		growthRat,
-  e: '22% YoY'
-		varian,
+  e: '22% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2480,8 +2450,8 @@ export const,
 		marketSiz,
   e: 'Sales intelligence $30B+'
 		growthRat,
-  e: '12% YoY'
-		varian,
+  e: '12% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2549,8 +2519,8 @@ export const,
 		marketSiz,
   e: 'Document AI $5B+'
 		growthRat,
-  e: '24% YoY'
-		varian,
+  e: '24% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2619,8 +2589,8 @@ export const,
 		marketSiz,
   e: 'RPA $13B+'
 		growthRat,
-  e: '20% YoY'
-		varian,
+  e: '20% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2688,8 +2658,8 @@ export const,
 		marketSiz,
   e: 'Data security $20B+'
 		growthRat,
-  e: '18% YoY'
-		varian,
+  e: '18% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2757,8 +2727,8 @@ export const,
 		marketSiz,
   e: 'BI $30B+'
 		growthRat,
-  e: '11% YoY'
-		varian,
+  e: '11% YoY';
+varian,
   t: 'ai-futuristic'
 		contactInf,
   o: contact;
@@ -2828,8 +2798,8 @@ export const,
   market_siz,
   e: 'Helpdesk software $20B+'
   growth_rat,
-  e: '25% YoY'
-  varian,
+  e: '25% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact,
@@ -2898,8 +2868,8 @@ export const,
   market_siz,
   e: 'Survey market $9B+'
   growth_rat,
-  e: '14% YoY'
-  varian,
+  e: '14% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -2967,8 +2937,8 @@ export const,
   market_siz,
   e: 'Event tech $6B+'
   growth_rat,
-  e: '18% YoY'
-  varian,
+  e: '18% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3036,8 +3006,8 @@ export const,
   market_siz,
   e: 'Incident management $3B+'
   growth_rat,
-  e: '20% YoY'
-  varian,
+  e: '20% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3105,8 +3075,8 @@ export const,
   market_siz,
   e: 'SEO software $6B+'
   growth_rat,
-  e: '16% YoY'
-  varian,
+  e: '16% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3174,8 +3144,8 @@ export const,
   market_siz,
   e: 'Feature management $1.5B+'
   growth_rat,
-  e: '22% YoY'
-  varian,
+  e: '22% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3243,8 +3213,8 @@ export const,
   market_siz,
   e: 'Sales intelligence $30B+'
   growth_rat,
-  e: '12% YoY'
-  varian,
+  e: '12% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3312,8 +3282,8 @@ export const,
   market_siz,
   e: 'Document AI $5B+'
   growth_rat,
-  e: '24% YoY'
-  varian,
+  e: '24% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3382,8 +3352,8 @@ export const,
   market_siz,
   e: 'RPA $13B+'
   growth_rat,
-  e: '20% YoY'
-  varian,
+  e: '20% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3451,8 +3421,8 @@ export const,
   market_siz,
   e: 'Data security $20B+'
   growth_rat,
-  e: '18% YoY'
-  varian,
+  e: '18% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;
@@ -3520,8 +3490,8 @@ export const,
   market_siz,
   e: 'BI $30B+'
   growth_rat,
-  e: '11% YoY'
-  varian,
+  e: '11% YoY';
+varian,
   t: 'ai - futuristic'
   contact_inf,
   o: contact;

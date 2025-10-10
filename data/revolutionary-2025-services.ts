@@ -75,8 +75,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
     id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",

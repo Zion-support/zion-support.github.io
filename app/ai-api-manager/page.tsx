@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
+;
+const PagePage: React.FC = () => {const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
@@ -23,8 +22,8 @@ const PagePage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
@@ -93,10 +92,10 @@ const PagePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -119,7 +118,7 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -169,11 +168,10 @@ const PagePage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -198,7 +196,7 @@ const PagePage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -226,8 +224,5 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default PagePage;

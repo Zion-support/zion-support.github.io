@@ -1,14 +1,14 @@
 import React from 'react';
 
-export default function AboutSection() {
-  const stats = [
+export default function AboutSection() {;
+const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
   ];
-
-  const values = [
+;
+const values = [
     {
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
@@ -196,5 +196,4 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}

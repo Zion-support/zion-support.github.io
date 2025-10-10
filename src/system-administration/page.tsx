@@ -1,3 +1,4 @@
+import React from 'react';
 
 
 
@@ -6,10 +7,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Settings, Shield, BarChart, Zap, CheckCircle, Star,  Settings,  Shield,  Zap } from 'lucide-react';
-const SystemAdministrationPage: React.FC = () => {
-  const features = [];
+const SystemAdministrationPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -19,8 +20,7 @@ const SystemAdministrationPage: React.FC = () => {
       descriptio,
   n: 'Comprehensive system administration and maintenance',
       benefit,
-  s: ['Server management', 'User administration', 'System monitoring'];
-    },
+  s: ['Server management', 'User administration', 'System monitoring']},
       ico,
   n: Shield,
       titl,
@@ -98,8 +98,7 @@ const SystemAdministrationPage: React.FC = () => {
       <Footer /></Footer>
 
     </div>
-  );
-};
+  )};
 
 
 export default SystemAdministrationPage;

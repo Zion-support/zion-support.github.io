@@ -36,8 +36,5 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default PagePage;

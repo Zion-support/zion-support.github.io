@@ -3,9 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const BlockchainWeb3Page: React.FC = () => {
-  const features = [
+;
+const BlockchainWeb3Page: React.FC = () => {const features = [
     {
       icon: Zap,
       title: 'Smart Contracts',
@@ -33,7 +32,7 @@ const BlockchainWeb3Page: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
@@ -68,15 +67,12 @@ const BlockchainWeb3Page: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default BlockchainWeb3Page;

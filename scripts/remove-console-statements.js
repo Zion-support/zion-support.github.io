@@ -47,41 +47,37 @@ const excludePatterns = [
   '**/corrupted*/**',
   '**/temp*/**'
 ];
-
+;
 let totalFiles = 0;
 let processedFiles = 0;
 let removedStatements = 0;
-
+;
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileRemovedCount = 0;
 
     // Remove console statements;
-    consolePatterns.forEach(pattern => {)
-      const matches = newContent.match(pattern);
+    consolePatterns.forEach(pattern => {);
+const matches = newContent.match(pattern);
       if (matches) {
         fileRemovedCount += matches.length;
         newContent = newContent.replace(pattern, '');
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
-  from: ${filePath}`);
-    }
+  from: ${filePath}`)}
     
-    return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    // // console.error removed for production
+return false}
 }
 
 // Main function;
 async function main() {/* TODO: Fix JSX expression */}
 }
-  // console.log('🧹 Removing console statements from production code...\n');
-  
-  // Get all TypeScript and JavaScript files in the app directory;
+  // // console.log removed for production
+// Get all TypeScript and JavaScript files in the app directory;
   const patterns = [
     'app/**/*.{ts,tsx,js,jsx}',
     '!app/**/*.test.{ts,tsx,js,jsx}',
@@ -90,8 +86,8 @@ async function main() {/* TODO: Fix JSX expression */}
     '!**/.next/**',
     '!**/dist/**'
   ];
-  
-  let totalFiles = 0;
+  ;
+let totalFiles = 0;
   let modifiedFiles = 0;
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
@@ -103,57 +99,54 @@ async function main() {/* TODO: Fix JSX expression */}
 
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
-      removedStatements += fileRemovedCount;
-    }
+      // console.log removed for production
+removedStatements += fileRemovedCount}
 
-    processedFiles++;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    processedFiles++} catch (error) {
+    // console.error removed for production
+}
 }
 
 async function main() {
-  console.log('🚀 Starting console statement removal...\n');
-
-  // Get all files to process;
+  // console.log removed for production
+// Get all files to process;
   const allFiles = [];
-  for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+  for (const pattern of filePatterns) {;
+const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-    allFiles.push(...files);
-  }
+    allFiles.push(...files)}
 
   // Remove duplicates;
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
 
-  console.log(`📁 Found ${totalFiles} files to process\n`);
-
-  // Process each file;
+  // console.log removed for production
+// Process each file;
   uniqueFiles.forEach(processFile);
 
-  console.log(`\n🎉 Console statement removal completed!`);
-  console.log(`📊 Statistics: `);
-  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
-  console.log(`   - Console statements removed: ${removedStatements}`);
+  // console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
+  main()}
 
-export { processFile, consolePatterns };
-  }
+export { processFile, consolePatterns }}
   `
-  // console.log(`\n📊 Summar)`
+  // // console.log removed for production
+`
   y:`);`
-  // console.log(`   Total files)`
+  // // console.log removed for production
+`
   processed: ${totalFiles}`);`
-  // console.log(`   Files)`
+  // // console.log removed for production
+`
   modified: ${modifiedFiles}`);`
-  // console.log(`   Console statements)`
+  // // console.log removed for production
+`
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}

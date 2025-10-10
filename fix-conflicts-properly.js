@@ -3,14 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// __dirname removed
 // Function to fix merge conflicts and syntax errors;
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version;
@@ -55,8 +54,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix duplicate 'use client' directives;
       .replace(/'use client';\s*'use client';/g, "'use client';")
       // Fix duplicate React imports;
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
-        const lines = match.split('\n');
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {;
+const lines = match.split('\n');
         return lines[0] + ';';
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
       })
@@ -75,8 +74,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     let bracketCount = 0;
     let parenCount = 0;
 
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+let line = lines[i];
       const trimmed = line.trim();
 
       // Track JSX state;
@@ -121,10 +120,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       if (braceCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < braceCount; j++) {
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-          line += '\n}';
-        }
-        modified = true;
-      }
+          line += '\n}'}
+        modified = true}
 
       // Fix missing closing brackets;
       if (bracketCount > 0 && i === lines.length - 1) {
@@ -132,8 +129,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
           line += '\n]';
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
-      }
+        modified = true}
 
       // Fix missing closing parentheses;
       if (parenCount > 0 && i === lines.length - 1) {
@@ -141,11 +137,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
           line += '\n)';
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
-        modified = true;
-      }
+        modified = true}
 
-      cleanedLines.push(line);
-    }
+      cleanedLines.push(line)}
 
     content = cleanedLines.join('\n');
 
@@ -156,33 +150,29 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-    if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
+      // console.log removed for production
+if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false} catch (error) {/* TODO: Fix JSX expression */}`
+    // console.error removed for production
+return false}
 }
 
 // Function to find all TypeScript/React files;
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;
+const files = [];
+  ;
+function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -191,44 +181,45 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
   }
   
   traverse(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
-console.log('Starting proper merge conflict resolution...');
-
+// console.log removed for production
+;
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
-
+;
 let fixedCount = 0;
 let errorCount = 0;
 
 for (const file of files) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Failed to process ${file}:`, error.message);
-    errorCount++;
-  }
+    // console.error removed for production
+errorCount++}
 }
 `
-console.log(`\nMerge conflict resolution)`
+// console.log removed for production
+`
   complete:`);`
-console.log(`- Files)`
+// console.log removed for production
+`
   processed: ${files.length}`);`
-console.log(`- Files)`
+// console.log removed for production
+`
   fixed: ${fixedCount}`);`
-console.log(`- Error)`
+// console.log removed for production
+`
   s: ${errorCount}`);
 
-console.log(`\nMerge conflict resolution complete: `);
-console.log(`- Files processed: ${files.length}`);
-console.log(`- Files fixed: ${fixedCount}`);
-console.log(`- Errors: ${errorCount}`);
-
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
 // Run linting to check for remaining issues;
-console.log('\nRunning linting to check for remaining issues...');
+// console.log removed for production
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
-  console.log('Linting passed!');
+  // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
 }"`

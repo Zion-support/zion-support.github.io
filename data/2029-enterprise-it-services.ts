@@ -123,8 +123,7 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const enterpriseITServices2029: EnterpriseItService2029[] = [,
     id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",

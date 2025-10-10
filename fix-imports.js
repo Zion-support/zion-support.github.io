@@ -43,8 +43,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 
       if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'));
-        modified = true;
-      }
+        modified = true}
     }
 
     //Fix Link imports if missing;

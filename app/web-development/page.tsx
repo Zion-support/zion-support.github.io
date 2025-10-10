@@ -7,8 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const $1: React.FC = () => {
-  const webServices = [,
+const $1: React.FC = () => {const webServices = [,
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
@@ -49,8 +48,8 @@ const $1: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'}
   ];
-
-  const technologies = [
+;
+const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
@@ -58,35 +57,31 @@ const $1: React.FC = () => {
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
   ];
-
-  const process = [
+;
+const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart,
-    },
+      icon: BarChart},
     {
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code,
-    },
+      icon: Code},
     {
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe,
-    },
+      icon: Globe},
     {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield,
-    }
+      icon: Shield}
   ];
 
-  return(<>
+  return(<React.Fragment>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -195,7 +190,7 @@ const $1: React.FC = () => {
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                         </CheckCircle>
-                      ))}
+                      ));
                     </ul>
                   </div>
 
@@ -205,11 +200,9 @@ const $1: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
                           </ArrowRight>
-                        ))}
+                        ));
                       </ul>
-                    </div>
-                  )}
-
+                    </div>);
                   <a;
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
@@ -220,7 +213,7 @@ const $1: React.FC = () => {
                   >
                     Get Started;
                   </a>,
-                </div>))}
+                </div>));
             </div>
           </section>
 
@@ -245,7 +238,7 @@ const $1: React.FC = () => {
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </section>
 
@@ -272,7 +265,7 @@ const $1: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </section>
 
@@ -315,7 +308,5 @@ const $1: React.FC = () => {
 
         <Footer />
       </div>,
-    </>);
-};
-
+    </React.Fragment>)
 export default WebDevelopmentPage;

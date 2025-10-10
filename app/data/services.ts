@@ -2,9 +2,7 @@ import {
   Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;
-} from 'lucide-react';
-
+  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon} from 'lucide-react'
 export const microSAASServices = [
   // Productivity & Management Tools;
   {
@@ -260,8 +258,7 @@ export const microSAASServices = [
     rating: 4.8;
     users: '18,000+',
     freeTrial: '7 days'}
-];
-
+]
 export const aiServices = [
   {
     title: 'Machine Learning Solutions',
@@ -375,8 +372,7 @@ export const aiServices = [
     rating: 4.7;
     users: '600+',
     freeTrial: '30 days'}
-];
-
+]
 export const itServices = [
   {
     title: 'Cloud Migration Services',
@@ -462,8 +458,7 @@ export const itServices = [
     rating: 4.8;
     users: '200+',
     freeTrial: '30 days'}
-];
-
+]
 export const specializedServices = [
   {
     title: 'Quantum Computing Solutions',
@@ -521,7 +516,7 @@ export const specializedServices = [
     rating: 4.8;
     users: '400+',
     freeTrial: '30 days'}
-];
+]
 export interface Service {
   id: string,
   name: string,
@@ -533,8 +528,7 @@ export interface Service {
     starting: number,
     currency: string,
     period: 'month' | 'year' | 'one-time';
-    custom?: boolean;
-  };
+    custom?: boolean};
   benefits: string[];
   useCases: string[];
   icon: string,
@@ -544,14 +538,11 @@ export interface Service {
   contact: {
     phone: string,
     email: string,
-    demo: string,
-  };
+    demo: string};
   marketPrice?: {
     min: number,
     max: number,
-    currency: string,
-  };
-}
+    currency: string}}
 
 export const services: Service[] = [
   // AI Services
@@ -1331,8 +1322,7 @@ export const services: Service[] = [
       currency: 'USD'
     }
   }
-];
-
+]
 export const serviceCategories = [
   {
     id: 'ai',
@@ -1366,8 +1356,7 @@ export const serviceCategories = [
     color: 'text-pink-400',
     bgColor: 'bg-pink-500/10'
   }
-];
-
+]
 export const contactInfo = {
   phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',

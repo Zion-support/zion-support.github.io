@@ -12,9 +12,8 @@ import {
   Send,
   CheckCircle
 } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+;
+const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -24,19 +23,18 @@ phone: '',
     timeline: '',
     message: ''
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+;
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+;
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+    }))}, []);
+;
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -54,15 +52,12 @@ phone: '',
         budget: '',
         timeline: '',
         message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
+      })} catch (error) {
+      setSubmitStatus('error')} finally {
       setIsSubmitting(false);
-    }
   };
-
-  const services = [
+;
+const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -73,8 +68,8 @@ phone: '',
     'Consulting',
     'Other'
   ];
-
-  const contactInfo = [
+;
+const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
@@ -102,7 +97,7 @@ phone: '',
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
@@ -136,15 +131,11 @@ phone: '',
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
-              )}
-
+                </div>);
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-              )}
-
+                </div>);
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -237,7 +228,7 @@ phone: '',
                         <option key={service} value={service}>
                           {service}
                         </option>
-                      ))}
+                      ));
                     </select>
                   </div>
                 </div>
@@ -266,16 +257,15 @@ phone: '',
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
-                    <>
+                    <React.Fragment>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
-                    </>
-                  )}
+                    </React.Fragment>);
                 </button>
               </form>
             </div>
@@ -354,9 +344,5 @@ phone: '',
           </div>
         </section>
       </div>
-</div>
-
-  );
-};
-
+</div>)
 export default ContactPage;

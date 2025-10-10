@@ -9,7 +9,7 @@ export interface BlogPost {
   tags: string[];
   featured: boolean;
   readTime: string;
-  image?: string;}
+  image?: string}
 
 export const blogPosts: BlogPost[] = [,
   {,

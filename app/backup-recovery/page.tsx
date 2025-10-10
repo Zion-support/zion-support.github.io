@@ -2,9 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
-
-const BackupRecoveryPage: React.FC = () => {
-  const features = [
+;
+const BackupRecoveryPage: React.FC = () => {const features = [
     {
       icon: Database,
       title: 'Automated Backups',
@@ -26,8 +25,8 @@ const BackupRecoveryPage: React.FC = () => {
       description: 'Seamless cloud backup and recovery across multiple platforms'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Automated backup scheduling',
     'Real-time data protection',
     'Enterprise-grade security and compliance',
@@ -78,7 +77,7 @@ const BackupRecoveryPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -101,7 +100,7 @@ const BackupRecoveryPage: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -127,8 +126,5 @@ const BackupRecoveryPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default BackupRecoveryPage;

@@ -75,8 +75,7 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const emergingTechnologyServices: EmergingTechnologyService[] = [,
     id: "blockchain-platform", name: "Blockchain Development Platform",

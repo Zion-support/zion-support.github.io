@@ -3,10 +3,9 @@ import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
+;
+const AIAnalyticsPage: React.FC = () => {;
+const features = [
     {
       icon: Brain,
       title: 'Predictive Analytics',
@@ -27,11 +26,11 @@ const AIAnalyticsPage: React.FC = () => {
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+;
+const AIAnalyticsPage: React.FC = () => {;
+const features = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   ico,
@@ -88,8 +87,8 @@ ico,
         'Automated responses'
     }
   ];
-
-  const useCases = [
+;
+const useCases = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -103,9 +102,8 @@ titletitle: 'Financial Forecasting',
       color:       ,
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
-      color: 'text-yellow-400'
-
-  const pricingTiers = [
+      color: 'text-yellow-400';
+const pricingTiers = [
       name: 'Starter',
       price: '$1,500',
       period: '/month',
@@ -143,9 +141,8 @@ namename: 'Professional',
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
-
-  const benefits = [
+      bgColor: 'bg-cyan-500/10';
+const benefits = [
       icon: Star,
       title: '95% Accuracy',
       description:       ,
@@ -155,8 +152,8 @@ title$5: 'Actionable Insights',
       description:       ,
 icon$5: Award,
       title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
-  const useCases = [
+      description: '300% average ROI for our analytics clients';
+const useCases = [
 
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
@@ -164,7 +161,7 @@ icon$5: Award,
       color: 'text-green-400',
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -319,9 +316,8 @@ icon$5: Award,
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default AIAnalyticsPage;
 {/* Use Cases */}
@@ -361,9 +357,7 @@ export default AIAnalyticsPage;
 
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
-
-}
+  // TODO: Add content}
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
@@ -400,8 +394,7 @@ export default AIAnalyticsPage;
       <Footer />
 
     </div>
-  );
-};
+  )};
 
 
 export default AiAnalyticsPage;

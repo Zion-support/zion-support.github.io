@@ -1,6 +1,6 @@
 import React from 'react';
-const January2026NewContentShowcaseBanne, r: React.FC = () => {,
-  const features = [,
+const January2026NewContentShowcaseBanne, r: React.FC = () => {,;
+const features = [,
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     { ic, o, n: Za, p, title: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
     { ic, o, n: Netw, o, r, k, title: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },
@@ -155,6 +155,5 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
       <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" /></div>"
       <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0" /></div>
     </moti, o, n.di, v>
-  );
-};
+  )};
 export default January2026NewContentShowcaseBanner;"

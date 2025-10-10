@@ -2,10 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-<<<<<<< HEAD
-const Next.dPage: React.FC = () => {
-  const features = [
+;
+const Next.dPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,8 +25,8 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -46,88 +44,6 @@ const Next.dPage: React.FC = () => {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
-=======
-// Type definitions for Next.js compatibility in Vite
-export interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
-  formatDetection?: {
-    email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
-  };
-  metadataBase?: URL;
-  alternates?: {
-    canonical?: string;
-    languages?: Record<string, string>;
-  };
-  openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
-    images?: Array<{
-      url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
-    }>;
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
-  };
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    };
-  };
-  verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  };
-}
-
-export interface MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
-
-export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
-
-// Custom Next.js types
-export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -157,7 +73,6 @@ export interface NextPageProps {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -169,12 +84,6 @@ export interface NextPageProps {
               Our next.d solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-=======
-// API route types
-export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -185,7 +94,7 @@ export interface ApiRouteHandler {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -202,14 +111,13 @@ export interface ApiRouteHandler {
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -237,71 +145,5 @@ export interface ApiRouteHandler {
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default Next.dPage;
-=======
-// Server components types
-export interface ServerComponentProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-// Client components types
-export interface ClientComponentProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-// Route handlers
-export interface RouteHandler {
-  GET?: (req: Request) => Promise<Response>;
-  POST?: (req: Request) => Promise<Response>;
-  PUT?: (req: Request) => Promise<Response>;
-  DELETE?: (req: Request) => Promise<Response>;
-  PATCH?: (req: Request) => Promise<Response>;
-}
-
-// Dynamic route types
-export interface DynamicRoute {
-  params: { [key: string]: string };
-}
-
-// Static generation types
-export interface StaticProps {
-  props: { [key: string]: any };
-  revalidate?: number;
-  notFound?: boolean;
-}
-
-// ISR types
-export interface ISRConfig {
-  revalidate: number;
-  tags?: string[];
-}
-
-// Edge runtime types
-export interface EdgeRuntime {
-  runtime: 'edge';
-}
-
-// Node.js runtime types
-export interface NodeRuntime {
-  runtime: 'nodejs';
-}
-
-// Extend Next.js types
-declare module 'next' {
-  interface NextApiRequest {
-    user?: {
-      id: string;
-      email: string;
-      name?: string;
-    };
-  }
-}
-
-export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4

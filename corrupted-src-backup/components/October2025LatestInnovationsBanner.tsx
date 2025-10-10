@@ -1,5 +1,9 @@
 const, October2025LatestInnovationsBanne, r = () => {
+return (
+
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
+);
+}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
@@ -427,7 +431,6 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 export default October2025LatestInnovationsBanner;
 ;"

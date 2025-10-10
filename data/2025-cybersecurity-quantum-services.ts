@@ -1,3 +1,4 @@
+import React from 'react';
 
 export interface CybersecurityQuantumService;
 export interface CybersecurityQuantumService {;
@@ -302,8 +303,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 01'
     customers: 1200;
     rating: 4 && 4.8;
-    reviews: 950;
-  },
+    reviews: 950},
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true;
@@ -472,8 +472,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 01 - 20'
     customers: 1800;
     rating: 4 && 4.7;
-    reviews: 1400;
-  },
+    reviews: 1400},
       'Highest security standards, Government security requirements, Industry-specific standards'],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network',
     id: 'quantum - key - distribution - network',
@@ -615,8 +614,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 03 - 01'
     customers: 120;
     rating: 4 && 4.9;
-    reviews: 95;
-  },
+    reviews: 95},
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
@@ -820,8 +818,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     launch_date: '2024 - 02 - 15'
     customers: 2500;
     rating: 4 && 4.8;
-    reviews: 1900;
-  },
+    reviews: 1900},
   id: string, name: string;
   tagline: string, description: string;
   category: string;
@@ -829,8 +826,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: string;
-    },
+    enterprise: string},
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[],
@@ -841,8 +837,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   icon: string, color: string;
   popular: boolean, launchDate: string;
   customers: number, rating: number;
-  reviews: number;
-}
+  reviews: number}
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -961,8 +956,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
-;
-  }
+}
 ];
 export interface CybersecurityQuantumService {;
   id: string;
@@ -998,8 +992,7 @@ export interface CybersecurityQuantumService {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 ;
 export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
   {
@@ -1042,8 +1035,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-01-15';
     customers: 650;
     rating: 4.9;
-    reviews: 480;
-  };
+    reviews: 480};
   {;
     id: 'ai-powered-threat-hunting-platform';
     name: 'AI-Powered Threat Hunting Platform';
@@ -1084,8 +1076,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-01';
     customers: 1200;
     rating: 4.8;
-    reviews: 950;
-  };
+    reviews: 950};
   {;
     id: 'zero-trust-network-access-platform';
     name: 'Zero-Trust Network Access Platform';
@@ -1126,8 +1117,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-01-20';
     customers: 1800;
     rating: 4.7;
-    reviews: 1400;
-  };
+    reviews: 1400};
   {;
     id: 'quantum-key-distribution-network';
     name: 'Quantum Key Distribution Network';
@@ -1168,8 +1158,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-03-01';
     customers: 120;
     rating: 4.9;
-    reviews: 95;
-  };
+    reviews: 95};
   {;
     id: 'ai-powered-vulnerability-assessment';
     name: 'AI-Powered Vulnerability Assessment Platform';
@@ -1210,8 +1199,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-15';
     customers: 2500;
     rating: 4.8;
-    reviews: 1900;
-  }
+    reviews: 1900}
 ];
     rating: 4.8;
     reviews: 1900;
@@ -1893,7 +1881,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   g: 4 && 4.8, review,
   s: 1900,
   rating: 4.8, review,
-  s: 1900} export interface CybersecurityQuantumService {; } ]; ; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
+  s: 1900} export interface CybersecurityQuantumService {} ]; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: string} enterpris,
   e: string} }; feature,
   s: string[]; benefit,

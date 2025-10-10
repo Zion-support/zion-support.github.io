@@ -1,15 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
-
+;
 const MicroSaaSPage: React.FC = () => {
-  const serviceName = 'content-generator';
-  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+return (;
+const serviceName = 'content-generator';
+const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
+        <title>
+);
+}{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
         <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
       </Helmet>
@@ -51,8 +54,5 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default MicroSaaSPage;

@@ -9,10 +9,9 @@ import fs from 'fs';
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
-//   process.exit(1);
-}
+//   process.exit(1)}
 
-//Step 2: Define priority branches (most recent and important),
+//Step 2: Define priority branches (most recent and important),;
 const priorityBranches = [,
 // //Step,
   1: Ensure we're on main and up to date;
@@ -24,7 +23,7 @@ const priorityBranches = [,
 }
 
 //Step,
-  2: Define priority branches (most recent and important)
+  2: Define priority branches (most recent and important);
 const priorityBranches = [
   //Recent cursor branches from today;
   'cursor/fix-errors-and-merge-to-main-f4fa',
@@ -74,30 +73,27 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });
 
-    //Check if already merged;`
-    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
+    //Check if already merged;`;
+const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
       {/* TODO: Fix JSX expression */}
   g: 'utf8' })
     ).trim();
     if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */}
-  d: 'already_merged' };
-    }
+  d: 'already_merged' }}
 
     //Try to merge;
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
       );
-//       return { success: true, method: 'direct' };
-    } catch (mergeError) {
+//       return { success: true, method: 'direct' }} catch (mergeError) {
 //       //Try different conflict resolution strategies;
       try {
         //Strategy 1: Use theirs;
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
         );
-//         return { success: true, method: 'theirs' };
-      } catch (theirsError) {
+//         return { success: true, method: 'theirs' }} catch (theirsError) {
         try {
           //Strategy 2: Use ours;
           execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)
@@ -108,29 +104,24 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
       );
 //       return {/* TODO: Fix JSX expression */}
-  d: 'direct' };
-    } catch (mergeError) {/* TODO: Fix JSX expression */}"`
+  d: 'direct' }} catch (mergeError) {/* TODO: Fix JSX expression */}"`
           `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
           {/* TODO: Fix JSX expression */}
   o: 'inherit' }
         );
 //         return {/* TODO: Fix JSX expression */}
-  d: 'theirs' };
-      } catch (theirsError) {/* TODO: Fix JSX expression */}"`
+  d: 'theirs' }} catch (theirsError) {/* TODO: Fix JSX expression */}"`
             `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'ours' };
-        } catch (oursError) {/* TODO: Fix JSX expression */}
-  d: 'failed' };
-        }
+  d: 'ours' }} catch (oursError) {/* TODO: Fix JSX expression */}
+  d: 'failed' }}
       }
     }
   } catch (error) {/* TODO: Fix JSX expression */}
-  d: 'not_found' };
-  }
+  d: 'not_found' }}
 }
 
 //Step 4: Process all priority branches;
@@ -162,8 +153,7 @@ const results = {/* TODO: Fix JSX expression */}
       success: true),
       method: result.method)});
     results.summary.successful++;
-    results.summary.methods[result.method]++;
-  } else {
+    results.summary.methods[result.method]++} else {
     results.failed.push({)
       branch: branch;),
       success: false),
@@ -171,12 +161,10 @@ const results = {/* TODO: Fix JSX expression */}
 // for (const branch of priorityBranches) {/* TODO: Fix JSX expression */}
     });
     results.summary.successful++;
-    results.summary.methods[result.method]++;
-  } else {/* TODO: Fix JSX expression */}
+    results.summary.methods[result.method]++} else {/* TODO: Fix JSX expression */}
     });
     results.summary.failed++;
-    results.summary.methods[result.method]++;
-  }
+    results.summary.methods[result.method]++}
 }
 
 //Step 5: Generate report;

@@ -18,10 +18,8 @@ export function deepClone<T>(ob)
     for (const key in obj) {/* TODO: Fix JSX expression */}
       }
     }
-    return clonedObj;
-  }
-  return obj;
-}
+    return clonedObj}
+  return obj}
 /**
  * Deep merge two objects;
  */
@@ -34,8 +32,7 @@ export function deepMerge<T extends Record<string, unknown>>(targe,
       }
     }
   }
-  return output;
-}
+  return output}
 /**
  * Flatten a nested object;
  */
@@ -52,8 +49,7 @@ export function flattenObject(ob,
       }
     }
   }
-  return flattened;
-}
+  return flattened}
 /**
  * Unflatten a flattened object;
  */
@@ -65,13 +61,11 @@ export function unflattenObject(ob,
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {};
-          current = current[k] as Record<string, unknown>;
-        }
+          current = current[k] as Record<string, unknown>}
       }
     }
   }
-  return result;
-}
+  return result}
 /**
  * Pick specific keys from an object;
  */
@@ -84,8 +78,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   });
-  return result;
-}
+  return result}
 /**
  * Omit specific keys from an object;
  */
@@ -97,8 +90,7 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
   const result = { ...obj };
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   });
-  return result as Omit<T, K>;
-}
+  return result as Omit<T, K>}
 /**
  * Group array items by a key;
  */
@@ -109,9 +101,7 @@ export function groupBy<T>(arra,
   m: T) => string | number)
 ): Record<string, T[]> {/* TODO: Fix JSX expression */}
     },
-    {} as Record<string, T[]></string>
-  );
-}
+    {} as Record<string, T[]></string>);
 /**
  * Get unique items from an array;
  */
@@ -122,9 +112,7 @@ export function unique<T>(arra)
   return array.filter(item => {/* TODO: Fix JSX expression */}
     })
     seen.add(value);
-    return true;
-  });
-}
+    return true});
 /**
  * Sort array by multiple keys;
  */
@@ -138,20 +126,17 @@ export function sortBy<T>(arra,
 ): T[] {/* TODO: Fix JSX expression */}
       }
       // Convert to comparable values;
-      const aComp =
+const aComp =
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
           ? aVal;
           : String(aVal);
-      const bComp =
+const bComp =
         typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
           ? bVal;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
-    }
-    return 0;
-  });
-}
+      if (aComp > bComp) return order === 'asc' ? 1 : -1}
+    return 0});
 /**
  * Chunk array into smaller arrays;
  */
@@ -159,23 +144,20 @@ export function chunk<T>(arra,
   y: T[], siz)
   e: number): T[][] {/* TODO: Fix JSX expression */}
   }
-  return chunks;
-}
+  return chunks}
 /**
  * Zip multiple arrays together;
  */
 export function zip<T>(...array)
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
   }
-  return result;
-}
+  return result}
 /**
  * Format bytes to human readable string;
  */
 export function formatBytes(byte)
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
-}
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`}
 /**
  * Format number with separators;
  */
@@ -188,7 +170,6 @@ export function formatNumber(nu)
 export function formatCurrency(amoun)
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */}
   }).format(amount);
-}
 /**
  * Format date;
  */
@@ -209,8 +190,7 @@ export function formatRelativeTime(dat)
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-  return `${years} year${years > 1 ? 's' : ''} ago`;
-}
+  return `${years} year${years > 1 ? 's' : ''} ago`}
 /**
  * Truncate string;
  */

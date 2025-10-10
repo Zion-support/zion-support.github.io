@@ -383,7 +383,5 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-}
-;
+  )}
 }"`

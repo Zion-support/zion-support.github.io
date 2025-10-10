@@ -1,3 +1,4 @@
+import React from 'react';
 
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
@@ -118,8 +119,7 @@
     launch_date: '2024 - 01 - 05'
     customers: 120;
     rating: 4 && 4.9;
-    reviews: 45;
-  },
+    reviews: 45},
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     realImplementation: true;
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
@@ -921,8 +921,7 @@
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: number;
-    },
+    enterprise: number},
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[],
@@ -934,8 +933,7 @@
   popular: boolean, launchDate: string;
   customers: number, rating: number;
   reviews: number, marketSize: string;
-  growthRate: string;
-}
+  growthRate: string}
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development'
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
@@ -1537,8 +1535,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   rating: number;
   reviews: number;
   marketSize: string;
-  growthRate: string;
-}
+  growthRate: string}
 ;
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {
@@ -2771,10 +2768,8 @@ export const,
     growthRat,
   e: '75% annually'
   }
-];
-  }
-];
-  }
+]}
+]}
 ];
 ;
 'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'], realImplementatio,
@@ -3226,7 +3221,7 @@ export const,
   g: 4.9; review,
   s: 65, ' marketSiz,
   e: '$35B autonomous vehicle market' ' growthRat,
-  e: '75% annually' } ]; export interface EmergingTechService {; } i,
+  e: '75% annually' } ]; export interface EmergingTechService {} i,
   d: string; nam,
   e: string; taglin,
   e: string; descriptio,
@@ -3418,7 +3413,7 @@ export const,
   g: number; review,
   s: number; marketSiz,
   e: string; growthRat,
-  e: string} ; export interface EmergingTechService {; } ]; export const,
+  e: string} ; export interface EmergingTechService {} ]; export const,
   emergingTechServicesV2: EmergingTechService[] = [; {/* TODO: Fix JSX expression */}
   e: '24 hours'} enterpris,
   e: 4999} }; feature,
@@ -3554,4 +3549,4 @@ export const,
   g: 4.9; review,
   s: 65;' marketSiz,
   e: '$35B autonomous vehicle market';' growthRat,
-  e: '75% annually' } ]; } ]; } ]; '
+  e: '75% annually' } ]} ]} ]; '

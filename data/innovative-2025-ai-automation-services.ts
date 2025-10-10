@@ -1,3 +1,4 @@
+import React from 'react';
   id: string;
   name: string;
   tagline: string;
@@ -27,8 +28,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string;
-  }
+    address: string}
 ;
   realImplementation: boolean;
   implementationDetails: string;
@@ -201,8 +201,8 @@ export const,
         'UiPath, Automation Anywhere, Blue Prism, Custom solutions'
       ]
       marketSize: '$25 B business process automation market'
-      growthRate: '300% annual growth'
-      variant: 'ai-automation',
+      growthRate: '300% annual growth';
+variant: 'ai-automation',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -213,8 +213,7 @@ export const,
       launchDate: '2025-01-15'
       customers: 75;
       rating: 4.9;
-      reviews: 45;
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -231,8 +230,8 @@ export const,
       marketSiz,
   e: '$25B business process automation market'
       growthRat,
-  e: '300% annual growth'
-      varian,
+  e: '300% annual growth';
+varian,
   t: 'ai-automation'
       contactInf,
   o: mobil,
@@ -336,8 +335,8 @@ export const,
       roi: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.',
       competitors: ['Salesforce Einstein, HubSpot AI, Custom ML solutions']
       marketSize: '$18 B customer intelligence market'
-      growthRate: '280% annual growth'
-      variant: 'ai-analytics',
+      growthRate: '280% annual growth';
+variant: 'ai-analytics',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -348,8 +347,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 120;
       rating: 4.8;
-      reviews: 78;
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -371,8 +369,8 @@ export const,
       marketSiz,
   e: '$18B customer intelligence market'
       growthRat,
-  e: '280% annual growth'
-      varian,
+  e: '280% annual growth';
+varian,
   t: 'ai-analytics'
       contactInf,
   o: mobil,
@@ -476,8 +474,8 @@ export const,
       roi: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.',
       competitors: ['GitHub Copilot, Tabnine, Kite, Custom solutions']
       marketSize: '$12 B AI development tools market'
-      growthRate: '350% annual growth'
-      variant: 'ai-development',
+      growthRate: '350% annual growth';
+variant: 'ai-development',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -488,8 +486,7 @@ export const,
       launchDate: '2025-01-20'
       customers: 95;
       rating: 4.9;
-      reviews: 62;
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -504,8 +501,8 @@ export const,
       marketSiz,
   e: '$12B AI development tools market'
       growthRat,
-  e: '350% annual growth'
-      varian,
+  e: '350% annual growth';
+varian,
   t: 'ai-development'
       contactInf,
   o: mobil,
@@ -609,8 +606,8 @@ export const,
       roi: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.',
       competitors: ['Alpaca, QuantConnect, MetaTrader, Custom solutions']
       marketSize: '$22 B algorithmic trading market'
-      growthRate: '320% annual growth'
-      variant: 'ai-finance',
+      growthRate: '320% annual growth';
+variant: 'ai-finance',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -621,8 +618,7 @@ export const,
       launchDate: '2025-02-15'
       customers: 45;
       rating: 4.9;
-      reviews: 38;
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -642,8 +638,8 @@ export const,
       marketSiz,
   e: '$22B algorithmic trading market'
       growthRat,
-  e: '320% annual growth'
-      varian,
+  e: '320% annual growth';
+varian,
   t: 'ai-finance'
       contactInf,
   o: mobil,
@@ -749,8 +745,8 @@ export const,
         'IBM Watson Health, Google Health AI, Custom medical AI solutions'
       ]
       marketSize: '$35 B AI healthcare market'
-      growthRate: '400% annual growth'
-      variant: 'ai-healthcare',
+      growthRate: '400% annual growth';
+variant: 'ai-healthcare',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -771,8 +767,8 @@ export const,
     useCases: ['Medical diagnosis, Patient monitoring, Treatment planning, Medical imaging analysis, Drug safety checking, Clinical research'];
     roi: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.',
     competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
-    marketSize: '$35B AI healthcare market', growthRate: '400% annual growth',
-    variant: 'ai-healthcare',
+    marketSize: '$35B AI healthcare market', growthRate: '400% annual growth',;
+variant: 'ai-healthcare',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -801,8 +797,7 @@ export const,
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string;
-  }
+    address: string}
   }
   realImplementation: boolean;
   implementationDetails: string;
@@ -828,8 +823,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       marketSiz,
   e: '$35B AI healthcare market'
       growthRat,
-  e: '400% annual growth'
-      varian,
+  e: '400% annual growth';
+varian,
   t: 'ai-healthcare'
       contactInf,
   o: mobil,
@@ -881,8 +876,8 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
   s: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
     marketSiz,
   e: '$35B AI healthcare market', growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'ai-healthcare'
     contactInf,
   o: unknown,
@@ -1042,8 +1037,8 @@ export const,
         'UiPath, Automation Anywhere, Blue Prism, Custom solutions'
       ]
       marketSize: '$25 B business process automation market'
-      growthRate: '300% annual growth'
-      variant: 'ai-automation',
+      growthRate: '300% annual growth';
+variant: 'ai-automation',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1054,8 +1049,7 @@ export const,
       launchDate: '2025-01-15'
       customers: 75;
       rating: 4.9;
-      reviews: 45;
-    }
+      reviews: 45}
     // AI-Powered Predictive Customer Intelligence Platform;
       id: 'ai-predictive-customer-intelligence',
       name: 'AI Predictive Customer Intelligence Platform',
@@ -1072,8 +1066,8 @@ export const,
       marketSiz,
   e: '$25B business process automation market'
       growthRat,
-  e: '300% annual growth'
-      varian,
+  e: '300% annual growth';
+varian,
   t: 'ai-automation'
       contactInf,
   o: mobil,
@@ -1177,8 +1171,8 @@ export const,
       roi: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.',
       competitors: ['Salesforce Einstein, HubSpot AI, Custom ML solutions']
       marketSize: '$18 B customer intelligence market'
-      growthRate: '280% annual growth'
-      variant: 'ai-analytics',
+      growthRate: '280% annual growth';
+variant: 'ai-analytics',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1189,8 +1183,7 @@ export const,
       launchDate: '2025-02-01'
       customers: 120;
       rating: 4.8;
-      reviews: 78;
-    }
+      reviews: 78}
     // AI-Powered Autonomous Code Generation & Deployment;
       id: 'ai-autonomous-code-generation',
       name: 'AI Autonomous Code Generation & Deployment',
@@ -1212,8 +1205,8 @@ export const,
       marketSiz,
   e: '$18B customer intelligence market'
       growthRat,
-  e: '280% annual growth'
-      varian,
+  e: '280% annual growth';
+varian,
   t: 'ai-analytics'
       contactInf,
   o: mobil,
@@ -1317,8 +1310,8 @@ export const,
       roi: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.',
       competitors: ['GitHub Copilot, Tabnine, Kite, Custom solutions']
       marketSize: '$12 B AI development tools market'
-      growthRate: '350% annual growth'
-      variant: 'ai-development',
+      growthRate: '350% annual growth';
+variant: 'ai-development',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1329,8 +1322,7 @@ export const,
       launchDate: '2025-01-20'
       customers: 95;
       rating: 4.9;
-      reviews: 62;
-    }
+      reviews: 62}
     // AI-Powered Autonomous Financial Trading Platform;
       id: 'ai-autonomous-financial-trading',
       name: 'AI Autonomous Financial Trading Platform',
@@ -1345,8 +1337,8 @@ export const,
       marketSiz,
   e: '$12B AI development tools market'
       growthRat,
-  e: '350% annual growth'
-      varian,
+  e: '350% annual growth';
+varian,
   t: 'ai-development'
       contactInf,
   o: mobil,
@@ -1450,8 +1442,8 @@ export const,
       roi: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.',
       competitors: ['Alpaca, QuantConnect, MetaTrader, Custom solutions']
       marketSize: '$22 B algorithmic trading market'
-      growthRate: '320% annual growth'
-      variant: 'ai-finance',
+      growthRate: '320% annual growth';
+variant: 'ai-finance',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1462,8 +1454,7 @@ export const,
       launchDate: '2025-02-15'
       customers: 45;
       rating: 4.9;
-      reviews: 38;
-    }
+      reviews: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform;
       id: 'ai-autonomous-healthcare-diagnosis',
       name: 'AI Autonomous Healthcare Diagnosis Platform',
@@ -1483,8 +1474,8 @@ export const,
       marketSiz,
   e: '$22B algorithmic trading market'
       growthRat,
-  e: '320% annual growth'
-      varian,
+  e: '320% annual growth';
+varian,
   t: 'ai-finance'
       contactInf,
   o: mobil,
@@ -1590,8 +1581,8 @@ export const,
         'IBM Watson Health, Google Health AI, Custom medical AI solutions'
       ]
       marketSize: '$35 B AI healthcare market'
-      growthRate: '400% annual growth'
-      variant: 'ai-healthcare',
+      growthRate: '400% annual growth';
+variant: 'ai-healthcare',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1602,8 +1593,7 @@ export const,
       launchDate: '2025-03-01'
       customers: 35;
       rating: 4.9;
-      reviews: 28;
-    }
+      reviews: 28}
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01'
       customers: 35;
@@ -1618,8 +1608,8 @@ export const,
       marketSiz,
   e: '$35B AI healthcare market'
       growthRat,
-  e: '400% annual growth'
-      varian,
+  e: '400% annual growth';
+varian,
   t: 'ai-healthcare'
       contactInf,
   o: mobil,
@@ -1670,8 +1660,8 @@ export const,
     useCases: ['Medical diagnosis, Patient monitoring, Treatment planning, Medical imaging analysis, Drug safety checking, Clinical research'];
     roi: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.',
     competitors: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
-    marketSize: '$35B AI healthcare market', growthRate: '400% annual growth',
-    variant: 'ai-healthcare',
+    marketSize: '$35B AI healthcare market', growthRate: '400% annual growth',;
+variant: 'ai-healthcare',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1711,8 +1701,8 @@ export const,
   s: ['IBM Watson Health, Google Health AI, Custom medical AI solutions'];
     marketSiz,
   e: '$35B AI healthcare market', growthRat,
-  e: '400% annual growth'
-    varian,
+  e: '400% annual growth';
+varian,
   t: 'ai-healthcare'
     contactInf,
   o: unknown,
@@ -1735,8 +1725,7 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 28};
-  }
+  s: 28}}
 ];
 export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   l: string} addres,
@@ -2230,4 +2219,4 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: '2025-03-01', customer,
   s: 35,
   rating: 4.9,
-  reviews: 28 }; } ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
+  reviews: 28 }} ]; export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}

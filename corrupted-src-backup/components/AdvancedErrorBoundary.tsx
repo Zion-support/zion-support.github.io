@@ -6,25 +6,21 @@ interface Props {/* TODO: Fix JSX expression */}
 interface State {/* TODO: Fix JSX expression */}
 }
 
-export class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+export class AdvancedErrorBoundary extends Component<Props, State> {;
+constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
 export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
-  }
+  r: false }}
 
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
-  r: true, error };
-  }
+  r: true, error }}
 
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -38,8 +34,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
         description: error.toString(),
         fatal: false;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-      });
-    }
+      })}
   }
 
   render() {
@@ -61,11 +56,9 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
             </details>
           </div>
         )
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default AdvancedErrorBoundary;

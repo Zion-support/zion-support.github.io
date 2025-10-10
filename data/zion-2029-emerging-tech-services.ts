@@ -31,8 +31,7 @@ export type ZionEmergingTechService2029 =
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -44,9 +43,7 @@ export type ZionEmergingTechService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string;
-  };
-}
+    period: string}}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform;
     id: 'space-technology-satellite-management',
@@ -145,8 +142,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string};
-}
+  d: string}}
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -199,8 +195,8 @@ export const,
     roi: 'Average customer achieves 300% ROI within 18 months through reduced operational costs and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Planet Labs', 'Maxar Technologies', 'Lockheed Martin'],
     marketSize: '$469.8B space economy'
-    growthRate: '8.5% annual growth'
-    variant: 'space-tech-futuristic'
+    growthRate: '8.5% annual growth';
+variant: 'space-tech-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -265,8 +261,8 @@ export const,
     marketSiz,
   e: '$469.8B space economy',
     growthRat,
-  e: '8.5% annual growth',
-    varian,
+  e: '8.5% annual growth',;
+varian,
   t: 'space-tech-futuristic',
     contactInf,
   o: unknown,
@@ -356,8 +352,8 @@ export const,
     roi: 'Average customer achieves 400% ROI within 24 months through accelerated development and reduced costs.',
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Zymergen', 'Benchling', 'DNA Script'],
     marketSize: '$83.9B synthetic biology market'
-    growthRate: '26.2% annual growth'
-    variant: 'biotech-synthetic-biology'
+    growthRate: '26.2% annual growth';
+variant: 'biotech-synthetic-biology'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -422,8 +418,8 @@ export const,
     marketSiz,
   e: '$83.9B synthetic biology market',
     growthRat,
-  e: '26.2% annual growth',
-    varian,
+  e: '26.2% annual growth',;
+varian,
   t: 'biotech-synthetic-biology',
     contactInf,
   o: unknown,
@@ -513,8 +509,8 @@ export const,
     roi: 'Average customer achieves 250% ROI within 18 months through improved energy efficiency and reduced costs.',
     competitors: ['GE Digital Energy', 'Siemens Grid Software', 'Schneider Electric', 'ABB', 'Honeywell'],
     marketSize: '$1.3T renewable energy market'
-    growthRate: '8.4% annual growth'
-    variant: 'renewable-energy-ai'
+    growthRate: '8.4% annual growth';
+variant: 'renewable-energy-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -579,8 +575,8 @@ export const,
     marketSiz,
   e: '$1.3T renewable energy market',
     growthRat,
-  e: '8.4% annual growth',
-    varian,
+  e: '8.4% annual growth',;
+varian,
   t: 'renewable-energy-ai',
     contactInf,
   o: unknown,
@@ -670,8 +666,8 @@ export const,
     roi: 'Average customer achieves 300% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],
     marketSize: '$43.8B industrial robotics market'
-    growthRate: '12.5% annual growth'
-    variant: 'robotics-automation-ai'
+    growthRate: '12.5% annual growth';
+variant: 'robotics-automation-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -736,8 +732,8 @@ export const,
     marketSiz,
   e: '$43.8B industrial robotics market',
     growthRat,
-  e: '12.5% annual growth',
-    varian,
+  e: '12.5% annual growth',;
+varian,
   t: 'robotics-automation-ai',
     contactInf,
   o: unknown,
@@ -827,8 +823,8 @@ export const,
     roi: 'Average customer achieves 400% ROI within 24 months through enhanced security and new quantum capabilities.',
     competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt', 'Quantum Machines'],
     marketSize: '$3.9B quantum communications market'
-    growthRate: '35.2% annual growth'
-    variant: 'quantum-internet-futuristic'
+    growthRate: '35.2% annual growth';
+variant: 'quantum-internet-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -893,8 +889,8 @@ export const,
     marketSiz,
   e: '$3.9B quantum communications market',
     growthRat,
-  e: '35.2% annual growth',
-    varian,
+  e: '35.2% annual growth',;
+varian,
   t: 'quantum-internet-futuristic',
     contactInf,
   o: unknown,
@@ -984,8 +980,8 @@ export const,
     roi: 'Average customer achieves 350% ROI within 24 months through accelerated development and new material capabilities.',
     competitors: ['Ansys Materials', 'Dassault Materials', 'Autodesk Fusion 360', 'Materialise', '3D Systems'],
     marketSize: '$67.8B advanced materials market'
-    growthRate: '15.3% annual growth'
-    variant: 'advanced-materials-ai'
+    growthRate: '15.3% annual growth';
+variant: 'advanced-materials-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1050,8 +1046,8 @@ export const,
     marketSiz,
   e: '$67.8B advanced materials market',
     growthRat,
-  e: '15.3% annual growth',
-    varian,
+  e: '15.3% annual growth',;
+varian,
   t: 'advanced-materials-ai',
     contactInf,
   o: unknown,
@@ -1141,8 +1137,8 @@ export const,
     roi: 'Average customer achieves 300% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Aurora', 'Argo AI'],
     marketSize: '$556.7B autonomous vehicle market'
-    growthRate: '39.7% annual growth'
-    variant: 'autonomous-transportation'
+    growthRate: '39.7% annual growth';
+variant: 'autonomous-transportation'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1207,8 +1203,8 @@ export const,
     marketSiz,
   e: '$556.7B autonomous vehicle market',
     growthRat,
-  e: '39.7% annual growth',
-    varian,
+  e: '39.7% annual growth',;
+varian,
   t: 'autonomous-transportation',
     contactInf,
   o: unknown,
@@ -1298,8 +1294,8 @@ export const,
     roi: 'Average customer achieves 250% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Dassault 3DEXPERIENCE', 'Autodesk Tandem'],
     marketSize: '$86.1B digital twin market'
-    growthRate: '58.9% annual growth'
-    variant: 'digital-twin-ai'
+    growthRate: '58.9% annual growth';
+variant: 'digital-twin-ai'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1364,8 +1360,8 @@ export const,
     marketSiz,
   e: '$86.1B digital twin market',
     growthRat,
-  e: '58.9% annual growth',
-    varian,
+  e: '58.9% annual growth',;
+varian,
   t: 'digital-twin-ai',
     contactInf,
   o: unknown,
@@ -1455,8 +1451,8 @@ export const,
     roi: 'Average customer achieves 200% ROI within 12 months through reduced latency and improved performance.',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Cisco Edge', 'HPE Edge'],
     marketSize: '$43.4B edge computing market'
-    growthRate: '37.4% annual growth'
-    variant: 'edge-computing-iot'
+    growthRate: '37.4% annual growth';
+variant: 'edge-computing-iot'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1521,8 +1517,8 @@ export const,
     marketSiz,
   e: '$43.4B edge computing market',
     growthRat,
-  e: '37.4% annual growth',
-    varian,
+  e: '37.4% annual growth',;
+varian,
   t: 'edge-computing-iot',
     contactInf,
   o: unknown,
@@ -1612,8 +1608,8 @@ export const,
     roi: 'Average customer achieves 300% ROI within 18 months through new virtual experiences and reduced costs.',
     competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
     marketSize: '$74.2B metaverse market'
-    growthRate: '37.7% annual growth'
-    variant: 'metaverse-vr-futuristic'
+    growthRate: '37.7% annual growth';
+variant: 'metaverse-vr-futuristic'
     contactInfo: unknown;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
@@ -1673,8 +1669,8 @@ export const getServicesByCategory = (category: string) =>;
     marketSiz,
   e: '$74.2B metaverse market',
     growthRat,
-  e: '37.7% annual growth',
-    varian,
+  e: '37.7% annual growth',;
+varian,
   t: 'metaverse-vr-futuristic',
     contactInf,
   o: unknown,
@@ -1717,15 +1713,12 @@ export const getServicesByCategory = (category: string) =>;
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
-  return zionEmergingTechServices2029.filter(service => service.category === category);
-};
+  return zionEmergingTechServices2029.filter(service => service.category === category)};
 export const getPopularServices = () =>
-  return zionEmergingTechServices2029.filter(service => service.popular);
-};
+  return zionEmergingTechServices2029.filter(service => service.popular)};
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>;
   return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter;)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)});
-};
+    return starterPrice >= minPrice && starterPrice <= maxPrice)})};
 export const getServicesByTechnology = (technology: string) =>;
   return zionEmergingTechServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1735,14 +1728,12 @@ export const getServicesByPriceRange = (minPric)
   return zionEmergingTechServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter;)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  });
-};
+  })};
 export const getServicesByTechnology = (technolog)
   y: string) =>;
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-  );
-};
+  )};
 export type ZionEmergingTechService2029 = i,
   d: string; nam,
   e: string; taglin,
@@ -1788,7 +1779,7 @@ export type ZionEmergingTechService2029 = i,
   l: number; enterpris,
   e: number; currenc,
   y: string; perio,
-  d: string}; } export const,
+  d: string}} export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [ // 1. Space Technology & Satellite Management Platform,
   id: 'space-technology-satellite-management',' nam,
   e: 'Space Technology & Satellite Management Platform',' taglin,
@@ -2260,7 +2251,7 @@ export type ZionEmergingTechService2029 = i,
   e: 20999,' currenc,
   y: 'USD',' perio,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category); }; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular); }; export const getServicesByPriceRange = (minPric)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.category === category)}; export const getPopularServices = () => return zionEmergingTechServices2029.filter(service => service.popular)}; export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) }); }; export const getServicesByTechnology = (technolog)
-  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ); };'
+  e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
+  y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'

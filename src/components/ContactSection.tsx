@@ -1,28 +1,27 @@
 import React, { useState } from 'react';
 
-export default function ContactSection() {
-  const [formData, setFormData] = useState({
+export default function ContactSection() {;
+const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: '',
     message: ''
   });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+    })};
+;
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
-
-  const contactInfo = [
+    // console.log removed for production
+};
+;
+const contactInfo = [
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,8 +54,8 @@ export default function ContactSection() {
       link: '#'
     }
   ];
-
-  const services = [
+;
+const services = [
     'AI & Machine Learning',
     'Cloud Solutions',
     'Web Development',
@@ -251,5 +250,4 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )}

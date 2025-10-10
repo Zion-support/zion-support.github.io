@@ -1,13 +1,16 @@
 const, October2025NewBreakthroughBanne, r = () => {
-  const, stat, s = octoberContentSta, t, s;
-  const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>>> = {
+return (
+;
+const, stat, s = octoberContentSta, t, s;
+  const, iconMa, p: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>
+);
+}>> = {
     '🧠': Bra, i, n;
     '💰': DollarSi, g, n;
     '🎨': E, y, e;
     '🧠': Bra, i, n,';
     '💰': DollarSi, g, n,';
-    '🎨': E, y, e';
-  };
+    '🎨': E, y, e'};
   return(<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-30">
@@ -85,13 +88,19 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";)
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
-            const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
+return (
+;
+const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             return(<Li, n, k;
         {/* Content, Card, s */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"</div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+);
+}"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
-            const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
+return (
+;
+const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             return (</div>
               <Li, n, k
   k, e, y={conte, n, t.id}
@@ -99,6 +108,8 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0"
               >
+);
+}
                 <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`</div>
                     <Icon, className="w-8 h-8, tex, t-whi, t, e  />
@@ -191,8 +202,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                   <Link, className="w-5 h-5" />";
                 </d, i, v>
               </Li, n, k>
-            );
-          })}
+            )})}
         </d, i, v>
         {/* CTA, Sectio, n */}
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l"></div>
@@ -340,8 +350,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 export default October2025 NewBreakthroughBanner;
-;
 }"`

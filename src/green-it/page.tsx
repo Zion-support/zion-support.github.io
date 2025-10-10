@@ -3,12 +3,11 @@ import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail,
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions');
-
-  const tabs = [
+;
+const GreenITPage: React.FC = () => {;
+const [activeTab, setActiveTab] = useState('solutions');
+;
+const tabs = [
     {
       id: 'solutions',
       name: 'Green Solutions',
@@ -28,8 +27,8 @@ idid: 'certifications',
       bgColor:     ,
 $4}
   ];
-
-  const greenSolutions = [
+;
+const greenSolutions = [
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
@@ -88,9 +87,8 @@ titletitle: 'Environmental Monitoring',
         'Sustainability reporting',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
-      pricing: 'Starting at $600/month'
-
-  const benefits = [
+      pricing: 'Starting at $600/month';
+const benefits = [
       icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
@@ -117,9 +115,8 @@ titletitle: 'Environmental Monitoring',
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
-        'Talent attraction and retention'
-
-  const certifications = [
+        'Talent attraction and retention';
+const certifications = [
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
       status:       ,
@@ -128,9 +125,8 @@ namename: 'LEED Platinum',
       name: 'Carbon Trust Standard',
       description: 'Carbon Footprint Management',
       name: 'Green IT Certification',
-      description: 'Sustainable IT Practices',
-
-  const stats = [
+      description: 'Sustainable IT Practices',;
+const stats = [
       value: '60%',
       label: 'Carbon Footprint Reduction',
       color:       ,
@@ -142,9 +138,8 @@ valuevalue: '50%',
       color:       ,
 valuevalue: '100%',
       label: 'Renewable Energy Options',
-      color: 'text-purple-400'
-
-  const caseStudies = [
+      color: 'text-purple-400';
+const caseStudies = [
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
@@ -166,7 +161,7 @@ valuevalue: '100%',
       icon: Building,
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
@@ -322,9 +317,8 @@ valuevalue: '100%',
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default GreenITPage;
 
@@ -333,17 +327,20 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
+;
 const GreenITPage: React.FC = () => {
+return (
+
   return (
     <div>Coming Soon</div>
+);
+}
 
-  );
-};
+  )};
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'solutions',
@@ -462,8 +459,8 @@ const tabs = [
       impac,
   t: 'Achieve 100% environmental transparency',
       pricin,
-  g: 'Starting at $600/month'
-  const benefits = [,
+  g: 'Starting at $600/month';
+const benefits = [,
 
       ico,
   n: TrendingUp,
@@ -501,8 +498,8 @@ const tabs = [
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
-        'Talent attraction and retention'
-  const certifications = [
+        'Talent attraction and retention';
+const certifications = [
       nam,
   e: 'ISO,
   14001:2015',
@@ -522,8 +519,8 @@ const tabs = [
       nam,
   e: 'Green IT Certification',
       descriptio,
-  n: 'Sustainable IT Practices',
-  const stats = [
+  n: 'Sustainable IT Practices',;
+const stats = [
       valu,
   e: '60%',
       labe,
@@ -550,8 +547,8 @@ const tabs = [
       labe,
   l: 'Renewable Energy Options',
       colo,
-  r: 'text-purple-400'
-  const caseStudies = [,
+  r: 'text-purple-400';
+const caseStudies = [,
 
       compan,
   y: 'TechCorp Manufacturing',
@@ -586,7 +583,7 @@ const tabs = [
   return (<div>Coming Soon</div>)
   )
     
-          <>
+          <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
@@ -639,8 +636,7 @@ const tabs = [
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
-}
+  O: Add content}
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -775,8 +771,7 @@ Benefits of Green IT;"
       <Footer />
 
     </div>
-  );
-};
+  )};
 
 
 export default GreenItPage;

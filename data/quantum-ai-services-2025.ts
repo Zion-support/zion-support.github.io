@@ -75,8 +75,7 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string;
-  }
+    address: string}
 }
 export const quantumAIServices2025: QuantumAiService2025[] = [,
     id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform",

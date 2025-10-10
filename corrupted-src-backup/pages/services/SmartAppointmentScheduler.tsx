@@ -6,14 +6,18 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
-  return(<>
+return (
+
+  return(<React.Fragment>
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";</meta>
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";</div>
-        <div, className="container, m, x-auto, p, x-4, p, y-12">";
+        <div, className="container, m, x-auto, p, x-4, p, y-12">
+);
+}";
           {/* Head, e, r */}</div>
           <div, className="te, x, t-center, m, b-16"></div>
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>
@@ -24,7 +28,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;</p>
           <div, className="te, x, t-center, m, b-16">";</div>
-            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">";</div>
+            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">";</div>;
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           {/* Head, e, r */}"
           <div, className="te, x, t-center, m, b-16"></div>"
@@ -474,7 +478,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
           </secti, o, n>
         </d, i, v>)
       </d, i, v>)
-    </>)
-  );
-};
+    </React.Fragment>)
+  )};
 export default SmartAppointmentScheduler;"

@@ -3,9 +3,9 @@ import React from 'react';
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const ITServicesPage: React.FC = () => {
-  const itServices = [
+;
+const ITServicesPage: React.FC = () => {;
+const itServices = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -240,8 +240,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-
-  const categories = [
+;
+const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
     { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
@@ -305,8 +305,8 @@ const ITServicesPage: React.FC = () => {
       color: 'text-orange-400'
     }
   ];
-
-  const additionalServices = [
+;
+const additionalServices = [
     {
       icon: Users,
       title: 'IT Consulting',
@@ -344,8 +344,8 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $399/month'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     {
       icon: Star,
       title: 'Proven Expertise',
@@ -599,7 +599,6 @@ const ITServicesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-  );
-};
+  )};
 
 export default ITServicesPage;

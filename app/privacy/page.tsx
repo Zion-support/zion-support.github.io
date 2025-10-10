@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
-  
-  const dataTypes = [
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
+export default function PrivacyPage() {;
+const lastUpdated = 'January 1, 2024';
+  ;
+const dataTypes = [
     {
       category: 'Personal Information',
       icon: User,
@@ -25,8 +24,8 @@ export default function PrivacyPage() {
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
     }
   ];
-
-  const purposes = [
+;
+const purposes = [
     {
       title: 'Service Provision',
       icon: Globe,
@@ -48,8 +47,8 @@ export default function PrivacyPage() {
       description: 'To protect against fraud and abuse'
     }
   ];
-
-  const rights = [
+;
+const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
@@ -117,10 +116,10 @@ export default function PrivacyPage() {
                     <ul className="text-sm text-gray-600 space-y-1">
                       {type.examples.map((example, idx) => (
                         <li key={idx}>• {example}</li>
-                      ))}
+                      ));
                     </ul>
                   </div>
-                ))}
+                ));
               </div>
             </section>
 
@@ -138,7 +137,7 @@ export default function PrivacyPage() {
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
                   </div>
-                ))}
+                ));
               </div>
             </section>
 
@@ -176,7 +175,7 @@ export default function PrivacyPage() {
                     </div>
                     <p className="text-gray-700">{right.description}</p>
                   </div>
-                ))}
+                ));
               </div>
             </section>
 
@@ -223,6 +222,4 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    </div>);

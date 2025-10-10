@@ -5,9 +5,9 @@
 // <input aria-describedby="email-help" type="email" />
 // <div id="email-help">Enter your email address</div>
 
-// 2. Implement focus management
-const trapFocus = (element) => {
-  const focusableElements = element.querySelectorAll(
+// 2. Implement focus management;
+const trapFocus = (element) => {;
+const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   const firstElement = focusableElements[0];
@@ -18,17 +18,14 @@ const trapFocus = (element) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
       }
     }
-  });
-};
+  })};
 
 // 3. Add live regions for dynamic content
 // Example JSX:

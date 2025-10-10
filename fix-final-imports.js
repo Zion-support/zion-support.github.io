@@ -1,7 +1,6 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-
-
+;
 function processFile(filePath) {
   try {
     // Fix remaining import path issues;
@@ -20,7 +19,7 @@ function processFile(filePath) {
       // Fix MetadataRoute namespace issue;
       {
         pattern: /MetadataRoute\./g;
-        replacement: 'MetadataRoute',
+        replacement: 'MetadataRoute',;
 function processFile(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacemen,
@@ -42,18 +41,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false} catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-
+;
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
@@ -62,8 +59,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     }
   });
 
-  return totalFixed;
-}
+  return totalFixed}
 
 // Process the app directory;
 // Process the app directory;"

@@ -6,13 +6,14 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components
+
+// Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
@@ -22,7 +23,8 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-// Loading skeleton component
+
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -31,21 +33,21 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+const HomePage: React.FC = () => {const [isLoaded, setIsLoaded] = useState(false);
+const [isVisible, setIsVisible] = useState(false);
+  
   useEffect(() => {
     setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    // Trigger visibility animation;
+const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+  
+  // Analytics tracking for phone clicks - optimized;
+const handlePhoneClick = useCallback(() => {
+    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
@@ -53,7 +55,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -1160,7 +1162,5 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-    </>
-  );
-};
+    </React.Fragment>)
 export default HomePage;

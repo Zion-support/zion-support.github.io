@@ -19,8 +19,7 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
   gradient?: string;
   breaking?: boolean;
   cta?: {/* TODO: Fix JSX expression */}
-  };
-}
+  }}
 
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {

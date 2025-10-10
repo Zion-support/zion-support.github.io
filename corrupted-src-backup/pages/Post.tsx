@@ -46,6 +46,5 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
         </div>
       </div>
     </div>)
-  );
-}
+  )}
 "

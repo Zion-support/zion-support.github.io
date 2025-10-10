@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-export default function EnhancedContactForm(): React.JSX.Element {
-  const [name, setName] = useState('');
+export default function EnhancedContactForm(): React.JSX.Element {;
+const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -47,6 +47,5 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         Send;
       </button>
     </form>
-  );
-}
+  )}
 "

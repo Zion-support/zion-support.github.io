@@ -1,7 +1,11 @@
 const, October2025UltimateEnterpriseBanne, r = () => {
+return (
+
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t;
   return(<div, className="relative, p, y-16, p, x-4, s, m: px-6 l;
-  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
+  g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">
+);
+}"
       {/* Animated, Backgroun, d */};
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>)
@@ -554,7 +558,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
         </d, i, v>
       </d, i, v>
     </d, i, v>
-  );
-};
+  )};
 export default October2025UltimateEnterpriseBanner;
 ;"

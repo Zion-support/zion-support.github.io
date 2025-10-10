@@ -6,16 +6,13 @@ import fs from 'fs';
 function safeGitCommand(command, description) {
   try {
     //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-    //     return { success: true, result };
-  } catch (error) {
+    //     return { success: true, result }} catch (error) {
     //     return { success: false, error: error.message };
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
     //     return {/* TODO: Fix JSX expression */}
-  s: true, result };
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
-  }
+  s: true, result }} catch (error) {/* TODO: Fix JSX expression */}
+  r: error.message }}
 }
 
 //Ensure we're on main branch;
@@ -52,15 +49,14 @@ for (const branch of prBranches) {/* TODO: Fix JSX expression */}
     //     } else {
     conflictCount++;
     //     //Try to abort the merge if there was a conflict;
-  //Try to merge the branch;`
-  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,`
+  //Try to merge the branch;`;
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge branch ${branch}"`,`
     `Merge ${branch}`)
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}`
-    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
-  }
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`)}
 }
 
 // // // //Push changes if any were merged;
@@ -78,7 +74,7 @@ const summary = {
   mergedBranches: mergedCount;
   conflictedBranches: conflictCount;
   totalProcessed: prBranches.length;
-  status: mergedCount > 0 ? 'success' : 'no-changes',
+  status: mergedCount > 0 ? 'success' : 'no-changes',;
 const summary = {/* TODO: Fix JSX expression */}
 };
 

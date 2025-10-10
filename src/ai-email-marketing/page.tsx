@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
-
+;
 const AiEmailMarketingPage: React.FC = () => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
-
-const AIEmailMarketingPage: React.FC = () => {
-  const _features = [
+;
+const AIEmailMarketingPage: React.FC = () => {;
+const _features = [
     {
       icon: Mail,
       title: 'AI Content Generation',
@@ -29,23 +29,22 @@ icon$5: TrendingUp,
       description:     ,
 $4}
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase open rates by 200%',
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
-    'Save 15+ hours per week'
-
-  const emailTypes = [
+    'Save 15+ hours per week';
+const emailTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
     { name: 'Promotional', icon: '🎯', description: 'Sales and special offers' },
     { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
-
-  const pricing = [
+;
+const pricing = [
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -109,8 +108,7 @@ import Footer from '../components/Footer';
           </div>
       
       <Footer />
-  );
-};
+  )};
 
 
 export default $1;

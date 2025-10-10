@@ -4,9 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-
-const EnterprisePage: React.FC = () => {
-  const features = [
+;
+const EnterprisePage: React.FC = () => {const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -44,8 +43,8 @@ const EnterprisePage: React.FC = () => {
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
     }
   ];
-
-  const solutions = [
+;
+const solutions = [
     {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
@@ -71,8 +70,8 @@ const EnterprisePage: React.FC = () => {
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -82,8 +81,8 @@ const EnterprisePage: React.FC = () => {
     'Integrate with existing systems',
     'Provide 24/7 support and monitoring'
   ];
-
-  const stats = [
+;
+const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
@@ -138,7 +137,7 @@ const EnterprisePage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -166,10 +165,10 @@ const EnterprisePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -183,10 +182,10 @@ const EnterprisePage: React.FC = () => {
           </div>
           
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -222,8 +221,5 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default EnterprisePage;

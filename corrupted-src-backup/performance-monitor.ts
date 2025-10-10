@@ -7,8 +7,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
   static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
-    return PerformanceMonitor.instance;
-  }
+    return PerformanceMonitor.instance}
 
   init(): void {/* TODO: Fix JSX expression */}
     }

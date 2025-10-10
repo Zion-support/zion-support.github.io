@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-
-const AIAnalyticsDashboardPage: React.FC = () => {
-  const features = [
+;
+const AIAnalyticsDashboardPage: React.FC = () => {const features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -35,8 +34,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor KPIs and business objectives with automated alerts.'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
     'Customizable dashboard widgets',
@@ -44,8 +43,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     'Multi-platform data integration',
     'Mobile-responsive design'
   ];
-
-  const metrics = [
+;
+const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
@@ -53,7 +52,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
@@ -109,7 +108,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -132,7 +131,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -153,7 +152,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
-                ))}
+                ));
               </div>
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
@@ -200,8 +199,5 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default AIAnalyticsDashboardPage;

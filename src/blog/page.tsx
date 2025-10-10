@@ -13,11 +13,9 @@ interface BlogPost {
   featured: boolean;
   stats?: {
     views: number;
-    engagement: number;
-  };
-}
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+    engagement: number}}
+export default function BlogPage() {;
+const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
@@ -118,13 +116,11 @@ export default function BlogPage() {
       stats: { views: 11200, engagement: 93 }
     }
   ], []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect(() => {;
+const timer = setTimeout(() => {
       setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
+      setLoading(false)}, 500);
+    return () => clearTimeout(timer)}, [blogPosts]);
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
@@ -150,8 +146,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-    );
-  }
+    )}
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
@@ -228,5 +223,4 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  );
-}
+  )}

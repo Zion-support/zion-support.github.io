@@ -1,9 +1,11 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-const AutonomousDevOpsServic, e = () => { 
-  return(<>
+;
+const AutonomousDevOpsServic, e = () => {
+return (
+ 
+  return(<React.Fragment>
       <Helm, e, t>
         <title>
           Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group;
@@ -19,7 +21,9 @@ const AutonomousDevOpsServic, e = () => {
         />),
       </Helm, e, t>
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'></div>
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r / >
+);
+} {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l' /></section>
           <div, className='relative, ma, x-w-7xl, m, x-au, t, o'></div>
@@ -48,7 +52,7 @@ const AutonomousDevOpsServic, e = () => {
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></section>
-            <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
+            <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>;
 const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'></section>

@@ -7,10 +7,9 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-const PartnersPage: React.FC = () => {
-  const partnerTypes = [
+;
+const PartnersPage: React.FC = () => {;
+const partnerTypes = [
     {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
@@ -50,8 +49,8 @@ const PartnersPage: React.FC = () => {
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -63,9 +62,8 @@ icon$5: Star,
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
-
-  const partnershipTiers = [
+      description: 'Rigorous partner certification and quality standards';
+const partnershipTiers = [
       name: 'Strategic Partners',
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
@@ -97,11 +95,10 @@ namename: 'Channel Partners',
         'Lead sharing and referrals',
         'Competitive margins'
       color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
-
-  const partnerTypes = [];
+      bgColor: 'bg-orange-500/10';
+const partnerTypes = [];
   return (
-    {// TODO: Add content;}
+    {// TODO: Add content}
 
 };
   titl,
@@ -182,14 +179,17 @@ namename: 'Channel Partners',
 
 icon: Globe,
       title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network',
-
+      description: 'Access to worldwide markets and customers through our partner network',;
 const PagePage: React.FC = () => {
+return (
+
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
+);
+}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -273,7 +273,7 @@ const PagePage: React.FC = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-    </>
+    </React.Fragment>
 
           {/* Header */}
           <div className="text-center mb-16"></div>"
@@ -389,8 +389,7 @@ const PagePage: React.FC = () => {
       <Footer />
 
     </div>
-  );
-};
+  )};
 
 
 export default PartnersPage;

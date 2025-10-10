@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AICrmAssistantPage: React.FC = () => {
-  const features = [
+;
+const AICrmAssistantPage: React.FC = () => {const features = [
     {
       title: 'AI Customer Management',
       description: 'Intelligent customer relationship management with AI insights',
@@ -23,8 +22,8 @@ const AICrmAssistantPage: React.FC = () => {
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase sales by 30%',
     'Improve customer satisfaction',
     'Reduce manual work by 60%',
@@ -94,10 +93,10 @@ const AICrmAssistantPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -120,7 +119,7 @@ const AICrmAssistantPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -144,8 +143,5 @@ const AICrmAssistantPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default AICrmAssistantPage;

@@ -4,12 +4,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-
-const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+;
+const SupportPage: React.FC = () => {;
+const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const supportCategories = [
+;
+const supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
@@ -18,8 +18,8 @@ const SupportPage: React.FC = () => {
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
-
-  const faqs = [
+;
+const faqs = [
     {
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
@@ -57,8 +57,8 @@ const SupportPage: React.FC = () => {
       category: 'getting-started'
     }
   ];
-
-  const supportChannels = [
+;
+const supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
@@ -92,8 +92,8 @@ const SupportPage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ];
-
-  const resources = [
+;
+const resources = [
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
@@ -131,12 +131,12 @@ const SupportPage: React.FC = () => {
       link: '/community'
     }
   ];
-
-  const filteredFaqs = selectedCategory === 'all' 
+;
+const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
-
-  const searchResults = searchQuery 
+;
+const searchResults = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
@@ -144,7 +144,7 @@ const SupportPage: React.FC = () => {
     : filteredFaqs;
 
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
@@ -298,8 +298,7 @@ const SupportPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
-  );
-};
+    </React.Fragment>
+  )};
 
 export default SupportPage;

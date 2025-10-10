@@ -15,8 +15,10 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r />
+        <Head, e, r />;
 const CognitiveAutomationEnterpriseRevolution: () => {
+return (
+
   return(<div>),
       <Helmet>),
         <title>Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>),
@@ -25,7 +27,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
   content="Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name="keywords;
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
-        <Head, e, r />
+        <Head, e, r />;
 const CognitiveAutomationEnterpriseRevolution: () => {
   return (
     <div></div>
@@ -42,6 +44,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <Header />
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
+);
+}
           {/* Back Link */};
           <Link to="/blog">
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors">
@@ -63,7 +67,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <ArrowLeft, className='w-4 h-4, m, r-2' />
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
-        <Head, e, r /></Head>
+        <Head, e, r /></Head>;
 const,
   CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
           {/* Back Link */};
@@ -1399,8 +1403,7 @@ Real-world implementations across industries are delivering transformational,
                   <TrendingUp, classNam, e='w-5 h-5' />
                   Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' />
-                  Explore, AI, Services;
-}
+                  Explore, AI, Services}
                       <p, classNam, e = 'mb-4'></p>
                         Identify, hig, h-value, automation, opportunities through, process, mini, n, g, stakeholder, interview, s, and, ROI, modeling. Prioritize, use, cases based, on, business impact, and, technical feasibili, t, y.
             <section, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, rounde, d-2x, l, p-12, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, tex, t-cent, e, r'></section>
@@ -1418,5 +1421,4 @@ Real-world implementations across industries are delivering transformational,
                   <TrendingUp, classNam, e='w-5 h-5' /></TrendingUp>
                   Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' /></TrendingUp>
-                  Explore, AI, Services;
-}"
+                  Explore, AI, Services}"

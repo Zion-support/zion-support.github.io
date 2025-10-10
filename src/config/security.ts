@@ -4,7 +4,7 @@
  * Defines security headers and policies for the application;
  */
 
-export const _securityHeaders = {// TODO: Add content;}
+export const _securityHeaders = {// TODO: Add content}
 
 }
   // Content Security Policy,
@@ -43,8 +43,7 @@ export const _securityHeaders = {// TODO: Add content;}
 // objectSr,"
   c: ["'none'"],
 // upgradeInsecureRequest,
-  s: true;
-    }
+  s: true}
   },
   // Security Headers,
   header,
@@ -58,7 +57,7 @@ export const _securityHeaders = {// TODO: Add content;}
 };
  * Rate limiting configuration;
 export const rateLimitConfig = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   windowM,
   s: 15 * 60 * 1000, // 15 minutes,
@@ -68,7 +67,7 @@ export const rateLimitConfig = {/* TODO: Fix JSX expression */}
   e: 'Too many requests from this IP, please try again later.'
  * CORS configuration;
 export const corsConfig = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
 
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
@@ -79,7 +78,7 @@ export const corsConfig = {/* TODO: Fix JSX expression */}
 
  * Session configuration;
 export const sessionConfig = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   secre,
   t: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
@@ -89,7 +88,7 @@ export const sessionConfig = {/* TODO: Fix JSX expression */}
   d: false,
   cooki,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   secur,
   e: process.env['NODE_ENV'] === 'production',
@@ -101,7 +100,7 @@ maxAg,
   e: 'strict' as const;
  * Input validation patterns;
 export const validationPatterns = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
 
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
@@ -113,7 +112,7 @@ export const validationPatterns = {/* TODO: Fix JSX expression */}
  * Sanitize user input;
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   return input;
 //     .replace(/[
@@ -125,7 +124,7 @@ export function sanitizeInput(inpu)
           
           
           )
-          <>]/g, '') // Remove;
+          <React.Fragment>]/g, '') // Remove;
           < and >
 
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
@@ -135,34 +134,33 @@ export function sanitizeInput(inpu)
  * Validate email address;
 export function validateEmail(emai)
   l: string): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   return validationPatterns.email.test(email);
  * Validate URL;
 export function validateUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   return validationPatterns.url.test(url);
  * Generate secure token;
 export function generateSecureToken(lengt)
-  h: number = 32): string {const array = new Uint8Array(length);}
+  h: number = 32): string {const array = new Uint8Array(length)}
 export function generateSecureToken(_lengt)
   h: number = 32): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-    window.crypto.getRandomValues(array);
-  } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    window.crypto.getRandomValues(array)} else {/* TODO: Fix JSX expression */}
+  O: Add content}
 }
     // Fallback for non-browser environments;
     for (let _i = 0; i;)
           < length; i++) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
       array[i] = Math.floor(Math.random() * 256);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');

@@ -7,15 +7,13 @@ interface FormData {
   company: string,
   phone: string,
   service: string,
-  message: string,
-}
+  message: string}
 
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error';
-  message: string,
-}
-
-  const [formData, setFormData] = useState<FormData>({
+  message: string}
+;
+const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -23,21 +21,20 @@ interface FormStatus {
     service: '',
     message: ''
   });
-
-  const [status, setStatus] = useState<FormStatus>({
+;
+const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
   });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+;
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
 
@@ -58,16 +55,14 @@ interface FormStatus {
         phone: '',
         service: '',
         message: ''
-      });
-    } catch (error) {
+      })} catch (error) {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.'
       });
-    }
   };
-
-  const services = [
+;
+const services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -151,28 +146,24 @@ interface FormStatus {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
               ) : (
-                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-              )}
+                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />);
               <span className="text-sm font-medium">{status.message}</span>
-            </div>
-          )}
-
+            </div>);
           <button
             type="submit"
             disabled={status.type === 'loading'}
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
             {status.type === 'loading' ? (
-              <>
+              <React.Fragment>
                 <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
-              </>
+              </React.Fragment>
             ) : (
-              <>
+              <React.Fragment>
                 <Send className="h-5 w-5" />
                 <span>Send Message</span>
-              </>
-            )}
+              </React.Fragment>);
           </button>
         </form>
 
@@ -209,8 +200,5 @@ interface FormStatus {
             </div>
           </div>
         </div>
-    </div>
-  );
-};
-
+    </div>)
 export default ContactForm;

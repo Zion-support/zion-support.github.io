@@ -7,8 +7,7 @@ export type Zion2026AIMarketplaceService =
     monthly: number;
     yearly: number;
     enterprise: number;
-    currency: string;
-  };
+    currency: string};
   features: string[];
   benefits: string[];
   roi: string;
@@ -21,9 +20,7 @@ export type Zion2026AIMarketplaceService =
     phone: string;
     email: string;
     website: string;
-    address: string;
-  };
-}
+    address: string}}
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
@@ -77,8 +74,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     websit,
   e: string;
     addres,
-  s: string};
-}
+  s: string}}
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     i,
@@ -614,7 +610,7 @@ export type Zion2026AIMarketplaceService = i,
   e: string; emai,
   l: string; websit,
   e: string; addres,
-  s: string}; } export const,
+  s: string}} export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [ ' i,
   d: 'ai-marketplace-001',' nam,
   e: 'Zion AI Service Marketplace Platform',' descriptio,

@@ -1,5 +1,5 @@
-const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
-  const, latestArticle, s = [
+const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {;
+const, latestArticle, s = [
     {
       i;
   d: 1;

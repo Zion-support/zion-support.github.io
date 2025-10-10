@@ -5,34 +5,29 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode}
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo}
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {;
+constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // console.error removed for production
     this.setState({ error, errorInfo });
-  }
-
+  };
   handleReload = () => {
     window.location.reload();
   };
-
+  
   handleGoHome = () => {
     window.location.href = '/';
   };
@@ -64,12 +59,10 @@ class ErrorBoundary extends Component<Props, State> {
                   Error Details (Development)
                 </summary>
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
+                  {this.state.error.toString();
                   {this.state.errorInfo?.componentStack}
                 </pre>
-              </details>
-            )}
-
+              </details>);
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleReload}
@@ -88,12 +81,8 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
             </div>
           </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
+        </div>);
+    return this.props.children}
 }
 
 export default ErrorBoundary;

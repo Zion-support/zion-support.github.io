@@ -9,9 +9,7 @@ interface Feature {
   description: string;
   stats?: {
     value: string;
-    label: string;
-  }[];
-}
+    label: string}[]}
 
 interface Testimonial {
   name: string;
@@ -19,14 +17,12 @@ interface Testimonial {
   role: string;
   content: string;
   rating: number;
-  avatar?: string;
-}
-
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  const features: Feature[] = [
+  avatar?: string}
+;
+const DynamicContentShowcase: React.FC = () => {const [currentIndex, setCurrentIndex] = useState(0);
+const [isPlaying, setIsPlaying] = useState(true);
+;
+const features: Feature[] = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -68,8 +64,8 @@ const DynamicContentShowcase: React.FC = () => {
       ]
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -79,8 +75,8 @@ const DynamicContentShowcase: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const testimonials: Testimonial[] = [
+;
+const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
@@ -113,27 +109,22 @@ const DynamicContentShowcase: React.FC = () => {
 
   useEffect(() => {
     if (!isPlaying) return;
+    ;
+const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 4000);
     
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
+    return () => clearInterval(timer)}, [isPlaying, testimonials.length]);
+;
+const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
+;
+const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
+;
+const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
+;
+const currentTestimonial = testimonials[currentIndex];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
@@ -190,16 +181,14 @@ const DynamicContentShowcase: React.FC = () => {
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
-                    ))}
-                  </div>
-                )}
+                    ));
+                  </div>);
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -216,7 +205,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <div className="flex justify-center mb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
+                  ));
                 </div>
                 
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -265,12 +254,12 @@ const DynamicContentShowcase: React.FC = () => {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => setCurrentIndex(index);
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
                 />
-              ))}
+              ));
             </div>
           </div>
         </div>
@@ -293,7 +282,7 @@ const DynamicContentShowcase: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </div>
@@ -317,65 +306,9 @@ const DynamicContentShowcase: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </button>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300">
-              Real feedback from real businesses that have transformed with our solutions.
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-xl text-white mb-6 italic">
-                "{testimonials[currentIndex].content}"
-              </p>
-              <div className="text-cyan-400 font-semibold">
-                {testimonials[currentIndex].name}
-              </div>
-              <div className="text-gray-300">
-                {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
+    </div>)
 export default DynamicContentShowcase;

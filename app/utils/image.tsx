@@ -26,7 +26,7 @@ interface ImageProps {}
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;}
+  onError?: () => void}
 }
 export const Image: React.FC<ImageProps>= ({
 export const Image: React.FC<ImageProps> = ({}
@@ -48,23 +48,23 @@ export const Image: React.FC<ImageProps> = ({,
   onError,
   ...props}
 }) => {}
-  const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {}
+  const [, setIsLoaded] = useState(false);
+const [hasError, setHasError] = useState(false);
+const handleLoad = useCallback(() => {}
     setIsLoaded(true)
-    if (onLoad) onLoad();}
-  }, [onLoad])
-  const handleError = useCallback(() => {}
+    if (onLoad) onLoad();
+  }, [onLoad]);
+const handleError = useCallback(() => {}
     setHasError(true)
-    if (onError) onError();}
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
+    if (onError) onError();
+  }, [onError]);
+const imageStyle: React.CSSProperties = {
     ...style;
     ...(fill && {
       position: 'absolute'
       top: 0,
-      left: 0,
-  const imageStyle: React.CSSProperties = {}
+      left: 0,;
+const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
       position: 'absolute',
@@ -73,8 +73,7 @@ export const Image: React.FC<ImageProps> = ({,
       width: '100%',
       height: '100%',
       objectFit: 'cover'}
-    })
-  }
+    });
   if (hasError) {</ImageProps>
     return (</ImageProps>
   if (hasError) {}
@@ -90,12 +89,11 @@ export const,
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    })
-  };
+    });
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -107,9 +105,7 @@ export const,
         {...props}
       ></div>
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    )
-  }
+      </div>);
   return(<img;
   return (<img></img>
       src={src}
@@ -130,12 +126,8 @@ export default Image</img>
       onLoad={handleLoad})
       onError={handleError})
       {...props})
-    />)
-  )
-}
+    />))
 export default Image;
-    />)
-  );
-};
+    />))
 export default Image;
 "`

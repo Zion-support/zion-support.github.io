@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIHRAssistantPage: React.FC = () => {
-  const features = [
+;
+const AIHRAssistantPage: React.FC = () => {;
+const features = [
     {
       icon: Users,
       title: 'HR Automation',
@@ -100,7 +100,6 @@ const AIHRAssistantPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )};
 
 export default AIHRAssistantPage;

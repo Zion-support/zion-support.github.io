@@ -5,9 +5,8 @@ import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AIContentWriterPage: React.FC = () => {
-  const features = [
+;
+const AIContentWriterPage: React.FC = () => {const features = [
     {
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
@@ -24,8 +23,8 @@ const AIContentWriterPage: React.FC = () => {
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
@@ -95,10 +94,10 @@ const AIContentWriterPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -121,7 +120,7 @@ const AIContentWriterPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -171,11 +170,10 @@ const AIContentWriterPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                      ));
+                    </ul>);
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -200,7 +198,7 @@ const AIContentWriterPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
@@ -228,8 +226,5 @@ const AIContentWriterPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default AIContentWriterPage;

@@ -1,5 +1,7 @@
 const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
-  const, blogPost, s = [
+return (
+;
+const, blogPost, s = [
     {
       i;
   d: 1;
@@ -15,7 +17,9 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       rati, n, g: 4.9;
       trendi, n, g: tr, u, e;
       featur, e, d: tr, u, e;
-      ic, o, n: <Brain, className="w-6 h-6/>,"
+      ic, o, n: <Brain, className="w-6 h-6/>
+);
+},"
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'FEATUR, E, D','
       ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'
@@ -129,8 +133,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Brain, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'FEATUR, E, D',';
-      ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']';
-    }
+      ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'}
     {
       id: 2;
       tit, l, e: 'Quantum, Computing, Breakthrough;
@@ -148,8 +151,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Zap, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'TRENDI, N, G',';
-      ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']';
-    }
+      ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'}
     {
       id: 3;
       tit, l, e: 'Enterprise, AI, Implementatio;
@@ -167,8 +169,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Award, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       bad, g, e: 'POPUL, A, R',';
-      ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']';
-    }
+      ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'}
     {
       id: 4;
       tit, l, e: 'Se, l, f-Evolving, AI, System;
@@ -186,8 +187,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Sparkles, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       bad, g, e: 'INNOVATI, O, N',';
-      ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']';
-    }
+      ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'}
     {
       id: 5;
       tit, l, e: 'Predictive, Analytics, Revolutio;
@@ -205,8 +205,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <TrendingUp, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
       bad, g, e: 'ANALYTI, C, S',';
-      ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']';
-    }
+      ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'}
     {
       id: 6;
       tit, l, e: 'AI, Ethics, and Governa, n, c;

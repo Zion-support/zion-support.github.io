@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function MicroSaasPage() {
-  const microSaasServices = [
+export default function MicroSaasPage() {;
+const microSaasServices = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -239,8 +239,8 @@ export default function MicroSaasPage() {
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
     }
   ];
-
-  const categories = [
+;
+const categories = [
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
     { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
@@ -257,8 +257,8 @@ export default function MicroSaasPage() {
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
   ];
-
-  const benefits = [
+;
+const benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -280,8 +280,8 @@ export default function MicroSaasPage() {
       description: 'Enterprise-grade security with 99.9% uptime guarantee'
     }
   ];
-
-  const stats = [
+;
+const stats = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
@@ -581,5 +581,4 @@ export default function MicroSaasPage() {
 
       <Footer />
     </div>
-  );
-}
+  )}

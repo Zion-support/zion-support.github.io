@@ -1,8 +1,7 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-
-const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
+;
+const EnhancedServicesShowcase: React.FC = () => {const services = [
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
@@ -67,7 +66,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
                   </li>
-                ))}
+                ));
               </ul>
               
               <a
@@ -77,7 +76,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-          ))}
+          ));
         </div>
 
         <div className="text-center mt-12">
@@ -89,8 +88,5 @@ const EnhancedServicesShowcase: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
         </div>
-    </section>
-  );
-};
-
+    </section>)
 export default EnhancedServicesShowcase;

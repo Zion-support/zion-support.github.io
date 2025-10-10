@@ -1,8 +1,12 @@
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
-const October2025DocumentAutomationBanne, r = () => { 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+const October2025DocumentAutomationBanne, r = () => {
+return (
+ 
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' >
+);
+} {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
@@ -20,7 +24,7 @@ const October2025DocumentAutomationBanne, r = () => {
           <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'></div>
             <FileText, className='w-4 h-4, m, r-2' />
             NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5;
-            <FileText, classNam, e = 'w-4 h-4, m, l-2' />
+            <FileText, classNam, e = 'w-4 h-4, m, l-2' />;
 const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
@@ -416,6 +420,5 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
         </div>
       </div>
     </div>
-  );
-};
+  )};
 export default October2025 DocumentAutomationBanner;

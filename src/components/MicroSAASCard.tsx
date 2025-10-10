@@ -1,12 +1,13 @@
+import React from 'react';
 
 
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   titl,
   e: string;
@@ -28,15 +29,15 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     contactInf,
   o: string;
     link?: string;
-    popular?: boolean;
-  };
-}
-
+    popular?: boolean}}
+;
 const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
+          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
 }
-
+;
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
+return (
+
   return (
     
           
@@ -50,6 +51,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   )
     
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+);
+}
 
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
@@ -123,8 +126,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default MicroSAASCard;"`
 

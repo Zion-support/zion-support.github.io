@@ -3,19 +3,17 @@ import React, { useState } from 'react';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const copyToClipboard = (code: string, id: string) => {
+import SEOOptimizer from '../components/SEOOptimizer'
+export default function APIDocsPage() {;
+const [copiedCode, setCopiedCode] = useState<string | null>(null);
+const [searchQuery, setSearchQuery] = useState('');
+;
+const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
-  };
-
-  const apiEndpoints = [
+;
+const apiEndpoints = [
     {
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
@@ -96,8 +94,8 @@ export default function APIDocsPage() {
       ]
     }
   ];
-
-  const filteredEndpoints = apiEndpoints.map(category => ({
+;
+const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -201,20 +199,19 @@ export default function APIDocsPage() {
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`);
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <>
+                            <React.Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </>
+                            </React.Fragment>
                           ) : (
-                            <>
+                            <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </>
-                          )}
+                            </React.Fragment>);
                         </button>
                       </div>
                       
@@ -226,10 +223,10 @@ export default function APIDocsPage() {
                         </pre>
                       </div>
                     </div>
-                  ))}
+                  ));
                 </div>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -255,6 +252,4 @@ export default function APIDocsPage() {
       </section>
 
       <Footer />
-    </div>
-  );
-}
+    </div>);

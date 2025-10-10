@@ -9,13 +9,13 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -41,6 +41,5 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               </button>
             </div>
           </div>
-};
-
+}
 export default PagePage;

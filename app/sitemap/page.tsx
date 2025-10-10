@@ -1,7 +1,6 @@
 import React from 'react';
-
-const SitemapPage: React.FC = () => {
-  const pages = [
+;
+const SitemapPage: React.FC = () => {const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -26,8 +25,7 @@ const SitemapPage: React.FC = () => {
     { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ];
+    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
@@ -60,7 +58,7 @@ const SitemapPage: React.FC = () => {
                   {page.path}
                 </p>
               </div>
-            ))}
+            ));
           </div>
         </div>
 
@@ -87,8 +85,5 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>)
 export default SitemapPage;

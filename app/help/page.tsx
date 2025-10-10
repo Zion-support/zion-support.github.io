@@ -19,7 +19,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -31,13 +31,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Experience the power of our page solutions for your business.
             </p>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
 
-    </div>
-  );
-};
-
+    </div>)
 export default PagePage;

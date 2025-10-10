@@ -4,9 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AiContentStudioPage: React.FC = () => {
-  const features = [
+;
+const AiContentStudioPage: React.FC = () => {const features = [
     {
       title: 'AI Content Generation',
       description: 'Generate high-quality content using advanced AI algorithms',
@@ -23,8 +22,8 @@ const AiContentStudioPage: React.FC = () => {
       benefits: ['Real-time editing', 'Comments', 'Version control']
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
@@ -94,10 +93,10 @@ const AiContentStudioPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  ));
                 </ul>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -120,7 +119,7 @@ const AiContentStudioPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            ));
           </div>
         </div>
       </section>
@@ -144,8 +143,5 @@ const AiContentStudioPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>)
 export default AIContentStudioPage;

@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 
 interface OptimizedLoadingSpinnerProps {
@@ -8,12 +9,11 @@ interface OptimizedLoadingSpinnerProps {
 
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
-  className?: string;
-}
+  className?: string}
 const,
   OptimizedLoadingSpinner: React.FC;
           <OptimizedLoadingSpinnerProps> = memo()
@@ -25,7 +25,7 @@ const,
   g: 'w-12 h-12'
     };
     const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   primar,
   y: 'text-cyan-400',
@@ -100,22 +100,20 @@ className="opacity-75""
           
           </svg>
       </div>
-    );
-  }
+    )}
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
-
-
+;
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg:     ,
 $4};
-
-    const colorClasses = {
+;
+const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
@@ -148,8 +146,7 @@ $4};
           />
         </svg>
       </div>
-    );
-  }
+    )}
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';

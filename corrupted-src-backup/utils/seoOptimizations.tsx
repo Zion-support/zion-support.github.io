@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * SEO Optimization Utilities;
  * Comprehensive SEO enhancements for the Zion website;
@@ -26,8 +27,7 @@ export const seoUtils = {/* content */}
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": item.url;
-    }))
+      "item": item.url}))
   }),
 
   // Generate FAQ structured data;
@@ -39,8 +39,7 @@ export const seoUtils = {/* content */}
       "name": faq.question)
       "acceptedAnswer": {/* content */}
         "@type": "Answer")
-        "text": faq.answer;
-      }
+        "text": faq.answer}
     }))
   }),
 
@@ -52,16 +51,14 @@ export const seoUtils = {/* content */}
     datePublished: string;
     dateModified: string;
     image?: string;
-    url: string;
-  }) => ({/* content */}
+    url: string}) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
     "author": {/* content */}
       "@type": "Person",
-      "name": article.author;
-    },
+      "name": article.author},
     "image": {/* content */}
       "url": article.image || "https: //zion.app/logo.png"}
   // Generate structured data for organization,
@@ -108,8 +105,7 @@ export const seoUtils = {/* content */}
       "name": faq.question,"
       "acceptedAnswer": {/* content */}"
         "@type": "Answer","
-        "text": faq.answer;
-      })
+        "text": faq.answer})
     }))
   }),
 
@@ -137,15 +133,13 @@ export const seoUtils = {/* content */}
     "description": article.description,"
     "author": {/* content */}"
       "@type": "Person","
-      "name": article.author;
-    },"
+      "name": article.author},"
     "image": {/* content */}"
       "url": article.image || "http,"
   s://zion.app/logo.png"
     })
   })
-});
-};
+})};
 
 // Sitemap generation utilities;
 export const sitemapUtils = {/* content */}
@@ -155,8 +149,7 @@ export const sitemapUtils = {/* content */}
       url,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
       changefreq: changefreq || 'weekly',
-      priority: priority || '0.8'};
-  },
+      priority: priority || '0.8'}},
 
   // Generate robots.txt content;
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
@@ -175,8 +168,7 @@ Sitemap: ${sitemapUrl}`;
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
-    };
-  },
+    }},
 
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
@@ -188,21 +180,18 @@ Allo,
   w: /
 
 Sitema,`
-  p: ${sitemapUrl}`;
-  }
+  p: ${sitemapUrl}`}
 };
 
 // URL optimization utilities;
 export const urlUtils = {/* content */}
   // Generate canonical URL;
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
 
   // Generate Open Graph URL;
   generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
 
   // Generate Twitter Card URL;
   generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
@@ -211,24 +200,21 @@ export const urlUtils = {/* content */}
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
 
   // Generate Open Graph URL,
   generateOGUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  },
+    return `${baseUrl}${path}`},
 
   // Generate Twitter Card URL,
   generateTwitterUrl: (pat,
   h: string, baseUr,
   l: string = 'http)
   s://zion.app') => {/* content */}`
-    return `${baseUrl}${path}`;
-  }
+    return `${baseUrl}${path}`}
 };
 
 // Content optimization utilities;
@@ -243,15 +229,13 @@ export const contentOptimization = {/* content */}
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
       .filter(word => word.length >= minLength);
-    
-    const wordCount = words.reduce((acc, word) => {/* content */}
+    ;
+const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
+      return acc}, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
-      .map(([word]) => word);
-  },
+      .map(([word]) => word)},
 
   // Generate meta description;
   generateMetaDescription: (content: string, maxLength: number = 160): string => {/* content */}
@@ -262,8 +246,7 @@ export const contentOptimization = {/* content */}
     const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     
-    return cleanContent.substring(0, maxLength - 3) + '...';
-  },
+    return cleanContent.substring(0, maxLength - 3) + '...'},
 
   // Generate title tag;
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {/* content */}
@@ -272,8 +255,7 @@ export const contentOptimization = {/* content */}
   e: string, siteNam,
   e: string = 'Zion Tech Group', separato)
   r: string = ' | '): string => {/* content */}`
-    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
-  }
+    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName}
 };
 
 // Performance SEO utilities;
@@ -290,15 +272,13 @@ export const performanceSEO = {/* content */}
   s: 'image' }
     ];
 
-    criticalResources.forEach(resource => {/* content */})
-      const _link = document.createElement('link');
+    criticalResources.forEach(resource => {/* content */});
+const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) link.type = resource.type;
-      document.head.appendChild(link);
-    });
-  },
+      document.head.appendChild(link)})},
 
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
@@ -315,8 +295,7 @@ export const performanceSEO = {/* content */}
     width?: number;
     height?: number;
     loadin,
-  g: 'lazy';
-  } => {/* content */}
+  g: 'lazy'} => {/* content */}
     return {/* content */}
       sr,`
   c: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
@@ -325,9 +304,7 @@ export const performanceSEO = {/* content */}
       height,
       loading: 'lazy' as const;
       loadin,
-  g: 'lazy' as const;
-    };
-  }
+  g: 'lazy' as const}}
 };
 
 // Analytics and tracking utilities;
@@ -349,8 +326,7 @@ export const analyticsUtils = {/* content */}
   e: title,
         page_locatio,
   n: url;)
-      });
-    }
+      })}
   },
 
   // Track custom events;
@@ -360,8 +336,7 @@ export const analyticsUtils = {/* content */}
   e: string, parameters?: Record<string, unknown>) => {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
-  g: Function }).gtag('event', eventName, parameters);
-    }
+  g: Function }).gtag('event', eventName, parameters)}
   },
 
   // Track conversion events;
@@ -380,8 +355,7 @@ export const analyticsUtils = {/* content */}
   o: conversionId,
         valu,
   e: value;)
-      });
-    }
+      })}
   }
 };
 
@@ -390,8 +364,8 @@ export const coreWebVitals = {/* content */}
   // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
-
-    const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
+;
+const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
@@ -400,8 +374,8 @@ export const coreWebVitals = {/* content */}
   // Track Core Web Vitals,
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
-
-    const trackMetric = (metri,
+;
+const trackMetric = (metri,
   c: {/* TODO: Fix JSX expression */})
   a: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
@@ -412,9 +386,7 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
-  a: metric.delta;
-      });
-    };
+  a: metric.delta})};
 
     // Import and track web vitals;
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
@@ -422,9 +394,7 @@ export const coreWebVitals = {/* content */}
       // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions;
       onFCP(trackMetric);
       onLCP(trackMetric);
-      onTTFB(trackMetric);
-    });
-  }
+      onTTFB(trackMetric)})}
 };
 
 // SEO component for React;
@@ -435,8 +405,7 @@ export const SEOComponent = ({/* content */}
   image, 
   url, 
   type = 'website',
-  structuredData;
-}: {/* content */}
+  structuredData}: {/* content */}
   title?: string;
   description?: string;
   keywords?: string;
@@ -505,8 +474,7 @@ export const SEOComponent = ({/* content */}
         </script>
       )}
     </Helmet>
-  );
-};
+  )};
 
 // Initialize SEO optimizations;
 export const initializeSEO = () => {/* content */}
@@ -524,7 +492,6 @@ export const initializeSEO = () => {/* content */}
       const _meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
-      document.head.appendChild(meta);
-    }
+      document.head.appendChild(meta)}
   }
 };"`

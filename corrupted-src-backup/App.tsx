@@ -10,26 +10,24 @@ import './index.css';
 // const Team = lazy(() => import('./pages/Team'));
 // const Privacy = lazy(() => import('./pages/Privacy'));
 // const Terms = lazy(() => import('./pages/Terms'));
-
+;
 function App() {
   useEffect(() => {
     // Initialize basic optimizations;
     //     // Cleanup on unmount;
     return () => {
-      //       };
-  }, []);
+      //       }}, []);
 
   return(<ErrorBoundary>
       <div>
   return (
     <ErrorBoundary>
       <div></div>
-        <Router>
+        <Router>;
 function App() {/* TODO: Fix JSX expression */}
 }
   useEffect(() => {/* TODO: Fix JSX expression */}
-      //       };
-  }, []);
+      //       }}, []);
 
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
@@ -53,8 +51,7 @@ function App() {/* TODO: Fix JSX expression */}
         </Router>
       </div>
     </ErrorBoundary>)
-  );
-}
+  )}
 
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
@@ -64,12 +61,10 @@ class ErrorBoundary extends React.Component<
   r: boolean }
 > {/* TODO: Fix JSX expression */}
   n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
-  r: false };
-  }
+  r: false }}
 
   static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
-  r: true };
-  }
+  r: true }}
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
@@ -102,11 +97,9 @@ class ErrorBoundary extends React.Component<
                 Try again;
               </button>
             </div>
-          </div>));
-    }
+          </div>))}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default App;

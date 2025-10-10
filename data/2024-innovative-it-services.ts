@@ -1,3 +1,4 @@
+import React from 'react';
 export interface InnovativeITService2024 {id: string;
   name: string;
   tagline: string;
@@ -35,8 +36,7 @@ export interface InnovativeITService2024 {id: string;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-  reviews: number;
-}
+  reviews: number}
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -73,8 +73,8 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     roi: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.",
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
     marketSize: "$8.2B market"
-    growthRate: "20.1% annual growth"
-    variant: "ai-futuristic"
+    growthRate: "20.1% annual growth";
+variant: "ai-futuristic"
     contactInfo: unknown;
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
@@ -163,8 +163,8 @@ export const,
     marketSiz,"
   e: "$8.2B market",
     growthRat,"
-  e: "20.1% annual growth",
-    varian,"
+  e: "20.1% annual growth",;
+varian,"
   t: "ai-futuristic",
     contactInf,
   o: unknown,

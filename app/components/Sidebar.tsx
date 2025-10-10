@@ -20,34 +20,32 @@ import {
   MapPin,
   Clock
 } from 'lucide-react';
-
+;
 const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
-  const location = useLocation();
+return (;
+const [isOpen, setIsOpen] = useState(false);
+const [expandedSections, setExpandedSections] = useState<Set<string>
+);
+}>(new Set(['ai-services', 'micro-saas', 'it-services']));
+const location = useLocation();
 
-  useEffect(() => {
-    const handleResize = () => {
+  useEffect(() => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
-      }
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
+    return () => window.removeEventListener('resize', handleResize)}, []);
+;
+const toggleSection = (section: string) => {;
+const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
+      newExpanded.delete(section)} else {
       newExpanded.add(section);
-    }
     setExpandedSections(newExpanded);
-  };
-
-  const navigationSections = [
+;
+const navigationSections = [
     {
       title: 'Main',
       items: [
@@ -56,8 +54,7 @@ const Sidebar: React.FC = () => {
         { name: 'Services', path: '/services', icon: Settings },
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Blog', path: '/blog', icon: BarChart },
-        { name: 'Case Studies', path: '/case-studies', icon: BarChart },
-      ]
+        { name: 'Case Studies', path: '/case-studies', icon: BarChart }]
     },
     {
       title: 'AI Services',
@@ -75,8 +72,7 @@ const Sidebar: React.FC = () => {
         { name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart },
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
-        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
-      ]
+        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings }]
     },
     {
       title: 'Micro SaaS',
@@ -94,8 +90,7 @@ const Sidebar: React.FC = () => {
         { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
-        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-      ]
+        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings }]
     },
     {
       title: 'IT Services',
@@ -109,8 +104,7 @@ const Sidebar: React.FC = () => {
         { name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Database Management', path: '/database-management', icon: Settings },
-        { name: 'Managed IT', path: '/managed-it', icon: Settings },
-      ]
+        { name: 'Managed IT', path: '/managed-it', icon: Settings }]
     },
     {
       title: 'Company',
@@ -118,8 +112,7 @@ const Sidebar: React.FC = () => {
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
-        { name: 'Pricing', path: '/pricing', icon: BarChart },
-      ]
+        { name: 'Pricing', path: '/pricing', icon: BarChart }]
     },
     {
       title: 'Resources',
@@ -127,12 +120,11 @@ const Sidebar: React.FC = () => {
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
-        { name: 'Status', path: '/status', icon: Settings },
-      ]
+        { name: 'Status', path: '/status', icon: Settings }]
     }
   ];
-
-  const contactInfo = {
+;
+const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
@@ -140,10 +132,10 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(true);
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
@@ -154,10 +146,8 @@ const Sidebar: React.FC = () => {
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-
+          onClick={() => setIsOpen(false);
+        />);
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -175,7 +165,7 @@ const Sidebar: React.FC = () => {
               </div>
             </Link>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false);
               className="lg:hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >
@@ -189,15 +179,14 @@ const Sidebar: React.FC = () => {
               {navigationSections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="space-y-1">
                   <button
-                    onClick={() => section.key && toggleSection(section.key)}
+                    onClick={() => section.key && toggleSection(section.key);
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <span>{section.title}</span>
                     {section.key && (
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4" /> : 
-                        <ChevronRight className="w-4 h-4" />
-                    )}
+                        <ChevronRight className="w-4 h-4" />);
                   </button>
                   
                   {(!section.key || expandedSections.has(section.key)) && (
@@ -206,7 +195,7 @@ const Sidebar: React.FC = () => {
                         <Link
                           key={itemIndex}
                           to={item.path}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => setIsOpen(false);
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
@@ -216,11 +205,10 @@ const Sidebar: React.FC = () => {
                           <item.icon className="w-4 h-4 flex-shrink-0" />
                           <span>{item.name}</span>
                         </Link>
-                      ))}
-                    </div>
-                  )}
+                      ));
+                    </div>);
                 </div>
-              ))}
+              ));
             </nav>
           </div>
 
@@ -246,10 +234,6 @@ const Sidebar: React.FC = () => {
               </div>
           </div>
       </aside>
-    </>
-  );
-};
-
-Sidebar.displayName = 'Sidebar';
-
+    </React.Fragment>);
+Sidebar.displayName = 'Sidebar'
 export default Sidebar;

@@ -9,11 +9,9 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-    text: string;
-  }>;
-  onSubscribe?: (email: string) => void;
-}
-
+    text: string}>;
+  onSubscribe?: (email: string) => void}
+;
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -38,12 +36,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     }
   ],
   onSubscribe
-}) => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+}) => {;
+const [email, setEmail] = useState('');
+const [isSubscribed, setIsSubscribed] = useState(false);
+const [isLoading, setIsLoading] = useState(false);
+;
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -51,19 +49,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     
     try {
       if (onSubscribe) {
-        await onSubscribe(email);
-      } else {
+        await onSubscribe(email)} else {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-      
       setIsSubscribed(true);
-      setEmail('');
-    } catch (error) {
-      console.error('Subscription failed:', error);
-    } finally {
+      setEmail('')} catch (error) {
+      // console.error removed for production
+} finally {
       setIsLoading(false);
-    }
   };
 
   if (isSubscribed) {
@@ -80,16 +73,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
           <button
-            onClick={() => setIsSubscribed(false)}
+            onClick={() => setIsSubscribed(false);
             className="text-white underline hover:text-blue-200 transition-colors"
           >
             Subscribe another email
           </button>
         </div>
-      </div>
-    );
-  }
-
+      </div>);
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -111,7 +101,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   </div>
                   <span className="text-blue-100">{feature.text}</span>
                 </div>
-              ))}
+              ));
             </div>
           </div>
 
@@ -126,7 +116,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   type="email"
                   id="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value);
                   placeholder={placeholder}
                   required
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
@@ -139,16 +129,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
                 {isLoading ? (
-                  <>
+                  <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
-                )}
+                  </React.Fragment>);
               </button>
               
               <p className="text-sm text-blue-200 text-center">
@@ -158,8 +147,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>)
 export default ContentNewsletterSignup;

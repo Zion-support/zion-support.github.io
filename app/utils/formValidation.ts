@@ -5,20 +5,20 @@
  */
 export interface ValidationRule<T = unknown> {
   validate: (value: T) => boolean;
-  message: string;}
+  message: string}
 }
 export interface ValidationResult {
   valid: boolean,
 export interface ValidationRule<T = unknown> {}
   validate: (value: T) => boolean
-  message: string;}
+  message: string}
 }
 export interface ValidationResult {}
   valid: boolean
-  errors: string[];}
+  errors: string[]}
 }
 export interface FieldValidation {}
-  [fieldName: string]: ValidationRule[];}
+  [fieldName: string]: ValidationRule[]}
 export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
 }
 export interface ValidationResult {/* TODO: Fix JSX expression */}
@@ -43,12 +43,16 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    * Validate email format;
    */
   email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,
-    validate: (value: string) => {,
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({}
+    validate: (value: string) => {
+return (
+,;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  email: (message = 'Please enter a valid email address'): ValidationRule<string>
+);
+} => ({}
     validate: (value: string) => {}
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      return emailRegex.test(value);}
+      return emailRegex.test(value);
     },
     message;
   emai,
@@ -87,26 +91,28 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
       return phoneRegex.test(value.replace(/\s/g, ''))
   phoneU,
-  S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-      return phoneRegex.test(value.replace(/\s/g, ''));
-    },
-    message;
-  }),
+  S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */});
+const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+      return phoneRegex.test(value.replace(/\s/g, ''))},
+    message}),
   /**
    * Validate URL format;
    */
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,
-    validate: (value: string) => {,
+    validate: (value: string) => {
+return (
+,
       try {,
         new URL(value),
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({}
+  url: (message = 'Please enter a valid URL'): ValidationRule<string>
+);
+} => ({}
     validate: (value: string) => {}
       try {}
         new URL(value)
-        return true;}
+        return true}
       } catch {}
-        return false;}
+        return false}
       }
     },
     message;
@@ -159,23 +165,25 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   strongPassword: (,
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
   ): ValidationRule<string> => ({
-    validate: (value: string) => {,
-      const hasUpperCase = /[A-Z]/.test(value),
-      const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}
+    validate: (value: string) => {
+return (
+,;
+const hasUpperCase = /[A-Z]/.test(value),;
+const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string>
+);
+} => ({}
     validate: (value: string) => {}
-      const hasUpperCase = /[A-Z]/.test(value)
-      const hasLowerCase = /[a-z]/.test(value)
-      const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value)
+      const hasUpperCase = /[A-Z]/.test(value);
+const hasLowerCase = /[a-z]/.test(value);
+const hasNumber = /[0-9]/.test(value);
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>]/.test(value)
   strongPasswor,
   d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')
-  ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
-      const hasMinLength = value.length >= 8;
-      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
-    },
-    message;
-  }),
+  ): ValidationRule<string> => ({/* TODO: Fix JSX expression */});
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>]/.test(value);
+const hasMinLength = value.length >= 8;
+      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength},
+    message}),
   /**
    * Validate matching fields (e.g., password confirmation)
    */
@@ -193,12 +201,16 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    * Validate file size;
    */
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
-    validate: (file: File) => {,
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
+    validate: (file: File) => {
+return (
+,;
+const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
+  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File>
+);
+} => ({}
     validate: (file: File) => {}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024
-      return file.size <= maxSizeInBytes;}
+      return file.size <= maxSizeInBytes}
     },
     message: message || `File size must not exceed ${maxSizeInMB}MB;
   fileSiz,
@@ -213,30 +225,29 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    */
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
     validate: (file: File) => allowedTypes.includes(file.type),`}
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}
+    message: message || `File type must be one of: ${allowedTypes.join(', ');
   fileTyp,
   e: (allowedType)
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`
   of: ${allowedTypes.join(', ')}`
-  })
-}
+  });
 /**
  * Validate a single field with multiple rules;
  */
-export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,
-  const errors: string[] = [],
+export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,;
+const errors: string[] = [],
   for (const rule of rules) {,
     if (!rule.validate(value)) {,
-      errors.push(rule.message);}
+      errors.push(rule.message);
     }
   }
   return {
-    valid: errors.length === 0;
+    valid: errors.length === 0
 export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {}
   const errors: string[] = []
   for (const rule of rules) {}
     if (!rule.validate(value)) {}
-      errors.push(rule.message);}
+      errors.push(rule.message);
     }
   }
   return {}
@@ -249,8 +260,7 @@ export function validateField<T>(valu,
     }
   }
   return {/* TODO: Fix JSX expression */}
-  };
-}
+  }}
 /**
  * Validate entire form;
  */
@@ -260,9 +270,9 @@ export function validateForm<T extends Record<string, unknown>>(
 ): Record<keyof T, ValidationResult> {}
   const results = {} as Record<keyof T, ValidationResult>
   for (const fieldName in validationSchema) {}
-    const value = formData[fieldName]
-    const rules = validationSchema[fieldName]
-    results[fieldName] = validateField(value, rules);}
+    const value = formData[fieldName];
+const rules = validationSchema[fieldName]
+    results[fieldName] = validateField(value, rules)
 export function validateForm<T extends Record<string, unknown>>(formDat,
   a: T,
   validationSchem,
@@ -271,15 +281,14 @@ export function validateForm<T extends Record<string, unknown>>(formDat,
   const results = {} as Record<keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   }
-  return results;
-}
+  return results}
 /**
  * Check if form is valid;
  */
 export function isFormValid<T extends Record<string, unknown>>(
   validationResults: Record<keyof T, ValidationResult>
 ): boolean {}
-  return Object.values(validationResults).every(result => result.valid);}
+  return Object.values(validationResults).every(result => result.valid)
 export function isFormValid<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>)
 ): boolean {/* TODO: Fix JSX expression */}
@@ -294,7 +303,7 @@ export function getFormErrors<T extends Record<string, unknown>>(
   for (const fieldName in validationResults) {}
     const result = validationResults[fieldName]
     if (!result.valid) {}
-      errors[fieldName] = result.errors;}
+      errors[fieldName] = result.errors}
 export function getFormErrors<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>)
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
@@ -302,19 +311,18 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
     }
   }
-  return errors;
-}
+  return errors}
 /**
  * Sanitize input string;
  */
 export function sanitizeInput(input: string): string {,
   return input;
     .trim(),
-    .replace(/[<>]/g, '') // Remove potential HTML tags;
+    .replace(/[<React.Fragment>]/g, '') // Remove potential HTML tags
 export function sanitizeInput(input: string): string {}
   return input
     .trim()
-    .replace(/[<>]/g, '') // Remove potential HTML tags
+    .replace(/[<React.Fragment>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
@@ -324,26 +332,28 @@ export function sanitizeInput(inpu)
  */
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
   func: T,
-  wait: number,
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters<T>) {,
-    const later = useCallback((...args) => {,
+  wait: number): (...args: Parameters<T>) => void {;
+let timeout: NodeJS.Timeout | null = null;
+  return function executedFunction(...args: Parameters<T>) {,;
+const later = useCallback((...args) => {
+return (
+,
       timeout = null;
   func: T,
   wait: number
-): (...args: Parameters<T>) => void {}
+): (...args: Parameters<T>
+);
+}) => void {}
   let timeout: NodeJS.Timeout | null = null
   return function executedFunction(...args: Parameters<T>) {}
     const later = useCallback((...args) => {}
       timeout = null
-      func(...args);}
+      func(...args);
     }
     if (timeout) {}
-      clearTimeout(timeout);}
+      clearTimeout(timeout);
     }
-    timeout = setTimeout(later, wait)
-  }
+    timeout = setTimeout(later, wait);
 }
 export function debounce<T extends (...arg)
   s: Parameters<T>) => ReturnType<T>>(fun,
@@ -355,7 +365,5 @@ export function debounce<T extends (...arg)
     };
     if (timeout) {/* TODO: Fix JSX expression */}
     }
-    timeout = setTimeout(later, wait);
-  };
-}
+    timeout = setTimeout(later, wait)}}
 "`

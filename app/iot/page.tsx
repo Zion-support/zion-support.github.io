@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-
-const IoTPage: React.FC = () => {
-  const iotServices = [
+;
+const IoTPage: React.FC = () => {const iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -137,11 +136,11 @@ const IoTPage: React.FC = () => {
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
     }
   ];
-
-  const categories = [...new Set(iotServices.map(service => service.category))];
+;
+const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
@@ -256,7 +255,7 @@ const IoTPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          ))}
+                          ));
                         </ul>
                       </div>
 
@@ -267,7 +266,7 @@ const IoTPage: React.FC = () => {
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
+                          ));
                         </div>
                       </div>
 
@@ -279,7 +278,7 @@ const IoTPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          ))}
+                          ));
                         </ul>
                       </div>
 
@@ -287,12 +286,11 @@ const IoTPage: React.FC = () => {
                         Get IoT Quote
                       </button>
                     </div>
-                  ))}
+                  ));
               </div>
             </div>
           </section>
-        ))}
-
+        ));
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -368,8 +366,5 @@ const IoTPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>)
 export default IoTPage;

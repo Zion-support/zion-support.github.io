@@ -10,12 +10,10 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🚀 Starting comprehensive improvements...');
-
+// __dirname removed
+// console.log removed for production
 // Add new scripts for better development experience;
 packageJson.scripts = {
   ...packageJson.scripts,
@@ -71,9 +69,8 @@ const improvedTsConfig = {
     forceConsistentCasingInFileNames: true;
     resolveJsonModule: true;
     isolatedModules: true;
-    verbatimModuleSyntax: true;
-  },
-  include: [,
+    verbatimModuleSyntax: true},
+  include: [,;
 const improvedTsConfig = {/* TODO: Fix JSX expression */}
   },
   includ,
@@ -106,8 +103,7 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
     ecmaVersion: 2022;
     sourceType: 'module',
     ecmaFeatures: {,
-      jsx: true;
-    }},
+      jsx: true}},
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {,
     'react/react-in-jsx-scope': 'off',
@@ -204,17 +200,14 @@ export default defineConfig({
     terserOptions: {,
       compress: {,
         drop_console: true;
-        drop_debugger: true;
-      }}},
+        drop_debugger: true}}},
   server: {
     port: 3000;
     host: true;
-    open: true;
-  },
+    open: true},
   preview: {,
     port: 4173;
-    host: true;
-  },
+    host: true},
   optimizeDeps: {,
     include: ['react', 'react-dom', 'react-router-dom']},
   define: {,
@@ -264,8 +257,7 @@ if (typeof window !== 'undefined') {
     entries.forEach((entry) => {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-    });
-  });
+    })});
   
   // Track Web Vitals;
 //   const metrics = performanceOptimizer.measurePageLoad();
@@ -275,43 +267,42 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 
 // 2. Run SEO enhancement;
 function runSEOEnhancement() {
-  console.log('🔍 Running SEO enhancement...');
-  try {
+  // console.log removed for production
+try {
     execSync('node scripts/seo-enhancer.js', { stdio: 'inherit' });
-    console.log('✅ SEO enhancement completed');
-  } catch (error) {
-    console.error('❌ SEO enhancement failed:', error.message);
-  }
+    // console.log removed for production
+} catch (error) {
+    // console.error removed for production
+}
 }
 
 // 3. Run accessibility enhancement;
 function runAccessibilityEnhancement() {
-  console.log('♿ Running accessibility enhancement...');
-  try {
+  // console.log removed for production
+try {
     execSync('node scripts/accessibility-enhancer.js', { stdio: 'inherit' });
-    console.log('✅ Accessibility enhancement completed');
-  } catch (error) {
-    console.error('❌ Accessibility enhancement failed:', error.message);
-  }
+    // console.log removed for production
+} catch (error) {
+    // console.error removed for production
+}
 }
 
 // 4. Run build;
 function runBuild() {
-  console.log('🏗️ Running build...');
-  try {
+  // console.log removed for production
+try {
     execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build completed');
-  } catch (error) {
-    console.error('❌ Build failed:', error.message);
-    process.exit(1);
-  }
+    // console.log removed for production
+} catch (error) {
+    // console.error removed for production
+process.exit(1)}
 }
 
 // 5. Generate improvement report;
 function generateImprovementReport() {
-  console.log('📊 Generating improvement report...');
-  
-  const report = {
+  // console.log removed for production
+;
+const report = {
     timestamp: new Date().toISOString()
     version: "1.0.0"
     improvements: [,
@@ -373,36 +364,28 @@ function generateImprovementReport() {
     path.join(__dirname, '../public/improvement-report.json'), 
     JSON.stringify(report, null, 2)
   );
-  console.log('✅ Improvement report generated');
+  // console.log removed for production
 }
 
 // 6. Run all improvements;
 async function runAllImprovements() {
   try {
-    console.log('🎯 Starting comprehensive improvements process...\n');
-    
-    runPerformanceOptimization();
-    console.log('');
-    
-    runSEOEnhancement();
-    console.log('');
-    
-    runAccessibilityEnhancement();
-    console.log('');
-    
-    runBuild();
-    console.log('');
-    
-    generateImprovementReport();
-    console.log('');
-    
-    console.log('🎉 All improvements completed successfully!');
-    console.log('📋 Check the improvement-report.json for details');
-    
-  } catch (error) {
-    console.error('❌ Error during improvements:', error);
-    process.exit(1);
-  }
+    // console.log removed for production
+runPerformanceOptimization();
+    // console.log removed for production
+runSEOEnhancement();
+    // console.log removed for production
+runAccessibilityEnhancement();
+    // console.log removed for production
+runBuild();
+    // console.log removed for production
+generateImprovementReport();
+    // console.log removed for production
+// console.log removed for production
+// console.log removed for production
+} catch (error) {
+    // console.error removed for production
+process.exit(1)}
 }
 
 runAllImprovements();
@@ -434,8 +417,8 @@ export const devWarn = (messag)
 export const measurePerformance = (nam,
   e: string, f)
   n: () => void) => {/* TODO: Fix JSX expression */}`
-//     // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
-  } else {/* TODO: Fix JSX expression */}
+//     // // console.log removed for production
+.toFixed(2)}ms\`)} else {/* TODO: Fix JSX expression */}
   }
 };
 

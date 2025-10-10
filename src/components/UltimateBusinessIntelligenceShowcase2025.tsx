@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
         return (
 import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const _UltimateBusinessIntelligenceShowcase2025 = () => {;
+const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -143,9 +143,9 @@ export default UltimateBusinessIntelligenceShowcase2025
 
 'use client';
 import React, { useState } from 'react';
-        return (import { Link } from 'react-router-dom';)
+        return (import { Link } from 'react-router-dom';);
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
@@ -153,7 +153,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   i,
   d: 'ultimate-business-intelligence-revolution',
@@ -170,7 +170,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   y: 'blog',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 };
   ro,
   i: '30,000%',

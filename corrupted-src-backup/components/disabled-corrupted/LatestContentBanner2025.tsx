@@ -1,6 +1,6 @@
 import React from 'react';
-const LatestContentBanner202, 5: React.FC = () => {,
-  const latestArticle, s = [
+const LatestContentBanner202, 5: React.FC = () => {,;
+const latestArticle, s = [
     {
       title: "AI, 2026, Mega Breakthrough, Revolut, i, o, n",
       description: "Me, t, a-Cognitiv, e, A, I, Quant, u, m-Neural, Network, s, Autonomous, Operation, s - $5, 0, M+ Annual, Saving, s",
@@ -8,7 +8,7 @@ const LatestContentBanner202, 5: React.FC = () => {,
       category: "Revolutionar, y, A, I",
       emo, j, i: "🚀",
       highlig, h, t: "BREAKTHRO, U, G, H",
-      impa, c, t: "$5, 0, M+ Savi, n, g, s"
+      impa, c, t: "$5, 0, M+ Savi, n, g, s";
 const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -299,6 +299,5 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </di, v>
-  );
-};
+  )};
 export default LatestContentBanner2025;"`

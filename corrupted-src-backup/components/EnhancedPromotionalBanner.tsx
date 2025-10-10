@@ -2,11 +2,11 @@ import React from 'react';
 
 interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
-
+;
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
   banner;
-  className = ''}) => {
-  const variantStyles = {
+  className = ''}) => {;
+const variantStyles = {
     success: 'bg-gradient-to-r from-green-600 to-emerald-600',
     warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',
     info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
@@ -28,7 +28,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
         <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'></div>
           <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'>
             {  bann, e, r.ic, o, n  && (</div>
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>
+              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>;
 const,
   EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}

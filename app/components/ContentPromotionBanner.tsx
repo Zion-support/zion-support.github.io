@@ -2,9 +2,8 @@
 
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
+;
+const ContentPromotionBanner: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,8 +25,8 @@ const ContentPromotionBanner: React.FC = () => {
       description: 'Worldwide deployment with local support and compliance'
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -37,8 +36,8 @@ const ContentPromotionBanner: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  const stats = [
+;
+const stats = [
     {
       icon: Users,
       value: '10,000+',
@@ -60,7 +59,6 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -95,7 +93,7 @@ const ContentPromotionBanner: React.FC = () => {
               <div className="text-gray-400 text-sm">{stat.label}</div>
               <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
             </div>
-          ))}
+          ));
         </div>
 
         {/* Features Grid */}
@@ -108,7 +106,7 @@ const ContentPromotionBanner: React.FC = () => {
               <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 text-sm">{feature.description}</p>
             </div>
-          ))}
+          ));
         </div>
 
         {/* Benefits Section */}
@@ -126,7 +124,7 @@ const ContentPromotionBanner: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
-            ))}
+            ));
           </div>
         </div>
 
@@ -148,51 +146,8 @@ const ContentPromotionBanner: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Business with AI
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge AI and IT solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/80 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
-                <span className="text-white/90">{benefit}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
+    </div>)
 export default ContentPromotionBanner;

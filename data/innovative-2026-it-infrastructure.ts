@@ -1,3 +1,4 @@
+import React from 'react';
 
   id: string;
   name: string;
@@ -224,8 +225,8 @@ export const,
         'IBM Cloud',
         'Oracle Cloud'],
       market_size: '$397.4B market'
-      growth_rate: '280% annual growth'
-      variant: 'quantum - futuristic'
+      growth_rate: '280% annual growth';
+variant: 'quantum - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -237,8 +238,7 @@ export const,
       launch_date: '2025 - 08 - 15'
       customers: 800;
       rating: 4 && 4.9;
-      reviews: 400;
-    },
+      reviews: 400},
         'AI-powered edge orchestration',
     // Edge Computing Orchestration Platform;
       id: 'edge - computing - orchestration',
@@ -251,8 +251,8 @@ export const,
       market_siz,
   e: '$397.4B market',
       growth_rat,
-  e: '280% annual growth',
-      varian,
+  e: '280% annual growth',;
+varian,
   t: 'quantum - futuristic',
       contact_inf,
   o: unknown,
@@ -385,8 +385,8 @@ export const,
         'FogHorn',
         'ClearBlade'],
       market_size: '$43.4B market'
-      growth_rate: '240% annual growth'
-      variant: 'edge - futuristic'
+      growth_rate: '240% annual growth';
+variant: 'edge - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -398,8 +398,7 @@ export const,
       launch_date: '2025 - 07 - 20'
       customers: 1200;
       rating: 4 && 4.8;
-      reviews: 600;
-    },
+      reviews: 600},
     // Zero - Trust Network Architecture;
       id: 'zero - trust - network - architecture',
       name: 'Zero - Trust Network Architecture',
@@ -411,8 +410,8 @@ export const,
       market_siz,
   e: '$43.4B market',
       growth_rat,
-  e: '240% annual growth',
-      varian,
+  e: '240% annual growth',;
+varian,
   t: 'edge - futuristic',
       contact_inf,
   o: unknown,
@@ -544,8 +543,8 @@ export const,
         'Check Point',
         'Juniper Networks'],
       market_size: '$45.2B market'
-      growth_rate: '260% annual growth'
-      variant: 'security - futuristic'
+      growth_rate: '260% annual growth';
+variant: 'security - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -557,8 +556,7 @@ export const,
       launch_date: '2025 - 09 - 10'
       customers: 900;
       rating: 4 && 4.9;
-      reviews: 450;
-    },
+      reviews: 450},
         'AI-powered CI/CD automation',
     // AI - Powered DevOps Platform;
       id: 'ai - powered - devops - platform'
@@ -570,8 +568,8 @@ export const,
       market_siz,
   e: '$45.2B market',
       growth_rat,
-  e: '260% annual growth',
-      varian,
+  e: '260% annual growth',;
+varian,
   t: 'security - futuristic',
       contact_inf,
   o: unknown,
@@ -704,8 +702,8 @@ export const,
         'CircleCI',
         'Travis CI'],
       market_size: '$8.2B market'
-      growth_rate: '190% annual growth'
-      variant: 'devops - futuristic'
+      growth_rate: '190% annual growth';
+variant: 'devops - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -721,8 +719,8 @@ export const,
       market_siz,
   e: '$8.2B market',
       growth_rat,
-  e: '190% annual growth',
-      varian,
+  e: '190% annual growth',;
+varian,
   t: 'devops - futuristic',
       contact_inf,
   o: unknown,
@@ -861,8 +859,8 @@ export const,
         'Dropbox Business',
         'Box'],
       market_size: '$78.4B market'
-      growth_rate: '220% annual growth'
-      variant: 'quantum - futuristic'
+      growth_rate: '220% annual growth';
+variant: 'quantum - futuristic'
       contact_info: unknown;
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -873,8 +871,8 @@ export const,
       market_siz,
   e: '$78.4B market',
       growth_rat,
-  e: '220% annual growth',
-      varian,
+  e: '220% annual growth',;
+varian,
   t: 'quantum - futuristic',
       contact_inf,
   o: unknown,
@@ -898,8 +896,7 @@ export const,
       launchDate: '2025-11-20'
       customers: 1100;
       rating: 4 && 4.8;
-      reviews: 550;
-    };
+      reviews: 550};
   ];    features: [,
 export interface Innovative2026ITInfrastructureService {id: string, name: string;
   tagline: string, price: string;
@@ -922,8 +919,7 @@ export interface Innovative2026ITInfrastructureService {id: string, name: string
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number;
-}
+  reviews: number}
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
   // Quantum-Enhanced Cloud Infrastructure;
     id: 'quantum-enhanced-cloud-platform', name: 'Quantum-Enhanced Cloud Platform',
@@ -995,8 +991,7 @@ export const,
       launchDate: '2025-11-20'
       customers: 1100;
       rating: 4.8;
-      reviews: 550;
-    };
+      reviews: 550};
   ];    features: [;
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication',
       'API accessMobile applications'],
@@ -1010,8 +1005,8 @@ export const,
     technology: ['Quantum ComputingKubernetesDockerTerraformPythonGoRustAWS', 'Azure'];
     integrations: ['AWS ServicesAzure ServicesGoogle CloudKubernetesDockerTerraformAnsibleJenkins'], useCases: ['High-performance computingCryptographic applicationsMachine learning accelerationFinancial modelingDrug discoveryClimate modeling'],
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.', competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'],
-    marketSize: '$397.4B market', growthRate: '280% annual growth'
-    variant: 'quantum-futuristic'
+    marketSize: '$397.4B market', growthRate: '280% annual growth';
+variant: 'quantum-futuristic'
     contactInfo: unknown;
   ];    features: [;
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication',
@@ -1145,8 +1140,8 @@ export interface Innovative2026ITInfrastructureService {;
   s: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'],
     marketSiz,
   e: '$397.4B market', growthRat,
-  e: '280% annual growth',
-    varian,
+  e: '280% annual growth',;
+varian,
   t: 'quantum-futuristic',
     contactInf,
   o: unknown;
@@ -1325,8 +1320,7 @@ export const,
     launchDate: '2025-08-15';
     customers: 800;
     rating: 4.9;
-    reviews: 400;
-  };
+    reviews: 400};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration';
@@ -1368,8 +1362,7 @@ export const,
     launchDate: '2025-07-20';
     customers: 1200;
     rating: 4.8;
-    reviews: 600;
-  };
+    reviews: 600};
   // Zero-Trust Network Architecture;
   {;
     id: 'zero-trust-network-architecture';
@@ -1411,8 +1404,7 @@ export const,
     launchDate: '2025-09-10';
     customers: 900;
     rating: 4.9;
-    reviews: 450;
-  };
+    reviews: 450};
   // AI-Powered DevOps Platform;
   {;
     id: 'ai-powered-devops-platform';
@@ -1454,8 +1446,7 @@ export const,
     launchDate: '2025-10-15';
     customers: 2500;
     rating: 4.7;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Quantum-Safe Data Storage;
   {;
     id: 'quantum-safe-data-storage';
@@ -1629,11 +1620,9 @@ export const,
 ]}
 ];
 ;
-;
-  }
+}
 ];
-;
-  }
+}
 ];
 export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
@@ -1702,8 +1691,7 @@ export const,
     launchDate: '2025-08-15';
     customers: 800;
     rating: 4.9;
-    reviews: 400;
-  };
+    reviews: 400};
   // Edge Computing Orchestration Platform;
   {;
     id: 'edge-computing-orchestration';
@@ -1745,8 +1733,7 @@ export const,
     launchDate: '2025-07-20';
     customers: 1200;
     rating: 4.8;
-    reviews: 600;
-  };
+    reviews: 600};
   // Zero-Trust Network Architecture;
   {;
     id: 'zero-trust-network-architecture';
@@ -1788,8 +1775,7 @@ export const,
     launchDate: '2025-09-10';
     customers: 900;
     rating: 4.9;
-    reviews: 450;
-  };
+    reviews: 450};
   // AI-Powered DevOps Platform;
   {;
     id: 'ai-powered-devops-platform';
@@ -1831,8 +1817,7 @@ export const,
     launchDate: '2025-10-15';
     customers: 2500;
     rating: 4.7;
-    reviews: 1250;
-  };
+    reviews: 1250};
   // Quantum-Safe Data Storage;
   {;
     id: 'quantum-safe-data-storage';
@@ -2453,7 +2438,7 @@ i,
   e: '2025-11-20'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 550; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
