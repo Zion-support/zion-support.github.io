@@ -113,29 +113,27 @@ const CareersPage: React.FC = () => {
                     <span>{position.type}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     {position.requirements?.map((req, reqIndex) => (
                       <li key={reqIndex} className="flex items-center space-x-2">
-                        <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
+                        <span className="w-1 h-1 bg-cyan-400 rounded-full"></span>
                         <span>{req}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                <Link
+                  to="/contact"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
+                >
                   Apply Now
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                </Link>
               </div>
             ))}
-=======
-              ))}
-            </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
           </div>
         </div>
       </section>

@@ -63,8 +63,6 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
-<<<<<<< HEAD
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -79,7 +77,7 @@ const PricingPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {plans.map((plan, index) => (
                 <div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
@@ -98,8 +96,8 @@ const PricingPage: React.FC = () => {
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2">/month</span>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
 
                   <ul className="space-y-3 mb-8">
@@ -111,13 +109,16 @@ const PricingPage: React.FC = () => {
                     ))}
                   </ul>
 
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}>
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 block text-center ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                        : 'bg-white/10 text-white hover:bg-white/20'
+                    }`}
+                  >
                     {plan.popular ? 'Get Started' : 'Choose Plan'}
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -127,14 +128,24 @@ const PricingPage: React.FC = () => {
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
               </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Contact Sales
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Contact Sales
+                </Link>
+                <Link
+                  to="/about"
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
         </section>
       </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     </>
   );
 };
