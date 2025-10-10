@@ -20,98 +20,146 @@ const Footer: React.FC = () => {
 
   const microSaasServices = {
     'Productivity': [
-      { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
-      { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning', price: '$99/mo' },
+      { name: 'AI Task Manager Pro', url: '/ai-task-manager', description: 'Smart task management', price: '$49/mo' },
+      { name: 'AI Workflow Automation Pro', url: '/ai-workflow-automation', description: 'Process automation', price: '$79/mo' },
+      { name: 'AI Meeting Intelligence Pro', url: '/ai-meeting-intelligence', description: 'Advanced meeting analytics', price: '$89/mo' },
+      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling', price: '$39/mo' },
+      { name: 'AI Time Tracker Pro', url: '/ai-time-tracker', description: 'Smart time tracking', price: '$34/mo' }
     ],
     'Content & Marketing': [
-      { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
-      { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-      { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-      { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+      { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation', price: '$89/mo' },
+      { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation', price: '$149/mo' },
+      { name: 'AI Social Media Manager Pro', url: '/ai-social-media-manager', description: 'Automated social media', price: '$69/mo' },
+      { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns', price: '$59/mo' },
+      { name: 'AI SEO Optimizer Pro', url: '/ai-seo-optimizer', description: 'SEO automation', price: '$79/mo' },
+      { name: 'AI Lead Generation Pro', url: '/ai-lead-generation', description: 'Automated lead generation', price: '$99/mo' }
     ],
     'Business & Finance': [
-      { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
-      { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+      { name: 'AI CRM Intelligence Pro', url: '/ai-crm', description: 'Smart CRM solutions', price: '$89/mo' },
+      { name: 'AI Financial Analyzer Pro', url: '/ai-financial-analyzer', description: 'Advanced financial insights', price: '$79/mo' },
+      { name: 'AI Invoice Generator Pro', url: '/ai-invoice-generator', description: 'Automated invoicing', price: '$49/mo' },
+      { name: 'AI Expense Tracker Pro', url: '/ai-expense-tracker', description: 'Smart expense tracking', price: '$29/mo' },
+      { name: 'AI Customer Insights Pro', url: '/ai-customer-insights', description: 'Deep customer analytics', price: '$99/mo' },
+      { name: 'AI Vendor Manager Pro', url: '/ai-vendor-manager', description: 'Smart vendor management', price: '$99/mo' }
     ],
     'Customer Service': [
-      { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-      { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Custom chatbot creation' },
-      { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' }
+      { name: 'AI Customer Support Bot Pro', url: '/ai-customer-support-bot', description: '24/7 AI support', price: '$99/mo' },
+      { name: 'AI Chatbot Builder Pro', url: '/ai-chatbot-builder', description: 'Custom chatbot creation', price: '$69/mo' },
+      { name: 'AI Email Assistant Pro', url: '/ai-email-assistant', description: 'Smart email management', price: '$39/mo' },
+      { name: 'AI Email Security Pro', url: '/ai-email-security', description: 'Advanced email protection', price: '$49/mo' }
     ],
-    'Development': [
-      { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-      { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
-      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+    'Development & Technical': [
+      { name: 'AI Code Review Assistant Pro', url: '/ai-code-generation', description: 'Automated code analysis', price: '$89/mo' },
+      { name: 'AI Mobile App Builder Pro', url: '/ai-mobile-app-development', description: 'Mobile app development', price: '$149/mo' },
+      { name: 'AI Document Processor Pro', url: '/ai-document-processing', description: 'Document automation', price: '$79/mo' },
+      { name: 'AI Code Quality Pro', url: '/ai-code-quality', description: 'Advanced code quality analysis', price: '$79/mo' },
+      { name: 'AI Test Automation Pro', url: '/ai-test-automation', description: 'Intelligent test automation', price: '$89/mo' },
+      { name: 'AI API Manager Pro', url: '/ai-api-manager', description: 'Comprehensive API management', price: '$99/mo' }
     ],
-    'Analytics': [
-      { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
-      { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
-      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
+    'Analytics & Data': [
+      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis', price: '$99/mo' },
+      { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards', price: '$69/mo' },
+      { name: 'AI Performance Monitor Pro', url: '/ai-performance-monitor', description: 'Comprehensive monitoring', price: '$89/mo' },
+      { name: 'AI Feedback Analyzer Pro', url: '/ai-feedback-analyzer', description: 'Advanced feedback analysis', price: '$59/mo' }
     ],
-    'Creative': [
-      { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-      { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-      { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
-      { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    'Creative & Media': [
+      { name: 'AI Voice Cloning Studio Pro', url: '/ai-voice-cloning', description: 'Realistic voice synthesis', price: '$79/mo' },
+      { name: 'AI Music Composer Pro', url: '/ai-music-composition', description: 'AI-generated music', price: '$59/mo' },
+      { name: 'AI Fashion Design Studio Pro', url: '/ai-fashion-design', description: 'AI fashion design', price: '$89/mo' },
+      { name: 'AI 3D Generation Studio Pro', url: '/ai-3d-generation', description: 'AI 3D content creation', price: '$199/mo' },
+      { name: 'AI Logo Designer Pro', url: '/ai-logo-designer', description: 'Professional logo creation', price: '$59/mo' }
     ],
     'Health & Wellness': [
-      { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
-      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
+      { name: 'AI Healthcare Assistant Pro', url: '/ai-healthcare', description: 'Medical AI support', price: '$49/mo' },
+      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans', price: '$39/mo' }
     ],
-    'Sales': [
-      { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    'Legal & Compliance': [
+      { name: 'AI Contract Analyzer Pro', url: '/ai-contract-analyzer', description: 'Intelligent contract analysis', price: '$149/mo' },
+      { name: 'AI Compliance Manager Pro', url: '/ai-compliance-manager', description: 'Automated compliance management', price: '$149/mo' }
+    ],
+    'E-commerce & Inventory': [
+      { name: 'AI Inventory Optimizer Pro', url: '/ai-inventory-optimizer', description: 'Smart inventory management', price: '$79/mo' }
+    ],
+    'Data Management': [
+      { name: 'AI Backup Manager Pro', url: '/ai-backup-manager', description: 'Intelligent backup management', price: '$39/mo' },
+      { name: 'AI Database Optimizer Pro', url: '/ai-database-optimizer', description: 'Advanced database optimization', price: '$119/mo' }
+    ],
+    'Cloud & Infrastructure': [
+      { name: 'AI Cloud Cost Optimizer Pro', url: '/ai-cloud-cost-optimizer', description: 'Intelligent cloud cost optimization', price: '$79/mo' }
+    ],
+    'Knowledge Management': [
+      { name: 'AI Knowledge Base Pro', url: '/ai-knowledge-base', description: 'Intelligent knowledge management', price: '$69/mo' }
+    ],
+    'Operations': [
+      { name: 'AI Incident Response Pro', url: '/ai-incident-response', description: 'Automated incident response', price: '$199/mo' },
+      { name: 'AI Workflow Designer Pro', url: '/ai-workflow-designer', description: 'Visual workflow design', price: '$89/mo' }
+    ],
+    'Training & Education': [
+      { name: 'AI Training Platform Pro', url: '/ai-training-platform', description: 'Intelligent training platform', price: '$79/mo' }
     ]
   };
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/machine-learning' },
-    { name: 'Natural Language Processing', href: '/nlp' },
-    { name: 'Computer Vision', href: '/computer-vision' },
-    { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-    { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
-    { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
-    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-    { name: 'AI Robotics', href: '/ai-robotics' },
+    { name: 'Machine Learning Solutions', href: '/machine-learning', price: '$1,500/mo' },
+    { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery', price: '$5,000/mo' },
+    { name: 'AI Climate Intelligence', href: '/ai-climate-intelligence', price: '$3,500/mo' },
+    { name: 'AI Space Technology Solutions', href: '/ai-space-technology', price: '$4,500/mo' },
+    { name: 'AI Metaverse Development', href: '/ai-metaverse-development', price: '$3,000/mo' },
+    { name: 'AI Biotechnology Solutions', href: '/ai-biotechnology', price: '$4,000/mo' },
+    { name: 'AI Smart City Solutions', href: '/ai-smart-city', price: '$2,500/mo' },
+    { name: 'AI Edge Computing Solutions', href: '/ai-edge-computing', price: '$1,800/mo' },
+    { name: 'AI Digital Twin Platform', href: '/ai-digital-twin', price: '$2,200/mo' },
+    { name: 'AI Advanced Robotics', href: '/ai-advanced-robotics', price: '$3,500/mo' },
+    { name: 'AI Quantum Machine Learning', href: '/ai-quantum-ml', price: '$6,000/mo' },
+    { name: 'AI Autonomous Vehicle Systems', href: '/ai-autonomous-vehicles', price: '$4,500/mo' },
+    { name: 'AI Cybersecurity Intelligence', href: '/ai-cybersecurity-intelligence', price: '$2,800/mo' },
+    { name: 'AI Financial Trading Platform', href: '/ai-financial-trading', price: '$3,200/mo' },
+    { name: 'AI Content Moderation Pro', href: '/ai-content-moderation', price: '$1,500/mo' },
+    { name: 'AI Supply Chain Intelligence', href: '/ai-supply-chain-intelligence', price: '$2,200/mo' },
+    { name: 'AI Energy Management System', href: '/ai-energy-management', price: '$1,800/mo' },
+    { name: 'AI Retail Intelligence', href: '/ai-retail-intelligence', price: '$2,000/mo' },
+    { name: 'AI Agriculture Solutions', href: '/ai-agriculture', price: '$1,600/mo' },
+    { name: 'AI Construction Management', href: '/ai-construction', price: '$2,500/mo' },
+    { name: 'AI Logistics Optimization', href: '/ai-logistics', price: '$1,900/mo' },
+    { name: 'AI Insurance Analytics', href: '/ai-insurance', price: '$2,300/mo' },
+    { name: 'AI Real Estate Intelligence', href: '/ai-real-estate', price: '$1,700/mo' },
+    { name: 'AI Entertainment Production', href: '/ai-entertainment', price: '$2,800/mo' },
+    { name: 'AI Sports Analytics', href: '/ai-sports', price: '$1,500/mo' },
+    { name: 'AI Gaming Intelligence', href: '/ai-gaming', price: '$2,000/mo' },
+    { name: 'AI Travel Optimization', href: '/ai-travel', price: '$1,200/mo' },
+    { name: 'AI Hospitality Solutions', href: '/ai-hospitality', price: '$1,800/mo' },
+    { name: 'AI Government Services', href: '/ai-government', price: '$3,500/mo' },
+    { name: 'AI Non-Profit Solutions', href: '/ai-nonprofit', price: '$800/mo' }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'IT Consulting', href: '/it-consulting' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/ai-mobile-app-development' },
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Network Infrastructure', href: '/network-infrastructure' },
-    { name: 'IT Support', href: '/it-support' },
-    { name: 'Business Intelligence', href: '/business-intelligence' },
-    { name: 'Enterprise Solutions', href: '/enterprise' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
-    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
-    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
-    { name: 'Metaverse Development', href: '/metaverse-development' },
-    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions' },
-    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions' },
-    { name: 'Space Technology Services', href: '/space-technology-services' },
-    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions' },
-    { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems' },
-    { name: 'Digital Twin Development', href: '/digital-twin-development' },
-    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
-    { name: 'Smart City Solutions', href: '/smart-city-solutions' },
-    { name: 'FinTech Solutions', href: '/fintech-solutions' },
-    { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
-    { name: 'EdTech Solutions', href: '/edtech-solutions' },
-    { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
+    { name: 'AI-Powered IT Operations', href: '/ai-it-operations', price: '$2,500/mo' },
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-infrastructure', price: '$8,000/mo' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing', price: '$1,800/mo' },
+    { name: '5G Network Infrastructure', href: '/5g-infrastructure', price: '$3,500/mo' },
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure', price: '$2,200/mo' },
+    { name: 'IoT Platform Solutions', href: '/iot-platform', price: '$1,500/mo' },
+    { name: 'Microservices Architecture', href: '/microservices', price: '$2,000/mo' },
+    { name: 'Serverless Computing', href: '/serverless', price: '$1,200/mo' },
+    { name: 'Data Lake Solutions', href: '/data-lake', price: '$1,800/mo' },
+    { name: 'API Gateway Solutions', href: '/api-gateway', price: '$1,000/mo' },
+    { name: 'Content Delivery Network', href: '/cdn', price: '$800/mo' },
+    { name: 'Identity and Access Management', href: '/iam', price: '$1,500/mo' },
+    { name: 'Disaster Recovery Solutions', href: '/disaster-recovery', price: '$1,200/mo' },
+    { name: 'Network Monitoring Solutions', href: '/network-monitoring', price: '$1,000/mo' },
+    { name: 'Application Performance Monitoring', href: '/apm', price: '$1,300/mo' },
+    { name: 'Log Management Solutions', href: '/log-management', price: '$900/mo' },
+    { name: 'Configuration Management', href: '/config-management', price: '$1,100/mo' },
+    { name: 'IT Asset Management', href: '/it-asset-management', price: '$800/mo' },
+    { name: 'IT Service Management', href: '/itsm', price: '$1,400/mo' },
+    { name: 'IT Governance Solutions', href: '/it-governance', price: '$1,600/mo' },
+    { name: 'IT Training and Development', href: '/it-training', price: '$1,000/mo' },
+    { name: 'IT Consulting Services', href: '/it-consulting', price: '$2,500/mo' },
+    { name: 'IT Project Management', href: '/it-project-management', price: '$1,800/mo' },
+    { name: 'IT Security Operations', href: '/it-security-ops', price: '$2,200/mo' },
+    { name: 'IT Compliance Solutions', href: '/it-compliance', price: '$1,700/mo' },
+    { name: 'IT Innovation Lab', href: '/it-innovation-lab', price: '$3,000/mo' }
   ];
 
   const socialLinks = [
@@ -193,18 +241,21 @@ const Footer: React.FC = () => {
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS Solutions
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {Object.entries(microSaasServices).map(([category, services]) => (
                 <div key={category}>
-                  <h4 className="text-white font-medium mb-2 text-sm">{category}</h4>
-                  <ul className="space-y-1">
-                    {services.slice(0, 3).map((service) => (
+                  <h4 className="text-white font-medium mb-3 text-sm border-b border-cyan-400/20 pb-1">{category}</h4>
+                  <ul className="space-y-2">
+                    {services.slice(0, 4).map((service) => (
                       <li key={service.name}>
                         <a href={service.url}
-                          className="group flex items-center text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+                          className="group flex items-center justify-between text-xs text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded hover:bg-slate-800/50"
                         >
-                          <span>{service.name}</span>
-                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                          <div className="flex items-center space-x-2">
+                            <span className="truncate">{service.name}</span>
+                            <ArrowRight className="w-2 h-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          </div>
+                          <span className="text-cyan-400 text-xs font-medium">{service.price}</span>
                         </a>
                       </li>
                     ))}
@@ -212,11 +263,13 @@ const Footer: React.FC = () => {
                 </div>
               ))}
             </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Micro SAAS →
-            </a>
+            <div className="mt-6 pt-4 border-t border-gray-700">
+              <a href="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-white transition-colors"
+              >
+                View All Micro SAAS Solutions →
+              </a>
+            </div>
           </div>
 
           {/* AI & IT Services */}
@@ -225,43 +278,53 @@ const Footer: React.FC = () => {
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
-                <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 6).map((service) => (
+                <h4 className="text-sm font-medium text-purple-300 mb-3 border-b border-purple-400/20 pb-1">AI Services</h4>
+                <ul className="space-y-2">
+                  {aiServices.slice(0, 8).map((service) => (
                     <li key={service.name}>
                       <a
                         href={service.href}
-                        className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
+                        className="group flex items-center justify-between text-xs text-gray-300 hover:text-purple-400 transition-colors p-2 rounded hover:bg-slate-800/50"
                       >
-                        {service.name}
+                        <div className="flex items-center space-x-2">
+                          <span className="truncate">{service.name}</span>
+                          <ArrowRight className="w-2 h-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                        <span className="text-purple-400 text-xs font-medium">{service.price}</span>
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 6).map((service) => (
+                <h4 className="text-sm font-medium text-green-300 mb-3 border-b border-green-400/20 pb-1">IT Services</h4>
+                <ul className="space-y-2">
+                  {itServices.slice(0, 8).map((service) => (
                     <li key={service.name}>
                       <a
                         href={service.href}
-                        className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
+                        className="group flex items-center justify-between text-xs text-gray-300 hover:text-green-400 transition-colors p-2 rounded hover:bg-slate-800/50"
                       >
-                        {service.name}
+                        <div className="flex items-center space-x-2">
+                          <span className="truncate">{service.name}</span>
+                          <ArrowRight className="w-2 h-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                        <span className="text-green-400 text-xs font-medium">{service.price}</span>
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Services →
-            </a>
+            <div className="mt-6 pt-4 border-t border-gray-700">
+              <a href="/services"
+                className="inline-flex items-center text-cyan-400 hover:text-white transition-colors"
+              >
+                View All AI & IT Services →
+              </a>
+            </div>
           </div>
         </div>
 
