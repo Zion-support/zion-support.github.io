@@ -17,12 +17,8 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
-=======
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 // Structured data for SEO - moved to SEOHead component
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
