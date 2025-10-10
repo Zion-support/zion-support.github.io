@@ -70,6 +70,7 @@ const ITConsultingPage = lazy(() => import('./it-consulting/page'));
 const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const CareersPage = lazy(() => import('./careers/page'));
+const MobileAppDevelopmentPage = lazy(() => import('./mobile-app-development/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
@@ -230,6 +231,7 @@ const App: React.FC = () => {
             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/careers" element={<CareersPage />} />
+            <Route path="/mobile-app-development" element={<MobileAppDevelopmentPage />} />
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
