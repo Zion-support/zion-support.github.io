@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
@@ -26,11 +27,22 @@ const BlogPage: React.FC = () => {
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 <<<<<<< HEAD
 =======
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+
+const BlogPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
   // Sample blog posts data
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const blogPosts: BlogPost[] = [
     {
+<<<<<<< HEAD
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
       excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
@@ -148,6 +160,8 @@ import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       id: 1,
       title: 'The Future of AI in Business: Trends and Predictions for 2024',
       excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
@@ -185,6 +199,18 @@ const BlogPage: React.FC = () => {
     }
   ];
   const categories = ['All', 'AI & Technology', 'Cloud Services', 'Cybersecurity', 'Micro SaaS', 'Industry Insights'];
+<<<<<<< HEAD
+=======
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
   return (
     <React.Fragment>
       <Helmet>
@@ -202,18 +228,39 @@ const BlogPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
               </p>
+              
+              <div className="max-w-md mx-auto relative mb-8">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+              </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
                 <button
                   key={category}
+<<<<<<< HEAD
                   className="px-6 py-3 rounded-full border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
+=======
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-3 rounded-full border transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10'
+                      : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                  }`}
+                >
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
                   {category}
                 </button>
               ))}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <article
                   key={post.id}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
@@ -368,6 +415,7 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-16 bg-white">
@@ -541,3 +589,24 @@ export default BlogPage;
 
 export default BlogPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+=======
+            {filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-400 text-lg">No articles found matching your search.</p>
+              </div>
+            )}
+
+            <div className="text-center mt-12">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Load More Articles
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default BlogPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277

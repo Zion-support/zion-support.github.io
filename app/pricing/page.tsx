@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -351,3 +352,5 @@ export default PricingPage;
 
 export default PricingPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277

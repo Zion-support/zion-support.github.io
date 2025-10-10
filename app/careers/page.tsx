@@ -288,6 +288,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                   <div className="text-gray-400 text-sm">{item.label}</div>
                   <div className="text-gray-500 text-xs mt-1">{item.description}</div>
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -536,6 +537,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
   </
                 </div>
 <p className="text-gray-300 mb-4">{position.description}</p>
+=======
+                <p className="text-gray-300 mb-4">{position.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
@@ -553,6 +557,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 </button>
               </div>
             ))}
+<<<<<<< HEAD
           </div>
         </section>
         {/* CTA Section */}
@@ -577,6 +582,8 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
   </
               </div>
             </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
           </div>
         </div>
       </section>

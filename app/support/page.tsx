@@ -1,6 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -13,6 +13,13 @@ interface FAQ {
   answer: string;
   category: string;
 }
+=======
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
 const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -64,6 +71,10 @@ answer: 'Yes, we provide comprehensive training programs to ensure your team can
       category: 'development'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
   const supportChannels = [
     {
       name: 'Phone Support',
@@ -77,12 +88,15 @@ title: 'Phone Support',
     {
       icon: Mail,
       title: 'Email Support',
-      description: 'Get help via email with detailed responses',
+      description: 'Send us your questions and we\'ll respond quickly',
       contact: 'support@ziontechgroup.com',
       availability: '24/7'
+<<<<<<< HEAD
       contact: '+1 (555) 123-4567',
       availability: '24/7 Available',
       color: 'text-blue-400'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     },
     {
       name: 'Email Support',
@@ -96,6 +110,7 @@ title: 'Phone Support',
       name: 'Live Chat',
       description: 'Instant help when you need it most',
       icon: MessageCircle,
+<<<<<<< HEAD
 availability: 'Mon-Fri: 9AM-6PM EST'
     }
   ];
@@ -115,11 +130,18 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     {
       question: 'Do you offer training for your solutions?',
       answer: 'Yes! We provide comprehensive training programs to help your team get the most out of our AI and IT solutions.'
+=======
+      title: 'Live Chat',
+      description: 'Get instant help through our chat system',
+      contact: 'Available on website',
+      availability: 'Business hours'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     }
   ];
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    faq.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST',
@@ -152,6 +174,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     }
   ];
 
+<<<<<<< HEAD
   const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
@@ -167,6 +190,10 @@ availability: 'Mon-Fri: 9AM-6PM EST'
   };
   return (
     <React.Fragment>
+=======
+  return (
+    <>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <Helmet>
         <title>Support | Zion Tech Group</title>
         <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
@@ -183,6 +210,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get help and support for our AI and IT solutions. We're here to help you succeed.
             </p>
+<<<<<<< HEAD
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -216,19 +244,25 @@ availability: 'Mon-Fri: 9AM-6PM EST'
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+=======
+            
+            <div className="max-w-md mx-auto relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
               <input
                 type="text"
                 placeholder="Search for help..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
           </div>
         </section>
         {/* Support Channels */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Contact Support;
@@ -607,3 +641,47 @@ export default SupportPage;
   </h1>
   </main>
   </number>
+=======
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <channel.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  <p className="text-purple-400 font-medium mb-2">{channel.contact}</p>
+                  <p className="text-gray-400 text-sm">{channel.availability}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {filteredFaqs.map((faq, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                  <span className="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mt-3">
+                    {faq.category}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+};
+
+export default SupportPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277

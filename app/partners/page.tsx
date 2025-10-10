@@ -1,14 +1,16 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 =======
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface Partner {
@@ -27,6 +29,7 @@ const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
     {
       name: 'Microsoft',
+<<<<<<< HEAD
       logo: '/images/partners/microsoft.png',
       description: 'Strategic cloud and AI partnership for enterprise solutions',
       category: 'Technology',
@@ -78,9 +81,29 @@ logo: '/api/placeholder/200/100',
       category: 'Database',
       website: 'https://oracle.com',
       tier: 'certified'
+=======
+      description: 'Cloud infrastructure and AI solutions',
+      category: 'Cloud Partner'
+    },
+    {
+      name: 'Amazon Web Services',
+      description: 'Scalable cloud computing services',
+      category: 'Cloud Partner'
+    },
+    {
+      name: 'Google Cloud',
+      description: 'AI and machine learning platforms',
+      category: 'AI Partner'
+    },
+    {
+      name: 'IBM',
+      description: 'Enterprise AI and data analytics',
+      category: 'Enterprise Partner'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     }
   ];
   const benefits = [
+<<<<<<< HEAD
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
 <<<<<<< HEAD
@@ -177,6 +200,15 @@ logo: '/api/placeholder/200/100',
   };
   return (
     <React.Fragment>
+=======
+    'Co-innovation projects',
+    'Global reach and scalability',
+    'Certified expertise and solutions'
+  ];
+
+  return (
+    <>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <Helmet>
         <title>Partners | Zion Tech Group</title>
         <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
@@ -319,9 +351,16 @@ logo: '/api/placeholder/200/100',
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </section>
 {/* Partners Grid */}
         <section className="py-16 px-4">
+=======
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
@@ -377,6 +416,7 @@ logo: '/api/placeholder/200/100',
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
+<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -398,6 +438,8 @@ logo: '/api/placeholder/200/100',
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
                   <div className="flex justify-center mb-4">
                     {tier.icon}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{tier.name}</h3>
                   <p className="text-gray-600 mb-6">{tier.description}</p>
@@ -406,6 +448,7 @@ logo: '/api/placeholder/200/100',
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -468,6 +511,11 @@ logo: '/api/placeholder/200/100',
           </div>
         </section>
       </main>
+=======
+        </section>
+      </main>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <Footer />
     </React.Fragment>
 =======
@@ -520,6 +568,7 @@ logo: '/api/placeholder/200/100',
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
+<<<<<<< HEAD
 export default PartnersPage;
   </button>
   </h2>
@@ -532,3 +581,7 @@ export default PartnersPage;
   </div>
   </section>
   </h1>
+=======
+
+export default PartnersPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277

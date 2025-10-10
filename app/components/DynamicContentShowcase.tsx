@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -13,6 +14,10 @@ interface Feature {
 }
 =======
 import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
+=======
+import React from 'react';
+import { CheckCircle, Star, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface Testimonial {
@@ -32,6 +37,7 @@ interface Feature {
   benefits: string[];
 }
 const DynamicContentShowcase: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -75,24 +81,43 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence to automate and optimize your business processes',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+=======
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     },
     {
       icon: Zap,
       title: 'High Performance',
+<<<<<<< HEAD
       description: 'Lightning-fast processing and real-time analytics for optimal results',
       benefits: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
+=======
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
+<<<<<<< HEAD
       description: 'Bank-level security with encryption and compliance standards',
       benefits: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
+=======
+      description: 'Bank-level security with encryption and compliance standards'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     },
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',
       benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
+=======
+      description: 'Worldwide deployment and support for international businesses'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
     }
   ];
   const benefits = [
@@ -109,20 +134,29 @@ const DynamicContentShowcase: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
       role: 'CTO',
+<<<<<<< HEAD
       content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
+=======
+      company: 'TechCorp',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       rating: 5
     },
     {
       name: 'Michael Chen',
-      company: 'DataFlow Systems',
       role: 'CEO',
+<<<<<<< HEAD
 content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
+=======
+      company: 'DataFlow Inc',
+      content: 'Outstanding service and support. The team delivered exactly what we needed on time and within budget.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
+<<<<<<< HEAD
 company: 'InnovateLab',
       role: 'Product Manager',
       content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
@@ -133,6 +167,11 @@ company: 'InnovateLab',
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
+=======
+      role: 'Operations Director',
+      company: 'Global Solutions',
+      content: 'The best technology partner we\'ve ever worked with. Highly recommend their services.',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       rating: 5
     }
   ];
@@ -166,6 +205,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   const currentTestimonial = testimonials[currentIndex];
 =======
 
+<<<<<<< HEAD
   useEffect(() => {
     const timer = setInterval(nextTestimonial, 5000);
     return () => clearInterval(timer);
@@ -182,6 +222,15 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
+=======
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6">Our Solutions</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover how our cutting-edge AI and IT solutions can transform your business
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
@@ -206,9 +255,9 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
 {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <feature.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
@@ -254,6 +303,7 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
         </div>
 <<<<<<< HEAD
       </div>
+<<<<<<< HEAD
 =======
       </section>
 
@@ -482,3 +532,10 @@ export default DynamicContentShowcase;
   </button>
   </section>
   </any>
+=======
+    </div>
+  );
+};
+
+export default DynamicContentShowcase;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277

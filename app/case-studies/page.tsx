@@ -150,6 +150,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
   const industries = ['All', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Logistics'];
   const [selectedIndustry, setSelectedIndustry] = React.useState('All');
 
+<<<<<<< HEAD
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
     : caseStudies.filter(study => study.industry === selectedIndustry);
@@ -169,6 +170,8 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         <meta name="keywords" content="case studies, success stories, technology implementation, digital transformation, AI solutions" />
       </Helmet>
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -214,6 +217,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -260,6 +264,16 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Discover how we've helped businesses transform and achieve their goals through innovative technology solutions
             </p>
+=======
+                  
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                    Read Full Case Study
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d277
           </div>
         </div>
       </section>
