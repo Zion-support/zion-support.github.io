@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -44,7 +43,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-      <SEOOptimizer 
+      <SEOOptimizer
         title="Healthcare IT Solutions - Zion Tech Group"
         description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations."
         keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology"
@@ -62,7 +61,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
+            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
             Protect patient data while improving operational efficiency.
           </p>
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -129,7 +128,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
   </button>
   </span>
   </SEOOptimizer>
-=======
 ;
       icon: Heart,;
       title: 'HIPAA Compliance',;
@@ -167,7 +165,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking'];}
     }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>;
       <SEOOptimizer;
@@ -253,4 +250,3 @@ import SEOOptimizer from '../components/SEOOptimizer';
   );
 }
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

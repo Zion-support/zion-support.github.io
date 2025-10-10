@@ -23,7 +23,6 @@ import {;
   Workflow,;
   Bot;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const ProcessAutomationPage: React.FC = () => {
   const features = [
     {
@@ -73,7 +72,7 @@ const ProcessAutomationPage: React.FC = () => {
                 Process Automation Services;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Streamline your business operations with intelligent automation solutions. 
+                Streamline your business operations with intelligent automation solutions.
                 Reduce costs, improve efficiency, and scale your business with AI-powered process automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +168,6 @@ export default ProcessAutomationPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const ProcessAutomationPage: React.FC = () => {;
   const features = [;
@@ -194,7 +192,6 @@ const ProcessAutomationPage: React.FC = () => {;
       description: 'Track and optimize your automated processes with real-time analytics and reporting.';}
     }
   ];
-;
   const benefits = [;
     'Reduce manual work and human errors',;
     'Increase operational efficiency',;
@@ -205,7 +202,6 @@ const ProcessAutomationPage: React.FC = () => {;
     '24/7 automated operations',;
     'Custom automation solutions';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -310,6 +306,4 @@ const ProcessAutomationPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default ProcessAutomationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

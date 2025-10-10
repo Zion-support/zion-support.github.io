@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-<<<<<<< HEAD
 const PageFixedPage: React.FC = () => {
   const features = [
     {
@@ -85,7 +84,6 @@ const PageFixedPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
 ;
 const PageFixedPage: React.FC = () => {;
   const features = [;
@@ -114,7 +112,6 @@ const PageFixedPage: React.FC = () => {;
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];}
     }
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -168,7 +165,6 @@ const PageFixedPage: React.FC = () => {;
                       {feature.benefits.map((benefit, idx) => (;}
                         <li key={idx} className="flex items-center text-sm text-gray-400">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {benefit}
                         </li>;
                       ))}
@@ -176,7 +172,6 @@ const PageFixedPage: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -214,7 +209,6 @@ export default PageFixedPage;
   </button>
   </button>
   </h1>
-=======
             </div>;
           </div>;
         </section>;
@@ -244,6 +238,4 @@ export default PageFixedPage;
     </>;
   );
 };
-;
 export default PageFixedPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

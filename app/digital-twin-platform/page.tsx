@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -49,7 +48,7 @@ const PagePage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
+              Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -64,7 +63,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -89,7 +87,6 @@ const PagePage: React.FC = () => {;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -100,7 +97,6 @@ const PagePage: React.FC = () => {;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>;
@@ -129,7 +125,6 @@ const PagePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -146,7 +141,6 @@ const PagePage: React.FC = () => {;
                 <p className="text-gray-300">{feature.description}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -198,7 +192,6 @@ export default PagePage;
   </h2>
   </button>
   </span>
-=======
           </div>;
         </div>;
       </section>;
@@ -244,6 +237,4 @@ export default PagePage;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

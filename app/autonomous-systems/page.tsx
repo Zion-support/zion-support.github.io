@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AutonomousSystemsPage: React.FC = () => {
@@ -24,11 +23,8 @@ const AutonomousSystemsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-=======
-;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-;
 const AutonomousSystemsPage: React.FC = () => {;
   return (;
     <></>;
@@ -51,6 +47,4 @@ const AutonomousSystemsPage: React.FC = () => {;
     </>;
   );}
 };
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default AutonomousSystemsPage;

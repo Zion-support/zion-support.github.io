@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PageOptimizedPage: React.FC = () => {
   const features = [
     {
@@ -55,7 +54,7 @@ const PageOptimizedPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page optimized solutions. 
+              Transform your business with our advanced page optimized solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,7 +145,6 @@ const PageOptimizedPage: React.FC = () => {
   </h2>
   </button>
   </span>
-=======
 ;
 const PageOptimizedPage: React.FC = () => {;
   const features = [;
@@ -171,7 +169,6 @@ const PageOptimizedPage: React.FC = () => {;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -182,7 +179,6 @@ const PageOptimizedPage: React.FC = () => {;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -288,5 +284,3 @@ const PageOptimizedPage: React.FC = () => {;
     </div>;
   );
 };
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -2,9 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -28,7 +25,6 @@ const SEOEnhancer: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -39,8 +35,6 @@ const SEOEnhancer: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -60,7 +54,7 @@ const SEOEnhancer: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced seoenhancer solutions. 
+              Transform your business with our advanced seoenhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -146,14 +140,10 @@ const SEOEnhancer: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default SEOEnhancerPage;
   </button>
   </button>
   </h2>
   </button>
   </span>
-=======
-
 export default SEOEnhancer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

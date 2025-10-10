@@ -24,7 +24,6 @@ import {;
   Server,;
   Monitor;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const CloudInfrastructureManagerPage: React.FC = () => {
   const features = [
     {
@@ -74,7 +73,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
                 Cloud Infrastructure Manager;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Streamline your cloud operations with our comprehensive infrastructure management platform. 
+                Streamline your cloud operations with our comprehensive infrastructure management platform.
                 Monitor, optimize, and scale your cloud resources across multiple providers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +169,6 @@ export default CloudInfrastructureManagerPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const CloudInfrastructureManagerPage: React.FC = () => {;
   const features = [;
@@ -195,7 +193,6 @@ const CloudInfrastructureManagerPage: React.FC = () => {;
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.';}
     }
   ];
-;
   const benefits = [;
     'Centralized cloud infrastructure management',;
     'Automated scaling and optimization',;
@@ -206,7 +203,6 @@ const CloudInfrastructureManagerPage: React.FC = () => {;
     'Multi-cloud support',;
     'Expert technical support';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -311,6 +307,4 @@ const CloudInfrastructureManagerPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default CloudInfrastructureManagerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

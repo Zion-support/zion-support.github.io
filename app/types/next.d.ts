@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +25,6 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -42,7 +35,6 @@ const Next.dPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -71,7 +63,6 @@ const Next.dPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -98,13 +89,7 @@ const Next.dPage: React.FC = () => {
     </div>
   );
 };
-
 export default Next.dPage;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -165,44 +150,37 @@ export interface Metadata {
     other?: Record<string, string>;
   };
 }
-
 export interface MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-
 // Custom Next.js types
 export interface NextPageProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
-
 // API route types
 export interface ApiRouteHandler {
   (req: Request): Promise<Response>;
 }
-
 // Server components types
 export interface ServerComponentProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
-
 // Client components types
 export interface ClientComponentProps {
   children?: React.ReactNode;
   className?: string;
 }
-
 // Route handlers
 export interface RouteHandler {
   GET?: (req: Request) => Promise<Response>;
@@ -211,35 +189,29 @@ export interface RouteHandler {
   DELETE?: (req: Request) => Promise<Response>;
   PATCH?: (req: Request) => Promise<Response>;
 }
-
 // Dynamic route types
 export interface DynamicRoute {
   params: { [key: string]: string };
 }
-
 // Static generation types
 export interface StaticProps {
   props: { [key: string]: any };
   revalidate?: number;
   notFound?: boolean;
 }
-
 // ISR types
 export interface ISRConfig {
   revalidate: number;
   tags?: string[];
 }
-
 // Edge runtime types
 export interface EdgeRuntime {
   runtime: 'edge';
 }
-
 // Node.js runtime types
 export interface NodeRuntime {
   runtime: 'nodejs';
 }
-
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
@@ -250,11 +222,5 @@ declare module 'next' {
     };
   }
 }
-
-<<<<<<< HEAD
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
 export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

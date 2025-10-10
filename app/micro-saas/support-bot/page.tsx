@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const SmartSupportBotPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -22,7 +21,7 @@ const SmartSupportBotPage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered customer service automation with intelligent support bot. 
+              AI-powered customer service automation with intelligent support bot.
               24/7 customer assistance and automated responses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -52,7 +51,6 @@ const SmartSupportBotPage: React.FC = () => {
 };
 export default SmartSupportBotPage;
   </button>
-=======
 ;
 const SmartSupportBotPage: React.FC = () => {;
   return (;
@@ -102,6 +100,4 @@ const SmartSupportBotPage: React.FC = () => {;
     </>;
   );}
 };
-;
 export default SmartSupportBotPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

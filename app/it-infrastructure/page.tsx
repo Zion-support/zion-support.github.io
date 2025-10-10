@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -84,7 +83,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 export default PagePage;
   </button>
   </button>
-=======
 ;
     {;
       icon: Brain,;
@@ -107,7 +105,6 @@ export default PagePage;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -118,7 +115,6 @@ export default PagePage;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -166,6 +162,4 @@ export default PagePage;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

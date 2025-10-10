@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const FinancialITPage: React.FC = () => {
   const features = [
     {
@@ -129,7 +128,6 @@ const FinancialITPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
 ;
 const FinancialITPage: React.FC = () => {;
   const features = [;
@@ -170,7 +168,6 @@ const FinancialITPage: React.FC = () => {;
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment'];}
     }
   ];
-;
   const services = [;
     {;
       icon: '🏦',;
@@ -193,7 +190,6 @@ const FinancialITPage: React.FC = () => {;
       description: 'Cybersecurity and data protection solutions';}
     }
   ];
-;
   const benefits = [;
     'SOX Compliance Ready',;
     'Bank-level Security',;
@@ -202,7 +198,6 @@ const FinancialITPage: React.FC = () => {;
     'Fraud Prevention',;
     'Advanced Analytics';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>;
       <Helmet>;
@@ -258,14 +253,12 @@ const FinancialITPage: React.FC = () => {;
                   {feature.benefits.map((benefit, benefitIndex) => (;}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -343,7 +336,6 @@ export default FinancialITPage;
   </p>
   </button>
   </span>
-=======
           </div>;
         </div>;
       </section>;
@@ -413,6 +405,4 @@ export default FinancialITPage;
     </div>;
   );
 };
-;
 export default FinancialITPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

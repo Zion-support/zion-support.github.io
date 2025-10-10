@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -55,7 +54,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedaccessibilityenhancer solutions. 
+              Transform your business with our advanced enhancedaccessibilityenhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -121,7 +120,6 @@ export default EnhancedAccessibilityEnhancerPage;
   </button>
   </span>
   </div>
-=======
 ;
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {;
   const features = [;
@@ -146,7 +144,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -157,7 +154,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -238,6 +234,4 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {;
         </div>;
       </section>;
 };
-;
 export default EnhancedAccessibilityEnhancerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

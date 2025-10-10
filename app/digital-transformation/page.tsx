@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -37,14 +36,11 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 };
-=======
-;
 const PagePage: React.FC = () => {;
   const features = [;
     {;}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -55,7 +51,6 @@ const PagePage: React.FC = () => {;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
           </div>;
         </div>;
@@ -75,6 +70,4 @@ const PagePage: React.FC = () => {;
         </div>;
       </section>;
 };
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default PagePage;

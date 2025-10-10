@@ -2,7 +2,6 @@
 import React from 'react';
 'use client';
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 interface SecurityEnhancerProps {
   children: React.ReactNode;
 }
@@ -18,7 +17,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       };
       // Add CSP meta tag
-=======
 ;
 interface SecurityEnhancerProps {;
   children: React.ReactNode;}
@@ -39,14 +37,11 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {;
 };
         'Referrer-Policy': 'strict-origin-when-cross-origin';}
       };
-;
       // Add CSP meta tag;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       const cspMeta = document.createElement('meta');
       cspMeta.httpEquiv = 'Content-Security-Policy';
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
       document.head.appendChild(cspMeta);
-<<<<<<< HEAD
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {
         e.preventDefault();
@@ -64,13 +59,11 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {;
 };
 export default SecurityEnhancer;
   </SecurityEnhancerProps>
-=======
 ;
       // Disable right-click context menu;
       document.addEventListener('contextmenu', (e) => {;
         e.preventDefault();}
       });
-;
       // Disable F12 and other dev tools shortcuts;
       document.addEventListener('keydown', (e) => {;
         if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {;
@@ -78,12 +71,8 @@ export default SecurityEnhancer;
         }
       });
     };
-;
     enhanceSecurity();
   }, []);
-;
   return <>{children}</>;
 };
-;
 export default SecurityEnhancer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

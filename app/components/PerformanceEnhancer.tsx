@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
     }
   ];
   const benefits = [
@@ -34,7 +33,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced performanceenhancer solutions. 
+              Transform your business with our advanced performanceenhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -100,11 +99,9 @@ export default PerformanceEnhancerPage;
   </button>
   </span>
   </div>
-=======
 ;
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -115,7 +112,6 @@ export default PerformanceEnhancerPage;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -196,6 +192,4 @@ export default PerformanceEnhancerPage;
         </div>;
       </section>;
 };
-;
 export default PerformanceEnhancerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

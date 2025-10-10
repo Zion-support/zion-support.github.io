@@ -24,7 +24,6 @@ import {;
   Target,;
   Eye;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const PenetrationTestingPage: React.FC = () => {
   const features = [
     {
@@ -74,7 +73,7 @@ const PenetrationTestingPage: React.FC = () => {
                 Penetration Testing Services;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Identify and fix security vulnerabilities before attackers exploit them. 
+                Identify and fix security vulnerabilities before attackers exploit them.
                 Our expert penetration testing services help secure your systems and protect your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +169,6 @@ export default PenetrationTestingPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const PenetrationTestingPage: React.FC = () => {;
   const features = [;
@@ -195,7 +193,6 @@ const PenetrationTestingPage: React.FC = () => {;
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.';}
     }
   ];
-;
   const benefits = [;
     'Identify security vulnerabilities before attackers do',;
     'Comply with industry regulations and standards',;
@@ -206,7 +203,6 @@ const PenetrationTestingPage: React.FC = () => {;
     'Expert analysis and reporting',;
     'Ongoing security improvement guidance';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -311,6 +307,4 @@ const PenetrationTestingPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default PenetrationTestingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

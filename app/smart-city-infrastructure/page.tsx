@@ -1,49 +1,34 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const SmartCityInfrastructurePage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-<<<<<<< HEAD
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
       description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
     },
     {
       icon: Zap,
       title: 'High Performance',
-<<<<<<< HEAD
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-=======
       description: 'Lightning-fast processing and real-time analytics for optimal city management'
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-<<<<<<< HEAD
       description: 'Bank-level security with encryption and compliance standards'
-=======
       description: 'Bank-level security with advanced encryption and compliance standards'
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
     },
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
@@ -70,7 +55,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
+              Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +70,6 @@ const SmartCityInfrastructurePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -108,12 +92,9 @@ const PagePage: React.FC = () => {;
       icon: Globe,;
       title: 'Global Reach',;
       description: 'Worldwide deployment and support for international businesses';}
-=======
       description: 'Worldwide deployment and support for international smart city projects'
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
     }
   ];
-
   const smartCityServices = [
     {
       icon: Building,
@@ -140,8 +121,6 @@ const PagePage: React.FC = () => {;
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
     }
   ];
-<<<<<<< HEAD
-;
   return (;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>;
@@ -170,7 +149,6 @@ const PagePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -187,7 +165,6 @@ const PagePage: React.FC = () => {;
                 <p className="text-gray-300">{feature.description}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -239,7 +216,6 @@ export default PagePage;
   </h2>
   </button>
   </span>
-=======
           </div>;
         </div>;
       </section>;
@@ -285,11 +261,7 @@ export default PagePage;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -300,7 +272,6 @@ export default PagePage;
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <>
       <Helmet>
@@ -337,7 +308,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -362,7 +332,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -399,7 +368,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -421,7 +389,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -450,6 +417,4 @@ export default PagePage;
     </>
   );
 };
-
 export default SmartCityInfrastructurePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89

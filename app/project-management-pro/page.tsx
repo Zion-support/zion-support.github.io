@@ -23,7 +23,6 @@ import {;
   Calendar,;
   FileText;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const ProjectManagementProPage: React.FC = () => {
   const features = [
     {
@@ -73,7 +72,7 @@ const ProjectManagementProPage: React.FC = () => {
                 Project Management Pro;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Streamline your projects with our comprehensive management platform. 
+                Streamline your projects with our comprehensive management platform.
                 Organize tasks, collaborate with teams, and deliver projects on time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +168,6 @@ export default ProjectManagementProPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const ProjectManagementProPage: React.FC = () => {;
   const features = [;
@@ -194,7 +192,6 @@ const ProjectManagementProPage: React.FC = () => {;
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.';}
     }
   ];
-;
   const benefits = [;
     'Improve project delivery times',;
     'Enhance team collaboration',;
@@ -205,7 +202,6 @@ const ProjectManagementProPage: React.FC = () => {;
     'Increase team productivity',;
     'Streamline project workflows';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -310,6 +306,4 @@ const ProjectManagementProPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default ProjectManagementProPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

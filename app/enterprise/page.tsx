@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -106,7 +105,7 @@ const EnterprisePage: React.FC = () => {
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive enterprise-grade solutions designed for large-scale business operations. 
+            Comprehensive enterprise-grade solutions designed for large-scale business operations.
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -120,7 +119,6 @@ const EnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 ;
 const EnterprisePage: React.FC = () => {;
   const features = [;
@@ -161,7 +159,6 @@ const EnterprisePage: React.FC = () => {;
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];}
     }
   ];
-;
   const solutions = [;
     {;
       title: 'Enterprise Resource Planning',;
@@ -188,7 +185,6 @@ const EnterprisePage: React.FC = () => {;
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];}
     }
   ];
-;
   const benefits = [;
     'Reduce operational costs by 30%',;
     'Improve productivity by 50%',;
@@ -199,14 +195,12 @@ const EnterprisePage: React.FC = () => {;
     'Integrate with existing systems',;
     'Provide 24/7 support and monitoring';
   ];
-;
   const stats = [;
     { number: '500+', label: 'Enterprise Clients', icon: Building },;
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },;
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <SEOOptimizer;
@@ -241,7 +235,6 @@ const EnterprisePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Stats Section */}
       <section className="py-20 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -255,7 +248,6 @@ const EnterprisePage: React.FC = () => {;
                 <div className="text-gray-300 text-sm">{stat.label}</div>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -279,7 +271,6 @@ const EnterprisePage: React.FC = () => {;
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
           </div>;
         </div>;
       </section>;
@@ -303,14 +294,12 @@ const EnterprisePage: React.FC = () => {;
                   {feature.benefits.map((benefit, idx) => (;}
                     <li key={idx} className="flex items-center text-sm text-gray-400">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -322,7 +311,6 @@ const EnterprisePage: React.FC = () => {;
             </p>
           </div>
                     </li>
-=======
           </div>;
         </div>;
       </section>;
@@ -334,12 +322,10 @@ const EnterprisePage: React.FC = () => {;
             </p>;
           </div>;
                     </li>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -381,7 +367,6 @@ export default EnterprisePage;
   </h2>
   </span>
   </SEOOptimizer>
-=======
           </div>;
         </div>;
       </section>;
@@ -417,6 +402,4 @@ export default EnterprisePage;
     </div>;
   );
 };
-;
 export default EnterprisePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

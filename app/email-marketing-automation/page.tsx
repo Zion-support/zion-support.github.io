@@ -22,7 +22,6 @@ import {;
   Send,;
   PieChart;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const EmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
@@ -72,7 +71,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
                 Email Marketing Automation;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your email marketing with our AI-powered automation platform. 
+                Transform your email marketing with our AI-powered automation platform.
                 Create engaging campaigns, automate workflows, and drive better results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,7 +167,6 @@ export default EmailMarketingAutomationPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const EmailMarketingAutomationPage: React.FC = () => {;
   const features = [;
@@ -193,7 +191,6 @@ const EmailMarketingAutomationPage: React.FC = () => {;
       description: 'Behavior-based triggers and workflows to send the right message at the right time.';}
     }
   ];
-;
   const benefits = [;
     'Increase email engagement rates',;
     'Automate repetitive marketing tasks',;
@@ -204,7 +201,6 @@ const EmailMarketingAutomationPage: React.FC = () => {;
     'Generate more qualified leads',;
     'Save time and resources';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -309,6 +305,4 @@ const EmailMarketingAutomationPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default EmailMarketingAutomationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

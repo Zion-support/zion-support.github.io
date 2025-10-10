@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 'use client';
-<<<<<<< HEAD
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -38,7 +37,7 @@ const PageBackupPage: React.FC = () => {
   return (
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page backup solutions. 
+              Transform your business with our advanced page backup solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </h2>
@@ -83,7 +82,6 @@ const PageBackupPage: React.FC = () => {
 export default PageBackupPage;
   </button>
   </button>
-=======
 ;
 const PageBackupPage: React.FC = () => {;
   const features = [;
@@ -108,7 +106,6 @@ const PageBackupPage: React.FC = () => {;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -119,7 +116,6 @@ const PageBackupPage: React.FC = () => {;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
             </h1>;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
@@ -165,6 +161,4 @@ const PageBackupPage: React.FC = () => {;
     </div>;
   );
 };
-;
 export default PageBackupPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

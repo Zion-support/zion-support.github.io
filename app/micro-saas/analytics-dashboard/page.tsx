@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-<<<<<<< HEAD
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -71,7 +70,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your data into actionable insights with our AI-powered analytics dashboard. 
+                Transform your data into actionable insights with our AI-powered analytics dashboard.
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -176,7 +175,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 Ready to Transform Your Analytics?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our AI analytics dashboard 
+                Join thousands of businesses already using our AI analytics dashboard
                 to make smarter, data-driven decisions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -201,7 +200,6 @@ export default AIAnalyticsDashboardPage;
   </p>
   </p>
   </button>
-=======
 ;
 const AIAnalyticsDashboardPage: React.FC = () => {;
   const features = [;
@@ -236,7 +234,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {;
       description: 'Monitor KPIs and business objectives with automated alerts.';}
     }
   ];
-;
   const benefits = [;
     'Real-time data visualization and reporting',;
     'AI-powered predictive analytics',;
@@ -245,14 +242,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {;
     'Multi-platform data integration',;
     'Mobile-responsive design';
   ];
-;
   const metrics = [;
     { label: 'Data Sources', value: '50+', icon: BarChart },;
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },;
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -399,6 +394,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default AIAnalyticsDashboardPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

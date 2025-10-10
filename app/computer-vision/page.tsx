@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
   ];
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -14,7 +13,7 @@ import React from 'react';
   ];
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
+              Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             </div>
@@ -63,7 +62,6 @@ import React from 'react';
 export default PagePage;
   </button>
   </button>
-=======
 ;
   const benefits = [;
     'Advanced AI technology integration',;
@@ -75,7 +73,6 @@ export default PagePage;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
             </h1>;
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Transform your business with our advanced page solutions.;
@@ -124,6 +121,4 @@ export default PagePage;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

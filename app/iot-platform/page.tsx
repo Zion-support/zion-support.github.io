@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
     },
     {
       icon: Clock,
@@ -17,11 +16,10 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
   ];
   return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform provides everything you need to build, deploy, and scale 
+              Our IoT platform provides everything you need to build, deploy, and scale
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
-=======
 ;
     },;
     {;
@@ -33,19 +31,16 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
     {;}
     }
   ];
-;
   return (;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Our IoT platform provides everything you need to build, deploy, and scale;
               Internet of Things solutions for any industry or use case.;
             </p>;
           </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   ))}
                 </ul>;
 </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -57,7 +52,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               IoT Use Cases;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform supports a wide range of industries and applications, 
+              Our IoT platform supports a wide range of industries and applications,
               from smart manufacturing to connected cities.
             </p>
           </div>
@@ -80,7 +75,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               Why Choose Our IoT Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of a comprehensive IoT platform designed for scale, 
+              Experience the benefits of a comprehensive IoT platform designed for scale,
               security, and performance.
             </p>
           </div>
@@ -98,7 +93,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       </section>
       {/* CTA Section */}
           <p className="text-xl text-gray-300 mb-8">
-            Start building your IoT platform today. Get started with a free consultation 
+            Start building your IoT platform today. Get started with a free consultation
             and discover how we can help you succeed.
           </p>
             </button>
@@ -115,7 +110,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 export default PagePage;
   </button>
   </h2>
-=======
           </div>;
         </div>;
       </section>;
@@ -182,6 +176,4 @@ export default PagePage;
 </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

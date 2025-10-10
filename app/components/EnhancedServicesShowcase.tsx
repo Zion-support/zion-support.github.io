@@ -1,6 +1,5 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -61,7 +60,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
 ;
 const EnhancedServicesShowcase: React.FC = () => {;
   const services = [;
@@ -98,7 +96,6 @@ const EnhancedServicesShowcase: React.FC = () => {;
       stats: '95% Efficiency';}
     }
   ];
-;
   return (;
     <section className="py-16"></section>;
       <div className="container mx-auto px-4"></div>;
@@ -124,11 +121,9 @@ const EnhancedServicesShowcase: React.FC = () => {;
                 {service.features.map((feature, featureIndex) => (;}
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">;
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {feature}
                   </li>;
                 ))}
-<<<<<<< HEAD
               </ul>
               <a
                 href="/services"
@@ -152,7 +147,6 @@ const EnhancedServicesShowcase: React.FC = () => {;
 export default EnhancedServicesShowcase;
   </p>
   </h2>
-=======
               </ul>;
               <a;
                 href="/services";
@@ -175,7 +169,4 @@ export default EnhancedServicesShowcase;
     </section>;
   );
 };
-;
 export default EnhancedServicesShowcase;
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -98,10 +97,8 @@ export default EnhancedHeroPage;
   </button>
   </button>
   </h2>
-=======
 ;
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -112,7 +109,6 @@ export default EnhancedHeroPage;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -193,6 +189,4 @@ export default EnhancedHeroPage;
     </div>;
   );
 };
-;
 export default EnhancedHeroPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

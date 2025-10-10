@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
     }
   ];
               </span>
@@ -10,7 +9,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced systemmonitor solutions. 
+              Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -28,11 +27,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 };
 export default SystemMonitorPage;
   </button>
-=======
 ;
     }
   ];
-;
               </span>;
               <br />;
               <span className="text-white">Solutions</span>;
@@ -54,6 +51,4 @@ export default SystemMonitorPage;
     </div>;
   );
 };
-;
 export default SystemMonitorPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -62,12 +61,10 @@ const BlockchainWeb3Page: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-=======
 ;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
 const BlockchainWeb3Page: React.FC = () => {;
   const features = [;
     {;
@@ -95,7 +92,6 @@ const BlockchainWeb3Page: React.FC = () => {;
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access'];}
     }
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -128,27 +124,22 @@ const BlockchainWeb3Page: React.FC = () => {;
                   {feature.benefits.map((benefit, benefitIndex) => (;}
                     <li key={benefitIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </div>
     </React.Fragment>
   );
 };
-=======
           </div>;
         </div>;
       </div>;
     </>;
   );
 };
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default BlockchainWeb3Page;

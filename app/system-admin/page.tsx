@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -103,7 +102,6 @@ export default PagePage;
   </button>
   </button>
   </h2>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -128,7 +126,6 @@ const PagePage: React.FC = () => {;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
           </div>;
         </div>;
@@ -204,6 +201,4 @@ const PagePage: React.FC = () => {;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

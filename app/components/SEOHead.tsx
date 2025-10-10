@@ -1,11 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface SEOHeadProps {
-=======
 ;
 interface SEOHeadProps {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   title?: string;
   description?: string;
   keywords?: string;
@@ -15,7 +12,6 @@ interface SEOHeadProps {;
   twitterCard?: string;
   structuredData?: object;}
 }
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
@@ -83,7 +79,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-=======
 ;
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = 'Zion Tech Group - Advanced AI & IT Solutions',;
@@ -97,7 +92,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 }) => {;}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-;
   const defaultStructuredData = {;
     "@context": "https://schema.org",;
     "@type": "Organization",;
@@ -124,7 +118,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       "https://twitter.com/ziontechgroup";
     ];
   };
-;
   return (;
     <Helmet>;
       {/* Basic Meta Tags */}
@@ -155,7 +148,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="msapplication-TileColor" content="#0f172a" />;
       <meta name="apple-mobile-web-app-capable" content="yes" />;
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Structured Data */}
       <script type="application/ld+json">;
         {JSON.stringify(structuredData || defaultStructuredData)}
@@ -163,10 +155,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
     </Helmet>;
   );
 };
-<<<<<<< HEAD
 export default SEOHead;
   </SEOHeadProps>
-=======
 ;
 export default SEOHead;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

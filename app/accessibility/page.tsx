@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
-<<<<<<< HEAD
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -84,7 +83,7 @@ const AccessibilityPage: React.FC = () => {
   </
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure 
+              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure
               your applications are usable by people of all abilities and comply with international standards.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -117,7 +116,6 @@ const AccessibilityPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-=======
 ;
 const AccessibilityPage: React.FC = () => {;
   const features = [;
@@ -158,7 +156,6 @@ const AccessibilityPage: React.FC = () => {;
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'];}
     }
   ];
-;
   const standards = [;
     {;
       name: 'WCAG 2.1 AA',;
@@ -181,7 +178,6 @@ const AccessibilityPage: React.FC = () => {;
       status: 'Fully Compliant';}
     }
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -236,7 +232,6 @@ const AccessibilityPage: React.FC = () => {;
                     <feature.icon className="w-8 h-8 text-white" />;
                   </div>;
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {feature.title}
                   </h3>;
                   <p className="text-gray-300 mb-6">{feature.description}</p>;
@@ -250,7 +245,6 @@ const AccessibilityPage: React.FC = () => {;
                   </ul>;
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -276,7 +270,6 @@ const AccessibilityPage: React.FC = () => {;
                   <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
                   <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full font-semibold">
-=======
             </div>;
           </div>;
         </section>;
@@ -303,12 +296,10 @@ const AccessibilityPage: React.FC = () => {;
                   <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>;
                   <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>;
                   <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full font-semibold">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {standard.status}
                   </span>;
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -345,7 +336,6 @@ export default AccessibilityPage;
   </button>
   </button>
   </span>
-=======
             </div>;
           </div>;
         </section>;
@@ -374,6 +364,4 @@ export default AccessibilityPage;
     </>;
   );
 };
-;
 export default AccessibilityPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

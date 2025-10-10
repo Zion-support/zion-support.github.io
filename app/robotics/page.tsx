@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -57,7 +56,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -82,7 +80,6 @@ const PagePage: React.FC = () => {;
       description: 'Worldwide deployment and support for international businesses';}
     }
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -93,7 +90,6 @@ const PagePage: React.FC = () => {;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -115,20 +111,16 @@ const PagePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
-=======
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
           </div>;
@@ -137,8 +129,4 @@ const PagePage: React.FC = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default PagePage;

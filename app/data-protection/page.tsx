@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -109,7 +108,6 @@ export default PagePage;
   </button>
   </button>
   </h2>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -130,7 +128,6 @@ const PagePage: React.FC = () => {;
     },;
     {;
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -214,6 +211,4 @@ const PagePage: React.FC = () => {;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

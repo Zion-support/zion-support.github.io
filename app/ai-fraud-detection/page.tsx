@@ -5,7 +5,6 @@ import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, P
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-<<<<<<< HEAD
 const AiFraudDetectionPage: React.FC = () => {
   const features = [
     {
@@ -94,7 +93,6 @@ const AiFraudDetectionPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
 ;
 const AiFraudDetectionPage: React.FC = () => {;
   const features = [;
@@ -123,7 +121,6 @@ const AiFraudDetectionPage: React.FC = () => {;
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];}
     }
   ];
-;
   const benefits = [;
     'Increase efficiency by up to 50%',;
     'Reduce costs by 30% with automation',;
@@ -131,7 +128,6 @@ const AiFraudDetectionPage: React.FC = () => {;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -186,7 +182,6 @@ const AiFraudDetectionPage: React.FC = () => {;
                       {feature.benefits.map((benefit, idx) => (;}
                         <li key={idx} className="flex items-center text-sm text-gray-400">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {benefit}
                         </li>;
                       ))}
@@ -194,7 +189,6 @@ const AiFraudDetectionPage: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -256,7 +250,6 @@ export default AiFraudDetectionPage;
   </button>
   </button>
   </h1>
-=======
             </div>;
           </div>;
         </section>;
@@ -309,6 +302,4 @@ export default AiFraudDetectionPage;
     </>;
   );
 };
-;
 export default AiFraudDetectionPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -24,7 +24,6 @@ import {;
   Target,;
   Monitor;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const SecurityMonitoringSuitePage: React.FC = () => {
   const features = [
     {
@@ -74,7 +73,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
                 Security Monitoring Suite;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection, 
+                Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection,
                 and automated response capabilities to protect your business 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +168,6 @@ export default SecurityMonitoringSuitePage;
   </button>
   </button>
   </h1>
-=======
 ;
 const SecurityMonitoringSuitePage: React.FC = () => {;
   const features = [;
@@ -194,7 +192,6 @@ const SecurityMonitoringSuitePage: React.FC = () => {;
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.';}
     }
   ];
-;
   const benefits = [;
     '24/7 security monitoring and protection',;
     'Real-time threat detection and alerts',;
@@ -205,7 +202,6 @@ const SecurityMonitoringSuitePage: React.FC = () => {;
     'Scalable for any business size',;
     'Expert security team support';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -310,6 +306,4 @@ const SecurityMonitoringSuitePage: React.FC = () => {;
     </>;
   );
 };
-;
 export default SecurityMonitoringSuitePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

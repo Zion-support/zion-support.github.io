@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const EmailMarketingSuitePage: React.FC = () => {
   return (
     <React.Fragment>
@@ -22,7 +21,7 @@ const EmailMarketingSuitePage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered email marketing automation. Create, send, and optimize email campaigns 
+              AI-powered email marketing automation. Create, send, and optimize email campaigns
               with intelligent automation and personalization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -52,7 +51,6 @@ const EmailMarketingSuitePage: React.FC = () => {
 };
 export default EmailMarketingSuitePage;
   </button>
-=======
 ;
 const EmailMarketingSuitePage: React.FC = () => {;
   return (;
@@ -102,7 +100,4 @@ const EmailMarketingSuitePage: React.FC = () => {;
     </>;
   );}
 };
-;
 export default EmailMarketingSuitePage;
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

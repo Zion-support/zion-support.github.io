@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const MicroSaaSPage: React.FC = () => {
   const serviceName = 'expense-tracker';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -53,12 +52,10 @@ const MicroSaaSPage: React.FC = () => {
 };
 export default MicroSaaSPage;
   </button>
-=======
 ;
 const MicroSaaSPage: React.FC = () => {;
   const serviceName = 'expense-tracker';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-;
   return (;
     <></>;
       <Helmet>;}
@@ -105,7 +102,4 @@ const MicroSaaSPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default MicroSaaSPage;
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

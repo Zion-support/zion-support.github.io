@@ -23,7 +23,6 @@ import {;
   PieChart,;
   LineChart;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const DataAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -73,7 +72,7 @@ const DataAnalyticsPage: React.FC = () => {
                 Data Analytics Services;
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced analytics solutions. 
+                Transform your data into actionable insights with our advanced analytics solutions.
                 Make smarter decisions and drive business growth with AI-powered data analysis.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +168,6 @@ export default DataAnalyticsPage;
   </button>
   </button>
   </h1>
-=======
 ;
 const DataAnalyticsPage: React.FC = () => {;
   const features = [;
@@ -194,7 +192,6 @@ const DataAnalyticsPage: React.FC = () => {;
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.';}
     }
   ];
-;
   const benefits = [;
     'Make data-driven business decisions',;
     'Identify new opportunities and trends',;
@@ -205,7 +202,6 @@ const DataAnalyticsPage: React.FC = () => {;
     'Real-time insights and reporting',;
     'Custom analytics solutions';
   ];
-;
   return (;
     <></>;
       <Helmet>;
@@ -310,6 +306,4 @@ const DataAnalyticsPage: React.FC = () => {;
     </>;
   );
 };
-;
 export default DataAnalyticsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

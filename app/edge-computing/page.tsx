@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
-<<<<<<< HEAD
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
@@ -161,7 +160,6 @@ const EdgeComputingPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-=======
 ;
 const EdgeComputingPage: React.FC = () => {;
   const features = [;
@@ -202,7 +200,6 @@ const EdgeComputingPage: React.FC = () => {;
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance'];}
     }
   ];
-;
   const services = [;
     {;
       icon: '⚡',;
@@ -225,7 +222,6 @@ const EdgeComputingPage: React.FC = () => {;
       description: 'Mobile edge computing for 5G and mobile applications';}
     }
   ];
-;
   const benefits = [;
     'Ultra-Low Latency',;
     'Reduced Bandwidth Costs',;
@@ -234,7 +230,6 @@ const EdgeComputingPage: React.FC = () => {;
     'Real-time Processing',;
     'Global Scalability';
   ];
-;
   const useCases = [;
     {;
       title: 'Autonomous Vehicles',;
@@ -267,7 +262,6 @@ const EdgeComputingPage: React.FC = () => {;
       icon: '🎮';}
     }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>;
       <Helmet>;
@@ -323,14 +317,12 @@ const EdgeComputingPage: React.FC = () => {;
                   {feature.benefits.map((benefit, benefitIndex) => (;}
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">;
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -426,7 +418,6 @@ export default EdgeComputingPage;
   </p>
   </button>
   </span>
-=======
           </div>;
         </div>;
       </section>;
@@ -512,6 +503,4 @@ export default EdgeComputingPage;
     </div>;
   );
 };
-;
 export default EdgeComputingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

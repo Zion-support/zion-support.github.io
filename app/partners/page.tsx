@@ -1,68 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap, ArrowRight } from 'lucide-react';
-
-interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';
-}
-
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
+import { ExternalLink, Award, Users, Globe, Shield, Zap } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const PartnersPage: React.FC = () => {
   const partners = [
-    {
-      name: 'Microsoft',
-<<<<<<< HEAD
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic cloud and AI partnership for enterprise solutions',
-      category: 'Technology',
-      website: 'https://microsoft.com',
-      tier: 'strategic'
-    },
-    {
-      name: 'Google Cloud',
-      logo: '/images/partners/google-cloud.png',
-      description: 'Certified partner for machine learning and data analytics',
-      category: 'Cloud',
-      website: 'https://cloud.google.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'CRM and customer experience solutions',
-      category: 'CRM',
-      website: 'https://salesforce.com',
-      tier: 'strategic'
-    },
-    {
-      name: 'IBM',
-      logo: '/images/partners/ibm.png',
-      description: 'Enterprise AI and data analytics solutions',
-      category: 'Enterprise',
-      website: 'https://ibm.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'Oracle',
-      logo: '/images/partners/oracle.png',
-      description: 'Database and cloud infrastructure solutions',
-      category: 'Database',
-      website: 'https://oracle.com',
-      tier: 'certified'
-    },
     {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
@@ -70,460 +14,322 @@ const PartnersPage: React.FC = () => {
       category: 'Cloud',
       website: 'https://aws.amazon.com',
       tier: 'strategic'
-=======
-      logo: '🔷',
-      description: 'Cloud infrastructure and AI solutions',
-      category: 'Technology Partner'
     },
     {
-      name: 'Amazon Web Services',
-      logo: '☁️',
-      description: 'Cloud computing and machine learning services',
-      category: 'Cloud Partner'
+      name: 'Microsoft Azure',
+      logo: '/images/partners/azure.png',
+      description: 'Enterprise cloud solutions and AI platform',
+      category: 'Cloud',
+      website: 'https://azure.microsoft.com',
+      tier: 'strategic'
     },
     {
       name: 'Google Cloud',
-      logo: '🔵',
-      description: 'AI and data analytics platform',
-      category: 'AI Partner'
+      logo: '/images/partners/gcp.png',
+      description: 'AI and machine learning services',
+      category: 'Cloud',
+      website: 'https://cloud.google.com',
+      tier: 'strategic'
+    },
+    {
+      name: 'NVIDIA',
+      logo: '/images/partners/nvidia.png',
+      description: 'AI computing and GPU solutions',
+      category: 'Hardware',
+      website: 'https://nvidia.com',
+      tier: 'technology'
     },
     {
       name: 'IBM',
-      logo: '🔵',
+      logo: '/images/partners/ibm.png',
       description: 'Enterprise AI and quantum computing',
-      category: 'Enterprise Partner'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+      category: 'Technology',
+      website: 'https://ibm.com',
+      tier: 'strategic'
+    },
+    {
+      name: 'Salesforce',
+      logo: '/images/partners/salesforce.png',
+      description: 'CRM and business automation',
+      category: 'Software',
+      website: 'https://salesforce.com',
+      tier: 'technology'
+    },
+    {
+      name: 'Oracle',
+      logo: '/images/partners/oracle.png',
+      description: 'Database and enterprise applications',
+      category: 'Software',
+      website: 'https://oracle.com',
+      tier: 'technology'
+    },
+    {
+      name: 'Cisco',
+      logo: '/images/partners/cisco.png',
+      description: 'Networking and cybersecurity solutions',
+      category: 'Security',
+      website: 'https://cisco.com',
+      tier: 'technology'
+    },
+    {
+      name: 'Dell Technologies',
+      logo: '/images/partners/dell.png',
+      description: 'Infrastructure and storage solutions',
+      category: 'Hardware',
+      website: 'https://dell.com',
+      tier: 'technology'
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Access to cutting-edge technology platforms',
-    'Joint go-to-market strategies',
-    'Co-marketing opportunities',
-    'Technical training and certification',
-    'Co-marketing and co-selling programs',
-    'Dedicated partner success manager',
-    'Priority support and resources',
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-  ];
-
-  const tiers = [
     {
-      name: 'Strategic Partners',
-      description: 'Our most important technology and business partners',
       icon: <Award className="w-8 h-8 text-yellow-500" />,
-      color: 'from-yellow-400 to-orange-500'
+      title: 'Certified Expertise',
+      description: 'Our team holds certifications from leading technology partners'
     },
     {
-      name: 'Preferred Partners',
-      description: 'Certified partners with proven track record',
       icon: <Users className="w-8 h-8 text-blue-500" />,
-      color: 'from-blue-400 to-purple-500'
+      title: 'Dedicated Support',
+      description: 'Direct access to partner support teams and resources'
     },
     {
-      name: 'Certified Partners',
-      description: 'Authorized partners with specialized expertise',
-      icon: <Handshake className="w-8 h-8 text-green-500" />,
-      color: 'from-green-400 to-teal-500'
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: 'Global Reach',
+      description: 'Leverage partner networks for worldwide deployment'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Security Compliance',
+      description: 'Meet enterprise security and compliance requirements'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-500" />,
+      title: 'Latest Technology',
+      description: 'Access to cutting-edge tools and early product releases'
     }
   ];
 
-  const stats = [
-    { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
-    { icon: <Users className="w-8 h-8 text-green-500" />, value: '100+', label: 'Certified Experts' },
-    { icon: <TrendingUp className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Joint Projects' },
-    { icon: <Zap className="w-8 h-8 text-yellow-500" />, value: '24/7', label: 'Support' }
-  ];
+  const tiers = {
+    strategic: { label: 'Strategic Partner', color: 'from-cyan-400 to-purple-500' },
+    technology: { label: 'Technology Partner', color: 'from-blue-400 to-cyan-500' }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
-        <meta name="keywords" content="partners, technology partners, strategic partnerships, ecosystem" />
+        <title>Partners - Zion Tech Group | Technology Partnerships</title>
+        <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with industry leaders to deliver cutting-edge AI and IT solutions." />
+        <meta name="keywords" content="partners, technology partnerships, AWS, Microsoft Azure, Google Cloud, strategic alliances, technology ecosystem" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Our
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Partners
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We work with industry-leading technology partners to deliver comprehensive solutions that drive innovation and business success.
-          </p>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collaborate with leading technology companies to provide you with the best solutions and support.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mr-4">
-                    <img src={partner.logo} alt={partner.name} className="w-12 h-12 object-contain" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{partner.name}</h3>
-                    <span className={`text-sm px-3 py-1 rounded-full ${
-                      partner.tier === 'strategic' ? 'bg-yellow-500/20 text-yellow-400' :
-                      partner.tier === 'preferred' ? 'bg-blue-500/20 text-blue-400' :
-                      'bg-green-500/20 text-green-400'
-                    }`}>
-                      {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
-                    </span>
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 mb-4">{partner.description}</p>
-                <p className="text-sm text-cyan-400 mb-6">{partner.category}</p>
-                
-                {partner.website && (
-                  <a
-                    href={partner.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    Visit Website
-                    <ExternalLink className="w-4 h-4 ml-1" />
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Tiers */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Partnership Tiers</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer different partnership levels to meet the needs of our diverse partner ecosystem.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {tiers.map((tier, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-cyan-500/20 text-center">
-                <div className="flex justify-center mb-6">
-                  {tier.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
-                <p className="text-gray-300">{tier.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Partnership Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our partner ecosystem and unlock exclusive benefits and opportunities.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Become a Partner
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join our partner ecosystem and help us deliver innovative solutions to businesses worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <span>Contact Us</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="border border-cyan-500 text-cyan-400 font-semibold py-3 px-8 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-=======
-    {
-      icon: Handshake,
-      title: 'Strategic Partnerships',
-      description: 'Collaborate with industry leaders to deliver cutting-edge solutions'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Market Access',
-      description: 'Expand your reach through our global partner network'
-    },
-    {
-      icon: Award,
-      title: 'Certification Programs',
-      description: 'Access to exclusive training and certification opportunities'
-    },
-    {
-      icon: Users,
-      title: 'Joint Marketing',
-      description: 'Co-marketing opportunities and joint go-to-market strategies'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Partners - Zion Tech Group</title>
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, certifications, and joint opportunities." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, AI partners, business partnerships" />
-      </Helmet>
-      
       <Navigation />
       
-      <main className="pt-20">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Partner with Us
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join our ecosystem of technology partners and unlock new opportunities 
-              for growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                Become a Partner
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                View Partner Benefits
-              </button>
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Partners</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                We collaborate with industry leaders to deliver cutting-edge AI and IT solutions. 
+                Our strategic partnerships enable us to provide the best technology and support for our clients.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Our Partners */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* Benefits Section */}
+        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Technology Partners
-              </h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Partnership Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We work with industry leaders to deliver the best solutions to our clients
+                Our strategic partnerships provide us with access to cutting-edge technology, 
+                expert support, and global resources to better serve our clients.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {partners.map((partner, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-4xl mb-4">{partner.logo}</div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="text-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6"
+                >
+                  <div className="flex justify-center mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Technology Partners</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We work with leading technology companies to deliver comprehensive solutions 
+                that meet the diverse needs of our clients across various industries.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {partners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl flex items-center justify-center">
+                      <span className="text-2xl font-bold text-cyan-400">
+                        {partner.name.charAt(0)}
+                      </span>
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${tiers[partner.tier as keyof typeof tiers].color} text-white`}>
+                      {tiers[partner.tier as keyof typeof tiers].label}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                     {partner.name}
                   </h3>
+                  
                   <p className="text-gray-300 mb-4">{partner.description}</p>
-                  <span className="inline-block bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
-                    {partner.category}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Partner Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Partner Benefits
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the advantages of partnering with Zion Tech Group
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-cyan-400 font-medium">{partner.category}</span>
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    </a>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Partnership Types */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* Partnership Tiers */}
+        <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Partnership Types
-              </h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the partnership level that best fits your business goals
+                We maintain different levels of partnerships based on the depth of collaboration 
+                and mutual value creation.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Technology Partner</h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Access to our technology stack</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Technical support and training</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Co-marketing opportunities</span>
-                  </li>
-                </ul>
-                <button className="w-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 ring-2 ring-blue-500">
-                <div className="text-center mb-4">
-                  <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mr-4">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Strategic Partners</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Solution Partner</h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Everything in Technology Partner</span>
+                <p className="text-gray-300 mb-6">
+                  Long-term partnerships with shared goals, joint go-to-market strategies, 
+                  and deep technical integration.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <span>Joint product development</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Joint solution development</span>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <span>Shared marketing initiatives</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Revenue sharing opportunities</span>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <span>Priority support and resources</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Dedicated partner manager</span>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <span>Early access to new technologies</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                  Apply Now
-                </button>
               </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Strategic Partner</h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Everything in Solution Partner</span>
+
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mr-4">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">Technology Partners</h3>
+                </div>
+                <p className="text-gray-300 mb-6">
+                  Technology-focused partnerships for integration, certification, 
+                  and technical collaboration.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <span>Technical integration support</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Exclusive market access</span>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <span>Certification programs</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Custom partnership agreements</span>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <span>Training and enablement</span>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Priority support and resources</span>
+                  <li className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <span>Co-marketing opportunities</span>
                   </li>
                 </ul>
-                <button className="w-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                  Contact Us
-                </button>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Partner with Us?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join our ecosystem and unlock new opportunities for growth and innovation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                  Become a Partner
-                </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                  Download Partner Kit
-                </button>
-              </div>
+        <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Interested in Partnering With Us?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              We're always looking for new technology partners who share our vision of 
+              transforming businesses through innovative solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105"
+              >
+                <span className="relative z-10">Become a Partner</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+              <a
+                href="mailto:partners@ziontechgroup.com"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-2xl transition-all duration-300 hover:bg-cyan-400 hover:text-slate-900 hover:scale-105"
+              >
+                Email Our Partnership Team
+              </a>
             </div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-    </div>
+    </>
   );
 };
 

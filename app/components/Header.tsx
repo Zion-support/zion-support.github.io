@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-<<<<<<< HEAD
 const Header: React.FC = () => {
   return (
     <React.Fragment>
@@ -11,8 +10,6 @@ const Header: React.FC = () => {
     </React.Fragment>
   );
 };
-=======
-;
 const Header: React.FC = () => {;
   return (;
     <></>;
@@ -22,7 +19,4 @@ const Header: React.FC = () => {;
     </>;
   );
 };
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default Header;
-;

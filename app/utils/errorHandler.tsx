@@ -453,7 +453,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       await fetch(this.config.reportEndpoint, {)}
         method: 'POST',;
         headers: {}
-<<<<<<< HEAD
           'Content-Type': 'application/json'
         })
     body: JSON.stringify(error)
@@ -463,7 +462,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         headers: {,
           'Content-Type': 'application/json'})
         body: JSON.stringify(error),
-=======
           'Content-Type': 'application/json';
         });
     body: JSON.stringify(error);
@@ -473,7 +471,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         headers: {,;}
           'Content-Type': 'application/json'});
         body: JSON.stringify(error),;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 } catch (err) {}
   }
   // Report error;
@@ -504,15 +501,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           ...error),;
           timestamp: error.timestamp.toISOString(),;}
         body: JSON.stringify({)}
-<<<<<<< HEAD
           ...error,
           timestamp: error.timestamp.toISOString()
         })
-=======
           ...error,;
           timestamp: error.timestamp.toISOString();
         });
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     } catch (err) {}
       }
   }
@@ -704,16 +698,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     setTimeout(() => {/* TODO: Fix JSX expression */}
     }, this.config.retryDelay * retryItem.retryCount);
   }
-<<<<<<< HEAD
   // Retry error
   private async retryError(retryItem: { error: AppError; retryCount: number }) {
     try {
-=======
 ;
   // Retry error;
   private async retryError(retryItem: { error: AppError; retryCount: number }) {;
     try {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       // Implement retry logic based on error type;
       if (retryItem.error.type === ErrorType.NETWORK) {;
         // Retry network request;
@@ -816,10 +807,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       (acc, error) => {;}
       {} as Record<ErrorType, number>;
             `);
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           }
         }
         // Add your retry logic here;
@@ -889,17 +876,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {);
     this.handleError(event.error || new Error(event.message));
-<<<<<<< HEAD
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)
     this.handleError(new Error(event.reason));
-=======
-;
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {);
-    this.handleError(new Error(event.reason));
-;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+    this.handleError(new Error(event.reason));}
     }
   }
 }</ErrorSeverity>;
@@ -907,10 +889,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {);
         this.handleError(event.error || new Error(event.message));
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {);}
   init(): void {}
@@ -918,17 +896,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {)}
         this.handleError(event.error || new Error(event.message));
-<<<<<<< HEAD
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)}
         this.handleError(new Error(event.reason));
-=======
-;
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {)}
         this.handleError(new Error(event.reason));
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   init(): void {/* TODO: Fix JSX expression */}
       });
       // Set up unhandled promise rejection handler;
@@ -958,21 +931,18 @@ export class ErrorBoundary extends React.Component<;
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.errorHandler.handleError(error, errorInfo, {)}
-<<<<<<< HEAD
       component: 'ErrorBoundary'
   })
     render() {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
       component: 'ErrorBoundary')
-=======
       component: 'ErrorBoundary';
   });
     render() {;
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
     this.errorHandler.handleError(error, errorInfo, {);
       component: 'ErrorBoundary');}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 )}
   render() {;
     if (this.state.hasError) {;
@@ -1096,7 +1066,6 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
   };
 };
 export default ErrorHandler;
-<<<<<<< HEAD
 "`
   </h2>
   </ErrorSeverit>
@@ -1107,6 +1076,4 @@ export default ErrorHandler;
   </ErrorHandlerConfig>
   </ErrorHandlerConfig>
   </strin>
-=======
 "`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

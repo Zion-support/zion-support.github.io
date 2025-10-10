@@ -1,6 +1,5 @@
     }
   ];
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -93,7 +92,6 @@ export default GlobalErrorBoundaryPage;
   </button>
   </button>
   </h2>
-=======
 ;
   const benefits = [;
     'Advanced AI technology integration',;
@@ -105,7 +103,6 @@ export default GlobalErrorBoundaryPage;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
       <Helmet>;
@@ -184,6 +181,4 @@ export default GlobalErrorBoundaryPage;
     </div>;
   );
 };
-;
 export default GlobalErrorBoundaryPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

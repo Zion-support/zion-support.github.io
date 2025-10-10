@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -98,10 +97,8 @@ export default PagePage;
   </button>
   </button>
   </h2>
-=======
 ;
   ];
-;
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;
@@ -112,7 +109,6 @@ export default PagePage;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-;
       <Helmet>;
         <title>Page | Zion Tech Group</title>;
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />;
@@ -193,6 +189,4 @@ export default PagePage;
     </div>;
   );
 };
-;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

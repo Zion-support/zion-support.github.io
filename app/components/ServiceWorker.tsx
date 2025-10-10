@@ -8,17 +8,32 @@ const ServiceWorker: React.FC = () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           console.log('Service Worker registered successfully:', registration);
+          
+          // Handle service worker updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New content is available, show update notification
+                  if (confirm('New version available! Reload to update?')) {
+                    window.location.reload();
+                  }
+                }
+              });
+            }
+          });
         })
         .catch((error) => {
           console.log('Service Worker registration failed:', error);
         });
 
-<<<<<<< HEAD
-      // Handle service worker updates
+      // Listen for controller changes
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
-=======
-      // Listen for updates
+      });
+
+      // Listen for messages from service worker
       navigator.serviceWorker.addEventListener('message', (event) => {
         if (event.data && event.data.type === 'SW_UPDATE') {
           // Handle service worker update
@@ -26,7 +41,6 @@ const ServiceWorker: React.FC = () => {
             window.location.reload();
           }
         }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       });
     }
   }, []);
