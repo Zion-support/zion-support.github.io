@@ -78,6 +78,7 @@ const HomePage: React.FC = React.memo((props) => {
             contactType: 'Customer Service',
             areaServed: 'US',
             availableLanguage: 'en'
+<<<<<<< HEAD
           },
           address: {
             '@type': 'PostalAddress',
@@ -86,6 +87,8 @@ const HomePage: React.FC = React.memo((props) => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7c55
           }
         },
         address: {
@@ -96,7 +99,7 @@ const HomePage: React.FC = React.memo((props) => {
           postalCode: '19709',
           addressCountry: 'US'
         }
-        }}
+      }}
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
