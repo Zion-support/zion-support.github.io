@@ -1,110 +1,150 @@
 'use client';
 import React from 'react';
-'use client';
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, Target, Cloud, DollarSign, Calendar, MessageSquare, Globe, Leaf, Activity, Play, Save, Building } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-const AIClimateSolutionsProPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedFeature, setSelectedFeature] = useState(0);
-
+const PagePage: React.FC = () => {
   const features = [
     {
-        'Real-time carbon tracking',
-        'Automated reduction recommendations',
-        'Industry-specific benchmarks',
-        'Regulatory compliance monitoring'
-      ]
+      title: 'Feature 1',
+      description: 'Description of feature 1',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
     {
-        '95% accuracy in weather predictions',
-        'Extreme weather early warning',
-        'Climate trend analysis',
-        'Long-term forecasting'
-      ]
+      title: 'Feature 2',
+      description: 'Description of feature 2',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
     {
-        'Custom sustainability roadmaps',
-        'ROI analysis for green initiatives',
-        'Resource optimization',
-        'Progress tracking & reporting'
-      ]
-    },
-    {
-        'Real-time emission monitoring',
-        'Automated compliance reporting',
-        'Predictive emission modeling',
-        'Regulatory compliance tracking'
-      ]
-    },
-    {
-      title: 'Renewable Energy Optimization',
-      description: 'AI-powered optimization of renewable energy systems and smart grid management',
-      icon: Globe,
-      benefits: [
-        'Energy efficiency optimization',
-        'Smart grid management',
-        'Renewable energy forecasting',
-        'Cost reduction strategies'
-      ]
-    },
-    {
-      title: 'Environmental Risk Assessment',
-      description: 'Comprehensive environmental risk analysis and mitigation strategies using AI',
-      icon: CheckCircle,
-      benefits: [
-        'Risk identification & analysis',
-        'Mitigation strategy recommendations',
-        'Environmental impact assessment',
-        'Compliance risk monitoring'
-      ]
+      title: 'Feature 3',
+      description: 'Description of feature 3',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
 
-  ];
-
-  const useCases = [
-    {
-      title: 'Corporate Sustainability',
-      description: 'Help corporations achieve their sustainability goals and reduce environmental impact',
-      icon: '🏢'
-    },
-    {
-      title: 'Smart Cities',
-      description: 'Build sustainable smart cities with AI-powered environmental management',
-      icon: '🏙️'
-    },
-    {
-      title: 'Agriculture',
-      description: 'Optimize agricultural practices for climate resilience and sustainability',
-      icon: '🌾'
-    },
-    {
-      title: 'Energy Sector',
-      description: 'Optimize renewable energy systems and reduce carbon footprint',
-      icon: '⚡'
-    },
-    {
-      title: 'Transportation',
-      description: 'Develop sustainable transportation solutions and reduce emissions',
-      icon: '🚗'
-    },
-    {
-      title: 'Manufacturing',
-      description: 'Optimize manufacturing processes for environmental sustainability',
-      icon: '🏭'
-    }
+  const benefits = [
+    'Benefit 1',
+    'Benefit 2',
+    'Benefit 3',
+    'Benefit 4',
+    'Benefit 5',
+    'Benefit 6'
   ];
 
   return (
-                      </li>
-                    ))}
-                  </ul>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Page
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced solutions designed for modern business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of our proven solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Transform your business with our page solutions today
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
-export default AIClimateSolutionsProPage;
+export default PagePage;
