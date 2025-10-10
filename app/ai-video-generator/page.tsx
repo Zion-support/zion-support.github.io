@@ -479,6 +479,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
       </div>
     </div>
   );
+});
 
 AIVideoGenerator.displayName = 'AIVideoGenerator';
 ,

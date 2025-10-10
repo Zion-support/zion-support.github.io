@@ -594,6 +594,7 @@ const CloudMigrationPage: React.FC = () => {
     </>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
+};
 
 <<<<<<< HEAD
 CloudMigrationPage.displayName = 'CloudMigrationPage';

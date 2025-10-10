@@ -501,6 +501,7 @@ const AICodeAssistant: React.FC = memo(() => {}
       </div>
     </div>
   );
+});
 
 AICodeAssistant.displayName = 'AICodeAssistant';
 ,
