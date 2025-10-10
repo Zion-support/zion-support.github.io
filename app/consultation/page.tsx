@@ -1,18 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, Calendar, CheckCircle, Clock, Users } from 'lucide-react';
-
-const ConsultationPage = () => {
-  const consultationServices = [
-    'AI Strategy & Implementation',
-    'Cloud Migration Planning',
-    'Cybersecurity Assessment',
-    'Digital Transformation',
-    'IT Infrastructure Review',
-    'Technology Roadmap Development'
-=======
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -93,7 +79,6 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
   ];
 
   const experts = [
