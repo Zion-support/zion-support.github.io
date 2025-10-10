@@ -25,7 +25,7 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
-  ];
+  ]
 
   const benefits = [
     'Advanced AI technology integration',
@@ -36,7 +36,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   const stats = [
     {
@@ -57,7 +57,7 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ];
+  ]
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -141,7 +141,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ContentPromotionBanner;

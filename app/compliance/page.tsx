@@ -25,7 +25,7 @@ const CompliancePage: React.FC = () => {
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting'
     }
-  ];
+  ]
 
   const benefits = [
     'Advanced compliance technology integration',
@@ -36,7 +36,7 @@ const CompliancePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -104,7 +104,7 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default CompliancePage;

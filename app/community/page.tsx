@@ -25,7 +25,7 @@ const CommunityPage: React.FC = () => {
       title: 'Global Network',
       description: 'Connect with professionals from around the world'
     }
-  ];
+  ]
 
   const benefits = [
     'Access to exclusive community resources',
@@ -36,7 +36,7 @@ const CommunityPage: React.FC = () => {
     'Collaboration opportunities',
     'Career development resources',
     'Proven track record of success'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -104,7 +104,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default CommunityPage;

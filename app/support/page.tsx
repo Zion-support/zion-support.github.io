@@ -11,9 +11,9 @@ interface FAQ {
 }
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
 
   const faqs: FAQ[] = [
     {
@@ -46,16 +46,16 @@ const SupportPage: React.FC = () => {
       answer: 'We implement automated daily backups with 30-day retention, plus real-time replication across multiple data centers. All backups are encrypted and tested regularly to ensure data integrity.',
       category: 'Data Management'
     }
-  ];
+  ]
 
-  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
+  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management']
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  })
 
   const supportChannels = [
     {
@@ -79,7 +79,7 @@ const SupportPage: React.FC = () => {
       contact: 'Available on website',
       availability: 'Business hours'
     }
-  ];
+  ]
 
   const resources = [
     {
@@ -100,7 +100,7 @@ const SupportPage: React.FC = () => {
       description: 'Connect with other users and experts',
       link: '/community'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -267,7 +267,7 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
 export default SupportPage;

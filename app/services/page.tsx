@@ -19,8 +19,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
 
   const services = [
     {
@@ -77,16 +77,16 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $1,000/month'
     }
-  ];
+  ]
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database']
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -201,7 +201,7 @@ const ServicesPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
+  )
+}
 
 export default ServicesPage;

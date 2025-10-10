@@ -27,32 +27,32 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   ],
   onSubscribe
 }) => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     if (!email) return;
 
-    setIsSubmitting(true);
+    setIsSubmitting(true)
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))
       
       if (onSubscribe) {
-        onSubscribe(email);
+        onSubscribe(email)
       }
       
-      setIsSubscribed(true);
-      setEmail('');
+      setIsSubscribed(true)
+      setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error);
+      console.error('Subscription error:', error)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
 
   if (isSubscribed) {
     return (
@@ -77,7 +77,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -139,7 +139,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ContentNewsletterSignup;

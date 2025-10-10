@@ -11,7 +11,7 @@ const AIAccountingAssistantPage: React.FC = () => {
     { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' },
     { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
     { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
-  ];
+  ]
 
   return (
     <>
@@ -42,7 +42,7 @@ const AIAccountingAssistantPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default AIAccountingAssistantPage;

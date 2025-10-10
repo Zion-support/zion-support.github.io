@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-;
-interface SEOHeadProps {;
+
+interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -11,7 +11,6 @@ interface SEOHeadProps {;
   twitterCard?: string;
   structuredData?: object;}
 }
-;
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = 'Zion Tech Group - Advanced AI & IT Solutions',;
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',;
@@ -23,8 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
   structuredData;}
 }) => {;}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-;
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
   const defaultStructuredData = {;
     "@context": "https://schema.org",;
     "@type": "Organization",;
@@ -49,13 +47,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
     "sameAs": [;
       "https://www.linkedin.com/company/zion-tech-group",;
       "https://twitter.com/ziontechgroup";
-    ];
-  };
-;
-  return (;
+    ]
+  }
+
+  return (
     <Helmet>;
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>;
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />;
       <meta name="keywords" content={keywords} />;
       <meta name="author" content="Zion Tech Group" />;
@@ -63,7 +61,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-;
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
@@ -85,9 +82,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       {/* Structured Data */}
       <script type="application/ld+json">;
         {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>;
-    </Helmet>;
-  );
-};
-;
+      </script>
+    </Helmet>
+  )
+}
+
 export default SEOHead;

@@ -35,7 +35,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -75,7 +75,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default EcommerceAnalyticsProPage;

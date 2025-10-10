@@ -10,7 +10,7 @@ interface MicroSaasProduct {
   icon: string;
   title: string;
   description: string;
-  features: string[];
+  features: string[]
   price: string;
   users: string;
   popular: boolean;
@@ -121,9 +121,9 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'AI'
     }
-  ];
+  ]
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI']
 
   const benefits = [
     'Quick setup and deployment',
@@ -132,20 +132,20 @@ const MicroSaasPage: React.FC = () => {
     'Regular feature updates',
     'Secure and reliable',
     'Easy integration'
-  ];
+  ]
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Active Users' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Secure' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5min', label: 'Setup Time' }
-  ];
+  ]
 
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [selectedCategory, setSelectedCategory] = React.useState('All')
 
   const filteredProducts = selectedCategory === 'All' 
     ? products 
-    : products.filter(product => product.category === selectedCategory);
+    : products.filter(product => product.category === selectedCategory)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -327,7 +327,7 @@ const MicroSaasPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
 export default MicroSaasPage;

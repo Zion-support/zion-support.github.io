@@ -20,7 +20,7 @@ const ItServicesPage: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
     { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }
-  ];
+  ]
 
   return (
     <>
@@ -67,7 +67,7 @@ const ItServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default ItServicesPage;

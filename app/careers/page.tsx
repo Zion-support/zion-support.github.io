@@ -13,8 +13,8 @@ interface JobPosition {
   type: string;
   experience: string;
   description: string;
-  requirements: string[];
-  benefits: string[];
+  requirements: string[]
+  benefits: string[]
   posted: string;
   featured: boolean;
 }
@@ -117,7 +117,7 @@ const CareersPage: React.FC = () => {
       posted: '1 week ago',
       featured: false
     }
-  ];
+  ]
 
   const companyValues = [
     {
@@ -140,7 +140,7 @@ const CareersPage: React.FC = () => {
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
     }
-  ];
+  ]
 
   const benefits = [
     'Competitive salary and equity participation',
@@ -153,7 +153,7 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -338,7 +338,7 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
 export default CareersPage;

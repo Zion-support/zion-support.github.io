@@ -11,8 +11,8 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -24,18 +24,18 @@ const PerformanceMonitor: React.FC = () => {
     if (!shouldMonitor) return;
 
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    };
+      setMetrics(prev => ({ ...prev, ...newMetrics }))
+    }
 
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => updateMetrics({ cls: metric.value }));
-        getFID((metric) => updateMetrics({ fid: metric.value }));
-        getFCP((metric) => updateMetrics({ fcp: metric.value }));
-        getLCP((metric) => updateMetrics({ lcp: metric.value }));
-        getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      });
+        getCLS((metric) => updateMetrics({ cls: metric.value }))
+        getFID((metric) => updateMetrics({ fid: metric.value }))
+        getFCP((metric) => updateMetrics({ fcp: metric.value }))
+        getLCP((metric) => updateMetrics({ lcp: metric.value }))
+        getTTFB((metric) => updateMetrics({ ttfb: metric.value }))
+      })
     }
 
     // Monitor performance with Performance Observer
@@ -43,32 +43,32 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime });
+            updateMetrics({ lcp: entry.startTime })
           }
           if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime });
+            updateMetrics({ fid: entry.processingStart - entry.startTime })
           }
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime });
+              updateMetrics({ fcp: entry.startTime })
             }
           }
-        });
-      });
+        })
+      })
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] })
       } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+        console.warn('Performance Observer not supported:', e)
       }
 
-      return () => observer.disconnect();
+      return () => observer.disconnect()
     }
 
     // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsVisible(true), 3000)
+    return () => clearTimeout(timer)
+  }, [])
 
   if (!isVisible || Object.keys(metrics).length === 0) {
     return null;
@@ -78,13 +78,13 @@ const PerformanceMonitor: React.FC = () => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
-  };
+  }
 
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
-  };
+  }
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
@@ -145,7 +145,7 @@ const PerformanceMonitor: React.FC = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default PerformanceMonitor;

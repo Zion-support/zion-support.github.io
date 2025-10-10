@@ -11,7 +11,7 @@ const LegalDocumentManagerPage: React.FC = () => {
     { icon: Zap, title: 'Contract Analysis', description: 'AI-powered contract analysis and risk assessment.' },
     { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
     { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
-  ];
+  ]
 
   return (
     <>
@@ -42,7 +42,7 @@ const LegalDocumentManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default LegalDocumentManagerPage;

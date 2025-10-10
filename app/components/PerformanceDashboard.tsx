@@ -21,10 +21,10 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     renderTime: 0,
     memoryUsage: 0,
     fps: 0
-  });
+  })
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [alerts, setAlerts] = useState<string[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(false)
+  const [alerts, setAlerts] = useState<string[]>([])
 
   useEffect(() => {
     const updateMetrics = () => {
@@ -36,7 +36,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
         : 0;
       
       // Measure render time
-      const renderStart = performance.now();
+      const renderStart = performance.now()
       const renderTime = performance.now() - renderStart;
       
       // Measure memory usage
@@ -49,25 +49,25 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       // Measure FPS (simplified)
       let fps = 60;
       if ('requestAnimationFrame' in window) {
-        let lastTime = performance.now();
+        let lastTime = performance.now()
         let frameCount = 0;
         
         const measureFPS = () => {
-          const currentTime = performance.now();
+          const currentTime = performance.now()
           frameCount++;
           
           if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
             frameCount = 0;
             lastTime = currentTime;
           }
           
           if (isMonitoring) {
-            requestAnimationFrame(measureFPS);
+            requestAnimationFrame(measureFPS)
           }
-        };
+        }
         
-        requestAnimationFrame(measureFPS);
+        requestAnimationFrame(measureFPS)
       }
       
       const newMetrics: PerformanceMetrics = {
@@ -75,57 +75,57 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
         renderTime,
         memoryUsage,
         fps
-      };
+      }
       
-      setMetrics(newMetrics);
-      onMetricsUpdate?.(newMetrics);
+      setMetrics(newMetrics)
+      onMetricsUpdate?.(newMetrics)
       
       // Check for performance alerts
-      checkPerformanceAlerts(newMetrics);
-    };
+      checkPerformanceAlerts(newMetrics)
+    }
 
     if (isMonitoring) {
-      updateMetrics();
-      const interval = setInterval(updateMetrics, 1000);
-      return () => clearInterval(interval);
+      updateMetrics()
+      const interval = setInterval(updateMetrics, 1000)
+      return () => clearInterval(interval)
     }
-  }, [isMonitoring, onMetricsUpdate]);
+  }, [isMonitoring, onMetricsUpdate])
 
   const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {
-    const newAlerts: string[] = [];
+    const newAlerts: string[] = []
     
     if (currentMetrics.loadTime > 3000) {
-      newAlerts.push('Load time is above 3 seconds');
+      newAlerts.push('Load time is above 3 seconds')
     }
     
     if (currentMetrics.memoryUsage > 50 * 1024 * 1024) { // 50MB
-      newAlerts.push('Memory usage is high');
+      newAlerts.push('Memory usage is high')
     }
     
     if (currentMetrics.fps < 30) {
-      newAlerts.push('FPS is below 30');
+      newAlerts.push('FPS is below 30')
     }
     
-    setAlerts(newAlerts);
-  };
+    setAlerts(newAlerts)
+  }
 
   const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring);
-  };
+    setIsMonitoring(!isMonitoring)
+  }
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
+    const sizes = ['Bytes', 'KB', 'MB', 'GB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+  }
 
   const getPerformanceColor = (value: number, thresholds: { good: number; warning: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400';
-  };
+  }
 
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -208,7 +208,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default PerformanceDashboard;

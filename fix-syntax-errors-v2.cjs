@@ -10,35 +10,43 @@ function fixSemicolonErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix common semicolon errors
+    // Fix common semicolon errors - more comprehensive patterns
     const fixes = [
-      // Fix function declarations with semicolons
-      { pattern: /(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{;/, replacement: '$1: React.FC = () => {' },
-      // Fix array declarations with semicolons
-      { pattern: /(\w+)\s*=\s*\[;/, replacement: '$1 = [' },
-      // Fix object declarations with semicolons
-      { pattern: /\{\s*;/, replacement: '{' },
-      // Fix return statements with semicolons
-      { pattern: /return\s*\(;/, replacement: 'return (' },
+      // Fix object property assignments with semicolons
+      { pattern: /(\w+):\s*(\w+),;/g, replacement: '$1: $2,' },
+      // Fix string assignments with semicolons
+      { pattern: /(\w+):\s*'([^']*)',;/g, replacement: "$1: '$2'," },
+      { pattern: /(\w+):\s*"([^"]*)",;/g, replacement: '$1: "$2",' },
+      // Fix array assignments with semicolons
+      { pattern: /(\w+):\s*\[([^\]]*)\],;/g, replacement: '$1: [$2],' },
+      // Fix function calls with semicolons
+      { pattern: /(\w+)\s*\([^)]*\),;/g, replacement: '$1($2),' },
       // Fix JSX elements with semicolons
-      { pattern: /<(\w+);/, replacement: '<$1' },
+      { pattern: /<(\w+);/g, replacement: '<$1' },
       // Fix closing tags with semicolons
-      { pattern: /<\/(\w+)>;/, replacement: '</$1>' },
+      { pattern: /<\/(\w+)>;/g, replacement: '</$1>' },
       // Fix self-closing tags with semicolons
-      { pattern: /<(\w+)\s*\/>;/, replacement: '<$1 />' },
+      { pattern: /<(\w+)\s*\/>;/g, replacement: '<$1 />' },
       // Fix attribute assignments with semicolons
-      { pattern: /(\w+)="([^"]*)"\s*;/, replacement: '$1="$2"' },
+      { pattern: /(\w+)="([^"]*)"\s*;/g, replacement: '$1="$2"' },
+      { pattern: /(\w+)='([^']*)'\s*;/g, replacement: "$1='$2'" },
       // Fix className assignments with semicolons
-      { pattern: /className="([^"]*)"\s*;/, replacement: 'className="$1"' },
-      // Fix closing braces with semicolons
-      { pattern: /\}\s*;/, replacement: '}' },
+      { pattern: /className="([^"]*)"\s*;/g, replacement: 'className="$1"' },
+      { pattern: /className='([^']*)'\s*;/g, replacement: "className='$1'" },
+      // Fix closing braces with semicolons (but not in object literals)
+      { pattern: /\}\s*;(\s*[^,}])/g, replacement: '}$1' },
       // Fix closing parentheses with semicolons
-      { pattern: /\)\s*;/, replacement: ')' },
+      { pattern: /\)\s*;(\s*[^,}])/g, replacement: ')$1' },
       // Fix closing brackets with semicolons
-      { pattern: /\]\s*;/, replacement: ']' },
-      // Fix import statements with semicolons (keep them)
-      // Fix export statements with semicolons (keep them)
-      // Fix variable declarations with semicolons (keep them)
+      { pattern: /\]\s*;(\s*[^,}])/g, replacement: ']$1' },
+      // Fix standalone semicolons at end of lines (not in comments or strings)
+      { pattern: /^(\s*);\s*$/gm, replacement: '' },
+      // Fix semicolons after closing braces in object literals
+      { pattern: /\}\s*;\s*$/gm, replacement: '}' },
+      // Fix semicolons after closing parentheses
+      { pattern: /\)\s*;\s*$/gm, replacement: ')' },
+      // Fix semicolons after closing brackets
+      { pattern: /\]\s*;\s*$/gm, replacement: ']' },
     ];
 
     fixes.forEach(fix => {
@@ -103,7 +111,7 @@ function fixMergeConflicts(filePath) {
 
 // Main function to process all TSX files
 function main() {
-  console.log('Starting syntax error fixes...');
+  console.log('Starting comprehensive syntax error fixes...');
   
   try {
     // Find all TSX files

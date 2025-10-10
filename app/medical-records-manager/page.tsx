@@ -35,7 +35,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -75,7 +75,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default MedicalRecordsManagerPage;

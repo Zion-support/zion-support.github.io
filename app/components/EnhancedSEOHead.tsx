@@ -95,7 +95,7 @@ const EnhancedSEOHead: React.FC = () => {
         })}
       </script>
     </Helmet>
-  );
-};
+  )
+}
 
 export default EnhancedSEOHead;

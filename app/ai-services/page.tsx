@@ -31,7 +31,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Extract insights from images and videos using computer vision technology.',
       benefits: ['Image recognition', 'Object detection', 'Video analysis', 'Visual search']
     }
-  ];
+  ]
 
   const services = [
     {
@@ -54,7 +54,7 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Training',
       description: 'Comprehensive training programs to upskill your team in AI technologies.'
     }
-  ];
+  ]
 
   const benefits = [
     'Increased operational efficiency',
@@ -65,14 +65,14 @@ const AIServicesPage: React.FC = () => {
     'Scalable AI solutions',
     '24/7 AI-powered support',
     'Continuous learning and improvement'
-  ];
+  ]
 
   const stats = [
     { icon: Brain, value: '95%', label: 'Accuracy Rate' },
     { icon: Zap, value: '10x', label: 'Faster Processing' },
     { icon: Shield, value: '99.9%', label: 'Uptime' },
     { icon: TrendingUp, value: '300%', label: 'Efficiency Gain' }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -226,7 +226,7 @@ const AIServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
 export default AIServicesPage;

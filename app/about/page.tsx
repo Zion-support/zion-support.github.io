@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
     { number: '99.9%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ];
+  ]
 
   const values = [
     {
@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
     }
-  ];
+  ]
 
   const team = [
     {
@@ -83,7 +83,7 @@ const AboutPage: React.FC = () => {
       image: '/team/david.jpg',
       bio: 'Full-stack developer with 10+ years experience'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -245,7 +245,7 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
+  )
+}
 
 export default AboutPage;

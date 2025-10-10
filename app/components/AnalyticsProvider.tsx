@@ -7,15 +7,15 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string, pagePath: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }
   return context;
-};
+}
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -31,9 +31,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
-      });
+      })
     }
-  }, []);
+  }, [])
 
   const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
     if (typeof window === 'undefined') return;
@@ -46,14 +46,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         event_label: parameters.label,
         value: parameters.value,
         ...parameters,
-      });
+      })
     }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
+      console.log('Analytics Event:', eventName, parameters)
     }
-  };
+  }
 
   const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return;
@@ -64,23 +64,23 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.origin + pagePath,
-      });
+      })
     }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
+      console.log('Page View:', pageName, pagePath)
     }
-  };
+  }
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-  };
+  }
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  );
-};
+  )
+}

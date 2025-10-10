@@ -31,7 +31,7 @@ const GlobalErrorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   return (
     <>
@@ -118,7 +118,7 @@ const GlobalErrorPage: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default GlobalErrorPage;

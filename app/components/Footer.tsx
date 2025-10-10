@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   
   const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -17,7 +17,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
@@ -28,7 +28,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Services', url: '/database-services', description: 'Database management' },
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
     { name: 'IT Support', url: '/it-support', description: 'Technical support' }
-  ];
+  ]
 
   const microSaasServices = [
     { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Business analytics' },
@@ -37,7 +37,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Social Manager', url: '/micro-saas/social-manager', description: 'Social media management' },
     { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'Financial tracking' },
     { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Scheduling system' }
-  ];
+  ]
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -144,8 +144,8 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
+  )
+})
 
 Footer.displayName = 'Footer';
 

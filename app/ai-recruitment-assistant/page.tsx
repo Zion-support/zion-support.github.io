@@ -35,7 +35,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -75,7 +75,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default AIRecruitmentAssistantPage;

@@ -14,15 +14,15 @@ interface BlogPost {
   date: string;
   readTime: string;
   category: string;
-  tags: string[];
+  tags: string[]
   image: string;
   featured: boolean;
 }
 
 const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([])
 
   // Sample blog posts data
   const blogPosts: BlogPost[] = [
@@ -104,9 +104,9 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-web.jpg',
       featured: false
     }
-  ];
+  ]
 
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development'];
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development']
 
   useEffect(() => {
     let filtered = blogPosts;
@@ -116,18 +116,18 @@ const BlogPage: React.FC = () => {
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post => post.category === selectedCategory)
     }
 
-    setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+    setFilteredPosts(filtered)
+  }, [searchTerm, selectedCategory])
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 3);
+  const featuredPosts = blogPosts.filter(post => post.featured)
+  const recentPosts = blogPosts.slice(0, 3)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -309,7 +309,7 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
 export default BlogPage;

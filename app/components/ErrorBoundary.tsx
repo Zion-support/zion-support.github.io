@@ -16,26 +16,26 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
+    console.error('ErrorBoundary caught an error:', error, errorInfo)
+    this.setState({ error, errorInfo })
   }
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
 
   handleGoHome = () => {
     window.location.href = '/';
-  };
+  }
 
   render() {
     if (this.state.hasError) {
@@ -89,7 +89,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;
