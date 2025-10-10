@@ -11,7 +11,7 @@ const Breadcrumb: React.FC = () => {
   return (
     <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
       <div className="container mx-auto px-4">
-        </div><ol className="flex items-center space-x-2 text-sm">
+        <ol className="flex items-center space-x-2 text-sm">
           <li>
             <Link
               to="/"

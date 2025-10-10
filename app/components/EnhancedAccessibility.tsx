@@ -66,12 +66,12 @@ const EnhancedAccessibility: React.FC = () => {
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
           onClick={() => setIsVisible(false)}
         >
-          </div><div
+          <div
             className="bg-white rounded-lg p-6 max-w-md w-full mx-4"
             onClick={(e) => e.stopPropagation()}
             onKeyDown={handleKeyDown}
           >
-            </div><div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4">
               </div><h2 className="text-xl font-semibold">Accessibility Settings</h2>
               <button
                 onClick={() => setIsVisible(false)}
