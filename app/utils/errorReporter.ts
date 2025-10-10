@@ -28,8 +28,8 @@ export interface ErrorReport {}
   message: string
   stack?: string
   componentStack?: string
-  timestamp: string
-  userAgent: string
+  timestamp: string,
+    userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical'
   context?: Record<string, unknown>;}</strin>
@@ -38,8 +38,8 @@ export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean
   enableRemoteLogging: boolean
   remoteEndpoint?: string
-  maxErrorsInMemory: number
-  captureContext: boolean;}
+  maxErrorsInMemory: number,
+    captureContext: boolean;}
 }
 const defaultConfig: ErrorReporterConfig = {}
 >>>>>>> origin/merge-error-fixes

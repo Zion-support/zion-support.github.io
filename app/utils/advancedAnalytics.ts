@@ -26,8 +26,8 @@ interface UserEvent {}
   type: string
   name: string
   value?: number
-  timestamp: string
-  sessionId: string
+  timestamp: string,
+    sessionId: string
   userId?: string
   url: string
   metadata?: Record<string, unknown></strin>

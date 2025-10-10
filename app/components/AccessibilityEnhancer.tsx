@@ -280,7 +280,7 @@ const AccessibilityEnhancer: React.FC = () => {,
   // Add CSS for accessibility features;
   useEffect(() => {
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = \`
       /* High contrast mode */
       .high-contrast {
         --neon-cyan: #00 ffff;
@@ -391,7 +391,7 @@ const AccessibilityEnhancer: React.FC = () => {,
       .high-contrast .bg-slate-900 {
         background-color: #000000 !important;
       }
-    `;
+    \`;
     document.head.appendChild(style);
 
     return () => {

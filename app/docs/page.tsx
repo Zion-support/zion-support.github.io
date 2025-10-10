@@ -253,8 +253,8 @@ const DocsPage: React.FC = () => {,
               <Link
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 to="/api-docs"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <Code className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,8 +272,8 @@ const DocsPage: React.FC = () => {,
 
               <Link;
                 to="/micro-saas"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,8 +291,8 @@ const DocsPage: React.FC = () => {,
 
               <Link;
                 to="/compliance"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -310,8 +310,8 @@ const DocsPage: React.FC = () => {,
 
               <Link;
                 to="/contact"
-                className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-              >
+        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
+      >
                 <Download className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
 <<<<<<< HEAD
 <<<<<<< HEAD

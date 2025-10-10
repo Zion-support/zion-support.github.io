@@ -22,8 +22,8 @@ interface ErrorReport {
 interface ErrorContext {}
   userId?: string
   sessionId?: string
-  url: string
-  userAgent: string
+  url: string,
+    userAgent: string
   timestamp: string
   component?: string
   action?: string

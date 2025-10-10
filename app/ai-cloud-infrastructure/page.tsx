@@ -382,8 +382,8 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-            >
+        className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+      >
               <Mail className="w-5 h-5 mr-2" />
               Email Us;
             </a>

@@ -457,7 +457,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public getAnalyticsSummary(): {}
     queueSize: number
     offlineQueueSize: number
-    sessionId: string
+    sessionId: string,
     userProperties: UserProperties;}
   } {}
     return {}
