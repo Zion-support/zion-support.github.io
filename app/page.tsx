@@ -9,12 +9,13 @@ import { ContentPromotionBanner } from './components/ContentPromotionBanner';
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
 
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card>
-    <div className="h-4 bg-gray-300 rounded mb-4></div>
-    <div className="h-3 bg-gray-300 rounded mb-2></div>
-    <div className="h-3 bg-gray-300 rounded></div>
-))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-4 bg-gray-300 rounded mb-4"></div>
+    <div className="h-3 bg-gray-300 rounded mb-2"></div>
+    <div className="h-3 bg-gray-300 rounded"></div>
+  </div>
+));
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,16 +31,15 @@ const HomePage: React.FC = () => {
 
   }, []);
 
-  const handlePhoneClick = () => {;;
-
+  const handlePhoneClick = () => {
     // Analytics tracking
-    if (typeof window !== 'undefined && window.gtag) {
-      window.gtag('event', 'phone_click, {
-        event_category: 'engagement,
-        event_label: header_phone
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'header_phone'
       });
-
     }
+  };
 
   };
 
