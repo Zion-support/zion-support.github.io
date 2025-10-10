@@ -12,61 +12,13 @@ const BlogPage: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
-<<<<<<< HEAD
-      title: 'The Future of AI in Business',
-      excerpt: 'Explore how artificial intelligence is transforming modern business operations and creating new opportunities.',
-      author: 'Zion Tech Team',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI & Technology',
-      image: '/images/blog/ai-business.jpg'
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'Learn the essential strategies for successful cloud migration and avoiding common pitfalls.',
-      author: 'Zion Tech Team',
-      date: '2024-01-10',
-      readTime: '7 min read',
-      category: 'Cloud Computing',
-      image: '/images/blog/cloud-migration.jpg'
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Digital Age',
-      excerpt: 'Understanding the latest cybersecurity threats and how to protect your business.',
-      author: 'Zion Tech Team',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Security',
-      image: '/images/blog/cybersecurity.jpg'
-    },
-    {
-      id: 4,
-      title: 'Micro SaaS Development Guide',
-      excerpt: 'Building scalable micro SaaS applications that solve real business problems.',
-      author: 'Zion Tech Team',
-      date: '2024-01-01',
-      readTime: '8 min read',
-      category: 'Development',
-      image: '/images/blog/micro-saas.jpg'
-    }
-  ];
-
-  const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development'];
-
-  const filteredPosts = blogPosts.filter(post => 
-    post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-=======
       title: 'The Future of AI in Business: Trends and Predictions for 2024',
       excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
       author: 'Zion Tech Team',
       date: '2024-01-15',
       category: 'AI & Technology',
-      readTime: '5 min read'
+      readTime: '5 min read',
+      image: '/images/blog/ai-business.jpg'
     },
     {
       id: 2,
@@ -75,7 +27,8 @@ const BlogPage: React.FC = () => {
       author: 'Cloud Solutions Team',
       date: '2024-01-10',
       category: 'Cloud Services',
-      readTime: '8 min read'
+      readTime: '8 min read',
+      image: '/images/blog/cloud-migration.jpg'
     },
     {
       id: 3,
@@ -84,7 +37,8 @@ const BlogPage: React.FC = () => {
       author: 'Security Team',
       date: '2024-01-05',
       category: 'Cybersecurity',
-      readTime: '6 min read'
+      readTime: '6 min read',
+      image: '/images/blog/cybersecurity.jpg'
     },
     {
       id: 4,
@@ -93,7 +47,8 @@ const BlogPage: React.FC = () => {
       author: 'Product Team',
       date: '2024-01-01',
       category: 'Micro SaaS',
-      readTime: '7 min read'
+      readTime: '7 min read',
+      image: '/images/blog/micro-saas.jpg'
     }
   ];
 
@@ -106,7 +61,6 @@ const BlogPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 
   return (
     <>
@@ -139,33 +93,16 @@ const BlogPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="mb-12">
-              <div className="relative max-w-2xl mx-auto">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
-                />
-              </div>
-            </div>
-
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
                 <button
                   key={category}
-<<<<<<< HEAD
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-=======
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-full border transition-all duration-300 ${
                     selectedCategory === category
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
                   }`}
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
                 >
                   {category}
                 </button>
@@ -178,37 +115,6 @@ const BlogPage: React.FC = () => {
                   key={post.id}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group"
                 >
-<<<<<<< HEAD
-                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-6 flex items-center justify-center">
-                    <div className="text-6xl opacity-50">📝</div>
-                  </div>
-                  
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {post.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
-                    </span>
-                  </div>
-
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-sm text-gray-400">
-                      <User className="w-4 h-4" />
-                      {post.author}
-                    </div>
-                    <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-=======
                   <div className="aspect-video bg-gray-700 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -252,10 +158,9 @@ const BlogPage: React.FC = () => {
                       to={`/blog/${post.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
                     >
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
                       Read More
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </div>
                 </article>
               ))}
@@ -266,15 +171,12 @@ const BlogPage: React.FC = () => {
                 <p className="text-gray-400 text-lg">No articles found matching your search.</p>
               </div>
             )}
-<<<<<<< HEAD
-=======
 
             <div className="text-center mt-12">
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Load More Articles
               </button>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
           </div>
         </section>
       </div>
@@ -282,8 +184,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BlogPage;
-=======
-export default BlogPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-3150

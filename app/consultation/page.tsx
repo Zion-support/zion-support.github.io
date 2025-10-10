@@ -2,36 +2,9 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Strategy Consultation',
-      description: 'Develop a comprehensive AI strategy tailored to your business needs.',
-      features: ['AI readiness assessment', 'Technology roadmap', 'ROI analysis', 'Implementation planning'],
-      price: 'Starting at $2,500',
-      duration: '2-4 weeks'
-    },
-    {
-      title: 'Cloud Migration Planning',
-      description: 'Plan and execute a seamless migration to the cloud.',
-      features: ['Infrastructure assessment', 'Migration strategy', 'Security planning', 'Cost optimization'],
-      price: 'Starting at $5,000',
-      duration: '4-8 weeks'
-    },
-    {
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and recommendations.',
-      features: ['Vulnerability assessment', 'Compliance review', 'Security policies', 'Training recommendations'],
-      price: 'Starting at $3,500',
-      duration: '2-3 weeks'
-=======
-import { Link } from 'react-router-dom';
-import { Phone, Mail, Calendar, CheckCircle, ArrowRight, Star, Shield, Users } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Users, Shield, Phone, Mail, Calendar } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const consultationTypes = [
@@ -49,252 +22,249 @@ const ConsultationPage: React.FC = () => {
     },
     {
       title: 'Cloud Migration Planning',
-      description: 'Comprehensive cloud strategy and migration planning for your infrastructure.',
+      description: 'Plan and execute a seamless migration to the cloud with minimal downtime.',
       duration: '4-8 hours',
       price: 'Starting at $400/hour',
       features: [
-        'Current infrastructure analysis',
-        'Cloud platform selection',
+        'Infrastructure assessment',
         'Migration strategy development',
+        'Security and compliance planning',
         'Cost optimization recommendations'
       ]
     },
     {
       title: 'Cybersecurity Audit',
-      description: 'Complete security assessment and recommendations for your digital infrastructure.',
-      duration: '6-12 hours',
+      description: 'Comprehensive security assessment and recommendations to protect your business.',
+      duration: '3-6 hours',
       price: 'Starting at $600/hour',
       features: [
-        'Security vulnerability assessment',
+        'Vulnerability assessment',
         'Compliance review',
         'Security policy development',
-        'Incident response planning'
+        'Training recommendations'
       ]
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategy to modernize your business operations.',
+      duration: '6-12 hours',
+      price: 'Starting at $450/hour',
+      features: [
+        'Current state analysis',
+        'Future state vision',
+        'Technology stack recommendations',
+        'Change management planning'
+      ]
     }
+  ];
+
+  const benefits = [
+    'Expert guidance from certified professionals',
+    'Customized solutions for your business',
+    'Proven methodologies and best practices',
+    'Clear roadmap for implementation',
+    'Ongoing support and follow-up',
+    'ROI-focused recommendations'
   ];
 
   const process = [
     {
-      step: '1',
-<<<<<<< HEAD
+      step: 1,
       title: 'Initial Consultation',
-      description: 'We discuss your business goals and challenges to understand your needs.',
-      icon: Users
+      description: 'We discuss your business goals, challenges, and current technology stack.',
+      duration: '30 minutes'
     },
     {
-      step: '2',
+      step: 2,
       title: 'Assessment & Analysis',
-      description: 'We analyze your current systems and identify opportunities for improvement.',
-      icon: Shield
+      description: 'We analyze your current situation and identify opportunities for improvement.',
+      duration: '1-2 hours'
     },
     {
-      step: '3',
+      step: 3,
       title: 'Strategy Development',
-      description: 'We create a customized strategy and implementation plan for your business.',
-      icon: CheckCircle
+      description: 'We develop a customized strategy and implementation plan for your business.',
+      duration: '2-4 hours'
     },
     {
-      step: '4',
-      title: 'Implementation Support',
-      description: 'We provide ongoing support to ensure successful implementation.',
-      icon: ArrowRight
-=======
-      title: 'Initial Assessment',
-      description: 'We analyze your current technology landscape and business objectives.'
-    },
-    {
-      step: '2',
-      title: 'Strategy Development',
-      description: 'Create a customized strategy based on your specific needs and goals.'
-    },
-    {
-      step: '3',
-      title: 'Implementation Plan',
-      description: 'Develop a detailed roadmap with timelines and milestones.'
-    },
-    {
-      step: '4',
-      title: 'Ongoing Support',
-      description: 'Provide continuous guidance and support throughout implementation.'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
+      step: 4,
+      title: 'Presentation & Discussion',
+      description: 'We present our findings and recommendations with detailed explanations.',
+      duration: '1 hour'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Consultation Services | Zion Tech Group</title>
-        <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs." />
-        <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
+        <title>Free Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
+        <meta name="description" content="Get a free consultation with our AI and IT experts. Discover how we can help transform your business with cutting-edge technology solutions." />
+        <meta name="keywords" content="free consultation, AI consulting, IT consulting, technology strategy, business transformation" />
       </Helmet>
 
-<<<<<<< HEAD
       <Navigation />
       
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        {/* Hero Section */}
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert Consultation Services
+                Free Consultation
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get personalized guidance and strategic insights to transform your business with cutting-edge technology.
+                Get expert guidance on AI and IT solutions that can transform your business. 
+                Our certified professionals are ready to help you succeed.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <span>Free Initial Consultation</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <span>Expert Guidance</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <span>Custom Solutions</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <span>No Obligation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Consultation Types */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Choose the consultation type that best fits your needs. All consultations include 
+                detailed analysis and actionable recommendations.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="border-t border-white/10 pt-6">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {service.duration}
-                      </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {consultationTypes.map((consultation, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group"
+                >
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {consultation.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4">{consultation.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-gray-400">Duration:</span>
+                        <span className="text-cyan-400">{consultation.duration}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-gray-400">Price:</span>
+                        <span className="text-green-400">{consultation.price}</span>
+                      </div>
                     </div>
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                      Get Started
+
+                    <div className="space-y-2 mb-6">
+                      {consultation.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-xs text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button className="w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                      Schedule Consultation
                     </button>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8">Our Consultation Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {process.map((step, index) => (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-300 text-sm">{step.description}</p>
-                  </div>
-                ))}
-=======
-            {/* Process Section */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  Our Consultation Process
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  A structured approach to delivering the best consultation experience.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {process.map((step, index) => (
-                  <div key={index} className="text-center">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-white">{step.step}</span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-300">{step.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-gray-300 mb-8">
-                  Contact our experts to discuss your specific needs and schedule a consultation.
-                </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-              </div>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a free consultation to discuss your technology needs and discover how we can help.
+        {/* Benefits Section */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Consultation?</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Our expert consultants bring years of experience and proven methodologies to help you succeed.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                  Schedule Free Consultation
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Download Our Guide
-                </button>
-=======
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300 mb-2">(302) 464-0950</p>
-                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
-                </div>
+            </div>
 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Schedule Online</h3>
-                  <p className="text-gray-300 mb-2">Book a consultation</p>
-                  <p className="text-sm text-gray-400">Available 24/7</p>
-                </div>
-              </div>
-
-              <div className="text-center mt-8">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="flex items-start space-x-3 p-4 bg-white/5 rounded-xl border border-white/10"
                 >
-                  Schedule Your Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-              </div>
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Our Consultation Process</h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                We follow a structured approach to ensure you get the most value from your consultation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">{step.step}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300 text-sm mb-2">{step.description}</p>
+                  <div className="text-cyan-400 text-xs font-medium">{step.duration}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Schedule your free consultation today and discover how AI and IT solutions can drive your success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
+                Schedule Free Consultation
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
+                Contact Us Directly
+              </button>
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
 
       <Footer />
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
     </>
   );
 };
 
-<<<<<<< HEAD
 export default ConsultationPage;
-=======
-export default ConsultationPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
