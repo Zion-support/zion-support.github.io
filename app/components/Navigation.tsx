@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect, useCallback}from 'react';
-import {Link}}from 'react-router-dom';
-import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart}}from 'lucide-react';
+import React, {useState, useEffect, useCallback} from 'react';
+import {Link} from 'react-router-dom';
+import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart} from 'lucide-react';
 
-const Navigation: React.FC = () => {,
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -498,20 +498,21 @@ const Navigation: React.FC = () => {,
               <Link to="/tutorials" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
                 Tutorials;
               </Link>
-              <Link to="/contact" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
-                Contact;
+              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Contact
               </Link>
 
-              {/* Mobile Contact Info */} <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <a;
-                  href="tel: +13024640950",
-                  className="flex items-center space-x-2 text-cyan-400 hover: text-cyan-300 transition-colors duration-300 font-medium">,
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
                   <Phone className="w-4 h-4" />
                   <span>(302) 464-0950</span>
                 </a>
-                <a;
-                  href="mailto: kleber@ziontechgroup.com",
-                  className="flex items-center space-x-2 text-cyan-400 hover: text-cyan-300 transition-colors duration-300 font-medium">,
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </a>
