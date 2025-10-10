@@ -115,7 +115,26 @@ export default function APIDocsPage() {
       />
       <Navigation />
       
-            </div>
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            API Documentation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Complete API reference for Zion Tech Group's AI and IT solutions. 
+            Integrate our powerful APIs into your applications.
+          </p>
+          
+          <div className="max-w-md mx-auto relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search APIs..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
           </div>
         </div>
       </section>
@@ -129,32 +148,32 @@ export default function APIDocsPage() {
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
-              <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
-              <button className="text-purple-400 hover:text-purple-300 font-medium">
-                Get API Key →
+              <h3 className="text-xl font-semibold text-white mb-3">Get API Key</h3>
+              <p className="text-gray-300 mb-4">Sign up and get your API key to start using our services</p>
+              <button className="text-purple-400 hover:text-purple-300 flex items-center">
+                Get Started <ArrowRight className="ml-2 w-4 h-4" />
               </button>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
-              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
-              <button className="text-purple-400 hover:text-purple-300 font-medium">
-                View Examples →
+              <h3 className="text-xl font-semibold text-white mb-3">Make First Request</h3>
+              <p className="text-gray-300 mb-4">Use our interactive examples to make your first API call</p>
+              <button className="text-green-400 hover:text-green-300 flex items-center">
+                Try It <ArrowRight className="ml-2 w-4 h-4" />
               </button>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
-              <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
-              <button className="text-purple-400 hover:text-purple-300 font-medium">
-                Start Building →
+              <h3 className="text-xl font-semibold text-white mb-3">Read Documentation</h3>
+              <p className="text-gray-300 mb-4">Explore detailed guides and examples for each API endpoint</p>
+              <button className="text-orange-400 hover:text-orange-300 flex items-center">
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
               </button>
             </div>
           </div>
@@ -164,29 +183,27 @@ export default function APIDocsPage() {
       {/* API Endpoints */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
           <div className="space-y-8">
             {filteredEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
+                    <h3 className="text-2xl font-semibold text-white">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-4">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            endpoint.method === 'POST' 
-                              ? 'bg-green-500/20 text-green-400' 
-                              : 'bg-blue-500/20 text-blue-400'
+                    <div key={endpointIndex} className="bg-slate-800/50 rounded-lg p-4 border border-gray-700">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center space-x-3">
+                          <span className={`px-2 py-1 rounded text-xs font-semibold ${
+                            endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
                           }`}>
                             {endpoint.method}
                           </span>
@@ -194,26 +211,20 @@ export default function APIDocsPage() {
                         </div>
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                          className="text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <>
-                              <Check className="w-4 h-4" />
-                              Copied!
-                            </>
+                            <Check className="w-4 h-4" />
                           ) : (
-                            <>
-                              <Copy className="w-4 h-4" />
-                              Copy
-                            </>
+                            <Copy className="w-4 h-4" />
                           )}
                         </button>
                       </div>
                       
-                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
+                      <p className="text-gray-300 mb-3">{endpoint.description}</p>
                       
-                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-                        <pre className="text-gray-300 text-sm">
+                      <div className="bg-slate-900 rounded p-3 overflow-x-auto">
+                        <pre className="text-sm text-gray-300 whitespace-pre-wrap">
                           <code>{endpoint.code}</code>
                         </pre>
                       </div>
@@ -222,26 +233,6 @@ export default function APIDocsPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Start building with our APIs today and create amazing applications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs
-            </button>
           </div>
         </div>
       </section>

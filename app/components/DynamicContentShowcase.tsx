@@ -115,12 +115,76 @@ const DynamicContentShowcase: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">Key Benefits</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Our solutions are designed to deliver maximum value with minimal complexity, 
+                helping you achieve your business goals faster and more efficiently.
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Get Started Today</h3>
+              <p className="text-cyan-100 mb-6">
+                Ready to transform your business? Contact our experts for a personalized consultation.
+              </p>
+              <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center">
+                Contact Us
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300">
+              Don't just take our word for it - hear from our satisfied customers
+            </p>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-gray-300 mb-6 italic">
+                "{testimonials[currentIndex].content}"
+              </blockquote>
+              <div className="text-white font-semibold">
+                {testimonials[currentIndex].name}
+              </div>
+              <div className="text-gray-400">
+                {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
+export default DynamicContentShowcase;

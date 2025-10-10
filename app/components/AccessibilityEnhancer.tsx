@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
-
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -22,14 +19,13 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
+          outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
       `;
       document.head.appendChild(style);
     };
 
-    // Initialize accessibility features
     addFocusStyles();
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
