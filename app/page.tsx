@@ -290,7 +290,22 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain quantum-bg">
+        {/* Quantum Particle System */}
+        <div className="quantum-particles">
+          {Array.from({ length: 50 }, (_, i) => (
+            <div
+              key={i}
+              className="quantum-particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 30}s`,
+                animationDuration: `${20 + Math.random() * 20}s`
+              }}
+            />
+          ))}
+        </div>
+        
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -318,7 +333,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced quantum-text quantum-glitch"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -359,7 +374,7 @@ const HomePage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="cyber-button-enhanced w-full sm:w-auto text-center"
+                  className="cyber-button-enhanced quantum-button w-full sm:w-auto text-center"
                   aria-label="Call us at (302) 464-0950"
                 >
                   📞 Call: (302) 464-0950
@@ -415,7 +430,7 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card-enhanced quantum-card group hover:scale-105 transition-all duration-300">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -474,7 +489,7 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card-enhanced quantum-card group hover:scale-105 transition-all duration-300">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -533,7 +548,7 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {microSaasServices.map((service, index) => (
-                <div key={index} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card-enhanced quantum-card group hover:scale-105 transition-all duration-300">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                       <service.icon className="w-8 h-8 text-white" />
@@ -588,7 +603,7 @@ const HomePage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="mb-16" aria-labelledby="cta-heading">
-            <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
+            <div className="cyber-card-enhanced hologram-card-enhanced quantum-holographic p-8 text-center">
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Ready to transform your business? Contact our experts for a free consultation and discover how our AI and IT solutions can drive your success.

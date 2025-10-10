@@ -112,17 +112,17 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 quantum-pulse">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 quantum-text">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -142,7 +142,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card quantum-card">
                   <div className="grid grid-cols-1 gap-2">
                     {aiServices.map((service) => (
                       <Link
@@ -174,7 +174,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card quantum-card">
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
                       <Link
@@ -206,7 +206,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
               </button>
               {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card quantum-card">
                   <div className="grid grid-cols-1 gap-2">
                     {microSaasServices.map((service) => (
                       <Link
@@ -238,7 +238,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card quantum-card">
                   <div className="grid grid-cols-1 gap-2">
                     {emergingTech.map((service) => (
                       <Link
@@ -281,14 +281,14 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-              <Phone className="w-4 h-4" />
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium group">
+              <Phone className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
               <span className="text-sm">(302) 464-0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-              <Mail className="w-4 h-4" />
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium group">
+              <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
               <span className="text-sm">Email</span>
             </a>
           </div>
