@@ -109,13 +109,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
 </section>
       </main>
       <Footer />
-    </React.Fragment>
-  ),
+    </>
+  );
 };
 
-export default AiCloudInfrastructurePage
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
+export default AiAnalyticsPage;

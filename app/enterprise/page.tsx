@@ -68,7 +68,8 @@ const solutions = [
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
-    ]
+    ];
+
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -88,7 +89,8 @@ const stats = [
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+  ];
+
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>

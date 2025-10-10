@@ -25,7 +25,8 @@ const ServiceCardSkeletonPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ]
+  ];
+
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

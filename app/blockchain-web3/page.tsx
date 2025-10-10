@@ -28,7 +28,8 @@ const BlockchainWeb3Page: React.FC = () => {
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
   }
-    ]
+    ];
+
 return (
     <>
       <Helmet>

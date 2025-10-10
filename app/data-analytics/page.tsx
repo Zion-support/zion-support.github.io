@@ -51,7 +51,8 @@ const DataAnalyticsPage: React.FC = () => {
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   }
     }
-  ]
+  ];
+
 const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
@@ -65,7 +66,8 @@ const benefits = [
     'Real-time insights and reporting',
 
     'Custom analytics solutions'
-  ]
+  ];
+
 return (
     <>
       <Helmet>

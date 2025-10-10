@@ -109,13 +109,8 @@ const AiCodeAssistantPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </React.Fragment>
-  ),
+    </>
+  );
 };
 
-export default AiCodeAssistantPage
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
+export default AiAnalyticsPage;

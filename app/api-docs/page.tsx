@@ -255,7 +255,5 @@ export default function APIDocsPage() {
   </button>
   </button>
   </button>
-  </button>
-  </h1>
   </SEOOptimizer>
   </string>

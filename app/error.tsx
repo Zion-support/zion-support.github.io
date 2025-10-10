@@ -109,13 +109,8 @@ const ErrorPage: React.FC = () => {
         </section>
       </main>
       <Footer />
-    </React.Fragment>
-  ),
+    </>
+  );
 };
 
-export default ErrorPage
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
+export default AiAnalyticsPage;

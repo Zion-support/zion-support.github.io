@@ -273,6 +273,4 @@ const CloudServicesPage: React.FC = () => {
 
 export default CloudServicesPage
   </button>
-  </button>
-  </h1>
   </div>

@@ -30,14 +30,16 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   }
-    ]
+  ];
+
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ]
+    'Gain competitive advantage with advanced technology'
+  ];
+
 return (
     <>
       <Helmet>
@@ -56,16 +58,16 @@ return (
             </div>
           </div>
         </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
             <h1>
               Ai Agricultural Intelligence Pro
             </h1>
             <p>
-              Advanced AI-powered ai agricultural intelligence pro solution for modern businesses.
+              Advanced AI-powered agricultural intelligence solution for modern businesses.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button>
                 Get Started
               </button>
@@ -84,30 +86,30 @@ return (
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
+        {/* Key Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Key Features
               </h2>
-              <p>
+              <p className="text-xl text-gray-300">
                 Advanced AI technology that drives results
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature />
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {
-    feature.benefits && (;
-                    <ul>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-  }
-                        <li>
-                          <CheckCircle>
-
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
                       ))}
@@ -115,7 +117,6 @@ return (
                   )}
                 </div>
               ))}
-
             </div>
           </div>
         </section>
@@ -177,9 +178,9 @@ return (
           </div>
         </section>
       </div>
-      <Footer>
+      <Footer />
     </>
-  ),
+  );
 };
 
 export default AiAgriculturalIntelligenceProPage;

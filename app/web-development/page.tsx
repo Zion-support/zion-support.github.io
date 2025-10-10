@@ -179,9 +179,8 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </div>
         </section>
-            <h1>
-              Web Development Services</h1>
-            </h1>,
+            <h1
+              Web Development Services</h1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Build modern, scalable, and high-performance web applications with our expert development team.;
               From frontend to backend, we deliver solutions that drive business growth.
@@ -434,8 +433,7 @@ const WebDevelopmentPage: React.FC = () => {
                 <a;
 
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><pLet's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a;
                   href="/contact";

@@ -6,7 +6,8 @@ const PagePage: React.FC = () => {
   const features = [
     {}
     }
-  ]
+  ];
+
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -20,7 +21,8 @@ const benefits = [
     'Cost-effective pricing plans',
 
     'Proven track record of success'
-  ]
+  ];
+
 return (
           </div>
         </div>

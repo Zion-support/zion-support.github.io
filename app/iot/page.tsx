@@ -159,9 +159,8 @@ return (
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
-              <h1>
+              <h1
                 IoT Solutions</h1>
-              </h1>
               <p>
                 Connect, monitor, and optimize your world with intelligent Internet of Things solutions
               </p>

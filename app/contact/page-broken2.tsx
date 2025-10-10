@@ -108,7 +108,8 @@ const contactInfo = [
       description: 'Eastern Time'
   }
     }
-  ]
+  ];
+
 return (
     <>
       <Helmet>

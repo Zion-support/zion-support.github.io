@@ -52,7 +52,8 @@ const CloudInfrastructureManagerPage: React.FC = () => {
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   }
     }
-  ]
+  ];
+
 const benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
@@ -66,7 +67,8 @@ const benefits = [
     'Multi-cloud support',
 
     'Expert technical support'
-  ]
+  ];
+
 return (
     <>
       <Helmet>

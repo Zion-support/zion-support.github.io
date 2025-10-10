@@ -15,9 +15,8 @@ const TeamPage: React.FC = () => {
         <main className="pt-20"></main>
           <div className="container mx-auto px-4 py-16"></div>
             <div className="max-w-4xl mx-auto"></div>
-              <h1>
+              <h1
                 Our Team</h1>
-              </h1>
               <div className="prose prose-lg max-w-none"></div>
                 <p>
                   Meet the experts behind our success.

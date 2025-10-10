@@ -52,7 +52,8 @@ const SecurityMonitoringSuitePage: React.FC = () => {
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
   }
     }
-  ]
+  ];
+
 const benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
@@ -66,7 +67,8 @@ const benefits = [
     'Scalable for any business size',
 
     'Expert security team support'
-  ]
+  ];
+
 return (
     <>
       <Helmet>

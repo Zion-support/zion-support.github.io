@@ -94,9 +94,8 @@ useEffect(() => {
           </div>
         </section>
           <div className="max-w-6xl mx-auto"></div>
-            <h1>
+            <h1
               Zion Tech Group</h1>
-            </h1>
             <p>
               Advanced AI and IT Solutions
             </p>

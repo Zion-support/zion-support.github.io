@@ -51,7 +51,8 @@ const ProjectManagementProPage: React.FC = () => {
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
   }
     }
-  ]
+  ];
+
 const benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
@@ -65,7 +66,8 @@ const benefits = [
     'Increase team productivity',
 
     'Streamline project workflows'
-  ]
+  ];
+
 return (
     <>
       <Helmet>

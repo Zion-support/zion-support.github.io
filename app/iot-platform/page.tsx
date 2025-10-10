@@ -13,7 +13,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
   },
     {}
     }
-  ]
+  ];
+
 return (
             <p>
               Our IoT platform provides everything you need to build, deploy, and scale;

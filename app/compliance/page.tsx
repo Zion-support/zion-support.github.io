@@ -102,5 +102,3 @@ const CompliancePage: React.FC = () => {
 
 export default CompliancePage
   </button>
-  </button>
-  </h1>

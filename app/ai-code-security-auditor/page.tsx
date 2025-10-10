@@ -177,7 +177,4 @@ export default AiCodeSecurityAuditorPage
   </p>
   </button>
   </h2>
-  </button>
-  </button>
-  </h1>
   </main>

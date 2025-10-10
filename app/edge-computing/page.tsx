@@ -65,7 +65,8 @@ const services = [
       description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
-  ]
+  ];
+
 const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -110,7 +111,8 @@ const useCases = [
       icon: '🎮'
   }
     }
-  ]
+  ];
+
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>

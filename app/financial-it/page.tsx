@@ -65,7 +65,8 @@ const services = [
       description: 'Cybersecurity and data protection solutions'
   }
     }
-  ]
+  ];
+
 const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -77,7 +78,8 @@ const benefits = [
     'Fraud Prevention',
 
     'Advanced Analytics'
-  ]
+  ];
+
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>
