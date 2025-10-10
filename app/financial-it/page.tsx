@@ -89,6 +89,7 @@ const FinancialITPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -116,6 +117,7 @@ const FinancialITPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
@@ -138,16 +140,17 @@ const FinancialITPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
-                  ))}
+                  )</div>
                 </ul>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -165,13 +168,14 @@ const FinancialITPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -190,13 +194,14 @@ const FinancialITPage: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
+            )</div>
           </div>
-        </div>
+        ))
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -210,7 +215,7 @@ const FinancialITPage: React.FC = () => {
               Contact Sales
             </button>
           </div>
-        </div>
+        ))
       </section>
 
       <Footer />

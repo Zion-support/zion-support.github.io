@@ -113,7 +113,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </p>
         {process.env['NODE_ENV'] === 'development' && (
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
-        )}
+        </div>
         <div className="mt-6 flex gap-4"></div>
           <button
             onClick={resetError}
@@ -122,7 +122,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Try Again
           </button>
           <button
-            onClick={() => (window.location.href = '/')}
+            onClick={() => (window.location.href = '/'</div>
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Home
@@ -186,13 +186,13 @@ function NotFoundFallback(): JSX.Element {
         </p>
         <div className="mt-6 flex gap-4 justify-center"></div>
           <button
-            onClick={() => (window.location.href = '/')}
+            onClick={() => (window.location.href = '/'</div>
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Go Home
           </button>
           <button
-            onClick={() => window.history.back()}
+            onClick={() => window.history.back(</div>
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Back

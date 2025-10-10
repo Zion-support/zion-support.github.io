@@ -101,6 +101,7 @@ const EnterprisePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
@@ -128,6 +129,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -138,13 +140,14 @@ const EnterprisePage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -166,10 +169,10 @@ const EnterprisePage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
-                  ))}
+                  )</div>
                 </ul>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
@@ -183,16 +186,17 @@ const EnterprisePage: React.FC = () => {
           </div>
           
                     </li>
-                  ))}
+                  )</div>
                 </ul>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
+        </section>
                 </button>
               </div>
             </div>
@@ -202,6 +206,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?

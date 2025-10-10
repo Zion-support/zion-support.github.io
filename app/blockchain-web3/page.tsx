@@ -34,6 +34,7 @@ const BlockchainWeb3Page: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
@@ -68,14 +69,14 @@ const BlockchainWeb3Page: React.FC = () => {
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
                       {benefit}
                     </li>
-                  ))}
+                  )</div>
                 </ul>
               </div>
-            ))}
+            )</div>
           </div>
-        </div>
+        ))
       </div>
-    </>
+
   );
 };
 

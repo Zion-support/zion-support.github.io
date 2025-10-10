@@ -13,13 +13,13 @@ export const preloadCriticalResources = useCallback((...args) => {}
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ]
   fontPreloads.forEach(href => {)
-  fontPreloads.forEach(href => {)}
+  fontPreloads.forEach(href => {</div>
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style',
     link.href = href;
     link.crossOrigin = 'anonymous',
-    document.head.appendChild(link)}
+    document.head.appendChild(link</div>
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
   // Preload critical images;
@@ -29,12 +29,12 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     '/images/favicon.ico'
   ]
   criticalImages.forEach(src => {)
-  criticalImages.forEach(src => {)}
+  criticalImages.forEach(src => {</div>
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'image'
     link.href = src;
-    document.head.appendChild(link)}
+    document.head.appendChild(link</div>
   })
 }
 export const preloadRoute = useCallback((...args) => {
@@ -53,11 +53,11 @@ export const preloadRoute = useCallback((...args) => {}
   if (resources) {
     resources.forEach(resource => {)
   if (resources) {}
-    resources.forEach(resource => {)}
+    resources.forEach(resource => {</div>
       const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
-      document.head.appendChild(link)}
+      document.head.appendChild(link</div>
     })
   }
 }
@@ -66,7 +66,7 @@ export const optimizeImages = useCallback((...args) => {
   // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {)
-    img.setAttribute('loading', 'lazy')}
+    img.setAttribute('loading', 'lazy'</div>
   })
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {
@@ -79,19 +79,19 @@ export const optimizeImages = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {)}
-    img.setAttribute('loading', 'lazy')}
+  images.forEach(img => {</div>
+    img.setAttribute('loading', 'lazy'</div>
   })
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {}
     const imageObserver = new IntersectionObserver((entries) => {}
-      entries.forEach(entry => {)}
+      entries.forEach(entry => {</div>
         if (entry.isIntersecting) {}
           const img = entry.target as HTMLImageElement
           if (img.dataset['src']) {}
             img['src'] = img.dataset['src']
             img.removeAttribute('data-src')
-            imageObserver.unobserve(img)}
+            imageObserver.unobserve(img</div>
   ];
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
   })
@@ -121,7 +121,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)
-    script.setAttribute('defer', '')}
+    script.setAttribute('defer', ''</div>
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {
@@ -130,16 +130,16 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {)}
-    script.setAttribute('defer', '')}
+  scripts.forEach(script => {</div>
+    script.setAttribute('defer', ''</div>
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {}
     document.addEventListener('DOMContentLoaded', () => {}
-      loadAnalytics()}
+      loadAnalytics(</div>
     })
   } else {}
-    loadAnalytics()}
+    loadAnalytics(</div>
   }
 }
 const loadAnalytics = useCallback((...args) => {
@@ -149,7 +149,7 @@ const loadAnalytics = useCallback((...args) => {}
   const gaScript = document.createElement('script')
   gaScript.async = true;
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
-  document.head.appendChild(gaScript)}
+  document.head.appendChild(gaScript</div>
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   })
   // Load analytics after page load;

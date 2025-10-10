@@ -73,16 +73,15 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
                 <pre className="text-xs text-red-300 whitespace-pre-wrap">
-                  {this.state.error.toString()}
+                  {this.state.error.toString(</div>
                 </pre>
                 {this.state.errorInfo && (
                   <pre className="text-xs text-red-300 whitespace-pre-wrap mt-2">
                     {this.state.errorInfo.componentStack}
                   </pre>
-                )}
+                </div>
               </div>
-            )}
-            
+            </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.handleRefresh}

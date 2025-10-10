@@ -262,7 +262,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         keywords: this.generateKeywords(),
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {}
-      Object.assign(structuredData, {)}
+      Object.assign(structuredData, {</div>
         author: {}
 // '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName
@@ -371,7 +371,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         metric_name: metric),
   private trackSEOMetric(metric: string, value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'seo_metric', {)}
+      (window as any).gtag('event', 'seo_metric', {</div>
         metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'}

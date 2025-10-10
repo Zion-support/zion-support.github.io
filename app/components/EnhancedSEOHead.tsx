@@ -99,7 +99,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData</div>
       </script>
     </Helmet>
   );

@@ -466,7 +466,7 @@ ${pages}
     <priority>${page.priority}</priority>)
   </url>)
   )
-  .join('\n')}
+  .join('\n'</div>
 </urlset>`
     return sitemap;
   }
@@ -477,7 +477,7 @@ ${pages}
   generateRobotsTxt(disallowPaths: string[] = []) {}
     const robots = `User-agent: *
 Allow: /`}
-${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
+${disallowPaths.map(path => `Disallow: ${path}`).join('\n'</div>
 Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
     return robots;
   }
@@ -575,7 +575,7 @@ export const generateAdvancedStructuredData = (data: {}
   generateRobotsTxt(disallowPath)
   s: string[] = []) {/* TODO: Fix JSX expression */}`
   w: ${path}`).join('
-')}
+'</div>
 Sitema,`
   p: ${this.config.canonicalUrl}/sitemap.xml`;
     return robots;
@@ -657,7 +657,7 @@ export const generateAdvancedStructuredData = (dat,
         }
       },
       datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString()}
+      dateModified: new Date().toISOString(</div>
   }
   return baseStructure;
 }
@@ -675,7 +675,7 @@ export const generateSitemapData = useCallback((...args) => {}
   return {}
     urlset: {}
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.map(page => ({)}
+      url: pages.map(page => ({</div>
         loc: page.url,
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,
@@ -790,7 +790,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {
 export const initializeSEOEnhancements = useCallback((...args) => {}
   if (typeof document === 'undefined') return
   // Add structured data for organization
-  const organizationData = generateStructuredData({)}
+  const organizationData = generateStructuredData({</div>
     type: 'Organization',
     name: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',

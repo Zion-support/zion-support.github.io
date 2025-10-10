@@ -77,6 +77,7 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Blog - Zion Tech Group | AI and IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />
@@ -86,6 +87,7 @@ const BlogPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
+        </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -100,6 +102,7 @@ const BlogPage: React.FC = () => {
 
         {/* Featured Post */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Article</h2>
             {blogPosts.filter(post => post.featured).map((post) => (
@@ -144,12 +147,13 @@ const BlogPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            )</div>
           </div>
         </section>
 
         {/* Blog Posts Grid */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Latest Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -180,7 +184,7 @@ const BlogPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(post.date).toLocaleDateString(</div>
                     </span>
                     <button className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                       <span>Read</span>
@@ -188,13 +192,14 @@ const BlogPage: React.FC = () => {
                     </button>
                   </div>
                 </article>
-              ))}
+              )</div>
             </div>
           </div>
         </section>
 
         {/* Newsletter Signup */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Stay Updated
@@ -214,8 +219,8 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      ))
+
   );
 };
 

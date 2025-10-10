@@ -142,6 +142,7 @@ const IoTPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
@@ -151,6 +152,7 @@ const IoTPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
         {/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20">
+        </section>
           <div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -168,13 +170,14 @@ const IoTPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
                   Schedule IoT Consultation
                 </button>
-              </div>
+              ))
             </div>
           </div>
         </section>
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -220,6 +223,7 @@ const IoTPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
+        </section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -256,7 +260,7 @@ const IoTPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          ))}
+                          )</div>
                         </ul>
                       </div>
 
@@ -267,7 +271,7 @@ const IoTPage: React.FC = () => {
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
+                          )</div>
                         </div>
                       </div>
 
@@ -279,7 +283,7 @@ const IoTPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          ))}
+                          )</div>
                         </ul>
                       </div>
 
@@ -287,14 +291,14 @@ const IoTPage: React.FC = () => {
                         Get IoT Quote
                       </button>
                     </div>
-                  ))}
+                  )</div>
               </div>
             </div>
           </section>
-        ))}
-
+        )</div>
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -341,6 +345,7 @@ const IoTPage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Connect Your World?
@@ -368,7 +373,7 @@ const IoTPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 

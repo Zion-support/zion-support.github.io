@@ -348,7 +348,7 @@ const Navigation: React.FC = () => {
               {/* Mobile AI Services */}
               <div>
                 <button
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                    onClick={() => setAiServicesOpen(!aiServicesOpen)}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
@@ -377,7 +377,7 @@ const Navigation: React.FC = () => {
                       View All AI Services →
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
               {/* Mobile IT Services */}
               <div>
@@ -404,12 +404,12 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                   </div>
-                )}
+                </div>
               </div>
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                  onClick={() => setMicroSaasOpen(!microSaasOpen</div>
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
@@ -438,7 +438,7 @@ const Navigation: React.FC = () => {
                       View All Micro SAAS →
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
@@ -478,7 +478,7 @@ const Navigation: React.FC = () => {
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

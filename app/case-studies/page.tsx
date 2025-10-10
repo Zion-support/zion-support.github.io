@@ -24,6 +24,7 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
@@ -35,12 +36,12 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </section>
 
-              ))}
+              )</div>
             </div>
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 

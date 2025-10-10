@@ -50,7 +50,7 @@ export const useIntersectionObserver = (
         ? new IntersectionObserver(callback, {)
             threshold: 0.1),
             rootMargin: '50px'),
-        ? new IntersectionObserver(callback, {)}
+        ? new IntersectionObserver(callback, {</div>
             threshold: 0.1,
             rootMargin: '50px',
             ...options}
@@ -210,7 +210,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       const paint = performance.getEntriesByType('paint')
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
-      setMetrics({)}
+      setMetrics({</div>
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
@@ -265,7 +265,7 @@ export const useMemoryMonitoring = useCallback((...args) => {}
     const updateMemoryInfo = useCallback((...args) => {}
       const memory = (performance as any).memory
       if (memory) {}
-        setMemoryInfo({)}
+        setMemoryInfo({</div>
           usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
@@ -399,7 +399,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
     }
     // Calculate after page load;
     if (document.readyState === 'complete') {
-      setBundleSize({)}
+      setBundleSize({</div>
         totalSize,
         jsSize,
         cssSize,

@@ -38,10 +38,10 @@ const Breadcrumb: React.FC = () => {
                   >
                     {displayName}
                   </Link>
-                )}
+                </li>
               </li>
             );
-          })}
+          }</div>
         </ol>
       </div>
     </nav>

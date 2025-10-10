@@ -139,12 +139,12 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
             ? {),
                 message: entry.error.message),
                 name: entry.error.name),
-      await fetch(endpoint, {)}
+      await fetch(endpoint, {</div>
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'}
         },
-        body: JSON.stringify({)}
+        body: JSON.stringify({</div>
           ...entry,
           error: entry.error
             ? {}

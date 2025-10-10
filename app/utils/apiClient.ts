@@ -75,7 +75,7 @@ class APIClient {}
       // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
     try {}
-      const response = await fetch(url, {)}
+      const response = await fetch(url, {</div>
         method,
         headers: {}
           ...this.defaultHeaders,

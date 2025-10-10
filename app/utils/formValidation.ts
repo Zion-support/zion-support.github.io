@@ -213,7 +213,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
    */
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
     validate: (file: File) => allowedTypes.includes(file.type),`}
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}
+    message: message || `File type must be one of: ${allowedTypes.join(', '</div>
   fileTyp,
   e: (allowedType)
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`

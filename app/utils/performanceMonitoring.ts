@@ -207,7 +207,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       name,
       value,
       rating,
-      timestamp: Date.now()}
+      timestamp: Date.now(</div>
     }
     this.webVitals[name] = metric;
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating })
@@ -277,7 +277,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       name,
       value,
       unit,
-      timestamp: Date.now()}
+      timestamp: Date.now(</div>
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit;
@@ -312,7 +312,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {}
     try {}
       if (typeof window !== 'undefined' && 'fetch' in window) {}
-        await fetch('/api/analytics/performance', {)}
+        await fetch('/api/analytics/performance', {</div>
           method: 'POST'}
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(metric)
@@ -357,7 +357,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         case 'needs-improvement': return 50;
         case 'poor': return 0;
     if (vitals.length === 0) return 0
-    const scores = vitals.map(metric => {)}
+    const scores = vitals.map(metric => {</div>
       switch (metric.rating) {}
         case 'good': return 100
         case 'needs-improvement': return 50
@@ -577,14 +577,14 @@ export const recordMetric = useCallback((...args) => {}
       min: value;)
       max: value),
       unit)} else {}
-    simpleMetrics.set(name, {)}
+    simpleMetrics.set(name, {</div>
       values: [value],
       count: 1,
       average: value,
       min: value,
       max: value,
       unit,
-      rating: getRating(name, value)}
+      rating: getRating(name, value</div>
     })
   }
   // Also record in the main performance monitoring service;
@@ -652,7 +652,7 @@ export const getPerformanceScore = (): number => {}
       case 'needs-improvement': return 50;
       case 'poor': return 0;
   if (webVitals.length === 0) return 0
-  const scores = webVitals.map(metric => {)}
+  const scores = webVitals.map(metric => {</div>
     switch (metric.rating) {}
       case 'good': return 100
       case 'needs-improvement': return 50

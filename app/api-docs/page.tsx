@@ -116,12 +116,13 @@ export default function APIDocsPage() {
       <Navigation />
       
             </div>
-          </div>
+          ))
         </div>
       </section>
 
       {/* Quick Start */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -157,12 +158,13 @@ export default function APIDocsPage() {
                 Start Building →
               </button>
             </div>
-          </div>
+          ))
         </div>
       </section>
 
       {/* API Endpoints */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
@@ -193,20 +195,21 @@ export default function APIDocsPage() {
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`</div>
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
                             <>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </>
+
                           ) : (
                             <>
+  </>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </>
-                          )}
+
+                          </div>
                         </button>
                       </div>
                       
@@ -218,16 +221,17 @@ export default function APIDocsPage() {
                         </pre>
                       </div>
                     </div>
-                  ))}
+                  )</div>
                 </div>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Get Started?

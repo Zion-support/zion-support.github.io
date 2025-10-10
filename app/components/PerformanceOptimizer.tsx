@@ -78,6 +78,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
 
   return (
     <>
+  </>
       {children}
       <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
         <div className="flex items-center justify-between mb-4">
@@ -104,8 +105,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
               </div>
             ))}
           </div>
-        )}
-
+        ))
         {performanceScore && (
           <div className="mt-4">
             <div className="flex items-center justify-between mb-2">
@@ -128,11 +128,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
                   Performance can be improved. Consider additional optimizations.
                 </span>
               </div>
-            )}
-          </div>
-        )}
+            </div>
+          ))
+        </div>
       </div>
-    </>
+
   );
 };
 

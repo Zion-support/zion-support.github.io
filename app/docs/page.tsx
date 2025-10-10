@@ -76,12 +76,13 @@ export default function DocsPage() {
       <Navigation />
       
             </div>
-          </div>
+          ))
         </div>
       </section>
 
       {/* Popular Docs */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -105,13 +106,14 @@ export default function DocsPage() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Documentation Categories */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -144,16 +146,17 @@ export default function DocsPage() {
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                       </div>
                     </a>
-                  ))}
-                </div>
+                  )</div>
+                ))
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need Help?

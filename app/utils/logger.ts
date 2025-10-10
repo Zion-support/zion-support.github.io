@@ -138,8 +138,7 @@ class Logger {/* TODO: Fix JSX expression */}
       message,
       context,
       metadata,
-      timestamp: Date.now()}
-
+      timestamp: Date.now(</div>
     this.logs.push(logEntry)
 
     // Keep only last 1000 logs;

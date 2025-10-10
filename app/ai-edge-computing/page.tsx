@@ -43,6 +43,7 @@ const AiEdgeComputingPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Ai Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai edge computing solution for modern businesses." />
@@ -53,6 +54,7 @@ const AiEdgeComputingPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
+        </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -75,6 +77,7 @@ const AiEdgeComputingPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -100,17 +103,18 @@ const AiEdgeComputingPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
+                      )</div>
                     </ul>
-                  )}
+                  </div>
                 </div>
-              ))}
+              )</div>
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -129,13 +133,14 @@ const AiEdgeComputingPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              )</div>
             </div>
-          </div>
+          ))
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -153,11 +158,11 @@ const AiEdgeComputingPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
+          ))
         </section>
       </div>
       <Footer />
-    </>
+
   );
 };
 

@@ -213,7 +213,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   private async sendToRemote(report: ErrorReport): Promise<void> {}
     if (!this.config.remoteEndpoint) return
     try {}
-      await fetch(this.config.remoteEndpoint, {)}
+      await fetch(this.config.remoteEndpoint, {</div>
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'}
@@ -261,7 +261,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     return {}
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)}
+      errorsByType: Object.fromEntries(this.errorCount</div>
     }
   getErrorStats(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
@@ -321,7 +321,7 @@ export const captureComponentError = (
   componentName: string
 ): void => {}
   const report = ErrorReporter.getInstance()
-  report.reportError(error, 'high', {)}
+  report.reportError(error, 'high', {</div>
     componentName,
     componentStack: errorInfo.componentStack}
   })

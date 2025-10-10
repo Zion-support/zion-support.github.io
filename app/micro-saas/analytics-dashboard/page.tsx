@@ -54,6 +54,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
@@ -64,12 +65,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="pt-24 pb-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <BarChart className="w-4 h-4" />
                 <span>AI Analytics Dashboard</span>
-              </div>
+              </li>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
                 Real-time Business </h1>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
@@ -86,98 +88,102 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                   View Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </li>
+            </li>
+          </li>
         </section>
 
         {/* Features Section */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to make data-driven decisions with confidence
               </p>
-            </div>
+            </li>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-6 h-6 text-white" />
-                  </div>
+                  </li>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+                </li>
+              )</div>
+            </li>
+          </li>
         </section>
 
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30">
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Built for scale and reliability
               </p>
-            </div>
+            </li>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric, index) => (</div>
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     <metric.icon className="w-8 h-8 text-white" />
-                  </div>
+                  </li>
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+                </li>
+              )</div>
+            </li>
+          </li>
         </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the difference with our AI-powered analytics platform
               </p>
-            </div>
+            </li>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               <div className="space-y-6">
                 {benefits.map((benefit, index) => (</div>
                   <div key={index} className="flex items-start space-x-3"></div>
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>
-                  </div>
-                ))}
-              </div>
+                  </li>
+                )</div>
+              </li>
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
                 <div className="space-y-4"></div>
                   <div className="flex items-center space-x-3"></div>
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
-                  </div>
+                  </li>
                   <div className="flex items-center space-x-3"></div>
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Reduced reporting time by 80%"</span>
-                  </div>
+                  </li>
                   <div className="flex items-center space-x-3"></div>
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  </li>
+                </li>
+              </li>
+            </li>
+          </li>
         </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -195,12 +201,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </li>
+            </li>
+          </li>
         </section>
-      </div>
-    </>
+      </li>
+
   );
 };
 

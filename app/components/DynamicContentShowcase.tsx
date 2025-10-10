@@ -74,6 +74,7 @@ const DynamicContentShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
             Dynamic <span className="text-cyan-400">Content Showcase</span>
@@ -96,6 +97,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -120,7 +122,7 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-    </div>
+    ))
   );
 };
 

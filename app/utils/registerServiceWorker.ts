@@ -68,7 +68,7 @@ export async function registerServiceWorker()
           } else {
             // Content cached for offline use;
             if (config.onSuccess) {
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
+    const registration = await navigator.serviceWorker.register('/service-worker.js', {</div>
       scope: '/'}
     })
     // Handle updates

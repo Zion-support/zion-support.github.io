@@ -79,7 +79,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           const firstInput = entries[0];)
           if (firstInput && (firstInput as any).processingStart !== undefined) {
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', entries => {)}
+        this.observeEntry('largest-contentful-paint', entries => {</div>
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {}
             this.recordMetric()
@@ -89,7 +89,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           }
 
         // First Input Delay
-        this.observeEntry('first-input', entries => {)}
+        this.observeEntry('first-input', entries => {</div>
           const firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
             const fid = (firstInput as any).processingStart - firstInput.startTime;
@@ -319,7 +319,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'performance_metric', {)}
+      (window as any).gtag('event', 'performance_metric', {</div>
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance',
@@ -432,7 +432,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return `
 Performance Report:
 Score: ${score}
-Metrics: ${JSON.stringify(metrics, null, 2)}
+Metrics: ${JSON.stringify(metrics, null, 2</div>
     `;
   }
 

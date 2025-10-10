@@ -45,6 +45,7 @@ const FiveGImplementationPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
@@ -53,6 +54,7 @@ const FiveGImplementationPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
+        </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -79,6 +81,7 @@ const FiveGImplementationPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -104,17 +107,18 @@ const FiveGImplementationPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
+                      )</div>
                     </ul>
-                  )}
+                  </div>
                 </div>
-              ))}
+              )</div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="container mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -134,8 +138,8 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      ))
+
   );
 };
 

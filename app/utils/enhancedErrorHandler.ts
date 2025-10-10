@@ -147,8 +147,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         lineno: event.lineno),
         colno: event.colno),
   private setupGlobalErrorHandlers(): void {}
-    window.addEventListener('error', event => {)}
-      this.handleError({)}
+    window.addEventListener('error', event => {</div>
+      this.handleError({</div>
         type: 'javascript',
         message: event.message,
         stack: event.error?.stack,
@@ -170,8 +170,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       this.handleError({)
         type: 'promise'),
   private setupUnhandledRejectionHandler(): void {}
-    window.addEventListener('unhandledrejection', event => {)}
-      this.handleError({)}
+    window.addEventListener('unhandledrejection', event => {</div>
+      this.handleError({</div>
         type: 'promise',
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack;
@@ -207,7 +207,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             src?: string
             href?: string;}
           }
-          this.handleError({)}
+          this.handleError({</div>
             type: 'resource'}
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
@@ -263,7 +263,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       try {}
         const response = await originalFetch(...args)
         if (!response.ok) {}
-          this.handleError({)}
+          this.handleError({</div>
             type: 'network',`}
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
@@ -273,7 +273,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         }
         return response
       } catch (error) {}
-        this.handleError({)}
+        this.handleError({</div>
           type: 'network',`}
           message: `Network request failed: ${error}`,
           url: args[0] as string,
@@ -320,11 +320,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     // Monitor long tasks that might indicate performance issues
     if ('PerformanceObserver' in window) {}
       try {}
-        const observer = new PerformanceObserver(list => {)}
-          list.getEntries().forEach(entry => {)}
+        const observer = new PerformanceObserver(list => {</div>
+          list.getEntries().forEach(entry => {</div>
             if (entry.duration > 100) {}
               // Tasks longer than 100ms
-              this.handleError({)}
+              this.handleError({</div>
                 type: 'custom',`}
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration;
@@ -385,7 +385,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**
    * Handle error with comprehensive processing;
    */
-  private handleError(errorData: {)}
+  private handleError(errorData: {</div>
 // type: ErrorReport['type'];
 // message: string,
 // stack?: string;
@@ -423,7 +423,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   /**
    * Create comprehensive error report;
    */
-  private createErrorReport(errorData: {)}
+  private createErrorReport(errorData: {</div>
 // type: ErrorReport['type'];
 // message: string,
 // stack?: string;
@@ -562,7 +562,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
-      userId: this.getUserId()}
+      userId: this.getUserId(</div>
     }
   private getErrorContext(): ErrorContext {/* TODO: Fix JSX expression */}
     };
@@ -580,7 +580,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       errorData.status &&)
       errorData.status >= 500;)
     ) {
-  private determineSeverity(errorData: {)}
+  private determineSeverity(errorData: {</div>
     type: ErrorReport['type']
     message: string
     status?: number
@@ -622,7 +622,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private categorizeError(errorData: {)
     type: ErrorReport['type']),
-  private categorizeError(errorData: {)}
+  private categorizeError(errorData: {</div>
     type: ErrorReport['type']
     message: string;}
   }): ErrorReport['category'] {}
@@ -666,7 +666,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   }): string[] {
     const tags: string[] = [],
     if (errorData.filename) {,
-  private generateTags(errorData: {)}
+  private generateTags(errorData: {</div>
     filename?: string
     type: ErrorReport['type']
     duration?: number;}
@@ -813,7 +813,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {}
     if (!this.config.remoteEndpoint) return
     try {}
-      await fetch(this.config.remoteEndpoint, {)}
+      await fetch(this.config.remoteEndpoint, {</div>
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json',`}
@@ -925,7 +925,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const errorsBySeverity: Record<string, number> = {}
     this.errors.forEach(error => {)
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
-    this.errors.forEach(error => {)}
+    this.errors.forEach(error => {</div>
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1;
@@ -974,7 +974,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config;
-        timestamp: new Date().toISOString()}
+        timestamp: new Date().toISOString(</div>
       },
       null,
       2;
@@ -993,7 +993,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       type: 'custom'),
       message),
   public reportError(message: string, context?: Partial<ErrorContext>): string {}
-    const errorReport = this.createErrorReport({)}
+    const errorReport = this.createErrorReport({</div>
       type: 'custom',
       message,
       ...context}

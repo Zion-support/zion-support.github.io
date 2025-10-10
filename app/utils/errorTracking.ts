@@ -43,8 +43,7 @@ class ErrorTrackingService {
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000;
   private constructor() {,
-    this.setupGlobalErrorHandlers()}
-
+    this.setupGlobalErrorHandlers(</div>
   static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
       ErrorTrackingService.instance = new ErrorTrackingService()
@@ -210,11 +209,9 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   addListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners.push(listener)}
-
+    this.errorListeners.push(listener</div>
   removeListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners = this.errorListeners.filter(l => l !== listener)}
-
+    this.errorListeners = this.errorListeners.filter(l => l !== listener</div>
   private notifyListeners(error: TrackedError): void {,
     this.errorListeners.forEach(listener => {)
       try {)
@@ -263,8 +260,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   getErrorById(id: string): TrackedError | undefined {,
-    return this.errors.get(id)}
-
+    return this.errors.get(id</div>
   clearErrors(): void {
     this.errors.clear()
   }

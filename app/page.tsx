@@ -56,6 +56,7 @@ const HomePage: React.FC = () => {
   }, []);
   return (
     <>
+  </>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -125,6 +126,7 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
+        </section>
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
@@ -210,6 +212,7 @@ const HomePage: React.FC = () => {
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
+        </section>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
@@ -748,6 +751,7 @@ const HomePage: React.FC = () => {
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
+        </section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           </h2>
@@ -1006,6 +1010,7 @@ const HomePage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading">
+        </section>
           <div className="max-w-6xl mx-auto">
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?
@@ -1162,7 +1167,7 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-    </>
+
   );
 };
 export default HomePage;

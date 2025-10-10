@@ -286,7 +286,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}</div>
-        </div>
+        ))
         {_recommendations.length > 0 && (
           <div className='mt-2'></div>
             <h4 className='font-semibold text-xs text-red-600'>
@@ -297,9 +297,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
-          </div>
-        )}
-      </div>
+          </li>
+        </li>
+      </li>
     );
   }
 

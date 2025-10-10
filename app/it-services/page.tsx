@@ -329,6 +329,7 @@ const ITServicesPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." />
@@ -338,6 +339,7 @@ const ITServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        </section>
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
@@ -354,13 +356,14 @@ const ITServicesPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Our Portfolio
                 </button>
-              </div>
+              ))
             </div>
           </div>
         </section>
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -406,6 +409,7 @@ const ITServicesPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
+        </section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -442,7 +446,7 @@ const ITServicesPage: React.FC = () => {
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          ))}
+                          )</div>
                         </ul>
                       </div>
 
@@ -453,7 +457,7 @@ const ITServicesPage: React.FC = () => {
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
+                          )</div>
                         </div>
                       </div>
 
@@ -465,7 +469,7 @@ const ITServicesPage: React.FC = () => {
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          ))}
+                          )</div>
                         </ul>
                       </div>
 
@@ -473,14 +477,14 @@ const ITServicesPage: React.FC = () => {
                         Get Quote
                       </button>
                     </div>
-                  ))}
+                  )</div>
               </div>
             </div>
           </section>
-        ))}
-
+        )</div>
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        </section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Your IT Infrastructure?
@@ -508,7 +512,7 @@ const ITServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 

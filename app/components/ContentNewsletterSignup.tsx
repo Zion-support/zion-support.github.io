@@ -80,7 +80,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
           <button
-            onClick={() => setIsSubscribed(false)}
+            onClick={() => setIsSubscribed(false</div>
             className="text-white underline hover:text-blue-200 transition-colors"
           >
             Subscribe another email
@@ -126,7 +126,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   type="email"
                   id="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value</div>
                   placeholder={placeholder}
                   required
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
@@ -142,20 +142,21 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
-                  </>
+
                 ) : (
                   <>
+  </>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
-                )}
+
+                </div>
               </button>
               
               <p className="text-sm text-blue-200 text-center">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </form>
-          </div>
+          ))
         </div>
       </div>
     </div>

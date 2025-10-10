@@ -537,11 +537,11 @@ export const localStorageCache = new CacheManager({)
 export const sessionStorageCache = new CacheManager({)
   storage: CacheStorage.SessionStorage),
   defaultTTL: 60 * 60 * 1000 // 1 hour;
-export const localStorageCache = new CacheManager({)}
+export const localStorageCache = new CacheManager({</div>
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
 
-export const sessionStorageCache = new CacheManager({)}
+export const sessionStorageCache = new CacheManager({</div>
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
 

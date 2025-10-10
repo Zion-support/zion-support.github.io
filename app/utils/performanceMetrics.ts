@@ -114,11 +114,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if ('PerformanceObserver' in window) {}
       try {}
         // Navigation timing
-        const navObserver = new PerformanceObserver(list => {)}
+        const navObserver = new PerformanceObserver(list => {</div>
           for (const entry of list.getEntries()) {}
             if (entry.entryType === 'navigation') {}
               const navEntry = entry as PerformanceNavigationTiming
-              this.recordMetric({)}
+              this.recordMetric({</div>
                 name: 'pageLoadTime',
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms',
@@ -145,11 +145,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
                 value: entry.startTime),
                 unit: 'ms'),
         // Paint timing
-        const paintObserver = new PerformanceObserver(list => {)}
+        const paintObserver = new PerformanceObserver(list => {</div>
           for (const entry of list.getEntries()) {}
             if (entry.name === 'first-contentful-paint') {}
               this.webVitals.FCP = entry.startTime
-              this.recordMetric({)}
+              this.recordMetric({</div>
                 name: 'FCP',
                 value: entry.startTime,
                 unit: 'ms',
@@ -172,12 +172,12 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
               value: lastEntry.startTime),
               unit: 'ms'),
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver(list => {)}
+        const lcpObserver = new PerformanceObserver(list => {</div>
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           if (lastEntry) {}
             this.webVitals.LCP = lastEntry.startTime
-            this.recordMetric({)}
+            this.recordMetric({</div>
               name: 'LCP',
               value: lastEntry.startTime,
               unit: 'ms',
@@ -201,14 +201,14 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             value: clsValue),
             unit: 'score'),
         // Layout Shift
-        const clsObserver = new PerformanceObserver(list => {)}
+        const clsObserver = new PerformanceObserver(list => {</div>
           let clsValue = 0
           for (const entry of list.getEntries()) {}
             if ((entry as LayoutShift).hadRecentInput) continue
             clsValue += (entry as LayoutShift).value;}
           }
           this.webVitals.CLS = clsValue
-          this.recordMetric({)}
+          this.recordMetric({</div>
             name: 'CLS',
             value: clsValue,
             unit: 'score',
@@ -291,7 +291,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return
     const perfData = window.performance.timing
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
-    this.recordMetric({)}
+    this.recordMetric({</div>
       name: 'pageLoad',
       value: pageLoadTime,
       unit: 'ms',
@@ -319,7 +319,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       metadata: {,
         url;
   recordNetworkRequest(url: string, duration: number, status: number): void {}
-    this.recordMetric({)}
+    this.recordMetric({</div>
       name: 'networkRequest',
       value: duration,
       unit: 'ms',
@@ -355,7 +355,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return
     if (!(performance as PerformanceWithMemory).memory) return
     const memory = (performance as PerformanceWithMemory).memory
-    this.recordMetric({)}
+    this.recordMetric({</div>
       name: 'memoryUsage',
       value: memory.usedJSHeapSize,
       unit: 'bytes',
@@ -591,9 +591,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         avgLoadTime,
         totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore(),
-        recommendations: this.getRecommendations()}
+        recommendations: this.getRecommendations(</div>
       },
-      timestamp: new Date()}
+      timestamp: new Date(</div>
   generateReport(): PerformanceReport {/* TODO: Fix JSX expression */}
       },
       timestam,

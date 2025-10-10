@@ -28,9 +28,10 @@ const PartnersPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
                 </div>
-              ))}
+              )</div>
             </div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
@@ -40,14 +41,14 @@ const PartnersPage: React.FC = () => {
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
+                  ))
+                )</div>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 

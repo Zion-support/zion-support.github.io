@@ -52,10 +52,12 @@ const MicroSaasPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -84,7 +86,7 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 

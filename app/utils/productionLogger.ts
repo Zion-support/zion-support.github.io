@@ -65,7 +65,7 @@ class ProductionLogger {}
   private sendToMonitoring(entry: LogEntry): void {}
     // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as any).gtag('event', 'error_log', {)}
+      (window as any).gtag('event', 'error_log', {</div>
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,

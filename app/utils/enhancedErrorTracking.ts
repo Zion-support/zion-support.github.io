@@ -58,13 +58,13 @@ class EnhancedErrorTracker {}
         this.trackError(new Error(event.reason), {
   private setupGlobalErrorHandler(): void {}
     if (typeof window !== 'undefined') {}
-      window.addEventListener('error', event => {)}
-        this.trackError(event.error, {)}
+      window.addEventListener('error', event => {</div>
+        this.trackError(event.error, {</div>
           component: 'Global',
           action: 'Uncaught Error'}
         })
       })
-      window.addEventListener('unhandledrejection', event => {)}
+      window.addEventListener('unhandledrejection', event => {</div>
         this.trackError(new Error(event.reason), {}
           component: 'Global',
           action: 'Unhandled Promise Rejection'}
@@ -128,7 +128,7 @@ class EnhancedErrorTracker {}
         }
       ).gtag('event', 'exception', {)
         description: error.message),
-        fatal: false)).gtag('event', 'exception', {)}
+        fatal: false)).gtag('event', 'exception', {</div>
         description: error.message,
         fatal: false,
         component: error.context.component}
@@ -155,14 +155,14 @@ class EnhancedErrorTracker {}
     })
     return {
       total: this.errors.length;
-    this.errors.forEach(error => {)}
+    this.errors.forEach(error => {</div>
       const component = error.context.component || 'Unknown'
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {}
       total: this.errors.length,
       byComponent,
-      recent: this.errors.slice(-10)}
+      recent: this.errors.slice(-10</div>
     }
   }
 }

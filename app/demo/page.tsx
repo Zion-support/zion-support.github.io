@@ -105,6 +105,7 @@ const DemoPage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -132,6 +133,7 @@ const DemoPage: React.FC = () => {
 
       {/* Demo Selection */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Choose Your Demo</h2>
@@ -142,7 +144,7 @@ const DemoPage: React.FC = () => {
             {demos.map((demo) => (
               <button
                 key={demo.id}
-                onClick={() => setSelectedDemo(demo.id)}
+                onClick={() => setSelectedDemo(demo.id</div>
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${
                   selectedDemo === demo.id
                     ? 'border-purple-500 bg-purple-500/10'
@@ -159,7 +161,7 @@ const DemoPage: React.FC = () => {
                   <span className="text-xs text-cyan-400">{demo.duration}</span>
                 </div>
               </button>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
@@ -167,6 +169,7 @@ const DemoPage: React.FC = () => {
       {/* Selected Demo Details */}
       {selectedDemoData && (
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -191,7 +194,7 @@ const DemoPage: React.FC = () => {
                           <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
                         </li>
-                      ))}
+                      )</div>
                     </ul>
                   </div>
                   
@@ -220,10 +223,10 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-      )}
-
+      ))
       {/* Testimonials */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
@@ -236,7 +239,7 @@ const DemoPage: React.FC = () => {
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                  )</div>
                 </div>
                 <blockquote className="text-gray-300 mb-4 italic">
                   "{testimonial.quote}"
@@ -246,13 +249,14 @@ const DemoPage: React.FC = () => {
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to See More?

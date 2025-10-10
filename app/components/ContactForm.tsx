@@ -152,11 +152,10 @@ interface FormStatus {
             >
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-              )}
+              </div>
               <span className="text-sm font-medium">{status.message}</span>
             </div>
-          )}
-
+          </div>
           <button
             type="submit"
             disabled={status.type === 'loading'}
@@ -166,13 +165,14 @@ interface FormStatus {
               <>
                 <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
-              </>
+
             ) : (
               <>
+  </>
                 <Send className="h-5 w-5" />
                 <span>Send Message</span>
-              </>
-            )}
+
+            </div>
           </button>
         </form>
 

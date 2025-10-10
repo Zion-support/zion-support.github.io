@@ -33,7 +33,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
@@ -41,7 +41,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
 
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>

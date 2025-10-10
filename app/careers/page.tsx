@@ -61,6 +61,7 @@ const CareersPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
@@ -69,6 +70,7 @@ const CareersPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">
+        </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -82,6 +84,7 @@ const CareersPage: React.FC = () => {
         </section>
 
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
@@ -123,19 +126,19 @@ const CareersPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {req}
                         </li>
-                      ))}
+                      )</div>
                     </ul>
                   </div>
 
                 </div>
-              ))}
+              )</div>
             </div>
 
             </div>
           </div>
         </section>
-      </div>
-    </>
+      ))
+
   );
 };
 

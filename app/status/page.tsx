@@ -145,7 +145,7 @@ export default function StatusPage() {
           
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
-              {getStatusIcon(overallStatus)}
+              {getStatusIcon(overallStatus</div>
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
                 {overallStatus === 'operational' ? 'All Systems Operational' : 
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
@@ -162,13 +162,14 @@ export default function StatusPage() {
           </div>
           
           <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
+            Last updated: {lastUpdated.toLocaleString(</div>
           </p>
         </div>
       </section>
 
       {/* Services Status */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -176,13 +177,13 @@ export default function StatusPage() {
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    {getStatusIcon(service.status)}
+                    {getStatusIcon(service.status</div>
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
                   </span>
-                </div>
+                ))
                 
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 
@@ -199,15 +200,16 @@ export default function StatusPage() {
                     <span className="text-gray-400">Last Incident:</span>
                     <span className="text-white">{service.lastIncident}</span>
                   </div>
-                </div>
+                ))
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Recent Incidents */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6">
@@ -220,7 +222,7 @@ export default function StatusPage() {
                       <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
                     </div>
-                  </div>
+                  ))
                   <div className="flex items-center gap-2">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
                       {incident.severity}
@@ -232,7 +234,7 @@ export default function StatusPage() {
                     }`}>
                       {incident.status}
                     </span>
-                  </div>
+                  ))
                 </div>
                 
                 <p className="text-gray-300 mb-4">{incident.description}</p>
@@ -242,13 +244,14 @@ export default function StatusPage() {
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            ))}
+            )</div>
           </div>
         </div>
       </section>
 
       {/* Performance Metrics */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -289,6 +292,7 @@ export default function StatusPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need More Information?

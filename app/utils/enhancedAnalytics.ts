@@ -81,7 +81,7 @@ class EnhancedAnalytics {}
       action: 'Analytics Initialized'),
       metadata: {,
     // Track initialization
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category: 'System',
       action: 'Analytics Initialized',
       metadata: {}
@@ -156,7 +156,7 @@ class EnhancedAnalytics {}
       ).gtag('event', event.action, {)
         event_category: event.category;)
         event_label: event.label),
-        value: event.value)).gtag('event', event.action, {)}
+        value: event.value)).gtag('event', event.action, {</div>
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -172,7 +172,7 @@ class EnhancedAnalytics {}
       metadata: {,
         pageTitle: pageTitle || document.title),
   public trackPageView(pagePath: string, pageTitle?: string): void {}
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category: 'Navigation',
       action: 'Page View',
       label: pagePath,
@@ -261,7 +261,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       metadata: {,
         stack: error.stack),
   public trackUserInteraction(action: string, label?: string, value?: number): void {}
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category: 'User Interaction',
       action,
       label,
@@ -269,7 +269,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     })
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {}
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category: 'Error',
       action: 'Error Occurred',
       label: error.message,
@@ -292,7 +292,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value: Math.round(value),
       metadata: {,
   public trackPerformance(metric: string, value: number, rating?: string): void {}
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category: 'Performance',
       action: metric,
       value: Math.round(value),
@@ -310,12 +310,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action: conversionType),
       value),
   public trackConversion(conversionType: string, value?: number): void {}
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category: 'Conversion',
       action: conversionType,
       value,
       metadata: {`}
-        conversionId: `conv-${Date.now()}
+        conversionId: `conv-${Date.now(</div>
   public trackConversion(conversionTyp)
   e: string, value?: number): void {/* TODO: Fix JSX expression */}`
   d: `conv-${Date.now()}`
@@ -347,7 +347,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     value?: number,
     metadata?: Record<string, unknown>
   ): void {}
-    this.trackEvent({)}
+    this.trackEvent({</div>
       category,
       action,
       label,
@@ -409,7 +409,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
-      userProperties: this.getUserProperties()}
+      userProperties: this.getUserProperties(</div>
     }
   }
 }

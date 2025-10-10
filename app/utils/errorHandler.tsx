@@ -450,7 +450,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private async logToNetwork(error: AppError) {}
     if (!this.config.reportEndpoint) return;
     try {}
-      await fetch(this.config.reportEndpoint, {)}
+      await fetch(this.config.reportEndpoint, {</div>
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'
@@ -476,7 +476,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private async reportError(error: AppError) {}
     if (!this.config.reportEndpoint) return;
     try {}
-      await fetch(this.config.reportEndpoint, {)}
+      await fetch(this.config.reportEndpoint, {</div>
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'
@@ -492,7 +492,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         body: JSON.stringify({)
           ...error),
           timestamp: error.timestamp.toISOString(),
-        body: JSON.stringify({)}
+        body: JSON.stringify({</div>
           ...error,
           timestamp: error.timestamp.toISOString()
         })
@@ -882,11 +882,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   init(): void {}
     if (typeof window !== 'undefined') {}
       // Set up global error handler
-      window.addEventListener('error', event => {)}
+      window.addEventListener('error', event => {</div>
         this.handleError(event.error || new Error(event.message));
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', event => {)}
+      window.addEventListener('unhandledrejection', event => {</div>
         this.handleError(new Error(event.reason));
 
   init(): void {/* TODO: Fix JSX expression */}
@@ -917,7 +917,7 @@ export class ErrorBoundary extends React.Component<
     return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.errorHandler.handleError(error, errorInfo, {)}
+    this.errorHandler.handleError(error, errorInfo, {</div>
       component: 'ErrorBoundary'
 
   })
@@ -925,7 +925,7 @@ export class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
       component: 'ErrorBoundary')
-)}
+</div>
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || (
@@ -937,11 +937,11 @@ export class ErrorBoundary extends React.Component<
         this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' }}></div>
             <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-              onClick={() =>this.setState({ hasError: false, error: undefined })}
+              onClick={() =>this.setState({ hasError: false, error: undefined }</div>
             <h2>Something went wrong</h2>)
             <p>We're sorry, but something unexpected happened.</p>)
             <button;)
-              onClick={() => this.setState({ hasError: false, error: undefined })}
+              onClick={() => this.setState({ hasError: false, error: undefined }</div>
               style={{
               style={{}
                 padding: '10px 20px',
@@ -975,7 +975,7 @@ export class ErrorBoundary extends React.Component<
             <p>We're sorry, but something unexpected happened.</p>
             <button></button>
               onClick={/* TODO: Fix JSX expression */}
-  r: undefined })}
+  r: undefined }</div>
               style={/* TODO: Fix JSX expression */}
               }}
             ></button>

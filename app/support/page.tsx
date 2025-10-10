@@ -60,6 +60,7 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Support - Zion Tech Group | Technical Support & Help</title>
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
@@ -71,6 +72,7 @@ const SupportPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
+        </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -89,6 +91,7 @@ const SupportPage: React.FC = () => {
 
         {/* Search Section */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">How can we help you?</h2>
@@ -101,7 +104,7 @@ const SupportPage: React.FC = () => {
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => setSearchQuery(e.target.value</div>
                   className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -111,7 +114,7 @@ const SupportPage: React.FC = () => {
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() => setSelectedCategory(category.id</div>
                   className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
@@ -120,7 +123,7 @@ const SupportPage: React.FC = () => {
                 >
                   {category.name}
                 </button>
-              ))}
+              )</div>
             </div>
           </div>
         </section>
@@ -145,13 +148,14 @@ const SupportPage: React.FC = () => {
                   <p className="text-cyan-400 font-medium">{channel.contact}</p>
                   <p className="text-sm text-gray-400 mt-2">{channel.availability}</p>
                 </div>
-              ))}
+              )</div>
             </div>
-          </div>
+          ))
         </section>
 
         {/* FAQ Section */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
@@ -163,13 +167,14 @@ const SupportPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
-              ))}
-            </div>
+              )</div>
+            ))
           </div>
         </section>
 
         {/* Support Hours */}
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
               <div className="text-center mb-8">
@@ -188,13 +193,13 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
                 </div>
               </div>
-            </div>
+            ))
           </div>
         </section>
       </div>
       
       <Footer />
-    </>
+
   );
 };
 

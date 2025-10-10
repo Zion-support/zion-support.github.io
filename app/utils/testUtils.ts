@@ -41,12 +41,12 @@ export const mockFetch = (
       Promise.resolve({)
         ok: status >= 200 && status < 300),
         status),
-      Promise.resolve({)}
+      Promise.resolve({</div>
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
         json: async () => response;
-        text: async () => JSON.stringify(response)}
+        text: async () => JSON.stringify(response</div>
       } as Response)
     ) as typeof fetch;
   }
@@ -103,7 +103,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
         ...global.window),
 export const mockWindow = (overrides: Partial<Window> = {}): void => {}
   if (typeof global !== 'undefined') {}
-    Object.defineProperty(global, 'window', {)}
+    Object.defineProperty(global, 'window', {</div>
       value: {}
         ...global.window,
         ...overrides}
@@ -192,7 +192,7 @@ export const createMockPerformance = (): Performance => {}
   return {}
     now: () => Date.now(),
     mark: (name: string) => {}
-      entries.push({)}
+      entries.push({</div>
         name,
         entryType: 'mark',
         startTime: Date.now(),
@@ -205,7 +205,7 @@ export const createMockPerformance = (): Performance => {}
         name)
         entryType: 'measure'),
     measure: (name: string, startMark?: string, endMark?: string) => {}
-      entries.push({)}
+      entries.push({</div>
         name,
         entryType: 'measure',
         startTime: Date.now(),

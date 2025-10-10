@@ -141,9 +141,10 @@ const Sidebar: React.FC = () => {
 
   return (
     <>
+  </>
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(true</div>
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
@@ -154,10 +155,9 @@ const Sidebar: React.FC = () => {
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={() => setIsOpen(false</div>
         />
-      )}
-
+      </div>
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -175,7 +175,7 @@ const Sidebar: React.FC = () => {
               </div>
             </Link>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpen(false</div>
               className="lg:hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >
@@ -189,7 +189,7 @@ const Sidebar: React.FC = () => {
               {navigationSections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="space-y-1">
                   <button
-                    onClick={() => section.key && toggleSection(section.key)}
+                    onClick={() => section.key && toggleSection(section.key</div>
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <span>{section.title}</span>
@@ -197,7 +197,7 @@ const Sidebar: React.FC = () => {
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4" /> : 
                         <ChevronRight className="w-4 h-4" />
-                    )}
+                    </div>
                   </button>
                   
                   {(!section.key || expandedSections.has(section.key)) && (
@@ -206,7 +206,7 @@ const Sidebar: React.FC = () => {
                         <Link
                           key={itemIndex}
                           to={item.path}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => setIsOpen(false</div>
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
@@ -218,7 +218,7 @@ const Sidebar: React.FC = () => {
                         </Link>
                       ))}
                     </div>
-                  )}
+                  </div>
                 </div>
               ))}
             </nav>
@@ -246,7 +246,7 @@ const Sidebar: React.FC = () => {
               </div>
           </div>
       </aside>
-    </>
+
   );
 };
 

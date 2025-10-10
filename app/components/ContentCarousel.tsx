@@ -81,7 +81,7 @@ const ContentCarousel: React.FC = () => {
             {slides.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => setCurrentSlide(index</div>
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}

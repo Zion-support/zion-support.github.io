@@ -137,14 +137,12 @@ phone: '',
                   <CheckCircle className="w-5 h-5 text-green-400" />
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
-              )}
-
+              </div>
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
-              )}
-
+              </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -237,7 +235,7 @@ phone: '',
                         <option key={service} value={service}>
                           {service}
                         </option>
-                      ))}
+                      )</div>
                     </select>
                   </div>
                 </div>
@@ -269,16 +267,17 @@ phone: '',
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
-                    </>
+
                   ) : (
                     <>
+  </>
                       <Send className="w-5 h-5" />
                       <span>Send Message</span>
-                    </>
-                  )}
+
+                  </div>
                 </button>
               </form>
-            </div>
+            ))
 
             {/* Contact Information */}
             <div className="space-y-8">
@@ -350,7 +349,7 @@ phone: '',
                   </div>
                 </div>
               </div>
-            </div>
+            ))
           </div>
         </section>
       </div>

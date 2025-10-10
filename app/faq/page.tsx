@@ -39,6 +39,7 @@ const FAQPage: React.FC = () => {
 
   return (
     <>
+  </>
       <Helmet>
         <title>Frequently Asked Questions - Zion Tech Group</title>
         <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
@@ -70,7 +71,7 @@ const FAQPage: React.FC = () => {
                     {faq.answer}
                   </p>
                 </div>
-              ))}
+              )</div>
             </div>
 
             <div className="mt-16 text-center">
@@ -97,8 +98,8 @@ const FAQPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      ))
+
   );
 };
 

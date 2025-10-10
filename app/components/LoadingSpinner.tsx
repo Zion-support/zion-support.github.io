@@ -30,7 +30,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
           {text}
         </p>
-      )}
+      </div>
     </div>
   );
 };

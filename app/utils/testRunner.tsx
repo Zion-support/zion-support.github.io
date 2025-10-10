@@ -381,7 +381,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({)}
+    this.currentSuite.tests.push({</div>
       name,
       fn)
     timeout: timeout || this.config.timeout}
@@ -427,7 +427,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const metrics = {}
       renderTime,
       memoryUsage,
-      timestamp: new Date().toISOString()}
+      timestamp: new Date().toISOString(</div>
     }
     const passed = renderTime < this.config.performanceThreshold
     this.testResults.push({})
@@ -499,7 +499,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({)}
+    this.currentSuite.tests.push({</div>
       name,
       fn)
     skip: true}
@@ -516,7 +516,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({)}
+    this.currentSuite.tests.push({</div>
       name,
       fn)
     only: true}
@@ -768,7 +768,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       for (const hook of suite.afterEach) {}
         await this.runHook(hook, 'afterEach');}
       }
-      this.results.push({)}
+      this.results.push({</div>
         name: testName,
         status: 'passed')
     duration: Date.now() - startTime,
@@ -783,7 +783,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       }
     } catch (error) {
       this.results.push({} catch (error) {}
-      this.results.push({)}
+      this.results.push({</div>
         name: testName,
         status: 'failed')
     duration: Date.now() - startTime,
@@ -883,7 +883,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         })
         .catch(error => {)
     clearTimeout(timer)
-        .catch(error => {)}
+        .catch(error => {</div>
           clearTimeout(timer)
           reject(error);}
         })
@@ -1012,7 +1012,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
-            </div>
+            </li>
 
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
@@ -1020,7 +1020,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
-    </div>
+    </li>
     <div class="tests">
         ${this.results;
           .map(result => `}
@@ -1035,8 +1035,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             </div>)
 )
           )
-          .join('')}
-    </div>
+          .join(''</div>
+    </li>
 </body>
 </html>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1201,8 +1201,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             </div>`
         `
           )
-          .join('')}
-    </div>
+          .join(''</div>
+    </li>
 </body>`
 </html>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1317,7 +1317,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             </testcase>)
 )
           )
-          .join('')}
+          .join(''</div>
     </testsuite>
 </testsuites>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1416,7 +1416,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       lines: 85}
     }
     const passed = coverage.statements >= this.config.coverageThreshold
-    this.testResults.push({)}
+    this.testResults.push({</div>
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
       duration: 0,`})
@@ -1521,7 +1521,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             </testcase>`
         `
           )
-          .join('')}
+          .join(''</div>
     </testsuite>`
 </testsuites>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1706,7 +1706,7 @@ export const useTestRunner = useCallback((...args) => {}
     getTestResults: () => testRunner.getTestResults(),
     getTestStatistics: () => testRunner.getTestStatistics(),
     clearTestResults: () => testRunner.clearTestResults(),
-    generateTestReport: () => testRunner.generateTestReport()}
+    generateTestReport: () => testRunner.generateTestReport(</div>
   }
 }
 // Test utilities;
@@ -1719,7 +1719,7 @@ export const testUtils = {}
   createMockData: (type: string, count: number = 10) => {}
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i < count; i++) {}
-      mockData.push({)}
+      mockData.push({</div>
         id: i + 1,`}
         name: `Mock ${type} ${i + 1}`,
         description: `This is a mock ${type} item`)
@@ -1761,7 +1761,7 @@ export const testUtils = {}
     subtree: true}
       observer.observe(document.body, {)
         childList: true),
-      observer.observe(document.body, {)}
+      observer.observe(document.body, {</div>
         childList: true,
         subtree: true}
       })
@@ -2218,7 +2218,7 @@ class Mock {}
     return new Proxy({} as T, {)
       get(target, prop) {
         if (prop in overrides) {
-    return new Proxy({} as T, {)}
+    return new Proxy({} as T, {</div>
       get(target, prop) {}
         if (prop in overrides) {}
           return overrides[prop as keyof T];}

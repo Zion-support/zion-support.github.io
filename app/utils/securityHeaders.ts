@@ -52,7 +52,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'interest-cohort=()',
     'accelerometer=()',
     'gyroscope=()',
-    'magnetometer=()'].join(', ')}
+    'magnetometer=()'].join(', '</div>
 }
 /**
  * Get security headers as key-value pairs;
