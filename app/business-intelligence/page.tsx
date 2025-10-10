@@ -489,8 +489,8 @@ const BusinessIntelligencePage: React.FC = () => {
 <<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?<p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
+            <p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a;
 =======

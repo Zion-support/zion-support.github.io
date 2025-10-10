@@ -1945,7 +1945,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
                 AI Services;
               </h1>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
+              <div className="$2" />
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with our comprehensive suite of cutting-edge AI-powered solutions;
@@ -2259,7 +2259,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           <div className="text-purple-100 text-sm"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          </div>
         </div>
       </div>
     </div>

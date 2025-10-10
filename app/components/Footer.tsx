@@ -682,6 +682,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               ))}
             </div>
           </div>
+        </div>
 
           {/* Quick Links */}
 <<<<<<< HEAD

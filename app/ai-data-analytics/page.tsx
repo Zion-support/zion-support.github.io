@@ -406,7 +406,6 @@ const AIDataAnalyticsPage: React.FC = () => {,
           <div className="mt-8 text-sm text-blue-200"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
         </div>
       </section>
     </div>

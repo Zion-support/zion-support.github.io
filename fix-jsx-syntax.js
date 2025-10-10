@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
 //Function to fix JSX syntax errors;
@@ -54,6 +55,33 @@ function processFile(filePath) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
+  },
+  // Fix malformed JSX fragments
+  {
+    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
+    replacement: '<div$1>$2</div>'
+  }
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
   }
@@ -62,7 +90,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 //Main function;
 <<<<<<< HEAD
 async function main() {
+  // Get all TSX files in the app directory
+  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
+  console.log(`Found ${files.length} TSX files to check...`);
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -97,7 +128,7 @@ async function main() {/* TODO: Fix JSX expression */}
     for (const file of files) {/* TODO: Fix JSX expression */}
       }
     }
-  }
+  });
 
   //   }
 

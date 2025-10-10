@@ -572,7 +572,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               >
                 <span className="relative z-10">Start Your Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="$2" />
               </Link>
 
               <div className="flex items-center space-x-6 text-gray-300"></div>

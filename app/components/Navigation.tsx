@@ -451,6 +451,25 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/main
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const closeAllMenus = () => {
+    setIsOpen(false);
+    setServicesOpen(false);
+  };
+
+  const handleServicesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setServicesOpen(!servicesOpen);
+  };
+
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -1314,8 +1333,9 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-14e4
                 {/* Mobile CTA */}
                 <Link
-                  to="/contact"
-                  className="block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4"
+                  key={index}
+                  to={item.path}
+                  className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                   onClick={closeAllMenus}
                 >
                   Get Started

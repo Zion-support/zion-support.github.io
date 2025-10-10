@@ -53,7 +53,6 @@ const EnhancedLoading: React.FC<LoadingProps> = ({ ,
           className={`w-2 h-2 bg-cyan-400 rounded-full animate-pulse`}
           style={{ animationDelay: `${i * 0.2}s` }}
         >))}</div>
-    </div>
   );
 
   const renderPulse = () => (
