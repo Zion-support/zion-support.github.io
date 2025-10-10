@@ -22,108 +22,246 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '1',
       icon: '📊',
-      title: 'Analytics Dashboard',
-      description: 'Real-time analytics and reporting for your business metrics',
+      title: 'Business Intelligence Dashboard',
+      description: 'Advanced analytics and reporting platform with real-time data visualization and AI-powered insights',
       features: [
-        'Real-time data visualization',
-        'Custom report generation',
+        'Real-time data visualization with 50+ chart types',
+        'Custom report generation and scheduling',
         'Email alerts and notifications',
-        'Multi-platform integration',
-        'Advanced filtering options'
+        'Multi-platform integration (Salesforce, HubSpot, Google Analytics)',
+        'Advanced filtering and drill-down capabilities',
+        'White-label reporting',
+        'API access for custom integrations',
+        'Mobile-responsive dashboard'
       ],
-      price: '$29/month',
-      users: 'Up to 5 users',
+      price: '$199/month',
+      users: 'Up to 25 users',
       popular: true,
       category: 'Analytics'
     },
     {
       id: '2',
       icon: '💬',
-      title: 'Customer Chat',
-      description: 'AI-powered customer support and live chat solution',
+      title: 'AI Customer Support Suite',
+      description: 'Complete customer support solution with AI chatbots, ticketing system, and knowledge base management',
       features: [
-        'AI chatbot integration',
-        'Live chat support',
-        'Ticket management system',
-        'Multi-language support',
-        'Analytics and reporting'
+        'AI chatbot with natural language processing',
+        'Live chat support with agent handoff',
+        'Advanced ticketing system with SLA management',
+        'Multi-language support (20+ languages)',
+        'Knowledge base with search functionality',
+        'Customer satisfaction surveys',
+        'Analytics and performance reporting',
+        'Integration with popular CRM systems'
       ],
-      price: '$49/month',
-      users: 'Up to 10 users',
-      popular: false,
+      price: '$299/month',
+      users: 'Up to 50 users',
+      popular: true,
       category: 'Communication'
     },
     {
       id: '3',
       icon: '🔐',
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection',
+      title: 'Enterprise Security Monitor',
+      description: 'Comprehensive cybersecurity monitoring with threat detection, compliance reporting, and incident response',
       features: [
-        'Real-time threat detection',
-        'Automated security scans',
-        'Compliance reporting',
-        'Incident response tools',
-        'Security dashboard'
+        'Real-time threat detection and analysis',
+        'Automated security vulnerability scans',
+        'Compliance reporting (SOC2, GDPR, HIPAA)',
+        'Incident response automation',
+        'Security dashboard with threat intelligence',
+        'Log analysis and correlation',
+        'Penetration testing tools',
+        '24/7 security monitoring alerts'
       ],
-      price: '$79/month',
-      users: 'Up to 25 users',
+      price: '$599/month',
+      users: 'Up to 100 users',
       popular: false,
       category: 'Security'
     },
     {
       id: '4',
       icon: '☁️',
-      title: 'Cloud Backup',
-      description: 'Automated cloud backup and disaster recovery solution',
+      title: 'Cloud Backup & Recovery',
+      description: 'Enterprise-grade cloud backup solution with disaster recovery and business continuity features',
       features: [
-        'Automated daily backups',
-        'Cross-platform sync',
-        'Version control',
-        'Disaster recovery',
-        'Encrypted storage'
+        'Automated daily backups with versioning',
+        'Cross-platform sync (Windows, Mac, Linux)',
+        'Point-in-time recovery capabilities',
+        'Disaster recovery planning and testing',
+        'End-to-end encryption (AES-256)',
+        'Compliance with data protection regulations',
+        'Bandwidth throttling and scheduling',
+        'Multi-cloud backup redundancy'
       ],
-      price: '$39/month',
-      users: 'Up to 15 users',
+      price: '$149/month',
+      users: 'Up to 30 users',
       popular: false,
       category: 'Storage'
     },
     {
       id: '5',
       icon: '📈',
-      title: 'Performance Tracker',
-      description: 'Monitor and optimize your application performance',
+      title: 'Application Performance Monitor',
+      description: 'Advanced application performance monitoring with error tracking, uptime monitoring, and optimization insights',
       features: [
-        'Performance monitoring',
-        'Error tracking',
-        'Uptime monitoring',
-        'Performance insights',
-        'Alert management'
+        'Real-time performance monitoring',
+        'Error tracking and debugging tools',
+        'Uptime monitoring with global checkpoints',
+        'Performance insights and recommendations',
+        'Alert management with escalation rules',
+        'Custom metrics and dashboards',
+        'API performance monitoring',
+        'Mobile app performance tracking'
       ],
-      price: '$59/month',
-      users: 'Up to 20 users',
-      popular: false,
+      price: '$249/month',
+      users: 'Up to 40 users',
+      popular: true,
       category: 'Monitoring'
     },
     {
       id: '6',
       icon: '🤖',
-      title: 'AI Assistant',
-      description: 'Intelligent automation and workflow optimization',
+      title: 'AI Workflow Automation',
+      description: 'Intelligent business process automation with AI-powered workflow optimization and custom integrations',
       features: [
-        'Workflow automation',
-        'AI-powered insights',
-        'Task scheduling',
-        'Integration capabilities',
-        'Custom AI models'
+        'Visual workflow designer with drag-and-drop',
+        'AI-powered process optimization suggestions',
+        'Advanced task scheduling and automation',
+        'Integration with 500+ business applications',
+        'Custom AI model training and deployment',
+        'Workflow analytics and performance metrics',
+        'Approval workflows and notifications',
+        'Multi-tenant architecture support'
       ],
-      price: '$99/month',
-      users: 'Up to 50 users',
+      price: '$399/month',
+      users: 'Up to 75 users',
       popular: true,
       category: 'AI'
+    },
+    {
+      id: '7',
+      icon: '📧',
+      title: 'Email Marketing Automation',
+      description: 'Advanced email marketing platform with automation, personalization, and analytics',
+      features: [
+        'Drag-and-drop email builder',
+        'Advanced automation workflows',
+        'Personalization and dynamic content',
+        'A/B testing and optimization',
+        'List segmentation and targeting',
+        'Email deliverability optimization',
+        'Advanced analytics and reporting',
+        'Integration with e-commerce platforms'
+      ],
+      price: '$179/month',
+      users: 'Up to 35 users',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '8',
+      icon: '📱',
+      title: 'Mobile App Analytics',
+      description: 'Comprehensive mobile app analytics with user behavior tracking, crash reporting, and performance monitoring',
+      features: [
+        'User behavior analytics and funnels',
+        'Crash reporting and error tracking',
+        'Performance monitoring and optimization',
+        'User segmentation and cohort analysis',
+        'Push notification analytics',
+        'In-app purchase tracking',
+        'Custom event tracking',
+        'Real-time dashboard and alerts'
+      ],
+      price: '$129/month',
+      users: 'Up to 20 users',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      id: '9',
+      icon: '💼',
+      title: 'Project Management Suite',
+      description: 'Complete project management solution with task tracking, team collaboration, and resource management',
+      features: [
+        'Kanban boards and Gantt charts',
+        'Task assignment and tracking',
+        'Team collaboration tools',
+        'Resource planning and allocation',
+        'Time tracking and reporting',
+        'Budget management and forecasting',
+        'Integration with development tools',
+        'Custom workflows and automation'
+      ],
+      price: '$219/month',
+      users: 'Up to 60 users',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      id: '10',
+      icon: '🎯',
+      title: 'Lead Generation Platform',
+      description: 'AI-powered lead generation and qualification platform with automated outreach and CRM integration',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Automated outreach campaigns',
+        'Multi-channel lead capture forms',
+        'CRM integration and synchronization',
+        'Lead nurturing workflows',
+        'Conversion tracking and analytics',
+        'A/B testing for campaigns',
+        'White-label lead generation pages'
+      ],
+      price: '$349/month',
+      users: 'Up to 45 users',
+      popular: false,
+      category: 'Sales'
+    },
+    {
+      id: '11',
+      icon: '📊',
+      title: 'Social Media Management',
+      description: 'Comprehensive social media management platform with scheduling, analytics, and engagement tools',
+      features: [
+        'Multi-platform social media scheduling',
+        'Content calendar and planning',
+        'Social media analytics and reporting',
+        'Engagement monitoring and response',
+        'Hashtag research and optimization',
+        'Influencer collaboration tools',
+        'Social listening and sentiment analysis',
+        'Team collaboration and approval workflows'
+      ],
+      price: '$199/month',
+      users: 'Up to 30 users',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '12',
+      icon: '🔍',
+      title: 'SEO Optimization Suite',
+      description: 'Complete SEO optimization platform with keyword research, site auditing, and ranking tracking',
+      features: [
+        'Keyword research and analysis tools',
+        'Website SEO auditing and recommendations',
+        'Ranking tracking and monitoring',
+        'Competitor analysis and benchmarking',
+        'Content optimization suggestions',
+        'Technical SEO auditing',
+        'Local SEO optimization tools',
+        'Custom reporting and white-label options'
+      ],
+      price: '$279/month',
+      users: 'Up to 25 users',
+      popular: true,
+      category: 'SEO'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
+  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Productivity', 'Sales', 'SEO'];
 
   const benefits = [
     'Quick setup and deployment',
