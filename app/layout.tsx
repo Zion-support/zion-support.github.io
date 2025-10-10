@@ -19,28 +19,31 @@ const features = [    {
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
-    icon: Globe,      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'  }
-  }]const benefits = [
-=======
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
   ];
 
   const benefits = [
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective pricing plans',    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+
+  return (
+    <>
       <Helmet>
         <title>Layout | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI solutions" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -180,11 +183,9 @@ return (
           </div>
         </div>
       </section>
-    </div>
-  )
-}
-export default LayoutPage};
+      </div>
+    </>
+  );
+};
 
 export default LayoutPage;
-
->>>>>>> 55f9bfb92d821ca12ee8dd7824e7a6cd258dc747

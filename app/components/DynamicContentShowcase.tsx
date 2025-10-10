@@ -1,6 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react'const DynamicContentShowcase: React.FC = () => {
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+
+const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const features = [
     {
@@ -42,8 +44,9 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock,
       icon: Globe,
       color: 'from-teal-500 to-cyan-600'
     }
-  ]  const benefits = [
-];
+  ];
+
+  const benefits = [
 'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -82,7 +85,9 @@ import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock,
       setCurrentIndex((prev) => (prev + 1) % features.length)
     }, 3000)
     return () => clearInterval(timer)
-  }, [features.length])  return (
+    }, [features.length]);
+
+  return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

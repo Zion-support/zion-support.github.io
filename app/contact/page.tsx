@@ -31,7 +31,8 @@ const ContactPage: React.FC = () => {
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus('success')      setFormData({
+      setSubmitStatus('success');
+      setFormData({
         name: '',
         email: '',
         company: '',

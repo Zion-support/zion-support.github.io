@@ -22,22 +22,13 @@ import {
   Target
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
+import Footer from '../components/Footer';
+
+const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     // AI Services
-=======
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
-      price: 'Starting at $1,500',
-      category: 'AI Services',
-      popular: true
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Chatbots',
@@ -372,7 +363,6 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
       benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies for optimal performance.',
@@ -390,6 +380,129 @@ import Footer from '../components/Footer'const ServicesPage: React.FC = () => {
       features: ['iOS & Android Apps', 'Cross-platform Development', 'App Store Optimization', 'Push Notifications', 'Offline Functionality', 'Performance Optimization'],
       price: 'Starting at $8,000/project',
       marketPrice: '$15000-50000/project',
-      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']    },
-    {
+      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']
+    }
+  ]
+
+  const categories = ['all', 'ai', 'it', 'saas']
+
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
+
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Comprehensive AI and IT services including chatbots, data analytics, cloud solutions, cybersecurity, and custom software development." />
+        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, software development, data analytics" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed to transform your business operations and drive growth.
+            </p>
+          </div>
+
+          {/* Search and Filter */}
+          <div className="mb-8 flex flex-col md:flex-row gap-4 justify-center">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 w-full md:w-80"
+              />
+            </div>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+            >
+              <option value="all">All Categories</option>
+              <option value="ai">AI Services</option>
+              <option value="it">IT Services</option>
+              <option value="saas">Micro SAAS</option>
+            </select>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                    <span className="text-sm text-cyan-400 capitalize">{service.category}</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-white mb-2">Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex justify-between items-center mb-4">
+                  <div>
+                    <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                    {service.marketPrice && (
+                      <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                    )}
+                  </div>
+                  {service.popular && (
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Popular
+                    </span>
+                  )}
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
+            </div>
+          )}
+        </main>
+
+        <Footer />
+      </div>
+    </>
+  )
+}
+
 export default ServicesPage
