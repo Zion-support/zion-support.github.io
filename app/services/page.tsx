@@ -1,637 +1,386 @@
 'use client';
-import React, { lazy } from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp, DollarSign, Calendar, Clock3, Calculator, CreditCard, Stethoscope, GraduationCap, Factory, Truck, Home, Scale, Mic, Cube, Camera, Gamepad2, ShoppingCart, Building, Car, Plane, Ship, Train, Hammer, Paintbrush, Scissors, BookOpen, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Package, Headphones } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  Users, 
+  Zap,
+  Star,
+  TrendingUp,
+  Settings,
+  Globe,
+  Target,
+  ArrowRight,
+  Sparkles,
+  Database,
+  MessageSquare,
+  Eye,
+  Cpu,
+  Lock,
+  BarChart3,
+  FileText,
+  Search,
+  Bot,
+  Palette,
+  Camera,
+  Music,
+  Video,
+  ShoppingCart,
+  CreditCard,
+  Building,
+  Factory,
+  Car,
+  Home,
+  Heart,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Calculator,
+  Calendar,
+  Clock3,
+  Activity,
+  DollarSign,
+  Truck,
+  Mic,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
+const ServicesPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('micro-saas');
+  const [isLoaded, setIsLoaded] = useState(false);
 
-const ServicesPage: React.FC = React.memo((props) => {
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
   const microSAASServices = [
     // Productivity & Management Tools
-    {
-      title: 'AI Project Manager Pro',
-      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
-      icon: BarChart,
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
-      link: '/ai-project-manager',
-      popular: true,
-<<<<<<< HEAD
-      category: 'Productivity'
-=======
-      category: 'Productivity',
-      rating: 4.9,
-      users: '10,000+',
-      freeTrial: '14 days'
->>>>>>> origin/main
-    },
-    {
-      title: 'AI Task Manager Pro',
-      description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
-      icon: Check,
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],
-      benefits: ['60% productivity boost', '50% better time management', '40% fewer missed deadlines', '25% stress reduction'],
-      link: '/ai-task-manager',
-      popular: true,
-<<<<<<< HEAD
-      category: 'Marketing'
-    },
-    {
-      title: 'AI Analytics Dashboard',
-      description: 'Transform your data into actionable insights with AI-powered analytics',
-      icon: PieChart,
-      price: '$149/month',
-      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
-      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
-      link: '/ai-analytics',
-      popular: true,
-      category: 'Analytics'
-    },
-    {
-      title: 'AI Email Marketing',
-      description: 'Transform your email marketing with AI-powered content generation and automation',
-      icon: Mail,
-      price: '$99/month',
-      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
-      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
-      link: '/ai-email-marketing',
-      popular: true,
-      category: 'Marketing'}
-    },
-    {
-      title: 'AI Customer Support Bot',
-      description: 'Provide 24/7 intelligent customer support with AI-powered chatbot',
-      icon: Bot,
-      price: '$149/month',
-      features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights'],
-      benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
-      link: '/ai-customer-support-bot',
-      popular: true,
-      category: 'Customer Service'}
-    },
-    {
-      title: 'AI Code Review Assistant',
-      description: 'Advanced automated code analysis with AI-powered bug detection and optimization',
-      icon: Code,
-      price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
-      benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
-      link: '/ai-code-generation',
-      popular: false,
-      category: 'Development'}
-    },
-    {
-      title: 'AI Video Generator',
-      description: 'Create professional videos with AI-powered editing and content generation',
-      icon: Video,
-      price: '$199/month',
-      features: ['AI video editing', 'Auto-generated content', 'Voice synthesis', 'Multi-language support'],
-      benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports'],
-      link: '/ai-video-generation',
-      popular: true,
-      category: 'Content Creation'}
-    },
-    {
-      title: 'AI Voice Cloning',
-      description: 'Create realistic voice clones for content creation and accessibility',
-      icon: Mic,
-      price: '$129/month',
-      features: ['High-quality voice cloning', 'Multiple voice options', 'Real-time synthesis', 'API integration'],
-      benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing'],
-      link: '/ai-voice-cloning',
-      popular: false,
-      category: 'Content Creation'}
-    },
-    {
-      title: 'AI Workflow Automation',
-      description: 'Automate complex business processes with intelligent workflow management',
-=======
-      category: 'Productivity',
-      rating: 4.8,
-      users: '8,500+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Workflow Automation Pro',
-      description: 'Automate complex business processes with intelligent workflow management and exception handling. Save 20+ hours per week.',
->>>>>>> origin/main
-      icon: Zap,
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard', 'Custom triggers', 'Integration APIs', 'Approval workflows', 'Document processing'],
-      benefits: ['80% process automation', '20+ hours saved weekly', '60% cost reduction', '99% accuracy rate'],
-      link: '/ai-workflow-automation',
-      popular: true,
-      category: 'Automation',
-      rating: 4.7,
-      users: '6,200+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Scheduler Pro',
-      description: 'Intelligent scheduling with AI-powered optimization for meetings, appointments, and resource allocation. Perfect for busy professionals.',
-      icon: Calendar,
-      price: '$39/month',
-      originalPrice: '$59/month',
-      features: ['Smart scheduling', 'Conflict resolution', 'Time zone handling', 'Resource booking', 'Recurring events', 'Calendar sync', 'Meeting optimization', 'Availability management'],
-      benefits: ['50% scheduling efficiency', '90% conflict reduction', '30% time saved', 'Perfect coordination'],
-      link: '/ai-scheduler',
-      popular: false,
-      category: 'Productivity',
-      rating: 4.6,
-      users: '4,100+',
-      freeTrial: '7 days'
-    },
-    {
-      title: 'AI Time Tracker Pro',
-      description: 'Advanced time tracking with AI insights, productivity analysis, and automated reporting. Understand how you spend your time.',
-      icon: Clock3,
-      price: '$34/month',
-      originalPrice: '$49/month',
-      features: ['Automatic time tracking', 'AI insights', 'Productivity analysis', 'Project billing', 'Team monitoring', 'Detailed reports', 'Goal setting', 'Distraction alerts'],
-      benefits: ['25% time awareness', '40% productivity insights', '30% better focus', 'Accurate billing'],
-      link: '/ai-time-tracker',
-      popular: false,
-<<<<<<< HEAD
-      category: 'Creative'}
-    },
-    {
-      title: 'AI Fitness Coach',
-      description: 'Personalized fitness coaching with AI-powered workout plans',
-      icon: Heart,
-      price: '$89/month',
-      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting'],
-      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling'],
-      link: '/ai-fitness-coach',
-      popular: false,
-      category: 'Health & Fitness'}
-    },
-    {
-      title: 'AI Sales Automation',
-      description: 'Boost sales with AI-powered lead generation and conversion optimization',
-      icon: TrendingUp,
-      price: '$199/month',
-      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration'],
-      benefits: ['35% more leads', '50% conversion increase', '25% revenue growth'],
-      link: '/ai-sales-automation',
-      popular: true,
-      category: 'Sales'}
-    },
-    {
-      title: 'AI Data Visualization',
-      description: 'Transform complex data into interactive visualizations',
-      icon: BarChart,
-      price: '$139/month',
-      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling'],
-      benefits: ['Faster insights', 'Better decisions', 'Stunning presentations'],
-      link: '/ai-data-visualization',
-      popular: false,
-      category: 'Analytics'}
-    },
-    {
-      title: 'AI 3D Generation',
-      description: 'Create 3D models and environments with AI technology',
-      icon: Cube,
-      price: '$249/month',
-      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
-      benefits: ['Professional 3D content', 'Time savings', 'Creative freedom'],
-      link: '/ai-3d-generation',
-      popular: false,
-      category: '3D & Graphics'}
-    },
-    {
-      title: 'AI Customer Support',
-      description: 'Advanced customer support with AI-powered ticket management',
-      icon: Headphones,
-      price: '$169/month',
-      features: ['Ticket automation', 'Sentiment analysis', 'Knowledge base', 'Multi-channel support'],
-      benefits: ['Faster resolution', 'Higher satisfaction', '24/7 availability'],
-      link: '/ai-customer-support',
-      popular: true,
-      category: 'Customer Service'}
-    },
-    {
-      title: 'AI Content Writer',
-      description: 'Generate high-quality content with AI-powered writing assistance',
-      icon: FileText,
-      price: '$79/month',
-      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization'],
-      benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency'],
-      link: '/ai-content-writer',
-      popular: true,
-      category: 'Content Creation'}
-    },
-    {
-      title: 'AI Inventory Manager',
-      description: 'Optimize inventory with AI-powered demand forecasting',
-      icon: Package,
-      price: '$149/month',
-      features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Analytics dashboard'],
-      benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts'],
-      link: '/ai-inventory-manager',
-      popular: false,
-      category: 'Operations'}
-    },
-    {
-      title: 'AI HR Assistant',
-      description: 'Streamline HR processes with AI-powered recruitment and management',
-      icon: Users,
-      price: '$189/month',
-      features: ['Resume screening', 'Interview scheduling', 'Employee analytics', 'Performance tracking'],
-      benefits: ['50% faster hiring', 'Better candidate matching', 'Reduced bias'],
-      link: '/ai-hr-assistant',
-      popular: false,
-      category: 'Human Resources'}
-    },
-    {
-      title: 'AI Financial Advisor',
-      description: 'Personalized financial planning with AI-powered investment advice',
-      icon: DollarSign,
-      price: '$299/month',
-      features: ['Portfolio analysis', 'Risk assessment', 'Tax optimization', 'Retirement planning'],
-      benefits: ['Better returns', 'Risk management', 'Tax savings'],
-      link: '/ai-financial-advisor',
-      popular: false,
-      category: 'Finance'}
-    },
-    {
-      title: 'AI Legal Assistant',
-      description: 'Legal document analysis and contract review with AI technology',
-      icon: Scale,
-      price: '$399/month',
-      features: ['Contract analysis', 'Legal research', 'Document generation', 'Compliance checking'],
-      benefits: ['Faster reviews', 'Risk identification', 'Cost savings'],
-      link: '/ai-legal-assistant',
-      popular: false,
-      category: 'Legal'
-    }
-  ]
-  const aiServices = [
-    {
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics and decision-making',
-      icon: Brain,
-      price: '$1,500/month',
-      features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
-      color: 'text-purple-400',
-      category: 'AI Development'}
-    },
-    {
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis and language understanding',
-      icon: MessageSquare,
-      price: '$1,200/month',
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
-      color: 'text-blue-400',
-      category: 'AI Development'}
-    },
-    {
-      title: 'Computer Vision',
-      description: 'Image and video analysis solutions for object detection and recognition',
-      icon: Eye,
-      price: '$1,800/month',
-      features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
-      color: 'text-green-400',
-      category: 'AI Development'}
-    },
-    {
-      title: 'AI Automation',
-      description: 'Intelligent process automation with decision-making capabilities',
-      icon: Zap,
-      price: '$1,400/month',
-      features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
-      color: 'text-cyan-400',
-      category: 'Automation'}
-    },
-    {
-      title: 'AI Data Visualization',
-      description: 'Transform complex data into interactive visualizations',
-      icon: BarChart,
-      price: '$1,100/month',
-      features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
-      color: 'text-orange-400',
-      category: 'Data Science'}
-    },
-    {
-      title: 'AI 3D Generation',
-      description: 'Create 3D models and environments with AI technology',
-      icon: Cube,
-      price: '$1,600/month',
-      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
-      color: 'text-pink-400',
-      category: '3D & Graphics'}
-    },
-    {
-      title: 'AI Voice Synthesis',
-      description: 'Advanced voice cloning and text-to-speech solutions',
-      icon: Mic,
-      price: '$1,300/month',
-      features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
-      color: 'text-indigo-400',
-      category: 'Voice Technology'}
-    },
-    {
-      title: 'AI Content Generation',
-      description: 'Automated content creation for marketing and communication',
-      icon: FileText,
-      price: '$1,000/month',
-      features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
-      color: 'text-yellow-400',
-      category: 'Content AI'}
-    },
-    {
-      title: 'AI Predictive Analytics',
-      description: 'Advanced forecasting and trend analysis with machine learning',
-      icon: TrendingUp,
-      price: '$1,700/month',
-      features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
-      color: 'text-red-400',
-      category: 'Analytics'}
-    },
-    {
-      title: 'AI Recommendation Engine',
-      description: 'Personalized recommendation systems for e-commerce and content',
-      icon: Target,
-      price: '$1,400/month',
-      features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing'],
-      color: 'text-teal-400',
-      category: 'Personalization'}
-    },
-    {
-      title: 'AI Fraud Detection',
-      description: 'Advanced fraud prevention and security monitoring',
-      icon: Shield,
-      price: '$1,900/month',
-      features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
-      color: 'text-red-500',
-      category: 'Security'}
-    },
-    {
-      title: 'AI Document Processing',
-      description: 'Intelligent document analysis and data extraction',
-      icon: Search,
-      price: '$1,200/month',
-      features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
-      color: 'text-gray-400',
-      category: 'Document AI'
-    }
-  ]
-  const itServices = [
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless cloud migration with zero downtime and data integrity',
-      icon: Cloud,
-      price: '$1,299/month',
-      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'],
-      color: 'text-blue-400',
-      category: 'Cloud Computing'}
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions with threat detection and prevention',
-      icon: Shield,
-      price: '$1,599/month',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
-      color: 'text-red-400',
-      category: 'Security'}
-    },
-    {
-      title: 'DevOps & CI/CD',
-      description: 'Streamlined development workflows with automated testing and deployment',
-      icon: Settings,
-      price: '$1,199/month',
-      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'],
-      color: 'text-green-400',
-      category: 'Development'}
-    },
-    {
-      title: 'Database Services',
-      description: 'Database design, optimization, and management with AI-powered tuning',
-      icon: Database,
-      price: '$899/month',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
-      color: 'text-purple-400',
-      category: 'Data Management'}
-    },
-    {
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting for digital transformation and optimization',
-      icon: Briefcase,
-      price: '$1,000/month',
-      features: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Process Optimization'],
-      color: 'text-yellow-400',
-      category: 'Consulting'}
-    },
-    {
-      title: 'Network Infrastructure',
-      description: 'Design and implement robust network infrastructure solutions',
-      icon: Globe,
-      price: '$1,400/month',
-      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
-      color: 'text-indigo-400',
-      category: 'Infrastructure'}
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile application development',
-      icon: Smartphone,
-      price: '$1,500/month',
-      features: ['iOS/Android Apps', 'Cross-platform Development', 'UI/UX Design', 'App Store Optimization'],
-      color: 'text-pink-400',
-      category: 'Mobile Development'}
-    },
-    {
-      title: 'Web Development',
-      description: 'Modern web applications with cutting-edge technologies',
-      icon: Code,
-      price: '$1,200/month',
-      features: ['Frontend Development', 'Backend Development', 'API Integration', 'Performance Optimization'],
-      color: 'text-cyan-400',
-      category: 'Web Development'}
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Business intelligence and data analytics solutions',
-      icon: BarChart,
-      price: '$1,300/month',
-      features: ['Data Warehousing', 'Business Intelligence', 'Reporting Dashboards', 'Data Mining'],
-      color: 'text-orange-400',
-      category: 'Analytics'}
-    },
-    {
-      title: 'IT Support & Maintenance',
-      description: 'Comprehensive IT support and system maintenance services',
-      icon: Wrench,
-      price: '$800/month',
-      features: ['24/7 Support', 'System Maintenance', 'Software Updates', 'Hardware Management'],
-      color: 'text-gray-400',
-      category: 'Support'}
-    },
-    {
-      title: 'Blockchain Solutions',
-      description: 'Blockchain development and cryptocurrency solutions',
-      icon: Lock,
-      price: '$2,000/month',
-      features: ['Smart Contracts', 'DApp Development', 'Token Creation', 'DeFi Solutions'],
-      color: 'text-yellow-500',
-      category: 'Blockchain'}
-    },
-    {
-      title: 'IoT Solutions',
-      description: 'Internet of Things development and implementation',
-      icon: Cpu,
-      price: '$1,600/month',
-      features: ['IoT Device Development', 'Sensor Integration', 'Data Collection', 'Real-time Monitoring'],
-      color: 'text-green-500',
-      category: 'IoT'
-    }
-  ]
-  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Sales', 'Operations', 'Human Resources', 'Finance', 'Legal', '3D & Graphics', 'Voice Technology', 'Content AI', 'Personalization', 'Security', 'Document AI', 'Cloud Computing', 'Data Management', 'Consulting', 'Infrastructure', 'Mobile Development', 'Web Development', 'Support', 'Blockchain', 'IoT']
-=======
-      category: 'Productivity',
-      rating: 4.5,
-      users: '3,800+',
-      freeTrial: '7 days'
-    }
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo', description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment' },
+    { name: 'AI Task Manager Pro', href: '/ai-task-manager', icon: CheckCircle, category: 'Productivity', price: '$49/mo', description: 'Smart task management with AI prioritization, deadline tracking, and productivity insights' },
+    { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo', description: 'Automate repetitive tasks with intelligent workflow design and execution' },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo', description: 'Smart scheduling with conflict resolution and optimal time slot recommendations' },
+    { name: 'AI Time Tracker Pro', href: '/ai-time-tracker', icon: Clock3, category: 'Productivity', price: '$34/mo', description: 'Advanced time tracking with AI-powered productivity analysis and reporting' },
+    
+    // Content & Marketing Tools
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo', description: 'Advanced AI content generation for blogs, articles, and marketing copy' },
+    { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing', price: '$69/mo', description: 'Automated social media posting, engagement, and analytics with AI optimization' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$59/mo', description: 'AI-powered email campaigns with personalization and performance optimization' },
+    { name: 'AI SEO Optimizer Pro', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing', price: '$79/mo', description: 'Comprehensive SEO analysis and optimization with AI-driven recommendations' },
+    { name: 'AI Lead Generation Pro', href: '/ai-lead-generation', icon: Target, category: 'Marketing', price: '$99/mo', description: 'Intelligent lead scoring, qualification, and nurturing automation' },
+    
+    // Business & Finance Tools
+    { name: 'AI CRM Intelligence Pro', href: '/ai-crm', icon: Users, category: 'Business', price: '$89/mo', description: 'Smart CRM with AI-powered customer insights and sales forecasting' },
+    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance', price: '$79/mo', description: 'Advanced financial analysis with AI-driven insights and forecasting' },
+    { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator', icon: FileText, category: 'Finance', price: '$49/mo', description: 'Automated invoice generation with AI-powered pricing and payment tracking' },
+    { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker', icon: CreditCard, category: 'Finance', price: '$29/mo', description: 'Smart expense tracking with AI categorization and budget management' },
+    { name: 'AI Stock Portfolio Manager', href: '/ai-stock-portfolio-manager', icon: TrendingUp, category: 'Finance', price: '$79/mo', description: 'AI-powered portfolio optimization and investment recommendations' },
+    
+    // Customer Service & Support Tools
+    { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot', icon: Bot, category: 'Support', price: '$99/mo', description: 'Advanced AI chatbot with natural language processing and human handoff' },
+    { name: 'AI Chatbot Builder Pro', href: '/ai-chatbot-builder', icon: Bot, category: 'Support', price: '$69/mo', description: 'No-code chatbot builder with AI training and optimization' },
+    { name: 'AI Email Assistant Pro', href: '/ai-email-assistant', icon: Mail, category: 'Support', price: '$39/mo', description: 'AI-powered email response generation and customer service automation' },
+    
+    // Development & Technical Tools
+    { name: 'AI Code Review Assistant Pro', href: '/ai-code-generation', icon: Code, category: 'Development', price: '$89/mo', description: 'AI-powered code review, suggestions, and automated testing' },
+    { name: 'AI Mobile App Builder Pro', href: '/ai-mobile-app-development', icon: Settings, category: 'Development', price: '$149/mo', description: 'No-code mobile app development with AI optimization' },
+    { name: 'AI Cybersecurity Shield Pro', href: '/ai-cybersecurity', icon: Shield, category: 'Security', price: '$199/mo', description: 'AI-powered threat detection and security monitoring' },
+    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$19/mo', description: 'Advanced password management with AI-powered security recommendations' },
+    
+    // Analytics & Data Tools
+    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics', price: '$99/mo', description: 'Advanced data analytics with AI-powered insights and predictions' },
+    { name: 'AI Data Visualization Pro', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics', price: '$69/mo', description: 'AI-generated charts, graphs, and interactive dashboards' },
+    
+    // Creative & Media Tools
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative', price: '$149/mo', description: 'AI-powered video creation from text prompts and templates' },
+    { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning', icon: Music, category: 'Creative', price: '$79/mo', description: 'High-quality voice cloning and synthesis for various applications' },
+    { name: 'AI Music Composer Pro', href: '/ai-music-composition', icon: Music, category: 'Creative', price: '$59/mo', description: 'AI-generated music composition and production tools' },
+    { name: 'AI Logo Designer Pro', href: '/ai-logo-designer', icon: Palette, category: 'Creative', price: '$59/mo', description: 'Professional logo design with AI-powered creativity' },
+    
+    // Health & Wellness Tools
+    { name: 'AI Healthcare Assistant Pro', href: '/ai-healthcare', icon: Stethoscope, category: 'Health', price: '$49/mo', description: 'AI-powered health monitoring and wellness recommendations' },
+    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Heart, category: 'Health', price: '$39/mo', description: 'Personalized fitness plans and workout optimization with AI' },
+    
+    // Sales & Business Tools
+    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation', icon: Target, category: 'Sales', price: '$149/mo', description: 'Complete sales automation with AI-powered lead scoring and follow-up' },
+    { name: 'AI Sales Forecasting', href: '/ai-sales-forecasting', icon: TrendingUp, category: 'Sales', price: '$99/mo', description: 'Accurate sales predictions and pipeline analysis with AI' }
   ];
 
->>>>>>> origin/main
+  const aiServices = [
+    // Core AI Technologies
+    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$2,500/mo', description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent automation' },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare, price: '$1,800/mo', description: 'Advanced NLP for text analysis, sentiment analysis, and language understanding' },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye, price: '$2,200/mo', description: 'Image and video analysis, object detection, and visual recognition systems' },
+    { name: 'Deep Learning Solutions', href: '/deep-learning', icon: Brain, price: '$3,000/mo', description: 'Neural network architectures for complex pattern recognition and decision making' },
+    { name: 'Generative AI Solutions', href: '/generative-ai', icon: Sparkles, price: '$2,000/mo', description: 'AI content generation, creative applications, and synthetic data creation' },
+    
+    // Business Intelligence & Analytics
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, price: '$1,500/mo', description: 'AI-powered business insights, reporting, and strategic decision support' },
+    { name: 'AI Predictive Analytics Platform', href: '/ai-predictive-analytics', icon: BarChart, price: '$2,200/mo', description: 'Advanced forecasting and predictive modeling for business outcomes' },
+    { name: 'AI Real-Time Analytics', href: '/ai-realtime-analytics', icon: Activity, price: '$1,600/mo', description: 'Live data processing and instant insights for operational decisions' },
+    
+    // Industry-Specific AI Solutions
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope, price: '$2,500/mo', description: 'Medical diagnosis assistance, drug discovery, and patient care optimization' },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard, price: '$2,800/mo', description: 'Fraud detection, algorithmic trading, and financial risk assessment' },
+    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory, price: '$2,200/mo', description: 'Smart manufacturing, quality control, and supply chain optimization' },
+    { name: 'AI Retail Solutions', href: '/ai-retail', icon: ShoppingCart, price: '$1,800/mo', description: 'Personalized shopping experiences, inventory optimization, and demand forecasting' },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck, price: '$2,000/mo', description: 'Route optimization, autonomous vehicles, and logistics management' },
+    
+    // Advanced AI Technologies
+    { name: 'Quantum AI Computing', href: '/ai-quantum-computing', icon: Cpu, price: '$5,000/mo', description: 'Quantum-enhanced AI algorithms for complex optimization problems' },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings, price: '$4,500/mo', description: 'Intelligent robotic systems for automation and human-robot collaboration' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings, price: '$4,200/mo', description: 'Self-operating systems for vehicles, drones, and industrial automation' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock, price: '$2,500/mo', description: 'AI-powered blockchain applications and smart contract optimization' }
+  ];
+
+  const itServices = [
+    // Cloud Services & Infrastructure
+    { name: 'Cloud Migration Services', href: '/cloud-migration', icon: Cloud, price: '$2,500/mo', description: 'Complete cloud migration strategy, planning, and execution for AWS, Azure, and GCP' },
+    { name: 'Cloud Infrastructure Management', href: '/cloud-infrastructure', icon: Cloud, price: '$2,000/mo', description: '24/7 cloud infrastructure monitoring, optimization, and management' },
+    { name: 'Multi-Cloud Solutions', href: '/multi-cloud', icon: Cloud, price: '$2,800/mo', description: 'Hybrid and multi-cloud architecture design and implementation' },
+    
+    // Cybersecurity & Security Services
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Shield, price: '$2,500/mo', description: 'Comprehensive cybersecurity assessment, implementation, and monitoring' },
+    { name: 'Network Security Solutions', href: '/network-security', icon: Shield, price: '$2,000/mo', description: 'Advanced network security architecture and threat protection' },
+    { name: 'Security Operations Center (SOC)', href: '/soc', icon: Activity, price: '$3,500/mo', description: '24/7 security monitoring, incident response, and threat hunting' },
+    
+    // DevOps & Development Services
+    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, price: '$2,200/mo', description: 'DevOps transformation, CI/CD pipeline setup, and automation' },
+    { name: 'Container Orchestration', href: '/container-orchestration', icon: Settings, price: '$1,800/mo', description: 'Kubernetes, Docker, and container management solutions' },
+    { name: 'API Development & Management', href: '/api-development', icon: Code, price: '$1,800/mo', description: 'RESTful and GraphQL API development and lifecycle management' },
+    
+    // Database & Data Services
+    { name: 'Database Services', href: '/database-services', icon: Database, price: '$1,800/mo', description: 'Database design, optimization, migration, and management' },
+    { name: 'Data Warehouse Solutions', href: '/data-warehouse', icon: Database, price: '$2,200/mo', description: 'Data warehouse design, ETL processes, and analytics infrastructure' },
+    { name: 'Big Data Solutions', href: '/big-data', icon: Database, price: '$2,800/mo', description: 'Hadoop, Spark, and big data processing solutions' },
+    
+    // Enterprise Solutions & Integration
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building, price: '$4,000/mo', description: 'Comprehensive enterprise IT transformation and digital modernization' },
+    { name: 'System Integration', href: '/system-integration', icon: Settings, price: '$2,500/mo', description: 'Legacy system integration and API connectivity solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Globe, price: '$3,000/mo', description: 'Complete digital transformation strategy and implementation' },
+    
+    // IT Infrastructure & Support
+    { name: 'IT Infrastructure Management', href: '/it-infrastructure', icon: Settings, price: '$2,200/mo', description: 'Complete IT infrastructure design, implementation, and management' },
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users, price: '$1,500/mo', description: '24/7 IT support, helpdesk, and technical assistance' },
+    { name: 'IT Asset Management', href: '/it-asset-management', icon: BarChart, price: '$1,200/mo', description: 'IT asset tracking, lifecycle management, and optimization' }
+  ];
+
+  const specializedServices = [
+    // Quantum Computing & Advanced Technologies
+    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, price: '$8,000/mo', description: 'Quantum algorithm development, quantum machine learning, and quantum optimization' },
+    { name: 'Quantum AI Integration', href: '/quantum-ai', icon: Brain, price: '$6,000/mo', description: 'Quantum-enhanced AI algorithms and hybrid quantum-classical computing' },
+    
+    // Autonomous Systems & Robotics
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$6,500/mo', description: 'Self-driving vehicles, autonomous drones, and intelligent automation systems' },
+    { name: 'Robotic Process Automation', href: '/rpa', icon: Settings, price: '$2,800/mo', description: 'Intelligent process automation and robotic workflow optimization' },
+    
+    // Blockchain & Web3 Technologies
+    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$3,500/mo', description: 'Blockchain development, smart contracts, and Web3 application architecture' },
+    { name: 'DeFi Solutions', href: '/defi', icon: CreditCard, price: '$4,000/mo', description: 'Decentralized finance protocols and DeFi application development' },
+    
+    // IoT & Edge Computing
+    { name: 'IoT Solutions', href: '/iot-solutions', icon: Settings, price: '$2,800/mo', description: 'Internet of Things device integration, data collection, and management' },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Cpu, price: '$2,200/mo', description: 'Edge computing infrastructure and distributed processing solutions' },
+    
+    // Emerging Technologies
+    { name: 'Augmented Reality (AR)', href: '/ar-solutions', icon: Eye, price: '$3,200/mo', description: 'AR application development and immersive user experiences' },
+    { name: 'Virtual Reality (VR)', href: '/vr-solutions', icon: Eye, price: '$3,500/mo', description: 'VR platform development and virtual environment creation' },
+    { name: 'Digital Twins', href: '/digital-twins', icon: Settings, price: '$3,000/mo', description: 'Digital twin creation and real-time simulation platforms' }
+  ];
+
+  const tabs = [
+    { id: 'micro-saas', name: 'Micro SAAS Solutions', count: microSAASServices.length },
+    { id: 'ai-services', name: 'AI Services', count: aiServices.length },
+    { id: 'it-services', name: 'IT Services', count: itServices.length },
+    { id: 'specialized', name: 'Specialized Solutions', count: specializedServices.length }
+  ];
+
+  const getCurrentServices = () => {
+    switch (activeTab) {
+      case 'micro-saas': return microSAASServices;
+      case 'ai-services': return aiServices;
+      case 'it-services': return itServices;
+      case 'specialized': return specializedServices;
+      default: return microSAASServices;
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+    <>
+      <Helmet>
+        <title>Our Services - Zion Tech Group | AI, IT & Micro SAAS Solutions</title>
+        <meta name="description" content="Comprehensive AI services, IT solutions, and micro SAAS applications. From machine learning to cloud infrastructure, we provide cutting-edge technology solutions for businesses of all sizes." />
+        <meta name="keywords" content="AI services, IT solutions, micro SAAS, cloud computing, cybersecurity, machine learning, business intelligence, digital transformation" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
+      </Helmet>
+      
       <Navigation />
       
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a>
-      <main className="container mx-auto px-4 py-16 pt-24" id="main-content">
-        {/* Header */}
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Our Services">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Comprehensive AI and IT solutions designed to transform your business operations and drive unprecedented growth.
-          </p>
-        </section>
-
-        {/* Micro SAAS Services */}
-        <section className="mb-16" aria-labelledby="micro-saas-heading">
-          <h2 id="micro-saas-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">
-            Micro SAAS Solutions
-          </h2>
-          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Powerful, affordable AI-powered tools designed for modern businesses. Choose from 30+ specialized applications.
-          </p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
-            {microSAASServices.map((service, index) => (
-              <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
-                      Popular
-                    </div>
-                  </div>
-                )}
-                <div className="flex items-center justify-between mb-4">
-                  <service.icon className="w-8 h-8 text-cyan-400" />
-                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded" style={{ color: "#9CA3AF" }}><span className="sr-only">Screen reader: </span>{service.category}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                  <ul className="space-y-1" role="list">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
-                  <ul className="space-y-1" role="list">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                        <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="text-center">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
-                    {service.originalPrice && (
-                      <div className="text-sm text-gray-400 line-through">{service.originalPrice}</div>
-                    )}
-                  </div>
-                  <div className="flex items-center justify-center gap-4 text-xs text-gray-400 mb-3">
-                    <div className="flex items-center gap-1">
-                      <StarIcon className="w-3 h-3 text-yellow-400" />
-                      <span>{service.rating}</span>
-                    </div>
-                    <div>{service.users} users</div>
-                    <div>{service.freeTrial} free trial</div>
-                  </div>
-                  <a 
-                    href={service.link}
-                    className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-                  >
-                    Learn More
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Comprehensive Technology
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                  Solutions & Services
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                From cutting-edge AI applications to robust IT infrastructure, we provide end-to-end technology solutions that drive innovation and growth for businesses worldwide.
+              </p>
+              
+              {/* Contact Info */}
+              <div className="flex flex-wrap justify-center gap-6 mb-8">
+                <div className="flex items-center space-x-2 text-cyan-400">
+                  <Phone className="w-5 h-5" />
+                  <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-300 transition-colors">
+                    {contactInfo.phone}
                   </a>
                 </div>
-              </article>
-            ))}
+                <div className="flex items-center space-x-2 text-cyan-400">
+                  <Mail className="w-5 h-5" />
+                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-300 transition-colors">
+                    {contactInfo.email}
+                  </a>
+                </div>
+                <div className="flex items-center space-x-2 text-cyan-400">
+                  <MapPin className="w-5 h-5" />
+                  <span>{contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="text-center">
-          <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+        {/* Service Categories Tabs */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    activeTab === tab.id
+                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-white'
+                  }`}
+                >
+                  {tab.name}
+                  <span className="ml-2 px-2 py-1 bg-slate-700 rounded-full text-xs">
+                    {tab.count}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {getCurrentServices().map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center space-x-3">
+                        <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
+                          <IconComponent className="w-6 h-6 text-cyan-400" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                            {service.name}
+                          </h3>
+                          <span className="text-sm text-cyan-400 font-medium">
+                            {service.category}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-white">
+                          {service.price}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <a
+                        href={service.href}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </a>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-400">4.8+</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Contact us today to discuss how our AI and IT solutions can revolutionize your business operations.
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our technology solutions can drive your success. Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                aria-label="Get Free Consultation"
+                href={`tel:${contactInfo.phone}`}
+                className="inline-flex items-center justify-center px-8 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-colors duration-300"
               >
-                Get Free Consultation
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: {contactInfo.phone}
               </a>
               <a
-                href="tel:+13024640950"
-                className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                href={`mailto:${contactInfo.email}`}
+                className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-300"
               >
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950
+                <Mail className="w-5 h-5 mr-2" />
+                Email Us
               </a>
-            </div>
-            <div className="mt-6 text-sm text-gray-400">
-              <p>📧 Email: kleber@ziontechgroup.com</p>
-              <p>📍 Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-              <p>🌐 Website: https://ziontechgroup.com</p>
             </div>
           </div>
         </section>
       </main>
-
+      
       <Footer />
-    </div>
-  )
-});
+    </>
+  );
+};
 
 export default ServicesPage;
