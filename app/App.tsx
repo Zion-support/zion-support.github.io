@@ -1,22 +1,5 @@
-<<<<<<< HEAD
 'use client';
-import React, { useEffect, useState, lazy } from 'react';
-import { useRouter } from 'next/navigation';
-
-// Lazy load components for better performance;
-const HomePage = lazy(() => import('./page'));
-
-// Loading component;
-const LoadingSpinner: React.FC = React.memo(() => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
-    </div>
-  </div>
-));
-=======
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -77,13 +60,6 @@ const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
 
-// Utils
-import { performanceOptimizer, performanceMonitor, seoOptimizer, accessibilityEnhancer, collectPerformanceMetrics } from './utils/performanceUtils';
-
-// Styles
-import './globals.css';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-
 // Mock components for now - these will be implemented
 const PerformanceOptimizer = () => null;
 const SEOOptimizer = () => null;
@@ -94,41 +70,29 @@ const SecurityEnhancer = () => null;
 // Loading component
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
+    </div>
   </div>
 );
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Initialize app;
+    // Initialize app
     const initializeApp = async () => {
       try {
-        // Add any initialization logic here;
+        // Add any initialization logic here
         setIsInitialized(true);
       } catch (error) {
+        console.warn('App initialization failed:', error);
         setIsInitialized(true);
       }
     };
 
     initializeApp();
-=======
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      try {
-        performanceOptimizer();
-        performanceMonitor();
-        seoOptimizer();
-        accessibilityEnhancer();
-        collectPerformanceMetrics();
-      } catch (error) {
-        console.warn('Performance monitoring initialization failed:', error);
-      }
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, []);
 
   if (!isInitialized) {
@@ -136,11 +100,6 @@ const App: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="App">
-      <HomePage />
-    </div>
-=======
     <HelmetProvider>
       <BrowserRouter>
         <div className="App">
@@ -217,7 +176,6 @@ const App: React.FC = () => {
         </div>
       </BrowserRouter>
     </HelmetProvider>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

@@ -1,30 +1,24 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { resolve } from 'path';
 
-<<<<<<< HEAD
-export default defineConfig({)
-  plugins: [react()],
-  root: '.',
-  publicDir: 'public',
-  resolve: {,
-    alias: {,
-      '@': resolve(__dirname, 'app'),
-      '@components': resolve(__dirname, 'app/components'),
-      '@utils': resolve(__dirname, 'app/utils'),
-      '@hooks': resolve(__dirname, 'app/hooks'),
-      '@types': resolve(__dirname, 'app/types'),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    }),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ],
+  root: '.',
   resolve: {
     alias: {
       '@': resolve(__dirname, './app'),
@@ -38,248 +32,71 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@app': resolve(__dirname, './app'),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
   build: {
-<<<<<<< HEAD
-    target: 'esnext'
-    minify: 'terser'
-    sourcemap: false;
-    cssMinify: true;
-    reportCompressedSize: true;
-    chunkSizeWarningLimit: 1000;
-    assetsInlineLimit: 4096;
-    cssCodeSplit: true;
-    terserOptions: {
-      compress: {,
-        drop_console: true;
-        drop_debugger: true;
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3;
-        unsafe: true;
-        unsafe_comps: true;
-        unsafe_math: true;
-        unsafe_proto: true;
-        unsafe_regexp: true;
-        unsafe_undefined: true;
-        conditionals: true;
-        dead_code: true;
-        evaluate: true;
-        if_return: true;
-        join_vars: true;
-        loops: true;
-        reduce_vars: true;
-        sequences: true;
-        side_effects: true;
-        switches: true;
-        top_ret: true;
-        toplevel: true;
-        unused: true;
-      },
-      mangle: {
-        safari10: true;
-        toplevel: true;
-        properties: {,
-          regex: /^_/,
-        }
-      },
-      format: {
-        comments: false;
-        ascii_only: true;
-        beautify: false;
-        ecma: 2020;
-        indent_level: 0;
-        indent_start: 0;
-        inline_script: false;
-        keep_numbers: false;
-        max_line_len: false;
-        preamble: null;
-        preserve_annotations: false;
-        quote_keys: false;
-        quote_style: 0;
-        safari10: true;
-        semicolons: true;
-        shebang: false;
-        shorthand: false;
-        source_map: null;
-        webkit: true;
-        width: 80;
-        wrap_iife: false;
-        wrap_func_args: true;
-      }
-    },
-    chunkSizeWarningLimit: 1000;
-    reportCompressedSize: true;
-    cssCodeSplit: true;
-    assetsInlineLimit: 4096;
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks - more granular splitting;
-          if (id.includes('node_modules')) {,
-            if (id.includes('react') || id.includes('react-dom')) {,
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-animations';
-            }
-            if (id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
-            }
-            if (id.includes('react-helmet-async')) {
-              return 'vendor-seo';
-            }
-            if (id.includes('gray-matter')) {
-              return 'vendor-content';
-            }
-            return 'vendor';
-          }
-          
-          // Component chunks - split by functionality;
-          if (id.includes('/src/components/')) {
-            if (id.includes('Navigation') || id.includes('Footer')) {
-              return 'layout';
-            }
-            if (id.includes('SEO') || id.includes('Analytics')) {
-              return 'seo';
-            }
-            if (id.includes('Performance') || id.includes('Accessibility')) {
-              return 'optimization';
-            }
-            return 'components';
-          }
-          
-          // Page chunks - split by category;
-          if (id.includes('/app/')) {
-            if (id.includes('/ai-') && !id.includes('/ai-services')) {
-              return 'ai-pages';
-            }
-            if (id.includes('/it-') || id.includes('/cloud-') || id.includes('/cybersecurity')) {
-              return 'it-pages';
-            }
-            if (id.includes('/micro-saas')) {
-              return 'saas-pages';
-            }
-            if (id.includes('/about') || id.includes('/contact') || id.includes('/team')) {
-              return 'company-pages';
-            }
-            return 'pages';
-          }
-=======
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2015',
+    chunkSizeWarningLimit: 1000,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
+    reportCompressedSize: true,
+    emptyOutDir: true,
+    copyPublicDir: true,
     rollupOptions: {
+      maxParallelFileOps: 2,
+      treeshake: {
+        moduleSideEffects: false,
+      },
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // React and React DOM
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react';
+          }
+          // Router library
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router';
+          }
+          // UI libraries
+          if (
+            id.includes('node_modules/framer-motion') ||
+            id.includes('node_modules/lucide-react') ||
+            id.includes('node_modules/@heroicons')
+          ) {
+            return 'ui';
+          }
+          // Charts and analytics
+          if (id.includes('node_modules/recharts') || id.includes('node_modules/web-vitals')) {
+            return 'analytics';
+          }
+          // Utilities
+          if (id.includes('node_modules/clsx') || id.includes('node_modules/tailwind-merge')) {
+            return 'utils';
+          }
+          // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            return 'vendor-misc';
+            return 'vendor';
           }
           
-          // App chunks
+          // App chunks - split by functionality
           if (id.includes('/app/ai-')) {
             return 'ai-services';
           }
-          if (id.includes('/app/it-')) {
+          if (id.includes('/app/it-') || id.includes('/app/cloud-') || id.includes('/app/cybersecurity')) {
             return 'it-services';
           }
           if (id.includes('/app/components/')) {
             return 'components';
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-<<<<<<< HEAD
-          router: ['react-router-dom'],
-=======
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          router: ['react-router-dom'],
-          utils: ['clsx', 'tailwind-merge']
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
-          return null;
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-=======
-          return 'app';
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+          if (id.includes('/app/')) {
+            return 'pages';
+          }
         },
-        chunkFileNames: 'assets/[name]-[hash].js'
-        entryFileNames: 'assets/[name]-[hash].js'
         assetFileNames: (assetInfo) => {
-<<<<<<< HEAD
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];,
-          if (/\.(css)$/.test(assetInfo.name)) {,
-=======
           const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             return `assets/css/[name]-[hash].${ext}`;
           }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
@@ -289,88 +106,110 @@ export default defineConfig({
             return `assets/fonts/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        }
-      }
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
     },
-<<<<<<< HEAD
-  },
-  server: {,
-    port: 3000;
-    host: true;
-  },
-  preview: {,
-    port: 4173;
-    host: true;
-  },
-  optimizeDeps: {,
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
-    exclude: ['@vite/client', '@vite/env']
-  },
-  css: {,
-    postcss: './postcss.config.js',
-=======
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.warn'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        reduce_vars: true,
+        sequences: true,
+        side_effects: true,
+        switches: true,
+        top_ret: true,
+        toplevel: true,
+        unused: true,
       },
       mangle: {
         safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/,
+        }
       },
       format: {
         comments: false,
-<<<<<<< HEAD
-=======
-        drop_debugger: true
-      },
-      mangle: {
-        safari10: true
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-      },
-      format: {
-        comments: false
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
+        ascii_only: true,
+        beautify: false,
+        ecma: 2020,
+        indent_level: 0,
+        indent_start: 0,
+        inline_script: false,
+        keep_numbers: false,
+        max_line_len: false,
+        preamble: null,
+        preserve_annotations: false,
+        quote_keys: false,
+        quote_style: 0,
+        safari10: true,
+        semicolons: true,
+        shebang: false,
+        shorthand: false,
+        source_map: null,
+        webkit: true,
+        width: 80,
+        wrap_iife: false,
+        wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-<<<<<<< HEAD
-    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
+    host: true,
     open: true,
+    // Enable HMR
+    hmr: {
+      overlay: true,
+    },
   },
   preview: {
     port: 4173,
+    host: true,
     open: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react',
+      'react-dom', 
+      'react-router-dom', 
+      'framer-motion', 
+      'lucide-react',
+      'react-helmet-async',
+      'web-vitals',
+      'recharts',
+      'clsx',
+      'tailwind-merge'
+    ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
   },
   css: {
     devSourcemap: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
-=======
-    assetsInlineLimit: 4096
+  esbuild: {
+    drop: ['console', 'debugger'],
+    target: 'es2015',
   },
-  server: {
-    port: 3000,
-    host: true
+  // Define global constants
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __VERSION__: JSON.stringify(process.env.npm_package_version),
   },
-  preview: {
-    port: 4173,
-    host: true
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
-  },
-  css: {
-    devSourcemap: true
-  }
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 });
