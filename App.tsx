@@ -87,6 +87,7 @@ const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -139,6 +140,7 @@ const App: React.FC = memo(() => {
                             <Route path="/edge-computing" element={<EdgeComputingPage />} />
                             <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                             <Route path="/iot-platform" element={<IoTPlatformPage />} />
+                            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
                           </Routes>
                         </Suspense>
                       </main>
