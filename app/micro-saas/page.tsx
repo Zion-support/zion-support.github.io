@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Zap } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -53,7 +54,11 @@ const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>Micro SaaS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Discover our micro SaaS solutions designed for modern businesses" />
+      </Helmet>
 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
