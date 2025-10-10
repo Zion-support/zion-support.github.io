@@ -5,14 +5,9 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
-import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
-<<<<<<< HEAD
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -30,8 +25,6 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -45,22 +38,14 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-<<<<<<< HEAD
   
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -72,8 +57,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-=======
   const features = [
     {
       icon: Brain,
@@ -137,7 +120,6 @@ const HomePage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -185,7 +167,6 @@ const HomePage: React.FC = () => {
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
-<<<<<<< HEAD
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
@@ -306,29 +287,6 @@ const HomePage: React.FC = () => {
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
-=======
-      >
-        <AccessibilityEnhancer
-          enableKeyboardNavigation={true}
-          enableScreenReaderSupport={true}
-          enableHighContrast={true}
-          enableFocusManagement={true}
-        >
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-            {/* Navigation */}
-            <Navigation />
-            
-            {/* Skip to main content for accessibility */}
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content
-            </a>
-
-            {/* Hero Section */}
-            <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
                 <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -388,7 +346,6 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
@@ -465,113 +422,6 @@ const HomePage: React.FC = () => {
                     Send Message;
   </
                 </form>
-<<<<<<< HEAD
-=======
-
-const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true);
-  }, []);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
-    },
-    {
-      icon: Users,
-      title: 'IT Consulting',
-      description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <StructuredData type="Organization" />
-      <StructuredData type="WebSite" />
-      <StructuredData type="WebPage" />
-      <StructuredData type="Service" />
-      <PerformanceOptimizer />
-      <SEOOptimizer />
-      <AccessibilityEnhancer />
-      
-      <Navigation />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <button 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                aria-label="Get started with our AI and IT solutions"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" aria-hidden="true" />
-              </button>
-              <button 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                aria-label="View our portfolio and case studies"
-              >
-                View Our Work
-              </button>
-=======
-              <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
-                Call +1 302 464 0950
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
-                Email Us
-              </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
             </div>
           </div>
         </section>
@@ -635,7 +485,6 @@ const HomePage: React.FC = memo(() => {
                 Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <button 
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                   aria-label="Contact us to discuss your business transformation needs"
@@ -648,18 +497,12 @@ const HomePage: React.FC = memo(() => {
                 >
                   Learn More
                 </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4e58
-=======
                 <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
                   Email kleber@ziontechgroup.com
                 </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
             </section>
 
             {/* Services Section */}
@@ -705,7 +548,6 @@ const HomePage: React.FC = memo(() => {
                     </div>
                   ))}
                 </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               </div>
             </section>
 
@@ -859,24 +701,15 @@ const HomePage: React.FC = memo(() => {
             {/* Footer */}
             <Footer />
           </div>
-<<<<<<< HEAD
         </section>
       </main>
       
       <Footer />
     </div>
-=======
-        </AccessibilityEnhancer>
-      </PerformanceOptimizer>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
     </React.Fragment>
   );
 };
 
 HomePage.displayName = 'HomePage';
-<<<<<<< HEAD
 
 export default HomePage;
-=======
-export default HomePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-3800

@@ -38,12 +38,7 @@ export interface MicroSaasService {;
     features: string[];}
   };
 }
-<<<<<<< HEAD
 export const microSaasServices: MicroSaasService[] = [
-=======
-;
-export const microSaasServices: MicroSaasService[] = [;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI-Powered Productivity Tools;
   {,;
     id: 'ai-project-manager-pro',;
@@ -116,7 +111,6 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 299,;
       features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations'];}
     }
-<<<<<<< HEAD
   },
   {
     id: 'ai-task-manager-pro',
@@ -147,38 +141,6 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-task-manager'
     popular: true,
     category: 'Productivity',
-=======
-  },;
-  {;
-    id: 'ai-task-manager-pro',;
-    title: 'AI Task Manager Pro',;
-    description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',;
-    shortDescription: 'Smart task management with AI prioritization and productivity optimization.';
-    icon: '✅',;
-    price: '$49/month',;
-    originalPrice: '$79/month',;
-    features: [,;
-      'AI-powered task prioritization and scheduling',;
-      'Smart deadline prediction and alerts',;
-      'Habit tracking and goal setting',;
-      'Team collaboration with AI insights',;
-      'Productivity analytics and reporting',;
-      'Time tracking and optimization',;
-      'Cross-platform synchronization',;
-      'Voice-to-task conversion';
-    ],;
-    benefits: [,;
-      '60% increase in task completion rate',;
-      '45% reduction in missed deadlines',;
-      '35% improvement in focus time',;
-      '50% better work-life balance',;
-      '40% increase in goal achievement',;
-      '25% reduction in stress levels';
-    ],;
-    link: '/ai-task-manager';
-    popular: true,;
-    category: 'Productivity',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     rating: 4.8;
     users: '25,000+',;
     freeTrial: '14 days',;
@@ -220,11 +182,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 149,;
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI Content & Marketing Tools;
   {;
     id: 'ai-content-writer-pro',;
@@ -296,7 +254,6 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 199,;
       features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support'];}
     }
-<<<<<<< HEAD
   },
   {
     id: 'ai-social-media-manager',
@@ -327,38 +284,6 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-social-media-manager'
     popular: true,
     category: 'Content & Marketing',
-=======
-  },;
-  {;
-    id: 'ai-social-media-manager',;
-    title: 'AI Social Media Manager',;
-    description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',;
-    shortDescription: 'AI-powered social media management with automated content creation and optimization.';
-    icon: '📱',;
-    price: '$89/month',;
-    originalPrice: '$149/month',;
-    features: [,;
-      'AI content creation for all social platforms',;
-      'Smart posting schedule optimization',;
-      'Advanced audience analytics and insights',;
-      'Automated engagement and responses',;
-      'Hashtag research and optimization',;
-      'Competitor analysis and monitoring',;
-      'Social listening and sentiment analysis',;
-      'ROI tracking and reporting';
-    ],;
-    benefits: [,;
-      '70% increase in social media engagement',;
-      '50% reduction in social media management time',;
-      '85% improvement in content performance',;
-      '60% increase in follower growth',;
-      '40% boost in website traffic from social',;
-      '90% automation of routine tasks';
-    ],;
-    link: '/ai-social-media-manager';
-    popular: true,;
-    category: 'Content & Marketing',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     rating: 4.6;
     users: '30,000+',;
     freeTrial: '14 days',;
@@ -401,11 +326,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 249,;
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI Business & Finance Tools;
   {;
     id: 'ai-crm-intelligence',;
@@ -478,7 +399,6 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 399,;
       features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support'];}
     }
-<<<<<<< HEAD
   },
   {
     id: 'ai-financial-analyzer',
@@ -509,38 +429,6 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-financial-analyzer'
     popular: true,
     category: 'Business & Finance',
-=======
-  },;
-  {;
-    id: 'ai-financial-analyzer',;
-    title: 'AI Financial Analyzer',;
-    description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',;
-    shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.';
-    icon: '💰',;
-    price: '$199/month',;
-    originalPrice: '$299/month',;
-    features: [,;
-      'Real-time financial data analysis',;
-      'AI-powered risk assessment and scoring',;
-      'Predictive financial modeling',;
-      'Automated financial reporting',;
-      'Investment recommendation engine',;
-      'Market trend analysis and forecasting',;
-      'Portfolio optimization algorithms',;
-      'Regulatory compliance monitoring';
-    ],;
-    benefits: [,;
-      '70% improvement in financial decision accuracy',;
-      '50% reduction in analysis time',;
-      '85% better risk prediction accuracy',;
-      '40% increase in investment returns',;
-      '60% reduction in compliance costs',;
-      '90% automation of financial reporting';
-    ],;
-    link: '/ai-financial-analyzer';
-    popular: true,;
-    category: 'Business & Finance',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     rating: 4.9;
     users: '12,000+',;
     freeTrial: '14 days',;
@@ -583,11 +471,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 599,;
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI Customer Service Tools;
   {;
     id: 'ai-customer-support-bot',;
@@ -660,11 +544,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 199,;
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI Development Tools;
   {;
     id: 'ai-code-review-assistant',;
@@ -737,11 +617,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 249,;
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI Healthcare Tools;
   {;
     id: 'ai-healthcare-assistant',;
@@ -814,11 +690,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 499,;
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI E-commerce Tools;
   {;
     id: 'ai-ecommerce-optimizer',;
@@ -891,11 +763,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 399,;
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support'];}
     }
-<<<<<<< HEAD
   },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI Education Tools;
   {;
     id: 'ai-education-platform',;
@@ -970,10 +838,7 @@ export const microSaasServices: MicroSaasService[] = [;
     }
   }
 ];
-<<<<<<< HEAD
-=======
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Service categories for filtering and organization;
 export const serviceCategories = [;
   'All',;
@@ -989,10 +854,6 @@ export const serviceCategories = [;
   'Analytics',;
   'Automation';
 ];
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Pricing tiers for comparison;
 export const pricingTiers = {;
   starter: {,;
@@ -1011,10 +872,7 @@ export const pricingTiers = {;
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees'];}
   }
 };
-<<<<<<< HEAD
-=======
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Contact information;
 export const contactInfo = {;
   phone: '+1 302 464 0950',;

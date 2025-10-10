@@ -1,9 +1,7 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -148,112 +146,6 @@ export default EnhancedAnalyticsPage;
   </h2>
   </button>
   </span>
-=======
-;
-const EnhancedAnalyticsPage: React.FC = () => {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
-      description: 'Advanced AI technology to transform your business operations and improve efficiency';}
-    },;
-    {;
-      icon: Zap,;
-      title: 'High Performance',;
-      description: 'Lightning-fast processing and real-time analytics for optimal results';}
-    },;
-    {;
-      icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with encryption and compliance standards';}
-    },;
-    {;
-      icon: Globe,;
-      title: 'Global Reach',;
-      description: 'Worldwide deployment and support for international businesses';}
-=======
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface AnalyticsEvent {
-  name: string;
-  value?: number;
-  category?: string;
-  label?: string;
-}
-
-class AnalyticsService {
-  private isInitialized = false;
-
-  init() {
-    if (this.isInitialized || typeof window === 'undefined') return;
-    
-    // Initialize Web Vitals
-    this.initWebVitals();
-    
-    // Initialize custom event tracking
-    this.initCustomEvents();
-    
-    this.isInitialized = true;
-  }
-
-  private initWebVitals() {
-    onCLS(this.sendToAnalytics);
-    onINP(this.sendToAnalytics);
-    onFCP(this.sendToAnalytics);
-    onLCP(this.sendToAnalytics);
-    onTTFB(this.sendToAnalytics);
-  }
-
-  private initCustomEvents() {
-    // Track page views
-    this.trackPageView();
-    
-    // Track button clicks
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (target.matches('button, a[href]')) {
-        this.trackEvent('click', {
-          category: 'engagement',
-          label: target.textContent || target.getAttribute('href') || 'unknown'
-        });
-      }
-    });
-
-    // Track form submissions
-    document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement;
-      this.trackEvent('form_submit', {
-        category: 'engagement',
-        label: form.id || form.className || 'unknown_form'
-      });
-    });
-  }
-
-  private trackPageView() {
-    this.trackEvent('page_view', {
-      category: 'navigation',
-      label: window.location.pathname
-    });
-  }
-
-  trackEvent(name: string, params: Omit<AnalyticsEvent, 'name'> = {}) {
-    const event: AnalyticsEvent = {
-      name,
-      ...params
-    };
-
-    // Send to analytics service (replace with your preferred service)
-    console.log('Analytics Event:', event);
-    
-    // Example: Send to Google Analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', name, {
-        event_category: params.category,
-        event_label: params.label,
-        value: params.value
-      });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
     }
   }
 
@@ -275,17 +167,5 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   return <>{children}</>;
 };
-<<<<<<< HEAD
 ;
 export default EnhancedAnalyticsPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
-
-export const useAnalytics = () => {
-  return {
-    trackEvent: analyticsService.trackEvent.bind(analyticsService)
-  };
-};
-
-export default AnalyticsService;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
