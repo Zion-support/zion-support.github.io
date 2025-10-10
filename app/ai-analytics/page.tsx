@@ -10,8 +10,6 @@ import React, { lazy } from 'react';
 import { CheckCircle, TrendingUp } from 'lucide-react';
 >>>>>>> origin/main
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
 const AIAnalyticsPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -112,8 +110,18 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ['Scheduled reports', 'Email delivery', 'Custom formats']
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
     }
-  ]
-  const pricingPlans = [
+  ];
+
+  const benefits = [
+    'Reduce data analysis time by 90%',
+    'Increase decision-making speed by 5x',
+    'Improve accuracy with AI-powered insights',
+    'Automate reporting and dashboards',
+    'Scale analytics across all departments',
+    'Integrate with existing systems seamlessly'
+  ];
+
+  const pricing = [
     {
 <<<<<<< HEAD
       name: 'Starter'
@@ -183,8 +191,7 @@ const AIAnalyticsPage: React.FC = () => {
         '24/7 dedicated support',
         'Unlimited data points',
         'Custom integrations',
-        'Advanced security',
-        'Dedicated account manager'
+        'SLA guarantee'
       ],
       popular: false;
 =======
@@ -467,8 +474,6 @@ const AIAnalyticsPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
       {/* Integrations Section */}
       <section className="py-16 px-4">

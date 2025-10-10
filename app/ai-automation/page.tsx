@@ -51,18 +51,26 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const benefits = [
+    'Reduce operational costs by 60%',
+    'Increase process efficiency by 80%',
+    'Eliminate human error completely',
+    'Scale operations without additional staff',
+    '24/7 automated operations',
+    'Real-time monitoring and alerts'
+  ];
+
+  const pricing = [
     {
       name: 'Starter',
-      price: '$1,400',
-      period: '/month',
+      price: '$499/month',
       description: 'Perfect for small businesses',
       features: [,
         'Up to 10 automated processes',
-        'Basic AI decision making',
+        'Basic AI capabilities',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+        '1 user account'
       ],
 <<<<<<< HEAD
       popular: false},
@@ -72,17 +80,16 @@ const AIAutomationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Professional',
-      price: '$2,800',
-      period: '/month',
+      price: '$1,299/month',
       description: 'Ideal for growing companies',
       features: [,
         'Up to 50 automated processes',
-        'Advanced AI decision making',
+        'Advanced AI capabilities',
         'Priority support',
         'Custom integrations',
-        'Advanced analytics',
+        'Up to 10 user accounts',
         'API access',
-        'Custom workflows'
+        'Real-time monitoring'
       ],
 <<<<<<< HEAD
       popular: true},
@@ -92,16 +99,16 @@ const AIAutomationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Enterprise',
-      price: '$5,600',
-      period: '/month',
+      price: '$2,999/month',
       description: 'For large organizations',
       features: [,
         'Unlimited processes',
         'Premium AI capabilities',
         'Dedicated support',
+        'Advanced analytics',
+        'Unlimited users',
         'White-label solution',
-        'Custom development',
-        'On-premise deployment',
+        'Custom workflows',
         'SLA guarantee'
       ],
 <<<<<<< HEAD

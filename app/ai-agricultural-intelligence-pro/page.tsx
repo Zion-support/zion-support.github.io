@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -86,4 +87,4 @@ const aiagriculturalintelligenceproPage: React.FC = () => {
   );
 };
 
-export default aiagriculturalintelligenceproPage;
+export default AIAgriculturalIntelligenceProPage;

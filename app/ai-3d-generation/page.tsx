@@ -23,7 +23,8 @@ const AI3DGenerationPage: React.FC = () => {,
     'Custom style transfer and adaptation',
     'Physics simulation integration',
     'Export to all major 3D formats'
-  ]
+  ];
+
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -33,7 +34,8 @@ const AI3DGenerationPage: React.FC = () => {,
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
-  ]
+  ];
+
   const applications = [
 =======
 import React from 'react';
@@ -200,13 +202,15 @@ const AI3DGenerationPage: React.FC = () => {
       ],
       popular: false;
     }
-  ]
+  ];
+
   const technologies = [
     'NeRF (Neural Radiance Fields)', '3D GANs', 'Point Cloud Processing',
     'Mesh Generation', 'Texture Synthesis', 'Blender API Integration',
     'Unity Integration', 'Unreal Engine Support', 'Custom 3D Models',
     'Deep Learning', 'Computer Vision', 'Generative AI'
-  ]
+  ];
+
   const workflow = [
     {
       step: 1;

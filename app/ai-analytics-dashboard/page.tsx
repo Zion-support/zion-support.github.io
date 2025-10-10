@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   BarChart3,
@@ -73,7 +75,7 @@ import {
   MapPin as Location;
 } from 'lucide-react';
 
-export default function AIAnalyticsDashboardPage() {
+const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
       title: "Real-time Analytics",
@@ -113,7 +115,16 @@ export default function AIAnalyticsDashboardPage() {
     }
   ];
 
-  const pricingTiers = [
+  const benefits = [
+    'Reduce data analysis time by 90%',
+    'Increase decision-making speed by 5x',
+    'Improve accuracy with AI-powered insights',
+    'Automate reporting and dashboards',
+    'Scale analytics across all departments',
+    'Integrate with existing systems seamlessly'
+  ];
+
+  const pricing = [
     {
       name: "Starter"
       price: "$199",
@@ -277,12 +288,11 @@ export default function AIAnalyticsDashboardPage() {
               >
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </Link>
 
               <Link;
                 to="/demo"
-                className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
+                className="group relative inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
 <<<<<<< HEAD
                 <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" >View Demo</Eye>
@@ -543,6 +553,7 @@ export default function AIAnalyticsDashboardPage() {
               Join thousands of businesses already using AI Analytics Dashboard to unlock insights and drive growth.
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
+          </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link;
@@ -592,4 +603,6 @@ export default function AIAnalyticsDashboardPage() {
       </div>,
     </div>,
   );
-}
+};
+
+export default AIAnalyticsDashboardPage;
