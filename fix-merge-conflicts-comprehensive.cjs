@@ -9,25 +9,10 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false;
-    }
-    
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    // More comprehensive regex patterns to handle various merge conflict formats
-    // Remove everything between ======= and >>>>>>> (the incoming branch content)
-    content = content.replace(/=======.*?>>>>>>> [^\n]+/gs, '');
-    
-    // Remove <<<<<<< HEAD markers
-    content = content.replace(/<<<<<<< HEAD\s*\n?/g, '');
-    
-    // Remove any remaining ======= markers
-    content = content.replace(/=======\s*\n?/g, '');
-    
-    // Remove any remaining >>>>>>> markers
-    content = content.replace(/>>>>>>> [^\n]+\s*\n?/g, '');
-    
+    if (!content.includes('') && !content.includes('
+    content = content.replace(/    
+    // Remove  markers
+    content = content.replace(/    
     // Clean up multiple consecutive newlines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     

@@ -6,7 +6,7 @@ import subprocess
 def resolve_merge_conflicts(file_path):
     """Resolve merge conflicts in a file by keeping the latest version"""
     try:
-        result = subprocess.run(['git', 'grep', '-l', '<<<<<<< HEAD'], 
+        result = subprocess.run(['git', 'grep', '-l', ''], 
                               capture_output=True, text=True, cwd='/workspace')
         if result.returncode != 0:
             print("No merge conflicts found")
@@ -17,19 +17,13 @@ def resolve_merge_conflicts(file_path):
             return False
         
         # Remove all merge conflict markers and keep the latest version
-        # Pattern 1: Remove everything from <<<<<<< HEAD to ======= (keep nothing from HEAD)
-        content = re.sub(r'<<<<<<< HEAD.*?=======\s*\n', '', content, flags=re.DOTALL)
-        
-        # Pattern 2: Remove everything from ======= to >>>>>>> (keep the latest version)
+        # Pattern 1: Remove everything from <<<<<<< HEAD to 
         content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
         
-        # Pattern 3: Remove any remaining <<<<<<< HEAD lines
+        # Pattern 3: Remove any remaining  lines
         content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
         
-        # Pattern 4: Remove any remaining ======= lines
-        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
-        
-        # Pattern 5: Remove any remaining >>>>>>> lines
+        # Pattern 4: Remove any remaining 
         content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
         
         # Clean up multiple empty lines

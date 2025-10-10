@@ -13,11 +13,8 @@ def fix_merge_conflicts(file_path):
             content = f.read()
         
         if ' and before >>>>>>>
-        pattern1 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
-        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
-        
-        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> cursor/...
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor/[^\n]+'
+        pattern1 = r'.*?
+        pattern = r'\n(.*?)\n
         content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
         
         # Pattern 3: Remove any remaining ======= lines

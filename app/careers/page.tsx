@@ -417,7 +417,6 @@ const CareersPage: React.FC = () => {
                 </Link>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
           </div>
         </section>
       </div>

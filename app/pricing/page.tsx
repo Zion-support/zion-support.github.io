@@ -145,7 +145,6 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
     </>
   );
 };
