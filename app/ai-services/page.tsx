@@ -7,118 +7,242 @@ export default function AIServicesPage() {
 
   const aiServices = [
     {
-      category: 'AI Automation',
+      category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
       services: [
         {
-          name: 'AI Workflow Automation',
-          description: 'Automate complex business processes with intelligent workflows',
-          features: ['Process Optimization', 'Error Reduction', 'Cost Savings', 'Scalability'],
+          name: 'AI Workflow Automation Platform',
+          description: 'End-to-end business process automation with intelligent decision-making and self-optimization',
+          features: ['Visual Workflow Builder', 'Smart Process Optimization', 'Error Detection & Correction', 'Cost Reduction', 'Scalable Architecture'],
           pricing: 'Starting at $5,000/month',
-          roi: '200-400% ROI'
+          trial: '30-day free trial',
+          roi: '200-400% ROI',
+          link: 'https://ziontechgroup.com/ai-workflow-automation',
+          popular: true
         },
         {
-          name: 'AI Customer Support',
-          description: '24/7 intelligent customer support with natural language processing',
-          features: ['24/7 Availability', 'Multi-language Support', 'Sentiment Analysis', 'Escalation Management'],
+          name: 'AI Customer Support Suite',
+          description: 'Advanced 24/7 customer support with natural language processing, sentiment analysis, and human handoff',
+          features: ['Multi-language NLP', 'Sentiment Analysis', 'Escalation Management', 'Knowledge Base Integration', 'Performance Analytics'],
           pricing: 'Starting at $3,000/month',
-          roi: '150-300% ROI'
+          trial: '14-day free trial',
+          roi: '150-300% ROI',
+          link: 'https://ziontechgroup.com/ai-customer-support',
+          popular: true
         },
         {
-          name: 'AI Sales Automation',
-          description: 'Intelligent sales processes and lead qualification',
-          features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'CRM Integration'],
+          name: 'AI Sales Automation Engine',
+          description: 'Intelligent sales process automation with lead scoring, automated follow-ups, and predictive analytics',
+          features: ['AI Lead Scoring', 'Automated Outreach', 'Sales Forecasting', 'CRM Integration', 'Revenue Optimization'],
           pricing: 'Starting at $4,000/month',
-          roi: '250-500% ROI'
+          trial: '14-day free trial',
+          roi: '250-500% ROI',
+          link: 'https://ziontechgroup.com/ai-sales-automation',
+          popular: true
+        },
+        {
+          name: 'AI Document Processing System',
+          description: 'Intelligent document analysis, extraction, and processing with OCR and natural language understanding',
+          features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Workflow Integration', 'Compliance Tracking'],
+          pricing: 'Starting at $2,500/month',
+          trial: '7-day free trial',
+          roi: '180-350% ROI',
+          link: 'https://ziontechgroup.com/ai-document-processing',
+          popular: false
         }
       ]
     },
     {
-      category: 'AI Analytics & Intelligence',
+      category: 'AI Analytics & Business Intelligence',
       icon: BarChart,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       services: [
         {
-          name: 'AI Data Analytics',
-          description: 'Advanced analytics and insights from your data',
-          features: ['Predictive Analytics', 'Real-time Insights', 'Data Visualization', 'Custom Dashboards'],
+          name: 'AI Data Analytics Platform',
+          description: 'Advanced analytics and insights with machine learning-powered predictions and real-time dashboards',
+          features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Visualization', 'Automated Insights'],
           pricing: 'Starting at $6,000/month',
-          roi: '300-600% ROI'
+          trial: '14-day free trial',
+          roi: '300-600% ROI',
+          link: 'https://ziontechgroup.com/ai-data-analytics',
+          popular: true
         },
         {
-          name: 'AI Business Intelligence',
-          description: 'Transform data into actionable business insights',
-          features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning'],
+          name: 'AI Business Intelligence Suite',
+          description: 'Transform raw data into actionable business insights with AI-powered analysis and recommendations',
+          features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning', 'ROI Measurement'],
           pricing: 'Starting at $7,000/month',
-          roi: '400-700% ROI'
+          trial: '14-day free trial',
+          roi: '400-700% ROI',
+          link: 'https://ziontechgroup.com/ai-business-intelligence',
+          popular: true
         },
         {
-          name: 'AI Predictive Analytics',
-          description: 'Forecast future trends and outcomes',
-          features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning'],
+          name: 'AI Predictive Analytics Engine',
+          description: 'Forecast future trends, outcomes, and opportunities with advanced machine learning models',
+          features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning', 'Anomaly Detection'],
           pricing: 'Starting at $8,000/month',
-          roi: '500-800% ROI'
+          trial: '14-day free trial',
+          roi: '500-800% ROI',
+          link: 'https://ziontechgroup.com/ai-predictive-analytics',
+          popular: true
+        },
+        {
+          name: 'AI Real-time Monitoring System',
+          description: 'Continuous monitoring and alerting system with AI-powered anomaly detection and automated responses',
+          features: ['Real-time Monitoring', 'Anomaly Detection', 'Automated Alerts', 'Performance Tracking', 'Predictive Maintenance'],
+          pricing: 'Starting at $4,500/month',
+          trial: '7-day free trial',
+          roi: '250-450% ROI',
+          link: 'https://ziontechgroup.com/ai-monitoring',
+          popular: false
         }
       ]
     },
     {
-      category: 'AI Content & Marketing',
+      category: 'AI Content & Marketing Solutions',
       icon: FileText,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       services: [
         {
-          name: 'AI Content Generation',
-          description: 'Create high-quality content at scale',
-          features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions'],
+          name: 'AI Content Generation Studio',
+          description: 'Complete content creation suite with AI writing, editing, optimization, and multi-format support',
+          features: ['AI Writing Assistant', 'Content Optimization', 'SEO Analysis', 'Brand Voice Training', 'Multi-format Support'],
           pricing: 'Starting at $2,000/month',
-          roi: '100-300% ROI'
+          trial: '7-day free trial',
+          roi: '100-300% ROI',
+          link: 'https://ziontechgroup.com/ai-content-generation',
+          popular: true
         },
         {
-          name: 'AI Email Marketing',
-          description: 'Intelligent email campaigns and personalization',
-          features: ['Personalization', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics'],
+          name: 'AI Email Marketing Platform',
+          description: 'Intelligent email campaigns with personalization, A/B testing, and performance optimization',
+          features: ['Smart Personalization', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics', 'List Segmentation'],
           pricing: 'Starting at $3,500/month',
-          roi: '200-400% ROI'
+          trial: '7-day free trial',
+          roi: '200-400% ROI',
+          link: 'https://ziontechgroup.com/ai-email-marketing',
+          popular: true
         },
         {
-          name: 'AI SEO Optimization',
-          description: 'Automated SEO analysis and optimization',
-          features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'],
+          name: 'AI SEO Optimization Suite',
+          description: 'Comprehensive SEO analysis, keyword research, and content optimization with AI recommendations',
+          features: ['Keyword Research', 'Content Analysis', 'Technical SEO', 'Competitor Analysis', 'Rank Tracking'],
           pricing: 'Starting at $4,500/month',
-          roi: '250-500% ROI'
+          trial: '7-day free trial',
+          roi: '250-500% ROI',
+          link: 'https://ziontechgroup.com/ai-seo-optimizer',
+          popular: true
+        },
+        {
+          name: 'AI Social Media Manager',
+          description: 'Automated social media content creation, scheduling, and engagement optimization across platforms',
+          features: ['Content Generation', 'Post Scheduling', 'Engagement Analytics', 'Hashtag Optimization', 'Multi-platform Management'],
+          pricing: 'Starting at $1,500/month',
+          trial: '7-day free trial',
+          roi: '150-300% ROI',
+          link: 'https://ziontechgroup.com/ai-social-media-manager',
+          popular: false
         }
       ]
     },
     {
-      category: 'AI Industry Solutions',
+      category: 'AI Industry-Specific Solutions',
       icon: Target,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       services: [
         {
           name: 'AI Healthcare Solutions',
-          description: 'AI-powered healthcare and medical solutions',
-          features: ['Medical Imaging', 'Diagnosis Support', 'Patient Monitoring', 'Drug Discovery'],
+          description: 'Advanced AI-powered healthcare solutions including medical imaging, diagnosis support, and patient care',
+          features: ['Medical Imaging Analysis', 'Diagnosis Support', 'Patient Monitoring', 'Drug Discovery', 'Clinical Decision Support'],
           pricing: 'Starting at $15,000/month',
-          roi: '400-800% ROI'
+          trial: '30-day free trial',
+          roi: '400-800% ROI',
+          link: 'https://ziontechgroup.com/ai-healthcare',
+          popular: true
         },
         {
-          name: 'AI Fintech Solutions',
-          description: 'Financial technology and banking AI solutions',
-          features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring'],
+          name: 'AI Fintech Platform',
+          description: 'Comprehensive financial technology solutions with fraud detection, risk assessment, and algorithmic trading',
+          features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Regulatory Compliance'],
           pricing: 'Starting at $12,000/month',
-          roi: '300-600% ROI'
+          trial: '14-day free trial',
+          roi: '300-600% ROI',
+          link: 'https://ziontechgroup.com/ai-fintech',
+          popular: true
         },
         {
-          name: 'AI E-commerce Solutions',
-          description: 'E-commerce optimization and personalization',
-          features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'],
+          name: 'AI E-commerce Optimization',
+          description: 'E-commerce platform optimization with personalization, inventory management, and customer insights',
+          features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights', 'Conversion Optimization'],
           pricing: 'Starting at $5,000/month',
-          roi: '200-500% ROI'
+          trial: '14-day free trial',
+          roi: '200-500% ROI',
+          link: 'https://ziontechgroup.com/ai-ecommerce-solutions',
+          popular: true
+        },
+        {
+          name: 'AI Manufacturing Intelligence',
+          description: 'Smart manufacturing solutions with predictive maintenance, quality control, and process optimization',
+          features: ['Predictive Maintenance', 'Quality Control', 'Process Optimization', 'Supply Chain Management', 'Energy Efficiency'],
+          pricing: 'Starting at $10,000/month',
+          trial: '14-day free trial',
+          roi: '350-650% ROI',
+          link: 'https://ziontechgroup.com/ai-manufacturing',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'AI Advanced Technologies',
+      icon: Cpu,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'AI Computer Vision Platform',
+          description: 'Advanced computer vision solutions for image recognition, object detection, and visual analysis',
+          features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Visual Search', 'Quality Inspection'],
+          pricing: 'Starting at $8,000/month',
+          trial: '14-day free trial',
+          roi: '300-600% ROI',
+          link: 'https://ziontechgroup.com/ai-computer-vision',
+          popular: true
+        },
+        {
+          name: 'AI Natural Language Processing',
+          description: 'Advanced NLP solutions for text analysis, language understanding, and conversational AI',
+          features: ['Text Analysis', 'Language Understanding', 'Sentiment Analysis', 'Translation', 'Conversational AI'],
+          pricing: 'Starting at $6,500/month',
+          trial: '14-day free trial',
+          roi: '250-500% ROI',
+          link: 'https://ziontechgroup.com/ai-nlp',
+          popular: true
+        },
+        {
+          name: 'AI Machine Learning Platform',
+          description: 'Complete ML platform with model training, deployment, and management capabilities',
+          features: ['Model Training', 'Model Deployment', 'Model Management', 'AutoML', 'MLOps'],
+          pricing: 'Starting at $9,000/month',
+          trial: '14-day free trial',
+          roi: '400-700% ROI',
+          link: 'https://ziontechgroup.com/ai-ml-platform',
+          popular: true
+        },
+        {
+          name: 'AI Quantum Computing Solutions',
+          description: 'Next-generation quantum computing solutions for complex optimization and simulation problems',
+          features: ['Quantum Optimization', 'Quantum Simulation', 'Quantum Machine Learning', 'Quantum Security', 'Hybrid Computing'],
+          pricing: 'Starting at $20,000/month',
+          trial: '30-day free trial',
+          roi: '500-1000% ROI',
+          link: 'https://ziontechgroup.com/ai-quantum-computing',
+          popular: false
         }
       ]
     }
@@ -289,7 +413,12 @@ export default function AIServicesPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
+                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
+                      {service.popular && (
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                          Popular
+                        </div>
+                      )}
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
                       <p className="text-gray-300 mb-4">{service.description}</p>
                       <div className="space-y-3 mb-6">
@@ -303,19 +432,34 @@ export default function AIServicesPage() {
                           ))}
                         </ul>
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-2 mb-6">
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-400">Pricing:</span>
                           <span className="text-sm font-medium text-white">{service.pricing}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Trial:</span>
+                          <span className="text-sm font-medium text-cyan-400">{service.trial}</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-400">Expected ROI:</span>
                           <span className="text-sm font-medium text-green-400">{service.roi}</span>
                         </div>
                       </div>
-                      <button className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
-                        Learn More
-                      </button>
+                      <div className="space-y-2">
+                        <a
+                          href={service.link}
+                          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all block text-center"
+                        >
+                          Learn More
+                        </a>
+                        <a
+                          href="/contact"
+                          className="w-full border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all block text-center"
+                        >
+                          Start Free Trial
+                        </a>
+                      </div>
                     </div>
                   ))}
                 </div>
