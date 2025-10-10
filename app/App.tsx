@@ -60,13 +60,13 @@ const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
-const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
-const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const _BlockchainWeb3Page = lazy(() => import('./blockchain/page'));
+const _IoTEdgeComputingPage = lazy(() => import('./iot-edge/page'));
 
 // Additional Pages
-const _BlogPage = lazy(() => import('./blog-index'));
+const _BlogPage = lazy(() => import('./blog/page'));
 const _GuidesPage = lazy(() => import('./guides/page'));
-const _SitemapPage = lazy(() => import('./sitemap-page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';

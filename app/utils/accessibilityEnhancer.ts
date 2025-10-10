@@ -578,9 +578,21 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+<<<<<<< HEAD
 - Score: ${metrics.score || 'N/A'}
 - Issues: ${metrics.issues || 0}
 - Recommendations: ${metrics.recommendations || 0}
 `;
+=======
+- Total enhancements: ${metrics.totalEnhancements}
+- Color contrast improvements: ${metrics.colorContrastImprovements}
+- Keyboard navigation fixes: ${metrics.keyboardNavigationFixes}
+- Screen reader optimizations: ${metrics.screenReaderOptimizations}
+- Focus management improvements: ${metrics.focusManagementImprovements}
+- ARIA enhancements: ${metrics.ariaEnhancements}
+- Semantic HTML improvements: ${metrics.semanticHtmlImprovements}
+- Performance impact: ${metrics.performanceImpact}ms
+    `;
+>>>>>>> cursor/website-audit-and-update-with-deployment-cee5
   }
 }

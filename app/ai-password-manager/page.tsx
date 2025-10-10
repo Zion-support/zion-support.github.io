@@ -1,11 +1,16 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Lock, Shield, Eye, EyeOff, Key, Smartphone, Globe, Zap, CheckCircle, Star, Users, Clock, DollarSign, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+=======
+import { Lock, Shield, Zap, CheckCircle, Star, ArrowRight, Phone, Mail, Key, Users, Clock, Target } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
+<<<<<<< HEAD
     'AI-powered password generation',
     'Secure password storage with 256-bit encryption',
     'Multi-device synchronization',
@@ -97,6 +102,47 @@ const AIPasswordManagerPage: React.FC = () => {
       content: 'The auto-fill feature saves me so much time. I never have to remember complex passwords anymore.',
       rating: 5
     }
+=======
+    {
+      title: 'AI-Generated Passwords',
+      description: 'Generate strong, unique passwords using advanced AI algorithms for maximum security.',
+      icon: Key
+    },
+    {
+      title: 'Secure Storage',
+      description: 'Military-grade encryption protects all your passwords and sensitive information.',
+      icon: Shield
+    },
+    {
+      title: 'Auto-Fill & Login',
+      description: 'Automatically fill passwords and login forms across all your devices and browsers.',
+      icon: Zap
+    },
+    {
+      title: 'Password Health Check',
+      description: 'AI analyzes your passwords and identifies weak or compromised credentials.',
+      icon: CheckCircle
+    },
+    {
+      title: 'Team Sharing',
+      description: 'Securely share passwords with team members while maintaining access control.',
+      icon: Users
+    },
+    {
+      title: 'Breach Monitoring',
+      description: 'Get instant alerts if any of your accounts are compromised in data breaches.',
+      icon: Target
+    }
+  ];
+
+  const benefits = [
+    '100% Secure Storage',
+    'Zero-Knowledge Architecture',
+    'Cross-Platform Sync',
+    'AI Password Generation',
+    'Breach Monitoring',
+    'Team Collaboration'
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
   ];
 
   return (
@@ -104,6 +150,7 @@ const AIPasswordManagerPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -143,12 +190,31 @@ const AIPasswordManagerPage: React.FC = () => {
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 Watch Demo
+=======
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Password Manager <span className="text-cyan-400">Pro</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Secure your digital life with AI-powered password management. Generate strong passwords, 
+              store them safely, and access them instantly across all your devices.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+                Start Free Trial
+              </a>
+              <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
+                Call +1 302 464 0950
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
               </a>
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
@@ -159,10 +225,19 @@ const AIPasswordManagerPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced AI technology meets military-grade security to protect your most sensitive information.
             </p>
+=======
+      {/* Features Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
+            <p className="text-xl text-gray-300">Everything you need to secure your passwords</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
@@ -184,6 +259,12 @@ const AIPasswordManagerPage: React.FC = () => {
                   {feature === 'Password health score' && 'Get a comprehensive health score for all your passwords with actionable improvement recommendations.'}
                   {feature === 'Emergency access features' && 'Set up emergency access for trusted contacts to access your passwords when needed.'}
                 </p>
+=======
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
               </div>
             ))}
           </div>
@@ -191,6 +272,7 @@ const AIPasswordManagerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -200,11 +282,19 @@ const AIPasswordManagerPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of password management with AI-powered security and seamless user experience.
             </p>
+=======
+      <section className="py-16 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Password Manager Pro?</h2>
+            <p className="text-xl text-gray-300">Proven results and cutting-edge technology</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
+<<<<<<< HEAD
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
@@ -217,6 +307,12 @@ const AIPasswordManagerPage: React.FC = () => {
                   {benefit === 'Team collaboration made secure' && 'Share passwords securely with team members while maintaining full control and compliance.'}
                   {benefit === 'Compliance with security standards' && 'Meet industry security standards including SOC 2, GDPR, and HIPAA compliance.'}
                 </p>
+=======
+                <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
               </div>
             ))}
           </div>
@@ -224,6 +320,7 @@ const AIPasswordManagerPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
+<<<<<<< HEAD
       <section id="pricing" className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -309,10 +406,53 @@ const AIPasswordManagerPage: React.FC = () => {
                 </div>
               </div>
             ))}
+=======
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Simple Pricing</h2>
+            <p className="text-xl text-gray-300">Choose the plan that fits your needs</p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 text-center">
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold text-white mb-2">AI Password Manager Pro</h3>
+              <div className="text-5xl font-bold text-cyan-400 mb-2">$19<span className="text-xl text-gray-300">/month</span></div>
+              <p className="text-gray-300">Per user, billed monthly</p>
+            </div>
+            
+            <ul className="space-y-4 mb-8 text-left max-w-md mx-auto">
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                Unlimited passwords
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                AI password generation
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                Cross-platform sync
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                Breach monitoring
+              </li>
+              <li className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                24/7 support
+              </li>
+            </ul>
+            
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+              Get Started Today
+            </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center">
@@ -344,6 +484,25 @@ const AIPasswordManagerPage: React.FC = () => {
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </p>
           </div>
+=======
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Secure Your Passwords?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of users already using AI Password Manager Pro to protect their digital accounts.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
+              Start Free Trial
+            </a>
+            <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
+              Call +1 302 464 0950
+            </a>
+          </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
         </div>
       </section>
 
