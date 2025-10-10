@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Receipt, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, BarChart, PieChart, TrendingUp } from 'lucide-react';
+import { Receipt, Target, Users, CheckCircle, Brain, BarChart } from 'lucide-react';
 
 const AIExpenseTracker: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -140,13 +140,13 @@ const AIExpenseTracker: React.FC = memo(() => {
             <Receipt className="w-4 h-4" />
             <span>AI-Powered Finance</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Expense Tracker
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your expense management with AI-powered receipt scanning and intelligent categorization. 
+            Transform your expense management with AI-powered receipt scanning and intelligent categorization.
             Save time, reduce errors, and gain valuable insights into your spending habits.
           </p>
 
@@ -287,7 +287,6 @@ const AIExpenseTracker: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AIExpenseTracker.displayName = 'AIExpenseTracker';
 

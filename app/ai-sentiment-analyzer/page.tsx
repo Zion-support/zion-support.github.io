@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, TrendingUp, BarChart, MessageSquare, Star, CheckCircle, ArrowRight, Zap, Target, Users, Globe, Shield, Clock, DollarSign } from 'lucide-react';
+import { Brain, TrendingUp, BarChart, MessageSquare, CheckCircle, Target, Users, Shield } from 'lucide-react';
 
 const AISentimentAnalyzer: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -130,13 +130,13 @@ const AISentimentAnalyzer: React.FC = memo(() => {
             <Brain className="w-4 h-4" />
             <span>AI-Powered Analytics</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Sentiment Analyzer
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform customer feedback into actionable insights with our advanced AI-powered sentiment analysis platform. 
+            Transform customer feedback into actionable insights with our advanced AI-powered sentiment analysis platform.
             Monitor brand perception, optimize customer experience, and drive business growth with 95% accuracy.
           </p>
 
@@ -290,7 +290,6 @@ const AISentimentAnalyzer: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AISentimentAnalyzer.displayName = 'AISentimentAnalyzer';
 

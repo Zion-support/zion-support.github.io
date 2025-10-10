@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Target, Users, Globe, Clock, DollarSign, CheckCircle, ArrowRight, Brain, AlertTriangle, Lock, Eye, Activity } from 'lucide-react';
+import { Shield, DollarSign, CheckCircle, Brain, AlertTriangle, Lock } from 'lucide-react';
 
 const AICybersecurityMonitor: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -140,13 +140,13 @@ const AICybersecurityMonitor: React.FC = memo(() => {
             <Shield className="w-4 h-4" />
             <span>AI-Powered Security</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Cybersecurity Monitor
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Protect your business with advanced AI-powered cybersecurity monitoring. 
+            Protect your business with advanced AI-powered cybersecurity monitoring.
             Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.
           </p>
 
@@ -287,7 +287,6 @@ const AICybersecurityMonitor: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AICybersecurityMonitor.displayName = 'AICybersecurityMonitor';
 

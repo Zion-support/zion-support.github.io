@@ -5,9 +5,9 @@ interface EnhancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
-export default function EnhancedPerformanceMonitor({ 
-  className = '', 
-  children 
+export default function EnhancedPerformanceMonitor({
+  className = '',
+  children
 }: EnhancedPerformanceMonitorProps) {
   return (
     <div className={`enhancedperformancemonitor ${className}`}>

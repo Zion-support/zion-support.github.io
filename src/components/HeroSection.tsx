@@ -5,9 +5,9 @@ interface HeroSectionProps {
   children?: React.ReactNode;
 }
 
-export default function HeroSection({ 
-  className = '', 
-  children 
+export default function HeroSection({
+  className = '',
+  children
 }: HeroSectionProps) {
   return (
     <div className={`herosection ${className}`}>

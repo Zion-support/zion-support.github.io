@@ -42,7 +42,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
 
   if (hasError) {
     return (
-      <div 
+      <div
         className={`bg-gray-200 dark:bg-gray-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
@@ -64,7 +64,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       onError={handleError}
       placeholder={
         placeholder ? (
-          <div 
+          <div
             className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}
             style={{ width, height }}
           />

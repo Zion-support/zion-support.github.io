@@ -5,9 +5,9 @@ interface PlaceholderBannerProps {
   children?: React.ReactNode;
 }
 
-export default function PlaceholderBanner({ 
-  className = '', 
-  children 
+export default function PlaceholderBanner({
+  className = '',
+  children
 }: PlaceholderBannerProps) {
   return (
     <div className={`placeholderbanner ${className}`}>

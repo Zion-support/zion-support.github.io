@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, Terminal, GitBranch, Bug, FileText, Sparkles } from 'lucide-react';
+import { Code, CheckCircle, Terminal, GitBranch, Bug, FileText } from 'lucide-react';
 
 const AICodeAssistant: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -138,13 +138,13 @@ const AICodeAssistant: React.FC = memo(() => {
             <Code className="w-4 h-4" />
             <span>AI-Powered Development</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Code Assistant
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Supercharge your development workflow with our intelligent AI code assistant. 
+            Supercharge your development workflow with our intelligent AI code assistant.
             Generate code, debug issues, and improve code quality with advanced AI technology.
           </p>
 
@@ -310,7 +310,6 @@ const AICodeAssistant: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AICodeAssistant.displayName = 'AICodeAssistant';
 

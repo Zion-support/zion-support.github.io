@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Lock, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, Palette, CreditCard, Stethoscope, Clock3, Navigation, TrendingDown, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck } from 'lucide-react'
+import { Lock, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, Palette, CreditCard, Stethoscope, Clock3, Navigation, TrendingDown, Zap, Target, Shield, Users, CheckCircle, ArrowRight, Truck } from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -158,7 +158,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -171,7 +171,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
               AI Blockchain <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Combine the power of artificial intelligence with blockchain technology to create secure, 
+              Combine the power of artificial intelligence with blockchain technology to create secure,
               intelligent, and decentralized solutions for the modern world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -208,7 +208,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
               AI-Enhanced Blockchain Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with blockchain technology to deliver 
+              Our platform combines cutting-edge AI with blockchain technology to deliver
               unprecedented security, efficiency, and intelligence.
             </p>
           </div>
@@ -284,8 +284,8 @@ const AIBlockchainSolutionsPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular 
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' 
+                plan.popular
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>
                 {plan.popular && (

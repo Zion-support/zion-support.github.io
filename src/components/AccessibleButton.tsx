@@ -28,7 +28,7 @@ const AccessibleButton = forwardRef<HTMLButtonElement, AccessibleButtonProps>(
     ref
   ) => {
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
-    
+
     const variantClasses = {
       primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 focus:ring-cyan-500 shadow-lg hover:shadow-xl',
       secondary: 'bg-slate-600 text-white hover:bg-slate-700 focus:ring-slate-500',
@@ -36,7 +36,7 @@ const AccessibleButton = forwardRef<HTMLButtonElement, AccessibleButtonProps>(
       ghost: 'text-cyan-400 hover:bg-cyan-400/10 focus:ring-cyan-400',
       danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
     };
-    
+
     const sizeClasses = {
       sm: 'px-3 py-1.5 text-sm',
       md: 'px-4 py-2 text-base',

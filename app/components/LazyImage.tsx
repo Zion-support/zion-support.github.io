@@ -26,7 +26,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px',
-  });
 
   React.useEffect(() => {
     if (entry?.isIntersecting) {
@@ -59,7 +58,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           loading="lazy"
         />
       )}
-      
+
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
           <img
@@ -69,7 +68,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           />
         </div>
       )}
-      
+
       {hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
           <span>Failed to load image</span>

@@ -31,7 +31,7 @@ const EnhancedHero: React.FC = () => {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
-      });
+
     }
   }, []);
 
@@ -81,7 +81,7 @@ const EnhancedHero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="absolute inset-0 cyber-grid opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
-        
+
         {/* Floating Elements */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
@@ -123,14 +123,14 @@ const EnhancedHero: React.FC = () => {
           >
             Zion Tech Group
           </motion.h1>
-          
+
           <motion.p
             className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium"
             variants={itemVariants}
           >
             Advanced AI and IT Solutions
           </motion.p>
-          
+
           <motion.p
             className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             variants={itemVariants}
@@ -223,7 +223,7 @@ const EnhancedHero: React.FC = () => {
             >
               📞 Call Now: (302) 464-0950
             </motion.a>
-            
+
             <motion.a
               href="/contact"
               className="cyber-button w-full sm:w-auto text-center"

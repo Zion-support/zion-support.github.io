@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Target, BarChart, Users, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, TrendingUp, Brain, Globe, Shield, Award } from 'lucide-react';
+import { Target, BarChart, Users, Zap, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -48,7 +48,7 @@ const ServicesAdvertisingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -57,7 +57,7 @@ const ServicesAdvertisingPage: React.FC = () => {
               Advanced <span className="text-cyan-400">Advertising</span> Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your advertising strategy with AI-powered solutions that deliver measurable results. 
+              Transform your advertising strategy with AI-powered solutions that deliver measurable results.
               Our comprehensive advertising services help you reach the right audience at the right time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -79,7 +79,7 @@ const ServicesAdvertisingPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Advertising Services</h2>
             <p className="text-xl text-gray-300">Comprehensive solutions for every advertising need</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {advertisingServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
@@ -115,7 +115,7 @@ const ServicesAdvertisingPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Advertising Services?</h2>
             <p className="text-xl text-gray-300">Proven results and cutting-edge technology</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">

@@ -5,9 +5,9 @@ interface ResponsiveContainerProps {
   children?: React.ReactNode;
 }
 
-export default function ResponsiveContainer({ 
-  className = '', 
-  children 
+export default function ResponsiveContainer({
+  className = '',
+  children
 }: ResponsiveContainerProps) {
   return (
     <div className={`responsivecontainer ${className}`}>

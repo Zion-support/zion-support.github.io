@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Code, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Shield, 
+import {
+  Brain,
+  Cloud,
+  Code,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Shield,
   Target,
   Sparkles,
   Rocket,
@@ -189,9 +189,9 @@ interface InteractiveContentShowcase2026Props {
   children?: React.ReactNode;
 }
 
-export default function InteractiveContentShowcase2026({ 
-  className = '', 
-  children 
+export default function InteractiveContentShowcase2026({
+  className = '',
+  children
 }: InteractiveContentShowcase2026Props) {
   const [activeTab, setActiveTab] = useState('ai');
   const [hoveredService, setHoveredService] = useState<number | null>(null);
@@ -412,7 +412,7 @@ export default function InteractiveContentShowcase2026({
             Interactive Solutions Showcase 2026
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Explore our comprehensive suite of AI, micro SAAS, IT, and quantum solutions. 
+            Explore our comprehensive suite of AI, micro SAAS, IT, and quantum solutions.
             Interactive demos and real-time statistics showcase the power of our technology.
           </p>
         </div>
@@ -463,9 +463,9 @@ export default function InteractiveContentShowcase2026({
                   </span>
                 </div>
               )}
-              
+
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              
+
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -475,15 +475,15 @@ export default function InteractiveContentShowcase2026({
                     {solution.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {solution.title}
                 </h3>
-                
+
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                   {solution.description}
                 </p>
-                
+
                 <div className="space-y-2 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -506,7 +506,7 @@ export default function InteractiveContentShowcase2026({
                     </div>
                   </div>
                 )}
-                
+
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">{solution.price}</div>
                   <Link
@@ -529,7 +529,7 @@ export default function InteractiveContentShowcase2026({
               Try Our Interactive Demo
             </h3>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Experience the power of our AI solutions with our interactive demonstration. 
+              Experience the power of our AI solutions with our interactive demonstration.
               See real-time results and understand how our technology can transform your business.
             </p>
           </div>
@@ -595,10 +595,10 @@ export default function InteractiveContentShowcase2026({
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of forward-thinking companies already using our cutting-edge solutions 
+              Join thousands of forward-thinking companies already using our cutting-edge solutions
               to achieve unprecedented growth and innovation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
@@ -608,7 +608,7 @@ export default function InteractiveContentShowcase2026({
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </Link>
-              
+
               <div className="flex items-center space-x-6 text-gray-300">
                 <div className="flex items-center">
                   <Phone className="w-4 h-4 text-cyan-400 mr-2" />

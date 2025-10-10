@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import ErrorFallback from './ErrorFallback';
 
 interface Props {
   children: ReactNode;
@@ -7,6 +7,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -19,27 +20,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+
+    this.setState({ error, errorInfo });
   }
 
   public render() {
-    if (this.state.hasError) {
+    if (this.state.hasError && this.state.error) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="text-center p-8">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-3xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="btn-primary"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
+        <ErrorFallback
+          error={this.state.error}
+          resetError={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+          componentStack={this.state.errorInfo?.componentStack}
+        />
       );
     }
 

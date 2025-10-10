@@ -210,7 +210,7 @@ export const preloadImage = (src: string): Promise<void> => {
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
-  });
+
 };
 
 export const preloadImages = async (srcs: string[]): Promise<void> => {
@@ -225,7 +225,7 @@ export const getImageDimensions = (src: string): Promise<{ width: number; height
     };
     img.onerror = reject;
     img.src = src;
-  });
+
 };
 
 export const createIntersectionObserver = (
@@ -236,7 +236,7 @@ export const createIntersectionObserver = (
     rootMargin: '50px',
     threshold: 0.1,
     ...options
-  });
+
 };
 
 export const measurePerformance = (name: string, fn: () => void): void => {
@@ -254,7 +254,7 @@ export const getDeviceInfo = () => {
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   const isTablet = /iPad|Android(?=.*Mobile)/i.test(userAgent);
   const isDesktop = !isMobile && !isTablet;
-  
+
   return {
     isMobile,
     isTablet,
@@ -265,13 +265,13 @@ export const getDeviceInfo = () => {
 
 export const optimizeForDevice = () => {
   const deviceInfo = getDeviceInfo();
-  
+
   if (deviceInfo.isMobile) {
     // Reduce animations and effects for mobile
     document.documentElement.style.setProperty('--animation-duration', '0.2s');
     document.documentElement.style.setProperty('--transition-duration', '0.15s');
   }
-  
+
   return deviceInfo;
 };
 
@@ -286,7 +286,7 @@ export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]
 
 export const measureWebVitals = () => {
   const vitals: Record<string, number> = {};
-  
+
   const observer = createPerformanceObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.entryType === 'paint') {
@@ -296,9 +296,8 @@ export const measureWebVitals = () => {
       } else if (entry.entryType === 'largest-contentful-paint') {
         vitals.lcp = entry.startTime;
       }
-    });
-  });
-  
+
+
   return {
     vitals,
     observer
@@ -310,9 +309,9 @@ export const optimizeBundleSize = () => {
   const loadHeavyComponent = (componentName: string) => {
     return import(`../components/${componentName}`).catch(() => {
       // return null;
-    });
+
   };
-  
+
   return { loadHeavyComponent };
 };
 
@@ -321,7 +320,7 @@ export const createLazyComponent = <T extends React.ComponentType<any>>(
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = React.lazy(importFunc);
-  
+
   return (props: React.ComponentProps<T>) => (
     <React.Suspense fallback={fallback || <div>Loading...</div>}>
       <LazyComponent {...props} />
@@ -408,7 +407,7 @@ class PerformanceOptimizer {
       if (!img.loading) {
         img.loading = 'lazy';
       }
-    });
+
   }
 
   private setupLazyLoading(): void {
@@ -423,12 +422,11 @@ class PerformanceOptimizer {
               observer.unobserve(element);
             }
           }
-        });
-      });
+
 
       document.querySelectorAll('[data-src]').forEach((el) => {
         observer.observe(el);
-      });
+
     }
   }
 
@@ -448,7 +446,7 @@ class PerformanceOptimizer {
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
-    });
+
   }
 
   private setupCaching(): void {
@@ -456,7 +454,7 @@ class PerformanceOptimizer {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {
         // Service worker registration failed
-      });
+
     }
   }
 
@@ -521,7 +519,7 @@ class PerformanceMonitor {
         if (this.metrics) {
           this.metrics.largestContentfulPaint = lastEntry.startTime;
         }
-      });
+
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     }
@@ -535,8 +533,8 @@ class PerformanceMonitor {
           if (this.metrics) {
             this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
           }
-        });
-      });
+
+
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     }
@@ -551,11 +549,11 @@ class PerformanceMonitor {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
-        });
+
         if (this.metrics) {
           this.metrics.cumulativeLayoutShift = clsValue;
         }
-      });
+
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     }
@@ -570,7 +568,7 @@ class PerformanceMonitor {
 
     // Simple scoring algorithm based on Core Web Vitals
     let score = 100;
-    
+
     if (this.metrics.largestContentfulPaint > 4000) score -= 20;
     if (this.metrics.firstInputDelay > 300) score -= 20;
     if (this.metrics.cumulativeLayoutShift > 0.25) score -= 20;
@@ -600,8 +598,7 @@ export function lazyLoadImages(): void {
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
-    });
-  });
+
 
   images.forEach((img) => imageObserver.observe(img));
 }
@@ -622,7 +619,7 @@ export function preloadCriticalResources(): void {
     if (resource.type) link.type = resource.type;
     if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
     document.head.appendChild(link);
-  });
+
 }
 
 export function collectPerformanceMetrics(): PerformanceMetrics | null {

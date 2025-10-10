@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Futuristic Design System */
+@import '../src/styles/futuristic.css';
+
 /* Futuristic Design System */
 :root {
   --neon-cyan: #00ffff;
@@ -348,6 +351,26 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .cyber-grid {
+    background-size: 30px 30px;
+  }
+  
+  .neon-text {
+    font-size: 1.75rem;
+  }
+  
+  .holographic-text {
+    font-size: 2.25rem;
+  }
+  
+  .quantum-card,
+  .cyber-card {
+    margin: 0.75rem;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .cyber-grid {
     background-size: 25px 25px;
@@ -364,6 +387,83 @@
   .quantum-card,
   .cyber-card {
     margin: 0.5rem;
+    padding: 16px;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .neon-glow {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+  
+  .neon-text {
+    font-size: 1.25rem;
+  }
+  
+  .holographic-text {
+    font-size: 1.75rem;
+  }
+  
+  .quantum-card,
+  .cyber-card {
+    margin: 0.25rem;
+    padding: 12px;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .neon-glow {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+  
+  .neon-text {
+    font-size: 1rem;
+  }
+  
+  .holographic-text {
+    font-size: 1.5rem;
+  }
+  
+  .quantum-card,
+  .cyber-card {
+    margin: 0.125rem;
+    padding: 8px;
+  }
+  
+  .cyber-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .neon-glow {
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 4px currentColor,
+      0 0 6px currentColor;
   }
 }
 

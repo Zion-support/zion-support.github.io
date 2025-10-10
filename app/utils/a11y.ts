@@ -21,7 +21,7 @@ export class A11yManager {
       screenReaderSupport: true,
       ...options
     };
-    
+
     this.initializeLiveRegion();
   }
 
@@ -62,7 +62,7 @@ export class A11yManager {
     const focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    
+
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
@@ -103,7 +103,7 @@ export class A11yManager {
           element.blur();
           break;
       }
-    });
+
   }
 
   /**
@@ -113,7 +113,7 @@ export class A11yManager {
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
       button.setAttribute('aria-label', 'Button');
     }
-    
+
     this.addKeyboardNavigation(button);
   }
 
@@ -122,11 +122,11 @@ export class A11yManager {
    */
   enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {
     const label = document.querySelector(`label[for="${field.id}"]`);
-    
+
     if (!label && !field.getAttribute('aria-label')) {
       field.setAttribute('aria-label', field.placeholder || 'Form field');
     }
-    
+
     if (field.required) {
       field.setAttribute('aria-required', 'true');
     }
@@ -138,12 +138,12 @@ export class A11yManager {
   createAccessibleModal(modal: HTMLElement): void {
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    
+
     const title = modal.querySelector('[data-modal-title]');
     if (title) {
       modal.setAttribute('aria-labelledby', title.id || 'modal-title');
     }
-    
+
     this.trapFocus(modal);
   }
 
@@ -165,8 +165,8 @@ export const a11yUtils = {
    */
   isVisibleToScreenReader(element: HTMLElement): boolean {
     const style = window.getComputedStyle(element);
-    return style.display !== 'none' && 
-           style.visibility !== 'hidden' && 
+    return style.display !== 'none' &&
+           style.visibility !== 'hidden' &&
            element.getAttribute('aria-hidden') !== 'true';
   },
 
@@ -187,7 +187,7 @@ export const a11yUtils = {
   isFocusable(element: HTMLElement): boolean {
     const tabIndex = element.getAttribute('tabindex');
     if (tabIndex === '-1') return false;
-    
+
     if (element instanceof HTMLButtonElement ||
         element instanceof HTMLInputElement ||
         element instanceof HTMLSelectElement ||
@@ -195,7 +195,7 @@ export const a11yUtils = {
         element instanceof HTMLAnchorElement) {
       return !element.disabled;
     }
-    
+
     return tabIndex !== null;
   }
 };

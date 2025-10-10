@@ -128,7 +128,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -139,10 +139,10 @@ const AIBusinessIntelligencePage: React.FC = () => {
             Transform your data into actionable insights with AI-powered business intelligence
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-            Leverage the power of artificial intelligence to analyze your business data, predict trends, 
+            Leverage the power of artificial intelligence to analyze your business data, predict trends,
             and make data-driven decisions that drive growth and efficiency.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="/contact"
@@ -174,7 +174,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Powerful Features
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -201,7 +201,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Real-World Applications
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
@@ -233,7 +233,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             How It Works
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -242,7 +242,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4">Connect Data Sources</h3>
               <p className="text-gray-300">Integrate with your existing databases, CRM, ERP, and other data sources</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">2</span>
@@ -250,7 +250,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4">AI Analysis</h3>
               <p className="text-gray-300">Our AI algorithms analyze your data to identify patterns, trends, and insights</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-white">3</span>
@@ -266,7 +266,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Flexible Pricing
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -277,7 +277,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -286,7 +286,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -295,7 +295,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <a
                   href="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -318,7 +318,7 @@ const AIBusinessIntelligencePage: React.FC = () => {
               Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join forward-thinking companies that are already using AI-powered business intelligence 
+              Join forward-thinking companies that are already using AI-powered business intelligence
               to make smarter decisions and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

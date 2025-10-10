@@ -1,4 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -24,13 +23,13 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
-    
+
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-      });
+
     }
   }
 
@@ -83,7 +82,7 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              
+
               <button
                 onClick={this.handleGoHome}
                 className="w-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center"
@@ -95,8 +94,8 @@ class ErrorBoundary extends Component<Props, State> {
 
             <div className="mt-6 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team:</p>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 kleber@ziontechgroup.com

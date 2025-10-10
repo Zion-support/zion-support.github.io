@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Calendar, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, Share2, TrendingUp, BarChart, MessageSquare } from 'lucide-react';
+import { Calendar, Target, Clock, CheckCircle, Brain, Share2, TrendingUp, BarChart, MessageSquare } from 'lucide-react';
 
 const AISocialMediaScheduler: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -142,13 +142,13 @@ const AISocialMediaScheduler: React.FC = memo(() => {
             <Calendar className="w-4 h-4" />
             <span>AI-Powered Social Media</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Social Media Scheduler
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Streamline your social media strategy with AI-powered scheduling, content generation, 
+            Streamline your social media strategy with AI-powered scheduling, content generation,
             and analytics. Manage all platforms from one intelligent dashboard.
           </p>
 
@@ -315,7 +315,6 @@ const AISocialMediaScheduler: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AISocialMediaScheduler.displayName = 'AISocialMediaScheduler';
 

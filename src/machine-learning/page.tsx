@@ -71,7 +71,7 @@ const MachineLearningPage: React.FC = () => {
               Custom ML models for predictive analytics and decision-making
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business with our advanced machine learning solutions that provide 
+              Transform your business with our advanced machine learning solutions that provide
               intelligent insights, predictions, and automation to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

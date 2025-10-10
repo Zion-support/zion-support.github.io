@@ -5,9 +5,9 @@ interface OptimizedErrorBoundaryProps {
   children?: React.ReactNode;
 }
 
-export default function OptimizedErrorBoundary({ 
-  className = '', 
-  children 
+export default function OptimizedErrorBoundary({
+  className = '',
+  children
 }: OptimizedErrorBoundaryProps) {
   return (
     <div className={`optimizederrorboundary ${className}`}>

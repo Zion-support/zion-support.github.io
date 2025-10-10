@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, FileText, GitBranch, AlertCircle, CheckSquare, Timer, DollarSign, PieChart, Activity, Bot, Headphones, Languages, Smartphone, Monitor, Laptop } from 'lucide-react';
+import { CheckCircle, Star, Shield, Clock, Users, TrendingUp, Brain, Target, BarChart, MessageSquare, Sparkles, Phone, Calendar, Bot } from 'lucide-react';
 
 const AICustomerSupportChatbotPage: React.FC = () => {
   const features = [
@@ -184,10 +184,10 @@ const AICustomerSupportChatbotPage: React.FC = () => {
             AI Customer Support Chatbot
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your customer support with AI-powered chatbots that provide instant, accurate responses 24/7. 
+            Transform your customer support with AI-powered chatbots that provide instant, accurate responses 24/7.
             Reduce support costs by 60% while improving customer satisfaction.
           </p>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (

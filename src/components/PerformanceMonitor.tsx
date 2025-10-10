@@ -1,15 +1,11 @@
-'use client';
 import React, { useEffect, useState } from 'react';
+import { Activity, AlertTriangle } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  totalBlockingTime: number;
-  speedIndex: number;
-  timeToInteractive: number;
+  renderTime: number;
+  memoryUsage: number;
+  isSlowConnection: boolean;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -17,83 +13,60 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') {
-      return;
+    // Only show in development or when performance issues are detected
+    if (process.env.NODE_ENV !== 'development') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+
+      // Measure render time
+      const renderStart = performance.now();
+      requestAnimationFrame(() => {
+        const renderTime = performance.now() - renderStart;
+
+        // Check memory usage (if available)
+        const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+
+        // Check connection speed
+        const connection = (navigator as any).connection;
+        const isSlowConnection = connection ?
+          connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
+
+        setMetrics({
+          loadTime,
+          renderTime,
+          memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
+          isSlowConnection
+
+        // Show warning if performance is poor
+        if (loadTime > 3000 || renderTime > 16 || memoryUsage > 50) {
+          setIsVisible(true);
+        }
+
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
-    const collectMetrics = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) {
-        return;
-      }
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-
-      const firstContentfulPaint = paintEntries.find(
-        (entry) => entry.name === 'first-contentful-paint'
-      )?.startTime || 0;
-
-      const largestContentfulPaint = paintEntries.find(
-        (entry) => entry.name === 'largest-contentful-paint'
-      )?.startTime || 0;
-
-      const performanceMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint,
-        largestContentfulPaint,
-        firstInputDelay: 0, // Would need to be measured separately
-        cumulativeLayoutShift: 0, // Would need to be measured separately
-        totalBlockingTime: 0, // Would need to be measured separately
-        speedIndex: 0, // Would need to be measured separately
-        timeToInteractive: navigation.domInteractive - navigation.navigationStart,
-      };
-
-      setMetrics(performanceMetrics);
-    };
-
-    // Collect metrics after page load
-    const timer = setTimeout(collectMetrics, 1000);
-
-    // Show/hide with keyboard shortcut
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
     return () => {
-      clearTimeout(timer);
-      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('load', measurePerformance);
     };
   }, []);
 
-  if (process.env.NODE_ENV !== 'development' || !isVisible || !metrics) {
-    return null;
-  }
-
-  const getScore = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.needsImprovement) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getScoreColor = (score: string) => {
-    switch (score) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
+  if (!isVisible || !metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-lg rounded-lg p-4 text-white text-xs font-mono max-w-sm z-50 border border-white/20">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
+    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center space-x-1">
+          <Activity className="w-3 h-3 text-cyan-400" />
+          <span className="font-semibold">Performance</span>
+        </div>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
@@ -101,39 +74,35 @@ const PerformanceMonitor: React.FC = () => {
           ×
         </button>
       </div>
-      
-      <div className="space-y-2">
+
+      <div className="space-y-1">
         <div className="flex justify-between">
           <span>Load Time:</span>
-          <span className={getScoreColor(getScore(metrics.loadTime, { good: 2000, needsImprovement: 4000 }))}>
+          <span className={metrics.loadTime > 3000 ? 'text-red-400' : 'text-green-400'}>
             {metrics.loadTime.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(getScore(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 }))}>
-            {metrics.firstContentfulPaint.toFixed(0)}ms
+          <span>Render Time:</span>
+          <span className={metrics.renderTime > 16 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.renderTime.toFixed(1)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(getScore(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 }))}>
-            {metrics.largestContentfulPaint.toFixed(0)}ms
+          <span>Memory:</span>
+          <span className={metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.memoryUsage.toFixed(1)}MB
           </span>
         </div>
-        
-        <div className="flex justify-between">
-          <span>TTI:</span>
-          <span className={getScoreColor(getScore(metrics.timeToInteractive, { good: 3800, needsImprovement: 7300 }))}>
-            {metrics.timeToInteractive.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-white/20 text-gray-400">
-        Press Ctrl+Shift+P to toggle
+
+        {metrics.isSlowConnection && (
+          <div className="flex items-center space-x-1 text-yellow-400">
+            <AlertTriangle className="w-3 h-3" />
+            <span>Slow Connection</span>
+          </div>
+        )}
       </div>
     </div>
   );

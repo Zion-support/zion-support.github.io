@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ShoppingCart, BarChart, Target, Zap, TrendingUp, Users, DollarSign, Shield, Globe, Smartphone, CreditCard, Package, Star, CheckCircle, ArrowRight, Brain, Cpu, Database, Settings, Eye, MessageSquare, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone as Mobile, TrendingUp as Growth } from 'lucide-react';
+import { BarChart, Target, Zap, TrendingUp, Users, Shield, Globe, CreditCard, Package, Star, CheckCircle, ArrowRight, Brain, Database, Search, Bot, Home, Navigation, Zap, Target, Shield, Users, Star, CheckCircle, ArrowRight, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -160,7 +160,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -173,7 +173,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
               AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment, 
+              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,
               and maximize revenue with intelligent automation and analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -292,8 +292,8 @@ const AIEcommerceOptimizerPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular 
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' 
+                plan.popular
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>
                 {plan.popular && (
