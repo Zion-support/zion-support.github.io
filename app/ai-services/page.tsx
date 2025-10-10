@@ -77,6 +77,166 @@ const AIServicesPage: React.FC = () => {
         'ROI Tracking & Analytics',
         'Cross-Platform Integration'
       ],
+<<<<<<< HEAD
+=======
+      icon: <Target className="w-8 h-8" />,
+      category: 'Marketing',
+      popular: true,
+      rating: 4.8,
+      users: '2,800+',
+      color: 'from-purple-500 to-pink-600',
+      capabilities: [
+        '300% increase in conversion rates',
+        'Automated campaign optimization',
+        'Real-time performance tracking',
+        'Predictive customer behavior'
+      ],
+      category: 'AI Automation & Workflow',
+      icon: Zap,
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10',
+      services: [
+        {
+          name: 'AI Workflow Automation Platform',
+          description: 'End-to-end business process automation with intelligent decision-making and self-optimization',
+          features: ['Visual Workflow Builder', 'Smart Process Optimization', 'Error Detection & Correction', 'Cost Reduction', 'Scalable Architecture'],
+          pricing: 'Starting at $5,000/month',
+          trial: '30-day free trial',
+          roi: '200-400% ROI',
+          link: 'https://ziontechgroup.com/ai-workflow-automation',
+          popular: true
+        },
+        {
+          name: 'AI Customer Support Suite',
+          description: 'Advanced 24/7 customer support with natural language processing, sentiment analysis, and human handoff',
+          features: ['Multi-language NLP', 'Sentiment Analysis', 'Escalation Management', 'Knowledge Base Integration', 'Performance Analytics'],
+          pricing: 'Starting at $3,000/month',
+          trial: '14-day free trial',
+          roi: '150-300% ROI',
+          link: 'https://ziontechgroup.com/ai-customer-support',
+          popular: true
+        },
+        {
+          name: 'AI Sales Automation Engine',
+          description: 'Intelligent sales process automation with lead scoring, automated follow-ups, and predictive analytics',
+          features: ['AI Lead Scoring', 'Automated Outreach', 'Sales Forecasting', 'CRM Integration', 'Revenue Optimization'],
+          pricing: 'Starting at $4,000/month',
+          trial: '14-day free trial',
+          roi: '250-500% ROI',
+          link: 'https://ziontechgroup.com/ai-sales-automation',
+          popular: true
+        },
+        {
+          name: 'AI Document Processing System',
+          description: 'Intelligent document analysis, extraction, and processing with OCR and natural language understanding',
+          features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Workflow Integration', 'Compliance Tracking'],
+          pricing: 'Starting at $2,500/month',
+          trial: '7-day free trial',
+          roi: '180-350% ROI',
+          link: 'https://ziontechgroup.com/ai-document-processing',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'AI Analytics & Business Intelligence',
+      icon: BarChart,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {
+          name: 'AI Data Analytics Platform',
+          description: 'Advanced analytics and insights with machine learning-powered predictions and real-time dashboards',
+          features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Visualization', 'Automated Insights'],
+          pricing: 'Starting at $6,000/month',
+          trial: '14-day free trial',
+          roi: '300-600% ROI',
+          link: 'https://ziontechgroup.com/ai-data-analytics',
+          popular: true
+        },
+        {
+          name: 'AI Business Intelligence Suite',
+          description: 'Transform raw data into actionable business insights with AI-powered analysis and recommendations',
+          features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning', 'ROI Measurement'],
+          pricing: 'Starting at $7,000/month',
+          trial: '14-day free trial',
+          roi: '400-700% ROI',
+          link: 'https://ziontechgroup.com/ai-business-intelligence',
+          popular: true
+        },
+        {
+          name: 'AI Predictive Analytics Engine',
+          description: 'Forecast future trends, outcomes, and opportunities with advanced machine learning models',
+          features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning', 'Anomaly Detection'],
+          pricing: 'Starting at $8,000/month',
+          trial: '14-day free trial',
+          roi: '500-800% ROI',
+          link: 'https://ziontechgroup.com/ai-predictive-analytics',
+          popular: true
+        },
+        {
+          name: 'AI Real-time Monitoring System',
+          description: 'Continuous monitoring and alerting system with AI-powered anomaly detection and automated responses',
+          features: ['Real-time Monitoring', 'Anomaly Detection', 'Automated Alerts', 'Performance Tracking', 'Predictive Maintenance'],
+          pricing: 'Starting at $4,500/month',
+          trial: '7-day free trial',
+          roi: '250-450% ROI',
+          link: 'https://ziontechgroup.com/ai-monitoring',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'AI Content & Marketing Solutions',
+      icon: FileText,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'AI Content Generation Studio',
+          description: 'Complete content creation suite with AI writing, editing, optimization, and multi-format support',
+          features: ['AI Writing Assistant', 'Content Optimization', 'SEO Analysis', 'Brand Voice Training', 'Multi-format Support'],
+          pricing: 'Starting at $2,000/month',
+          trial: '7-day free trial',
+          roi: '100-300% ROI',
+          link: 'https://ziontechgroup.com/ai-content-generation',
+          popular: true
+        },
+        {
+          name: 'AI Email Marketing Platform',
+          description: 'Intelligent email campaigns with personalization, A/B testing, and performance optimization',
+          features: ['Smart Personalization', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics', 'List Segmentation'],
+          pricing: 'Starting at $3,500/month',
+          trial: '7-day free trial',
+          roi: '200-400% ROI',
+          link: 'https://ziontechgroup.com/ai-email-marketing',
+          popular: true
+        },
+        {
+          name: 'AI SEO Optimization Suite',
+          description: 'Comprehensive SEO analysis, keyword research, and content optimization with AI recommendations',
+          features: ['Keyword Research', 'Content Analysis', 'Technical SEO', 'Competitor Analysis', 'Rank Tracking'],
+          pricing: 'Starting at $4,500/month',
+          trial: '7-day free trial',
+          roi: '250-500% ROI',
+          link: 'https://ziontechgroup.com/ai-seo-optimizer',
+          popular: true
+        },
+        {
+          name: 'AI Social Media Manager',
+          description: 'Automated social media content creation, scheduling, and engagement optimization across platforms',
+          features: ['Content Generation', 'Post Scheduling', 'Engagement Analytics', 'Hashtag Optimization', 'Multi-platform Management'],
+          pricing: 'Starting at $1,500/month',
+          trial: '7-day free trial',
+          roi: '150-300% ROI',
+          link: 'https://ziontechgroup.com/ai-social-media-manager',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'AI Industry-Specific Solutions',
+>>>>>>> cursor/fix-errors-and-merge-to-main-90b7
       icon: Target,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50'
@@ -170,6 +330,7 @@ const AIServicesPage: React.FC = () => {
                     Most Popular
                   </span>
                 </div>
+<<<<<<< HEAD
               )}
               
               <div className="p-8">
@@ -188,6 +349,18 @@ const AIServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {service.price}
+=======
+                <div className="flex items-center space-x-2">
+                  {service.popular && (
+                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </span>
+                  )}
+                  <div className="flex items-center text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-90b7
                   </div>
                   <div className="text-sm text-gray-500">per month</div>
                 </div>
