@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 /* Import Futuristic Design System */
-@import '../src/styles/futuristic.css';
 
 /* Futuristic Design System */
 :root {

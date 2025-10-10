@@ -28,7 +28,11 @@ const DYNAMIC_PATTERNS = [
 ];
 
 // Install event - cache static assets
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-4b35
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Installing...');
   
@@ -48,7 +52,11 @@ self.addEventListener('install', (event) => {
       })
       .catch((error) => {
         console.error('Service Worker: Failed to cache static assets', error);
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-4b35
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
       })
   );
 });
@@ -301,4 +309,8 @@ self.addEventListener('message', (event) => {
 });
 
 console.log('Service Worker: Loaded successfully');
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-4b35
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main

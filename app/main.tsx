@@ -12,8 +12,8 @@ if ('serviceWorker' in navigator) {
       })
       .catch(() => {
         // Service Worker registration failed - handled silently
-
-
+      });
+  });
 }
 
 const root = document.getElementById('root');
