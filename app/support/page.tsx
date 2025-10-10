@@ -195,16 +195,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      
-      <Footer />
     </>
   );
 };
 
 export default SupportPage;
-=======
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
