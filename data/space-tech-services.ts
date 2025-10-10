@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export interface SpaceTechService {id: string;
@@ -2924,10 +2923,3 @@ export interface SpaceTechService,
   s: 500, ratin,
   g: 4.9, review,
   s: 250} ]} ; '
-=======
-    market_size: '$469B space economy'
-    growth_rate: '400% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

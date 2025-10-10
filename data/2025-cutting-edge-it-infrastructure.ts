@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -2524,10 +2523,3 @@ i,
   s: 6; ratin,
   g: 4.9; review,
   s: 4} ]; '
-=======
-      market_size: '$397.4B cloud computing market'
-      growth_rate: '23% annual growth';
-variant: 'quantum - cloud - enterprise'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

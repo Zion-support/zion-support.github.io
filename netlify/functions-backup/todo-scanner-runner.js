@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {
   try {
     //     // Todo scanning simulation;
@@ -39,7 +38,3 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })}}
 };
-=======
-        timestamp: new Date().toISOString();
-function: 'todo-scanner-runner'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

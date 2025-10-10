@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 ;
 const QuantumAIHybrid202, 5 = () => {
 return (
@@ -9,13 +8,6 @@ return (
   return(:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx;
     <React.Fragment>
       <Helm, e, t>
-=======
-
-const QuantumAIHybrid202, 5 = () => { 
-  return(:src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           Quant, u, m-AI, Hybrid, Systems 20, 2, 5: Practical, Nea, r-Term, Implementatio, n |
           Zion, Tech, Group;
@@ -77,17 +69,11 @@ const QuantumAIHybrid202, 5 = () => {
                 <
                 <div, className='bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6'><
                   <p, className='te, x, t-white, tex, t-lg, leadin, g-relax, e, d'>
-<<<<<<< HEAD
                     Quant, u, m-AI, hybrid, systems are, no, longer theoretic, a, l—th, e, y're, deliverin, g <stro, n, g>1000x, processing, speed</st, r, o, n, g>)
                     <stro, n, g>99.9% accuracy, improvement, s</stro, n, g >
 );
 } , a, n, d{' ' }
                     <stro, n, g>unprecedented, optimization, capabilities</stro, n, g>
-=======
-                    Quant, u, m-AI, hybrid, systems are, no, longer theoretic, a, l—th, e, y're, deliverin, g <stro, n, g>1000x, processing, speed<
-                    <stro, n, g>99.9% accuracy, improvement, s<
-                    <stro, n, g>unprecedented, optimization, capabilities<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     for, enterprise, applications tod, a, y.
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems
     <div>
@@ -128,7 +114,6 @@ const QuantumAIHybrid202, 5 = () => {
     5:</h1> <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"><
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." 
             "
-<<<<<<< HEAD
     <React.Fragment>
       <Helmet >
         <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group</title>),
@@ -138,21 +123,6 @@ const QuantumAIHybrid202, 5 = () => {
         <meta property: "og:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." />
         <link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/>
       </Helmet>"
-=======
-    <>
-      
-        <title>Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation | Zion Tech Group<
-        <meta name="description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property: "o,
-    g:title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" 
-        <meta property: "o,
-    g:description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." 
-        <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><meta property: "o,
-    g:title", content="Quantum-AI Hybrid Systems 2025: Practical Near-Term Implementation" 
-        <meta property: "o,
-    g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." 
-        <link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 "
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
         <div className="bg-white/10 backdrop-blur-lg border-b border-white
@@ -246,17 +216,10 @@ const QuantumAIHybrid202, 5 = () => {
               <
             <
             
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">,"</p>;
 const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     <stro, n, g>99.9% accuracy, improvement, s</stro, n, g > , a, n, d{' ' }
                     <stro, n, g>unprecedented, optimization, capabilities</stro, n, g>
-=======
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">,"<
-const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression *
-                    <stro, n, g>99.9% accuracy, improvement, s<
-                    <stro, n, g>unprecedented, optimization, capabilities<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     for, enterprise, applications tod, a, y.
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems
     <div><
@@ -291,7 +254,6 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression *
   2025: <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"><
         <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><
             "
-<<<<<<< HEAD
     <React.Fragment>
       <Helmet ></Helmet>
         <title>Quantum-AI Hybrid Systems,
@@ -314,26 +276,6 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression *
   property: 'o,',
   g:
         g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /></meta>
-=======
-    <>
-      <Helmet ><
-        <title>Quantum-AI Hybrid Systems,
-  2025: Practical Near-Term Implementation | Zion Tech Group<
-        <meta name="description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." 
-  property: "o,"
-  g:title", content="Quantum-AI Hybrid Systems,"
-  2025: Practical Near-Term Implementation" 
-        <meta,"
-  property: "o,"
-  g:description", content ="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." 
-        <meta name="description" content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." 
-  property: "o,"
-  g:title", content="Quantum-AI Hybrid Systems,"
-  2025: Practical Near-Term Implementation" /><
-        <meta,"
-  property: "o,"
-  g:description", content="Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies, real-world applications, and ROI optimization for 1000x processing speed gains." /><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <link,"
   rel: "canonical", href="http,
   s: //ziontechgroup.com/blog/ai-2025-october-quantum-ai-hybrid-systems/><
@@ -680,22 +622,12 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression *
   hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""
-<<<<<<< HEAD
                       <Link className="w-5 h-5 " /></Link>"
                       <Link className="w-5 h-5" /></Link>
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className= " />
   )};
-=======
-                      <Link className="w-5 h-5 " /><
-                      <Link className="w-5 h-5" /><
-                    <
-                    <Link to="/services/quantum-computing-consulting"><
-  className= " 
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default QuantumAIHybrid2025;
   </div>  <

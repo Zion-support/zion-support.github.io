@@ -1,17 +1,10 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 const EnterpriseAutomation202, 5 = () => {
 return (
  
   return(:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation/page.tsx;
     <React.Fragment>
       <Helm, e, t>
-=======
-const EnterpriseAutomation202, 5 = () => { 
-  return(:src/pages/blog/ai-2025-october-breakthrough-enterprise-automation
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           AI-Powered, Enterprise, Automation 20, 2, 5: Complete, Implementation, Guide |
           Zion, Tech, Group;
@@ -68,17 +61,11 @@ const EnterpriseAutomation202, 5 = () => {
               <section, className='mb-12'>
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                   Executive, Summar, y;
-<<<<<<< HEAD
                 </h2>
                 <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6'>
 );
 };
 const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
-=======
-                <
-                <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0
-const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   <p, className='te, x, t-white, tex, t-lg, leadin, g-relax, e, d' > Enterprise, AI, automation is, no, longer a, future, aspiration—it's, a, present necessi, t, y. Companies, implementing, comprehensive AI, automation, strategies are, see, i, n, g{' ' }
                     <stro, n, g>4, 0, 0-6, 0, 0% efficiency, gain, s<
                 <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6'><
@@ -294,7 +281,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression *
   2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"><
         <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><
             ""
-<<<<<<< HEAD
         <meta name="description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta,"
   property: 'o,',
   g:
@@ -313,22 +299,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression *
   property: 'o,',
   g:
         g:description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /></meta>
-=======
-        <meta name="description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." 
-  property: "o,"
-  g:title", content="AI-Powered Enterprise Automation,"
-  2025: Complete Implementation Guide" 
-        <meta,"
-  property: "o,"
-  g:description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." 
-        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." 
-  property: "o,"
-  g:title", content="AI-Powered Enterprise Automation,"
-  2025: Complete Implementation Guide" /><
-        <meta,"
-  property: "o,"
-  g:description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <link,"
   rel: "canonical", href="http,
   s: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation/><
@@ -712,7 +682,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression *
   className= " /><
                     
                       View Case Studies;
-<<<<<<< HEAD
                     </Link>
                   </div>
                 </div>
@@ -722,18 +691,6 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression *
         </div>
       </div>,
     </React.Fragment>)};
-=======
-                    <
-                  <
-                <
-              <
-            <
-          <
-        <
-      <
-    <
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default EnterpriseAutomation2025;
   <

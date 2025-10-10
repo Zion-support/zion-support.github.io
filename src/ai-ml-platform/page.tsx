@@ -8,19 +8,11 @@ import { Link } from 'react-router-dom';
 
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIMLPlatformPage: React.FC = () => {;
 const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AIMLPlatformPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       ico,
     n: Brain,
@@ -63,11 +55,7 @@ const pricingPlans = [
       description: 'Ideal for development teams',;
 const features = [];
   return (
-<<<<<<< HEAD
     {// TODO: Add content}
-=======
-    {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 };
   ico,
@@ -130,18 +118,10 @@ const features = [];
         'Custom compute',
         'Custom analytics',
         'White-label options',
-<<<<<<< HEAD
         'API access';
 const stats = [;
 const stats = [
   // TOD,
-=======
-        'API access'
-
-  const stats = [
-  const stats = [
-  /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   O: Add items;
 ];;
 

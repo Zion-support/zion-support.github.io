@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
@@ -3262,8 +3261,3 @@ export interface ComprehensiveService,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),' ico,
   n: '🚀',' colo,
   r: 'from-violet-600 to-purple-700' } ];'"
-=======
-    reviews: 89},
-    id: 'zero-trust-security-platform'
-    name: 'Zero Trust Security Platform'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

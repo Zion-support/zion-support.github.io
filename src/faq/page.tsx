@@ -1,7 +1,6 @@
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -15,17 +14,6 @@ const [searchTerm, setSearchTerm] = useState('');
 ;
 const toggleItem = (index: number) => {
     setOpenItems(prev => 
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
@@ -104,15 +92,10 @@ const filteredData = faqData.map(category => ({
     )
   })).filter(category => category.questions.length > 0);
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-12">
@@ -149,13 +132,9 @@ return (
 const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                     
-<<<<<<< HEAD
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
 );
 }
-=======
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                         <button
                           onClick = { () => toggleItem(globalIndex) };
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700
@@ -188,13 +167,8 @@ const globalIndex = categoryIndex * 100 + itemIndex;
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" 
                 Contact Form
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-=======
-      <Footer 
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default FAQPage;
 
@@ -203,7 +177,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components
 import Footer from '../components
 const FAQPage: React.FC = () => {
-<<<<<<< HEAD
 return (
 
   return (
@@ -212,11 +185,6 @@ return (
 }
 
   )};
-=======
-  return (<div>Coming Soon<)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
@@ -229,14 +197,8 @@ const toggleItem = (inde)
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   categor,
   y: 'General Questions',
@@ -355,14 +317,8 @@ const toggleItem = (inde)
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-<<<<<<< HEAD
   const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;)}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
 /
     question,
@@ -374,21 +330,12 @@ const toggleItem = (inde)
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-12"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-12"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
@@ -420,20 +367,11 @@ type="text" placeholder="Search FAQs..."
           <div key={categoryIndex} className="mb-12"><
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"><
                   {category.category}
-<<<<<<< HEAD
                 </h2>"
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
   // TOD,
   O: Add content}
-=======
-                <
-                <div className="space-y-4"><
-                  {category.questions.map ((item, itemIndex) => {}
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
 
@@ -480,13 +418,8 @@ type="text" placeholder="Search FAQs..."
                 <MessageSquare className="w-4 h-4 mr-2" 
 
                 Contact Form;
-<<<<<<< HEAD
       <Footer /></Footer>
     </React.Fragment>
-=======
-      <Footer /><
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default FAQPage;
 
 export default FaqPage;

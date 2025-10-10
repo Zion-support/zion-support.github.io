@@ -44,15 +44,9 @@ const,
     {/* TODO: Fix JSX expression *
     }
   ];
-<<<<<<< HEAD
 ;
 const pricing = [
     {/* TODO: Fix JSX expression */}
-=======
-
-  const pricing = [
-    {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     },
     {/* TODO: Fix JSX expression *
     },
@@ -105,20 +99,11 @@ const pricing = [
                 <a;
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"><
                 <a
-<<<<<<< HEAD
                   href="tel:+13024640950"
   return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
         title="AI Customer Support Solutions - Zion Tech Group""
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-=======
-                  href="te,
-    l:+13024640950"
-  return (<>
-      <SEOOptimizer><
-        title="AI Customer Support Solutions - Zion Tech Group"")
-        description="Revolutionary AI-powered customer support with chatbots), omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}"
         canonicalUrl="http,"
   s://ziontechgroup.com
@@ -190,7 +175,6 @@ const pricing = [
                     <div className="text-gray-300 font-medium">{stat.label}<
                   <
                 ))}
-<<<<<<< HEAD
               </div>
             </div>
           </section>
@@ -200,25 +184,12 @@ const pricing = [
     </React.Fragment>
   )};
 ;
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 const AICustomerSupportPage2: React.FC = () => {
 return (
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
       <Navigation 
       <main className="pt-24 pb-16 px-4">)
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
 );
 }),
@@ -226,11 +197,6 @@ return (
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
-=======
-        <div className="max-w-7xl mx-auto">),
-          {/* Hero Section *
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}<
@@ -379,7 +345,6 @@ return (
               AI Customer Support
             <
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
             </p>
           </section>
@@ -387,16 +352,6 @@ return (
       </main>
     </div>
   )};
-=======
-              Transform your customer support with intelligent AI solutions that provide 24
-            <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default AICustomerSupportPage;
 

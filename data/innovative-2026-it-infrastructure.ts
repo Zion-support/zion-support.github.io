@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
   id: string;
@@ -2510,10 +2509,3 @@ i,
   s: 1100; ratin,
   g: 4.8; review,
   s: 550} ]; '
-=======
-      market_size: '$397.4B market'
-      growth_rate: '280% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

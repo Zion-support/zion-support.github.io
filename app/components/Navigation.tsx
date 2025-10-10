@@ -1,15 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
 const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
 const [servicesOpen, setServicesOpen] = useState(false);
 const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -25,9 +18,6 @@ const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
   };
   
-=======
->>>>>>> main
->>>>>>> origin/main
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -35,7 +25,6 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);

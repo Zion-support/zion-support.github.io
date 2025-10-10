@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
@@ -31519,8 +31518,3 @@ export const,
   g: 4.6, review,
   s: 2}]; review,
   s: 2 } ]; '
-=======
-    market_size: '$40 B GenAI apps'
-    growth_rate: '45% CAGR';
-variant: 'quantum - matrix',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
       'Quantum-secured space communication',
@@ -6340,7 +6339,3 @@ export const,
   s: 35, ratin,
   g: 4.8, review,
   s: 28} ; '"
-=======
-    growth_rate: '500% annual growth';
-variant: 'quantum - space'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

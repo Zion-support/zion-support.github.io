@@ -6,17 +6,10 @@ impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "luci, d, e-rea, c, t";';"
-<<<<<<< HEAD
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, SmartContractAudi, t: Rea, c, t.FC = () => {;
 const, feature, s = [
-=======
-import, Header, from "../../componen, t, s
-import, Footer, from "../../componen, t, s
-const, SmartContractAudi, t: Rea, c, t.FC = () => {
-  const, feature, s = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       i, c, o;
   n: Shie, l, d;
@@ -325,7 +318,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     {/* TODO: Fix JSX expression *
     }
   ];
-<<<<<<< HEAD
   return(<React.Fragment>
       <Helmet>
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
@@ -335,15 +327,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
-=======
-  return(<div>
-        <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts<
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t
-  return (<div><Helmet><
-        <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <me, t, a;"
   na, m, e="descripti, o, n""
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t
@@ -581,7 +564,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
-<<<<<<< HEAD
               {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
 return (
 ;
@@ -589,11 +571,6 @@ const, Ico, n = aud, i, t.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {auditTyp, e, s.m, a, p ((aud, i, t, ind, e, x) => {
-                const, Ico, n = aud, i, t.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  
                     <
@@ -674,7 +651,6 @@ const, Ico, n = aud, i, t.ic, o, n;
                             <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}<
                           <
                         ))}
-<<<<<<< HEAD
                       </ul>
                     </d, i, v>
                   </d, i, v>
@@ -683,17 +659,6 @@ const, Ico, n = aud, i, t.ic, o, n;
           </d, i, v>
         </secti, o, n>
         {/* Proce, s, s */}
-=======
-                      <
-                    <
-                  <
-                );
-              })}
-            <
-          <
-        <
-        {/* Proce, s, s *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <section, className="py-20, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
@@ -790,7 +755,6 @@ const, Ico, n = aud, i, t.ic, o, n;
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
@@ -798,11 +762,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
@@ -815,7 +774,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
@@ -823,18 +781,12 @@ const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"><
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"><)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
@@ -849,18 +801,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
             </d, i, v>"
-=======
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";<
-                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" 
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";<
-            <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression *
@@ -882,7 +822,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
-<<<<<<< HEAD
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
@@ -893,9 +832,6 @@ const, Ico, n = featu, r, e.ic, o, n;
         </secti, o, n>
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-=======
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
@@ -980,11 +916,7 @@ const, Ico, n = featu, r, e.ic, o, n;
 pl, a, n.popul, a, r;
 ? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
 ? 'bg-r, e, d-600, tex, t-white, hov, e;
-<<<<<<< HEAD
   r: bg-r, e, d-7, 0, 0','}
-=======
-  r: bg-r, e, d-7, 0, 0','; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a><
   hr, e, f="
@@ -1134,7 +1066,6 @@ pl, a, n.popul, a, r;
   r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Audit, Reports;"
-<<<<<<< HEAD
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
                 <Link, className="w-5 h-5, m, l-2" />";
               </a>
@@ -1146,18 +1077,3 @@ pl, a, n.popul, a, r;
     </React.Fragment>
   )};
 export default SmartContractAudit}}}}}"`
-=======
-                <Link, className="w-5 h-5, m, l-2  /><
-                <Link, className="w-5 h-5, m, l-2" 
-              <
-            <
-          <
-        <
-      <
-      <Foot, e, r   /><
-    <
-  );
-};
-export default SmartContractAudit;
-}}}}}"`
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

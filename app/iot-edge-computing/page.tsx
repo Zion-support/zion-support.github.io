@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -80,6 +79,3 @@ const benefits = [
 )]
     };
 export default PagePage;
-=======
-      description: 'Worldwide deployment and support for international businesses';);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

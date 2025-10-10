@@ -31,15 +31,8 @@ metr, i, c;
   s: {,
 pageTit, l, e: stri, n, g;
 metaDescripti, o, n: stri, n, g;
-<<<<<<< HEAD
 headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
   6: numb, e, r};
-=======
-headin, g, s: { h,
-    1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; h5: numb, e, r; h;
-  6: numb, e, r;
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     imag, e, s: { tot, a, l: numb, e, r; withA, l, t: numb, e, r; without, A, l;
   t: numb, e, r };
     lin, k, s: { tot, a, l: numb, e, r; intern, a, l: numb, e, r; exter, n, a;
@@ -58,17 +51,9 @@ interface, SEORepor, t {/* TODO: Fix JSX expression *
     wordCou, n, t: numb, e, r;
     readabilitySc, o, r;
     readabilitySc, o, r,
-<<<<<<< HEAD
   e: numb, e, r};
   lastUpdat, e, d: numb, e, r}
 const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-=======
-  e: numb, e, r;
-  };
-  lastUpdat, e, d: numb, e, r;
-}
-const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     }
     {/* TODO: Fix JSX expression *
     }
@@ -143,14 +128,8 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       descripti, o, n: 'Page, loading, time affects, SEO, rankings',';
       impa, c, t: 'hi, g, h',';
       catego, r, y: 'performan, c, e',';
-<<<<<<< HEAD
       f, i, x: 'Optimize, image, s, minimize, CS, S/JS, and, use, CDN',';
       sco, r, e: 70}
-=======
-      f, i, x: 'Optimize, image, s, minimize, CS, S
-      sco, r, e: 70;
-    }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       id: 'intern, a, l-linki, n, g',';
       ty, p, e: 'in, f, o',';
@@ -192,19 +171,11 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     setIsRunni, n, g(tr, u, e);
     /
   await, new, Promise(resol, v, e => setTimeo, u, t(resol, v, e, 30, 0, 0));
-<<<<<<< HEAD
     // Simulate, some, issues based, on, random facto, r, s;
   const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {;
 let, typ, e = iss, u, e.ty, p, e;);
 let, scor, e = iss, u, e.sco, r, e;)
       // Simulate, some, issues being, fixed, or appeari, n, g;)
-=======
-    /
-  const, issue, s = commonSEOIssu, e, s.m, a, p(iss, u, e => {)
-      let, typ, e = iss, u, e.ty, p, e;)
-      let, scor, e = iss, u, e.sco, r, e;)
-      /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {;
         ty, p, e = 'warni, n, g';
         sco, r, e = 60} else, i, f (iss, u, e.id === 'pa, g, e-spe, e, d' && Ma, t, h.rand, o, m() > 0.4) {;
@@ -293,12 +264,7 @@ let, scor, e = iss, u, e.sco, r, e;)
   ,
     l: 45, intern, a, l: 32, extern, a, l: 13 }
         wordCou, n, t: 28, 4, 7;
-<<<<<<< HEAD
         readabilitySco, r, e: 72})
-=======
-        readabilitySco, r, e: 72;)
-      });
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       lastUpdat, e, d: Da, t, e.n, o, w()
         pageTi, t, l,
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',';
@@ -316,27 +282,15 @@ let, scor, e = iss, u, e.sco, r, e;)
         readabilitySco, r, e: 72}
       lastUpdat, e, d: Da, t, e.n, o, w()
     });
-<<<<<<< HEAD
     setIsRunni, n, g(fal, s, e)};
   const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */}
-=======
-    setIsRunni, n, g(fal, s, e);
-  };
-  const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
 ca, s, e 'err, o, r':';"
 retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0" 
 ca, s, e 'warni, n, g':';"
 retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" 
 defau, l, t:"
-<<<<<<< HEAD
 retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;"}};
-=======
-retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" 
-};
-  };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {
 swit, c, h (impa, c, t) {
 ca, s, e 'hi, g, h':
@@ -351,7 +305,6 @@ retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 
 defa, u, l;
   t:
 retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';';
-<<<<<<< HEAD
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression */}
 }};
   const, getCategoryIco, n = (catego, r, y: stri, n, g) => {/* TODO: Fix JSX expression */}
@@ -366,24 +319,6 @@ const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego,
 const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
     return, categoryMatc, h && impactMat, c, h;);
 const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression */})
-=======
-  const, getImpactColo, r = (impa, c, t: stri, n, g) => {/* TODO: Fix JSX expression *
-};
-  };
-  const, getCategoryIco, n = (catego, r, y: stri, n, g) => {/* TODO: Fix JSX expression *
-}
-  };
-  const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression *
-};
-  };
-  const, getScoreColo, r = (sco, r, e: numb, e, r) => {/* TODO: Fix JSX expression *
-  };
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {)
-    const, categoryMatc, h = selectedCatego, r, y === 'a, l, l' || iss, u, e.catego, r, y === selectedCatego, r, y;';)
-    const, impactMatc, h = selectedImpa, c, t === 'a, l, l' || iss, u, e.impa, c, t === selectedImpa, c, t;';)
-    return, categoryMatc, h && impactMat, c, h;)
-  const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TODO: Fix JSX expression *)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   }) || [];
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))];
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];
@@ -413,17 +348,10 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
           <p, className="te, x, t-gr, a, y-600, m, t-1">Comprehensive, SEO, analysis and, optimization, recommendations<
         <
         <butt, o, n;
-<<<<<<< HEAD
   onCli, c, k={runSEOAud, i, t}
           disabl, e, d={isRunni, n, g}
           classNa, m, e={`px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`
             isRunni, n, g}
-=======
-  onCli, c, k = { runSEOAud, i, t };
-          disabl, e, d = { isRunni, n, g };
-          classNa, m, e = { `px-6, p, y-2, rounde, d-lg, fon, t-medium, transitio, n-colors, flex, items-center, ga, p-2 ${`;`
-            isRunni, n, g; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'}
           classNa, m, e={/* TODO: Fix JSX expression *
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0}`}`;`
@@ -432,7 +360,6 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
         >
           {
 isRunni, n, g ? (
-<<<<<<< HEAD
 <React.Fragment>
 <div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"></d, i, v>";)
 Analyzi, n, g...)
@@ -455,28 +382,6 @@ Analyzi, n, g...)
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";</div>
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";</div>
               <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
-=======
-<>
-<div, className="anima, t, e-spin, rounde, d-ful, l, h-4 w-4, borde, r-b-2, borde, r-whi, t, e"><
-Analyzi, n, g...)
-<
-) : (<>{}
-<Search, className="w-4 h-4  /><
-<Search, className="w-4 h-4" />";</Search>Run<
-<)
-)
-}
-        <
-      <
-      {repo, r, t && (<>{}
-          {/* SEO, Score, Overview *
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"<
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"><
-              <div, className="flex, justif, y-between, item, s-cent, e, r"><
-          <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";<
-            <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";<
-              <div, className="flex, justif, y-between, item, s-cent, e, r">";<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 <d, i, v>
                   <p, className="te, x, t-bl, u, e-100, tex, t-sm">SEO, Scor, e<
         ><
@@ -806,18 +711,9 @@ Analyzi, n, g...)
           {/* Last, Update, d *
           <div, className="mt-6, tex, t-center, tex, t-sm, tex, t-gr, a, y-5, 0, 0">";
             Last, update, d: {new, Dat, e(repo, r, t.lastUpdat, e, d).toLocaleStri, n, g()}
-<<<<<<< HEAD
           </d, i, v>
         </React.Fragment>
       )}
     </d, i, v>
   )};
-=======
-          <
-        <
-      )}
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default SEOAuditDashboard;"`

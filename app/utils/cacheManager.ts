@@ -8,25 +8,6 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   s: 0 };
   constructor(confi)
   g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;);
-<<<<<<< HEAD
-=======
-      this.saveToStorage();
-export enum CacheStorage {/* TODO: Fix JSX expression */});]
-    }
-export interface CacheOptions {/* TODO: Fix JSX expression */});]
-    }
-export interface CacheConfig {/* TODO: Fix JSX expression */});]
-    }
-export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});]
-    }
-export interface CacheStats {/* TODO: Fix JSX expression */});]
-    }
-export class CacheManager {/* TODO: Fix JSX expression */}
-  s: 0 };
-  constructor(confi)
-  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Start periodic cleanup of expired entries;
    */
@@ -42,7 +23,6 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
   /**
    * Remove expired entries;
    */
-<<<<<<< HEAD
   private cleanup(): void {/* TODO: Fix JSX expression */});;);
     }
     // Clean localStorage;
@@ -52,33 +32,11 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
         });;);
       keysToRemove.forEach(key => localStorage.removeItem(key)););
     logger.debug('Cache cleanup completed'););
-=======
-  private cleanup(): void {/* TODO: Fix JSX expression */});]
-    }
-    }
-    // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});]
-    }
-            });]
-    } catch {/* TODO: Fix JSX expression */});]
-    }
-        });]
-    }
-      keysToRemove.forEach(key => localStorage.removeItem(key))]
-    }
-    logger.debug('Cache cleanup completed')]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Check if cache entry is expired;
    */
   private isExpired(entr)
-<<<<<<< HEAD
   y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get storage key with prefix;
    */
@@ -99,7 +57,6 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
     } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-<<<<<<< HEAD
     ) {/* TODO: Fix JSX expression */});;)
 } catch (error) {/* TODO: Fix JSX expression */});;);
     } else if (this.storage === CacheStorage.SessionStorage &&
@@ -108,20 +65,6 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
     ) {/* TODO: Fix JSX expression */});;)
 } catch (error) {/* TODO: Fix JSX expression */});;);
     });;);
-=======
-    ) {/* TODO: Fix JSX expression */});]
-    } catch (error) {/* TODO: Fix JSX expression */});]
-    }
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
-      window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});]
-    } catch (error) {/* TODO: Fix JSX expression */});]
-    }
-    });]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get a value from the cache;
    */
@@ -158,7 +101,6 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
     } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-<<<<<<< HEAD
     ) {/* TODO: Fix JSX expression */});;);
       } catch (error) {/* TODO: Fix JSX expression */});;);
     } else if (this.storage === CacheStorage.SessionStorage &&
@@ -166,19 +108,6 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
       window.sessionStorage}
     ) {/* TODO: Fix JSX expression */});;);
       } catch (error) {/* TODO: Fix JSX expression */});;);
-=======
-    ) {/* TODO: Fix JSX expression */});]
-    }
-      } catch (error) {/* TODO: Fix JSX expression */});]
-    }
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
-      window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});]
-    }
-      } catch (error) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
     if (!entry) {/* TODO: Fix JSX expression */}`
       performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
@@ -256,24 +185,12 @@ y: string): boolean {/* TODO: Fix JSX expression */});]
   /**
    * Clear all cache entries;
    */
-<<<<<<< HEAD
   clear(): void {/* TODO: Fix JSX expression */});;);
     if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
     ) {/* TODO: Fix JSX expression */});;);
       });;);
-=======
-  clear(): void {/* TODO: Fix JSX expression */});]
-    }
-    if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
-      window.localStorage}
-    ) {/* TODO: Fix JSX expression */});]
-    }
-      });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return deleted});
 }
 
@@ -352,7 +269,6 @@ this.saveToStorage()]
   n: () => T | Promise<T></T>,
     option,
   s: { ttl?: number } = {}
-<<<<<<< HEAD
   ): T | Promise<T></T> {/* TODO: Fix JSX expression */});;);
 const start = performance.now();
 const value = fn();
@@ -361,18 +277,6 @@ const duration = performance.now() - start;`
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */});;)
 });;);
-=======
-  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});]
-    }
-    const start = performance.now();
-    const value = fn();
-    const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-    // Handle both sync and async values;
-    if (value instanceof Promise) {/* TODO: Fix JSX expression */});]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.set(key, value, options);
     return value});
 }
@@ -391,18 +295,10 @@ const duration = performance.now() - start;`
   n: () => Promise<T></T> | T,
     option,
   s: { ttl?: number } = {}
-<<<<<<< HEAD
   ): Promise<T></T> {/* TODO: Fix JSX expression */});;);
 const start = performance.now();
 const value = await fn();
 const duration = performance.now() - start;`
-=======
-  ): Promise<T></T> {/* TODO: Fix JSX expression */});]
-    }
-    const start = performance.now();
-    const value = await fn();
-    const duration = performance.now() - start;`
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     this.set(key, value, options);
     return value});
@@ -512,17 +408,9 @@ storage.removeItem('cache-manager')]
       default:,
         return null});
 }
-<<<<<<< HEAD
   });;);
 // Create singleton instances for different use cases
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
-=======
-  });]
-    }
-
-// Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const localStorageCache = new CacheManager({)
   storage: CacheStorage.LocalStorage),
   defaultTTL: 30 * 60 * 1000 // 30 minutes
@@ -546,5 +434,3 @@ export const cacheManager = new CacheManager()
 export default CacheManager;
 `
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

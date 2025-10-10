@@ -6,7 +6,6 @@ impo, r, t {/* TODO: Fix JSX expression *
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "luci, d, e-rea, c, t";';
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
-<<<<<<< HEAD
 return (
 
   return(<React.Fragment>
@@ -36,32 +35,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>"
               <Users, className="w-1, 0, h-10, tex, t-whi, t, e  /></Users>
             </d, i, v>"
-=======
-  return (<div>
-        <title>Smart, Appointment, Scheduler - Zion, Tech, Group<
-        <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /><
-        <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";<
-      <
-      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";<
-        <div, className="container, m, x-auto, p, x-4, p, y-12">";
-          {/* Head, e, r */}<
-          <div, className="te, x, t-center, m, b-16"><
-            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"><
-              <Users, className="w-1, 0, h-10, tex, t-whi, t, e  
-            <
-            <h1, className="te, x, t-4 xl, m, d: te, x, t-6 xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"</h>Smart<
-            <
-            <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
-              Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;<
-          <div, className="te, x, t-center, m, b-16">";<
-            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">";<)
-const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
-          {/* Head, e, r *
-          <div, className="te, x, t-center, m, b-16"><
-            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"><
-              <Users, className="w-1, 0, h-10, tex, t-whi, t, e  /><
-            <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"
               Smart, Appointment, Scheduler;
             <
@@ -500,7 +473,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
               <
               <p, className="te, x, t-sm, tex, t-gr, a, y-500, m, t-6">";
                 364, E, Main St, STE, 1008, Middleto, w, n, DE, 1970, 9;
-<<<<<<< HEAD
               </p>
             </d, i, v>
           </secti, o, n>
@@ -508,14 +480,4 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
       </d, i, v>)
     </React.Fragment>)
   )};
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default SmartAppointmentScheduler;"

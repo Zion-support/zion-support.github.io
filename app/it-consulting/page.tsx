@@ -5,17 +5,6 @@ const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCa
 const [searchTerm, setSearchTerm] = useState('');
 ;
 const itServices = [
-<<<<<<< HEAD
-=======
-  Webcam as WebcamIcon, Speaker as SpeakerIcon]
-    } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -566,5 +555,3 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
 )]
     };
 export default ITConsultingPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

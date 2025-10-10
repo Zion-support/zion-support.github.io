@@ -3,13 +3,8 @@ import React, { useEffect, useState } from 'react';
 
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
 ;
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
-=======
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ),
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   children;
   enableReporting = true,
   enableLongTaskMonitoring = true}) => {
@@ -20,7 +15,6 @@ const [metrics, setMetrics] = useState<WebVitalsMetrics>
 }({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Initialize performance monitoring;
     // Add critical resource hints manually;
@@ -30,21 +24,6 @@ const hints = [
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
-=======
-  useEffect (() => {
-    /
-    /
-    if (typeof document !== 'undefined') {
-      const hints = [
-        { rel: 'dns-prefetch', href: 'https:/
-        { re,
-    l: 'dns-prefetch', href: 'https:/
-        { re,
-    l: 'preconnect', href: 'https:/
-        { re,
-    l: 'preconnect', href: 'http,
-    s:/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       ];
       
       hints.forEach(hint => {);
@@ -71,17 +50,9 @@ const,
     n: 'anonymous' }
       ];
       
-<<<<<<< HEAD
       hints.forEach(hint => {/* TODO: Fix JSX expression */}
         })
         document.head.appendChild(link)})}
-=======
-      hints.forEach(hint => {/* TODO: Fix JSX expression *)
-        });
-        document.head.appendChild(link);
-      });
-    }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     
     /
 /
@@ -89,15 +60,9 @@ const,
       }
     }
 
-<<<<<<< HEAD
     // Monitor long tasks if enabled;
     if (enableLongTaskMonitoring) {;
 const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
-=======
-    /
-    if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks ((entries: PerformanceEntryList) => {,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         setLongTasks(prev => [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression *
 /
@@ -106,7 +71,6 @@ const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntr
       {) => {/* TOD,
     O: Fix JSX expression *
         }
-<<<<<<< HEAD
       }}
   }, [enableReporting, enableLongTaskMonitoring]);
 
@@ -117,26 +81,11 @@ const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntr
 const observer = new PerformanceObserver((list) => {;
 const _entries = list.getEntries();
       entries.forEach((entry) => {
-=======
-      };
-    }
-  }, [enableReporting, enableLongTaskMonitoring]}
-    </div>
-  );
-  /
-  useEffect (() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver ((list) => {
-      const _entries = list.getEntries();
-      entries.forEach ((entry) => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         if (entry.entryType === 'largest-contentful-paint') {
 /
           setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
-<<<<<<< HEAD
   useEffect(() => {/* TODO: Fix JSX expression */}
   P: lcp }));
           if (enableReporting) {/* TODO: Fix JSX expression */}
@@ -165,51 +114,6 @@ const _entries = list.getEntries();
 
   // Development mode: Log performance metrics;
   useEffect(() => {,
-=======
-  useEffect (() => {/* TODO: Fix JSX expression *
-  ,
-    P: lcp }));
-          if (enableReporting) {/* TODO: Fix JSX expression *
-  ,
-    P: lcp });
-          }
-        }
-        
-        if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression *
-  ,
-    D: fid }));
-          if (enableReporting) {/* TODO: Fix JSX expression *
-  ,
-    D: fid });
-          }
-        }
-        
-        if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression *
-  ,
-    S: cls }));
-          if (enableReporting) {/* TODO: Fix JSX expression *
-  ,
-    S: cls });
-          }
-        }
-      });
-    });
-    try {/* TODO: Fix JSX expression *
-  ,
-    s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {/* TODO: Fix JSX expression *
-/
-
-    return (<div>)
-      {) => {/* TOD,
-    O: Fix JSX expression *
-    };
-  }, [enableReporting]}
-    </div>
-  );
-  /
-  useEffect (() => {,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
   /
   mode: Log performance metrics;
@@ -223,7 +127,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
 ;
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   enabled = true;
@@ -232,53 +135,26 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
     maxImageSize: 100, // 100KB;
     maxFirstLoad: 3000, // 3 seconds;
     maxInteractive: 2000 // 2 seconds},
-=======
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({),
-  enabled = true;
-  budget = {,
-    maxBundleSize: 500, /
-    maxImageSize: 100, /
-    maxFirstLoad: 3000, /
-    maxInteractive: 2000 /
-  },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   onMetricsUpdate,
   onBudgetViolation}) => {
 return (
 ;
 const,
-<<<<<<< HEAD
   PerformanceMonitor: React.FC<PerformanceMonitorProps>
 );
 } = ({/* TODO: Fix JSX expression */}
   },
-=======
-  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TOD,
-    O: Fix JSX expression *)
-  )},
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   onMetricsUpdate,
   onBudgetViolation;)
 }) => {/* TODO: Fix JSX expression *
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
   s: string[] }>({/* TODO: Fix JSX expression */})
   s: [] });
 ;
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
-=======
-  const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression *
-  ,
-    s: string[] }>({/* TODO: Fix JSX expression *)
-  ,
-    s: [] });
-  const updateMetrics = useCallback (() => {/* TODO: Fix JSX expression *
-      setMetrics(prev => ({ ...prev), ...newMetrics }));
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       onMetricsUpdate?.(newMetrics);
       
       /
@@ -312,7 +188,6 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics)};
 
-<<<<<<< HEAD
     // Set up performance monitoring;
     if ('PerformanceObserver' in window) {;
 const observer = new PerformanceObserver((list) => {
@@ -337,40 +212,6 @@ const _paintEntry = entry as PerformancePaintTiming;
     return () => {/* TODO: Fix JSX expression */}
     }}, [enabled, updateMetrics]);
 
-=======
-    /
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver ((list) => {
-        list.getEntries().forEach ((entry) => {
-          if (entry.entryType === 'paint') {
-            const _paintEntry = entry as PerformancePaintTiming;
-            if (paintEntry.name === 'first-contentful-paint') {
-              reportVitals({ FCP: paintEntry.startTime });
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression *
-  ,
-    P: paintEntry.startTime });
-            }
-          }
-          if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression *
-  ,
-    P: lcpEntry.startTime });
-          }
-        });
-      });
-      observer.observe({/* TODO: Fix JSX expression *)
-  ,
-    s: ['paint', 'largest-contentful-paint'] });
-      return () => {/* TODO: Fix JSX expression *
-      };
-    }
-
-    return (<div>)
-      {) => {/* TODO: Fix JSX expression *
-    };
-  }, [enabled, updateMetrics]}
-    </div>
-  );
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   if (!enabled) return null;
 
   return(<div className="performance-monitor">)
@@ -565,13 +406,7 @@ const _paintEntry = entry as PerformancePaintTiming;
           <
         <
       )}
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default PerformanceMonitor}"`

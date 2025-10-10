@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing;
     id: 'quantum-ai-brain-computer-interface',
@@ -11020,9 +11019,3 @@ export const,
   s: 38, ratin,
   g: 4.7, review,
   s: 26 } ]} ]; '"
-=======
-    roi: '1000% ROI within 6 months through breakthrough discoveries and patents'
-    competitors: ['Neuralink ($10) 000+/month)Kernel ($50) 000+/month)']
-    growth_rate: '300% annual growth';
-variant: 'quantum - ai - futuristic'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

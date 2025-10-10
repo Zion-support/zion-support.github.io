@@ -4,19 +4,11 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const MarketplacePage: React.FC = () => {;
 const [activeCategory, setActiveCategory] = useState('products');
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [searchTerm, setSearchTerm] = useState('');
 ;
 const categories = [
@@ -119,22 +111,11 @@ const talent = [
       expertise: ['Penetration Testing', 'Security Audits', 'Compliance', 'Incident Response'],
       experience: '10 years',
       projects: 89,
-<<<<<<< HEAD
       rate: '$180/hour',
       image: '👩‍🔬',
       available: false;
 const equipment = [
       name: 'AI Workstation Pro',
-=======
-      rate: '$180
-      imag,
-    e: '👩‍🔬',
-      available: false
-
-  const equipment = [
-      nam,
-    e: 'AI Workstation Pro',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       description: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
       price: '$4,999',
@@ -151,16 +132,9 @@ const equipment = [
       review,
     s: 15,
       image: '⚛️',
-<<<<<<< HEAD
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendor: 'QuantumCloud',;
 const getCurrentItems = () => {
-=======
-      features: ['100 qubits', '24
-      vendor: 'QuantumCloud',
-
-  const getCurrentItems = () => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     switch (activeCategory) {
       case 'products':
         return products;
@@ -169,16 +143,9 @@ const getCurrentItems = () => {
       case 'equipment':
         return equipment;
       default:
-<<<<<<< HEAD
         return []};
 ;
 const filteredItems = getCurrentItems().filter(item =>
-=======
-        return [];
-  };
-
-  const filteredItems = getCurrentItems().filter(item =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -196,17 +163,9 @@ valuevalue: '100+',
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
-<<<<<<< HEAD
       color: 'text-yellow-400';
 const benefits = [
       icon: CheckCircle,
-=======
-      color: 'text-yellow-400'
-
-  const benefits = [
-      ico,
-    n: CheckCircle,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       title: 'Verified Vendors',
       description:       ,
 icon$5: Shield,
@@ -220,15 +179,10 @@ icon$5: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -307,19 +261,11 @@ icon$5: Award,
                           {item.features.map((feature), index) => (<li key={index} className="text-sm text-gray-300 flex items-start">
                               
                         <div className="flex items-center">
-<<<<<<< HEAD
                           <Star className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
                         <div className="text-lg font-bold text-cyan-400">{item.price}</div>
                     </React.Fragment>
-=======
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" 
-                          <span className="text-sm text-white font-medium">{item.rating}<)
-                          <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)<
-                        <div className="text-lg font-bold text-cyan-400">{item.price}<
-                    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
                   {activeCategory === 'talent' && (<h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise: <
                         <div className="flex flex-wrap gap-1">)
@@ -374,7 +320,6 @@ icon$5: Award,
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
   return (
     <div>Coming Soon</div>
@@ -385,18 +330,6 @@ icon$5: Award,
 const categories = [
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      <Footer 
-  return (<div>Coming Soon<)
-  );
-};
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-const categories = [
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'products',

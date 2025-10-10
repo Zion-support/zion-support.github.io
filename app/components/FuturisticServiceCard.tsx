@@ -2,13 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const benefits = [
-=======
-
-  const benefits = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -47,18 +42,8 @@ const benefits = [
                 Get Started
                 
                 Learn More
-<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>)
-=======
-              <
-            <
-          <
-        <)
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default FuturisticServiceCardPage;

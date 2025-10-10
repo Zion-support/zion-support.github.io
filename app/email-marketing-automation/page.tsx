@@ -58,7 +58,6 @@ const benefits = [
     'Save time and resources'
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
@@ -66,13 +65,6 @@ const benefits = [
         <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
         <meta name="keywords" content="email marketing automation, marketing platform, email campaigns, marketing automation, Zion Tech Group" />
       </Helmet>
-=======
-  return (<div>
-        <title>Email Marketing Automation - Zion Tech Group | Marketing Platform<
-        <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." 
-        <meta name="keywords" content="email marketing automation, marketing platform, email campaigns, marketing automation, Zion Tech Group" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section *
@@ -103,7 +95,6 @@ const benefits = [
     g:grid-cols-4 gap-8">
               {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-<<<<<<< HEAD
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -113,17 +104,6 @@ const benefits = [
             </div>
           </div>
         </section>
-=======
-                    <feature.icon className="h-6 w-6 text-white" 
-                  <
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
-                  <p className="text-gray-300">{feature.description}<
-                <)
-              ))}
-            <
-          <
-        <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* Benefits Section *
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
@@ -137,7 +117,6 @@ const benefits = [
               <
             <
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -148,18 +127,6 @@ const benefits = [
             </div>
           </div>
         </section>
-=======
-            <div className="grid grid-cols-1 m,
-    d:grid-cols-2 gap-6">
-              {benefits.map((benefit), index) => (<div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" 
-                  <p className="text-gray-300 text-lg">{benefit}<
-                <)
-              ))}
-            <
-          <
-        <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* CTA Section *
         <section className="py-20 px-4 sm: px-6 lg:px-8">
@@ -177,7 +144,6 @@ const benefits = [
                   
                   <Mail className="mr-2 h-5 w-5" 
                   Email Us
-<<<<<<< HEAD
                 </button>
               </div>
             </div>
@@ -185,16 +151,4 @@ const benefits = [
         </section>
       </div>
     </React.Fragment>)
-=======
-                <
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default EmailMarketingAutomationPage;

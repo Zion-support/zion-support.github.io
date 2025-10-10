@@ -4,19 +4,11 @@ import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} 
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AICustomerSupportBotPage: React.FC = () => {;
 const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       ico,
     n: Bot,
@@ -146,14 +138,8 @@ const stats = [
     r:text-slate-900 transition-colors">
               View Case Studies
       
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 'use client';

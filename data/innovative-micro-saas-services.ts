@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -9692,10 +9691,3 @@ addres,
   s: 12, ratin,
   g: 4.9, review,
   s: 6} ]; '"
-=======
-    market_size: '$469B space economy'
-    growth_rate: '400% annual growth';
-variant: 'quantum - space'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

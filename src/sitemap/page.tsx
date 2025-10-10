@@ -4,7 +4,6 @@ import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
 import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const SitemapPage: React.FC = () => {;
 const mainPages = [
@@ -86,127 +85,6 @@ const blogCategories = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
-
-const SitemapPage: React.FC = () => {
-  const mainPages = [
-    { nam,
-    e: 'Home', path: '
-    { nam,
-    e: 'About Us', path: '
-    { nam,
-    e: 'Services', path: '
-    { nam,
-    e: 'Contact', path: '
-    { nam,
-    e: 'Blog', path: '
-    { nam,
-    e: 'Case Studies', path: '
-    { nam,
-    e: 'Pricing', path: '
-    { nam,
-    e: 'Demo', path: '
-    { nam,
-    e: 'Team', path: '
-    { nam,
-    e: 'Careers', path: '
-    { nam,
-    e: 'Support', path: '
-    { nam,
-    e: 'Privacy Policy', path: '
-    { nam,
-    e: 'Terms of Service', path: '
-  ];
-
-  const microSaasServices = [
-    { nam,
-    e: 'AI Project Manager', path: '
-    { nam,
-    e: 'AI Social Media Manager', path: '
-    { nam,
-    e: 'AI Analytics Dashboard', path: '
-    { nam,
-    e: 'AI Email Marketing', path: '
-    { nam,
-    e: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24
-    { nam,
-    e: 'AI Code Review Assistant', path: '
-    { nam,
-    e: 'AI Content Generator', path: '
-    { nam,
-    e: 'AI Lead Generation', path: '
-    { nam,
-    e: 'AI Document Processor', path: '
-    { nam,
-    e: 'AI SEO Optimizer', path: '
-    { nam,
-    e: 'AI E-commerce Assistant', path: '
-    { nam,
-    e: 'AI Financial Analyzer', path: '
-  ];
-
-  const aiServices = [
-    { nam,
-    e: 'Machine Learning Solutions', path: '
-    { nam,
-    e: 'Natural Language Processing', path: '
-    { nam,
-    e: 'Computer Vision', path: '
-    { nam,
-    e: 'AI Automation', path: '
-    { nam,
-    e: 'Quantum AI Computing', path: '
-    { nam,
-    e: 'AI Cybersecurity', path: '
-  ];
-
-  const itServices = [
-    { nam,
-    e: 'Cloud Services', path: '
-    { nam,
-    e: 'Cybersecurity', path: '
-    { nam,
-    e: 'DevOps & CI/CD', path: '
-    { nam,
-    e: 'Database Services', path: '
-    { nam,
-    e: 'Network Infrastructure', path: '
-    { nam,
-    e: 'IT Support & Helpdesk', path: '/it-support', description: '24
-  ];
-
-  const specializedServices = [
-    { nam,
-    e: 'Quantum Computing', path: '
-    { nam,
-    e: 'Autonomous Systems', path: '
-    { nam,
-    e: 'Blockchain & Web3', path: '
-    { nam,
-    e: 'IoT & Edge Computing', path: '
-    { nam,
-    e: 'Business Intelligence', path: '
-    { nam,
-    e: 'Robotics Solutions', path: '
-  ];
-
-  const blogCategories = [
-    { nam,
-    e: 'AI Trends', path: '
-    { nam,
-    e: 'Enterprise Transformation', path: '
-    { nam,
-    e: 'Success Stories', path: '
-    { nam,
-    e: 'Technical Guides', path: '
-    { nam,
-    e: 'Cost Optimization', path: '
-  ];
-
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="text-center mb-16">
             <h1 className="text-4xl m,
     d:text-6xl font-bold text-white mb-6 neon-text">
@@ -362,17 +240,9 @@ const SitemapPage: React.FC = () => {
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SitemapPage;

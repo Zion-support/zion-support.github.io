@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
     id: 'customer - feedback - intelligence',
     name: 'Customer Feedback Intelligence',
@@ -6389,7 +6388,3 @@ i,
   g: 4.7, review,
   s: 6 } ]; review,
   s: 6 } ]; '
-=======
-    reviews: 5},
-    id: 'api - security - posture - monitor'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,14 +1,8 @@
 
 export default function About() {
-<<<<<<< HEAD
   return(<React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
-=======
-  return(<>
-      
-        <title>About Us - Zion Tech Group<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <meta;
           name="description"
           content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
@@ -145,17 +139,10 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
   return (<React.Fragment>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
-=======
-  return (<>
-      <Head><
-        <title>About Us - Zion Tech Group<
-        <meta><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           name="description""
           content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
         
@@ -447,7 +434,6 @@ export default function About() {/* TODO: Fix JSX expression *
   hover:text-blue-600 transition-colors"
               >
                 View Our Services;
-<<<<<<< HEAD
               </a>
             </div>
           </div>
@@ -457,16 +443,4 @@ export default function About() {/* TODO: Fix JSX expression *
       </div>
     </React.Fragment>)
   )}
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-      <
-    <)
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 "

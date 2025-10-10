@@ -65,7 +65,6 @@ icon$5: BarChart,
 icon$5: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
@@ -99,25 +98,6 @@ return (
 );
 }
       {/* Hero Section */}
-=======
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-import { Link )} from 'react-router-dom';
-
-import Navigation from '../components
-import Footer from '../components
-
-const PagePage: React.FC = () => {
-  return (<div>Coming Soon<)
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-        <title>Analytics Tools - Zion Tech Group<
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." 
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" 
-      <
-      {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl m,

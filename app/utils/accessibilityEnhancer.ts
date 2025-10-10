@@ -25,18 +25,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-      description: 'Worldwide deployment and support for international businesses'});;)
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> origin/main
     focusableElements[nextIndex]?.focus();
     event.preventDefault(););)
 }
@@ -523,13 +511,6 @@ Recommendations:
 - Test with screen readers regularly
 `});;)
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   ];
 
   const benefits = [
@@ -656,10 +637,3 @@ Recommendations:
 };
 
 export default AccessibilityEnhancerPage;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
->>>>>>> origin/main

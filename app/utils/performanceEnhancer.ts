@@ -1,9 +1,4 @@
       setTimeout(() => (inThrottle = false), limit););
-<<<<<<< HEAD
-=======
-      setTimeout(() => (inThrottle = false), limit)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }});
 };
 // Performance monitoring utilities
@@ -20,12 +15,7 @@ export class PerformanceMonitor {}
   private observers: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {}
     if (!PerformanceMonitor.instance) {}
-<<<<<<< HEAD
       PerformanceMonitor.instance = new PerformanceMonitor(););
-=======
-      PerformanceMonitor.instance = new PerformanceMonitor()]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return PerformanceMonitor.instance});
 }
   // Track component render time;
@@ -33,12 +23,7 @@ export class PerformanceMonitor {}
   // Track component render time
   trackRender(componentName: string, renderTime: number) {}
     this.metrics.set(`${componentName}_render`, renderTime);
-<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {});;);
-=======
-    if (process.env['NODE_ENV'] === 'development') {});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Track memory usage;
   trackMemory(componentName: string) {,
@@ -62,21 +47,11 @@ export const throttle = <T></T> unknown>(fun,
   limi,
   t: number}
 ): ((...arg)
-<<<<<<< HEAD
   s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});;);
   }});
 };
 // Performance monitoring utilities
 export class PerformanceMonitor {/* TODO: Fix JSX expression */});;);
-=======
-  s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});]
-    }
-  }});
-};
-// Performance monitoring utilities;
-export class PerformanceMonitor {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return PerformanceMonitor.instance});
 }
   // Track component render time;
@@ -112,25 +87,12 @@ this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)]
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
   // Get performance metrics;
-<<<<<<< HEAD
   getMetrics() {/* TODO: Fix JSX expression */});;);
   // Clear metrics;
   clearMetrics() {/* TODO: Fix JSX expression */});;);
   // Monitor long tasks;
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */});;);
 const observer = new PerformanceObserver((list) => {
-=======
-  getMetrics() {/* TODO: Fix JSX expression */});]
-    }
-  // Clear metrics;
-  clearMetrics() {/* TODO: Fix JSX expression */});]
-    }
-  // Monitor long tasks;
-  startLongTaskMonitoring() {/* TODO: Fix JSX expression */});]
-    }
-
-    const observer = new PerformanceObserver((list) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms;
   // Get performance metrics
@@ -148,21 +110,10 @@ return Object.fromEntries(this.metrics)]
 }
     const observer = new PerformanceObserver((list) => {}
       list.getEntries().forEach((entry) => {}
-<<<<<<< HEAD
         if (entry.duration > 50) { // Tasks longer than 50ms});;)
 }ms`););
     observer.observe({ entryTypes: ['longtask'] });;
     this.observers.push(observer););
-=======
-        if (entry.duration > 50) { // Tasks longer than 50ms});]
-    }ms`)]
-    }
-
-
-    observer.observe({ entryTypes: ['longtask'] });;
-    this.observers.push(observer)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Cleanup observers;
   cleanup() {
   // Cleanup observers
@@ -226,21 +177,10 @@ const imageObserver = new IntersectionObserver((entries) => {}
         img['src'] = img.dataset['src'] || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
-<<<<<<< HEAD
 // Image lazy loading utility
 export const lazyLoadImages = () => {/* TODO: Fix JSX expression */});;);
   images.forEach((img) => imageObserver.observe(img)););
 // Preload critical resources
-=======
-// Image lazy loading utility;
-export const lazyLoadImages = () => {/* TODO: Fix JSX expression */});]
-    }
-
-
-  images.forEach((img) => imageObserver.observe(img))]
-    };
-// Preload critical resources;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const preloadCriticalResources = () => {
 // Preload critical resources
 export const preloadCriticalResources = () => {}
@@ -255,17 +195,9 @@ const criticalResources = [
     link.as = resource.endsWith('.woff2') ? 'font' : 'style';
     if (resource.endsWith('.woff2')) {}
       link.crossOrigin = 'anonymous';
-<<<<<<< HEAD
 // Preload critical resources
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */});;);
     document.head.appendChild(link););
-=======
-// Preload critical resources;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */});]
-    }
-    document.head.appendChild(link)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {
@@ -319,52 +251,29 @@ const trackCLS = () => {}
 const trackLCP = () => {}
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
-<<<<<<< HEAD
         if (process.env['NODE_ENV'] === 'development') {});;);
       }
 
     observer.observe({ entryTypes: ['largest-contentful-paint'] });;
     return () => observer.disconnect(););
 const trackFID = () => {}
-=======
-        if (process.env['NODE_ENV'] === 'development') {});]
-    }
-      }
-
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });;
-    return () => observer.disconnect()]
-    };
-  const trackFID = () => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     interface FirstInputEntry extends PerformanceEntry {}
       processingStart: number,});
 }
     const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
         const fidEntry = entry as FirstInputEntry;
-<<<<<<< HEAD
 const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {});;);
       }
 
     observer.observe({ entryTypes: ['first-input'] });;
     return () => observer.disconnect(););
-=======
-        const fid = fidEntry.processingStart - entry.startTime;
-        if (process.env['NODE_ENV'] === 'development') {});]
-    }
-      }
-
-    observer.observe({ entryTypes: ['first-input'] });;
-    return () => observer.disconnect()]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   window.addEventListener('scroll', requestTick, { passive: true });;
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
     ticking = false});
-<<<<<<< HEAD
 }
 const requestTick = () => {/* TODO: Fix JSX expression */});;);
   };
@@ -391,42 +300,6 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
     observer.observe({/* TODO: Fix JSX expression */});
   s: ['first-input'] });;
     return () => observer.disconnect(););
-=======
-};
-  const requestTick = () => {/* TODO: Fix JSX expression */});]
-    }
-  };
-  // Track Core Web Vitals;
-  const trackCLS = () => {/* TODO: Fix JSX expression */});]
-    }
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});]
-    }
-      });]
-    });;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['layout-shift'] });;
-    return () => {/* TODO: Fix JSX expression */});]
-    }});
-};
-  const trackLCP = () => {/* TODO: Fix JSX expression */});]
-    }
-      });]
-    });;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['largest-contentful-paint'] });;
-    return () => observer.disconnect()]
-    };
-  const trackFID = () => {/* TODO: Fix JSX expression */});]
-    }
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});]
-    }
-      });]
-    });;
-    observer.observe({/* TODO: Fix JSX expression */});
-  s: ['first-input'] });;
-    return () => observer.disconnect()]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */});
   e: true });;
   // Start tracking;
@@ -513,29 +386,16 @@ const metrics = collectPerformanceMetrics();
   return () => {/* TODO: Fix JSX expression */});]
     }});
 };
-<<<<<<< HEAD
 // Memory usage monitoring
 export const getMemoryUsage = () => {/* TODO: Fix JSX expression */});;);
 const memory = (performance as unknown as {/* TODO: Fix JSX expression */});
-=======
-// Memory usage monitoring;
-export const getMemoryUsage = () => {/* TODO: Fix JSX expression */});]
-    }
-  const memory = (performance as unknown as {/* TODO: Fix JSX expression */});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   t: number} });.memory;
   return {/* TODO: Fix JSX expression */});]
     }});
 };
-<<<<<<< HEAD
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */});;)
 },
-=======
-// Performance metrics collection;
-export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */});]
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     pain,
   t: {/* TODO: Fix JSX expression */});]
     },
@@ -543,15 +403,7 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */})
   y: getMemoryUsage()]
     }});
 };
-<<<<<<< HEAD
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */});;);
-=======
-// Initialize performance enhancements;
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };`
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

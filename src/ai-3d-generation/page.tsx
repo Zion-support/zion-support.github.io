@@ -1,20 +1,11 @@
 import React from 'react';
 import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AI3DGenerationPage: React.FC = () => {;
 const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
-
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     '3D Model Generation',
     'Animation Creation',
     'Texture Mapping',
@@ -63,7 +54,6 @@ const pricingPlans = [
     }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -78,11 +68,6 @@ const pricingPlans = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
@@ -198,17 +183,9 @@ const pricingPlans = [
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default AI3DGenerationPage;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { lazy, Suspense, ComponentType } from 'react'
 interface DynamicOptions {
@@ -33,6 +32,3 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
 )]
     }
 export default dynamic;
-=======
-  );)
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

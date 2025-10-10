@@ -2,38 +2,22 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
 const PartnersPage = () => {
   const partners = [
     {
-<<<<<<< HEAD
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
     },
     {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
->>>>>>> origin/main
 
 interface Partner {
   name: string;
@@ -52,112 +36,51 @@ const PartnersPage: React.FC = () => {
       description: 'Strategic partnership for Azure cloud solutions and AI services',
       category: 'Cloud & AI',
       website: 'https://microsoft.com',
-<<<<<<< HEAD
       tier: 'strategic'
     },
-=======
-      tier: 'strategic'});;)
-},
->>>>>>> origin/main
     {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing',
       website: 'https://aws.amazon.com',
-<<<<<<< HEAD
       tier: 'strategic'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      website: 'https://aws.amazon.com'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
->>>>>>> origin/main
     },
-=======
       tier: 'strategic'});;)
 },
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
     {
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
       description: 'Advanced AI and machine learning platform with global reach',
       category: 'Cloud & AI',
       website: 'https://cloud.google.com',
-<<<<<<< HEAD
       tier: 'strategic'
     },
-=======
-      tier: 'strategic'});;)
-},
->>>>>>> origin/main
     {
       name: 'IBM',
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
       category: 'Enterprise AI',
       website: 'https://ibm.com',
-<<<<<<< HEAD
       tier: 'preferred'
     },
     {
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
-=======
-      tier: 'preferred'});;)
-},
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> origin/main
       description: 'Customer relationship management and business automation',
-=======
       description: 'Customer relationship management and business automation platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       category: 'CRM & Automation',
       website: 'https://salesforce.com',
       tier: 'preferred'});;)
 },
     {
-<<<<<<< HEAD
-=======
-      name: 'Oracle',
-      logo: '/images/partners/oracle.png',
-      description: 'Database solutions and enterprise applications',
-      category: 'Database & Enterprise',
-      website: 'https://oracle.com',
-      tier: 'preferred'});;)
-},
-    {
-      name: 'ServiceNow',
-      logo: '/images/partners/servicenow.png',
-      description: 'IT service management and workflow automation',
-      category: 'IT Management',
-      website: 'https://servicenow.com',
-      tier: 'certified'});;)
-},
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
       name: 'Splunk',
       logo: '/images/partners/splunk.png',
       description: 'Data analytics and security monitoring platform',
       category: 'Analytics & Security',
       website: 'https://splunk.com',
-<<<<<<< HEAD
       tier: 'certified'
     }
-=======
-      tier: 'certified'});;)
-}
->>>>>>> origin/main
   ];
 
   const benefits = [
@@ -171,7 +94,6 @@ const PartnersPage: React.FC = () => {
 
   const partnershipTiers = [
     {
-<<<<<<< HEAD
       name: 'Strategic',
       description: 'Deep integration and co-innovation',
       bgColor: 'bg-gradient-to-br from-purple-500/20 to-blue-500/20',
@@ -192,72 +114,27 @@ const PartnersPage: React.FC = () => {
       borderColor: 'border-green-400/50',
       icon: CheckCircle
     }
-=======
-      name: 'Strategic Partners',
-      description: 'Deep integration and joint development',
-      icon: Award,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-400/10',
-      borderColor: 'border-yellow-400/30'});;)
-},
-    {
-      name: 'Preferred Partners',
-      description: 'Certified solutions and priority support',
-      icon: Handshake,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-400/10',
-      borderColor: 'border-blue-400/30'});;)
-},
-    {
-      name: 'Certified Partners',
-      description: 'Authorized implementation and support',
-      icon: CheckCircle,
-      color: 'text-green-400',
-      bgColor: 'bg-green-400/10',
-      borderColor: 'border-green-400/30'});;)
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
   ];
 
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
-=======
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
->>>>>>> origin/main
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
-=======
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Page
-              </span>
-=======
-        <section></section>
-          <div></div>
-            <h1></h1>
-              Strategic <spa></spa>Partnerships</span>
->>>>>>> origin/main
             </h1>
             <p></p>
               We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
@@ -305,19 +182,11 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Partners Grid */}
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-        <section></section>
-          <div></div>
-            <div></div>
-              <h></h>Our Technology Partners</h2>
-              <p></p>
->>>>>>> origin/main
                 We work with the world's leading technology companies to deliver comprehensive solutions.
               </p>
             </div>
@@ -347,31 +216,18 @@ const PagePage: React.FC = () => {
                       );
                     </div>
                   </div>
-<<<<<<< HEAD
                 );
               })}
-=======
-                ););)
-});;
->>>>>>> origin/main
             </div>
           </div>
         </section>
 
         {/* Partnership Benefits */}
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Benefits</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-        <section></section>
-          <div></div>
-            <div></div>
-              <h></h>Partnership Benefits</h2>
-              <p></p>
->>>>>>> origin/main
                 Our strategic partnerships provide significant advantages for your business.
               </p>
             </div>
@@ -381,11 +237,7 @@ const PagePage: React.FC = () => {
                 {benefits.map((benefit, index) => (
                   <div></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-<<<<<<< HEAD
                     <span className="text-gray-300">{benefit}</span>
-=======
-                    <spa></spa>{benefit}</span>
->>>>>>> origin/main
                   </div>
                 ));
               </div>
@@ -411,17 +263,6 @@ const PagePage: React.FC = () => {
                   View Partnership Program
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-        </section>
-      </div>
-      </div>
-    </>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
-=======
       nam,
     e: 'Microsoft',
       logo: '/api/placeholder/200
@@ -465,22 +306,6 @@ const PagePage: React.FC = () => {
         <
       <
     <
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
-=======
-<<<<<<< HEAD
-=======
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-        <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
-        <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
@@ -502,7 +327,6 @@ const PagePage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -561,19 +385,14 @@ const PagePage: React.FC = () => {
                   Email Us
                 </a>
               </div>
->>>>>>> origin/main
             </div>
           </div>
         </section>
       </div>
     </>
-=======
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   );
 };
 

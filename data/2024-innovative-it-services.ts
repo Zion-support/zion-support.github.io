@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 export interface InnovativeITService2024 {id: string;
   name: string;
@@ -279,11 +278,3 @@ export interface InnovativeITService2024,
   s: 950, ratin,
   g: 4.8, review,
   s: 520 } ];"
-=======
-    marketSize: "$8.2B market"
-    growthRate: "20.1% annual growth";
-variant: "ai-futuristic"
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com",
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

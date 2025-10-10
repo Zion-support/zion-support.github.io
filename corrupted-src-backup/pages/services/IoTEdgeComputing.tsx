@@ -6,17 +6,10 @@ impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "luci, d, e-rea, c, t";';"
-<<<<<<< HEAD
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, IoTEdgeComputin, g: Rea, c, t.FC = () => {;
 const, feature, s = [
-=======
-import, Header, from "../../componen, t, s
-import, Footer, from "../../componen, t, s
-const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
-  const, feature, s = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       i, c, o;
   n: C, p, u;
@@ -327,7 +320,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     { na, m, e: "Ener, g, y", devic, e, s: "Smart, meter, s, grid, sensor, s, renewable, energ, y" },";"
     { na, m, e: "Agricultu, r, e", devic, e, s: "Soil, sensor, s, weather, station, s, irrigation, system, s" }";
   ];
-<<<<<<< HEAD
   return(<React.Fragment>
       <Helmet>
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
@@ -337,15 +329,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
-=======
-  return(<div>
-        <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions<
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g
-  return (<div><Helmet><
-        <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <me, t, a;"
   na, m, e="descripti, o, n""
           content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g
@@ -583,7 +566,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
-<<<<<<< HEAD
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
 ;
@@ -591,16 +573,10 @@ const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {useCas, e, s.m, a, p ((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
-<<<<<<< HEAD
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
 ;
@@ -608,11 +584,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";
-=======
-              {useCas, e, s.m, a, p ((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return (<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">";
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
@@ -621,7 +592,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"><
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-<<<<<<< HEAD
 return (
 ;
 const, Ico, n = useCa, s, e.ic, o, n;
@@ -635,17 +605,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{useCa, s, e.descripti, o, n}</p>";)
                     <div, className="te, x, t-oran, g, e-600, fon, t-semibold, m, b-4">{useCa, s, e.metri, c, s}</d, i, v>";)
-=======
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">";<
-                      <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" 
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{useCa, s, e.descripti, o, n}<
-                    <div, className="te, x, t-oran, g, e-600, fon, t-semibold, m, b-4">{useCa, s, e.metri, c, s}<)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <ul, className="spa, c, e-y-2">";)
                       {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (<li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  
@@ -679,7 +638,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
                         <)
                       ))}
-<<<<<<< HEAD
                     </ul>
                   </d, i, v>
                 )})}
@@ -687,16 +645,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
           </d, i, v>
         </secti, o, n>
         {/* Featur, e, s */}
-=======
-                    <
-                  <
-                );
-              })}
-            <
-          <
-        <
-        {/* Featur, e, s *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <section, className="py-20, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
@@ -732,7 +680,6 @@ const, Ico, n = useCa, s, e.ic, o, n;
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
@@ -740,11 +687,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4">
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
@@ -757,7 +699,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
@@ -765,18 +706,12 @@ const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm"><
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"><)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
@@ -791,18 +726,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm">";</div>
             </d, i, v>"
-=======
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4">";<
-                      <Icon, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0" 
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm">";<
-            <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression *
@@ -824,7 +747,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
                     <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm">";"
-<<<<<<< HEAD
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
@@ -835,9 +757,6 @@ const, Ico, n = featu, r, e.ic, o, n;
         </secti, o, n>
         {/* Industri, e, s */}
         <section, className="py-20">
-=======
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
@@ -996,11 +915,7 @@ const, Ico, n = featu, r, e.ic, o, n;
 pl, a, n.popul, a, r;
 ? 'bg-oran, g, e-600, tex, t-white, hove, r: bg-oran, g, e-7, 0, 0'
 ? 'bg-oran, g, e-600, tex, t-white, hov, e;
-<<<<<<< HEAD
   r: bg-oran, g, e-7, 0, 0','}
-=======
-  r: bg-oran, g, e-7, 0, 0','; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a><
   hr, e, f="
@@ -1154,7 +1069,6 @@ pl, a, n.popul, a, r;
   r:te, x, t-oran, g, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Success, Stories;"
-<<<<<<< HEAD
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
                 <Link, className="w-5 h-5, m, l-2" />";
               </a>
@@ -1166,18 +1080,3 @@ pl, a, n.popul, a, r;
     </React.Fragment>
   )};
 export default IoTEdgeComputing}}}}}"`
-=======
-                <Link, className="w-5 h-5, m, l-2  /><
-                <Link, className="w-5 h-5, m, l-2" 
-              <
-            <
-          <
-        <
-      <
-      <Foot, e, r   /><
-    <
-  );
-};
-export default IoTEdgeComputing;
-}}}}}"`
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

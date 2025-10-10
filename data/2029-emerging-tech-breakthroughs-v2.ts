@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
   id: string;
@@ -1339,10 +1338,3 @@ i,
   s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
   n: true, implementation_detail,
   s:; '
-=======
-      marketSize: '$5 B market'
-      growthRate: '800% annual growth';
-variant: 'space-futuristic'
-      contactInfo: unknown;
-      color: 'from - purple - 600 via - pink - 600 to - rose - 600'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

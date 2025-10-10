@@ -4,7 +4,6 @@ import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} fr
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -12,16 +11,6 @@ const AIProjectManagerPage: React.FC = () => {;
 const _features = [;
 const AiProjectManagerPage: React.FC = () => {;
 const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-
-const AiProjectManagerPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       ico,
     n: BarChart,
@@ -106,14 +95,8 @@ const stats = [
               Learn More
           <
       
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 'use client';

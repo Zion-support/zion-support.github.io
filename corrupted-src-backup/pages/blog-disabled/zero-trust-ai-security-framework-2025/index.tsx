@@ -1,19 +1,12 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 ;
 const ZeroTrustAISecurityFramework202, 5 = () => {
 return (
  
   return(<React.Fragment>
       <Helm, e, t>
-=======
-
-const ZeroTrustAISecurityFramework202, 5 = () => { 
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
           Zion, Tech, Group;
@@ -37,7 +30,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression *
           <div, className='absolute, inse, t-0, b, g-bla, c, k/20' /><
           <div, className='container, m, x-auto, p, x-6, relative, z-10'><
 
-<<<<<<< HEAD
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' >
 );
 } {/* Hero, Sect, i, o, n */ }</div>;
@@ -52,8 +44,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <ArrowLeft, className='w-4 h-4, m, r-2' />
               Back, to, Blog;
                 <div, classNam, e='flex, item, s-cent, e, r'>
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               Back, to, Blog
                 <div, classNam, e='flex, item, s-cent, e, r'><
                   
@@ -307,15 +297,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <div><
                   <TrendingUp className="w-5 h-5 mr-2" 
   conten,"
-<<<<<<< HEAD
   t: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta,"
   name: 'keywords,',
   content: 'AI security, zero trust, model security, ML security, AI governance, enterprise security', /><link,"
-=======
-  t: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", 
-  name: "keywords,"
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   rel: "canonical;"
   href=",
   http,
@@ -1316,16 +1300,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   hover:bg-gray-100 transition-colors""
                 >""
                   Request Security Assessment""
-<<<<<<< HEAD
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
   )};
-=======
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "><
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /><
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default ZeroTrustAISecurityFramework2025;;
   <

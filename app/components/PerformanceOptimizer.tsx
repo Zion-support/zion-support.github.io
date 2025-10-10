@@ -1,11 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
-
-import React, { useEffect } from 'react';
->>>>>>> origin/main
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -14,10 +9,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-=======
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), className = '' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
@@ -130,9 +122,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
       <
     <
   );
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOptimizerProps> = ({
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -219,12 +208,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-<<<<<<< HEAD
   return null;
-=======
-  return null});;)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
 
 export default PerformanceOptimizer;

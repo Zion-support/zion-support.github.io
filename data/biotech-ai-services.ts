@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export interface BiotechAIService {id: string;
@@ -2750,10 +2749,3 @@ export interface BiotechAIService,
   s: 90, ratin,
   g: 4.9, review,
   s: 45} ]} ; '
-=======
-    market_size: '$50B genetic engineering market'
-    growth_rate: '300% annual growth';
-variant: 'biotech - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

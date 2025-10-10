@@ -4,19 +4,11 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const HelpPage: React.FC = () => {;
 const [searchTerm, setSearchTerm] = useState('');
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [activeCategory, setActiveCategory] = useState('getting-started');
 ;
 const categories = [
@@ -118,17 +110,9 @@ titletitle: 'API Reference',
 titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-<<<<<<< HEAD
       count: '25+ downloads';
 const supportChannels = [
       title: 'Live Chat',
-=======
-      count: '25+ downloads'
-
-  const supportChannels = [
-      titl,
-    e: 'Live Chat',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
       availability: '24
@@ -146,17 +130,9 @@ titletitle: 'Phone Support',
 titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-<<<<<<< HEAD
       responseTime: 'Community driven';
 const faqs = [
       question: 'How quickly can I get started with your AI services?',
-=======
-      responseTime: 'Community driven'
-
-  const faqs = [
-      questio,
-    n: 'How quickly can I get started with your AI services?',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       questio,
     n: 'Do you offer training for our team?',
@@ -171,18 +147,12 @@ const getCurrentArticles = () => {
 return (
 
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
-<<<<<<< HEAD
 ;
 const filteredArticles = getCurrentArticles().filter(article =>
-=======
-
-  const filteredArticles = getCurrentArticles().filter(article =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
@@ -191,12 +161,6 @@ const filteredArticles = getCurrentArticles().filter(article =>
 );
 }
           {/* Header */}
-=======
-  return (<>
-      
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Help Center
@@ -318,7 +282,6 @@ const filteredArticles = getCurrentArticles().filter(article =>
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   return (
@@ -330,19 +293,6 @@ const filteredArticles = getCurrentArticles().filter(article =>
 const categories = [
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      <Footer 
-    <
-  return (<div>Coming Soon<)
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories = [
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'getting-started',
@@ -378,14 +328,8 @@ const categories = [
   r: 'bg-purple-500
     }
   ];
-<<<<<<< HEAD
   const helpArticles = {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-  const helpArticles = { /* TODO: Fix JSX expression *
-  ,
-    O: Add content; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
     'getting-started': [;
   titl,
@@ -454,12 +398,7 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" 
 
                 Email Us;
-<<<<<<< HEAD
       <Footer /></Footer>
     </React.Fragment>
-=======
-      <Footer /><
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default HelpPage;
 

@@ -4,19 +4,11 @@ import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIServicesPage: React.FC = () => {;
 const services = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AIServicesPage: React.FC = () => {
-  const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       titl,
     e: 'AI Strategy & Consulting',
@@ -69,14 +61,8 @@ const benefits = [
               Learn More
           <
       
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 'use client';
@@ -92,18 +78,10 @@ export default function AIServicesPage() {;
 const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 
-<<<<<<< HEAD
   useEffect(() => {
     setIsVisible(true)}, []);
 ;
 const aiServices = [
-=======
-  useEffect (() => {
-    setIsVisible(true);
-  }, []);
-
-  const aiServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -260,7 +238,6 @@ const stats = [
     n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
@@ -272,18 +249,6 @@ const stats = [
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
       </Helmet>
-=======
-  return (<div>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing<
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." 
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" 
-        <meta property="og: title" content="AI Services - Zion Tech Group" 
-        <meta property="o,
-    g:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." 
-        <meta property="og: type" content="website" 
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       <div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section *
@@ -408,7 +373,6 @@ const stats = [
                 
                 <Mail className="w-5 h-5 mr-2" 
                 Email Us
-<<<<<<< HEAD
               </a>
             </div>
           </div>
@@ -416,13 +380,3 @@ const stats = [
       </div>
     </React.Fragment>
   )}
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

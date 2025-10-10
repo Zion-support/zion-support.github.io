@@ -37,15 +37,10 @@ return (
       descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
       availabili, t, y: 'Business, Hour, s'
       responseTi, m, e: '< 4, hour, s'
-<<<<<<< HEAD
       conta, c, t: 'Schedule, Cal, l';
 const, Suppor, t: Rea, c, t.FC = () =>
 );
 } {/* TODO: Fix JSX expression */}
-=======
-      conta, c, t: 'Schedule, Cal, l'
-const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     }
     {/* TODO: Fix JSX expression *
     }
@@ -92,7 +87,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-<<<<<<< HEAD
   return(<React.Fragment>
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
@@ -100,14 +94,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>
-=======
-  return(<div>
-        <title>Suppo, r, t - Zion, Tech, Group<
-        <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  
-        <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  
-      <)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n *
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
@@ -121,7 +107,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="te, x, t-cent, e, r"><
               <h1, className="te, x, t-4x, l, m
   d:te, x, t-5xl, fon, t-bold, m, b-6">
-<<<<<<< HEAD
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
@@ -134,19 +119,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
             <div, className="te, x, t-cent, e, r"></div>"
-=======
-  return (<div><Helmet><
-        <title>Suppo, r, t - Zion, Tech, Group<
-        <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /><
-        <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /><
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /><
-      <
-      <div, className="m, i, n-h-screen, b, g-gr, a, y-50"><
-        {/* Hero, Sectio, n *
-        <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"><
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"><
-            <div, className="te, x, t-cent, e, r"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <h1, className="te, x, t-4x, l, m,"
   d:te, x, t-5xl, fon, t-bold, m, b-6"><
                 Support, Cente, r;
@@ -437,7 +409,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   r:bg-whi, t, e
               ><
                 View, Documentatio, n;"
-<<<<<<< HEAD
                 <BookOpen, className="ml-2 h-5 w-5"  /></BookOpen>
               </Li, n, k>
             </d, i, v>
@@ -449,18 +420,4 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
       </secti, o, n>
     </d, i, v>
   )};
-=======
-                <BookOpen, className="ml-2 h-5 w-5"  /><
-              <
-            <
-          <
-        <
-      <
-    <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default Support;"`

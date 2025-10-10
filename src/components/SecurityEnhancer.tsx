@@ -25,7 +25,6 @@ const,
     /
     addSecurityHeaders();
     
-<<<<<<< HEAD
     // Add security event listeners;
     addSecurityEventListeners()}, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 ;
@@ -57,44 +56,6 @@ const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
     })};
 ;
 const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
-=======
-    /
-    addSecurityEventListeners();
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
-
-  const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression *
-  };
-
-  const enforceHTTPS = () => {/* TODO: Fix JSX expression *
-    }
-  };
-
-  const addXSSProtection = () => {/* TODO: Fix JSX expression *
-  };
-
-  const addClickjackingProtection = () => {/* TODO: Fix JSX expression *
-  };
-
-  const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression *
-  };
-
-  const addSecurityHeaders = () => {/* TODO: Fix JSX expression *
-  ,
-    t: 'strict-origin-when-cross-origin' },
-      {/* TODO: Fix JSX expression *
-  ,
-    t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      {/* TODO: Fix JSX expression *
-  ,
-    t: 'max-age=63072000; includeSubDomains; preload' }
-    ];
-
-    headers.forEach(header => {/* TODO: Fix JSX expression *)
-    });
-  };
-
-  const addSecurityEventListeners = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       }
     });
     /
@@ -131,51 +92,29 @@ const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
     /
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
 
-<<<<<<< HEAD
     // Track rapid clicks (potential bot activity);
 let clickCount = 0;
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
-=======
-    /
-    let clickCount = 0;
-    document.addEventListener ('click', () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         }
       })};
 
     checkForXSS();
 
-<<<<<<< HEAD
     // Monitor form submissions for CSRF;
 const forms = document.querySelectorAll('form');
     forms.forEach(form => {
       form.addEventListener('submit', (e) => {;
 const formData = new FormData(form as HTMLFormElement);
-=======
-    /
-    const forms = document.querySelectorAll('form');
-    forms.forEach (form => {)
-      form.addEventListener('submit', (e) => {
-        const formData = new FormData(form as HTMLFormElement);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         const token = formData.get('csrf_token');
         
         if (!token) {
           setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-<<<<<<< HEAD
           logger.warn('Potential CSRF attempt detected', { form: form.id })}
       })});
 
 
     // Track rapid keyboard input;
-=======
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
-        }
-      });
-    });
-    /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     let keyCount = 0;
     document.addEventListener ('keydown', () => {/* TODO: Fix JSX expression *
 
@@ -184,17 +123,10 @@ const formData = new FormData(form as HTMLFormElement);
 
     checkSuspiciousCode();
 
-<<<<<<< HEAD
     // Monitor for unusual network requests;
 const originalFetch = window.fetch;
     window.fetch = async (...args) => {;
 const url = args[0] as string;
-=======
-    /
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const url = args[0] as string;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       
       if (typeof url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
@@ -203,15 +135,8 @@ const url = args[0] as string;
       
       return originalFetch.apply(window, args)}}, [validateURL]);
 
-<<<<<<< HEAD
   // Security headers validation;
 const validateSecurityHeaders = useCallback(() => {
-=======
-  }, [validateURL]);
-
-  /
-  const validateSecurityHeaders = useCallback (() => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     if (typeof window === 'undefined') return;
 ;
 const warnings: string[] = [];
@@ -222,13 +147,8 @@ const warnings: string[] = [];
       warnings.push('Site is not served over HTTPS');
       setIsSecure(false)}
 
-<<<<<<< HEAD
     // Check for security headers (if available);
 const headers = (window as any).securityHeaders;
-=======
-    /
-    const headers = (window as any).securityHeaders;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     if (headers) {
       if (!headers['x-frame-options']) {
         warnings.push('X-Frame-Options header missing')}
@@ -244,15 +164,9 @@ const headers = (window as any).securityHeaders;
       logger.warn('Security warnings detected', { warnings })}
   }, []);
 
-<<<<<<< HEAD
   // Rate limiting;
 const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {;
 const now = Date.now();
-=======
-  /
-  const rateLimit = useCallback ((key: string, limit: number, windowMs: number) => {
-    const now = Date.now();
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     const windowStart = now - windowMs;
     ;
 const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
@@ -272,7 +186,6 @@ const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
     monitorSuspiciousActivity();
     validateSecurityHeaders();
 
-<<<<<<< HEAD
     // Set up periodic security checks;
 const interval = setInterval(() => {
       validateSecurityHeaders()}, 30000); // Check every 30 seconds
@@ -281,21 +194,6 @@ const interval = setInterval(() => {
 
   // Security event handlers;
 const handleSecurityEvent = useCallback((event: string, data: any) => {
-=======
-    /
-    const interval = setInterval (() => {
-      validateSecurityHeaders();
-    }, 30000); /
-
-    return (<div>)
-      {) => clearInterval(interval}
-    </div>)
-  );
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
-
-  /
-  const handleSecurityEvent = useCallback ((event: string, data: any) => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     logger.info('Security event', { event, data });
     /
     if (!rateLimit('security_events', 10, 60000)) {
@@ -305,14 +203,8 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
-<<<<<<< HEAD
         event_label: event,
         custom_map: data})}
-=======
-        event_label: event,)
-        custom_map: data});
-    }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   }, [rateLimit]);
 
   /
@@ -328,13 +220,8 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
   return (
-<<<<<<< HEAD
     <React.Fragment>
       {/* Security Status Indicator */}
-=======
-    <>
-      {/* Security Status Indicator *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       {!isSecure && (
         <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
           ⚠️ Security Warning: This site is not served over HTTPS
@@ -362,13 +249,7 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
           <
         <)
       )}
-<<<<<<< HEAD
     </React.Fragment>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SecurityEnhancer;

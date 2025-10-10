@@ -1,7 +1,6 @@
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -9,15 +8,6 @@ const GreenITPage: React.FC = () => {;
 const [activeTab, setActiveTab] = useState('solutions');
 ;
 const tabs = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions');
-
-  const tabs = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       id: 'solutions',
       name: 'Green Solutions',
@@ -97,17 +87,9 @@ titletitle: 'Environmental Monitoring',
         'Sustainability reporting',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
-<<<<<<< HEAD
       pricing: 'Starting at $600/month';
 const benefits = [
       icon: TrendingUp,
-=======
-      pricing: 'Starting at $600
-
-  const benefits = [
-      ico,
-    n: TrendingUp,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
@@ -133,17 +115,9 @@ const benefits = [
         'Improved brand perception',
         'Customer loyalty increase',
         'Investor confidence boost',
-<<<<<<< HEAD
         'Talent attraction and retention';
 const certifications = [
       name: 'ISO 14001:2015',
-=======
-        'Talent attraction and retention'
-
-  const certifications = [
-      name: 'ISO 1400,
-    1:2015',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       description: 'Environmental Management Systems',
       status:       ,
 namename: 'LEED Platinum',
@@ -164,17 +138,9 @@ valuevalue: '50%',
       color:       ,
 valuevalue: '100%',
       label: 'Renewable Energy Options',
-<<<<<<< HEAD
       color: 'text-purple-400';
 const caseStudies = [
       company: 'TechCorp Manufacturing',
-=======
-      color: 'text-purple-400'
-
-  const caseStudies = [
-      compan,
-    y: 'TechCorp Manufacturing',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
       solution: 'Implemented energy-efficient data center design with renewable energy integration',
@@ -194,15 +160,10 @@ const caseStudies = [
         'Enhanced brand reputation'
       icon: Building,
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -348,22 +309,14 @@ const caseStudies = [
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   )};
-=======
-      <Footer 
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default GreenITPage;
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -380,20 +333,6 @@ return (
 const tabs = [
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const GreenITPage: React.FC = () => {
-  return (<div>Coming Soon<)
-  );
-};
-  const [activeTab, setActiveTab] = useState('solutions');
-const tabs = [
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'solutions',
@@ -513,13 +452,8 @@ const tabs = [
       impac,
   t: 'Achieve 100% environmental transparency',
       pricin,
-<<<<<<< HEAD
   g: 'Starting at $600/month';
 const benefits = [,
-=======
-  g: 'Starting at $600
-  const benefits = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       ico,
   n: TrendingUp,
@@ -642,21 +576,12 @@ const caseStudies = [,
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
@@ -694,16 +619,9 @@ const caseStudies = [,
           <button><
                   key = { tab.id };
                   onClick={() => setActiveTab(tab.id)}`
-<<<<<<< HEAD
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
   O: Add content}
-=======
-                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800
@@ -822,14 +740,8 @@ Benefits of Green IT;"
                 Email Us;
       <Footer 
 
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default GreenItPage;
 

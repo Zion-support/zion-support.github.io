@@ -1,9 +1,6 @@
 
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 function fixMergeConflicts(filePath) {
   try {
@@ -61,15 +58,11 @@ function findFilesWithConflicts(dir) {
         } catch (error) {
           // Skip files that can't be read
         }
-=======
-import { glob } from 'glob';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 // Function to resolve merge conflicts by choosing the HEAD version
 function resolveMergeConflicts(content) {
   // Remove merge conflict markers and choose HEAD version
   let resolved = content
-<<<<<<< HEAD
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
@@ -203,7 +196,6 @@ async function processFiles() {
       } catch (error) {
         console.error(`Error processing ${file}:`, error.message);
         errorCount++;
-<<<<<<< HEAD
 import { execSync } from 'child_process';
 
 // Function to resolve merge conflicts by keeping HEAD version;
@@ -266,40 +258,6 @@ const content = fs.readFileSync(fullPath, 'utf8');
             files.push(fullPath)}
         } catch (error) {
           // Skip files that can't be read
-=======
-import fs from 'fs';
-import path from 'path';
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
-    // Clean up any remaining artifacts
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove excessive newlines
-    content = content.replace(/^\s*\n/gm, ''); // Remove empty lines at start of lines
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-function findFilesWithMergeConflicts(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('') || content.includes('') || content.includes('          files.push(fullPath);
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         }
       }
     }
@@ -317,13 +275,10 @@ for (const file of filesWithConflicts) {
   }
 }
 console.log(`Fixed ${fixedCount} files`);
-=======
->>>>>>> main
       }
     }
   }
   
-<<<<<<< HEAD
   searchDir(dir);
   return files;
 }
@@ -342,15 +297,3 @@ conflictFiles.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} out of ${conflictFiles.length} files`);
-=======
-  console.log(`\nMerge conflict resolution complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
-}
-
-// Run the script
-processFiles().catch(console.error);
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

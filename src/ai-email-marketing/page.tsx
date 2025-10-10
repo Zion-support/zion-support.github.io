@@ -109,14 +109,8 @@ import Footer from '../components
               Learn More
           <
       
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
 import { Helmet } from 'react-helmet-async';

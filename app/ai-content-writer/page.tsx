@@ -5,11 +5,6 @@ const AIContentWriterPage: React.FC = () => {const features = [
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -38,12 +33,6 @@ const PagePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AIContentWriterPage: React.FC = () => {
@@ -52,7 +41,6 @@ const AIContentWriterPage: React.FC = () => {
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     },
     {
       icon: Globe,
@@ -61,29 +49,16 @@ const AIContentWriterPage: React.FC = () => {
       benefits: ['Global deployment', 'Edge computing', 'Load balancing', 'Geographic optimization']
     },
     {
-<<<<<<< HEAD
       title: 'SEO Optimization',
       description: 'Optimize content for search engines automatically',
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
->>>>>>> main
     }
   ];
-<<<<<<< HEAD
 const benefits = [
-=======
-
-  const benefits = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
     'Increase efficiency by up to 50%',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-=======
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Enterprise-grade security to protect your data and operations.',
@@ -97,11 +72,9 @@ const benefits = [
     'Identify trends and opportunities early',
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -110,16 +83,7 @@ const benefits = [
         <meta name="keywords" content="page" />
       </Helmet>
 
-<<<<<<< HEAD
       <Navigation />
-=======
-  return (<title>Ai Content Writer - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai content writer solution for modern businesses." />
-        <meta name="keywords" content="AI ai content writer, artificial intelligence, ai content writer, AI solutions, intelligent automation" />
-      </Helmet>
-
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">)
@@ -142,15 +106,8 @@ const benefits = [
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>;
 const benefits = [
-=======
-        </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     'Increase content production by 10x',
         </section>    'Increase content production by 10x',
     'Improve engagement by 200%',
@@ -271,20 +228,16 @@ const benefits = [
           </div>
         </div>
       </section>
->>>>>>> main
 
         {/* Features Section */}
         <section className="py-20 px-4">
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Page
               </h1>
@@ -316,33 +269,16 @@ const benefits = [
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
-=======
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our comprehensive platform provides everything you need to succeed.
               </p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
-=======
-
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
-    r:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -350,28 +286,13 @@ const benefits = [
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
                           
                           {benefit}
-<<<<<<< HEAD
                         </li>
                       ));
                     </ul>);
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-=======
                         </li>)
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 </div>
               ));
             </div>
@@ -379,7 +300,6 @@ const benefits = [
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -419,12 +339,7 @@ const benefits = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               ));
-=======
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -446,13 +361,11 @@ const benefits = [
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>)
               ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
@@ -475,44 +388,18 @@ const benefits = [
                   <span>View Pricing</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hove,
-    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <Footer />
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       
     </div>
   );
 };
 
 export default AiContentWriterPage;
-=======
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <Footer />
       </div>
     </>
@@ -527,7 +414,6 @@ export default AiContentWriterPage;
 export default AIContentWriterPage;
       </section>export default AiContentWriterPage
 export default AIContentWriterPage;
-=======
 
         <Footer />
       </div>
@@ -535,16 +421,5 @@ export default AIContentWriterPage;
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-=======
-<<<<<<< HEAD
-=======
-export default AiContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 export default AIContentWriterPage;
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

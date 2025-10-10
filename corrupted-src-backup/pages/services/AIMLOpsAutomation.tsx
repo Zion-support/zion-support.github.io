@@ -2,7 +2,6 @@ impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 ;
 const AIMLOpsAutomatio, n = () => {
 return (
@@ -10,13 +9,6 @@ return (
   return(<React.Fragment>
       <Helm, e, t>
         <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</title>
-=======
-
-const AIMLOpsAutomatio, n = () => { 
-  return (<>
-      
-        <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <meta, nam, e = 'description'
           conte, n, t='Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Dep, l, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization.'
         /><
@@ -25,13 +17,9 @@ const AIMLOpsAutomatio, n = () => {
         /><
       <
 
-<<<<<<< HEAD
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' >
 );
 } {/* Hero, Sect, i, o, n */ }</div>
-=======
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'>
           <div, className='absolute, inse, t-0, b, g-black, opacit, y-10' /><
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'><
@@ -43,7 +31,6 @@ const AIMLOpsAutomatio, n = () => {
                 De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y;
                   Gette, d;
                 De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
-<<<<<<< HEAD
                   Gette, d</p>
                   <Link, classNam, e='ml-2 h-5 w-5' />
               <div, classNam, e='p-6'></div>
@@ -56,20 +43,6 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'></div>
             <div, className='te, x, t-cent, e, r'></div>
               <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6'></h1>
-=======
-                  Gette, d<
-                  <Link, classNam, e='ml-2 h-5 w-5' 
-              <div, classNam, e='p-6'><
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%<
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>)
-const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression *
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n *
-        <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'><
-          <div, className='absolute, inse, t-0, b, g-black, opacit, y-10' /><
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'><
-            <div, className='te, x, t-cent, e, r'><
-              <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6'><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 AI, MLOps, Automation;
               <
               <p, className='te, x, t-xl, m, d:te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o'><

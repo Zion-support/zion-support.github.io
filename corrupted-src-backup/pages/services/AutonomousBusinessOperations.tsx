@@ -1,19 +1,12 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 ;
 const AutonomousBusinessOperation, s = () => {
 return (
  
   return(<React.Fragment>
       <Helm, e, t>
-=======
-
-const AutonomousBusinessOperation, s = () => { 
-  return(<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;
         <
@@ -27,13 +20,9 @@ const AutonomousBusinessOperation, s = () => {
         
       <
 
-<<<<<<< HEAD
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' >
 );
 } {/* Hero, Sect, i, o, n */ }</div>
-=======
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' 
             <div, classNam, e='flex, justif, y-center, m, b-8'>
@@ -75,7 +64,6 @@ const AutonomousBusinessOperation, s = () => {
         {/* Trust, Indicat, o, r, s *
               Wh, a, t's, Included, in Your, Platfor, m
 
-<<<<<<< HEAD
         {/* Trust, Indicat, o, r, s */}</h2>
         <section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           <div, className='container, m, x-auto, p, x-6'></section>
@@ -102,34 +90,6 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'></div>
                 <Rocket, classNam, e='w-5 h-5, m, r-2' /></Rocket>
               <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d'></p>
-=======
-        {/* Trust, Indicat, o, r, s */}<
-        <section, classNam, e = 'py-12, b, g-bla, c, k
-          <div, className='container, m, x-auto, p, x-6'><
-            <div, className='flex, fle, x-wrap, justif, y-center, item, s-center, ga, p-8, tex, t-bl, u, e-2, 0, 0'><
-              <div, className='flex, item, s-center, ga, p-2'><
-                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' 
-                <span, className='fo, n, t-semibo, l, d'>50+ Fortune, 500, Clients<
-              <
-              <div, className='flex, item, s-center, ga, p-2'><
-                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' 
-                <span, className='fo, n, t-semibo, l, d'>$5B+ Value, Create, d<
-              <
-              <div, className='flex, item, s-center, ga, p-2'><
-                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' 
-                <span, className='fo, n, t-semibo, l, d'>SOC, 2, Type II, Certifie, d<
-              <
-              <div, className='flex, item, s-center, ga, p-2'><
-                <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' 
-const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression *
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n *
-        <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'><
-          <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' /><
-            <div, classNam, e='flex, justif, y-center, m, b-8'><
-              <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'><
-                <Rocket, classNam, e='w-5 h-5, m, r-2' /><
-              <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-bl, u, e-200, m, b-8, fon, t-semibo, l, d'><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 Transform, Your, Enterprise in, 90, Days with, Sel, f-Managing, AI, Systems;
             <div, className='flex, justif, y-center, m, b-8'><
               <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-gre, e, n-5, 0, 0/20, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, tex, t-gre, e, n-300, tex, t-sm, fon, t-bold, uppercase, tracking-wider, animat, e-pul, s, e'><
