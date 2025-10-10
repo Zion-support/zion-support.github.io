@@ -26,8 +26,6 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
-=======
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -95,7 +93,6 @@ export interface MetadataRoute {
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> origin/main
 
   const benefits = [
     'Advanced AI technology integration',
@@ -115,15 +112,12 @@ export interface MetadataRoute {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
-<<<<<<< HEAD
-=======
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> origin/main
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

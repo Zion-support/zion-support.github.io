@@ -32,12 +32,6 @@ const PerformanceMonitor: React.FC = () => {
             connectionSpeed,
             renderTime: Math.round(domContentLoaded)
           });
-          
-          console.log('Page Load Performance:', {
-            loadTime,
-            domContentLoaded,
-            totalTime: navigation.loadEventEnd - navigation.fetchStart
-          });
         }
       }
     };

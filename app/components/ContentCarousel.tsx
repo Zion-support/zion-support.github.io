@@ -59,24 +59,6 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">Featured Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/10 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white mb-3">AI Solutions</h3>
-              <p className="text-gray-300 text-sm">Transform your business with cutting-edge AI technology</p>
-            </div>
-            <div className="bg-white/10 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-300 text-sm">Scalable cloud infrastructure for modern businesses</p>
-            </div>
-            <div className="bg-white/10 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-white mb-3">Cybersecurity</h3>
-              <p className="text-gray-300 text-sm">Protect your business from evolving cyber threats</p>
-=======
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -115,7 +97,6 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               ))}
->>>>>>> origin/main
             </div>
           </div>
 
@@ -146,8 +127,6 @@ const ContentCarousel: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
@@ -174,7 +153,6 @@ const ContentCarousel: React.FC = () => {
             </button>
           </div>
         </div>
->>>>>>> origin/main
       </div>
     </div>
   );

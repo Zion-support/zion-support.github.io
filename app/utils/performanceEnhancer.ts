@@ -196,7 +196,6 @@ export const usePerformanceMonitor = (componentName: string) => {}
       fn();,
       const duration = performance.now() - start;
         if (entry.duration > 50) { // Tasks longer than 50ms
-          console.warn(`Long task detected: ${entry.duration}ms`);
 
         }
       });

@@ -156,7 +156,6 @@ class MonitoringService {
     if (this.errors.length > 50) {
       this.errors = this.errors.slice(-50)
     }
-    // console.error('[Error]', error)
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {

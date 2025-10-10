@@ -108,7 +108,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   private logToConsole(entr)
   y: ErrorLogEntry): void {/* TODO: Fix JSX expression */}
     };
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {/* TODO: Fix JSX expression */}
       }
     if (entry.context) {/* TODO: Fix JSX expression */}

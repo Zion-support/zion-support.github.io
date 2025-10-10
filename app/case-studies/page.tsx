@@ -1,12 +1,7 @@
 'use client';
-<<<<<<< HEAD
-
-import React from 'react';
-=======
 import React from 'react';
 'use client';
 import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
@@ -14,14 +9,6 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-<<<<<<< HEAD
-      title: 'AI-Powered E-commerce Transformation',
-      client: 'RetailTech Solutions',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and poor customer experience',
-      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
-      results: '300% increase in conversion rates, 50% reduction in cart abandonment',
-=======
       id: 1,
       title: 'AI-Powered Supply Chain Optimization',
       client: 'Global Manufacturing Corp',
@@ -38,18 +25,12 @@ const CaseStudiesPage: React.FC = () => {
       technologies: ['Machine Learning', 'Predictive Analytics', 'IoT Sensors', 'Cloud Computing'],
       duration: '6 months',
       teamSize: '8 developers',
->>>>>>> origin/main
       image: '/api/placeholder/600/400'
     },
     {
       title: 'Cloud Migration for Financial Services',
       client: 'FinanceCorp',
       industry: 'Financial Services',
-<<<<<<< HEAD
-      challenge: 'Legacy systems causing performance issues and security concerns',
-      solution: 'Complete cloud migration with enhanced security and compliance',
-      results: '99.9% uptime, 60% cost reduction, improved security posture',
-=======
       category: 'cloud',
       challenge: 'Legacy on-premise systems causing security vulnerabilities and scalability issues',
       solution: 'Complete cloud migration with modern microservices architecture and enhanced security',
@@ -62,18 +43,12 @@ const CaseStudiesPage: React.FC = () => {
       technologies: ['AWS', 'Kubernetes', 'Docker', 'Microservices', 'DevOps'],
       duration: '8 months',
       teamSize: '12 developers',
->>>>>>> origin/main
       image: '/api/placeholder/600/400'
     },
     {
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
-<<<<<<< HEAD
-      challenge: 'HIPAA compliance and increasing cyber threats',
-      solution: 'Comprehensive security audit and implementation of advanced threat detection',
-      results: 'Zero security incidents, 100% HIPAA compliance, 24/7 monitoring',
-=======
       category: 'mobile',
       challenge: 'Need for a comprehensive mobile platform connecting patients, doctors, and healthcare providers',
       solution: 'Developed cross-platform mobile app with telemedicine capabilities and health monitoring',
@@ -86,13 +61,10 @@ const CaseStudiesPage: React.FC = () => {
       technologies: ['React Native', 'Node.js', 'MongoDB', 'WebRTC', 'Health APIs'],
       duration: '10 months',
       teamSize: '10 developers',
->>>>>>> origin/main
       image: '/api/placeholder/600/400'
     }
   ];
 
-<<<<<<< HEAD
-=======
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -106,7 +78,6 @@ const CaseStudiesPage: React.FC = () => {
     ? caseStudies 
     : caseStudies.filter(study => study.category === selectedCategory);
 
->>>>>>> origin/main
   return (
     <>
       <Helmet>
@@ -116,17 +87,6 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Success Stories
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
-=======
         <Navigation />
         
         {/* Header */}
@@ -138,49 +98,10 @@ const CaseStudiesPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover how we've helped businesses transform with cutting-edge AI and technology solutions. 
               Real results from real clients.
->>>>>>> origin/main
             </p>
           </div>
         </section>
 
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-6">
-                    <span className="inline-block bg-cyan-500/20 text-cyan-400 text-xs px-3 py-1 rounded-full mb-4">
-                      {study.industry}
-                    </span>
-                    <h2 className="text-2xl font-bold text-white mb-4">{study.title}</h2>
-                    <p className="text-gray-300 mb-2"><strong>Client:</strong> {study.client}</p>
-                  </div>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Challenge</h3>
-                      <p className="text-gray-300">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Solution</h3>
-                      <p className="text-gray-300">{study.solution}</p>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Results</h3>
-                      <p className="text-gray-300">{study.results}</p>
-                    </div>
-                  </div>
-                  
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-=======
         {/* Category Filter */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
@@ -197,13 +118,10 @@ const CaseStudiesPage: React.FC = () => {
                 >
                   {category.label} ({category.count})
                 </button>
->>>>>>> origin/main
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
@@ -311,7 +229,6 @@ const CaseStudiesPage: React.FC = () => {
 
         <Footer />
         <SEOOptimizer />
->>>>>>> origin/main
       </div>
     </>
   );

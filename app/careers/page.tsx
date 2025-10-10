@@ -3,11 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { MapPin, Clock, ArrowRight, CheckCircle } from 'lucide-react';
-=======
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart, Briefcase, Award, Zap } from 'lucide-react';
->>>>>>> origin/main
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -17,12 +13,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-<<<<<<< HEAD
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.'
-=======
       description: 'Lead development of cutting-edge AI solutions and machine learning models.',
       requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred']
->>>>>>> origin/main
     },
     {
       title: 'Cloud Architect',
@@ -34,57 +26,40 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
-<<<<<<< HEAD
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Protect our clients from cyber threats and ensure compliance with security standards.'
-    },
-    {
       title: 'Data Scientist',
       department: 'Analytics',
       location: 'San Francisco, CA',
       type: 'Full-time',
-      experience: '3+ years',
-      description: 'Extract insights from complex datasets to drive business decisions and AI improvements.'
-=======
-      title: 'Data Scientist',
-      department: 'Analytics',
-      location: 'Remote / Austin',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Extract insights from complex datasets and build predictive models.',
-      requirements: ['Python, R, SQL', '3+ years data science', 'Statistics background']
+      experience: '4+ years',
+      description: 'Extract insights from complex datasets and build predictive models for business intelligence.',
+      requirements: ['Python, R, SQL', '4+ years data science', 'Machine learning expertise']
     },
     {
       title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Seattle',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Automate deployment pipelines and manage infrastructure at scale.',
-      requirements: ['Kubernetes, Docker, CI/CD', '4+ years DevOps', 'Infrastructure as Code']
-    },
-    {
-      title: 'Frontend Developer',
-      department: 'Engineering',
+      department: 'Infrastructure',
       location: 'Remote',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Build beautiful and responsive user interfaces for our AI applications.',
-      requirements: ['React, TypeScript, Next.js', '3+ years frontend', 'UI/UX experience']
+      description: 'Automate deployment pipelines and maintain scalable infrastructure systems.',
+      requirements: ['Docker, Kubernetes, CI/CD', '3+ years DevOps', 'Cloud platform experience']
+    },
+    {
+      title: 'Frontend Developer',
+      department: 'Product',
+      location: 'Austin, TX',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Build responsive and interactive user interfaces for our AI-powered applications.',
+      requirements: ['React, TypeScript, CSS', '3+ years frontend', 'UI/UX experience']
     },
     {
       title: 'Product Manager',
       department: 'Product',
-      location: 'New York',
+      location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Lead product strategy and roadmap for our AI and cloud solutions.',
-      requirements: ['5+ years PM experience', 'Technical background', 'AI/ML knowledge']
->>>>>>> origin/main
+      description: 'Drive product strategy and roadmap for our AI and IT solutions portfolio.',
+      requirements: ['Product management', '5+ years experience', 'Technical background preferred']
     }
   ];
 
@@ -93,31 +68,32 @@ const CareersPage: React.FC = () => {
     'Comprehensive health insurance',
     'Flexible work arrangements',
     'Professional development budget',
-    'Top-tier equipment and tools',
-    'Team building events',
-    'Career growth opportunities'
+    'Unlimited PTO',
+    '401(k) with company matching',
+    'Stock options',
+    'Remote work support'
   ];
 
   const values = [
     {
       icon: Star,
       title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology'
+      description: 'We push boundaries and embrace new technologies to solve complex problems.'
     },
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results'
+      description: 'We believe in the power of teamwork and diverse perspectives.'
     },
     {
       icon: Heart,
-      title: 'Impact',
-      description: 'We create solutions that make a real difference'
+      title: 'Passion',
+      description: 'We are passionate about technology and its potential to change the world.'
     },
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
+      description: 'We strive for excellence in everything we do and deliver exceptional results.'
     }
   ];
 
@@ -125,11 +101,9 @@ const CareersPage: React.FC = () => {
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
+        <meta name="description" content="Join our team of passionate innovators building the future of AI and IT solutions. Explore open positions and discover why Zion Tech Group is the perfect place to grow your career." />
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, tech jobs, remote work, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="container mx-auto px-4 py-16">
@@ -138,17 +112,15 @@ const CareersPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               Join Our <span className="text-cyan-400">Team</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Work on cutting-edge AI and IT solutions that are transforming industries. 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join a team of passionate innovators building the future of technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
-                <Heart className="w-5 h-5" />
-                <span>Apply Now</span>
+                Apply Now
               </Link>
               <Link
                 to="/about"
@@ -224,26 +196,11 @@ const CareersPage: React.FC = () => {
               ))}
             </div>
           </div>
->>>>>>> origin/main
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our Team
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          {/* Open Positions */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Open Positions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {openPositions.map((position, index) => (
                 <div
                   key={index}
@@ -286,36 +243,15 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
-<<<<<<< HEAD
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-=======
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     Apply Now
                     <ArrowRight className="w-4 h-4" />
                   </button>
->>>>>>> origin/main
                 </div>
               ))}
             </div>
+          </div>
 
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Why Work With Us?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-=======
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -338,10 +274,9 @@ const CareersPage: React.FC = () => {
               >
                 Learn About Us
               </Link>
->>>>>>> origin/main
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );

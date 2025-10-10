@@ -24,8 +24,6 @@ const ApiCachePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
 interface CacheEntry {
   data: any,
   timestamp: number,
@@ -53,7 +51,6 @@ class APICache {
     if (this.cache.size >= this.maxSize) {
       const oldestKey = this.cache.keys().next().value;
       this.cache.delete(oldestKey);
->>>>>>> origin/main
     }
   ];
 
