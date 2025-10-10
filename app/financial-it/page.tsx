@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
 const FinancialITPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +42,7 @@ const FinancialITPage: React.FC = () => {
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
     }
-  ];
+  ]
   const services = [
     {
       icon: '🏦',
@@ -64,7 +64,7 @@ const FinancialITPage: React.FC = () => {
       title: 'Security Services',
       description: 'Cybersecurity and data protection solutions'
     }
-  ];
+  ]
   const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -72,7 +72,7 @@ const FinancialITPage: React.FC = () => {
     'Regulatory Compliance',
     'Fraud Prevention',
     'Advanced Analytics'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
@@ -84,13 +84,12 @@ const FinancialITPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Financial Services
             <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Solutions;
-  </
+              IT Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.
@@ -100,28 +99,26 @@ const FinancialITPage: React.FC = () => {
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
               Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
+            </button></button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo;
-  </
-          </div>
-        </div>
+              Schedule Demo</button>
+</div>
+</div></button>
       </section>
-      {/* Features Section */}
-      <section className="py-20 px-4">
+        {/* Features Section */}</section>
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
+          <div className="text-center mb-16"></h1>
+            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed specifically for financial services industry;
-  </
-          </div>
+              Comprehensive IT solutions designed specifically for financial services industry</h1></p>
+</div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
-                </div>
+</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -129,82 +126,66 @@ const FinancialITPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+                    </li>)}
+                </ul></h1></p>
+</div>)}</div>
+</div></h1></p>
       </section>
-      {/* Services Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></h1>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Financial Services;
-  </
+              Financial Services</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
-            </p>
-          </div>
+            </p></h1></p>
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+                <p className="text-gray-300">{service.description}</p></h1></p>
+</div>)}</div>
+</div></h1></p>
       </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16"></h1>
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Financial IT Solutions?
-            </h2>
+            </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of modern financial technology with our proven solutions.
-            </p>
-          </div>
+            </p></h1></p>
+</div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
+</div>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3></h1>
+</div>)}</div>
+</div></h1></p>
       </section>
-      {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></h1>
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading financial institutions using our specialized IT solutions for compliance and security;
-  </
+            Join leading financial institutions using our specialized IT solutions for compliance and security</h1></p></div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
-  </
+              Start Free Trial</button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
-  </
-          </div>
-        </div>
+              Contact Sales</button>
+</div>
+</div></button>
       </section>
       <Footer />
-    </div>
-  );
-};
-export default FinancialITPage;
-  </button>
+</div>
+}
+export default FinancialITPage</button>
   </button>
   </p>
   </h2>

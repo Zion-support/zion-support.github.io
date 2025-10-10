@@ -1,19 +1,19 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react'
 interface CaseStudy {
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  duration: string;
-  team: string;
+  id: string
+  title: string
+  client: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string[]
+  image: string
+  duration: string
+  team: string
 }
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
@@ -68,13 +68,13 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
       duration: '4 months',
       team: '6 specialists'
     }
-  ];
+  ]
   const stats = [
     { icon: TrendingUp, value: '150+', label: 'Projects Completed' },
     { icon: Users, value: '50+', label: 'Happy Clients' },
     { icon: Award, value: '99%', label: 'Success Rate' },
     { icon: CheckCircle, value: '24/7', label: 'Support' }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -84,35 +84,34 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
       </Helmet>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Case Studies;
-  </
+            Case Studies
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
-          </p>
-        </div>
+          </p></h1></p>
+</div></h1></p>
       </section>
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300">
+                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300"></div>
                 <div className="h-48 bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center">
                   <div className="text-white text-center">
-                    <Building className="w-16 h-16 mx-auto mb-4" />
+                    <Building className="w-16 h-16 mx-auto mb-4" /></div>
                     <div className="text-sm opacity-80">{study.industry}</div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
+</div>
+</div>
+                <div className="p-6"></h1>
+                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3></h1></div>
                   <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
                     <Users className="w-4 h-4" />
-                    <span>{study.client}</span>
-                  </div>
+                    <span>{study.client}</span></span>
+</div></p>
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {study.description}
                   </p>
@@ -121,12 +120,11 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                     <ul className="text-sm text-gray-300 space-y-1">
                       {study.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="flex items-center space-x-2">
-                          <TrendingUp className="w-3 h-3 text-green-400" />
+                          <TrendingUp className="w-3 h-3 text-green-400" /></span>
                           <span>{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                        </li>)}
+                    </ul></p>
+</div></div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,9 +134,9 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="aspect-video bg-gray-700 rounded-lg mb-4"></div>
-                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="aspect-video bg-gray-700 rounded-lg mb-4"></div></h1>
+                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3></p>
                   <p className="text-gray-300 mb-4">{study.client} - {study.industry}</p>
                   <Link 
                     to={`/case-studies/${index}`}
@@ -146,9 +144,9 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                     Read More <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>Duration: {study.duration}</span>
-                    <span>Team: {study.team}</span>
-                  </div>
+                    <span>Duration: {study.duration}</span></span>
+                    <span>Team: {study.team}</span></h1>
+</div></div>
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/case-studies/${study.id}`}
@@ -158,14 +156,11 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                     </Link>
                     <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                       <ExternalLink className="w-4 h-4" />
-                      Share;
-  </
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                      Share</button>
 </div>
+</div>)}</div>
+</div>
+</div></button>
       </section>
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
@@ -188,17 +183,15 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
               View Our Services
               <ExternalLink className="w-5 h-5 ml-2" />
             </Link>
-          </div>
-        </div>
+</div>
+</div></h1></p>
       </section>
-    </div>
-  );
-};
-export default CaseStudiesPage;
-  </button>
-  </div>
-  </div>
-  </div>
+</div>
+}
+export default CaseStudiesPage</button>
+</div>
+</div>
+</div>
   </section>
   </h1>
-  </div>
+</div>

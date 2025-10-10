@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -42,7 +42,7 @@ const EnterprisePage: React.FC = () => {
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
     }
-  ];
+  ]
   const solutions = [
     {
       title: 'Enterprise Resource Planning',
@@ -68,7 +68,7 @@ const EnterprisePage: React.FC = () => {
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
     }
-  ];
+  ]
   const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -78,13 +78,13 @@ const EnterprisePage: React.FC = () => {
     'Scale with business growth',
     'Integrate with existing systems',
     'Provide 24/7 support and monitoring'
-  ];
+  ]
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
@@ -96,98 +96,83 @@ const EnterprisePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions;
-  </
+              Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></h1></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Enterprise Consultation
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
+            </button></button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies;
-  </
-          </div>
-        </div>
+              View Case Studies</button>
+</div>
+</div></button>
       </section>
-      {/* Stats Section */}
-      <section className="py-20 px-4">
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (</div>
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   <stat.icon className="w-12 h-12 text-purple-400" />
-                </div>
+</div></div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+</div>)}</div>
+</div>
       </section>
-      {/* Features Section */}
-      <section className="py-20 px-4">
+        {/* Features Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+          <div className="text-center mb-16"></div></h1>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features;
-  </
+              Enterprise-Grade Features</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for scale, security, and performance to meet the demands of large organizations.
-            </p>
-          </div>
+            </p></h1></p>
+</div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                </div>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3></h1>
+</div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                    </li>)}
+                </ul></p>
+</div>)}</div>
+</div></h1></p>
+      </section></h1>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions;
-  </
+              Comprehensive Solutions</p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end enterprise solutions that address every aspect of your business operations.
-            </p>
-          </div>
-                    </li>
-                  ))}
+            </p></h1></p>
+</div>
+                    </li>)}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+</div>)}</div>
+</div></h1></p>
       </section>
-      {/* Benefits Section */}
       <section className="py-20 px-4">
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
+</div>
       </section>
-      {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -200,19 +185,16 @@ const EnterprisePage: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Contact Enterprise Sales
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
+            </button></button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More;
-  </
-          </div>
-        </div>
+              Learn More</button>
+</div>
+</div></button>
       </section>
       <Footer />
-    </div>
-  );
-};
-export default EnterprisePage;
-  </button>
+</div>
+}
+export default EnterprisePage</button>
   </h2>
   </h2>
   </span>

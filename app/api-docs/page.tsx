@@ -1,17 +1,17 @@
-'use client';
-import React, { useState } from 'react';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState } from 'react'
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [copiedCode, setCopiedCode] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
   const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
+    navigator.clipboard.writeText(code)
+    setCopiedCode(id)
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -92,7 +92,7 @@ export default function APIDocsPage() {
         }
       ]
     }
-  ];
+  ]
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
@@ -100,7 +100,7 @@ export default function APIDocsPage() {
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.endpoints.length > 0);
+  })).filter(category => category.endpoints.length > 0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -110,11 +110,10 @@ export default function APIDocsPage() {
       />
       <Navigation />
       {/* Hero Section */}
-<section className="py-20 px-4">
+<section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation;
-  </
+            API Documentation
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
@@ -122,72 +121,68 @@ export default function APIDocsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Code className="mr-2 h-5 w-5" />
-              Get Started;
-  </
+              Get Started</button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Download className="mr-2 h-5 w-5" />
-              Download SDK;
-  </
-          </div>
-        </div>
+              Download SDK</button>
+</div>
+</div></button>
       </section>
-      {/* Quick Start */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto"></h1>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></h1></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
+</div>
+              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3></p>
               <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Get API Key →
-              </button>
-            </div>
+              </button></button>
+</div></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
-              </div>
+</div></h1>
               <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
-              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
+              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p></button>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 View Examples →
-              </button>
-            </div>
+              </button></button>
+</div></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
+</div>
+              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3></p>
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Start Building →
-              </button>
-            </div>
-          </div>
-        </div>
+              </button></button>
+</div>
+</div>
+</div></button>
       </section>
-      {/* API Endpoints */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto"></h1>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
-            {filteredEndpoints.map((category, categoryIndex) => (
+            {filteredEndpoints.map((category, categoryIndex) => (</h1></div>
               <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-8">
+                <div className="flex items-center gap-4 mb-8"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-6 h-6 text-white" />
-                  </div>
+</div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">{category.description}</p>
-                  </div>
-                </div>
+                    <p className="text-gray-300">{category.description}</p></h1></p>
+</div>
+</div></div>
                 <div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10"></div>
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -197,8 +192,8 @@ export default function APIDocsPage() {
                           }`}>
                             {endpoint.method}
                           </span>
-                          <code className="text-purple-400 font-mono">{endpoint.path}</code>
-                        </div>
+                          <code className="text-purple-400 font-mono">{endpoint.path}</code></span>
+</div></button>
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
@@ -206,51 +201,41 @@ export default function APIDocsPage() {
                             <React.Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
-                            </React.Fragment>
-                          ) : (
+                            </React.Fragment> : (
                             <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
-                            </React.Fragment>
-                          )}
-                        </button>
-                      </div>
-                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
+                            </React.Fragment>}
+                        </button></button>
+</div></p>
+                      <p className="text-gray-300 mb-4">{endpoint.description}</p></p></div>
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
-                        </pre>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+                        </pre></p>
+</div>
+</div>)}</div>
+</div>)}</div>
+</div></button>
       </section>
-      {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></h1>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Get Started?
-          </h2>
+          </h2></p>
           <p className="text-xl text-purple-100 mb-8">
             Start building with our APIs today and create amazing applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </
+              Get API Key</button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </
-          </div>
-        </div>
+              View SDKs</button>
+</div>
+</div></button>
       </section>
       <Footer />
-    </div>
-  );
+</div>
 }
   </button>
   </button>

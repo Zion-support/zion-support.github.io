@@ -1,26 +1,26 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react'
 interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
+  icon: React.ComponentType<any>
+  title: string
+  description: string
   stats?: {
-    value: string;
-    label: string;
-  }[];
+    value: string
+    label: string
+  }[]
 }
 interface Testimonial {
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar?: string;
+  name: string
+  company: string
+  role: string
+  content: string
+  rating: number
+  avatar?: string
 }
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
   const features: Feature[] = [
     {
       icon: Brain,
@@ -62,7 +62,7 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '24/7', label: 'Support' }
       ]
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -72,7 +72,7 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
@@ -102,28 +102,28 @@ company: 'InnovateLab',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
       rating: 5
     }
-  ];
+  ]
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isPlaying) return
     const timer = setInterval(() => {
-setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
+setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [isPlaying, testimonials.length])
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+  }
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-  const currentTestimonial = testimonials[currentIndex];
+    setIsPlaying(!isPlaying)
+  }
+  const currentTestimonial = testimonials[currentIndex]
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
@@ -135,134 +135,111 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
-              Start Demo;
-  </
+              Start Demo</button>
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More;
-  </
-          </div>
-        </div>
-{/* Features Grid */}
+              Learn More</button>
+</div>
+</div>/* Features Grid */}</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-        {/* Benefits Section */}
+</div></h1>
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></p>
+              <p className="text-gray-300">{feature.description}</p></h1></p>
+</div>)}</div>/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3></h1></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Testimonials */}
-        <div className="text-center">
+                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" /></span>
+                <span className="text-gray-300">{benefit}</span></span>
+</div>)}</div>
+</div>/* Testimonials */}</div>
+        <div className="text-center"></h1>
           <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (</h1></div>
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
+                  ))}</div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p></p></div>
+                <div className="text-center"></p>
                   <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Features Section */}
+                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p></p>
+</div>
+</div>)}</div>
+</div>
+</div>/* Features Section */}</button></section>
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">
               Why Choose Our Solutions?
-            </h2>
+            </h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
-            </p>
-          </div>
+            </p></h1></p>
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>
+</div></h1>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                {feature.stats && (
+                <p className="text-gray-300 mb-6">{feature.description}</p>feature.stats && (</h1></p></div>
                   <div className="grid grid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
+                      <div key={statIndex} className="text-center"></div>
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+</div>)}</div>}</div>)}</div>
+</div></h1></p>
       </section>
-      {/* Testimonials Section */}
-      <section className="py-16 px-4">
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2></p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
-            </p>
-          </div>
+            </p></h1></p>
+</div></div>
           <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20"></div>
               <div className="text-center">
                 <div className="flex justify-center mb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                  ))}</div>
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   "{currentTestimonial.content}"
-                </blockquote>
+                </blockquote></div>
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
                     <Users className="w-8 h-8 text-white" />
-                  </div>
+</div></div>
                   <div className="text-left">
-                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
+                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div></div>
                     <div className="text-gray-400">{currentTestimonial.role}</div>
                     <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Navigation Controls */}
+</div>
+</div>
+</div>
+</div>/* Navigation Controls */}</div>
             <div className="flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronLeft className="w-6 h-6" />
-              </button>
+              </button></button>
               <button
                 onClick={togglePlayPause}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
@@ -272,11 +249,10 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 onClick={nextTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-            {/* Dots Indicator */}
+              </button></button>
+</div>/* Dots Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
+              {testimonials.map((_, index) => (</button>
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
@@ -284,59 +260,52 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
                 />
-              ))}
-            </div>
-          </div>
-        </div>
+              ))}</button>
+</div>
+</div>
+</div></button>
       </section>
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
+      <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16"></h1>
             <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
-            </p>
-          </div>
+            </p></h1></p>
+</div></div>
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+                  <span className="text-gray-300">{benefit}</span></span>
+</div>)}</div>
+</div>
+</div></h1>
       </section>
-      {/* CTA Section */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Experience the Future?
-            </h2>
+            </h2></p>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
+                <Zap className="w-5 h-5" /></span>
                 <span>Start Free Trial</span>
-              </button>
+              </button></button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo;
-  </
-            </div>
-          </div>
-        </div>
+                Schedule Demo</button>
+</div>
+</div>
+</div></button>
       </section>
-    </div>
-  );
-};
-export default DynamicContentShowcase;
-  </button>
+</div>
+}
+export default DynamicContentShowcase</button>
   </button>
   </button>
   </button>

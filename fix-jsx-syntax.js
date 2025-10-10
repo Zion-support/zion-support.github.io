@@ -1,132 +1,73 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-//Function to fix JSX syntax errors;
-function fixJSXSyntax(content) {
+// Pattern to find all JSX files
+const jsxFiles = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
 
-  //Fix function declarations with malformed comments;
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-,
-  //Fix malformed JSX elements that are self-closing but shouldn't be;
-  //Pattern: <div></div> followed by content that should be inside;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
+console.log(`Found ${jsxFiles.length} JSX files to process...`);
 
-  //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
+let fixedFiles = 0;
+let totalFixes = 0;
 
-  //Fix array syntax issues;
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues;
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects;
-  fixed = fixed.replace(
-function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
-}
-
-//Function to process a single file;
-function processFile(filePath) {
-  try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
-  }
-];
-
-function fixFile(filePath) {
+jsxFiles.forEach(filePath => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let originalContent = content;
+    let fileFixes = 0;
+
+    // Fix malformed JSX closing tags
+    // Pattern: </ followed by whitespace and semicolon
+    content = content.replace(/<\/(\s*);/g, '</$1>');
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
+    // Fix standalone semicolons that should be closing tags
+    // Look for patterns like: text; followed by whitespace and </
+    content = content.replace(/([^>])\s*;\s*<\//g, '$1</');
     
-    if (modified) {
+    // Fix specific patterns where semicolons are used instead of closing tags
+    // Pattern: text; followed by newline and whitespace
+    content = content.replace(/([^>])\s*;\s*\n\s*<\//g, '$1\n  </');
+    
+    // Fix cases where there's a semicolon at the end of a line that should be a closing tag
+    content = content.replace(/([^>])\s*;\s*$/gm, '$1');
+    
+    // Fix specific malformed patterns
+    // Pattern: Get Started; followed by </
+    content = content.replace(/Get Started;\s*<\//g, 'Get Started</');
+    content = content.replace(/Schedule Demo;\s*<\//g, 'Schedule Demo</');
+    content = content.replace(/Learn More;\s*<\//g, 'Learn More</');
+    content = content.replace(/Get Accessibility Audit;\s*<\//g, 'Get Accessibility Audit</');
+    content = content.replace(/Advanced 5G Features;\s*<\//g, 'Advanced 5G Features</');
+    content = content.replace(/Solutions;\s*<\//g, 'Solutions</');
+    
+    // Fix button closing tags specifically
+    content = content.replace(/button>\s*;\s*<\//g, 'button>\n              </');
+    content = content.replace(/h1>\s*;\s*<\//g, 'h1>\n            </');
+    content = content.replace(/h2>\s*;\s*<\//g, 'h2>\n            </');
+    content = content.replace(/p>\s*;\s*<\//g, 'p>\n            </');
+    content = content.replace(/span>\s*;\s*<\//g, 'span>\n            </');
+    
+    // Fix cases where there are orphaned semicolons
+    content = content.replace(/;\s*<\/(button|h1|h2|h3|p|span|div|section|article|header|footer|main|nav|aside)/g, '</$1');
+    
+    // Fix malformed closing tags that are missing the tag name
+    content = content.replace(/<\/(\s*)\s*$/gm, '');
+    
+    // Clean up extra whitespace and newlines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+      fileFixes = (originalContent.match(/;\s*<\//g) || []).length;
+      totalFixes += fileFixes;
+      fixedFiles++;
+      console.log(`Fixed ${fileFixes} issues in ${filePath}`);
     }
-    
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+});
 
-//Main function;
-async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
-
-  console.log(`Found ${files.length} TSX files to check...`);
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [,
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**')
-        '**/ai-optimization-backups/**')
-        '**/automation_logs/**')
-        '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
-async function main() {/* TODO: Fix JSX expression */}
-}
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
-
-    for (const file of files) {/* TODO: Fix JSX expression */}
-      }
-    }
-  });
-
-  //   }
-
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-
-export { fixJSXSyntax, processFile };
-
-}"`
+console.log(`\nFixed ${totalFixes} JSX syntax issues across ${fixedFiles} files.`);

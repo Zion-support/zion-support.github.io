@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const SitemapPage: React.FC = () => {
   const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
@@ -26,43 +26,40 @@ const SitemapPage: React.FC = () => {
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-  ];
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div></div>
       <div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-12"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Sitemap</h1>
           </h1>
           <p className="text-xl text-gray-600">
-            Navigate through all pages on our website;
-  </
-        </div>
+            Navigate through all pages on our website</h1></p>
+</div></div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pages.map((page, index) => (</div>
-              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div>
+            {pages.map((page, index) => (</div></div>
+              <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"></div></h1>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   <a 
                     href={page.path} 
                     className="text-blue-600 hover:text-blue-700 transition-colors">
                     {page.title}
                   </a>
-                </h3>
+                </h3></p>
                 <p className="text-sm text-gray-600 mb-2">
                   {page.description}
                 </p>
                 <p className="text-xs text-gray-500">
                   {page.path}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+                </p></h1></p>
+</div>)}</div>
+</div>
         <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             Need Help Finding Something?
-          </h2>
+          </h2></p>
           <p className="text-gray-600 mb-6">
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
@@ -70,20 +67,15 @@ const SitemapPage: React.FC = () => {
             <a 
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
-              Contact Us;
-  </
+              Contact Us
             <a 
               href="tel:+13024640950"
               className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
-              Call Us: (302) 464-0950;
-  </
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default SitemapPage;
-  </a>
+              Call Us: (302) 464-0950</div>
+</div>
+</div>
+</div>
+}
+export default SitemapPage</a>
   </a>
   </p>

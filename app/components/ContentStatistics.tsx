@@ -1,6 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
@@ -9,7 +9,7 @@ const ContentStatistics: React.FC = () => {
     years: 0,
     countries: 0,
     uptime: 0
-  });
+  })
   const targetCounters = {
     clients: 10000,
     projects: 5000,
@@ -17,7 +17,7 @@ const ContentStatistics: React.FC = () => {
     years: 15,
     countries: 50,
     uptime: 99
-  };
+  }
   const statistics = [
     {
       icon: Users,
@@ -67,7 +67,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-red-400',
       description: 'Service reliability'
     }
-  ];
+  ]
   const achievements = [
     {
       icon: Brain,
@@ -85,7 +85,7 @@ const ContentStatistics: React.FC = () => {
 description: 'Worldwide deployment and support for international businesses',
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -95,7 +95,7 @@ description: 'Worldwide deployment and support for international businesses',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   const achievements = [
     {
       icon: Star,
@@ -115,155 +115,132 @@ description: 'Worldwide deployment and support for international businesses',
       description: 'Year-over-year business growth',
       value: '300%'
     }
-  ];
+  ]
   useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const duration = 3000 // 3 seconds
+    const steps = 60
+    const stepDuration = duration / steps
     const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
+      const target = targetCounters[key as keyof typeof targetCounters]
+      const duration = 2000 // 2 seconds
+      const increment = target / (duration / 16) // 60fps
       return setInterval(() => {
 setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
+          const current = prev[key as keyof typeof prev]
           if (current < target) {
             return {
               ...prev,
               [key]: Math.min(current + increment, target)
-            };
+            }
           }
-          return prev;
-        });
-      }, 16);
-    });
+          return prev
+        })
+      }, 16)
+    })
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+      timers.forEach(timer => clearInterval(timer))
+    }
+  }, [])
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8"></div>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Impact in Numbers;
-  </
+            Our Impact in Numbers
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how we've transformed businesses and delivered exceptional results.
-          </p>
-        </div>
-        {/* Statistics Grid */}
+          </p></h1></p>
+</div>/* Statistics Grid */}</div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="flex justify-center mb-4">
                 <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
                   <stat.icon className="h-8 w-8 text-white" />
-                </div>
-              </div>
+</div>
+</div></div>
               <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                {Math.floor(stat.value)}{stat.suffix}
-              </div>
+                {Math.floor(stat.value)}{stat.suffix}</div>
               <div className="text-gray-300">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-        {/* Achievements */}
+</div>)}</div>/* Achievements */}</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <achievement.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
-              <p className="text-gray-300 text-sm">{achievement.description}</p>
-            </div>
-          ))}
+</div></h1>
+              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3></p>
+              <p className="text-gray-300 text-sm">{achievement.description}</p></h1></p>
+</div>)}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {statistics.map((stat, index) => (
+          {statistics.map((stat, index) => (</div>
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
               <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-8 h-8" />
-              </div>
+</div></div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value.toLocaleString()}{stat.suffix}
-              </div>
-              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
+                {stat.value.toLocaleString()}{stat.suffix}</div>
+              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div></div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
-            </div>
-          ))}
-        </div>
-        {/* Features Section */}
-        <div className="mb-16">
+</div>)}</div>/* Features Section */}
+        <div className="mb-16"></div>
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our comprehensive solutions deliver measurable results across all key business metrics.
-            </p>
-          </div>
+            </p></h1></p>
+</div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
-                </div>
+</div>
                 <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {feature.title}
-                </h4>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
+                </h4></p>
+                <p className="text-gray-300 text-sm mb-4">{feature.description}</p></p></div>
                 <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
                     <div key={statIndex} className="flex items-center text-xs text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {stat}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Achievements Section */}
+                      {stat}</div>)}</div>
+</div>)}</div>
+</div>/* Achievements Section */}</div>
         <div className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></h1>
             <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Recognition and awards that validate our commitment to excellence and innovation.
-            </p>
-          </div>
+            </p></h1></p>
+</div></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <achievement.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
+</div>
+                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div></div>
                 <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Benefits Section */}
+</div>)}</div>
+</div>/* Benefits Section */}</div>
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3></p>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
-            </p>
-          </div>
+            </p></h1></p>
+</div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* CTA Section */}
+                <span className="text-gray-300">{benefit}</span></span>
+</div>)}</div>
+</div>/* CTA Section */}</div>
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12"></h1>
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
             </h3>
@@ -272,20 +249,17 @@ setCounters(prev => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
+                <Zap className="w-5 h-5" /></span>
                 <span>Get Started</span>
-              </button>
+              </button></button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                View Case Studies;
-  </
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default ContentStatistics;
-  </button>
+                View Case Studies</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+}
+export default ContentStatistics</button>
   </h2>
-  </div>
+</div>

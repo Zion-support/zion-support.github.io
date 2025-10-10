@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react'
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
     { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
@@ -10,7 +10,7 @@ const AIAccountingAssistantPage: React.FC = () => {
     { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' },
     { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
     { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -19,27 +19,24 @@ const AIAccountingAssistantPage: React.FC = () => {
         <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
+        <section className="relative py-20 px-4 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Accounting Assistant</h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Streamline your accounting with AI-powered financial management tools.</p>
-            </div>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Streamline your accounting with AI-powered financial management tools.</p></h1></p>
+</div></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+</div></h1>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3></p>
+                  <p className="text-gray-300">{feature.description}</p></h1></p>
+</div>)}</div>
+</div></h1></p>
         </section>
-      </div>
+</div>
     </React.Fragment>
-  );
-};
-export default AIAccountingAssistantPage;
+}
+export default AIAccountingAssistantPage

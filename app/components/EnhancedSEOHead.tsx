@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
-  structuredData?: object;
+  title: string
+  description: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  siteName?: string
+  structuredData?: object
 }
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -47,7 +47,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ]
-  };
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -92,7 +92,5 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-export default EnhancedSEOHead;
-  </SEOHeadProps>
+}
+export default EnhancedSEOHead</SEOHeadProps>
