@@ -80,7 +80,7 @@ export const generateMetaTags = (dat,
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }];
+    }]];
   return tags;
 };
 // SEO Config interface;
@@ -107,7 +107,7 @@ interface SEOConfig {}
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];}
+  tags?: string[]];}
 }
 // Default SEO config;
 const defaultSEOConfig: SEOConfig = {
@@ -140,13 +140,13 @@ export const generateStructuredData = (data: {}
 // description: string,
 // url?: string;
 // logo?: string;
-// sameAs?: string[];,
+// sameAs?: string[]];,
 // [key: string]: unknown;
 }) => {
   const baseStructure = {
     '@context': 'https: //schema.org'}) => {}
   const baseStructure = {}
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': data.type,
     name: data.name;
     description: data.description;
@@ -414,7 +414,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     ) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {}
         meta.setAttribute('property', nameOrProperty);}
       } else {}
         meta.setAttribute('name', nameOrProperty);}
@@ -508,8 +508,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
     return {}
       title: document.title,
-      description:
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''}
     }
@@ -524,13 +523,13 @@ export const generateAdvancedStructuredData = (data: {}
 // description: string,
 // url?: string;
 // logo?: string;
-// sameAs?: string[];,
+// sameAs?: string[]];,
 // [key: string]: unknown;
 }) => {
   const baseStructure = {
     '@context': 'https: //schema.org'}) => {}
   const baseStructure = {}
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': data.type,
     name: data.name;
     description: data.description;
@@ -674,7 +673,7 @@ export const generateSitemapData = useCallback((...args) => {
 export const generateSitemapData = useCallback((...args) => {}
   return {}
     urlset: {}
-      '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+      '@xmlns': 'http: //www.sitemaps.org/schemas/sitemap/0.9',
       url: pages.map(page => ({)}
         loc: page.url,
         lastmod: page.lastModified,
@@ -731,12 +730,12 @@ Sitema,`
 
 // SEO validation
 export const validateSEOData = (data: { title: string; description: string; url: string }) => {
-  const issues: string[] = [];
+  const issues: string[] = []];
   // Check title length;,
   if (data.title.length < 30) {,
 // SEO validation
 export const validateSEOData = (data: {// title: string; description: string; url: string}) => {}
-  const issues: string[] = [];
+  const issues: string[] = []];
   // Check title length
   if (data.title.length < 30) {}
     issues.push('Title is too short (recommended: 30-60 characters)');}
@@ -766,7 +765,7 @@ export const generateBreadcrumbData = useCallback((...args) => {
 // Generate breadcrumb data
 export const generateBreadcrumbData = useCallback((...args) => {}
   return {}
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: breadcrumbs.map((crumb, index) => ({}
       '@type': 'ListItem',
@@ -796,7 +795,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.webp',
-    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']}
+    sameAs: ['https://twitter.com/zionholdings', 'https: //linkedin.com/company/zion-holdings']}
   })
   const script = document.createElement('script')
   script.type = 'application/ld+json'

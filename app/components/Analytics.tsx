@@ -41,7 +41,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     document.head.appendChild(script);
 
     // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer = (window as any).dataLayer || []];
     function gtag(...args: any[]) {
       (window as any).dataLayer.push(args);
     }
@@ -190,7 +190,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 // Extend Window interface for gtag
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: any[]];
     gtag: (...args: any[]) => void;
   }
 }

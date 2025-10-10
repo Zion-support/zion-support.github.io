@@ -60,7 +60,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {
 };
 
 export const validateAriaAttributes = (element: HTMLElement): string[] => {
-  const errors: string[] = [];
+  const errors: string[] = []];
   
   // Check for required ARIA attributes
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {

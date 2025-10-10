@@ -17,7 +17,7 @@ export class PerformanceMonitor {
     cumulativeLayoutShift: 0,
   };
 
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []];
 
   constructor() {
     this.initializeMetrics();
@@ -75,7 +75,7 @@ export class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries[entries.length - 1]];
         this.metrics.largestContentfulPaint = lastEntry.startTime;
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -153,7 +153,7 @@ export class PerformanceMonitor {
 
   public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    this.observers = []];
   }
 }
 

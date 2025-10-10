@@ -66,9 +66,9 @@ export interface CustomMetric {/* TODO: Fix JSX expression */}
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   webVitals: WebVitals = {};
   private,
-  customMetrics: CustomMetric[] = [];
+  customMetrics: CustomMetric[] = []];
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = []];
   private maxMetrics = 1000;
   private constructor() {/* TODO: Fix JSX expression */}
   }
@@ -260,7 +260,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   P: {/* TODO: Fix JSX expression */}
   r: 500 }
     };
-    const threshold = thresholds[name];
+    const threshold = thresholds[name]];
     if (!threshold) return 'good';
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
@@ -342,7 +342,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    * Get custom metrics;
    */
   getCustomMetrics(): CustomMetric[] {}
-    return [...this.customMetrics];}
+    return [...this.customMetrics]];}
   getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */}
   }
   /**
@@ -379,7 +379,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     score: number
     webVitals: WebVitals
     customMetrics: CustomMetric[]
-    recommendations: string[];}
+    recommendations: string[]];}
   } {}
     const score = this.getPerformanceScore()
     const recommendations: string[] = [],
@@ -522,14 +522,14 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     this.customMetrics = []
   clearMetrics(): void {/* TODO: Fix JSX expression */}
     this.webVitals = {};
-    this.customMetrics = [];
+    this.customMetrics = []];
   }
   /**
    * Disconnect all observers;
    */
   disconnect(): void {}
     this.observers.forEach(observer => observer.disconnect())
-    this.observers = [];}
+    this.observers = []];}
   disconnect(): void {/* TODO: Fix JSX expression */}
   }
 }
@@ -717,7 +717,7 @@ function getRating(nam,
     'INP': {/* TODO: Fix JSX expression */}
   r: 500 }
   };
-  const threshold = thresholds[name];
+  const threshold = thresholds[name]];
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';

@@ -10,9 +10,9 @@ interface InterceptorConfig {
 }
 
 class APIInterceptor {
-  private requestInterceptors: Array<(config: any) => any> = [];
-  private responseInterceptors: Array<(response: any) => any> = [];
-  private errorInterceptors: Array<(error: any) => any> = [];
+  private requestInterceptors: Array<(config: any) => any> = []];
+  private responseInterceptors: Array<(response: any) => any> = []];
+  private errorInterceptors: Array<(error: any) => any> = []];
 
   // Add request interceptor;
   addRequestInterceptor(interceptor: (config: any) => any): void {,
@@ -88,9 +88,9 @@ class APIInterceptor {
 
   // Clear all interceptors;
   clearAll(): void {
-    this.requestInterceptors = [];
-    this.responseInterceptors = [];
-    this.errorInterceptors = [];
+    this.requestInterceptors = []];
+    this.responseInterceptors = []];
+    this.errorInterceptors = []];
   }
 
   // Get interceptor counts;

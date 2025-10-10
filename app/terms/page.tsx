@@ -45,7 +45,7 @@ export default function TermsPage() {
       title: 'Governing Law',
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
-    }
+    }]
   ];
 
   return (
@@ -75,7 +75,7 @@ export default function TermsPage() {
                     <div className="flex-shrink-0 mr-4"></div>
                       <section.icon className="h-6 w-6 text-blue-600" />
                     </div>
-                    <div></div>
+                    </section><div></div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3">
                         {index + 1}. {section.title}
                       </h2>

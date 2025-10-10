@@ -9,8 +9,8 @@ export interface AccessibilityOptions {
 
 export interface AccessibilityAuditResult {
   score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
+  issues: AccessibilityIssue[]];
+  recommendations: string[]];
 }
 
 export interface AccessibilityIssue {
@@ -199,22 +199,22 @@ function handleArrowNavigation(event: KeyboardEvent): void {
 function getFocusableElements(): HTMLElement[] {
   const focusableSelectors = [
     'a[href]',
-    'button:not([disabled])',
-    'input:not([disabled])',
-    'select:not([disabled])',
-    'textarea:not([disabled])',
+    'button: not([disabled])',
+    'input: not([disabled])',
+    'select: not([disabled])',
+    'textarea: not([disabled])',
     '[tabindex]:not([tabindex="-1"])',
-    '[contenteditable="true"]'
+    '[contenteditable="true"]']
   ];
   
-  return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+  return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[]];
 }
 
 /**
  * Run accessibility audit
  */
 export function runAccessibilityAudit(): AccessibilityAuditResult {
-  const issues: AccessibilityIssue[] = [];
+  const issues: AccessibilityIssue[] = []];
   let score = 100;
   
   // Check for missing alt text on images
@@ -310,7 +310,7 @@ function calculateContrast(color1: string, color2: string): number {
  * Generate accessibility recommendations
  */
 function generateRecommendations(issues: AccessibilityIssue[]): string[] {
-  const recommendations: string[] = [];
+  const recommendations: string[] = []];
   
   const errorCount = issues.filter(issue => issue.type === 'error').length;
   const warningCount = issues.filter(issue => issue.type === 'warning').length;
@@ -357,8 +357,8 @@ export function trapFocus(element: HTMLElement): void {
   
   if (focusableElements.length === 0) return;
   
-  const firstElement = focusableElements[0];
-  const lastElement = focusableElements[focusableElements.length - 1];
+  const firstElement = focusableElements[0]];
+  const lastElement = focusableElements[focusableElements.length - 1]];
   
   element.addEventListener('keydown', (event) => {
     if (event.key === 'Tab') {

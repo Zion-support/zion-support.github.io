@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -43,10 +40,10 @@ const ContactPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        </div><section className="pt-20 pb-16 px-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Contact Us
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -58,11 +55,11 @@ const ContactPage: React.FC = () => {
 
         {/* Contact Form and Info */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="cyber-card p-8">
-                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+              </div><div className="cyber-card p-8">
+                </div><h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -131,50 +128,50 @@ const ContactPage: React.FC = () => {
 
               {/* Contact Information */}
               <div className="space-y-8">
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+                </div><div>
+                  </div><h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
 
                 <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                  </div><div className="flex items-center">
+                    </div><div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Phone</h3>
+                      </div><h3 className="text-lg font-semibold text-white">Phone</h3>
                       <p className="text-gray-300">+1 (555) 123-4567</p>
                     </div>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
+                      </div><h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
+                      </div><h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>
+                      </div><h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                   </div>

@@ -34,7 +34,7 @@ const FAQPage: React.FC = () => {
     {
       question: "How do I get started?",
       answer: "Contact us through our consultation form or call +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal."
-    }
+    }]
   ];
 
   return (
@@ -45,9 +45,9 @@ const FAQPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+        </div><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
+            </div><h1 className="text-5xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -57,13 +57,13 @@ const FAQPage: React.FC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+            </div><div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div
+                </div><div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  </div><h3 className="text-xl font-semibold text-white mb-3">
                     {faq.question}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -74,7 +74,7 @@ const FAQPage: React.FC = () => {
             </div>
 
             <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
+              </div><h2 className="text-3xl font-bold text-white mb-6">
                 Still have questions?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

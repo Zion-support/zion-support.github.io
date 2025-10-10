@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -34,7 +32,7 @@ const AICodeAssistantPage: React.FC = () => {
       benefits: ['50+ languages', 'Syntax highlighting', 'Language-specific features', 'Cross-platform support']
     },
     {
-    }
+    }]
   ];
 
   const benefits = [
@@ -45,7 +43,7 @@ const AICodeAssistantPage: React.FC = () => {
     'Enable faster learning',
     'Automate repetitive tasks',
     'Scale development teams',
-    'Enhance code security'
+    'Enhance code security']
   ];
 
   const useCases = [

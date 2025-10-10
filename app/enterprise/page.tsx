@@ -42,7 +42,7 @@ const EnterprisePage: React.FC = () => {
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-    }
+    }]
   ];
 
   const solutions = [
@@ -69,7 +69,7 @@ const EnterprisePage: React.FC = () => {
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
-    }
+    }]
   ];
 
   const benefits = [
@@ -80,14 +80,14 @@ const EnterprisePage: React.FC = () => {
     'Enable data-driven decisions',
     'Scale with business growth',
     'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
+    'Provide 24/7 support and monitoring']
   ];
 
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
+    { number: '24/7', label: 'Support Available', icon: Clock }]
   ];
 
   return (
@@ -101,7 +101,7 @@ const EnterprisePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -128,11 +128,11 @@ const EnterprisePage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        </section><div className="max-w-7xl mx-auto">
+          </div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
+              </div><div key={index} className="text-center">
+                </div><div className="flex justify-center mb-4">
                   <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -145,7 +145,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
+        </section><div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features
@@ -157,7 +157,7 @@ const EnterprisePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </div><h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -202,7 +202,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
+        </section><div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>

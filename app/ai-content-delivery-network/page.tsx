@@ -42,7 +42,7 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
       title: 'Real-time Analytics',
       description: 'Comprehensive analytics and monitoring for performance insights and optimization.',
       benefits: ['Real-time metrics', 'Performance monitoring', 'Usage analytics', 'Custom dashboards']
-    }
+    }]
   ];
 
   const benefits = [
@@ -53,7 +53,7 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
     'Enable global scalability',
     'Automate content optimization',
     'Enhance user experience',
-    'Reduce infrastructure costs'
+    'Reduce infrastructure costs']
   ];
 
   const useCases = [
@@ -86,7 +86,7 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
       title: 'Software Distribution',
       description: 'Distribute software updates and downloads efficiently worldwide',
       icon: '💻'
-    }
+    }]
   ];
 
   return (
@@ -100,9 +100,9 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8">
               <Globe className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

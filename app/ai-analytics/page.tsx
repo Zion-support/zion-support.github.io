@@ -21,7 +21,6 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       title: 'Performance Tracking',
       description: 'Track and analyze performance metrics across all your business operations.',
       benefits: ['KPI monitoring', 'ROI analysis', 'Growth tracking', 'Benchmarking']
@@ -43,25 +42,7 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-=======
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
-    }
+    }]
   ];
 
   const benefits = [
@@ -69,7 +50,7 @@ const AIAnalyticsPage: React.FC = () => {
     'Reduce decision-making time by 70% with automated reporting',
     'Identify new opportunities with predictive analytics',
     'Improve operational efficiency with real-time monitoring',
-    'Make better strategic decisions with comprehensive dashboards'
+    'Make better strategic decisions with comprehensive dashboards']
   ];
 
   const useCases = [
@@ -102,40 +83,24 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
-    }
+    }]
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Analytics - Zion Tech Group | Advanced Business Intelligence</title>
         <meta name="description" content="Transform your business with AI-powered analytics and insights. Get real-time dashboards, predictive analytics, and intelligent recommendations." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              AI <span className="text-cyan-400">Analytics</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and insights. Get real-time dashboards, predictive analytics, and intelligent recommendations.
-            </p>
-=======
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
       </Helmet>
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
+            </div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               AI Analytics
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Platform
@@ -153,36 +118,14 @@ const AIAnalyticsPage: React.FC = () => {
                 View Demo
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
           </div>
+        </section>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -192,8 +135,8 @@ const AIAnalyticsPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -216,9 +159,9 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Analytics?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -228,8 +171,8 @@ const AIAnalyticsPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
@@ -241,9 +184,9 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -253,8 +196,8 @@ const AIAnalyticsPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                  </div><div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
@@ -265,9 +208,9 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -280,18 +223,12 @@ const AIAnalyticsPage: React.FC = () => {
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Contact Sales
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
               </div>
-            ))}
+            </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-=======
         </section>
       </div>
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
     </>
   );
 };

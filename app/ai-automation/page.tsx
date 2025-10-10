@@ -43,7 +43,7 @@ const AIAutomationPage: React.FC = () => {
       title: 'Custom Solutions',
       description: 'Tailored automation solutions designed specifically for your business requirements.',
       benefits: ['Custom workflows', 'Integration support', 'Scalable architecture', 'Dedicated support']
-    }
+    }]
   ];
 
   const benefits = [
@@ -51,7 +51,7 @@ const AIAutomationPage: React.FC = () => {
     'Increase productivity by 80% with streamlined workflows',
     'Eliminate human errors with AI-powered validation',
     'Scale operations without proportional cost increases',
-    'Improve customer satisfaction with faster response times'
+    'Improve customer satisfaction with faster response times']
   ];
 
   const useCases = [
@@ -84,7 +84,7 @@ const AIAutomationPage: React.FC = () => {
       title: 'Quality Control',
       description: 'Automate quality checks and validation processes',
       icon: '✅'
-    }
+    }]
   ];
 
   return (
@@ -98,11 +98,11 @@ const AIAutomationPage: React.FC = () => {
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(20,184,166,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(20,184,166,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
+            </div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               AI <span className="bg-gradient-to-r from-teal-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Automation</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -121,9 +121,9 @@ const AIAutomationPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Automation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -133,8 +133,8 @@ const AIAutomationPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -157,9 +157,9 @@ const AIAutomationPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose AI Automation?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -169,8 +169,8 @@ const AIAutomationPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+                  </div><div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <TrendingUp className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
@@ -182,9 +182,9 @@ const AIAutomationPage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Automation Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -194,8 +194,8 @@ const AIAutomationPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
+                </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  </div><div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
@@ -206,9 +206,9 @@ const AIAutomationPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">

@@ -103,14 +103,14 @@ export const getDeviceInfo = () => {}
     isTablet: width >= 768 && width < 1024;
     isDesktop: width >= 1024;
   };
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []];
   private isMonitoring: boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {,
   return {}
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
     isDesktop: width >= 1024};
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []];
   private isMonitoring: boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {}
 'use client';
@@ -143,7 +143,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   config: OptimizationConfig = {/* TODO: Fix JSX expression */}
   };
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = []];
   private,
   isMonitoring: boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
@@ -572,8 +572,7 @@ Bundle,
 Cache Hit,
   Rate: ${metrics.cacheHitRate}%
 Recommendation,
-  s:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+  s: ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
     `.trim();

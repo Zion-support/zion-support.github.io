@@ -75,7 +75,7 @@ interface FormStatus {
     'Data Analytics',
     'Cybersecurity',
     'IT Consulting',
-    'Other'
+    'Other']
   ];
 
               </label>
@@ -108,7 +108,7 @@ interface FormStatus {
             </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
+            </div><div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                 Company
               </label>
@@ -151,7 +151,7 @@ interface FormStatus {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
               ) : (
-                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                </div><div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}
               <span className="text-sm font-medium">{status.message}</span>
             </div>
@@ -176,34 +176,34 @@ interface FormStatus {
           </button>
         </form>
 
-        <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="flex flex-col items-center space-y-2">
-              <div className="p-3 bg-blue-100 rounded-full">
+        </div><div className="mt-8 pt-8 border-t border-gray-200">
+          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            </div><div className="flex flex-col items-center space-y-2">
+              </div><div className="p-3 bg-blue-100 rounded-full">
                 <Phone className="h-6 w-6 text-blue-600" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Phone</p>
+                </div><p className="font-semibold text-gray-900">Phone</p>
                 <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
               </div>
             </div>
 
             <div className="flex flex-col items-center space-y-2">
-              <div className="p-3 bg-green-100 rounded-full">
+              </div><div className="p-3 bg-green-100 rounded-full">
                 <Mail className="h-6 w-6 text-green-600" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Email</p>
+                </div><p className="font-semibold text-gray-900">Email</p>
                 <p className="text-sm text-gray-600">hello@ziontechgroup.com</p>
               </div>
             </div>
 
             <div className="flex flex-col items-center space-y-2">
-              <div className="p-3 bg-purple-100 rounded-full">
+              </div><div className="p-3 bg-purple-100 rounded-full">
                 <MapPin className="h-6 w-6 text-purple-600" />
               </div>
               <div>
-                <p className="font-semibold text-gray-900">Office</p>
+                </div><p className="font-semibold text-gray-900">Office</p>
                 <p className="text-sm text-gray-600">New York, NY</p>
               </div>
             </div>

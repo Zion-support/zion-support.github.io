@@ -15,10 +15,10 @@ export interface ValidationRule<T = unknown> {}
 }
 export interface ValidationResult {}
   valid: boolean
-  errors: string[];}
+  errors: string[]];}
 }
 export interface FieldValidation {}
-  [fieldName: string]: ValidationRule[];}
+  [fieldName: string]: ValidationRule[]];}
 export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
 }
 export interface ValidationResult {/* TODO: Fix JSX expression */}

@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -21,7 +19,7 @@ const AICodeSecurityAuditorPage: React.FC = () => {
     'Enable automated security testing',
     'Accelerate security audits',
     'Scale security across teams',
-    'Enhance security awareness'
+    'Enhance security awareness']
   ];
 
   const useCases = [
@@ -54,7 +52,7 @@ const AICodeSecurityAuditorPage: React.FC = () => {
       title: 'Risk Management',
       description: 'Assess and manage security risks across the development lifecycle',
       icon: '⚠️'
-    }
+    }]
   ];
 
 
@@ -62,9 +60,9 @@ const AICodeSecurityAuditorPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
               <Shield className="w-10 h-10 text-white" />
             </div>
             </h1>
@@ -109,9 +107,9 @@ const AICodeSecurityAuditorPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-12">
+              </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Secure Your Code?
               </h2>
               <p className="text-xl text-red-100 mb-8">

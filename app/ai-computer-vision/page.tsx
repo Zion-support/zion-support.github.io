@@ -42,7 +42,7 @@ const AIComputerVisionPage: React.FC = () => {
       title: 'Edge Computing',
       description: 'Deploy computer vision models on edge devices for offline processing and reduced latency.',
       benefits: ['Edge deployment', 'Offline processing', 'Reduced latency', 'Cost optimization']
-    }
+    }]
   ];
 
   const benefits = [
@@ -53,7 +53,7 @@ const AIComputerVisionPage: React.FC = () => {
     'Automate visual tasks',
     'Scale across devices',
     'Enhance user experience',
-    'Enable new applications'
+    'Enable new applications']
   ];
 
   const useCases = [
@@ -86,7 +86,7 @@ const AIComputerVisionPage: React.FC = () => {
       title: 'Agriculture',
       description: 'Crop monitoring, disease detection, and yield prediction in agriculture',
       icon: '🌾'
-    }
+    }]
   ];
 
   return (
@@ -100,9 +100,9 @@ const AIComputerVisionPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8">
               <Eye className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

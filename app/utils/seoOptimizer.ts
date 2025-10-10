@@ -135,34 +135,34 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
     this.setMetaTag('robots', this.getRobotsContent())
     // Open Graph tags;
-    this.setMetaTag('og:title', title, 'property')
-    this.setMetaTag('og:description', description, 'property')
-    this.setMetaTag('og:image', image, 'property')
-    this.setMetaTag('og:url', url, 'property')
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
-    this.setMetaTag('og:site_name', this.config.siteName, 'property')
+    this.setMetaTag('og: title', title, 'property')
+    this.setMetaTag('og: description', description, 'property')
+    this.setMetaTag('og: image', image, 'property')
+    this.setMetaTag('og: url', url, 'property')
+    this.setMetaTag('og: type', this.currentPageData.type || 'website', 'property')
+    this.setMetaTag('og: site_name', this.config.siteName, 'property')
     // Twitter Card tags;
     if (this.config.twitterHandle) {
     // Twitter Card tags
     if (this.config.twitterHandle) {}
-      this.setMetaTag('twitter:card', 'summary_large_image');`}
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
-      this.setMetaTag('twitter:title', title)
-      this.setMetaTag('twitter:description', description)
-      this.setMetaTag('twitter:image', image)
+      this.setMetaTag('twitter: card', 'summary_large_image');`}
+      this.setMetaTag('twitter: site', `@${this.config.twitterHandle}`)
+      this.setMetaTag('twitter: title', title)
+      this.setMetaTag('twitter: description', description)
+      this.setMetaTag('twitter: image', image)
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
     this.setMetaTag('theme-color', '#1e40af')
     this.setMetaTag('msapplication-TileColor', '#1e40af')
   private updateMetaTags(): void {/* TODO: Fix JSX expression */}`
-  r:site', `@${this.config.twitterHandle}`);
+  r: site', `@${this.config.twitterHandle}`);
       this.setMetaTag('twitte)
-  r:title', title);
+  r: title', title);
       this.setMetaTag('twitte)
-  r:description', description);
+  r: description', description);
       this.setMetaTag('twitte)
-  r:image', image);
+  r: image', image);
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
@@ -237,7 +237,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {}
     if (!this.currentPageData) return
     const structuredData = {}
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),

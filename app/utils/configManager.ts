@@ -288,18 +288,18 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Get configuration value;
    */
   get<K extends keyof AppConfig>(ke)
-  y: K): AppConfig[K];
+  y: K): AppConfig[K]];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKe,
   y: NK;)
-  ): AppConfig[K][NK];
+  ): AppConfig[K][NK]];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKey?: NK;)
   ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
     }
-    return this.config[key];
+    return this.config[key]];
   }
   /**
    * Set configuration value;
@@ -321,10 +321,10 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     value?: AppConfig[K][NK])
   ): void {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
-        }) as AppConfig[K];
+        }) as AppConfig[K]];
       } else {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */})
-        }) as AppConfig[K];
+        }) as AppConfig[K]];
       }
     } else {/* TODO: Fix JSX expression */}
     }
@@ -351,7 +351,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   g: {/* TODO: Fix JSX expression */}
       }
     };
-    return defaultValues[key];
+    return defaultValues[key]];
   }
   /**
    * Get full configuration;

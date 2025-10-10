@@ -48,14 +48,14 @@ export default function DocsPage() {
         { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
         { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
       ]
-    }
+    }]
   ];
 
   const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
     { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
-    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
+    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }]
   ];
 
   const filteredDocs = docCategories.map(category => ({
@@ -82,13 +82,13 @@ export default function DocsPage() {
 
       {/* Popular Docs */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
+        </section><div className="max-w-7xl mx-auto">
+          </div><h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularDocs.map((doc, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                </div><div className="flex items-center gap-3 mb-4">
+                  </div><div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
@@ -112,17 +112,17 @@ export default function DocsPage() {
 
       {/* Documentation Categories */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
+        </section><div className="max-w-7xl mx-auto">
+          </div><h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredDocs.map((category, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                </div><div className="flex items-center gap-4 mb-6">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
+                    </div><h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
@@ -134,9 +134,9 @@ export default function DocsPage() {
                       href={doc.link}
                       className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                      </div><div className="flex items-center justify-between">
+                        </div><div>
+                          </div><h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
                             {doc.title}
                           </h4>
                           <p className="text-gray-300 text-sm">{doc.description}</p>
@@ -154,8 +154,8 @@ export default function DocsPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        </section><div className="max-w-4xl mx-auto text-center">
+          </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need Help?
           </h2>
           <p className="text-xl text-purple-100 mb-8">

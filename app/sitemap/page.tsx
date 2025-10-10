@@ -26,7 +26,7 @@ const SitemapPage: React.FC = () => {
     { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
+    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },]
   ];
 
   return (

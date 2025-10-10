@@ -47,7 +47,7 @@ const $1: React.FC = () => {
       icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
-      color: 'text-gray-400'}
+      color: 'text-gray-400'}]
   ];
 
   const technologies = [
@@ -56,7 +56,7 @@ const $1: React.FC = () => {
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
+    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }]
   ];
 
   const process = [
@@ -83,7 +83,7 @@ const $1: React.FC = () => {
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,
-    }
+    }]
   ];
 
   return(<>
@@ -119,12 +119,12 @@ const $1: React.FC = () => {
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
+            </section><h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+          </main><section className="text-center mb-16">
+            </section><h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
               Web Development Services;</h1>
             </h1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
@@ -155,19 +155,19 @@ const $1: React.FC = () => {
 ,
           {/* Services Grid */}
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
+            </section><h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div></div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Web Development Services;)
             </h2>)
 )
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
               {webServices.map((service, index) => (</div>
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6">,</div>
@@ -181,8 +181,8 @@ const $1: React.FC = () => {
                   </div>
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>
+                </div><div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
                       <service.icon className="w-8 h-8 text-white" />
@@ -226,7 +226,7 @@ const $1: React.FC = () => {
 
           {/* Technologies */}
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
+            </section><h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
@@ -234,14 +234,14 @@ const $1: React.FC = () => {
               Technologies We Use;
             </h2>,
 ,
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">,
+            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">,
               {technologies.map((tech, index) => (</div>
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,</div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</section>
+                </div><div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
@@ -251,7 +251,7 @@ const $1: React.FC = () => {
 
           {/* Process */}
           <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
+            </section><h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
@@ -259,7 +259,7 @@ const $1: React.FC = () => {
               Our Development Process;
             </h2>,
 ,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {process.map((step, index) => (</div>
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,</div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">,</div>
@@ -267,8 +267,8 @@ const $1: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
+                </div><div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
@@ -278,7 +278,7 @@ const $1: React.FC = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Build Your Next Web Application?
@@ -289,7 +289,7 @@ const $1: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+              </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a

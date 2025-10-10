@@ -8,8 +8,8 @@ export interface MicroSaasService {
   icon: string,
   price: string,
   originalPrice?: string;
-  features: string[];
-  benefits: string[];
+  features: string[]];
+  benefits: string[]];
   link: string,
   popular: boolean,
   category: string,
@@ -17,25 +17,25 @@ export interface MicroSaasService {
   users: string,
   freeTrial: string,
   marketPrice: string,
-  capabilities: string[];
-  useCases: string[];
-  integrations: string[];
+  capabilities: string[]];
+  useCases: string[]];
+  integrations: string[]];
   apiAvailable: boolean,
   mobileApp: boolean,
   whiteLabel: boolean,
   support: string,
   setupTime: string,
   technicalSpecs: {
-    languages: string[];
-    frameworks: string[];
-    databases: string[];
-    cloudProviders: string[];
+    languages: string[]];
+    frameworks: string[]];
+    databases: string[]];
+    cloudProviders: string[]];
   };
   pricing: {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[];
+    features: string[]];
   };
 }
 
@@ -847,7 +847,7 @@ export const microSaasServices: MicroSaasService[] = [
       enterprise: 299,
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
     }
-  }
+  }]
 ];
 
 // Service categories for filtering and organization;
@@ -863,7 +863,7 @@ export const serviceCategories = [
   'Education',
   'AI & ML',
   'Analytics',
-  'Automation'
+  'Automation']
 ];
 
 // Pricing tiers for comparison;

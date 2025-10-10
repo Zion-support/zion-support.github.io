@@ -28,7 +28,7 @@ export interface UserProperties {}
   [key: string]: unknown;}
 }
 class EnhancedAnalytics {}
-  private queue: AnalyticsEvent[] = [];}
+  private queue: AnalyticsEvent[] = []];}
   private userProperties: UserProperties = {}
   private sessionId: string,
   private isInitialized = false;
@@ -191,7 +191,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private batchSize = 10;
   private flushInterval = 30000; // 30 seconds;
   private,
-  offlineQueue: AnalyticsEvent[] = [];
+  offlineQueue: AnalyticsEvent[] = []];
   constructor() {/* TODO: Fix JSX expression */}
   }
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
@@ -432,7 +432,7 @@ export default analytics;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
       }
     // Clear queue;
-    this.queue = [];
+    this.queue = []];
   }
   private flushOfflineQueue(): void {/* TODO: Fix JSX expression */}
   }

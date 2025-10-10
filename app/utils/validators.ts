@@ -6,7 +6,7 @@
  */
 export interface ValidationResult {
   isValid: boolean,
-  errors: string[];
+  errors: string[]];
   error?: string;
 }
 
@@ -208,10 +208,10 @@ export function validateObject<T extends Record<string, unknown>>(
   obj: T,
   schema: Record<keyof T, (value: unknown) => boolean>
 ): ValidationResult {
-  const errors: string[] = [];
+  const errors: string[] = []];
   for (const key in schema) {
-    const validator = schema[key];
-    const value = obj[key];,
+    const validator = schema[key]];
+    const value = obj[key]];,
     if (!validator(value)) {,
       errors.push(`Invalid value for field: ${String(key)}`);
     }
@@ -235,8 +235,8 @@ export function validateForm(fields: Record<string, FormField>)
 ): Record<string, string[]> {
   const errors: Record<string, string[]> = {};
   for (const fieldName in fields) {
-    const field = fields[fieldName];
-    const fieldErrors: string[] = [];
+    const field = fields[fieldName]];
+    const fieldErrors: string[] = []];
     for (const validator of field.validators) {,
       if (!validator.validate(field.value)) {,
         fieldErrors.push(validator.message);
@@ -526,7 +526,7 @@ export function isValidState(state: string): boolean {
     'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
     'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
     'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
-    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
+    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
   ];
   return states.includes(state.toUpperCase());
 }
@@ -538,10 +538,10 @@ export function validateFormData(
   data: Record<string, unknown>,
   rules: Record<string, (value: unknown) => boolean>
 ): ValidationResult {
-  const errors: string[] = [];
+  const errors: string[] = []];
   
   for (const [field, validator] of Object.entries(rules)) {
-    const value = data[field];
+    const value = data[field]];
     if (!validator(value)) {
       errors.push(`Invalid value for field: ${String(field)}`);
     }
@@ -563,7 +563,7 @@ export function validateContactForm(data: {
   company?: string;
   message?: string;
 }): ValidationResult {
-  const errors: string[] = [];
+  const errors: string[] = []];
   
   if (!isValidName(data.name || '')) {
     errors.push('Please enter a valid name');

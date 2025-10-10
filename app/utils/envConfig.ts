@@ -64,7 +64,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
-    return this.config[key];}
+    return this.config[key]];}
   public get<K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
@@ -94,7 +94,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {,
     valid: boolean,
-    missing: string[];}
+    missing: string[]];}
   } {
     const missing: string[] = [],
     for (const varName of requiredVars) {,
@@ -106,7 +106,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       valid: missing.length === 0;
   public validate(requiredVars: (keyof EnvConfig)[]): {}
     valid: boolean
-    missing: string[];}
+    missing: string[]];}
   } {}
     const missing: string[] = []
     for (const varName of requiredVars) {}

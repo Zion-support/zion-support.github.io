@@ -224,7 +224,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
-        logger.warn('Failed to send error to remote endpoint:', error);}
+        logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor)
   t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}
         },
@@ -239,7 +239,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get all errors in queue;
    */
   getErrorQueue(): ErrorReport[] {}
-    return [...this.errorQueue];}
+    return [...this.errorQueue]];}
   getErrorQueue(): ErrorReport[] {/* TODO: Fix JSX expression */}
   }
   /**

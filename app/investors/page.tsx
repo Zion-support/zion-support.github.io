@@ -10,7 +10,7 @@ const PagePage: React.FC = () => {
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+    {]
   ];
 
   return (
@@ -22,7 +22,7 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">

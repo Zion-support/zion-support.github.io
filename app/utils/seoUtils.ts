@@ -3,7 +3,7 @@
 export interface SEOConfig {
   title: string;
   description: string;
-  keywords: string[];
+  keywords: string[]];
   canonicalUrl?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -18,7 +18,7 @@ export interface SEOConfig {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
+  tags?: string[]];
 }
 
 export class SEOManager {
@@ -70,23 +70,23 @@ export class SEOManager {
 
     // Update published time
     if (this.config.publishedTime) {
-      this.updateMetaTag('article:published_time', this.config.publishedTime);
+      this.updateMetaTag('article: published_time', this.config.publishedTime);
     }
 
     // Update modified time
     if (this.config.modifiedTime) {
-      this.updateMetaTag('article:modified_time', this.config.modifiedTime);
+      this.updateMetaTag('article: modified_time', this.config.modifiedTime);
     }
 
     // Update section
     if (this.config.section) {
-      this.updateMetaTag('article:section', this.config.section);
+      this.updateMetaTag('article: section', this.config.section);
     }
 
     // Update tags
     if (this.config.tags) {
       this.config.tags.forEach(tag => {
-        this.addMetaTag('article:tag', tag);
+        this.addMetaTag('article: tag', tag);
       });
     }
   }
@@ -122,7 +122,7 @@ export class SEOManager {
       { property: 'og:title', content: this.config.ogTitle || this.config.title },
       { property: 'og:description', content: this.config.ogDescription || this.config.description },
       { property: 'og:type', content: this.config.ogType || 'website' },
-      { property: 'og:url', content: this.config.canonicalUrl || window.location.href },
+      { property: 'og:url', content: this.config.canonicalUrl || window.location.href },]
     ];
 
     if (this.config.ogImage) {
@@ -140,7 +140,7 @@ export class SEOManager {
     const twitterTags = [
       { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },
-      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },
+      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },]
     ];
 
     if (this.config.twitterImage) {
@@ -221,7 +221,7 @@ export const getCanonicalUrl = (path: string, baseUrl: string = ''): string => {
 
 export const createStructuredData = (data: any): string => {
   return JSON.stringify({
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     ...data,
   });
 };

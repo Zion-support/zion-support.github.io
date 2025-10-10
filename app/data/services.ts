@@ -259,7 +259,7 @@ export const microSAASServices = [
     category: 'Marketing',
     rating: 4.8;
     users: '18,000+',
-    freeTrial: '7 days'}
+    freeTrial: '7 days'}]
 ];
 
 export const aiServices = [
@@ -374,7 +374,7 @@ export const aiServices = [
     category: 'Education'
     rating: 4.7;
     users: '600+',
-    freeTrial: '30 days'}
+    freeTrial: '30 days'}]
 ];
 
 export const itServices = [
@@ -461,7 +461,7 @@ export const itServices = [
     category: 'Consulting'
     rating: 4.8;
     users: '200+',
-    freeTrial: '30 days'}
+    freeTrial: '30 days'}]
 ];
 
 export const specializedServices = [
@@ -520,7 +520,7 @@ export const specializedServices = [
     category: 'IoT'
     rating: 4.8;
     users: '400+',
-    freeTrial: '30 days'}
+    freeTrial: '30 days'}]
 ];
 export interface Service {
   id: string,
@@ -528,15 +528,15 @@ export interface Service {
   category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech';
   subcategory: string,
   description: string,
-  features: string[];
+  features: string[]];
   pricing: {
     starting: number,
     currency: string,
     period: 'month' | 'year' | 'one-time';
     custom?: boolean;
   };
-  benefits: string[];
-  useCases: string[];
+  benefits: string[]];
+  useCases: string[]];
   icon: string,
   popular: boolean,
   new?: boolean;
@@ -1330,7 +1330,7 @@ export const services: Service[] = [
       max: 2500,
       currency: 'USD'
     }
-  }
+  }]
 ];
 
 export const serviceCategories = [
@@ -1365,7 +1365,7 @@ export const serviceCategories = [
     icon: '🚀',
     color: 'text-pink-400',
     bgColor: 'bg-pink-500/10'
-  }
+  }]
 ];
 
 export const contactInfo = {

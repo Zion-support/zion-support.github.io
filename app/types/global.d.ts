@@ -3,7 +3,7 @@
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
+    dataLayer?: any[]];
   }
 }
 
@@ -55,8 +55,8 @@ export interface Service {
   title: string;
   description: string;
   icon: string;
-  features: string[];
-  benefits: string[];
+  features: string[]];
+  benefits: string[]];
 }
 
 export interface BlogPost {
@@ -67,7 +67,7 @@ export interface BlogPost {
   slug: string;
   publishedAt: string;
   author: string;
-  tags: string[];
+  tags: string[]];
   featuredImage?: string;
 }
 
@@ -75,7 +75,7 @@ export interface BlogPost {
 export interface NavigationItem {
   label: string;
   href: string;
-  children?: NavigationItem[];
+  children?: NavigationItem[]];
 }
 
 // Analytics types

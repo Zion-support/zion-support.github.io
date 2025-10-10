@@ -446,13 +446,12 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
             logger.info(message, structuredLog)
           }
           break;
-        case LogLevel.WARN:
-          logger.warn(message, structuredLog)
+        case LogLevel.WARN: logger.warn(message, structuredLog)
           break;
         case LogLevel.ERROR: case LogLevel.FATAL:,
           logger.error(message, structuredLog)
           if (entry.stack) {
-            logger.info('Stack trace:', { stack: entry.stack }, 'Logger')
+            logger.info('Stack trace: ', { stack: entry.stack }, 'Logger')
           }
           break;
       }
@@ -467,8 +466,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
             logger.info(message, entry.data)
           }
           break;
-        case LogLevel.WARN:
-          logger.warn(message, entry.data)
+        case LogLevel.WARN: logger.warn(message, entry.data)
           break;
         case LogLevel.ERROR: case LogLevel.FATAL:,
           logger.error(message, entry.data)
@@ -482,19 +480,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           }
           break;
         case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+  O: if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
             }
           break;
         case LogLevel.WAR,
-  N:
-          logger.warn(message, structuredLog);
+  N: logger.warn(message, structuredLog);
           break;
         case LogLevel.ERRO,
-  R:
-        case LogLevel.FATA,
-  L:
-          logger.error(message, structuredLog);
+  R: case LogLevel.FATA,
+  L: logger.error(message, structuredLog);
           if (entry.stack) {/* TODO: Fix JSX expression */}
   k: entry.stack }, 'Logger');
           }
@@ -504,19 +498,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           }
           break;
         case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+  O: if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
             }
           break;
         case LogLevel.WAR,
-  N:
-          logger.warn(message, entry.data);
+  N: logger.warn(message, entry.data);
           break;
         case LogLevel.ERRO,
-  R:
-        case LogLevel.FATA,
-  L:
-          logger.error(message, entry.data);
+  R: case LogLevel.FATA,
+  L: logger.error(message, entry.data);
           break;
       }
     }
@@ -540,7 +530,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       })
     } catch (error) {
       // Fallback to console if remote logging fails;
-      logger.error('Failed to send log to remote endpoint:', {)
+      logger.error('Failed to send log to remote endpoint: ', {)
         error: error instanceof Error ? error.message : String(error)})
   private async logToRemote(entr)
   y: LogEntry): Promise<void> {/* TODO: Fix JSX expression */}

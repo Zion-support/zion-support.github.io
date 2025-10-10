@@ -15,14 +15,14 @@ class EnvValidator {
   /**,
    * Validate all environment variables;
    */,
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
+  validate(): { isValid: boolean; errors: string[]]; warnings: string[] } {
 class EnvValidator {}
   private errors: string[] = []
   private warnings: string[] = []
   /**
    * Validate all environment variables
    */
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
+  validate(): { isValid: boolean; errors: string[]]; warnings: string[] } {}
     this.errors = []
     this.warnings = []
     // Validate NODE_ENV;
@@ -50,7 +50,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     const validation = this.validate()
     if (!validation.isValid) {}
       throw new Error()
-        `Environment validation failed:\n${validation.errors.join('\n')}`
+        `Environment validation failed: \n${validation.errors.join('\n')}`
       )
     }
     if (validation.warnings.length > 0) {}

@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -13,6 +11,10 @@ const AIClimateSolutionsProPage: React.FC = () => {
 
   const features = [
     {
+      icon: Activity,
+      title: 'Carbon Footprint Tracking',
+      description: 'Monitor and track carbon emissions across your entire organization in real-time.',
+      benefits: [
         'Real-time carbon tracking',
         'Automated reduction recommendations',
         'Industry-specific benchmarks',
@@ -20,6 +22,10 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
+      icon: Cloud,
+      title: 'Climate Prediction AI',
+      description: 'Advanced AI models for accurate weather and climate predictions.',
+      benefits: [
         '95% accuracy in weather predictions',
         'Extreme weather early warning',
         'Climate trend analysis',
@@ -27,6 +33,10 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
+      icon: Target,
+      title: 'Sustainability Planning',
+      description: 'AI-powered tools for creating and managing sustainability initiatives.',
+      benefits: [
         'Custom sustainability roadmaps',
         'ROI analysis for green initiatives',
         'Resource optimization',
@@ -34,6 +44,10 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
+      icon: Building,
+      title: 'Emission Monitoring',
+      description: 'Comprehensive monitoring and reporting of greenhouse gas emissions.',
+      benefits: [
         'Real-time emission monitoring',
         'Automated compliance reporting',
         'Predictive emission modeling',
@@ -41,9 +55,9 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
+      icon: Globe,
       title: 'Renewable Energy Optimization',
       description: 'AI-powered optimization of renewable energy systems and smart grid management',
-      icon: Globe,
       benefits: [
         'Energy efficiency optimization',
         'Smart grid management',
@@ -52,18 +66,16 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
+      icon: CheckCircle,
       title: 'Environmental Risk Assessment',
       description: 'Comprehensive environmental risk analysis and mitigation strategies using AI',
-      icon: CheckCircle,
       benefits: [
         'Risk identification & analysis',
         'Mitigation strategy recommendations',
         'Environmental impact assessment',
         'Compliance risk monitoring'
       ]
-    }
-  ];
-
+    }]
   ];
 
   const useCases = [
@@ -96,7 +108,7 @@ const AIClimateSolutionsProPage: React.FC = () => {
       title: 'Manufacturing',
       description: 'Optimize manufacturing processes for environmental sustainability',
       icon: '🏭'
-    }
+    }]
   ];
 
   return (

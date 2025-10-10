@@ -49,12 +49,12 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
     'Enable 24/7 support',
     'Improve resolution rates',
     'Scale support operations',
-    'Enhance customer experience'
+    'Enhance customer experience']
   ];
 
   const useCases = [
     {
-    }
+    }]
   ];
 
   return (

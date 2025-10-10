@@ -1,12 +1,10 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-  keywords?: string[];
+  keywords?: string[]];
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: Record<string, unknown>;
@@ -15,8 +13,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  canonicalUrl = 'https: //ziontechgroup.com',
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   structuredData
 }) => {
   useEffect(() => {
@@ -26,14 +24,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
     // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:url', canonicalUrl, 'property');
+    updateMetaTag('og: title', title, 'property');
+    updateMetaTag('og: description', description, 'property');
+    updateMetaTag('og: image', ogImage, 'property');
+    updateMetaTag('og: url', canonicalUrl, 'property');
     // Update Twitter tags
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', ogImage, 'name');
+    updateMetaTag('twitter: title', title, 'name');
+    updateMetaTag('twitter: description', description, 'name');
+    updateMetaTag('twitter: image', ogImage, 'name');
     // Update canonical URL
     updateCanonicalUrl(canonicalUrl);
     // Add structured data
@@ -77,14 +75,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [
         {
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
-          'item': 'https://ziontechgroup.com'
+          'item': 'https: //ziontechgroup.com'
         }
       ]
     };
@@ -102,11 +100,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const addOrganizationStructuredData = () => {
     const organizationData = {
-      '@context': 'https://schema.org',
+      '@context': 'https: //schema.org',
       '@type': 'Organization',
       'name': 'Zion Tech Group',
-      'url': 'https://ziontechgroup.com',
-      'logo': 'https://ziontechgroup.com/logo.png',
+      'url': 'https: //ziontechgroup.com',
+      'logo': 'https: //ziontechgroup.com/logo.png',
       'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
       'foundingDate': '2020',
       'numberOfEmployees': '50-100',
@@ -127,7 +125,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'addressCountry': 'US'
       },
       'sameAs': [
-        'https://twitter.com/ziontechgroup',
+        'https: //twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup'
       ]
     };
@@ -147,13 +145,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta property="og: title" content={title} />
+      <meta property="og: description" content={description} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta name="twitter: title" content={title} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );

@@ -217,15 +217,15 @@ class Logger {/* TODO: Fix JSX expression */}
    */
   private formatContext(contex)
   t: LogContext): string {/* TODO: Fix JSX expression */}`
-  t:${context.component}`);`
+  t: ${context.component}`);`
     if (context.action) parts.push(`actio)`
-  n:${context.action}`);`
+  n: ${context.action}`);`
     if (context.userId) parts.push(`use)`
-  r:${context.userId}`);`
+  r: ${context.userId}`);`
     if (context.sessionId) parts.push(`sessio)`
-  n:${context.sessionId}`);`
+  n: ${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
-  t:${context.requestId}`);
+  t: ${context.requestId}`);
     return parts.join(', ');
   }
   /**
@@ -251,8 +251,7 @@ class Logger {/* TODO: Fix JSX expression */}
   private sendToLoggingService(entry: LogMetadata): void {,
     // In a real application, you would send this to your logging service;
     // For example: Sentry, LogRocket, DataDog, etc.
-    // Example implementation:
-    // fetch('/api/logs', {)
+    // Example implementation: // fetch('/api/logs', {)
     //   method: 'POST'),
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),

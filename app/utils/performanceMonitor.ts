@@ -32,7 +32,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   s: {}
   };
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = []];
   private isInitialized = false;
   init(): void {}
     if (this.isInitialized || typeof window === 'undefined') return;
@@ -67,7 +67,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
         // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {)
-          const lastEntry = entries[entries.length - 1];)
+          const lastEntry = entries[entries.length - 1]];)
           if (lastEntry) {
             this.recordMetric('LCP')
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
@@ -76,11 +76,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
         // First Input Delay;
         this.observeEntry('first-input', entries => {)
-          const firstInput = entries[0];)
+          const firstInput = entries[0]];)
           if (firstInput && (firstInput as any).processingStart !== undefined) {
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {)}
-          const lastEntry = entries[entries.length - 1];
+          const lastEntry = entries[entries.length - 1]];
           if (lastEntry) {}
             this.recordMetric()
               'LCP',
@@ -90,7 +90,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
         // First Input Delay
         this.observeEntry('first-input', entries => {)}
-          const firstInput = entries[0];
+          const firstInput = entries[0]];
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
@@ -160,7 +160,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const lastEntry = entries[entries.length - 1]];
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
 
@@ -329,7 +329,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return { ...this.metrics };
   }
   getScore(): number {}
-    const scores = [];
+    const scores = []];
     // FCP scoring (0-100)
     if (this.metrics.fcp) {}
       if (this.metrics.fcp <= 1800) scores.push(100);
@@ -430,8 +430,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     const score = this.getScore();
     const metrics = this.getMetrics();
     return `
-Performance Report:
-Score: ${score}
+Performance Report: Score: ${score}
 Metrics: ${JSON.stringify(metrics, null, 2)}
     `;
   }

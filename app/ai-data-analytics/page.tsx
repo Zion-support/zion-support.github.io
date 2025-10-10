@@ -24,7 +24,7 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    }]
   ];
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

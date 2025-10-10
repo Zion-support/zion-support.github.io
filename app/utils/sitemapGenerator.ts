@@ -206,7 +206,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
   q: 'yearly',
       priorit,
   y: 0.3;
-    }
+    }]
   ];
 };
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}

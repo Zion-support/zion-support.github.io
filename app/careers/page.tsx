@@ -51,7 +51,7 @@ const CareersPage: React.FC = () => {
         'Experience with security tools and frameworks',
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
       ]
-    }
+    }]
   ];
 
   const benefits = [
@@ -84,7 +84,7 @@ const CareersPage: React.FC = () => {
       icon: <Users className="w-6 h-6" />,
       title: 'Great Team',
       description: 'Collaborate with talented, passionate professionals'
-    }
+    }]
   ];
 
   return (
@@ -97,11 +97,11 @@ const CareersPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
+            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our Team
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -112,9 +112,9 @@ const CareersPage: React.FC = () => {
 
         {/* Open Positions */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Open Positions
               </h2>
               <p className="text-xl text-gray-300">
@@ -124,13 +124,13 @@ const CareersPage: React.FC = () => {
 
             <div className="space-y-8">
               {openPositions.map((position, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                    <div>
-                      <h3 className="text-2xl font-semibold text-white mb-2">{position.title}</h3>
+                </div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  </div><div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                    </div><div>
+                      </div><h3 className="text-2xl font-semibold text-white mb-2">{position.title}</h3>
                       <p className="text-gray-300 mb-4">{position.description}</p>
                       <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                        <div className="flex items-center space-x-1">
+                        </div><div className="flex items-center space-x-1">
                           <Briefcase className="w-4 h-4" />
                           <span>{position.department}</span>
                         </div>
@@ -158,7 +158,7 @@ const CareersPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Requirements</h4>
+                    </div><h4 className="text-lg font-semibold text-white mb-3">Requirements</h4>
                     <ul className="space-y-2">
                       {position.requirements.map((requirement, reqIndex) => (
                         <li key={reqIndex} className="flex items-start space-x-2">
@@ -176,9 +176,9 @@ const CareersPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Work With Us
               </h2>
               <p className="text-xl text-gray-300">
@@ -188,9 +188,9 @@ const CareersPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-4">
-                    <div className="text-cyan-400">
+                </div><div key={index} className="text-center">
+                  </div><div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-4">
+                    </div><div className="text-cyan-400">
                       {benefit.icon}
                     </div>
                   </div>
@@ -204,8 +204,8 @@ const CareersPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Don't See Your Role?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

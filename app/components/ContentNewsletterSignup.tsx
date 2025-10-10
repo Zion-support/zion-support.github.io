@@ -23,9 +23,9 @@ const ContentNewsletterSignup: React.FC = () => {
   if (isSubscribed) {
     return (
       <div className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        </div><div className="max-w-4xl mx-auto text-center">
+          </div><div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+            </div><div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-8 h-8 text-green-400" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -48,9 +48,9 @@ const ContentNewsletterSignup: React.FC = () => {
 
   return (
     <div className="py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-          <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+      </div><div className="max-w-4xl mx-auto text-center">
+        </div><div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+          </div><div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail className="w-8 h-8 text-cyan-400" />
           </div>
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -88,7 +88,7 @@ const ContentNewsletterSignup: React.FC = () => {
             </button>
           </form>
           
-          <p className="text-sm text-gray-400 mt-4">
+          </div><p className="text-sm text-gray-400 mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>

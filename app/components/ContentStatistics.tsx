@@ -34,11 +34,11 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       label: 'Micro SaaS Tools',
       color: 'text-cyan-400'
-    }
+    }]
   ];
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = [];
+    const timers: NodeJS.Timeout[] = []];
     
     statistics.forEach((stat, index) => {
       const timer = setInterval(() => {
@@ -57,9 +57,9 @@ const ContentStatistics: React.FC = () => {
 
   return (
     <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
+      </div><div className="max-w-7xl mx-auto">
+        </div><div className="text-center mb-12">
+          </div><h2 className="text-3xl font-bold text-white mb-4">
             Our Impact
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -69,8 +69,8 @@ const ContentStatistics: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {statistics.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+            </div><div key={index} className="text-center">
+              </div><div className={`text-4xl font-bold ${stat.color} mb-2`}>
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-gray-300">{stat.label}</div>

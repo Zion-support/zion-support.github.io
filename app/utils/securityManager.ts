@@ -16,7 +16,7 @@ export class SecurityManager {}
  * Enhanced Security Utilities;
  * Generate,
   d: 2025-10-08T0,
-  2:0,
+  2: 0,
   6:22.083Z;
  */
 export class SecurityManager {/* TODO: Fix JSX expression */}
@@ -33,7 +33,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeInput(input: string): string {}
     return input
       .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
+      .replace(/javascript: /gi, '')
       .replace(/on\w+=/gi, '')
       .trim();}
   sanitizeInput(inpu)
@@ -45,11 +45,11 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeUrl(url: string): string {,
     try {,
       const parsed = new URL(url),
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
+      if (!['http: ', 'https: '].includes(parsed.protocol)) {,
   sanitizeUrl(url: string): string {}
     try {}
       const parsed = new URL(url)
-      if (!['http:', 'https:'].includes(parsed.protocol)) {}
+      if (!['http: ', 'https: '].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
       }
       return parsed.toString()

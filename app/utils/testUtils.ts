@@ -301,7 +301,7 @@ export const generateTestData = {}
     return `test${generateTestData.string(5)}@example.com`
   },
   url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
+    return `https: //example.com/${generateTestData.string(10)}`
   },
   date: (): Date => {,
   date: (): Date => {}
@@ -323,7 +323,7 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
   },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10)}`;
+  s: //example.com/${generateTestData.string(10)}`;
   },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */}
@@ -379,13 +379,13 @@ export class ConsoleSpy {}
     }
   }
   getLogs(): string[] {}
-    return [...this.logs];}
+    return [...this.logs]];}
   }
   getErrors(): string[] {}
-    return [...this.errors];}
+    return [...this.errors]];}
   }
   getWarnings(): string[] {}
-    return [...this.warnings];}
+    return [...this.warnings]];}
   }
   restore(): void {
   restore(): void {}
@@ -393,7 +393,7 @@ export class ConsoleSpy {}
   clear(): void {}
     this.logs = []
     this.errors = []
-    this.warnings = [];}
+    this.warnings = []];}
 export const deepClone = <T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */}
 };

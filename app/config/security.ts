@@ -12,13 +12,13 @@ export const securityHeaders = {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
-        'https://www.googletagmanager.com',
-        'https://www.google-analytics.com',
+        'https: //www.googletagmanager.com',
+        'https: //www.google-analytics.com',
       ],
-      styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-      fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
+      fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
+      imgSrc: ["'self'", 'data: ', 'https: ', 'blob: '],
+      connectSrc: ["'self'", 'https: //www.google-analytics.com', 'https: //analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: true,
@@ -50,7 +50,7 @@ export const rateLimitConfig = {
  * CORS configuration
  */
 export const corsConfig = {
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
@@ -89,7 +89,7 @@ export const validationPatterns = {
 export function sanitizeInput(input: string): string {
   return input
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/javascript: /gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
 }

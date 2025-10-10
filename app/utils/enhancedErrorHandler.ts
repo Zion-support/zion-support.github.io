@@ -386,7 +386,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Handle error with comprehensive processing;
    */
   private handleError(errorData: {)}
-// type: ErrorReport['type'];
+// type: ErrorReport['type']];
 // message: string,
 // stack?: string;
 // filename?: string;
@@ -424,7 +424,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Create comprehensive error report;
    */
   private createErrorReport(errorData: {)}
-// type: ErrorReport['type'];
+// type: ErrorReport['type']];
 // message: string,
 // stack?: string;
 // filename?: string;
@@ -918,7 +918,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     errorsByType: Record<string, number>
     errorsByCategory: Record<string, number>
     errorsBySeverity: Record<string, number>
-    recentErrors: ErrorReport[];}
+    recentErrors: ErrorReport[]];}
   } {}
     const errorsByType: Record<string, number> = {}
     const errorsByCategory: Record<string, number> = {}

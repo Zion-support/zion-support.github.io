@@ -102,8 +102,8 @@ export class ErrorHandler {
 export class ErrorHandler {}
   private static instance: ErrorHandler,
   private config: ErrorHandlerConfig;</string>
-  private errors: AppError[] = [];</string>
-  private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
+  private errors: AppError[] = []];</string>
+  private retryQueue: Array<{ error: AppError; retryCount: number }> = []];
   constructor(config: Partial<ErrorHandlerConfig>= {}) {
     this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>
   }</ErrorHandlerConfig>
@@ -128,7 +128,7 @@ export const,
 };
 // Error Handler class;
 export class ErrorHandler {/* TODO: Fix JSX expression */}
-  t: number }> = [];
+  t: number }> = []];
   constructor(confi)
   g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
     this.config = { ...defaultErrorHandlerConfig, ...config };
@@ -333,11 +333,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (this.config.enableConsoleLogging) {}
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {}
-        case ErrorSeverity.CRITICAL:
-        case ErrorSeverity.HIGH: break,
+        case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
         case ErrorSeverity.MEDIUM: break,
-        case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') {}
+        case ErrorSeverity.LOW: if (process.env['NODE_ENV'] === 'development') {}
             if (import.meta.env.DEV) {}
   // Handle error;
   handleError(erro)
@@ -718,7 +716,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Get all errors;
   getErrors(): AppError[] {
-    return [...this.errors];
+    return [...this.errors]];
   }
   // Get errors by type;
   getErrorsByType(type: ErrorType): AppError[] {,
@@ -738,7 +736,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (error) {,
   // Get all errors
   getErrors(): AppError[] {}
-    return [...this.errors];
+    return [...this.errors]];
   }
   // Get errors by type
   getErrorsByType(type: ErrorType): AppError[] {}
@@ -767,8 +765,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Clear all errors;
   clearAllErrors(): void {
-    this.errors = [];
-    this.retryQueue = [];
+    this.errors = []];
+    this.retryQueue = []];
   }
   // Get error statistics;
   getErrorStatistics() {
@@ -778,8 +776,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Clear all errors
   clearAllErrors(): void {}
-    this.errors = [];
-    this.retryQueue = [];
+    this.errors = []];
+    this.retryQueue = []];
   }
   // Get error statistics
   getErrorStatistics() {}

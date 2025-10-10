@@ -45,20 +45,20 @@ export interface PerformanceReport {}
     avgLoadTime: number
     totalMetrics: number
     performanceScore: number
-    recommendations: string[];}
+    recommendations: string[]];}
   }
   timestamp: Date,
 }
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics,
-  private metrics: PerformanceMetric[] = [];}
+  private metrics: PerformanceMetric[] = []];}
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {,
     if (typeof window !== 'undefined') {,
 export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
-  private metrics: PerformanceMetric[] = [];}
+  private metrics: PerformanceMetric[] = []];}
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = []
   constructor() {}
@@ -81,7 +81,7 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */}
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {};
   private,
-  observers: PerformanceObserver[] = [];
+  observers: PerformanceObserver[] = []];
   constructor() {/* TODO: Fix JSX expression */}
     }
   }
@@ -393,7 +393,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   measureFunction<T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
-  n:${name}`,
+  n: ${name}`,
       valu,
   e: endTime - startTime,
       uni,
@@ -429,7 +429,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   async measureAsyncFunction<T>(nam,
   e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`
-  c:${name}`,
+  c: ${name}`,
       valu,
   e: endTime - startTime,
       uni,
@@ -445,7 +445,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Get all metrics;
    */
   getMetrics(): PerformanceMetric[] {}
-    return [...this.metrics];}
+    return [...this.metrics]];}
   getMetrics(): PerformanceMetric[] {/* TODO: Fix JSX expression */}
   }
   /**
@@ -611,7 +611,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Clear all metrics;
    */
   clearMetrics(): void {}
-    this.metrics = [];}
+    this.metrics = []];}
     this.webVitals = {}
   clearMetrics(): void {/* TODO: Fix JSX expression */}
     this.webVitals = {};
@@ -621,7 +621,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   cleanup(): void {}
     this.observers.forEach(observer => observer.disconnect())
-    this.observers = [];}
+    this.observers = []];}
   }
 }
 // Type for performance.memory;

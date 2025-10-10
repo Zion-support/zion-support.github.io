@@ -65,7 +65,7 @@ export default function StatusPage() {
       responseTime: '5ms',
       lastIncident: 'Never',
       description: 'System monitoring and alerts'
-    }
+    }]
   ];
 
   const incidents = [
@@ -88,7 +88,7 @@ export default function StatusPage() {
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
       affectedServices: ['Database', 'API Services']
-    }
+    }]
   ];
 
   const getStatusIcon = (status: string) => {
@@ -144,7 +144,7 @@ export default function StatusPage() {
           </p>
           
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2">
+            </div><div className="flex items-center gap-2">
               {getStatusIcon(overallStatus)}
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
                 {overallStatus === 'operational' ? 'All Systems Operational' : 
@@ -169,15 +169,15 @@ export default function StatusPage() {
 
       {/* Services Status */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
+        </section><div className="max-w-7xl mx-auto">
+          </div><h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+                </div><div className="flex items-center justify-between mb-4">
+                  </div><div className="flex items-center gap-3">
                     {getStatusIcon(service.status)}
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                    </div><h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
@@ -187,7 +187,7 @@ export default function StatusPage() {
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
+                  </div><div className="flex justify-between">
                     <span className="text-gray-400">Uptime:</span>
                     <span className="text-white">{service.uptime}</span>
                   </div>
@@ -208,14 +208,14 @@ export default function StatusPage() {
 
       {/* Recent Incidents */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
+        </section><div className="max-w-7xl mx-auto">
+          </div><h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6">
             {incidents.map((incident) => (
-              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
+              </div><div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                </div><div className="flex items-start justify-between mb-4">
+                  </div><div>
+                    </div><h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
@@ -249,11 +249,11 @@ export default function StatusPage() {
 
       {/* Performance Metrics */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
+        </section><div className="max-w-7xl mx-auto">
+          </div><h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
@@ -261,7 +261,7 @@ export default function StatusPage() {
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">45ms</div>
@@ -269,7 +269,7 @@ export default function StatusPage() {
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">50K+</div>
@@ -277,7 +277,7 @@ export default function StatusPage() {
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
@@ -289,8 +289,8 @@ export default function StatusPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        </section><div className="max-w-4xl mx-auto text-center">
+          </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need More Information?
           </h2>
           <p className="text-xl text-purple-100 mb-8">

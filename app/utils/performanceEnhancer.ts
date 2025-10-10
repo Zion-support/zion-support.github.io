@@ -44,14 +44,14 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map();
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []];
   static getInstance(): PerformanceMonitor {,
     if (!PerformanceMonitor.instance) {,
 // Performance monitoring utilities
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map();
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []];
   static getInstance(): PerformanceMonitor {}
     if (!PerformanceMonitor.instance) {}
       PerformanceMonitor.instance = new PerformanceMonitor();
@@ -172,7 +172,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   // Cleanup observers
   cleanup() {}
     this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    this.observers = []];
   }
 }
 // React hook for performance monitoring;
@@ -245,7 +245,7 @@ export const preloadCriticalResources = () => {}
   if (typeof window === 'undefined') return;
   const criticalResources = [
     '/fonts/inter-var.woff2',
-    '/css/critical.css'];
+    '/css/critical.css']];
   criticalResources.forEach((resource) => {}
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -284,12 +284,12 @@ export const optimizeScrollPerformance = () => {}
   // Track Core Web Vitals;
   const trackCLS = () => {
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
+    let clsEntries: PerformanceEntry[] = []];
     interface LayoutShiftEntry extends PerformanceEntry {,
   // Track Core Web Vitals
   const trackCLS = () => {}
     let clsValue = 0;
-    let clsEntries: PerformanceEntry[] = [];
+    let clsEntries: PerformanceEntry[] = []];
     interface LayoutShiftEntry extends PerformanceEntry {}
       hadRecentInput?: boolean;
       value: number,

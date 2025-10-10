@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -50,7 +48,7 @@ const AICloudInfrastructurePage: React.FC = () => {
       title: 'Global Distribution',
       description: 'Worldwide cloud infrastructure with intelligent content delivery and edge computing.',
       benefits: ['Global CDN', 'Edge computing', 'Low latency', 'High availability']
-    }
+    }]
   ];
 
   ];

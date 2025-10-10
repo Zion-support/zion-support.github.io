@@ -11,12 +11,12 @@ const MicroSaaSPage: React.FC = () => {
       <Helmet>
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
+        <link rel="canonical" href={`https: //ziontechgroup.com/micro-saas/${serviceName}`} />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center"></div>
+          </section><div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Settings className="w-4 h-4" />
               <span>{title}</span>
@@ -41,7 +41,7 @@ const MicroSaaSPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">

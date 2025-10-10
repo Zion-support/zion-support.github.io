@@ -34,10 +34,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
 
-    const observers: PerformanceObserver[] = [];
+    const observers: PerformanceObserver[] = []];
 
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
 
     // Measure Largest Contentful Paint (LCP)
@@ -45,7 +45,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       try {
         const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+          const lastEntry = entries[entries.length - 1]];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -110,7 +110,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const navigationEntries = performance.getEntriesByType?.('navigation') || []];
       const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
@@ -154,7 +154,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (slowResources.length > 0) {
        
       // eslint-disable-next-line no-console
-        'Slow resources detected:',
+        'Slow resources detected: ',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
@@ -233,7 +233,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
+    const recommendations: string[] = []];
 
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
@@ -282,7 +282,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <div>
             TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
           <div>
-            Memory:{' '}
+            Memory: {' '}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}</div>

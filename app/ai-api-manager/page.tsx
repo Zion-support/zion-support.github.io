@@ -42,7 +42,7 @@ const AIAPIManagerPage: React.FC = () => {
       title: 'Real-time Monitoring',
       description: 'Monitor API performance, usage, and health in real-time with detailed analytics.',
       benefits: ['Real-time metrics', 'Usage analytics', 'Health monitoring', 'Alert system']
-    }
+    }]
   ];
 
   const benefits = [
@@ -53,7 +53,7 @@ const AIAPIManagerPage: React.FC = () => {
     'Enable global API distribution',
     'Automate API management tasks',
     'Scale APIs efficiently',
-    'Enhance developer experience'
+    'Enhance developer experience']
   ];
 
   const useCases = [
@@ -86,7 +86,7 @@ const AIAPIManagerPage: React.FC = () => {
       title: 'Data Integration',
       description: 'Integrate data from multiple sources',
       icon: '📊'
-    }
+    }]
   ];
 
   return (
@@ -100,9 +100,9 @@ const AIAPIManagerPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
               <Code className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

@@ -23,7 +23,7 @@ export default function PrivacyPage() {
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
-    }
+    }]
   ];
 
   const purposes = [
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
       title: 'Security',
       icon: Shield,
       description: 'To protect against fraud and abuse'
-    }
+    }]
   ];
 
   const rights = [
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
       title: 'Portability',
       description: 'Receive your data in a structured format',
       icon: Database
-    }
+    }]
   ];
 
   return (
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Introduction */}</div>
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
+              </section><h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
 
             {/* Information We Collect */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
+              </section><h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {dataTypes.map((type, index) => (</div>
                   <div key={index} className="bg-gray-50 rounded-lg p-6"></div>
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
 
             {/* How We Use Information */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
+              </section><h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {purposes.map((purpose, index) => (</div>
                   <div key={index} className="flex items-start"></div>
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
 
             {/* Data Security */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
+              </section><h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
@@ -166,7 +166,7 @@ export default function PrivacyPage() {
 
             {/* Your Rights */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
+              </section><h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {rights.map((right, index) => (</div>
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-6"></div>
@@ -182,7 +182,7 @@ export default function PrivacyPage() {
 
             {/* Contact Information */}
             <section className="bg-gray-50 rounded-lg p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+              </section><h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
               <p className="text-gray-700 mb-6">
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
@@ -208,7 +208,7 @@ export default function PrivacyPage() {
 
             {/* Updates */}
             <section>
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
+              </section><div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                   <div></div>

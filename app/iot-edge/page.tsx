@@ -24,7 +24,7 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    }]
   ];
 
   const benefits = [
@@ -35,7 +35,7 @@ const PagePage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of success']
   ];
 
   return (
@@ -47,7 +47,7 @@ const PagePage: React.FC = () => {
       </Helmet>
 
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            </div><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>

@@ -15,7 +15,7 @@ import { FileText, PenTool, Target, CheckCircle, Phone, Mail, MapPin, ArrowRight
     'Enable consistent brand voice',
     'Automate content workflows',
     'Scale content across channels',
-    'Enhance content quality'
+    'Enhance content quality']
   ];
 
   const useCases = [

@@ -45,10 +45,10 @@ const CaseStudiesPage: React.FC = () => {
       image: '/api/placeholder/600/400',
       duration: '4 months',
       team: '6 developers'
-    }
+    }]
   ];
 
-  const categories = ['All', 'AI', 'Cloud', 'Security', 'Development'];
+  const categories = ['All', 'AI', 'Cloud', 'Security', 'Development']];
 
   return (
     <>
@@ -60,11 +60,11 @@ const CaseStudiesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
+            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Success Stories
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -75,12 +75,12 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          </section><div className="max-w-7xl mx-auto">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                </div><div key={study.id} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  </div><div className="mb-6">
+                    </div><div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
                       <span className="text-2xl font-bold text-cyan-400">{study.title.charAt(0)}</span>
                     </div>
                     <div className="flex items-center justify-between mb-2">
@@ -94,16 +94,16 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
 
                   <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4>
+                    </div><div>
+                      </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4>
                       <p className="text-sm text-gray-300">{study.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4>
+                      </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4>
                       <p className="text-sm text-gray-300">{study.solution}</p>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Results</h4>
+                      </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Results</h4>
                       <p className="text-sm text-gray-300">{study.results}</p>
                     </div>
                   </div>
@@ -125,8 +125,8 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="max-w-4xl mx-auto text-center">
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

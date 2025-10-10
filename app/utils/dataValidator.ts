@@ -55,7 +55,7 @@ export function validateURL(ur,
 
   try {
     // If protocol is not required, add http: // prefix for validation;
-    const urlToValidate = requireProtocol ? url : `http://${url}`;
+    const urlToValidate = requireProtocol ? url : `http: //${url}`;
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ?
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :
@@ -65,7 +65,7 @@ export function validateURL(ur,
       error: isValid ? undefined : 'Invalid URL format or protocol',
   
   try {/* TODO: Fix JSX expression */}
-  p://${url}`;
+  p: //${url}`;
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ? 
       (parsed.protocol === 'htt,
@@ -238,9 +238,9 @@ export function validateForm<T extends Record<string, unknown>>(
 ): ValidationResult {,
   const errors: Record<string, string[]> = {};
   for (const field in rules) {
-    const value = data[field];
-    const fieldRules = rules[field] || [];
-    const fieldErrors: string[] = [];
+    const value = data[field]];
+    const fieldRules = rules[field] || []];
+    const fieldErrors: string[] = []];
     for (const rule of fieldRules) {,
       if (!validateFieldRule(value, rule)) {
         fieldErrors.push(rule.message);

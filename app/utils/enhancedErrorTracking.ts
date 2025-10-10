@@ -136,17 +136,17 @@ class EnhancedErrorTracker {}
     }
   }
   public getErrors(): TrackedError[] {}
-    return [...this.errors];}
+    return [...this.errors]];}
   }
   public clearErrors(): void {}
-    this.errors = [];}
+    this.errors = []];}
   }
   public getErrorStats(): {
     total: number,
   public getErrorStats(): {}
     total: number
     byComponent: Record<string, number>
-    recent: TrackedError[];}
+    recent: TrackedError[]];}
   } {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {)

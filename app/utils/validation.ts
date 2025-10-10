@@ -6,7 +6,7 @@
 export interface ValidationResult {
   isValid: boolean,
   error?: string;
-  errors?: string[];,
+  errors?: string[]];,
 export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 
