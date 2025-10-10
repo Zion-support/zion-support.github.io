@@ -61,11 +61,6 @@ const PrivacyPage: React.FC = () => {
         'Opt-out: You can unsubscribe from marketing communications at any time.'
       ]
     }
-<<<<<<< HEAD
-  ];];];
-  const purposes = [
-    {
-    }
   ];
   const rights = [
     {

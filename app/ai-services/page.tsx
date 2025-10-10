@@ -1012,7 +1012,7 @@ const AiServicesPage: React.FC = () => {
       popular: true,
       icon: FileText
     }
-  ];];];
+  ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
@@ -1044,7 +1044,7 @@ const AiServicesPage: React.FC = () => {
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
   ];
   const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory;
+    selectedCategory === 'all' || service.category === selectedCategory
   );
 
   return (
