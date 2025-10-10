@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Brain, 
   MessageSquare, 
@@ -22,7 +22,7 @@ import {
   Heart,
   FileText,
   Cpu,
-  Link,
+  Link as LinkIcon,
   Server
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -31,7 +31,7 @@ import Footer from '../components/Footer';
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     {
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',

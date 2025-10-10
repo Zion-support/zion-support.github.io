@@ -2,128 +2,69 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
     // Only show in development or when performance monitoring is enabled
-      const shouldMonitor = const shouldMonitor = process.env.NODE_ENV === 'development' ||;
+    const shouldMonitor = process.env.NODE_ENV === 'development' || 
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {;
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    }
-
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => updateMetrics({ cls: metric.value }));
-        getFID((metric) => updateMetrics({ fid: metric.value }));
-        getFCP((metric) => updateMetrics({ fcp: metric.value }));
-        getLCP((metric) => updateMetrics({ lcp: metric.value }));
-        getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      })
-    }
-
-    // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime })
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
           }
-          if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime })
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime })
-            }
-          }
-        })
-      })
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          setMetrics(prev => ({ ...prev, cls: (prev?.cls || 0) + entry.value }));
+        }
+      });
+    });
 
-      try {;
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
-      } catch (e) {;
-        console.warn('Performance Observer not supported:', e);
+    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    // Toggle visibility with Ctrl+Shift+P
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
       }
+    };
 
-      return () => observer.disconnect();
-    }
+    document.addEventListener('keydown', handleKeyDown);
 
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
+  if (!isVisible || !metrics) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  }
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  }
-
-  return ()
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1" /></div>
-        {metrics.lcp && ()
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })} /></span>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
-            </span>
-          </div>
-        )},
-    {metrics.fid && ()
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })} /></span>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
-            </span>
-          </div>
-        )},
-    {metrics.cls && ()
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })} /></span>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
-            </span>
-          </div>
-        )},
-    {metrics.fcp && ()
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })} /></span>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
-            </span>
-          </div>
-        )},
-    {metrics.ttfb && ()
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })} /></span>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
-            </span>
-          </div>
-        )}
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 text-xs">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+        <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+        <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cls?.toFixed(4)}</div>
       </div>
     </div>
   );

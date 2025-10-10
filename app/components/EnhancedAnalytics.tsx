@@ -1,81 +1,101 @@
 'use client';
-import React, { createContext, useContext, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-    track: (event: string, parameters?: Record<string, any>) => void;
-  page: (pageName: string, parameters?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void
-  }
-
-const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
-
-export const useAnalytics = () => {;
-    const context = useContext(AnalyticsContext);
-  if (!context) {
-    console.warn('useAnalytics must be used within an AnalyticsProvider');
-    return null
-  }
-  return context;
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
+  identifyUser: (userId: string, traits?: Record<string, any>) => void;
 }
 
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
 interface AnalyticsProviderProps {
-    children: React.ReactNode,
-  trackingId?: string
-  }
+  children: React.ReactNode;
+  trackingId?: string;
+  enableTracking?: boolean;
+}
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ()
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+  trackingId,
+  enableTracking = true
 }) => {
-  // Initialize Google Analytics
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // Initialize analytics
   useEffect(() => {
-    if (typeof window !== 'undefined' && !window.gtag) {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+    if (!enableTracking || !trackingId) return;
 
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || []
-      function gtag(...args: any[]) {
-    window.dataLayer.push(args)
-  }
-      window.gtag = gtag;
+    // Initialize Google Analytics or other tracking service
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+    document.head.appendChild(script);
 
-      gtag('js', new Date());
-      gtag()
-      })
+    script.onload = () => {
+      window.gtag = window.gtag || function() {
+        (window.gtag.q = window.gtag.q || []).push(arguments);
+      };
+      window.gtag('js', new Date());
+      window.gtag('config', trackingId);
+      setIsInitialized(true);
+    };
+  }, [trackingId, enableTracking]);
+
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    if (!enableTracking || !isInitialized) return;
+
+    if (window.gtag) {
+      window.gtag('event', eventName, properties);
     }
-  }, [trackingId]);
+  };
 
-  const track = const track = const track = useCallback((event: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag()
-      });
-    };
-  }, []);
+  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+    if (!enableTracking || !isInitialized) return;
 
-  const page = const page = const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag()
+    if (window.gtag) {
+      window.gtag('config', trackingId, {
+        page_title: pageName,
+        page_location: window.location.href,
+        ...properties
       });
-    };
-  }, [trackingId]);
+    }
+  };
 
-  const identify = const identify = const identify = useCallback((userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag()
+  const identifyUser = (userId: string, traits?: Record<string, any>) => {
+    if (!enableTracking || !isInitialized) return;
+
+    if (window.gtag) {
+      window.gtag('config', trackingId, {
+        user_id: userId,
+        ...traits
       });
-    };
-  }, [trackingId]);
+    }
+  };
 
   const value: AnalyticsContextType = {
-    track,
-    page,
-    identify
-  }
+    trackEvent,
+    trackPageView,
+    identifyUser
+  };
 
-  return ()
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
   );
 };
 
-export default AnalyticsProvider;
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}

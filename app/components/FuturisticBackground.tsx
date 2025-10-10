@@ -11,10 +11,10 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const resizeCanvas = () => {;
+    const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    }
+    };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -28,12 +28,13 @@ const FuturisticBackground: React.FC = () => {
       size: number;
       opacity: number;
       color: string;
-    }> = []
+    }> = [];
 
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
+    
     // Create particles
     for (let i = 0; i < 50; i++) {
-      particles.push()
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,
@@ -41,9 +42,10 @@ const FuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
-        })
-      }
-    const animate = () => {;
+      });
+    }
+
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -58,11 +60,13 @@ const FuturisticBackground: React.FC = () => {
         if (particle.y > canvas.height) particle.y = 0;
 
         // Draw particle
+        ctx.save();
+        ctx.globalAlpha = particle.opacity;
+        ctx.fillStyle = particle.color;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
         ctx.fill();
+        ctx.restore();
 
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
@@ -72,49 +76,36 @@ const FuturisticBackground: React.FC = () => {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 100) {
+              ctx.save();
+              ctx.globalAlpha = (100 - distance) / 100 * 0.1;
+              ctx.strokeStyle = particle.color;
+              ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-              ctx.lineWidth = 0.5;
               ctx.stroke();
+              ctx.restore();
             }
           }
-        })
-      })
+        });
+      });
 
-      // Draw cyber grid
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 0.5;
-
-      for (let x = 0; x < canvas.width; x += 20) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      for (let y = 0; y < canvas.height; y += 20) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
-    }
+    };
 
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-    }
+    };
   }, []);
 
-  return ()
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none"
+      style={{ zIndex: -1 }}
+    />
   );
 };
 
