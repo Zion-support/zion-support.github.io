@@ -51,8 +51,7 @@ key={index}
           {stories.map((story, index) => (</div>
             <div
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            ></div>
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>

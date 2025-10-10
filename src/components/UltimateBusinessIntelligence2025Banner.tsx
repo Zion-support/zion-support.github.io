@@ -42,14 +42,13 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
   ];
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % content.length)
+  }, 5000);
     return () => clearInterval(timer);
   }, [content.length]);
   const handleClose = () => {
-    setIsVisible(false);
-  };
-
+    setIsVisible(false)
+  }
   if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -68,8 +67,8 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-2xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
-            </span>
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025,
+  </
             <span className='text-2xl'>⚡</span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
@@ -80,8 +79,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-            >
+              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">
               Get Started Today
               <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -156,24 +154,22 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     </section>
   );
 export default UltimateBusinessIntelligence2025Banner;
-
-
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
@@ -182,13 +178,13 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       typ,
   e: 'Blog Post',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   efficienc,
   y: '300%',
         accurac,
@@ -218,20 +214,11 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       ur,
-  l: '/services/automation';
+  l: '/services/automation',
       typ,
   e: 'Service',
                   {tag}
             {/* CTA Buttons */}
-            
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="flex flex-col,"
   sm:flex-row items-center justify-center gap-6"></div>
                 href={currentContent.url}"
@@ -255,23 +242,31 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   l: 'Success Rate' },
             {/* TODO: Fix JSX expression */}
   l: 'Data Points Processed' }].map((stat, index) => ()
-            
-          
-          
-          
-          
-          
-          
-          
           "
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
     </section>
   );
-};
-
+}
 export default UltimateBusinessIntelligence2025Banner;"
-
-
-
+  </div>
+  </div>
+  </button>
+  </div>
+  </div>
+  </span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </svg>
+  </div>
+  </div>
+  </div>
+  </path>
+  </div>
+  </span>
+  </div>
+  </div>
+  </div>

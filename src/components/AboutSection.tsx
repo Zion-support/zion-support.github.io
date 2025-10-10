@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function AboutSection() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -7,7 +6,6 @@ export default function AboutSection() {
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
   ];
-
   const values = [
     {
       title: 'Innovation First',
@@ -37,7 +35,6 @@ export default function AboutSection() {
       )
     }
   ];
-
   return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,15 +48,13 @@ export default function AboutSection() {
             that transform businesses and drive digital innovation.
           </p>
         </div>
-
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="cyber-card-advanced p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
-                Our Mission
-              </h3>
+                Our Mission</span>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 To empower businesses with cutting-edge AI and IT solutions that drive 
                 growth, efficiency, and innovation. We believe technology should be 
@@ -71,7 +66,6 @@ export default function AboutSection() {
                 needs but also scale with your future ambitions.
               </p>
             </div>
-
             <div className="cyber-card-advanced p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
                 Why Choose Us?
@@ -104,7 +98,6 @@ export default function AboutSection() {
               </ul>
             </div>
           </div>
-
           {/* Right Content - Stats */}
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-6">
@@ -119,11 +112,9 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-
             <div className="cyber-card-advanced p-8">
               <h3 className="text-xl font-bold text-white mb-4">
-                Our Expertise
-              </h3>
+                Our Expertise</span>
               <div className="space-y-3">
                 {['Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Web Development', 'Mobile Apps', 'Data Analytics'].map((skill, index) => (
                   <div key={index} className="flex items-center justify-between">
@@ -137,12 +128,10 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
-
         {/* Values Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Our Core Values
-          </h3>
+            Our Core Values</span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="cyber-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300">
@@ -159,18 +148,16 @@ export default function AboutSection() {
             ))}
           </div>
         </div>
-
         {/* Team Section */}
         <div className="cyber-card-advanced p-8">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
-            Meet Our Team
-          </h3>
+            Meet Our Team</span>
           <p className="text-gray-300 text-center text-lg max-w-3xl mx-auto mb-8">
             Our diverse team of experts brings together decades of experience in AI, 
             machine learning, software development, and IT consulting. We're passionate 
             about technology and committed to delivering exceptional results.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-black font-bold text-2xl">AI</span>
@@ -196,5 +183,9 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
+  </h3>
+  </h3>
+  </h3>
+  </h3>

@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
@@ -28,10 +29,11 @@ const CloudServicesPage: React.FC = () => {
       title: 'Cloud Security',
       description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
+
     }
   ];
-
   const benefits = [
+
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
     'Enhanced security and compliance',
@@ -85,9 +87,10 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ]
     }
-  ];
 
+  ];
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
@@ -124,9 +127,11 @@ const CloudServicesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
+
             </div>
           </div>
         </div>
+
       </section>
 
       {/* Services Section */}
@@ -242,7 +247,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with Cloud?
@@ -263,7 +268,11 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
 
+  ),
+}
 export default CloudServicesPage;
+  </button>
+  </button>
+  </h1>
+  </div>

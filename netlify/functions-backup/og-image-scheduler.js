@@ -1,12 +1,12 @@
 // netlify/functions/og-image-scheduler.js;
-exports.config = { schedule: '0 */2 * * *' };
+exports.config = { schedule: '0 */2 * * *' }
 exports.handler = async function () {
   const { execSync } = require('child_process');
   try {execSync('node automation/og-image-generator.cjs || true', {)
       stdio: inherit),
         shell: true}
 exports.config = {/* TODO: Fix JSX expression */}
-  e: '0 */2 * * *' };
+  e: '0 */2 * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
   try {/* TODO: Fix JSX expression */}
@@ -17,36 +17,36 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true });
-    return {statusCode: 200;
+    return {statusCode: 200,
       body: JSON.stringify({ ok: true),
         task: 'og-image-scheduler' });
-    };
+    }
   } catch (e) {return {
-      statusCode: 200;
+      statusCode: 200,
       body: JSON.stringify({ ok: false),
-        error: String(e;),
+        error: String(e,),
     return {/* TODO: Fix JSX expression */}
   k: 'og-image-scheduler' });
-    };
+    }
   } catch (e) {/* TODO: Fix JSX expression */}
       });
-    };
+    }
   }
-};
-// netlify/functions/og-image-scheduler.js exports.config = { schedule: '0 */2 * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {' execSync('node automation/og-image-generator.cjs || true') { stdio: 'inherit'} shell: true;
-      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): refresh OG images [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
-      });' return {statusCode: 200;
+}
+// netlify/functions/og-image-scheduler.js exports.config = { schedule: '0 */2 * * *' } exports.handler = async function() {' const { execSync } = require('child_process'); try {' execSync('node automation/og-image-generator.cjs || true') { stdio: 'inherit'} shell: true,
+      });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): refresh OG images [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true,
+      });' return {statusCode: 200,
         body: JSON.stringify({ok: true),
-        task: 'og-image-scheduler' }) }; } catch (e) {return { statusCode: 200;
+        task: 'og-image-scheduler' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
-        error: String(e;)}) }; } }; '
+        error: String(e,)}) } } } '
 // netlify/functions/og-image-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
-  e: '0 */2 * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
+  e: '0 */2 * * *' } exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;"
+  l: true,"
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(images): refresh OG images [ci skip]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true;
+  l: true,
       });' return {/* TODO: Fix JSX expression */}
-  k: 'og-image-scheduler' }) }; } catch (e) {/* TODO: Fix JSX expression */}
-      }) }; } }; '"
+  k: 'og-image-scheduler' }) } } catch (e) {/* TODO: Fix JSX expression */}
+      }) } } } '"

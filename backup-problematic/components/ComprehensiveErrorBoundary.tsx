@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface ComprehensiveErrorBoundaryProps {/* TODO: Fix JSX expression */}
 }
-
 const ComprehensiveErrorBoundary = React.memo(function ComprehensiveErrorBoundary({)
   className = '')
 }: ComprehensiveErrorBoundaryProps) {
@@ -21,6 +19,5 @@ const ComprehensiveErrorBoundary = React.memo(function ComprehensiveErrorBoundar
     </div>
   );
 });
-
 export default ComprehensiveErrorBoundary;
 "`

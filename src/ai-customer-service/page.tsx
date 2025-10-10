@@ -1,6 +1,5 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
@@ -17,17 +16,16 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Customer Service Solutions;
+  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+              AI Customer Service Solutions
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Revolutionary 24/7 AI-powered customer support;
+              Revolutionary 24/7 AI-powered customer support,
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
             </p>
           </section>
-
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>"
@@ -83,7 +81,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
@@ -131,7 +128,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </section>
-
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>"
@@ -166,7 +162,6 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </section>
-
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?</h2>"
@@ -176,21 +171,20 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="te,"
-  l:+13024640950" className="cyber-button"></a>
+  l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950,
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo;
+  hover: text-indigo-600 transition-all duration-300"></a>
+                Get Free Demo
               </a>
             </div>
           </section>
         </main>
-        
         <Footer /></Footer>
       </div>
     </div>
-  );
+  ),
 }"

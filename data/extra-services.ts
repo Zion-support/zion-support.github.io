@@ -6,24 +6,23 @@ export interface ExtraService {id: string;
   description: string;
   features: string[];
   link: string;
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
+  category: string
+  real_implementation: boolean
+  contact_info: unknown,
     mobile: string}
     email: string}
 }
-    address: string;
+    address: string,
   }
-export const extraServices: ExtraService[] = [;
-    address: string;
+export const extraServices: ExtraService[] = [
+    address: string,
   }
-;
 export const extra_services: ExtraService[] = [
     id: 'cloud - migration - expert',
     name: 'Cloud Migration Expert',
     tagline: 'Seamless cloud migration and optimization',
     price: '$99 / hour',
-    description: unknown;
+    description: unknown,
 export interface ExtraService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
@@ -32,10 +31,9 @@ export interface ExtraService {/* TODO: Fix JSX expression */}
     addres,
   s: string}
 export const,
-  extraServices: ExtraService[] = [;
+  extraServices: ExtraService[] = [,
     addres,
   s: string}
-;
 export const,
   extra_services: ExtraService[] = [,
     i,
@@ -58,17 +56,17 @@ export const,
       '24 / 7 support'],
     link: '/services / cloud - migration - expert'
     category: 'Cloud Services'
-    real_implementation: true;
-    contact_info: unknown;
+    real_implementation: true
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}},
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string,
+  tagline: string, price: string,
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown,
     mobile: string, email: string;
     address: string;
   id: string;
@@ -81,13 +79,13 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string
+    email: string
+    address: string,
+  }
 }
 }
-    address: string;
+    address: string,
     lin,
   k: '/services / cloud - migration - expert',
     categor,
@@ -122,39 +120,39 @@ export const,
   e: string, emai,
   l: string,
     addres,
-  s: string;
+  s: string,
   i,
-  d: string;
+  d: string,
   nam,
-  e: string;
+  e: string,
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string,
   feature,
-  s: string[];
+  s: string[],
   lin,
-  k: string;
+  k: string,
   categor,
-  y: string;
+  y: string,
   realImplementatio,
-  n: boolean;
+  n: boolean,
   contactInf,
-  o: unknown;
+  o: unknown,
     mobil,
-  e: string;
+  e: string,
     emai,
-  l: string;
+  l: string,
     addres,
-  s: string};
+  s: string}
 }
 }
     addres,
   s: string}
 export const,
-  extraServices: ExtraService[] = [;
+  extraServices: ExtraService[] = [,
     i,
   d: 'cloud-migration-expert'
     nam,
@@ -166,7 +164,7 @@ export const,
     descriptio,
   n: 'Professional cloud migration services for businesses looking to modernize their infrastructure.'
     feature,
-  s: [;
+  s: [
       'AWS/Azure/GCP migration'
       'Performance optimization'
       'Cost analysis'
@@ -175,7 +173,7 @@ export const,
     ]
     link: '/services/cloud-migration-expert'
     category: 'Cloud Services'
-    realImplementation: true;
+    realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -205,7 +203,7 @@ export const,
     descriptio,
   n: 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.'
     feature,
-  s: [;
+  s: [
       'Vulnerability assessment'
       'Penetration testing'
       'Security policy review'
@@ -214,7 +212,7 @@ export const,
     ]
     link: '/services/cybersecurity-audit'
     category: 'Security'
-    realImplementation: true;
+    realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -225,7 +223,7 @@ export const,
     name: 'Cybersecurity Audit Pro',
     tagline: 'Comprehensive security assessment and protection',
     price: '$199 / hour',
-    description: unknown;
+    description: unknown,
     lin,
   k: '/services/cybersecurity-audit'
     categor,
@@ -265,8 +263,8 @@ export const,
       'Remediation guidance'],
     link: '/services / cybersecurity - audit'
     category: 'Security'
-    real_implementation: true;
-    contact_info: unknown;
+    real_implementation: true
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
@@ -284,8 +282,8 @@ export const,
     ],
     link: "/services/cloud-migration-expert"
     category: "Cloud Services"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -304,7 +302,7 @@ export const,
     ],
     link: "/services/cybersecurity-audit"
     category: "Security"
-    realImplementation: true;
+    realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -391,7 +389,6 @@ export const,
     }
   }
 ];
-;
 ];
     id: "cloud-migration-expert"
     name: "Cloud Migration Expert",
@@ -407,8 +404,8 @@ export const,
     ],
     link: "/services/cloud-migration-expert"
     category: "Cloud Services"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"}
@@ -427,13 +424,13 @@ export const,
     ],
     link: "/services/cybersecurity-audit"
     category: "Security"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
@@ -508,7 +505,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -523,21 +520,21 @@ export const,
   }
 ];
 export interface ExtraService,
-  id: string; nam,
-  e: string; taglin,
+  id: string, nam,
+  e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; real_implementatio,
-  n: boolean; contact_inf,
+  n: string, feature,
+  s: string[], lin,
+  k: string, categor,
+  y: string, real_implementatio,
+  n: boolean, contact_inf,
   o: mobil,
-  e: string; emai,
+  e: string, emai,
   l: string} addres,
   s: string} export const,
   extraServices: ExtraService[] = [ addres,
-  s: string} ; export const,
+  s: string} export const,
   extra_services: ExtraService[] = [, i,
   d: 'cloud - migration - expert',' nam,
   e: 'Cloud Migration Expert',' taglin,
@@ -565,19 +562,19 @@ export interface ExtraService,
   e: string, emai,
   l: string, addres,
   s: string,
-  id: string; nam,
-  e: string; taglin,
+  id: string, nam,
+  e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  n: string, feature,
+  s: string[], lin,
+  k: string, categor,
+  y: string, realImplementatio,
+  n: boolean, contactInf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string}; } } addres,
+  e: string, emai,
+  l: string, addres,
+  s: string} } } addres,
   s: string} export const,
   extraServices: ExtraService[] = [ ' i,
   d: 'cloud-migration-expert'' nam,
@@ -678,7 +675,7 @@ export interface ExtraService,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

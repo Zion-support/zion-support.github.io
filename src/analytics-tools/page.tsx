@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
-
 import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
@@ -60,27 +59,13 @@ icon$5: Brain,
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
-
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
 const PagePage: React.FC = () => {
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
@@ -90,24 +75,22 @@ const PagePage: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics Tools
-          </h1>
+          <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Analytics Tools,
+  </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
           <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-// AI Analytics Tools;
-
+  md: text-6xl font-bold text-white mb-6"></h1>
+// AI Analytics Tools
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
+            Coming Soon,
+  </
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -134,9 +117,9 @@ const PagePage: React.FC = () => {
       {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools
-          </h2>
+          <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+            Our Analytics Tools,
+  </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
@@ -160,10 +143,9 @@ const PagePage: React.FC = () => {
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-                  >
-                    Get Started
-                  </a>
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block">
+                    Get Started,
+  </
       {/* Benefits Section */}
             Why Choose Our Analytics Tools?
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -172,7 +154,6 @@ const PagePage: React.FC = () => {
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-
               <div className="text-gray-300">Analytics Tools</div>
             </div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>"
@@ -199,8 +180,8 @@ const PagePage: React.FC = () => {
       <section className="py-16 px-4"></section>"
         <div className="max-w-7xl mx-auto"></div>"
           <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Our Analytics Tools;
+  md: text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
+// Our Analytics Tools,
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -232,9 +213,9 @@ const PagePage: React.FC = () => {
   o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-cyan-600,"
-  hover:to-blue-700 transition-all inline-block"
+  hover: to-blue-700 transition-all inline-block"
 // >
-//                     Get Started;
+//                     Get Started,
           </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?"
@@ -247,11 +228,10 @@ Why Choose Our Analytics Tools?"
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></benefit>"
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
@@ -262,21 +242,40 @@ Why Choose Our Analytics Tools?"
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  );
-};
+  ),
+}
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-Call (302) 464-0950;
+Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-
-              Email Us;
-  );
-};
-
-
+              Email Us
+  ),
+}
 export default AnalyticsToolsPage;
-
-
+  </div>
+  </p>
+  </div>
+  </p>
+  </h2>
+  </div>
+  </section>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </p>
+  </p>
+  </div>
+  </div>
+  </div>

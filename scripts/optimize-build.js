@@ -86,16 +86,16 @@ function generateRobots() {/* TODO: Fix JSX expression */}
 Allo,
   w: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Crawl-delay for better server performance;
-Crawl-delay: 1`;
+Sitemap: https://ziontechgroup.com/sitemap.xml
+# Crawl-delay for better server performance
+Crawl-delay: 1`,
 ,
 Sitema,
   p: http,
-  s://ziontechgroup.com/sitemap.xml;
-# Crawl-delay for better server performance;
+  s: //ziontechgroup.com/sitemap.xml
+# Crawl-delay for better server performance,
 Crawl-dela,`
-  y: 1`;
+  y: 1`,
 
   fs.writeFileSync('public/robots.txt', robots);
   // console.log('✓ Robots.txt generated');
@@ -119,7 +119,7 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
   }
   
   if (issues.length > 0) {
-    // console.log('⚠️  Performance issues found: ');
+    // console.log('⚠️  Performance issues found: '),
   for (const file of files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
     }
@@ -159,13 +159,12 @@ async function optimize() {/* TODO: Fix JSX expression */}
   Summary:');
     // console.log('   - Images optimized');
     // console.log('   - CSS optimized');
-    // console.log('   - JavaScript bundles optimized');
-    // console.log('   - Sitemap generated');
-    // console.log('   - Robots.txt generated');
+    // console.log('   - JavaScript bundles optimized')
+    // console.log('   - Sitemap generated')
+    // console.log('   - Robots.txt generated'),
     } catch (error) {
     // console.error('❌ Optimization failed:', error.message);
-    process.exit(1);
-    
+    process.exit(1)
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }

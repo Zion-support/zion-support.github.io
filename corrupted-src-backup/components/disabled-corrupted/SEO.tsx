@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-
 const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
@@ -52,7 +50,8 @@ const,
       <link rel="canonical" href={url} /></link>
     </Helmet>
   );
-};
-
+}
 export default SEO;
 "
+  </SEOProps>
+  </SEOProps>

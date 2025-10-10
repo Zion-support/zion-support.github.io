@@ -99,7 +99,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "@type": "Organization",
       "name": "Zion Tech Group",
       "description": description,
-      "url": canonicalUrl || window.location.origin,
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
@@ -110,6 +110,29 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     return structuredData || defaultStructuredData;
   };
 
+  const _trackPageView = (config: SEOData) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: config.title,
+        page_location: config.canonicalUrl,
+      });
+    }
+  };
+
+  const _trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
+          });
+        }
+      });
+    }
+  };
   return (
     <>
       <Helmet>
@@ -165,7 +188,52 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           )}
         </div>
       )}
-    </>
+
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+
+      {/* Additional SEO Meta Tags */}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      <meta name="copyright" content="Zion Tech Group" />
+      <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      <meta name="theme-color" content="#1a1a2e" />
+      <meta name="msapplication-TileColor" content="#1a1a2e" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+
+      {/* Open Graph Tags */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
+    </Helmet>
+    {children}
+  </>
   );
 };
 

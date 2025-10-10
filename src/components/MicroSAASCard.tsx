@@ -1,61 +1,49 @@
-
-
+import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
-  e: string;
+  e: string,
     descriptio,
-  n: string;
+  n: string,
     ico,
-  n: string;
+  n: string,
     pric,
-  e: string;,
+  e: string,,
     feature,
-  s: string[];,
+  s: string[],,
     benefit,
-  s: string[];
-    marketPrice?: string;,
+  s: string[]
+    marketPrice?: string,,
     categor,
-  y: string;,
+  y: string,,
     technologie,
-  s: string[];,
+  s: string[],,
     contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean;
-  };
+  o: string
+    link?: string
+    popular?: boolean,
+  }
 }
-
-const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
+const MicroSAASCard: React.FC,
+          <MicroSAASCardProps> = ({ service }) => {
+    // TODO: Add content
+  }
 }
-
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
-          </span>
+// Most Popular</span>
         </div>
       )}"
       <div className="text-center mb-4"></div>"
@@ -114,9 +102,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   o:kleber@ziontechgroup.com'}"
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,
   hover:from-cyan-600,"
-  hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
+  hover: to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >
-//             Get Started;"
+//             Get Started,"
           <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
           </a>"
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
@@ -124,9 +112,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
       </div>
     </div>
   );
-};
-
+}
 export default MicroSAASCard;"`
-
-
-
+  </MicroSAASCardProps>
+  </MicroSAASCardProps>

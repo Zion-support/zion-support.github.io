@@ -4,172 +4,187 @@
  * Centralized configuration management with environment-based settings;
  */;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
-export interface AppConfig {;
-  environment: Environment,;
-  api: {;
+export interface AppConfig {
+    environment: Environment,;
+  api: {
     baseURL: string,;
     timeout: number,;
     retryAttempts: number,;
-    enableCaching: boolean,;}
+    enableCaching: boolean,
   }
-  features: {;
+  }
+  features: {
     enableAnalytics: boolean,;
     enableErrorReporting: boolean,;
     enablePerformanceMonitoring: boolean,;
     enableAccessibility: boolean,;
     enableSEO: boolean,;
-    enablePWA: boolean,;}
+    enablePWA: boolean,
   }
-  performance: {;
+  }
+  performance: {
     enableCodeSplitting: boolean,;
     enableLazyLoading: boolean,;
     enableImageOptimization: boolean,;
-    enableCaching: boolean,;}
+    enableCaching: boolean,
   }
-  security: {;
+  }
+  security: {
     enableCSP: boolean,;
     enableCORS: boolean,;
     enableRateLimiting: boolean,;
-    maxRequestsPerMinute: number,;}
+    maxRequestsPerMinute: number,
   }
-  ui: {,;
+  }
+  ui: {
+    ,;
     theme: 'light' | 'dark' | 'auto',;
     language: string,;
-    timezone: string,;}
+    timezone: string,
   }
-  logging: {,;
+  }
+  logging: {
+    ,;
     level: 'debug' | 'info' | 'warn' | 'error',;
     enableConsole: boolean,;
-    enableNetwork: boolean,;}
+    enableNetwork: boolean,
+  }
   }
 }
-;
-const defaultConfig: AppConfig = {;
-  environment: 'development';
-  api: {;
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com';
+const defaultConfig: AppConfig = {
+    environment: 'development'
+  api: {
+    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,;
     retryAttempts: 3,;
-    enableCaching: true,;}
+    enableCaching: true,
+  }
   },;
-  features: {;
+  features: {
     enableAnalytics: true,;
     enableErrorReporting: true,;
     enablePerformanceMonitoring: true,;
     enableAccessibility: true,;
     enableSEO: true,;
-    enablePWA: true,;}
+    enablePWA: true,
+  }
   },;
-  performance: {;
+  performance: {
     enableCodeSplitting: true,;
     enableLazyLoading: true,;
     enableImageOptimization: true,;
-    enableCaching: true,;}
+    enableCaching: true,
+  }
   },;
-  security: {;
+  security: {
     enableCSP: true,;
     enableCORS: true,;
     enableRateLimiting: true,;
-    maxRequestsPerMinute: 100,;}
+    maxRequestsPerMinute: 100,
+  }
   },;
-  ui: {,;
+  ui: {
+    ,;
     theme: 'auto',;
-    language: 'en',;}
+    language: 'en',
+  }
     timezone: 'UTC'},;
-  logging: {,;
+  logging: {
+    ,;
     level: 'info',;
     enableConsole: true,;
-    enableNetwork: false,;}
+    enableNetwork: false,
+  }
   }
 }
-;
-class ConfigManager {;
-  private config: AppConfig,;
-  constructor() {,;}
+class ConfigManager {
+    private config: AppConfig,;
+  constructor() {,
+  }
     this.config = { ...defaultConfig }
     this.loadEnvironmentConfig();
   }
-;
-  private loadEnvironmentConfig(): void {;
+private loadEnvironmentConfig(): void {
     const env = process.env.NODE_ENV as Environment || 'development';
     this.config.environment = env;
     // Override with environment-specific settings;
-    if (env === 'production') {;
+    if (env === 'production') {
       this.config.logging.level = 'error';
       this.config.logging.enableConsole = false;
-      this.config.features.enableAnalytics = true;}
-    } else if (env === 'staging') {;
-      this.config.logging.level = 'warn';
-      this.config.logging.enableConsole = true;}
+      this.config.features.enableAnalytics = true
+  }
+    } else if (env === 'staging') {
+    this.config.logging.level = 'warn';
+      this.config.logging.enableConsole = true
+  }
     }
   }
-;
-  public getConfig(): AppConfig {;}
+public getConfig(): AppConfig {}
     return { ...this.config }
   }
-;
-  public updateConfig(updates: Partial<AppConfig>): void {,;}
+public updateConfig(updates: Partial<AppConfig>): void {
+    ,
+  }
     this.config = { ...this.config, ...updates }
   }
-;
-  public getApiConfig() {;
-    return this.config.api;}
+public getApiConfig() {
+    return this.config.api
   }
-;
-  public getFeatureConfig() {;
-    return this.config.features;}
   }
-;
-  public getPerformanceConfig() {;
-    return this.config.performance;}
+public getFeatureConfig() {
+    return this.config.features
   }
-;
-  public getSecurityConfig() {;
-    return this.config.security;}
   }
-;
-  public getUIConfig() {;
-    return this.config.ui;}
+public getPerformanceConfig() {
+    return this.config.performance
   }
-;
-  public getLoggingConfig() {;
-    return this.config.logging;}
   }
-;
-  public isDevelopment(): boolean {;
-    return this.config.environment === 'development';}
+public getSecurityConfig() {
+    return this.config.security
   }
-;
-  public isProduction(): boolean {;
-    return this.config.environment === 'production';}
   }
-;
-  public isStaging(): boolean {;
-    return this.config.environment === 'staging';}
+public getUIConfig() {
+    return this.config.ui
+  }
+  }
+public getLoggingConfig() {
+    return this.config.logging
+  }
+  }
+public isDevelopment(): boolean {
+    return this.config.environment === 'development'
+  }
+  }
+public isProduction(): boolean {
+    return this.config.environment === 'production'
+  }
+  }
+public isStaging(): boolean {
+    return this.config.environment === 'staging'
+  }
   }
 }
-;
 // Export singleton instance;
 export const configManager = new ConfigManager();
 export default configManager;
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
-  };
+  }
   feature,;
   s: {/* TODO: Fix JSX expression */}
-  };
+  }
   performanc,;
   e: {/* TODO: Fix JSX expression */}
-  };
+  }
   securit,;
   y: {/* TODO: Fix JSX expression */}
-  };
+  }
   u,;
   i: {/* TODO: Fix JSX expression */}
-  };
+  }
   loggin,;
   g: {/* TODO: Fix JSX expression */}
-  };
+  }
 }
 const,;
   defaultConfig: AppConfig = {/* TODO: Fix JSX expression */}
@@ -189,7 +204,7 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-};
+}
 const,;
   developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },;
@@ -199,7 +214,7 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-};
+}
 const,;
   stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },;
@@ -209,7 +224,7 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-};
+}
 const,;
   productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },;
@@ -222,7 +237,7 @@ const,;
   securit,;
   y: {/* TODO: Fix JSX expression */}
   }
-};
+}
 const,;
   testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },;
@@ -232,9 +247,9 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-};
+}
 export class ConfigManager {/* TODO: Fix JSX expression */}
-  overrides: Partial<AppConfig> = {};
+  overrides: Partial<AppConfig> = {}
   constructor() {/* TODO: Fix JSX expression */}
   }
   static getInstance(): ConfigManager {/* TODO: Fix JSX expression */}
@@ -256,7 +271,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Load configuration based on environment;
    */;
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config = { ...defaultConfig };
+    let config = { ...defaultConfig }
     switch (this.environment) {/* TODO: Fix JSX expression */}
     }
     // Apply overrides;
@@ -284,12 +299,12 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Get configuration value;
    */;
   get<K extends keyof AppConfig>(ke);
-  y: K): AppConfig[K];
+  y: K): AppConfig[K],
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,;
     nestedKe,;
-  y: NK;);
-  ): AppConfig[K][NK];
+  y: NK;)
+  ): AppConfig[K][NK],
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,;
     nestedKey?: NK;);
@@ -302,14 +317,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   set<K extends keyof AppConfig>(ke,;
   y: K, valu);
-  e: AppConfig[K]): void;
+  e: AppConfig[K]): void,
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,;
     nestedKe,;
   y: NK,;
     valu,;
-  e: AppConfig[K][NK]);
-  ): void;
+  e: AppConfig[K][NK])
+  ): void,
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,;
   y: K,;
     nestedKeyOrValu,;
@@ -346,14 +361,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
       loggin,;
   g: {/* TODO: Fix JSX expression */}
       }
-    };
+    }
     return defaultValues[key];
   }
   /**;
    * Get full configuration;
    */;
   getConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    return { ...this.config };
+    return { ...this.config }
   }
   /**;
    * Get environment;
@@ -382,14 +397,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Get API configuration;
    */;
   getAPIConfig() {/* TODO: Fix JSX expression */}
-    return { ...this.config.api };
+    return { ...this.config.api }
   }
   /**;
    * Update API configuration;
    */;
   updateAPIConfig(confi);
   g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
-    this.config.api = { ...this.config.api, ...config };
+    this.config.api = { ...this.config.api, ...config }
   }
   /**;
    * Check if in production;
@@ -421,7 +436,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Reset configuration;
    */;
   reset(): void {/* TODO: Fix JSX expression */}
-    this.overrides = {};
+    this.overrides = {}
     this.config = this.loadConfig();
   }
   /**;
@@ -443,10 +458,9 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     if (this.config.security.maxRequestsPerMinute < 1) {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 }
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 export default ConfigManager;
-;

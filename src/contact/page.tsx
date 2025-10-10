@@ -4,10 +4,8 @@ import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-
 const ContactPage: React.FC = () => {
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,28 +15,23 @@ export default function ContactPage() {
     service: '',
     message:   ,
 $4});
-
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
     timeline: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-  };
-
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Here you would typically send the form data to your backend
     // console.log('Form submitted:', formData);
     setIsSubmitted(true);
@@ -47,23 +40,19 @@ $4});
       setIsSubmitted(false);
       setFormData({}, 3000);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true),
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
-
+    setIsSubmitting(false)
+  }
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
-
+  }
   const services = [
     'AI Services',
     'IT Services',
@@ -76,25 +65,21 @@ $4});
     'Custom Development',
     'Other'
   ];
-
   const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
+          Contact Us</span>
       </div>
-  );
-
-export default ContactPage;
+  )
+export default ContactPage,
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -103,7 +88,6 @@ export default ContactPage;
     'Consulting',
     'Other'
   ];
-
   const budgetRanges = [
     'Under $10K',
     '$10K - $50K',
@@ -112,7 +96,6 @@ export default ContactPage;
     '$500K+',
     'Not sure'
   ];
-
   const timelines = [
     'ASAP',
     'Within 1 month',
@@ -121,7 +104,6 @@ export default ContactPage;
     '6+ months',
     'Just exploring'
   ];
-
   const offices = [
     {
       city: 'Middletown, DE',
@@ -148,7 +130,6 @@ export default ContactPage;
       timezone: 'Greenwich Mean Time'
     }
   ];
-
   const faqs = [
     {
       question: 'How quickly can you start my project?',
@@ -167,7 +148,6 @@ export default ContactPage;
       answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
     }
   ];
-
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -201,17 +181,14 @@ export default ContactPage;
           <div className="mt-8">
             <a
               href="/"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
-              Back to Home
-            </a>
+              Back to Home</span>
           </div>
         </div>
       </div>
-    );
+    )
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -220,8 +197,7 @@ export default ContactPage;
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Get In Touch
-            </h1>
+              Get In Touch</span>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Ready to transform your business with AI? Let's discuss your project and explore 
               how we can help you achieve your goals.
@@ -239,7 +215,6 @@ export default ContactPage;
           </div>
         </div>
       </section>
-
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -278,12 +253,10 @@ export default ContactPage;
                     />
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
+                      Company</span>
                     <input
                       type="text"
                       name="company"
@@ -295,8 +268,7 @@ export default ContactPage;
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
+                      Phone Number</span>
                     <input
                       type="tel"
                       name="phone"
@@ -307,18 +279,15 @@ export default ContactPage;
                     />
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
-                    </label>
+                      Service Interest</span>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                    >
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
                         <option key={index} value={service}>{service}</option>
@@ -327,14 +296,12 @@ export default ContactPage;
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
-                    </label>
+                      Budget Range</span>
                     <select
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                    >
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => (
                         <option key={index} value={range}>{range}</option>
@@ -342,24 +309,20 @@ export default ContactPage;
                     </select>
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Timeline
-                  </label>
+                    Timeline</span>
                   <select
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                  >
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
                     <option value="">Select timeline</option>
                     {timelines.map((timeline, index) => (
                       <option key={index} value={timeline}>{timeline}</option>
                     ))}
                   </select>
                 </div>
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
@@ -374,27 +337,24 @@ export default ContactPage;
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
                 </div>
-
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                >
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">
                   {isSubmitting ? (
-                    <>
+                    <React.Fragment>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-                    </>
+                    </React.Fragment>
                   )}
                 </button>
               </form>
             </div>
-
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -430,7 +390,6 @@ export default ContactPage;
                   </div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
                 <div className="space-y-3">
@@ -452,41 +411,33 @@ export default ContactPage;
                   </div>
                 </div>
               </div>
-
               <div className="bg-slate-800/50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
                 <div className="space-y-3">
                   <a
                     href="/consultation"
-                    className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center"
-                  >
+                    className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center">
                     <Calendar className="w-5 h-5 inline mr-2" />
-                    Schedule Free Consultation
-                  </a>
+                    Schedule Free Consultation</span>
                   <a
                     href="/demo"
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-colors text-center"
-                  >
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-colors text-center">
                     <MessageSquare className="w-5 h-5 inline mr-2" />
-                    Request Demo
-                  </a>
+                    Request Demo</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Global Offices
-            </h2>
+              Our Global Offices</span>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              We're here to serve you wherever you are in the world
-            </p>
+              We're here to serve you wherever you are in the world</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {offices.map((office, index) => (
@@ -516,17 +467,14 @@ export default ContactPage;
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
+              Frequently Asked Questions</span>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Common questions about our services and process
-            </p>
+              Common questions about our services and process</span>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
@@ -543,3 +491,21 @@ export default ContactPage;
     </div>
   );
 }
+  </p>
+  </h2>
+  </p>
+  </h2>
+  </a>
+  </a>
+  </textarea>
+  </label>
+  </label>
+  </label>
+  </label>
+  </label>
+  </h1>
+  </a>
+  </a>
+  </div>
+  </HTMLInputElement>
+  </HTMLInputElement>

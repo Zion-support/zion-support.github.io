@@ -47,11 +47,11 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Get Started Today;
+              Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Learn More;
+              Learn More,
             </button>
           </div>
         </div>,
@@ -105,10 +105,10 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation;
+              Get Free Consultation
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              View Pricing;
+              View Pricing,
             </button>
           </div>
         </div>
@@ -116,7 +116,7 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
 
       <Footer />,
     </div>);
-};
+}
 
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
@@ -135,7 +135,7 @@ const createPage = (route, title, description, category) => {
   // Write the page file;
   fs.writeFileSync(pagePath, pageContent);
   console.log(`Created page: ${route}`);
-};
+}
 
 // Page configurations;
 const pageConfigs = {
@@ -283,7 +283,7 @@ const pageConfigs = {
   '/space-technology': { title: 'Space Technology', description: 'Space technology solutions and satellite systems', category: 'Space' },
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
-};
+}
 
 // Create pages in batches;
 let createdCount = 0;

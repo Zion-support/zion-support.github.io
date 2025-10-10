@@ -26,20 +26,19 @@ try {
   if (status.includes('UU') || status.includes('AA') || status.includes('DD')) {
     console.log('❌ Merge conflicts detected!');
     console.log('Conflicted files: ');
-    console.log(status);
-    
-    // Try to resolve conflicts automatically;
-    console.log('Attempting to resolve conflicts...');
+    console.log(status)
+    // Try to resolve conflicts automatically
+    console.log('Attempting to resolve conflicts...'),
     try {,
       execSync('git add .', { stdio: 'inherit' });
       execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
       console.log('✅ Conflicts resolved automatically');
     } catch (error) {
-      console.log('❌ Could not resolve conflicts automatically');
-      console.log('Manual intervention required');
-    }
+    console.log('❌ Could not resolve conflicts automatically');
+      console.log('Manual intervention required')
+  }
   } else {
-    console.log('✅ No merge conflicts detected');
+    console.log('✅ No merge conflicts detected')
   }
 
   // Try to merge our improvements branch;
@@ -49,7 +48,7 @@ try {
     console.log('✅ Successfully merged improvements branch');
   } catch (error) {
     console.log('❌ Could not merge improvements branch automatically');
-    console.log('This might be due to conflicts or the branch not being available locally');
+    console.log('This might be due to conflicts or the branch not being available locally')
   }
 
   // Push changes to main;
@@ -59,12 +58,12 @@ try {
     console.log('✅ Successfully pushed to main branch');
   } catch (error) {
     console.log('❌ Could not push to main branch');
-    console.log('Error:', error.message);
+    console.log('Error:', error.message)
   }
 
   console.log('🎉 PR merge process completed!');
 
 } catch (error) {
-  console.error('❌ Error during PR merge process:', error.message);
-  process.exit(1);
-}
+    console.error('❌ Error during PR merge process:', error.message);
+  process.exit(1)
+  }

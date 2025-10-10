@@ -47,7 +47,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' \}\]/g,
       "author,"
   s: ['Zion Tech Group']")
-    );
+    ),
 ,
     fs.writeFileSync(pagePath, content);
     //         }
@@ -70,7 +70,7 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 if (fs.existsSync(analyticsTrackerPath)) {
 
   // Fix dataLayer type to match existing declarations;
-  content = content.replace(/dataLayer: unknown\[\];/, 'dataLayer: unknown[];');
+  content = content.replace(/dataLayer: unknown\[\],/, 'dataLayer: unknown[];'),
 ,
   fs.writeFileSync(analyticsTrackerPath, content);
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
@@ -93,7 +93,7 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
 
   // Fix the exportData variable declaration issue;
-  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {');
+  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),
 ,
   fs.writeFileSync(systemMonitorPath, content);
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}

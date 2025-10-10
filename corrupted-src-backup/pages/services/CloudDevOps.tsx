@@ -62,7 +62,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
   ];
   const, pricin, g = [
     {
-      na, m, e: "Start, u, p"
+    na, m, e: "Start, u, p"
       pri, c, e: "$3,5, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e"
@@ -76,10 +76,10 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s"
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e
+  }
     {
-      na, m, e: "Grow, t, h"
+    na, m, e: "Grow, t, h"
       pri, c, e: "$8,5, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s"
@@ -95,10 +95,10 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n"
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e
+  }
     {
-      na, m, e: "Enterpri, s, e"
+    na, m, e: "Enterpri, s, e"
       pri, c, e: "$25,0, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
@@ -132,10 +132,10 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s",";
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e
+  }
     {
-      na, m, e: "Grow, t, h",";
+    na, m, e: "Grow, t, h",";
       pri, c, e: "$8,5, 0, 0",";
       peri, o, d: "/mon, t, h",";
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s",";
@@ -151,10 +151,10 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n",";
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
-    }
+      popul, a, r: tr, u, e
+  }
     {
-      na, m, e: "Enterpri, s, e",";
+    na, m, e: "Enterpri, s, e",";
       pri, c, e: "$25,0, 0, 0",";
       peri, o, d: "/mon, t, h",";
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s",";
@@ -172,8 +172,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "SLA, guarante, e",";
         "On-premise, integratio, n"
       ]
-      popul, a, r: fal, s, e;
-    }
+      popul, a, r: fal, s, e
+  }
   ];
   const, testimonial, s = [
     {
@@ -183,7 +183,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       na, m, e: "Alex, Thompso, n",";
       ro, l, e: "C, T, O, FinTech, Startu, p",";
       conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.",";
-      rati, n, g: 5;
+      rati, n, g: 5,
       compa, n, y: "FinTech, Startu, p"
     }
     {
@@ -193,7 +193,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       na, m, e: "Maria, Rodrigue, z",";
       ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m",";
       conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.",";
-      rati, n, g: 5;
+      rati, n, g: 5,
       compa, n, y: "E-Commerce, Platfor, m"
     }
     {
@@ -203,7 +203,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       na, m, e: "Dr. James, Che, n",";
       ro, l, e: "Head, of, IT, Healthcare, Networ, k",";
       conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.",";
-      rati, n, g: 5;
+      rati, n, g: 5,
       compa, n, y: "Healthcare, Networ, k"
     }
   ];
@@ -227,35 +227,35 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"
     }
     {
-      tit, l, e: "Securi, t, y & Complian, c, e","
+    tit, l, e: "Securi, t, y & Complian, c, e","
       ic, o, n: Shie, l, d;
       descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.","
       benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"
       tit, l, e: "Cloud, Migratio, n",";
       ic, o, n: Clo, u, d;
       descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.",";
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]";
-    }
+      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"
+  }
     {
-      tit, l, e: "Container, Orchestratio, n",";
+    tit, l, e: "Container, Orchestratio, n",";
       ic, o, n: Serv, e, r;
       descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.",";
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]";
-    }
+      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"
+  }
     {
-      tit, l, e: "Infrastructure, Automatio, n",";
+    tit, l, e: "Infrastructure, Automatio, n",";
       ic, o, n: Z, a, p;
       descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.",";
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]";
-    }
+      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"
+  }
     {
-      tit, l, e: "Securi, t, y & Complian, c, e",";
+    tit, l, e: "Securi, t, y & Complian, c, e",";
       ic, o, n: Shie, l, d;
       descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.",";
-      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]";
-    }
+      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"
+  }
   ];
-  return(<>
+  return(<React.Fragment>
       <Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
         <me, t, a;
@@ -310,7 +310,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         <title>Clo, u, d & DevOps, Service, s - Zion, Tech, Group | Enterprise, Cloud, Solutions</title>
         <me, t, a;"
@@ -325,7 +325,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-cent, e, r">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -340,9 +340,9 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
         <section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-cent, e, r">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-cent, e, r">";</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
                 Clo, u, d &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s</sp, a, n>";
@@ -372,7 +372,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
         <section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             <div, className="te, x, t-cent, e, r">";"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
                 Clo, u, d & <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s</sp, a, n>";
@@ -410,19 +410,19 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="text-center mb-12">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="text-center mb-12">";</div>
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
@@ -431,7 +431,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="text-center mb-12"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-16, b, g-gr, a, y-50">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             <div, className="text-center mb-12">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Why, Choose, Our Clo, u, d & DevOps, Service, s?
@@ -519,19 +519,19 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Servic, e, s */}
         <section, className="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";),
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Servic, e, s */}"
         <section, className="py-20"></section>"
@@ -540,7 +540,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Comprehensive, Clou, d & DevOps, Service, s;
@@ -619,19 +619,19 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Featur, e, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Featur, e, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
@@ -640,7 +640,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20, b, g-gr, a, y-50">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Advanced, Capabilitie, s;
@@ -717,19 +717,19 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </secti, o, n>
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20"></section>"
@@ -738,7 +738,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, i, d="prici, n, g" classNa, m, e="py-20">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 Transparent, Pricing, for Every, Scal, e;
@@ -795,11 +795,12 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   <a;
   hr, e, f="/conta, c, t"
                     classNa, m, e={
-`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+    `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-gre, e, n-600, tex, t-white, hove, r: bg-gre, e, n-7, 0, 0'
 ? 'bg-gre, e, n-600, tex, t-white, hov, e;
-  r: bg-gre, e, n-7, 0, 0',';}
+  r: bg-gre, e, n-7, 0, 0','
+  }
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -831,19 +832,19 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* Testimonia, l, s */}
         <section, className="py-20, b, g-gr, a, y-50">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Testimonia, l, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
@@ -852,7 +853,7 @@ pl, a, n.popul, a, r;
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20, b, g-gr, a, y-50">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
                 What, Our, Clients S, a, y;
@@ -898,7 +899,7 @@ pl, a, n.popul, a, r;
         </secti, o, n>
         {/* CTA, Sectio, n */}
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
@@ -959,8 +960,8 @@ pl, a, n.popul, a, r;
         </secti, o, n>
       </ma, i, n>
       <Foot, e, r   /></Foot>
-    </>
+    </React.Fragment>
   );
-};
+}
 export default CloudDevOps;
 }}}}"`

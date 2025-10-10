@@ -35,7 +35,7 @@ function fixSyntaxErrors(content) {
   let fixed = false;
 
   // Fix missing closing braces and parentheses;
-  // Pattern: Missing closing brace for setState;
+  // Pattern: Missing closing brace for setState,
   const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm;
   if (setStatePattern.test(newContent)) {
     newContent = newContent.replace(setStatePattern, (match) => {
@@ -98,7 +98,7 @@ function fixSyntaxErrors(content) {
   // Clean up multiple empty lines;
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
-  return { content: newContent, fixed };
+  return { content: newContent, fixed }
 }
 
 function processFile(filePath) {
@@ -140,15 +140,15 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Syntax error fixes completed!`);
-  console.log(`📊 Statistics: `);
+  console.log(`📊 Statistics: `),
   console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
   console.log(`   - Files fixed: ${fixedFiles}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
+    main()
+  }
 
-export { processFile, fixSyntaxErrors };
+export { processFile, fixSyntaxErrors }
 // #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
   d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

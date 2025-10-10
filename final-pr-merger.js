@@ -6,15 +6,15 @@ import fs from 'fs';
 function safeGitCommand(command, description) {
   try {
 //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-//     return { success: true, result };
+//     return { success: true, result }
   } catch (error) {
-//     return { success: false, error: error.message };
+//     return { success: false, error: error.message }
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //     return {/* TODO: Fix JSX expression */}
-  s: true, result };
+  s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
+  r: error.message }
   }
 }
 
@@ -36,28 +36,28 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
 //All PRs to process;
 const allPRs = [
   {
-    number: 11935;
+    number: 11935,
     title: 'Fix web application console errors'
     branch: 'cursor/fix-web-application-console-errors-0bf5'
     sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661',
     priority: 'critical',
     description: 'Critical console errors and PWA fixes'},
   {
-    number: 25063;
+    number: 25063,
     title: 'Build and deploy with vite and netlify'
     branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37'
     sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580',
     priority: 'high',
     description: 'Netlify configuration updates'},
   {
-    number: 25062;
+    number: 25062,
     title: 'Fix errors and merge to main'
     branch: 'cursor/fix-errors-and-merge-to-main-fcbd'
     sha: 'a5f35d4a9ddcf46941c797da316bb3a2b7b05b56',
     priority: 'high',
     description: 'Remove unused PerformanceOptimizer import'},
   {
-    number: 25061;
+    number: 25061,
     title: 'Fix errors and merge to main'
     branch: 'cursor/fix-errors-and-merge-to-main-e6e1'
     sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db',
@@ -89,7 +89,7 @@ for (const pr of allPRs) {
 //     notFoundCount++;
     results.push({)
       pr: pr.number;)
-      title: pr.title;)
+      title: pr.title,)
       status: 'not_found'),
       branch: pr.branch),
       priority: pr.priority),
@@ -112,7 +112,7 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
     mergedCount++;
 //     results.push({)
       pr: pr.number;)
-      title: pr.title;)
+      title: pr.title,)
       status: 'merged'),
       branch: pr.branch),
       priority: pr.priority)});
@@ -125,7 +125,7 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
       pr: pr.number;)
       title: pr.title;)
       status: 'conflict')
-      branch: pr.branch;),
+      branch: pr.branch,),
       priority: pr.priority),
       error: mergeResult.error),
 //   //Try to merge the branch;`
@@ -149,12 +149,11 @@ for (const pr of allPRs) {/* TODO: Fix JSX expression */}`
 );
 const buildCheck = safeGitCommand('pnpm run build: no-check')
   'Production build'
-);
-
-//Push changes if any were merged;
+)
+//Push changes if any were merged
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand('git push origin main')
-    'Push changes to main');
+    'Push changes to main'),
   if (pushResult.success) {,
 //     } else {
 // const typeCheck = safeGitCommand('pnpm run type-check',
@@ -177,21 +176,21 @@ const finalReport = {
   summary: {
     totalPRs: allPRs.length;
     merged: mergedCount;
-    conflicts: conflictCount;
-    notFound: notFoundCount;
-    skipped: skippedCount;
+    conflicts: conflictCount
+    notFound: notFoundCount
+    skipped: skippedCount,
     successRate: `${Math.round((mergedCount / allPRs.length) * 100)}%`},
   systemChecks: {
     typeCheck: typeCheck.success;
-    lintCheck: lintCheck.success;
-    testCheck: testCheck.success;
-    buildCheck: buildCheck.success;
+    lintCheck: lintCheck.success
+    testCheck: testCheck.success
+    buildCheck: buildCheck.success,
     allPassed: typeCheck.success &&
       lintCheck.success &&,
       testCheck.success &&,
-      buildCheck.success;
+      buildCheck.success
   },
-  results: results;
+  results: results,
   status: mergedCount > 0 ? 'success' : 'no-changes'
   repository: {,
     branch: 'main',
@@ -208,7 +207,7 @@ const finalReport = {/* TODO: Fix JSX expression */}`
   s: mergedCount > 0 ? 'success' : 'no-changes',
   repositor,
   y: {/* TODO: Fix JSX expression */}
-  g: 'utf8' }).trim()}};
+  g: 'utf8' }).trim()}}
 
 //Save detailed final report;
 fs.writeFileSync('final-pr-merge-report.json')

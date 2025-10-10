@@ -1,7 +1,6 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -25,7 +24,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Log error for monitoring in production
+    if (process.env.NODE_ENV === 'production') {
+      // In production, you would send this to an error reporting service
+      // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    }
     this.setState({ error, errorInfo });
   }
 
@@ -87,11 +90,22 @@ class ErrorBoundary extends Component<Props, State> {
                 <span>Go Home</span>
               </button>
             </div>
+
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-3">
+                Still having trouble? Contact our support team:
+              </p>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                <Phone className="w-4 h-4 mr-2" />
+                kleber@ziontechgroup.com
+              </a>
+            </div>
           </div>
         </div>
       );
     }
-
     return this.props.children;
   }
 }

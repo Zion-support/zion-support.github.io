@@ -58,7 +58,7 @@ async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
     }
   }
   
-  // console.log(`\n📊 Performance Analysis Summary: `);
+  // console.log(`\n📊 Performance Analysis Summary: `),
   // console.log(`   Total components analyzed: ${totalFiles}`);
   // console.log(`   Components with optimization opportunities: ${optimizedFiles}`);
 }
@@ -67,7 +67,7 @@ async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
 function createPerformanceMonitor() {
   `
   // console.log(`\n📊 Performance Analysis)`
-  Summary:`);`
+  Summary: `),`
   // console.log(`   Total components)`
   analyzed: ${totalFiles}`);`
   // console.log(`   Components with optimization)`
@@ -98,14 +98,15 @@ function createImageOptimization() {/* TODO: Fix JSX expression */}
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+    ,
   src;
   alt,
   width,
   height,
   className = '',
-  priority = false;
-}) => {
+  priority = false
+  }) => {
   return(<img;
       src={src}
       alt={alt}
@@ -134,7 +135,7 @@ const,
       }}
     /></img>
   );
-};
+}
 
 export default OptimizedImage;`
 `;

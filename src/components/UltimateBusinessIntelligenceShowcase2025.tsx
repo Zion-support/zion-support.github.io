@@ -68,10 +68,10 @@ readingTimereadingTime: '45 min read',
             <span className="text-2xl">🚀</span>
             <span className="text-yellow-400 font-bold text-lg">ULTIMATE BUSINESS INTELLIGENCE 2025</span>
             <span className="text-2xl">⚡</span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
+          <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos;s transforming enterprises worldwide</p>
+            content that&apos,s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
             <button
@@ -125,8 +125,7 @@ readingTimereadingTime: '45 min read',
               Ready to Transform Your Business?
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>
                 to="/contact"
-                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-              >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -135,26 +134,23 @@ readingTimereadingTime: '45 min read',
                   />
                 </svg>
                 to="/services"
-                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
-              >Learn More</Link>
-    </section>);
+                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
+    </section>)
 export default UltimateBusinessIntelligenceShowcase2025
-
-
-'use client';
+'use client',
 import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
@@ -163,15 +159,15 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       typ,
   e: 'Blog Post',
       categor,
   y: 'blog',
       metric,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ro,
   i: '30,000%',
         efficienc,
@@ -206,21 +202,12 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       ur,
-  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide';
+  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       typ,
   e: 'Implementation Guide',
       categor,
   y: 'resource',
               {/* Badge */}
-                
-          
-          
-          
-          
-          
-          
-          
-          
           <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
                 <span className="text-green-400 font-semibold text-sm"></span>
                   {item.featured ? 'FEATURED' : 'NEW'}
@@ -264,22 +251,11 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                     strokeWidth={2}"
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
 // />
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </svg>"
                 to="/services""
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
-  hover:bg-blue-400/10 transition-all duration-300"
+  hover: bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
-    </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
-
-
-
+    </section>)
+export default UltimateBusinessIntelligenceShowcase2025,
+  </path>

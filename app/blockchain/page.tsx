@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
-
 const BlockchainPage: React.FC = () => {
   const features = [
     {
@@ -26,7 +25,6 @@ const BlockchainPage: React.FC = () => {
       description: 'Worldwide blockchain deployment and support for international businesses'
     }
   ];
-
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -37,7 +35,6 @@ const BlockchainPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,13 +42,11 @@ const BlockchainPage: React.FC = () => {
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
-
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
+<div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Solutions
-          </h1>
+            Blockchain Solutions;
+  </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge blockchain technology and decentralized solutions. 
             Powered by advanced AI and industry expertise.
@@ -60,40 +55,15 @@ const BlockchainPage: React.FC = () => {
             Our blockchain solutions deliver unmatched performance, security, and scalability.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-indigo-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Blockchain Solutions
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Transform your business with cutting-edge blockchain technology and decentralized solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
-                  Explore Blockchain Solutions
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Schedule Blockchain Consultation
-                </button>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             </div>
           ))}
         </div>
-
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Blockchain Solutions?
@@ -107,28 +77,7 @@ const BlockchainPage: React.FC = () => {
             ))}
           </div>
         </div>
-
-<<<<<<< HEAD
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Contact our experts to discuss your blockchain needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Email Us
-            </button>
-          </div>
-        </div>
-=======
-        {/* Key Benefits */}
+{/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -136,8 +85,8 @@ const BlockchainPage: React.FC = () => {
                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
-              </p>
+                Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions;
+  </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -171,18 +120,17 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
-                </h2>
+                  {category} Services;
+  </
                 <p className="text-xl text-gray-600">
-                  Professional {category.toLowerCase()} solutions powered by blockchain technology
-                </p>
+                  Professional {category.toLowerCase()} solutions powered by blockchain technology;
+  </
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blockchainServices
@@ -192,17 +140,15 @@ const BlockchainPage: React.FC = () => {
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
-                        </div>
+                          Save up to 50% vs market rates;
+  </
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -214,7 +160,6 @@ const BlockchainPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
@@ -225,7 +170,6 @@ const BlockchainPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
@@ -237,27 +181,25 @@ const BlockchainPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                        Get Blockchain Quote
-                      </button>
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">
+                        Get Blockchain Quote,
+  </
                     </div>
                   ))}
               </div>
             </div>
           </section>
         ))}
-
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Capabilities
-              </h2>
+  </
               <p className="text-xl text-gray-600">
-                Comprehensive blockchain technologies and methodologies for modern business applications
-              </p>
+                Comprehensive blockchain technologies and methodologies for modern business applications,
+  </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -293,39 +235,45 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform with Blockchain?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
-            </p>
+  </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950
-              </a>
+  </
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                ✉️ kleber@ziontechgroup.com,
+  </
             </div>
             <div className="mt-8 text-sm text-blue-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       </div>
     </div>
   );
-};
-
+}
 export default BlockchainPage;
+  </a>
+  </a>
+  </p>
+  </p>
+  </h2>
+  </button>
+  </p>
+  </h2>
+  </p>
+  </h1>
+  </div>

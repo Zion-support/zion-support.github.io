@@ -23,7 +23,7 @@ function mergeBranch(branchName) {
       { stdio: 'inherit' }
     );
 
-//     return { success: true, method: 'direct' };
+//     return { success: true, method: 'direct' }
   } catch (error) {
 //     try {
       //Check for merge conflicts;
@@ -47,7 +47,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     );
 
 //     return {/* TODO: Fix JSX expression */}
-  d: 'direct' };
+  d: 'direct' }
   } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' });
           execSync(")`
@@ -56,7 +56,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'theirs' };
+  d: 'theirs' }
         } catch (theirsError) {/* TODO: Fix JSX expression */}
 //           }
 
@@ -72,7 +72,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' }
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'ours' };
+  d: 'ours' }
         } catch (oursError) {/* TODO: Fix JSX expression */}
 //           }
 
@@ -122,7 +122,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   o: 'inherit' })
           );
 //           return {/* TODO: Fix JSX expression */}
-  d: 'manual' };
+  d: 'manual' }
         } catch (manualError) {/* TODO: Fix JSX expression */}
 //           }
       }
@@ -141,7 +141,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     }
 
     return {/* TODO: Fix JSX expression */}
-  d: 'failed' };
+  d: 'failed' }
   }
 }
 
@@ -150,12 +150,12 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
   successful: []
   failed: []
   summary: {
-    total: 0;
-    successful: 0;
-    failed: 0;
+    total: 0
+    successful: 0
+    failed: 0,
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 // const results = {/* TODO: Fix JSX expression */}
-  d: 0 }}};
+  d: 0 }}}
 
 //Merge each branch;
 for (const branch of openPRBranches) {

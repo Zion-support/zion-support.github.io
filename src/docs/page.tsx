@@ -4,11 +4,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
-
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const docCategories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
@@ -17,7 +15,6 @@ const DocsPage: React.FC = () => {
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
   ];
-
   const documentation = [
     {
       id: 1,
@@ -120,7 +117,6 @@ const DocsPage: React.FC = () => {
       content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
     }
   ];
-
   const quickLinks = [
     {
       title: 'API Reference',
@@ -151,11 +147,9 @@ const DocsPage: React.FC = () => {
       color: 'text-cyan-400'
     }
   ];
-
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
-
   const searchResults = searchQuery 
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -163,18 +157,16 @@ const DocsPage: React.FC = () => {
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredDocs;
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-500/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
-      case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
-    }
-  };
-
+      case 'Beginner': return 'text-green-400 bg-green-500/20'
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20'
+      case 'Advanced': return 'text-red-400 bg-red-500/20',
+      default: return 'text-gray-400 bg-gray-500/20'
+  }
+  }
   return (
-    <>
+    <React.Fragment>
       <SEOOptimizer
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
@@ -183,22 +175,20 @@ const DocsPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               Documentation
-            </h1>
+  </
             <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI
-            </p>
+              Everything you need to build with AI,
+  </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Comprehensive guides, API references, and tutorials to help you 
               integrate and optimize our AI services for your business.
             </p>
           </section>
-
           {/* Search Section */}
           <section className="mb-16">
             <div className="max-w-2xl mx-auto">
@@ -214,19 +204,17 @@ const DocsPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Quick Links */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Quick Links
-            </h2>
+              Quick Links;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => (
                 <Link
                   key={index}
                   to={link.link}
-                  className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group"
-                >
+                  className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
                   <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} />
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {link.title}
@@ -236,12 +224,11 @@ const DocsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category
-            </h2>
+              Browse by Category;
+  </
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
               {docCategories.map((category) => (
                 <button
@@ -260,12 +247,11 @@ const DocsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Documentation List */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Documentation
-            </h2>
+              Documentation;
+  </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {searchResults.map((doc) => (
                 <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -292,8 +278,7 @@ const DocsPage: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/docs/${doc.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-white transition-colors"
-                    >
+                      className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
@@ -305,7 +290,6 @@ const DocsPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Getting Started CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -313,32 +297,37 @@ const DocsPage: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start building with our AI services today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                Start building with our AI services today;
+  </
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
-                >
+                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Contact Our Team
-                </Link>
+  </
                 <Link
                   to="/demo"
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
-                >
+                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Play className="w-5 h-5 mr-2" />
                   Request Demo
-                </Link>
+  </
               </div>
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
-    </>
-  );
-};
-
+    </React.Fragment>
+  ),
+}
 export default DocsPage;
+  </Link>
+  </Link>
+  </p>
+  </h2>
+  </h2>
+  </h2>
+  </p>
+  </h1>
+  </SEOOptimizer>

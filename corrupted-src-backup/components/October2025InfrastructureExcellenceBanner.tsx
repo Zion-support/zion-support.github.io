@@ -1,7 +1,7 @@
 const, October2025InfrastructureExcellenceBanne, r = () => {
   const, newArticle, s = [
     {
-      id: 1;
+      id: 1,
       tit, l, e: "Distributed, Tracing, for Microservic, e, s"
       descripti, o, n: "99.99% observabili, t, y, 87% faster, MTT, R, $8.2M, saving, s"
       ic, o, n: Activi, t, y;
@@ -10,7 +10,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"]
     }
     {
-      id: 2;
+      id: 2,
       tit, l, e: "Kubernetes, Security, Best Practic, e, s"
       descripti, o, n: "Ze, r, o-trust, architectur, e, 99.97% threat, preventio, n"
       ic, o, n: Shie, l, d;
@@ -19,7 +19,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
       metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"]
     }
     {
-      id: 3;
+      id: 3,
       tit, l, e: "Re, a, l-Time, Data, Streaming"
       descripti, o, n: "Process, 10, M+ even, t, s/sec, with, sub-100ms, latenc, y"
       ic, o, n: Z, a, p;
@@ -74,7 +74,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
             </sp, a, n>
           </d, i, v>"
           <h2, className="te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4">"
-      id: 1;
+      id: 1,
       tit, l, e: "Distributed, Tracing, for Microservic, e, s",";
       descripti, o, n: "99.99% observabili, t, y, 87% faster, MTT, R, $8.2M, saving, s",";
       ic, o, n: Activi, t, y;
@@ -83,35 +83,35 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],";
     }
     {
-      id: 2;
+    id: 2,
       tit, l, e: "Kubernetes, Security, Best Practic, e, s",";
       descripti, o, n: "Ze, r, o-trust, architectur, e, 99.97% threat, preventio, n",";
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s",";
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0",";
-      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],";
-    }
+      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"
+  }
     {
-      id: 3;
+    id: 3,
       tit, l, e: "Re, a, l-Time, Data, Streaming",";
       descripti, o, n: "Process, 10, M+ even, t, s/sec, with, sub-100ms, latenc, y",";
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s",";
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0",";
-      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],";
-    }
+      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"
+  }
   ];
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";),
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",),
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0">";
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10" />";
   return (</h2>
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0">";</div>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10" />";</div>
       i,
-  d: 1;"
+  d: 1,"
       tit, l, e: "Distributed, Tracing, for Microservic, e, s",";"
       descripti, o, n: "99.99% observabili, t, y, 87% faster, MTT, R, $8.2M, saving, s",";
       ic, o, n: Activi, t, y;"
@@ -125,13 +125,13 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
     }
   ];
   return ("
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";
+    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0">";")
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10" />";"
         <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t" />";
       </d, i, v>"
-      <div, className="relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8">";
+      <div, className="relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8">",
         {/* Head, e, r */}</div>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4">";</div>
@@ -319,6 +319,6 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025InfrastructureExcellenceBanner;
-;"`
+"`

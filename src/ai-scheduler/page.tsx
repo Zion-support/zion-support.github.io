@@ -2,8 +2,6 @@
 import React from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-
 const AISchedulerPage: React.FC = () => {
   const features = [
     {
@@ -34,7 +32,6 @@ iconicon: Shield,
       benefit:     ,
 $4}
   ];
-
   const pricingPlans = [
       name: 'Personal',
       price: '$19',
@@ -48,8 +45,8 @@ $4}
         'Mobile app access',
         'Standard support'
       ],
-      popular: false
-      name: 'Team',
+      popular: false,
+    name: 'Team',
       price: '$49',
       description: 'Ideal for small teams',
         'Up to 10 team members',
@@ -60,8 +57,8 @@ $4}
         'Priority support',
         'API access',
         'Custom branding'
-      popular: true
-      name: 'Enterprise',
+      popular: true,
+    name: 'Enterprise',
       price: '$149',
       description: 'For large organizations',
         'Unlimited team members',
@@ -72,7 +69,6 @@ $4}
         'White-label options',
         'SSO integration',
         'Custom workflows'
-
   const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
@@ -82,14 +78,13 @@ $4}
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-
   const testimonials = [
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
       content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
-      rating: 5
-      name: 'Robert Martinez',
+      rating: 5,
+    name: 'Robert Martinez',
       company: 'Consulting Group',
       role: 'Senior Partner',
       content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
@@ -97,7 +92,6 @@ $4}
       company: 'Digital Agency',
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -106,30 +100,28 @@ $4}
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Calendar className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
             AI Scheduler
-          </h1>
+  </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling
-          </p>
+            Intelligent Meeting & Event Scheduling,
+  </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
             for maximum productivity.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
-            </a>
+  </
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial
-            </Link>
-
+              Start Free Trial,
+  </
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -145,12 +137,11 @@ $4}
             <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
             <div className="text-white font-semibold mb-2">Conflict-Free</div>
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
-
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features
-          </h2>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
+            Smart Scheduling Features,
+  </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -160,7 +151,6 @@ $4}
                 <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
             ))}
         </section>
-
         {/* Integrations Section */}
             Works with Your Favorite Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -169,7 +159,6 @@ $4}
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
-
         {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -196,11 +185,10 @@ $4}
                     </li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
+                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started
-                </button>
-
+                  Get Started,
+  </
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -214,18 +202,43 @@ $4}
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
-
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Master Your Schedule?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
-  );
-};
-
+  ),
+}
 export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
-
 export default AISchedulerPage;
+  </p>
+  </h2>
+  </section>
+  </div>
+  </div>
+  </div>
+  </div>
+  </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </h2>
+  </div>
+  </div>
+  </Link>
+  </a>
+  </div>
+  </p>
+  </p>
+  </h1>
+  </div>
+  </section>
+  </div>

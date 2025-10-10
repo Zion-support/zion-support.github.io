@@ -1,7 +1,5 @@
-
 type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
- };
-
+ }
 export default function NewServices2026Bann, e, r({)
   varia, n, t = 'showc, a, s, e')
   showCou, n, t =  , 6)
@@ -59,7 +57,6 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
             Accelerate, transformation, with our, newest, AI-powered, solution, s.
           </p>
         </div>
-
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
           { servic, e, s.m, a, p(s =  > (</div>
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'></div>

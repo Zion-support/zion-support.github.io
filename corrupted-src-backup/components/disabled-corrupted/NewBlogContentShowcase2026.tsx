@@ -2,7 +2,7 @@ import React from 'react';
 const NewBlogContentShowcase202, 6: React.FC = () => { ,
   const blogPost, s = [
     {
-      id: 1;
+      id: 1,
       title: 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
       slug: 'comple, t, e-gui, d, e-ai-revoluti, o, n-2, 0, 2, 6',
       excerpt: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',
@@ -312,14 +312,12 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, hre, f="/bl, o, g""
-                  className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
+                  className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
                   <sp, a, n>Browse, All, Articles</sp, a, n>
                 </a>"
                 <a, hre, f="/conta, c, t""
-                  className="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
-                ></a>
+                  className="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"></a>
                   <sp, a, n>Request, Custom, Content</sp, a, n>"
                   <Link, className="w-5 h-5" /></Link>
                 </a>
@@ -330,5 +328,5 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
       </div>
     </div>
   );
-};
+}
 export default NewBlogContentShowcase2026;"`

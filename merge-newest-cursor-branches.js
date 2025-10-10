@@ -15,15 +15,15 @@ const newestCursorBranches = [
 function safeGitCommand(command, description) {
   try {
 //     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
-//     return { success: true, result };
+//     return { success: true, result }
   } catch (error) {
-//     return { success: false, error: error.message };
+//     return { success: false, error: error.message }
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //     return {/* TODO: Fix JSX expression */}
-  s: true, result };
+  s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
-  r: error.message };
+  r: error.message }
   }
 }
 
@@ -100,12 +100,11 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}
 );
 const buildCheck = safeGitCommand('pnpm run build: no-check')
   'Production build'
-);
-
-//Push changes if any were merged;
+)
+//Push changes if any were merged
 if (mergedCount > 0) {
 //   const pushResult = safeGitCommand('git push origin main')
-    'Push changes to main');
+    'Push changes to main'),
   if (pushResult.success) {,
 //     } else {
 // const typeCheck = safeGitCommand('pnpm run type-check',
@@ -126,22 +125,22 @@ if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 const report = {
   timestamp: new Date().toISOString()
   summary: {
-    totalBranches: newestCursorBranches.length;
-    merged: mergedCount;
-    notFound: notFoundCount;
+    totalBranches: newestCursorBranches.length
+    merged: mergedCount
+    notFound: notFoundCount,
     successRate: `${Math.round((mergedCount / newestCursorBranches.length) * 100)}%`},
   systemChecks: {
     typeCheck: typeCheck.success;
-    lintCheck: lintCheck.success;
-    testCheck: testCheck.success;
-    buildCheck: buildCheck.success;
+    lintCheck: lintCheck.success
+    testCheck: testCheck.success
+    buildCheck: buildCheck.success,
     allPassed: typeCheck.success &&
       lintCheck.success &&,
       testCheck.success &&,
-      buildCheck.success;
+      buildCheck.success
   },
-  results: results;
-  status: mergedCount > 0 ? 'success' : 'no-changes'};
+  results: results,
+  status: mergedCount > 0 ? 'success' : 'no-changes'}
 
 // Save detailed report;
 fs.writeFileSync('newest-cursor-branches-merge-report.json')
@@ -153,7 +152,7 @@ const report = {/* TODO: Fix JSX expression */}`
   result,
   s: results,
   statu,
-  s: mergedCount > 0 ? 'success' : 'no-changes'};
+  s: mergedCount > 0 ? 'success' : 'no-changes'}
 
 // Save detailed report;
 fs.writeFileSync('newest-cursor-branches-merge-report.json')

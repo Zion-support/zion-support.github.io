@@ -119,14 +119,12 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
             </p>"
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4"></div>"
               <Link, t, o="/conta, c, t""
-                className="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r:fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hove, r:shad, o, w-yell, o, w-5, 0, 0/50"
-              ></Link>
+                className="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r:fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hove, r:shad, o, w-yell, o, w-5, 0, 0/50"></Link>
                 <sp, a, n>GET, STARTED, NOW</sp, a, n>"
                 <Link, className="w-6 h-6, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
               </Li, n, k>"
               <Link, t, o="/bl, o, g""
-                className="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-              ></Link>"
+                className="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>"
                 <Sparkles, className="w-6 h-6" /></Sparkles>
                 <sp, a, n>READ, ALL, 3 GUID, E, S</sp, a, n>
               </Li, n, k>

@@ -1,4 +1,3 @@
-
 export default function ServicesSection() {
   const services = [
     {
@@ -62,7 +61,6 @@ export default function ServicesSection() {
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
     }
   ];
-
   return (
     <section id="services" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,28 +74,23 @@ export default function ServicesSection() {
             and digital transformation journey.
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300"
-            >
+              className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
               {/* Icon */}
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
-
               {/* Content */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                 {service.title}
               </h3>
-              
               <p className="text-gray-400 mb-6 leading-relaxed">
                 {service.description}
               </p>
-
               {/* Features */}
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
@@ -109,13 +102,11 @@ export default function ServicesSection() {
                   </li>
                 ))}
               </ul>
-
               {/* Learn More Button */}
               <div className="mt-6">
                 <a
                   href="#contact"
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300"
-                >
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -125,7 +116,6 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="cyber-card-advanced p-8 max-w-4xl mx-auto">
@@ -135,23 +125,23 @@ export default function ServicesSection() {
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+                className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 Get Free Consultation
-              </a>
+  </
               <a
                 href="tel:+1234567890"
-                className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow"
-              >
+                className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
                 Call Now
-              </a>
+  </
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  ),
 }
+  </a>
+  </a>

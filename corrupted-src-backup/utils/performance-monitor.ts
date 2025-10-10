@@ -20,11 +20,11 @@ class PerformanceMonitor {
       ttfb: null;
       navigationStart: performance.now()
       loadTime: 0;
-      domContentLoaded: 0;
-      firstPaint: null;
-      firstContentfulPaint: null;
+      domContentLoaded: 0
+      firstPaint: null
+      firstContentfulPaint: null,
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}
@@ -68,12 +68,13 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 //       }
   }
 
-  private processPerformanceEntry(entry: PerformanceEntry): void {,
+  private processPerformanceEntry(entry: PerformanceEntry): void {
+    ,
     switch (entry.entryType) {,
       case 'paint':,
         if (entry.name === 'first-paint') {,
-          this.metrics.firstPaint = entry.startTime;
-        } else if (entry.name === 'first-contentful-paint') {
+          this.metrics.firstPaint = entry.startTime
+  } else if (entry.name === 'first-contentful-paint') {
           this.metrics.firstContentfulPaint = entry.startTime;
           this.metrics.fcp = entry.startTime;
   private processPerformanceEntry(entr)
@@ -112,7 +113,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             timestamp: performance.now(),
             element: (event.target as Element)?.tagName?.toLowerCase(),
   private trackUserInteractions(): void {/* TODO: Fix JSX expression */}
-          };
+          }
 
           this.interactions.push(interaction);
 
@@ -134,19 +135,19 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     // Measure Time to First Byte;
     if (performance.timing) {
       this.metrics.ttfb =
-        performance.timing.responseStart - performance.timing.navigationStart;
-    }
+        performance.timing.responseStart - performance.timing.navigationStart
+  }
 
     // Measure page load time;
     window.addEventListener('load', () => {
-      this.metrics.loadTime = performance.now() - this.metrics.navigationStart;
-    });
+    this.metrics.loadTime = performance.now() - this.metrics.navigationStart
+  });
 
     // Measure DOM content loaded;
     document.addEventListener('DOMContentLoaded', () => {
-      this.metrics.domContentLoaded =
-        performance.now() - this.metrics.navigationStart;
-    });
+    this.metrics.domContentLoaded =
+        performance.now() - this.metrics.navigationStart
+  });
   }
 
   private trackPageLoadMetrics(): void {
@@ -178,7 +179,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
 
   getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-    return { ...this.metrics };
+    return { ...this.metrics }
   }
 
   getInteractions(): UserInteraction[] {/* TODO: Fix JSX expression */}
@@ -189,22 +190,25 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     let _score = 100;
 
     // LCP scoring (Good: <2.5s, Needs Improvement: 2.5-4s, Poor: >4s),
-    if (lcp !== null) {,
+    if (lcp !== null) {
+    ,
       if (lcp > 4000) score -= 30;
-      else if (lcp > 2500) score -= 15;
-    }
+      else if (lcp > 2500) score -= 15
+  }
 
     // FID scoring (Good: <100ms, Needs Improvement: 100-300ms, Poor: >300ms),
-    if (fid !== null) {,
+    if (fid !== null) {
+    ,
       if (fid > 300) score -= 30;
-      else if (fid > 100) score -= 15;
-    }
+      else if (fid > 100) score -= 15
+  }
 
     // CLS scoring (Good: <0.1, Needs Improvement: 0.1-0.25, Poor: >0.25),
-    if (cls !== null) {,
+    if (cls !== null) {
+    ,
       if (cls > 0.25) score -= 30;
-      else if (cls > 0.1) score -= 15;
-    }
+      else if (cls > 0.1) score -= 15
+  }
 
     // FCP scoring (Good: <1.8s, Needs Improvement: 1.8-3s, Poor: >3s),
     if (fcp !== null) {,

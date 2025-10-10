@@ -11,18 +11,18 @@ interface LoggerConfig {/* TODO: Fix JSX expression */}
 }
 
 class Logger {
-  private config: LoggerConfig;
-  private static instance: Logger;
+  private config: LoggerConfig
+  private static instance: Logger,
 ,
   private constructor(config: Partial<LoggerConfig> = {}) {
     this.config = {
       level: this.getLogLevelFromEnv(),
       prefix: config.prefix || 'APP',
-      timestamp: config.timestamp !== false;
+      timestamp: config.timestamp !== false,
       colorize: config.colorize !== false && typeof window !== 'undefined',
 class Logger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   public static getInstance(config?: Partial<LoggerConfig>): Logger {/* TODO: Fix JSX expression */}
@@ -49,26 +49,30 @@ class Logger {/* TODO: Fix JSX expression */}
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();
   }
 
-  private shouldLog(level: LogLevel): boolean {,
-    return level >= this.config.level;
+  private shouldLog(level: LogLevel): boolean {
+    ,
+    return level >= this.config.level
   }
 
-  public debug(message: string, ...args: unknown[]): void {,
+  public debug(message: string, ...args: unknown[]): void {
+    ,
     if (this.shouldLog(LogLevel.DEBUG)) {,
-      //       // );
-    }
+      //       // )
+  }
   }
 
-  public info(message: string, ...args: unknown[]): void {,
+  public info(message: string, ...args: unknown[]): void {
+    ,
     if (this.shouldLog(LogLevel.INFO)) {,
-      //       );
-    }
+      //       )
+  }
   }
 
-  public warn(message: string, ...args: unknown[]): void {,
+  public warn(message: string, ...args: unknown[]): void {
+    ,
     if (this.shouldLog(LogLevel.WARN)) {,
-      //       // );
-    }
+      //       // )
+  }
   }
 
   public error(message: string, error?: Error | any, ...args: unknown[]): void {,
@@ -79,8 +83,9 @@ class Logger {/* TODO: Fix JSX expression */}
     }
   }
 
-  public setLevel(level: LogLevel): void {,
-    this.config.level = level;
+  public setLevel(level: LogLevel): void {
+    ,
+    this.config.level = level
   }
 
   public setPrefix(prefix: string): void {,

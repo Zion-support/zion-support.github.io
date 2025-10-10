@@ -1,25 +1,26 @@
 'use client';
-
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
+import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/SkipLink';
+import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-
-// Structured data for SEO - moved to SEOHead component
+import ServiceWorker from './app/components/ServiceWorker';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import FuturisticBackground from './app/components/FuturisticBackground';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -37,20 +38,28 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const CommunityPage = React.lazy(() => import('./app/community/page'));
+const ApiPage = React.lazy(() => import('./app/api/page'));
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 // Main App Component
 const App: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <HelmetProvider>
         <SEOHead />
         <SkipLink />
+        <ServiceWorker />
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
@@ -58,10 +67,11 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                      <FuturisticBackground />
                       <Navigation />
                       <Breadcrumb />
-                      <main id="main-content" className="flex-1">
+                      <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
@@ -80,6 +90,14 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/docs" element={<DocsPage />} />
+                            <Route path="/community" element={<CommunityPage />} />
+                            <Route path="/api" element={<ApiPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
                           </Routes>
                         </Suspense>
                       </main>
@@ -92,10 +110,9 @@ const App: React.FC = () => {
           </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 
 App.displayName = 'App';
-
 export default App;

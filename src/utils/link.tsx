@@ -1,7 +1,9 @@
-
-interface LinkProps {// TODO: Add content;}
-};
-  href: string;,
+import React from 'react';
+interface LinkProps {
+    // TODO: Add content
+  }
+}
+  href: string,,
     children: React.ReactNode
   className?: string
   target?: string
@@ -9,9 +11,10 @@ interface LinkProps {// TODO: Add content;}
   onClick?: () => void
   'aria-label'?: string
 }
-export const Link: React.FC;
-          <LinkProps> = ({// TODO: Add content;}
-
+export const Link: React.FC,
+          <LinkProps> = ({
+    // TODO: Add content
+  }
 }
 //   href,
 //   children,
@@ -25,7 +28,7 @@ export const Link: React.FC;
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
       e.preventDefault();
       window.location.href = href;
@@ -33,7 +36,6 @@ export const Link: React.FC;
   }
   return (<div>Coming Soon</div>)
   )
-    
           <a></a>
       href={href}
       className={className}
@@ -44,19 +46,8 @@ export const Link: React.FC;
       {...props}
 // >
       {children}
-    
-          
-          
-          
-          
-          
-          
-          
-          
           </a>
   )
 }
 export default Link;
-
-
-
+  </LinkProps>

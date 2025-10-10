@@ -1,6 +1,6 @@
 interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
 }
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {;
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
   return (
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`</div>
@@ -29,8 +29,8 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <strong, className="te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
-            The, Complete, AI Revoluti, o, n: 3, Essential, Guides
-          </h2>
+            The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
+  </
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>
             <strong, className="te, x, t-whi, t, e">NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n)
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {';
@@ -63,8 +63,8 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
           </h2>)
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";)
             The, Complete, AI Revolut, i, o
-  n: 3, Essential, Guides
-          </h2>
+  n: 3, Essential, Guides;
+  </
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";</p>
             The, Complete, AI Revolut, i, o,
   n: 3, Essential, Guides;
@@ -385,5 +385,4 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
     </d, i, v>
   );
 }
-;
 }"`

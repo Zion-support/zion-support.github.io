@@ -2,7 +2,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
   const, latestArticle, s = [
     {
       i;
-  d: 1;
+  d: 1,
       tit, l, e: 'AI, 20, 2;
   6: Autonomous, Agent, Factories - The, Future, of Enterprise, Automatio, n','
       sl, u, g: 'ai-20, 2, 6-autonomo, u, s-age, n, t-factori, e, s','
@@ -15,7 +15,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0}
     {
-      id: 2;
+      id: 2,
       tit, l, e: 'AI, 20, 2;
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h','
       sl, u, g: 'ai-20, 2, 6-quant, u, m-neur, a, l-optimizati, o, n','
@@ -29,7 +29,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0}
     {
-      id: 3;
+      id: 3,
       tit, l, e: 'AI, 20, 2;
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence','
       sl, u, g: 'ai-20, 2, 6-me, t, a-cogniti, v, e-reasoni, n, g','
@@ -62,7 +62,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0'
     }
     {
-      id: 2;
+      id: 2,
       tit, l, e: 'AI, 20, 2;
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h',';
       sl, u, g: 'ai-20, 2, 6-quant, u, m-neur, a, l-optimizati, o, n',';
@@ -77,7 +77,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0'
     }
     {
-      id: 3;
+      id: 3,
       tit, l, e: 'AI, 20, 2;
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence',';
       sl, u, g: 'ai-20, 2, 6-me, t, a-cogniti, v, e-reasoni, n, g',';
@@ -100,8 +100,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -114,8 +114,8 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';"
@@ -311,7 +311,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                     <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0  />
                     {artic, l, e.readTi, m, e}
                   </sp, a, n>
-                  <sp, a, n>{new, Dat, e(artic, l, e.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;
+                  <sp, a, n>{new, Dat, e(artic, l, e.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">";</div>
                   <span, className="flex, item, s-center, ga, p-2">";</span>
                 {/* Meta, Inf, o */}"
@@ -320,7 +320,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                     <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0  /></Zap>
                     {artic, l, e.readTi, m, e}
                   </sp, a, n>
-                  <sp, a, n>{new, Dat, e(artic, l, e.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;"
+                  <sp, a, n>{new, Dat, e(artic, l, e.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">";"
                   <span, className="flex, item, s-center, ga, p-2">";"
                     <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0" />";

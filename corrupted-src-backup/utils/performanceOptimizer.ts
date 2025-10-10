@@ -1,6 +1,6 @@
 // Performance optimization utilities;
 export class PerformanceOptimizer {
-  private static instance: PerformanceOptimizer;
+  private static instance: PerformanceOptimizer,
   private metrics: Map<string, number> = new Map();</string>static</string> getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -58,11 +58,11 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       // Throttled scroll handling;
       ticking = false;
   optimizeScroll(): void {/* TODO: Fix JSX expression */}
-    };
+    }
 
     const requestTick = () => {/* TODO: Fix JSX expression */}
       }
-    };
+    }
 
     window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
   e: true });
@@ -71,9 +71,9 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Measure performance metrics;
   measurePerformance(name: string, fn: () => void): void {
     //     const start = performance.now();
-    fn();
-    //     const end = performance.now();
-    const _duration = end - start;
+    fn()
+    //     const end = performance.now()
+    const _duration = end - start,
 ,
     this.metrics.set(name, duration);
 
@@ -88,7 +88,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   // Get performance metrics;
   getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
+    return Object.fromEntries(this.metrics)
   }
 
   // Add critical resource hints method;
@@ -104,13 +104,14 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         href: 'https://fonts.gstatic.com',
         crossOrigin: 'anonymous'}];
 
-    hints.forEach(hint => {)
+    hints.forEach(hint => {
+    )
       const _link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
       if (hint.crossOrigin) {
-        link.crossOrigin = hint.crossOrigin;
-      }
+        link.crossOrigin = hint.crossOrigin
+  }
   getMetrics(): Record<string, number> {/* TODO: Fix JSX expression */}
   }
 
@@ -141,19 +142,19 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Add page load measurement method;
   measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
-      return null;
-    }
+      return null
+  }
 
     const _timing = window.performance.timing;
     return {
-      loadTime: timing.loadEventEnd - timing.navigationStart;
-      interactiveTime: timing.domInteractive - timing.navigationStart;
+      loadTime: timing.loadEventEnd - timing.navigationStart
+      interactiveTime: timing.domInteractive - timing.navigationStart,
   measurePageLoad(): unknown {/* TODO: Fix JSX expression */}
     }
 
     const _timing = window.performance.timing;
     return {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   // Initialize all optimizations;

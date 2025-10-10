@@ -7,12 +7,12 @@ export const measurePerformance = (nam,
   n: () => void) => {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}
   }
-};
+}
 
 export const getPageLoadTime = (): number | null => {/* TODO: Fix JSX expression */}
   }
   return null;
-};
+}
 
 export const optimizeImages = () => {
   if (typeof window !== 'undefined') {
@@ -24,4 +24,4 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
     });
   }
-};
+}

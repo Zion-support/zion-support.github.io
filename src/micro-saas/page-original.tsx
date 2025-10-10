@@ -1664,7 +1664,6 @@ $4},
       contactInfo:     ,
 $4}
   ];
-  
   /* const realEstateSaaS = [
     {
       title: 'AI Property Valuation Platform',
@@ -3408,25 +3407,25 @@ $4}
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions
-          </h1>
+          <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
+            Micro SAAS Solutions,
+  </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
-  return (
+    return (
     <div>Coming Soon</div>
-  );
-};
+  )
+  }
   const _microSAASServices = [
   // TOD,
   O: Add items;
-];;
-    // AI-Powered Developer Tools;
+]
+    // AI-Powered Developer Tools,
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Code Review Assistant Pro',
       descriptio,
@@ -3452,11 +3451,11 @@ const MicroSAASPage: React.FC = () => {
   k: 'http,
   s://ziontechgroup.com/ai-code-review',
       popula,
-  r: true;
+  r: true,
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Test Generation Suite',
       descriptio,
@@ -3480,8 +3479,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart API Documentation Generator',
       descriptio,
@@ -3506,8 +3505,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Marketing & SEO Tools;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI SEO Optimizer Pro',
       descriptio,
@@ -3531,8 +3530,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Social Media Manager',
       descriptio,
@@ -3556,8 +3555,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Email Marketing Platform',
       descriptio,
@@ -3581,8 +3580,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Content Generator Pro',
       descriptio,
@@ -3607,8 +3606,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Business Intelligence & Analytics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Analytics Dashboard Pro',
       descriptio,
@@ -3632,8 +3631,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Lead Scoring Engine',
       descriptio,
@@ -3657,8 +3656,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Insights Platform',
       descriptio,
@@ -3683,8 +3682,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Finance & Accounting Tools;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Invoice Generator Pro',
       descriptio,
@@ -3708,8 +3707,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Financial Planning Assistant',
       descriptio,
@@ -3733,8 +3732,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Expense Management System',
       descriptio,
@@ -3759,8 +3758,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Healthcare & Wellness;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Health Monitoring Platform',
       descriptio,
@@ -3784,8 +3783,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fitness Coach Pro',
       descriptio,
@@ -3809,8 +3808,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Mental Health Assistant',
       descriptio,
@@ -3835,8 +3834,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Education & Learning;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Language Learning Platform',
       descriptio,
@@ -3860,8 +3859,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Study Assistant Pro',
       descriptio,
@@ -3885,8 +3884,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Skill Assessment Platform',
       descriptio,
@@ -3911,8 +3910,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI E-commerce & Retail;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Inventory Optimizer Pro',
       descriptio,
@@ -3936,8 +3935,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Product Recommendation Engine',
       descriptio,
@@ -3961,8 +3960,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Price Optimization Tool',
       descriptio,
@@ -3987,8 +3986,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Legal & Compliance;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Legal Document Analyzer',
       descriptio,
@@ -4013,8 +4012,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Real Estate & Property Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Property Valuation Engine',
       descriptio,
@@ -4039,8 +4038,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Resume Parser & Matcher',
       descriptio,
@@ -4064,8 +4063,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Interview Scheduler Pro',
       descriptio,
@@ -4089,8 +4088,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
@@ -4115,8 +4114,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Finance & Accounting;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Expense Tracker & Categorizer',
       descriptio,
@@ -4140,8 +4139,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Invoice Processing System',
       descriptio,
@@ -4165,8 +4164,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Financial Forecasting Tool',
       descriptio,
@@ -4191,8 +4190,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Project Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Project Manager Assistant',
       descriptio,
@@ -4216,8 +4215,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Time Tracking & Analytics',
       descriptio,
@@ -4242,8 +4241,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Customer Service;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Live Chat Assistant',
       descriptio,
@@ -4267,8 +4266,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Ticket Classification System',
       descriptio,
@@ -4293,8 +4292,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Sales & CRM;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Lead Scoring Engine',
       descriptio,
@@ -4318,8 +4317,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Sales Forecasting Platform',
       descriptio,
@@ -4344,8 +4343,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Healthcare & Wellness;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Symptom Checker Pro',
       descriptio,
@@ -4369,8 +4368,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fitness Coach Platform',
       descriptio,
@@ -4395,8 +4394,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Security & Compliance;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Security Monitoring System',
       descriptio,
@@ -4420,8 +4419,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Compliance Checker',
       descriptio,
@@ -4446,8 +4445,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Productivity & Automation;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Meeting Assistant Pro',
       descriptio,
@@ -4471,8 +4470,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Email Management System',
       descriptio,
@@ -4496,8 +4495,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Document Management Platform',
       descriptio,
@@ -4522,8 +4521,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Analytics & Reporting;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Business Intelligence Suite',
       descriptio,
@@ -4547,8 +4546,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Social Media Analytics',
       descriptio,
@@ -4573,8 +4572,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Development & DevOps;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Code Quality Monitor',
       descriptio,
@@ -4598,8 +4597,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Deployment Automation',
       descriptio,
@@ -4624,8 +4623,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Communication & Collaboration;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Team Collaboration Hub',
       descriptio,
@@ -4649,8 +4648,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Video Conferencing Assistant',
       descriptio,
@@ -4675,8 +4674,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Marketing & Advertising;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Ad Campaign Optimizer',
       descriptio,
@@ -4700,8 +4699,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Influencer Marketing Platform',
       descriptio,
@@ -4726,8 +4725,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI E-commerce & Retail;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Behavior Analyzer',
       descriptio,
@@ -4751,8 +4750,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Supply Chain Optimizer',
       descriptio,
@@ -4777,8 +4776,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Education & Training;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Corporate Training Platform',
       descriptio,
@@ -4802,8 +4801,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Knowledge Management System',
       descriptio,
@@ -4828,8 +4827,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Legal & Compliance;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Contract Management System',
       descriptio,
@@ -4853,8 +4852,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Privacy Compliance Monitor',
       descriptio,
@@ -4879,8 +4878,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Real Estate & Property;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Property Management Suite',
       descriptio,
@@ -4904,8 +4903,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Market Research Platform',
       descriptio,
@@ -4930,8 +4929,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Agriculture & Environment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Crop Monitoring System',
       descriptio,
@@ -4955,8 +4954,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Environmental Monitoring',
       descriptio,
@@ -4981,8 +4980,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Transportation & Logistics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fleet Management System',
       descriptio,
@@ -5006,8 +5005,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Logistics Optimizer',
       descriptio,
@@ -5032,8 +5031,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Entertainment & Media;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Content Moderation Platform',
       descriptio,
@@ -5057,8 +5056,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Video Production Assistant',
       descriptio,
@@ -5083,8 +5082,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Game Development Platform',
       descriptio,
@@ -5108,8 +5107,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Player Behavior Analytics',
       descriptio,
@@ -5134,8 +5133,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -5159,8 +5158,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Patent Analysis Tool',
       descriptio,
@@ -5185,8 +5184,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Energy & Utilities;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Energy Management System',
       descriptio,
@@ -5210,8 +5209,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Smart Grid Optimizer',
       descriptio,
@@ -5236,8 +5235,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Manufacturing & Industrial;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Quality Control System',
       descriptio,
@@ -5261,8 +5260,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Production Planning Optimizer',
       descriptio,
@@ -5287,8 +5286,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Insurance & Risk Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Risk Assessment Platform',
       descriptio,
@@ -5312,8 +5311,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Claims Processing System',
       descriptio,
@@ -5338,8 +5337,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Government & Public Sector;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Citizen Services Platform',
       descriptio,
@@ -5363,8 +5362,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Public Safety System',
       descriptio,
@@ -5389,8 +5388,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Non-Profit & Social Impact;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Donor Management System',
       descriptio,
@@ -5414,8 +5413,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Volunteer Matching Platform',
       descriptio,
@@ -5440,8 +5439,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Travel & Hospitality;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Travel Planning Assistant',
       descriptio,
@@ -5465,8 +5464,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Hotel Revenue Optimizer',
       descriptio,
@@ -5491,8 +5490,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Sports & Fitness;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Sports Performance Analyzer',
       descriptio,
@@ -5516,8 +5515,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fitness Nutrition Coach',
       descriptio,
@@ -5542,8 +5541,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Beauty & Fashion;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Virtual Try-On Platform',
       descriptio,
@@ -5567,8 +5566,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Beauty Analysis Tool',
       descriptio,
@@ -5593,8 +5592,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Home & Lifestyle;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Smart Home Controller',
       descriptio,
@@ -5618,8 +5617,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Personal Assistant Platform',
       descriptio,
@@ -5644,8 +5643,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Pets & Animals;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Pet Health Monitor',
       descriptio,
@@ -5669,8 +5668,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Pet Training Assistant',
       descriptio,
@@ -5695,8 +5694,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Education & Learning;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Tutoring Platform',
       descriptio,
@@ -5720,8 +5719,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Homework Helper',
       descriptio,
@@ -5746,8 +5745,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Music & Audio;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Music Composition Tool',
       descriptio,
@@ -5771,8 +5770,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Audio Enhancement Platform',
       descriptio,
@@ -5797,8 +5796,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Art & Design;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Design Assistant Pro',
       descriptio,
@@ -5822,8 +5821,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Logo Generator Platform',
       descriptio,
@@ -5848,8 +5847,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Dating & Relationships;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Dating Assistant',
       descriptio,
@@ -5873,8 +5872,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Relationship Counselor',
       descriptio,
@@ -5899,8 +5898,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Parenting & Family;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Parenting Assistant',
       descriptio,
@@ -5924,8 +5923,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Family Organizer',
       descriptio,
@@ -5950,8 +5949,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Senior Care & Aging;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Senior Care Monitor',
       descriptio,
@@ -5975,8 +5974,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Memory Assistant',
       descriptio,
@@ -6001,8 +6000,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Accessibility & Inclusion;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Accessibility Assistant',
       descriptio,
@@ -6026,8 +6025,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Language Translation Pro',
       descriptio,
@@ -6052,8 +6051,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Emergency & Crisis Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Emergency Response System',
       descriptio,
@@ -6077,8 +6076,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Crisis Communication Platform',
       descriptio,
@@ -6103,8 +6102,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Space & Astronomy;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Space Mission Planner',
       descriptio,
@@ -6128,8 +6127,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Astronomical Data Analyzer',
       descriptio,
@@ -6154,8 +6153,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Ocean & Marine;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Marine Life Tracker',
       descriptio,
@@ -6179,8 +6178,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Ocean Current Predictor',
       descriptio,
@@ -6205,8 +6204,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Archaeology & History;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Archaeological Site Analyzer',
       descriptio,
@@ -6230,8 +6229,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Historical Document Processor',
       descriptio,
@@ -6256,8 +6255,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Psychology & Mental Health;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Mental Health Tracker',
       descriptio,
@@ -6281,8 +6280,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Therapy Assistant',
       descriptio,
@@ -6307,8 +6306,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Philosophy & Ethics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Ethical Decision Maker',
       descriptio,
@@ -6332,8 +6331,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Philosophy Research Assistant',
       descriptio,
@@ -6358,8 +6357,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Spirituality & Religion;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Spiritual Guidance Platform',
       descriptio,
@@ -6383,8 +6382,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Religious Text Analyzer',
       descriptio,
@@ -6409,8 +6408,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Future & Innovation;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Innovation Predictor',
       descriptio,
@@ -6434,8 +6433,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Future Scenario Generator',
       descriptio,
@@ -6460,8 +6459,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Consciousness & AI Ethics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Consciousness Monitor',
       descriptio,
@@ -6485,8 +6484,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Rights Management System',
       descriptio,
@@ -6511,8 +6510,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Time & Space;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Time Management Master',
       descriptio,
@@ -6536,8 +6535,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Space-Time Analyzer',
       descriptio,
@@ -6562,8 +6561,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Quantum & Advanced Physics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Quantum Simulator Pro',
       descriptio,
@@ -6587,8 +6586,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Physics Research Assistant',
       descriptio,
@@ -6613,8 +6612,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Multiverse & Parallel Realities;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Multiverse Explorer',
       descriptio,
@@ -6638,8 +6637,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Reality Manipulation Tool',
       descriptio,
@@ -6664,8 +6663,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Transcendence & Enlightenment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Enlightenment Assistant',
       descriptio,
@@ -6689,8 +6688,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Transcendence Platform',
       descriptio,
@@ -6715,8 +6714,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Universal Consciousness;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Universal Consciousness Connector',
       descriptio,
@@ -6740,8 +6739,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Cosmic Intelligence Platform',
       descriptio,
@@ -6766,8 +6765,8 @@ const MicroSAASPage: React.FC = () => {
     },
     // AI Infinite Possibilities;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Infinite Possibility Generator',
       descriptio,
@@ -6791,8 +6790,8 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Ultimate Reality Creator',
       descriptio,
@@ -6818,8 +6817,8 @@ const MicroSAASPage: React.FC = () => {
   ];
 const realEstateSaaS = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Property Valuation Platform',
       descriptio,
@@ -6843,8 +6842,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Tenant Screening Platform',
       descriptio,
@@ -6869,8 +6868,8 @@ const realEstateSaaS = [
     },
     // AI Agriculture & Food Tech;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Crop Monitoring System',
       descriptio,
@@ -6894,8 +6893,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Food Safety Inspector',
       descriptio,
@@ -6920,8 +6919,8 @@ const realEstateSaaS = [
     },
     // AI Transportation & Logistics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Route Optimization Pro',
       descriptio,
@@ -6945,8 +6944,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fleet Maintenance Predictor',
       descriptio,
@@ -6971,8 +6970,8 @@ const realEstateSaaS = [
     },
     // AI Energy & Sustainability;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Energy Management System',
       descriptio,
@@ -6996,8 +6995,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Carbon Footprint Tracker',
       descriptio,
@@ -7022,8 +7021,8 @@ const realEstateSaaS = [
     },
     // AI Entertainment & Media;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Content Moderation Suite',
       descriptio,
@@ -7047,8 +7046,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Video Editor Pro',
       descriptio,
@@ -7073,8 +7072,8 @@ const realEstateSaaS = [
     },
     // AI Security & Surveillance;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Security Camera System',
       descriptio,
@@ -7098,8 +7097,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fraud Detection Engine',
       descriptio,
@@ -7124,8 +7123,8 @@ const realEstateSaaS = [
     },
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -7149,8 +7148,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Patent Search Engine',
       descriptio,
@@ -7174,8 +7173,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Compliance Monitoring Suite',
       descriptio,
@@ -7200,8 +7199,8 @@ const realEstateSaaS = [
     },
     // AI Real Estate & Property;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Real Estate Analyzer Pro',
       descriptio,
@@ -7225,8 +7224,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Property Management System',
       descriptio,
@@ -7251,8 +7250,8 @@ const realEstateSaaS = [
     },
     // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI HR Recruitment Suite',
       descriptio,
@@ -7276,8 +7275,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
@@ -7302,8 +7301,8 @@ const realEstateSaaS = [
     },
     // AI Project Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Project Manager Pro',
       descriptio,
@@ -7327,8 +7326,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Task Automation Suite',
       descriptio,
@@ -7353,8 +7352,8 @@ const realEstateSaaS = [
     },
     // AI Supply Chain & Logistics;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Supply Chain Optimizer',
       descriptio,
@@ -7378,8 +7377,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Warehouse Management System',
       descriptio,
@@ -7404,8 +7403,8 @@ const realEstateSaaS = [
     },
     // AI Agriculture & Food Tech;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Precision Agriculture Platform',
       descriptio,
@@ -7429,8 +7428,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Food Safety Monitor',
       descriptio,
@@ -7455,8 +7454,8 @@ const realEstateSaaS = [
     },
     // AI Energy & Sustainability;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Energy Management System',
       descriptio,
@@ -7480,8 +7479,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Carbon Footprint Tracker',
       descriptio,
@@ -7506,8 +7505,8 @@ const realEstateSaaS = [
     },
     // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Game Development Suite',
       descriptio,
@@ -7531,8 +7530,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Content Moderation Platform',
       descriptio,
@@ -7557,8 +7556,8 @@ const realEstateSaaS = [
     },
     // AI Transportation & Mobility;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Fleet Management System',
       descriptio,
@@ -7582,8 +7581,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Traffic Management Platform',
       descriptio,
@@ -7608,8 +7607,8 @@ const realEstateSaaS = [
     },
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -7633,8 +7632,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Patent Analysis Tool',
       descriptio,
@@ -7659,8 +7658,8 @@ const realEstateSaaS = [
     },
     // AI Personal Productivity;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Personal Assistant Pro',
       descriptio,
@@ -7684,8 +7683,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Meeting Assistant',
       descriptio,
@@ -7709,8 +7708,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Insurance Underwriting Assistant',
       descriptio,
@@ -7731,8 +7730,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Onboarding Platform',
       descriptio,
@@ -7753,8 +7752,8 @@ const realEstateSaaS = [
   s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Retention Manager',
       descriptio,
@@ -7775,8 +7774,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Support Optimizer',
       descriptio,
@@ -7797,8 +7796,8 @@ const realEstateSaaS = [
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Feedback Analyzer',
       descriptio,
@@ -7819,8 +7818,8 @@ const realEstateSaaS = [
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Journey Mapper',
       descriptio,
@@ -7841,8 +7840,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Lifetime Value Predictor',
       descriptio,
@@ -7863,8 +7862,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Segmentation Engine',
       descriptio,
@@ -7885,8 +7884,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Personalization Engine',
       descriptio,
@@ -7907,8 +7906,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Data Platform',
       descriptio,
@@ -7929,8 +7928,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Privacy Manager',
       descriptio,
@@ -7951,8 +7950,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Communication Manager',
       descriptio,
@@ -7973,8 +7972,8 @@ const realEstateSaaS = [
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Experience Optimizer',
       descriptio,
@@ -7995,8 +7994,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Success Manager',
       descriptio,
@@ -8017,8 +8016,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Advocacy Platform',
       descriptio,
@@ -8039,8 +8038,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Insights Platform',
       descriptio,
@@ -8061,8 +8060,8 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Intelligence Suite',
       descriptio,
@@ -8084,8 +8083,8 @@ const realEstateSaaS = [
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Meeting Transcriber',
       descriptio,
@@ -8106,8 +8105,8 @@ const realEstateSaaS = [
   s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Expense Tracker AI',
       descriptio,
@@ -8128,8 +8127,8 @@ const realEstateSaaS = [
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Password Manager',
       descriptio,
@@ -8150,8 +8149,8 @@ const realEstateSaaS = [
   s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Time Tracking Assistant',
       descriptio,
@@ -8172,8 +8171,8 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Logo Generator',
       descriptio,
@@ -8194,8 +8193,8 @@ const realEstateSaaS = [
   s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Invoice Generator',
       descriptio,
@@ -8216,8 +8215,8 @@ const realEstateSaaS = [
   s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Website Builder',
       descriptio,
@@ -8238,8 +8237,8 @@ const realEstateSaaS = [
   s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Contract Generator',
       descriptio,
@@ -8260,8 +8259,8 @@ const realEstateSaaS = [
   s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Email Signature Generator',
       descriptio,
@@ -8282,8 +8281,8 @@ const realEstateSaaS = [
   s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart QR Code Generator',
       descriptio,
@@ -8304,8 +8303,8 @@ const realEstateSaaS = [
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Color Palette Generator',
       descriptio,
@@ -8326,8 +8325,8 @@ const realEstateSaaS = [
   s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Business Card Designer',
       descriptio,
@@ -8348,8 +8347,8 @@ const realEstateSaaS = [
   s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Newsletter Generator',
       descriptio,
@@ -8370,8 +8369,8 @@ const realEstateSaaS = [
   s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart PDF Converter Pro',
       descriptio,
@@ -8392,8 +8391,8 @@ const realEstateSaaS = [
   s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Video Thumbnail Generator',
       descriptio,
@@ -8414,8 +8413,8 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Social Media Scheduler',
       descriptio,
@@ -8436,8 +8435,8 @@ const realEstateSaaS = [
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Hashtag Generator',
       descriptio,
@@ -8458,8 +8457,8 @@ const realEstateSaaS = [
   s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Email Template Builder',
       descriptio,
@@ -8480,8 +8479,8 @@ const realEstateSaaS = [
   s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Competitor Analysis Tool',
       descriptio,
@@ -8502,8 +8501,8 @@ const realEstateSaaS = [
   s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Customer Feedback Analyzer',
       descriptio,
@@ -8524,8 +8523,8 @@ const realEstateSaaS = [
   s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Landing Page Optimizer',
       descriptio,
@@ -8546,8 +8545,8 @@ const realEstateSaaS = [
   s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Inventory Photo Manager',
       descriptio,
@@ -8568,8 +8567,8 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Price Monitoring Tool',
       descriptio,
@@ -8590,8 +8589,8 @@ const realEstateSaaS = [
   s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Appointment Scheduler',
       descriptio,
@@ -8612,8 +8611,8 @@ const realEstateSaaS = [
   s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Resume Builder',
       descriptio,
@@ -8634,8 +8633,8 @@ const realEstateSaaS = [
   s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Weather API Service',
       descriptio,
@@ -8656,8 +8655,8 @@ const realEstateSaaS = [
   s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Translation Service',
       descriptio,
@@ -8678,8 +8677,8 @@ const realEstateSaaS = [
   s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Data Backup Service',
       descriptio,
@@ -8700,8 +8699,8 @@ const realEstateSaaS = [
   s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Form Builder',
       descriptio,
@@ -8722,8 +8721,8 @@ const realEstateSaaS = [
   s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Uptime Monitor',
       descriptio,
@@ -8744,8 +8743,8 @@ const realEstateSaaS = [
   s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Survey Creator',
       descriptio,
@@ -8766,8 +8765,8 @@ const realEstateSaaS = [
   s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart File Converter',
       descriptio,
@@ -8788,8 +8787,8 @@ const realEstateSaaS = [
   s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered QR Code Scanner',
       descriptio,
@@ -8810,8 +8809,8 @@ const realEstateSaaS = [
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Password Generator',
       descriptio,
@@ -8832,8 +8831,8 @@ const realEstateSaaS = [
   s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Color Picker',
       descriptio,
@@ -8854,8 +8853,8 @@ const realEstateSaaS = [
   s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Text Summarizer',
       descriptio,
@@ -8876,8 +8875,8 @@ const realEstateSaaS = [
   s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Image Resizer',
       descriptio,
@@ -8898,8 +8897,8 @@ const realEstateSaaS = [
   s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart URL Shortener',
       descriptio,
@@ -8920,8 +8919,8 @@ const realEstateSaaS = [
   s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Favicon Generator',
       descriptio,
@@ -8942,8 +8941,8 @@ const realEstateSaaS = [
   s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Meta Tag Generator',
       descriptio,
@@ -8964,8 +8963,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Sitemap Generator',
       descriptio,
@@ -8986,8 +8985,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Robots.txt Generator',
       descriptio,
@@ -9008,8 +9007,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Schema Markup Generator',
       descriptio,
@@ -9030,8 +9029,8 @@ const realEstateSaaS = [
   s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Alt Text Generator',
       descriptio,
@@ -9052,8 +9051,8 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Internal Link Optimizer',
       descriptio,
@@ -9074,8 +9073,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Keyword Density Analyzer',
       descriptio,
@@ -9096,8 +9095,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Page Speed Optimizer',
       descriptio,
@@ -9118,8 +9117,8 @@ const realEstateSaaS = [
   s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Core Web Vitals Monitor',
       descriptio,
@@ -9140,8 +9139,8 @@ const realEstateSaaS = [
   s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Mobile Optimization Tool',
       descriptio,
@@ -9162,8 +9161,8 @@ const realEstateSaaS = [
   s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Local SEO Optimizer',
       descriptio,
@@ -9184,8 +9183,8 @@ const realEstateSaaS = [
   s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Competitor SEO Analyzer',
       descriptio,
@@ -9206,8 +9205,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Backlink Analyzer',
       descriptio,
@@ -9228,8 +9227,8 @@ const realEstateSaaS = [
   s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Content Gap Analyzer',
       descriptio,
@@ -9250,8 +9249,8 @@ const realEstateSaaS = [
   s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Technical SEO Auditor',
       descriptio,
@@ -9272,8 +9271,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered E-commerce SEO Optimizer',
       descriptio,
@@ -9294,8 +9293,8 @@ const realEstateSaaS = [
   s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Voice Search Optimizer',
       descriptio,
@@ -9316,8 +9315,8 @@ const realEstateSaaS = [
   s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Video SEO Optimizer',
       descriptio,
@@ -9338,8 +9337,8 @@ const realEstateSaaS = [
   s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart Featured Snippet Optimizer',
       descriptio,
@@ -9360,8 +9359,8 @@ const realEstateSaaS = [
   s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered Image SEO Optimizer',
       descriptio,
@@ -9382,8 +9381,8 @@ const realEstateSaaS = [
   s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Smart International SEO Manager',
       descriptio,
@@ -9404,8 +9403,8 @@ const realEstateSaaS = [
   s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI-Powered SEO Reporting Dashboard',
       descriptio,
@@ -9428,8 +9427,8 @@ const realEstateSaaS = [
     // NEW COMPREHENSIVE MICRO SAAS SERVICES;
     // AI Productivity & Time Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Time Tracking & Productivity Analyzer',
       descriptio,
@@ -9453,8 +9452,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Task Management & Prioritization',
       descriptio,
@@ -9478,8 +9477,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Email Management & Prioritization',
       descriptio,
@@ -9504,8 +9503,8 @@ const realEstateSaaS = [
     },
     // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Resume Parser & Candidate Matcher',
       descriptio,
@@ -9529,8 +9528,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
@@ -9554,8 +9553,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Workplace Safety Monitor',
       descriptio,
@@ -9580,8 +9579,8 @@ const realEstateSaaS = [
     },
     // AI Customer Service & Support;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Support Ticket Router',
       descriptio,
@@ -9605,8 +9604,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Customer Feedback Analyzer',
       descriptio,
@@ -9630,8 +9629,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Live Chat Assistant',
       descriptio,
@@ -9656,8 +9655,8 @@ const realEstateSaaS = [
     },
     // AI Sales & CRM;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Sales Pipeline Optimizer',
       descriptio,
@@ -9681,8 +9680,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Sales Call Analyzer',
       descriptio,
@@ -9706,8 +9705,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Proposal Generator Pro',
       descriptio,
@@ -9732,8 +9731,8 @@ const realEstateSaaS = [
     },
     // AI Project Management;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Project Risk Predictor',
       descriptio,
@@ -9757,8 +9756,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Resource Allocation Optimizer',
       descriptio,
@@ -9782,8 +9781,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Project Timeline Predictor',
       descriptio,
@@ -9808,8 +9807,8 @@ const realEstateSaaS = [
     },
     // AI Security & Compliance;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Security Threat Detector',
       descriptio,
@@ -9833,8 +9832,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Compliance Monitor',
       descriptio,
@@ -9858,8 +9857,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Data Privacy Manager',
       descriptio,
@@ -9884,8 +9883,8 @@ const realEstateSaaS = [
     },
     // AI Quality Assurance & Testing;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Automated Testing Suite',
       descriptio,
@@ -9909,8 +9908,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Bug Prediction & Prevention',
       descriptio,
@@ -9934,8 +9933,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Performance Monitoring Pro',
       descriptio,
@@ -9960,8 +9959,8 @@ const realEstateSaaS = [
     },
     // AI Content & Media;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Video Content Generator',
       descriptio,
@@ -9985,8 +9984,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Podcast Production Suite',
       descriptio,
@@ -10010,8 +10009,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Image & Design Generator',
       descriptio,
@@ -10036,8 +10035,8 @@ const realEstateSaaS = [
     },
     // AI Research & Development;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -10061,8 +10060,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Patent Analyzer & Generator',
       descriptio,
@@ -10086,8 +10085,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Innovation Tracker',
       descriptio,
@@ -10112,8 +10111,8 @@ const realEstateSaaS = [
     },
     // AI Personal & Lifestyle;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Personal Finance Manager',
       descriptio,
@@ -10137,8 +10136,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Personal Assistant Pro',
       descriptio,
@@ -10162,8 +10161,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Home Energy Optimizer',
       descriptio,
@@ -10188,8 +10187,8 @@ const realEstateSaaS = [
     },
     // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Game Development Assistant',
       descriptio,
@@ -10213,8 +10212,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Music Composition Studio',
       descriptio,
@@ -10238,8 +10237,8 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'AI Streaming Content Optimizer',
       descriptio,
@@ -10322,12 +10321,12 @@ const categories = [
         <div className="max-w-7xl mx-auto text-center"></div>"
           <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-// Micro SAAS Solutions;
+  md: text-6xl font-bold text-white mb-6"></h1>
+// Micro SAAS Solutions
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
+            Coming Soon,
+  </
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -10400,8 +10399,8 @@ const categories = [
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Perfect AI Tools
-          </h2>
+            Choose Your Perfect AI Tools;
+  </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -10430,8 +10429,8 @@ const categories = [
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
-                      </li>
+                        +{service.features.length - 4} more features;
+  </
                     )}
                   </ul>
                 </div>
@@ -10518,10 +10517,9 @@ const categories = [
                 <div className="text-center">
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
-                  >
-                    Get Started Now
-                  </a>
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
+                    Get Started Now,
+  </
                   <p className="text-xs text-gray-500 mt-2">
                 </div>"
                 <div className="text-center"></div>
@@ -10530,9 +10528,9 @@ const categories = [
   o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"
-  hover:to-blue-700 transition-all inline-block"
+  hover: to-blue-700 transition-all inline-block"
 // >
-//                     Get Started Now;
+//                     Get Started Now,
           </a>"
                   <p className="text-xs text-gray-500 mt-2"></p>
                     {service.contactInfo}
@@ -10552,19 +10550,17 @@ const categories = [
           <p className="text-xl text-purple-100 mb-8">
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
               Call (302) 464-0950
-            </a>
+  </
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Email Us
-            </a>
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
+              Email Us,
+  </
       {/* CTA Section */}"
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
@@ -10574,21 +10570,24 @@ const categories = [
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//               Call (302) 464-0950;
+//               Call (302) 464-0950
           </a>
             <a
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//               Email Us;
+//               Email Us
           </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  ),
+}
 export default MicroSAASPage;"`
+  </a>
+  </a>
+  </p>

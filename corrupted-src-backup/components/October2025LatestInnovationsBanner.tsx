@@ -1,15 +1,15 @@
 const, October2025LatestInnovationsBanne, r = () => {
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
-      {/* Animated, background, elements */};</div>
+      {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8, p, y-12">"
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-8"></div>
@@ -23,13 +23,13 @@ const, October2025LatestInnovationsBanne, r = () => {
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"</h2>
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">";
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-      {/* Animated, background, elements */};</div>
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
+      {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
@@ -59,7 +59,7 @@ const, October2025LatestInnovationsBanne, r = () => {
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 99.9% complian, c, e</sp, a, n>, harness, quantu, m-enhanced, AI, with ";
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 10,000x, speedu, p</sp, a, n>, and, implement, autonomous enterprise, orchestratio, n ";
 const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
@@ -78,7 +78,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">""
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>"
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">";
-      {/* Animated, background, elements */};"
+      {/* Animated, background, elements */}"
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
@@ -428,6 +428,6 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025LatestInnovationsBanner;
-;"
+"

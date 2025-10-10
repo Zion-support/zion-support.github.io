@@ -1,12 +1,8 @@
 import React from 'react';
-
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-};
+}
   titl,
   e: 'IoT Device Management Platform',
       descriptio,
@@ -151,7 +147,6 @@ titl,
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (<div>Coming Soon</div>)
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Hero Section */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
@@ -161,8 +156,8 @@ titl,
   lg:px-8"></div>"
             <div className="text-center"></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold mb-6"></h1>
-// IoT & Edge Computing Services;
+  md: text-6xl font-bold mb-6"></h1>
+// IoT & Edge Computing Services,
           </h1>"
               <p className="text-xl,"
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
@@ -171,13 +166,13 @@ titl,
               <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-cyan-50 transition-colors"></button>
-// Explore IoT Solutions;
+  hover: bg-cyan-50 transition-colors"></button>
+// Explore IoT Solutions,
           </button>"
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-cyan-600 transition-colors"></button>
-Schedule Demo;
+  hover: text-cyan-600 transition-colors"></button>
+Schedule Demo,
               </div>
         </section>
         {/* Key Benefits */}"
@@ -189,15 +184,6 @@ Schedule Demo;
               <h2 className="text-3xl,"
   md:text-4xl font-bold text-gray-900 mb-4"></h2>
 // Why Choose Our IoT & Edge Services?
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
               <p className="text-xl text-gray-600"></p>
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
@@ -228,7 +214,9 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-                {iotServices;}
+                {
+    iotServices
+  }
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
@@ -269,8 +257,8 @@ Save up to 40% vs market rates;"
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" /></Star>
                               {benefit}"
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"
-  hover:bg-cyan-700 transition-colors"></button>
-                        Get IoT Consultation;
+  hover: bg-cyan-700 transition-colors"></button>
+                        Get IoT Consultation,
         {/* IoT Capabilities Showcase */}
                 Our IoT & Edge Capabilities;
                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
@@ -304,25 +292,20 @@ Save up to 40% vs market rates;"
   sm:px-6,"
   lg:px-8 text-center"></div>"
             <h2 className="text-3xl,"
-  md:text-4xl font-bold mb-4"></h2>
+  md: text-4xl font-bold mb-4"></h2>
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
-              Contact our IoT experts for a free consultation and custom connected solution strategy;
-
+              Contact our IoT experts for a free consultation and custom connected solution strategy
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
-//                  +1 302 464 0950;
+//                  +1 302 464 0950
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com,
             <div className="mt-8 text-sm text-cyan-200">
-
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
-};
-
-
+}
 export default IotEdgePage;
-
-
+  </div>

@@ -236,7 +236,6 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
       </d, i, v>)
     </secti, o, n>)
   );
-};
+}
 export default October2025 CognitiveOrchestrationShowcase;
-;
 }"

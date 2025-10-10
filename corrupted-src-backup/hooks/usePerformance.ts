@@ -3,15 +3,14 @@
  * Provides React hooks for performance monitoring and optimization;
  */
 
-
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 export interface UsePerformanceOptions {
   componentName: string;
-  trackRenderTime?: boolean;
-  trackMemoryUsage?: boolean;
-  slowRenderThreshold?: number; // in milliseconds;
+  trackRenderTime?: boolean
+  trackMemoryUsage?: boolean
+  slowRenderThreshold?: number; // in milliseconds,
 export interface UsePerformanceOptions {/* TODO: Fix JSX expression */}
 }
 
@@ -38,7 +37,7 @@ export const usePerformance = (option)
       //       const mountDuration = performance.now() - mountTimeRef.current;
   useEffect(() => {/* TODO: Fix JSX expression */}
       analytics.trackPerformance(`${componentName}_mount_time`, mountDuration);
-    };
+    }
   }, [componentName]);
 
   // Track render performance;
@@ -50,22 +49,22 @@ export const usePerformance = (option)
     // Use requestAnimationFrame to measure actual render time;
     requestAnimationFrame(() => {
       //       const renderTime = performance.now() - renderStartTimeRef.current;
-      //       const isSlowRender = renderTime>slowRenderThreshold</renderTime>;
+      //       const isSlowRender = renderTime>slowRenderThreshold</renderTime>
 
       const metrics: PerformanceMetrics = {,
         renderTime;
-        componentMountTime: performance.now() - mountTimeRef.current;
-        isSlowRender};
+        componentMountTime: performance.now() - mountTimeRef.current,
+        isSlowRender}
 
       // Track memory usage if available;
       if (trackMemoryUsage && 'memory' in performance) {
-        const _memory = (performance as any).memory;
-        metrics.memoryUsage = memory.usedJSHeapSize;
-      }
+    const _memory = (performance as any).memory;
+        metrics.memoryUsage = memory.usedJSHeapSize
+  }
 
       // Send to analytics;
   const trackRender = useCallback(() => {/* TODO: Fix JSX expression */}
-      };
+      }
 
       // Track memory usage if available;
       if (trackMemoryUsage && 'memory' in performance) {/* TODO: Fix JSX expression */}
@@ -82,18 +81,18 @@ export const usePerformance = (option)
   return {
     trackRender,
     getMetrics: (): PerformanceMetrics => ({
-      renderTime: performance.now() - renderStartTimeRef.current;
-      componentMountTime: performance.now() - mountTimeRef.current;
-      isSlowRender: false;
+      renderTime: performance.now() - renderStartTimeRef.current
+      componentMountTime: performance.now() - mountTimeRef.current
+      isSlowRender: false,
   return {/* TODO: Fix JSX expression */}
-    })};
-};
+    })}
+}
 
 /**
  * Hook for monitoring page load performance;
  */
 export const usePageLoadPerformance = () => {
-  useEffect(() => {
+    useEffect(() => {
     const trackPageLoad = () => {
       // Wait for page to be fully loaded;
       if (document.readyState === 'complete') {
@@ -103,16 +102,16 @@ export const usePageLoadPerformance = () => {
         if (navigation) {
           const metrics = {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-            firstByte: navigation.responseStart - navigation.requestStart;
-            domInteractive: navigation.domInteractive - navigation.navigationStart;
-            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart;
-          };
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+            firstByte: navigation.responseStart - navigation.requestStart
+            domInteractive: navigation.domInteractive - navigation.navigationStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart
+  }
 
           // Track each metric;
           Object.entries(metrics).forEach(([key, value]) => {
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
-          };
+          }
 
           // Track each metric;
           Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
@@ -133,12 +132,12 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
           );
         }
       }
-    };
+    }
 
     // Track immediately if page is already loaded;
     if (document.readyState === 'complete') {
-      trackPageLoad();
-    } else {
+    trackPageLoad()
+  } else {
       // Wait for load event;
       window.addEventListener('load', trackPageLoad);
       return () => window.removeEventListener('load', trackPageLoad);
@@ -146,7 +145,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }
   }, []);
-};
+}
 
 /**
  * Hook for monitoring resource loading performance;
@@ -172,7 +171,7 @@ export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`
 
     return () => observer.disconnect();
   }, []);
-};
+}
 
 /**
  * Hook for monitoring long tasks;
@@ -188,9 +187,9 @@ export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */}
 
     return () => {/* TODO: Fix JSX expression */}
       }
-    };
+    }
   }, []);
-};
+}
 
 export default usePerformance;
 `

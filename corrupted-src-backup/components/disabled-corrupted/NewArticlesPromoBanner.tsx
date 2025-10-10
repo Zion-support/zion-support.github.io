@@ -1,3 +1,4 @@
+import React from 'react';
 import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 interface NewArticlesPromoBannerProp, s {
@@ -40,8 +41,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             </div>
           </div>"
           <Link, t, o="/bl, o, g""
-            className="bg-white, tex, t-bl, u, e-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, tex, t-sm"
-          >
+            className="bg-white, tex, t-bl, u, e-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, tex, t-sm">
             Read, No, w;)
           </Li, n, k>)
         </div>)
@@ -110,15 +110,13 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
           </div>
           <div, classNam, e = "te, x, t-center, m, t-8"></div>
             <Link, t, o="/bl, o, g"
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            >
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
               View, All, Articles;
               <Link, className="w-5 h-5" />
           </div>"
           <div, classNam, e = "te, x, t-center, m, t-8"></div>"
             <Link, t, o="/bl, o, g""
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            ></Link>
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></Link>
               View, All, Articles;"
               <Link, className="w-5 h-5" /></Link>
             </Li, n, k>
@@ -151,8 +149,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         <div, className="p-8"></div>
           <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
-              <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l"
-              >
+              <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l">
                 <div, className="flex, fle, x-wrap, ga, p-2, m, b-3">
                   { artic, l, e.tags.sl, i, c, e(, 0, 2).m, a, p((t, a, g) = > (</div>
   if (varia, n, t = == 'featu, r, e, d') {/* TODO: Fix JSX expression */}`
@@ -171,8 +168,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         <div, className="p-8"></div>"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6"></div>
             {/* TODO: Fix JSX expression */}"
-              <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l"
-              ></Link>"
+              <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className="group, border, border-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-a, l, l"></Link>"
                 <div, className="flex, fle, x-wrap, ga, p-2, m, b-3"></div>
                   {/* TODO: Fix JSX expression */}"
                     <span, ke, y = { ta, g  }, classNa, m, e = "te, x, t-xs, b, g-indi, g, o-100, tex, t-indi, g, o-700, p, x-2, p, y-1, rounde, d-fu, l, l"
@@ -239,5 +235,5 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
       </div>
     </div>
   );
-};
+}
 export default NewArticlesPromoBanner;"`

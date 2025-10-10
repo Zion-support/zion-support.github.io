@@ -19,10 +19,9 @@ try {
   console.log('🔍 Checking differences with origin/main...');
   const diff = execSync('git diff HEAD origin/main --name-only', { encoding: 'utf8' });
   console.log('Files changed in origin/main: ');
-  console.log(diff);
-
-  // Try to merge with origin/main;
-  console.log('🔄 Attempting to merge with origin/main...');
+  console.log(diff)
+  // Try to merge with origin/main
+  console.log('🔄 Attempting to merge with origin/main...'),
   try {,
     execSync('git merge origin/main --no-ff -m "feat: Sync with latest main branch changes"', { stdio: 'inherit' });
     console.log('✅ Successfully merged with origin/main');
@@ -40,10 +39,10 @@ try {
         execSync('git commit -m "feat: Resolve merge conflicts with main branch"', { stdio: 'inherit' });
         console.log('✅ Conflicts resolved and committed');
       } catch (resolveError) {
-        console.log('❌ Could not automatically resolve conflicts');
+    console.log('❌ Could not automatically resolve conflicts');
         console.log('Manual intervention needed for:', conflictFiles);
-        throw resolveError;
-      }
+        throw resolveError
+  }
     }
   }
 
@@ -54,6 +53,6 @@ try {
   console.log('🎉 Successfully synced with main branch!');
 
 } catch (error) {
-  console.error('❌ Error syncing with main:', error.message);
-  process.exit(1);
-}
+    console.error('❌ Error syncing with main:', error.message);
+  process.exit(1)
+  }

@@ -236,14 +236,12 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               </div>"
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <a, hre, f="/subscri, b, e""
-                  className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
+                  className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
                   <sp, a, n>Get, Premium, Access</sp, a, n>
                 </a>"
                 <a, hre, f="/conta, c, t""
-                  className="bord, e, r-2, borde, r-emera, l, d-500, tex, t-emera, l, d-400, hove, r:bg-emera, l, d-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
-                ></a>
+                  className="bord, e, r-2, borde, r-emera, l, d-500, tex, t-emera, l, d-400, hove, r:bg-emera, l, d-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"></a>
                   <sp, a, n>Contact, Sale, s</sp, a, n>"
                   <Link, className="w-5 h-5" /></Link>
                 </a>
@@ -295,5 +293,5 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
       </div>
     </div>
   );
-};
+}
 export default February2026ContentShowcaseBanner;"`

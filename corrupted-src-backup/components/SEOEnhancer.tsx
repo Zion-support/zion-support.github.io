@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
@@ -29,23 +27,21 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
-
       return () => {
         document.head.removeChild(script);
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
   }, [structuredData]);
-
   // Default structured data for organization;
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: canonicalUrl || window.location.origin;
+    description: description
+    url: canonicalUrl || window.location.origin,
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,
@@ -61,11 +57,9 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
-    }};
-
+    }}
   //   const finalStructuredData = structuredData || defaultStructuredData;
-
-  return(<>)
+  return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -76,7 +70,6 @@ const,
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link>
-
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -117,7 +110,7 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
-  return (<>
+  return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
@@ -128,7 +121,6 @@ const,
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
         {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
         {/* Open Graph Meta Tags */}"
         <meta property="o,"
   g:title" content={title} /></meta>"
@@ -184,9 +176,9 @@ const,
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}
-    
   );
-};
-
+}
 export default SEOEnhancer;
 "`
+  </SEOEnhancerProps>
+  </SEOEnhancerProps>

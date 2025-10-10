@@ -1,8 +1,6 @@
 import React from 'react';
-
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
-
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   title;
   description,
@@ -15,7 +13,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
       className="advertising-banner"
       style={{
         backgroundColor,
-        color: textColor;
+        color: textColor,
         padding: '2rem'
         borderRadius: '0.5rem')
         margin: '1rem 0')
@@ -49,7 +47,6 @@ const,
           /></img>
         </div>
       )}
-
       <div className="banner-content" style={{ flex: 1 }}></div>
         <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>
@@ -59,7 +56,7 @@ const,
             display: 'inline-block',
             padding: '0.75 rem 1.5 rem',
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            color: textColor;
+            color: textColor,
             textDecoration: 'none',
             borderRadius: '0.25rem',
             fontWeight: 'bold'}
@@ -90,7 +87,8 @@ const,
       </div>
     </div>
   );
-};
-
+}
 export default AdvertisingBanner;
 "
+  </AdvertisingBannerProps>
+  </AdvertisingBannerProps>

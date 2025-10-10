@@ -65,14 +65,14 @@ function removeUnusedImports(content) {
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         const totalOccurrences = matches.length;
         
-        return totalOccurrences>importOccurrences</totalOccurrences>;
+        return totalOccurrences>importOccurrences</totalOccurrences>
       });
 
       // If no names are used, remove the entire import;
       if (usedNames.length === 0) {
-        newContent = newContent.replace(importStatement, '');
-        removedCount++;
-      } else if (usedNames.length < importedNames.length) {
+    newContent = newContent.replace(importStatement, '');
+        removedCount++
+  } else if (usedNames.length < importedNames.length) {
         // Some names are unused, update the import;
         const newImportStatement = importStatement.replace(
           /{([^}]+)}/,
@@ -91,9 +91,9 @@ function removeUnusedImports(content) {
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         
         if (matches.length <= importOccurrences) {
-          newContent = newContent.replace(importStatement, '');
-          removedCount++;
-        }
+    newContent = newContent.replace(importStatement, '');
+          removedCount++
+  }
       }
     }
   });
@@ -101,7 +101,7 @@ function removeUnusedImports(content) {
   // Clean up multiple empty lines;
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
-  return { content: newContent, removedCount };
+  return { content: newContent, removedCount }
 }
 
 function processFile(filePath) {
@@ -143,13 +143,13 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Unused import removal completed!`);
-  console.log(`📊 Statistics: `);
+  console.log(`📊 Statistics: `),
   console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
   console.log(`   - Unused imports removed: ${removedImports}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
+    main()
+  }
 
-export { processFile, removeUnusedImports };
+export { processFile, removeUnusedImports }

@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from 'fs';
 console.log('🔧 Resolving merge conflicts in app/page.tsx...');
 
 try {
-  // Read the file;
+    // Read the file;
   const content = readFileSync('/workspace/app/page.tsx', 'utf8');
   
   // Split by conflict markers and keep our version (after )
@@ -17,20 +17,20 @@ try {
     
     if (line.includes('')) {
       skipUntilNextMarker = true;
-      continue;
-    }
+      continue
+  }
     
     if (line.includes('')) {
-      skipUntilNextMarker = false;
-      continue;
-    }
+    skipUntilNextMarker = false;
+      continue
+  }
     
     if(line.includes('      continue;)
     })
     )
     if (!skipUntilNextMarker) {
-      resolvedLines.push(line);
-    }
+    resolvedLines.push(line)
+  }
   }
   
   // Write the resolved content;
@@ -52,6 +52,6 @@ try {
   console.log('✅ Duplicate imports cleaned up!');
   
 } catch (error) {
-  console.error('❌ Error resolving conflicts:', error.message);
-  process.exit(1);
-}
+    console.error('❌ Error resolving conflicts:', error.message);
+  process.exit(1)
+  }

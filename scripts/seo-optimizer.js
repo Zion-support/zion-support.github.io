@@ -4,9 +4,9 @@ import { glob } from 'glob';
 
 // SEO optimization script;
 class SEOOptimizer {
-  constructor() {
+    constructor() {
     this.optimizations = [];
-    this.issues = [];
+    this.issues = []
   }
 
   // Check meta tags;
@@ -25,9 +25,9 @@ class SEOOptimizer {
         const hasViewport = content.includes('name="viewport"');
         const hasCharset = content.includes('charset=');
         const hasOgTitle = content.includes('property="og: title"');
-        const hasOgDescription = content.includes('property="og:description"');
-        const hasOgImage = content.includes('property="og:image"');
-        const hasTwitterCard = content.includes('name="twitter: card"');
+        const hasOgDescription = content.includes('property="og:description"')
+        const hasOgImage = content.includes('property="og:image"')
+        const hasTwitterCard = content.includes('name="twitter: card"'),
         ,
         if (!hasTitle) this.issues.push(`${file}: Missing title tag`);
         if (!hasDescription) this.issues.push(`${file}: Missing meta description`);
@@ -130,14 +130,13 @@ class SEOOptimizer {
 
     let linkCount = 0;
     for (const file of tsxFiles) {
-      try {
+    try {
         const content = fs.readFileSync(file, 'utf8');
         
         // Count internal links;
         const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
-        linkCount += internalLinks.length;
-        
-      } catch (error) {
+        linkCount += internalLinks.length
+  } catch (error) {
         console.error(`   ❌ Error processing ${file}:`, error.message);
       }
     }
@@ -164,8 +163,8 @@ class SEOOptimizer {
         console.log(`   ... and ${this.issues.length - 10} more issues`);
       }
     } else {
-      console.log('\n✅ No SEO issues found!');
-    }
+    console.log('\n✅ No SEO issues found!')
+  }
     
     console.log('\n🚀 SEO Recommendations: ');
     console.log('   1. Add structured data (JSON-LD)');
@@ -175,9 +174,9 @@ class SEOOptimizer {
     console.log('   5. Use descriptive URLs');
     console.log('   6. Add sitemap.xml');
     console.log('   7. Implement robots.txt');
-    console.log('   8. Use semantic HTML elements');
-    console.log('   9. Add social media meta tags');
-    console.log('   10. Implement schema markup');
+    console.log('   8. Use semantic HTML elements')
+    console.log('   9. Add social media meta tags')
+    console.log('   10. Implement schema markup'),
   }
 
   // Run all optimizations;
@@ -191,18 +190,18 @@ class SEOOptimizer {
       await this.checkInternalLinks();
       this.generateReport();
       
-      console.log('\n✅ SEO optimization completed!');
-    } catch (error) {
-      console.error('❌ SEO optimization failed:', error.message);
-    }
+      console.log('\n✅ SEO optimization completed!')
+  } catch (error) {
+    console.error('❌ SEO optimization failed:', error.message)
+  }
   }
 }
 
 // Run the optimizer;
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const optimizer = new SEOOptimizer();
-  optimizer.run();
-}
+    const optimizer = new SEOOptimizer();
+  optimizer.run()
+  }
 
 export default SEOOptimizer;
 // SEO optimization script;
@@ -300,13 +299,13 @@ ${/* TODO: Fix JSX expression */}
   
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
   // console.log('  - Sitemap)
-  generated: public/sitemap.xml');
+  generated: public/sitemap.xml'),
 }
 
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
   const metaOptimizations = {/* TODO: Fix JSX expression */}
-  };
+  }
   
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
@@ -314,7 +313,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
   );
   
   // console.log('  - Meta tags)
-  optimized: seo-optimizations.json');
+  optimized: seo-optimizations.json'),
 }
 
 function generateRobotsTxt() {/* TODO: Fix JSX expression */}
@@ -326,7 +325,7 @@ Allo,
 
 Sitema,
   p: http,
-  s://ziontechgroup.com/sitemap.xml;
+  s: //ziontechgroup.com/sitemap.xml,
 # Disallow admin and private areas,
   Disallow: /admin/
 Disallo,
@@ -343,11 +342,11 @@ Allo,
   Allow: /services,
   Allow: /contact,
   Allow: /ai-services,`
-  Allow: /it-services`;
+  Allow: /it-services`,
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
   // console.log('  - Robots.txt)
-  generated: public/robots.txt');
+  generated: public/robots.txt'),
 }
 
 function generateStructuredData() {/* TODO: Fix JSX expression */}
@@ -362,7 +361,7 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
       "http,"
   s://linkedin.com/company/ziontechgroup"
     ]
-  };
+  }
   
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json'),
@@ -370,7 +369,7 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
   );
   
   // console.log('  - Structured data)
-  generated: public/structured-data.json');
+  generated: public/structured-data.json'),
 }
 
 // Run SEO optimization;

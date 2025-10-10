@@ -61,7 +61,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
   ];
   return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
   g:px-8">",
   return (
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
@@ -133,11 +133,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return ()
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";)
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)
-  g:px-8">";),
+  g:px-8">",),
   return (</div>
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";</div>
+  g:px-8">",</div>
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
           {/* Lo, g, o */}</div>
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";
@@ -145,7 +145,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return ("
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";"
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
-  g:px-8">";"
+  g: px-8">","
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
           {/* Lo, g, o */}"
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";"
@@ -286,22 +286,24 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         </d, i, v>
         {/* Mobile, Navigatio, n */}
         {
-isMenuOp, e, n && (
+    isMenuOp, e, n && (
 <div, className="md: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0"></div>
 <nav, className="flex, fle, x-col, spac, e-y-1">
 <div, className="m;
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e;}
+<div, ke, y={it, e, m.na, m, e
+  }
 }>
                   <Li, n, k;
 <div, className="m
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
 <nav, className="flex, fle, x-col, spac, e-y-1">";
-{navigationIte, m, s.m, a, p((it, e, m) => (
-<div, ke, y={it, e, m.na, m, e;
-}></div>
+{
+    navigationIte, m, s.m, a, p((it, e, m) => (
+<div, ke, y={it, e, m.na, m, e
+  }></div>
                   <Li, n, k
   to={it, e, m.hr, e, f}
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;
@@ -365,5 +367,5 @@ isMenuOp, e, n && (
       </d, i, v>
     </head, e, r>
   );
-};
+}
 export default ModernHeader;"

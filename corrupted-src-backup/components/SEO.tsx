@@ -1,4 +1,3 @@
-
 interface SEOProps {/* TODO: Fix JSX expression */}
       <title>{title}</title>
       <meta name="description" content={description} />

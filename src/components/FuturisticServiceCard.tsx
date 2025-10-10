@@ -1,10 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
-
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 }
-
 const,
   FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -24,10 +22,8 @@ const,
     orang,
   e: {/* TODO: Fix JSX expression */}
     }
-  };
-
+  }
   const currentColor = colorClasses[color];
-
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
       }`})
@@ -37,7 +33,6 @@ const,
       {/* Popular Badge */}
       {/* TODO: Fix JSX expression */}
       )}
-
       {/* Card */}
       <div></div>
         className={/* TODO: Fix JSX expression */}
@@ -54,23 +49,19 @@ const,
           >"
             <Icon className="w-8 h-8 text-white" /></Icon>
           </div>
-          
           {/* Animated Background */}"
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hove,"
   r:opacity-100 transition-opacity duration-500"></div>
         </div>
-
         {/* Title */}"
         <h3 className="text-2xl font-bold text-white mb-3 group-hove,"
   r:text-cyan-400 transition-colors duration-300"></h3>
           {title}
         </h3>
-
         {/* Description */}"
         <p className="text-gray-300 mb-6 leading-relaxed"></p>
           {description}
         </p>
-
         {/* Price */}"
         <div className="mb-6"></div>`
           <div className={`text-3xl font-bold ${currentColor.text} mb-2`}></div>
@@ -78,7 +69,6 @@ const,
           </div>"
           <div className="text-sm text-gray-400">per month</div>
         </div>
-
         {/* Features */}"
         <ul className="space-y-3 mb-8"></ul>
           {/* TODO: Fix JSX expression */}"
@@ -88,11 +78,9 @@ const,
             </li>
           ))}
           {/* TODO: Fix JSX expression */}
-              +{features.length - 4} more features;
-            </li>
+              +{features.length - 4} more features</li>
           )}
         </ul>
-
         {/* CTA Button */}
         <button></button>
           className={/* TODO: Fix JSX expression */}`
@@ -104,14 +92,12 @@ const,
           <ArrowRight className="w-4 h-4 ml-2 group-hove,"
   r:translate-x-1 transition-transform" /></ArrowRight>
         </button>
-
         {/* Hover Effect Overlay */}
         <div></div>`
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-5 rounded-2xl transition-opacity duration-500`}
         ></div>
       </div>
-
       {/* Glow Effect */}
       <div></div>`
         className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
@@ -119,6 +105,6 @@ const,
       ></div>
     </div>
   );
-};
-
+}
 export default FuturisticServiceCard;"`
+  </FuturisticServiceCardProps>

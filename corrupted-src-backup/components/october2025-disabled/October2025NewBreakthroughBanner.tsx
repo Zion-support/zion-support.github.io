@@ -3,7 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t';
 const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-   };
+   }
   return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, opacit, y-30'>
@@ -278,6 +278,6 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
       </div>
     </div>
   );
-};
+}
 export default October2025NewBreakthroughBanner;
 `

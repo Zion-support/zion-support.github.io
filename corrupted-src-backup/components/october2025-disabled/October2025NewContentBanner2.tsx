@@ -34,8 +34,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
             const Ico, n = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
-                className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
-              >
+                className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1">
                 {/* B, a, d, g, e */}
                 <div, classNam, e = "absolute, to, p-4, righ, t-4"></div>
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">
@@ -71,8 +70,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>
           {/* TODO: Fix JSX expression */}
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}"
-                className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
-              ></Link>
+                className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"></Link>
                 {/* B, a, d, g, e */}"
                 <div, classNam, e = "absolute, to, p-4, righ, t-4"></div>"
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></span>
@@ -112,8 +110,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         {/* CTA, Sectio, n */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <Link, t, o="/bl, o, g""
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
-          ></Link>
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"></Link>
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
             <Link, className="w-5 h-5" /></Link>
           </Li, n, k>
@@ -121,6 +118,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
       </div>
     </sec, t, i, o, n>
   );
-};
+}
 export default October2025NewContentBanner2;
 "`

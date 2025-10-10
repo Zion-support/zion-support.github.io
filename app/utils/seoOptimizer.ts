@@ -3,20 +3,22 @@
  * Advanced SEO Optimization Utility;
  * Provides comprehensive SEO enhancements and monitoring;
  */;
-interface SEOConfig {;
-  siteName: string,;
+interface SEOConfig {
+    siteName: string,;
   siteUrl: string,;
   defaultTitle: string,;
   defaultDescription: string,;
   defaultImage: string,;
   twitterHandle?: string;
   facebookAppId?: string;
-  googleAnalyticsId?: string;}
+  googleAnalyticsId?: string
+  }
   googleTagManagerId?: string;}
 }
-interface PageSEOData {;
-  title: string,;
-  description: string,;}
+interface PageSEOData {
+    title: string,;
+  description: string,
+  }
 interface SEOConfig {}
   siteName: string;
   siteUrl: string;
@@ -24,9 +26,9 @@ interface SEOConfig {}
   defaultDescription: string;
   defaultImage: string;
   twitterHandle?: string;
-  facebookAppId?: string;
-  googleAnalyticsId?: string;
-  googleTagManagerId?: string;}
+  facebookAppId?: string
+  googleAnalyticsId?: string
+  googleTagManagerId?: string,}
 }
 interface PageSEOData {}
   title: string;
@@ -36,20 +38,21 @@ interface PageSEOData {}
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
   publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
+  modifiedTime?: string
+  author?: string
+  section?: string,
   tags?: string[],;
   noindex?: boolean;
   nofollow?: boolean;}
 }
-class SEOOptimizer {;
-  private config: SEOConfig,;
-  private currentPageData: PageSEOData | null = null;
-  constructor(config: SEOConfig) {,;}
+class SEOOptimizer {
+    private config: SEOConfig,;
+  private currentPageData: PageSEOData | null = null,
+  constructor(config: SEOConfig) {,
+  }
 class SEOOptimizer {}
-  private config: SEOConfig;
-  private currentPageData: PageSEOData | null = null;
+  private config: SEOConfig
+  private currentPageData: PageSEOData | null = null,
   constructor(config: SEOConfig) {}
     this.config = config;}
 interface SEOConfig {/* TODO: Fix JSX expression */}
@@ -71,9 +74,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Set page-specific SEO data;
    */;
-  setPageData(data: PageSEOData): void {,;
+  setPageData(data: PageSEOData): void {
+    ,;
     this.currentPageData = data;
-    this.updateMetaTags(),;}
+    this.updateMetaTags(),
+  }
   setPageData(data: PageSEOData): void {}
     this.currentPageData = data;
     this.updateMetaTags();
@@ -84,8 +89,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Generate optimized title;
    */;
-  generateTitle(pageTitle?: string): string {;
-    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;}
+  generateTitle(pageTitle?: string): string {
+    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
+  }
   generateTitle(pageTitle?: string): string {}
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName);
@@ -97,9 +103,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Generate optimized description;
    */;
-  generateDescription(pageDescription?: string): string {;
+  generateDescription(pageDescription?: string): string {
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
-    return description.length > 160;}
+    return description.length > 160
+  }
   generateDescription(pageDescription?: string): string {}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160;
@@ -118,8 +125,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Update meta tags;
    */;
-  private updateMetaTags(): void {;
-    if (!this.currentPageData) return;}
+  private updateMetaTags(): void {
+    if (!this.currentPageData) return
+  }
   private updateMetaTags(): void {}
     if (!this.currentPageData) return;
     const title = this.generateTitle();
@@ -142,8 +150,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property');
     this.setMetaTag('og:site_name', this.config.siteName, 'property');
     // Twitter Card tags;
-    if (this.config.twitterHandle) {;
-    // Twitter Card tags;}
+    if (this.config.twitterHandle) {
+    // Twitter Card tags
+  }
     if (this.config.twitterHandle) {}
       this.setMetaTag('twitter:card', 'summary_large_image');`}
       this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);
@@ -174,7 +183,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {;}
+    if (!meta) {}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {}
       meta = document.createElement('meta');
@@ -218,22 +227,23 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   t: `${this.config.siteUrl}/search?q={search_term_string}`,;
         'query-input': 'required name=search_term_string';
       }
-    };
+    }
     this.addStructuredData(structuredData);
   }
   /**;
    * Update structured data for current page;
    */;
-  private updateStructuredData(): void {;
+  private updateStructuredData(): void {
     if (!this.currentPageData) return;
-    const structuredData = {;
+    const structuredData = {
       '@context': 'https: //schema.org',;
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
       headline: this.generateTitle();
-      description: this.generateDescription();
-      url: this.currentPageData.url || window.location.href;
-      image: this.currentPageData.image || this.config.defaultImage;
-      publisher: {,;}
+      description: this.generateDescription()
+      url: this.currentPageData.url || window.location.href
+      image: this.currentPageData.image || this.config.defaultImage,
+      publisher: {,
+  }
   private updateStructuredData(): void {}
     if (!this.currentPageData) return;
     const structuredData = {}
@@ -245,18 +255,19 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       image: this.currentPageData.image || this.config.defaultImage,;
       publisher: {}
         '@type': 'Organization',;
-        name: this.config.siteName;
+        name: this.config.siteName,
         url: this.config.siteUrl}
       }
     }
     // Add article-specific properties;
-    if (this.currentPageData.type === 'article') {;
-      Object.assign(structuredData, {;
-        author: {);
-// '@type': 'Person');
-// name: this.currentPageData.author || this.config.siteName;);}
+    if (this.currentPageData.type === 'article') {
+    Object.assign(structuredData, {
+        author: {)
+// '@type': 'Person')
+// name: this.currentPageData.author || this.config.siteName,)
+  }
         });
-        datePublished: this.currentPageData.publishedTime;
+        datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime),;
         articleSection: this.currentPageData.section),;
         keywords: this.generateKeywords(),;
@@ -265,16 +276,16 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       Object.assign(structuredData, {)}
         author: {}
 // '@type': 'Person',;
-// name: this.currentPageData.author || this.config.siteName;
+// name: this.currentPageData.author || this.config.siteName,
         },;
         datePublished: this.currentPageData.publishedTime,;
         dateModified: this.currentPageData.modifiedTime,;
         articleSection: this.currentPageData.section,;
-        keywords: this.generateKeywords();
+        keywords: this.generateKeywords(),
       });
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
       }
-    };
+    }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
         },;
@@ -285,7 +296,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         articleSectio,;
   n: this.currentPageData.section,;
         keyword,;
-  s: this.generateKeywords();
+  s: this.generateKeywords(),
       });
     }
     this.addStructuredData(structuredData);
@@ -314,9 +325,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Setup performance monitoring for SEO;
    */;
-  private setupPerformanceMonitoring(): void {;
+  private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact;
-    if (typeof window !== 'undefined' && 'performance' in window) {;}
+    if (typeof window !== 'undefined' && 'performance' in window) {}
   private setupPerformanceMonitoring(): void {}
     // Monitor Core Web Vitals for SEO impact;
     if (typeof window !== 'undefined' && 'performance' in window) {}
@@ -324,7 +335,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       new PerformanceObserver((list) => {}
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        if (lastEntry.startTime > 4000) {// Poor LCP;}
+        if (lastEntry.startTime > 4000) {
+    // Poor LCP
+  }
         if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
@@ -335,14 +348,16 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint'] });
       // Monitor CLS (Cumulative Layout Shift);
       let clsValue = 0;
-      new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (!(entry as any).hadRecentInput) {;}
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value;}
           }
         }
-        if (clsValue > 0.25) {// Poor CLS;
-      let clsValue = 0;}
+        if (clsValue > 0.25) {
+    // Poor CLS;
+      let clsValue = 0
+  }
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (!(entry as any).hadRecentInput) {}
@@ -365,10 +380,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Track SEO-related metrics;
    */;
-  private trackSEOMetric(metric: string, value: number): void {,;
+  private trackSEOMetric(metric: string, value: number): void {
+    ,;
     if (typeof window !== 'undefined' && (window as any).gtag) {,;
       (window as any).gtag('event', 'seo_metric', {);
-        metric_name: metric),;}
+        metric_name: metric),
+  }
   private trackSEOMetric(metric: string, value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'seo_metric', {)}
@@ -385,12 +402,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Generate sitemap data;
    */;
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {;
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
     // This would typically come from your CMS or routing system;
     return [;
-      {;
-        url: this.config.siteUrl;}
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {}
+      {
+        url: this.config.siteUrl
+  }
+  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {}
     // This would typically come from your CMS or routing system;
     return [;
       {}
@@ -406,10 +424,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Generate robots.txt content;
    */;
-  generateRobotsTxt(): string {;
-    return `User-agent: *,;}
+  generateRobotsTxt(): string {
+    return `User-agent: *,
+  }
   generateRobotsTxt(): string {}
-    return `User-agent: *;
+    return `User-agent: *,
 Allow: /}
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
 # Disallow admin and private areas;
@@ -421,26 +440,28 @@ Disallow: /static/`,;
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
   p: ${this.config.siteUrl}/sitemap.xml;
 # Disallow admin and private areas,;
-  Disallow: /admin/;
+  Disallow: /admin/,
 Disallo,;
-  w: /private/;
+  w: /private/,
 Disallo,;
-  w: /api/;
+  w: /api/,
 Disallo,;
-  w: /_next/;
+  w: /_next/,
 Disallo,`;
-  w: /static/`;
+  w: /static/`,
   }
   /**;
    * Check for SEO issues;
    */;
   checkSEOIssues(): string[] {}
-    const issues: string[] = [];
+    const issues: string[] = []
+    // Check title length
+    const title = document.title,,;
+    if (title.length < 30) {
+    ,;
     // Check title length;
-    const title = document.title;,;
-    if (title.length < 30) {,;
-    // Check title length;
-    const title = document.title;}
+    const title = document.title
+  }
     if (title.length < 30) {}
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
@@ -501,10 +522,11 @@ Disallo,`;
   }
 }
 // Default configuration;
-const defaultConfig: SEOConfig = {;
-  siteName: 'Zion Tech Group';
-  siteUrl: 'https://zion.app';
-// Default configuration;}
+const defaultConfig: SEOConfig = {
+    siteName: 'Zion Tech Group'
+  siteUrl: 'https://zion.app',
+// Default configuration
+  }
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',;
   siteUrl: 'https://zion.app',;
@@ -512,7 +534,7 @@ const defaultConfig: SEOConfig = {}
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',;
   defaultImage: 'https://zion.app/og-image.webp',;
   twitterHandle: 'ZionTechGroup',;
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
+  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
@@ -523,6 +545,6 @@ export default seoOptimizer;
 // Default configuration;
 const,;
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-};
+}
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;"`;

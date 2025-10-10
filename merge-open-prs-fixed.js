@@ -7,8 +7,8 @@ try {
 //   const prData = fs.readFileSync('open_prs_current.json', 'utf8');
   openPRs = JSON.parse(prData);
 //   } catch (error) {
-//   process.exit(1);
-}
+    //   process.exit(1)
+  }
 
 // Function to safely merge a PR branch;
 function mergePR(pr) {
@@ -97,7 +97,7 @@ for (const pr of openPRs) {
 //   const success = mergePR(pr);
   results.push({)
     prNumber: pr.number;)
-    title: pr.title;),
+    title: pr.title,),
     branch: pr.head.ref),
     success: success),
 for (const pr of openPRs) {/* TODO: Fix JSX expression */}
@@ -111,12 +111,12 @@ for (const pr of openPRs) {/* TODO: Fix JSX expression */}
 // Create summary report;
 const summary = {
   totalPRs: openPRs.length;
-  successfulMerges: successCount;
-  failedMerges: failCount;
-  results: results;
+  successfulMerges: successCount
+  failedMerges: failCount
+  results: results,
   timestamp: new Date().toISOString(),
 const summary = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2));
 

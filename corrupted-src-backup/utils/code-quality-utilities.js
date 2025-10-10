@@ -44,10 +44,10 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
         func(...args);
   // Debounce utility,
   debounce: (func, wait) => {/* TODO: Fix JSX expression */}
-      };
+      }
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
-    };
+    }
   },
 
   // Throttle utility;
@@ -61,14 +61,14 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
   // Throttle utility,
   throttle: (func, limit) => {/* TODO: Fix JSX expression */}
       }
-    };
+    }
   },
 
   // Memoization;
   memoize: fn => {
-    const _cache = new Map();
+    const _cache = new Map()
     return function (...args) {
-      //       const key = JSON.stringify(args);
+      //       const key = JSON.stringify(args),
       if (cache.has(key)) {,
         return cache.get(key);
   // Memoization,
@@ -77,6 +77,6 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       //       const result = fn.apply(this, args);
       cache.set(key, result);
       return result;
-    };
-  }};
+    }
+  }}
 `

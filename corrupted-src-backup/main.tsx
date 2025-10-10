@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-
 async function reportWebVitals() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
@@ -9,8 +8,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
   c: {/* TODO: Fix JSX expression */})
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
-    };
-
+    }
     onCLS(log);
     onLCP(log);
     onFCP(log);
@@ -18,11 +16,9 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
 }
-
 // const container = document.getElementById('root');
 if (!container) {/* TODO: Fix JSX expression */}
 }
-
 const _root = createRoot(container);
 root.render(<React.StrictMode>)
     <App />)
@@ -30,5 +26,4 @@ root.render(<React.StrictMode></React>
     <App /></App>
   </React.StrictMode>)
 );
-
 reportWebVitals();

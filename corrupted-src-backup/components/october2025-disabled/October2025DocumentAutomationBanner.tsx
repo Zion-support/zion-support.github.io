@@ -50,8 +50,8 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             Discover, how, leading enterprises, achi, e, v, e{' '})
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>)
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d;
-            Transform, Operations, with AI-Powered, Document, Processing
-          </p>
+            Transform, Operations, with AI-Powered, Document, Processing;
+  </
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>
             Discover, how, leading enterprises, achi, e, v, e{' '}</p>
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>,
@@ -417,5 +417,5 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
       </div>
     </div>
   );
-};
+}
 export default October2025 DocumentAutomationBanner;

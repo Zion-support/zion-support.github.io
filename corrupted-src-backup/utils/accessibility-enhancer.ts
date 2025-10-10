@@ -13,21 +13,21 @@ interface AccessibilityReport {/* TODO: Fix JSX expression */}
 }
 
 class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
-  private issues: AccessibilityIssue[] = [];
+  private config: AccessibilityConfig
+  private issues: AccessibilityIssue[] = [],
 ,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
       enableAutoFix: true;
       enableKeyboardNavigation: true;
       enableScreenReaderSupport: true;
-      enableColorContrastCheck: true;
-      enableFocusManagement: true;
-      enableARIALabels: true;
+      enableColorContrastCheck: true
+      enableFocusManagement: true
+      enableARIALabels: true,
       ...config,
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   /**
@@ -51,10 +51,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     // Make all interactive elements focusable;
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
     );
-    interactiveElements.forEach(element => {)
+    interactiveElements.forEach(element => {
+    )
       if (!element.hasAttribute('tabindex')) {
-        element.setAttribute('tabindex', '0');
-      }
+        element.setAttribute('tabindex', '0')
+  }
     interactiveElements.forEach(element => {/* TODO: Fix JSX expression */}
       })
     });
@@ -124,14 +125,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     // Track focus changes;
     document.addEventListener('focusin', e => {)
-      this.manageFocus(e.target as HTMLElement);
-    });
+      this.manageFocus(e.target as HTMLElement)
+  });
 
     // Trap focus in modals;
-    document.addEventListener('keydown', e => {)
+    document.addEventListener('keydown', e => {
+    )
       if (e.key === 'Tab') {
-        this.trapFocusInModal(e);
-      }
+        this.trapFocusInModal(e)
+  }
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
     });
 
@@ -145,13 +147,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    * Manage focus for better accessibility;
    */
   private manageFocus(element: HTMLElement): void {
-    // Add focus indicators;
-    element.classList.add('focus-visible');
+    // Add focus indicators
+    element.classList.add('focus-visible'),
 ,
     // Remove focus indicator after blur;
     element.addEventListener('blur', () => {
-      element.classList.remove('focus-visible');
-    });
+      element.classList.remove('focus-visible')
+  });
 
     // Announce focus changes to screen readers;
     if (this.config.enableScreenReaderSupport) {
@@ -169,8 +171,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    * Trap focus in modal;
    */
   private trapFocusInModal(e: KeyboardEvent): void {
-    const _modal = document.querySelector('.modal[aria-hidden="false"]');
-    if (!modal) return;
+    const _modal = document.querySelector('.modal[aria-hidden="false"]')
+    if (!modal) return,
 ,
     const focusableElements = modal.querySelectorAll()
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -180,8 +182,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     if (e.shiftKey && document.activeElement === firstElement) {
       e.preventDefault();
-      lastElement.focus();
-    } else if (!e.shiftKey && document.activeElement === lastElement) {
+      lastElement.focus()
+  } else if (!e.shiftKey && document.activeElement === lastElement) {
       e.preventDefault();
       firstElement.focus();
   private trapFocusInModal(e: KeyboardEvent): void {/* TODO: Fix JSX expression */}
@@ -196,7 +198,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (!this.config.enableARIALabels) return;
 
     // Add ARIA labels to buttons without text;
-    const _buttons = document.querySelectorAll('button: not([aria-label])');
+    const _buttons = document.querySelectorAll('button: not([aria-label])'),
     buttons.forEach(button => {),
       const _icon = button.querySelector('svg, i');
       if (icon && !button.textContent?.trim()) {
@@ -207,14 +209,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     });
 
     // Add ARIA labels to form inputs;
-    const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
-    inputs.forEach(input => {),
+    const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
+    inputs.forEach(input => {
+    ),
       const _label = this.findAssociatedLabel(input as HTMLInputElement);
       if (label) {,
-        input.setAttribute('aria-labelledby', label.id || this.generateId(label));
-      }
+        input.setAttribute('aria-labelledby', label.id || this.generateId(label))
+  }
     const _inputs = document.querySelectorAll('inpu)
-  t:not([aria-label]):not([aria-labelledby])');
+  t: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach(input => {/* TODO: Fix JSX expression */}
       })
     });
@@ -267,7 +270,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         img.alt = this.generateAltText(img);
         this.addIssue({)
           type: 'error')
-          element: img;)
+          element: img,)
           message: 'Image missing alt text'),
           fix: 'Add descriptive alt text'),
           severity: 'high')});
@@ -275,8 +278,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
       // Add loading="lazy" for non-critical images;
       if (!img.hasAttribute('loading')) {
-        img.loading = 'lazy';
-      }
+    img.loading = 'lazy'
+  }
 
       // Add width and height attributes;
       if (!img.hasAttribute('width') || !img.hasAttribute('height')) {
@@ -355,13 +358,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         position: absolute;
         width: 1 px;
         height: 1 px;
-        padding: 0;
-        margin: -1 px;
-        overflow: hidden;
+        padding: 0
+        margin: -1 px
+        overflow: hidden,
         clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
+        white-space: nowrap,
+        border: 0
+  }
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
       }`
     `;
@@ -377,11 +380,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     return {
       score,
-      issues: this.issues;
+      issues: this.issues,
       recommendations,
       timestamp: new Date().toISOString(),
   public generateReport(): AccessibilityReport {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   /**
@@ -412,10 +415,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    * Generate recommendations;
    */
   private generateRecommendations(): string[] {
-    const recommendations: string[] = [];
-
-    //     const errorCount = this.issues.filter(i => i.type === 'error').length;
-    //     const warningCount = this.issues.filter(i => i.type === 'warning').length;
+    const recommendations: string[] = []
+    //     const errorCount = this.issues.filter(i => i.type === 'error').length
+    //     const warningCount = this.issues.filter(i => i.type === 'warning').length,
 ,
     if (errorCount > 0) {,
   private generateRecommendations(): string[] {/* TODO: Fix JSX expression */}`
@@ -458,10 +460,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     return `id-${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  private generateAltText(img: HTMLImageElement): string {,
+  private generateAltText(img: HTMLImageElement): string {
+    ,
     const _src = img['src'];,
     //     const filename = src.split('/').pop()?.split('.')[0] || 'image';,
-    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
   }
 
   private generateFormLabel(input: HTMLInputElement): string {
@@ -474,24 +477,26 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       case 'email':
         return 'Email address';
       case 'password':
-        return 'Password';
+        return 'Password'
       case 'tel':
-        return 'Phone number';
+        return 'Phone number'
       case 'url':
-        return 'Website URL';
+        return 'Website URL',
       default:,
-        return 'Input field';
-    }
+        return 'Input field'
+  }
   }
 
-  private calculateContrast(color1: string, color2: string): number {,
+  private calculateContrast(color1: string, color2: string): number {
+    ,
     // Simplified contrast calculation;
     // In a real implementation, you'd parse the colors and calculate luminance;
-    return 4.5; // Placeholder;
+    return 4.5; // Placeholder
   }
 
-  private addIssue(issue: AccessibilityIssue): void {,
-    this.issues.push(issue);
+  private addIssue(issue: AccessibilityIssue): void {
+    ,
+    this.issues.push(issue)
   }
 
   private addARIADescriptions(): void {
@@ -536,18 +541,19 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   private announceToScreenReader(message: string): void {
-    const _liveRegion = document.getElementById('live-region');
+    const _liveRegion = document.getElementById('live-region'),
     if (liveRegion) {,
-      liveRegion.textContent = message;
-    }
+      liveRegion.textContent = message
+  }
   }
 
-  private closeModal(modal: HTMLElement): void {,
+  private closeModal(modal: HTMLElement): void {
+    ,
     modal.setAttribute('aria-hidden', 'true');
     const _focusableElement = modal.querySelector('[data-focus-trap-start]') as HTMLElement;
     if (focusableElement) {
-      focusableElement.focus();
-    }
+      focusableElement.focus()
+  }
   }
 
   private getElementDescription(element: HTMLElement): string {
@@ -555,10 +561,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (ariaLabel) return ariaLabel;
 
     //     const text = element.textContent?.trim();
-    if (text) return text;
-
-    //     const alt = element.getAttribute('alt');
-    if (alt) return alt;
+    if (text) return text
+    //     const alt = element.getAttribute('alt')
+    if (alt) return alt,
 ,
     return element.tagName.toLowerCase();
   private announceToScreenReader(messag)

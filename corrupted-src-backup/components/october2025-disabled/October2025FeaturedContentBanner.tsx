@@ -249,6 +249,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       </div>
     </div>
   );
-};
+}
 export default October2025FeaturedContentBanner;
 `

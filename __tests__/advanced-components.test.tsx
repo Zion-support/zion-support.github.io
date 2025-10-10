@@ -12,12 +12,12 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
+
     render(
       <MemoryRouter>
         <ThrowError shouldThrow={false} />
       </MemoryRouter>
     );
-
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 
@@ -38,4 +38,5 @@ describe('Advanced Components', () => {
 
     consoleSpy.mockRestore();
   });
+
 });

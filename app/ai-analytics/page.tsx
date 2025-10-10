@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
 const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -15,24 +14,7 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      title: 'Real-Time Dashboards',
+title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
@@ -61,7 +43,6 @@ const AiAnalyticsPage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -69,7 +50,6 @@ const AiAnalyticsPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-
   const useCases = [
     {
       title: 'Business Intelligence',
@@ -100,59 +80,49 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
-
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
+<meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-=======
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       </Helmet>
-      
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 AI Analytics
-              </h1>
+  </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent analytics powered by cutting-edge AI technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Started
-                </button>
+  </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More
-                </button>
+                  Learn More,
+  </
               </div>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Analytics Features
-              </h2>
+                Powerful AI Analytics Features,
+  </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our AI analytics platform can revolutionize your business intelligence.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -174,9 +144,8 @@ const AiAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Analytics?
@@ -186,14 +155,17 @@ const AiAnalyticsPage: React.FC = () => {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
-            </button>
+  </
           </div>
         </section>
       </main>
-      
       <Footer />
-    </>
-  );
-};
-
+    </React.Fragment>
+  ),
+}
 export default AiAnalyticsPage;
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>

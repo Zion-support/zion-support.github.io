@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
@@ -20,17 +19,16 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Data Visualization;
+  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+              AI Data Visualization
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Transform data into actionable insights with AI;
+              Transform data into actionable insights with AI,
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
             </p>
           </section>
-
           {/* Features Grid */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
@@ -86,7 +84,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
@@ -134,7 +131,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* Use Cases Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
@@ -166,7 +162,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </div>
             </div>
           </section>
-
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today</h2>"
@@ -176,21 +171,20 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="te,"
-  l:+13024640950" className="cyber-button"></a>
+  l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950,
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo;
+  hover: text-indigo-600 transition-all duration-300"></a>
+                Get Free Demo
               </a>
             </div>
           </section>
         </main>
-        
         <Footer /></Footer>
       </div>
     </div>
-  );
+  ),
 }"

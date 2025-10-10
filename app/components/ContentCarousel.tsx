@@ -1,66 +1,34 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-
-interface Slide {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  stats?: {
-    value: string;
-    label: string;
-  }[];
-}
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides: Slide[] = [
+  const slides = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: [
-        { value: '95%', label: 'Accuracy Rate' },
-        { value: '10x', label: 'Faster Processing' },
-        { value: '24/7', label: 'Automation' }
-      ]
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
-      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency'],
-      stats: [
-        { value: '99.9%', label: 'Uptime' },
-        { value: '< 100ms', label: 'Response Time' },
-        { value: '10M+', label: 'Requests/Day' }
-      ]
+      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
-      stats: [
-        { value: '256-bit', label: 'Encryption' },
-        { value: 'SOC 2', label: 'Compliance' },
-        { value: 'Zero', label: 'Security Breaches' }
-      ]
+      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
     },
     {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
-      stats: [
-        { value: '50+', label: 'Countries' },
-        { value: '15+', label: 'Languages' },
-        { value: '24/7', label: 'Global Support' }
-      ]
+      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
     }
   ];
 
@@ -77,74 +45,58 @@ const ContentCarousel: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const currentSlideData = slides[currentSlide];
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI and IT solutions designed to transform your business.
+            We deliver cutting-edge AI and IT solutions that drive real business results
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="relative">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
-                  <currentSlideData.icon className="w-8 h-8 text-slate-900" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {currentSlideData.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {currentSlideData.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentSlideData.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0 bg-white/5 backdrop-blur-lg p-12">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8">
+                      <slide.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-6">{slide.title}</h3>
+                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">{slide.description}</p>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                      {slide.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-2 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
-
-            {/* Stats */}
-            {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
-                {currentSlideData.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="h-6 w-6" />
           </button>
+          
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="h-6 w-6" />
           </button>
         </div>
 
@@ -155,28 +107,10 @@ const ContentCarousel: React.FC = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
             />
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have already transformed their operations with our solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5" />
-              Get Started Today
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
-          </div>
         </div>
       </div>
     </div>

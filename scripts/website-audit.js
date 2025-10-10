@@ -14,7 +14,7 @@ const appDir = path.join(__dirname, '..', 'app');
 const allPages = [];
 
 function scanDirectory(dir, basePath = '') {
-  const items = fs.readdirSync(dir);
+    const items = fs.readdirSync(dir);
   
   for (const item of items) {
     const fullPath = path.join(dir, item);
@@ -28,8 +28,8 @@ function scanDirectory(dir, basePath = '') {
         allPages.push({)
           path: route),
           file: pageFile),
-          exists: true;
-        });
+          exists: true
+  });
       }
       // Recursively scan subdirectories;
       scanDirectory(fullPath, basePath + '/' + item);
@@ -40,7 +40,7 @@ function scanDirectory(dir, basePath = '') {
 // Scan the app directory for pages;
 scanDirectory(appDir);
 
-console.log(`📄 Found ${allPages.length} pages: `);
+console.log(`📄 Found ${allPages.length} pages: `),
 allPages.forEach(page => {),
   console.log(`  ✅ ${page.path}`);
 });
@@ -50,14 +50,16 @@ const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx')
 const footerContent = fs.readFileSync(footerFile, 'utf8');
 
 // Extract all href links from Footer;
-const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;
-const footerLinks = [];
-let match;
+const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g
+const footerLinks = []
+let match,
 ,
-while ((match = hrefRegex.exec(footerContent)) !== null) {,
-  footerLinks.push(match[1]);}
+while ((match = hrefRegex.exec(footerContent)) !== null) {
+    ,
+  footerLinks.push(match[1])
+  }
 
-console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `);
+console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `),
 footerLinks.forEach(link => {),
   console.log(`  📎 ${link}`);
 });
@@ -66,9 +68,10 @@ footerLinks.forEach(link => {),
 const missingPages = [];
 const existingRoutes = allPages.map(p => p.path);
 
-footerLinks.forEach(link => {)
+footerLinks.forEach(link => {
+    )
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
-    missingPages.push(link);
+    missingPages.push(link)
   }
 });
 
@@ -115,21 +118,21 @@ console.log(`\n🔍 Checking for broken internal links in existing pages...`);
 
 const brokenLinks = [];
 
-allPages.forEach(page => {)
+allPages.forEach(page => {
+    )
   try {)
     const content = fs.readFileSync(page.file, 'utf8');
     
     // Find all internal links in the page;
-    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;
-    let linkMatch;
-    
+    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g
+    let linkMatch
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {
-      const link = linkMatch[1];
+      const link = linkMatch[1],
       if (!existingRoutes.includes(link) && !link.startsWith('http')) {
         brokenLinks.push({),
           page: page.path),
-          brokenLink: link;
-        });
+          brokenLink: link
+  });
       }
     }
   } catch (error) {
@@ -143,25 +146,25 @@ if (brokenLinks.length > 0) {
     console.log(`  ❌ ${page} → ${brokenLink}`);
   });
 } else {
-  console.log(`  ✅ No broken internal links found`);
-}
+    console.log(`  ✅ No broken internal links found`)
+  }
 
 // Generate report;
 const report = {
   timestamp: new Date().toISOString()
   totalPages: allPages.length;
   totalFooterLinks: footerLinks.length;
-  missingPages: missingPages;
-  additionalMissing: additionalMissing;
-  brokenLinks: brokenLinks;
-  existingPages: allPages.map(p => p.path)};
+  missingPages: missingPages
+  additionalMissing: additionalMissing
+  brokenLinks: brokenLinks,
+  existingPages: allPages.map(p => p.path)}
 
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),
   JSON.stringify(report, null, 2)
 );
 
-console.log(`\n📊 Audit Summary: `);
+console.log(`\n📊 Audit Summary: `),
 console.log(`  📄 Total pages found: ${allPages.length}`);
 console.log(`  🔗 Footer links: ${footerLinks.length}`);
 console.log(`  ❌ Missing pages: ${missingPages.length}`);
@@ -171,8 +174,8 @@ console.log(`\n📋 Report saved to: website-audit-report.json`);
 
 console.log(`\n🎯 Next steps:`);
 console.log(`  1. Create missing pages identified above`);
-console.log(`  2. Fix broken internal links`);
-console.log(`  3. Test all links on the live website`);
-console.log(`  4. Improve navigation structure`);
+console.log(`  2. Fix broken internal links`)
+console.log(`  3. Test all links on the live website`)
+console.log(`  4. Improve navigation structure`),
 ,
 console.log(`\n✅ Website audit completed!`);

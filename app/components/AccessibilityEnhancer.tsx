@@ -1,8 +1,8 @@
 'use client';
-
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -10,6 +10,7 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -135,7 +136,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
-  return null;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default AccessibilityEnhancer;

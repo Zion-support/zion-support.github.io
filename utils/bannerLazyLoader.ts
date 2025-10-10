@@ -13,7 +13,7 @@ interface BannerModule {/* TODO: Fix JSX expression */}
  */
 export const lazyLoadBanner = (
   importFn: () => Promise<BannerModule>
-      // Retry once after a delay;
+      // Retry once after a delay,
       return new Promise<BannerModule>(resolve => {
         setTimeout(() => {
           importFn()
@@ -28,14 +28,14 @@ export const lazyLoadBanner = (importF)
       });
     })
   );
-};
+}
 
 /**
  * Preload banner components for better performance;
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
   if (typeof window !== 'undefined') {
-    // Preload on idle;
+    // Preload on idle,
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {,
         importFn().catch(() => {,
@@ -45,7 +45,7 @@ export const preloadBanner = (importF)
         });
       });
   }
-};
+}
 
 /**
  * Banner loader with intersection observer;
@@ -68,5 +68,5 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
   );
 
   return {/* TODO: Fix JSX expression */}
-  };
-};
+  }
+}

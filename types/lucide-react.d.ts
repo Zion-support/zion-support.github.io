@@ -1,40 +1,40 @@
 declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   }
 
-  export type LucideIcon = ComponentType<LucideProps>;
+  export type LucideIcon = ComponentType<LucideProps>
 
   export const,
-  Calendar: LucideIcon;
+  Calendar: LucideIcon,
   export const,
-  Clock: LucideIcon;
+  Clock: LucideIcon,
   export const,
-  ListChecks: LucideIcon;
+  ListChecks: LucideIcon,
   export const,
-  FileWarning: LucideIcon;
+  FileWarning: LucideIcon,
   export const,
-  RefreshCw: LucideIcon;
+  RefreshCw: LucideIcon,
   export const,
-  ArrowLeft: LucideIcon;
+  ArrowLeft: LucideIcon,
   export const,
-  User: LucideIcon;
+  User: LucideIcon,
   export const,
-  Tag: LucideIcon;
+  Tag: LucideIcon,
   export const,
-  DollarSign: LucideIcon;
+  DollarSign: LucideIcon,
   export const,
-  Users: LucideIcon;
+  Users: LucideIcon,
   export const,
-  Target: LucideIcon;
+  Target: LucideIcon,
   export const,
-  Brain: LucideIcon;
+  Brain: LucideIcon,
   export const,
-  ArrowRight: LucideIcon;
+  ArrowRight: LucideIcon,
   export const,
-  Cog: LucideIcon;
+  Cog: LucideIcon,
   export const,
-  Award: LucideIcon;
+  Award: LucideIcon,
   export const,
-  TrendingUp: LucideIcon;
+  TrendingUp: LucideIcon,
   export const,
   Zap: LucideIcon;
 
@@ -69,70 +69,66 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const Calculator: LucideIcon;
   export const Share2: LucideIcon;
   export const Search: LucideIcon;
-  export const Globe: LucideIcon;
-  export const Database: LucideIcon;
-  export const Cloud: LucideIcon;
+  export const Globe: LucideIcon
+  export const Database: LucideIcon
+  export const Cloud: LucideIcon,
 ,
   export const,
-  Github: LucideIcon;
+  Github: LucideIcon,
   export const,
-  Linkedin: LucideIcon;
+  Linkedin: LucideIcon,
   export const,
-  Twitter: LucideIcon;
-
-  // Communication icons;
+  Twitter: LucideIcon
+  // Communication icons,
   export const,
-  Mail: LucideIcon;
+  Mail: LucideIcon,
   export const,
-  Phone: LucideIcon;
-
-  // Location icons;
+  Phone: LucideIcon
+  // Location icons,
   export const,
-  MapPin: LucideIcon;
-
-  // UI icons;
+  MapPin: LucideIcon
+  // UI icons,
   export const,
-  Menu: LucideIcon;
+  Menu: LucideIcon,
   export const,
-  X: LucideIcon;
+  X: LucideIcon,
   export const,
-  Star: LucideIcon;
+  Star: LucideIcon,
   export const,
-  CheckCircle: LucideIcon;
+  CheckCircle: LucideIcon,
   export const,
-  AlertTriangle: LucideIcon;
+  AlertTriangle: LucideIcon,
   export const,
-  Home: LucideIcon;
+  Home: LucideIcon,
   export const,
-  Sparkles: LucideIcon;
+  Sparkles: LucideIcon,
   export const,
-  Cpu: LucideIcon;
+  Cpu: LucideIcon,
   export const,
-  BookOpen: LucideIcon;
+  BookOpen: LucideIcon,
   export const,
-  Shield: LucideIcon;
+  Shield: LucideIcon,
   export const,
-  Settings: LucideIcon;
+  Settings: LucideIcon,
   export const,
-  BarChart3: LucideIcon;
+  BarChart3: LucideIcon,
   export const,
-  Code: LucideIcon;
+  Code: LucideIcon,
   export const,
-  ExternalLink: LucideIcon;
+  ExternalLink: LucideIcon,
   export const,
-  Atom: LucideIcon;
+  Atom: LucideIcon,
   export const,
-  Calculator: LucideIcon;
+  Calculator: LucideIcon,
   export const,
-  Share2: LucideIcon;
+  Share2: LucideIcon,
   export const,
-  Search: LucideIcon;
+  Search: LucideIcon,
   export const,
-  Globe: LucideIcon;
+  Globe: LucideIcon,
   export const,
-  Database: LucideIcon;
+  Database: LucideIcon,
   export const,
-  Cloud: LucideIcon;
-
-  // Add more icons as needed;
+  Cloud: LucideIcon
+  // Add more icons as needed,
 }

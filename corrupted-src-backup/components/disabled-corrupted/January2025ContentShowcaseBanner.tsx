@@ -323,6 +323,6 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
       </div>
     </div>
   );
-};
+}
 export default January2025ContentShowcaseBanner;
 "

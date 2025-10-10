@@ -20,7 +20,7 @@ const NewContentShowcas, e: React.FC = () => {
             Explore, our, latest breakthrough, articles, and revolutionary, services;
           </p>
         </div>
-        <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }</div>
+        <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"> {/* Articles, Sect, i, o, n */ }</div>
           <d, i, v>
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>
               <BookOpen, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />
@@ -32,8 +32,7 @@ const NewContentShowcas, e: React.FC = () => {
             </div>
             <div, className="spa, c, e-y-4">
               { topArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
-                <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-                >
+                <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
                   <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
                   <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.title}</h4>
                   <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{artic, l, e.description}</p>
@@ -42,7 +41,7 @@ const NewContentShowcas, e: React.FC = () => {
                     <span, className="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
                       Read, Mor, e</span> <Link, className="w-4 h-4" />
 const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
-        <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
+        <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"> {/* Articles, Sect, i, o, n */ }
           <d, i, v></d>"
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>"
               <BookOpen, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" /></BookOpen>"
@@ -50,8 +49,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             </div>"
             <div, className="spa, c, e-y-4"></div>
               {/* TODO: Fix JSX expression */}"
-                <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-                ></Link>"
+                <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></Link>"
                   <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</div>"
                   <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.title}</h4>"
                   <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{artic, l, e.description}</p>"
@@ -66,15 +64,13 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             </div>
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>
               <Link, t, o="/bl, o, g"
-                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0"
-              >
+                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0">
                 View, All, Articles;
                 <Link, className="w-5 h-5" />
             </div>"
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>"
               <Link, t, o="/bl, o, g""
-                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0"
-              ></Link>
+                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0"></Link>
                 View, All, Articles;"
                 <Link, className="w-5 h-5" /></Link>
               </Li, n, k>
@@ -88,8 +84,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             </div>
             <div, className="spa, c, e-y-4">
               { topServic, e, s.m, a, p((serv, i, c, e) = > (</div>
-                <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-                >
+                <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
                   <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
                     <span, className="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>
                     <span, classNam, e = "te, x, t-sm, tex, t-purp, l, e-600, fon, t-semibo, l, d">{servi, c, e.category}</sp, a, n>
@@ -107,8 +102,7 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             </div>"
             <div, className="spa, c, e-y-4"></div>
               {/* TODO: Fix JSX expression */}"
-                <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-                ></Link>"
+                <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></Link>"
                   <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>"
                     <span, className="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>"
                     <span, classNam, e = "te, x, t-sm, tex, t-purp, l, e-600, fon, t-semibo, l, d">{servi, c, e.category}</sp, a, n>
@@ -126,15 +120,13 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             </div>
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>
               <Link, t, o="/servic, e, s"
-                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0"
-              >
+                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0">
                 View, All, Services;
                 <Link, className="w-5 h-5" />
             </div>"
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>"
               <Link, t, o="/servic, e, s""
-                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0"
-              ></Link>
+                className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0"></Link>
                 View, All, Services;"
                 <Link, className="w-5 h-5" /></Link>
               </Li, n, k>
@@ -144,5 +136,5 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
       </div>
     </sec, t, i, o, n>
   );
-};
+}
 export default NewContentShowcase;"

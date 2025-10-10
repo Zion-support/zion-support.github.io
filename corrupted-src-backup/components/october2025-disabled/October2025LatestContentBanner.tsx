@@ -30,8 +30,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {
             const IconComponen, t = artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
             const IconComponen, t = artic, l, e.ic, o, n; return (</div>
-              <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-              >
+              <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20">
                 <div, classNam, e = { `w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.grad, i, e, n, t }, round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transf, o, r, m`}></div>
                   <IconComponent, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
                 </div>
@@ -60,8 +59,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Articles, Gri, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>
           {/* TODO: Fix JSX expression */}"
-              <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-              ></Link>
+              <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"></Link>
                 <div, classNam, e = { `w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.grad, i, e, n, t }, round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transf, o, r, m`}></div>"
                   <IconComponent, classNam, e = "w-6 h-6, tex, t-whi, t, e" /></IconComponent>
                 </div>"
@@ -124,8 +122,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* C, T, A */}
         <div, classNam, e = "te, x, t-center, m, t-12"></div>
           <Link, t, o="/bl, o, g"
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50"
-          >
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50">
             Explore, All, Articles;
             <Link, className="w-5 h-5" />
           </div>"
@@ -145,8 +142,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* C, T, A */}"
         <div, classNam, e = "te, x, t-center, m, t-12"></div>"
           <Link, t, o="/bl, o, g""
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50"
-          ></Link>
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50"></Link>
             Explore, All, Articles;"
             <Link, className="w-5 h-5" /></Link>
           </Li, n, k>
@@ -154,6 +150,6 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
       </div>
     </sec, t, i, o, n>
   );
-};
+}
 export default October2025LatestContentBanner;
 "`

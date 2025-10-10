@@ -12,7 +12,7 @@ interface AccessibilityIssue {/* TODO: Fix JSX expression */}
  * Accessibility auditor class;
  */
 export class AccessibilityAuditor {
-  private issues: AccessibilityIssue[] = [];
+    private issues: AccessibilityIssue[] = [];
 
   /**
    * Run comprehensive accessibility audit;
@@ -25,11 +25,11 @@ export class AccessibilityAuditor {
     this.checkLinks();
     this.checkForms();
     this.checkButtons();
-    this.checkColorContrast();
-    this.checkKeyboardNavigation();
-    this.checkARIALabels();
+    this.checkColorContrast()
+    this.checkKeyboardNavigation()
+    this.checkARIALabels(),
 ,
-    return this.issues;
+    return this.issues
   }
 
   private checkImages(): void {
@@ -127,7 +127,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
       'document')
       'Color contrast check needed')
       'Use automated tools to verify color contrast ratios'
-    );
+    )
   }
 
   private checkKeyboardNavigation(): void {
@@ -172,7 +172,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   private addIssue(severity: AccessibilityIssue['severity'])
     element: string)
     issue: string)
-    recommendation: string;
+    recommendation: string,
   ): void {,
     this.issues.push({)
       severity;)
@@ -186,7 +186,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     issu,
   e: string,
     recommendatio,
-  n: string;)
+  n: string,)
   ): void {/* TODO: Fix JSX expression */}
     });
   }
@@ -205,20 +205,20 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
    */
   public getSummary(): {
     total: number;
-    critical: number;
-    serious: number;
-    moderate: number;
-    minor: number;
+    critical: number
+    serious: number
+    moderate: number,
+    minor: number
   } {
     return {
       total: this.issues.length;
       critical: this.getIssuesBySeverity('critical').length;
-      serious: this.getIssuesBySeverity('serious').length;
-      moderate: this.getIssuesBySeverity('moderate').length;
-      minor: this.getIssuesBySeverity('minor').length;
+      serious: this.getIssuesBySeverity('serious').length
+      moderate: this.getIssuesBySeverity('moderate').length
+      minor: this.getIssuesBySeverity('minor').length,
   public getSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 }
 
@@ -226,5 +226,5 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
  * Utility function to run accessibility audit;
  */
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
-};
+}
 "`

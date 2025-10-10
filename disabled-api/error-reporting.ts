@@ -1,10 +1,10 @@
 // import {NextApiRequest} NextApiResponse } from 'next' interface ErrorReport {/* TODO: Fix JSX expression */}
   e: string} stack?: string} nam,
-  e: string}; errorInf,
-  o: { componentStack?: string}; timestam,
-  p: string; userAgen,
-  t: string; ur,
-  l: string; userId?: string, sessionId?: string} // In-memory storage for demo purposes // In production, you would use a proper database const,
+  e: string} errorInf,
+  o: { componentStack?: string} timestam,
+  p: string, userAgen,
+  t: string, ur,
+  l: string, userId?: string, sessionId?: string} // In-memory storage for demo purposes // In production, you would use a proper database const,
   errorReports: ErrorReport[] = [], export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}

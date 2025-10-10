@@ -42,22 +42,24 @@ async function main() {/* TODO: Fix JSX expression */}
       if (styleFix !== content) {/* TODO: Fix JSX expression */}
       }
 
-      //5. Fix template literal syntax: ${> -> ${,
+      //5. Fix template literal syntax: ${
+    > -> ${,
       //       const templateFix = content.replace(/\$\{>/g, '${');
       if (templateFix !== content) {
         content = templateFix;
-        modified = true;
-      }
+        modified = true
+  }
 
-      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
+      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button
       const inputFix = content.replace(
-        /<input([^>]*?)\n\s*\n\s*<button/g;
+        /<input([^>]*?)\n\s*\n\s*<button/g
         '<input$1\n/>\n\n<button'
-      );
-      if (inputFix !== content) {,
+      ),
+      if (inputFix !== content) {
+    ,
         content = inputFix;
-        modified = true;
-      }
+        modified = true
+  }
 
       //7. Fix unclosed br tags: <br> -> <br />,
       //5. Fix template literal,

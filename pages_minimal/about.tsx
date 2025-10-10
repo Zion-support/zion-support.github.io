@@ -1,4 +1,3 @@
-
 export const metadata: Metadata = {,
   title: 'About | Zion Tech Group',
   description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
@@ -6,8 +5,7 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'About',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article'}};
-
+    type: 'article'}}
 export default function about() {
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -42,8 +40,7 @@ export default function about() {
       </div>)
 export const,
   metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
-
+  }}
 export default function about() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gray-50"></div>"

@@ -1,7 +1,7 @@
 export type Notification = {/* TODO: Fix JSX expression */}
-};
+}
 type NotificationSystemProp, s = {/* TODO: Fix JSX expression */}
- };
+ }
 export default function NotificationSyst, e, m({)
   notificatio, n, s)
   onAddNotificati, o, n)
