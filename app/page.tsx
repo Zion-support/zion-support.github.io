@@ -1,6 +1,7 @@
 'use client';
 
 import React, { Suspense } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
@@ -1050,15 +1051,17 @@ const HomePage: React.FC = () => {
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">Micro SAAS Solutions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {microSAASServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+              {microSAASServices.slice(0, 12).map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group cursor-pointer" onClick={() => service.link && window.open(service.link, '_blank')}>
                   <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {service.icon ? <service.icon className="w-6 h-6 text-white" /> : <div className="text-2xl">🤖</div>}
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1076,21 +1079,29 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-8">
+              <Link to="/micro-saas" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                View All Micro SAAS Solutions
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
 
           {/* AI Services */}
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">Enterprise AI Solutions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
+              {aiServices.slice(0, 12).map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300 group cursor-pointer" onClick={() => service.link && window.open(service.link, '_blank')}>
                   <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1108,21 +1119,29 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-8">
+              <Link to="/ai-services" className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                View All AI Solutions
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
 
           {/* IT Services */}
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+              {itServices.slice(0, 12).map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300 group cursor-pointer" onClick={() => service.link && window.open(service.link, '_blank')}>
                   <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1139,158 +1158,14 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               ))}
-
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {microSAASServices.map((service, index) => (
-              <div
-                key={index}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group cursor-pointer"
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
-                      Learn More →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link to="/it-services" className="bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
+                View All IT Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* AI Services Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Enterprise AI Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div
-                key={index}
-                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative group cursor-pointer ${
-                  service.enterprise ? 'ring-2 ring-purple-400/30' : ''
-                }`}
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                {service.enterprise && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                      Enterprise
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
-                      Get Started
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IT Services Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IT Infrastructure Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions to build, secure, and scale your technology infrastructure.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {itServices.map((service, index) => (
-              <div 
-                key={index} 
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-white mb-2">{service.price}</div>
-                    <div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
-                      Learn More →
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">

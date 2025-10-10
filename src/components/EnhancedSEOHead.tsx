@@ -185,7 +185,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       {/* Theme Color Variations */}
       <meta name="theme-color" content="#00ffff" media="(prefers-color-scheme: light)" />
       <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
->>>>>>> cursor/analyze-improve-and-deploy-application-fdcc
     </Helmet>
   );
 };
