@@ -1,8 +1,7 @@
 'use client';
-import React from 'react';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -104,38 +103,26 @@ const Navigation: React.FC = () => {
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
-    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
-    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Users, description: 'Chatbot Platform' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Email Marketing' },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-builder', icon: Smartphone, description: 'Mobile Development' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, description: 'SEO Tools' },
-    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: BarChart, description: 'Invoice Management' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'Writing Tools' },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Analytics Platform' },
-    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools' },
-    { name: 'Expense Tracker', href: '/expense-tracker', icon: BarChart, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
-    { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Lightweight CRM' },
-    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Optimization' },
-    { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media Tools' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
-    { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
-    { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Search, description: 'SEO Tools' },
-    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: BarChart, description: 'Ad Management' },
-    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development Tools' },
-    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Tracking' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
-    { name: 'AI Recruitment Assistant', href: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager', icon: Shield, description: 'Healthcare' },
-    { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', icon: BarChart, description: 'Finance & Accounting' },
-    { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '25+ AI Tools', price: 'From $29/mo' },
+    { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence', price: '$199/mo' },
+    { name: 'AI-Powered CRM Suite', href: '/ai-crm', icon: Users, description: 'Customer Management', price: '$149/mo' },
+    { name: 'AI Security Monitoring', href: '/ai-security-monitoring', icon: Shield, description: 'Cybersecurity', price: '$299/mo' },
+    { name: 'AI Email Marketing Pro', href: '/ai-email-marketing', icon: Mail, description: 'Email Marketing', price: '$79/mo' },
+    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-builder', icon: Smartphone, description: 'Mobile Development', price: '$199/mo' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, description: 'SEO Tools', price: '$89/mo' },
+    { name: 'AI Document Processor', href: '/ai-document-processor', icon: FileText, description: 'Document AI', price: '$129/mo' },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools', price: '$39/mo' },
+    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools', price: '$59/mo' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI', price: '$149/mo' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'Support AI', price: '$99/mo' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI', price: '$179/mo' },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: Code, description: 'Writing Tools', price: '$49/mo' },
+    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: BarChart, description: 'Expense Management', price: '$29/mo' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: CheckSquare, description: 'Project Management', price: '$89/mo' },
+    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users, description: 'HR & Recruitment', price: '$199/mo' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Database, description: 'Inventory AI', price: '$159/mo' },
+    { name: 'AI Data Cleaner', href: '/ai-data-cleaner', icon: Settings, description: 'Data Processing', price: '$99/mo' },
+    { name: 'AI Compliance Manager', href: '/ai-compliance-manager', icon: Shield, description: 'Compliance AI', price: '$249/mo' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
@@ -242,22 +229,39 @@ const Navigation: React.FC = () => {
               </button>
               {microSaasOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
+                  <div className="mb-3">
+                    <h3 className="text-lg font-bold text-white neon-text">Micro SAAS Solutions</h3>
+                    <p className="text-sm text-gray-300">25+ AI-powered business tools</p>
+                  </div>
+                  <div className="grid grid-cols-1 gap-2 max-h-96 overflow-y-auto">
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group quantum-field"
                         onClick={closeAllMenus}
                       >
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
+                        <div className="flex-1">
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <div className="text-right">
+                          <div className="text-xs text-cyan-400 font-semibold">{service.price}</div>
+                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400" />
+                        </div>
                       </Link>
                     ))}
+                  </div>
+                  <div className="mt-3 pt-3 border-t border-cyan-500/20">
+                    <Link
+                      href="/micro-saas"
+                      className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium cyber-button"
+                      onClick={closeAllMenus}
+                    >
+                      <span>View All Solutions</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
               )}

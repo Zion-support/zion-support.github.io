@@ -1,9 +1,7 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight, Star, Shield, Globe, Database, Smartphone, Target, Settings, CheckCircle } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
@@ -41,22 +39,22 @@ const Footer: React.FC = memo(() => {
     { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
-    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Customer management' },
-    { name: 'Security Monitoring Suite', url: '/security-monitoring-suite', description: 'Cybersecurity' },
-    { name: 'Cloud Infrastructure Manager', url: '/cloud-infrastructure-manager', description: 'Cloud management' },
-    { name: 'Email Marketing Automation', url: '/email-marketing-automation', description: 'Email marketing' },
-    { name: 'Project Management Pro', url: '/project-management-pro', description: 'Project management' },
-    { name: 'E-commerce Analytics Pro', url: '/ecommerce-analytics-pro', description: 'E-commerce analytics' },
-    { name: 'AI Recruitment Assistant', url: '/ai-recruitment-assistant', description: 'HR & recruitment' },
-    { name: 'Medical Records Manager', url: '/medical-records-manager', description: 'Healthcare' },
-    { name: 'AI Accounting Assistant', url: '/ai-accounting-assistant', description: 'Finance & accounting' },
-    { name: 'Property Management AI', url: '/property-management-ai', description: 'Real estate' },
-    { name: 'Legal Document Manager', url: '/legal-document-manager', description: 'Legal & compliance' },
-    { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
-    { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
+    { name: 'AI Analytics Dashboard Pro', url: '/ai-analytics-dashboard', description: 'Business Intelligence', price: '$199/mo', popular: true },
+    { name: 'AI-Powered CRM Suite', url: '/ai-crm', description: 'Customer Management', price: '$149/mo', popular: true },
+    { name: 'AI Security Monitoring', url: '/ai-security-monitoring', description: 'Cybersecurity', price: '$299/mo', popular: true },
+    { name: 'AI Email Marketing Pro', url: '/ai-email-marketing', description: 'Email Marketing', price: '$79/mo', popular: false },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-app-builder', description: 'Mobile Development', price: '$199/mo', popular: true },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO Tools', price: '$89/mo', popular: false },
+    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Document AI', price: '$129/mo', popular: false },
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Scheduling Tools', price: '$39/mo', popular: true },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design Tools', price: '$59/mo', popular: false },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Lead Gen AI', price: '$149/mo', popular: true },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'Support AI', price: '$99/mo', popular: false },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow AI', price: '$179/mo', popular: true },
+    { name: 'AI Content Writer', url: '/ai-content-writer', description: 'Writing Tools', price: '$49/mo', popular: true },
+    { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Expense Management', price: '$29/mo', popular: false },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project Management', price: '$89/mo', popular: false },
+    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'HR & Recruitment', price: '$199/mo', popular: true }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -94,182 +92,214 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      
+      <div className="relative container mx-auto px-4 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
+          <div className="lg:col-span-2">
+            <h3 className="text-xl font-bold mb-6 text-cyan-400 flex items-center neon-text">
+              <Brain className="w-6 h-6 mr-3" />
               AI Services
             </h3>
-            <ul className="space-y-2">
-              {aiServices.slice(0, 8).map((service, index) => (
+            <ul className="space-y-3">
+              {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    to={service.url}
+                    className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group"
                   >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className="pt-2">
                 <Link 
-                  href="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  to="/ai-services"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium cyber-glow"
                 >
-                  View All AI Services →
+                  View All AI Services
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </li>
             </ul>
           </div>
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Cloud className="w-5 h-5 mr-2" />
+            <h3 className="text-xl font-bold mb-6 text-cyan-400 flex items-center neon-text">
+              <Cloud className="w-6 h-6 mr-3" />
               IT Services
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    to={service.url}
+                    className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group"
                   >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
+              <li className="pt-2">
                 <Link 
-                  href="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  to="/it-services"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium cyber-glow"
                 >
-                  View All IT Services →
+                  View All IT Services
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </li>
             </ul>
           </div>
+          
           {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Code className="w-5 h-5 mr-2" />
+          <div className="lg:col-span-2">
+            <h3 className="text-xl font-bold mb-6 text-cyan-400 flex items-center neon-text">
+              <Code className="w-6 h-6 mr-3" />
               Micro SAAS
             </h3>
-            <ul className="space-y-2">
+            <div className="grid grid-cols-1 gap-3">
               {microSaasServices.slice(0, 8).map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-              <li>
                 <Link 
-                  href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  key={index}
+                  to={service.url}
+                  className="group p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 quantum-field"
                 >
-                  View All Micro SAAS →
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-white font-medium text-sm group-hover:text-cyan-400 transition-colors">
+                          {service.name}
+                        </span>
+                        {service.popular && (
+                          <Star className="w-3 h-3 text-yellow-400" />
+                        )}
+                      </div>
+                      <div className="text-xs text-gray-400 mt-1">{service.description}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xs text-cyan-400 font-semibold">{service.price}</div>
+                    </div>
+                  </div>
                 </Link>
-              </li>
-            </ul>
+              ))}
+              <div className="pt-3">
+                <Link 
+                  to="/micro-saas"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium cyber-glow"
+                >
+                  View All Micro SAAS
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </div>
           </div>
-          {/* Emerging Technologies */}
+          {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech
+            <h3 className="text-xl font-bold mb-6 text-cyan-400 flex items-center neon-text">
+              <Users className="w-6 h-6 mr-3" />
+              Contact Us
             </h3>
-            <ul className="space-y-2">
-              {emergingTech.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Users className="w-5 h-5 mr-2" />
-              Company
-            </h3>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
-            <ul className="space-y-2 mb-6">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="space-y-3">
-              <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+            <div className="space-y-4">
+              <div className="flex items-center text-sm text-gray-300 group">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors font-medium">
                   {contactInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Mail className="w-4 h-4 mr-2 text-cyan-400" />
+              <div className="flex items-center text-sm text-gray-300 group">
+                <Mail className="w-5 h-5 mr-3 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium">
                   {contactInfo.email}
                 </a>
               </div>
-              <div className="flex items-start text-sm text-gray-300">
-                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
+              <div className="flex items-start text-sm text-gray-300 group">
+                <MapPin className="w-5 h-5 mr-3 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
                 <span className="leading-relaxed">{contactInfo.address}</span>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+              <div className="flex items-center text-sm text-gray-300 group">
+                <Clock className="w-5 h-5 mr-3 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <span>{contactInfo.hours}</span>
               </div>
-              <div className="text-xs text-cyan-400 font-medium">
-                {contactInfo.emergency}
+              <div className="flex items-center text-xs text-cyan-400 font-medium group">
+                <Shield className="w-4 h-4 mr-2 group-hover:text-cyan-300 transition-colors" />
+                <span>{contactInfo.emergency}</span>
               </div>
+            </div>
+            
+            {/* Company Links */}
+            <div className="mt-8">
+              <h4 className="text-lg font-semibold mb-4 text-cyan-400">Company</h4>
+              <ul className="space-y-2">
+                {companyLinks.slice(0, 4).map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.url}
+                      className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-cyan-500/20">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">25+</div>
+            <div className="text-sm text-gray-300">Micro SAAS Tools</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+            <div className="text-sm text-gray-300">AI Services</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-pink-400 mb-2">100+</div>
+            <div className="text-sm text-gray-300">IT Solutions</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+            <div className="text-sm text-gray-300">Support</div>
+          </div>
+        </div>
+        {/* Bottom Footer */}
+        <div className="pt-8 border-t border-cyan-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
+            <div className="flex items-center space-x-4 mb-4 md:mb-0">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              </div>
+              <div className="text-sm text-gray-400">
+                © {currentYear} All rights reserved.
+              </div>
             </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+            <div className="flex flex-wrap justify-center md:justify-end space-x-6">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </Link>
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                 Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              </Link>
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                 Cookie Policy
-              </a>
+              </Link>
+              <Link to="/sitemap" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                Sitemap
+              </Link>
             </div>
           </div>
         </div>
