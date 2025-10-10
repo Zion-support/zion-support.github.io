@@ -1,264 +1,151 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+import { Wifi, Cpu, Shield, BarChart, Zap, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp, Database, Code, Smartphone, Settings, Lock, Globe, Home } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const IoTPlatformPage: React.FC = () => {
-  const features = [
-    {
-      icon: Wifi,
-      title: 'Device Connectivity',
-      description: 'Connect and manage thousands of IoT devices with our robust connectivity platform.',
-      benefits: ['Multi-protocol support', 'Device management', 'Real-time monitoring']
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Processing',
-      description: 'Process IoT data in real-time for immediate insights and automated responses.',
-      benefits: ['Stream processing', 'Real-time analytics', 'Automated actions']
-    },
-    {
-      icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
-      benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
-    },
-    {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Enterprise-grade security for IoT devices and data with end-to-end encryption.',
-      benefits: ['End-to-end encryption', 'Device authentication', 'Data privacy']
-    },
-    {
-      icon: Users,
-      title: 'Scalable Architecture',
-      description: 'Scale your IoT platform to handle millions of devices and data points.',
-      benefits: ['Horizontal scaling', 'Load balancing', 'High availability']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Gain insights from IoT data with machine learning and predictive analytics.',
-      benefits: ['ML-powered insights', 'Predictive analytics', 'Custom dashboards']
-    }
-  ];
-
-  const benefits = [
-    'Reduce operational costs by 60%',
-    'Improve device uptime by 95%',
-    'Enable predictive maintenance',
-    'Enhance data security',
-    'Scale to millions of devices',
-    'Real-time insights and control'
-  ];
+  const [selectedUseCase, setSelectedUseCase] = useState('smart-home');
 
   const useCases = [
     {
-      title: 'Smart Manufacturing',
-      description: 'Optimize production with IoT sensors and real-time monitoring',
-      icon: '🏭'
+      id: 'smart-home',
+      title: 'Smart Home',
+      description: 'Connected home devices for automation and energy management',
+      icon: Home,
+      benefits: ['Energy efficiency', 'Automation', 'Remote control', 'Cost savings']
     },
     {
-      title: 'Smart Cities',
-      description: 'Build intelligent city infrastructure with IoT solutions',
-      icon: '🏙️'
+      id: 'industrial',
+      title: 'Industrial IoT',
+      description: 'Manufacturing and industrial automation solutions',
+      icon: Cpu,
+      benefits: ['Predictive maintenance', 'Process optimization', 'Quality control', 'Safety monitoring']
     },
     {
-      title: 'Agriculture',
-      description: 'Monitor crops and livestock with precision IoT sensors',
-      icon: '🌾'
+      id: 'agriculture',
+      title: 'Smart Agriculture',
+      description: 'Precision farming and crop monitoring systems',
+      icon: Globe,
+      benefits: ['Crop monitoring', 'Resource optimization', 'Yield prediction', 'Environmental control']
     },
     {
-      title: 'Healthcare',
-      description: 'Enable remote patient monitoring with IoT devices',
-      icon: '🏥'
+      id: 'healthcare',
+      title: 'Healthcare IoT',
+      description: 'Medical devices and patient monitoring systems',
+      icon: Shield,
+      benefits: ['Patient monitoring', 'Health tracking', 'Emergency alerts', 'Data analytics']
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>IoT Platform Solutions - Zion Tech Group | Internet of Things</title>
-        <meta name="description" content="Build and scale IoT solutions with our comprehensive platform. Device connectivity, real-time processing, and advanced analytics for your IoT projects." />
-        <meta name="keywords" content="IoT platform, Internet of Things, device connectivity, IoT analytics, smart devices, IoT management" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            IoT Platform
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Build and scale IoT solutions with our comprehensive platform. Connect devices, 
-            process data in real-time, and gain valuable insights from your IoT ecosystem.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get IoT Platform Demo
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
+  const capabilities = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      icon: Wifi,
+      title: 'Device Connectivity',
+      description: 'Secure connectivity for all types of IoT devices'
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      icon: Database,
+      title: 'Data Management',
+      description: 'Real-time data collection, processing, and storage'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      icon: Code,
+      title: 'API Integration',
+      description: 'Seamless integration with existing systems and applications'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Apps',
+      description: 'Mobile applications for device control and monitoring'
+    },
+    {
+      icon: Settings,
+      title: 'Device Management',
+      description: 'Centralized management of all connected devices'
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'Global Deployment',
+      description: 'Deploy and manage devices across multiple locations'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    {
+      icon: Zap,
+      title: 'Real-time Monitoring',
+      description: 'Monitor devices and data in real-time for better decisions'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Improved Efficiency',
+      description: 'Optimize operations and reduce costs by up to 40%'
+    },
+    {
+      icon: Shield,
+      title: 'Enhanced Security',
+      description: 'End-to-end security for all connected devices and data'
+    },
+    {
+      icon: Users,
+      title: 'Better User Experience',
+      description: 'Intuitive interfaces and seamless device interactions'
+    }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
+  const stats = [
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '50ms', label: 'Average Latency', icon: Zap },
+    { number: '40%', label: 'Cost Reduction', icon: TrendingUp },
+    { number: '24/7', label: 'Device Monitoring', icon: Clock }
+  ];
 
+  const selectedUseCaseData = useCases.find(useCase => useCase.id === selectedUseCase);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+      <SEOOptimizer
+        title="IoT Platform Solutions - Zion Tech Group"
+        description="Build and deploy IoT solutions with our comprehensive platform. Device connectivity, data management, and analytics for smart devices."
+        keywords="IoT platform, Internet of Things, smart devices, device connectivity, data management, Zion Tech Group"
+      />
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
+      <section className="pt-32 pb-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            IoT <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Platform</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Build and deploy IoT solutions with our comprehensive platform. Device connectivity, data management, and analytics for smart devices.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-<<<<<<< HEAD
+      {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              IoT Platform Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform provides everything you need to build, deploy, and scale 
-              Internet of Things solutions for any industry or use case.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -269,21 +156,88 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              IoT Use Cases
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">IoT Use Cases</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT platform supports a wide range of industries and applications, 
-              from smart manufacturing to connected cities.
+              Discover how IoT can transform your business across different industries.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Use Case List */}
+            <div className="space-y-4">
+              {useCases.map((useCase) => (
+                <div
+                  key={useCase.id}
+                  onClick={() => setSelectedUseCase(useCase.id)}
+                  className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
+                    selectedUseCase === useCase.id
+                      ? 'bg-purple-500/20 border-purple-500 border-2'
+                      : 'bg-white/5 border border-white/10 hover:bg-white/10'
+                  }`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                      selectedUseCase === useCase.id
+                        ? 'bg-purple-500'
+                        : 'bg-gradient-to-r from-purple-500 to-blue-600'
+                    }`}>
+                      <useCase.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">{useCase.title}</h3>
+                      <p className="text-gray-300 text-sm">{useCase.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Use Case Details */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <selectedUseCaseData?.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {selectedUseCaseData?.title}
+                </h3>
+                <p className="text-gray-300">{selectedUseCaseData?.description}</p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
+                <ul className="space-y-2">
+                  {selectedUseCaseData?.benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IoT platform capabilities for all your connected device needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {capabilities.map((capability, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <capability.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
               </div>
             ))}
           </div>
@@ -294,22 +248,65 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our IoT Platform?
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our IoT Platform?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of a comprehensive IoT platform designed for scale, 
-              security, and performance.
+              Transform your business with our comprehensive IoT solutions.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Architecture</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our proven architecture ensures scalability, security, and performance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Device Layer',
+                description: 'Connect and manage all types of IoT devices',
+                features: ['Device onboarding', 'Firmware updates', 'Remote configuration', 'Health monitoring']
+              },
+              {
+                title: 'Connectivity Layer',
+                description: 'Secure communication between devices and platform',
+                features: ['Multiple protocols', 'Data encryption', 'Message queuing', 'Load balancing']
+              },
+              {
+                title: 'Application Layer',
+                description: 'Business logic and user interfaces',
+                features: ['Data analytics', 'User dashboards', 'API management', 'Third-party integrations']
+              }
+            ].map((layer, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">{layer.title}</h3>
+                <p className="text-gray-300 mb-4">{layer.description}</p>
+                <ul className="space-y-2">
+                  {layer.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -317,19 +314,18 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Build Your IoT Solution?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Start building your IoT platform today. Get started with a free consultation 
-            and discover how we can help you succeed.
+            Let's discuss how our IoT platform can help you connect devices and unlock new opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
@@ -339,32 +335,8 @@ const PagePage: React.FC = () => {
       </section>
 
       <Footer />
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
     </div>
   );
 };
 
-export default PagePage;
+export default IoTPlatformPage;

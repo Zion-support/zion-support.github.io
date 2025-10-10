@@ -67,8 +67,4 @@ async function handler(req, res) {
     }));
   }
 }
-<<<<<<< HEAD
-
 module.exports = withSentry(handler);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3

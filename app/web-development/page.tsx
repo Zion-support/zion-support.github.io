@@ -1,321 +1,342 @@
 'use client';
-import React from 'react';
-import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Code, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp, Database, Settings, Lock, Shield, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-const WebDevelopmentPage: React.FC = () => {,
-  const webServices = [,
-    {,
+
+const WebDevelopmentPage: React.FC = () => {
+  const [selectedService, setSelectedService] = useState('frontend');
+
+  const services = [
+    {
+      id: 'frontend',
       title: 'Frontend Development',
-      description: 'Modern, responsive web applications with cutting-edge technologies',
-      icon: Code;
-      price: '$1,200/month',
-      features: ['React/Next.js', 'Vue.js/Angular', 'Responsive Design', 'PWA Development'],
-      benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
-      color: 'text-blue-400'},
+      description: 'Modern, responsive user interfaces with React, Next.js, and Vue.js',
+      icon: Code,
+      benefits: ['Responsive design', 'Fast performance', 'SEO optimized', 'Accessibility compliant']
+    },
     {
+      id: 'backend',
       title: 'Backend Development',
-      description: 'Scalable server-side solutions and API development',
-      icon: Database;
-      price: '$1,500/month',
-      features: ['Node.js/Python', 'RESTful APIs', 'Microservices', 'Database Design'],
-      benefits: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
-      color: 'text-green-400'},
+      description: 'Scalable server-side applications with Node.js, Python, and Java',
+      icon: Database,
+      benefits: ['API development', 'Database design', 'Security implementation', 'Performance optimization']
+    },
     {
+      id: 'fullstack',
       title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend',
-      icon: Globe;
-      price: '$2,200/month',
-      features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
-      benefits: ['Unified solution', 'Faster development', 'Better performance'],
-      color: 'text-purple-400'},
-    {
-      title: 'E-commerce Development',
-      description: 'Custom e-commerce platforms and online stores',
-      icon: Smartphone;
-      price: '$1,800/month',
-      features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
-      benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
-      color: 'text-orange-400'},
-    {
-      title: 'Maintenance & Support',
-      description: 'Ongoing maintenance and support for your web applications',
-      icon: Users;
-      price: '$500/month',
-      features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
-      color: 'text-gray-400'}
-  ];
-
-  const technologies = [
-    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
-    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
-    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
-    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
-    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
-
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart;
+      description: 'Complete web applications from frontend to backend',
+      icon: Globe,
+      benefits: ['End-to-end solutions', 'Seamless integration', 'Unified architecture', 'Faster development']
     },
     {
-      step: '02',
-      title: 'Design & Prototyping',
-      description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code;
-    },
-    {
-      step: '03',
-      title: 'Development',
-      description: 'Build your web application using modern technologies and best practices',
-      icon: Globe;
-    },
-    {
-      step: '04',
-      title: 'Testing & Launch',
-      description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield;
+      id: 'mobile',
+      title: 'Mobile Web Apps',
+      description: 'Progressive Web Apps and mobile-optimized web solutions',
+      icon: Smartphone,
+      benefits: ['Mobile-first design', 'Offline capability', 'Push notifications', 'App-like experience']
     }
   ];
 
-  return(<>
-      <SEOOptimizer;
+  const capabilities = [
+    {
+      icon: Code,
+      title: 'Modern Frameworks',
+      description: 'React, Next.js, Vue.js, Angular, and more'
+    },
+    {
+      icon: Database,
+      title: 'Database Solutions',
+      description: 'PostgreSQL, MongoDB, Redis, and cloud databases'
+    },
+    {
+      icon: Settings,
+      title: 'API Development',
+      description: 'RESTful APIs, GraphQL, and microservices architecture'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Development',
+      description: 'Responsive design and Progressive Web Apps'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Authentication, authorization, and data protection'
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics',
+      description: 'User tracking, performance monitoring, and insights'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: 'Fast Performance',
+      description: 'Optimized for speed and user experience'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Bank-grade security and 99.9% uptime guarantee'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Scalable Solutions',
+      description: 'Grow with your business needs and traffic'
+    },
+    {
+      icon: Users,
+      title: 'User-Focused',
+      description: 'Intuitive interfaces and exceptional user experience'
+    }
+  ];
+
+  const stats = [
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '95+', label: 'Performance Score', icon: Zap },
+    { number: '50%', label: 'Faster Load Times', icon: TrendingUp },
+    { number: '24/7', label: 'Support & Monitoring', icon: Clock }
+  ];
+
+  const selectedServiceData = services.find(service => service.id === selectedService);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+      <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
-        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
-        canonicalUrl="https: //ziontechgroup.com/web-development",
-      />,
-        <PerformanceOptimizer;
-          enableImageOptimization={true}
-          enableLazyLoading={true}
-          enableCodeSplitting={true}
-          enablePrefetching={true}
-        />
-      <AccessibilityEnhancer;
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
+        description="Professional web development services. Frontend, backend, full-stack, and mobile web solutions for modern businesses."
+        keywords="web development, frontend development, backend development, full-stack, mobile web, Zion Tech Group"
       />
-      <SecurityEnhancer;
-        enableCSP={true}
-        enableHTTPSRedirect={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <Analytics />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Web <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Development</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Professional web development services. Frontend, backend, full-stack, and mobile web solutions for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Portfolio
+            </button>
+          </div>
+        </div>
+      </section>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <Navigation />
+      {/* Stats Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
-              From frontend to backend, we deliver solutions that drive business growth.</p>
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-              Web Development Services;
-            </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Build modern, scalable, and high-performance web applications with our expert development team.
-              From frontend to backend, we deliver solutions that drive business growth.
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Web Development Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive web development solutions for all your business needs.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
-              <a
-                href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >Start Your Project<a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >Call +1 302 464 0950</a>
-              >
-                Start Your Project;
-              </a>
-              <a;
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Call +1 302 464 0950;
-              </a>
-            </div>,
-          </section>,
-,
-          {/* Services Grid */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Service List */}
+            <div className="space-y-4">
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  onClick={() => setSelectedService(service.id)}
+                  className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
+                    selectedService === service.id
+                      ? 'bg-purple-500/20 border-purple-500 border-2'
+                      : 'bg-white/5 border border-white/10 hover:bg-white/10'
+                  }`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                      selectedService === service.id
+                        ? 'bg-purple-500'
+                        : 'bg-gradient-to-r from-purple-500 to-blue-600'
+                    }`}>
+                      <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Web Development Services;)
-            </h2>)
-)
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
-              {webServices.map((service, index) => (
-                <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-6">,
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,
-                      <service.icon className="w-8 h-8 text-white" />,
-                    </div>,
-                    <div>,
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
-                      <div className={`font-semibold ${service.color}`}>{service.price}</div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">{service.title}</h3>
+                      <p className="text-gray-300 text-sm">{service.description}</p>
                     </div>
                   </div>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
-                  <div className="flex items-center mb-6"></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div></div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
-                  <div className="mb-6"></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
-                        </CheckCircle>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {service.benefits && (
-                    <div className="mb-6"></div>
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
-                          <li key={benefitIndex} className="flex items-center text-gray-300">
-                            <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
-                          </ArrowRight>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <a;
-                    href="/contact"
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
-                  >Get Started</a>
-                  </a>
-                </div>
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
-                  >
-                    Get Started;
-                  </a>,
-                </div>))}
-            </div>
-          </section>
-
-          {/* Technologies */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Technologies We Use;
-            </h2>,
-,
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">,
-              {technologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                  <p className="text-sm text-gray-300">{tech.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
               ))}
             </div>
-          </section>
 
-          {/* Process */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Development Process;
-            </h2>,
-,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {process.map((step, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">,
-                    <span className="text-2xl font-bold text-white">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
+            {/* Service Details */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                  <selectedServiceData?.icon className="w-8 h-8 text-white" />
                 </div>
-              ))}
-            </div>
-          </section>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {selectedServiceData?.title}
+                </h3>
+                <p className="text-gray-300">{selectedServiceData?.description}</p>
+              </div>
 
-          {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Build Your Next Web Application?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss your project requirements and create a custom solution that drives your business forward.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >Start Your Project<a
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >Call +1 302 464 0950</a>
-                >
-                  Start Your Project;
-                </a>
-                <a;
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  Call +1 302 464 0950;
-                </a>
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>
+                <ul className="space-y-2">
+                  {selectedServiceData?.benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </section>
-        </main>
+          </div>
+        </div>
+      </section>
 
-        <Footer />
-      </div>,
-    </>);
+      {/* Capabilities Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Capabilities</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced web development technologies and frameworks.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {capabilities.map((capability, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <capability.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Web Development?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with our professional web development services.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Development Process</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our proven methodology ensures successful web development projects.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Discovery',
+                description: 'Understand your requirements and project goals'
+              },
+              {
+                step: '02',
+                title: 'Design',
+                description: 'Create wireframes, mockups, and user experience design'
+              },
+              {
+                step: '03',
+                title: 'Development',
+                description: 'Build your website with modern technologies and best practices'
+              },
+              {
+                step: '04',
+                title: 'Launch',
+                description: 'Deploy, test, and launch your website with ongoing support'
+              }
+            ].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">{step.step}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Build Your Website?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss your web development needs and create a solution that drives results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Free Quote
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Portfolio
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default WebDevelopmentPage;
