@@ -1,9 +1,12 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const AISchedulerPage: React.FC = () => {
   const features = [

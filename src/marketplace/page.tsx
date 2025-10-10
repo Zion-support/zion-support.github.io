@@ -2,12 +2,15 @@
 import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 
 
 import { Link } from 'react-router-dom';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

@@ -10,12 +10,20 @@ import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+<<<<<<< HEAD
 // Suppress jsdom navigation warnings;
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console;
 const __originalConsoleError = console.error;
 console.error = (...args) => {// TODO: Add content;}
 }
+=======
+// Suppress jsdom navigation warnings
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') ||
       message.includes('navigation (except hash changes)')) {// TODO: Add content;}
@@ -60,11 +68,22 @@ const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
   value: sessionStorageMock;
 // Mock fetch;
 global.fetch = jest.fn();
+<<<<<<< HEAD
 // Mock console methods for cleaner test output;
+=======
+// Mock console methods for cleaner test output
+// eslint-disable-next-line no-console
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 const originalConsoleWarn = console.warn;
+// eslint-disable-next-line no-console
 const originalConsoleInfo = console.info;
+<<<<<<< HEAD
 console.warn = (...args) => {// TODO: Add content;}
 }
+=======
+// eslint-disable-next-line no-console
+console.warn = (...args) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
   // TODO: Add content;
@@ -75,6 +94,38 @@ delete (window as unknown as Record;
           <string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {// TODO: Add content;}
 };
+<<<<<<< HEAD
+=======
+// eslint-disable-next-line no-console
+console.info = (...args) => {
+  const message = args[0]?.toString?.() || '';
+  if (message.includes('ReactDOM.render is no longer supported')) {
+    return;
+  }
+  originalConsoleInfo(...args);
+};
+// Mock PerformanceObserver
+global.PerformanceObserver = class MockPerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  constructor(public callback: PerformanceObserverCallback) {}
+  observe() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+};
+// Suppress JSDOM navigation warnings
+// eslint-disable-next-line no-console
+console.error = (...args) => {
+  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+    return; // Suppress JSDOM navigation warnings
+  }
+  originalConsoleError(...args);
+};
+// Mock window.location
+delete (window as unknown as Record<string, unknown>).location;
+(window as unknown as Record<string, unknown>).location = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',

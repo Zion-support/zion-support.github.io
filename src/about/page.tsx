@@ -1,8 +1,13 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+=======
+import { Link } from 'react-router-dom';
+import { Users, Target, Brain, Shield } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {

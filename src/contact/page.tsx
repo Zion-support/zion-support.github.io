@@ -1,7 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';

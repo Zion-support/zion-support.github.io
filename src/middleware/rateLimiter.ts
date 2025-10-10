@@ -56,8 +56,11 @@ export class RateLimiter {// TODO: Add content;}
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
     const now = Date.now();
     const record = this.requests.get(identifier);
+<<<<<<< HEAD
     const __now = Date.now();
     const _record = this.requests.get(identifier);
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs;
@@ -100,6 +103,10 @@ export class RateLimiter {// TODO: Add content;}
     this.requests.delete(identifier);
    * Cleanup expired entries
   private cleanup(): void {
+<<<<<<< HEAD
+=======
+    const now = Date.now();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
         this.requests.delete(key);

@@ -14,6 +14,7 @@ const AICustomerSupportPage: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 =======
@@ -21,3 +22,6 @@ import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, Ch
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default AICustomerSupportPage;
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [

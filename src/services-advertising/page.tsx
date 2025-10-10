@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -20,6 +21,18 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
   hover:text-blue-800 transition-colors duration-200"></Link>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Home;
+=======
+import React from 'react';
+export default function ServicesAdvertisingPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
           </Link>
         </div>
       </header>

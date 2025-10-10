@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const ExpenseTrackerPage: React.FC = () => {
   const features = [

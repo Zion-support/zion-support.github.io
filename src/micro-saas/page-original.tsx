@@ -1666,7 +1666,7 @@ $4},
 $4}
   ];
   
-  const realEstateSaaS = [
+  /* const realEstateSaaS = [
     {
       title: 'AI Property Valuation Platform',
       description: 'Advanced property valuation using machine learning and real estate data analysis.',
@@ -3368,10 +3368,17 @@ $4},
       marketPrice: '$350-700/month',
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
+<<<<<<< HEAD
       contactInfo:     ,
 $4}
   ];
   const categories = [
+=======
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    }
+  ]; */
+  /* const categories = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -3394,7 +3401,7 @@ $4}
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+  ]; */
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

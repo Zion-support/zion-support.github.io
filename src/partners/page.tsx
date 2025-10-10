@@ -2,12 +2,15 @@
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 =======
 
 
 import { Link } from 'react-router-dom';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

@@ -1,10 +1,13 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
 
 const AiEmailMarketingPage: React.FC = () => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [

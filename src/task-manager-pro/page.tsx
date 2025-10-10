@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const TaskManagerProPage: React.FC = () => {
   const features = [

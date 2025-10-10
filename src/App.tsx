@@ -228,6 +228,7 @@ import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // AI Services
 
 // Additional AI Services
@@ -238,6 +239,8 @@ import ConsultationPage from './consultation/page';
 import AIProjectManagerPage from './ai-project-manager/page';
 
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 // Support Pages
 
 // AI Services Pages
@@ -245,7 +248,10 @@ import AIProjectManagerPage from './ai-project-manager/page';
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);

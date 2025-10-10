@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -10,6 +11,10 @@ import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

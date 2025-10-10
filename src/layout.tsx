@@ -178,6 +178,7 @@ $4]
       </body>
     </html>
   );
+<<<<<<< HEAD
 
 export default RootLayout;
 =======
@@ -198,3 +199,6 @@ export default SrcPage;
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
