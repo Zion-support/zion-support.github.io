@@ -1,107 +1,107 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Zap, BarChart3, ArrowRight, Star, CheckSquare, Smartphone, Users, Target, Globe, Settings } from 'lucide-react';
+import { Truck, BarChart3, Target, Zap, ArrowRight, Star, CheckSquare, Shield, Smartphone, Users, Globe, Settings } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AICloudInfrastructurePage: React.FC = () => {
+const AISupplyChainOptimizationPage: React.FC = () => {
   const features = [
     {
-      icon: Cloud,
-      title: 'Intelligent Auto-Scaling',
-      description: 'AI-powered auto-scaling that predicts traffic patterns and scales resources automatically',
-      benefits: ['Predictive scaling', 'Cost optimization', 'Zero downtime', 'Performance optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Advanced Security',
-      description: 'Comprehensive cloud security with AI-powered threat detection and automated response',
-      benefits: ['Real-time threat detection', 'Automated incident response', 'Compliance management', 'Data encryption']
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'AI-driven performance monitoring and optimization for maximum efficiency and speed',
-      benefits: ['Real-time monitoring', 'Performance analytics', 'Bottleneck detection', 'Automated optimization']
+      icon: Truck,
+      title: 'Demand Forecasting',
+      description: 'Predict demand patterns with 92% accuracy using advanced machine learning algorithms',
+      benefits: ['92% forecast accuracy', 'Real-time demand signals', 'Seasonal pattern recognition', 'Market trend analysis']
     },
     {
       icon: BarChart3,
-      title: 'Cost Management',
-      description: 'Intelligent cost optimization and resource management to reduce cloud spending',
-      benefits: ['Cost analysis', 'Resource optimization', 'Budget alerts', 'Usage forecasting']
+      title: 'Inventory Optimization',
+      description: 'Optimize inventory levels across your entire supply chain to reduce costs and improve availability',
+      benefits: ['Reduce inventory costs by 25%', 'Improve stock availability', 'Automated reorder points', 'Multi-location optimization']
+    },
+    {
+      icon: Target,
+      title: 'Route Planning',
+      description: 'AI-powered route optimization for logistics and transportation to minimize costs and delivery times',
+      benefits: ['Reduce transportation costs by 30%', 'Optimize delivery routes', 'Real-time traffic updates', 'Fuel efficiency optimization']
+    },
+    {
+      icon: Zap,
+      title: 'Risk Management',
+      description: 'Identify and mitigate supply chain risks with predictive analytics and real-time monitoring',
+      benefits: ['Risk prediction', 'Supplier monitoring', 'Disruption alerts', 'Contingency planning']
     }
   ];
 
-  const cloudProviders = [
+  const industries = [
     {
-      name: 'Amazon Web Services',
-      icon: '☁️',
-      features: ['EC2, S3, Lambda', 'RDS, DynamoDB', 'CloudFront, Route 53', 'SageMaker, Rekognition'],
-      pricing: 'Starting at $500/month'
+      title: 'Manufacturing',
+      description: 'Optimize production planning and raw material procurement',
+      icon: Settings,
+      benefits: ['Reduce production costs by 20%', 'Improve on-time delivery by 35%', 'Minimize waste by 40%', 'Optimize supplier relationships']
     },
     {
-      name: 'Microsoft Azure',
-      icon: '🔷',
-      features: ['Virtual Machines', 'Azure SQL Database', 'Azure Functions', 'Cognitive Services'],
-      pricing: 'Starting at $450/month'
+      title: 'Retail & E-commerce',
+      description: 'Streamline inventory management and fulfillment operations',
+      icon: Globe,
+      benefits: ['Reduce stockouts by 60%', 'Improve customer satisfaction', 'Optimize warehouse operations', 'Enhance last-mile delivery']
     },
     {
-      name: 'Google Cloud Platform',
-      icon: '🔵',
-      features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'AI Platform'],
-      pricing: 'Starting at $400/month'
+      title: 'Healthcare',
+      description: 'Ensure critical medical supplies and pharmaceutical availability',
+      icon: Users,
+      benefits: ['Ensure supply continuity', 'Reduce waste and expiration', 'Optimize cold chain logistics', 'Improve patient care']
     },
     {
-      name: 'Multi-Cloud',
-      icon: '🌐',
-      features: ['Hybrid cloud solutions', 'Cross-platform management', 'Disaster recovery', 'Vendor independence'],
-      pricing: 'Starting at $800/month'
+      title: 'Food & Beverage',
+      description: 'Manage perishable goods and optimize distribution networks',
+      icon: Smartphone,
+      benefits: ['Reduce food waste by 45%', 'Optimize freshness', 'Improve distribution efficiency', 'Enhance quality control']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$1,299',
+      price: '$899',
       period: '/month',
       description: 'Perfect for small to medium businesses',
       features: [
-        'Up to 10 servers',
-        'Basic monitoring',
+        'Up to 10 locations',
+        'Basic forecasting',
+        'Standard analytics',
         'Email support',
-        'Standard security',
-        '99.9% uptime SLA'
+        'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$2,999',
+      price: '$1,999',
       period: '/month',
       description: 'Ideal for growing enterprises',
       features: [
-        'Up to 100 servers',
+        'Up to 100 locations',
         'Advanced AI features',
+        'Real-time analytics',
         'Priority support',
-        'Enhanced security',
-        '99.99% uptime SLA',
-        'API access'
+        'API access',
+        'Custom integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$7,999',
+      price: '$4,999',
       period: '/month',
-      description: 'For large organizations with complex needs',
+      description: 'For large organizations with complex supply chains',
       features: [
-        'Unlimited servers',
+        'Unlimited locations',
         'Custom AI models',
+        'White-label solution',
         'Dedicated support',
-        'Advanced security',
-        '99.999% uptime SLA',
-        'White-label solution'
+        'On-premise deployment',
+        'Advanced reporting'
       ],
       popular: false
     }
@@ -109,24 +109,24 @@ const AICloudInfrastructurePage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'CTO',
-      company: 'TechStartup Inc',
-      content: 'Our cloud costs reduced by 40% while performance improved by 60%. The AI optimization is incredible.',
+      name: 'David Chen',
+      role: 'Supply Chain Director',
+      company: 'Global Manufacturing Corp',
+      content: 'We reduced inventory costs by 30% and improved on-time delivery to 98%. The AI insights are incredibly accurate.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'IT Director',
-      company: 'Global Enterprises',
-      content: 'We achieved 99.99% uptime and reduced security incidents by 90%. Outstanding service.',
+      name: 'Sarah Johnson',
+      role: 'Operations Manager',
+      company: 'RetailMax',
+      content: 'Our stockout rate dropped by 70% and customer satisfaction increased by 25%. The optimization is game-changing.',
       rating: 5
     },
     {
-      name: 'Sarah Wilson',
-      role: 'Cloud Architect',
-      company: 'Digital Solutions',
-      content: 'The auto-scaling and cost optimization features saved us $50K monthly. Highly recommended.',
+      name: 'Michael Rodriguez',
+      role: 'Logistics Director',
+      company: 'PharmaSupply',
+      content: 'We eliminated supply disruptions and reduced waste by 50%. The predictive capabilities are outstanding.',
       rating: 5
     }
   ];
@@ -134,9 +134,9 @@ const AICloudInfrastructurePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. Reduce costs by 40% and improve performance by 60%." />
-        <meta name="keywords" content="AI cloud infrastructure, cloud optimization, auto-scaling, cloud security, cloud management" />
+        <title>AI Supply Chain Optimization - Zion Tech Group</title>
+        <meta name="description" content="Optimize supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning. Reduce costs by 30%." />
+        <meta name="keywords" content="AI supply chain, supply chain optimization, demand forecasting, inventory management, logistics AI" />
       </Helmet>
       
       <Navigation />
@@ -145,23 +145,23 @@ const AICloudInfrastructurePage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
-              AI-Powered Cloud Infrastructure
+            <div className="inline-flex items-center bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Truck className="w-4 h-4 mr-2" />
+              AI-Powered Supply Chain Optimization
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Cloud Infrastructure
+              AI Supply Chain Optimization
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Intelligent cloud infrastructure with AI-powered auto-scaling, security, and optimization. 
-              Reduce costs by 40% and improve performance by 60% with our advanced cloud management platform.
+              Optimize your supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning. 
+              Reduce costs by 30% and improve efficiency by 40%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
               </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                 Watch Demo
               </button>
             </div>
@@ -179,13 +179,13 @@ const AICloudInfrastructurePage: React.FC = () => {
                 Advanced AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to optimize your cloud infrastructure for maximum performance and cost efficiency.
+                Leverage artificial intelligence to optimize every aspect of your supply chain operations.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -204,30 +204,30 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Cloud Providers Section */}
+        {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Multi-Cloud Support
+                Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Deploy and manage your infrastructure across all major cloud providers.
+                Deploy supply chain optimization across various industries with proven results.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {cloudProviders.map((provider, index) => (
+              {industries.map((industry, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{provider.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-2">{provider.name}</h3>
-                    <div className="text-blue-400 font-semibold">{provider.pricing}</div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <industry.icon className="w-8 h-8 text-white" />
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{industry.title}</h3>
+                  <p className="text-gray-300 mb-6">{industry.description}</p>
                   <ul className="space-y-2">
-                    {provider.features.map((feature, idx) => (
+                    {industry.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckSquare className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
+                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -245,14 +245,14 @@ const AICloudInfrastructurePage: React.FC = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your cloud infrastructure needs. All plans include our core AI features.
+                Choose the plan that fits your supply chain needs. All plans include our core AI features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   )}
@@ -274,8 +274,8 @@ const AICloudInfrastructurePage: React.FC = () => {
                   </ul>
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white transform hover:scale-105' 
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
+                      ? 'bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white transform hover:scale-105' 
+                      : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-white'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
                   </button>
@@ -293,7 +293,7 @@ const AICloudInfrastructurePage: React.FC = () => {
                 What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of organizations who have transformed their cloud infrastructure with AI.
+                Join thousands of organizations who have transformed their supply chain with AI.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -318,24 +318,24 @@ const AICloudInfrastructurePage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/20">
+            <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 backdrop-blur-sm rounded-3xl p-12 border border-green-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Optimize Your Cloud Infrastructure?
+                Ready to Optimize Your Supply Chain?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven cloud management.
+                Start your free trial today and experience the power of AI-driven supply chain optimization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                   Schedule Demo
                 </button>
               </div>
               <div className="mt-6 text-sm text-gray-400">
-                Questions? Call us at <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">(302) 464-0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
+                Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">(302) 464-0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a>
               </div>
             </div>
           </div>
@@ -347,4 +347,4 @@ const AICloudInfrastructurePage: React.FC = () => {
   );
 };
 
-export default AICloudInfrastructurePage;
+export default AISupplyChainOptimizationPage;

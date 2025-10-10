@@ -136,7 +136,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
+<<<<<<< HEAD
   return <React.Fragment>{children}</React.Fragment>;
+=======
+  return null;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 };
 
 export default AccessibilityEnhancer;
