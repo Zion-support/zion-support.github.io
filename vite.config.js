@@ -30,7 +30,6 @@ export default defineConfig({
     // Optimize build performance
     emptyOutDir: true,
     copyPublicDir: true,
-    // Enhanced performance optimizations
     rollupOptions: {
       maxParallelFileOps: 2,
       treeshake: {
@@ -40,28 +39,31 @@ export default defineConfig({
         manualChunks: (id) => {
           // React and React DOM
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'vendor';
+            return 'react';
+          }
+          // Router library
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router';
           }
           // UI libraries
-          if (id.includes('node_modules/@heroicons') || id.includes('node_modules/lucide-react')) {
+          if (
+            id.includes('node_modules/framer-motion') ||
+            id.includes('node_modules/lucide-react')
+          ) {
             return 'ui';
           }
-          // Animation libraries
-          if (id.includes('node_modules/framer-motion')) {
-            return 'animation';
+          // Utilities and web vitals
+          if (id.includes('node_modules/web-vitals')) {
+            return 'vitals';
           }
-          // Chart libraries
-          if (id.includes('node_modules/recharts')) {
-            return 'charts';
-          }
-          // Other vendor libraries
+          // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
             return 'vendor';
           }
         },
+        assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
   },
@@ -69,23 +71,46 @@ export default defineConfig({
     port: 3000,
     host: true,
     open: true,
+    // Enable HMR
+    hmr: {
+      overlay: true,
+    },
   },
   preview: {
     port: 4173,
-    host: true,
     open: true,
   },
   optimizeDeps: {
     include: [
       'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      '@heroicons/react',
+      'react-dom', 
+      'react-router-dom', 
+      'framer-motion', 
       'lucide-react',
+      'react-helmet-async',
+      'web-vitals'
     ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
   },
+  css: {
+    devSourcemap: true,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
+    target: 'es2015',
+  },
+  // Define global constants
   define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
+  // Resolve configuration
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@app': '/app',
+      '@components': '/app/components',
+    },
   },
 });

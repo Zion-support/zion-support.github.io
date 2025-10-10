@@ -23,21 +23,32 @@ async function handler(req, res) {
     // Basic checkout session creation logic
     const sessionData = {
       productId,
-      userId,
-      sessionId: 'cs_' + Date.now(),
-      status: 'created',
-      createdAt: new Date().toISOString()
+      userId: userId || null,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
     };
+
+    // In a real implementation, you would:
+    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
+    // 2. Store session data in your database
+    // 3. Return the session ID and checkout URL
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ session: sessionData }));
-  } catch (err) {
-    console.error("Error:", err);
-    console.error('Error creating checkout session:', err);
+    res.end(JSON.stringify({
+      success: true,
+      sessionId: `session_${Date.now()}`,
+      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
+      data: sessionData
+    }));
+  } catch (error) {
+    console.error('Checkout session creation error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to create checkout session',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
 
