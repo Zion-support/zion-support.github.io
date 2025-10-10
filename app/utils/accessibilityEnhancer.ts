@@ -3,7 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
-<<<<<<< HEAD
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -125,41 +124,19 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key
    */
-=======
-const AccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
+
   private handleEscapeKey(event: KeyboardEvent): void {
-    // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
+    // Close any open modals or dropdowns;
+
+const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     })
     
-    // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
+    // Close any open menus;
+
+const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
@@ -217,8 +194,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
    * Setup skip links
    */
   private setupSkipLinks(): void {
-    // Create skip to main content link
-    const skipLink = document.createElement('a');
+    // Create skip to main content link;
+
+const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
@@ -231,29 +209,33 @@ const AccessibilityEnhancerPage: React.FC = () => {
    * Setup landmarks
    */
   private setupLandmarks(): void {
-    // Ensure main content has proper landmark
-    const mainContent = document.querySelector('main') || document.querySelector('#main-content');
+    // Ensure main content has proper landmark;
+
+const mainContent = document.querySelector('main') || document.querySelector('#main-content');
     if (mainContent) {
       mainContent.setAttribute('role', 'main');
       mainContent.id = 'main-content';
     }
     
-    // Setup navigation landmarks
-    const navs = document.querySelectorAll('nav');
+    // Setup navigation landmarks;
+
+const navs = document.querySelectorAll('nav');
     navs.forEach((nav, index) => {
       if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
         nav.setAttribute('aria-label', `Navigation ${index + 1}`);
       }
     })
     
-    // Setup banner landmark
-    const header = document.querySelector('header');
+    // Setup banner landmark;
+
+const header = document.querySelector('header');
     if (header) {
       header.setAttribute('role', 'banner');
     }
     
-    // Setup contentinfo landmark
-    const footer = document.querySelector('footer');
+    // Setup contentinfo landmark;
+
+const footer = document.querySelector('footer');
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
     }
@@ -263,8 +245,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
    * Setup ARIA labels
    */
   private setupAriaLabels(): void {
-    // Add ARIA labels to buttons without text
-    const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+    // Add ARIA labels to buttons without text;
+
+const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
     iconButtons.forEach(button => {
       const icon = button.querySelector('svg');
       if (icon) {
@@ -273,8 +256,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
       }
     })
     
-    // Add ARIA labels to form inputs
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+    // Add ARIA labels to form inputs;
+
+const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (label) {
@@ -290,8 +274,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
    * Setup color contrast improvements
    */
   private setupColorContrast(): void {
-    // Add high contrast mode support
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    // Add high contrast mode support;
+
+const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
@@ -309,8 +294,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
    * Setup screen reader support
    */
   private setupScreenReaderSupport(): void {
-    // Add live region for announcements
-    const liveRegion = document.createElement('div');
+    // Add live region for announcements;
+
+const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only';
@@ -379,27 +365,17 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.skipLinks = []
     this.landmarks = []
   }
-<<<<<<< HEAD
 }
 
 // Create global instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-=======
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
+
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
 }
 
-<<<<<<< HEAD
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
 }
@@ -411,6 +387,4 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
-=======
-export default AccessibilityEnhancerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
+

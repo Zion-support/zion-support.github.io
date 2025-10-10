@@ -20,7 +20,6 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
     {
       title: 'Governing Law',
       icon: Scale,
-<<<<<<< HEAD
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
     }
   ]
@@ -31,9 +30,8 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+
   return (
     <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
+      <Helmet></Helmet>
+        <title></titl>Terms of Service - Zion Tech Group</title>

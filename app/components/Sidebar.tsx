@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -27,7 +26,7 @@ import {
 } from 'lucide-react'
 const Sidebar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+  const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
 useEffect(() => {
     const handleResize = (;
@@ -160,12 +159,12 @@ return (
 
       {/* Mobile Menu Button */}
       <button;
-        onClick={() => setIsOpen(true)}
+        onClick={() =></button> setIsOpen(true)}
 
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >,
-        <Menu>
+        <Menu></Menu>
       </button>
 
       {/* Sidebar Overlay */}
@@ -174,30 +173,29 @@ return (
         <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
   }
-          onClick={() => setIsOpen(false)}
+          onClick={() =></div> setIsOpen(false)}
         />
       )}
 {/* Sidebar */}</div>
-      <aside>
-        <div className="flex flex-col h-full"></div>
+      <aside></aside>
+        <div className="flex flex-col h-full"></di></div>
           {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
-                <Brain />
-              <div />
-                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
+          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></di></div>
+            <Link to="/" className="flex items-center space-x-3" onClick={() =></Link> setIsOpen(false)}>;
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></di></div>
+                <Brain /></Brain>
+              <div /></div>
+                <h2 className="text-xl font-bold text-white cyber-text"></h>Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
             </Link>
             <button;
-              onClick={() => setIsOpen(false)}
+              onClick={() =></button> setIsOpen(false)}
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >,
-              <X>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+              <X></X>
+
             </button>
           </div>
 
