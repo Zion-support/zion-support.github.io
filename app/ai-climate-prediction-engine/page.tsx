@@ -121,13 +121,13 @@ const AIClimatePredictionEngine: React.FC = () => {
     <>
       <Helmet>
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />
-        <meta property="og:title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" />
-        <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-climate-prediction-engine" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-climate-prediction-engine" />
+        <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment."  />
+        <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data"  />
+        <meta property="og:title" content="AI Climate Prediction Engine - Advanced Climate Forecasting"  />
+        <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment."  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-climate-prediction-engine"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-climate-prediction-engine"  />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
@@ -139,7 +139,7 @@ const AIClimatePredictionEngine: React.FC = () => {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-green-500/30">
-                <Globe className="w-5 h-5 text-green-400" />
+                <Globe className="w-5 h-5 text-green-400"  />
                 <span className="text-green-400 font-semibold">Climate Technology</span>
               </div>
               
@@ -154,15 +154,15 @@ const AIClimatePredictionEngine: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <div className="flex items-center space-x-2 text-green-400">
-                  <BarChart className="w-5 h-5" />
+                  <BarChart className="w-5 h-5"  />
                   <span className="font-semibold">95% Accuracy</span>
                 </div>
                 <div className="flex items-center space-x-2 text-cyan-400">
-                  <Shield className="w-5 h-5" />
+                  <Shield className="w-5 h-5"  />
                   <span className="font-semibold">Early Warning</span>
                 </div>
                 <div className="flex items-center space-x-2 text-blue-400">
-                  <Globe className="w-5 h-5" />
+                  <Globe className="w-5 h-5"  />
                   <span className="font-semibold">Global Coverage</span>
                 </div>
               </div>
@@ -172,14 +172,14 @@ const AIClimatePredictionEngine: React.FC = () => {
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-green-500/25 hover:shadow-green-500/40 hover:scale-105"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2"  />
                   Call (302) 464-0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2"  />
                   Get Quote
                 </a>
               </div>
@@ -207,14 +207,14 @@ const AIClimatePredictionEngine: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <feature.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-green-400">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0"  />
                         {benefit}
                       </li>
                     ))}
@@ -245,7 +245,7 @@ const AIClimatePredictionEngine: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    <useCase.icon className="w-8 h-8 text-white" />
+                    <useCase.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
@@ -301,7 +301,7 @@ const AIClimatePredictionEngine: React.FC = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -338,14 +338,14 @@ const AIClimatePredictionEngine: React.FC = () => {
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-green-500/25 hover:shadow-green-500/40 hover:scale-105"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 Get Free Quote
               </a>
             </div>

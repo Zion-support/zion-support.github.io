@@ -38,32 +38,33 @@ const benefits = [
     'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-  ]
-return (
+  ];
+
+  return (
     <>
-      <Helmet>
+      <Helmet  />
         <title>Ai Chatbot Builder - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta   />
+        <meta   />
       </Helmet>
-      <Navigation>
+      <Navigation  />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"   /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }}   /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>
+            <h1  />
               Ai Chatbot Builder;
             </h1>
-            <p>
+            <p  />
               Advanced AI-powered ai chatbot builder solution for modern businesses.;
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button>
+              <button  />
                 Get Started
               </button>
-              <button>
+              <button  />
                 View Demo,
               </button>
             </div>
@@ -73,10 +74,10 @@ return (
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
+              <h2  />
                 Key Features;
               </h2>
-              <p>
+              <p  />
                 Advanced AI technology that drives results;
               </p>
             </div>
@@ -86,19 +87,17 @@ return (
   }
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature>
+                    <feature  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
     feature.benefits && (;
-                    <ul>
+                    <ul  />
                       {feature.benefits.map((benefit, idx) => (
   }
-                        <li>
-                          <CheckCircle>
-
-=======
+                        <li  />
+                          <CheckCircle  />
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -246,59 +245,58 @@ const AIChatbotBuilder: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles"   />
+      <Navigation   />
+      <main className="container mx-auto px-4 py-16 pt-24"  />
         {/* Hero Section */}
         <section className={`text-center mb-16 transition-all duration-1000 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
-            <Bot className="w-4 h-4 text-green-400" />
+        }`}   />
+          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6"   />
+            <Bot className="w-4 h-4 text-green-400"   />
             <span className="text-green-400 text-sm font-medium">AI Chatbot Platform</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text"  />
             AI Chatbot Builder
           </h1>
           
-          <p className="text-xl md:text-2xl text-green-400 mb-8 font-medium">
+          <p className="text-xl md:text-2xl text-green-400 mb-8 font-medium"  />
             Create Intelligent Chatbots in Minutes
           </p>
           
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"  />
             Build powerful AI chatbots for customer support, lead generation, and sales automation. 
             No coding required. Deploy in 50+ languages with enterprise-grade security.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"   />
             <a
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
-            >
+              />
               📞 Call Now: (302) 464-0950
             </a>
             <a
               href="/contact"
               className="cyber-button w-full sm:w-auto text-center"
               style={{background: 'linear-gradient(45deg, #10b981, #059669)'}}
-            >
+              />
               Start Building Free
             </a>
           </div>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="hologram-card-enhanced p-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"   />
+            <div className="hologram-card-enhanced p-6 text-center"   />
               <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
               <div className="text-gray-300">Reduction in Support Tickets</div>
             </div>
-            <div className="hologram-card-enhanced p-6 text-center">
+            <div className="hologram-card-enhanced p-6 text-center"   />
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">Languages Supported</div>
             </div>
-            <div className="hologram-card-enhanced p-6 text-center">
+            <div className="hologram-card-enhanced p-6 text-center"   />
               <div className="text-3xl font-bold text-purple-400 mb-2">5 min</div>
               <div className="text-gray-300">Setup Time</div>
             </div>
@@ -306,23 +304,23 @@ const AIChatbotBuilder: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
+        <section className="mb-16"   />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12"  />
             Powerful Features
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"   />
             {features.map((feature, index) => (
-              <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl mb-4 text-green-400">
-                  <feature.icon className="w-10 h-10" />
+              <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300"   />
+                <div className="text-4xl mb-4 text-green-400"   />
+                  <feature.icon className="w-10 h-10"   />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2"  />
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={idx} className="flex items-center text-sm text-gray-400"  />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2"   />
                       {benefit}
                     </li>
                   ))}
@@ -333,25 +331,25 @@ const AIChatbotBuilder: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
+        <section className="mb-16"   />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12"  />
             Use Cases
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"   />
             {useCases.map((useCase, index) => (
-              <div key={index} className="hologram-card-enhanced p-8 hover:scale-105 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl text-green-400">
-                    <useCase.icon className="w-10 h-10" />
+              <div key={index} className="hologram-card-enhanced p-8 hover:scale-105 transition-all duration-300"   />
+                <div className="flex items-start space-x-4"   />
+                  <div className="text-4xl text-green-400"   />
+                    <useCase.icon className="w-10 h-10"   />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1"   />
                     <h3 className="text-2xl font-bold text-white mb-3">{useCase.title}</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"  />
                       {useCase.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        <li key={idx} className="flex items-center text-sm text-gray-400"  />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"   />
                           {benefit}
                         </li>
                       ))}
@@ -367,10 +365,10 @@ const AIChatbotBuilder: React.FC = () => {
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>
+              <h2  />
                 Why Choose Our Solution?;
               </h2>
-              <p>
+              <p  />
                 Proven results that drive business growth and efficiency;
               </p>
             </div>
@@ -380,7 +378,7 @@ const AIChatbotBuilder: React.FC = () => {
   }
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <CheckCircle>
+                    <CheckCircle  />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
@@ -392,17 +390,17 @@ const AIChatbotBuilder: React.FC = () => {
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>
+              <h2  />
                 Ready to Get Started?;
               </h2>
-              <p>
+              <p  />
                 Contact our experts to discuss your requirements and get started today.;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
+                <button  />
                   Contact Us;
                 </button>
-                <button>
+                <button  />
                   Learn More
                 </button>
               </div>
@@ -410,13 +408,12 @@ const AIChatbotBuilder: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer>
+      <Footer  />
     </>
   ),
 }
 export default AiChatbotBuilderPage;
 
-=======
                   </div>
                 </div>
               </div>
@@ -425,37 +422,37 @@ export default AiChatbotBuilderPage;
         </section>
 
         {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
+        <section className="mb-16"   />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12"  />
             Simple Pricing
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"   />
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`hologram-card-enhanced p-8 relative ${
                 plan.popular ? 'ring-2 ring-green-400 scale-105' : ''
-              }`}>
+              }`}   />
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-green-400 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"   />
+                    <div className="bg-gradient-to-r from-green-400 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"   />
                       Most Popular
                     </div>
                   </div>
                 )}
                 
-                <div className="text-center mb-6">
+                <div className="text-center mb-6"   />
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"   />
                     <span className="text-4xl font-bold text-green-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8"  />
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={idx} className="flex items-center text-gray-300"  />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
@@ -468,7 +465,7 @@ export default AiChatbotBuilderPage;
                       ? 'bg-gradient-to-r from-green-400 to-cyan-500 text-white hover:from-green-500 hover:to-cyan-600'
                       : 'bg-gray-800 text-white hover:bg-gray-700 border border-gray-600'
                   }`}
-                >
+                  />
                   Get Started
                 </a>
               </div>
@@ -477,21 +474,21 @@ export default AiChatbotBuilderPage;
         </section>
 
         {/* Testimonials Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
+        <section className="mb-16"   />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12"  />
             Customer Success Stories
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"   />
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="hologram-card-enhanced p-6">
-                <div className="flex items-center mb-4">
+              <div key={index} className="hologram-card-enhanced p-6"   />
+                <div className="flex items-center mb-4"   />
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
+                <div  />
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
                 </div>
@@ -501,26 +498,26 @@ export default AiChatbotBuilderPage;
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="hologram-card-enhanced p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="text-center"   />
+          <div className="hologram-card-enhanced p-12 max-w-4xl mx-auto"   />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"  />
               Ready to Build Your AI Chatbot?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"  />
               Join thousands of businesses using our platform to automate customer interactions and boost efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"   />
               <a
                 href="tel:+13024640950"
                 className="cyber-button w-full sm:w-auto text-center"
-              >
+                />
                 📞 Call (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button w-full sm:w-auto text-center"
                 style={{background: 'linear-gradient(45deg, #10b981, #059669)'}}
-              >
+                />
                 Email Us
               </a>
             </div>
@@ -528,7 +525,7 @@ export default AiChatbotBuilderPage;
         </section>
       </main>
 
-      <Footer />
+      <Footer   />
     </div>
   );
 };

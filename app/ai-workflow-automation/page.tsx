@@ -50,8 +50,8 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"   /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }}   /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>
               Ai Workflow Automation;
@@ -98,7 +98,6 @@ return (
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -189,9 +188,9 @@ const AIWorkflowAutomation: React.FC = () => {
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
-      />
+       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">
-        <Navigation />
+        <Navigation  />
         
         <main className="pt-16">
           {/* Hero Section */}
@@ -213,7 +212,7 @@ const AIWorkflowAutomation: React.FC = () => {
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   <span>Call (302) 464-0950</span>
                 </a>
                 <a
@@ -221,7 +220,7 @@ const AIWorkflowAutomation: React.FC = () => {
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #10b981, #059669)'}}
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5"  />
                   <span>Start Free Trial</span>
                 </a>
               </div>
@@ -251,14 +250,14 @@ const AIWorkflowAutomation: React.FC = () => {
                 {features.map((feature, index) => (
                   <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl mb-4 text-yellow-400">
-                      <feature.icon className="w-10 h-10" />
+                      <feature.icon className="w-10 h-10"  />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                           {benefit}
                         </li>
                       ))}
@@ -312,7 +311,6 @@ const AIWorkflowAutomation: React.FC = () => {
                 <button>
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
@@ -330,7 +328,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 {services.map((service, index) => (
                   <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl mb-4 text-cyan-400">
-                      <service.icon className="w-10 h-10" />
+                      <service.icon className="w-10 h-10"  />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                     <div className="text-center">
@@ -356,7 +354,7 @@ const AIWorkflowAutomation: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <Footer  />
     </>
   );
 };

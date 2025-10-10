@@ -121,13 +121,13 @@ const AIQuantumComputingSimulator: React.FC = () => {
     <>
       <Helmet>
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
-        <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />
-        <meta property="og:title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" />
-        <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing-simulator" />
+        <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development."  />
+        <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development"  />
+        <meta property="og:title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation"  />
+        <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization."  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing-simulator"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing-simulator"  />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -139,7 +139,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
           <div className="max-w-7xl mx-auto relative z-10">
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 mb-8 border border-purple-500/30">
-                <Cpu className="w-5 h-5 text-purple-400" />
+                <Cpu className="w-5 h-5 text-purple-400"  />
                 <span className="text-purple-400 font-semibold">Quantum Computing</span>
               </div>
               
@@ -154,15 +154,15 @@ const AIQuantumComputingSimulator: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <div className="flex items-center space-x-2 text-purple-400">
-                  <Cpu className="w-5 h-5" />
+                  <Cpu className="w-5 h-5"  />
                   <span className="font-semibold">Up to 50 Qubits</span>
                 </div>
                 <div className="flex items-center space-x-2 text-pink-400">
-                  <Brain className="w-5 h-5" />
+                  <Brain className="w-5 h-5"  />
                   <span className="font-semibold">AI Optimization</span>
                 </div>
                 <div className="flex items-center space-x-2 text-cyan-400">
-                  <BarChart className="w-5 h-5" />
+                  <BarChart className="w-5 h-5"  />
                   <span className="font-semibold">3D Visualization</span>
                 </div>
               </div>
@@ -172,14 +172,14 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   href="tel:+13024640950"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2"  />
                   Call (302) 464-0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2"  />
                   Get Quote
                 </a>
               </div>
@@ -207,14 +207,14 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <feature.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-purple-400">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0"  />
                         {benefit}
                       </li>
                     ))}
@@ -245,7 +245,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:scale-105"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    <useCase.icon className="w-8 h-8 text-white" />
+                    <useCase.icon className="w-8 h-8 text-white"  />
                   </div>
                   <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
@@ -301,7 +301,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -338,14 +338,14 @@ const AIQuantumComputingSimulator: React.FC = () => {
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 Get Free Quote
               </a>
             </div>

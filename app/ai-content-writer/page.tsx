@@ -31,23 +31,23 @@ const AIContentWriterPage: React.FC = () => {
     'Team collaboration'
   ];
   const stats = [
-    { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
-    { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
-    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },
-    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
+    { icon: <PenTool className="w-8 h-8 text-blue-500"  />, value: '10K+', label: 'Articles Created' },
+    { icon: <Zap className="w-8 h-8 text-green-500"  />, value: '90%', label: 'Time Saved' },
+    { icon: <Users className="w-8 h-8 text-purple-500"  />, value: '500+', label: 'Happy Users' },
+    { icon: <BarChart3 className="w-8 h-8 text-orange-500"  />, value: '300%', label: 'Engagement Boost' }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale." />
-        <meta name="keywords" content="AI content writer, content generation, SEO writing, content marketing, AI writing tool, Zion Tech Group" />
+        <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale."  />
+        <meta name="keywords" content="AI content writer, content generation, SEO writing, content marketing, AI writing tool, Zion Tech Group"  />
       </Helmet>
-      <Navigation />
+      <Navigation  />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"   />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }}   />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Content Writer
@@ -107,7 +107,7 @@ const AIContentWriterPage: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -132,7 +132,7 @@ const AIContentWriterPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
+                  <CheckCircle className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -163,7 +163,7 @@ const AIContentWriterPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer  />
     </div>
   );
 };

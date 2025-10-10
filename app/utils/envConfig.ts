@@ -111,7 +111,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     valid: missing.length === 0
   }
   public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
+    valid: boolean,
     missing: string[],}
   } {}
     const missing: string[] = [],

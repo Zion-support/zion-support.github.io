@@ -153,7 +153,6 @@ const CloudServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -264,5 +263,4 @@ export default CloudServicesPage
   </button>
   </h1>
   </div>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+cursor/analyze-improve-and-deploy-application-bc7b

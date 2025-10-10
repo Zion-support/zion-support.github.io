@@ -45,16 +45,16 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
 export interface PerformanceMetrics {
-    renderTime: number
-  memoryUsage: number,
+    renderTime: number,
+    memoryUsage: number,
   timestamp: string
   }
 
   enableMocking: boolean;
   enableCoverage: boolean;
   enablePerformance: boolean;
-  enableAccessibility: boolean
-  enableVisualRegression: boolean
+  enableAccessibility: boolean,
+    enableVisualRegression: boolean
   mockDataPath?: string,
   coverageThreshold: number,
     performanceThreshold: number;
@@ -184,16 +184,16 @@ interface TestSuite {
 interface CoverageResult {}
 
 export interface CoverageMetrics {
-    statements: number
-  branches: number
+    statements: number,
+    branches: number
   functions: number,
   lines: number
   }
 
 // Test configuration interface
 export interface TestConfig {
-    timeout: number
-  retries: number
+    timeout: number,
+    retries: number
   parallel: boolean,
   coverage: boolean
   }
@@ -207,36 +207,36 @@ export const defaultTestConfig: TestConfig = {
 }
 
 interface TestResult {
-    name: string
-  status: 'passed' | 'failed' | 'skipped'
+    name: string,
+    status: 'passed' | 'failed' | 'skipped'
   duration: number,
   error?: string
   }
 
 interface AssertionResult {
-    passed: boolean
-  message: string
+    passed: boolean,
+    message: string
   expected?: unknown,
   actual?: unknown
   }
 
 interface CoverageResult {
-    statements: number
-  branches: number
+    statements: number,
+    branches: number
   functions: number,
   lines: number
   }
 
 interface TestSuite {
-    name: string
-  tests: Test[]
+    name: string,
+    tests: Test[]
   beforeEach?: () => void,
   afterEach?: () => void
   }
 
 interface Test {
     name: string,
-  fn: () => void | Promise<void>
+  fn: () => void | Promise<void />
   timeout?: number
   }
 
@@ -341,7 +341,7 @@ export class TestRunner {
   // Get test statistics
   getStats(results: TestResult[]): {
     total: number;
-    passed: number
+    passed: number,
     failed: number
     skipped: number,
 
@@ -358,9 +358,11 @@ export class TestRunner {
 }
 
 // Custom render function with providers
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+  };
+
+  const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
-    <BrowserRouter>
+    <BrowserRouter />
       {children}
     </BrowserRouter>
   );
@@ -368,7 +370,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Omit<RenderOptions, 'wrapper' />
 ) => {
   if (typeof window !== 'undefined') {
     return render(ui, { wrapper: AllTheProviders, ...options })
@@ -776,7 +778,7 @@ if ('memory' in performance) {}
    * Run a hook
    */
   private async runHook(,
-    hook: () => void | Promise<void>
+    hook: () => void | Promise<void />
     hookName: string,
   ): Promise<void> {,
     try {,
@@ -952,7 +954,7 @@ if ('memory' in performance) {}
   }</style>
     </style>
 </head>
-<body>
+<body />
     <h2 id="heading-test-results">Test Results</h2>
     <div class="summary"></div>
         <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
@@ -1076,7 +1078,9 @@ if ('memory' in performance) {}
     component: ReactElement,
     testName: string)
     assertions: (result: RenderResult) => void
-    const passed = violations.length === 0,
+  };
+
+  const passed = violations.length === 0,
     this.testResults.push({`})
       name: `Accessibility: ${testName}`);
       status: passed ? 'passed' : 'failed'),
@@ -1138,7 +1142,7 @@ if ('memory' in performance) {}
   r: #ff9800, }
     </style>
 </head>
-<body />
+<body / />
     <h1>Test Results</h1>
     <div class="summary"></div>
         <h2>Summary</h2>
@@ -1189,7 +1193,9 @@ if ('memory' in performance) {}
     const,
   violations: string[] = []
     // Check for missing alt text on images
-    const images = container.querySelectorAll('img'),
+  };
+
+  const images = container.querySelectorAll('img'),
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`;
         violations.push(`Image ${index} missing alt text`);
       }
@@ -1274,8 +1280,7 @@ if ('memory' in performance) {}
         ${this.results}
           .map();
             result => `}
-            <testcase>
-
+            <testcase />
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
             </skipped>
@@ -1301,7 +1306,7 @@ if ('memory' in performance) {}
   async runIntegrationTest();
     component: ReactElement,
     testName: string)
-    userInteractions: (result: RenderResult) => Promise<void>
+    userInteractions: (result: RenderResult) => Promise<void />
   // Integration test,
   async runIntegrationTest(component: ReactElement),
     testName: string),
@@ -1520,7 +1525,7 @@ if ('memory' in performance) {}
   e: string,
     userInteraction,
   s: (resul),
-  t: RenderResult) => Promise<void />
+  t: RenderResult) => Promise<void / />
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean, error?: string }> {/* TODO: Fix JSX expression */}`;
   n: ${testName}`,
@@ -1668,7 +1673,7 @@ export const useTestRunner = useCallback((...args) => {}
     assertions?: (result: RenderResult) => void,
     userInteractions?: (result: RenderResult) => Promise<void>) => {
     switch (type) {
-    userInteractions?: (result: RenderResult) => Promise<void>
+    userInteractions?: (result: RenderResult) => Promise<void />
   }
   ) => {}
     switch (type) {}
@@ -1678,7 +1683,7 @@ export const useTestRunner = useCallback((...args) => {}
     testName: string)
     type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
     assertions?: (result: RenderResult) => void,
-    userInteractions?: (result: RenderResult) => Promise<void>
+    userInteractions?: (result: RenderResult) => Promise<void />
   ) => {
     ,
     switch (type) {,

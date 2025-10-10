@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 
 const CookiesPage: React.FC = () => {
@@ -80,8 +79,7 @@ const CookiesPage: React.FC = () => {
     }
   ]
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
+cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
       <Helmet>

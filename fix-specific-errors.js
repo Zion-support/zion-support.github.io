@@ -1,90 +1,85 @@
-#!/usr/bin/env node;
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
 
-// Function to process a file;
-function processFile(filePath) {
+function fixSpecificErrors(filePath) {
   try {
-    // Fix malformed closing tags;
-    if (content.includes('</div>}')) {
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/<\/div>\}/g, '}');
-      modified = true;
-    }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Fix malformed closing tags with semicolons;
-    if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
-      modified = true;
-    }
-
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
-      modified = true;
-    }
-
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
-      modified = true;
-    }
-
-    // Fix malformed object properties;
-    if (content.includes('const config = {')) {
-      // Look for lines that might be missing colons;
-      for (let i = 0; i < lines.length; i++) {
-        // Fix lines that look like property assignments but are missing colons;
-        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
-          line = line.replace(
-            /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
-            '$1: $2,'
-          );
-          modified = true;
-        }
-    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix malformed object properties;
-    if (content.includes('const config = {/* TODO: Fix JSX expression */}
-        })
-        newLines.push(line);
+    // Fix missing closing brace in features array
+    content = content.replace(/(\w+):\s*\[([^\]]*)\]\s*\n\s*]/g, (match, key, value) => {
+      if (!value.includes('}')) {
+        return `${key}: [${value}\n  }];`;
       }
-      if (modified) {/* TODO: Fix JSX expression */}
-      }
-    }
+      return match;
+    });
 
-    if (modified) {/* TODO: Fix JSX expression */}
-    }
+    // Fix missing commas in array elements
+    content = content.replace(/(\w+)\s*\n\s*]/g, '$1\n  ]');
 
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+    // Fix missing semicolons after const declarations
+    content = content.replace(/(const\s+\w+\s*=\s*\[[^\]]*\])\s*\n\s*(const|return)/g, '$1;\n\n  $2');
+
+    // Fix malformed object properties
+    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
+
+    // Fix missing closing braces in objects
+    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*]/g, '$1: $2\n  }];');
+
+    // Fix extra semicolons in arrays
+    content = content.replace(/(\w+),;\s*\n/g, '$1,\n');
+
+    // Fix missing closing braces before return statements
+    content = content.replace(/(\w+)\s*\n\s*return\s*\(/g, '$1\n  };\n\n  return (');
+
+    // Fix malformed JSX fragments
+    content = content.replace(/<>\s*<\/>/g, '<></>');
+
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed specific errors in: ${filePath}`);
+      modified = true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Main execution;
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {)
-    if (processFile(file)) {
-      fixedCount++;
-    }
-async function main() {/* TODO: Fix JSX expression */}
-}
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  });
+// List of files with specific errors
+const filesToFix = [
+  '/workspace/app/ai-3d-generation/page.tsx',
+  '/workspace/app/ai-agricultural-intelligence-pro/page.tsx',
+  '/workspace/app/ai-analytics-dashboard/page.tsx',
+  '/workspace/app/ai-analytics/page.tsx',
+  '/workspace/app/ai-api-management/page.tsx',
+  '/workspace/app/ai-api-manager/page.tsx',
+  '/workspace/app/ai-automation/page.tsx',
+  '/workspace/app/ai-autonomous-systems/page.tsx',
+  '/workspace/app/ai-blockchain-analytics/page.tsx',
+  '/workspace/app/ai-blockchain-solutions/page.tsx',
+  '/workspace/app/ai-business-intelligence/page.tsx',
+  '/workspace/app/ai-chatbot-builder/page.tsx',
+  '/workspace/app/ai-climate-solutions-pro/page.tsx',
+  '/workspace/app/ai-cloud-infrastructure/page.tsx',
+  '/workspace/app/ai-code-assistant/page.tsx',
+  '/workspace/app/ai-code-generation/page.tsx',
+  '/workspace/app/ai-code-security-auditor/page.tsx',
+  '/workspace/app/ai-computer-vision/page.tsx',
+  '/workspace/app/ai-content-delivery-network/page.tsx',
+  '/workspace/app/ai-content-generation/page.tsx',
+  '/workspace/app/ai-content-studio/page.tsx',
+  '/workspace/app/ai-crm-assistant/page.tsx',
+  '/workspace/app/ai-crm/page.tsx',
+  '/workspace/app/ai-customer-service/page.tsx',
+  '/workspace/app/ai-customer-support-bot/page.tsx',
+  '/workspace/app/ai-customer-support-chatbot/page.tsx'
+];
 
-}
+console.log(`Fixing ${filesToFix.length} files with specific errors`);
 
-main().catch(console.error);
+filesToFix.forEach(fixSpecificErrors);
+
+console.log('Specific error fixing completed!');

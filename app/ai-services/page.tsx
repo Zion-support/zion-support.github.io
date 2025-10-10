@@ -1053,10 +1053,10 @@ const AiServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
+        <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation."  />
       </Helmet>
       
-      <Navigation />
+      <Navigation  />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
@@ -1098,13 +1098,13 @@ const AiServicesPage: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-white" />
+                        <service.icon className="w-6 h-6 text-white"  />
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                     </div>
                     {service.popular && (
                       <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
+                        <Star className="w-4 h-4 mr-1"  />
                         Popular
                       </span>
                     )}
@@ -1125,7 +1125,7 @@ const AiServicesPage: React.FC = () => {
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"  />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
                       ))}
@@ -1138,7 +1138,7 @@ const AiServicesPage: React.FC = () => {
                       className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1"  />
                     </Link>
                     <Link
                       to="/contact"
@@ -1181,7 +1181,7 @@ const AiServicesPage: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      <Footer  />
     </>
   );
 }

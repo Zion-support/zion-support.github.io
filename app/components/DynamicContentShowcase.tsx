@@ -1,8 +1,18 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { Cloud, Zap, Shield, Brain, Globe, CheckCircle, Star } from 'lucide-react';
+
+const DynamicContentShowcase: React.FC = () => {
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const features = [
     {
+      id: 1,
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions for modern businesses.',
+      icon: Brain,
+      color: 'from-blue-500 to-purple-600'
     },
     {
       id: 2,
@@ -16,22 +26,31 @@ import React, { useState, useEffect } from 'react';
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
+      color: 'from-orange-500 to-red-600'
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
-<<<<<<< HEAD
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
+      color: 'from-red-500 to-pink-600'
     },
     {
-      icon: Globe,
+      id: 5,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.',
+      icon: Shield,
+      color: 'from-purple-500 to-indigo-600'
+    },
+    {
+      id: 6,
       title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.',
+      icon: Globe,
+      color: 'from-cyan-500 to-teal-600'
     }
   ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -42,6 +61,7 @@ import React, { useState, useEffect } from 'react';
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -63,16 +83,24 @@ import React, { useState, useEffect } from 'react';
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
       rating: 5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
     }
-  ]
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 4000);
 
     return () => clearInterval(timer);
   }, [features.length]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
 
   return (
     <div className="py-16 px-4">
@@ -87,6 +115,23 @@ import React, { useState, useEffect } from 'react';
           </p>
         </div>
 
+        {/* Features Carousel */}
+        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-4">{features[currentFeature].title}</h3>
+              <p className="text-lg text-gray-300 mb-6">{features[currentFeature].description}</p>
+              <div className="flex space-x-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentFeature(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentFeature ? 'bg-blue-500' : 'bg-gray-500'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             {/* Feature Visual */}
@@ -103,8 +148,52 @@ import React, { useState, useEffect } from 'react';
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3 p-4 bg-white/5 rounded-lg">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300 text-sm">{benefit}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 md:p-12 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h3>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Don't just take our word for it - hear from our satisfied customers.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-white mb-6 italic">
+                "{testimonials[currentTestimonial].content}"
+              </blockquote>
+              <div className="text-blue-100">
+                <p className="font-semibold text-lg">{testimonials[currentTestimonial].name}</p>
+                <p className="text-sm">{testimonials[currentTestimonial].role}, {testimonials[currentTestimonial].company}</p>
+              </div>
+            </div>
+            
+            <div className="flex justify-center mt-6 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentTestimonial ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
