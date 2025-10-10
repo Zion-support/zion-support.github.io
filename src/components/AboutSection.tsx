@@ -1,25 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 export default function AboutSection() {
-  const stats = [
-=======
-export default function AboutSection() {;
-const stats = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    { number: '500+', label: 'Projects Completed' },
+  const stats = [    { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
   ];
-<<<<<<< HEAD
-  const values = [
-=======
-;
-const values = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const values = [    {
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
       icon: (

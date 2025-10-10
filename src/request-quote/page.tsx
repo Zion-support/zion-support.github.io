@@ -1,23 +1,12 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
-=======
-import Navigation from '../components
-import Footer from '../components
-'use client';
-import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-};
-const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: '',
+  const [formData, setFormData] = useState({    name: '',
     email: '',
     company: '',
     phone: '',
@@ -28,19 +17,9 @@ const [formData, setFormData] = useState({
     description: '',
     requirements:   ,
 $4});
-<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
-=======
-;
-const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-;
-const _serviceTypes = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'AI Services',
+  const _serviceTypes = [    'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
     'Cloud Migration',
@@ -50,40 +29,19 @@ const _serviceTypes = [
     'Consulting Services',
     'Other'
   ];
-<<<<<<< HEAD
-  const projectSizes = [
-=======
-;
-const projectSizes = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'Small (1-10 employees)',
+  const projectSizes = [    'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
-<<<<<<< HEAD
-  const timelines = [
-=======
-;
-const timelines = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'ASAP',
+  const timelines = [    'ASAP',
     '1-3 months',
     '3-6 months',
     '6-12 months',
     '12+ months',
     'Flexible'
   ];
-<<<<<<< HEAD
-  const budgetRanges = [
-=======
-;
-const budgetRanges = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'Under $10,000',
+  const budgetRanges = [    'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
     '$100,000 - $500,000',
@@ -95,7 +53,6 @@ const budgetRanges = [
     setFormData(prev => ({
       ...prev,
       [name]: value
-<<<<<<< HEAD
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -107,23 +64,7 @@ const budgetRanges = [
     setIsSubmitted(true)
   }
   const benefits = [
-    {
-=======
-    }))};
-;
-const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    /
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true)};
-;
-const benefits = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Calculator,
+    {      icon: Calculator,
       title: 'Free Quote',
       description:     ,
 $4},
@@ -143,16 +84,8 @@ $4},
       description:     ,
 $4};
   ];
-<<<<<<< HEAD
   const whyChooseUs = [
-    {
-=======
-;
-const whyChooseUs = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Users,
+    {      icon: Users,
       title: '50+ Successful Projects',
       description:     ,
 $4},
@@ -179,15 +112,10 @@ $4};
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 py-16 pt-24">
             <div className="max-w-2xl mx-auto text-center">
-<<<<<<< HEAD
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-green-400" />
               </div>
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text">
-=======
-              <div className="w-20 h-20 bg-green-500
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Quote Request Submitted!
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text">                Quote Request Submitted!
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Thank you for your interest in our services. We've received your quote request 
@@ -211,7 +139,6 @@ $4};
                 </div>
               </div>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -219,16 +146,7 @@ $4};
                   Contact Us
   </
                 <a
-                  href="/"
-=======
-                <a href="
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Contact Us
-                </a>
-                <a href="/"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
+                  href="/"                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Back to Home,
   </
@@ -238,13 +156,8 @@ $4};
         </div>
         <Footer />
       </React.Fragment>
-<<<<<<< HEAD
     )
-  }
-=======
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  }  return (
     <React .Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -257,31 +170,18 @@ $4};
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
-<<<<<<< HEAD
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
             <div className="lg:col-span-2">
               <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
-=======
-            <
-          <
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-12">
-            {/* Quote Form *
-            <div className="l,
-    g:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>                <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
-<<<<<<< HEAD
                       </label>
                       <input
                         type="text"
@@ -443,156 +343,7 @@ $4};
                 </form>
               </div>
             </div>
-            {/* Sidebar */}
-=======
-                      <
-                      <input type="text"
-                        name="name"
-                        value = { formData.name };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                        placeholder="Enter your full name"
-                    <
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
-                      <
-                      <input type="email"
-                        name="email"
-                        value = { formData.email };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400
-                        placeholder="Enter your email"
-                    <
-                  <
-                  <div className="grid grid-cols-1 m,
-    d:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name
-                      <
-                      <input type="text"
-                        name="company"
-                        value = { formData.company };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                        placeholder="Enter your company name"
-                    <
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
-                      <
-                      <input type="tel"
-                        name="phone"
-                        value = { formData.phone };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                        placeholder="Enter your phone number"
-                    <
-                  <
-                  {/* Project Information *
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Type *
-                    <
-                    <select name="serviceType"
-                      value = { formData.serviceType };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400>
-                      <option value="">Select a service type<)
-                      {serviceTypes.map((type), index) => (<option key={index} value={type}>{type}<)
-                      ))};
-                    <
-                  <
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size
-                      <
-                      <select name="projectSize"
-                        value = { formData.projectSize };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400>
-                        <option value="">Select project size<
-                        {projectSizes.map((size), index) => (<option key={index} value={size}>{size}<)
-                        ))};
-                      <
-                    <
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                      <
-                      <select name="timeline"
-                        value = { formData.timeline };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400>
-                        <option value="">Select timeline<
-                        {timelines.map((timeline), index) => (<option key={index} value={timeline}>{timeline}<)
-                        ))};
-                      <
-                    <
-                  <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
-                    <
-                    <select name="budget"
-                      value = { formData.budget };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400>
-                      <option value="">Select budget range<
-                      {budgetRanges.map((range), index) => (<option key={index} value={range}>{range}<)
-                      ))};
-                    <
-                  <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Description *
-                    <
-                    <textarea name="description"
-                      value = { formData.description };
-                      onChange = { handleInputChange };
-                      rows = { 4 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      placeholder="Describe your project requirements and goals..."
-                  <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements
-                    <
-                    <textarea name="requirements"
-                      value = { formData.requirements };
-                      onChange = { handleInputChange };
-                      rows = { 3 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      placeholder="Any specific technical requirements, integrations, or constraints..."
-                  <
-                  <button
-                    type="submit"
-                    disabled = { isSubmitting };
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
-    d:cursor-not-allowed">
-                    {isSubmitting ? (<div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
-                        Submitting...
-                      <)
-                    ) : ('Request Quote')
-                    )};
-                  <
-                <
-              <
-            <
-            {/* Sidebar *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <div className="space-y-8">
+            {/* Sidebar */}            <div className="space-y-8">
               {/* Benefits */}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
@@ -603,7 +354,6 @@ $4};
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
                       </div>
                       <div>
-<<<<<<< HEAD
                         <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>
                         <p className="text-xs text-gray-300">{benefit.description}</p>
                       </div>
@@ -613,27 +363,13 @@ $4};
               </div>
               {/* Why Choose Us */}
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
-=======
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}<
-                        <p className="text-xs text-gray-300">{benefit.description}<
-                      <
-                    <)
-                  ))};
-                <
-              <
-              {/* Why Choose Us *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                <div className="space-y-4">
+                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>                <div className="space-y-4">
                   {whyChooseUs.map((item, index) => (
                     <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                         <item.icon className="w-4 h-4 text-purple-400" />
                       </div>
                       <div>
-<<<<<<< HEAD
                         <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
                         <p className="text-xs text-gray-300">{item.description}</p>
                       </div>
@@ -643,24 +379,10 @@ $4};
               </div>
               {/* Contact Info */}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
-=======
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}<
-                        <p className="text-xs text-gray-300">{item.description}<
-                      <
-                    <)
-                  ))};
-                <
-              <
-              {/* Contact Info *
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                <p className="text-gray-300 text-sm mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>                <p className="text-gray-300 text-sm mb-4">
                   For urgent inquiries or immediate assistance, contact us directly.
                 </p>
                 <div className="space-y-3">
-<<<<<<< HEAD
                   <a
                     href="tel: +13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -685,32 +407,7 @@ $4};
 }
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-                  <a href="tel: +13024640950"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <Phone className="w-4 h-4 mr-2" 
-                    <span className="text-sm">(302) 464-0950<
-                  <
-                  <a href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <Mail className="w-4 h-4 mr-2" 
-                    <span className="text-sm">kleber@ziontechgroup.com<
-                  <
-                  <a href="
-                    className="flex items-center text-cyan-400 hove,
-    r:text-cyan-300 transition-colors">
-                    <MessageSquare className="w-4 h-4 mr-2" 
-                    <span className="text-sm">Contact Form<
-                  <
-                <
-    <div>Coming Soon<
-  )};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  nam,
+}  nam,
   e: '',
     emai,
   l: '',
@@ -734,7 +431,6 @@ $4};
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
-<<<<<<< HEAD
   // TOD,
   O: Add items
 ],
@@ -793,72 +489,7 @@ $4};
   }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-];
-  /
-  O: Add items;
-];;
-/
-/
-/
-/
-/
-/
-/
-/
-/
-  ];
-  const projectSizes = [
-];
-  /
-  O: Add items;
-];;
-/
-/
-/
-/
-  ];
-  const timelines = [
-];
-  /
-  O: Add items;
-];;
-/
-/
-/
-/
-/
-/
-  ];
-  const budgetRanges = [
-];
-  /
-  O: Add items;
-];;
-/
-/
-/
-/
-/
-/
-  ];
-  const handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-/
-      [name]: value;)
-    }))};
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    e.preventDefault();
+}    e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -866,71 +497,39 @@ $4};
     setIsSubmitted(true);
   }
   const benefits = [
-<<<<<<< HEAD
   // TOD,
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-];
-  /
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Calculator,
       titl,
   e: 'Free Quote',
       descriptio,
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Clock,
       titl,
   e: 'Quick Response',
       descriptio,
   n: 'We respond to all quote requests within 4 hours'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: CheckCircle,
       titl,
   e: 'Transparent Pricing',
       descriptio,
   n: 'Clear, detailed pricing with no hidden fees'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Star,
       titl,
   e: 'Expert Consultation',
@@ -939,71 +538,39 @@ $4};
     };
   ];
   const whyChooseUs = [
-<<<<<<< HEAD
   // TOD,
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-];
-  /
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Users,
       titl,
   e: '50+ Successful Projects',
       descriptio,
   n: 'Proven track record of delivering results'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Award,
       titl,
   e: '300% Average ROI',
       descriptio,
   n: 'Our clients see significant returns on investment'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Clock,
       titl,
   e: '24/7 Support',
       descriptio,
   n: 'Round-the-clock support for all our clients'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Star,
       titl,
   e: '99.9% Uptime',
@@ -1011,22 +578,12 @@ $4};
   n: 'Reliable, high-performance solutions'
     };
   ];
-<<<<<<< HEAD
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
-=======
-  if (isSubmitted) {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
-    return (<div>Coming Soon<)
-  )
-          <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <Navigation /></Navigation>
+          <React.Fragment>        <Navigation /></Navigation>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
           <div className="container mx-auto px-4 py-16 pt-24"></div>"
             <div className="max-w-2xl mx-auto text-center"></div>"
@@ -1056,7 +613,6 @@ $4};
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
@@ -1068,43 +624,7 @@ $4};
           </a>
                 <a
                   href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-// >
-=======
-          <
-              <p className="text-xl text-gray-300 mb-8"><
-                Thank you for your interest in our services. We've received your quote request;
-/
-          <
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"><
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?<
-                <div className="space-y-3 text-left"><
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1<
-                    <span className="text-gray-300">Our team will review your requirements<
-                  <
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2<
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal<
-                  <
-                  <div className="flex items-center"><
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3<
-                    <span className="text-gray-300">Schedule a call to discuss your project<
-                  <
-                <
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="
-/
-          "
-          <Phone className="w-5 h-5 mr-2" /><
-/
-          <
-                <a
-                  href="
-/
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          "
+// >          "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
 // Back to Home
           </a>
@@ -1117,34 +637,19 @@ $4};
     </React.Fragment>
         <Footer /></Footer>
       </React.Fragment>
-<<<<<<< HEAD
     ),
   }
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
-=======
-    )};
-  return (<div>Coming Soon</div>)
-  )
-          <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <Navigation /></Navigation>"
+          <React.Fragment>      <Navigation /></Navigation>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-<<<<<<< HEAD
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Request a Quote
-          </h1>
-=======
-  md: text-5xl font-bold text-white mb-6 neon-text"><
-/
-          <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          </h1>          <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
   </
           </div>
@@ -1158,7 +663,6 @@ $4};
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-<<<<<<< HEAD
 // Full Name *
           </label>
                       <input
@@ -1242,105 +746,11 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           <option key={index} value={size}>{size}</option>
                         ))}
                       </select>
-                    </div>
-=======
-/
-          <
-                      <input
-type="text" name="name"
-                        value = { formData.name };
-                        onChange = { handleInputChange };
-/
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-//                       
-          <
-                    <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                      <input
-type="email" name="email"
-                        value = { formData.email };
-                        onChange = { handleInputChange };
-/
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-//                       
-          <
-                  <
-                  <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-6"><
-                    <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                      <input
-type="text" name="company"
-                        value = { formData.company };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-// 
-          <
-                    <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                      <input
-type="tel" name="phone"
-                        value = { formData.phone };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-// 
-          <
-                  <
-                  {/* Project Information *
-                  <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                    <select
-                      name="serviceType" value = { formData.serviceType };
-                      onChange = { handleInputChange };
-/
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-/
-          "
-          <option value="">Select a service type<
-                      {serviceTypes.map((type), index) => ()};
-          <option key={index} value={type}>{type}<
-                      ))};
-                    <
-                  <
-                  <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-6"><
-                    <div><
-                      <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                      <select
-                        name="projectSize" value = { formData.projectSize };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-/
-          "
-          <option value="">Select project size<
-                        {projectSizes.map((size), index) => ()};
-          <option key={index} value={size}>{size}<
-                        ))};
-                      <
-                    <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                    <div>
+                    </div>                    <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Timeline;
   </
                       <select
-<<<<<<< HEAD
                         name="timeline" value={formData.timeline}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
@@ -1465,124 +875,3 @@ export default RequestQuotePage;
   </a>
   </a>
   </HTMLInputElement>
-=======
-                        name="timeline" value = { formData.timeline };
-                        onChange = { handleInputChange };
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-/
-          "
-          <option value="">Select timeline<
-                        {timelines.map((timeline), index) => ()};
-          <option key={index} value={timeline}>{timeline}<
-                        ))};
-                      <
-                    <
-                  <
-                  <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                    <select
-                      name="budget" value = { formData.budget };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-/
-          "
-          <option value="">Select budget range<
-                      {budgetRanges.map((range), index) => ()};
-          <option key={index} value={range}>{range}<
-                      ))};
-                    <
-                  <
-                  <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                    <textarea
-                      name="description" value = { formData.description };
-                      onChange = { handleInputChange };
-/
-                      rows = { 4 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-//                     
-          <
-                  <div><
-                    <label className="block text-sm font-medium text-gray-300 mb-2"><
-/
-          <
-                    <textarea
-                      name="requirements" value = { formData.requirements };
-                      onChange = { handleInputChange };
-                      rows = { 3 };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-// 
-          <
-                  <button
-type="submit" disabled = { isSubmitting };
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
-    d:cursor-not-allowed"
-/
-                    {isSubmitting ? ()}"
-          <div className="flex items-center justify-center"><
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
-/
-          <
-                    ) : ()
-/
-                    )};
-          <
-                <
-              <
-            <
-            {/* Sidebar *
-            <div className="space-y-8"><
-              {/* Benefits *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"><
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?<
-                <div className="space-y-4"><
-                  {benefits.map((benefit, index) => ()}"
-          <div key={index} className="flex items-start"><
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"><
-                        <benefit.icon className="w-4 h-4 text-cyan-400" /><
-                      <
-                      <div><
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}<
-                        <p className="text-xs text-gray-300">{benefit.description}<
-                      <
-                    <
-                  ))};
-                <
-              <
-              {/* Why Choose Us *
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"><
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?<
-                <div className="space-y-4"><
-                  {whyChooseUs.map((item, index) => ()}"
-          <div key={index} className="flex items-start"><
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"><
-                        <item.icon className="w-4 h-4 text-purple-400" /><
-                      <
-                      <div><
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}<
-                        <p className="text-xs text-gray-300">{item.description}<
-                      <
-                    <
-                  ))};
-                <
-              <
-              {/* Contact Info *
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"><
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?<
-                <p className="text-gray-300 text-sm mb-4"><
-/
-          <
-        <
-      <
-    </div>
-  )};
-export default RequestQuotePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -32,18 +32,10 @@ export type EmergingTechService2027 =
   roi: string;
   estimatedDelivery: string;
   contactInfo: unknown;
-<<<<<<< HEAD
     phone: string
     email: string
     website: string,
-    address: string}}
-=======
-    phone: string;
-    email: string;
-    website: string;
-    address: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
+    address: string}}export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Quantum Internet Infrastructure,
     id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure",

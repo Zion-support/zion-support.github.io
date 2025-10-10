@@ -7,7 +7,6 @@ id: string;
   description: string;
   features: string[];
   link: string;
-<<<<<<< HEAD
   category: string
   real_implementation: boolean
   contact_info: unknown,
@@ -18,34 +17,14 @@ id: string;
   }
 export const extraServices: ExtraService[] = [
     address: string,
-  }
-=======
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string};
-    email: string};
-};
-    address: string};
-export const extraServices: ExtraService[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const extra_services: ExtraService[] = [
+  }export const extra_services: ExtraService[] = [
     id: 'cloud - migration - expert',
     name: 'Cloud Migration Expert',
     tagline: 'Seamless cloud migration and optimization',
     price: '$99 / hour',
-<<<<<<< HEAD
     description: unknown,
 export interface ExtraService {/* TODO: Fix JSX expression */}
-  e: string}
-=======
-    description: unknown;
-export interface ExtraService {/* TODO: Fix JSX expression */};
-  e: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    emai,
+  e: string}    emai,
   l: string};
 };
     addres,
@@ -53,13 +32,7 @@ export interface ExtraService {/* TODO: Fix JSX expression */};
 export const,
   extraServices: ExtraService[] = [,
     addres,
-<<<<<<< HEAD
-  s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const,
+  s: string}export const,
   extra_services: ExtraService[] = [,
     i,
   d: 'cloud - migration - expert',
@@ -104,22 +77,13 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,
   }
 }
 }
-    address: string,
-=======
-    mobile: string;
-    email: string;
-    address: string}};
-};
-    address: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    lin,
+    address: string,    lin,
   k: '/services / cloud - migration - expert',
     categor,
   y: 'Cloud Services',
@@ -179,15 +143,9 @@ export const,
     emai,
   l: string,
     addres,
-<<<<<<< HEAD
   s: string}
 }
-}
-=======
-  s: string}};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    addres,
+}    addres,
   s: string};
 export const,
   extraServices: ExtraService[] = [,
@@ -253,18 +211,10 @@ export const,
     realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
-];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'cybersecurity - audit',
+      email: "kleber@ziontechgroup.com"    id: 'cybersecurity - audit',
     name: 'Cybersecurity Audit Pro',
     tagline: 'Comprehensive security assessment and protection',
     price: '$199 / hour',

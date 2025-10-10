@@ -248,11 +248,6 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

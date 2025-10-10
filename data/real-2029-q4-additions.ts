@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -1042,21 +1037,12 @@ import React from 'react';
     variant: 'ai-futuristic'
     contactInfo: contact;
     realImplementation: true;
-<<<<<<< HEAD
     implementationDetails: 'Metrics ingestion and templated reporting.'
     launchDate: '2029-10-20'
     customers: 36
     rating: 4.4
     reviews: 16,
-  }
-=======
-    implementationDetails: 'Metrics ingestion and templated reporting.',
-    launchDate: '2029-10-20',
-    customers: 36;
-    rating: 4.4;
-    reviews: 16};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'kpi - scorecards - studio',
+  }    id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
     price: '$69',
@@ -1269,7 +1255,6 @@ export const,
 		marketSize: 'Helpdesk software $20 B+'
 		growthRate: '25% YoY'
 		variant: 'ai-futuristic',
-<<<<<<< HEAD
 		contactInfo: contact
 		realImplementation: true,
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.'
@@ -1277,17 +1262,7 @@ export const,
 		customers: 120
 		rating: 4 && 4.8
 		reviews: 74,
-	}
-=======
-		contactInfo: contact;
-		realImplementation: true;
-		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.',
-		launchDate: '2029-10-12',
-		customers: 120;
-		rating: 4 && 4.8;
-		reviews: 74};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'mobile-survey-studio',
+	}		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards'
 		price: '$59',
@@ -1317,21 +1292,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.'
 		launchDate: '2029-11-05'
 		customers: 60
 		rating: 4 && 4.6
 		reviews: 33,
-	}
-=======
-		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.',
-		launchDate: '2029-11-05',
-		customers: 60;
-		rating: 4 && 4.6;
-		reviews: 33};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'event-ops-dashboard',
+	}		id: 'event-ops-dashboard',
 		name: 'EventOps Dashboard',
 		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place'
 		price: '$149',
@@ -1361,21 +1327,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.'
 		launchDate: '2029-09-23'
 		customers: 48
 		rating: 4 && 4.7
 		reviews: 29,
-	}
-=======
-		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.',
-		launchDate: '2029-09-23',
-		customers: 48;
-		rating: 4 && 4.7;
-		reviews: 29};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'oncall-scheduler-pro',
+	}		id: 'oncall-scheduler-pro',
 		name: 'OnCall Scheduler Pro',
 		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams'
 		price: '$129',
@@ -1405,21 +1362,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Rotations engine and integrations with chat tools.'
 		launchDate: '2029-10-30'
 		customers: 32
 		rating: 4 && 4.5
 		reviews: 19,
-	}
-=======
-		implementationDetails: 'Rotations engine and integrations with chat tools.',
-		launchDate: '2029-10-30',
-		customers: 32;
-		rating: 4 && 4.5;
-		reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'seo-content-optimizer-pro',
+	}		id: 'seo-content-optimizer-pro',
 		name: 'SEO Content Optimizer Pro',
 		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data'
 		price: '$89',
@@ -1449,21 +1397,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'SERP fetchers with caching and AI summarization.'
 		launchDate: '2029-09-10'
 		customers: 95
 		rating: 4 && 4.6
 		reviews: 54,
-	}
-=======
-		implementationDetails: 'SERP fetchers with caching and AI summarization.',
-		launchDate: '2029-09-10',
-		customers: 95;
-		rating: 4 && 4.6;
-		reviews: 54};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'feature-flags-lite',
+	}		id: 'feature-flags-lite',
 		name: 'Feature Flags Lite',
 		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps'
 		price: '$49',
@@ -1493,21 +1432,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Rules engine with SDKs and environment isolation.'
 		launchDate: '2029-10-02'
 		customers: 70
 		rating: 4 && 4.5
 		reviews: 21,
-	}
-=======
-		implementationDetails: 'Rules engine with SDKs and environment isolation.',
-		launchDate: '2029-10-02',
-		customers: 70;
-		rating: 4 && 4.5;
-		reviews: 21};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'sales-lead-enrichment',
+	}		id: 'sales-lead-enrichment',
 		name: 'Sales Lead Enrichment',
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
 		price: '$129',
@@ -1537,21 +1467,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.'
 		launchDate: '2029-11-18'
 		customers: 40
 		rating: 4 && 4.4
 		reviews: 17,
-	}
-=======
-		implementationDetails: 'Data aggregation with caching and scoring heuristics.',
-		launchDate: '2029-11-18',
-		customers: 40;
-		rating: 4 && 4.4;
-		reviews: 17};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'invoice-ocr-processor',
+	}		id: 'invoice-ocr-processor',
 		name: 'Invoice OCR Processor',
 		tagline: 'Extract line items and totals from invoices and receipts to your ERP',
 		price: '$79',
@@ -1581,21 +1502,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.'
 		launchDate: '2029-12-01'
 		customers: 27
 		rating: 4 && 4.5
 		reviews: 14,
-	}
-=======
-		implementationDetails: 'Template-free extraction with feedback loops for edge cases.',
-		launchDate: '2029-12-01',
-		customers: 27;
-		rating: 4 && 4.5;
-		reviews: 14};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'rpa-browser-automation',
+	}		id: 'rpa-browser-automation',
 		name: 'RPA Browser Automation Kit',
 		tagline: 'Headless browser workflows with queues, retries, and human review'
 		price: '$139',
@@ -1625,7 +1537,6 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Playwright runners with job queues and storage integrations.'
 		launchDate: '2029-11-28'
 		customers: 38
@@ -1633,18 +1544,7 @@ export const,
 		reviews: 18,
 	}
 		id: 'redaction-compliance-api'
-		name: 'Redaction & Compliance API'
-=======
-		implementationDetails: 'Playwright runners with job queues and storage integrations.',
-		launchDate: '2029-11-28',
-		customers: 38;
-		rating: 4 && 4.4;
-reviews: 18;
-	};
-		id: 'redaction-compliance-api',
-		name: 'Redaction & Compliance API',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'PII detection and redaction for text and documents with audit logs',
+		name: 'Redaction & Compliance API'		tagline: 'PII detection and redaction for text and documents with audit logs',
 		price: '$79',
 		period: '/month',
   description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
@@ -1672,21 +1572,12 @@ reviews: 18;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Detectors with policy engine and audit export.'
 		launchDate: '2029-12-03'
 		customers: 22
 		rating: 4 && 4.3
 		reviews: 12,
-	}
-=======
-		implementationDetails: 'Detectors with policy engine and audit export.',
-		launchDate: '2029-12-03',
-		customers: 22;
-		rating: 4 && 4.3;
-		reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'kpi-scorecards-studio',
+	}		id: 'kpi-scorecards-studio',
 		name: 'KPI Scorecards Studio',
 		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries'
 		price: '$69',
@@ -1716,21 +1607,12 @@ reviews: 18;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Metrics ingestion and templated reporting.'
 		launchDate: '2029-10-20'
 		customers: 36
 		rating: 4 && 4.4
 		reviews: 16,
-	}
-=======
-		implementationDetails: 'Metrics ingestion and templated reporting.',
-		launchDate: '2029-10-20',
-		customers: 36;
-		rating: 4 && 4.4;
-		reviews: 16};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+	}];
   id: 'ai - email - triage - copilot',
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email'
@@ -1759,7 +1641,6 @@ reviews: 18;
   market_size: 'Helpdesk software $20 B+'
   growth_rate: '25% YoY'
   variant: 'ai - futuristic',
-<<<<<<< HEAD
   contact_info: contact
   real_implementation: true,
   implementation_details: 'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.'
@@ -1767,17 +1648,7 @@ reviews: 18;
   customers: 120
   rating: 4.8
   reviews: 74,
-}
-=======
-  contact_info: contact;
-  real_implementation: true;
-  implementation_details: 'Shared inbox connectors, rules engine, and prompt templates with human - in - the - loop.',
-  launch_date: '2029 - 10 - 12',
-  customers: 120;
-  rating: 4.8;
-  reviews: 74};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'mobile - survey - studio',
+}  id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Conversational, mobile - first surveys with branching logic and realtime dashboards'
   price: '$59',
@@ -1807,21 +1678,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Responsive renderer with schema - driven forms and analytics.'
   launch_date: '2029 - 11 - 05'
   customers: 60
   rating: 4.6
   reviews: 33,
-}
-=======
-  implementation_details: 'Responsive renderer with schema - driven forms and analytics.',
-  launch_date: '2029 - 11 - 05',
-  customers: 60;
-  rating: 4.6;
-  reviews: 33};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'event - ops - dashboard',
+}  id: 'event - ops - dashboard',
   name: 'EventOps Dashboard',
   tagline: 'Ticketing, invitations, run - of - show, and post - event analytics in one place'
   price: '$149',
@@ -1851,21 +1713,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Ticketing service with role - based portals and exportable analytics.'
   launch_date: '2029 - 09 - 23'
   customers: 48
   rating: 4.7
   reviews: 29,
-}
-=======
-  implementation_details: 'Ticketing service with role - based portals and exportable analytics.',
-  launch_date: '2029 - 09 - 23',
-  customers: 48;
-  rating: 4.7;
-  reviews: 29};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'oncall - scheduler - pro',
+}  id: 'oncall - scheduler - pro',
   name: 'OnCall Scheduler Pro',
   tagline: 'Policy - based shift planning, rotations, and escalations with Slack / Teams'
   price: '$129',
@@ -1895,21 +1748,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Rotations engine and integrations with chat tools.'
   launch_date: '2029 - 10 - 30'
   customers: 32
   rating: 4.5
   reviews: 19,
-}
-=======
-  implementation_details: 'Rotations engine and integrations with chat tools.',
-  launch_date: '2029 - 10 - 30',
-  customers: 32;
-  rating: 4.5;
-  reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'seo - content - optimizer - pro',
+}  id: 'seo - content - optimizer - pro',
   name: 'SEO Content Optimizer Pro',
   tagline: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data'
   price: '$89',
@@ -1939,21 +1783,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'SERP fetchers with caching and AI summarization.'
   launch_date: '2029 - 09 - 10'
   customers: 95
   rating: 4.6
   reviews: 54,
-}
-=======
-  implementation_details: 'SERP fetchers with caching and AI summarization.',
-  launch_date: '2029 - 09 - 10',
-  customers: 95;
-  rating: 4.6;
-  reviews: 54};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'feature - flags - lite',
+}  id: 'feature - flags - lite',
   name: 'Feature Flags Lite',
   tagline: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps'
   price: '$49',
@@ -1983,21 +1818,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Rules engine with SDKs and environment isolation.'
   launch_date: '2029 - 10 - 02'
   customers: 70
   rating: 4.5
   reviews: 21,
-}
-=======
-  implementation_details: 'Rules engine with SDKs and environment isolation.',
-  launch_date: '2029 - 10 - 02',
-  customers: 70;
-  rating: 4.5;
-  reviews: 21};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'sales - lead - enrichment',
+}  id: 'sales - lead - enrichment',
   name: 'Sales Lead Enrichment',
   tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
   price: '$129',
@@ -2027,21 +1853,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Data aggregation with caching and scoring heuristics.'
   launch_date: '2029 - 11 - 18'
   customers: 40
   rating: 4.4
   reviews: 17,
-}
-=======
-  implementation_details: 'Data aggregation with caching and scoring heuristics.',
-  launch_date: '2029 - 11 - 18',
-  customers: 40;
-  rating: 4.4;
-  reviews: 17};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'invoice - ocr - processor',
+}  id: 'invoice - ocr - processor',
   name: 'Invoice OCR Processor',
   tagline: 'Extract line items and totals from invoices and receipts to your ERP',
   price: '$79',
@@ -2071,21 +1888,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Template - free extraction with feedback loops for edge cases.'
   launch_date: '2029 - 12 - 01'
   customers: 27
   rating: 4.5
   reviews: 14,
-}
-=======
-  implementation_details: 'Template - free extraction with feedback loops for edge cases.',
-  launch_date: '2029 - 12 - 01',
-  customers: 27;
-  rating: 4.5;
-  reviews: 14};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'rpa - browser - automation',
+}  id: 'rpa - browser - automation',
   name: 'RPA Browser Automation Kit',
   tagline: 'Headless browser workflows with queues, retries, and human review'
   price: '$139',
@@ -2115,7 +1923,6 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Playwright runners with job queues and storage integrations.'
   launch_date: '2029 - 11 - 28'
   customers: 38
@@ -2123,18 +1930,7 @@ reviews: 18;
   reviews: 18,
 }
   id: 'redaction - compliance - api'
-  name: 'Redaction & Compliance API'
-=======
-  implementation_details: 'Playwright runners with job queues and storage integrations.',
-  launch_date: '2029 - 11 - 28',
-  customers: 38;
-  rating: 4.4;
-reviews: 18;
-};
-  id: 'redaction - compliance - api',
-  name: 'Redaction & Compliance API',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  tagline: 'PII detection and redaction for text and documents with audit logs',
+  name: 'Redaction & Compliance API'  tagline: 'PII detection and redaction for text and documents with audit logs',
   price: '$79',
   period: '/month',
   description: 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
@@ -2162,21 +1958,12 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Detectors with policy engine and audit export.'
   launch_date: '2029 - 12 - 03'
   customers: 22
   rating: 4.3
   reviews: 12,
-}
-=======
-  implementation_details: 'Detectors with policy engine and audit export.',
-  launch_date: '2029 - 12 - 03',
-  customers: 22;
-  rating: 4.3;
-  reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'kpi - scorecards - studio',
+}  id: 'kpi - scorecards - studio',
   name: 'KPI Scorecards Studio',
   tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries'
   price: '$69',
@@ -2206,7 +1993,6 @@ reviews: 18;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Metrics ingestion and templated reporting.'
   launch_date: '2029 - 10 - 20'
   customers: 36
@@ -2218,23 +2004,7 @@ reviews: 18;
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  implementation_details: 'Metrics ingestion and templated reporting.',
-  launch_date: '2029 - 10 - 20',
-  customers: 36;
-  rating: 4.4;
-  reviews: 16};
-		rating: 4.4;
-		reviews: 16;
-// const contact = {
-;
-};
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	website: 'https://ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709'}	website: 'https://ziontechgroup.com',
 		popula,
   r: true,
 		ico,
@@ -3754,7 +3524,6 @@ reviews: 18;
   s://ziontechgroup.com'
 }
 export const,
-<<<<<<< HEAD
   real2029Q4Additions: RealMarketService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.8}
@@ -3768,24 +3537,7 @@ export const,
 	}
 	{
 		id: 'event-ops-dashboard'
-		name: 'EventOps Dashboard',
-=======
-  real2029Q4Additions: RealMarketService[] = [;
-	{/* TODO: Fix JSX expression */};
-  g: 4.8};
-		review,
-  s: 74};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 33};
-	};
-	{;
-		id: 'event-ops-dashboard';
-		name: 'EventOps Dashboard';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
+		name: 'EventOps Dashboard',		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
 		price: '$149'
 		period: '/month',
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
@@ -3813,7 +3565,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.'
 		launchDate: '2029-09-23'
 		customers: 48,
@@ -3822,19 +3573,7 @@ export const,
 	}
 	{
 		id: 'oncall-scheduler-pro'
-		name: 'OnCall Scheduler Pro',
-=======
-		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';
-		launchDate: '2029-09-23';
-		customers: 48;
-		rating: 4.7};
-		reviews: 29};
-	};
-	{;
-		id: 'oncall-scheduler-pro';
-		name: 'OnCall Scheduler Pro';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
+		name: 'OnCall Scheduler Pro',		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
 		price: '$129'
 		period: '/month',
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
@@ -3862,7 +3601,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Rotations engine and integrations with chat tools.'
 		launchDate: '2029-10-30'
 		customers: 32,
@@ -3871,19 +3609,7 @@ export const,
 	}
 	{
 		id: 'seo-content-optimizer-pro'
-		name: 'SEO Content Optimizer Pro',
-=======
-		implementationDetails: 'Rotations engine and integrations with chat tools.';
-		launchDate: '2029-10-30';
-		customers: 32;
-		rating: 4.5};
-		reviews: 19};
-	};
-	{;
-		id: 'seo-content-optimizer-pro';
-		name: 'SEO Content Optimizer Pro';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
+		name: 'SEO Content Optimizer Pro',		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
 		price: '$89'
 		period: '/month',
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
@@ -3911,7 +3637,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'SERP fetchers with caching and AI summarization.'
 		launchDate: '2029-09-10'
 		customers: 95,
@@ -3937,36 +3662,7 @@ export const,
 		review,
   s: 21}
 	}
-	{
-=======
-		implementationDetails: 'SERP fetchers with caching and AI summarization.';
-		launchDate: '2029-09-10';
-		customers: 95;
-		rating: 4.6};
-		reviews: 54};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 29};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 19};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 54};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 21};
-	};
-	{;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'sales-lead-enrichment';
+	{		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV'
 		price: '$129'
@@ -3996,7 +3692,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.'
 		launchDate: '2029-11-18'
 		customers: 40,
@@ -4024,38 +3719,7 @@ export const,
 	}
 	{
 		id: 'kpi-scorecards-studio'
-		name: 'KPI Scorecards Studio',
-=======
-		implementationDetails: 'Data aggregation with caching and scoring heuristics.';
-		launchDate: '2029-11-18';
-		customers: 40;
-		rating: 4.4};
-		reviews: 17};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 17};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 14};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 18};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.3};
-		review,
-  s: 12};
-	};
-	{;
-		id: 'kpi-scorecards-studio';
-		name: 'KPI Scorecards Studio';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
+		name: 'KPI Scorecards Studio',		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
 		price: '$69'
 		period: '/month',
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
@@ -4083,7 +3747,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Metrics ingestion and templated reporting.'
 		launchDate: '2029-10-20'
 		customers: 36,
@@ -4094,44 +3757,19 @@ export const,
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-		implementationDetails: 'Metrics ingestion and templated reporting.';
-		launchDate: '2029-10-20';
-		customers: 36;
-		rating: 4.4};
-		reviews: 16};
-	};
-];
-;
-// const contact = {
-;
-};
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	website: 'https://ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709'}	website: 'https://ziontechgroup.com',
 	{/* TODO: Fix JSX expression */};
   g: 4.4};
 		review,
   s: 16};
 	};
 ];
-<<<<<<< HEAD
 // const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-;
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}	websit,
   e: 'http,
   s://ziontechgroup.com'
 }
 export const,
-<<<<<<< HEAD
   real2029Q4Additions: RealMarketService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.8}
@@ -4145,24 +3783,7 @@ export const,
 	}
 	{
 		id: 'event-ops-dashboard'
-		name: 'EventOps Dashboard',
-=======
-  real2029Q4Additions: RealMarketService[] = [;
-	{/* TODO: Fix JSX expression */};
-  g: 4.8};
-		review,
-  s: 74};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 33};
-	};
-	{;
-		id: 'event-ops-dashboard';
-		name: 'EventOps Dashboard';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
+		name: 'EventOps Dashboard',		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
 		price: '$149'
 		period: '/month',
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
@@ -4190,7 +3811,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.'
 		launchDate: '2029-09-23'
 		customers: 48,
@@ -4199,19 +3819,7 @@ export const,
 	}
 	{
 		id: 'oncall-scheduler-pro'
-		name: 'OnCall Scheduler Pro',
-=======
-		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';
-		launchDate: '2029-09-23';
-		customers: 48;
-		rating: 4.7};
-		reviews: 29};
-	};
-	{;
-		id: 'oncall-scheduler-pro';
-		name: 'OnCall Scheduler Pro';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
+		name: 'OnCall Scheduler Pro',		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
 		price: '$129'
 		period: '/month',
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
@@ -4239,7 +3847,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Rotations engine and integrations with chat tools.'
 		launchDate: '2029-10-30'
 		customers: 32,
@@ -4248,19 +3855,7 @@ export const,
 	}
 	{
 		id: 'seo-content-optimizer-pro'
-		name: 'SEO Content Optimizer Pro',
-=======
-		implementationDetails: 'Rotations engine and integrations with chat tools.';
-		launchDate: '2029-10-30';
-		customers: 32;
-		rating: 4.5};
-		reviews: 19};
-	};
-	{;
-		id: 'seo-content-optimizer-pro';
-		name: 'SEO Content Optimizer Pro';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
+		name: 'SEO Content Optimizer Pro',		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
 		price: '$89'
 		period: '/month',
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
@@ -4288,7 +3883,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'SERP fetchers with caching and AI summarization.'
 		launchDate: '2029-09-10'
 		customers: 95,
@@ -4314,36 +3908,7 @@ export const,
 		review,
   s: 21}
 	}
-	{
-=======
-		implementationDetails: 'SERP fetchers with caching and AI summarization.';
-		launchDate: '2029-09-10';
-		customers: 95;
-		rating: 4.6};
-		reviews: 54};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 29};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 19};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 54};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 21};
-	};
-	{;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'sales-lead-enrichment';
+	{		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
 		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV'
 		price: '$129'
@@ -4373,7 +3938,6 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.'
 		launchDate: '2029-11-18'
 		customers: 40,
@@ -4401,38 +3965,7 @@ export const,
 	}
 	{
 		id: 'kpi-scorecards-studio'
-		name: 'KPI Scorecards Studio',
-=======
-		implementationDetails: 'Data aggregation with caching and scoring heuristics.';
-		launchDate: '2029-11-18';
-		customers: 40;
-		rating: 4.4};
-		reviews: 17};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 17};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 14};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 18};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.3};
-		review,
-  s: 12};
-	};
-	{;
-		id: 'kpi-scorecards-studio';
-		name: 'KPI Scorecards Studio';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
+		name: 'KPI Scorecards Studio',		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
 		price: '$69'
 		period: '/month',
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
@@ -4460,24 +3993,13 @@ export const,
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Metrics ingestion and templated reporting.'
 		launchDate: '2029-10-20'
 		customers: 36,
 		rating: 4.4}
 		reviews: 16}
 	{/* TODO: Fix JSX expression */}
-  g: 4.4}
-=======
-		implementationDetails: 'Metrics ingestion and templated reporting.';
-		launchDate: '2029-10-20';
-		customers: 36;
-		rating: 4.4};
-		reviews: 16};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		review,
+  g: 4.4}		review,
   s: 16};
 	};
 ];
@@ -5602,7 +5124,6 @@ export const,
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   real2029Q4Additions: RealMarketService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.8} review,
@@ -5624,37 +5145,11 @@ export const,
   g: 4.4} review,
   s: 18} } {/* TODO: Fix JSX expression */}
   g: 4.3} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */};
-  g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 33} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 29} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 19} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 54} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 21} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 17} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */};
-  g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  g: 4.4} review,
+  s: 12} } {/* TODO: Fix JSX expression */}  g: 4.4} review,
   s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   real2029Q4Additions: RealMarketService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.8} review,
@@ -5679,29 +5174,3 @@ export const,
   s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.4} review,
   s: 16} } ]; '
-=======
-  s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */};
-  g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 33} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 29} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 19} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 54} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 21} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 17} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */};
-  g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 16} } ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

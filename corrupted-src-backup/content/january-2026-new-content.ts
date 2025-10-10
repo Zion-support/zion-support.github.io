@@ -99,12 +99,6 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */};
     }],
   caseStudie,
   s: [
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
     }]}
-
-=======
-    {/* TODO: Fix JSX expression */};
-    }]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default january2026 NewContent;

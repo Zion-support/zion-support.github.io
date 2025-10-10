@@ -1,6 +1,5 @@
 import React from 'react';
 const Loading: React.FC = () => {
-<<<<<<< HEAD
 =======
 }
 return (
@@ -19,8 +18,4 @@ return (
     </div>
 <<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default Loading;
+}export default Loading;

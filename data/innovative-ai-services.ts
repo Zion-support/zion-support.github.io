@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-export interface InnovativeAIService {id: string;
-=======
-export interface InnovativeAIService {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string;
+export interface InnovativeAIService {id: string;  name: string;
   tagline: string;
   price: string;
   period: string;
@@ -52,24 +45,13 @@ id: string;
   description: string;
   features: string[];
   popular: boolean;
-<<<<<<< HEAD
   icon: string
   color: string
     mobile: string,
     email: string}
     address: string,
 export interface InnovativeAIService {/* TODO: Fix JSX expression */}
-  l: string}
-=======
-  icon: string;
-  color: string;
-    mobile: string;
-    email: string};
-    address: string;
-export interface InnovativeAIService {/* TODO: Fix JSX expression */};
-  l: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    addres,
+  l: string}    addres,
   s: string,
       'Advanced computer vision AI',
       'Real - time decision making',
@@ -81,7 +63,6 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */};
       'Traffic prediction',
       'Emergency response systems',
       'Performance analytics'],
-<<<<<<< HEAD
     popular: true,
     website: string}
   }
@@ -91,19 +72,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */};
   customers: number
   rating: number
   reviews: number,
-}
-=======
-    popular: true;
-    website: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const innovativeAIServices: InnovativeAIService[] = [,
+}export const innovativeAIServices: InnovativeAIService[] = [,
     id: 'quantum - ai - brain - computer - interface',
     name: 'Quantum AI Brain - Computer Interface',
     tagline: 'Revolutionary quantum - enhanced AI with human - like reasoning',
@@ -1396,20 +1365,11 @@ export const,
     reviews: 6,
   },
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
-<<<<<<< HEAD
     launchDate: '2024-08-01'
     customers: 67
     rating: 4.7
     reviews: 34,
-  }
-=======
-    launchDate: '2024-08-01',
-    customers:
-        customers: 67;
-    rating: 4.7;
-    reviews: 34};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
+  }      'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01'
     customers: 67
     rating: 4 && 4.7
@@ -1579,21 +1539,12 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'};
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.'
     launch_date: '2024 - 08 - 01'
     customers: 67
     rating: 4 && 4.7
     reviews: 34,
-  }
-=======
-    implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.',
-    launch_date: '2024 - 08 - 01',
-    customers: 67;
-    rating: 4 && 4.7;
-    reviews: 34};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
     reviews: 34,
     market_siz,
   e: '$300B supply chain management',
@@ -1648,13 +1599,7 @@ export const,
   s: 34};
 ];
     review,
-<<<<<<< HEAD
-  s: 34}
-=======
-  s: 34};
-]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  s: 34}];
   }
 ];
   id: string, name: string,
@@ -1741,14 +1686,8 @@ export const,
 export interface InnovativeAIService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
-  }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementation: boolean;
+  }  realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number
@@ -3696,8 +3635,4 @@ export interface InnovativeAIService,
   e: '2024-08-01', customer,
   s: 67, ratin,
   g: 4.7, review,
-<<<<<<< HEAD
   s: 34 } ]; ]; } ]; '"
-=======
-  s: 34 } ]; ]} ]; '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

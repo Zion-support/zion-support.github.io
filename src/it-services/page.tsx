@@ -3,17 +3,8 @@ import React from 'react';
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const ITServicesPage: React.FC = () => {
-  const itServices = [
-=======
-;
-const ITServicesPage: React.FC = () => {
-};
-const itServices = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Infrastructure & Cloud Services
+  const itServices = [    // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
@@ -247,7 +238,6 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     };
   ];
-<<<<<<< HEAD
   const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -260,25 +250,7 @@ const itServices = [
     { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-=======
-;
-const categories = [
-[
-        { name: 'All', count: itServices.length },
-        { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-        { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-        { name: 'Data', count: itServices.filter(s => s.category === 'Data').length },
-        { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-        { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
-        { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
-        { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
-        { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
-        { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
-        { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-        { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ];
+    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }  ];
   const services = [
 [
         {
@@ -330,16 +302,8 @@ const categories = [
       color: 'text-orange-400'
     };
   ];
-<<<<<<< HEAD
   const additionalServices = [
-    {
-=======
-;
-const additionalServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Users,
+    {      icon: Users,
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology roadmap development.',
       price: '$200/hour'
@@ -375,16 +339,8 @@ const additionalServices = [
       price: 'Starting at $399/month'
     };
   ];
-<<<<<<< HEAD
   const benefits = [
-    {
-=======
-;
-const benefits = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Star,
+    {      icon: Star,
       title: 'Proven Expertise',
       description: '10+ years of experience with 100+ successful projects'
     },
@@ -419,7 +375,6 @@ const benefits = [
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
@@ -430,21 +385,7 @@ const benefits = [
               (302) 464-0950</span>
           </div>
         </section>
-        {/* Main Services Grid */}
-=======
-            <a href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-              Get Free IT Assessment
-            </a>
-            <a href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              (302) 464-0950
-            </a>
-          </div>
-        </section>
-        {/* Main Services Grid */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        {/* Main Services Grid */}        <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -509,12 +450,7 @@ const benefits = [
             ))};
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Additional Services */}
-=======
-        {/* Additional Services */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        {/* Additional Services */}        <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
@@ -529,12 +465,7 @@ const benefits = [
             ))};
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Support Tiers */}
-=======
-        {/* Support Tiers */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        {/* Support Tiers */}        <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
@@ -551,18 +482,10 @@ const benefits = [
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Basic monitoring</span>
               </ul>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started</span>
-=======
-              <a href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </div>
+                Get Started</span>            </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
@@ -580,18 +503,10 @@ const benefits = [
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Priority response</span>
               </ul>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started</span>
-=======
-              <a href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </div>
+                Get Started</span>            </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
@@ -609,7 +524,6 @@ const benefits = [
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Strategic consulting</span>
               </ul>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
@@ -617,24 +531,12 @@ const benefits = [
             </div>
           </div>
         </section>
-        {/* CTA Section */}
-=======
-              <a href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Contact Sales
-              </a>
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="text-center">
+        {/* CTA Section */}        <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
@@ -643,25 +545,12 @@ const benefits = [
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                (302) 464-0950</span>
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-                Get Free IT Assessment
-              </a>
-              <a href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                (302) 464-0950
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </div>
+                (302) 464-0950</span>            </div>
           </div>
           </section>
         </main>
         <Footer />
       </div>
-<<<<<<< HEAD
   ),
 }
 export default ITServicesPage</a>
@@ -685,7 +574,3 @@ export default ITServicesPage</a>
   </a>
   </a>
   </span>
-=======
-  )};
-export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

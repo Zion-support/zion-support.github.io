@@ -600,11 +600,5 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
         </foot, e, r>
       </artic, l, e>
     </d, i, v>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-"
+}"

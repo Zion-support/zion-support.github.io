@@ -7,22 +7,11 @@
   link: string;
   category: string;
   realImplementation: boolean;
-<<<<<<< HEAD
   contactInfo: unknown
     mobile: string
     email: string,
 export interface QuantumSpaceService {,
-    address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface QuantumSpaceService {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  i,
+    address: string}  i,
   d: string,
   nam,
   e: string,
@@ -45,18 +34,10 @@ export interface QuantumSpaceService {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface QuantumSpaceService {/* TODO: Fix JSX expression */}
   s: string}
-}
-=======
-  l: string;
-export interface QuantumSpaceService {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  i,
+}  i,
   d: string,
   nam,
   e: string,
@@ -87,23 +68,13 @@ export interface QuantumSpaceService {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
     address: string,
   }
-}
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const quantumSpaceServices: QuantumSpaceService[] = [,
+}export const quantumSpaceServices: QuantumSpaceService[] = [,
     id: "quantum-computing-platform", name: "Quantum Computing Platform",
     tagline: "Next-generation quantum computing solutions", price: "$199/month"
     description: "Advanced quantum computing platform for complex calculations and simulations."
@@ -114,16 +85,9 @@ export const quantumSpaceServices: QuantumSpaceService[] = [,
       "Documentation",
       "Support services"],
     link: "/services/quantum-computing-platform", category: "Quantum Computing",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
   };
@@ -287,7 +251,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface QuantumSpaceService {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -300,23 +263,7 @@ i,
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface QuantumSpaceService {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: string} addres,
+  o: {/* TODO: Fix JSX expression */}  l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,

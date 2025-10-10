@@ -1,17 +1,7 @@
 const, October2025NewAIContentMegaBanne, r = () => {
-<<<<<<< HEAD
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">
 const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effect */}
-=======
-return (
-  return(<div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">
-);
-};
-const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, background, effect */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <div, className="absolute, inse, t-0, opacit, y-20"></div>"
+      {/* Animated, background, effect */}      <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>
       </d, i, v>
@@ -26,24 +16,13 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>";)
       </d, i, v>)
-<<<<<<< HEAD
       <div, className="relativ, e, p-8, m, d: p-12">",),
         {/* Head, e, r */}
         <div, className="flex, item, s-center, ga, p-3, m, b-6">";
           <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-cy, a, n-500, rounde, d-xl">";
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">
-      {/* Animated, background, effect */}</div>
-=======
-      <div, className="relativ, e, p-8, m, d: p-12">";),
-        {/* Head, e, r */};
-        <div, className="flex, item, s-center, ga, p-3, m, b-6">";
-          <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-cy, a, n-500, rounde, d-xl">";
-  return (
-    <div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">
-      {/* Animated, background, effect */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <div, className="absolute, inse, t-0, opacit, y-20"></div>
+      {/* Animated, background, effect */}</div>      <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0"></d, i, v>
       </d, i, v>

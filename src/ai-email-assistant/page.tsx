@@ -7,20 +7,10 @@ import Footer from '../components/Footer';
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
-<<<<<<< HEAD
 // AI Email Assistant</h1>"
           <p className="text-xl,"
   md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
-// Smart Email Management with AI-Powered Intelligence</p>
-=======
-// AI Email Assistant;
-          </h1>"
-          <p className="text-xl,"
-  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
-// Smart Email Management with AI-Powered Intelligence;
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+// Smart Email Management with AI-Powered Intelligence</p>          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
@@ -28,21 +18,11 @@ import Footer from '../components/Footer';
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 // >,
  Cal)
-<<<<<<< HEAD
   l: (302) 464-0950</a>
             <a
               href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
 // >
-//               Get Free Demo</a>
-=======
-  l: (302) 464-0950;
-          </a>
-            <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//>
-//               Get Free Demo;
-          </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </div>
+//               Get Free Demo</a>          </div>
         </section>
         {/* Features Section */}"
         <section className="mb-16"></section>"
@@ -165,29 +145,14 @@ import Footer from '../components/Footer';
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 // >,
  Cal,
-<<<<<<< HEAD
   l: (302) 464-0950</a>
             <a
               href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
 // >
-//                Email Us</a>
-=======
-  l: (302) 464-0950;
-          </a>
-            <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
-//>
-//                Email Us;
-          </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </div>
+//                Email Us</a>          </div>
         </section>
       </main>
       <Footer /></Footer>
     </div>
-<<<<<<< HEAD
   ),
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default PagePage;
+}export default PagePage;

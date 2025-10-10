@@ -5,19 +5,9 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarCha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 const ServicesPage: React.FC = () => {
   const aiServices = [
-    {
-=======
-;
-const ServicesPage: React.FC = () => {
-};
-const aiServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Brain,
+    {      icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
@@ -71,16 +61,8 @@ const aiServices = [
       link: '/ai-computer-vision'
     };
   ];
-<<<<<<< HEAD
   const itServices = [
-    {
-=======
-;
-const itServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Database,
+    {      icon: Database,
       title: 'Database Management',
       description: 'Comprehensive database solutions and optimization',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
@@ -134,16 +116,8 @@ const itServices = [
       link: '/network-solutions'
     };
   ];
-<<<<<<< HEAD
   const microSaasServices = [
-    {
-=======
-;
-const microSaasServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: BarChart3,
+    {      icon: BarChart3,
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence and analytics',
       features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
@@ -197,16 +171,8 @@ const microSaasServices = [
       link: '/ai-content-generation'
     };
   ];
-<<<<<<< HEAD
   const benefits = [
-    {
-=======
-;
-const benefits = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: TrendingUp,
+    {      icon: TrendingUp,
       title: 'Proven ROI',
       description: 'Average 300% return on investment for our clients'
     },
@@ -226,22 +192,11 @@ const benefits = [
       description: 'Quick implementation with minimal downtime'
     };
   ];
-<<<<<<< HEAD
   const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
-    { label: 'Support Available', value: '24/7' }
-=======
-;
-const stats = [
-[
-        { label: 'Projects Completed', value: '500+' },
-        { label: 'Happy Clients', value: '200+' },
-        { label: 'Uptime Guarantee', value: '99.9%' },
-        { label: 'Support Available', value: '24/7' };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ];
+    { label: 'Support Available', value: '24/7' }  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer title="AI & IT Services - Zion Tech Group"
@@ -249,12 +204,7 @@ const stats = [
         keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence"
       />
       <Navigation />
-<<<<<<< HEAD
-      {/* Hero Section */}
-=======
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="pt-24 pb-16">
+      {/* Hero Section */}      <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -264,7 +214,6 @@ const stats = [
               Comprehensive AI and IT solutions designed to transform your business operations and drive growth
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
@@ -275,28 +224,11 @@ const stats = [
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Free Consultation,
-  </
-=======
-              <a href="tel:+13024640950"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
-                <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-              </a>
-              <Link to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Consultation
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </div>
+  </            </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Stats Section */}
-=======
-      {/* Stats Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 bg-white/5">
+      {/* Stats Section */}      <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -312,12 +244,7 @@ const stats = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* AI Services Section */}
-=======
-      {/* AI Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-24">
+      {/* AI Services Section */}      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -352,30 +279,17 @@ const stats = [
                 </ul>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-<<<<<<< HEAD
                   <Link
                     to={service.link}
                     className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                     Learn More,
-  </
-=======
-                  <Link to={service.link};
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More
-                  </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                </div>
+  </                </div>
               </div>
             ))};
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* IT Services Section */}
-=======
-      {/* IT Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-24 bg-white/5">
+      {/* IT Services Section */}      <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -410,30 +324,17 @@ const stats = [
                 </ul>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
-<<<<<<< HEAD
                   <Link
                     to={service.link}
                     className="bg-blue-500 hover: bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                     Learn More,
-  </
-=======
-                  <Link to={service.link};
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More
-                  </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                </div>
+  </                </div>
               </div>
             ))};
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Micro SAAS Services Section */}
-=======
-      {/* Micro SAAS Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-24">
+      {/* Micro SAAS Services Section */}      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -468,30 +369,17 @@ const stats = [
                 </ul>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
-<<<<<<< HEAD
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                     Learn More,
-  </
-=======
-                  <Link to={service.link};
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More
-                  </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                </div>
+  </                </div>
               </div>
             ))};
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Benefits Section */}
-=======
-      {/* Benefits Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-24 bg-white/5">
+      {/* Benefits Section */}      <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -514,12 +402,7 @@ const stats = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-24">
+      {/* CTA Section */}      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -529,7 +412,6 @@ const stats = [
               Contact us today to discuss how our AI and IT solutions can help your organization thrive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
@@ -537,16 +419,7 @@ const stats = [
                 Call (302) 464-0950
   </
               <Link
-                to="/contact"
-=======
-              <a href="tel:+13024640950"
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
-                <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-              </a>
-              <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                to="/contact"                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Free Consultation
   </
             </div>
@@ -555,7 +428,6 @@ const stats = [
       </section>
       <Footer />
     </div>
-<<<<<<< HEAD
   ),
 }
 export default ServicesPage;
@@ -578,7 +450,3 @@ export default ServicesPage;
   </p>
   </h1>
   </SEOOptimizer>
-=======
-  )};
-export default ServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

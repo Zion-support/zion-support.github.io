@@ -1,6 +1,5 @@
 'use client';
 interface OptimizedErrorBoundaryProps {
-<<<<<<< HEAD
     children: ReactNode
   fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void
@@ -13,23 +12,7 @@ interface State {
   errorInfo: ErrorInfo | null,
   errorId: string
   }
-class OptimizedErrorBoundary extends Component
-=======
-  children: ReactNode
-}
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>};
-interface State {
-  hasError: boolean
-}
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string};
-class OptimizedErrorBoundary extends Component<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  OptimizedErrorBoundaryProps,
+class OptimizedErrorBoundary extends Component  OptimizedErrorBoundaryProps,
   State
 > {
   private resetTimeoutId: number | null = null
@@ -40,24 +23,14 @@ class OptimizedErrorBoundary extends Component<
       error: null,
       errorInfo: null,
       errorId:     ,
-<<<<<<< HEAD
 $4}
-  }
-=======
-$4}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  }  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
     }
-  }
-=======
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  }  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -70,40 +43,24 @@ $4}};
   }
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-<<<<<<< HEAD
     this.reportError(error, errorInfo)
   }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-=======
-      this.reportError(error, errorInfo)}
-  };
-  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {;
-const { resetKeys, resetOnPropsChange } = this.props;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    const { hasError } = this.state;
+    const { resetKeys, resetOnPropsChange } = this.props;    const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
     if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
         );
         if (hasResetKeyChanged) {
-<<<<<<< HEAD
           this.resetErrorBoundary()
   }
       }
-    }
-=======
-          this.resetErrorBoundary()}
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    if (
+    }    if (
       hasError &&
       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
-<<<<<<< HEAD
     this.resetErrorBoundary()
   }
   }
@@ -112,35 +69,16 @@ const { resetKeys, resetOnPropsChange } = this.props;
       clearTimeout(this.resetTimeoutId)
   }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-=======
-      this.resetErrorBoundary()}
-  };
-  componentWillUnmount() {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId)}
-  };
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Report to error monitoring service
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {    // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (
         window as unknown as {
           gtag: (
             command: string,
             action: string,
-<<<<<<< HEAD
             parameters: Record<string, unknown>
           ) => void
-  }
-=======
-            parameters: Record<string , unknown>
-);
-}
-          ) => void};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      ).gtag;
+  }      ).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
@@ -148,15 +86,9 @@ return (
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-<<<<<<< HEAD
       });
     }
-  }
-=======
-      })};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  private resetErrorBoundary = () => {
+  }  private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
       clearTimeout(this.resetTimeoutId)
   }
@@ -170,13 +102,8 @@ $4});
     }, 100);
   }
   private handleRetry = () => {
-<<<<<<< HEAD
     this.resetErrorBoundary()
-  }
-=======
-    this.resetErrorBoundary()}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  render() {
+  }  render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback
@@ -187,7 +114,6 @@ $4});
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-<<<<<<< HEAD
       );
     }
     return this.props.children;
@@ -198,19 +124,7 @@ interface ErrorFallbackProps {
   errorInfo: ErrorInfo | null
   errorId: string,
   onRetry: () => void
-  }
-=======
-      )};
-    return this.props.children};
-};
-interface ErrorFallbackProps {
-  error: Error | null
-}
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  onRetry: () => void};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const ErrorFallback = memo<ErrorFallbackProps>(
+  }const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
@@ -287,13 +201,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
   focus:ring-blue-500,
   focus:ring-offset-2 transition-colors'
 // >
-<<<<<<< HEAD
-//             Try Again</button>
-=======
-//             Try Again;
-          </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <button></button>
+//             Try Again</button>          <button></button>
             onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
@@ -324,13 +232,9 @@ ErrorFallback.displayName = 'ErrorFallback';
     </div>
 //   )
 );
-<<<<<<< HEAD
 ErrorFallback.displayName = 'ErrorFallback'</h1>
   </path>
   </ErrorFallbackProps>
   </ErrorFallback>
   </State>
   </string>
-=======
-ErrorFallback.displayName = 'ErrorFallback';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

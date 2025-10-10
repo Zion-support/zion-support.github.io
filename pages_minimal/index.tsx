@@ -5,12 +5,7 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'Index',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-<<<<<<< HEAD
-    type: 'article'}}
-=======
-    type: 'article'}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default function index() {
+    type: 'article'}}export default function index() {
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -43,18 +38,10 @@ export default function index() {
         </div>)
       </div>)
 export const,
-<<<<<<< HEAD
   metadata: Metadata = {/* TODO: Fix JSX expression */}
   }}
 export default function index() {/* TODO: Fix JSX expression */}
-}
-=======
-  metadata: Metadata = {/* TODO: Fix JSX expression */};
-  }};
-export default function index() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (<div className="min-h-screen bg-gray-50"></div>"
+}  return (<div className="min-h-screen bg-gray-50"></div>"
       <div className="max-w-4xl mx-auto px-4 py-8"></div>"
         <div className="bg-white rounded-lg shadow-lg p-8"></div>"
           <div className="text-center mb-8"></div>"
@@ -81,10 +68,5 @@ export default function index() {/* TODO: Fix JSX expression */};
         </div>
       </div>
     </div>)
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-"
+}"

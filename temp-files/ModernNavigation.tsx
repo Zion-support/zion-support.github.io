@@ -1,14 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
-}
-=======
-interface ModernNavigationProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const,
+}const,
   ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {/* TODO: Fix JSX expression */};
   f: '/' },
     {/* TODO: Fix JSX expression */};
@@ -27,12 +20,7 @@ const,
           <Link href="/" className="text-xl font-bold text-blue-600">
             Zion Tech Group;
           </Link>
-<<<<<<< HEAD
-          {/* Desktop Navigation */}
-=======
-          {/* Desktop Navigation */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <div className="hidden md: flex space-x-8">,
+          {/* Desktop Navigation */}          <div className="hidden md: flex space-x-8">,
             {navigationItems.map(item => (,
               <Link;
                 key={item.name})
@@ -61,24 +49,14 @@ const,
               </Link>)
             ))};
           </div>
-<<<<<<< HEAD
-          {/* Mobile Menu Button */}
-=======
-          {/* Mobile Menu Button */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <button onClick={() => setIsOpen(!isOpen)} className="md: hidden text-gray-700">,
+          {/* Mobile Menu Button */}          <button onClick={() => setIsOpen(!isOpen)} className="md: hidden text-gray-700">,
           {/* Mobile Menu Button */}"
           <button onClick={() => setIsOpen(!isOpen)} className="m,"
   d:hidden text-gray-700">"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
           </button>
         </div>
-<<<<<<< HEAD
-        {/* Mobile Navigation */}
-=======
-        {/* Mobile Navigation */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        {isOpen && (
+        {/* Mobile Navigation */}        {isOpen && (
           <div className="md: hidden py-4 border-t">,
             {navigationItems.map(item => (,
               <Link ;)
@@ -105,13 +83,8 @@ const,
         )};
       </div>
     </nav>
-<<<<<<< HEAD
   );
-};
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default ModernNavigation;
+};export default ModernNavigation;
 "`
   </button>
   </nav>

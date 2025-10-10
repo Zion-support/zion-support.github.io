@@ -1,13 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 export default function EnterpriseAISolutions(): React.JSX.Element {
-  const solutions = [
-=======
-export default function EnterpriseAISolutions(): React.JSX.Element {;
-const solutions = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const solutions = [    {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
       features: [,
@@ -60,15 +53,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (</div>
             <div
-<<<<<<< HEAD
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-=======
-              key={index};
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-            ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <div className="flex items-center mb-4"></div>
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>              <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
     {/* TODO: Fix JSX expression */};
     }];
@@ -118,10 +104,5 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-"
+}"

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import React { useEffect } from \"react\" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; \"; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
   a: \'T\'; statu} s: \'number\'}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: \'string\'; nam; e: \'string\'} rol}\"} e: \"admin\" | \"user\" | \"guest\"} ; interface Service {/* TODO: Fix JSX expression */}"
@@ -142,37 +141,17 @@
   4: "cls"}metric_,")
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp | 0),non_interactio,"
-  n: "true"; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
-=======
-  p: Date.now()} metrics}; metrics})}).catch(console.error)} } ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()} window.removeEventListener("beforeunload")sendMetrics)}"},[])} retur,"
-  n: "null,"
-  export: default PerformanceMonitor"," window.removeEventListener("beforeunload")sendMetrics)}},[])} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
-  d: "POST",header,"
-  s: {"}; "Content-Type": "application/json"},bod,"
-  y: JSON.stringify({) ur} l: "window.location.href")timestam,"
-  p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect()} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics)} },[])} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */};
-  a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  p: Date.now()} metrics}; metrics})}).catch(console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,"
+  n: "true"; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"  p: Date.now()} metrics}; metrics})}).catch(console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,"
   n: "null,"
   export: default PerformanceMonitor"," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
   d: "POST",header,"
   s: {"}; "Content-Type": "application/json"},bod,"
   y: JSON.stringify({) ur} l: "window.location.href")timestam,"
-<<<<<<< HEAD
   p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
   a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}
-  n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {; } [ke,
-=======
-  p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */};
-  a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}',
-  l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
-  l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */};
-  n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {} [ke,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'string]: string | number | boolean | File'} ; interface ComponentProps {; className?: string} children?: _React.ReactNode [ke,
+  n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {; } [ke,  y: 'string]: string | number | boolean | File'} ; interface ComponentProps {; className?: string} children?: _React.ReactNode [ke,
   y: 'string]: unknown'} ; const,
   PerformanceMonitor: _React.F,
   C: = () => {, useEffect(() => {} i,"
@@ -236,21 +215,12 @@
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp || 0),non_interactio,"
   n: 'true; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
-  p: Date.now()} metrics}; metrics})}).catch(_console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,
-=======
-  p: Date.now()} metrics}; metrics})}).catch(_console.error)} } ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()} window.removeEventListener("beforeunload")sendMetrics)}"},[])} retur,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  n: 'null,"
+  p: Date.now()} metrics}; metrics})}).catch(_console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,  n: 'null,"
   export: default PerformanceMonitor," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
   d: "POST",header,"
   s: {"}; "Content-Type": "application/json"},bod,
   y: JSON.stringify({) ur} l: 'window.location.href)timestam,"
-<<<<<<< HEAD
   p: Date.now()}metrics})}).catch(_console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"
   </T>
   </T>
   </T>
-=======
-  p: Date.now()}metrics})}).catch(_console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect()} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics)} },[])} " return null; "'"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

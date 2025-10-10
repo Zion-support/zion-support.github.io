@@ -1,14 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 const January2026NewContentShowcaseBanne, r: React.FC = () => {,
-  const features = [,
-=======
-const January2026NewContentShowcaseBanne, r: React.FC = () => {,;
-const features = [
-,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
+  const features = [,    { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     { ic, o, n: Za, p, title: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
     { ic, o, n: Netw, o, r, k, title: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },
     { ic, o, n: Shi, e, l, d, title: "Quantum, Securi, t, y", de, s, c: "Unbreakable, protecti, o, n" },
@@ -132,15 +124,9 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }};
           transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
-<<<<<<< HEAD
           classNa, m, e = "te, x, t-cent, e, r"
         >
-          <a, hre, f="/bl, o, g"
-=======
-          classNa, m, e = "te, x, t-cent, e, r">
-          <a , hre, f="/bl, o, g"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            className="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl">
+          <a, hre, f="/bl, o, g"            className="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl">
             Explore, January, 2026 Conte, n, t;
             <Link , className="ml-2 w-5 h-5" />
           </a>

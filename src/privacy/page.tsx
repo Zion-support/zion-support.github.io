@@ -1,20 +1,10 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-<<<<<<< HEAD
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
   const dataTypes = [
-    {
-=======
-export default function PrivacyPage() {;
-const lastUpdated = 'January 1, 2024';
-;
-const dataTypes = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      category: 'Personal Information',
+    {      category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
@@ -38,16 +28,8 @@ const dataTypes = [
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
     };
   ];
-<<<<<<< HEAD
   const rights = [
-    {
-=======
-;
-const rights = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      title: 'Right to Access',
+    {      title: 'Right to Access',
       description: 'Request a copy of your personal data',
       icon: Eye
     },
@@ -77,14 +59,7 @@ const rights = [
       icon: Lock
     };
   ];
-<<<<<<< HEAD
-  const securityMeasures = [
-=======
-;
-const securityMeasures = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'SSL/TLS encryption for data transmission',
+  const securityMeasures = [    'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
     'Data backup and disaster recovery procedures',
@@ -93,14 +68,8 @@ const securityMeasures = [
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-=======
-      {/* Hero Section */};
-      <section className="relative py-20 lg:py-32 overflow-hidden">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+      <section className="relative py-20 lg: py-32 overflow-hidden">        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -126,12 +95,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Last Updated */}
-=======
-      {/* Last Updated */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-8">
+      {/* Last Updated */}      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
@@ -145,12 +109,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Introduction */}
-=======
-      {/* Introduction */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
+      {/* Introduction */}      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
@@ -168,12 +127,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Information We Collect */}
-=======
-      {/* Information We Collect */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
+      {/* Information We Collect */}      <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Information We Collect</h2>
@@ -202,12 +156,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* How We Use Your Information */}
-=======
-      {/* How We Use Your Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
+      {/* How We Use Your Information */}      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8">How We Use Your Information</h2>
@@ -246,12 +195,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Data Security */}
-=======
-      {/* Data Security */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
+      {/* Data Security */}      <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security</h2>
@@ -269,12 +213,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Your Rights */}
-=======
-      {/* Your Rights */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
+      {/* Your Rights */}      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Rights</h2>
@@ -290,12 +229,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Contact Information */}
-=======
-      {/* Contact Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+      {/* Contact Information */}      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?</h2>
@@ -316,26 +250,16 @@ const securityMeasures = [
                 <span className="text-white">Middletown, DE</span>
               </div>
             </div>
-<<<<<<< HEAD
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-=======
-            <a href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <Mail className="w-5 h-5 mr-2" />
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">              <Mail className="w-5 h-5 mr-2" />
               Contact Us
   </
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   ),
 }
   </a>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

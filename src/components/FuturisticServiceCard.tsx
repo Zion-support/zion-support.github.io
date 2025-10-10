@@ -2,13 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-}
-=======
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const,
+}const,
   FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     },
@@ -26,17 +20,9 @@ const,
     },
     orang,
   e: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
   }
-  const currentColor = colorClasses[color];
-=======
-    };
-  };
-;
-const currentColor = colorClasses[color];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (<div></div>
+  const currentColor = colorClasses[color];  return (<div></div>
       className={/* TODO: Fix JSX expression */}
       }`})
       onMouseEnter={() => setIsHovered(true)}
@@ -44,12 +30,7 @@ const currentColor = colorClasses[color];
     >
       {/* Popular Badge */}
       {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-      )}
-=======
-      )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      {/* Card */}
+      )}      {/* Card */}
       <div></div>
         className={/* TODO: Fix JSX expression */}
         } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
@@ -94,15 +75,8 @@ const currentColor = colorClasses[color];
             </li>
           ))};
           {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
               +{features.length - 4} more features</li>
-          )}
-=======
-              +{features.length - 4} more features;
-            </li>
-          )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        </ul>
+          )}        </ul>
         {/* CTA Button */}
         <button></button>
           className={/* TODO: Fix JSX expression */}`
@@ -126,12 +100,7 @@ const currentColor = colorClasses[color];
   r:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
                 ></div>
     </div>
-<<<<<<< HEAD
   );
 }
 export default FuturisticServiceCard;"`
   </FuturisticServiceCardProps>
-=======
-  )};
-export default FuturisticServiceCard;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

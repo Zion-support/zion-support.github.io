@@ -1,14 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
-}
-=======
-interface SEOHeadProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const SEOHead: React.FC<SEOHeadProps> = ({,
+}const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
   keywords = 'AI solutions, IT consulting, cloud services, data analytics, machine learning, artificial intelligence',
@@ -21,26 +14,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`;
-<<<<<<< HEAD
-  const defaultStructuredData = {
-=======
-;
-const defaultStructuredData = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    '@context': 'https: //schema.org',
+  const defaultStructuredData = {    '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
-<<<<<<< HEAD
     description: description,
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}
-=======
-    description: description;
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return(<Helmet>
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}  return(<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -68,14 +48,8 @@ const defaultStructuredData = {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />)
       <link rel="dns-prefetch" href="//www.google-analytics.com" />)
 ),
-<<<<<<< HEAD
       {/* Structured Data */}
-      <script type="application/ld+json">
-=======
-      {/* Structured Data */};
-      <script type="application/ld+json">;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const,
+      <script type="application/ld+json">const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */};
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -83,15 +57,8 @@ const,
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`;
-<<<<<<< HEAD
   const defaultStructuredData = {/* TODO: Fix JSX expression */}
-  }
-=======
-;
-const defaultStructuredData = {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (<Helmet></Helmet>
+  }  return (<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
@@ -134,13 +101,8 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */};
         {JSON.stringify(structuredData || defaultStructuredData)};
       </script>
     </Helmet>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default SEOHead;
+}export default SEOHead;
 "`
   </SEOHeadProps>
   </SEOHeadProps>

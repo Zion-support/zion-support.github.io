@@ -1,31 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface SEOProps {/* TODO: Fix JSX expression */}
-}
-=======
-interface SEOProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const SEO: React.FC<SEOProps> = ({,
+}const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
   image = '/og-image.jpg',
   url = 'https: //zion.app',
   type = 'website'}) => {
-<<<<<<< HEAD
   return(<Helmet>
-      <title>{title}</title>
-=======
-return (
-  return(<Helmet>
-      <title></title>
-);
-}{title}</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <meta name="description" content={description} />
+      <title>{title}</title>      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
@@ -63,13 +47,8 @@ const,
   r:image" content={image} /></meta>"
       <link rel="canonical" href={url} /></link>
     </Helmet>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default SEO;
+}export default SEO;
 "
   </SEOProps>
   </SEOProps>

@@ -1,7 +1,6 @@
 import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   servic,
@@ -36,48 +35,10 @@ const MicroSAASCard: React.FC,
     // TODO: Add content
   }
 }
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-=======
-  O: Add content};
-};
-  servic,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-  titl,
-  e: string;
-    descriptio,
-  n: string;
-    ico,
-  n: string;
-    pric,
-  e: string;,
-    feature,
-  s: string[];,
-    benefit,
-  s: string[];
-    marketPrice?: string;,
-    categor,
-  y: string;,
-    technologie,
-  s: string[];,
-    contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean}};
-;
-const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
-};
-;
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {  return (
           <div>Coming Soon</div>
   )
           <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-<<<<<<< HEAD
 =======
 );
 };
@@ -159,7 +120,3 @@ return (
 export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>
-=======
-  )};
-export default MicroSAASCard;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

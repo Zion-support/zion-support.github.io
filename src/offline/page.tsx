@@ -10,21 +10,12 @@ import Footer from '../components/Footer';
  * Displayed when the user is offline and tries to access a page;
  */
 const,
-<<<<<<< HEAD
   OfflinePage: React.FC = () => {const handleRetry = () => {}
     window.location.reload();
   }
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  OfflinePage: React.FC = () => {const handleRetry = () => {};
-    window.location.reload()};
-  const handleGoHome = () => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    window.location.href = '/';
+}    window.location.href = '/';
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
@@ -62,10 +53,5 @@ onClick={handleGoHome}"
           <p className="text-xs text-gray-400"></p>
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
-<<<<<<< HEAD
   ),
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default OfflinePage;
+}export default OfflinePage;

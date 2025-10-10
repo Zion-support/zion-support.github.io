@@ -1,11 +1,5 @@
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
-<<<<<<< HEAD
-  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">)
-=======
-return (
-  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
+  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">)const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
   return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">";
       <h1>Private, Experiments, Blueprin;
   t: Ze, r, o‑PII, Testing, at the, Edg, e</h1>
@@ -30,12 +24,6 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
       </p>)
     </artic, l, e>)
   );
-<<<<<<< HEAD
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-}
-=======
-const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default PrivateExperimentsBlueprint2025;
+}export default PrivateExperimentsBlueprint2025;
 };

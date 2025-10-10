@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 export default function ServicesSection() {
-  const services = [
-=======
-import React from 'react';
-export default function ServicesSection() {;
-const services = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const services = [    {
       title: 'AI & Machine Learning',
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
       icon: (
@@ -84,13 +76,8 @@ const services = [
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-<<<<<<< HEAD
             <div
-              key={index}
-=======
-            <div key={index}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
+              key={index}              className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
               {/* Icon */}
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
@@ -115,13 +102,8 @@ const services = [
               </ul>
               {/* Learn More Button */}
               <div className="mt-6">
-<<<<<<< HEAD
                 <a
-                  href="#contact"
-=======
-                <a href="#contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
+                  href="#contact"                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -140,7 +122,6 @@ const services = [
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="#contact"
@@ -148,16 +129,7 @@ const services = [
                 Get Free Consultation
   </
               <a
-                href="tel:+1234567890"
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Get Free Consultation
-              </a>
-              <a href="tel:+1234567890"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
+                href="tel:+1234567890"                className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
                 Call Now
   </
             </div>
@@ -165,11 +137,7 @@ const services = [
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   ),
 }
   </a>
   </a>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

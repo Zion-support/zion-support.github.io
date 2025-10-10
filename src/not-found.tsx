@@ -1,15 +1,7 @@
 import { Home, Phone } from 'lucide-react';
-<<<<<<< HEAD
 export default function NotFound() {
   const popularPages = [
-    {
-=======
-export default function NotFound() {;
-const popularPages = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      title: 'Home',
+    {      title: 'Home',
       description: 'Return to our homepage',
       href: '/',
       icon: '🏠'
@@ -68,15 +60,9 @@ const popularPages = [
         {/* Popular Pages */};
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {popularPages.map((page, index) => (
-<<<<<<< HEAD
             <Link
               key={index}
-              to={page.href}
-=======
-            <Link key={index};
-              to={page.href};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left">
+              to={page.href}              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left">
               <div className="text-3xl mb-3">{page.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title};
@@ -87,7 +73,6 @@ const popularPages = [
             </Link>
           ))};
         </div>
-<<<<<<< HEAD
         {/* Action Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center">
           <Link
@@ -97,31 +82,16 @@ const popularPages = [
             Go Home
   </
           <Link
-            to="/contact"
-=======
-        {/* Action Buttons */};
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-          </Link>
-          <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300">
+            to="/contact"            className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300">
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
   </
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   ),
 }
   </Link>
   </Link>
   </h2>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

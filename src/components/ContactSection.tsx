@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-=======
-export default function ContactSection() {;
-const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: '',
+  const [formData, setFormData] = useState({    name: '',
     email: '',
     company: '',
     service: '',
@@ -21,18 +15,9 @@ const [formData, setFormData] = useState({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle form submission here
-<<<<<<< HEAD
     console.log('Form submitted:', formData)
   }
-  const contactInfo = [
-=======
-    // console.log removed for production
-}
-;
-const contactInfo = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const contactInfo = [    {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth=    {2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -64,16 +49,8 @@ const contactInfo = [
       link: '#'
     };
   ];
-<<<<<<< HEAD
   const services = [
-    'AI & Machine Learning',
-=======
-;
-const services = [
-];
-'AI & Machine Learning',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'Cloud Solutions',
+    'AI & Machine Learning',    'Cloud Solutions',
     'Web Development',
     'Mobile Development',
     'Data Analytics',
@@ -194,16 +171,9 @@ const services = [
               </div>
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-<<<<<<< HEAD
                   Company Name</span>
                 <input
-                  type="text"
-=======
-                  Company Name
-                </label>
-                <input type="text"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  id="company"
+                  type="text"                  id="company"
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
@@ -213,16 +183,9 @@ const services = [
               </div>
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-<<<<<<< HEAD
                   Service Interested In</span>
                 <select
-                  id="service"
-=======
-                  Service Interested In
-                </label>
-                <select id="service"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  name="service"
+                  id="service"                  name="service"
                   value={formData.service}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">
@@ -248,23 +211,14 @@ const services = [
                   placeholder="Tell us about your project..."
                 />
               </div>
-<<<<<<< HEAD
               <button
                 type="submit"
                 className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Send Message</span>
-=======
-              <button type="submit"
-                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Send Message
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </form>
+                Send Message</span>            </form>
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   ),
 }
   </button>
@@ -274,6 +228,3 @@ const services = [
   </h3>
   </h3>
   </HTMLInputElement>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

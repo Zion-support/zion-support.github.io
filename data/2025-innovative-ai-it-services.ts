@@ -1579,40 +1579,20 @@
 export interface InnovativeAIService {/* TODO: Fix JSX expression */};
   };
 ];
-<<<<<<< HEAD
 }
 ];
-export interface InnovativeAIService {
-=======
-;
-};
-];
-export interface InnovativeAIService {
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
+export interface InnovativeAIService {  id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
   price: {
-<<<<<<< HEAD
     monthly: number
     yearly: number
     currency: string,
     trialDays: number}
     setupTime: string}
-  }
-=======
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number};
-    setupTime: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  features: string[];
+  }  features: string[];
   benefits: string[];
   targetAudience: string[];
   marketPosition: string;
@@ -1630,18 +1610,10 @@ export interface InnovativeAIService {
   color: string;
   popular: boolean;
   launchDate: string;
-<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
-}
-=======
-  customers: number;
-  rating: number;
-  reviews: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const innovativeAIServices2025: InnovativeAIService[] = [;
+}export const innovativeAIServices2025: InnovativeAIService[] = [;
   {
     id: 'ai-consciousness-platform'
     name: 'AI Consciousness Evolution Platform'
@@ -2050,7 +2022,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     color: 'from-blue-500 to-indigo-600';
     popular: true;
     launchDate: '2025-02-15';
-<<<<<<< HEAD
     customers: 350
     rating: 4.9
     reviews: 189,
@@ -2062,21 +2033,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
   e: string}
-  }
-=======
-    customers: 350;
-    rating: 4.9;
-    reviews: 189};
-];
-    rating: 4.9;
-    reviews: 189;
-export interface InnovativeAIService {/* TODO: Fix JSX expression */};
-  s: number};
-    setupTim,
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  feature,
+  }  feature,
   s: string[],
   benefit,
   s: string[],
@@ -2117,21 +2074,11 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */};
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 export const,
   innovativeAIServices2025: InnovativeAIService[] = [,
   {/* TODO: Fix JSX expression */}
-  y: 'AI & Consciousness'}
-=======
-  s: number};
-;
-export const,
-  innovativeAIServices2025: InnovativeAIService[] = [;
-  {/* TODO: Fix JSX expression */};
-  y: 'AI & Consciousness'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'AI & Consciousness'}    pric,
   e: {};
       monthl,
   y: 2999,
@@ -2195,16 +2142,9 @@ export const,
     ratin,
   g: 5.0,
     review,
-<<<<<<< HEAD
   s: 12}
   {/* TODO: Fix JSX expression */}
-  y: 'Quantum AI'}
-=======
-  s: 12};
-  {/* TODO: Fix JSX expression */};
-  y: 'Quantum AI'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Quantum AI'}    pric,
   e: {};
       monthl,
   y: 1999,
@@ -2270,16 +2210,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 89}
   {/* TODO: Fix JSX expression */}
-  y: 'DevOps & Infrastructure'}
-=======
-  s: 89};
-  {/* TODO: Fix JSX expression */};
-  y: 'DevOps & Infrastructure'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'DevOps & Infrastructure'}    pric,
   e: {};
       monthl,
   y: 799,
@@ -2345,16 +2278,9 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 234}
   {/* TODO: Fix JSX expression */}
-  y: 'Cybersecurity'}
-=======
-  s: 234};
-  {/* TODO: Fix JSX expression */};
-  y: 'Cybersecurity'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Cybersecurity'}    pric,
   e: {};
       monthl,
   y: 1299,
@@ -2420,16 +2346,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 156}
   {/* TODO: Fix JSX expression */}
-  y: 'Space Technology'}
-=======
-  s: 156};
-  {/* TODO: Fix JSX expression */};
-  y: 'Space Technology'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Space Technology'}    pric,
   e: {};
       monthl,
   y: 4999,
@@ -2494,16 +2413,9 @@ export const,
     ratin,
   g: 5.0,
     review,
-<<<<<<< HEAD
   s: 8}
   {/* TODO: Fix JSX expression */}
-  y: 'Emerging Technology'}
-=======
-  s: 8};
-  {/* TODO: Fix JSX expression */};
-  y: 'Emerging Technology'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Emerging Technology'}    pric,
   e: {};
       monthl,
   y: 3999,
@@ -2569,16 +2481,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 45}
   {/* TODO: Fix JSX expression */}
-  y: 'Metaverse & Virtual Reality'}
-=======
-  s: 45};
-  {/* TODO: Fix JSX expression */};
-  y: 'Metaverse & Virtual Reality'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Metaverse & Virtual Reality'}    pric,
   e: {};
       monthl,
   y: 599,
@@ -2644,16 +2549,9 @@ export const,
     ratin,
   g: 4.7,
     review,
-<<<<<<< HEAD
   s: 423}
   {/* TODO: Fix JSX expression */}
-  y: 'Logistics & Supply Chain'}
-=======
-  s: 423};
-  {/* TODO: Fix JSX expression */};
-  y: 'Logistics & Supply Chain'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Logistics & Supply Chain'}    pric,
   e: {};
       monthl,
   y: 899,
@@ -2719,16 +2617,9 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 267}
   {/* TODO: Fix JSX expression */}
-  y: 'Financial Technology'}
-=======
-  s: 267};
-  {/* TODO: Fix JSX expression */};
-  y: 'Financial Technology'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Financial Technology'}    pric,
   e: {};
       monthl,
   y: 2499,
@@ -2794,16 +2685,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 134}
   {/* TODO: Fix JSX expression */}
-  y: 'Healthcare & Biotechnology'}
-=======
-  s: 134};
-  {/* TODO: Fix JSX expression */};
-  y: 'Healthcare & Biotechnology'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    pric,
+  y: 'Healthcare & Biotechnology'}    pric,
   e: {};
       monthl,
   y: 1599,
@@ -3322,7 +3206,6 @@ export const,
   g: 4 && 4.9, review,
   s: 189,
   rating: 4.9, review,
-<<<<<<< HEAD
   s: 189} export interface InnovativeAIService { } ]; ; } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   s: number} setupTim,
   e: string} } feature,
@@ -3347,35 +3230,7 @@ export const,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  innovativeAIServices2025: InnovativeAIService[] = [, {/* TODO: Fix JSX expression */}
-=======
-  s: 189} export interface InnovativeAIService {} ]; } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */};
-  s: number} setupTim,
-  e: string} }; feature,
-  s: string[]; benefit,
-  s: string[]; targetAudienc,
-  e: string[]; marketPositio,
-  n: string; competitor,
-  s: string[]; techStac,
-  k: string[]; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; ro,
-  i: string; useCase,
-  s: string[]; integration,
-  s: string[]; suppor,
-  t: string; complianc,
-  e: string[]; lin,
-  k: string; ico,
-  n: string; colo,
-  r: string; popula,
-  r: boolean; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  innovativeAIServices2025: InnovativeAIService[] = [; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  innovativeAIServices2025: InnovativeAIService[] = [, {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 30}' setupTim,
   e: '2 weeks' } feature,
   s: [,' 'Consciousness development frameworksEmotional intelligence training modulesEthical AI governance toolsSelf-awareness assessment metricsConsciousness evolution trackingMulti-modal consciousness trainingReal-time consciousness monitoringEthical decision-making frameworks';' 'Consciousness validation toolsResearch collaboration platform' ]; benefit,
@@ -3392,7 +3247,6 @@ export const,
   t: '24/7 expert support, dedicated research consultants, patent assistance, and collaboration facilitation.';' complianc,
   e: ['AI Ethics Guidelines, Research Standards, Patent Compliance, International AI Safety Protocols'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/ai-consciousness-platform',' ico,
   n: '🧠',' colo,
   r: 'from-violet-500 to-purple-600', popula,
@@ -3400,18 +3254,7 @@ export const,
   e: '2025-01-01', customer,
   s: 25, ratin,
   g: 5.0, review,
-  s: 12} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/ai-consciousness-platform';' ico,
-  n: '🧠';' colo,
-  r: 'from-violet-500 to-purple-600'; popula,
-  r: true;' launchDat,
-  e: '2025-01-01'; customer,
-  s: 25; ratin,
-  g: 5.0; review,
-  s: 12}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 12} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 14}' setupTim,
   e: '1 week' } feature,
   s: [,' 'Quantum AI orchestration engineReal-time optimization algorithmsMulti-dimensional problem solvingQuantum-enhanced machine learningEnterprise workflow automationResource optimization enginePredictive analytics platformQuantum security protocols';' 'Scalable quantum processingAPI-first architecture' ]; benefit,
@@ -3430,7 +3273,6 @@ export const,
   t: '24/7 enterprise support, dedicated quantum consultants, implementation specialists, and ongoing optimization.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/quantum-ai-orchestrator',' ico,
   n: '⚛️',' colo,
   r: 'from-indigo-500 to-blue-600', popula,
@@ -3438,18 +3280,7 @@ export const,
   e: '2025-01-15', customer,
   s: 150, ratin,
   g: 4.9, review,
-  s: 89} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/quantum-ai-orchestrator';' ico,
-  n: '⚛️';' colo,
-  r: 'from-indigo-500 to-blue-600'; popula,
-  r: true;' launchDat,
-  e: '2025-01-15'; customer,
-  s: 150; ratin,
-  g: 4.9; review,
-  s: 89}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 89} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 21}' setupTim,
   e: '3 days' } feature,
   s: [,' 'Autonomous infrastructure managementSelf-healing applicationsIntelligent deployment optimizationPredictive failure preventionAuto-scaling intelligenceSecurity vulnerability auto-patchingPerformance auto-optimizationCost optimization engine';' 'Zero-downtime deploymentsComprehensive monitoring' ]; benefit,
@@ -3468,7 +3299,6 @@ export const,
   t: '24/7 support, dedicated DevOps consultants, implementation specialists, and ongoing optimization.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/autonomous-devops-platform',' ico,
   n: '🤖',' colo,
   r: 'from-green-500 to-emerald-600', popula,
@@ -3476,18 +3306,7 @@ export const,
   e: '2025-01-10', customer,
   s: 500, ratin,
   g: 4.8, review,
-  s: 234} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/autonomous-devops-platform';' ico,
-  n: '🤖';' colo,
-  r: 'from-green-500 to-emerald-600'; popula,
-  r: true;' launchDat,
-  e: '2025-01-10'; customer,
-  s: 500; ratin,
-  g: 4.8; review,
-  s: 234}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 234} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 30}' setupTim,
   e: '1 week' } feature,
   s: [,' 'AI-powered threat detectionZero-trust architectureReal-time threat responseBehavioral analysisAutomated incident responseThreat intelligence sharingCompliance automationSecurity orchestration';' 'Vulnerability managementSecurity analytics dashboard' ]; benefit,
@@ -3506,7 +3325,6 @@ export const,
   t: '24/7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.';' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/zero-trust-ai-security',' ico,
   n: '🛡️',' colo,
   r: 'from-red-500 to-pink-600', popula,
@@ -3514,18 +3332,7 @@ export const,
   e: '2025-01-20', customer,
   s: 300, ratin,
   g: 4.9, review,
-  s: 156} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/zero-trust-ai-security';' ico,
-  n: '🛡️';' colo,
-  r: 'from-red-500 to-pink-600'; popula,
-  r: true;' launchDat,
-  e: '2025-01-20'; customer,
-  s: 300; ratin,
-  g: 4.9; review,
-  s: 156}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 156} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 60}' setupTim,
   e: '1 month' } feature,
   s: [,' 'AI-powered resource identificationAutonomous mining fleet managementSpace logistics optimizationResource value assessmentMining operation planningRisk assessment and mitigationRegulatory compliance toolsMarket analysis platform';' 'Supply chain optimizationReal-time monitoring' ]; benefit,
@@ -3543,7 +3350,6 @@ export const,
   t: '24/7 space operations support, dedicated space consultants, regulatory assistance, and ongoing optimization.';' complianc,
   e: ['Space regulations, International space law, Safety protocols, Environmental standards'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/space-mining-ai',' ico,
   n: '🚀',' colo,
   r: 'from-purple-500 to-indigo-600', popula,
@@ -3551,18 +3357,7 @@ export const,
   e: '2025-01-25', customer,
   s: 15, ratin,
   g: 5.0, review,
-  s: 8} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/space-mining-ai';' ico,
-  n: '🚀';' colo,
-  r: 'from-purple-500 to-indigo-600'; popula,
-  r: true;' launchDat,
-  e: '2025-01-25'; customer,
-  s: 15; ratin,
-  g: 5.0; review,
-  s: 8}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 8} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 45}' setupTim,
   e: '2 weeks' } feature,
   s: [,' 'DNA computing engineBiological problem solverDrug discovery platformGenetic algorithm optimizationBioinformatics toolsMolecular simulationProtein folding predictionDisease modeling';' 'Drug interaction analysisResearch collaboration tools' ]; benefit,
@@ -3581,7 +3376,6 @@ export const,
   t: '24/7 research support, dedicated bioinformatics consultants, implementation specialists, and ongoing optimization.';' complianc,
   e: ['Research ethics, Laboratory safety, Data privacy, International research standards'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/dna-computing-platform',' ico,
   n: '🧬',' colo,
   r: 'from-teal-500 to-cyan-600', popula,
@@ -3589,18 +3383,7 @@ export const,
   e: '2025-01-30', customer,
   s: 75, ratin,
   g: 4.9, review,
-  s: 45} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/dna-computing-platform';' ico,
-  n: '🧬';' colo,
-  r: 'from-teal-500 to-cyan-600'; popula,
-  r: true;' launchDat,
-  e: '2025-01-30'; customer,
-  s: 75; ratin,
-  g: 4.9; review,
-  s: 45}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 45} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 21}' setupTim,
   e: '1 week' } feature,
   s: [,' '3D world creation toolsAI-powered content generationVirtual asset marketplaceUser management systemMonetization toolsAnalytics dashboardMulti-platform deploymentSocial features';' 'Virtual commerce toolsCustom branding options' ]; benefit,
@@ -3619,7 +3402,6 @@ export const,
   t: '24/7 support, dedicated metaverse consultants, content creation assistance, and ongoing optimization.';' complianc,
   e: ['Content moderation, Privacy regulations, Payment compliance, Platform guidelines'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/metaverse-development-platform',' ico,
   n: '🌐',' colo,
   r: 'from-blue-500 to-indigo-600', popula,
@@ -3627,18 +3409,7 @@ export const,
   e: '2025-02-01', customer,
   s: 800, ratin,
   g: 4.7, review,
-  s: 423} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/metaverse-development-platform';' ico,
-  n: '🌐';' colo,
-  r: 'from-blue-500 to-indigo-600'; popula,
-  r: true;' launchDat,
-  e: '2025-02-01'; customer,
-  s: 800; ratin,
-  g: 4.7; review,
-  s: 423}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 423} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 30}' setupTim,
   e: '2 weeks' } feature,
   s: [,' 'AI-powered demand predictionAutonomous route optimizationReal-time supply chain monitoringInventory optimizationWarehouse automationLast-mile delivery optimizationCost optimization engineSustainability tracking';' 'Compliance automationPerformance analytics' ]; benefit,
@@ -3657,7 +3428,6 @@ export const,
   t: '24/7 logistics support, dedicated consultants, implementation specialists, and ongoing optimization.';' complianc,
   e: ['Transportation regulations, Safety standards, Environmental compliance, International trade laws'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/autonomous-logistics-ai',' ico,
   n: '🚚',' colo,
   r: 'from-orange-500 to-red-600', popula,
@@ -3665,18 +3435,7 @@ export const,
   e: '2025-02-05', customer,
   s: 450, ratin,
   g: 4.8, review,
-  s: 267} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/autonomous-logistics-ai';' ico,
-  n: '🚚';' colo,
-  r: 'from-orange-500 to-red-600'; popula,
-  r: true;' launchDat,
-  e: '2025-02-05'; customer,
-  s: 450; ratin,
-  g: 4.8; review,
-  s: 267}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 267} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 30}' setupTim,
   e: '2 weeks' } feature,
   s: [,' 'Quantum-powered trading algorithmsReal-time risk assessmentPortfolio optimization engineFinancial modeling toolsMarket prediction algorithmsFraud detection systemCompliance automationPerformance analytics';' 'API accessMulti-asset support' ]; benefit,
@@ -3695,7 +3454,6 @@ export const,
   t: '24/7 financial support, dedicated financial consultants, implementation specialists, and ongoing optimization.';' complianc,
   e: ['Financial regulations, Trading compliance, Risk management standards, International financial laws'];' lin,
   k: 'http,
-<<<<<<< HEAD
   s: //ziontechgroup.com/quantum-financial-platform',' ico,
   n: '💰',' colo,
   r: 'from-green-500 to-emerald-600', popula,
@@ -3703,18 +3461,7 @@ export const,
   e: '2025-02-10', customer,
   s: 200, ratin,
   g: 4.9, review,
-  s: 134} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com/quantum-financial-platform';' ico,
-  n: '💰';' colo,
-  r: 'from-green-500 to-emerald-600'; popula,
-  r: true;' launchDat,
-  e: '2025-02-10'; customer,
-  s: 200; ratin,
-  g: 4.9; review,
-  s: 134}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: 'USD'} trialDay,
+  s: 134} {/* TODO: Fix JSX expression */}  y: 'USD'} trialDay,
   s: 60}' setupTim,
   e: '1 month' } feature,
   s: [,' 'AI-powered medical imaging analysisEarly disease detectionPersonalized treatment recommendationsPatient outcome predictionMedical record analysisDrug interaction checkingClinical decision supportTelemedicine integration';' 'Compliance automationResearch collaboration tools' ]; benefit,

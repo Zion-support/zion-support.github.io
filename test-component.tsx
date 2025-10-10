@@ -1,5 +1,4 @@
 const TestComponent = () => {
-<<<<<<< HEAD
 =======
 };
 return (
@@ -14,12 +13,4 @@ return (
 <<<<<<< HEAD
   );
 const TestComponent = () => {/* TODO: Fix JSX expression */}
-}
-=======
-);
-};
-  );
-const TestComponent = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default TestComponent;
+}export default TestComponent;

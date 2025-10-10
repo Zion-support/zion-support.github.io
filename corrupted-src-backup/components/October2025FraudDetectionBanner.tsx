@@ -1,23 +1,10 @@
 const, October2025FraudDetectionBanne, r = () => {
-<<<<<<< HEAD
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */}</div>
-=======
-return (
-  return(<div , className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
-);
-};
-      {/* Animated, background, effects */};
-      <div , className="absolute, inse, t-0, opacit, y-10">
-  return (
-    <div , className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <div, className="absolute, inse, t-0, opacit, y-10"></div>
+      {/* Animated, background, effects */}</div>      <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
@@ -43,16 +30,9 @@ return (
   g:px-8, p, y-12">";
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
-<<<<<<< HEAD
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
 const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effects */}
-=======
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>;
-const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, background, effects */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <div, className="absolute, inse, t-0, opacit, y-10"></div>"
+      {/* Animated, background, effects */}      <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>

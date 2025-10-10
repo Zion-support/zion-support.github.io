@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
-<<<<<<< HEAD
-export const metadata = {/* TODO: Fix JSX expression */}
-=======
-export const metadata = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-};
+export const metadata = {/* TODO: Fix JSX expression */}};
 export default function AI2026ImplementationRoadmap() {
   return(<div className="min-h-screen bg-white">
       {/* Header */};
@@ -17,13 +12,8 @@ export default function AI2026ImplementationRoadmap() {
       {/* Header */}</div>
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6"></div>
-<<<<<<< HEAD
           <Link 
-            href="/"
-=======
-          <Link href="/"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            className="inline-flex items-center text-blue-600 hover: text-blue-800 transition-colors">
+            href="/"            className="inline-flex items-center text-blue-600 hover: text-blue-800 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home;
           </Link>
@@ -112,12 +102,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             ))};
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Executive Summary */}
-=======
-        {/* Executive Summary */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div className="mb-12"></div>
+        {/* Executive Summary */}        <div className="mb-12"></div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8">
             <div className="text-center p-4 bg-blue-50 rounded-lg">
@@ -572,12 +557,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           <p></p>
             The future belongs to organizations that can successfully harness the power of AI to transform their operations, enhance customer experiences, and drive innovation. This roadmap provides the foundation for that transformation.
           </p>
-<<<<<<< HEAD
-          {/* CTA Section */}
-=======
-          {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <div className="bg-blue-50 p-8 rounded-lg mt-12"></div>
+          {/* CTA Section */}          <div className="bg-blue-50 p-8 rounded-lg mt-12"></div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Your AI Transformation Journey?</h3>
             <p className="text-gray-600 mb-6">
               Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI success.
@@ -585,13 +565,8 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             <div className="flex flex-wrap gap-4">
               <Link;
             <div className="flex flex-wrap gap-4"></div>
-<<<<<<< HEAD
               <Link 
-                href="/case-studies/fortune-500-ai-transformation-success"
-=======
-              <Link href="/case-studies/fortune-500-ai-transformation-success"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">
+                href="/case-studies/fortune-500-ai-transformation-success"                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">
                 View Success Stories;
                 <Link className="w-4 h-4 ml-2" />
               </Link>
@@ -627,13 +602,8 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>
         </div>
       </article>,
-<<<<<<< HEAD
     </div>);
-};
-=======
-    </div>)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default AI2026ImplementationRoadmap;
+};export default AI2026ImplementationRoadmap;
 "
   </li>
   </li>

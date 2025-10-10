@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 
-export interface AdditionalRealService {id: string;
-=======
-export interface AdditionalRealService {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string;
+export interface AdditionalRealService {id: string;  name: string;
   tagline: string;
   price: string;
   description: string;
   features: string[];
   link: string;
-<<<<<<< HEAD
   category: string
   real_implementation: boolean
   contact_info: unknown,
@@ -23,34 +15,14 @@ id: string;
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
     address: string,
-  }
-=======
-  category: string;
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string};
-    email: string};
-};
-    address: string};
-export const additionalEnhancedServices: AdditionalRealService[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const additionalEnhancedServices: AdditionalRealService[] = [
+  }export const additionalEnhancedServices: AdditionalRealService[] = [
     id: 'ai - automation - suite',
     name: 'AI Automation Suite',
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
-<<<<<<< HEAD
     description: unknown,
 export interface AdditionalRealService {/* TODO: Fix JSX expression */}
-  e: string}
-=======
-    description: unknown;
-export interface AdditionalRealService {/* TODO: Fix JSX expression */};
-  e: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    emai,
+  e: string}    emai,
   l: string};
 };
     addres,
@@ -58,13 +30,7 @@ export interface AdditionalRealService {/* TODO: Fix JSX expression */};
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
     addres,
-<<<<<<< HEAD
-  s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const,
+  s: string}export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
     i,
   d: 'ai - automation - suite',
@@ -109,22 +75,13 @@ export const,
   category: string;
   realImplementation: boolean;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,
   }
 }
 }
-    address: string,
-=======
-    mobile: string;
-    email: string;
-    address: string}};
-};
-    address: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    lin,
+    address: string,    lin,
   k: '/services / ai - automation - suite',
     categor,
   y: 'AI & Automation',
@@ -184,15 +141,9 @@ export const,
     emai,
   l: string,
     addres,
-<<<<<<< HEAD
   s: string}
 }
-}
-=======
-  s: string}};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    addres,
+}    addres,
   s: string};
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
@@ -258,18 +209,10 @@ export const,
     realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
-];      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'data - warehouse - solution',
+      email: "kleber@ziontechgroup.com"    id: 'data - warehouse - solution',
     name: 'Data Warehouse Solution',
     tagline: 'Enterprise - grade data management and analytics',
     price: '$149 / month',
@@ -10045,8 +9988,4 @@ export interface AdditionalRealService,
   l: "kleber@ziontechgroup.com" mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-<<<<<<< HEAD
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
-=======
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -16,14 +16,8 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       featured: t, r, u, e,
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'FEATU, R, E, D',
-<<<<<<< HEAD
       tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
-const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e'];
-const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-     },
+const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}     },
     {/* TODO: Fix JSX expression */};
      },
     {/* TODO: Fix JSX expression */};

@@ -1,5 +1,4 @@
 const, October2025CuttingEdgeInnovationsBanne, r = () => {
-<<<<<<< HEAD
 =======
 return (
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
@@ -77,12 +76,7 @@ return (
                   <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
 <<<<<<< HEAD
                   <div, className="fl, e, x-1, mi, n-w-0">";</div>
-const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
-=======
-                  <div, className="fl, e, x-1, mi, n-w-0">";</div>;
-const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  Y:</stro, n, g> Deploy, neur, o-symbolic, AI, achieving{" "}";"
+const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}  Y:</stro, n, g> Deploy, neur, o-symbolic, AI, achieving{" "}";"
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">99.7% reasoning, accurac, y</sp, a, n> wi, t, h{" "}";"
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">89% fewer, hallucination, s</sp, a, n>, implement, spatial, computing platforms, deliverin, g{" "}";"
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">12x, productivity, gains</sp, a, n> a, n, d{" "}";"

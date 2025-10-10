@@ -131,7 +131,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     this.setupErrorRecovery();
     this.setupErrorCleanup();
     this.isInitialized = true;
-<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {}
   private initialize(): void {/* TODO: Fix JSX expression */}
       }
@@ -875,12 +874,7 @@ if (errorReport.stack) {}
   }
   /**;   * Clear error state;
    */;
-  private clearErrorState(): void {
-=======
-    // Reset error counters;
-  private clearErrorState(): void {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Reset error counters
+  private clearErrorState(): void {    // Reset error counters
   }
   private clearErrorState(): void {}
     // Reset error counters;

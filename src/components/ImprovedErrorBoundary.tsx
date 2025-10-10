@@ -4,7 +4,6 @@
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
 interface Props {
-<<<<<<< HEAD
     children: ReactNode
   fallback?: ReactNode,
   onError?: (erro,
@@ -21,48 +20,18 @@ interface State {
   }
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props),
-=======
-  children: ReactNode
-}
-  fallback?: ReactNode;
-  onError?: (erro,
-  r: Error, errorInf)
-  o: ErrorInfo) => void;
-  resetKeys?: Array;
-          <string | number>};
-interface State {
-  hasError: boolean
-}
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number};
-class ImprovedErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {
-    super(props);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    this.state = {
+    super(props),    this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorCount: 0
-<<<<<<< HEAD
     }
-  }
-=======
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  }  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error
-<<<<<<< HEAD
     }
-  }
-=======
-    }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+  }  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error to console for debugging
     console.error('Error caught by ImprovedErrorBoundary:', {
       message: error.message,
@@ -90,21 +59,14 @@ constructor(props: Props) {
           react: {
             componentStack: errorInfo.componentStack
 interface State {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  hasErro,
+}  hasErro,
   r: boolean,,
     erro,
   r: Error | null,,
     errorInf,
   o: ErrorInfo | null,,
     errorCoun,
-<<<<<<< HEAD
   t: number,
 }
 class ImprovedErrorBoundary extends Component;
@@ -120,40 +82,18 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     super(props),
     this.state = {// TODO: Add content
   }
-}
-=======
-  t: number};
-class ImprovedErrorBoundary extends Component;
-          <Props, State> {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-;
-constructor(props: Props) {// TODO: Add content}
-};
-class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
-constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = {// TODO: Add content}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  hasErro,
+}  hasErro,
   r: false,
       erro,
   r: null,
       errorInf,
   o: null,
       errorCoun,
-<<<<<<< HEAD
   t: 0,
     }
-  }
-=======
-  t: 0}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  static getDerivedStateFromError(erro)
+  }  static getDerivedStateFromError(erro)
   r: Error): Partial,
           <State> {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
     return {/* TODO: Fix JSX expression */}
@@ -168,23 +108,7 @@ constructor(props: ErrorBoundaryProps) {
   r: Error, errorInf)
   o: ErrorInfo): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-};
-    return {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-  hasErro,
-  r: true,
-//       error}};
-  componentDidCatch(erro,
-  r: Error, errorInf)
-  o: ErrorInfo): void {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Log error to console for debugging;
+}    // Log error to console for debugging;
     console.error('Error caught by,
   ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -204,7 +128,6 @@ constructor(props: ErrorBoundaryProps) {
     });
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
       this.props.onError(error, errorInfo);
@@ -212,23 +135,12 @@ constructor(props: ErrorBoundaryProps) {
     // Update state with error details;
     this.setState((prevState) => ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-};
-      this.props.onError(error, errorInfo)};
-    // Update state with error details;
-    this.setState((prevState) => ({/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-//       errorInfo,
+}//       errorInfo,
       errorCoun,
   t: prevState.errorCount + 1,)
     }));
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
     }
@@ -236,21 +148,9 @@ constructor(props: ErrorBoundaryProps) {
     if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */})
   y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-};
-    };
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */})
-  y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      (window as unknown as {/* TODO: Fix JSX expression */}
+}      (window as unknown as {/* TODO: Fix JSX expression */}
   t: Record,})
           <string, unknown>) => void } }).Sentry.captureException(error, {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
         context,
@@ -272,50 +172,18 @@ constructor(props: ErrorBoundaryProps) {
   componentDidUpdate(prevProp)
   s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-};
-        context,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-          reac,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-  componentStac,
-  k: errorInfo.componentStack};
-        })
-      })};
-  };
-  componentDidUpdate(prevProps: Props): void {
-  componentDidUpdate(prevProp)
-  s: Props): void {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Reset error state if resetKeys changed
+}    // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
       );
       if (resetKeysChanged && this.state.hasError) {
       if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
         this.resetErrorBoundary();
       }
     }
-  }
-=======
-  O: Add content};
-};
-        this.resetErrorBoundary()};
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  resetErrorBoundary = (): void => {
+  }  resetErrorBoundary = (): void => {
     this.setState({
       hasError: false,
       error: null,
@@ -323,18 +191,11 @@ constructor(props: ErrorBoundaryProps) {
     });
   }
   handleReload = (): void => {
-<<<<<<< HEAD
     window.location.reload()
   }
   handleGoHome = (): void => {
     window.location.href = '/'
-  }
-=======
-    window.location.reload()}
-  handleGoHome = (): void => {
-    window.location.href = '/'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  render(): ReactNode {
+  }  render(): ReactNode {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
@@ -352,20 +213,11 @@ constructor(props: ErrorBoundaryProps) {
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>
   resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
     this.setState({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-};
-    this.setState({/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  hasErro,
+}  hasErro,
   r: false,
       erro,
   r: null,
@@ -374,7 +226,6 @@ constructor(props: ErrorBoundaryProps) {
     });
   }
   handleReload = (): void => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
     window.location.reload();
@@ -395,28 +246,7 @@ constructor(props: ErrorBoundaryProps) {
   O: Add content,}
 }
         return this.props.fallback;
-      }
-=======
-  O: Add content};
-};
-    window.location.reload()};
-  handleGoHome = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-    window.location.href = '/'};
-  render(): ReactNode {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-      // Use custom fallback if provided;
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-        return this.props.fallback};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      // Default error UI;
+      }      // Default error UI;
       return (<div>Coming Soon</div>)
   )
           <div className="error-boundary-container" style={styles.container}></div>
@@ -463,34 +293,20 @@ constructor(props: ErrorBoundaryProps) {
                 style={styles.button}"
                 aria-label="Try Again"
               >
-<<<<<<< HEAD
                 Try Again;
   </
               <button
-// >
-=======
-                Try Again
-              </button>
-              <button //>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-//                 Try Again;
+// >//                 Try Again;
           </button>
               <button></button>
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
               >
-<<<<<<< HEAD
                 Reload Page;
   </
               <button
-// >
-=======
-                Reload Page
-              </button>
-              <button //>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-//                 Reload Page;
+// >//                 Reload Page;
           </button>
               <button></button>
                 onClick={this.handleGoHome}
@@ -510,18 +326,11 @@ constructor(props: ErrorBoundaryProps) {
             )};
           </div>
         </div>
-<<<<<<< HEAD
       );
     }
     return this.props.children;
   }
-}
-=======
-      )};
-    return this.props.children};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const styles = {
+}const styles = {
 };
 };
 };
@@ -616,7 +425,6 @@ $4},
     fontSize: '14px',
     color:   ,
 $4}
-<<<<<<< HEAD
 }
       );
     }
@@ -630,21 +438,7 @@ const styles = {
   containe,
   r: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-};
-      )};
-    return this.props.children};
-};
-;
-const styles = {// TODO: Add content}
-};
-  containe,
-  r: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  minHeigh,
+}  minHeigh,
   t: '100vh',
     displa,
   y: 'flex',
@@ -661,14 +455,8 @@ const styles = {// TODO: Add content}
   },
   conten,
   t: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  maxWidt,
+}  maxWidt,
   h: '600px',
     widt,
   h: '100%',
@@ -685,28 +473,16 @@ const styles = {// TODO: Add content}
   },
   ico,
   n: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  fontSiz,
+}  fontSiz,
   e: '48px',
     marginBotto,
   m: '20px'
   },
   titl,
   e: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  fontSiz,
+}  fontSiz,
   e: '24px',
     fontWeigh,
   t: 'bold',
@@ -717,14 +493,8 @@ const styles = {// TODO: Add content}
   },
   messag,
   e: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  fontSiz,
+}  fontSiz,
   e: '16px',
     colo,
   r: '#666',
@@ -735,14 +505,8 @@ const styles = {// TODO: Add content}
   },
   detail,
   s: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  textAlig,
+}  textAlig,
   n: 'left' as const,
     marginBotto,
   m: '24px',
@@ -757,14 +521,8 @@ const styles = {// TODO: Add content}
   },
   summar,
   y: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  curso,
+}  curso,
   r: 'pointer',
     fontWeigh,
   t: 'bold',
@@ -775,40 +533,22 @@ const styles = {// TODO: Add content}
   },
   errorDetail,
   s: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  fontSiz,
+}  fontSiz,
   e: '14px'
   },
   errorMessag,
   e: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  marginBotto,
+}  marginBotto,
   m: '12px',
     colo,
   r: '#d32f2f'
   },
   stac,
   k: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  backgroundColo,
+}  backgroundColo,
   r: '#f5f5f5',
     paddin,
   g: '12px',
@@ -827,14 +567,8 @@ const styles = {// TODO: Add content}
   },
   action,
   s: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  displa,
+}  displa,
   y: 'flex',
     ga,
   p: '12px',
@@ -845,14 +579,8 @@ const styles = {// TODO: Add content}
   },
   butto,
   n: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  paddin,
+}  paddin,
   g: '12px 24px',
     fontSiz,
   e: '16px',
@@ -873,38 +601,21 @@ const styles = {// TODO: Add content}
   },
   secondaryButto,
   n: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  backgroundColo,
+}  backgroundColo,
   r: '#6c757d'
   },
   errorCoun,
   t: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  marginTo,
+}  marginTo,
   p: '24px',
     fontSiz,
   e: '14px',
     colo,
   r: '#999'
-<<<<<<< HEAD
   }
 }
   </State>
   </State>
   </string>
-=======
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

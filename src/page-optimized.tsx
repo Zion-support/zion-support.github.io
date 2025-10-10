@@ -12,7 +12,6 @@ const UnifiedBanner = lazy(() =>
 //   )
 );
 const ContentPromotion = lazy(() =>
-<<<<<<< HEAD
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     // TODO: Add content
   }
@@ -29,19 +28,7 @@ const ContentShowcase = lazy(() =>
 export default function OptimizedHomePage() {
     // TODO: Add content
   }
-}
-=======
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content};
-};
-    return { default: EmptyComponent } as { default: React.ComponentType }});
-const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content};
-};
-  default: EmptyComponent}))
-export default function OptimizedHomePage() {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+}  return (
           <div>Coming Soon</div>
   )
           <div className="min-h-screen bg-white">
@@ -68,19 +55,11 @@ export default function OptimizedHomePage() {// TODO: Add content};
 //                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
 //                 autonomous systems, and digital transformation services.
           </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
 // >
-//                   Get Your Free AI Assessment
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-//>
-//                   Get Your Free AI Assessment;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </a>
+//                   Get Your Free AI Assessment          </a>
                   href="/case-studies" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
 View Success Stories
               </div>
@@ -88,11 +67,7 @@ View Success Stories
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD
   ),
 }
   </div>
   </div>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

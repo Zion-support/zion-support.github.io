@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 export interface BreakthroughContent {/* TODO: Fix JSX expression */}
   }
 }
-
-=======
-export interface BreakthroughContent {/* TODO: Fix JSX expression */};
-  }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const newBreakthroughContent2025: BreakthroughContent[] = [
   {
     id: 'ai-platform-optimization-2025'

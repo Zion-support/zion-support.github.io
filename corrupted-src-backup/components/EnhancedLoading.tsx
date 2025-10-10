@@ -1,43 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedLoading: React.FC<LoadingProps> = ({,
   message = 'Loading...',
   size = 'md',
   variant = 'spinner'}) => {
-  const sizeClasses = {
-=======
-interface LoadingProps {/* TODO: Fix JSX expression */};
-};
-;
-const EnhancedLoading: React.FC<LoadingProps> = ({,
-  message = 'Loading...',
-  size = 'md',;
-variant = 'spinner'}) => {;
-const sizeClasses = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    sm: 'w-4 h-4',
+  const sizeClasses = {    sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'}
   const renderSpinner = () => (
     <div;
 const,
   EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
 }) => {/* TODO: Fix JSX expression */}
   }
   const renderSpinner = () => (<div></div>
-      className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}
-=======
-}) => {/* TODO: Fix JSX expression */};
-  };
-;
-const renderSpinner = () => (<div></div>
-      className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    />)
+      className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}    />)
   );
   const renderDots = () => (</div>
     <div className="flex space-x-1">
@@ -54,16 +32,9 @@ const renderSpinner = () => (<div></div>
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`};
           style={{
             animationDelay: `${i * 0.2}s`,
-<<<<<<< HEAD
             animationDuration: '1s',
   const renderDots = () => (<div className="flex space-x-1"></div>
-      {/* TODO: Fix JSX expression */}
-=======
-            animationDuration: '1s',;
-const renderDots = () => (<div className="flex space-x-1"></div>
-      {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          key={i}`
+      {/* TODO: Fix JSX expression */}          key={i}`
           className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`};
           style={/* TODO: Fix JSX expression */}`
   y: `${i * 0.2}s`,
@@ -76,19 +47,11 @@ const renderDots = () => (<div className="flex space-x-1"></div>
 `
   const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
   );
-<<<<<<< HEAD
-  const renderLoader = () => {
-=======
-;
-const renderLoader = () => {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    switch (variant) {
+  const renderLoader = () => {    switch (variant) {
       case 'dots':
         return renderDots();
       case 'pulse':
         return renderPulse();
-<<<<<<< HEAD
       default: return renderSpinner()
   }
   }
@@ -98,30 +61,13 @@ const renderLoader = () => {
       <div className="mb-4">{renderLoader()}</div>
   const renderLoader = () => {/* TODO: Fix JSX expression */}
     }
-  }
-=======
-      default: return renderSpinner()};
-  };
-  return(<div className="flex flex-col items-center justify-center p-8">)
-  return (</div>
-    <div className="flex flex-col items-center justify-center p-8"></div>
-      <div className="mb-4">{renderLoader()}</div>;
-const renderLoader = () => {/* TODO: Fix JSX expression */};
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return ("
+  }  return ("
     <div className="flex flex-col items-center justify-center p-8"></div>")
       <div className="mb-4">{renderLoader()}</div>"
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default EnhancedLoading;
+}export default EnhancedLoading;
 "`
   </LoadingProps>
   </LoadingProps>

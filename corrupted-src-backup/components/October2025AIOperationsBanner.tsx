@@ -117,16 +117,8 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
-<<<<<<< HEAD
             const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li, n, k;
-=======
-return (
-;
-const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li , n, k;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            return (</div>
+            return(<Li, n, k;            return (</div>
               <Li , n, k
   k, e, y={ind, e, x};
                 to={artic, l, e.li, n, k};
@@ -195,13 +187,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>)
-<<<<<<< HEAD
             );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        </d, i, v>
+          })}        </d, i, v>
         {/* Bottom, CT, A */};
         <div , className="te, x, t-cent, e, r">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">"

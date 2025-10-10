@@ -1,34 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
 interface SkeletonProps {
     // TODO: Add content
   }
-}
-=======
-interface SkeletonProps {// TODO: Add content}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  className?: string;
+}  className?: string;
   width?: string | number;
   height?: string | number;
   rounded?: boolean;
-<<<<<<< HEAD
   animated?: boolean;
-}
-=======
-  animated?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const,
+}const,
   Skeleton: React.FC,
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  className = '',
+}  className = '',
 //   width,
 //   height,
   rounded = false,
@@ -41,13 +24,8 @@ const,
     <div className="loadingskeleton">
       {/* Component content */}
     </div>)
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          "
+}          "
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
 );
 export const,
@@ -61,23 +39,12 @@ export const,
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
 // />
-<<<<<<< HEAD
-    ))}
-=======
-    ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </div>
+    ))}          </div>
 );
 export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  aspectRatio = '16/9')
+}  aspectRatio = '16/9')
 }) => ("
           <div className="bg-gray-200 rounded-lg animate-pulse"
     style={{ aspectRatio }}"
@@ -96,16 +63,9 @@ export const,
   </div>
 );
 export const,
-<<<<<<< HEAD
   TableSkeleton: React.FC<{ rows?: number, columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  rows = 5,
+}  rows = 5,
   columns = 4;)
 }) => ("
           <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})
@@ -131,8 +91,4 @@ export const,
     ))};
   </div>
 );
-<<<<<<< HEAD
 export default Skeleton</SkeletonProps>
-=======
-export default Skeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

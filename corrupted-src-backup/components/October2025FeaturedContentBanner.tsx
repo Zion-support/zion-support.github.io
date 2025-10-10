@@ -245,22 +245,10 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-<<<<<<< HEAD
             const, Ico, n = conte, n, t.ic, o, n;
             return(<Li, n, k;
         {/* Featured, Content, Cards */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
-=======
-return (
-;
-const, Ico, n = conte, n, t.ic, o, n;
-            return(<Li , n, k;
-        {/* Featured, Content, Cards */};
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">
-);
-}"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
             const, Ico, n = conte, n, t.ic, o, n;
             return (</div>
@@ -269,15 +257,8 @@ const, Ico, n = conte, n, t.ic, o, n;
                 to={conte, n, t.li, n, k};
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
-<<<<<<< HEAD
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
-              >
-=======
-                sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }};>
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
+              >                <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
                 <div , className="relativ, e, p-8">
                   {/* Ic, o, n & Tit, l, e */}</div>
                   <div, className="flex, item, s-start, m, b-6"></div>
@@ -379,13 +360,8 @@ const, Ico, n = conte, n, t.ic, o, n;
                 {/* Hover, Effect, Overlay */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opaci, t, y`}></d, i, v>`;`
               </Li, n, k>
-<<<<<<< HEAD
             );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        </d, i, v>
+          })}        </d, i, v>
         {/* Bottom, CT, A */};
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";

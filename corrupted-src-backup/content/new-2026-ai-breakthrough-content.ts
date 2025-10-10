@@ -1,30 +1,16 @@
 export interface AIBreakthroughContent {
-<<<<<<< HEAD
-    id: string;
-=======
-}
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  title: string;
+    id: string;  title: string;
   description: string;
   content: string;
   author: string;
   publishedAt: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   featured: boolean
   readTime: string
   image?: string,,
   valueProposition: string
   }
-
-=======
-  featured: boolean;
-  readTime: string;
-  image?: string;,
-  valueProposition: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
   {,
     id: 'ai-2026-hyperconscious-computing-revolution',

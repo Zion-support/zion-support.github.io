@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 
 ];      phone: '+1 302 464 0950'
-  id: string;
-=======
-];      phone: '+1 302 464 0950',
-  id:
-        id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string;
+  id: string;  name: string;
   tagline: string;
   description: string;
   price: string;
@@ -28,7 +21,6 @@
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'};
     trial_days: 60;
-<<<<<<< HEAD
     setup_time: '4 - 6 weeks'
     competitors: ['PTCSiemensGE DigitalRockwell Automation'];
     roi: 'Average customer sees 600% ROI through operational improvements'
@@ -36,18 +28,7 @@
     customers: 950
     rating: 4 && 4.9
     reviews: 520,
-  }
-=======
-    setup_time: '4 - 6 weeks',
-    competitors:
-        competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements',
-    launch_date: '2024 - 01 - 10',
-    customers: 950;
-    rating: 4 && 4.9;
-    reviews: 520};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
   id: string, name: string,
   tagline: string, description: string,
   price: string, period: string,
@@ -61,7 +42,6 @@
   competitive_advantage: string;
   use_cases: string[];
   integrations: string[];
-<<<<<<< HEAD
   compliance: string[]
   website: string
   contact: unknown,
@@ -73,20 +53,7 @@
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
-=======
-  compliance: string[];
-  website: string;
-  contact: unknown;
-    phone: string, email: string;
-    address: string},
-    trialDays: number, setupTime: string;
-  competitors: string[], roi: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const comprehensiveRealServices: ComprehensiveService[] = [,
+}export const comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services;
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',
@@ -323,18 +290,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
-<<<<<<< HEAD
     launchDate: '2024-01-10', customers: 950
     rating: 4.9
     reviews: 520,
-export interface ComprehensiveService {}
-=======
-    launchDate: '2024-01-10', customers: 950;
-    rating: 4.9;
-    reviews: 520;
-export interface ComprehensiveService {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+export interface ComprehensiveService {}];
 ];      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -996,16 +955,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 520,
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  }
-=======
-  s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
 ];      phon,
   e: '+1 302 464 0950'
       emai,
@@ -1033,14 +985,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
 export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   l: string};
     addres,
-<<<<<<< HEAD
   s: string}
-  }
-=======
-  s: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  trialDays: number;
+  }  trialDays: number;
   setupTime: string;
   competitors: string[];
   roi: string;
@@ -1063,13 +1009,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
-  s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const,
+  s: number}export const,
   comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services,
   {,
@@ -1089,7 +1029,6 @@ export const,
     competitiveAdvantage: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities';
     useCases: [
       'Blog content creation and optimizationSocial media content generationProduct descriptions and marketing copyEmail marketing campaignsTechnical documentation and whitepapers'
-<<<<<<< HEAD
     ]
     integrations: ['WordPressShopifyHubSpotMailchimpGoogle AnalyticsSEMrush']
     compliance: ['GDPRCCPASOC2 ISO 27001'],
@@ -1097,18 +1036,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['WordPressShopifyHubSpotMailchimpGoogle AnalyticsSEMrush'];
-    compliance: ['GDPRCCPASOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-content-factory-pro'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 14;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 14;
     setupTime: '5 minutes';
     competitors: ['JasperCopy.aiWritesonicGrammarly Business'];
     roi: 'Average customer sees 300% ROI within 3 months';
@@ -1135,7 +1063,6 @@ export const,
     competitiveAdvantage: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations';
     useCases: [
       'Customer churn preventionUpsell and cross-sell optimizationCustomer onboarding automationCustomer health monitoringCustomer success team productivity'
-<<<<<<< HEAD
     ]
     integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack']
     compliance: ['GDPRCCPASOC2 ISO 27001'],
@@ -1143,18 +1070,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack'];
-    compliance: ['GDPRCCPASOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-customer-success-platform'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 21;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 21;
     setupTime: '1-2 days';
     competitors: ['GainsightTotangoClientSuccessChurnZero'];
     roi: 'Average customer sees 400% ROI through reduced churn';
@@ -1181,7 +1097,6 @@ export const,
     competitiveAdvantage: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems';
     useCases: [
       'Credit risk assessmentFraud detection and preventionCompliance monitoring and reportingMarket risk managementOperational risk assessment'
-<<<<<<< HEAD
     ]
     integrations: ['FiservJack HenryFISTemenosSalesforceOracle']
     compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2 ISO 27001'],
@@ -1189,18 +1104,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['FiservJack HenryFISTemenosSalesforceOracle'];
-    compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-financial-risk-manager'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 30;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 30;
     setupTime: '2-4 weeks';
     competitors: ['SASIBMOracleSAP'];
     roi: 'Average customer sees 500% ROI through risk reduction';
@@ -1227,7 +1131,6 @@ export const,
     competitiveAdvantage: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems';
     useCases: [
       'Radiology image analysisPathology slide analysisCardiology imaging supportOncology diagnostic assistanceEmergency department support'
-<<<<<<< HEAD
     ]
     integrations: ['EpicCernerAllscriptsGE HealthcareSiemensPhilips']
     compliance: ['HIPAAFDACE MarkSOC2 ISO 27001 ISO 13485'],
@@ -1235,18 +1138,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['EpicCernerAllscriptsGE HealthcareSiemensPhilips'];
-    compliance: ['HIPAAFDACE MarkSOC2 ISO 27001 ISO 13485'];
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 60;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 60;
     setupTime: '4-6 weeks';
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'];
     roi: 'Average customer sees 600% ROI through improved diagnostic accuracy';
@@ -1273,7 +1165,6 @@ export const,
     competitiveAdvantage: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement';
     useCases: [
       'Product recommendation optimizationPricing strategy optimizationCustomer experience personalizationMarketing campaign optimizationInventory and supply chain optimization'
-<<<<<<< HEAD
     ]
     integrations: ['ShopifyWooCommerceMagentoBigCommerceSalesforceKlaviyo']
     compliance: ['GDPRCCPAPCI DSSSOC2 ISO 27001'],
@@ -1281,18 +1172,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['ShopifyWooCommerceMagentoBigCommerceSalesforceKlaviyo'];
-    compliance: ['GDPRCCPAPCI DSSSOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 14;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 14;
     setupTime: '1-2 days';
     competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'];
     roi: 'Average customer sees 350% ROI through increased conversions';
@@ -1319,7 +1199,6 @@ export const,
     competitiveAdvantage: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities';
     useCases: [
       'Threat detection and preventionIncident response automationCompliance monitoring and reportingVulnerability managementSecurity operations optimization'
-<<<<<<< HEAD
     ]
     integrations: ['SplunkServiceNowJiraSlackMicrosoft 365 Google Workspace']
     compliance: ['SOC2 ISO 27001 NISTGDPRHIPAAPCI DSS'],
@@ -1327,18 +1206,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['SplunkServiceNowJiraSlackMicrosoft 365 Google Workspace'];
-    compliance: ['SOC2 ISO 27001 NISTGDPRHIPAAPCI DSS'];
-    website: 'https://ziontechgroup.com/ai-cybersecurity-suite'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 30;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 30;
     setupTime: '1-2 weeks';
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'];
     roi: 'Average customer sees 450% ROI through threat prevention';
@@ -1365,7 +1233,6 @@ export const,
     competitiveAdvantage: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure';
     useCases: [
       'Data pipeline automationData quality managementReal-time analyticsMachine learning operationsData governance and compliance'
-<<<<<<< HEAD
     ]
     integrations: ['SnowflakeDatabricksAWSGoogle CloudAzureTableau']
     compliance: ['SOC2 ISO 27001 GDPRCCPAHIPAA'],
@@ -1373,18 +1240,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['SnowflakeDatabricksAWSGoogle CloudAzureTableau'];
-    compliance: ['SOC2 ISO 27001 GDPRCCPAHIPAA'];
-    website: 'https://ziontechgroup.com/ai-data-pipeline-platform'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 21;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 21;
     setupTime: '1-2 weeks';
     competitors: ['FivetranAlteryxTalendInformatica'];
     roi: 'Average customer sees 400% ROI through data automation';
@@ -1411,7 +1267,6 @@ export const,
     competitiveAdvantage: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates';
     useCases: [
       'Candidate sourcing and screeningInterview process optimizationDiversity and inclusion initiativesEmployee onboarding automationPerformance management and tracking'
-<<<<<<< HEAD
     ]
     integrations: ['WorkdayBambooHRGreenhouseLeverSlackMicrosoft Teams']
     compliance: ['EEOCOFCCPGDPRCCPASOC2 ISO 27001'],
@@ -1419,18 +1274,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['WorkdayBambooHRGreenhouseLeverSlackMicrosoft Teams'];
-    compliance: ['EEOCOFCCPGDPRCCPASOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 14;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 14;
     setupTime: '1-2 days';
     competitors: ['HireVuePymetricsHiredScoreEntelo'];
     roi: 'Average customer sees 300% ROI through improved hiring';
@@ -1457,7 +1301,6 @@ export const,
     competitiveAdvantage: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration';
     useCases: [
       'Contract review and analysisRisk assessment and managementCompliance monitoringLegal document automationContract lifecycle management'
-<<<<<<< HEAD
     ]
     integrations: ['ClioMyCasePracticePantherLexisNexisWestlawDocuSign']
     compliance: ['SOC2 ISO 27001 GDPRCCPAAttorney-client privilege'],
@@ -1465,18 +1308,7 @@ export const,
     contact: {}
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-    ];
-    integrations: ['ClioMyCasePracticePantherLexisNexisWestlawDocuSign'];
-    compliance: ['SOC2 ISO 27001 GDPRCCPAAttorney-client privilege'];
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    trialDays: 30;
+      address: '364 E Main St STE 1008 Middletown DE 19709'}    trialDays: 30;
     setupTime: '1-2 weeks';
     competitors: ['EvisortContractPodAiKira SystemsLuminance'];
     roi: 'Average customer sees 500% ROI through contract automation';
@@ -1503,24 +1335,13 @@ export const,
     competitiveAdvantage: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements';
     useCases: [
       'Predictive maintenance optimizationProduction efficiency improvementQuality control automationSupply chain optimizationEnergy consumption reduction'
-<<<<<<< HEAD
     ]
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC']
     compliance: ['ISO 9001 ISO 14001 OHSAS 18001 SOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer'}
     contact: {}
       phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-=======
-    ];
-    integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'];
-    compliance: ['ISO 9001 ISO 14001 OHSAS 18001 SOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer'};
-    contact: {};
-      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      email: 'kleber@ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
   {/* TODO: Fix JSX expression */};
   s://ziontechgroup.com/ai-content-factory-pro'};
     contac,
@@ -1801,7 +1622,6 @@ export const,
     review,
   s: 520,
     review,
-<<<<<<< HEAD
   s: 520,
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
@@ -1809,17 +1629,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     phone: string
     email: string
     address: string,
-  }
-=======
-  s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */};
-  };
-];
-    phone: string;
-    email: string;
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  competitors: string[];
+  }  competitors: string[];
   roi: string;
   launch_date: string
   customers: number
@@ -1971,7 +1781,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
     website: 'https://ziontechgroup.com/ai-content-factory-pro',
     contact: phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 14,
     setupTime: '5 minutes',
@@ -1981,19 +1790,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
     customers: 2500
     rating: 4.8
     reviews: 1250,
-  }
-=======
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-    trialDays: 14;
-    setupTime: '5 minutes',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
-    roi: 'Average customer sees 300% ROI within 3 months',
-    launchDate: '2024-01-15',
-    customers: 2500;
-    rating: 4.8;
-    reviews: 1250};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // Customer Success & Support;
+  }  // Customer Success & Support;
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
@@ -2908,16 +2705,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
     review,
   s: 520,
     review,
-<<<<<<< HEAD
   s: 520,
 export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  }
-=======
-  s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
   id: string, name: string,
   tagline: string, description: string,
   price: string, period: string,
@@ -2925,7 +2715,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   marketSize: string, targetAudience: string,
   competitiveAdvantage: string, useCases: string[],
   integrations: string[], compliance: string[],
-<<<<<<< HEAD
   website: string
   contact: unknown,
     phone: string, email: string
@@ -2936,19 +2725,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
-=======
-  website: string;
-  contact: unknown;
-    phone: string, email: string;
-    address: string},
-    trialDays: number, setupTime: string;
-  competitors: string[], roi: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const comprehensiveRealServices: ComprehensiveService[] = [,
+}export const comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services;
       address: '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 14, setupTime: '5 minutes',
@@ -4069,7 +3846,6 @@ export const,
   g: 4.9,
   reviews: 520 } ]; export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   l: string} addres,
-<<<<<<< HEAD
   s: string} } trialDay,
   s: number, setupTim,
   e: string, competitor,
@@ -4178,119 +3954,7 @@ export const,
   e: '2024-02-10', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 580} // Manufacturing & IoT; {/* TODO: Fix JSX expression */}
-=======
-  s: string} }; trialDay,
-  s: number; setupTim,
-  e: string; competitor,
-  s: string[]; ro,
-  i: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  comprehensiveRealServices: ComprehensiveService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 14;' setupTim,
-  e: '5 minutes';' competitor,
-  s: ['JasperCopy.aiWritesonicGrammarly Business'];' ro,
-  i: 'Average customer sees 300% ROI within 3 months';' launchDat,
-  e: '2024-01-15'; customer,
-  s: 2500; ratin,
-  g: 4.8; review,
-  s: 1250}; // Customer Success & Support; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 21;' setupTim,
-  e: '1-2 days';' competitor,
-  s: ['GainsightTotangoClientSuccessChurnZero'];' ro,
-  i: 'Average customer sees 400% ROI through reduced churn';' launchDat,
-  e: '2024-02-20'; customer,
-  s: 1800; ratin,
-  g: 4.9; review,
-  s: 950}; // Financial Technology; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 30;' setupTim,
-  e: '2-4 weeks';' competitor,
-  s: ['SASIBMOracleSAP'];' ro,
-  i: 'Average customer sees 500% ROI through risk reduction';' launchDat,
-  e: '2024-03-10'; customer,
-  s: 1200; ratin,
-  g: 4.7; review,
-  s: 680}; // Healthcare & Biotech; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 60;' setupTim,
-  e: '4-6 weeks';' competitor,
-  s: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips'];' ro,
-  i: 'Average customer sees 600% ROI through improved diagnostic accuracy';' launchDat,
-  e: '2024-01-30'; customer,
-  s: 850; ratin,
-  g: 4.9; review,
-  s: 420}; // E-commerce & Retail; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 14;' setupTim,
-  e: '1-2 days';' competitor,
-  s: ['Dynamic YieldOptimizelyKlevuAlgolia'];' ro,
-  i: 'Average customer sees 350% ROI through increased conversions';' launchDat,
-  e: '2024-02-15'; customer,
-  s: 3200; ratin,
-  g: 4.8; review,
-  s: 1680}; // Cybersecurity & Compliance; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 30;' setupTim,
-  e: '1-2 weeks';' competitor,
-  s: ['CrowdStrikeSentinelOneCarbon BlackCylance'];' ro,
-  i: 'Average customer sees 450% ROI through threat prevention';' launchDat,
-  e: '2024-03-01'; customer,
-  s: 2100; ratin,
-  g: 4.9; review,
-  s: 1100}; // Data & Analytics; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 21;' setupTim,
-  e: '1-2 weeks';' competitor,
-  s: ['FivetranAlteryxTalendInformatica'];' ro,
-  i: 'Average customer sees 400% ROI through data automation';' launchDat,
-  e: '2024-02-01'; customer,
-  s: 2800; ratin,
-  g: 4.8; review,
-  s: 1450}; // Human Resources; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 14;' setupTim,
-  e: '1-2 days';' competitor,
-  s: ['HireVuePymetricsHiredScoreEntelo'];' ro,
-  i: 'Average customer sees 300% ROI through improved hiring';' launchDat,
-  e: '2024-01-20'; customer,
-  s: 1900; ratin,
-  g: 4.7; review,
-  s: 890}; // Legal & Compliance; {/* TODO: Fix JSX expression */};
-  e: '+1 302 464 0950'}' emai,
-  l: 'kleber@ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
-  s: 30;' setupTim,
-  e: '1-2 weeks';' competitor,
-  s: ['EvisortContractPodAiKira SystemsLuminance'];' ro,
-  i: 'Average customer sees 500% ROI through contract automation';' launchDat,
-  e: '2024-02-10'; customer,
-  s: 1100; ratin,
-  g: 4.8; review,
-  s: 580}; // Manufacturing & IoT; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  e: '+1 302 464 0950'}' emai,
+  s: 580} // Manufacturing & IoT; {/* TODO: Fix JSX expression */}  e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } trialDay,
   s: 60,' setupTim,

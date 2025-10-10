@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025'
-=======
-export const revolutionaryITInfrastructure2025Services = [
-{name: 'Revolutionary Cloud Infrastructure 2025',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    path: '/services/revolutionary-cloud-infrastructure-2025',
+export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025'    path: '/services/revolutionary-cloud-infrastructure-2025',
     description: 'Next-generation cloud infrastructure and management',
     icon: 'Cloud',
     category: 'IT Infrastructure',
@@ -86,16 +79,8 @@ export const revolutionaryITStats2025 = {}
   averageRatin,
   g: 4.8,
   activeUser,
-<<<<<<< HEAD
   s: 1800}
-export const revolutionaryITInfrastructure2025Services = [ nam,
-=======
-  s: 1800};
-export const revolutionaryITInfrastructure2025Services = [
- nam,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  e: 'Revolutionary Cloud Infrastructure 2025',' pat,
+export const revolutionaryITInfrastructure2025Services = [ nam,  e: 'Revolutionary Cloud Infrastructure 2025',' pat,
   h: '/services/revolutionary-cloud-infrastructure-2025',' descriptio,
   n: 'Next-generation cloud infrastructure and management',' ico,
   n: 'Cloud',' categor,

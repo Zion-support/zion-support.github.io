@@ -125,22 +125,10 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */};
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
           {newArticl, e, s.m, a, p((artic, l, e) => {
-<<<<<<< HEAD
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
         {/* Articles, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"</div>
-=======
-return (
-;
-const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li , n, k;
-        {/* Articles, Gri, d */};
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
-);
-}"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
+        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"</div>        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
             return (</div>
@@ -148,17 +136,9 @@ const, Ico, n = artic, l, e.ic, o, n;
   k, e, y={artic, l, e.sl, u, g};
                 to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;
-<<<<<<< HEAD
   r:-transla, t, e-y-1"
               ></Li>
-                {/* Bad, g, e */}
-=======
-  r:-transla, t, e-y-1">
-);
-}</Li>
-                {/* Bad, g, e */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                <div, className="absolute, to, p-4, righ, t-4">";</div>
+                {/* Bad, g, e */}                <div, className="absolute, to, p-4, righ, t-4">";</div>
         {/* Articles, Gri, d */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
@@ -218,13 +198,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                 {/* Hover, Gradient, Effect */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`
               </Li, n, k>)
-<<<<<<< HEAD
             );
-          })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        </d, i, v>
+          })}        </d, i, v>
         {/* CTA, Sectio, n */};
         <div, className="te, x, t-cent, e, r">";
           <Li, n, k;

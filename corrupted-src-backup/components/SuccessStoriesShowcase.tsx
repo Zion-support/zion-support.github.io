@@ -50,36 +50,18 @@ key={index};
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) => (</div>
             <div
-<<<<<<< HEAD
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>
-=======
-key={index};
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>
                   <div></div>
-<<<<<<< HEAD
                     <h3 className="font-bold text-xl">{story.company}</h3>
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-key={index}
-=======
-                    <h3 className="font-bold text-xl">{story.company}</h3>;
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-key={index};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="bg-white rounded-2xl shadow-xl overflow-hidden,"
+key={index}              className="bg-white rounded-2xl shadow-xl overflow-hidden,"
   hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"

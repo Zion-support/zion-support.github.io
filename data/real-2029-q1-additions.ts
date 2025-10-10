@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 
-    id: 'finops - scheduler - optimizer'
-=======
-    id: 'finops - scheduler - optimizer',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'FinOps Scheduler Optimizer',
+    id: 'finops - scheduler - optimizer'    name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
     period: '/month',
@@ -179,21 +174,12 @@
     variant: 'quantum'
     contactInfo: contact;
     realImplementation: true;
-<<<<<<< HEAD
     implementationDetails: 'Agent + collector with secure export.'
     launchDate: '2025-02-12'
     customers: 18
     rating: 4.5
     reviews: 9,
-  }
-=======
-    implementationDetails: 'Agent + collector with secure export.',
-    launchDate: '2025-02-12',
-    customers: 18;
-    rating: 4.5;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      'Modern alternative to legacy APM addons with focused insights.',
+  }      'Modern alternative to legacy APM addons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -244,7 +230,6 @@
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40
@@ -259,25 +244,7 @@
 		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.'
 		features: ['Idle detectionSchedule generatorIaC exportAlerting']
 		popular: true,
-		icon: ''
-=======
-		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.',
-		launchDate: '2025-02-01',
-		customers: 40;
-		rating: 4 && 4.7;
-reviews: 18;
-	};
-		id: 'finops-scheduler-optimizer',
-		name: 'FinOps Scheduler Optimizer',
-		tagline: 'Rightsizing & schedules with IaC exports',
-		price: '$99',
-		period: '/month',
-		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.',
-		features: ['Idle detectionSchedule generatorIaC exportAlerting'];
-		popular: true;
-		icon: '',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		color: 'from-emerald-600 to-teal-700',
+		icon: ''		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 		marketPosition: 'Actionable, lowtouch FinOps that pays for itself within 90 days.'
@@ -296,7 +263,6 @@ reviews: 18;
 		variant: 'quantum-holographic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.'
 		launchDate: '2025-02-10'
 		customers: 25
@@ -312,26 +278,7 @@ reviews: 18;
 		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast']
 		popular: false,
 		icon: ''
-		color: 'from-indigo-600 to-violet-700'
-=======
-		implementationDetails: 'Analyzer SaaS with policy engine and exporters.',
-		launchDate: '2025-02-10',
-		customers: 25;
-		rating: 4 && 4.6;
-reviews: 12;
-	};
-		id: 'db-index-advisor',
-		name: 'DB Index Advisor',
-		tagline: 'AI index recommendations for Postgres/MySQL',
-		price: '$79',
-		period: '/month',
-		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.',
-		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'];
-		popular: false;
-		icon: '',
-		color: 'from-indigo-600 to-violet-700',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		textColor: 'text-indigo-300',
+		color: 'from-indigo-600 to-violet-700'		textColor: 'text-indigo-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor',
 		marketPosition: 'Modern alternative to legacy APM addons with focused insights.',
 		targetAudience: 'DBA, Backend, Platform'
@@ -349,21 +296,12 @@ reviews: 12;
 		variant: 'quantum'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Agent + collector with secure export.'
 		launchDate: '2025-02-12'
 		customers: 18
 		rating: 4 && 4.5
 		reviews: 9,
-	}
-=======
-		implementationDetails: 'Agent + collector with secure export.',
-		launchDate: '2025-02-12',
-		customers: 18;
-		rating: 4 && 4.5;
-		reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+	}];
   id: 'ai - redteam - evaluator',
   name: 'AI RedTeam Evaluator',
   tagline: 'Continuous LLM redteaming and safety scoring',
@@ -392,7 +330,6 @@ reviews: 12;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Runs eval suites nightly and on PRs with webhooks.'
   launch_date: '2025 - 02 - 01'
   customers: 40
@@ -407,25 +344,7 @@ reviews: 12;
   description: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.'
   features: ['Idle detection_schedule generatorIaC export_alerting']
   popular: true,
-  icon: ''
-=======
-  implementation_details: 'Runs eval suites nightly and on PRs with webhooks.',
-  launch_date: '2025 - 02 - 01',
-  customers: 40;
-  rating: 4.7;
-reviews: 18;
-};
-  id: 'finops - scheduler - optimizer',
-  name: 'FinOps Scheduler Optimizer',
-  tagline: 'Rightsizing & schedules with IaC exports',
-  price: '$99',
-  period: '/month',
-  description: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
-  features: ['Idle detection_schedule generatorIaC export_alerting'];
-  popular: true;
-  icon: '',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  color: 'from - emerald - 600 to - teal - 700',
+  icon: ''  color: 'from - emerald - 600 to - teal - 700',
   text_color: 'text - emerald - 300',
   link: 'https://ziontechgroup.com / services / finops - scheduler - optimizer',
   market_position: 'Actionable, lowtouch FinOps that pays for itself within 90 days.'
@@ -444,7 +363,6 @@ reviews: 18;
   variant: 'quantum - holographic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Analyzer SaaS with policy engine and exporters.'
   launch_date: '2025 - 02 - 10'
   customers: 25
@@ -460,26 +378,7 @@ reviews: 18;
   features: ['Slow query capture_index suggestions_impact simulation_capacity forecast']
   popular: false,
   icon: ''
-  color: 'from - indigo - 600 to - violet - 700'
-=======
-  implementation_details: 'Analyzer SaaS with policy engine and exporters.',
-  launch_date: '2025 - 02 - 10',
-  customers: 25;
-  rating: 4.6;
-reviews: 12;
-};
-  id: 'db - index - advisor',
-  name: 'DB Index Advisor',
-  tagline: 'AI index recommendations for Postgres / MySQL',
-  price: '$79',
-  period: '/month',
-  description: 'Collects slow queries and proposes safe index changes with before / after impact analysis.',
-  features: ['Slow query capture_index suggestions_impact simulation_capacity forecast'];
-  popular: false;
-  icon: '',
-  color: 'from - indigo - 600 to - violet - 700',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  text_color: 'text - indigo - 300',
+  color: 'from - indigo - 600 to - violet - 700'  text_color: 'text - indigo - 300',
   link: 'https://ziontechgroup.com / services / db - index - advisor',
   market_position: 'Modern alternative to legacy APM addons with focused insights.',
   target_audience: 'DBA, Backend, Platform'
@@ -497,7 +396,6 @@ reviews: 12;
   variant: 'quantum'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Agent + collector with secure export.'
   launch_date: '2025 - 02 - 12'
   customers: 18
@@ -510,24 +408,7 @@ reviews: 12;
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'}
-=======
-  implementation_details: 'Agent + collector with secure export.',
-  launch_date: '2025 - 02 - 12',
-  customers: 18;
-  rating: 4.5;
-  reviews: 9};
-		rating: 4.5;
-		reviews: 9;
-// const contact = {
-;
-};
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
-	website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+	website: 'https://ziontechgroup.com'}export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator'
@@ -557,20 +438,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40,
 		rating: 4.7}
-		reviews: 18}
-=======
-		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
-		launchDate: '2025-02-01';
-		customers: 40;
-		rating: 4.7};
-		reviews: 18};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    popula,
+		reviews: 18}    popula,
   r: false,
     ico,
   n: '',
@@ -1124,7 +996,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   s://ziontechgroup.com'
 }
 export const,
-<<<<<<< HEAD
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
@@ -1137,43 +1008,15 @@ export const,
   s: 12}
 	}
 	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-=======
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 18};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 12};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		review,
+  g: 4.5}		review,
   s: 9};
 	};
 ];
-<<<<<<< HEAD
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'}
-=======
-;
-// const contact = {
-;
-};
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
-	website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
+	website: 'https://ziontechgroup.com'}export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI RedTeam Evaluator';
@@ -1203,29 +1046,17 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.'
 		launchDate: '2025-02-01'
 		customers: 40,
 		rating: 4.7}
 		reviews: 18}
 // const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
-		launchDate: '2025-02-01';
-		customers: 40;
-		rating: 4.7};
-		reviews: 18};
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}	websit,
   e: 'http,
   s://ziontechgroup.com'
 }
 export const,
-<<<<<<< HEAD
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
@@ -1238,23 +1069,7 @@ export const,
   s: 12}
 	}
 	{/* TODO: Fix JSX expression */}
-  g: 4.5}
-=======
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 18};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 12};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		review,
+  g: 4.5}		review,
   s: 9};
 	};
 ];
@@ -1579,27 +1394,16 @@ i,
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.7} review,
   s: 18} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 12} }; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  g: 4.5} review,
+  s: 12} } {/* TODO: Fix JSX expression */}  g: 4.5} review,
   s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.7} review,
@@ -1608,13 +1412,3 @@ i,
   s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 9} } ]; '
-=======
-  s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 12} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 9} } ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

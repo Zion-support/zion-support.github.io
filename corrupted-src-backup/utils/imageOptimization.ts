@@ -33,16 +33,9 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {
 export const getOptimizedUrl = (s, r, c: st, r, i, n, g,
   optio, n, s: {/* TODO: Fix JSX expression */};
    } = {})
-<<<<<<< HEAD
 ): string = > {/* TODO: Fix JSX expression */}`
   const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
-export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}
-=======
-): string = > {/* TODO: Fix JSX expression */}`;
-const, queryStrin, g = para, m, s.toStr, i, n, g(); return, queryStrin, g ? `${s, r, c}?${queryStri, n, g}` : s, r, c;
-export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      },
+export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */}      },
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/* TODO: Fix JSX expression */};
               }, if() {/* TODO: Fix JSX expression */};
              }, image.classLi, s, t.a, d, d('loa, d, e, d');
@@ -70,14 +63,8 @@ export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p'
   if (await, isFormatSupporte, d('av, i, f')) return 'av, i, f'; if (await, isFormatSupporte, d('we, b, p')) return 'we, b, p';
   return 'j, p, g';
 export const createPictureElement = (
-<<<<<<< HEAD
   conf, i, g: ResponsiveImageCo, n, f, i, g): HTMLPictureEleme, n, t = > { 
   const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
-
-=======
-  conf, i, g: ResponsiveImageCo, n, f, i, g): HTMLPictureEleme, n, t = > { ;
-const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Add source elements for different formats;
   const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {)
     const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t(
@@ -90,7 +77,6 @@ const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e');
   const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r);
   // Load full image;
   const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
-<<<<<<< HEAD
 =======
 return (
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
@@ -104,18 +90,10 @@ export const getOptimalQualit, y = (): number = > {
 export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f')
 <<<<<<< HEAD
 ): Promi, s, e<boolean> => {/* TODO: Fix JSX expression */}
-  } return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})
-=======
-): Promi, s, e<boolean>
-);
-} => {/* TODO: Fix JSX expression */};
-  }; return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-   });
+  } return, new, Promise(resol, v, e = > {/* TODO: Fix JSX expression */})   });
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {/* TODO: Fix JSX expression */}`
     const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t()`
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e);
-<<<<<<< HEAD
     placehold, e, r: string, // L o w-res placeholde r (e. g. 20x 2 0)
     s, r, c: string; // Full resolution image,
     a, l, t: str, i, n, g;
@@ -128,22 +106,7 @@ export const estimateDataUsage = (wid, t, h: nu, m, b, e, r,
   heig, h, t: num, b, e, r,
   form, a, t: 'j, p, g' | 'p, n, g' | 'we, b, p' | 'av, i, f' = 'jp, g')
 ): number = > {/* TODO: Fix JSX expression */}
-  } return, Mat, h.rou, n, d(pixe, l, s * bytesPerPix, e, l[form, a, t]);
-=======
-    placehold, e, r: string; // L o w-res placeholde r (e. g. 20x 2 0)
-    s, r, c: string; // Full resolution image;
-    a, l, t: str, i, n, g}): vo, i, d = > {/* TODO: Fix JSX expression */};
-  };
-;
-const connectio, n = (navigator, as, any).connecti, o, n; const effectiveTyp, e = connecti, o, n?.effectiveTy, p, e; swit, c, h (effectiveT, y, p, e) {/* TODO: Fix JSX expression */};
-  };
-export const estimateDataUsage = (wid, t, h: nu, m, b, e, r,
-  heig, h, t: num, b, e, r,
-  form, a, t: 'j, p, g' | 'p, n, g' | 'we, b, p' | 'av, i, f' = 'jp, g')
-): number = > {/* TODO: Fix JSX expression */};
-  }; return, Mat, h.rou, n, d(pixe, l, s * bytesPerPix, e, l[form, a, t]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        s, r, c,
+  } return, Mat, h.rou, n, d(pixe, l, s * bytesPerPix, e, l[form, a, t]);        s, r, c,
         priori, t, y,
         callba, c, k: reso, l, v, e}); th, i, s.que, u, e.so, r, t((a, b) => b.priori, t, y - a.priori, t, y);
         s, r, c,

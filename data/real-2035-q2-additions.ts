@@ -1,116 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      'Intent classification + prioritization'
-      'On-brand response drafting'
-      'Automatic polite follow-ups'
-      'Lead/contact enrichment'
-      'Analytics and response SLAs'
-    ]
-    popular: true
-    icon: '',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-email-responder',
-    marketPosition: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
-    targetAudience: 'Sales, support, founder-led teams'
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
-    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
-    roi: 'Cuts manual email time by 6080%',
-    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
-    marketSize: '$10B+ email productivity',
-    growthRate: '15% CAGR',
-    variant: 'network-futuristic',
-    contactInfo: contact
-    realImplementation: true,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from-cyan-600 to-blue-700'
-    textColo,
-  r: 'text-cyan-300'
-    lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-email-responder'
-    marketPositio,
-  n: 'Competes with Superhuman/Front add-ons, turnkey for SMBs'
-    targetAudienc,
-  e: 'Sales, support, founder-led teams'
-    trialDay,
-  s: 14,
-    setupTim,
-  e: '30 minutes'
-    categor,
-  y: 'Developer Tools'
-    realServic,
-  e: true,
-    technolog,
-  y: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
-    integration,
-  s: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
-    useCase,
-  s: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
-    ro,
-  i: 'Cuts manual email time by 6080%'
-    competitor,
-  s: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
-    marketSiz,
-  e: '$10B+ email productivity'
-    growthRat,
-  e: '15% CAGR'
-    varian,
-  t: 'network-futuristic'
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-      'Intent classification + prioritization',
-      'On-brand response drafting',
-      'Automatic polite follow-ups',
-      'Lead/contact enrichment',
-      'Intent classification + prioritization',
-      'On - brand response drafting',
-      'Automatic polite follow - ups',
-      'Lead / contact enrichment',      'Analytics and response SLAs'],
-    popular: true,
-    icon: ''
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / services / ai - email - responder',
-    market_position: 'Competes with Superhuman / Front add - ons, turnkey for SMBs',
-    target_audience: 'Sales, support, founder - led teams',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    category: 'Developer Tools',
-    real_service: true,
-    technology: ['Gmail / Outlook APIs', 'LLM', 'Webhook'],
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'],
-    use_cases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],
-<<<<<<< HEAD
-    roi: 'Cuts manual email time by 6080%'
-    implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
-    launchDate: '2025-08-20'
-    customers: 48
-    rating: 4.7
-    reviews: 12,
-  }
-=======
-    roi: 'Cuts manual email time by 6080%',
-    implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
-    launchDate: '2025-08-20',
-    customers:
-        customers: 48;
-    rating: 4.7;
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR'
@@ -2829,24 +2716,13 @@
     variant: 'holographic-matrix'
     contactInfo: contact;
     realImplementation: true;
-<<<<<<< HEAD
     implementationDetails: 'Analyzer + simulator + rule export'
     launchDate: '2025-08-20'
     customers: 17
     rating: 4.5
     reviews: 4,
   }
-    id: 'pii-discovery-scanner'
-=======
-    implementationDetails: 'Analyzer + simulator + rule export',
-    launchDate: '2025-08-20',
-    customers: 17;
-    rating: 4.5;
-reviews: 4;
-  };
-    id: 'pii-discovery-scanner',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'PII Discovery Scanner',
+    id: 'pii-discovery-scanner'    name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
     price: '$89',
     period: '/month',
@@ -3562,24 +3438,13 @@ reviews: 4;
     variant: 'network-futuristic'
     contactInfo: contact;
     realImplementation: true;
-<<<<<<< HEAD
     implementationDetails: 'Registry + diff engine + CI'
     launchDate: '2025-08-20'
     customers: 12
     rating: 4.5
     reviews: 3,
   }
-    id: 'feature - flag - auditor'
-=======
-    implementationDetails: 'Registry + diff engine + CI',
-    launchDate: '2025-08-20',
-    customers: 12;
-    rating: 4.5;
-reviews: 3;
-  };
-    id: 'feature - flag - auditor',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Feature Flag Auditor',
+    id: 'feature - flag - auditor'    name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
     price: '$19',
     period: '/month',
@@ -4767,21 +4632,12 @@ export const,
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48
 		rating: 4 && 4.7
 		reviews: 12,
-	}
-=======
-		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
-		launchDate: '2025-08-20',
-		customers: 48;
-		rating: 4 && 4.7;
-		reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'mobile-survey-studio',
+	}		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
 		price: '$19'
@@ -4811,21 +4667,12 @@ export const,
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22
 		rating: 4 && 4.6
 		reviews: 9,
-	}
-=======
-		implementationDetails: 'Survey builder + delivery channels + analytics + export',
-		launchDate: '2025-08-20',
-		customers: 22;
-		rating: 4 && 4.6;
-		reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'niche-productivity-planner',
+	}		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
 		price: '$12',
@@ -4855,21 +4702,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18
 		rating: 4 && 4.5
 		reviews: 7,
-	}
-=======
-		implementationDetails: 'Templates + KPI widgets + export',
-		launchDate: '2025-08-20',
-		customers: 18;
-		rating: 4 && 4.5;
-		reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'event-management-dashboard',
+	}		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
 		tagline: 'Tickets, scheduling, comms, and post-event analytics'
 		price: '$49',
@@ -4899,21 +4737,12 @@ export const,
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31
 		rating: 4 && 4.7
 		reviews: 11,
-	}
-=======
-		implementationDetails: 'Ticketing + agenda + comms + analytics',
-		launchDate: '2025-08-20',
-		customers: 31;
-		rating: 4 && 4.7;
-		reviews: 11};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'affiliate-tracking-suite',
+	}		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
 		tagline: 'Links, attribution, commission rules, and payouts'
 		price: '$29',
@@ -4941,21 +4770,12 @@ export const,
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Link generator + rules + exports'
 		launchDate: '2025-08-20'
 		customers: 12
 		rating: 4 && 4.5
 		reviews: 5,
-	}
-=======
-		implementationDetails: 'Link generator + rules + exports',
-		launchDate: '2025-08-20',
-		customers: 12;
-		rating: 4 && 4.5;
-		reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'smb-analytics-lite',
+	}		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
 		tagline: 'Traffic, funnels, and conversions without complexity'
 		price: '$15'
@@ -4983,21 +4803,12 @@ export const,
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Tracker script + dashboard'
 		launchDate: '2025-08-20'
 		customers: 40
 		rating: 4 && 4.6
 		reviews: 8,
-	}
-=======
-		implementationDetails: 'Tracker script + dashboard',
-		launchDate: '2025-08-20',
-		customers: 40;
-		rating: 4 && 4.6;
-		reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'it-helpdesk-portal',
+	}		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
 		tagline: 'Tickets, knowledge base, SLAs, and client portal'
 		price: '$59',
@@ -5025,21 +4836,12 @@ export const,
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing + KB + SLAs + reports'
 		launchDate: '2025-08-20'
 		customers: 16
 		rating: 4 && 4.7
 		reviews: 6,
-	}
-=======
-		implementationDetails: 'Ticketing + KB + SLAs + reports',
-		launchDate: '2025-08-20',
-		customers: 16;
-		rating: 4 && 4.7;
-		reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'ecommerce-returns-manager',
+	}		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
 		tagline: 'Customer-friendly returns with labels and status tracking',
 		price: '$39',
@@ -5067,7 +4869,6 @@ export const,
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Portal + labels + analytics'
 		launchDate: '2025-08-20'
 		customers: 14
@@ -5083,26 +4884,7 @@ export const,
 		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics']
 		popular: false,
 		icon: ''
-		color: 'from-cyan-600 to-teal-700'
-=======
-		implementationDetails: 'Portal + labels + analytics',
-		launchDate: '2025-08-20',
-		customers: 14;
-		rating: 4 && 4.6;
-reviews: 5;
-	};
-		id: 'automated-email-followups',
-		name: 'Automated Email Followups',
-		tagline: 'No-lead-left-behind sequences across inboxes',
-		price: '$15',
-		period: '/month',
-  description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.',
-		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'];
-		popular: false;
-		icon: '',
-		color: 'from-cyan-600 to-teal-700',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		textColor: 'text-cyan-300',
+		color: 'from-cyan-600 to-teal-700'		textColor: 'text-cyan-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/automated-email-followups',
 		marketPosition: 'Lightweight + affordable outreach',
 		targetAudience: 'Sales, success, support'
@@ -5120,21 +4902,12 @@ reviews: 5;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Sequencer + inbox + analytics'
 		launchDate: '2025-08-20'
 		customers: 28
 		rating: 4 && 4.5
 		reviews: 8,
-	}
-=======
-		implementationDetails: 'Sequencer + inbox + analytics',
-		launchDate: '2025-08-20',
-		customers: 28;
-		rating: 4 && 4.5;
-		reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'podcast-transcription-service',
+	}		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports'
 		price: '$12',
@@ -5162,21 +4935,12 @@ reviews: 5;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Uploader + ASR + export'
 		launchDate: '2025-08-20'
 		customers: 20
 		rating: 4 && 4.6
 		reviews: 6,
-	}
-=======
-		implementationDetails: 'Uploader + ASR + export',
-		launchDate: '2025-08-20',
-		customers: 20;
-		rating: 4 && 4.6;
-		reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'ai-seo-content-optimizer',
+	}		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
 		tagline: 'Live on-page audits and SEO-aware rewrites',
 		price: '$29',
@@ -5204,21 +4968,12 @@ reviews: 5;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Crawler + editor plugin + suggestions'
 		launchDate: '2025-08-20'
 		customers: 33
 		rating: 4 && 4.7
 		reviews: 10,
-	}
-=======
-		implementationDetails: 'Crawler + editor plugin + suggestions',
-		launchDate: '2025-08-20',
-		customers: 33;
-		rating: 4 && 4.7;
-		reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'social-scheduler-ai',
+	}		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform'
 		price: '$15',
@@ -5246,21 +5001,12 @@ reviews: 5;
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Calendar + generator + queue'
 		launchDate: '2025-08-20'
 		customers: 26
 		rating: 4 && 4.5
 		reviews: 7,
-	}
-=======
-		implementationDetails: 'Calendar + generator + queue',
-		launchDate: '2025-08-20',
-		customers: 26;
-		rating: 4 && 4.5;
-		reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'lead-enrichment-api',
+	}		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
 		tagline: 'Company, role, and social signals from an email/domain'
 		price: '$49'
@@ -5288,21 +5034,12 @@ reviews: 5;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'REST + dashboard + quotas'
 		launchDate: '2025-08-20'
 		customers: 9
 		rating: 4 && 4.4
 		reviews: 4,
-	}
-=======
-		implementationDetails: 'REST + dashboard + quotas',
-		launchDate: '2025-08-20',
-		customers: 9;
-		rating: 4 && 4.4;
-		reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'consent-management-cmp',
+	}		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs'
 		price: '$25',
@@ -5330,21 +5067,12 @@ reviews: 5;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Banner + preferences + logs'
 		launchDate: '2025-08-20'
 		customers: 37
 		rating: 4 && 4.7
 		reviews: 10,
-	}
-=======
-		implementationDetails: 'Banner + preferences + logs',
-		launchDate: '2025-08-20',
-		customers: 37;
-		rating: 4 && 4.7;
-		reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'cookie-scanner-pro',
+	}		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
 		tagline: 'Auto-detects cookies + trackers and updates your policy',
 		price: '$9',
@@ -5372,21 +5100,12 @@ reviews: 5;
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Scanner + policy generator'
 		launchDate: '2025-08-20'
 		customers: 19
 		rating: 4 && 4.5
 		reviews: 5,
-	}
-=======
-		implementationDetails: 'Scanner + policy generator',
-		launchDate: '2025-08-20',
-		customers: 19;
-		rating: 4 && 4.5;
-		reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'statuspage-sla-tracker',
+	}		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
 		tagline: 'Track uptime/incidents and publish SLA reports',
 		price: '$19',
@@ -5414,21 +5133,12 @@ reviews: 5;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Monitors + incidents + pages'
 		launchDate: '2025-08-20'
 		customers: 11
 		rating: 4 && 4.4
 		reviews: 3,
-	}
-=======
-		implementationDetails: 'Monitors + incidents + pages',
-		launchDate: '2025-08-20',
-		customers: 11;
-		rating: 4 && 4.4;
-		reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'agentic-lead-qualifier',
+	}		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
 		tagline: 'Website chat agent that pre-qualifies and routes leads',
 		price: '$29',
@@ -5456,21 +5166,12 @@ reviews: 5;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Widget + flows + routing'
 		launchDate: '2025-08-20'
 		customers: 23
 		rating: 4 && 4.6
 		reviews: 7,
-	}
-=======
-		implementationDetails: 'Widget + flows + routing',
-		launchDate: '2025-08-20',
-		customers: 23;
-		rating: 4 && 4.6;
-		reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'gdpr-dsar-portal-lite',
+	}		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
 		tagline: 'Accept, verify, export, and fulfill data subject requests'
 		price: '$49',
@@ -5498,21 +5199,12 @@ reviews: 5;
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Portal + workflow + exports'
 		launchDate: '2025-08-20'
 		customers: 10
 		rating: 4 && 4.5
 		reviews: 4,
-	}
-=======
-		implementationDetails: 'Portal + workflow + exports',
-		launchDate: '2025-08-20',
-		customers: 10;
-		rating: 4 && 4.5;
-		reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'feature-flag-auditor',
+	}		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
 		tagline: 'Flag hygiene checks and end-of-life automation',
 		price: '$19',
@@ -5540,21 +5232,12 @@ reviews: 5;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Scanner + PR bot'
 		launchDate: '2025-08-20'
 		customers: 8
 		rating: 4 && 4.4
 		reviews: 3,
-	}
-=======
-		implementationDetails: 'Scanner + PR bot',
-		launchDate: '2025-08-20',
-		customers: 8;
-		rating: 4 && 4.4;
-		reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'postgres-index-advisor-pro',
+	}		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
 		tagline: 'Index recommendations and controlled PR rollouts',
 		price: '$79',
@@ -5582,7 +5265,6 @@ reviews: 5;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Collector + advisor + PRs'
 		launchDate: '2025-08-20'
 		customers: 15
@@ -5594,22 +5276,7 @@ reviews: 5;
 		tagline: 'Move objects between storage classes to cut costs'
 		price: '$59'
 		period: '/month'
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-=======
-		implementationDetails: 'Collector + advisor + PRs',
-		launchDate: '2025-08-20',
-		customers: 15;
-		rating: 4 && 4.6;
-reviews: 5;
-	};
-		id: 's3-lifecycle-optimizer',
-		name: 'S3 Lifecycle Optimizer',
-		tagline: 'Move objects between storage classes to cut costs',
-		price: '$59',
-		period: '/month',
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
+  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
 		popular: false;
 		icon: '';
 		color: 'from-emerald-700 to-teal-800'
@@ -5631,21 +5298,12 @@ reviews: 5;
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Analyzer + simulator + rule export'
 		launchDate: '2025-08-20'
 		customers: 17
 		rating: 4 && 4.5
 		reviews: 4,
-	}
-=======
-		implementationDetails: 'Analyzer + simulator + rule export',
-		launchDate: '2025-08-20',
-		customers: 17;
-		rating: 4 && 4.5;
-		reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'pii-discovery-scanner',
+	}		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
 		price: '$89',
@@ -5673,21 +5331,12 @@ reviews: 5;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Connectors + scan jobs + exports'
 		launchDate: '2025-08-20'
 		customers: 13
 		rating: 4 && 4.6
 		reviews: 5,
-	}
-=======
-		implementationDetails: 'Connectors + scan jobs + exports',
-		launchDate: '2025-08-20',
-		customers: 13;
-		rating: 4 && 4.6;
-		reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'api-breaking-change-watcher',
+	}		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
 		tagline: 'Schema diffs with CI gates and notifications',
 		price: '$49',
@@ -5715,21 +5364,12 @@ reviews: 5;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Registry + diff engine + CI'
 		launchDate: '2025-08-20'
 		customers: 12
 		rating: 4 && 4.5
 		reviews: 3,
-	}
-=======
-		implementationDetails: 'Registry + diff engine + CI',
-		launchDate: '2025-08-20',
-		customers: 12;
-		rating: 4 && 4.5;
-		reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'synthetic-journey-monitor',
+	}		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
 		tagline: 'Record and replay user flows with SLO alerts',
 		price: '$39',
@@ -5757,7 +5397,6 @@ reviews: 5;
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Recorder + runner + alerts'
 		launchDate: '2025-08-20'
 		customers: 21
@@ -5769,22 +5408,7 @@ reviews: 5;
 		tagline: 'Detect over-privileged access and propose least-privilege policies'
 		price: '$79'
 		period: '/month'
-  description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'
-=======
-		implementationDetails: 'Recorder + runner + alerts',
-		launchDate: '2025-08-20',
-		customers: 21;
-		rating: 4 && 4.5;
-reviews: 6;
-	};
-		id: 'iam-permission-analyzer',
-		name: 'IAM Permission Analyzer',
-		tagline: 'Detect over-privileged access and propose least-privilege policies',
-		price: '$79',
-		period: '/month',
-  description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
+  description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
 		popular: true;
 		icon: '';
 		color: 'from-blue-700 to-slate-800'
@@ -5806,7 +5430,6 @@ reviews: 6;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Collector + analyzer + PRs'
 		launchDate: '2025-08-20'
 		customers: 9
@@ -5818,22 +5441,7 @@ reviews: 6;
 		tagline: 'Right-size warehouses and schedule off-peak workloads'
 		price: '$99'
 		period: '/month'
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'
-=======
-		implementationDetails: 'Collector + analyzer + PRs',
-		launchDate: '2025-08-20',
-		customers: 9;
-		rating: 4 && 4.6;
-reviews: 3;
-	};
-		id: 'warehouse-cost-optimizer',
-		name: 'Data Warehouse Cost Optimizer',
-		tagline: 'Right-size warehouses and schedule off-peak workloads',
-		price: '$99',
-		period: '/month',
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
+  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
 		popular: true;
 		icon: '';
 		color: 'from-indigo-700 to-violet-800'
@@ -5855,7 +5463,6 @@ reviews: 3;
 		variant: 'network-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Analyzer + simulator + PRs'
 		launchDate: '2025-08-20'
 		customers: 7
@@ -5867,22 +5474,7 @@ reviews: 3;
 		tagline: 'Track sender reputation and run inbox placement tests'
 		price: '$39'
 		period: '/month'
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-=======
-		implementationDetails: 'Analyzer + simulator + PRs',
-		launchDate: '2025-08-20',
-		customers: 7;
-		rating: 4 && 4.5;
-reviews: 3;
-	};
-		id: 'email-warmup-monitor',
-		name: 'Email Warmup & Reputation Monitor',
-		tagline: 'Track sender reputation and run inbox placement tests',
-		price: '$39',
-		period: '/month',
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
+  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
 		popular: false;
 		icon: '';
 		color: 'from-orange-600 to-rose-700'
@@ -5904,21 +5496,12 @@ reviews: 3;
 		variant: 'holographic-matrix'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Warmup + tests + alerts'
 		launchDate: '2025-08-20'
 		customers: 16
 		rating: 4 && 4.5
 		reviews: 4,
-	}
-=======
-		implementationDetails: 'Warmup + tests + alerts',
-		launchDate: '2025-08-20',
-		customers: 16;
-		rating: 4 && 4.5;
-		reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		id: 'ai-meeting-to-ticket',
+	}		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
 		tagline: 'Turn meeting action items into Jira/GitHub tickets',
 		price: '$25',
@@ -5946,21 +5529,12 @@ reviews: 3;
 		variant: 'ai-futuristic'
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Transcribe + extract + tickets'
 		launchDate: '2025-08-20'
 		customers: 24
 		rating: 4 && 4.6
 		reviews: 6,
-	}
-=======
-		implementationDetails: 'Transcribe + extract + tickets',
-		launchDate: '2025-08-20',
-		customers: 24;
-		rating: 4 && 4.6;
-		reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+	}];
   id: 'ai - email - responder',
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support'
@@ -5991,21 +5565,12 @@ reviews: 3;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
   launch_date: '2025 - 08 - 20'
   customers: 48
   rating: 4.7
   reviews: 12,
-}
-=======
-  implementation_details: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
-  launch_date: '2025 - 08 - 20',
-  customers: 48;
-  rating: 4.7;
-  reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'mobile - survey - studio',
+}  id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics'
   price: '$19'
@@ -6035,21 +5600,12 @@ reviews: 3;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Survey builder + delivery channels + analytics + export'
   launch_date: '2025 - 08 - 20'
   customers: 22
   rating: 4.6
   reviews: 9,
-}
-=======
-  implementation_details: 'Survey builder + delivery channels + analytics + export',
-  launch_date: '2025 - 08 - 20',
-  customers: 22;
-  rating: 4.6;
-  reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'niche - productivity - planner',
+}  id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks'
   price: '$12',
@@ -6079,21 +5635,12 @@ reviews: 3;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Templates + KPI widgets + export'
   launch_date: '2025 - 08 - 20'
   customers: 18
   rating: 4.5
   reviews: 7,
-}
-=======
-  implementation_details: 'Templates + KPI widgets + export',
-  launch_date: '2025 - 08 - 20',
-  customers: 18;
-  rating: 4.5;
-  reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'event - management - dashboard',
+}  id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics'
   price: '$49',
@@ -6123,21 +5670,12 @@ reviews: 3;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Ticketing + agenda + comms + analytics'
   launch_date: '2025 - 08 - 20'
   customers: 31
   rating: 4.7
   reviews: 11,
-}
-=======
-  implementation_details: 'Ticketing + agenda + comms + analytics',
-  launch_date: '2025 - 08 - 20',
-  customers: 31;
-  rating: 4.7;
-  reviews: 11};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'affiliate - tracking - suite',
+}  id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts'
   price: '$29',
@@ -6165,21 +5703,12 @@ reviews: 3;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Link generator + rules + exports'
   launch_date: '2025 - 08 - 20'
   customers: 12
   rating: 4.5
   reviews: 5,
-}
-=======
-  implementation_details: 'Link generator + rules + exports',
-  launch_date: '2025 - 08 - 20',
-  customers: 12;
-  rating: 4.5;
-  reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'smb - analytics - lite',
+}  id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity'
   price: '$15'
@@ -6207,21 +5736,12 @@ reviews: 3;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Tracker script + dashboard'
   launch_date: '2025 - 08 - 20'
   customers: 40
   rating: 4.6
   reviews: 8,
-}
-=======
-  implementation_details: 'Tracker script + dashboard',
-  launch_date: '2025 - 08 - 20',
-  customers: 40;
-  rating: 4.6;
-  reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'it - helpdesk - portal',
+}  id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal'
   price: '$59',
@@ -6249,21 +5769,12 @@ reviews: 3;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Ticketing + KB + SLAs + reports'
   launch_date: '2025 - 08 - 20'
   customers: 16
   rating: 4.7
   reviews: 6,
-}
-=======
-  implementation_details: 'Ticketing + KB + SLAs + reports',
-  launch_date: '2025 - 08 - 20',
-  customers: 16;
-  rating: 4.7;
-  reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'ecommerce - returns - manager',
+}  id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
   tagline: 'Customer - friendly returns with labels and status tracking',
   price: '$39',
@@ -6291,7 +5802,6 @@ reviews: 3;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Portal + labels + analytics'
   launch_date: '2025 - 08 - 20'
   customers: 14
@@ -6307,26 +5817,7 @@ reviews: 3;
   features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics']
   popular: false,
   icon: ''
-  color: 'from - cyan - 600 to - teal - 700'
-=======
-  implementation_details: 'Portal + labels + analytics',
-  launch_date: '2025 - 08 - 20',
-  customers: 14;
-  rating: 4.6;
-reviews: 5;
-};
-  id: 'automated - email - followups',
-  name: 'Automated Email Followups',
-  tagline: 'No - lead - left - behind sequences across inboxes',
-  price: '$15',
-  period: '/month',
-  description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.',
-  features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'];
-  popular: false;
-  icon: '',
-  color: 'from - cyan - 600 to - teal - 700',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  text_color: 'text - cyan - 300',
+  color: 'from - cyan - 600 to - teal - 700'  text_color: 'text - cyan - 300',
   link: 'https://ziontechgroup.com / services / automated - email - followups',
   market_position: 'Lightweight + affordable outreach',
   target_audience: 'Sales, success, support'
@@ -6344,21 +5835,12 @@ reviews: 5;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Sequencer + inbox + analytics'
   launch_date: '2025 - 08 - 20'
   customers: 28
   rating: 4.5
   reviews: 8,
-}
-=======
-  implementation_details: 'Sequencer + inbox + analytics',
-  launch_date: '2025 - 08 - 20',
-  customers: 28;
-  rating: 4.5;
-  reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'podcast - transcription - service',
+}  id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports'
   price: '$12',
@@ -6386,21 +5868,12 @@ reviews: 5;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Uploader + ASR + export'
   launch_date: '2025 - 08 - 20'
   customers: 20
   rating: 4.6
   reviews: 6,
-}
-=======
-  implementation_details: 'Uploader + ASR + export',
-  launch_date: '2025 - 08 - 20',
-  customers: 20;
-  rating: 4.6;
-  reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'ai - seo - content - optimizer',
+}  id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
   tagline: 'Live on - page audits and SEO - aware rewrites',
   price: '$29',
@@ -6428,21 +5901,12 @@ reviews: 5;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Crawler + editor plugin + suggestions'
   launch_date: '2025 - 08 - 20'
   customers: 33
   rating: 4.7
   reviews: 10,
-}
-=======
-  implementation_details: 'Crawler + editor plugin + suggestions',
-  launch_date: '2025 - 08 - 20',
-  customers: 33;
-  rating: 4.7;
-  reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'social - scheduler - ai',
+}  id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform'
   price: '$15',
@@ -6470,21 +5934,12 @@ reviews: 5;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Calendar + generator + queue'
   launch_date: '2025 - 08 - 20'
   customers: 26
   rating: 4.5
   reviews: 7,
-}
-=======
-  implementation_details: 'Calendar + generator + queue',
-  launch_date: '2025 - 08 - 20',
-  customers: 26;
-  rating: 4.5;
-  reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'lead - enrichment - api',
+}  id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain'
   price: '$49'
@@ -6512,21 +5967,12 @@ reviews: 5;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'REST + dashboard + quotas'
   launch_date: '2025 - 08 - 20'
   customers: 9
   rating: 4.4
   reviews: 4,
-}
-=======
-  implementation_details: 'REST + dashboard + quotas',
-  launch_date: '2025 - 08 - 20',
-  customers: 9;
-  rating: 4.4;
-  reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'consent - management - cmp',
+}  id: 'consent - management - cmp',
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs'
   price: '$25',
@@ -6554,21 +6000,12 @@ reviews: 5;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Banner + preferences + logs'
   launch_date: '2025 - 08 - 20'
   customers: 37
   rating: 4.7
   reviews: 10,
-}
-=======
-  implementation_details: 'Banner + preferences + logs',
-  launch_date: '2025 - 08 - 20',
-  customers: 37;
-  rating: 4.7;
-  reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'cookie - scanner - pro',
+}  id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
   tagline: 'Auto - detects cookies + trackers and updates your policy',
   price: '$9',
@@ -6596,21 +6033,12 @@ reviews: 5;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Scanner + policy generator'
   launch_date: '2025 - 08 - 20'
   customers: 19
   rating: 4.5
   reviews: 5,
-}
-=======
-  implementation_details: 'Scanner + policy generator',
-  launch_date: '2025 - 08 - 20',
-  customers: 19;
-  rating: 4.5;
-  reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'statuspage - sla - tracker',
+}  id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
   tagline: 'Track uptime / incidents and publish SLA reports',
   price: '$19',
@@ -6638,21 +6066,12 @@ reviews: 5;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Monitors + incidents + pages'
   launch_date: '2025 - 08 - 20'
   customers: 11
   rating: 4.4
   reviews: 3,
-}
-=======
-  implementation_details: 'Monitors + incidents + pages',
-  launch_date: '2025 - 08 - 20',
-  customers: 11;
-  rating: 4.4;
-  reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'agentic - lead - qualifier',
+}  id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
   tagline: 'Website chat agent that pre - qualifies and routes leads',
   price: '$29',
@@ -6680,21 +6099,12 @@ reviews: 5;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Widget + flows + routing'
   launch_date: '2025 - 08 - 20'
   customers: 23
   rating: 4.6
   reviews: 7,
-}
-=======
-  implementation_details: 'Widget + flows + routing',
-  launch_date: '2025 - 08 - 20',
-  customers: 23;
-  rating: 4.6;
-  reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'gdpr - dsar - portal - lite',
+}  id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests'
   price: '$49',
@@ -6722,21 +6132,12 @@ reviews: 5;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Portal + workflow + exports'
   launch_date: '2025 - 08 - 20'
   customers: 10
   rating: 4.5
   reviews: 4,
-}
-=======
-  implementation_details: 'Portal + workflow + exports',
-  launch_date: '2025 - 08 - 20',
-  customers: 10;
-  rating: 4.5;
-  reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'feature - flag - auditor',
+}  id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
   tagline: 'Flag hygiene checks and end - of - life automation',
   price: '$19',
@@ -6764,21 +6165,12 @@ reviews: 5;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Scanner + PR bot'
   launch_date: '2025 - 08 - 20'
   customers: 8
   rating: 4.4
   reviews: 3,
-}
-=======
-  implementation_details: 'Scanner + PR bot',
-  launch_date: '2025 - 08 - 20',
-  customers: 8;
-  rating: 4.4;
-  reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'postgres - index - advisor - pro',
+}  id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
   tagline: 'Index recommendations and controlled PR rollouts',
   price: '$79',
@@ -6806,7 +6198,6 @@ reviews: 5;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Collector + advisor + PRs'
   launch_date: '2025 - 08 - 20'
   customers: 15
@@ -6818,22 +6209,7 @@ reviews: 5;
   tagline: 'Move objects between storage classes to cut costs'
   price: '$59'
   period: '/month'
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-=======
-  implementation_details: 'Collector + advisor + PRs',
-  launch_date: '2025 - 08 - 20',
-  customers: 15;
-  rating: 4.6;
-reviews: 5;
-};
-  id: 's3 - lifecycle - optimizer',
-  name: 'S3 Lifecycle Optimizer',
-  tagline: 'Move objects between storage classes to cut costs',
-  price: '$59',
-  period: '/month',
-  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
+  description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'  features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
   popular: false;
   icon: '';
   color: 'from - emerald - 700 to - teal - 800'
@@ -6855,21 +6231,12 @@ reviews: 5;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Analyzer + simulator + rule export'
   launch_date: '2025 - 08 - 20'
   customers: 17
   rating: 4.5
   reviews: 4,
-}
-=======
-  implementation_details: 'Analyzer + simulator + rule export',
-  launch_date: '2025 - 08 - 20',
-  customers: 17;
-  rating: 4.5;
-  reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'pii - discovery - scanner',
+}  id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
   price: '$89',
@@ -6897,21 +6264,12 @@ reviews: 5;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Connectors + scan jobs + exports'
   launch_date: '2025 - 08 - 20'
   customers: 13
   rating: 4.6
   reviews: 5,
-}
-=======
-  implementation_details: 'Connectors + scan jobs + exports',
-  launch_date: '2025 - 08 - 20',
-  customers: 13;
-  rating: 4.6;
-  reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'api - breaking - change - watcher',
+}  id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
   tagline: 'Schema diffs with CI gates and notifications',
   price: '$49',
@@ -6939,21 +6297,12 @@ reviews: 5;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Registry + diff engine + CI'
   launch_date: '2025 - 08 - 20'
   customers: 12
   rating: 4.5
   reviews: 3,
-}
-=======
-  implementation_details: 'Registry + diff engine + CI',
-  launch_date: '2025 - 08 - 20',
-  customers: 12;
-  rating: 4.5;
-  reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'synthetic - journey - monitor',
+}  id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
   tagline: 'Record and replay user flows with SLO alerts',
   price: '$39',
@@ -6981,7 +6330,6 @@ reviews: 5;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Recorder + runner + alerts'
   launch_date: '2025 - 08 - 20'
   customers: 21
@@ -6993,22 +6341,7 @@ reviews: 5;
   tagline: 'Detect over - privileged access and propose least - privilege policies'
   price: '$79'
   period: '/month'
-  description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'
-=======
-  implementation_details: 'Recorder + runner + alerts',
-  launch_date: '2025 - 08 - 20',
-  customers: 21;
-  rating: 4.5;
-reviews: 6;
-};
-  id: 'iam - permission - analyzer',
-  name: 'IAM Permission Analyzer',
-  tagline: 'Detect over - privileged access and propose least - privilege policies',
-  price: '$79',
-  period: '/month',
-  description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
+  description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'  features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
   popular: true;
   icon: '';
   color: 'from - blue - 700 to - slate - 800'
@@ -7030,7 +6363,6 @@ reviews: 6;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Collector + analyzer + PRs'
   launch_date: '2025 - 08 - 20'
   customers: 9
@@ -7042,22 +6374,7 @@ reviews: 6;
   tagline: 'Right - size warehouses and schedule off - peak workloads'
   price: '$99'
   period: '/month'
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'
-=======
-  implementation_details: 'Collector + analyzer + PRs',
-  launch_date: '2025 - 08 - 20',
-  customers: 9;
-  rating: 4.6;
-reviews: 3;
-};
-  id: 'warehouse - cost - optimizer',
-  name: 'Data Warehouse Cost Optimizer',
-  tagline: 'Right - size warehouses and schedule off - peak workloads',
-  price: '$99',
-  period: '/month',
-  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
+  description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'  features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
   popular: true;
   icon: '';
   color: 'from - indigo - 700 to - violet - 800'
@@ -7079,7 +6396,6 @@ reviews: 3;
   variant: 'network - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Analyzer + simulator + PRs'
   launch_date: '2025 - 08 - 20'
   customers: 7
@@ -7091,22 +6407,7 @@ reviews: 3;
   tagline: 'Track sender reputation and run inbox placement tests'
   price: '$39'
   period: '/month'
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-=======
-  implementation_details: 'Analyzer + simulator + PRs',
-  launch_date: '2025 - 08 - 20',
-  customers: 7;
-  rating: 4.5;
-reviews: 3;
-};
-  id: 'email - warmup - monitor',
-  name: 'Email Warmup & Reputation Monitor',
-  tagline: 'Track sender reputation and run inbox placement tests',
-  price: '$39',
-  period: '/month',
-  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
+  description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'  features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
   popular: false;
   icon: '';
   color: 'from - orange - 600 to - rose - 700'
@@ -7128,21 +6429,12 @@ reviews: 3;
   variant: 'holographic - matrix'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Warmup + tests + alerts'
   launch_date: '2025 - 08 - 20'
   customers: 16
   rating: 4.5
   reviews: 4,
-}
-=======
-  implementation_details: 'Warmup + tests + alerts',
-  launch_date: '2025 - 08 - 20',
-  customers: 16;
-  rating: 4.5;
-  reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: 'ai - meeting - to - ticket',
+}  id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
   tagline: 'Turn meeting action items into Jira / GitHub tickets',
   price: '$25',
@@ -7170,7 +6462,6 @@ reviews: 3;
   variant: 'ai - futuristic'
   contact_info: contact;
   real_implementation: true;
-<<<<<<< HEAD
   implementation_details: 'Transcribe + extract + tickets'
   launch_date: '2025 - 08 - 20'
   customers: 24
@@ -7184,25 +6475,7 @@ reviews: 3;
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'}
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
-=======
-  implementation_details: 'Transcribe + extract + tickets',
-  launch_date: '2025 - 08 - 20',
-  customers: 24;
-  rating: 4.6;
-  reviews: 6};
-		rating: 4.6;
-		reviews: 6;
-// const contact = {
-;
-};
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
-	website: 'https://ziontechgroup.com'};
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	{,
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,	{,
 		id: 'ai-email-responder'
 		name: 'AI Email Responder',
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
@@ -7233,7 +6506,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'network-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48,
@@ -7242,19 +6514,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	}
 	{
 		id: 'mobile-survey-studio'
-		name: 'Mobile Survey Studio',
-=======
-		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';
-		launchDate: '2025-08-20';
-		customers: 48;
-		rating: 4.7};
-		reviews: 12};
-	};
-	{;
-		id: 'mobile-survey-studio';
-		name: 'Mobile Survey Studio';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
+		name: 'Mobile Survey Studio',		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
 		price: '$19';
 		period: '/month';
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
@@ -7282,7 +6542,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'holographic-matrix';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22,
@@ -7291,19 +6550,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	}
 	{
 		id: 'niche-productivity-planner'
-		name: 'Niche Productivity Planner',
-=======
-		implementationDetails: 'Survey builder + delivery channels + analytics + export';
-		launchDate: '2025-08-20';
-		customers: 22;
-		rating: 4.6};
-		reviews: 9};
-	};
-	{;
-		id: 'niche-productivity-planner';
-		name: 'Niche Productivity Planner';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
+		name: 'Niche Productivity Planner',		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
 		price: '$12'
 		period: '/month',
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
@@ -7331,7 +6578,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18,
@@ -7340,19 +6586,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	}
 	{
 		id: 'event-management-dashboard'
-		name: 'Event Management Dashboard',
-=======
-		implementationDetails: 'Templates + KPI widgets + export';
-		launchDate: '2025-08-20';
-		customers: 18;
-		rating: 4.5};
-		reviews: 7};
-	};
-	{;
-		id: 'event-management-dashboard';
-		name: 'Event Management Dashboard';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Tickets, scheduling, comms, and post-event analytics';
+		name: 'Event Management Dashboard',		tagline: 'Tickets, scheduling, comms, and post-event analytics';
 		price: '$49'
 		period: '/month',
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
@@ -7380,20 +6614,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'network-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31,
 		rating: 4.7}
-		reviews: 11}
-=======
-		implementationDetails: 'Ticketing + agenda + comms + analytics';
-		launchDate: '2025-08-20';
-		customers: 31;
-		rating: 4.7};
-		reviews: 11};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		popula,
+		reviews: 11}		popula,
   r: true,
 		ico,
   n: '',
@@ -11157,7 +10382,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   s://ziontechgroup.com'
 }
 export const,
-<<<<<<< HEAD
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
@@ -11295,170 +10519,16 @@ export const,
   s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-=======
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 12};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 9};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 7};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 11};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 8};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 6};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 8};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 6};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 10};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 7};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 10};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 7};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 6};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		review,
+  g: 4.6}		review,
   s: 6};
 	};
 ];
-<<<<<<< HEAD
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com'}
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
-=======
-;
-// const contact = {
-;
-};
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
-	website: 'https://ziontechgroup.com'};
-export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	{,
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,	{,
 		id: 'ai-email-responder'
 		name: 'AI Email Responder',
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support';
@@ -11489,7 +10559,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'network-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48,
@@ -11498,19 +10567,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	}
 	{
 		id: 'mobile-survey-studio'
-		name: 'Mobile Survey Studio',
-=======
-		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';
-		launchDate: '2025-08-20';
-		customers: 48;
-		rating: 4.7};
-		reviews: 12};
-	};
-	{;
-		id: 'mobile-survey-studio';
-		name: 'Mobile Survey Studio';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
+		name: 'Mobile Survey Studio',		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
 		price: '$19';
 		period: '/month';
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.';
@@ -11538,7 +10595,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'holographic-matrix';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22,
@@ -11547,19 +10603,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	}
 	{
 		id: 'niche-productivity-planner'
-		name: 'Niche Productivity Planner',
-=======
-		implementationDetails: 'Survey builder + delivery channels + analytics + export';
-		launchDate: '2025-08-20';
-		customers: 22;
-		rating: 4.6};
-		reviews: 9};
-	};
-	{;
-		id: 'niche-productivity-planner';
-		name: 'Niche Productivity Planner';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
+		name: 'Niche Productivity Planner',		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
 		price: '$12'
 		period: '/month',
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.';
@@ -11587,7 +10631,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'ai-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18,
@@ -11596,19 +10639,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	}
 	{
 		id: 'event-management-dashboard'
-		name: 'Event Management Dashboard',
-=======
-		implementationDetails: 'Templates + KPI widgets + export';
-		launchDate: '2025-08-20';
-		customers: 18;
-		rating: 4.5};
-		reviews: 7};
-	};
-	{;
-		id: 'event-management-dashboard';
-		name: 'Event Management Dashboard';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		tagline: 'Tickets, scheduling, comms, and post-event analytics';
+		name: 'Event Management Dashboard',		tagline: 'Tickets, scheduling, comms, and post-event analytics';
 		price: '$49'
 		period: '/month',
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.';
@@ -11636,29 +10667,17 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		variant: 'network-futuristic';
 		contactInfo: contact;
 		realImplementation: true;
-<<<<<<< HEAD
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31,
 		rating: 4.7}
 		reviews: 11}
 // const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-		implementationDetails: 'Ticketing + agenda + comms + analytics';
-		launchDate: '2025-08-20';
-		customers: 31;
-		rating: 4.7};
-		reviews: 11};
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}	websit,
   e: 'http,
   s://ziontechgroup.com'
 }
 export const,
-<<<<<<< HEAD
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
@@ -11796,148 +10815,7 @@ export const,
   s: 4}
 	}
 	{/* TODO: Fix JSX expression */}
-  g: 4.6}
-=======
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 12};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 9};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 7};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 11};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 8};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 6};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 8};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 6};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 10};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 7};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.7};
-		review,
-  s: 10};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 7};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.4};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 5};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 6};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 3};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.5};
-		review,
-  s: 4};
-	};
-	{/* TODO: Fix JSX expression */};
-  g: 4.6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-		review,
+  g: 4.6}		review,
   s: 6};
 	};
 ];
@@ -15349,7 +14227,6 @@ export const,
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.7} review,
@@ -15405,71 +14282,11 @@ export const,
   g: 4.5} review,
   s: 3} } {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  g: 4.6} review,
+  s: 4} } {/* TODO: Fix JSX expression */}  g: 4.6} review,
   s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.7} review,
@@ -15528,63 +14345,3 @@ export const,
   s: 4} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 6} } ]; '
-=======
-  s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 6} } ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

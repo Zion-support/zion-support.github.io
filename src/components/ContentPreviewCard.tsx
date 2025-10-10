@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 interface ContentPreviewCardProps {
     // TODO: Add content
   }
-}
-=======
-interface ContentPreviewCardProps {// TODO: Add content}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  i,
+}  i,
   d: string,
     titl,
   e: string,
@@ -26,36 +20,18 @@ interface ContentPreviewCardProps {// TODO: Add content}
   e: string
   featured?: boolean,
   stats?: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  view,
+}  view,
   s: number,,
     engagemen,
-<<<<<<< HEAD
   t: number,
   }
   excerpt?: string;
-}
-=======
-  t: number};
-  excerpt?: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const,
+}const,
   ContentPreviewCard: React.FC,
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // id,
+}  // id,
 //   title,
 //   description,
 //   category,
@@ -68,7 +44,6 @@ const,
 //   excerpt;)
 }) => {if (num >= 1000) {}
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
       return (num / 1000).toFixed(1) + 'k';
@@ -83,22 +58,7 @@ const,
   colors: {/* TODO: Fix JSX expression */}
   y: string]: string } = {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-      return (num / 1000).toFixed(1) + 'k'};
-    return num.toString()};
-  const getCategoryColor = (categor)
-  y: string): string => {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-    const,
-  colors: {/* TODO: Fix JSX expression */}
-  y: string]: string } = {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      'Success Story': 'from-green-500 to-emerald-600',
+}      'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
       'AI Agents': 'from-orange-500 to-red-600',
@@ -114,13 +74,8 @@ const,
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
-<<<<<<< HEAD
   O: Add content,
-}
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      featured ? 'ring-2 ring-indigo-200' : ''
+}      featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>
       {/* Image/Visual Header */}
           `
@@ -204,12 +159,7 @@ const,
         </div>
       </div>
     </article>
-<<<<<<< HEAD
   );
 }
 export default ContentPreviewCard;"`
   </ContentPreviewCardProps>
-=======
-  )};
-export default ContentPreviewCard;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

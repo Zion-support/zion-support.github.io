@@ -3,19 +3,9 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const PricingPage: React.FC = () => {
   const plans = [
-    {
-=======
-;
-const PricingPage: React.FC = () => {
-};
-const plans = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      name: 'Starter',
+    {      name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
       price: '$2,500',
       period: '/month',
@@ -83,16 +73,8 @@ const plans = [
       popular: false
     };
   ];
-<<<<<<< HEAD
   const addOns = [
-    {
-=======
-;
-const addOns = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      name: 'Additional AI Models',
+    {      name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
       price: '$500',
       period: '/model/month'
@@ -116,16 +98,8 @@ const addOns = [
       period: '/day'
     };
   ];
-<<<<<<< HEAD
   const faqs = [
-    {
-=======
-;
-const faqs = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      question: 'Can I change my plan at any time?',
+    {      question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
     },
         {
@@ -182,23 +156,13 @@ const faqs = [
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-<<<<<<< HEAD
         }
     }
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      {/* Hero Section */}
-=======
-        }};
-  };
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="relative py-20 px-4">
+      {/* Hero Section */}      <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Simple <span className="text-cyan-400">Pricing</span>
@@ -208,12 +172,7 @@ const faqs = [
           </p>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Pricing Plans */}
-=======
-      {/* Pricing Plans */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-white">
+      {/* Pricing Plans */}      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
@@ -222,25 +181,13 @@ const faqs = [
                 <div key={index};
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                     plan.popular ? colors.border : 'border-gray-200'
-<<<<<<< HEAD
                   } overflow-hidden`}
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
                       Most Popular;
   </
-                  )}
-=======
-                  } overflow-hidden`};>
-);
-};
-                  {plan.popular && (
-                    <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular
-                    </div>
-                  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
+                  )}                  <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
                     <div className="text-center mb-8">
                       <div className={`w-16 h-16 ${colors.light} rounded-full flex items-center justify-center mx-auto mb-4`}>
                         <plan .icon className={`w-8 h-8 ${colors.textLight}`} />
@@ -275,15 +222,9 @@ const faqs = [
                           ))};
                         </ul>
                       </div>
-<<<<<<< HEAD
                     )}
                     <Link
-                      to="/contact"
-=======
-                    )};
-                    <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                      className={`w-full ${
+                      to="/contact"                      className={`w-full ${
                         plan.popular
                           ? `${colors.bg} hover:opacity-90 text-white`
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
@@ -292,21 +233,12 @@ const faqs = [
                     </Link>
                   </div>
                 </div>
-<<<<<<< HEAD
               );
             })}
           </div>
         </div>
       </section>
-      {/* Add-ons */}
-=======
-              )})};
-          </div>
-        </div>
-      </section>
-      {/* Add-ons */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gray-50">
+      {/* Add-ons */}      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -330,12 +262,7 @@ const faqs = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* FAQ Section */}
-=======
-      {/* FAQ Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-white">
+      {/* FAQ Section */}      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -355,12 +282,7 @@ const faqs = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+      {/* CTA Section */}      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
@@ -369,22 +291,13 @@ const faqs = [
             Choose your plan and start transforming your business with AI and IT solutions today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Start Free Trial
   </
             <Link
-              to="/demo"
-=======
-            <Link to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Start Free Trial
-            </Link>
-            <Link to="/demo"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
+              to="/demo"              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Schedule Demo
   </
           </div>
@@ -392,7 +305,6 @@ const faqs = [
       </section>
       <Footer />
     </div>
-<<<<<<< HEAD
   ),
 }
 export default PricingPage;
@@ -403,7 +315,3 @@ export default PricingPage;
   </p>
   </h2>
   </div>
-=======
-  )};
-export default PricingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

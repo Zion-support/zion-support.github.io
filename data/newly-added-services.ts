@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
   {const contact =,
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup && ziontechgroup.com'}
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
-=======
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
-	website: 'https://ziontechgroup && ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const contact =,
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,const contact =,
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -25,27 +13,15 @@ const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'}
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
-=======
-  website: 'https://ziontechgroup.com'};
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {const contact =
+export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,  {const contact =
 	mobile: '+1 302 464 0950'
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {const contact =,
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup && ziontechgroup.com'}
-=======
-	address: '364 E Main St STE 1008 Middletown DE 19709'};
-	website: 'https://ziontechgroup && ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
+	website: 'https://ziontechgroup && ziontechgroup.com'}export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     id: 'managed-ml-feature-store-starter'
     name: 'Managed ML Feature Store Starter'
     tagline: 'Production-ready feature store with governance and lineage'
@@ -89,16 +65,9 @@ const contact =
   e: 'http,
   s://ziontechgroup.com'};
 export const,
-<<<<<<< HEAD
   newlyAddedServices: EnhancedRealMicroSaasService[] = [,
   {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  newlyAddedServices: EnhancedRealMicroSaasService[] = [;
-  {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}	websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
 }
@@ -239,7 +208,6 @@ export const,
     roi: 'Reduce feature delivery time by 6080%',
     competitors: ['Tecton, Feast DIY'];
     marketSize: '$5B ML platform tooling',
-<<<<<<< HEAD
     growthRate: '30% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact
@@ -249,19 +217,7 @@ export const,
     customers: 7
     rating: 4 && 4.7
     reviews: 4,
-  }
-=======
-    growthRate: '30% CAGR',;
-variant: 'holographic-matrix',
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Provisioned infra, SDKs, CI templates, and dashboards.',
-    launchDate: '2025-03-15',
-    customers: 7;
-    rating: 4 && 4.7;
-    reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'agentic-browser-recorder-pro',
+  }    id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries'
     price: '$89',
@@ -324,7 +280,6 @@ variant: 'holographic-matrix',
     roi: 'Reduce feature delivery time by 6080%',
     competitors: ['Tecton, Feast DIY'];
     market_size: '$5B ML platform tooling',
-<<<<<<< HEAD
     growth_rate: '30% CAGR',
     variant: 'holographic - matrix',
     contact_info: contact
@@ -334,19 +289,7 @@ variant: 'holographic-matrix',
     customers: 7
     rating: 4.7
     reviews: 4,
-  }
-=======
-    growth_rate: '30% CAGR',;
-variant: 'holographic - matrix',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Provisioned infra, SDKs, CI templates, and dashboards.',
-    launch_date: '2025 - 03 - 15',
-    customers: 7;
-    rating: 4.7;
-    reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'agentic - browser - recorder - pro',
+  }    id: 'agentic - browser - recorder - pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries'
     price: '$89',
@@ -372,7 +315,6 @@ variant: 'holographic - matrix',
     roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI.Vision'];
     market_size: '$12B RPA',
-<<<<<<< HEAD
     growth_rate: '25% CAGR',
     variant: 'network - futuristic',
     contact_info: contact
@@ -382,19 +324,7 @@ variant: 'holographic - matrix',
     customers: 5
     rating: 4.6
     reviews: 3,
-  }
-=======
-    growth_rate: '25% CAGR',;
-variant: 'network - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Recorder UI, compiler, runner fleet, replay UIs.',
-    launch_date: '2025 - 03 - 16',
-    customers: 5;
-    rating: 4.6;
-    reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'sso - scim - accelerator',
+  }    id: 'sso - scim - accelerator',
     name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
     price: '$299',
@@ -407,7 +337,6 @@ variant: 'network - futuristic',
     roi: 'Cut p95 latency by 2560% in 30 days',
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics'];
     market_size: '$12B APM',
-<<<<<<< HEAD
     growth_rate: '18% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact
@@ -417,19 +346,7 @@ variant: 'network - futuristic',
     customers: 12
     rating: 4.8
     reviews: 9,
-  }
-=======
-    growth_rate: '18% CAGR',;
-variant: 'quantum - matrix',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Synthetic test agents, results store, optimization engine, and IaC exporter.',
-    launch_date: '2025 - 03 - 01',
-    customers: 12;
-    rating: 4.8;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - rag - starter - blueprint',
+  }    id: 'ai - rag - starter - blueprint',
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production - ready retrieval augmented generation stack with evals',
     price: '$149',
@@ -467,7 +384,6 @@ variant: 'quantum - matrix',
     market_size: '$40 B GenAI apps'
     growth_rate: '45% CAGR'
     variant: 'quantum - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Templates, infra modules, eval notebooks, and dashboards.'
@@ -475,17 +391,7 @@ variant: 'quantum - matrix',
     customers: 15
     rating: 4.8
     reviews: 7,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Templates, infra modules, eval notebooks, and dashboards.',
-    launch_date: '2025 - 03 - 08',
-    customers: 15;
-    rating: 4.8;
-    reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'browser - automation - copilot',
+  }    id: 'browser - automation - copilot',
     name: 'Browser Automation Copilot',
     tagline: 'Headless browser workflows with resilient selectors and retries',
     price: '$79',
@@ -520,7 +426,6 @@ variant: 'quantum - matrix',
     reviews: 12,
     competitors: ['Browserless, Superblocks, UI.Vision'];
     market_size: '$12B RPA',
-<<<<<<< HEAD
     growth_rate: '25% CAGR',
     variant: 'network - futuristic',
     contact_info: contact
@@ -530,19 +435,7 @@ variant: 'quantum - matrix',
     customers: 22
     rating: 4.6
     reviews: 12,
-  }
-=======
-    growth_rate: '25% CAGR',;
-variant: 'network - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Runner fleet, state store, DSL compiler, and replay UI.',
-    launch_date: '2025 - 03 - 05',
-    customers: 22;
-    rating: 4.6;
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'cloud - cost - anomaly - guard',
+  }    id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
     price: '$69',
@@ -579,21 +472,12 @@ variant: 'network - futuristic',
     variant: 'holographic - advanced'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'ETL + anomaly models + alerting with IaC guidance.'
     launch_date: '2025 - 03 - 09'
     customers: 11
     rating: 4 && 4.7
     reviews: 5,
-  }
-=======
-    implementation_details: 'ETL + anomaly models + alerting with IaC guidance.',
-    launch_date: '2025 - 03 - 09',
-    customers: 11;
-    rating: 4 && 4.7;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'serverless-batch-orchestrator-pro',
+  }    id: 'serverless-batch-orchestrator-pro',
     name: 'Serverless Batch Orchestrator',
     tagline: 'Cron-scale workflows with retries, DLQs, and cost-aware scheduling'
     price: '$79',
@@ -627,17 +511,10 @@ variant: 'network - futuristic',
     launchDate: '2025-02-10'
     customers: 34;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 14
     rating: 4.7
     reviews: 5,
-  }
-=======
-    reviews: 14;
-    rating: 4.7;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'serverless - batch - orchestrator - pro',
+  }    id: 'serverless - batch - orchestrator - pro',
     name: 'Serverless Batch Orchestrator',
     tagline: 'Cron - scale workflows with retries, DLQs, and cost - aware scheduling'
     price: '$79',
@@ -663,7 +540,6 @@ variant: 'network - futuristic',
     roi: 'Replace bespoke cron boxes and reduce toil by 80%',
     competitors: ['Temporal Cloud, Airflow Managed, Prefect Cloud'];
     market_size: '$8B workflow orchestration',
-<<<<<<< HEAD
     growth_rate: '20% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact
@@ -674,21 +550,7 @@ variant: 'network - futuristic',
     rating: 4.6
     reviews: 14,
   }
-    id: 'seo - technical - auditor - pro'
-=======
-    growth_rate: '20% CAGR',;
-variant: 'ai - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Managed specs, runners, and observability with audit trails.',
-    launch_date: '2025 - 02 - 10',
-    customers: 34;
-    rating: 4.6;
-reviews: 14;
-  };
-    id: 'seo - technical - auditor - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'SEO Technical Auditor Pro',
+    id: 'seo - technical - auditor - pro'    name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
     price: '$59',
     link: 'https://ziontechgroup && ziontechgroup.com/services/seo-technical-auditor-pro',
@@ -724,7 +586,6 @@ reviews: 14;
     roi: 'Lift organic traffic by 1030% in 90 days',
     competitors: ['Screaming Frog, Deepcrawl, Ahrefs Site Audit'];
     market_size: '$6B SEO tooling',
-<<<<<<< HEAD
     growth_rate: '16% CAGR',
     variant: 'holographic - advanced',
     contact_info: contact
@@ -734,19 +595,7 @@ reviews: 14;
     customers: 58
     rating: 4.7
     reviews: 31,
-  }
-=======
-    growth_rate: '16% CAGR',;
-variant: 'holographic - advanced',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Crawl scheduler, render lab, rules engine, and PR bot.',
-    launch_date: '2025 - 02 - 15',
-    customers: 58;
-    rating: 4.7;
-    reviews: 31};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'gdpr - cookie - consent - manager - pro',
+  }    id: 'gdpr - cookie - consent - manager - pro',
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
     price: '$49',
@@ -785,21 +634,12 @@ variant: 'holographic - advanced',
     variant: 'holographic'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Hosted CMP with edge storage and region - aware rendering.'
     launch_date: '2025 - 03 - 03'
     customers: 40
     rating: 4 && 4.5
     reviews: 16,
-  }
-=======
-    implementation_details: 'Hosted CMP with edge storage and region - aware rendering.',
-    launch_date: '2025 - 03 - 03',
-    customers: 40;
-    rating: 4 && 4.5;
-    reviews: 16};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai-meeting-notes-summarizer-pro',
+  }    id: 'ai-meeting-notes-summarizer-pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto-recording, diarization, action items, and CRM sync'
     price: '$39',
@@ -825,7 +665,6 @@ variant: 'holographic - advanced',
     roi: 'Save 35 hours per week per user',
     competitors: ['Fireflies && Fireflies.ai, Otter && Otter.ai, Avoma'];
     marketSize: '$5B meeting AI',
-<<<<<<< HEAD
     growthRate: '28% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact
@@ -835,19 +674,7 @@ variant: 'holographic - advanced',
     customers: 120
     rating: 4 && 4.6
     reviews: 52,
-  }
-=======
-    growthRate: '28% CAGR',;
-variant: 'neural-quantum',
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Recording bot, summarization pipeline, and secure storage.',
-    launchDate: '2025-02-01',
-    customers: 120;
-    rating: 4 && 4.6;
-    reviews: 52};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai-code-migration-assistant-pro',
+  }    id: 'ai-code-migration-assistant-pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation'
     price: '$199',
@@ -870,15 +697,9 @@ variant: 'neural-quantum',
     technology: ['TypeScript, AST, LLM'];
     integrations: ['GitHub, GitLab, Bitbucket'];
     useCases: ['Next && Next.js/React upgrades, Typescript migrations, Policy refactors'];
-<<<<<<< HEAD
     rating: 4.5
     reviews: 16,
-  }
-=======
-    rating: 4.5;
-    reviews: 16};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - meeting - notes - summarizer - pro',
+  }    id: 'ai - meeting - notes - summarizer - pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto - recording, diarization, action items, and CRM sync'
     price: '$39',
@@ -904,7 +725,6 @@ variant: 'neural-quantum',
     roi: 'Save 35 hours per week per user',
     competitors: ['Fireflies.ai, Otter.ai, Avoma'];
     market_size: '$5B meeting AI',
-<<<<<<< HEAD
     growth_rate: '28% CAGR',
     variant: 'neural - quantum',
     contact_info: contact
@@ -914,19 +734,7 @@ variant: 'neural-quantum',
     customers: 120
     rating: 4.6
     reviews: 52,
-  }
-=======
-    growth_rate: '28% CAGR',;
-variant: 'neural - quantum',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Recording bot, summarization pipeline, and secure storage.',
-    launch_date: '2025 - 02 - 01',
-    customers: 120;
-    rating: 4.6;
-    reviews: 52};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - code - migration - assistant - pro',
+  }    id: 'ai - code - migration - assistant - pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation'
     price: '$199',
@@ -956,7 +764,6 @@ variant: 'neural - quantum',
     variant: 'holographic'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'AST - driven codemods with safety rails and CI checks.'
     launch_date: '2025 - 02 - 18'
     customers: 18
@@ -968,22 +775,7 @@ variant: 'neural - quantum',
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms'
     rating: 4.5
     reviews: 10,
-  }
-=======
-    implementation_details: 'AST - driven codemods with safety rails and CI checks.',
-    launch_date: '2025 - 02 - 18',
-    customers: 18;
-    rating: 4 && 4.5;
-    reviews: 10};
-    id: 'incident-statuspage-automation-pro',
-    name: 'Incident StatusPage Automation',
-tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
-    rating:
-        rating: 4.5;
-    reviews: 10;
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'incident - statuspage - automation - pro',
+  }    id: 'incident - statuspage - automation - pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO - aware updates, RCA templates, and subscriber comms'
     price: '$79',
@@ -1015,13 +807,8 @@ tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
     integrations: ['Statuspage, Freshstatus, Better Uptime'];
     rating: 4 && 4.6,
     integrations: ['Statuspage, Freshstatus, Better Uptime'];
-<<<<<<< HEAD
     reviews: 12,
-  }
-=======
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'multi-cloud-backup-automation-pro',
+  }    id: 'multi-cloud-backup-automation-pro',
     name: 'Multi-Cloud Backup Automation',
     tagline: 'Policy-based snapshots, immutability, and cross-cloud recovery'
     price: '$149',
@@ -1047,7 +834,6 @@ tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
     roi: 'Reduce RTO/RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU'];
     marketSize: '$10B backup & recovery',
-<<<<<<< HEAD
     growthRate: '17% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact
@@ -1057,26 +843,13 @@ tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
     customers: 14
     rating: 4 && 4.7
     reviews: 8,
-  }
-=======
-    growthRate: '17% CAGR',;
-variant: 'quantum-matrix',
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Policy engine, snapshot orchestrator, and drill runner.',
-    launchDate: '2025-03-05',
-    customers: 14;
-    rating: 4 && 4.7;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'customer-feedback-insights-pro',
+  }    id: 'customer-feedback-insights-pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards'
     use_cases: ['Public comms, Internal updates, RCA library'];
     roi: 'Reduce incident comms toil by 70%',
     competitors: ['Atlassian Statuspage, Better Uptime'];
     market_size: '$2B incident tooling',
-<<<<<<< HEAD
     growth_rate: '19% CAGR',
     variant: 'neural - cyberpunk',
     contact_info: contact
@@ -1086,19 +859,7 @@ variant: 'quantum-matrix',
     customers: 25
     rating: 4.6
     reviews: 12,
-  }
-=======
-    growth_rate: '19% CAGR',;
-variant: 'neural - cyberpunk',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'SLO integrations, templates, and messaging pipeline.',
-    launch_date: '2025 - 02 - 22',
-    customers: 25;
-    rating: 4.6;
-    reviews: 12};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'multi - cloud - backup - automation - pro',
+  }    id: 'multi - cloud - backup - automation - pro',
     name: 'Multi - Cloud Backup Automation',
     tagline: 'Policy - based snapshots, immutability, and cross - cloud recovery'
     price: '$149',
@@ -1124,7 +885,6 @@ variant: 'neural - cyberpunk',
     roi: 'Reduce RTO / RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU'];
     market_size: '$10B backup & recovery',
-<<<<<<< HEAD
     growth_rate: '17% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact
@@ -1134,19 +894,7 @@ variant: 'neural - cyberpunk',
     customers: 14
     rating: 4.7
     reviews: 8,
-  }
-=======
-    growth_rate: '17% CAGR',;
-variant: 'quantum - matrix',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Policy engine, snapshot orchestrator, and drill runner.',
-    launch_date: '2025 - 03 - 05',
-    customers: 14;
-    rating: 4.7;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'customer - feedback - insights - pro',
+  }    id: 'customer - feedback - insights - pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards'
     price: '$69',
@@ -1194,7 +942,6 @@ variant: 'quantum - matrix',
     roi: 'Lift retention by 38 pts',
     competitors: ['Thena, Canny, Pendo'];
     market_size: '$7B CX analytics',
-<<<<<<< HEAD
     growth_rate: '21% CAGR',
     variant: 'holographic - advanced',
     contact_info: contact
@@ -1205,21 +952,7 @@ variant: 'quantum - matrix',
     rating: 4.5
     reviews: 24,
   }
-    id: 'ai - sales - sequences - pro'
-=======
-    growth_rate: '21% CAGR',;
-variant: 'holographic - advanced',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Connectors, NLP pipelines, and dashboard.',
-    launch_date: '2025 - 02 - 12',
-    customers: 63;
-    rating: 4.5;
-reviews: 24;
-  };
-    id: 'ai - sales - sequences - pro',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'AI Sales Sequences',
+    id: 'ai - sales - sequences - pro'    name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
     price: '$99',
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-sales-sequences-pro',
@@ -1255,19 +988,11 @@ reviews: 24;
     roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead'];
     market_size: '$11B sales tech',
-<<<<<<< HEAD
     growth_rate: '20% CAGR',
     variant: 'holographic',
     rating: 4 && 4.8
     reviews: 77,
-  }
-=======
-    growth_rate: '20% CAGR',;
-variant: 'holographic',
-    rating: 4 && 4.8;
-    reviews: 77};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'data-pipeline-optimizer-pro',
+  }    id: 'data-pipeline-optimizer-pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards'
     price: '$129',
@@ -1301,7 +1026,6 @@ variant: 'holographic',
     launchDate: '2025-03-02'
     customers: 11;
     rating: 4 && 4.4;
-<<<<<<< HEAD
     reviews: 6
     contact_info: contact
     real_implementation: true,
@@ -1310,18 +1034,7 @@ variant: 'holographic',
     customers: 210
     rating: 4.8
     reviews: 77,
-  }
-=======
-    reviews: 6;
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Template library, sequence runner, and analytics.',
-    launch_date: '2025 - 01 - 28',
-    customers: 210;
-    rating: 4.8;
-    reviews: 77};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'data - pipeline - optimizer - pro',
+  }    id: 'data - pipeline - optimizer - pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards'
     price: '$129',
@@ -1347,7 +1060,6 @@ variant: 'holographic',
     roi: 'Cut pipeline spend by 3050%',
     competitors: ['Monte Carlo, Databand'];
     market_size: '$5B data ops',
-<<<<<<< HEAD
     growth_rate: '23% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact
@@ -1357,19 +1069,7 @@ variant: 'holographic',
     customers: 11
     rating: 4.4
     reviews: 6,
-  }
-=======
-    growth_rate: '23% CAGR',;
-variant: 'quantum - matrix',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Scheduler hooks, profilers, and policy engine.',
-    launch_date: '2025 - 03 - 02',
-    customers: 11;
-    rating: 4.4;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'sso - rapid - integration - pro',
+  }    id: 'sso - rapid - integration - pro',
     name: 'SSO Rapid Integration',
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM',
     price: '$99',
@@ -1395,19 +1095,11 @@ variant: 'quantum - matrix',
     roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'];
     market_size: '$7B identity & access',
-<<<<<<< HEAD
     growth_rate: '19% CAGR',
     variant: 'holographic',
     rating: 4 && 4.7
     reviews: 19,
-  }
-=======
-    growth_rate: '19% CAGR',;
-variant: 'holographic',
-    rating: 4 && 4.7;
-    reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'finops-cost-anomaly-guard',
+  }    id: 'finops-cost-anomaly-guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real-time'
     price: '$129',
@@ -1426,7 +1118,6 @@ variant: 'holographic',
     trialDays: 14,
     setupTime: '1 day'
     category: 'Cloud & FinOps',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Config UI, metadata exchange, and provisioning agent.'
@@ -1434,17 +1125,7 @@ variant: 'holographic',
     customers: 45
     rating: 4.7
     reviews: 19,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Config UI, metadata exchange, and provisioning agent.',
-    launch_date: '2025 - 01 - 30',
-    customers: 45;
-    rating: 4.7;
-    reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'finops - cost - anomaly - guard',
+  }    id: 'finops - cost - anomaly - guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real - time'
     price: '$129',
@@ -1475,7 +1156,6 @@ variant: 'holographic',
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'];
     market_size: '$10B cloud cost optimization',
-<<<<<<< HEAD
     growth_rate: '20% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact
@@ -1485,19 +1165,7 @@ variant: 'holographic',
     customers: 11
     rating: 4.7
     reviews: 6,
-  }
-=======
-    growth_rate: '20% CAGR',;
-variant: 'quantum - matrix',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Connect billing export, train anomaly baselines, configure guardrails and alert routes.',
-    launch_date: '2025 - 03 - 10',
-    customers: 11;
-    rating: 4.7;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'gdpr - dsar - automation - suite',
+  }    id: 'gdpr - dsar - automation - suite',
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
     price: '$199',
@@ -1529,13 +1197,8 @@ variant: 'quantum - matrix',
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
     rating: 4 && 4.8,
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
-<<<<<<< HEAD
     reviews: 5,
-  }
-=======
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'incident-copilot-pro',
+  }    id: 'incident-copilot-pro',
     name: 'Incident Copilot Pro',
     tagline: 'AI-assisted on-call with runbooks, timelines, and auto-postmortems'
     price: '$149',
@@ -1558,7 +1221,6 @@ variant: 'quantum - matrix',
     roi: 'Reduce DSAR processing time by 7090%',
     competitors: ['Transcend, OneTrust, DataGrail'];
     market_size: '$12B privacy ops',
-<<<<<<< HEAD
     growth_rate: '22% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact
@@ -1568,19 +1230,7 @@ variant: 'quantum - matrix',
     customers: 8
     rating: 4.8
     reviews: 5,
-  }
-=======
-    growth_rate: '22% CAGR',;
-variant: 'ai - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Configurable workflows, connectors, and export pipeline with redaction.',
-    launch_date: '2025 - 03 - 12',
-    customers: 8;
-    rating: 4.8;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'incident - copilot - pro',
+  }    id: 'incident - copilot - pro',
     name: 'Incident Copilot Pro',
     tagline: 'AI - assisted on - call with runbooks, timelines, and auto - postmortems'
     price: '$149',
@@ -1608,7 +1258,6 @@ variant: 'ai - futuristic',
     roi: 'Cut MTTR by 2040%',
     integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'];
     competitors: ['FireHydrant, Rootly'];
-<<<<<<< HEAD
     market_size: '$5 B incident mgmt'
     growth_rate: '18% CAGR'
     variant: 'quantum'
@@ -1621,23 +1270,7 @@ variant: 'ai - futuristic',
     customers: 9
     rating: 4.7
     reviews: 4,
-  }
-=======
-market_size: '$5 B incident mgmt',
-    growth_rate: '18% CAGR',
-    variant: 'quantum',
-    rating:
-        rating: 4 && 4.7;
-    reviews: 4;
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Ingestion of alerts, timeline builder, and report generator.',
-    launch_date: '2025 - 03 - 14',
-    customers: 9;
-    rating: 4.7;
-    reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - sales - prospecting - studio',
+  }    id: 'ai - sales - prospecting - studio',
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi - channel outreach with compliance and warm - up',
     price: '$99',
@@ -1669,13 +1302,8 @@ market_size: '$5 B incident mgmt',
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
     rating: 4 && 4.8,
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
-<<<<<<< HEAD
     reviews: 10,
-  }
-=======
-    reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'data-contracts-health-monitor',
+  }    id: 'data-contracts-health-monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams'
     price: '$119',
@@ -1698,7 +1326,6 @@ market_size: '$5 B incident mgmt',
     roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'];
     market_size: '$20B sales tech',
-<<<<<<< HEAD
     growth_rate: '15% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact
@@ -1708,19 +1335,7 @@ market_size: '$5 B incident mgmt',
     customers: 17
     rating: 4.8
     reviews: 10,
-  }
-=======
-    growth_rate: '15% CAGR',;
-variant: 'ai - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Sequencer, warmup checks, and CRM connector pack.',
-    launch_date: '2025 - 03 - 15',
-    customers: 17;
-    rating: 4.8;
-    reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'data - contracts - health - monitor',
+  }    id: 'data - contracts - health - monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams'
     price: '$119',
@@ -1748,7 +1363,6 @@ variant: 'ai - futuristic',
     roi: 'Reduce data incidents by 3050%',
     integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'];
     competitors: ['Monte Carlo, Bigeye, Soda'];
-<<<<<<< HEAD
     market_size: '$6 B data observability'
     growth_rate: '23% CAGR'
     variant: 'quantum'
@@ -1761,23 +1375,7 @@ variant: 'ai - futuristic',
     customers: 6
     rating: 4.6
     reviews: 3,
-  }
-=======
-market_size: '$6 B data observability',
-    growth_rate: '23% CAGR',
-    variant: 'quantum',
-    rating:
-        rating: 4 && 4.6;
-    reviews: 3;
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Registry UI, checks engine, and connectors for lineage & tickets.',
-    launch_date: '2025 - 03 - 16',
-    customers: 6;
-    rating: 4.6;
-    reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - powered - email - responder',
+  }    id: 'ai - powered - email - responder',
     name: 'AI - Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
     price: '$39',
@@ -1815,7 +1413,6 @@ market_size: '$6 B data observability',
     market_size: '$9 B shared inbox'
     growth_rate: '15% CAGR'
     variant: 'ai - futuristic',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'OAuth mail connectors, policy engine, review queues.'
@@ -1823,17 +1420,7 @@ market_size: '$6 B data observability',
     customers: 6
     rating: 4.7
     reviews: 3,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'OAuth mail connectors, policy engine, review queues.',
-    launch_date: '2025 - 03 - 18',
-    customers: 6;
-    rating: 4.7;
-    reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'mobile - first - survey - tool',
+  }    id: 'mobile - first - survey - tool',
     name: 'Mobile - First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real - time analytics',
     price: '$25',
@@ -1852,7 +1439,6 @@ market_size: '$6 B data observability',
     marketSize: '$5 B surveys'
     growthRate: '12% CAGR'
     variant: 'holographic-advanced',
-<<<<<<< HEAD
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Survey builder, response store, analytics.'
@@ -1860,17 +1446,7 @@ market_size: '$6 B data observability',
     customers: 3
     rating: 4 && 4.6
     reviews: 2,
-  }
-=======
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Survey builder, response store, analytics.',
-    launchDate: '2025-03-18',
-    customers: 3;
-    rating: 4 && 4.6;
-    reviews: 2};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ecommerce-returns-management-saas',
+  }    id: 'ecommerce-returns-management-saas',
     name: 'Ecommerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics'
     price: '$49',
@@ -1915,7 +1491,6 @@ market_size: '$6 B data observability',
     market_size: '$5 B surveys'
     growth_rate: '12% CAGR'
     variant: 'holographic - advanced',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Survey builder, response store, analytics.'
@@ -1923,17 +1498,7 @@ market_size: '$6 B data observability',
     customers: 3
     rating: 4.6
     reviews: 2,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Survey builder, response store, analytics.',
-    launch_date: '2025 - 03 - 18',
-    customers: 3;
-    rating: 4.6;
-    reviews: 2};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ecommerce - returns - management - saas',
+  }    id: 'ecommerce - returns - management - saas',
     name: 'Ecommerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics'
     price: '$49',
@@ -1963,7 +1528,6 @@ market_size: '$6 B data observability',
     market_size: '$3 B returns tech'
     growth_rate: '18% CAGR'
     variant: 'neural - quantum',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Portal, policy engine, carrier / commerce connectors.'
@@ -1971,17 +1535,7 @@ market_size: '$6 B data observability',
     customers: 4
     rating: 4.7
     reviews: 2,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Portal, policy engine, carrier / commerce connectors.',
-    launch_date: '2025 - 03 - 18',
-    customers: 4;
-    rating: 4.7;
-    reviews: 2};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - email - responder - pro',
+  }    id: 'ai - email - responder - pro',
     name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety',
     price: '$39',
@@ -2023,7 +1577,6 @@ market_size: '$6 B data observability',
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)'];
     market_size: '$10B productivity tooling',
-<<<<<<< HEAD
     growth_rate: '20% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact
@@ -2033,19 +1586,7 @@ market_size: '$6 B data observability',
     customers: 32
     rating: 4.7
     reviews: 14,
-  }
-=======
-    growth_rate: '20% CAGR',;
-variant: 'ai - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'OAuth connections, safe prompt templates, analytics and handoff.',
-    launch_date: '2026 - 03 - 10',
-    customers: 32;
-    rating: 4.7;
-    reviews: 14};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'mobile - first - survey - studio',
+  }    id: 'mobile - first - survey - studio',
     name: 'MobileFirst Survey Studio',
     tagline: 'Conversational surveys that adapt in real - time',
     price: '$29',
@@ -2071,13 +1612,8 @@ variant: 'ai - futuristic',
     integrations: ['Slack, HubSpot, Zapier, Webhooks'];
     rating: 4 && 4.6,
     integrations: ['Slack, HubSpot, Zapier, Webhooks'];
-<<<<<<< HEAD
     reviews: 6,
-  }
-=======
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'affiliate-tracking-hub',
+  }    id: 'affiliate-tracking-hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs'
     price: '$59',
@@ -2100,7 +1636,6 @@ variant: 'ai - futuristic',
     roi: 'Increase completion rates by 2040% on mobile',
     competitors: ['Typeform, Tally'];
     market_size: '$6B survey & CX',
-<<<<<<< HEAD
     growth_rate: '14% CAGR',
     variant: 'network - futuristic',
     contact_info: contact
@@ -2110,19 +1645,7 @@ variant: 'ai - futuristic',
     customers: 18
     rating: 4.6
     reviews: 6,
-  }
-=======
-    growth_rate: '14% CAGR',;
-variant: 'network - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Visual builder, CDN forms, realtime aggregation.',
-    launch_date: '2026 - 03 - 11',
-    customers: 18;
-    rating: 4.6;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'affiliate - tracking - hub',
+  }    id: 'affiliate - tracking - hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs'
     price: '$59',
@@ -2148,19 +1671,13 @@ variant: 'network - futuristic',
     integrations: ['Stripe, Shopify, WooCommerce'];
     rating: 4 && 4.5,
     integrations: ['Stripe, Shopify, WooCommerce'];
-<<<<<<< HEAD
     reviews: 5,
-  }
-=======
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'podcast-transcription-studio',
+  }    id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     use_cases: ['Affiliate sales, referrals, partnerships'];
     roi: 'Lift new - user acquisition 515%',
     competitors: ['Impact, PartnerStack'];
     market_size: '$4B affiliate software',
-<<<<<<< HEAD
     growth_rate: '12% CAGR',
     variant: 'cloud - futuristic',
     contact_info: contact
@@ -2170,19 +1687,7 @@ variant: 'network - futuristic',
     customers: 11
     rating: 4.5
     reviews: 5,
-  }
-=======
-    growth_rate: '12% CAGR',;
-variant: 'cloud - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Tracking pixels, webhook handlers, payout engine.',
-    launch_date: '2026 - 03 - 12',
-    customers: 11;
-    rating: 4.5;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'podcast - transcription - studio',
+  }    id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters'
     price: '$19',
@@ -2200,7 +1705,6 @@ variant: 'cloud - futuristic',
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev'];
     marketSize: '$2B creator tooling',
-<<<<<<< HEAD
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact
@@ -2210,19 +1714,7 @@ variant: 'cloud - futuristic',
     customers: 20
     rating: 4 && 4.6
     reviews: 9,
-  }
-=======
-    growthRate: '15% CAGR',;
-variant: 'ai-futuristic',
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Batch processing pipeline, editor UI, and export tools.',
-    launchDate: '2026-03-09',
-    customers: 20;
-    rating: 4 && 4.6;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ecommerce-returns-portal',
+  }    id: 'ecommerce-returns-portal',
     name: 'Ecommerce Returns Portal',
     color: 'from - pink - 600 to - rose - 700',
     text_color: 'text - pink - 300',
@@ -2239,7 +1731,6 @@ variant: 'ai-futuristic',
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev'];
     market_size: '$2B creator tooling',
-<<<<<<< HEAD
     growth_rate: '15% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact
@@ -2249,19 +1740,7 @@ variant: 'ai-futuristic',
     customers: 20
     rating: 4.6
     reviews: 9,
-  }
-=======
-    growth_rate: '15% CAGR',;
-variant: 'ai - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Batch processing pipeline, editor UI, and export tools.',
-    launch_date: '2026 - 03 - 09',
-    customers: 20;
-    rating: 4.6;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ecommerce - returns - portal',
+  }    id: 'ecommerce - returns - portal',
     name: 'Ecommerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics'
     price: '$49',
@@ -2287,7 +1766,6 @@ variant: 'ai - futuristic',
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly'];
     marketSize: '$3B ecommerce tooling',
-<<<<<<< HEAD
     growthRate: '16% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact
@@ -2297,19 +1775,7 @@ variant: 'ai - futuristic',
     customers: 14
     rating: 4 && 4.5
     reviews: 7,
-  }
-=======
-    growthRate: '16% CAGR',;
-variant: 'network-futuristic',
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Branded portal, webhook flows, and SLA notifications.',
-    launchDate: '2026-03-08',
-    customers: 14;
-    rating: 4 && 4.5;
-    reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'msP-it-helpdesk-lite',
+  }    id: 'msP-it-helpdesk-lite',
     name: 'MSP IT Helpdesk Lite',
     real_service: true,
     technology: ['Next.js, Shopify / Woo APIs, Webhooks'];
@@ -2318,7 +1784,6 @@ variant: 'network-futuristic',
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly'];
     market_size: '$3B ecommerce tooling',
-<<<<<<< HEAD
     growth_rate: '16% CAGR',
     variant: 'network - futuristic',
     contact_info: contact
@@ -2328,19 +1793,7 @@ variant: 'network-futuristic',
     customers: 14
     rating: 4.5
     reviews: 7,
-  }
-=======
-    growth_rate: '16% CAGR',;
-variant: 'network - futuristic',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Branded portal, webhook flows, and SLA notifications.',
-    launch_date: '2026 - 03 - 08',
-    customers: 14;
-    rating: 4.5;
-    reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ms_p - it - helpdesk - lite',
+  }    id: 'ms_p - it - helpdesk - lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal'
     price: '$79',
@@ -2366,7 +1819,6 @@ variant: 'network - futuristic',
     roi: 'Stand up a support desk in days, not months'
     competitors: ['Zendesk, Freshdesk'];
     marketSize: '$15B helpdesk software',
-<<<<<<< HEAD
     growthRate: '10% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact
@@ -2376,19 +1828,7 @@ variant: 'network - futuristic',
     customers: 16
     rating: 4 && 4.5
     reviews: 8,
-  }
-=======
-    growthRate: '10% CAGR',;
-variant: 'quantum-cyberpunk',
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Ticket intake, workflow, roles, portal and KB UI.',
-    launchDate: '2026-03-07',
-    customers: 16;
-    rating: 4 && 4.5;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai-privacy-compliance-copilot',
+  }    id: 'ai-privacy-compliance-copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI'
     price: '$399',
@@ -2416,7 +1856,6 @@ variant: 'quantum-cyberpunk',
     roi: 'Stand up a support desk in days, not months'
     competitors: ['Zendesk, Freshdesk'];
     market_size: '$15B helpdesk software',
-<<<<<<< HEAD
     growth_rate: '10% CAGR',
     variant: 'quantum - cyberpunk',
     contact_info: contact
@@ -2426,19 +1865,7 @@ variant: 'quantum-cyberpunk',
     customers: 16
     rating: 4.5
     reviews: 8,
-  }
-=======
-    growth_rate: '10% CAGR',;
-variant: 'quantum - cyberpunk',
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Ticket intake, workflow, roles, portal and KB UI.',
-    launch_date: '2026 - 03 - 07',
-    customers: 16;
-    rating: 4.5;
-    reviews: 8};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - privacy - compliance - copilot',
+  }    id: 'ai - privacy - compliance - copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI'
     price: '$399',
@@ -2460,22 +1887,12 @@ variant: 'quantum - cyberpunk',
     real_service: true,
     technology: ['Next.js_node.js_vector DBOCR redaction'],
     integrations: ['Google, Microsoft 365, Okta, Slack, Zendesk'];
-<<<<<<< HEAD
     use_cases: ['DPIA / RoPA automationDSAR processing_evidence collection'],
     roi: 'Reduce manual privacy ops hours by 6080%'
     competitors: ['OneTrustTranscendSecuriti'],
     rating: 4 && 4.7
     reviews: 6,
-  }
-=======
-    use_cases: ['DPIA / RoPA automationDSAR processing_evidence collection'];
-    roi: 'Reduce manual privacy ops hours by 6080%',
-    competitors:
-        competitors: ['OneTrustTranscendSecuriti'],
-    rating: 4 && 4.7;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'sales-copilot-for-outreach',
+  }    id: 'sales-copilot-for-outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notesdone for you'
     price: '$149',
@@ -2501,7 +1918,6 @@ variant: 'quantum - cyberpunk',
     market_size: '$8 B privacy tech'
     growth_rate: '20% CAGR'
     variant: 'holographic - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Policy templates, discovery connectors, redaction pipeline.'
@@ -2509,17 +1925,7 @@ variant: 'quantum - cyberpunk',
     customers: 9
     rating: 4.7
     reviews: 6,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Policy templates, discovery connectors, redaction pipeline.',
-    launch_date: '2025 - 08 - 01',
-    customers: 9;
-    rating: 4.7;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'sales - copilot - for - outreach',
+  }    id: 'sales - copilot - for - outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notesdone for you'
     price: '$149',
@@ -2553,20 +1959,11 @@ variant: 'quantum - cyberpunk',
     launch_date: '2025 - 07 - 10'
     customers: 21;
     rating: 4 && 4.6;
-<<<<<<< HEAD
     reviews: 12
     rating: 4.6
     reviews: 12,
   }
-    id: 'security - evidence - automation - lite'
-=======
-    reviews: 12;
-    rating: 4.6;
-reviews: 12;
-  };
-    id: 'security - evidence - automation - lite',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Security Evidence Automation Lite',
+    id: 'security - evidence - automation - lite'    name: 'Security Evidence Automation Lite',
     tagline: 'SOC2 / ISO evidence capture with zero - spreadsheet workflows',
     price: '$199',
     link: 'https://ziontechgroup && ziontechgroup.com/services/security-evidence-automation-lite',
@@ -2603,7 +2000,6 @@ reviews: 12;
     variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Agentless collectors with export pipelines.'
     launch_date: '2025 - 06 - 01'
     customers: 11
@@ -2614,19 +2010,7 @@ reviews: 12;
     name: 'AI Product Research Analyst',
     rating: 4.5
     reviews: 7,
-  }
-=======
-    implementation_details: 'Agentless collectors with export pipelines.',
-    launch_date: '2025 - 06 - 01',
-    customers: 11;
-    rating: 4 && 4.5;
-    reviews: 7};
-    id: 'ai-product-research-analyst',
-    name: 'AI Product Research Analyst',
-    rating: 4.5;
-    reviews: 7};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - product - research - analyst',
+  }    id: 'ai - product - research - analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically'
     price: '$129',
@@ -2661,7 +2045,6 @@ reviews: 12;
     variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Scheduled crawlers + summarization with citations.'
     launch_date: '2025 - 07 - 01'
     customers: 18
@@ -2672,19 +2055,7 @@ reviews: 12;
     name: 'Marketing Brief Generator Pro',
     rating: 4.6
     reviews: 10,
-  }
-=======
-    implementation_details: 'Scheduled crawlers + summarization with citations.',
-    launch_date: '2025 - 07 - 01',
-    customers: 18;
-    rating: 4 && 4.6;
-    reviews: 10};
-    id: 'marketing-brief-generator-pro',
-    name: 'Marketing Brief Generator Pro',
-    rating: 4.6;
-    reviews: 10};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'marketing - brief - generator - pro',
+  }    id: 'marketing - brief - generator - pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes'
     price: '$79',
@@ -2719,21 +2090,12 @@ reviews: 12;
     variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Guided workflow with template library and exports.'
     launch_date: '2025 - 05 - 15'
     customers: 25
     rating: 4 && 4.5
     reviews: 9,
-  }
-=======
-    implementation_details: 'Guided workflow with template library and exports.',
-    launch_date: '2025 - 05 - 15',
-    customers: 25;
-    rating: 4 && 4.5;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'customer-feedback-hub',
+  }    id: 'customer-feedback-hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI'
     price: '$99',
@@ -2751,15 +2113,9 @@ reviews: 12;
     targetAudience: 'Product, success, founders'
     trialDays: 14,
     setupTime: '1 day',
-<<<<<<< HEAD
     rating: 4.5
     reviews: 9,
-  }
-=======
-    rating: 4.5;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'customer - feedback - hub',
+  }    id: 'customer - feedback - hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI'
     price: '$99',
@@ -2789,7 +2145,6 @@ reviews: 12;
     market_size: '$1.2 B feedback tools'
     growth_rate: '14% CAGR'
     variant: 'holographic - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Embed widgets, event ingestors, tagging pipeline.'
@@ -2798,19 +2153,7 @@ reviews: 12;
     rating: 4.6
     reviews: 8,
   }
-    id: 'real - time - feature - flags - lite'
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Embed widgets, event ingestors, tagging pipeline.',
-    launch_date: '2025 - 06 - 25',
-    customers: 15;
-    rating: 4.6;
-reviews: 8;
-  };
-    id: 'real - time - feature - flags - lite',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Real - Time Feature Flags Lite',
+    id: 'real - time - feature - flags - lite'    name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
     price: '$59',
     link: 'https://ziontechgroup && ziontechgroup.com/services/real-time-feature-flags-lite',
@@ -2848,17 +2191,10 @@ reviews: 8;
     launch_date: '2025 - 07 - 20'
     customers: 10;
     rating: 4 && 4.5;
-<<<<<<< HEAD
     reviews: 5
     rating: 4.5
     reviews: 5,
-  }
-=======
-    reviews: 5;
-    rating: 4.5;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - legal - clause - recommender',
+  }    id: 'ai - legal - clause - recommender',
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
     price: '$179',
@@ -2893,21 +2229,12 @@ reviews: 8;
     variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Template packs + contract parsers.'
     launch_date: '2025 - 05 - 28'
     customers: 8
     rating: 4 && 4.5
     reviews: 4,
-  }
-=======
-    implementation_details: 'Template packs + contract parsers.',
-    launch_date: '2025 - 05 - 28',
-    customers: 8;
-    rating: 4 && 4.5;
-    reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai-incident-analysis-bot',
+  }    id: 'ai-incident-analysis-bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations'
     price: '$129',
@@ -2925,15 +2252,9 @@ reviews: 8;
     targetAudience: 'SRE, platform, dev teams'
     trialDays: 14,
     setupTime: '1 day',
-<<<<<<< HEAD
     rating: 4.5
     reviews: 4,
-  }
-=======
-    rating: 4.5;
-    reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - incident - analysis - bot',
+  }    id: 'ai - incident - analysis - bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations'
     price: '$129',
@@ -2963,7 +2284,6 @@ reviews: 8;
     variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Event ingestors and summarization pipelines.'
     launch_date: '2025 - 08 - 05'
     customers: 7
@@ -2974,19 +2294,7 @@ reviews: 8;
     name: 'AI Data Quality Monitor',
     rating: 4.6
     reviews: 3,
-  }
-=======
-    implementation_details: 'Event ingestors and summarization pipelines.',
-    launch_date: '2025 - 08 - 05',
-    customers: 7;
-    rating: 4 && 4.6;
-    reviews: 3};
-    id: 'ai-data-quality-monitor',
-    name: 'AI Data Quality Monitor',
-    rating: 4.6;
-    reviews: 3};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - data - quality - monitor',
+  }    id: 'ai - data - quality - monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously'
     price: '$169',
@@ -3021,7 +2329,6 @@ reviews: 8;
     market_size: '$3 B data ops'
     growth_rate: '20% CAGR'
     variant: 'holographic - matrix',
-<<<<<<< HEAD
     contact_info: contact
     real_implementation: true,
     implementation_details: 'Warehouse connectors, alerting, and PR generators.'
@@ -3029,17 +2336,7 @@ reviews: 8;
     customers: 12
     rating: 4.6
     reviews: 6,
-  }
-=======
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Warehouse connectors, alerting, and PR generators.',
-    launch_date: '2025 - 07 - 14',
-    customers: 12;
-    rating: 4.6;
-    reviews: 6};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - ux - copy - optimizer',
+  }    id: 'ai - ux - copy - optimizer',
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
     price: '$59',
@@ -3074,7 +2371,6 @@ reviews: 8;
     variant: 'holographic - matrix'
     contact_info: contact;
     real_implementation: true;
-<<<<<<< HEAD
     implementation_details: 'Browser extension + flag hooks + PR templates.'
     launch_date: '2025 - 06 - 18'
     customers: 14
@@ -3085,19 +2381,7 @@ reviews: 8;
     name: 'AI Governance Policy Center',
     rating: 4.5
     reviews: 5,
-  }
-=======
-    implementation_details: 'Browser extension + flag hooks + PR templates.',
-    launch_date: '2025 - 06 - 18',
-    customers: 14;
-    rating: 4 && 4.5;
-    reviews: 5};
-    id: 'ai-governance-policy-center',
-    name: 'AI Governance Policy Center',
-    rating: 4.5;
-    reviews: 5};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - governance - policy - center',
+  }    id: 'ai - governance - policy - center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place'
     price: '$249',
@@ -3122,7 +2406,6 @@ reviews: 8;
     setup_time: '25 days'
     category: 'Quality & Monitoring'
     real_service: true;
-<<<<<<< HEAD
     technology: ['RegistryEvalsWorkflows']
     integrations: ['GitHubJiraSlack']
     use_cases: ['Model registry_risk tracking_policy compliance'],
@@ -3130,18 +2413,7 @@ reviews: 8;
     competitors: ['Holistic AI (lite)'],
     rating: 4 && 4.6
     reviews: 2,
-  }
-=======
-    technology: ['RegistryEvalsWorkflows'];
-    integrations: ['GitHubJiraSlack'];
-    use_cases: ['Model registry_risk tracking_policy compliance'];
-    roi: 'Reduce policy drift and audit risk',
-    competitors:
-        competitors: ['Holistic AI (lite)'],
-    rating: 4 && 4.6;
-    reviews: 2};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next && Next.js'],
     realService: true,
@@ -3156,20 +2428,11 @@ reviews: 8;
     realImplementation: true,
     implementationDetails:,
       'Provisioned infra, SDKs, CI templates, and dashboards.'
-<<<<<<< HEAD
     launchDate: '2025-03-15'
     customers: 7
     rating: 4.7
     reviews: 4,
-  }
-=======
-    launchDate: '2025-03-15',
-    customers:
-        customers: 7;
-    rating: 4.7;
-    reviews: 4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
     real_service: true,
     technology: ['Feast - compatible, PostgreSQL, Redis, Next.js'],
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'],
@@ -31927,8 +31190,4 @@ export const,
   s: 5, ratin,
   g: 4.6, review,
   s: 2}]; review,
-<<<<<<< HEAD
   s: 2 } ]; '
-=======
-  s: 2 } ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

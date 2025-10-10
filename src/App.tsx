@@ -3,24 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
-<<<<<<< HEAD
-// Lazy load components for better performance
-=======
-// Lazy load components for better performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const HomePage = lazy(() => import('./page'));
+// Lazy load components for better performanceconst HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const ServicesPage = lazy(() => import('./services/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
-<<<<<<< HEAD
-// AI Services Pages
-=======
-// AI Services Pages;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
+// AI Services Pagesconst AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
 const AIChatbotBuilderPage = lazy(() => import('./ai-chatbot-builder/page'));
 const AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
 const AICRMPage = lazy(() => import('./ai-crm/page'));
@@ -41,12 +31,7 @@ const AISchedulerPage = lazy(() => import('./ai-scheduler/page'));
 const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
-<<<<<<< HEAD
-// Additional AI Services Pages
-=======
-// Additional AI Services Pages;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const AIProjectManagerPage = lazy(() => import('./ai-project-manager/page'));
+// Additional AI Services Pagesconst AIProjectManagerPage = lazy(() => import('./ai-project-manager/page'));
 const AISocialMediaManagerPage = lazy(() => import('./ai-social-media-manager/page'));
 const AIEmailMarketingPage = lazy(() => import('./ai-email-marketing/page'));
 const AICustomerSupportBotPage = lazy(() => import('./ai-customer-support-bot/page'));
@@ -66,12 +51,7 @@ const QuantumAIPage = lazy(() => import('./quantum-ai/page'));
 const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
-<<<<<<< HEAD
-// IT Services Pages
-=======
-// IT Services Pages;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
+// IT Services Pagesconst AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
 const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
@@ -117,12 +97,7 @@ const SystemStatusPage = lazy(() => import('./system-status/page'));
 const TaskManagerProPage = lazy(() => import('./task-manager-pro/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const TermsPage = lazy(() => import('./terms/page'));
-<<<<<<< HEAD
-// Blog Pages
-=======
-// Blog Pages;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const BlogAgentReleaseRunbooksV22026Page = lazy(() => import('./blog/agent-release-runbooks-v2-2026/page'));
+// Blog Pagesconst BlogAgentReleaseRunbooksV22026Page = lazy(() => import('./blog/agent-release-runbooks-v2-2026/page'));
 const BlogAI20252026MegaTrendsBreakthroughPage = lazy(() => import('./blog/ai-2025-2026-mega-trends-breakthrough/page'));
 const BlogAI2025JanuaryAdvancedAIRevolutionPage = lazy(() => import('./blog/ai-2025-january-advanced-ai-revolution/page'));
 const BlogAI2025JanuaryCuttingEdgeTrendsBreakthroughPage = lazy(() => import('./blog/ai-2025-january-cutting-edge-trends-breakthrough/page'));
@@ -150,12 +125,7 @@ const BlogAIEnterpriseTransformationUltimateGuide2025Page = lazy(() => import('.
 const BlogAIInnovationLabsProductDevelopment2025Page = lazy(() => import('./blog/ai-innovation-labs-product-development-2025/page'));
 const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./blog/ai-powered-autonomous-business-processes-2026/page'));
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
-<<<<<<< HEAD
-// Main loading component
-=======
-// Main loading component;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const MainLoadingSpinner = () => (
+// Main loading componentconst MainLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
   </div>
@@ -164,13 +134,8 @@ const App: React.FC = () => {
 };
   // Initialize performance monitoring
   React.useEffect(() => {
-<<<<<<< HEAD
     performanceMonitor.reportMetrics();
-  }, []);
-=======
-    performanceMonitor.reportMetrics()}, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  }, []);  return (
     <ErrorBoundary>
       <Router>
         <Suspense fallback={<MainLoadingSpinner />}>
@@ -182,12 +147,7 @@ const App: React.FC = () => {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
-<<<<<<< HEAD
-            {/* AI Services Pages */}
-=======
-            {/* AI Services Pages */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+            {/* AI Services Pages */}            <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
             <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
             <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
             <Route path="/ai-crm" element={<AICRMPage />} />
@@ -208,12 +168,7 @@ const App: React.FC = () => {
             <Route path="/ai-services" element={<AIServicesPage />} />
             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
             <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
-<<<<<<< HEAD
-            {/* Additional AI Services Pages */}
-=======
-            {/* Additional AI Services Pages */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+            {/* Additional AI Services Pages */}            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
             <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
             <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
             <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
@@ -233,12 +188,7 @@ const App: React.FC = () => {
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
-<<<<<<< HEAD
-            {/* IT Services Pages */}
-=======
-            {/* IT Services Pages */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
+            {/* IT Services Pages */}            <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
             <Route path="/api-docs" element={<APIDocsPage />} />
             <Route path="/api" element={<APIPage />} />
             <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
@@ -284,12 +234,7 @@ const App: React.FC = () => {
             <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/terms" element={<TermsPage />} />
-<<<<<<< HEAD
-            {/* Blog Pages */}
-=======
-            {/* Blog Pages */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <Route path="/blog/agent-release-runbooks-v2-2026" element={<BlogAgentReleaseRunbooksV22026Page />} />
+            {/* Blog Pages */}            <Route path="/blog/agent-release-runbooks-v2-2026" element={<BlogAgentReleaseRunbooksV22026Page />} />
             <Route path="/blog/ai-2025-2026-mega-trends-breakthrough" element={<BlogAI20252026MegaTrendsBreakthroughPage />} />
             <Route path="/blog/ai-2025-january-advanced-ai-revolution" element={<BlogAI2025JanuaryAdvancedAIRevolutionPage />} />
             <Route path="/blog/ai-2025-january-cutting-edge-trends-breakthrough" element={<BlogAI2025JanuaryCuttingEdgeTrendsBreakthroughPage />} />
@@ -317,20 +262,10 @@ const App: React.FC = () => {
             <Route path="/blog/ai-innovation-labs-product-development-2025" element={<BlogAIInnovationLabsProductDevelopment2025Page />} />
             <Route path="/blog/ai-powered-autonomous-business-processes-2026" element={<BlogAIPoweredAutonomousBusinessProcesses2026Page />} />
             <Route path="/blog/ai-trends-2026-future-enterprise-transformation" element={<BlogAITrends2026FutureEnterpriseTransformationPage />} />
-<<<<<<< HEAD
-            {/* 404 Page */}
-=======
-            {/* 404 Page */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <Route path="*" element={<NotFoundPage />} />
+            {/* 404 Page */}            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </Router>
     </ErrorBoundary>
-<<<<<<< HEAD
   );
-};
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default App;
+};export default App;

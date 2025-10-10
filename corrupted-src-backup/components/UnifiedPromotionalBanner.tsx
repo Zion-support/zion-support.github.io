@@ -3,17 +3,10 @@ export, interface, FeaturedItem {
 catego, r, y: stri, n, g;
 l, i, n;
   k: stri, n, g;
-<<<<<<< HEAD
 metri, c, s?: stri, n, g
   }
 export, interface, UnifiedPromotionalBannerProps {
-    varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-=======
-metri, c, s?: stri, n, g};
-export, interface, UnifiedPromotionalBannerProps {;
-varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-tit, l, e: stri, n, g;
+    varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
 ctaTe, x, t: stri, n, g;
 ctaL, i, n;
@@ -25,17 +18,10 @@ classNa, m, e?: stri, n, g;
 ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
 animat, e, d?: boole, a, n;
 bad, g, e?: stri, n, g;
-<<<<<<< HEAD
 da, t, e?: stri, n, g
   }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
-    varia, n, t = 'defau, l, t'
-=======
-da, t, e?: stri, n, g};
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({;
-varia, n, t = 'defau, l, t'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  tit, l, e;
+    varia, n, t = 'defau, l, t'  tit, l, e;
   descripti, o, n;
   ctaTe, x, t;
   ctaLi, n, k;
@@ -80,12 +66,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     premi, u, m: 'py-12, p, x-, 8',
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
-<<<<<<< HEAD
-    me, g, a: 'py-20, p, x-1, 2'} const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<div, classNam, e = { `
-=======
-    me, g, a: 'py-20, p, x-1, 2'}; const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<div , classNam, e = { `
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
+    me, g, a: 'py-20, p, x-1, 2'} const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<div, classNam, e = { `        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]};
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' };
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
@@ -105,16 +86,9 @@ export, interface, FeaturedItem {/* TODO: Fix JSX expression */};
 export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */};
 };
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
 }) => {/* TODO: Fix JSX expression */}
   } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
-  } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<div, classNam, e = {/* TODO: Fix JSX expression */}
-=======
-}) => {/* TODO: Fix JSX expression */};
-  }; const, buttonTheme, s = {/* TODO: Fix JSX expression */};
-  }; const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<div, classNam, e = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
+  } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<div, classNam, e = {/* TODO: Fix JSX expression */}        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]};
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' };
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'></div>

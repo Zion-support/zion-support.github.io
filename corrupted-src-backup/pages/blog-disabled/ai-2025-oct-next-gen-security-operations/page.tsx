@@ -13,7 +13,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
         /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'
-<<<<<<< HEAD
         /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-ne x t-g e n-securi t y-operatio n s',
@@ -37,30 +36,13 @@ export default function NextGenSecurityOperations20, 2, 5() {
               </ul>
             </div>
             <section, className='mb-12'>
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
-=======
-        /><
-        <link , re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g
-      <
-      <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
-        <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'><
-                    <stro, n, g>95% Faster, MTT, R:<
-                  <
-                <
-              <
-            <
-            <section , className='mb-12'>
-              <h2 , className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                The, Security, Crisis;
+              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>                The, Security, Crisis;
               </h2>
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>Cyber</p>, threats, have evolved, beyond, human capacity, to, defend.
                 Modern, attacks, leverage , A, I, operate, at, machine spe, e, d, and, exploit, vulnerabilities faster, than, security teams, can, respond.
                 The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives;
                 while, real, threats slip, throug, h.
                 The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives
-<<<<<<< HEAD
                 while, real, threats slip, throug, h.</p>
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
@@ -70,24 +52,10 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   1. Intelligent, Threat, Detection;
                 </h3>
-                <p, className='te, x, t-gr, a, y-300, m, b-4'>
-=======
-                while, real, threats slip, throug, h.<
-            <section , classNam, e = 'mb-12'>
-              <h2 , className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
-                The, Autonomous, SecOps Architectu, r, e;
-              <
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><
-                <h3 , className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                  1. Intelligent, Threat, Detection;
-                <
-                <p , className='te, x, t-gr, a, y-300, m, b-4'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  Advanced, ML, models analyze, network, traffi, c, user, behavio, r)
+                <p, className='te, x, t-gr, a, y-300, m, b-4'>                  Advanced, ML, models analyze, network, traffi, c, user, behavio, r)
                   system, log, s, and, threat, intelligence in, rea, l-time, to, detect;
                   anomalies, and, known attack, pattern, s. Deep, learning, identifies;
                   sophisticated, threats, including ze, r, o-da, y, s, AP, T, s, insider, threat, s, and, novel, attack techniques, that, signature-based, systems, miss complete, l, y.
-<<<<<<< HEAD
               </div>
 :src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx;
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
@@ -96,19 +64,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   4. Threat, Intelligence, Fusion;
                 </h3>
-                <p, className='te, x, t-gr, a, y-300, m, b-4'>
-=======
-              <
-:src/pages/blog/ai-2025-oct-next-gen-security-operations
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0
-:src/pages/blog/ai-2025-oct-next-gen-security-operations
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><
-                <h3 , className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                  4. Threat, Intelligence, Fusion;
-                <
-                <p , className='te, x, t-gr, a, y-300, m, b-4'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract;
+                <p, className='te, x, t-gr, a, y-300, m, b-4'>                  AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract;
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
@@ -118,7 +74,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
               <p className="text-gray-300 mb-6">
                 Discover how Zion Tech Group can deploy autonomous AI security operations that protect your enterprise;
                 against modern threats. Our proven implementation methodology ensures rapid deployment with measurable results.
-<<<<<<< HEAD
               </p>
               <Link;
                 to="/contact>"
@@ -149,38 +104,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
               <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'></section>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
             <section, className='mb-12'></section>
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>
-=======
-              <
-                Schedule Your Security Assessment;
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" 
-export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression *
-};
-  </>  <
-<
-            <section , className='mb-12'>
-              <h2 , className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
-                Enterprise, Success, Stories;
-              <
-              <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'><
-                <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'><
-                  <h3 , className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'>
-                    Global, Financial, Institution;
-                  <
-                  <ul , className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
-                    <li>
-                      • Zero, successful, breaches in, 24, months of, operatio, n;
-                    <
-            <section , className='mb-12'>
-              <h2 , className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
-                Implementation, Roadma, p;
-              <
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><
-                <h3 , className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-            <section, className='mb-12'><
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'><
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Enterprise, Success, Stories;
+              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>                Enterprise, Success, Stories;
               </h2>
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'></div>
@@ -190,7 +114,6 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                   <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                     <li></li>
                       • Zero, successful, breaches in, 24, months of, operatio, n;
-<<<<<<< HEAD
                     </li>
             <section, className='mb-12'></section>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'></h2>
@@ -213,33 +136,7 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-2, 4)
                 </h3>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-=======
-                    <
-            <section, className='mb-12'><
-              <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'><
-                Implementation, Roadma, p;
-              <
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'><
-                  Phas, e, 1: Assessme, n, t (Week, s, 1-, 4)
-                <
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><
-              <
-              <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><
-                <h3 , className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'><
-                  Phas, e, 2: Deployme, n, t (Week, s, 5-1, 2)
-                <
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'><
-              <
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'><
-                <h3 , className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                  Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-2, 4)
-                <
-                <ul , classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  <li>
+                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>                  <li>
                     Autonomous, response, activated for, verified, threat typ, e, s;
                   </li>
                   <li>
@@ -265,14 +162,9 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
-<<<<<<< HEAD
                 Schedule, Your, Security Assessme, n, t</p>
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
-              <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
-=======
-                Schedule, Your, Security Assessme, n, t<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
+              <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
                 Schedule, Your, Security Assessme, n, t</p>

@@ -1,18 +1,8 @@
-<<<<<<< HEAD
 export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
   e: string}
-  }
-=======
-import React from 'react';
-export interface CloudDevOpsService {/* TODO: Fix JSX expression */};
-  s: number};
-    setupTim,
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  keyFeatures: string[];
+  }  keyFeatures: string[];
   benefits: string[];
   targetAudience: string[];
   marketPosition: string;
@@ -30,17 +20,10 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */};
   color: string;
   popular: boolean;
   launchDate: string;
-<<<<<<< HEAD
   customers: number
   rating: number
   reviews: number,
-}
-=======
-  customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
+}export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Unified management and orchestration across multiple cloud providers',

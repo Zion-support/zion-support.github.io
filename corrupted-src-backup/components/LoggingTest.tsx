@@ -17,15 +17,8 @@ const,
 );
 // Simple logger replacement;
 const logger = {
-<<<<<<< HEAD
   error: (message: string, error?: unknown, meta?: unknown) => {
-const logger = {/* TODO: Fix JSX expression */}
-=======
-};
-  error: (message: string, error?: unknown, meta?: unknown) => {;
-const logger = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    //     },
+const logger = {/* TODO: Fix JSX expression */}    //     },
   war,
   n: (messag)
   e: string, error?: unknown, meta?: unknown) => {/* TODO: Fix JSX expression */};
@@ -36,11 +29,5 @@ const logger = {/* TODO: Fix JSX expression */};
     //     },
   debu,
   g: (messag)
-<<<<<<< HEAD
   e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
-    //     }}
-=======
-  e: string, meta?: unknown) => {/* TODO: Fix JSX expression */};
-    //     }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-`
+    //     }}`

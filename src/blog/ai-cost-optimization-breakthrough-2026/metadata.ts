@@ -21,16 +21,9 @@ $4};
     ]
   },
   twitte,
-<<<<<<< HEAD
   r: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  r: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  car,
+}  car,
   d: 'summary_large_image',
     titl,
   e: 'AI Cost Optimization Breakthrough,
@@ -42,30 +35,16 @@ $4};
   s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
   robot,
-<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  s: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  inde,
+}  inde,
   x: true,
     follo,
   w: true,
     googleBo,
-<<<<<<< HEAD
   t: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  t: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  inde,
+}  inde,
   x: true,
       follo,
   w: true,
@@ -76,7 +55,6 @@ $4};
   },
   alternates: {
     canonical:   ,
-<<<<<<< HEAD
 $4}
 }
 
@@ -84,12 +62,3 @@ $4}
   s: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-
-=======
-$4};
-};
-  alternate,
-  s: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

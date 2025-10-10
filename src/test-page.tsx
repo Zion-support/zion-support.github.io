@@ -4,13 +4,7 @@ import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const testPagetsx: React.FC = () => {
-<<<<<<< HEAD
-  const _features = [],
-=======
-};
-const _features = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  const _features = [],  return (
     {icon: Users,
     title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
@@ -25,12 +19,7 @@ const _features = [];
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-<<<<<<< HEAD
-    }
-=======
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ]
+    }  ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
       <Helmet></Helmet>
         <title>testtsx - Zion Tech Group</title>"
@@ -54,23 +43,12 @@ const _features = [];
               </a>"
               <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-500,"
-<<<<<<< HEAD
   hover: text-white transition-colors"></a>
-                View Demo,
-=======
-  hover:text-white transition-colors"></a>
-                View Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              </a>
+                View Demo,              </a>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Features Section */}
-=======
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="py-16 px-4">
+        {/* Features Section */}        <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,12 +61,7 @@ const _features = [];
                     {feature.benefits.map((benefit, idx) => (};
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-<<<<<<< HEAD
-                        {benefit}
-=======
-                        {benefit};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                      </li>)
+                        {benefit}                      </li>)
                     ))};
                   </ul>
                 </div>
@@ -102,14 +75,8 @@ const _features = [];
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-<<<<<<< HEAD
   hover: bg-cyan-600 transition-colors"></a>
-              Contact Us
-=======
-  hover:bg-cyan-600 transition-colors"></a>
-              Contact Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </a>
+              Contact Us            </a>
           </div>
         </section>
       </main>

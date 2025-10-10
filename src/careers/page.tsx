@@ -3,19 +3,9 @@ import { Link } from 'react-router-dom';
 import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const CareersPage: React.FC = () => {
   const openPositions = [
-    {
-=======
-;
-const CareersPage: React.FC = () => {
-};
-const openPositions = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      id: 'senior-ai-engineer',
+    {      id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote / New York, NY',
@@ -117,16 +107,8 @@ const openPositions = [
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
     };
   ];
-<<<<<<< HEAD
   const benefits = [
-    {
-=======
-;
-const benefits = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Heart,
+    {      icon: Heart,
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance, dental, vision, and mental health support'
     },
@@ -146,14 +128,7 @@ const benefits = [
       description: 'Performance bonuses, stock options, and recognition programs'
     };
   ];
-<<<<<<< HEAD
-  const culture = [
-=======
-;
-const culture = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'Innovation-driven environment where creativity is encouraged',
+  const culture = [    'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
     'Opportunities to work on cutting-edge AI and technology projects',
     'Mentorship programs and career development support',
@@ -163,12 +138,7 @@ const culture = [
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
-      {/* Hero Section */}
-=======
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="relative py-20 px-4">
+      {/* Hero Section */}      <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Join Our <span className="text-cyan-400">Team</span>
@@ -177,7 +147,6 @@ const culture = [
             Be part of the future of AI and IT solutions. We're looking for passionate individuals who want to make a real impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <Link
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -191,22 +160,7 @@ const culture = [
           </div>
         </div>
       </section>
-      {/* Why Work With Us */}
-=======
-            <Link to="#open-positions"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Open Positions
-            </Link>
-            <Link to="/contact"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Why Work With Us */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-white">
+      {/* Why Work With Us */}      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -229,12 +183,7 @@ const culture = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Company Culture */}
-=======
-      {/* Company Culture */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gray-50">
+      {/* Company Culture */}      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -279,12 +228,7 @@ const culture = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Open Positions */}
-=======
-      {/* Open Positions */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section id="open-positions" className="py-20 bg-white">
+      {/* Open Positions */}      <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -320,13 +264,8 @@ const culture = [
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
                     <Link
-                      to="/contact"
-=======
-                    <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                      className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">
+                      to="/contact"                      className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">
                       Apply Now <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
@@ -361,12 +300,7 @@ const culture = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+      {/* CTA Section */}      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
@@ -375,22 +309,13 @@ const culture = [
             We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Send Us Your Resume
   </
             <Link
-              to="/team"
-=======
-            <Link to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Send Us Your Resume
-            </Link>
-            <Link to="/team"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
+              to="/team"              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Meet Our Team
   </
           </div>
@@ -398,7 +323,6 @@ const culture = [
       </section>
       <Footer />
     </div>
-<<<<<<< HEAD
   ),
 }
 export default CareersPage;
@@ -410,7 +334,3 @@ export default CareersPage;
   </p>
   </Link>
   </Link>
-=======
-  )};
-export default CareersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

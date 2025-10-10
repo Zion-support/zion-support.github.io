@@ -30,12 +30,7 @@
                 Starting, a, t $, 7,9, 9, 9/mon, t, h;
               </sp, a, n>
             </div>
-<<<<<<< HEAD
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-=======
-            <h1 , classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              Re, a, l-Time, Cognitive, Automation Platfo, r, m;
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>              Re, a, l-Time, Cognitive, Automation Platfo, r, m;
               Re, a, l-Time, Cognitive, Automation Platfo, r, m</h1>
               <span , className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>
@@ -154,7 +149,6 @@
                       'Custom, AI, models',
                       'Dedicated, tea, m',
                       '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => (
-<<<<<<< HEAD
                   <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   >
                     {
@@ -162,15 +156,7 @@
                       <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
                         MOST, POPULA, R
   })
-                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
-=======
-                  <div , ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`};>
-                    {  p, k, g.popul, a, r  && (</div>
-                      <div , className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
-                        MOST, POPULA, R})
-                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  ></div>
+                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}                  ></div>
                     {/* TODO: Fix JSX expression */})
                       </di, v > )  };
                     <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'></h3>

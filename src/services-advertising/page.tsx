@@ -1,15 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
-<<<<<<< HEAD
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (<div>Coming Soon</div>)
+}  return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Header */}"
@@ -56,7 +49,6 @@ AI-Powered Advertising Solutions,"
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
@@ -64,17 +56,7 @@ AI-Powered Advertising Solutions,"
 //                 Start Free Consultation
           <ArrowRight className="w-4 h-4 ml-2" />
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-                View Our Services,
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-//>
-//                 Start Free Consultation;
-          <ArrowRight className="w-4 h-4 ml-2" />
-href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-                View Our Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      </section>
+                View Our Services,      </section>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
         <div className="max-w-7xl mx-auto px-4,
@@ -173,14 +155,8 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 <li>• Competitive analysis</li>
                 Market,
   Price: $1,000-3,000/month | Our,
-<<<<<<< HEAD
   Price: $600/month,
-      {/* Pricing Section */}
-=======
-  Price: $600/month;
-      {/* Pricing Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-Transparent Pricing;
+      {/* Pricing Section */}Transparent Pricing;
               Choose the plan that fits your advertising needs;"
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>"
@@ -227,12 +203,7 @@ Transparent Pricing;
                   <span>Custom integrations</span>
                   <span>White-label options</span>
                 Contact Sales;
-<<<<<<< HEAD
-      {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      {/* CTA Section */}      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Transform Your Advertising?
@@ -240,7 +211,6 @@ Ready to Transform Your Advertising?
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-<<<<<<< HEAD
               View Success Stories
   ),
 }
@@ -256,8 +226,3 @@ export default ServicesAdvertisingPage;
   </div>
   </Link>
   </div>
-=======
-              View Success Stories;
-  )};
-export default ServicesAdvertisingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

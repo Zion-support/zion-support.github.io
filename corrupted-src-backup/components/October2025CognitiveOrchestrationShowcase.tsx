@@ -1,15 +1,7 @@
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
-<<<<<<< HEAD
 return(<section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
 <div, className="m, a, x-w-7xl, m, x-au, t, o">
-<div, className="text-center mb-12">
-=======
-return (
-return(<section , className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
-<div , className="m, a, x-w-7xl, m, x-au, t, o">
-<div , className="text-center mb-12">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-return (
+<div, className="text-center mb-12">return (
 <section , className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
 <div, className="m, a, x-w-7xl, m, x-au, t, o"></section>
 <div, className="text-center mb-12"></div>
@@ -39,7 +31,6 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
 </p>
 </d, i, v>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12"></div>
-<<<<<<< HEAD
 =======
 );
 };
@@ -73,13 +64,7 @@ Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with,
 <<<<<<< HEAD
             <div, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/90">";</div>
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-}
-=======
-            <div, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/90">";</div>;
-const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,
+}          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
   r:shad, o, w-cy, a, n-5, 0, 0/50">""
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>"

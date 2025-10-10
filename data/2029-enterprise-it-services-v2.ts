@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 
-export interface EnterpriseITService2029V2 {
-=======
-export interface EnterpriseITService2029V2 {
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
+export interface EnterpriseITService2029V2 {  id: string;
   name: string;
   description: string;
   category: string[];
@@ -39,22 +32,12 @@ export interface EnterpriseITService2029V2 {
   partnership: string;
   funding: string;
   exit: string;
-<<<<<<< HEAD
   contact: unknown
     mobile: string
     email: string,
     website: string}
     address: string}
-  }
-=======
-  contact: unknown;
-    mobile: string;
-    email: string;
-    website: string};
-    address: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
+  }export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description:,
@@ -745,14 +728,8 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
-  }
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    i,
+  }    i,
   d: 'ai-powered-enterprise-security', nam,
   e: 'AI-Powered Enterprise Security',
     descriptio,
@@ -854,14 +831,8 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
-  }
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    i,
+  }    i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',
     descriptio,
@@ -1071,13 +1042,7 @@ export const,
     };
   };
 ];
-<<<<<<< HEAD
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
-=======
-;
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  e: string} addres,
+export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}  e: string} addres,
   s: string} } export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [ i,
   d: 'autonomous-devops-platform'' nam,

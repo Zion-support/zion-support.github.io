@@ -42,14 +42,8 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */};
         <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";)
       </d, i, v>)
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">")
-<<<<<<< HEAD
       <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",),
-        {/* Header, Sectio, n */}
-=======
-      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">";),
-        {/* Header, Sectio, n */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div, className="text-center mb-12">";
+        {/* Header, Sectio, n */}        <div, className="text-center mb-12">";
           <moti, o, n.d, i, v;
         <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";
       </d, i, v>

@@ -4,19 +4,9 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const AISEOOptimizerPage: React.FC = () => {
   const features = [
-    {
-=======
-;
-const AISEOOptimizerPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Search,
+    {      icon: Search,
       title: 'SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization',
       benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
@@ -55,7 +45,6 @@ const features = [
             Boost your search engine rankings with AI-powered SEO optimization. 
             Analyze, optimize, and monitor your website's SEO performance automatically.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -63,16 +52,7 @@ const features = [
               Get Started
   </
             <a
-              href="tel:+13024640950"
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact"
-              className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-              Get Started
-            </a>
-            <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              href="tel:+13024640950"              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               <Search className="w-5 h-5" />
               +1 302 464 0950
   </
@@ -80,14 +60,8 @@ const features = [
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-<<<<<<< HEAD
             SEO Optimization Features,
-  </
-=======
-            SEO Optimization Features
-          </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  </          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -114,7 +88,6 @@ const features = [
       </main>
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 }
 export default AISEOOptimizerPage;
@@ -123,7 +96,3 @@ export default AISEOOptimizerPage;
   </a>
   </p>
   </h1>
-=======
-  )};
-export default AISEOOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

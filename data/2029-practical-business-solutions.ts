@@ -196,20 +196,11 @@ export const,
   category: string
   realImplementation: boolean,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string,
     email: string}
     address: string}
   }
-}
-=======
-    mobile: string;
-    email: string};
-    address: string};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [
+}export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [
     id: "2029-practical-business-solution"
     name: "2029 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2029",
@@ -237,14 +228,8 @@ export interface PracticalBusinessSolution2029 {
       "Affordable pricing"],
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
-<<<<<<< HEAD
     realImplementation: true,
-    contactInfo: unknown}
-=======
-    realImplementation: true;
-    contactInfo: unknown};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      lin,
+    contactInfo: unknown}      lin,
   k: '/services/2029-practical-business-solution'
       categor,
   y: 'Practical Business Solutions 2029'
@@ -365,15 +350,8 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */};
     };
   };
 ];
-<<<<<<< HEAD
 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
-  }
-=======
-;
-export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
+  }export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
       id: '2029-practical-business-solution'
       name: '2029 Practical Business Solution Platform',
@@ -473,16 +451,9 @@ export const,
   category: string
   realImplementation: boolean,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string,
     email: string}
-    address: string}
-=======
-    mobile: string;
-    email: string};
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    lin,"
+    address: string}    lin,"
   k: "/services/2029-practical-business-solution",
     categor,"
   y: "Practical Business Solutions 2029",
@@ -522,7 +493,6 @@ export const,
     contact_info: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
 export interface PracticalBusinessSolution2029 {
-<<<<<<< HEAD
 =======
 ;
 }
@@ -566,14 +536,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   }
 ];
     }
-  }
-=======
-  s: "364 E Main St STE 1008 Middletown DE 19709"    };
-  };
-]};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];"
+  }];"
 "Practical solutions" "Business applications" "Real-world use cases" "Easy integration", "Affordable pricing" ]; lin,"
   k: "/services/2029-practical-business-solution", categor,"
   y: "Practical Business Solutions 2029",
@@ -660,22 +623,12 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-<<<<<<< HEAD
   n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-=======
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: string} addres,
+  o: {/* TODO: Fix JSX expression */}  l: string} addres,
   s: string} } } export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [ i,"
   d: "2029-practical-business-solution", nam,"
@@ -716,22 +669,12 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-<<<<<<< HEAD
   n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-=======
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: string} addres,"
+  o: {/* TODO: Fix JSX expression */}  l: string} addres,"
   s: string} } } "Affordable pricing" ], lin,"
   k: "/services/2029-practical-business-solution", categor,"
   y: "Practical Business Solutions 2029", realImplementatio,
@@ -741,22 +684,12 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}"
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-<<<<<<< HEAD
   n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
-=======
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: string} addres,"
+  o: {/* TODO: Fix JSX expression */}  l: string} addres,"
   s: string} } } "Affordable pricing" ]; lin,"
   k: "/services / 2029 - practical - business - solution", categor,"
   y: "Practical Business Solutions 2029", real_implementatio,

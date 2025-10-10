@@ -141,16 +141,9 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */};
         </div>
       </div>
       <div, className="te, x, t-cent, e, r"></div>
-<<<<<<< HEAD
         <Link, t, o="/conta, c, t" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
-          <Sparkles, className="w-5 h-5" />
-=======
-        <Link , t, o="/conta, c, t" 
-          className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
-          <Sparkles , className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          Start, Your, AI Transformation, Journe, y;
+          <Sparkles, className="w-5 h-5" />          Start, Your, AI Transformation, Journe, y;
           <Link , className="w-5 h-5" />
         </Li, n, k>
         <p , className="mt-4, tex, t-gr, a, y-400, tex, t-sm">

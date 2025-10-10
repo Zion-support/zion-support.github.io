@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 // export {}; // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}
   r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
   Report: ' {/* TODO: Fix JSX expression */}
   l: errorReport.url} timestam)
   p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */})
-  s: true })} catch (error) {/* TODO: Fix JSX expression */}
-=======
-// export {}; // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */};
-  r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // // console.error removed for production
-p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */})
-  s: true })} catch (error) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  r: 'Internal server error' })} } async function sendToErrorMonitoringServices(errorRepor)
+  s: true })} catch (error) {/* TODO: Fix JSX expression */}  r: 'Internal server error' })} } async function sendToErrorMonitoringServices(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */};
   s: {' 'Content-Type': 'application/json',' 'X-Sentry-Auth': `Sentry sentry_version=7} sentry_key=${process.env.SENTRY_KEY}` }) bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */};
@@ -50,15 +42,8 @@ p: errorReport.timestamp }); // Send to external error monitoring services await
   r: ${errorReport.error.message} UR,
   L: ${errorReport.url} Tim,
   e: ${errorReport.timestamp} User,
-<<<<<<< HEAD
   Agent: ${errorReport.userAgent} Stack)`
-  Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */}
-=======
-  Agent: ${errorReport.userAgent} Stack)',
-  Trace:
-        Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  d: 'POST'} header,
+  Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */}  d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */};
   e: errorReport.error.message} shor,

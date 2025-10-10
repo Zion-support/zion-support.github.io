@@ -42,18 +42,11 @@ export type ZionCuttingEdgeService2029 =
   pricing: unknown;
     starter: number;
     professional: number;
-<<<<<<< HEAD
     enterprise: number
     currency: string
     period: string,
   }
-}
-=======
-    enterprise: number;
-    currency: string;
-    period: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
+}export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform,
     id: 'ai-quantum-computing-optimization',
     name: 'AI-Powered Quantum Computing Optimization Platform',
@@ -151,13 +144,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string,
     perio,
-<<<<<<< HEAD
   d: string}
-}
-=======
-  d: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const,
+}export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
   id: 'ai-quantum-computing-optimization',
@@ -2272,10 +2260,5 @@ export type ZionCuttingEdgeService2029 = i,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-<<<<<<< HEAD
   e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) }); } export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ), }'
-=======
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

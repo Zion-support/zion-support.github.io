@@ -8,14 +8,8 @@ const LatestContentBanner202, 5: React.FC = () => {,
       category: "Revolutionar, y, A, I",
       emo, j, i: "🚀",
       highlig, h, t: "BREAKTHRO, U, G, H",
-<<<<<<< HEAD
       impa, c, t: "$5, 0, M+ Savi, n, g, s"
-const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      impa, c, t: "$5, 0, M+ Savi, n, g, s";
-const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    },
+const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}    },
     {/* TODO: Fix JSX expression */};
     },
     {/* TODO: Fix JSX expression */};

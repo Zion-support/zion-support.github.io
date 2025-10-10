@@ -822,18 +822,10 @@
   description: string, category: string,
   price: string, features: string[],
   benefits: string[], useCases: string[],
-<<<<<<< HEAD
   targetAudience: string[], marketSize: string,
   competitiveAdvantage: string, implementationTime: string,
   roi: string, link: string,
-  tags: string[]}
-=======
-  targetAudience: string[], marketSize: string;
-  competitiveAdvantage: string, implementationTime: string;
-  roi: string, link: string;
-  tags: string[]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'quantum-climate-modeling',
+  tags: string[]}    id: 'quantum-climate-modeling',
     name: 'Quantum Climate Modeling Platform',
     description:,
       'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.'
@@ -982,37 +974,19 @@
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
     tag,
-<<<<<<< HEAD
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'],
 export interface Service {/* TODO: Fix JSX expression */}
   }
 ];
-}
-=======
-  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
-export interface Service {/* TODO: Fix JSX expression */};
-  };
-];
-;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+}];
 };
 ];
 export interface Service {/* TODO: Fix JSX expression */};
   k: string};
   tag,
-<<<<<<< HEAD
   s: string[]}
 }
-export const emergingTech2027Services: Service[] = [,
-=======
-  s: string[]};
-};
-;
-export const emergingTech2027Services: Service[] = [;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {,
+export const emergingTech2027Services: Service[] = [,  {,
     id: 'quantum-machine-learning',
     name: 'Quantum Machine Learning Platform',,
   description: 'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.'
@@ -1031,7 +1005,6 @@ export const emergingTech2027Services: Service[] = [;
       'Research institutionsPharmaceutical companiesFinancial institutionsGovernment agenciesTech companies'
     ];
     marketSize: '$18.7 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms'
     implementationTime: '6-8 weeks'
     roi: '1200% within 18 months',
@@ -1039,18 +1012,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Quantum ComputingMachine LearningAIResearchOptimization']}
   }
   {
-    id: 'neuromorphic-computing',
-=======
-    competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms';
-    implementationTime: '6-8 weeks';
-    roi: '1200% within 18 months';
-    link: 'https://ziontechgroup.com/services/quantum-machine-learning'};
-    tags: ['Quantum ComputingMachine LearningAIResearchOptimization']};
-  };
-  {;
-    id: 'neuromorphic-computing';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Neuromorphic Computing Platform',,
+    id: 'neuromorphic-computing',    name: 'Neuromorphic Computing Platform',,
   description: 'Advanced computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing and learning.'
     category: 'AI & Computing',
     price: '$8,999/month';
@@ -1067,7 +1029,6 @@ export const emergingTech2027Services: Service[] = [;
       'IoT companiesRobotics manufacturersEdge computing providersSensor manufacturersAutonomous vehicle companies'
     ];
     marketSize: '$14.2 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Most advanced neuromorphic computing platform'
     implementationTime: '4-6 weeks'
     roi: '800% within 12 months',
@@ -1075,18 +1036,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']}
   }
   {
-    id: 'synthetic-biology-platform',
-=======
-    competitiveAdvantage: 'Most advanced neuromorphic computing platform';
-    implementationTime: '4-6 weeks';
-    roi: '800% within 12 months';
-    link: 'https://ziontechgroup.com/services/neuromorphic-computing'};
-    tags: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']};
-  };
-  {;
-    id: 'synthetic-biology-platform';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Synthetic Biology Platform',,
+    id: 'synthetic-biology-platform',    name: 'Synthetic Biology Platform',,
   description: 'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.';
     category: 'Biotechnology',
     price: '$15,999/month';
@@ -1103,7 +1053,6 @@ export const emergingTech2027Services: Service[] = [;
       'Pharmaceutical companiesAgricultural companiesIndustrial biotech firmsResearch institutionsEnvironmental companies'
     ];
     marketSize: '$22.8 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration'
     implementationTime: '8-12 weeks'
     roi: '1500% within 24 months',
@@ -1111,18 +1060,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']}
   }
   {
-    id: 'quantum-sensors-network',
-=======
-    competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration';
-    implementationTime: '8-12 weeks';
-    roi: '1500% within 24 months';
-    link: 'https://ziontechgroup.com/services/synthetic-biology-platform'};
-    tags: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']};
-  };
-  {;
-    id: 'quantum-sensors-network';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Quantum Sensors Network',,
+    id: 'quantum-sensors-network',    name: 'Quantum Sensors Network',,
   description: 'Advanced network of quantum sensors for ultra-precise measurements in various fields including navigation, medical imaging, and environmental monitoring.';
     category: 'Quantum Technology',
     price: '$9,999/month';
@@ -1139,7 +1077,6 @@ export const emergingTech2027Services: Service[] = [;
       'Medical device companiesEnvironmental monitoring firmsNavigation companiesResearch institutionsIndustrial companies'
     ];
     marketSize: '$16.5 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Only quantum sensors network with multi-application support'
     implementationTime: '6-8 weeks'
     roi: '900% within 15 months',
@@ -1147,18 +1084,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']}
   }
   {
-    id: 'brain-computer-interface',
-=======
-    competitiveAdvantage: 'Only quantum sensors network with multi-application support';
-    implementationTime: '6-8 weeks';
-    roi: '900% within 15 months';
-    link: 'https://ziontechgroup.com/services/quantum-sensors-network'};
-    tags: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']};
-  };
-  {;
-    id: 'brain-computer-interface';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Brain-Computer Interface Platform',,
+    id: 'brain-computer-interface',    name: 'Brain-Computer Interface Platform',,
   description: 'Advanced platform for direct communication between the human brain and computers, enabling new forms of human-computer interaction.';
     category: 'Neural Technology',
     price: '$19,999/month';
@@ -1175,7 +1101,6 @@ export const emergingTech2027Services: Service[] = [;
       'Medical device companiesResearch institutionsAssistive technology firmsGaming companiesHealthcare providers'
     ];
     marketSize: '$28.9 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Most advanced brain-computer interface platform'
     implementationTime: '10-12 weeks'
     roi: '2000% within 30 months',
@@ -1183,18 +1108,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']}
   }
   {
-    id: 'quantum-internet-security',
-=======
-    competitiveAdvantage: 'Most advanced brain-computer interface platform';
-    implementationTime: '10-12 weeks';
-    roi: '2000% within 30 months';
-    link: 'https://ziontechgroup.com/services/brain-computer-interface'};
-    tags: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']};
-  };
-  {;
-    id: 'quantum-internet-security';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Quantum Internet Security Platform',,
+    id: 'quantum-internet-security',    name: 'Quantum Internet Security Platform',,
   description: 'Next-generation security platform that uses quantum cryptography to create unhackable communications and data protection systems.'
     category: 'Cybersecurity',
     price: '$7,999/month';
@@ -1211,7 +1125,6 @@ export const emergingTech2027Services: Service[] = [;
       'Government agenciesFinancial institutionsHealthcare organizationsMilitary organizationsCritical infrastructure'
     ];
     marketSize: '$25.4 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Only quantum internet security platform with global coverage'
     implementationTime: '4-6 weeks'
     roi: '1000% within 18 months',
@@ -1219,18 +1132,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']}
   }
   {
-    id: 'autonomous-robotics-platform',
-=======
-    competitiveAdvantage: 'Only quantum internet security platform with global coverage';
-    implementationTime: '4-6 weeks';
-    roi: '1000% within 18 months';
-    link: 'https://ziontechgroup.com/services/quantum-internet-security'};
-    tags: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']};
-  };
-  {;
-    id: 'autonomous-robotics-platform';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Autonomous Robotics Platform',,
+    id: 'autonomous-robotics-platform',    name: 'Autonomous Robotics Platform',,
   description: 'Advanced platform for developing, deploying, and managing autonomous robots with AI-powered decision making and learning capabilities.';
     category: 'Robotics & AI',
     price: '$6,999/month';
@@ -1247,7 +1149,6 @@ export const emergingTech2027Services: Service[] = [;
       'Manufacturing companiesLogistics companiesAgricultural companiesService providersResearch institutions'
     ];
     marketSize: '$19.8 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning'
     implementationTime: '5-7 weeks'
     roi: '700% within 12 months',
@@ -1255,18 +1156,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['RoboticsAIAutomationManufacturingLogistics']}
   }
   {
-    id: 'quantum-materials-discovery',
-=======
-    competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning';
-    implementationTime: '5-7 weeks';
-    roi: '700% within 12 months';
-    link: 'https://ziontechgroup.com/services/autonomous-robotics-platform'};
-    tags: ['RoboticsAIAutomationManufacturingLogistics']};
-  };
-  {;
-    id: 'quantum-materials-discovery';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Quantum Materials Discovery Platform',,
+    id: 'quantum-materials-discovery',    name: 'Quantum Materials Discovery Platform',,
   description: 'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.'
     category: 'Materials Science',
     price: '$13,999/month';
@@ -1283,7 +1173,6 @@ export const emergingTech2027Services: Service[] = [;
       'Semiconductor companiesBattery manufacturersAerospace companiesMedical device companiesEnergy companies'
     ];
     marketSize: '$21.3 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Only quantum materials discovery platform with AI integration'
     implementationTime: '8-10 weeks'
     roi: '1100% within 20 months',
@@ -1291,18 +1180,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']}
   }
   {
-    id: 'quantum-financial-modeling',
-=======
-    competitiveAdvantage: 'Only quantum materials discovery platform with AI integration';
-    implementationTime: '8-10 weeks';
-    roi: '1100% within 20 months';
-    link: 'https://ziontechgroup.com/services/quantum-materials-discovery'};
-    tags: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']};
-  };
-  {;
-    id: 'quantum-financial-modeling';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Quantum Financial Modeling Platform',,
+    id: 'quantum-financial-modeling',    name: 'Quantum Financial Modeling Platform',,
   description: 'Advanced financial modeling platform that uses quantum computing for ultra-accurate predictions, risk assessment, and portfolio optimization.';
     category: 'Financial Technology',
     price: '$11,999/month';
@@ -1319,7 +1197,6 @@ export const emergingTech2027Services: Service[] = [;
       'Investment banksHedge fundsAsset managersInsurance companiesRegulatory bodies'
     ];
     marketSize: '$18.9 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis'
     implementationTime: '6-8 weeks'
     roi: '900% within 16 months',
@@ -1327,18 +1204,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']}
   }
   {
-    id: 'quantum-climate-modeling',
-=======
-    competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis';
-    implementationTime: '6-8 weeks';
-    roi: '900% within 16 months';
-    link: 'https://ziontechgroup.com/services/quantum-financial-modeling'};
-    tags: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']};
-  };
-  {;
-    id: 'quantum-climate-modeling';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Quantum Climate Modeling Platform',,
+    id: 'quantum-climate-modeling',    name: 'Quantum Climate Modeling Platform',,
   description: 'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.';
     category: 'Environmental Technology',
     price: '$10,999/month';
@@ -1355,7 +1221,6 @@ export const emergingTech2027Services: Service[] = [;
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
     marketSize: '$17.6 B by 2027';
-<<<<<<< HEAD
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions'
     implementationTime: '7-9 weeks'
     roi: '800% within 18 months',
@@ -1409,64 +1274,7 @@ export const,
   s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']}
   }
   {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/services/quantum-climate-modeling'}
-=======
-    competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
-    implementationTime: '7-9 weeks';
-    roi: '800% within 18 months';
-    link: 'https://ziontechgroup.com/services/quantum-climate-modeling'};
-    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']};
-export const,
-  emergingTech2027Services: Service[] = [;
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-machine-learning'};
-    tag,
-  s: ['Quantum ComputingMachine LearningAIResearchOptimization']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/neuromorphic-computing'};
-    tag,
-  s: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/synthetic-biology-platform'};
-    tag,
-  s: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-sensors-network'};
-    tag,
-  s: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/brain-computer-interface'};
-    tag,
-  s: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-internet-security'};
-    tag,
-  s: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/autonomous-robotics-platform'};
-    tag,
-  s: ['RoboticsAIAutomationManufacturingLogistics']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-materials-discovery'};
-    tag,
-  s: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-financial-modeling'};
-    tag,
-  s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']};
-  };
-  {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-climate-modeling'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    tag,
+  s://ziontechgroup.com/services/quantum-climate-modeling'}    tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']};
   };
 ];
@@ -1715,7 +1523,6 @@ i,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',' tag,
-<<<<<<< HEAD
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'] export interface Service {} ]; ; } ]; } ]; export interface Service {/* TODO: Fix JSX expression */}
   k: string} tag,
   s: string[]} } export const,
@@ -1737,30 +1544,5 @@ i,
   s://ziontechgroup.com/services/quantum-materials-discovery'}' tag,
   s: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']} } {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-financial-modeling'}' tag,
-  s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']} } {/* TODO: Fix JSX expression */}
-=======
-  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'] export interface Service {} ]; } ]} ]; export interface Service {/* TODO: Fix JSX expression */};
-  k: string} tag,
-  s: string[]} } ; export const,
-  emergingTech2027Services: Service[] = [; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-machine-learning'}' tag,
-  s: ['Quantum ComputingMachine LearningAIResearchOptimization']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/neuromorphic-computing'}' tag,
-  s: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/synthetic-biology-platform'}' tag,
-  s: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-sensors-network'}' tag,
-  s: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/brain-computer-interface'}' tag,
-  s: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-internet-security'}' tag,
-  s: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/autonomous-robotics-platform'}' tag,
-  s: ['RoboticsAIAutomationManufacturingLogistics']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-materials-discovery'}' tag,
-  s: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']} }; {/* TODO: Fix JSX expression */};
-  s://ziontechgroup.com/services/quantum-financial-modeling'}' tag,
-  s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']} }; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  s://ziontechgroup.com/services/quantum-climate-modeling'}' tag,
+  s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']} } {/* TODO: Fix JSX expression */}  s://ziontechgroup.com/services/quantum-climate-modeling'}' tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} } ]; '"

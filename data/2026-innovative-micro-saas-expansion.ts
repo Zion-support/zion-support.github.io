@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -30,17 +25,10 @@ import React from 'react';
   growth_rate: string;
   contact_info: unknown;
     mobile: string;
-<<<<<<< HEAD
     email: string
     address: string
     website: string,
-  }
-=======
-    email: string;
-    address: string;
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  real_implementation: boolean;
+  }  real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
   customers: number;
@@ -240,20 +228,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.'
-<<<<<<< HEAD
       launchDate: '2024-11-01'
       customers: 45
       rating: 4.8
       reviews: 23,
-    }
-=======
-      launchDate: '2024-11-01',
-      customers:
-        customers: 45;
-      rating: 4.8;
-      reviews: 23};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI Content Creation & Marketing;
+    }    // AI Content Creation & Marketing;
       id: 'ai-content-factory-pro'
       name: 'AI Content Factory Pro',
       tagline: 'Generate high-quality content at scale with AI-powered writing assistance',
@@ -380,20 +359,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered content generation platform with advanced language models, SEO tools, and comprehensive content management system.'
-<<<<<<< HEAD
       launchDate: '2024-10-15'
       customers: 78
       rating: 4.7
       reviews: 34,
-    }
-=======
-      launchDate: '2024-10-15',
-      customers:
-        customers: 78;
-      rating: 4.7;
-      reviews: 34};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI Customer Service & Support;
+    }    // AI Customer Service & Support;
       id: 'ai-customer-service-automation'
       name: 'AI Customer Service Automation',
       tagline: 'Automate customer support with intelligent chatbots and ticket management',
@@ -506,20 +476,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered customer service platform with natural language processing, automated ticket management, and comprehensive analytics.'
-<<<<<<< HEAD
       launchDate: '2024-09-20'
       customers: 56
       rating: 4.6
       reviews: 28,
-    }
-=======
-      launchDate: '2024-09-20',
-      customers:
-        customers: 56;
-      rating: 4.6;
-      reviews: 28};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI-Powered E-commerce Optimization;
+    }    // AI-Powered E-commerce Optimization;
       id: 'ai-ecommerce-optimizer'
       name: 'AI E-commerce Optimizer',
       tagline: 'Boost sales with AI-powered product recommendations and pricing optimization',
@@ -632,20 +593,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered e-commerce optimization platform with machine learning algorithms for recommendations, pricing, and customer experience enhancement.'
-<<<<<<< HEAD
       launchDate: '2024-08-10'
       customers: 32
       rating: 4.5
       reviews: 19,
-    }
-=======
-      launchDate: '2024-08-10',
-      customers:
-        customers: 32;
-      rating: 4.5;
-      reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI-Powered HR & Recruitment;
+    }    // AI-Powered HR & Recruitment;
       id: 'ai-hr-recruitment-suite'
       name: 'AI HR & Recruitment Suite',
       tagline: 'Streamline hiring with AI-powered candidate screening and talent management',
@@ -768,20 +720,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered HR and recruitment platform with natural language processing, automated screening, and comprehensive talent management tools.'
-<<<<<<< HEAD
       launchDate: '2024-07-15'
       customers: 41
       rating: 4.4
       reviews: 22,
-    }
-=======
-      launchDate: '2024-07-15',
-      customers:
-        customers: 41;
-      rating: 4.4;
-      reviews: 22};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI-Powered Financial Management;
+    }    // AI-Powered Financial Management;
       id: 'ai-financial-management-platform'
       name: 'AI Financial Management Platform',
       tagline: 'Intelligent financial planning and analysis with AI-powered insights',
@@ -908,20 +851,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered financial management platform with machine learning algorithms for expense categorization, forecasting, and financial planning.'
-<<<<<<< HEAD
       launchDate: '2024-06-20'
       customers: 67
       rating: 4.6
       reviews: 31,
-    }
-=======
-      launchDate: '2024-06-20',
-      customers:
-        customers: 67;
-      rating: 4.6;
-      reviews: 31};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI-Powered Project Management;
+    }    // AI-Powered Project Management;
       id: 'ai-project-management-suite'
       name: 'AI Project Management Suite',
       tagline: 'Smart project management with AI-powered task optimization and team collaboration',
@@ -1044,20 +978,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered project management platform with machine learning algorithms for task optimization, resource allocation, and project forecasting.'
-<<<<<<< HEAD
       launchDate: '2024-05-25'
       customers: 53
       rating: 4.5
       reviews: 26,
-    }
-=======
-      launchDate: '2024-05-25',
-      customers:
-        customers: 53;
-      rating: 4.5;
-      reviews: 26};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI-Powered Learning & Training;
+    }    // AI-Powered Learning & Training;
       id: 'ai-learning-management-system'
       name: 'AI Learning Management System',
       tagline: 'Personalized learning experiences with AI-powered content adaptation and progress tracking',
@@ -1170,20 +1095,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered learning management system with machine learning algorithms for personalization, content adaptation, and progress tracking.'
-<<<<<<< HEAD
       launchDate: '2024-04-30'
       customers: 38
       rating: 4.4
       reviews: 21,
-    }
-=======
-      launchDate: '2024-04-30',
-      customers:
-        customers: 38;
-      rating: 4.4;
-      reviews: 21};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // AI-Powered Healthcare Solutions;
+    }    // AI-Powered Healthcare Solutions;
       id: 'ai-healthcare-assistant'
       name: 'AI Healthcare Assistant',
       tagline: 'Intelligent healthcare management with AI-powered patient care and administrative automation',
@@ -1296,20 +1212,11 @@ const contact =
       realImplementation: true,
       implementationDetails:,
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.'
-<<<<<<< HEAD
       launchDate: '2024-03-15'
       customers: 24
       rating: 4.3
       reviews: 18,
-    }
-=======
-      launchDate: '2024-03-15',
-      customers:
-        customers: 24;
-      rating: 4.3;
-      reviews: 18};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
+    }        'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
       launchDate: '2024-03-15'
       customers: 24;
       rating: 4.3
@@ -1358,7 +1265,6 @@ export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   return innovativeMicroSaasServices2026.filter(service => service.category === category)
   )};
 export const getPopularInnovativeMicroSaasServices2026 = () =>
-<<<<<<< HEAD
 }
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.popular)}
@@ -1368,24 +1274,13 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
   return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
-=======
-};
-export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */};
-  return innovativeMicroSaasServices2026.filter(service => service.popular)};
-};
-  return innovativeMicroSaasServices2026.filter(service => service.popular)};
-  return innovativeMicroSaasServices2026.filter(service => service.popular)};
-  return innovativeMicroSaasServices2026.filter(service => service.popular)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ];
+}  ];
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number),
   maxPrice: number)) =>})
 };
 export interface InnovativeMicroSaasService2026 {
 id: string, name: string;
 }
-<<<<<<< HEAD
 export interface InnovativeMicroSaasService2026 {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1408,31 +1303,7 @@ export interface InnovativeMicroSaasService2026 {id: string, name: string,
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
-=======
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const contact =
+}const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
@@ -1658,17 +1529,10 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     growthRate: '17% annual growth', contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
-<<<<<<< HEAD
     launchDate: '2024-03-15', customers: 24
     rating: 4.3
     reviews: 18,
-  }
-=======
-    launchDate: '2024-03-15', customers: 24;
-    rating: 4.3;
-    reviews: 18};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =>,
   return innovativeMicroSaasServices2026.filter(service => service.category === category),
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
@@ -2238,7 +2102,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number)
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
-<<<<<<< HEAD
   return innovativeMicroSaasServices2026.filter(service =>)
     const _price = parseInt(service.price.replace('$') ''));
 }
@@ -2250,45 +2113,23 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   });
 }
   })
-}
-=======
-  return innovativeMicroSaasServices2026.filter(service =>);
-const _price = parseInt(service.price.replace('$') ''))};
-  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>);
-const _price = parseInt(service && service.price.replace('$') ''));
-  return innovativeMicroSaasServices2026.filter(service =>);
-const _price = parseInt(service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice})}})
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const getInnovativeMicroSaasServices2026ByCategory = (
+}export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: unknown
   return innovativeMicroSaasServices2026.filter()
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) =>: unknown
   return innovativeMicroSaasServices2026.filter ()
-<<<<<<< HEAD
     service => service.category === category),
 }
 export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown;
   return innovativeMicroSaasServices2026.filter (service => service.popular);
-}
-=======
-    service => service.category === category)};
-;
-export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown;
-  return innovativeMicroSaasServices2026.filter (service => service.popular)};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number)
+}export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return innovativeMicroSaasServices2026.filter(service =>),
 export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-<<<<<<< HEAD
   return innovativeMicroSaasServices2026.filter (service =>)
     const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
@@ -2312,32 +2153,7 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  return innovativeMicroSaasServices2026.filter (service =>);
-const _price = parse_int (service.price.replace ('$') ''));
-    return price >= min_price && price <= max_price})}}    return price >= min_price && price <= max_price})};
-;
-export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */};
-  s: string};
-    websit,
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
-// const contact = {
-;
-};
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  website: 'https://ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'}  website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -2349,17 +2165,9 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 // const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  s: number};
-;
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}  websit,
   e: 'http,
   s://ziontechgroup.com'
 }
@@ -2398,20 +2206,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.';
-<<<<<<< HEAD
     launchDate: '2024-11-01'
     customers: 45,
     rating: 4.8}
     reviews: 23}
-  }
-=======
-    launchDate: '2024-11-01';
-    customers: 45;
-    rating: 4.8};
-    reviews: 23};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI Content Creation & Marketing;
+  }  // AI Content Creation & Marketing;
   {
     id: 'ai-content-factory-pro';
     name: 'AI Content Factory Pro';
@@ -2444,20 +2243,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered content generation platform with advanced language models, SEO tools, and comprehensive content management system.';
-<<<<<<< HEAD
     launchDate: '2024-10-15'
     customers: 78,
     rating: 4.7}
     reviews: 34}
-  }
-=======
-    launchDate: '2024-10-15';
-    customers: 78;
-    rating: 4.7};
-    reviews: 34};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI Customer Service & Support;
+  }  // AI Customer Service & Support;
   {
     id: 'ai-customer-service-automation';
     name: 'AI Customer Service Automation';
@@ -2490,20 +2280,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered customer service platform with natural language processing, automated ticket management, and comprehensive analytics.';
-<<<<<<< HEAD
     launchDate: '2024-09-20'
     customers: 56,
     rating: 4.6}
     reviews: 28}
-  }
-=======
-    launchDate: '2024-09-20';
-    customers: 56;
-    rating: 4.6};
-    reviews: 28};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered E-commerce Optimization;
+  }  // AI-Powered E-commerce Optimization;
   {
     id: 'ai-ecommerce-optimizer';
     name: 'AI E-commerce Optimizer';
@@ -2536,20 +2317,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered e-commerce optimization platform with machine learning algorithms for recommendations, pricing, and customer experience enhancement.';
-<<<<<<< HEAD
     launchDate: '2024-08-10'
     customers: 32,
     rating: 4.5}
     reviews: 19}
-  }
-=======
-    launchDate: '2024-08-10';
-    customers: 32;
-    rating: 4.5};
-    reviews: 19};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered HR & Recruitment;
+  }  // AI-Powered HR & Recruitment;
   {
     id: 'ai-hr-recruitment-suite';
     name: 'AI HR & Recruitment Suite';
@@ -2582,20 +2354,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered HR and recruitment platform with natural language processing, automated screening, and comprehensive talent management tools.';
-<<<<<<< HEAD
     launchDate: '2024-07-15'
     customers: 41,
     rating: 4.4}
     reviews: 22}
-  }
-=======
-    launchDate: '2024-07-15';
-    customers: 41;
-    rating: 4.4};
-    reviews: 22};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Financial Management;
+  }  // AI-Powered Financial Management;
   {
     id: 'ai-financial-management-platform';
     name: 'AI Financial Management Platform';
@@ -2628,20 +2391,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered financial management platform with machine learning algorithms for expense categorization, forecasting, and financial planning.';
-<<<<<<< HEAD
     launchDate: '2024-06-20'
     customers: 67,
     rating: 4.6}
     reviews: 31}
-  }
-=======
-    launchDate: '2024-06-20';
-    customers: 67;
-    rating: 4.6};
-    reviews: 31};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Project Management;
+  }  // AI-Powered Project Management;
   {
     id: 'ai-project-management-suite';
     name: 'AI Project Management Suite';
@@ -2674,20 +2428,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered project management platform with machine learning algorithms for task optimization, resource allocation, and project forecasting.';
-<<<<<<< HEAD
     launchDate: '2024-05-25'
     customers: 53,
     rating: 4.5}
     reviews: 26}
-  }
-=======
-    launchDate: '2024-05-25';
-    customers: 53;
-    rating: 4.5};
-    reviews: 26};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Learning & Training;
+  }  // AI-Powered Learning & Training;
   {
     id: 'ai-learning-management-system';
     name: 'AI Learning Management System';
@@ -2720,20 +2465,11 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered learning management system with machine learning algorithms for personalization, content adaptation, and progress tracking.';
-<<<<<<< HEAD
     launchDate: '2024-04-30'
     customers: 38,
     rating: 4.4}
     reviews: 21}
-  }
-=======
-    launchDate: '2024-04-30';
-    customers: 38;
-    rating: 4.4};
-    reviews: 21};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Healthcare Solutions;
+  }  // AI-Powered Healthcare Solutions;
   {
     id: 'ai-healthcare-assistant';
     name: 'AI Healthcare Assistant';
@@ -2766,7 +2502,6 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.';
-<<<<<<< HEAD
     launchDate: '2024-03-15'
     customers: 24,
     rating: 4.3}
@@ -2775,96 +2510,42 @@ export const,
   g: 4.8}
     review,
   s: 23}
-  }
-=======
-    launchDate: '2024-03-15';
-    customers: 24;
-    rating: 4.3};
-    reviews: 18};
-  {/* TODO: Fix JSX expression */};
-  g: 4.8};
-    review,
-  s: 23};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI Content Creation & Marketing;
+  }  // AI Content Creation & Marketing;
   {/* TODO: Fix JSX expression */};
   g: 4.7};
     review,
-<<<<<<< HEAD
   s: 34}
-  }
-=======
-  s: 34};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI Customer Service & Support;
+  }  // AI Customer Service & Support;
   {/* TODO: Fix JSX expression */};
   g: 4.6};
     review,
-<<<<<<< HEAD
   s: 28}
-  }
-=======
-  s: 28};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered E-commerce Optimization;
+  }  // AI-Powered E-commerce Optimization;
   {/* TODO: Fix JSX expression */};
   g: 4.5};
     review,
-<<<<<<< HEAD
   s: 19}
-  }
-=======
-  s: 19};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered HR & Recruitment;
+  }  // AI-Powered HR & Recruitment;
   {/* TODO: Fix JSX expression */};
   g: 4.4};
     review,
-<<<<<<< HEAD
   s: 22}
-  }
-=======
-  s: 22};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Financial Management;
+  }  // AI-Powered Financial Management;
   {/* TODO: Fix JSX expression */};
   g: 4.6};
     review,
-<<<<<<< HEAD
   s: 31}
-  }
-=======
-  s: 31};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Project Management;
+  }  // AI-Powered Project Management;
   {/* TODO: Fix JSX expression */};
   g: 4.5};
     review,
-<<<<<<< HEAD
   s: 26}
-  }
-=======
-  s: 26};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Learning & Training;
+  }  // AI-Powered Learning & Training;
   {/* TODO: Fix JSX expression */};
   g: 4.4};
     review,
-<<<<<<< HEAD
   s: 21}
-  }
-=======
-  s: 21};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // AI-Powered Healthcare Solutions;
+  }  // AI-Powered Healthcare Solutions;
   {/* TODO: Fix JSX expression */};
   g: 4.3};
     review,
@@ -2872,7 +2553,6 @@ export const,
   };
 ];
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-<<<<<<< HEAD
   y: string) => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.category === category)}
 }
@@ -2889,24 +2569,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   });
 }    return price >= minPrice && price <= maxPrice;
   })
-}
-=======
-  y: string) => {/* TODO: Fix JSX expression */};
-  return innovativeMicroSaasServices2026.filter(service => service.category === category)};
-};
-export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */};
-  return innovativeMicroSaasServices2026.filter(service => service.popular)};
-};
-export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) => {;
-export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
-  e: number) maxPric,
-  e: number) => {/* TODO: Fix JSX expression */};
-  return innovativeMicroSaasServices2026.filter(service => {});
-const _price = parseInt(service.price.replace('$') ''));
-    return price >= minPrice && price <= maxPrice})};    return price >= minPrice && price <= maxPrice})
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-i,
+}i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -3590,7 +3253,6 @@ i,
   e: number) => return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')), } return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); } }) } export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service => service.category === category), } export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular); } export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
-<<<<<<< HEAD
   e: number) =>: unknown return innovativeMicroSaasServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price, }); } } return price >= min_price && price <= max_price; }); } ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
@@ -3599,22 +3261,9 @@ i,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} const contact = {/* TODO: Fix JSX expression */}
-=======
-  e: number) =>: unknown return innovativeMicroSaasServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price})}} return price >= min_price && price <= max_price})} ; ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; const contact = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: number} const contact = {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [; // AI-Powered Business Intelligence & Analytics, {/* TODO: Fix JSX expression */}
   g: 4.8} review,
@@ -3632,28 +3281,7 @@ i,
   g: 4.5} review,
   s: 26} } // AI-Powered Learning & Training; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 21} } // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [; // AI-Powered Business Intelligence & Analytics; {/* TODO: Fix JSX expression */};
-  g: 4.8} review,
-  s: 23} }; // AI Content Creation & Marketing; {/* TODO: Fix JSX expression */};
-  g: 4.7} review,
-  s: 34} }; // AI Customer Service & Support; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 28} }; // AI-Powered E-commerce Optimization; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 19} }; // AI-Powered HR & Recruitment; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 22} }; // AI-Powered Financial Management; {/* TODO: Fix JSX expression */};
-  g: 4.6} review,
-  s: 31} }; // AI-Powered Project Management; {/* TODO: Fix JSX expression */};
-  g: 4.5} review,
-  s: 26} }; // AI-Powered Learning & Training; {/* TODO: Fix JSX expression */};
-  g: 4.4} review,
-  s: 21} }; // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  g: 4.3} review,
+  s: 21} } // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */}  g: 4.3} review,
   s: 18} } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) => { return innovativeMicroSaasServices2026.filter(service => service.category === category)} }; export const getPopularInnovativeMicroSaasServices2026 = () => { return innovativeMicroSaasServices2026.filter(service => service.popular)} } export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,

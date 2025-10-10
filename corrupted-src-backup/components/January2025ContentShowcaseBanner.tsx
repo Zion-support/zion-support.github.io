@@ -1,18 +1,8 @@
 import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-<<<<<<< HEAD
 const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => { 
   retu, r, n(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-=======
-const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
-return (
-  retu, r, n(<div , classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0'>
-);
-} {' ' };
-          <h2 , classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>)
+          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>            <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>)
               Complete, AI, Knowledge H, u, b;)
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>)
             Access, the, most comprehensive, collection, of AI, insig, h, t, s)
@@ -21,16 +11,9 @@ return (
           <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span , classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
               Complete, AI, Knowledge H, u, b</span>
-<<<<<<< HEAD
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>
 const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
-=======
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>;
-const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
               Complete, AI, Knowledge H, u, b;
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'></p>
@@ -142,9 +125,5 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               <BookOpen, classNam, e='w-5 h-5' /></BookOpen>
               Explore, Complete, Library;
               <Users, classNam, e='w-5 h-5' /></Users>
-<<<<<<< HEAD
               Join, AI, Community;
 }
-=======
-              Join, AI, Community};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

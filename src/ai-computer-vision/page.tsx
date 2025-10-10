@@ -5,20 +5,11 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
-<<<<<<< HEAD
     const features = [],
   return (
     {// TODO: Add content
   }
-}
-=======
-};
-const features = [];
-  return (
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Eye,
       titl,
   e: 'Object Detection',
@@ -62,15 +53,8 @@ const features = [];
       ico,
   n: Settings,
       useCase,
-<<<<<<< HEAD
   s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
-=======
-  s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
-const pricing = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      nam,
+  const pricing = [      nam,
   e: 'Starter',
       pric,
   e: '$499/month',
@@ -85,16 +69,8 @@ const pricing = [
 //         'Email support',
 //         'Standard API'
 //       ],
-<<<<<<< HEAD
       popular: false,
-const PagePage: React.FC = () => {
-=======
-      popular: false,;
-const PagePage: React.FC = () => {
-};
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+const PagePage: React.FC = () => {  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -108,32 +84,17 @@ return (
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//>
-//               Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </a>
+//               Get Started          </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Eye className="w-5 h-5" />
               +1 302 464 0950,
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Features Section */}
-=======
-);
-};
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16"></section>"
+        {/* Features Section */}        <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities,
@@ -203,25 +164,14 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
-}
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-//                     plan.popular;
+}//                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-slate-900'`
-<<<<<<< HEAD
                   }`}
-        {/* CTA Section */}
-=======
-                  }`};
-        {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          "
+        {/* CTA Section */}          "
           <section className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
             <h2 className="text-3xl,"
@@ -232,7 +182,6 @@ Ready to See the Future?"
                 Start Your Vision Journey;
                 href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
-<<<<<<< HEAD
                 Request Demo
       </main>
       <Footer /></Footer>
@@ -241,11 +190,3 @@ Ready to See the Future?"
 }
 export default PagePage;
   </p>
-=======
-                Request Demo;
-      </main>
-      <Footer /></Footer>
-    </div>
-  )};
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

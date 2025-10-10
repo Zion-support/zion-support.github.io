@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -1158,8 +1153,4 @@ i,
   s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
   n: true, implementation_detail,
   s:  ,' 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',' launch_dat,
-<<<<<<< HEAD
   e: '2024 - 11 - 01', '
-=======
-  e: '2024 - 11 - 01', '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

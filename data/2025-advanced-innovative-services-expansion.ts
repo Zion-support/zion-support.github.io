@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-<<<<<<< HEAD
-    email: string
-    address: string
-    website: string,
-  }
-=======
-    email: string;
-    address: string;
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -65,7 +23,6 @@ const contact =
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',
-<<<<<<< HEAD
 export interface AdvancedInnovativeService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -82,29 +39,7 @@ export interface AdvancedInnovativeService {id: string, name: string,
   contactInfo: unknown,
     mobile: string, email: string
     address: string,
-    website: string}
-=======
-export interface AdvancedInnovativeService {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: ServiceVariant;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    },
+    website: string}    },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number, reviews: number,
@@ -1284,20 +1219,13 @@ export const,
 export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
-  }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementation: boolean;
+  }  realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
   benefits: string[]
   capabilities: string[]
   marketAdvantage: string,
@@ -1305,20 +1233,7 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string};
-;
-// const contact = {
-;
-};
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  website: 'https://ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'}  website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1336,17 +1251,9 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
   capabilitie,
   s: string[],
   marketAdvantag,
-<<<<<<< HEAD
   e: string}
 // const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  e: string};
-;
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}  websit,
   e: 'http,
   s://ziontechgroup.com'
 }
@@ -1867,7 +1774,6 @@ export const,
     variant: 'ai-autonomous-enterprise', contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Cloud-native platform with enterprise SSO, custom integrations, and dedicated support',
-<<<<<<< HEAD
     launchDate: '2025-01-15', customers: 89,
     rating: 4.8, reviews: 67
     benefits: [
@@ -1875,18 +1781,7 @@ export const,
     capabilities: [}
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
     ]}
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}
-=======
-    launchDate: '2025-01-15', customers: 89;
-    rating: 4.8, reviews: 67;
-    benefits: [;
-      '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring'];,
-    capabilities: [};
-      'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
-    ]};
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // Quantum Computing Services;
+    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}  // Quantum Computing Services;
     id: 'quantum-financial-modeling-platform', name: 'Quantum Financial Modeling Platform',
     tagline: 'Quantum-powered financial modeling for unprecedented accuracy and speed',
     price: '$4,999',
@@ -2850,20 +2745,13 @@ export const,
 export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
-  }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementation: boolean;
+  }  realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
   benefits: string[]
   capabilities: string[]
   marketAdvantage: string,
@@ -2871,20 +2759,7 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string};
-;
-// const contact = {
-;
-};
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  website: 'https://ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'}  website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -2902,17 +2777,9 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
   capabilitie,
   s: string[],
   marketAdvantag,
-<<<<<<< HEAD
   e: string}
 // const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  e: string};
-;
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}  websit,
   e: 'http,
   s://ziontechgroup.com'
 }
@@ -3427,15 +3294,9 @@ export const,
     ]};
     marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'
-<<<<<<< HEAD
   }
 ];
-  }
-=======
-  };
-]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
     benefit,
   s: [,
       '30% improvement in prediction accuracy',
@@ -3834,7 +3695,6 @@ i,
   s: [' '30% improvement in prediction accuracy'' '50% reduction in modeling time'' 'Real-time monitoring'' 'Environmental compliance'' 'Expert consultation' ] capabilitie,
   s: [' 'AI climate modeling'' 'Environmental monitoring'' 'Weather forecasting'' 'Sustainability analytics'' 'Custom model development' ] marketAdvantag,
   e:' 'Most advanced AI climate prediction platform with research-grade accuracy' }' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
-<<<<<<< HEAD
   e: 'Most advanced AI climate prediction platform with research-grade accuracy' } ]; ' 'Most advanced AI climate prediction platform with research-grade accuracy'}' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
@@ -3847,26 +3707,9 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string} const contact = {/* TODO: Fix JSX expression */}
-=======
-  e: 'Most advanced AI climate prediction platform with research-grade accuracy' } ]; ' 'Most advanced AI climate prediction platform with research-grade accuracy'};' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
-  e: 'Most advanced AI climate prediction platform with research-grade accuracy'' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; benefit,
-  s: string[]; capabilitie,
-  s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  e: string} const contact = {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
   s: [,' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
@@ -3895,39 +3738,7 @@ i,
   e: 'Most comprehensive enterprise blockchain platform with multi-chain support' } // Healthcare AI Services; {/* TODO: Fix JSX expression */}
   s: [,' '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support' ]} capabilitie,
   s: [,' 'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance' ]}' marketAdvantag,
-  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services; {/* TODO: Fix JSX expression */};
-  s: [,' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
-  s: [,' 'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance' ]};' marketAdvantag,
-  e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' }; // Quantum Computing Services; {/* TODO: Fix JSX expression */};
-  s: [,' '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation' ]} capabilitie,
-  s: [,' 'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption' ]};' marketAdvantag,
-  e: 'Only quantum computing platform specifically designed for financial services' }; // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */};
-  s: [,' '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation' ]} capabilitie,
-  s: [,' 'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling' ]};' marketAdvantag,
-  e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption' }; // Edge Computing & IoT Services; {/* TODO: Fix JSX expression */};
-  s: [,' '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment' ]} capabilitie,
-  s: [,' 'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics' ]};' marketAdvantag,
-  e: 'Comprehensive edge AI platform with advanced optimization and management capabilities' }; // Space Technology Services; {/* TODO: Fix JSX expression */};
-  s: [,' '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance' ]} capabilitie,
-  s: [,' 'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control' ]};' marketAdvantag,
-  e: 'Only AI-powered satellite mission control platform with proven space operations' }; // Neural Technology & BCI Services; {/* TODO: Fix JSX expression */};
-  s: [,' '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance' ]} capabilitie,
-  s: [,' 'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks' ]};' marketAdvantag,
-  e: 'Most comprehensive BCI development platform with complete hardware and software stack' }; // Advanced Data Analytics Services; {/* TODO: Fix JSX expression */};
-  s: [,' '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics' ]} capabilitie,
-  s: [,' 'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring' ]};' marketAdvantag,
-  e: 'High-performance streaming analytics platform with proven enterprise scalability' }; // Blockchain & DeFi Services; {/* TODO: Fix JSX expression */};
-  s: [,' '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation' ]} capabilitie,
-  s: [,' 'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization' ]};' marketAdvantag,
-  e: 'Most comprehensive enterprise blockchain platform with multi-chain support' }; // Healthcare AI Services; {/* TODO: Fix JSX expression */};
-  s: [,' '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support' ]} capabilitie,
-  s: [,' 'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance' ]};' marketAdvantag,
-  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' }; // Climate & Sustainability Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  s: [' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
+  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */}  s: [' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
   s: [' 'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance' ]}' marketAdvantag,
   e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' } // Quantum Computing Services ' i,
   d: 'quantum-financial-modeling-platform', nam,
@@ -4263,7 +4074,6 @@ i,
   benefits: [' '30% improvement in prediction accuracy'' '50% reduction in modeling time'' 'Real-time monitoring'' 'Environmental compliance'' 'Expert consultation' ] capabilitie,
   s: [' 'AI climate modeling'' 'Environmental monitoring'' 'Weather forecasting'' 'Sustainability analytics'' 'Custom model development' ] marketAdvantag,
   e:' market_advantag,
-<<<<<<< HEAD
   e: 'Most advanced AI climate prediction platform with research - grade accuracy' ' 'Most advanced AI climate prediction platform with research-grade accuracy'}' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy' ' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
@@ -4276,26 +4086,9 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string} const contact = {/* TODO: Fix JSX expression */}
-=======
-  e: 'Most advanced AI climate prediction platform with research - grade accuracy' ' 'Most advanced AI climate prediction platform with research-grade accuracy'};' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
-  e: 'Most advanced AI climate prediction platform with research-grade accuracy' ' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; benefit,
-  s: string[]; capabilitie,
-  s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  e: string} const contact = {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
   s: [,' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
@@ -4324,45 +4117,9 @@ i,
   e: 'Most comprehensive enterprise blockchain platform with multi-chain support' } // Healthcare AI Services; {/* TODO: Fix JSX expression */}
   s: [,' '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support' ]} capabilitie,
   s: [,' 'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance' ]}' marketAdvantag,
-  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services; {/* TODO: Fix JSX expression */};
-  s: [,' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
-  s: [,' 'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance' ]};' marketAdvantag,
-  e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' }; // Quantum Computing Services; {/* TODO: Fix JSX expression */};
-  s: [,' '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation' ]} capabilitie,
-  s: [,' 'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption' ]};' marketAdvantag,
-  e: 'Only quantum computing platform specifically designed for financial services' }; // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */};
-  s: [,' '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation' ]} capabilitie,
-  s: [,' 'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling' ]};' marketAdvantag,
-  e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption' }; // Edge Computing & IoT Services; {/* TODO: Fix JSX expression */};
-  s: [,' '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment' ]} capabilitie,
-  s: [,' 'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics' ]};' marketAdvantag,
-  e: 'Comprehensive edge AI platform with advanced optimization and management capabilities' }; // Space Technology Services; {/* TODO: Fix JSX expression */};
-  s: [,' '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance' ]} capabilitie,
-  s: [,' 'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control' ]};' marketAdvantag,
-  e: 'Only AI-powered satellite mission control platform with proven space operations' }; // Neural Technology & BCI Services; {/* TODO: Fix JSX expression */};
-  s: [,' '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance' ]} capabilitie,
-  s: [,' 'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks' ]};' marketAdvantag,
-  e: 'Most comprehensive BCI development platform with complete hardware and software stack' }; // Advanced Data Analytics Services; {/* TODO: Fix JSX expression */};
-  s: [,' '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics' ]} capabilitie,
-  s: [,' 'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring' ]};' marketAdvantag,
-  e: 'High-performance streaming analytics platform with proven enterprise scalability' }; // Blockchain & DeFi Services; {/* TODO: Fix JSX expression */};
-  s: [,' '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation' ]} capabilitie,
-  s: [,' 'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization' ]};' marketAdvantag,
-  e: 'Most comprehensive enterprise blockchain platform with multi-chain support' }; // Healthcare AI Services; {/* TODO: Fix JSX expression */};
-  s: [,' '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support' ]} capabilitie,
-  s: [,' 'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance' ]};' marketAdvantag,
-  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' }; // Climate & Sustainability Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  s: [}' 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ]}' marketAdvantag,
+  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */}  s: [}' 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ]}' marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy' } ]; } ]; benefit,
   s: [,' '30% improvement in prediction accuracy',' '50% reduction in modeling time',' 'Real - time monitoring',' 'Environmental compliance',' 'Expert consultation'], capabilitie,
   s: [,' 'AI climate modeling',' 'Environmental monitoring',' 'Weather forecasting',' 'Sustainability analytics',' 'Custom model development'], market_advantag,
   e:  ,' 'Most advanced AI climate prediction platform with research - grade accuracy'},' ]; 'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development' ];' market_advantag,
-<<<<<<< HEAD
   e: 'Most advanced AI climate prediction platform with research - grade accuracy' } ]; '
-=======
-  e: 'Most advanced AI climate prediction platform with research - grade accuracy' } ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

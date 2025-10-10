@@ -1,794 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string
-    address: string
-    website: string,
-  i,
-  d: string,
-  nam,
-  e: string,
-  taglin,
-  e: string,
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string,
-  feature,
-  s: string[],
-  popula,
-  r: boolean,
-  ico,
-  n: string,
-  colo,
-  r: string,
-  text_colo,
-  r: string,
-  lin,
-  k: string,
-  market_positio,
-  n: string,
-  target_audienc,
-  e: string,
-  trial_day,
-  s: number,
-  setup_tim,
-  e: string,
-  categor,
-  y: string,
-  real_servic,
-  e: boolean,
-  technolog,
-  y: string[],
-  integration,
-  s: string[],
-  use_case,
-  s: string[],
-  ro,
-  i: string,
-  competitor,
-  s: string[],
-  market_siz,
-  e: string,
-  growth_rat,
-  e: string,
-  varian,
-  t: ServiceVariant,
-  contact_inf,
-  o: unknown,
-    mobil,
-  e: string,
-    emai,
-  l: string,
-    addres,
-  s: string,
-    websit,
-  e: string};
-  real_implementatio,
-  n: boolean,
-  implementation_detail,
-  s: string,
-  launch_dat,
-  e: string,
-  customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number,
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =
-  [
-      id: 'ai - powered - supply - chain - optimization',
-      name: 'AI - Powered Supply Chain Optimization',
-      tagline: 'Intelligent supply chain planning and optimization',
-      price: '$1, 299',
-      period: '/month',
-      description: unknown,
-export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =,
-  [
-      i,
-  d: 'ai - powered - supply - chain - optimization',
-      nam,
-  e: 'AI - Powered Supply Chain Optimization',
-      taglin,
-  e: 'Intelligent supply chain planning and optimization',
-      pric,
-  e: '$1, 299',
-      perio,
-  d: '/month',
-      descriptio,
-  n: unknown,
-        'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
-      feature,
-  s: [,
-        'Demand forecasting',
-        'Inventory optimization',
-        'Route optimization',
-        'Supplier management',
-        'Risk assessment',
-        'Performance analytics',
-        'Real - time monitoring',
-        'API integration',
-        'Custom algorithms',
-        'Compliance tools'],
-      popular: true,
-      icon: ''
-      color: 'from - blue - 600 via - indigo - 600 to - purple - 600'
-      text_color: 'text - blue - 400',
-      link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
-      market_position: unknown,
-        'Leading AI supply chain optimization platform with advanced analytics',
-      target_audience: unknown,
-        'Manufacturing companies, Retail chains, E - commerce platforms, Logistics providers, Distribution centers',
-      trial_days: 30,
-      setup_time: '15 - 20 days'
-      category: 'Logistics & Supply Chain',
-      real_service: true,
-      technology: [,
-      popula,
-  r: true,
-      ico,
-  n: '',
-      colo,
-  r: 'from - blue - 600 via - indigo - 600 to - purple - 600',
-      text_colo,
-  r: 'text - blue - 400',
-      lin,
-  k: 'http,
-  s://ziontechgroup.com / ai - powered - supply - chain - optimization',
-      market_positio,
-  n: unknown,
-        'Leading AI supply chain optimization platform with advanced analytics',
-      target_audienc,
-  e: unknown,
-        'Manufacturing companies, Retail chains, E - commerce platforms, Logistics providers, Distribution centers',
-      trial_day,
-  s: 30,
-      setup_tim,
-  e: '15 - 20 days',
-      categor,
-  y: 'Logistics & Supply Chain',
-      real_servic,
-  e: true,
-      technolog,
-  y: [,
-        'Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI / ML'],
-      integration,
-  s: [,
-        'ERP systems, WMS platforms, TMS solutions, E - commerce platforms, Analytics tools'],
-      use_case,
-  s: [,
-        'Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'],
-      roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
-      competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],
-      market_size: '$45B supply chain management market'
-      growth_rate: '28% annual growth'
-      variant: 'logistics'
-      contact_info: unknown,
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
-      implementation_details: unknown,
-        'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
-      launch_date: '2025 - 01 - 26'
-      customers: 156
-      rating: 4 && 4.8
-      reviews: 98,
-    },
-      id: 'quantum - logistics - optimization - platform',
-      name: 'Quantum Logistics Optimization Platform',
-      tagline: 'Quantum computing for complex logistics problems',
-      price: '$2, 999',
-      period: '/month',
-      description: unknown,
-      ro,
-  i: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
-      competitor,
-  s: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'],
-      market_siz,
-  e: '$45B supply chain management market',
-      growth_rat,
-  e: '28% annual growth',
-      varian,
-  t: 'logistics',
-      contact_inf,
-  o: unknown,
-        mobil,
-  e: '+1 302 464 0950',
-        emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-        addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-        websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-      real_implementatio,
-  n: true,
-      implementation_detail,
-  s: unknown,
-        'Production - ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
-      launch_dat,
-  e: '2025 - 01 - 26',
-      customer,
-  s: 156,
-      ratin,
-  g: 4 && 4.8,
-      review,
-  s: 98},
-      i,
-  d: 'quantum - logistics - optimization - platform',
-      nam,
-  e: 'Quantum Logistics Optimization Platform',
-      taglin,
-  e: 'Quantum computing for complex logistics problems',
-      pric,
-  e: '$2, 999',
-      perio,
-  d: '/month',
-      descriptio,
-  n: unknown,
-        'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
-      feature,
-  s: [,
-        'Quantum algorithms',
-        'Route optimization',
-        'Scheduling optimization',
-        'Vehicle routing',
-        'Capacity planning',
-        'Real - time optimization',
-        'High - performance computing',
-        'API access',
-        'Custom models',
-        'Performance analytics'],
-      popular: false,
-      icon: ''
-      color: 'from - purple - 600 via - violet - 600 to - indigo - 600'
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / quantum - logistics - optimization - platform',
-      market_position: unknown,
-        'Leading quantum logistics platform with advanced optimization capabilities',
-      target_audience: unknown,
-        'Large logistics companies, Transportation networks, Global supply chains, Research institutions, Government agencies',
-      trial_days: 45,
-      setup_time: '20 - 30 days'
-      category: 'Logistics & Supply Chain',
-      real_service: true,
-      technology: [,
-      popula,
-  r: false,
-      ico,
-  n: '',
-      colo,
-  r: 'from - purple - 600 via - violet - 600 to - indigo - 600',
-      text_colo,
-  r: 'text - purple - 400',
-      lin,
-  k: 'http,
-  s://ziontechgroup.com / quantum - logistics - optimization - platform',
-      market_positio,
-  n: unknown,
-        'Leading quantum logistics platform with advanced optimization capabilities',
-      target_audienc,
-  e: unknown,
-        'Large logistics companies, Transportation networks, Global supply chains, Research institutions, Government agencies',
-      trial_day,
-  s: 45,
-      setup_tim,
-  e: '20 - 30 days',
-      categor,
-  y: 'Logistics & Supply Chain',
-      real_servic,
-  e: true,
-      technolog,
-  y: [,
-        'Quantum Computing, Logistics Optimization, Route Planning, Scheduling, Quantum Algorithms'],
-      integration,
-  s: [,
-        'TMS platforms, Fleet management systems, GPS tracking, Analytics tools, Reporting systems'],
-      use_case,
-  s: [,
-        'Route optimization, Vehicle scheduling, Capacity planning, Network optimization, Research'],
-      ro,
-  i: 'Improve route efficiency by 35%. Reduce fuel costs by 25%. Speed up optimization by 1000x.',
-      competitor,
-  s: [,
-        'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D - Wave, Rigetti'],
-      market_size: '$8B quantum computing market'
-      growth_rate: '65% annual growth'
-      variant: 'quantum - logistics'
-      contact_info: unknown,
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
-      implementation_details: unknown,
-        'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',
-      launch_date: '2025 - 02 - 02'
-      customers: 34
-      rating: 4 && 4.9
-      reviews: 23,
-    },
-        'Real-time tracking',
-      id: 'iot - fleet - management - platform'
-      name: 'IoT Fleet Management Platform',
-      tagline: 'Comprehensive IoT - based fleet monitoring and management',
-      price: '$799',
-      period: '/month',
-      description: unknown,
-      market_siz,
-  e: '$8B quantum computing market',
-      growth_rat,
-  e: '65% annual growth',
-      varian,
-  t: 'quantum - logistics',
-      contact_inf,
-  o: unknown,
-        mobil,
-  e: '+1 302 464 0950',
-        emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-        addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-        websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-      real_implementatio,
-  n: true,
-      implementation_detail,
-  s: unknown,
-        'Production - ready quantum logistics platform with advanced algorithms and enterprise integration.',
-      launch_dat,
-  e: '2025 - 02 - 02',
-      customer,
-  s: 34,
-      ratin,
-  g: 4 && 4.9,
-      review,
-  s: 23},
-        'Real-time tracking',
-      i,
-  d: 'iot - fleet - management - platform',
-      nam,
-  e: 'IoT Fleet Management Platform',
-      taglin,
-  e: 'Comprehensive IoT - based fleet monitoring and management',
-      pric,
-  e: '$799',
-      perio,
-  d: '/month',
-      descriptio,
-  n: unknown,
-        'Advanced IoT - based fleet management platform that provides real - time monitoring, predictive maintenance, and optimization for vehicle fleets.',
-      feature,
-  s: [,
-        'Real - time tracking',
-        'Predictive maintenance',
-        'Fuel monitoring',
-        'Driver behavior analysis',
-        'Route optimization',
-        'Performance analytics',
-        'Mobile integration',
-        'API access',
-        'Custom dashboards',
-        'Compliance tools'],
-      popular: true,
-      icon: ''
-      color: 'from - green - 600 via - emerald - 600 to - teal - 600'
-      text_color: 'text - green - 400',
-      link: 'https://ziontechgroup.com / iot - fleet - management - platform',
-      market_position: unknown,
-        'Leading IoT fleet management platform with comprehensive monitoring',
-      target_audience: unknown,
-        'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies',
-      trial_days: 21,
-      setup_time: '10 - 15 days'
-      category: 'Logistics & Supply Chain',
-      real_service: true,
-      technology: [,
-      popula,
-  r: true,
-      ico,
-  n: '',
-      colo,
-  r: 'from - green - 600 via - emerald - 600 to - teal - 600',
-      text_colo,
-  r: 'text - green - 400',
-      lin,
-  k: 'http,
-  s://ziontechgroup.com / iot - fleet - management - platform',
-      market_positio,
-  n: unknown,
-        'Leading IoT fleet management platform with comprehensive monitoring',
-      target_audienc,
-  e: unknown,
-        'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies',
-      trial_day,
-  s: 21,
-      setup_tim,
-  e: '10 - 15 days',
-      categor,
-  y: 'Logistics & Supply Chain',
-      real_servic,
-  e: true,
-      technolog,
-  y: [,
-        'IoT Sensors, GPS Tracking, Predictive Analytics, Fleet Management, Real - time Monitoring'],
-      integration,
-  s: [,
-        'GPS devices, Vehicle systems, Fuel cards, Maintenance systems, Accounting software'],
-      use_case,
-  s: [,
-        'Fleet monitoring, Predictive maintenance, Route optimization, Driver management, Cost optimization'],
-      ro,
-  i: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.',
-      competitor,
-  s: [,
-        'Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'],
-      market_size: '$30B fleet management market'
-      growth_rate: '32% annual growth'
-      variant: 'iot - futuristic'
-      contact_info: unknown,
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
-      implementation_details: unknown,
-        'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
-      launch_date: '2025 - 02 - 07'
-      customers: 234
-      rating: 4 && 4.7
-      reviews: 145,
-    },
-        'End-to-end traceability',
-      id: 'blockchain - supply - chain - transparency'
-      name: 'Blockchain Supply Chain Transparency Platform',
-      tagline: 'End - to - end supply chain transparency with blockchain',
-      price: '$899',
-      period: '/month',
-      description: unknown,
-      market_siz,
-  e: '$30B fleet management market',
-      growth_rat,
-  e: '32% annual growth',
-      varian,
-  t: 'iot - futuristic',
-      contact_inf,
-  o: unknown,
-        mobil,
-  e: '+1 302 464 0950',
-        emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-        addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-        websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-      real_implementatio,
-  n: true,
-      implementation_detail,
-  s: unknown,
-        'Production - ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
-      launch_dat,
-  e: '2025 - 02 - 07',
-      customer,
-  s: 234,
-      ratin,
-  g: 4 && 4.7,
-      review,
-  s: 145},
-        'End-to-end traceability',
-      i,
-  d: 'blockchain - supply - chain - transparency',
-      nam,
-  e: 'Blockchain Supply Chain Transparency Platform',
-      taglin,
-  e: 'End - to - end supply chain transparency with blockchain',
-      pric,
-  e: '$899',
-      perio,
-  d: '/month',
-      descriptio,
-  n: unknown,
-        'Advanced blockchain - based supply chain transparency platform that provides end - to - end visibility, traceability, and compliance across global supply chains.',
-      feature,
-  s: [,
-        'End - to - end traceability',
-        'Smart contracts',
-        'Compliance tracking',
-        'Quality assurance',
-        'Sustainability monitoring',
-        'Real - time updates',
-        'API integration',
-        'Data analytics',
-        'Audit trails',
-        'Performance monitoring'],
-      popular: false,
-      icon: ''
-      color: 'from - indigo - 600 via - purple - 600 to - pink - 600'
-      text_color: 'text - indigo - 400',
-      link: 'https://ziontechgroup.com / blockchain - supply - chain - transparency',
-      market_position: unknown,
-        'Leading blockchain supply chain platform with comprehensive transparency',
-      target_audience: unknown,
-        'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands',
-      trial_days: 30,
-      setup_time: '15 - 20 days'
-      category: 'Logistics & Supply Chain',
-      real_service: true,
-      technology: [,
-      popula,
-  r: false,
-      ico,
-  n: '',
-      colo,
-  r: 'from - indigo - 600 via - purple - 600 to - pink - 600',
-      text_colo,
-  r: 'text - indigo - 400',
-      lin,
-  k: 'http,
-  s://ziontechgroup.com / blockchain - supply - chain - transparency',
-      market_positio,
-  n: unknown,
-        'Leading blockchain supply chain platform with comprehensive transparency',
-      target_audienc,
-  e: unknown,
-        'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands',
-      trial_day,
-  s: 30,
-      setup_tim,
-  e: '15 - 20 days',
-      categor,
-  y: 'Logistics & Supply Chain',
-      real_servic,
-  e: true,
-      technolog,
-  y: [,
-        'Blockchain, Supply Chain Management, Smart Contracts, Traceability, Distributed Ledger'],
-      integration,
-  s: [,
-        'ERP systems, WMS platforms, Quality management systems, Compliance tools, Analytics platforms'],
-      use_case,
-  s: [,
-        'Supply chain traceability, Quality assurance, Compliance, Sustainability, Risk management'],
-      ro,
-  i: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.',
-      competitor,
-  s: [,
-        'IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'],
-      market_size: '$22B blockchain supply chain market'
-      growth_rate: '45% annual growth'
-      variant: 'blockchain - futuristic'
-      contact_info: unknown,
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
-      implementation_details: unknown,
-        'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',
-      launch_date: '2025 - 02 - 12'
-      customers: 89
-      rating: 4 && 4.6
-      reviews: 56,
-      market_siz,
-  e: '$22B blockchain supply chain market',
-      growth_rat,
-  e: '45% annual growth',
-      varian,
-  t: 'blockchain - futuristic',
-      contact_inf,
-  o: unknown,
-        mobil,
-  e: '+1 302 464 0950',
-        emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-        addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-        websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-      real_implementatio,
-  n: true,
-      implementation_detail,
-  s: unknown,
-        'Production - ready blockchain supply chain platform with comprehensive transparency and compliance features.',
-      launch_dat,
-  e: '2025 - 02 - 12',
-      customer,
-  s: 89,
-      ratin,
-  g: 4 && 4.6,
-      review,
-  s: 56},
-        'Automated picking',
-        'Smart routing',
-        'Inventory optimization',
-        'Performance analytics',
-        'Predictive maintenance',
-        'Real - time monitoring',
-        'Mobile integration',
-        'API access',
-        'Custom workflows',
-        'Compliance tools'],
-      popular: true,
-      icon: ''
-      color: 'from - orange - 600 via - amber - 600 to - yellow - 600'
-      text_color: 'text - orange - 400',
-      link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
-      market_position: unknown,
-        'Leading AI warehouse automation platform with intelligent optimization',
-      target_audience: unknown,
-        'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers',
-      trial_days: 21,
-      setup_time: '10 - 15 days'
-      category: 'Logistics & Supply Chain',
-      real_service: true,
-      technology: [,
-      popula,
-  r: true,
-      ico,
-  n: '',
-      colo,
-  r: 'from - orange - 600 via - amber - 600 to - yellow - 600',
-      text_colo,
-  r: 'text - orange - 400',
-      lin,
-  k: 'http,
-  s://ziontechgroup.com / ai - powered - warehouse - automation',
-      market_positio,
-  n: unknown,
-        'Leading AI warehouse automation platform with intelligent optimization',
-      target_audienc,
-  e: unknown,
-        'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers',
-      trial_day,
-  s: 21,
-      setup_tim,
-  e: '10 - 15 days',
-      categor,
-  y: 'Logistics & Supply Chain',
-      real_servic,
-  e: true,
-      technolog,
-  y: [,
-        'Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI / ML'],
-      integration,
-  s: [,
-        'WMS platforms, Robotics systems, Conveyor systems, Mobile devices, Analytics tools'],
-      use_case,
-  s: [,
-        'Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'],
-      ro,
-  i: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
-      competitor,
-  s: [,
-        'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'],
-      market_size: '$28B warehouse automation market'
-      growth_rate: '38% annual growth'
-      variant: 'ai - supply - chain - enterprise'
-      contact_info: unknown,
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
-      implementation_details: unknown,
-      market_siz,
-  e: '$28B warehouse automation market',
-      growth_rat,
-  e: '38% annual growth',
-      varian,
-  t: 'ai - supply - chain - enterprise',
-      contact_inf,
-  o: unknown,
-        mobil,
-  e: '+1 302 464 0950',
-        emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-        addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-        websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-      real_implementatio,
-  n: true,
-      implementation_detail,
-  s: unknown,
-        'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
-      launch_dat,
-  e: '2025 - 02 - 18',
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
-      launchDate: '2025-02-18',      customers: 178
-      rating: 4 && 4.8
-      reviews: 112,
-    }
-  ];    features: [,
-<<<<<<< HEAD
-export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant
-  contactInfo: unknown,
-    mobile: string, email: string
-    address: string,
-    website: string}
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number
-  rating: number
-  reviews: number,
-}
-=======
-export interface AdvancedLogisticsSupplyChainSolution2025 {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: ServiceVariant;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain planning and optimization',
@@ -998,13 +207,7 @@ export const,
   n: ''],
     popula,
   r: true, ico,
-<<<<<<< HEAD
-  n: ''],}
-=======
-  n: ''];
-;};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  n: ''],}];
 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
       'Custom algorithmsCompliance tools'
     ];
@@ -1433,7 +636,6 @@ export const,
 export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -1442,19 +644,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   customers: number
   rating: number
   reviews: number,
-}
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+}export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
   {
     id: 'ai-powered-supply-chain-optimization'
     name: 'AI-Powered Supply Chain Optimization'
@@ -1482,7 +672,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
     roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.',
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
-<<<<<<< HEAD
     marketSize: '$45 B supply chain management market'
     growthRate: '28% annual growth',
     variant: 'logistics'}
@@ -1490,18 +679,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    marketSize: '$45 B supply chain management market';
-    growthRate: '28% annual growth';
-    variant: 'logistics'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.';
     launchDate: '2025-01-26';
     customers: 156
@@ -1535,7 +713,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Route optimization, Vehicle scheduling, Capacity planning, Network optimization, Research'];
     roi: 'Improve route efficiency by 35%. Reduce fuel costs by 25%. Speed up optimization by 1000 x.',
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'];
-<<<<<<< HEAD
     marketSize: '$8 B quantum computing market'
     growthRate: '65% annual growth',
     variant: 'quantum-logistics'}
@@ -1543,18 +720,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    marketSize: '$8 B quantum computing market';
-    growthRate: '65% annual growth';
-    variant: 'quantum-logistics'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.';
     launchDate: '2025-02-02';
     customers: 34
@@ -1588,7 +754,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Fleet monitoring, Predictive maintenance, Route optimization, Driver management, Cost optimization'];
     roi: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.',
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'];
-<<<<<<< HEAD
     marketSize: '$30 B fleet management market'
     growthRate: '32% annual growth',
     variant: 'iot-futuristic'}
@@ -1596,18 +761,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    marketSize: '$30 B fleet management market';
-    growthRate: '32% annual growth';
-    variant: 'iot-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.';
     launchDate: '2025-02-07';
     customers: 234
@@ -1641,7 +795,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Supply chain traceability, Quality assurance, Compliance, Sustainability, Risk management'];
     roi: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.',
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'];
-<<<<<<< HEAD
     marketSize: '$22 B blockchain supply chain market'
     growthRate: '45% annual growth',
     variant: 'blockchain-futuristic'}
@@ -1649,18 +802,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    marketSize: '$22 B blockchain supply chain market';
-    growthRate: '45% annual growth';
-    variant: 'blockchain-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.';
     launchDate: '2025-02-12';
     customers: 89
@@ -1694,7 +836,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'];
     roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'];
-<<<<<<< HEAD
     marketSize: '$28 B warehouse automation market'
     growthRate: '38% annual growth',
     variant: 'ai-supply-chain-enterprise'}
@@ -1702,18 +843,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    marketSize: '$28 B warehouse automation market';
-    growthRate: '38% annual growth';
-    variant: 'ai-supply-chain-enterprise'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.';
     launchDate: '2025-02-18';
     customers: 178
@@ -1730,21 +860,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
   {/* TODO: Fix JSX expression */}
-  t: 'logistics'}
-=======
-  s: number};
-;
-export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
-  {/* TODO: Fix JSX expression */};
-  t: 'logistics'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'logistics'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -1767,16 +887,9 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 98}
   {/* TODO: Fix JSX expression */}
-  t: 'quantum-logistics'}
-=======
-  s: 98};
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-logistics'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'quantum-logistics'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -1799,16 +912,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 23}
   {/* TODO: Fix JSX expression */}
-  t: 'iot-futuristic'}
-=======
-  s: 23};
-  {/* TODO: Fix JSX expression */};
-  t: 'iot-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'iot-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -1831,16 +937,9 @@ export const,
     ratin,
   g: 4.7,
     review,
-<<<<<<< HEAD
   s: 145}
   {/* TODO: Fix JSX expression */}
-  t: 'blockchain-futuristic'}
-=======
-  s: 145};
-  {/* TODO: Fix JSX expression */};
-  t: 'blockchain-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'blockchain-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -1863,16 +962,9 @@ export const,
     ratin,
   g: 4.6,
     review,
-<<<<<<< HEAD
   s: 56}
   {/* TODO: Fix JSX expression */}
-  t: 'ai-supply-chain-enterprise'}
-=======
-  s: 56};
-  {/* TODO: Fix JSX expression */};
-  t: 'ai-supply-chain-enterprise'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'ai-supply-chain-enterprise'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2364,7 +1456,6 @@ i,
   g: 4.8, review,
   s: 112 } ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -2372,101 +1463,45 @@ i,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [, {/* TODO: Fix JSX expression */}
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [, {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',' launchDat,
   e: '2025-01-26', customer,
   s: 156, ratin,
   g: 4.8, review,
-  s: 98} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.';' launchDat,
-  e: '2025-01-26'; customer,
-  s: 156; ratin,
-  g: 4.8; review,
-  s: 98}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 98} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',' launchDat,
   e: '2025-02-02', customer,
   s: 34, ratin,
   g: 4.9, review,
-  s: 23} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.';' launchDat,
-  e: '2025-02-02'; customer,
-  s: 34; ratin,
-  g: 4.9; review,
-  s: 23}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 23} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',' launchDat,
   e: '2025-02-07', customer,
   s: 234, ratin,
   g: 4.7, review,
-  s: 145} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.';' launchDat,
-  e: '2025-02-07'; customer,
-  s: 234; ratin,
-  g: 4.7; review,
-  s: 145}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 145} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',' launchDat,
   e: '2025-02-12', customer,
   s: 89, ratin,
   g: 4.6, review,
-  s: 56} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.';' launchDat,
-  e: '2025-02-12'; customer,
-  s: 89; ratin,
-  g: 4.6; review,
-  s: 56}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 56} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',' launchDat,
@@ -2474,12 +1509,3 @@ i,
   s: 178, ratin,
   g: 4.8, review,
   s: 112} ]; '
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.';' launchDat,
-  e: '2025-02-18'; customer,
-  s: 178; ratin,
-  g: 4.8; review,
-  s: 112} ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

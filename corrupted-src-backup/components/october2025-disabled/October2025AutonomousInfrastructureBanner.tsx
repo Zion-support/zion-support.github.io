@@ -1,5 +1,4 @@
 const October2025AutonomousInfrastructureBanner = () => {
-<<<<<<< HEAD
 =======
 };
 return (
@@ -39,12 +38,7 @@ return (
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
 <<<<<<< HEAD
             Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
-const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
-=======
-            Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ;
-const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  y: '1s' }}></div>
+const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}  y: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */};
   y: '2s' }}></div>
       </div>"
@@ -256,13 +250,8 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div className="text-xs text-gray-400">Scale without team growth</div>
         {/* Call-to-Action Buttons */};
         <div className="grid md:grid-cols-3 gap-6 mb-8"></div>
-<<<<<<< HEAD
           <Link
-            to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"
-=======
-          <Link to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+            to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"            className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center justify-between mb-3"></div>
               <Cpu className="w-8 h-8" />
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -323,17 +312,10 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <Link
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-<<<<<<< HEAD
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
-              Request Free Assessment,
-=======
-            <Link to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
-              Request Free Assessment;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <Link className="w-5 h-5" />
+              Request Free Assessment,              <Link className="w-5 h-5" />
             </Link>
             <div className="text-white text-sm">
               <Clock className="w-4 h-4 inline mr-1" />,
@@ -345,16 +327,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div>
             <div className="text-white text-sm"></div>
               <Clock className="w-4 h-4 inline mr-1" />
-<<<<<<< HEAD
               Typical assessment value: $75K • Yours free,
   </
-        {/* Trust Indicators */}
-=======
-              Typical assessment value: $75K • Yours free
-            </div>
-        {/* Trust Indicators */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
+        {/* Trust Indicators */}        <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400"></div>
             <div></div>
               <div className="text-2xl font-bold text-white mb-1">12+</div>
@@ -617,9 +592,5 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
   ),
 }
 export default October2025 AutonomousInfrastructureBanner;
-<<<<<<< HEAD
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
   </strong>
-=======
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

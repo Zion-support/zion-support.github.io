@@ -1,819 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string
-    email: string
-    address: string,
-export const advancedITServices: AdvancedITService[] = [
-    id: 'quantum-cloud-platform',
-    name: 'Quantum Cloud Platform',
-    tagline: 'Next-generation quantum computing in the cloud',
-    price: '$9,999',
-    period: '/month',
-    description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
-    features: [,
-  i,
-  d: string,
-  nam,
-  e: string,
-  taglin,
-  e: string,
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string,
-  feature,
-  s: string[],
-  popula,
-  r: boolean,
-  ico,
-  n: string,
-  colo,
-  r: string,
-  textColo,
-  r: string,
-  lin,
-  k: string,
-  marketPositio,
-  n: string,
-  targetAudienc,
-  e: string,
-  trialDay,
-  s: number,
-  setupTim,
-  e: string,
-  categor,
-  y: string,
-  realServic,
-  e: boolean,
-  technolog,
-  y: string[],
-  integration,
-  s: string[],
-  useCase,
-  s: string[],
-  ro,
-  i: string,
-  competitor,
-  s: string[],
-  marketSiz,
-  e: string,
-  growthRat,
-  e: string,
-  varian,
-  t: string,
-  contactInf,
-  o: unknown,
-    mobil,
-  e: string,
-    emai,
-  l: string,
-    addres,
-  s: string,
-export const,
-  advancedITServices: AdvancedITService[] = [,
-    i,
-  d: 'quantum-cloud-platform',
-    nam,
-  e: 'Quantum Cloud Platform',
-    taglin,
-  e: 'Next-generation quantum computing in the cloud',
-    pric,
-  e: '$9,999',
-    perio,
-  d: '/month',
-    descriptio,
-  n: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
-    feature,
-  s: [,
-      'Quantum computing resources',
-      'Quantum algorithm library',
-      'Hybrid classical-quantum workflows',
-      'Quantum machine learning',
-      'Quantum cryptography',
-      'Performance optimization',
-      'Real-time quantum monitoring',
-      'Advanced analytics dashboard',
-      'API for integration',
-      '24/7 quantum support'
-    ],
-    popular: true,
-    icon: ''
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-cloud-platform',
-    marketPosition: 'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
-    targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
-    trialDays: 30,
-    setupTime: '1 month',
-    category: 'Quantum Computing',
-    realService: true,
-    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'AI/ML', 'Quantum Cryptography'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Research platforms', 'Financial systems'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],
-    roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
-    competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
-    marketSize: '$500M quantum computing market'
-    growthRate: '500% annual growth'
-    variant: 'quantum-cloud'
-    contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
-    realImplementation: true,
-    implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',
-    launchDate: '2024-12-01'
-    customers: 8
-    rating: 4.9
-    reviews: 4,
-  },
-    id: 'edge-computing-orchestrator',
-    name: 'Edge Computing Orchestrator',
-    tagline: 'Intelligent edge computing management and optimization',
-    price: '$1, 999',
-    period: '/month',
-    description: unknown,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from-blue-600 to-indigo-700',
-    textColo,
-  r: 'text-blue-400',
-    lin,
-  k: 'http,
-  s://ziontechgroup.com/quantum-cloud-platform',
-    marketPositio,
-  n: 'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
-    targetAudienc,
-  e: 'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
-    trialDay,
-  s: 30,
-    setupTim,
-  e: '1 month',
-    categor,
-  y: 'Quantum Computing',
-    realServic,
-  e: true,
-    technolog,
-  y: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'AI/ML', 'Quantum Cryptography'],
-    integration,
-  s: ['AWS', 'Azure', 'Google Cloud', 'Research platforms', 'Financial systems'],
-    useCase,
-  s: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],
-    ro,
-  i: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
-    competitor,
-  s: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
-    marketSiz,
-  e: '$500M quantum computing market',
-    growthRat,
-  e: '500% annual growth',
-    varian,
-  t: 'quantum-cloud',
-    contactInf,
-  o: unknown,
-      mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-      websit,
-  e: 'http,
-  s://ziontechgroup.com'
-    },
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',
-    launchDat,
-  e: '2024-12-01',
-    customer,
-  s: 8,
-    ratin,
-  g: 4.9,
-    review,
-  s: 4},
-    i,
-  d: 'edge-computing-orchestrator',
-    nam,
-  e: 'Edge Computing Orchestrator',
-    taglin,
-  e: 'Intelligent edge computing management and optimization',
-    pric,
-  e: '$1, 999',
-    perio,
-  d: '/month',
-    descriptio,
-  n: unknown,
-      'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
-    feature,
-  s: [,
-      'Intelligent resource allocation',
-      'Real - time performance optimization',
-      'Edge device management',
-      'Load balancing',
-      'Security and compliance',
-      'Monitoring and analytics',
-      'Automated scaling',
-      'API gateway',
-      'Integration tools',
-      '24 / 7 support'],
-    popular: true
-    website: string,
-    popula,
-  r: true,
-    websit,
-  e: string};
-  realImplementatio,
-  n: boolean,
-  implementationDetail,
-  s: string,
-  launchDat,
-  e: string,
-  customer,
-  s: number,
-  ratin,
-  g: number,
-  review,
-  s: number,
-export const advancedITServices: AdvancedITService[] = [
-    id: 'quantum - cloud - platform',
-    name: 'Quantum Cloud Platform',
-    tagline: 'Next - generation quantum computing in the cloud',
-    price: '$9, 999',
-    period: '/month',
-    description: unknown,
-export const,
-  advancedITServices: AdvancedITService[] = [,
-    i,
-  d: 'quantum - cloud - platform',
-    nam,
-  e: 'Quantum Cloud Platform',
-    taglin,
-  e: 'Next - generation quantum computing in the cloud',
-    pric,
-  e: '$9, 999',
-    perio,
-  d: '/month',
-    descriptio,
-  n: unknown,
-      'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical - quantum workflows for enterprise applications.',
-    feature,
-  s: [,
-      'Quantum computing resources',
-      'Quantum algorithm library',
-      'Hybrid classical - quantum workflows',
-      'Quantum machine learning',
-      'Quantum cryptography',
-      'Performance optimization',
-      'Real - time quantum monitoring',
-      'Advanced analytics dashboard',
-      'API for integration',
-      '24 / 7 quantum support'],
-    popular: true,
-    icon: ''
-    color: 'from - blue - 600 to - indigo - 700'
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / quantum - cloud - platform',
-    market_position: unknown,
-      'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
-    target_audience: unknown,
-      'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
-    trial_days: 30,
-    setup_time: '1 month'
-    category: 'Quantum Computing',
-    real_service: true,
-    technology: [,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from - blue - 600 to - indigo - 700',
-    text_colo,
-  r: 'text - blue - 400',
-    lin,
-  k: 'http,
-  s://ziontechgroup.com / quantum - cloud - platform',
-    market_positio,
-  n: unknown,
-      'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
-    target_audienc,
-  e: unknown,
-      'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
-    trial_day,
-  s: 30,
-    setup_tim,
-  e: '1 month',
-    categor,
-  y: 'Quantum Computing',
-    real_servic,
-  e: true,
-    technolog,
-  y: [,
-      'Quantum Computing',
-      'Cloud Infrastructure',
-      'Quantum Algorithms',
-      'AI / ML',
-      'Quantum Cryptography'],
-    integration,
-  s: [,
-      'AWS',
-      'Azure',
-      'Google Cloud',
-      'Research platforms',
-      'Financial systems'],
-    use_case,
-  s: [,
-      'Drug discovery',
-      'Financial modeling',
-      'Cryptography',
-      'Optimization problems'],
-    ro,
-  i: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
-    competitor,
-  s: [,
-      'IBM Quantum ($1000+/month)',
-      'AWS Braket ($5000+/month)',
-      'Google Quantum AI'],
-    market_size: '$500M quantum computing market'
-    growth_rate: '500% annual growth'
-    variant: 'quantum - cloud'
-    contact_info: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true
-    implementation_details: unknown,
-      'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',
-    launch_date: '2024 - 12 - 01'
-    customers: 8
-    rating: 4 && 4.9
-    reviews: 4,
-  },
-    id: 'edge - computing - orchestrator',
-    name: 'Edge Computing Orchestrator',
-    tagline: 'Intelligent edge computing management and optimization',
-    price: '$1, 999',
-    period: '/month',
-    description: unknown,
-    market_siz,
-  e: '$500M quantum computing market',
-    growth_rat,
-  e: '500% annual growth',
-    varian,
-  t: 'quantum - cloud',
-    contact_inf,
-  o: unknown,
-      mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-      websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-    real_implementatio,
-  n: true,
-    implementation_detail,
-  s: unknown,
-      'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.',
-    launch_dat,
-  e: '2024 - 12 - 01',
-    customer,
-  s: 8,
-    ratin,
-  g: 4 && 4.9,
-    review,
-  s: 4},
-    i,
-  d: 'edge - computing - orchestrator',
-    nam,
-  e: 'Edge Computing Orchestrator',
-    taglin,
-  e: 'Intelligent edge computing management and optimization',
-    pric,
-  e: '$1, 999',
-    perio,
-  d: '/month',
-    descriptio,
-  n: unknown,
-      'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
-    feature,
-  s: [,
-      'Intelligent resource allocation',
-      'Real - time performance optimization',
-      'Edge device management',
-      'Load balancing',
-      'Security and compliance',
-      'Monitoring and analytics',
-      'Automated scaling',
-      'API gateway',
-      'Integration tools',
-      '24 / 7 support'],
-    popular: true,
-    icon: ''
-    color: 'from - green - 600 to - emerald - 700'
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / edge - computing - orchestrator',
-    market_position: unknown,
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge',
-    target_audience: unknown,
-      'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare',
-    trial_days: 30,
-    setup_time: '2 weeks'
-    category: 'Edge Computing',
-    real_service: true,
-    technology: [,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from - green - 600 to - emerald - 700',
-    text_colo,
-  r: 'text - green - 400',
-    lin,
-  k: 'http,
-  s://ziontechgroup.com / edge - computing - orchestrator',
-    market_positio,
-  n: unknown,
-      'Advanced edge orchestration platform competing with AWS Greengrass and Azure IoT Edge',
-    target_audienc,
-  e: unknown,
-      'IoT companies, Manufacturing, Smart cities, Transportation, Healthcare',
-    trial_day,
-  s: 30,
-    setup_tim,
-  e: '2 weeks',
-    categor,
-  y: 'Edge Computing',
-    real_servic,
-  e: true,
-    technolog,
-  y: [,
-      'Edge Computing',
-      'AI / ML',
-      'IoT',
-      'Container Orchestration',
-      'Real - time Analytics'],
-    integration,
-  s: [,
-      'AWS IoT',
-      'Azure IoT',
-      'Google Cloud IoT',
-      'Kubernetes',
-      'Docker'],
-    use_case,
-  s: [,
-      'IoT management',
-      'Real - time analytics',
-      'Edge AI',
-      'Smart manufacturing'],
-    roi: '300% ROI within 6 months through reduced latency and improved performance',
-    competitors: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],
-    marketSize: '$50B edge computing market'
-    growthRate: '250% annual growth'
-    variant: 'edge-futuristic'
-    contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.'
-    launchDate: '2024-10-01'
-    customers: 156
-    rating: 4 && 4.7
-    reviews: 89,
-  },
-    id: 'zero - trust - security - platform',
-    name: 'Zero Trust Security Platform',
-    tagline: 'Comprehensive zero trust security implementation',
-    price: '$3, 999',
-    period: '/month',
-    description: unknown,
-    ro,
-  i: '300% ROI within 6 months through reduced latency and improved performance',
-    competitor,
-  s: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],
-    marketSiz,
-  e: '$50B edge computing market',
-    growthRat,
-  e: '250% annual growth',
-    varian,
-  t: 'edge-futuristic',
-    contactInf,
-  o: unknown,
-      mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-      websit,
-  e: 'http,
-  s://ziontechgroup.com'
-    },
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.',
-    launchDat,
-  e: '2024-10-01',
-    customer,
-  s: 156,
-    ratin,
-  g: 4 && 4.7,
-    review,
-  s: 89},
-    i,
-  d: 'zero - trust - security - platform',
-    nam,
-  e: 'Zero Trust Security Platform',
-    taglin,
-  e: 'Comprehensive zero trust security implementation',
-    pric,
-  e: '$3, 999',
-    perio,
-  d: '/month',
-    descriptio,
-  n: unknown,
-      'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
-    feature,
-  s: [,
-      'Continuous identity verification',
-      'Micro - segmentation',
-      'Advanced threat detection',
-      'Behavioral analytics',
-      'Compliance tools',
-      'Real - time monitoring',
-      'Automated response',
-      'Integration APIs',
-      'Security dashboard',
-      '24/7 security support'
-    ],
-    popular: true,
-    icon: ''
-    color: 'from-red-600 to-orange-700'
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/zero-trust-security-platform',
-    marketPosition: 'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trialDays: 30,
-    setupTime: '1 month'
-    category: 'Cybersecurity',
-    real_service: true,
-    technology: [,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from-red-600 to-orange-700',
-    textColo,
-  r: 'text-red-400',
-    lin,
-  k: 'http,
-  s://ziontechgroup.com/zero-trust-security-platform',
-    marketPositio,
-  n: 'Comprehensive zero trust platform competing with Palo Alto Networks and CrowdStrike',
-    targetAudienc,
-  e: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trialDay,
-  s: 30,
-    setupTim,
-  e: '1 month',
-    categor,
-  y: 'Cybersecurity',
-    real_servic,
-  e: true,
-    technolog,
-  y: [,
-      'Zero Trust Architecture',
-      'AI / ML',
-      'Identity Management',
-      'Network Security',
-      'Threat Intelligence'],
-    integration,
-  s: [,
-      'Active Directory',
-      'Okta',
-      'Palo Alto Networks',
-      'CrowdStrike',
-      'SIEM systems'],
-    use_case,
-  s: [,
-      'Enterprise security',
-      'Government compliance',
-      'Financial security',
-      'Healthcare compliance'],
-    ro,
-  i: '400% ROI within 12 months through security improvements and compliance benefits',
-    competitor,
-  s: [,
-      'Palo Alto Networks ($10000+/month)',
-      'CrowdStrike ($5000+/month)',
-      'Zscaler'],
-    market_size: '$30B zero trust market'
-    growth_rate: '200% annual growth'
-    variant: 'zero - trust - futuristic'
-    contact_info: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true
-    implementation_details: unknown,
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',
-    launch_date: '2024 - 09 - 01'
-    customers: 89
-    rating: 4 && 4.8
-    reviews: 45,
-    id: 'ai-powered-cloud-migration',
-    name: 'AI-Powered Cloud Migration',
-    tagline: 'Intelligent cloud migration and optimization',
-    price: '$5,999'
-    period: '/month',
-    description:,
-    market_siz,
-  e: '$30B zero trust market',
-    growth_rat,
-  e: '200% annual growth',
-    varian,
-  t: 'zero - trust - futuristic',
-    contact_inf,
-  o: unknown,
-      mobil,
-  e: '+1 302 464 0950',
-      emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-      websit,
-  e: 'http,
-  s://ziontechgroup && ziontechgroup.com'},
-    real_implementatio,
-  n: true,
-    implementation_detail,
-  s: unknown,
-      'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',
-    launch_dat,
-  e: '2024 - 09 - 01',
-    customer,
-  s: 89,
-    ratin,
-  g: 4 && 4.8,
-    review,
-  s: 45,
-    i,
-  d: 'ai-powered-cloud-migration'
-    nam,
-  e: 'AI-Powered Cloud Migration'
-    taglin,
-  e: 'Intelligent cloud migration and optimization'
-    pric,
-  e: '$5,999'
-    perio,
-  d: '/month'
-    descriptio,
-  n:
-      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
-    feature,
-  s: [
-      'AI migration planning'
-      'Cost optimization'
-      'Performance analysis'
-      'Security assessment'
-      'Compliance tools'
-      'Automated migration'
-      'Real-time monitoring'
-      'Integration APIs'
-      'Migration dashboard'
-      '24/7 support'
-    ]
-    popular: true,
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-powered-cloud-migration',
-    marketPosition: 'AI-enhanced cloud migration competing with Accenture and Deloitte',
-    targetAudience:,
-    popula,
-  r: true,
-    ico,
-  n: '',
-    colo,
-  r: 'from-blue-600 to-indigo-700'
-    textColo,
-  r: 'text-blue-400'
-    lin,
-  k: 'http,
-  s://ziontechgroup.com/ai-powered-cloud-migration'
-    marketPositio,
-  n: 'AI-enhanced cloud migration competing with Accenture and Deloitte'
-    targetAudienc,
-  e:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDay,
-  s: 30,
-    setupTim,
-  e: '1 month'
-    categor,
-  y: 'Cloud Migration'
-    realServic,
-  e: true,
-    technolog,
-  y: [,
-      'AI/ML'
-      'Cloud Computing'
-      'Migration Tools'
-      'Performance Analysis'
-      'Cost Optimization'
-    ]
-    integration,
-  s: [,
-      'AWS'
-      'Azure'
-      'Google Cloud'
-      'On-premises systems'
-      'Monitoring tools'
-    ]
-    useCase,
-  s: [,
-      'Cloud migration'
-      'Cost optimization'
-      'Performance improvement'
-      'Security enhancement'
-    ]
-    roi: '600% ROI within 12 months through cost savings and performance improvements'
-    competitors: [
-    ro,
-  i: '600% ROI within 12 months through cost savings and performance improvements'
-    competitor,
-  s: [,
-      'Accenture ($50000+/month)'
-      'Deloitte ($40000+/month)'
-      'AWS Migration Hub'
-    ]
-    marketSize: '$15B cloud migration market'
-    growthRate: '200% annual growth'
-    variant: 'ai-migration-futuristic'
-    contactInfo: mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-<<<<<<< HEAD
-    implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 45,
-  }
-=======
-    implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
-    launchDate: '2024-10-01',
-    customers: 89;
-    rating: 4.8;
-    reviews: 45};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
       'AI-powered automation',
     id: 'ai - powered - devops - platform',
@@ -1692,15 +876,8 @@ export const,
     review,
   s: 45};
 ];
-<<<<<<< HEAD
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
-  }
-=======
-;
-export interface AdvancedITService {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
 ];
 };
 ];
@@ -1708,7 +885,6 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */};
 export interface AdvancedITService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -1717,19 +893,7 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */};
   customers: number
   rating: number
   reviews: number,
-}
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const advancedITServices: AdvancedITService[] = [;
+}export const advancedITServices: AdvancedITService[] = [;
   {
     id: 'quantum-cloud-platform'
     name: 'Quantum Cloud Platform'
@@ -1756,7 +920,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['AWSAzureGoogle CloudResearch platformsFinancial systems'];
     useCases: ['Drug discoveryFinancial modelingCryptographyOptimization problems'];
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage';
-<<<<<<< HEAD
     competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI']
     marketSize: '$500 M quantum computing market'
     growthRate: '500% annual growth',
@@ -1766,20 +929,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    realImplementation: true,
-=======
-    competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI'];
-    marketSize: '$500 M quantum computing market';
-    growthRate: '500% annual growth';
-    variant: 'quantum-cloud'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';
+    realImplementation: true,    implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';
     launchDate: '2024-12-01';
     customers: 8
     rating: 4.9
@@ -1811,7 +961,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['AWS IoTAzure IoTGoogle Cloud IoTKubernetesDocker'];
     useCases: ['IoT managementReal-time analyticsEdge AISmart manufacturing'];
     roi: '300% ROI within 6 months through reduced latency and improved performance';
-<<<<<<< HEAD
     competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT']
     marketSize: '$50 B edge computing market'
     growthRate: '250% annual growth',
@@ -1820,19 +969,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT'];
-    marketSize: '$50 B edge computing market';
-    growthRate: '250% annual growth';
-    variant: 'edge-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.';
     launchDate: '2024-10-01';
     customers: 156
@@ -1865,7 +1002,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['Active DirectoryOktaPalo Alto NetworksCrowdStrikeSIEM systems'];
     useCases: ['Enterprise securityGovernment complianceFinancial securityHealthcare compliance'];
     roi: '400% ROI within 12 months through security improvements and compliance benefits';
-<<<<<<< HEAD
     competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler']
     marketSize: '$30 B zero trust market'
     growthRate: '200% annual growth',
@@ -1874,19 +1010,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler'];
-    marketSize: '$30 B zero trust market';
-    growthRate: '200% annual growth';
-    variant: 'zero-trust-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.';
     launchDate: '2024-09-01';
     customers: 89
@@ -1919,7 +1043,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['GitHubGitLabJenkinsKubernetesDockerAWSAzure'];
     useCases: ['CI/CD automationDevOps optimizationPerformance monitoringSecurity automation'];
     roi: '350% ROI within 6 months through automation and performance improvements';
-<<<<<<< HEAD
     competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins']
     marketSize: '$8 B DevOps market'
     growthRate: '180% annual growth',
@@ -1929,20 +1052,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    realImplementation: true,
-=======
-    competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins'];
-    marketSize: '$8 B DevOps market';
-    growthRate: '180% annual growth';
-    variant: 'ai-devops-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    implementationDetails: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.';
+    realImplementation: true,    implementationDetails: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.';
     launchDate: '2024-08-01';
     customers: 234
     rating: 4.6
@@ -1974,7 +1084,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['EthereumHyperledgerCordaEnterprise systemsPayment platforms'];
     useCases: ['Supply chain trackingFinancial transactionsDigital identitySmart contracts'];
     roi: '500% ROI within 18 months through efficiency improvements and new business models';
-<<<<<<< HEAD
     competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda']
     marketSize: '$20 B enterprise blockchain market'
     growthRate: '300% annual growth',
@@ -1984,20 +1093,7 @@ export const advancedITServices: AdvancedITService[] = [;
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    realImplementation: true,
-=======
-    competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda'];
-    marketSize: '$20 B enterprise blockchain market';
-    growthRate: '300% annual growth';
-    variant: 'blockchain-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    implementationDetails: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.';
+    realImplementation: true,    implementationDetails: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.';
     launchDate: '2024-07-01';
     customers: 67
     rating: 4.7
@@ -2029,7 +1125,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['AWSAzureGoogle CloudOn-premises systemsQuantum computers'];
     useCases: ['High-performance computingQuantum researchEnterprise applicationsResearch computing'];
     roi: '800% ROI within 18 months through performance improvements and competitive advantage';
-<<<<<<< HEAD
     competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)']
     marketSize: '$200 B data center market'
     growthRate: '150% annual growth',
@@ -2038,19 +1133,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)'];
-    marketSize: '$200 B data center market';
-    growthRate: '150% annual growth';
-    variant: 'quantum-infrastructure'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.';
     launchDate: '2024-11-01';
     customers: 12
@@ -2083,7 +1166,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['CiscoPalo Alto NetworksFortinetSIEM systemsFirewalls'];
     useCases: ['Network protectionThreat detectionComplianceSecurity monitoring'];
     roi: '400% ROI within 12 months through threat prevention and security improvements';
-<<<<<<< HEAD
     competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)']
     marketSize: '$25 B network security market'
     growthRate: '180% annual growth',
@@ -2092,19 +1174,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)'];
-    marketSize: '$25 B network security market';
-    growthRate: '180% annual growth';
-    variant: 'ai-network-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'AI-powered network security platform with real-time threat detection and automated response capabilities.';
     launchDate: '2024-09-15';
     customers: 178
@@ -2137,7 +1207,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['AWS IoTAzure IoTGoogle Cloud IoTDevice manufacturersAnalytics platforms'];
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringTransportation tracking'];
     roi: '450% ROI within 12 months through security improvements and operational efficiency';
-<<<<<<< HEAD
     competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)']
     marketSize: '$100 B IoT market'
     growthRate: '250% annual growth',
@@ -2146,19 +1215,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)'];
-    marketSize: '$100 B IoT market';
-    growthRate: '250% annual growth';
-    variant: 'quantum-iot-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.';
     launchDate: '2024-08-15';
     customers: 234
@@ -2191,7 +1248,6 @@ export const advancedITServices: AdvancedITService[] = [;
     integrations: ['AWSAzureGoogle CloudOn-premises systemsMonitoring tools'];
     useCases: ['Cloud migrationCost optimizationPerformance improvementSecurity enhancement'];
     roi: '600% ROI within 12 months through cost savings and performance improvements';
-<<<<<<< HEAD
     competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub']
     marketSize: '$15 B cloud migration market'
     growthRate: '200% annual growth',
@@ -2200,19 +1256,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
-=======
-    competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub'];
-    marketSize: '$15 B cloud migration market';
-    growthRate: '200% annual growth';
-    variant: 'ai-migration-futuristic'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    realImplementation: true;
+      website: 'https://ziontechgroup.com'}    realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';
     launchDate: '2024-10-01';
     customers: 89
@@ -2229,21 +1273,11 @@ export const advancedITServices: AdvancedITService[] = [;
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 export const,
   advancedITServices: AdvancedITService[] = [,
   {/* TODO: Fix JSX expression */}
-  t: 'quantum-cloud'}
-=======
-  s: number};
-;
-export const,
-  advancedITServices: AdvancedITService[] = [;
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-cloud'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'quantum-cloud'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2266,16 +1300,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 4}
   {/* TODO: Fix JSX expression */}
-  t: 'edge-futuristic'}
-=======
-  s: 4};
-  {/* TODO: Fix JSX expression */};
-  t: 'edge-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'edge-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2298,16 +1325,9 @@ export const,
     ratin,
   g: 4.7,
     review,
-<<<<<<< HEAD
   s: 89}
   {/* TODO: Fix JSX expression */}
-  t: 'zero-trust-futuristic'}
-=======
-  s: 89};
-  {/* TODO: Fix JSX expression */};
-  t: 'zero-trust-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'zero-trust-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2330,16 +1350,9 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 45}
   {/* TODO: Fix JSX expression */}
-  t: 'ai-devops-futuristic'}
-=======
-  s: 45};
-  {/* TODO: Fix JSX expression */};
-  t: 'ai-devops-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'ai-devops-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2362,16 +1375,9 @@ export const,
     ratin,
   g: 4.6,
     review,
-<<<<<<< HEAD
   s: 123}
   {/* TODO: Fix JSX expression */}
-  t: 'blockchain-futuristic'}
-=======
-  s: 123};
-  {/* TODO: Fix JSX expression */};
-  t: 'blockchain-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'blockchain-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2394,16 +1400,9 @@ export const,
     ratin,
   g: 4.7,
     review,
-<<<<<<< HEAD
   s: 34}
   {/* TODO: Fix JSX expression */}
-  t: 'quantum-infrastructure'}
-=======
-  s: 34};
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-infrastructure'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'quantum-infrastructure'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2426,16 +1425,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-<<<<<<< HEAD
   s: 6}
   {/* TODO: Fix JSX expression */}
-  t: 'ai-network-futuristic'}
-=======
-  s: 6};
-  {/* TODO: Fix JSX expression */};
-  t: 'ai-network-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'ai-network-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2458,16 +1450,9 @@ export const,
     ratin,
   g: 4.7,
     review,
-<<<<<<< HEAD
   s: 89}
   {/* TODO: Fix JSX expression */}
-  t: 'quantum-iot-futuristic'}
-=======
-  s: 89};
-  {/* TODO: Fix JSX expression */};
-  t: 'quantum-iot-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'quantum-iot-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -2490,16 +1475,9 @@ export const,
     ratin,
   g: 4.6,
     review,
-<<<<<<< HEAD
   s: 123}
   {/* TODO: Fix JSX expression */}
-  t: 'ai-migration-futuristic'}
-=======
-  s: 123};
-  {/* TODO: Fix JSX expression */};
-  t: 'ai-migration-futuristic'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'ai-migration-futuristic'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -3011,7 +1989,6 @@ i,
   e: '2024-10-01' customer,
   s: 89, ratin,
   g: 4 && 4.8, review,
-<<<<<<< HEAD
   s: 45 } ]; export interface AdvancedITService { } ]; ]; } ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
@@ -3021,174 +1998,81 @@ i,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  advancedITServices: AdvancedITService[] = [, {/* TODO: Fix JSX expression */}
-=======
-  s: 45 } ]; export interface AdvancedITService {} ]; ]} ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  advancedITServices: AdvancedITService[] = [; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  advancedITServices: AdvancedITService[] = [, {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';' launchDat,
-<<<<<<< HEAD
   e: '2024-12-01', customer,
   s: 8, ratin,
   g: 4.9, review,
-  s: 4} {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-12-01'; customer,
-  s: 8; ratin,
-  g: 4.9; review,
-  s: 4}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 4} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.',' launchDat,
   e: '2024-10-01', customer,
   s: 156, ratin,
   g: 4.7, review,
-  s: 89} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Complete edge computing orchestration platform with intelligent resource management and real-time optimization.';' launchDat,
-  e: '2024-10-01'; customer,
-  s: 156; ratin,
-  g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 89} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.',' launchDat,
   e: '2024-09-01', customer,
   s: 89, ratin,
   g: 4.8, review,
-  s: 45} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Complete zero trust security platform with continuous verification and advanced threat detection capabilities.';' launchDat,
-  e: '2024-09-01'; customer,
-  s: 89; ratin,
-  g: 4.8; review,
-  s: 45}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 45} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.';' launchDat,
-<<<<<<< HEAD
   e: '2024-08-01', customer,
   s: 234, ratin,
   g: 4.6, review,
-  s: 123} {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-08-01'; customer,
-  s: 234; ratin,
-  g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 123} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Complete enterprise blockchain platform with smart contracts, token management, and compliance features.';' launchDat,
-<<<<<<< HEAD
   e: '2024-07-01', customer,
   s: 67, ratin,
   g: 4.7, review,
-  s: 34} {/* TODO: Fix JSX expression */}
-=======
-  e: '2024-07-01'; customer,
-  s: 67; ratin,
-  g: 4.7; review,
-  s: 34}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 34} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.',' launchDat,
   e: '2024-11-01', customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 6} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.';' launchDat,
-  e: '2024-11-01'; customer,
-  s: 12; ratin,
-  g: 4.9; review,
-  s: 6}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 6} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'AI-powered network security platform with real-time threat detection and automated response capabilities.',' launchDat,
   e: '2024-09-15', customer,
   s: 178, ratin,
   g: 4.7, review,
-  s: 89} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'AI-powered network security platform with real-time threat detection and automated response capabilities.';' launchDat,
-  e: '2024-09-15'; customer,
-  s: 178; ratin,
-  g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 89} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.',' launchDat,
   e: '2024-08-15', customer,
   s: 234, ratin,
   g: 4.6, review,
-  s: 123} {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.';' launchDat,
-  e: '2024-08-15'; customer,
-  s: 234; ratin,
-  g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  s: 123} {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',' launchDat,
@@ -3196,12 +2080,3 @@ i,
   s: 89, ratin,
   g: 4.8, review,
   s: 45} export interface AdvancedITService { } ]; '
-=======
-  s://ziontechgroup.com' }; realImplementatio,
-  n: true;' implementationDetail,
-  s: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.';' launchDat,
-  e: '2024-10-01'; customer,
-  s: 89; ratin,
-  g: 4.8; review,
-  s: 45} export interface AdvancedITService {} ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

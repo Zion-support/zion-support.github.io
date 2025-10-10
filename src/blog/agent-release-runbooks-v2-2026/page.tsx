@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
-<<<<<<< HEAD
 =======
 };
 return (
@@ -16,12 +15,7 @@ return (
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
 <<<<<<< HEAD
             Page,
-  </
-=======
-            Page
-          </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+  </<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
             canaries, approvals and one‑click rollback.
           </p>
           <div></div>
@@ -89,15 +83,7 @@ return (
           </div>
         </div>
       </section>)
-<<<<<<< HEAD
     </main>)
 }
 export default AgentReleaseRunbooksV22026Page;
   </h1>
-=======
-    </main>
-);
-})
-};
-export default AgentReleaseRunbooksV22026Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

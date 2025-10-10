@@ -14,7 +14,6 @@ export interface EmergingTechService2028 {
   features: string[];
   link: string;
   category: string;
-<<<<<<< HEAD
   real_implementation: boolean
   contact_info: unknown
     mobile: string,
@@ -35,30 +34,7 @@ export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [
     address: string,
-  }
-=======
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
-    email: string};
-    address: string};
-export interface EmergingTechService2028 {/* TODO: Fix JSX expression */};
-  l: string};
-    addres,
-  s: string};
-  };
-export interface EmergingTechService2028 {/* TODO: Fix JSX expression */};
-  l: string};
-    addres,
-  s: string};
-  };
-};
-    address: string};
-export const emergingTech2028Services: EmergingTechService2028[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const emergingTech2028Services: EmergingTechService2028[] = [
+  }export const emergingTech2028Services: EmergingTechService2028[] = [
     id: '2028 - emerging - tech - service',
     name: '2028 Emerging Tech Service Platform',
     tagline: 'Emerging tech services for 2028',
@@ -69,13 +45,7 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
 export const,
   emergingTech2028Services: EmergingTechService2028[] = [,
     addres,
-<<<<<<< HEAD
-  s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const,
+  s: string}export const,
   emergingTech2028Services: EmergingTechService2028[] = [,
     i,
   d: '2028 - emerging - tech - service',
@@ -128,23 +98,13 @@ export const,
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
     mobile: string, email: string
     address: string,
   }
-}
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const emergingTech2028 Services: EmergingTechService2028[] = [,
+}export const emergingTech2028 Services: EmergingTechService2028[] = [,
     id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028", price: "$299/month"
     description: "Advanced platform showcasing emerging technology services and innovations for 2028."
@@ -354,16 +314,9 @@ id: "2028-emerging-tech-service"
   };
 ];
 export interface EmergingTechService2028 export interface EmergingTechService2028,
-<<<<<<< HEAD
   id: string, export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
-=======
-  id: string; export interface EmergingTechService2028 {/* TODO: Fix JSX expression */};
-  l: string} addres,
-  s: string} }; export interface EmergingTechService2028 {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: string} addres,
+  s: string} } export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}  l: string} addres,
   s: string} } } addres,
   s: string} export const,
   emergingTech2028Services: EmergingTechService2028[] = [ addres,

@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
-}
-=======
-interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
+}const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
   enableConversionTracking = true;
   enablePerformanceTracking = true,
   enableErrorTracking = true}) => {
@@ -33,18 +26,10 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
     // Initialize analytics tracking;
     if (enableConversionTracking) {
       // Track conversion events;
-<<<<<<< HEAD
       //       }
     if (enablePerformanceTracking) {
       // Track performance metrics;
-      //       }
-=======
-      //       };
-    if (enablePerformanceTracking) {
-      // Track performance metrics;
-      //       };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    if (enableErrorTracking) {
+      //       }    if (enableErrorTracking) {
       // Track errors;
       //       };
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
@@ -81,22 +66,12 @@ const,
   e: 0,
     error,
   s: 0});
-<<<<<<< HEAD
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
     if (enablePerformanceTracking) {/* TODO: Fix JSX expression */}
       //       }
     if (enableErrorTracking) {/* TODO: Fix JSX expression */}
-      //       }
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */};
-      //       };
-    if (enablePerformanceTracking) {/* TODO: Fix JSX expression */};
-      //       };
-    if (enableErrorTracking) {/* TODO: Fix JSX expression */};
-      //       };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
+      //       }  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
   return (<div className="advanced-analytics"></div>
       <h2>Advanced Analytics Dashboard</h2>"
       <div className="metrics-grid"></div>"
@@ -118,13 +93,8 @@ const,
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default AdvancedAnalytics;
+}export default AdvancedAnalytics;
 "
   </AdvancedAnalyticsProps>
   </AdvancedAnalyticsProps>

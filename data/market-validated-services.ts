@@ -1,50 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  i,
-  d: string,
-  nam,
-  e: string,
-  taglin,
-  e: string,
-  pric,
-  e: string,
-  perio,
-  d: string,
-  descriptio,
-  n: string,
-  feature,
-  s: string[],
-  categor,
-  y: string,
-  lin,
-  k: string;
-  variant?: ServiceVariant;
-  rating?: number;
-  customers?: number;
-  trial_days?: number;
-  setup_time?: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string
-    address: string
-    website?: string,,
-  contact_inf,
-  o: unknown,
-    mobil,
-  e: string,
-    emai,
-  l: string,
-    addres,
-<<<<<<< HEAD
-  s: string,
-    website?: string}
-=======
-  s: string;
-    website?: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const contact_info =
   mobil,
   e: '+1 302 464 0950',
@@ -54,17 +7,9 @@ const contact_info =
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com'}
 export const marketValidatedServices: MarketValidatedService[] = [
-  // AI and Assistants,
-=======
-  s://ziontechgroup.com'};
-;
-export const marketValidatedServices: MarketValidatedService[] = [;
-  // AI and Assistants;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    id: 'ai - assistant - pro',
+  // AI and Assistants,    id: 'ai - assistant - pro',
     name: 'AI Assistant Pro',
     tagline: 'Branded copilot with RAG, guardrails, and analytics',
     price: '$149',
@@ -1129,19 +1074,10 @@ export const,
     customers: 410
     trialDays: 14,
     setupTime: '2 hours',
-<<<<<<< HEAD
     contactInfo;
   }
 ];import { ServiceVariant  } from "../types/service-variants"
-export interface MarketValidatedService {id: 'vector - search - starter'
-=======
-    contactInfo};
-];import { ServiceVariant  } from "../types/service-variants";
-export interface MarketValidatedService {
-id: 'vector - search - starter',
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Vector Search Starter',
+export interface MarketValidatedService {id: 'vector - search - starter'    name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
     price: '$89',
     period: '/month',
@@ -1176,13 +1112,8 @@ id: 'vector - search - starter',
   s: 14,
     setupTim,
   e: '2 hours'
-<<<<<<< HEAD
     contactInfo,
-  }
-=======
-    contactInfo};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];import { ServiceVariant } from '../types/service-variants';
+  }];import { ServiceVariant } from '../types/service-variants';
 export interface MarketValidatedService {/* TODO: Fix JSX expression */};
     contact_info};
   },
@@ -1207,7 +1138,6 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */};
     contact_info},
 export interface MarketValidatedService;
 export interface MarketValidatedService {
-<<<<<<< HEAD
 export interface MarketValidatedService;
 export interface MarketValidatedService {}
     trialDays: 14,
@@ -1215,22 +1145,7 @@ export interface MarketValidatedService {}
     contactInfo}
   }
 ];import { ServiceVariant  } from "../types/service-variants"
-export interface MarketValidatedService {
-=======
-;
-}
-export interface MarketValidatedService;
-export interface MarketValidatedService {};
-    trialDays: 14;
-    setupTime: '2 hours',
-    contactInfo};
-  };
-];import { ServiceVariant  } from "../types/service-variants";
-export interface MarketValidatedService {
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-	id: string;
+export interface MarketValidatedService {	id: string;
 	name: string;
 	tagline: string;
 	price: string;
@@ -1244,7 +1159,6 @@ export interface MarketValidatedService {
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-<<<<<<< HEAD
   mobile: "+1 302 464 0950"
 	email: "kleber@ziontechgroup && ziontechgroup.com"
 	address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -1252,18 +1166,7 @@ export interface MarketValidatedService {
 	contactInfo: unknown
 		mobile: string
 		email: string,
-		address: string}
-=======
-  mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup && ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com',
-	contactInfo: unknown;
-		mobile: string;
-		email: string;
-		address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    categor,
+		address: string}    categor,
   y: 'AI & Search',
     lin,
   k: 'http,
@@ -1286,7 +1189,6 @@ export interface MarketValidatedService {};
   s: 14,
     setupTim,
   e: '2 hours',
-<<<<<<< HEAD
     contactInfo}
   }
 ];import { ServiceVariant } from '../types/service-variants';
@@ -1294,17 +1196,7 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string}
 		website?: string}
 	}
-}
-=======
-    contactInfo};
-  };
-];import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */};
-  s: string};
-		website?: string};
-	}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const,
+}export const,
   marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants,
 	{,
@@ -1637,26 +1529,13 @@ export const,
 		description: "Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.",
 		features["WORM retention", "Export APIs", "Fine-grained access", "Tamper evidence"],
 		category: "Enterprise IT - Security",
-<<<<<<< HEAD
 		link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",
 		variant: "quantum-neural",
 		rating: 4 && 4.5
 		customers: 420,
 		trialDays: 14}
 ];import { ServiceVariant   } from '../types / service - variants'
-export interface MarketValidatedService {id: string;
-=======
-		link: "https://ziontechgroup && ziontechgroup.com/audit-log-vault",;
-variant: "quantum-neural",
-		rating: 4 && 4.5;
-		customers: 420;
-		trialDays: 14};
-];import { ServiceVariant   } from '../types / service - variants';
-export interface MarketValidatedService {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-name: string;
+export interface MarketValidatedService {id: string;name: string;
 tagline: string;
 price: string;
 period: string;
@@ -1668,20 +1547,11 @@ variant?: ServiceVariant;
 rating?: number;
 customers?: number;
 trial_days?: number;
-<<<<<<< HEAD
 setup_time?: string
 contact_info: unknown
   mobile: string,
   email: string}
-  address: string,
-=======
-setup_time?: string;
-contact_info: unknown;
-  mobile: string;
-  email: string};
-  address: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const contact_info =
+  address: string,const contact_info =
   mobile: "+1 302 464 0950"
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1761,21 +1631,11 @@ addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
 ,
   websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"}
 }
 export const marketValidatedServices: MarketValidatedService[] = [
-// AI and Assistants,
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"};
-};
-export const marketValidatedServices: MarketValidatedService[] = [;
-// AI and Assistants;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: "ai - assistant - pro",
+// AI and Assistants,  id: "ai - assistant - pro",
   name: "AI Assistant Pro",
   tagline: "Branded copilot with RAG, guardrails, and analytics",
   price: "$149",
@@ -2582,12 +2442,7 @@ export const,
   s: 14,
   setup_tim,"
   e: "2 hours",
-<<<<<<< HEAD
-  contact_info;}];}}
-=======
-  contact_info}]}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // Search and Knowledge;
+  contact_info;}];}}  // Search and Knowledge;
   id: 'vector - search - starter',
   name: 'Vector Search Starter',
   tagline: 'Deploy a production - grade vector database and APIs',
@@ -2633,15 +2488,8 @@ export const,
   setup_tim,
   e: '2 hours'
   contact_info}];
-<<<<<<< HEAD
 contactInfo;
-	}
-=======
-;
-;
-		contactInfo};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+	}];
 }};
 i,
   d: string, nam,
@@ -3010,16 +2858,9 @@ i,
   s: 14,' setup_tim,
   e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService { export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
   s: 14,' setupTim,"
-<<<<<<< HEAD
   e: '2 hours', contactInfo} } ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string} website?: string} } } export const,
-  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants, {/* TODO: Fix JSX expression */}"
-=======
-  e: '2 hours', contactInfo} }; ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */};
-  s: string} website?: string} }} export const,
-  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants; {/* TODO: Fix JSX expression */}"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
+  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants, {/* TODO: Fix JSX expression */}"  e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "1 hour", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "2 hours", contactInfo}} }, // Security and APIs; {/* TODO: Fix JSX expression */}"
   e: "20 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
@@ -3364,14 +3205,7 @@ i,
   k: 'http,
   s://ziontechgroup.com / vector - search - starter'' varian,
   t: 'quantum' ratin,
-<<<<<<< HEAD
   g: 4.6, customer,
   s: 410, trial_day,
   s: 14,' setup_tim,
   e: '2 hours' contact_info}]; ; contactInfo } ]; }} '"
-=======
-  g: 4.6; customer,
-  s: 410; trial_day,
-  s: 14;' setup_tim,
-  e: '2 hours' contact_info}]; ; contactInfo } ]}} '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

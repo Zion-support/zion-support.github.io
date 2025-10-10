@@ -1,13 +1,7 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 interface AdvancedAccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-}
-=======
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const,
+}const,
   AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   });
@@ -18,7 +12,6 @@ const,
     const motionQuery = window.matchMedia('(prefers-reduced-motio)
   n: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contras)
-<<<<<<< HEAD
   t: high)'),
     const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
   n: e.matches }));
@@ -69,61 +62,10 @@ const,
     }
     history.replaceState = function(...args) {/* TODO: Fix JSX expression */}
     }
-  }, []);
-=======
-  t: high)');
-    ;
-const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
-  n: e.matches }))};
-    ;
-const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
-  t: e.matches }))};
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
-    return () => {/* TODO: Fix JSX expression */}
-    }}, []);
-  // Apply accessibility styles;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    };
-    // Apply reduced motion;
-    if (accessibilitySettings.reducedMotion) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    };
-    // Apply font scaling;
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')}, [accessibilitySettings]);
-  // Keyboard navigation enhancement;
-  const setupKeyboardNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
-        };
-      };
-      // Escape key to close modals/dropdowns;
-      if (event.key === 'Escape') {/* TODO: Fix JSX expression */}
-        };
-      };
-      // Arrow keys for menu navigation;
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {/* TODO: Fix JSX expression */}
-        };
-      };
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
-  // Screen reader enhancements;
-  const setupScreenReaderSupport = useCallback(() => {/* TODO: Fix JSX expression */}
-      };
-    };
-    // Listen for route changes (if using client-side routing);
-const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
-    history.pushState = function(...args) {/* TODO: Fix JSX expression */}
-    };
-    history.replaceState = function(...args) {/* TODO: Fix JSX expression */}
-    }}, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // Focus management;
+  }, []);  // Focus management;
   const setupFocusManagement = useCallback(() => {/* TODO: Fix JSX expression */}
             };
           } else {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
             }
           }
         }
@@ -141,51 +83,22 @@ const originalPushState = history.pushState;
   const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
         button.setAttribute('aria-label', `Button ${index + 1}`);
-      }
-=======
-            };
-          };
-        };
-      };
-      element.addEventListener('keydown', handleTabKey);
-      firstElement?.focus();
-      return () => element.removeEventListener('keydown', handleTabKey)};
-    // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {/* TODO: Fix JSX expression */})
-    })}, []);
-  // ARIA labels enhancement;
-  const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-        button.setAttribute('aria-label', `Button ${index + 1}`)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    });
+      }    });
     // Add ARIA labels to images;
     const images = document.querySelectorAll('im)
   g: not([alt])'),
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
       img.setAttribute('alt', `Image ${index + 1}`);
-    });
-=======
-      img.setAttribute('alt', `Image ${index + 1}`)});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Add ARIA labels to form inputs;
+    });    // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('inpu)
   t: not([aria-label]):not([aria-labelledby])'),
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
       } else if (label) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
         input.setAttribute('aria-label', `Input ${index + 1}`);
       }
     });
-  }, []);
-=======
-        input.setAttribute('aria-label', `Input ${index + 1}`)};
-    })}, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // Skip links;
+  }, []);  // Skip links;
   const addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */}
   t: 'Skip to main content' },
       {/* TODO: Fix JSX expression */}
@@ -198,7 +111,6 @@ const originalPushState = history.pushState;
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
     skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
     });
-<<<<<<< HEAD
     document.body.insertBefore(skipLinksContainer, document.body.firstChild);
   }, []);
   // Color contrast checking;
@@ -207,32 +119,15 @@ const originalPushState = history.pushState;
     }
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
     elements.forEach(element => checkElementContrast(element as HTMLElement));
-  }, []);
-=======
-    document.body.insertBefore(skipLinksContainer, document.body.firstChild)}, []);
-  // Color contrast checking;
-  const checkColorContrast = useCallback(() => {/* TODO: Fix JSX expression */}
-      };
-    };
-;
-const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
-    elements.forEach(element => checkElementContrast(element as HTMLElement))}, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  // Voice navigation support;
+  }, []);  // Voice navigation support;
   const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to about')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to contact')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to services')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('call phone')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('send email')) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
       }
-    }
-=======
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    // Add voice navigation button;
+    }    // Add voice navigation button;
     const voiceButton = document.createElement('button');
     voiceButton.textContent = 'Voice Navigation';
     voiceButton.className = 'voice-navigation-button';
@@ -258,12 +153,7 @@ const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div
     if (enableVoiceNavigation) {/* TODO: Fix JSX expression */}
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
-<<<<<<< HEAD
   return null;
 }
 export default AdvancedAccessibilityEnhancer;"`
   </AdvancedAccessibilityEnhancerProps>
-=======
-  return null};
-export default AdvancedAccessibilityEnhancer;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

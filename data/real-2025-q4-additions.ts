@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 
-export interface Q4Service {id: string;
-=======
-export interface Q4Service {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string;
+export interface Q4Service {id: string;  name: string;
   tagline: string;
   price: string;
   period: string;
@@ -36,22 +29,12 @@ id: string;
   growth_rate?: string
   variant?: string,
   contact_info?:,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
     website: string}
 export interface Q4Service {/* TODO: Fix JSX expression */}
-  s: string}
-=======
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-export interface Q4Service {/* TODO: Fix JSX expression */};
-  s: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    websit,
+  s: string}    websit,
   e: string};
   };
   real_implementatio,
@@ -1008,7 +991,6 @@ export const real2025Q4Additions = [
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
-<<<<<<< HEAD
     launchDate: '2025-09-28'
     customers: 70
     rating: 4.5
@@ -1017,18 +999,7 @@ export const real2025Q4Additions = [
 }
     customers: 120
     rating: 4.7
-    reviews: 48,
-=======
-    launchDate: '2025-09-28',
-    customers:
-        customers: 70;
-    rating: 4.5;
-    reviews: 28}]};
-    customers: 120;
-    rating: 4.7;
-    reviews: 48;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    popula,
+    reviews: 48,    popula,
   r: true,
     ico,
   n: '',
@@ -1061,13 +1032,8 @@ export const real2025Q4Additions = [
     ratin,
   g: 4.5,
     review,
-<<<<<<< HEAD
   s: 28}];
-}
-=======
-  s: 28}]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    customer,
+}    customer,
   s: 120,
     ratin,
   g: 4.7,
@@ -1344,16 +1310,8 @@ export const real2025 Q4 Additions = [
       'A / B and holdout tests',
       'Privacy - first scoring',
       'Dashboards and exports'],
-<<<<<<< HEAD
     popular: true,
-export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
-=======
-    popular: true;
-export const real2025Q4Additions = [
-{id: 'ai-governed-rag-platform',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'AI-Governed RAG Platform',
+export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',    name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
     period: '/month',
@@ -3306,13 +3264,8 @@ export const real2025Q4Additions = [
   launchDate?: string;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
   reviews?: number;
-}
-=======
-  reviews?: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const contact =
+}const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
@@ -3659,29 +3612,16 @@ export const,
 		growthRate: '10% YoY', variant: 'ai-futuristic',
 		contactInfo: contact, realImplementation: true,
 		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
-<<<<<<< HEAD
     launchDate: '2025-09-28', customers: 70
 		rating: 4.5
 		reviews: 28,
-	}
-=======
-    launchDate: '2025-09-28', customers: 70;
-		rating: 4.5;
-		reviews: 28};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+	}];
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
-<<<<<<< HEAD
     features: [,
-      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']}
-=======
-    features: [;
-      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    icon: '',
+      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']}    icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300'};
     link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
@@ -3724,20 +3664,11 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Backup policies, failover drills, dashboards.',
-<<<<<<< HEAD
     launchDate: '2025-03-11'
     customers: 17
     rating: 4.6
     reviews: 9,
-  }
-=======
-    launchDate: '2025-03-11',
-    customers:
-        customers: 17;
-    rating: 4.6;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
     rating: 4 && 4.6
     reviews: 9,
 		popula,
@@ -4348,21 +4279,12 @@ export const,
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
-<<<<<<< HEAD
     launchDate: '2025-09-28'
     customers: 70
     rating: 4.5
     reviews: 28,
   }];
-}
-=======
-    launchDate: '2025-09-28',
-    customers:
-        customers: 70;
-    rating: 4.5;
-    reviews: 28}]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
+}export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
@@ -4452,19 +4374,10 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-<<<<<<< HEAD
   s: 28}];
 }
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-  r: 'text-cyan-300'}
-=======
-  s: 28}]};
-export const real2025Q4Additions = [
-{/* TODO: Fix JSX expression */};
-];
-  r: 'text-cyan-300'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    lin,`
+  r: 'text-cyan-300'}    lin,`
   k: `http,`
   s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     marketPositio,
@@ -5395,20 +5308,11 @@ export const real2025Q4Additions = [
     contactInfo: contact
     realImplementation: true,
     implementationDetails: 'Backup policies, failover drills, dashboards.',
-<<<<<<< HEAD
     launchDate: '2025-03-11'
     customers: 17
     rating: 4.6
     reviews: 9,
-  }
-=======
-    launchDate: '2025-03-11',
-    customers:
-        customers: 17;
-    rating: 4.6;
-    reviews: 9};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+  }];
     reviews: 9,
     ico,
   n: '',
@@ -5747,14 +5651,7 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-<<<<<<< HEAD
-  s: 28}]; export const real2025Q4Additions = [ ' i,
-=======
-  s: 28}]; export const real2025Q4Additions = [
-; ' i,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  d: 'ai - governed - rag - platform',' nam,
+  s: 28}]; export const real2025Q4Additions = [ ' i,  d: 'ai - governed - rag - platform',' nam,
   e: 'AI - Governed RAG Platform',' taglin,
   e: 'Enterprise - grade RAG with guardrails, approvals, and evals',' pric,
   e: '$699',' perio,
@@ -6968,14 +6865,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-<<<<<<< HEAD
-  s: 28}]; } export const real2025Q4Additions = [ ' i,
-=======
-  s: 28}]} export const real2025Q4Additions = [
- ' i,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  d: 'ai-governed-rag-platform',' nam,
+  s: 28}]; } export const real2025Q4Additions = [ ' i,  d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,
   e: '$699',' perio,
@@ -7341,8 +7231,4 @@ export interface Q4Service,
   s: 17, ratin,
   g: 4.6, review,
   s: 9 } ]; review,
-<<<<<<< HEAD
   s: 9 } ]; '`
-=======
-  s: 9 } ]; '`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

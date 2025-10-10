@@ -5,14 +5,8 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {,
       ic, o, n: "🚀",
       title: "Revolutionary, AI, Technologie, s",",
       description: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
-<<<<<<< HEAD
       highlig, h, t: "1000x, Performan, c, e"
-const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      highlig, h, t: "1000x, Performan, c, e";
-const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    },
+const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}    },
     {/* TODO: Fix JSX expression */};
     },
     {/* TODO: Fix JSX expression */};

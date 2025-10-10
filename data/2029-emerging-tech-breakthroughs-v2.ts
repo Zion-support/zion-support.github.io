@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;

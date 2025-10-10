@@ -2,19 +2,9 @@
 import React from 'react';
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
-    {
-=======
-;
-const ExpenseTrackerPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: Receipt,
+    {      icon: Receipt,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit:     ,
@@ -41,14 +31,7 @@ iconicon: Shield,
       benefit:     ,
 $4};
   ];
-<<<<<<< HEAD
-  const pricingPlans = [
-=======
-;
-const pricingPlans = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      name: 'Personal',
+  const pricingPlans = [      name: 'Personal',
       price: '$9',
       period: '/month',
       description: 'Perfect for individuals',
@@ -83,7 +66,6 @@ const pricingPlans = [
         'Dedicated support',
         'White-label options',
         'Unlimited data retention',
-<<<<<<< HEAD
         'Custom compliance rules'
   const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
@@ -94,24 +76,7 @@ const pricingPlans = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
-  const testimonials = [
-=======
-        'Custom compliance rules';
-const integrations = [
-[
-        { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
-        { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
-        { name: 'Sage', icon: '📈', description: 'Business management' },
-        { name: 'Stripe', icon: '💳', description: 'Payment processing' },
-        { name: 'PayPal', icon: '💸', description: 'Online payments' },
-        { name: 'Slack', icon: '💬', description: 'Team communication' },
-        { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
-        { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' };
-;
-const testimonials = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      name: 'Michael Johnson',
+  const testimonials = [      name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
       content: 'Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
@@ -142,7 +107,6 @@ const testimonials = [
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
             over your business finances.
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
@@ -155,21 +119,7 @@ const testimonials = [
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               Start Free Trial,
   </
-        {/* Key Benefits */}
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
-            <Link href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial
-            </Link>
-        {/* Key Benefits */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        {/* Key Benefits */}        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">8+</div>
             <div className="text-white font-semibold mb-2">Hours Saved</div>
@@ -183,12 +133,7 @@ const testimonials = [
             <div className="text-4xl font-bold text-orange-400 mb-2">5x</div>
             <div className="text-white font-semibold mb-2">Faster Processing</div>
             <div className="text-gray-300 text-sm">With automated workflows</div>
-<<<<<<< HEAD
-        {/* Features Section */}
-=======
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        {/* Features Section */}        <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Expense Management Features,
   </
@@ -201,24 +146,14 @@ const testimonials = [
                 <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
             ))};
         </section>
-<<<<<<< HEAD
-        {/* Integrations Section */}
-=======
-        {/* Integrations Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            Integrates with Your Tools
+        {/* Integrations Section */}            Integrates with Your Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
-<<<<<<< HEAD
-        {/* Pricing Section */}
-=======
-        {/* Pricing Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            Simple, Transparent Pricing
+        {/* Pricing Section */}            Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
@@ -245,16 +180,9 @@ const testimonials = [
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-<<<<<<< HEAD
                   Get Started,
   </
-        {/* Testimonials */}
-=======
-                  Get Started
-                </button>
-        {/* Testimonials */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            What Our Customers Say
+        {/* Testimonials */}            What Our Customers Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
@@ -266,32 +194,18 @@ const testimonials = [
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
-<<<<<<< HEAD
-        {/* CTA Section */}
-=======
-        {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
+        {/* CTA Section */}        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using AI Expense Tracker to streamline financial 
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
-<<<<<<< HEAD
     const features = [],
   return (
     {// TODO: Add content
   }
-}
-=======
-};
-const features = [];
-  return (
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ico,
+}  ico,
   n: Receipt,
       titl,
   e: 'Smart Receipt Scanning',
@@ -307,7 +221,6 @@ const features = [];
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
 =======
 };
 return (
@@ -317,13 +230,7 @@ return (
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <<<<<<< HEAD
-      {/* Hero Section */}
-=======
-);
-};
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="container mx-auto px-4 py-16 pt-24"></section>"
+      {/* Hero Section */}      <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>"
             <Receipt className="w-10 h-10 text-white" /></Receipt>
@@ -341,28 +248,16 @@ Transform your expense management with AI-powered receipt scanning, automated ca
             and intelligent financial insights. Save time, reduce errors, and gain complete control;
             over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-// >
-=======
-            <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-//>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          "
+// >          "
           <Phone className="w-5 h-5 mr-2" />,
  Cal,
   l: (302) 464-0950
             </a>
-<<<<<<< HEAD
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial,
-=======
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </Link>
+Start Free Trial,            </Link>
         {/* Key Benefits */}"
         <div className="grid grid-cols-1,"
   md:grid-cols-4 gap-8 mb-16"></div>"
@@ -414,13 +309,8 @@ Integrates with Your Tools;"
             {pricingPlans.map((plan, index) => ()};
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
-}
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-//                 plan.popular;
+}//                 plan.popular;
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
   hover:border-cyan-500/50'`
@@ -472,7 +362,6 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of businesses using AI Expense Tracker to streamline financial
             management and gain better control over their spending.
-<<<<<<< HEAD
   ),
 }
 export default ExpenseTrackerPage;
@@ -501,7 +390,3 @@ export default ExpenseTrackerPage;
   </div>
   </section>
   </div>
-=======
-  )};
-export default ExpenseTrackerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

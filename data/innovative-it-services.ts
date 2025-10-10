@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
-export interface InnovativeITService {id: string;
-=======
-import React from 'react';
-export interface InnovativeITService {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string;
+export interface InnovativeITService {id: string;  name: string;
   tagline: string;
   price: string;
   period: string;
@@ -32,37 +24,19 @@ id: string;
   market_size: string;
   growth_rate: string;
   variant: string;
-<<<<<<< HEAD
   contact_info: unknown
     mobile: string
     email: string,
     address: string}
     website: string}
   }
-    id: 'zero - trust - security - platform'
-=======
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-  };
-    id: 'zero - trust - security - platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Zero Trust Security Platform',
+    id: 'zero - trust - security - platform'    name: 'Zero Trust Security Platform',
     tagline: 'Next - generation cybersecurity with zero trust architecture',
     price: '$599',
     period: '/month',
-<<<<<<< HEAD
     description: unknown,
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  s: string}
-=======
-    description: unknown;
-export interface InnovativeITService {/* TODO: Fix JSX expression */};
-  s: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    websit,
+  s: string}    websit,
   e: string};
   };
     i,
@@ -821,7 +795,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */};
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
-<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string
@@ -834,21 +807,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */};
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
-=======
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string},
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const innovativeITServices: InnovativeITService[] = [,
+}export const innovativeITServices: InnovativeITService[] = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
     period: '/month',
@@ -870,24 +829,13 @@ export const innovativeITServices: InnovativeITService[] = [,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.'
     launch_date: '2024 - 01 - 20'
     customers: 2500
     rating: 4.7
-    reviews: 1250,
-=======
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.',
-    launch_date: '2024 - 01 - 20',
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    market_siz,
+    reviews: 1250,    market_siz,
   e: '$12B DevOps market',
     growth_rat,
   e: '130% annual growth',
@@ -1053,33 +1001,16 @@ export const,
 export interface InnovativeITService {/* TODO: Fix JSX expression */};
   };
 ];
-<<<<<<< HEAD
-}
-=======
-;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-];
+}];
 realImplementation: true,
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
-<<<<<<< HEAD
     launchDate: '2024-01-01'
     customers: 800
     rating: 4.9
     reviews: 400,
   }
-    id: 'edge-computing-platform'
-=======
-    launchDate: '2024-01-01',
-    customers:
-        customers: 800;
-    rating: 4.9;
-reviews: 400;
-  };
-    id: 'edge-computing-platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Edge Computing Platform',
+    id: 'edge-computing-platform'    name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
     price: '$299',
     period: '/month',
@@ -1397,14 +1328,8 @@ reviews: 400;
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
-    realImplementation: true,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    implementationDetails:,
+    realImplementation: true,    implementationDetails:,
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
@@ -1413,24 +1338,13 @@ reviews: 400;
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
     rating: 4.7
-    reviews: 1250,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
-    launchDate: '2024-01-20',
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    marketSiz,
+    reviews: 1250,    marketSiz,
   e: '$12B DevOps market'
     growthRat,
   e: '130% annual growth'
@@ -1485,7 +1399,6 @@ reviews: 400;
 export interface InnovativeITService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
   realImplementation: boolean;
@@ -1494,19 +1407,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */};
   customers: number
   rating: number
   reviews: number,
-}
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const innovativeITServices: InnovativeITService[] = [;
+}export const innovativeITServices: InnovativeITService[] = [;
   {
     id: 'zero-trust-security-platform';
     name: 'Zero Trust Security Platform'
@@ -1533,7 +1434,6 @@ export const innovativeITServices: InnovativeITService[] = [;
     integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'];
     useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'];
     roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.';
-<<<<<<< HEAD
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk']
     marketSize: '$45 B cybersecurity market'
     growthRate: '110% annual growth',
@@ -1548,25 +1448,7 @@ export const innovativeITServices: InnovativeITService[] = [;
     launch_date: '2024 - 01 - 20'
     customers: 2500
     rating: 4.7
-    reviews: 1250,
-=======
-    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'];
-    marketSize: '$45 B cybersecurity market';
-    growthRate: '110% annual growth';
-    variant: 'cyberpunk'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.',
-    launch_date: '2024 - 01 - 20',
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementatio,
+    reviews: 1250,  realImplementatio,
   n: boolean,
   implementationDetail,
   s: string,
@@ -1577,21 +1459,11 @@ export const innovativeITServices: InnovativeITService[] = [;
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 export const,
   innovativeITServices: InnovativeITService[] = [,
   {/* TODO: Fix JSX expression */}
-  t: 'cyberpunk'}
-=======
-  s: number};
-;
-export const,
-  innovativeITServices: InnovativeITService[] = [;
-  {/* TODO: Fix JSX expression */};
-  t: 'cyberpunk'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    contactInf,
+  t: 'cyberpunk'}    contactInf,
   o: {};
       mobil,
   e: '+1 302 464 0950',
@@ -1614,16 +1486,9 @@ export const,
     ratin,
   g: 4.7,
     review,
-<<<<<<< HEAD
   s: 1250}
 ];
-  }
-=======
-  s: 1250};
-]};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export interface InnovativeITService,
+  }export interface InnovativeITService,
   id: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -2039,7 +1904,6 @@ export interface InnovativeITService,
   g: 4.7,
   reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -2047,18 +1911,7 @@ export interface InnovativeITService,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  innovativeITServices: InnovativeITService[] = [, {/* TODO: Fix JSX expression */}
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  innovativeITServices: InnovativeITService[] = [; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  l: 'kleber@ziontechgroup.com'}' addres,
+  innovativeITServices: InnovativeITService[] = [, {/* TODO: Fix JSX expression */}  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } real_implementatio,
@@ -2067,8 +1920,4 @@ export interface InnovativeITService,
   e: '2024 - 01 - 20' customer,
   s: 2500, ratin,
   g: 4.7, review,
-<<<<<<< HEAD
   s: 1250} ]; } '
-=======
-  s: 1250} ]} ; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

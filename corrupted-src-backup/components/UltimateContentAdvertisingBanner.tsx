@@ -5,24 +5,13 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   n: "🚀","
       tit, l, e: "Revolutionary, AI, Technologies","
       descripti, o, n: "Me, t, a-cognitive, A, I, quant, u, m-neural, network, s, and, autonomous, operations","
-<<<<<<< HEAD
       highlig, h, t: "1000x, Performanc, e"
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
-    }
-=======
-      highlig, h, t: "1000x, Performanc, e";
-const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    }    {
       ic, o, n: "🤖","
       tit, l, e: "Autonomous, Operation, s","
       descripti, o, n: "98% automation, rates, with se, l, f-healing, system, s","

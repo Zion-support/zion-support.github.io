@@ -18,15 +18,7 @@
   h: pdf_url, signature) ipfs_cid} }); return res.status (200).json ({/* TODO: Fix JSX expression */})
   a: updated }); } catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
   r: error?.message || "Export failed" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" }); } }
-=======
-  r: error?.message || "Export failed" })} } } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} } } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-"
+  r: "Internal server error" }); } }"

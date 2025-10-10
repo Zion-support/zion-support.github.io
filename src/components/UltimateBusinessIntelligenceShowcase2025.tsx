@@ -3,13 +3,7 @@ import React, { useState } from 'react';
         return (
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('all');
-=======
-}
-const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  const content = [
+  const [selectedCategory, setSelectedCategory] = useState('all');  const content = [
 [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -132,37 +126,20 @@ readingTimereadingTime: '45 min read',
               Ready to Transform Your Business?
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>
                 to="/contact"
-<<<<<<< HEAD
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
-                    strokeLinecap="round"
-=======
-                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-              >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                    strokeLinejoin="round"
+                    strokeLinecap="round"                    strokeLinejoin="round"
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
                 to="/services"
-<<<<<<< HEAD
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
     </section>)
 export default UltimateBusinessIntelligenceShowcase2025
-'use client',
-=======
-                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
-              >Learn More</Link>
-    </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-import React, { useState } from 'react';
+'use client',import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -172,21 +149,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  O: Add content};
-};
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const content = [
-];
-// TOD,
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  i,
+}  i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
   e: 'AI,
@@ -201,14 +164,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   y: 'blog',
       metric,
   s: {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
-}
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  ro,
+}  ro,
   i: '30,000%',
         efficienc,
   y: '500%',
@@ -296,11 +253,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
   hover: bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
-<<<<<<< HEAD
     </section>)
 export default UltimateBusinessIntelligenceShowcase2025,
   </path>
-=======
-    </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -11,31 +11,17 @@ export interface EnterpriseCaseStudy {
   results: string;
   metrics: {
     costSavings: string;
-<<<<<<< HEAD
     efficiencyGain: string
     roi: string
     timeline: string,
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
-  }
-=======
-    efficiencyGain: string;
-    roi: string;
-    timeline: string;
-export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  feature,
+  }  feature,
   d: boolean,
   publishedA,
   t: string,
   tag,
-<<<<<<< HEAD
   s: string[],
 }
-
-=======
-  s: string[]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {
     id: 'fortune-500-ai-automation'

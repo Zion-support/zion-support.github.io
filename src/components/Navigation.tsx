@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
 const Navigation: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
-=======
-;
-const Navigation: React.FC = () => {
-}
-const [isOpen, setIsOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  const [servicesOpen, setServicesOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);  const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -32,32 +23,10 @@ const [isOpen, setIsOpen] = useState(false);
       window.removeEventListener('scroll', handleScroll)
   }
   }, []);
-  const closeAllMenus = () => {
-=======
-  useEffect(() => {;
-const handleResize = () => {
-}
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false)}
-    };
-;
-const handleScroll = () => {
-}
-      setIsScrolled(window.scrollY > 50)};
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll)}}, []);
-;
-const closeAllMenus = () => {
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    setServicesOpen(false);
+  const closeAllMenus = () => {    setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-<<<<<<< HEAD
     setIsOpen(false)
   }
   const toggleMenu = () => {
@@ -66,21 +35,7 @@ const closeAllMenus = () => {
       closeAllMenus()
   }
   }
-  const serviceCategories = [
-=======
-    setIsOpen(false)};
-;
-const toggleMenu = () => {
-}
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus()}
-  };
-;
-const serviceCategories = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const serviceCategories = [    {
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
@@ -229,18 +184,10 @@ const serviceCategories = [
           <div className="hidden lg: flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
-<<<<<<< HEAD
   </
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About,
-  </
-=======
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            {/* Services Dropdown */}
+  </            {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -292,16 +239,9 @@ const serviceCategories = [
                     <Link href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
-<<<<<<< HEAD
                     >
                       View All Services;
-  </
-=======
-                >
-                      View All Services
-                    </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  </div>
+  </                  </div>
                 </div>
               )};
             </div>
@@ -311,7 +251,6 @@ const serviceCategories = [
             <Link href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
-<<<<<<< HEAD
             >
               Case Studies;
   </
@@ -328,25 +267,7 @@ const serviceCategories = [
               onClick={closeAllMenus}
             >
               Contact;
-  </
-=======
-                >
-              Case Studies
-            </Link>
-            <Link href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-                >
-              Blog
-            </Link>
-            <Link href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-                >
-              Contact
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            {/* CTA Button */}
+  </            {/* CTA Button */}
             <Link href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
@@ -371,7 +292,6 @@ const serviceCategories = [
               <Link href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
-<<<<<<< HEAD
               >
                 Home;
   </
@@ -381,19 +301,7 @@ const serviceCategories = [
                 onClick={closeAllMenus}
               >
                 About;
-  </
-=======
-                >
-                Home
-              </Link>
-              <Link href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-                >
-                About
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              {/* Mobile Services */}
+  </              {/* Mobile Services */}
               <div>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
@@ -416,15 +324,9 @@ const serviceCategories = [
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1">
                               {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                             </Link>
-<<<<<<< HEAD
                           ))}
                           <Link
-                            href="/services"
-=======
-                          ))};
-                          <Link href="/services"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
+                            href="/services"                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
                             View All →
                           </Link>
                         </div>
@@ -434,41 +336,22 @@ const serviceCategories = [
                 </div>
               </div>
           {/* Contact Info */}
-<<<<<<< HEAD
           <div className="hidden lg: flex items-center space-x-4">
             <a
-              href="tel:+13024640950"
-=======
-          <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+              href="tel:+13024640950"              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">+1 302 464 0950</span>
             </a>
-<<<<<<< HEAD
             <a
-              href="mailto:kleber@ziontechgroup.com"
-=======
-            <a href="mailto:kleber@ziontechgroup.com"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300">
+              href="mailto:kleber@ziontechgroup.com"              className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300">
               <Mail className="w-4 h-4" />
               <span className="text-sm font-medium">Email</span>
             </a>
-<<<<<<< HEAD
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
               Get Started,
-  </
-=======
-            <a href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started
-            </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </div>
+  </          </div>
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300"
@@ -493,13 +376,8 @@ const serviceCategories = [
                   </Link>
                 ))};
               </div>
-<<<<<<< HEAD
               <a
-                href="tel:+13024640950"
-=======
-              <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+                href="tel:+13024640950"                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
                 >
                 <Phone className="w-4 h-4 inline mr-2" />
@@ -510,13 +388,8 @@ const serviceCategories = [
         )};
       </div>
     </nav>
-<<<<<<< HEAD
   );
-}
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default Navigation;
+}export default Navigation;
   </a>
   </a>
   </Link>

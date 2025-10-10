@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
-<<<<<<< HEAD
 =======
 };
 return (
@@ -25,13 +24,7 @@ return (
           </p>
         </section>
 <<<<<<< HEAD
-        {/* Key Benefits */}
-=======
-);
-};
-        {/* Key Benefits */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        {/* Key Benefits */}        <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 // Why Choose Our Business Apps?
           </h2>"
@@ -51,14 +44,9 @@ return (
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
-<<<<<<< HEAD
             <div>{
     businessApps
-  }
-=======
-            <div>{businessApps};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                .filter(app => app.category === category)
+  }                .filter(app => app.category === category)
                 .map((app, index) => ("
 <div className="text-4xl mb-4 text-center">{app.icon}</div>"
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>"
@@ -101,7 +89,6 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Call (302) 464-0950</a>
       </main>
       <Footer /></Footer>
-<<<<<<< HEAD
 </div>),
 }
 export default BusinessAppsPage;
@@ -109,7 +96,3 @@ export default BusinessAppsPage;
   </p>
   </h1>
   </div>
-=======
-</div>)};
-export default BusinessAppsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

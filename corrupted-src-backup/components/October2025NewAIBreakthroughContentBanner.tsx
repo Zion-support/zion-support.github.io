@@ -1,5 +1,4 @@
 const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
-<<<<<<< HEAD
 =======
 return (
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
@@ -201,12 +200,7 @@ return (
           <div, className="fl, e, x-1"></div>
 <<<<<<< HEAD
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3">
-              💎 Combined, Enterprise, Impact: $13.3B,
-=======
-            <h3 , className="te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3">
-              💎 Combined, Enterprise, Impact: $13.3B;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </h3>,
+              💎 Combined, Enterprise, Impact: $13.3B,            </h3>,
             <p , className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
               These, three, breakthrough technologies, work, together to, create, a comprehensive, AI, innovation platfo, r, m:</p>
               <strong, className="te, x, t-purp, l, e-4, 0, 0"> NAS, designs, optimal architectur, e, s</stro, n, g>
@@ -261,15 +255,6 @@ return (
         </p>
       </d, i, v>
     </d, i, v>
-<<<<<<< HEAD
   );
 const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-}
-=======
-);
-};
-  );
-const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default October2025 NewAIBreakthroughContentBanner;
+}export default October2025 NewAIBreakthroughContentBanner;
