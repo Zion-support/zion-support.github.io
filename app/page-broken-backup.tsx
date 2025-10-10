@@ -1,68 +1,101 @@
 'use client';
+
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+
 import Navigation from './components/Navigation';
+
 import Footer from './components/Footer';
+
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+
 import SEOOptimizer from './components/SEOOptimizer';
+
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-// Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+
+// Dynamically import heavy components for better performance';
+
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner));;
+
+const ContentCarousel = lazy(() => import('./components/ContentCarousel));;
+
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase));;
+
+const ContentStatistics = lazy(() => import('./components/ContentStatistics));;
+
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup));;
 
 // Preload critical components;
-const preloadComponents = () => {
+
+const preloadComponents = () => {;;
+
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
+      import('./components/ContentPromotionBanner);
+
+      import('./components/ContentCarousel);
+
     }, 100);
+
   }
+
 };
 
 // Loading skeleton component;
+
 const ServiceCardSkeleton: React.FC = memo(() => (
+
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-4 bg-gray-300 rounded mb-4"></div>
     <div className="h-3 bg-gray-300 rounded mb-2"></div>
-    <div className="h-3 bg-gray-300 rounded"> </div>
-  </div>
+    <div $2></div>
 ));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     setIsLoaded(true);
+
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 100);;
+
     // Preload components
     preloadComponents();
+
     return () => clearTimeout(timer);
+
   }, []);
-  
+
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  const handlePhoneClick = useCallback(() => {;;
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;;
+
       gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
+        event_label: main_phone_number
       });
+
     }
+
   }, []);
+
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -80,14 +113,14 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            Business Intelligence
           ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: en
     },
           address: {
             '@type': 'PostalAddress',
@@ -95,26 +128,38 @@ const HomePage: React.FC = () => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: US
     }
+
         }}
+
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
+
         enableLazyLoading={true}
+
         enablePreloading={true}
+
         enableCodeSplitting={true}
+
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
+
         enableScreenReaderSupport={true}
+
         enableHighContrast={true}
+
         enableFocusManagement={true}
+
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}
+
         <Navigation />
         {/* Skip to main content for accessibility */}
+
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
@@ -122,17 +167,20 @@ const HomePage: React.FC = () => {
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
+
       <Suspense fallback={<div>Loading...</div>}>
         <ContentPromotionBanner />
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
+
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'
+              : opacity-0 translate-y-8
           }`}
+
           aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto">
@@ -153,6 +201,7 @@ const HomePage: React.FC = () => {
             </p>
             
             {/* Key Benefits */}
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
               <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-2xl sm:text-3xl mb-3">🚀</div>
@@ -177,10 +226,12 @@ const HomePage: React.FC = () => {
             </div>
             
             {/* CTA Buttons */}
+
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 onClick={handlePhoneClick}
+
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
               >📞 Call: (302) 464-0950
@@ -198,6 +249,7 @@ const HomePage: React.FC = () => {
             </div>
             
             {/* Contact Info */}
+
             <div className="mt-8 text-center">
               <p className="text-gray-300 text-sm mb-2">📍 364 E Main St STE 1008, Middletown, DE 19709
               </p>
@@ -207,6 +259,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         {/* Services Section */}
+
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
@@ -214,6 +267,7 @@ const HomePage: React.FC = () => {
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Comprehensive AI and IT solutions designed to transform your business operations
           </p>
           {/* Primary Services Grid */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse"></article>
@@ -256,6 +310,7 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           {/* Secondary Services Grid */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
@@ -298,6 +353,7 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           {/* Micro SAAS Services Grid */}
+
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">Micro SAAS Solutions
             </h3>
@@ -410,6 +466,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Additional Micro SAAS Services */}
+
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               More Micro SAAS Solutions
@@ -539,6 +596,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Professional Tools Micro SAAS */}
+
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Professional Tools
@@ -668,6 +726,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* IT Services & Infrastructure */}
+
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">IT Services & Infrastructure
             </h3>
@@ -763,6 +822,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           {/* New AI Services Grid */}
+
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">Advanced AI Services
             </h3>
@@ -836,6 +896,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           {/* Emerging Technologies Grid */}
+
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">Emerging Technologies
             </h3>
@@ -887,6 +948,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           {/* IT Services Grid */}
+
           <div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">IT Services & Infrastructure
             </h3>
@@ -928,6 +990,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         {/* Micro SAAS Solutions Section */}
+
         <section className="mb-16" aria-labelledby="micro-saas-heading"></section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text"></h2>
             Micro SAAS Solutions
@@ -935,6 +998,7 @@ const HomePage: React.FC = () => {
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p>
           {/* Productivity Tools */}
+
           <div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">Productivity & Business Tools
             </h3>
@@ -1030,6 +1094,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           {/* Marketing & Sales Tools */}
+
           <div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">Marketing & Sales Tools
             </h3>
@@ -1081,6 +1146,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           {/* Developer Tools */}
+
           <div className="mb-12"></div>
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">Developer Tools
             </h3>
@@ -1133,23 +1199,28 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         {/* Statistics Section */}
+
         <Suspense fallback={<div></Suspense>}>
           <ContentStatistics />
         </Suspense>
         {/* Content Carousel */}
+
         <Suspense fallback={<div></Suspense>}>
           <ContentCarousel />
         </Suspense>
         {/* Dynamic Content Showcase */}
+
         <Suspense fallback={<div></Suspense>}>
           <DynamicContentShowcase />
         </Suspense>
         {/* Newsletter Signup */}
+
         <Suspense fallback={<div></Suspense>}>
           <ContentNewsletterSignup />
         </Suspense>
 
         {/* Contact Section */}
+
         <section className="mb-16" aria-labelledby="contact-heading"></section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text"></h2>
@@ -1160,6 +1231,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
               {/* Contact Information */}
+
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
                 <div className="space-y-6"></div>
@@ -1214,6 +1286,7 @@ const HomePage: React.FC = () => {
               </div>
               
               {/* Quick Contact Form */}
+
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form className="space-y-6"></form>
@@ -1291,10 +1364,12 @@ const HomePage: React.FC = () => {
         </section>
       </main>
       {/* Footer */}
+
       <Footer />
     </div>
     </>
   );
+
 };
 
 export default HomePage;

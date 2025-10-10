@@ -2,16 +2,9 @@ impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr,
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function CognitiveSearchEnterprise20, 2, 5() { 
-<<<<<<< HEAD
   return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
     <React.Fragment>
-      <Helm, e, t>
-=======
-  return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <title>
+      <Helm, e, t>        <title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group;
         <
         <meta, nam, e = 'description'

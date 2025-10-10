@@ -1,16 +1,24 @@
 'use client';
+
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components
 import Footer from '../components
 
 'use client';
+
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {;
-const [activeTab, setActiveTab] = useState('ai');
+
+const ResearchDevelopmentPage: React.FC = () => {';
+
+const [activeTab, setActiveTab] = useState('ai);
+
 ;
-const _researchAreas = [
+
+const _researchAreas = [;;
+
     {
       id: 'ai',
       name: 'Artificial Intelligence',
@@ -47,9 +55,13 @@ $4},
       descriptio,
     n:     ,
 $4}
+
   ];
+
 ;
-const researchProjects = {
+
+const researchProjects = {;;
+
     ai: [
       {
         titl,
@@ -62,7 +74,7 @@ const researchProjects = {
         outcomes: [
           'Improved decision accuracy by 40%',
           'Reduced computational overhead by 30%',
-          'Published 3 papers in top-tier conferences'
+          Published 3 papers in top-tier conferences
         ],
         icon: Brain,
         color:       ,
@@ -77,7 +89,7 @@ $4},
         outcomes: [
           '95% automation of business processes',
           '300% improvement in decision speed',
-          'Patent filed for core algorithms'
+          Patent filed for core algorithms
         ],
         icon: Target,
         color:       ,
@@ -92,11 +104,12 @@ $4},
         outcomes: [
           '50% reduction in model development time',
           '25% improvement in model performance',
-          'Open-source framework released'
+          Open-source framework released
         ],
         icon: Microscope,
         color:       ,
 $4}
+
     ],
     quantum: [
       {
@@ -110,7 +123,7 @@ $4}
         outcomes: [
           'Quantum speedup demonstrated for specific problems',
           'Novel quantum ML algorithms developed',
-          'Partnership with leading quantum hardware companies'
+          Partnership with leading quantum hardware companies
         ],
         icon: Atom,
         color:       ,
@@ -125,11 +138,12 @@ $4},
         outcomes: [
           'Improved quantum error rates',
           'Practical implementation strategies',
-          'Industry collaboration established'
+          Industry collaboration established
         ],
         icon: Zap,
         color:       ,
 $4}
+
     ],
     autonomous: [
       {
@@ -143,7 +157,7 @@ $4}
         outcomes: [
           '90% reduction in manual operations',
           'Self-healing system capabilities',
-          'Real-world deployment in 5 enterprises'
+          Real-world deployment in 5 enterprises
         ],
         icon: Rocket,
         color:       ,
@@ -158,11 +172,12 @@ $4},
         outcomes: [
           'Novel coordination algorithms developed',
           'Scalability demonstrated up to 1000 agents',
-          'Published in Nature Communications'
+          Published in Nature Communications
         ],
         icon: Users,
         color:       ,
 $4}
+
     ],
     emerging: [
       {
@@ -176,7 +191,7 @@ $4}
         outcomes: [
           'Novel neuromorphic algorithms',
           'Hardware-software co-design',
-          'Industry partnerships established'
+          Industry partnerships established
         ],
         icon: Lightbulb,
         color:       ,
@@ -191,15 +206,19 @@ $4},
         outcomes: [
           '10x reduction in power consumption',
           'Real-time processing capabilities',
-          'Commercial product launched'
+          Commercial product launched
         ],
         icon: Globe,
         color:       ,
 $4}
+
     ]
   };
+
 ;
-const publications = [
+
+const publications = [;;
+
     {
       title: 'Consensus Intelligenc,
     e: A Framework for Multi-Agent Decision Making',
@@ -233,9 +252,13 @@ $4},
       impact: 'High',
       link:     ,
 $4}
+
   ];
+
 ;
-const achievements = [
+
+const achievements = [;;
+
     {
       icon: Award,
       title: '50+ Research Papers',
@@ -256,18 +279,14 @@ $4},
       title: 'Global Collaborations',
       description:     ,
 $4}
+
   ];
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -285,16 +304,19 @@ $4}
               {researchAreas.map((area) => (<button
                   key = { area.id };)
                   onClick = { () => setActiveTab(area.id) };
+
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === area.id
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
                   }`}
+
                 >
                   <area.icon className="w-5 h-5 mr-2" 
                   <span className="font-medium">{area.name}<
                 <
               ))}
+
             <
             
             <div className="text-center">
@@ -302,20 +324,20 @@ $4}
     <div>Coming Soon<
 
   )};
-  const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas = [
+
+  const [activeTab, setActiveTab] = useState('ai);
+
+  const _researchAreas = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   i,
   d: 'ai',
       nam,
@@ -327,17 +349,12 @@ $4}
       bgColo,
   r: 'bg-purple-500
       descriptio,
-  n: 'Advancing the frontiers of AI and machine learning'
+  n: Advancing the frontiers of AI and machine learning
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   i,
   d: 'quantum',
       nam,
@@ -349,17 +366,12 @@ $4}
       bgColo,
   r: 'bg-blue-500
       descriptio,
-  n: 'Exploring quantum algorithms and quantum advantage'
+  n: Exploring quantum algorithms and quantum advantage
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   i,
   d: 'autonomous',
       nam,
@@ -371,17 +383,12 @@ $4}
       bgColo,
   r: 'bg-green-500
       descriptio,
-  n: 'Developing self-managing and intelligent systems'
+  n: Developing self-managing and intelligent systems
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   i,
   d: 'emerging',
       nam,
@@ -393,31 +400,23 @@ $4}
       bgColo,
   r: 'bg-yellow-500
       descriptio,
-  n: 'Researching next-generation technologies'
+  n: Researching next-generation technologies
     }
+
   ];
-<<<<<<< HEAD
-  const researchProjects = {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-  const researchProjects = { /* TODO: Fix JSX expression *
-  ,
-    O: Add content; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  const researchProjects = {/* TODO: Fix JSX expression */};;
+
+  O: Add content}};
+
   a,
   i: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Consensus Intelligence Framework',
         descriptio,
@@ -442,17 +441,12 @@ $4}
         ico,
   n: Brain,
         colo,
-  r: 'text-purple-400'
+  r: text-purple-400
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Autonomous Business Intelligence',
         descriptio,
@@ -472,22 +466,17 @@ $4}
     O: Add items]
 /
 /
-          'Patent filed for core algorithms'
+          Patent filed for core algorithms
 /
         ico,
   n: Target,
         colo,
-  r: 'text-green-400'
+  r: text-green-400
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Neural Architecture Search for Enterprise',
         descriptio,
@@ -512,22 +501,18 @@ $4}
         ico,
   n: Microscope,
         colo,
-  r: 'text-blue-400'
+  r: text-blue-400
       }
+
 /
     quantu,
   m: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Quantum Machine Learning Algorithms',
         descriptio,
@@ -552,17 +537,12 @@ $4}
         ico,
   n: Atom,
         colo,
-  r: 'text-blue-400'
+  r: text-blue-400
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Quantum Error Correction for Business Applications',
         descriptio,
@@ -582,27 +562,23 @@ $4}
     O: Add items]
 /
 /
-          'Industry collaboration established'
+          Industry collaboration established
 /
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
+  r: text-yellow-400
       }
+
 /
     autonomou,
   s: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Autonomous Enterprise Operations',
         descriptio,
@@ -627,17 +603,12 @@ $4}
         ico,
   n: Rocket,
         colo,
-  r: 'text-green-400'
+  r: text-green-400
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Multi-Agent Coordination Systems',
         descriptio,
@@ -662,22 +633,18 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-purple-400'
+  r: text-purple-400
       }
+
 /
     emergin,
   g: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Neuromorphic Computing for AI',
         descriptio,
@@ -697,22 +664,17 @@ $4}
     O: Add items]
 /
 /
-          'Industry partnerships established'
+          Industry partnerships established
 /
         ico,
   n: Lightbulb,
         colo,
-  r: 'text-yellow-400'
+  r: text-yellow-400
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Edge AI for IoT Systems',
         descriptio,
@@ -737,23 +699,23 @@ $4}
         ico,
   n: Globe,
         colo,
-  r: 'text-blue-400'
+  r: text-blue-400
       }
+
 /
   };
-  const publications = [
+
+  const publications = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making',
@@ -766,17 +728,12 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
+  k: #
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       author,
@@ -788,17 +745,12 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
+  k: #
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
       author,
@@ -810,17 +762,12 @@ $4}
       impac,
   t: 'Medium',
       lin,
-  k: '#'
+  k: #
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
       author,
@@ -832,97 +779,74 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
+  k: #
     }
+
   ];
-  const achievements = [
+
+  const achievements = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: Award,
       titl,
   e: '50+ Research Papers',
       descriptio,
-  n: 'Published in top-tier conferences and journals'
+  n: Published in top-tier conferences and journals
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: Users,
       titl,
   e: '100+ Researchers',
       descriptio,
-  n: 'World-class research team across multiple disciplines'
+  n: World-class research team across multiple disciplines
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: Target,
       titl,
   e: '15+ Patents',
       descriptio,
-  n: 'Innovative technologies and methodologies'
+  n: Innovative technologies and methodologies
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: Globe,
       titl,
   e: 'Global Collaborations',
       descriptio,
-  n: 'Partnerships with leading universities and research institutions'
+  n: Partnerships with leading universities and research institutions
     }
+
   ];
+
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
-          <div className="text-center mb-16"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-            <h1 className="text-4xl,"
+          <div className="text-center mb-16"></div>"            <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
 
@@ -936,27 +860,21 @@ $4}
           <div className="mb-12"><
             <div className="flex flex-wrap justify-center gap-4 mb-8"><
               {researchAreas.map((area) => ()}
-<<<<<<< HEAD
+
           <button></button>
                   key={area.id}
+
                   onClick={() => setActiveTab(area.id)}
+
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
+
   // TOD,
-  O: Add content}
-=======
-          <button><
-                  key = { area.id };
-                  onClick = { () => setActiveTab(area.id) };
-                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                    activeTab === area.id;`
+  O: Add content}                    activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800
   hover:bg-slate-700
                   }`}
+
 /
 
           "
@@ -964,10 +882,12 @@ $4}
                   <span className="font-medium">{area.name}<
                 <
               ))}
+
             <
             <div className="text-center"><
               <p className="text-gray-300 max-w-2xl mx-auto"><
                 {researchAreas.find(area => area.id === activeTab)?.description}
+
               <
             <
           <
@@ -981,7 +901,8 @@ $4}
               {researchProjects[activeTab as keyof typeof researchProjects].map((project), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700
-                      <project.icon className={`w-6 h-6 ${project.color}`} 
+                      <project.icon className={`w-6 h-6 ${project.color}`}
+
                     <
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}<
@@ -994,9 +915,10 @@ $4}
                       <div className="text-sm text-gray-400 mb-1">Status<
                       <div className={`text-sm font-medium ${
                         project.status === 'Completed' ? 'text-green-400' : 
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
+                        project.status === 'In Progress' ? 'text-blue-400' : text-yellow-400
                       }`}>
                         {project.status}
+
                       <
                     <
                     <div>
@@ -1023,7 +945,6 @@ $4}
 /
           <
             <div className="grid grid-cols-1,"
-<<<<<<< HEAD
   lg:grid-cols-2 gap-8"></div>
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
@@ -1041,31 +962,9 @@ $4}
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${}
+
   // TOD,
-  O: Add content}
-=======
-  lg: grid-cols-2 gap-8"><)
-              {researchProjects[activeTab as keyof typeof researchProjects].map((project), index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
-  hover:border-cyan-400/50 transition-all duration-300"><
-                  <div className="flex items-start mb-4"><
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}><
-                      <project.icon className={`w-6 h-6 ${project.color}`} /><
-                    <
-                    <div className="flex-1"><
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}<
-                      <p className="text-gray-300 text-sm mb-4">{project.description}<
-                    <
-                  <
-                  <div className="grid grid-cols-2 gap-4 mb-4"><
-                    <div><
-                      <div className="text-sm text-gray-400 mb-1">Status<
-                      <div className = { `text-sm font-medium ${ };
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                        project.status === 'Completed' ? 'text-green-400' :
+  O: Add content}                        project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
                       }`}><
                         {project.status}
@@ -1093,12 +992,15 @@ $4}
           <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"><
                           <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"><
                           {outcome}
+
                         <
                       ))}
+
                     <
                   <
                 <
               ))}
+
             <
           <
 
@@ -1125,15 +1027,16 @@ $4}
                       <
                       <a
                         href = { pub.link };
+
                         className="text-cyan-400 hover: text-cyan-300 text-sm font-medium"
                       >
                         Read Paper →
-<<<<<<< HEAD
                       </a>
           {/* Publications */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Recent Publications;
+
           </h2>"
             <div className="max-w-4xl mx-auto"></div>"
               <div className="space-y-6"></div>
@@ -1148,37 +1051,13 @@ $4}
                         <span></span>
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${}
+
   // TOD,
   O: Add content}
+
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
-                        }`}></span>
-=======
-                      <
-          {/* Publications *
-          <div className="mb-16"><
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"><
-/
-          <
-            <div className="max-w-4xl mx-auto"><
-              <div className="space-y-6"><)
-                {publications.map((pub), index) => ()}"
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700
-  hover:border-cyan-400/50 transition-all duration-300"><
-                    <h3 className="text-lg font-semibold text-white mb-2">{pub.title}<
-                    <div className="text-sm text-gray-300 mb-2">{pub.authors}<
-                    <div className="flex items-center justify-between"><
-                      <div className="flex items-center space-x-4 text-sm text-gray-400"><
-                        <span>{pub.journal}<
-                        <span><
-                        <span>{pub.year}<
-                        <span className = { `px-2 py-1 rounded text-xs ${ };
-  /
-  O: Add content;
-}
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500
-                        }`}><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                          {pub.impact} Impact;
+                        }`}></span>                          {pub.impact} Impact;
+
           <
                       <
                       <a><
@@ -1191,6 +1070,7 @@ $4}
                     <
                   <
                 ))}
+
               <
             <
           <
@@ -1224,6 +1104,7 @@ $4}
                   <p className="text-gray-300 text-sm">{achievement.description}<
                 <
               ))}
+
             <
           <
 
@@ -1292,20 +1173,10 @@ $4}
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
 
     </div>
   )};
-=======
-      <Footer 
-    <
-
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default ResearchDevelopmentPage;
-

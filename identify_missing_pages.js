@@ -1,14 +1,19 @@
 import fs from 'fs';
 
-// Read existing pages;
-const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx');
+// Read existing pages';
+
+const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx);;
 
 // Navigation links from the Navigation component;
-const navigationLinks = [
-  // Main navigation;
+
+const navigationLinks = [;;
+
+  // Main navigation';
+
   '/about', '/blog', '/case-studies', '/pricing', '/contact', '/services', '/specialized-services',
   
   // Micro SAAS Services;
+
   '/ai-project-manager', '/ai-writing-assistant', '/ai-crm', '/ai-healthcare', '/ai-fintech',
   '/ai-mobile-app-development', '/ai-cybersecurity', '/ai-marketing', '/task-manager-pro',
   '/expense-tracker', '/ai-chatbot-builder', '/ai-data-analytics', '/ai-social-media-manager',
@@ -19,6 +24,7 @@ const navigationLinks = [
   '/ai-data-visualization', '/ai-3 d-generation',
   
   // AI Services;
+
   '/machine-learning', '/ai-business-intelligence', '/ai-supply-chain', '/ai-quality-assurance',
   '/ai-hr', '/ai-legal', '/ai-real-estate', '/ai-manufacturing', '/ai-transportation',
   '/ai-education', '/ai-energy', '/ai-insurance', '/nlp', '/computer-vision', '/ai-automation',
@@ -26,6 +32,7 @@ const navigationLinks = [
   '/ai-crm', '/ai-email-assistant', '/ai-scheduler',
   
   // IT Services;
+
   '/cloud-services', '/enterprise-security', '/it-infrastructure', '/data-center',
   '/network-security', '/it-consulting', '/managed-it', '/cloud-security', '/it-asset-management',
   '/backup-recovery', '/it-training', '/it-performance', '/cybersecurity', '/devops',
@@ -33,16 +40,19 @@ const navigationLinks = [
   '/compliance', '/developer-tools', '/marketing-tools', '/productivity',
   
   // Specialized Services;
+
   '/quantum-computing', '/autonomous-systems', '/blockchain', '/iot-edge', '/business-intelligence',
   '/robotics', '/enterprise', '/analytics-tools', '/business-apps', '/expense-tracker',
-  '/task-manager-pro', '/smart-analytics'
+  '/task-manager-pro', /smart-analytics
 ];
 
 // Convert to page names (remove leading slash);
-const navigationPages = navigationLinks.map(link => link.substring(1));
+
+const navigationPages = navigationLinks.map(link => link.substring(1));;
 
 // Find missing pages;
-const missingPages = navigationPages.filter(page => !existingPages.includes(page));
+
+const missingPages = navigationPages.filter(page => !existingPages.includes(page));;
 
 // console.log removed for production
 missingPages.forEach(page => // console.log removed for production
@@ -52,4 +62,5 @@ missingPages.forEach(page => // console.log removed for production
 // console.log removed for production
 // console.log removed for production
 // Write missing pages to file;
+
 fs.writeFileSync('missing_pages.txt', missingPages.join('\n'));

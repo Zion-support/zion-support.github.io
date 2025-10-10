@@ -1,13 +1,19 @@
 'use client';
+
 import React from 'react';
+
 import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react;
+
 const AICustomerSupportPage: React.FC = () => {;
-const features = [
+
+const features = [;';
+
     {
-      icon: MessageCircle;
+      icon: MessageCircle';
+
       title: '24
       descriptio,
     n: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
@@ -15,6 +21,7 @@ const features = [
     },
     {
       icon: Users;
+
       titl,
     e: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
@@ -22,6 +29,7 @@ const features = [
     },
     {
       icon: Clock;
+
       titl,
     e: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
@@ -29,10 +37,12 @@ const features = [
     },
     {
       icon: Shield;
+
       titl,
     e: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
-      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management'];
+      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management];
+
 const,
   AICustomerSupportPage: React.FC = () => {/* TOD,
     O: Fix JSX expression *
@@ -43,23 +53,23 @@ const,
     },
     {/* TODO: Fix JSX expression *
     }
-  ];
-<<<<<<< HEAD
-;
-const pricing = [
-    {/* TODO: Fix JSX expression */}
-=======
 
-  const pricing = [
-    {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    },
+  ];
+
+;
+
+const pricing = [;;
+
+    {/* TODO: Fix JSX expression */}    },
     {/* TODO: Fix JSX expression *
     },
     {/* TODO: Fix JSX expression *
     }
+
   ];
-  const stats = [
+
+  const stats = [;;
+
     {/* TODO: Fix JSX expression *
   ,
     l: 'Customer Satisfaction' },
@@ -72,12 +82,16 @@ const pricing = [
     {/* TODO: Fix JSX expression *
   ,
     l: 'Languages Supported' }
+
   ];
+
   return(<React.Fragment>
       <SEOOptimizer;
+
         title="AI Customer Support Solutions - Zion Tech Group"
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-        keywords = { ['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk'] };
+        keywords = { ['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk] };
+
         canonicalUrl="https: //ziontechgroup.com
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
@@ -92,6 +106,7 @@ const pricing = [
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
                 AI Customer Support Solutions;
+
               <)
               <p className="text-xl m,
     d:text-2xl text-cyan-400 mb-8">)
@@ -103,23 +118,14 @@ const pricing = [
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
                 <a;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"><
                 <a
-<<<<<<< HEAD
                   href="tel:+13024640950"
   return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
         title="AI Customer Support Solutions - Zion Tech Group""
-        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
-=======
-                  href="te,
-    l:+13024640950"
-  return (<>
-      <SEOOptimizer><
-        title="AI Customer Support Solutions - Zion Tech Group"")
-        description="Revolutionary AI-powered customer support with chatbots), omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}"
+        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}"
         canonicalUrl="http,"
   s://ziontechgroup.com
       
@@ -132,10 +138,12 @@ const pricing = [
               <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text"><
                 AI Customer Support Solutions;
+
               <
               <p className="text-xl,"
   md:text-2xl text-cyan-400 mb-8"><
                 Transform your customer service with intelligent AI that never sleeps;
+
               <
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"><
                 Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
@@ -152,10 +160,12 @@ const pricing = [
                   <span>Call (302) 464-0950<
                 <
                 <a;
+
                   href="mailt,
     o:kleber@ziontechgroup.com",
                   className="cyber-button flex items-center space-x-2",
                   style={{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}
+
                 >
                   <Mail className="w-5 h-5" 
                   <span>Get Free Demo<
@@ -172,6 +182,7 @@ const pricing = [
                   style={/* TODO: Fix JSX expression *)
   ,
     d: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}
+
                 >"
                   <Mail className="w-5 h-5" /><
                   <span>Get Free Demo<
@@ -186,11 +197,12 @@ const pricing = [
                     <div className="text-3xl,"
   md:text-4xl font-bold text-cyan-400 mb-2 neon-text"><
                       {stat.number}
+
                     <
                     <div className="text-gray-300 font-medium">{stat.label}<
                   <
                 ))}
-<<<<<<< HEAD
+
               </div>
             </div>
           </section>
@@ -199,45 +211,28 @@ const pricing = [
     </div>
     </React.Fragment>
   )};
-;
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-    <
-  );
-};
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-const AICustomerSupportPage2: React.FC = () => {
-return (
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
+;const AICustomerSupportPage2: React.FC = () => {
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
       <Navigation 
       <main className="pt-24 pb-16 px-4">)
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
 );
+
 }),
           {/* Hero Section */}
+
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
-      <Navigation />
-=======
-        <div className="max-w-7xl mx-auto">),
-          {/* Hero Section *
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      
+      <Navigation />      
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}<
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl m,
     d:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support;
+
             <
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Transform your customer support with intelligent AI solutions that provide 24
@@ -245,6 +240,7 @@ return (
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
               <a
                 href="tel:+13024640950"
@@ -254,10 +250,12 @@ return (
                 <<<<span>Get</span></span></<<span>Started</span></span><
               <
               <a;
+
                 href="
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Learn More;
+
               <
             <
           <
@@ -265,6 +263,7 @@ return (
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features;
+
             <
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8">,)
@@ -284,21 +283,26 @@ return (
                     {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l><
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl><
                         {benefit}
+
                       <)
                     ))}
+
                   <
                 <
               ))}
+
             <
           <
           {/* Pricing Section *
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans;
+
             <
             <div className="grid grid-cols-1 m,
     d:grid-cols-3 gap-8 max-w-6xl mx-auto">,
               {pricingPlans.map((plan, index) => (<div;
+
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             <
@@ -307,17 +311,23 @@ return (
               {pricingPlans.map((plan), index) => (<
                 <div
                   key = { index };
+
                   className = { `cyber-card p-8 relative ${ };
+
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
+
                   }`}
+
                 >
                   {plan.popular && (<
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"><
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         Most Popular;
+
                       <
                     <
                   )}
+
                   <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h><
                   <p className="text-gray-300 mb-4">{plan.description}<
                   <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di><
@@ -325,17 +335,23 @@ return (
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300"></l><
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl><
                         {feature}
+
                       <)
                     ))}
+
                   <
                   <a;
+
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
+
                     className="cyber-button w-full text-center block"
                   >
                     Get Started;
+
                   <
                 <
               ))}
+
             <
           <
           {/* CTA Section *
@@ -348,9 +364,11 @@ return (
               <
               <p className="text-xl text-gray-300 mb-8">
                 Join 500+ companies already using our AI customer support solutions;
+
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center"><
                 <a
                   href="tel:+13024640950"
@@ -360,10 +378,12 @@ return (
                   <<<<span>Call</span></span></span> (302) 464-0950<
                 <
                 <a;
+
                   href="mailt,
     o:kleber@ziontechgroup.com",
                   className="cyber-button flex items-center justify-center space-x-2",
                   style={{background: 'linear-gradient(45deg), #8b5cf6, #ec4899)'}}
+
                 >
                   <Mail className="w-5 h-5" 
                   <span>Schedule Demo<
@@ -379,7 +399,6 @@ return (
               AI Customer Support
             <
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
             </p>
           </section>
@@ -387,16 +406,5 @@ return (
       </main>
     </div>
   )};
-=======
-              Transform your customer support with intelligent AI solutions that provide 24
-            <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default AICustomerSupportPage;
-

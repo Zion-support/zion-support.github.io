@@ -1,16 +1,21 @@
 'use client';
+
 import React from 'react';
-
-
 
 import { Link } from 'react-router-dom';
 
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {;
-const certifications = [];
+
+import Footer from '../components/Footer;
+
+const CompliancePage: React.FC = () => {';
+
+const certifications = [];';
+
   return (
+
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR Compliant', status: 'Certified' },
@@ -19,13 +24,20 @@ const certifications = [];
     { name: 'NIST Framework', status: 'Implemented' }
 
   ];
-  const complianceAreas = [
+
+  const complianceAreas = [;;
+
   // TOD,
   O: Add items;
-];;
+
+];
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   ico,
   n: Shield,
       titl,
@@ -52,6 +64,7 @@ const certifications = [];
       feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
+
   return (<div>Coming Soon</div>)
   )
     
@@ -59,6 +72,7 @@ const certifications = [];
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
+
         <section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center">
@@ -77,6 +91,7 @@ const certifications = [];
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy;
+
           </Link>"
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
@@ -89,10 +104,12 @@ const certifications = [];
             <div className="text-center mb-12"></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
 // Our Commitment to Compliance;
+
           </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
+
 //                 and our services meet the most stringent requirements.
               
           
@@ -116,6 +133,7 @@ const certifications = [];
                       <CheckCircle className="w-5 h-5 mr-2" /></CheckCircle>"
                       <span className="text-sm font-medium">{cert.status}</span>
               ))}
+
           {/* Compliance Areas */}"
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12"></h2>
 Compliance Areas;"
@@ -133,6 +151,7 @@ Compliance Areas;"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
+
                       </li>
                   </ul>
 {/* Contact Section */}"
@@ -147,6 +166,7 @@ Compliance Areas;"
               href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
 
               Contact Compliance Team;
+
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
@@ -156,7 +176,4 @@ Compliance Areas;"
 
   )};
 
-
 export default CompliancePage;
-
-

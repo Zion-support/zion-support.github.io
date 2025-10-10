@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
-import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react;
+
+';
+
+const SupportPage: React.FC = () => {';
+
+const [searchQuery, setSearchQuery] = useState(');
+
+  const [selectedCategory, setSelectedCategory] = useState('all);
+
 ;
-const SupportPage: React.FC = () => {;
-const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
-const supportCategories = [
+
+const supportCategories = [;;
+
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
@@ -17,50 +26,58 @@ const supportCategories = [
     { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
+
   ];
+
 ;
-const faqs = [
+
+const faqs = [;;
+
     {
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',
-      category: 'getting-started'
+      category: getting-started
     },
     {
       id: 2,
       question: 'What AI services do you offer?',
       answer: 'We offer comprehensive AI services including Machine Learning, Natural Language Processing, Computer Vision, AI Automation, Quantum AI Computing, and AI Cybersecurity. We also provide Micro SAAS solutions for immediate deployment.',
-      category: 'ai-services'
+      category: ai-services
     },
     {
       id: 3,
       question: 'How much do your services cost?',
       answer: 'Our pricing starts at $299
       categor,
-    y: 'billing'
+    y: billing
     },
     {
       id: 4,
       question: 'Do you provide 24
       answer: 'Yes! We offer 24
       categor,
-    y: 'technical'
+    y: technical
     },
     {
       id: 5,
       question: 'How do I integrate your AI services with my existing systems?',
       answer: 'Our team provides comprehensive integration support. We work with your existing infrastructure and provide APIs, SDKs, and custom integration solutions to ensure seamless implementation.',
-      category: 'api'
+      category: api
     },
     {
       id: 6,
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
-      category: 'getting-started'
+      category: getting-started
     }
+
   ];
+
 ;
-const supportChannels = [
+
+const supportChannels = [;;
+
     {
       icon: Phone,
       title: 'Phone Support',
@@ -68,7 +85,7 @@ const supportChannels = [
       contact: '+1 302 464 0950',
       availability: '24
       colo,
-    r: 'text-green-400'
+    r: text-green-400
     },
     {
       icon: Mail,
@@ -76,7 +93,7 @@ const supportChannels = [
       description: 'Get detailed responses via email',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2 hours',
-      color: 'text-blue-400'
+      color: text-blue-400
     },
     {
       icon: MessageSquare,
@@ -84,7 +101,7 @@ const supportChannels = [
       description: 'Instant support through our chat system',
       contact: 'Start Chat',
       availability: 'Mon-Fri 9AM-6PM EST',
-      color: 'text-purple-400'
+      color: text-purple-400
     },
     {
       icon: Calendar,
@@ -92,86 +109,85 @@ const supportChannels = [
       description: 'Book a consultation with our team',
       contact: 'Book Now',
       availability: 'Flexible scheduling',
-      color: 'text-cyan-400'
+      color: text-cyan-400
     }
+
   ];
+
 ;
-const resources = [
+
+const resources = [;;
+
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
-      link: '
+      link: 
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
       icon: Eye,
-      link: '
+      link: 
     },
     {
       title: 'Case Studies',
       description: 'Real-world examples and success stories',
       icon: BarChart,
-      link: '
+      link: 
     },
     {
       title: 'API Reference',
       description: 'Complete API documentation and examples',
       icon: Code,
-      link: '
+      link: 
     },
     {
       title: 'Best Practices',
       description: 'Industry best practices and guidelines',
       icon: Award,
-      link: '
+      link: 
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: Users,
-      link: '
+      link: 
     }
+
   ];
+
 ;
-const filteredFaqs = selectedCategory === 'all' 
+
+const filteredFaqs = selectedCategory === 'all;;
+
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
-<<<<<<< HEAD
-;
-const searchResults = searchQuery 
-    ? faqs.filter(faq => 
-=======
 
-  const searchResults = searchQuery 
-    ? faqs.filter(faq =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+;
+
+const searchResults = searchQuery;;
+
+    ? faqs.filter(faq =>         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
         keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}
+
         canonicalUrl="https://ziontechgroup.com/support"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-=======
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <section className="text-center mb-16">
+          {/* Hero Section */}          <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Support Center
             <
@@ -194,6 +210,7 @@ const searchResults = searchQuery
                   placeholder="Search for help..."
                   value = { searchQuery };)
                   onChange = { (e) => setSearchQuery(e.target.value) };
+
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"
                 
               <
@@ -208,13 +225,15 @@ const searchResults = searchQuery
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6">
               {supportChannels.map((channel), index) => (<div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} 
+                  <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`}
+
                   <h3 className="text-xl font-bold text-white mb-2">{channel.title}<
                   <p className="text-gray-300 mb-4">{channel.description}<
                   <div className="text-cyan-400 font-semibold mb-2">{channel.contact}<
                   <div className="text-gray-400 text-sm">{channel.availability}<
                 <)
               ))}
+
             <
           <
 
@@ -228,17 +247,20 @@ const searchResults = searchQuery
               {supportCategories.map((category) => (<button
                   key = { category.id };)
                   onClick = { () => setSelectedCategory(category.id) };
+
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
+                      ? bg-cyan-500 text-slate-900
+                      : bg-slate-800 text-white hover:bg-slate-700
                   }`}
+
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" 
                   <div className="text-sm font-semibold">{category.name}<
                   <div className="text-xs opacity-75">{category.count} topics<
                 <
               ))}
+
             <
           <
 
@@ -253,6 +275,7 @@ const searchResults = searchQuery
                   <p className="text-gray-300 leading-relaxed">{faq.answer}<
                 <)
               ))}
+
             <
           <
 
@@ -264,14 +287,17 @@ const searchResults = searchQuery
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-6">
               {resources.map((resource), index) => (
+
                   <div className="flex items-center mb-4">
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" 
                     
                     {resource.title}
+
                   <
                   <p className="text-gray-300">{resource.description}<
                 <)
               ))}
+
             <
           <
 
@@ -299,17 +325,9 @@ const searchResults = searchQuery
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SupportPage;

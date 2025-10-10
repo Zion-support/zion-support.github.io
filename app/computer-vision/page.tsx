@@ -1,8 +1,13 @@
 'use client';
-import React from 'react';
+
+import React from 'react;
+
   ];
-;
-const benefits = [
+
+';
+
+const benefits = [;';
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -10,7 +15,7 @@ const benefits = [
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
             </h1>
@@ -28,17 +33,20 @@ const benefits = [
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

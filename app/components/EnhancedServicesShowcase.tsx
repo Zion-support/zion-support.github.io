@@ -1,7 +1,11 @@
 import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-;
-const EnhancedServicesShowcase: React.FC = () => {const services = [
+
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react;
+
+';
+
+const EnhancedServicesShowcase: React.FC = () => {const services = [;';
+
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
@@ -34,9 +38,11 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
 stats: '95% Efficiency']
     }
+
   ];
 
   return (
+
     <section className="py-16"></section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
@@ -62,11 +68,14 @@ stats: '95% Efficiency']
               
               <ul className="space-y-2 mb-6"></ul>
                 {service.features.map((feature, featureIndex) => (
+
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
+
                   </li>
                 ));
+
               </ul>
               
               <a
@@ -77,6 +86,7 @@ stats: '95% Efficiency']
               </a>
             </div>
           ));
+
         </div>
 
         <div className="text-center mt-12"></div>
@@ -91,5 +101,7 @@ stats: '95% Efficiency']
     </section>
 )]
     };
+
 export default EnhancedServicesShowcase;
+
 }

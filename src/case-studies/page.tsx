@@ -1,8 +1,13 @@
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {;
-const caseStudies = [
+
+import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react;
+
+const CaseStudiesPage: React.FC = () => {';
+
+const caseStudies = [;';
+
     {
       i,
     d: 1,
@@ -16,10 +21,10 @@ const caseStudies = [
     i: '340%',
         conversion: '+85%',
         costReduction: '-65%',
-        revenue: '+$2.3M'
+        revenue: +$2.3M
       },
       image: '🛒',
-      description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
+      description: Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.
     },
     {
       id: 2,
@@ -33,10 +38,10 @@ const caseStudies = [
     i: '280%',
         processingTime: '-80%',
         accuracy: '+95%',
-        costSavings: '$1.8M'
+        costSavings: $1.8M
       },
       image: '🏦',
-      description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
+      description: Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.
     },
     {
       id: 3,
@@ -50,10 +55,10 @@ const caseStudies = [
     i: '420%',
         patientOutcomes: '+70%',
         efficiency: '+90%',
-        costSavings: '$3.2M'
+        costSavings: $3.2M
       },
       image: '🏥',
-      description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
+      description: Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.
     },
     {
       id: 4,
@@ -67,26 +72,21 @@ const caseStudies = [
     i: '310%',
         efficiency: '+75%',
         defects: '-90%',
-        downtime: '-85%'
+        downtime: -85%
       },
       image: '🏭',
-      description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
+      description: Optimized manufacturing processes using AI for predictive maintenance and automated quality control.
     }
+
   ];
-<<<<<<< HEAD
+
   return (
+
     <React.Fragment>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
-=======
-  return (<div>
-        <title>Case Studies - Zion Tech Group<
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      </Helmet>      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header *
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
@@ -140,6 +140,7 @@ const caseStudies = [
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
                           <div className="text-2xl font-bold text-blue-600">)
                             {Object.values(study.results)[1]}
+
                           <
                           <div className="text-sm text-gray-600">
                             {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^.
@@ -159,6 +160,7 @@ const caseStudies = [
                   <
                 <)
               ))}
+
             <
           <
         <
@@ -209,22 +211,10 @@ const caseStudies = [
                 Start Your Project
                 
                 View Our Services
-<<<<<<< HEAD
               </Link>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  )};
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default CaseStudiesPage;
+  )};export default CaseStudiesPage;

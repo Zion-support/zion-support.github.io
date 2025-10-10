@@ -1,24 +1,37 @@
 import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components
 import Footer from '../components
 import SEOOptimizer from '../components
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
+import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react;
+
+';
+
+const DocsPage: React.FC = () => {';
+
+const [searchQuery, setSearchQuery] = useState(');
+
+  const [selectedCategory, setSelectedCategory] = useState('all);
+
 ;
-const DocsPage: React.FC = () => {;
-const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
-const docCategories = [
+
+const docCategories = [;;
+
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
     { id: 'api', name: 'API Reference', icon: Code, count: 15 },
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
+
   ];
+
 ;
-const documentation = [
+
+const documentation = [;;
+
     {
       id: 1,
       title: 'Quick Start Guide',
@@ -27,7 +40,7 @@ const documentation = [
       difficulty: 'Beginner',
       readTime: '10 min',
       icon: Zap,
-      content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.'
+      content: Learn how to set up your account, configure your first AI service, and start getting results immediately.
     },
     {
       id: 2,
@@ -37,7 +50,7 @@ const documentation = [
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Code,
-      content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.'
+      content: Detailed API documentation including endpoints, parameters, authentication, and code examples.
     },
     {
       id: 3,
@@ -47,7 +60,7 @@ const documentation = [
       difficulty: 'Advanced',
       readTime: '45 min',
       icon: Brain,
-      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'
+      content: Step-by-step guide to integrating our machine learning capabilities into your business processes.
     },
     {
       id: 4,
@@ -57,7 +70,7 @@ const documentation = [
       difficulty: 'Intermediate',
       readTime: '20 min',
       icon: BarChart,
-      content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.'
+      content: Learn how to set up dashboards, configure data sources, and create custom visualizations.
     },
     {
       id: 5,
@@ -67,7 +80,7 @@ const documentation = [
       difficulty: 'Intermediate',
       readTime: '15 min',
       icon: Shield,
-      content: 'Best practices for API authentication, security headers, and data protection.'
+      content: Best practices for API authentication, security headers, and data protection.
     },
     {
       id: 6,
@@ -77,7 +90,7 @@ const documentation = [
       difficulty: 'Beginner',
       readTime: '12 min',
       icon: Settings,
-      content: 'Common issues and their solutions, including error codes and debugging tips.'
+      content: Common issues and their solutions, including error codes and debugging tips.
     },
     {
       id: 7,
@@ -87,7 +100,7 @@ const documentation = [
       difficulty: 'Intermediate',
       readTime: '30 min',
       icon: FileText,
-      content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.'
+      content: Complete guide to using our content generation API for blogs, social media, and marketing materials.
     },
     {
       id: 8,
@@ -97,7 +110,7 @@ const documentation = [
       difficulty: 'Advanced',
       readTime: '35 min',
       icon: MessageSquare,
-      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
+      content: Configure webhooks to receive real-time updates and synchronize data across your systems.
     },
     {
       id: 9,
@@ -107,7 +120,7 @@ const documentation = [
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Bot,
-      content: 'Complete setup guide for deploying intelligent customer support bots on your website.'
+      content: Complete setup guide for deploying intelligent customer support bots on your website.
     },
     {
       id: 10,
@@ -117,99 +130,97 @@ const documentation = [
       difficulty: 'Advanced',
       readTime: '40 min',
       icon: Zap,
-      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
+      content: Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.
     }
+
   ];
+
 ;
-const quickLinks = [
+
+const quickLinks = [;;
+
     {
       title: 'API Reference',
       description: 'Complete API documentation',
       icon: Code,
-      link: '
+      link: 
       colo,
-    r: 'text-blue-400'
+    r: text-blue-400
     },
     {
       title: 'SDK Downloads',
       description: 'Client libraries and tools',
       icon: Download,
-      link: '
+      link: 
       colo,
-    r: 'text-green-400'
+    r: text-green-400
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Play,
-      link: '
+      link: 
       colo,
-    r: 'text-purple-400'
+    r: text-purple-400
     },
     {
       title: 'Community Forum',
       description: 'Connect with other developers',
       icon: Users,
-      link: '
+      link: 
       colo,
-    r: 'text-cyan-400'
+    r: text-cyan-400
     }
+
   ];
+
 ;
-const filteredDocs = selectedCategory === 'all' 
+
+const filteredDocs = selectedCategory === 'all;;
+
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
-<<<<<<< HEAD
-;
-const searchResults = searchQuery 
-    ? documentation.filter(doc => 
-=======
 
-  const searchResults = searchQuery 
-    ? documentation.filter(doc =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+;
+
+const searchResults = searchQuery;;
+
+    ? documentation.filter(doc =>         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredDocs;
+
 ;
-const getDifficultyColor = (difficulty: string) => {
+
+const getDifficultyColor = (difficulty: string) => {;;
+
     switch (difficulty) {
-<<<<<<< HEAD
-      case 'Beginner': return 'text-green-400 bg-green-500/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
-      case 'Advanced': return 'text-red-400 bg-red-500/20';
+      case 'Beginner': return 'text-green-400 bg-green-500/20;
+
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20;
+
+      case 'Advanced': return 'text-red-400 bg-red-500/20;
+
       default: return 'text-gray-400 bg-gray-500/20'}
+
   };
 
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
         keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
+
         canonicalUrl="https://ziontechgroup.com/docs"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-=======
-      case 'Beginner': return 'text-green-400 bg-green-500
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500
-      case 'Advanced': return 'text-red-400 bg-red-500
-      defaul,
-    t: return 'text-gray-400 bg-gray-500
-    }
-  };
-
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <section className="text-center mb-16">
+          {/* Hero Section */}          <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
 
             <
@@ -232,6 +243,7 @@ const getDifficultyColor = (difficulty: string) => {
                   placeholder="Search documentation..."
                   value = { searchQuery };)
                   onChange = { (e) => setSearchQuery(e.target.value) };
+
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"
                 
               <
@@ -246,13 +258,17 @@ const getDifficultyColor = (difficulty: string) => {
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6">
               {quickLinks.map((link), index) => (
-                  <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} 
+
+                  <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`}
+
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {link.title}
+
                   <
                   <p className="text-gray-300">{link.description}<
                 <)
               ))}
+
             <
           <
 
@@ -266,17 +282,20 @@ const getDifficultyColor = (difficulty: string) => {
               {docCategories.map((category) => (<button
                   key = { category.id };)
                   onClick = { () => setSelectedCategory(category.id) };
+
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
+                      ? bg-cyan-500 text-slate-900
+                      : bg-slate-800 text-white hover:bg-slate-700
                   }`}
+
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" 
                   <div className="text-sm font-semibold">{category.name}<
                   <div className="text-xs opacity-75">{category.count} docs<
                 <
               ))}
+
             <
           <
 
@@ -294,6 +313,7 @@ const getDifficultyColor = (difficulty: string) => {
                       <div className="flex items-center gap-2 mb-2">)
                         <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>
                           {doc.difficulty}
+
                         <
                         <span className="text-gray-400 text-xs">{doc.readTime}<
                       <
@@ -301,22 +321,27 @@ const getDifficultyColor = (difficulty: string) => {
                   <
                   <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
                     {doc.title}
+
                   <
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {doc.description}
+
                   <
                   <p className="text-gray-400 text-sm mb-4">
                     {doc.content}
+
                   <
                   <div className="flex items-center justify-between">
                     
                       Read More
                       
                       {doc.category };
+
                     <
                   <
                 <
               ))}
+
             <
           <
 
@@ -331,25 +356,9 @@ const getDifficultyColor = (difficulty: string) => {
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-                  <Play className="w-5 h-5 mr-2" 
-                  Request Demo
-                <
-              <
-            <
-          <
-        <
-
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default DocsPage;

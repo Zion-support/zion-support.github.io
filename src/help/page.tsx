@@ -1,25 +1,25 @@
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
+
 'use client';
+
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const HelpPage: React.FC = () => {;
-const [searchTerm, setSearchTerm] = useState('');
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+import Footer from '../components/Footer;
+
+';
+
+const HelpPage: React.FC = () => {';
+
+const [searchTerm, setSearchTerm] = useState('');  const [activeCategory, setActiveCategory] = useState('getting-started);
+
 ;
-const categories = [
+
+const categories = [;;
+
     {
       id: 'getting-started',
       name: 'Getting Started',
@@ -43,9 +43,13 @@ idid: 'technical',
       color: 'text-purple-400',
       bgColor:     ,
 $4}
+
   ];
+
 ;
-const helpArticles = {
+
+const helpArticles = {;;
+
     'getting-started': [
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
@@ -103,8 +107,11 @@ titletitle: 'Security Best Practices',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
   };
+
 ;
-const resources = [
+
+const resources = [;;
+
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -118,18 +125,11 @@ titletitle: 'API Reference',
 titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-<<<<<<< HEAD
-      count: '25+ downloads';
-const supportChannels = [
-      title: 'Live Chat',
-=======
-      count: '25+ downloads'
+      count: '25+ downloads;
 
-  const supportChannels = [
-      titl,
-    e: 'Live Chat',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      description: 'Get instant help from our support team',
+const supportChannels = [;;
+
+      title: 'Live Chat',      description: 'Get instant help from our support team',
       color: 'text-cyan-400',
       availability: '24
       responseTim,
@@ -146,18 +146,11 @@ titletitle: 'Phone Support',
 titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-<<<<<<< HEAD
-      responseTime: 'Community driven';
-const faqs = [
-      question: 'How quickly can I get started with your AI services?',
-=======
-      responseTime: 'Community driven'
+      responseTime: 'Community driven;
 
-  const faqs = [
-      questio,
-    n: 'How quickly can I get started with your AI services?',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
+const faqs = [;;
+
+      question: 'How quickly can I get started with your AI services?',      answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\re up and running quickly.
       questio,
     n: 'Do you offer training for our team?',
       answer:       ,
@@ -166,38 +159,32 @@ questionquestion: 'What kind of support do you provide?',
 questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
 questionquestion: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.';
-const getCurrentArticles = () => {
+      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.;
+
+const getCurrentArticles = () => {;;
+
 return (
 
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
-<<<<<<< HEAD
-;
-const filteredArticles = getCurrentArticles().filter(article =>
-=======
 
-  const filteredArticles = getCurrentArticles().filter(article =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+;
+
+const filteredArticles = getCurrentArticles().filter(article =>    article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
 );
+
 }
-          {/* Header */}
-=======
-  return (<>
-      
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <div className="text-center mb-16">
+
+          {/* Header */}          <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Help Center
             <
@@ -216,6 +203,7 @@ const filteredArticles = getCurrentArticles().filter(article =>
                 placeholder="Search help articles..."
                 value = { searchTerm };)
                 onChange = { (e) => setSearchTerm(e.target.value) };
+
                 className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
 
@@ -225,11 +213,13 @@ const filteredArticles = getCurrentArticles().filter(article =>
               {categories.map((category) => (<button
                   key = { category.id };)
                   onClick = { () => setActiveCategory(category.id) };
+
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
                   }`}
+
                 >
                   <category.icon className="w-5 h-5 mr-2" 
                   <span className="font-medium">{category.name}<
@@ -246,7 +236,8 @@ const filteredArticles = getCurrentArticles().filter(article =>
               {filteredArticles.map((article), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400
                   <div className="flex items-start mb-4">)
                     <div className={`w-10 h-10 ${article.color.replace('text-'), 'bg-').replace('-400', '-500
-                      <article.icon className={`w-5 h-5 ${article.color}`} 
+                      <article.icon className={`w-5 h-5 ${article.color}`}
+
                     <div className="flex-1">
                       <h3 className="text-lg font-semibold text-white mb-2">{article.title}<
                       <p className="text-gray-300 text-sm mb-3">{article.description}<
@@ -259,6 +250,7 @@ const filteredArticles = getCurrentArticles().filter(article =>
                       'bg-red-500
                     }`}>
                       {article.difficulty}
+
                     <
                   
                   <button className="w-full text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
@@ -269,7 +261,8 @@ const filteredArticles = getCurrentArticles().filter(article =>
     g:grid-cols-4 gap-6">)
               {resources.map((resource), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400)
                   <div className={`w-16 h-16 ${resource.color.replace('text-'), 'bg-').replace('-400', '-500
-                    <resource.icon className={`w-8 h-8 ${resource.color}`} 
+                    <resource.icon className={`w-8 h-8 ${resource.color}`}
+
                   <h3 className="text-lg font-semibold text-white mb-2">{resource.title}<
                   <p className="text-gray-300 text-sm mb-3">{resource.description}<
                   <div className="text-cyan-400 text-sm font-medium">{resource.count}<
@@ -277,8 +270,10 @@ const filteredArticles = getCurrentArticles().filter(article =>
           {/* Support Channels *
               Get Support)
               {supportChannels.map((channel, index) => (
+
                   <div className={`w-16 h-16 ${channel.color.replace('text-', 'bg-').replace('-400', '-500
-                    <channel.icon className={`w-8 h-8 ${channel.color}`} 
+                    <channel.icon className={`w-8 h-8 ${channel.color}`}
+
                   <h3 className="text-lg font-semibold text-white mb-2">{channel.title}<
                   <p className="text-gray-300 text-sm mb-3">{channel.description}<
                   <div className="text-sm text-gray-400 mb-2">
@@ -318,32 +313,24 @@ const filteredArticles = getCurrentArticles().filter(article =>
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   return (
+
     <div>Coming Soon</div>
 
   )};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories = [
+
+  const [searchTerm, setSearchTerm] = useState(');
+
+  const [activeCategory, setActiveCategory] = useState('getting-started);
+
+const categories = [;;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      <Footer 
-    <
-  return (<div>Coming Soon<)
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories = [
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   i,
   d: 'getting-started',
       nam,
@@ -377,17 +364,15 @@ const categories = [
       bgColo,
   r: 'bg-purple-500
     }
+
   ];
-<<<<<<< HEAD
-  const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-  const helpArticles = { /* TODO: Fix JSX expression *
-  ,
-    O: Add content; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-}
-    'getting-started': [;
+
+  const helpArticles = {/* TODO: Fix JSX expression */};;
+
+  O: Add content}}
+
+    'getting-started: [;
+
   titl,
   e: 'Setting Up Your First Dashboard',
         descriptio,
@@ -440,7 +425,7 @@ const categories = [
       ico,
   n: Users,
       responseTim,
-  e: 'Community driven'
+  e: Community driven
 
           <MessageSquare className="w-5 h-5 mr-2" /><
 /
@@ -449,17 +434,12 @@ const categories = [
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" 
                 (302) 464-0950;
+
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
 
                 Email Us;
-<<<<<<< HEAD
-      <Footer /></Footer>
-    </React.Fragment>
-=======
-      <Footer /><
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default HelpPage;
 
+      <Footer /></Footer>
+    </React.Fragment>export default HelpPage;

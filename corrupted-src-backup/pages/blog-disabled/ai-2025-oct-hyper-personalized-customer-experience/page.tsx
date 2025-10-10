@@ -3,16 +3,9 @@ impo, r, t {/* TODO: Fix JSX expression *
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {  
-<<<<<<< HEAD
   return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
     <React.Fragment>
-      <Helm, e, t>
-=======
-  return(:src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <title>
+      <Helm, e, t>        <title>
           Hyp, e, r-Personalized, AI, Customer Experience, Platform, 2025 — 97.8%
           Satisfacti, o, n, 12.4x, Engagemen, t, $3.2B+ Reven, u, e | Zion, Tech, Group;
         <

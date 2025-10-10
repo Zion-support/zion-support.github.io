@@ -1,16 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
-<<<<<<< HEAD
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react;
+
 const MicroSAASPage: React.FC = () => {;
-const _microSAASServices = [
-    // AI-Powered Developer Tools
-=======
-const MicroSAASPage: React.FC = () => {
-  const _microSAASServices = [
-    /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+
+const _microSAASServices = [;;
+
+    // AI-Powered Developer Tools    {
       titl,
     e: 'AI Code Review Assistant Pro',
       description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
@@ -1939,6 +1937,7 @@ $4},
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4}
+
   ];
 
     {
@@ -3938,11 +3937,15 @@ $4},
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo:     ,
 $4}
+
   ];
-  const categories = [
+
+  const categories = [;;
+
       contactInfo: 'Contac,
-    t: kleber@ziontechgroup.com | +1 302 464 0950'
+    t: kleber@ziontechgroup.com | +1 302 464 0950
     }
+
   ]; *
   
     { name: 'All', count: microSAASServices.length },
@@ -3967,6 +3970,7 @@ $4}
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
+
   ]; *
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
@@ -3985,34 +3989,26 @@ $4}
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';)
 const MicroSAASPage: React.FC = () => {
-<<<<<<< HEAD
-return (
-
   return (
+
     <div>Coming Soon</div>
 );
+
 }
-  )};
-=======
-  return (<div>Coming Soon<)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  const _microSAASServices = [
+
+  )};  const _microSAASServices = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     // AI-Powered Developer Tools;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Code Review Assistant Pro',
       descriptio,
@@ -4038,18 +4034,11 @@ return (
   k: 'http,
   s://ziontechgroup.com
       popula,
-<<<<<<< HEAD
   r: true},
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-  r: true;
-    },
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Test Generation Suite',
       descriptio,
@@ -4070,17 +4059,12 @@ return (
   s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart API Documentation Generator',
       descriptio,
@@ -4101,19 +4085,14 @@ return (
   s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Marketing & SEO Tools;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI SEO Optimizer Pro',
       descriptio,
@@ -4134,17 +4113,12 @@ return (
   s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Social Media Manager',
       descriptio,
@@ -4165,17 +4139,12 @@ return (
   s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Email Marketing Platform',
       descriptio,
@@ -4196,17 +4165,12 @@ return (
   s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Content Generator Pro',
       descriptio,
@@ -4227,19 +4191,14 @@ return (
   s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Business Intelligence & Analytics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Analytics Dashboard Pro',
       descriptio,
@@ -4260,17 +4219,12 @@ return (
   s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Lead Scoring Engine',
       descriptio,
@@ -4291,17 +4245,12 @@ return (
   s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Insights Platform',
       descriptio,
@@ -4322,19 +4271,14 @@ return (
   s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Finance & Accounting Tools;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Invoice Generator Pro',
       descriptio,
@@ -4355,17 +4299,12 @@ return (
   s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Financial Planning Assistant',
       descriptio,
@@ -4386,17 +4325,12 @@ return (
   s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Expense Management System',
       descriptio,
@@ -4417,19 +4351,14 @@ return (
   s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Healthcare & Wellness;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Health Monitoring Platform',
       descriptio,
@@ -4450,17 +4379,12 @@ return (
   s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fitness Coach Pro',
       descriptio,
@@ -4481,17 +4405,12 @@ return (
   s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Mental Health Assistant',
       descriptio,
@@ -4512,19 +4431,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Education & Learning;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Language Learning Platform',
       descriptio,
@@ -4545,17 +4459,12 @@ return (
   s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Study Assistant Pro',
       descriptio,
@@ -4576,17 +4485,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Skill Assessment Platform',
       descriptio,
@@ -4607,19 +4511,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI E-commerce & Retail;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Inventory Optimizer Pro',
       descriptio,
@@ -4640,17 +4539,12 @@ return (
   s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Product Recommendation Engine',
       descriptio,
@@ -4671,17 +4565,12 @@ return (
   s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Price Optimization Tool',
       descriptio,
@@ -4702,19 +4591,14 @@ return (
   s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Legal & Compliance;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Legal Document Analyzer',
       descriptio,
@@ -4735,19 +4619,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Real Estate & Property Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Property Valuation Engine',
       descriptio,
@@ -4768,19 +4647,14 @@ return (
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI HR & Recruitment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Resume Parser & Matcher',
       descriptio,
@@ -4801,17 +4675,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Interview Scheduler Pro',
       descriptio,
@@ -4832,17 +4701,12 @@ return (
   s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
@@ -4863,19 +4727,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Finance & Accounting;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Expense Tracker & Categorizer',
       descriptio,
@@ -4896,17 +4755,12 @@ return (
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Invoice Processing System',
       descriptio,
@@ -4927,17 +4781,12 @@ return (
   s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Financial Forecasting Tool',
       descriptio,
@@ -4958,19 +4807,14 @@ return (
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Project Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Project Manager Assistant',
       descriptio,
@@ -4991,17 +4835,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Time Tracking & Analytics',
       descriptio,
@@ -5022,19 +4861,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Customer Service;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Live Chat Assistant',
       descriptio,
@@ -5055,17 +4889,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Ticket Classification System',
       descriptio,
@@ -5086,19 +4915,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Sales & CRM;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Lead Scoring Engine',
       descriptio,
@@ -5119,17 +4943,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Sales Forecasting Platform',
       descriptio,
@@ -5150,19 +4969,14 @@ return (
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Healthcare & Wellness;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Symptom Checker Pro',
       descriptio,
@@ -5183,17 +4997,12 @@ return (
   s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fitness Coach Platform',
       descriptio,
@@ -5214,19 +5023,14 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Security & Compliance;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Security Monitoring System',
       descriptio,
@@ -5247,17 +5051,12 @@ return (
   s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Compliance Checker',
       descriptio,
@@ -5278,19 +5077,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Productivity & Automation;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Meeting Assistant Pro',
       descriptio,
@@ -5311,17 +5105,12 @@ return (
   s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Email Management System',
       descriptio,
@@ -5342,17 +5131,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Document Management Platform',
       descriptio,
@@ -5373,19 +5157,14 @@ return (
   s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Analytics & Reporting;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Business Intelligence Suite',
       descriptio,
@@ -5406,17 +5185,12 @@ return (
   s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Social Media Analytics',
       descriptio,
@@ -5437,19 +5211,14 @@ return (
   s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Development & DevOps;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Code Quality Monitor',
       descriptio,
@@ -5470,17 +5239,12 @@ return (
   s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Deployment Automation',
       descriptio,
@@ -5501,19 +5265,14 @@ return (
   s: ['CI
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Communication & Collaboration;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Team Collaboration Hub',
       descriptio,
@@ -5534,17 +5293,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Video Conferencing Assistant',
       descriptio,
@@ -5565,19 +5319,14 @@ return (
   s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Marketing & Advertising;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Ad Campaign Optimizer',
       descriptio,
@@ -5598,17 +5347,12 @@ return (
   s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Influencer Marketing Platform',
       descriptio,
@@ -5629,19 +5373,14 @@ return (
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI E-commerce & Retail;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Behavior Analyzer',
       descriptio,
@@ -5662,17 +5401,12 @@ return (
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Supply Chain Optimizer',
       descriptio,
@@ -5693,19 +5427,14 @@ return (
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Education & Training;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Corporate Training Platform',
       descriptio,
@@ -5726,17 +5455,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Knowledge Management System',
       descriptio,
@@ -5757,19 +5481,14 @@ return (
   s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Legal & Compliance;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Contract Management System',
       descriptio,
@@ -5790,17 +5509,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Privacy Compliance Monitor',
       descriptio,
@@ -5821,19 +5535,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Real Estate & Property;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Property Management Suite',
       descriptio,
@@ -5854,17 +5563,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Market Research Platform',
       descriptio,
@@ -5885,19 +5589,14 @@ return (
   s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Agriculture & Environment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Crop Monitoring System',
       descriptio,
@@ -5918,17 +5617,12 @@ return (
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Environmental Monitoring',
       descriptio,
@@ -5949,19 +5643,14 @@ return (
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Transportation & Logistics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fleet Management System',
       descriptio,
@@ -5982,17 +5671,12 @@ return (
   s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Logistics Optimizer',
       descriptio,
@@ -6013,19 +5697,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Entertainment & Media;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Content Moderation Platform',
       descriptio,
@@ -6046,17 +5725,12 @@ return (
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Video Production Assistant',
       descriptio,
@@ -6077,19 +5751,14 @@ return (
   s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Gaming & Entertainment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Game Development Platform',
       descriptio,
@@ -6110,17 +5779,12 @@ return (
   s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Player Behavior Analytics',
       descriptio,
@@ -6141,19 +5805,14 @@ return (
   s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -6174,17 +5833,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Patent Analysis Tool',
       descriptio,
@@ -6205,19 +5859,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Energy & Utilities;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Energy Management System',
       descriptio,
@@ -6238,17 +5887,12 @@ return (
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Smart Grid Optimizer',
       descriptio,
@@ -6269,19 +5913,14 @@ return (
   s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Manufacturing & Industrial;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Quality Control System',
       descriptio,
@@ -6302,17 +5941,12 @@ return (
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Production Planning Optimizer',
       descriptio,
@@ -6333,19 +5967,14 @@ return (
   s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Insurance & Risk Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Risk Assessment Platform',
       descriptio,
@@ -6366,17 +5995,12 @@ return (
   s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Claims Processing System',
       descriptio,
@@ -6397,19 +6021,14 @@ return (
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Government & Public Sector;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Citizen Services Platform',
       descriptio,
@@ -6430,17 +6049,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Public Safety System',
       descriptio,
@@ -6461,19 +6075,14 @@ return (
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Non-Profit & Social Impact;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Donor Management System',
       descriptio,
@@ -6494,17 +6103,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Volunteer Matching Platform',
       descriptio,
@@ -6525,19 +6129,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Travel & Hospitality;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Travel Planning Assistant',
       descriptio,
@@ -6558,17 +6157,12 @@ return (
   s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Hotel Revenue Optimizer',
       descriptio,
@@ -6589,19 +6183,14 @@ return (
   s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Sports & Fitness;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Sports Performance Analyzer',
       descriptio,
@@ -6622,17 +6211,12 @@ return (
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fitness Nutrition Coach',
       descriptio,
@@ -6653,19 +6237,14 @@ return (
   s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Beauty & Fashion;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Virtual Try-On Platform',
       descriptio,
@@ -6686,17 +6265,12 @@ return (
   s: ['Computer Vision', 'AR
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Beauty Analysis Tool',
       descriptio,
@@ -6717,19 +6291,14 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Home & Lifestyle;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Smart Home Controller',
       descriptio,
@@ -6750,17 +6319,12 @@ return (
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Personal Assistant Platform',
       descriptio,
@@ -6781,19 +6345,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Pets & Animals;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Pet Health Monitor',
       descriptio,
@@ -6814,17 +6373,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Pet Training Assistant',
       descriptio,
@@ -6845,19 +6399,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Education & Learning;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Tutoring Platform',
       descriptio,
@@ -6878,17 +6427,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Homework Helper',
       descriptio,
@@ -6909,19 +6453,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Music & Audio;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Music Composition Tool',
       descriptio,
@@ -6942,17 +6481,12 @@ return (
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Audio Enhancement Platform',
       descriptio,
@@ -6973,19 +6507,14 @@ return (
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Art & Design;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Design Assistant Pro',
       descriptio,
@@ -7006,17 +6535,12 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Logo Generator Platform',
       descriptio,
@@ -7037,19 +6561,14 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Dating & Relationships;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Dating Assistant',
       descriptio,
@@ -7070,17 +6589,12 @@ return (
   s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Relationship Counselor',
       descriptio,
@@ -7101,19 +6615,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Parenting & Family;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Parenting Assistant',
       descriptio,
@@ -7134,17 +6643,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Family Organizer',
       descriptio,
@@ -7165,19 +6669,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Senior Care & Aging;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Senior Care Monitor',
       descriptio,
@@ -7198,17 +6697,12 @@ return (
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Memory Assistant',
       descriptio,
@@ -7229,19 +6723,14 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Accessibility & Inclusion;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Accessibility Assistant',
       descriptio,
@@ -7262,17 +6751,12 @@ return (
   s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Language Translation Pro',
       descriptio,
@@ -7293,19 +6777,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Emergency & Crisis Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Emergency Response System',
       descriptio,
@@ -7326,17 +6805,12 @@ return (
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Crisis Communication Platform',
       descriptio,
@@ -7357,19 +6831,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Space & Astronomy;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Space Mission Planner',
       descriptio,
@@ -7390,17 +6859,12 @@ return (
   s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Astronomical Data Analyzer',
       descriptio,
@@ -7421,19 +6885,14 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Ocean & Marine;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Marine Life Tracker',
       descriptio,
@@ -7454,17 +6913,12 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Ocean Current Predictor',
       descriptio,
@@ -7485,19 +6939,14 @@ return (
   s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Archaeology & History;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Archaeological Site Analyzer',
       descriptio,
@@ -7518,17 +6967,12 @@ return (
   s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Historical Document Processor',
       descriptio,
@@ -7549,19 +6993,14 @@ return (
   s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Psychology & Mental Health;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Mental Health Tracker',
       descriptio,
@@ -7582,17 +7021,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Therapy Assistant',
       descriptio,
@@ -7613,19 +7047,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Philosophy & Ethics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Ethical Decision Maker',
       descriptio,
@@ -7646,17 +7075,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Philosophy Research Assistant',
       descriptio,
@@ -7677,19 +7101,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Spirituality & Religion;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Spiritual Guidance Platform',
       descriptio,
@@ -7710,17 +7129,12 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Religious Text Analyzer',
       descriptio,
@@ -7741,19 +7155,14 @@ return (
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Future & Innovation;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Innovation Predictor',
       descriptio,
@@ -7774,17 +7183,12 @@ return (
   s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Future Scenario Generator',
       descriptio,
@@ -7805,19 +7209,14 @@ return (
   s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Consciousness & AI Ethics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Consciousness Monitor',
       descriptio,
@@ -7838,17 +7237,12 @@ return (
   s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Rights Management System',
       descriptio,
@@ -7869,19 +7263,14 @@ return (
   s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Time & Space;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Time Management Master',
       descriptio,
@@ -7902,17 +7291,12 @@ return (
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Space-Time Analyzer',
       descriptio,
@@ -7933,19 +7317,14 @@ return (
   s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Quantum & Advanced Physics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Quantum Simulator Pro',
       descriptio,
@@ -7966,17 +7345,12 @@ return (
   s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Physics Research Assistant',
       descriptio,
@@ -7997,19 +7371,14 @@ return (
   s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Multiverse & Parallel Realities;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Multiverse Explorer',
       descriptio,
@@ -8030,17 +7399,12 @@ return (
   s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Reality Manipulation Tool',
       descriptio,
@@ -8061,19 +7425,14 @@ return (
   s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Transcendence & Enlightenment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Enlightenment Assistant',
       descriptio,
@@ -8094,17 +7453,12 @@ return (
   s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Transcendence Platform',
       descriptio,
@@ -8125,19 +7479,14 @@ return (
   s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Universal Consciousness;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Universal Consciousness Connector',
       descriptio,
@@ -8158,17 +7507,12 @@ return (
   s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Cosmic Intelligence Platform',
       descriptio,
@@ -8189,19 +7533,14 @@ return (
   s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Infinite Possibilities;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Infinite Possibility Generator',
       descriptio,
@@ -8222,17 +7561,12 @@ return (
   s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Ultimate Reality Creator',
       descriptio,
@@ -8253,19 +7587,17 @@ return (
   s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     }
+
   ];
-const realEstateSaaS = [
-<<<<<<< HEAD
+
+const realEstateSaaS = [;;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Property Valuation Platform',
       descriptio,
@@ -8286,17 +7618,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Tenant Screening Platform',
       descriptio,
@@ -8317,19 +7644,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Agriculture & Food Tech;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Crop Monitoring System',
       descriptio,
@@ -8350,17 +7672,12 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Food Safety Inspector',
       descriptio,
@@ -8381,19 +7698,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Transportation & Logistics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Route Optimization Pro',
       descriptio,
@@ -8414,17 +7726,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fleet Maintenance Predictor',
       descriptio,
@@ -8445,19 +7752,14 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Energy & Sustainability;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Energy Management System',
       descriptio,
@@ -8478,17 +7780,12 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Carbon Footprint Tracker',
       descriptio,
@@ -8509,19 +7806,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Entertainment & Media;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Content Moderation Suite',
       descriptio,
@@ -8542,17 +7834,12 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Video Editor Pro',
       descriptio,
@@ -8573,19 +7860,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Security & Surveillance;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Security Camera System',
       descriptio,
@@ -8606,17 +7888,12 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fraud Detection Engine',
       descriptio,
@@ -8637,19 +7914,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -8670,17 +7942,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Patent Search Engine',
       descriptio,
@@ -8701,17 +7968,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Compliance Monitoring Suite',
       descriptio,
@@ -8732,19 +7994,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Real Estate & Property;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Real Estate Analyzer Pro',
       descriptio,
@@ -8765,17 +8022,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Property Management System',
       descriptio,
@@ -8796,19 +8048,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI HR & Recruitment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI HR Recruitment Suite',
       descriptio,
@@ -8829,17 +8076,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
@@ -8860,19 +8102,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Project Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Project Manager Pro',
       descriptio,
@@ -8893,17 +8130,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Task Automation Suite',
       descriptio,
@@ -8924,19 +8156,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Supply Chain & Logistics;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Supply Chain Optimizer',
       descriptio,
@@ -8957,17 +8184,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Warehouse Management System',
       descriptio,
@@ -8988,19 +8210,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Agriculture & Food Tech;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Precision Agriculture Platform',
       descriptio,
@@ -9021,17 +8238,12 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Food Safety Monitor',
       descriptio,
@@ -9052,19 +8264,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Energy & Sustainability;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Energy Management System',
       descriptio,
@@ -9085,17 +8292,12 @@ const realEstateSaaS = [
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Carbon Footprint Tracker',
       descriptio,
@@ -9116,19 +8318,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Gaming & Entertainment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Game Development Suite',
       descriptio,
@@ -9149,17 +8346,12 @@ const realEstateSaaS = [
   s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Content Moderation Platform',
       descriptio,
@@ -9180,19 +8372,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Transportation & Mobility;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Fleet Management System',
       descriptio,
@@ -9213,17 +8400,12 @@ const realEstateSaaS = [
   s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Traffic Management Platform',
       descriptio,
@@ -9244,19 +8426,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -9277,17 +8454,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Patent Analysis Tool',
       descriptio,
@@ -9308,19 +8480,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Personal Productivity;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Personal Assistant Pro',
       descriptio,
@@ -9341,17 +8508,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Meeting Assistant',
       descriptio,
@@ -9372,17 +8534,12 @@ const realEstateSaaS = [
   s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Insurance Underwriting Assistant',
       descriptio,
@@ -9402,15 +8559,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Onboarding Platform',
       descriptio,
@@ -9430,15 +8582,10 @@ const realEstateSaaS = [
       technologie,
   s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Retention Manager',
       descriptio,
@@ -9458,15 +8605,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Support Optimizer',
       descriptio,
@@ -9486,15 +8628,10 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Feedback Analyzer',
       descriptio,
@@ -9514,15 +8651,10 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Journey Mapper',
       descriptio,
@@ -9542,15 +8674,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Lifetime Value Predictor',
       descriptio,
@@ -9570,15 +8697,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Segmentation Engine',
       descriptio,
@@ -9598,15 +8720,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Personalization Engine',
       descriptio,
@@ -9626,15 +8743,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Data Platform',
       descriptio,
@@ -9654,15 +8766,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Privacy Manager',
       descriptio,
@@ -9682,15 +8789,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Communication Manager',
       descriptio,
@@ -9710,15 +8812,10 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Experience Optimizer',
       descriptio,
@@ -9738,15 +8835,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Success Manager',
       descriptio,
@@ -9766,15 +8858,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Advocacy Platform',
       descriptio,
@@ -9794,15 +8881,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Insights Platform',
       descriptio,
@@ -9822,15 +8904,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Intelligence Suite',
       descriptio,
@@ -9850,17 +8927,12 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     // NEW INNOVATIVE MICRO SAAS SERVICES;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Meeting Transcriber',
       descriptio,
@@ -9880,15 +8952,10 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Expense Tracker AI',
       descriptio,
@@ -9908,15 +8975,10 @@ const realEstateSaaS = [
       technologie,
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Password Manager',
       descriptio,
@@ -9936,15 +8998,10 @@ const realEstateSaaS = [
       technologie,
   s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Time Tracking Assistant',
       descriptio,
@@ -9964,15 +9021,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Logo Generator',
       descriptio,
@@ -9992,15 +9044,10 @@ const realEstateSaaS = [
       technologie,
   s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Invoice Generator',
       descriptio,
@@ -10020,15 +9067,10 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Website Builder',
       descriptio,
@@ -10048,15 +9090,10 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Contract Generator',
       descriptio,
@@ -10076,15 +9113,10 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Email Signature Generator',
       descriptio,
@@ -10104,15 +9136,10 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart QR Code Generator',
       descriptio,
@@ -10132,15 +9159,10 @@ const realEstateSaaS = [
       technologie,
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Color Palette Generator',
       descriptio,
@@ -10160,15 +9182,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Business Card Designer',
       descriptio,
@@ -10188,15 +9205,10 @@ const realEstateSaaS = [
       technologie,
   s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Newsletter Generator',
       descriptio,
@@ -10216,15 +9228,10 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart PDF Converter Pro',
       descriptio,
@@ -10244,15 +9251,10 @@ const realEstateSaaS = [
       technologie,
   s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Video Thumbnail Generator',
       descriptio,
@@ -10272,15 +9274,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Social Media Scheduler',
       descriptio,
@@ -10300,15 +9297,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Hashtag Generator',
       descriptio,
@@ -10328,15 +9320,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Email Template Builder',
       descriptio,
@@ -10356,15 +9343,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Email APIs', 'React', 'Node.js', 'A
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Competitor Analysis Tool',
       descriptio,
@@ -10384,15 +9366,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Customer Feedback Analyzer',
       descriptio,
@@ -10412,15 +9389,10 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Landing Page Optimizer',
       descriptio,
@@ -10440,15 +9412,10 @@ const realEstateSaaS = [
       technologie,
   s: ['A
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Inventory Photo Manager',
       descriptio,
@@ -10468,15 +9435,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Price Monitoring Tool',
       descriptio,
@@ -10496,15 +9458,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Appointment Scheduler',
       descriptio,
@@ -10524,15 +9481,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Resume Builder',
       descriptio,
@@ -10552,15 +9504,10 @@ const realEstateSaaS = [
       technologie,
   s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Weather API Service',
       descriptio,
@@ -10580,15 +9527,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Translation Service',
       descriptio,
@@ -10608,15 +9550,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Data Backup Service',
       descriptio,
@@ -10636,15 +9573,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Form Builder',
       descriptio,
@@ -10664,15 +9596,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Uptime Monitor',
       descriptio,
@@ -10692,15 +9619,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Survey Creator',
       descriptio,
@@ -10720,15 +9642,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart File Converter',
       descriptio,
@@ -10748,15 +9665,10 @@ const realEstateSaaS = [
       technologie,
   s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered QR Code Scanner',
       descriptio,
@@ -10776,15 +9688,10 @@ const realEstateSaaS = [
       technologie,
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Password Generator',
       descriptio,
@@ -10804,15 +9711,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Color Picker',
       descriptio,
@@ -10832,15 +9734,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Text Summarizer',
       descriptio,
@@ -10860,15 +9757,10 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Image Resizer',
       descriptio,
@@ -10888,15 +9780,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart URL Shortener',
       descriptio,
@@ -10916,15 +9803,10 @@ const realEstateSaaS = [
       technologie,
   s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Favicon Generator',
       descriptio,
@@ -10944,15 +9826,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Meta Tag Generator',
       descriptio,
@@ -10972,15 +9849,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Sitemap Generator',
       descriptio,
@@ -11000,15 +9872,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Robots.txt Generator',
       descriptio,
@@ -11028,15 +9895,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Schema Markup Generator',
       descriptio,
@@ -11056,15 +9918,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Alt Text Generator',
       descriptio,
@@ -11084,15 +9941,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Internal Link Optimizer',
       descriptio,
@@ -11112,15 +9964,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Keyword Density Analyzer',
       descriptio,
@@ -11140,15 +9987,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Page Speed Optimizer',
       descriptio,
@@ -11168,15 +10010,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Core Web Vitals Monitor',
       descriptio,
@@ -11196,15 +10033,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Mobile Optimization Tool',
       descriptio,
@@ -11224,15 +10056,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Local SEO Optimizer',
       descriptio,
@@ -11252,15 +10079,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Competitor SEO Analyzer',
       descriptio,
@@ -11280,15 +10102,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Backlink Analyzer',
       descriptio,
@@ -11308,15 +10125,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Content Gap Analyzer',
       descriptio,
@@ -11336,15 +10148,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Technical SEO Auditor',
       descriptio,
@@ -11364,15 +10171,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered E-commerce SEO Optimizer',
       descriptio,
@@ -11392,15 +10194,10 @@ const realEstateSaaS = [
       technologie,
   s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Voice Search Optimizer',
       descriptio,
@@ -11420,15 +10217,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Video SEO Optimizer',
       descriptio,
@@ -11448,15 +10240,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart Featured Snippet Optimizer',
       descriptio,
@@ -11476,15 +10263,10 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered Image SEO Optimizer',
       descriptio,
@@ -11504,15 +10286,10 @@ const realEstateSaaS = [
       technologie,
   s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Smart International SEO Manager',
       descriptio,
@@ -11532,15 +10309,10 @@ const realEstateSaaS = [
       technologie,
   s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI-Powered SEO Reporting Dashboard',
       descriptio,
@@ -11560,19 +10332,14 @@ const realEstateSaaS = [
       technologie,
   s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-<<<<<<< HEAD
     // NEW COMPREHENSIVE MICRO SAAS SERVICES;
+
     // AI Productivity & Time Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Time Tracking & Productivity Analyzer',
       descriptio,
@@ -11593,17 +10360,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Task Management & Prioritization',
       descriptio,
@@ -11624,17 +10386,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Email Management & Prioritization',
       descriptio,
@@ -11655,19 +10412,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI HR & Recruitment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Resume Parser & Candidate Matcher',
       descriptio,
@@ -11688,17 +10440,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
@@ -11719,17 +10466,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Workplace Safety Monitor',
       descriptio,
@@ -11750,19 +10492,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Customer Service & Support;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Support Ticket Router',
       descriptio,
@@ -11783,17 +10520,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Customer Feedback Analyzer',
       descriptio,
@@ -11814,17 +10546,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Live Chat Assistant',
       descriptio,
@@ -11845,19 +10572,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Sales & CRM;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Sales Pipeline Optimizer',
       descriptio,
@@ -11878,17 +10600,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Sales Call Analyzer',
       descriptio,
@@ -11909,17 +10626,12 @@ const realEstateSaaS = [
   s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Proposal Generator Pro',
       descriptio,
@@ -11940,19 +10652,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Project Management;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Project Risk Predictor',
       descriptio,
@@ -11973,17 +10680,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Resource Allocation Optimizer',
       descriptio,
@@ -12004,17 +10706,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Project Timeline Predictor',
       descriptio,
@@ -12035,19 +10732,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Security & Compliance;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Security Threat Detector',
       descriptio,
@@ -12068,17 +10760,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Compliance Monitor',
       descriptio,
@@ -12099,17 +10786,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Data Privacy Manager',
       descriptio,
@@ -12130,19 +10812,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Quality Assurance & Testing;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Automated Testing Suite',
       descriptio,
@@ -12163,17 +10840,12 @@ const realEstateSaaS = [
   s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Bug Prediction & Prevention',
       descriptio,
@@ -12194,17 +10866,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Performance Monitoring Pro',
       descriptio,
@@ -12225,19 +10892,14 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Content & Media;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Video Content Generator',
       descriptio,
@@ -12258,17 +10920,12 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Podcast Production Suite',
       descriptio,
@@ -12289,17 +10946,12 @@ const realEstateSaaS = [
   s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Image & Design Generator',
       descriptio,
@@ -12320,19 +10972,14 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
@@ -12353,17 +11000,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Patent Analyzer & Generator',
       descriptio,
@@ -12384,17 +11026,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Innovation Tracker',
       descriptio,
@@ -12415,19 +11052,14 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Personal & Lifestyle;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Personal Finance Manager',
       descriptio,
@@ -12448,17 +11080,12 @@ const realEstateSaaS = [
   s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Personal Assistant Pro',
       descriptio,
@@ -12479,17 +11106,12 @@ const realEstateSaaS = [
   s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Home Energy Optimizer',
       descriptio,
@@ -12510,19 +11132,14 @@ const realEstateSaaS = [
   s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     // AI Gaming & Entertainment;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    /
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Game Development Assistant',
       descriptio,
@@ -12543,17 +11160,12 @@ const realEstateSaaS = [
   s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Music Composition Studio',
       descriptio,
@@ -12574,17 +11186,12 @@ const realEstateSaaS = [
   s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Streaming Content Optimizer',
       descriptio,
@@ -12605,10 +11212,13 @@ const realEstateSaaS = [
   s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInf,
   o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     }
+
   ];
-const categories = [
+
+const categories = [;;
+
     {/* TODO: Fix JSX expression *
   ,
     t: microSAASServices.length },
@@ -12675,7 +11285,9 @@ const categories = [
     {/* TODO: Fix JSX expression *
   ,
     t: microSAASServices.filter(s => s.category === 'Game Development').length }
+
   ];
+
   return (<div>Coming Soon<)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
@@ -12786,6 +11398,7 @@ const categories = [
                   <
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
                     {service.category}
+
                   <
                 <
                 <div className="mb-6">
@@ -12794,12 +11407,15 @@ const categories = [
                     {service.features.slice(0), 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" 
                         {feature}
+
                       <)
                     ))}
+
                     {service.features.length > 4 && (<li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
                       <)
                     )}
+
                   <
                 <
                 <div className="mb-6">
@@ -12833,6 +11449,7 @@ const categories = [
                   <
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"><
                     {service.category}
+
                   <
                 <
                 <div className="mb-6"><
@@ -12843,13 +11460,17 @@ const categories = [
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"><
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /><
                         {feature}
+
                       <
                     ))}
+
                     {service.features.length > 4 && ()}"
           <li className="text-sm text-gray-500"><
                         +{service.features.length - 4} more features;
+
                       <
                     )}
+
                   <
                 <
                 <div className="mb-6"><
@@ -12860,8 +11481,10 @@ const categories = [
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"><
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /><
                         {benefit}
+
                       <
                     ))}
+
                   <
                 <
                 <div className="mb-6">
@@ -12876,13 +11499,16 @@ const categories = [
                     {service.technologies.map((tech), techIndex) => ()}"
           <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"><
                         {tech}
+
                       <
                     ))}
+
                   <
                 <
                 <div className="text-center">
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started Now
@@ -12902,10 +11528,12 @@ const categories = [
           <
                   <p className="text-xs text-gray-500 mt-2"><
                     {service.contactInfo}
+
                   <
                 <
               <
             ))}
+
           <
         <
       <
@@ -12947,27 +11575,13 @@ const categories = [
 /
           <
             <a
-<<<<<<< HEAD
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
 //               Email Us;
+
           </a>
           </div>
         </div>
       </section>
     </div>
-  )};
-=======
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
-    r:text-purple-600 transition-colors"
-/
-/
-          <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default MicroSAASPage;"`
+  )};export default MicroSAASPage;"`

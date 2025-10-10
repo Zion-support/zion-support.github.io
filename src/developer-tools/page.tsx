@@ -1,13 +1,18 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+
 import React from 'react';
+
 import Navigation from '../components
 import Footer from '../components
 
-import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {;
-const _devTools = [
+import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react;
+
+const DeveloperToolsPage: React.FC = () => {';
+
+const _devTools = [;';
+
     {
       titl,
     e: 'AI Code Generator',
@@ -58,24 +63,17 @@ $4},
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price:     ,
 $4}
+
   ];
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
-      </Helmet>
-=======
-  return (<div>
-        <title>Developer Tools - Zion Tech Group<
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." 
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </Helmet>      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
@@ -118,30 +116,20 @@ $4}
                   <span className="text-white font-medium">kleber@ziontechgroup.com<
                 <
                 <div className="flex items-center space-x-2">
-<<<<<<< HEAD
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
 
-  )};
-=======
-                  <MapPin className="w-5 h-5" 
-    <div>Coming Soon<)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  const _devTools = [
+  )};  const _devTools = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'AI Code Generator',
       descriptio,
@@ -155,15 +143,10 @@ $4}
       pric,
   e: 'Starting at $99
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'API Testing Suite',
       descriptio,
@@ -177,15 +160,10 @@ $4}
       pric,
   e: 'Starting at $149
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Database Management Tool',
       descriptio,
@@ -199,15 +177,10 @@ $4}
       pric,
   e: 'Starting at $199
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'DevOps Automation',
       descriptio,
@@ -221,15 +194,10 @@ $4}
       pric,
   e: 'Starting at $299
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Code Review Assistant',
       descriptio,
@@ -243,15 +211,10 @@ $4}
       pric,
   e: 'Starting at $79
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   titl,
   e: 'Performance Profiler',
       descriptio,
@@ -265,11 +228,12 @@ $4}
       pric,
   e: 'Starting at $179
     }
+
   ];
+
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Helmet></Helmet>
         <title>Developer Tools - Zion Tech Group</title>
@@ -280,20 +244,7 @@ $4}
         <Navigation /></Navigation>
         {/* Hero Section */}"
         <section className="pt-24 pb-16 px-4"></section>"
-          <div className="max-w-7xl mx-auto text-center"></div>"
-=======
-          <div><Helmet><
-        <title>Developer Tools - Zion Tech Group<
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /><
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" /><
-      <
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <Navigation /><
-        {/* Hero Section *
-        <section className="pt-24 pb-16 px-4"><
-          <div className="max-w-7xl mx-auto text-center"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-            <h1 className="text-4xl,
+          <div className="max-w-7xl mx-auto text-center"></div>"            <h1 className="text-4xl,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"><
 /
@@ -402,8 +353,10 @@ $4}
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"><
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /><
                           {feature}
+
                         <
                       ))}
+
                     <
                   <
 
@@ -421,14 +374,17 @@ $4}
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"><
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /><
                           {benefit}
+
                         <
                       ))}
+
                     <
                   <
 
                   <div className="text-center">
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
                     >
                       Get Started Now
@@ -448,6 +404,7 @@ $4}
                   <
                 <
               ))}
+
             <
           <
         <
@@ -478,7 +435,6 @@ $4}
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
@@ -508,17 +464,6 @@ $4}
           
           
           
-=======
-        <Footer 
-      <
-    <
-        {/* CTA Section *
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"><
-          <div className="max-w-4xl mx-auto text-center"><
-            <h2 className="text-3xl font-bold text-white mb-6"><
-/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
           <
             <p className="text-xl text-purple-100 mb-8"><
 /
@@ -543,14 +488,7 @@ $4}
       <
       <Footer /><
 
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default DeveloperToolsPage;
-

@@ -1,13 +1,17 @@
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
-return (
+  return (
+
 ;
+
 const, storie, s = [
     {
       comp, a, n;
+
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
       ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>
 );
+
 }, l, t: "3, 0, 0% Revenue, Growt, h"
       descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s."
       metri, c, s: [,
@@ -17,6 +21,7 @@ const, storie, s = [
       ]
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     }
+
     {
       compa, n, y: "Global, Manufacturing, Inc"
       indust, r, y: "Manufacturi, n, g"
@@ -29,6 +34,7 @@ const, storie, s = [
       ]
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
+
     {
       company: 'FinanceFirst Bank',
       industry: 'Financial Services',
@@ -44,8 +50,11 @@ const, storie, s = [
         </div>,
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
           {stories.map((story, index) => (
+
             <div;
+
 key={index}
+
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
             >,
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
@@ -55,6 +64,7 @@ key={index}
           {stories.map((story, index) => (</div>
             <div
 key={index}
+
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             ></div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
@@ -62,18 +72,26 @@ key={index}
                   {story.icon}</div>
                   <div></div>
                     <h3 className="font-bold text-xl">{story.company}</h3>;
+
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
 key={index}
+
               className="bg-white rounded-2xl shadow-xl overflow-hidden,"
   hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
                 <div className="flex items-center gap-3 mb-4"></div>
                   {story.icon}
+
                   <div></div>"
                     <h3 className="font-bold text-xl">{story.company}</h3>"
                     <p className="text-sm opacity-90">{story.industry}</p>
@@ -90,11 +108,13 @@ key={index}
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
                   Read Full Story;
+
                   <Link className="w-4 h-4" />
                 </Link>
               </div>
             </div>
             View All Success Stories;
+
             <Link className="w-6 h-6" />
               </div>"
               <div className="p-6"></div>"
@@ -106,13 +126,11 @@ key={index}
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
                   Read Full Story;"
-                  <Link className="w-4 h-4" /></Link>
-                </Link>
+                  <Link $2></Link>
               </div>
             </div>
             View All Success Stories;"
-            <Link className="w-6 h-6" /></Link>
-          </Link>
+            <Link $2></Link>
         </div>
       </div>
     </section>

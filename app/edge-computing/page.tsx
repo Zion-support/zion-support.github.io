@@ -1,11 +1,17 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import Navigation from '../components
 import Footer from '../components
-import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
-;
-const EdgeComputingPage: React.FC = () => {const features = [
+import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react;
+
+';
+
+const EdgeComputingPage: React.FC = () => {const features = [;';
+
     {
       ico,
     n: Cpu,
@@ -43,72 +49,84 @@ const EdgeComputingPage: React.FC = () => {const features = [
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
     }
+
   ];
+
 ;
-const services = [
+
+const services = [;;
+
     {
       icon: '⚡',
       title: 'Edge Analytics',
-      description: 'Real-time data processing and analytics at the edge'
+      description: Real-time data processing and analytics at the edge
     },
     {
       icon: '🌐',
       title: 'Edge Networking',
-      description: 'Optimized networking solutions for edge deployments'
+      description: Optimized networking solutions for edge deployments
     },
     {
       icon: '🔒',
       title: 'Edge Security',
-      description: 'Comprehensive security solutions for edge environments'
+      description: Comprehensive security solutions for edge environments
     },
     {
       icon: '📱',
       title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications'
+      description: Mobile edge computing for 5G and mobile applications
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
     'Improved Reliability',
     'Enhanced Security',
     'Real-time Processing',
-    'Global Scalability'
+    Global Scalability
   ];
+
 ;
-const useCases = [
+
+const useCases = [;;
+
     {
       title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
-      icon: '🚗'
+      icon: 🚗
     },
     {
       title: 'Smart Cities',
       description: 'IoT sensors and real-time city management',
-      icon: '🏙️'
+      icon: 🏙️
     },
     {
       title: 'Industrial IoT',
       description: 'Manufacturing automation and monitoring',
-      icon: '🏭'
+      icon: 🏭
     },
     {
       title: 'AR
       descriptio,
     n: 'Immersive experiences with low latency',
-      icon: '🥽'
+      icon: 🥽
     },
     {
       title: 'Healthcare',
       description: 'Real-time patient monitoring and diagnostics',
-      icon: '🏥'
+      icon: 🏥
     },
     {
       title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-      icon: '🎮'
+      icon: 🎮
     }
+
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -123,7 +141,8 @@ const useCases = [
       {/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }}
+
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Edge Computing
@@ -155,9 +174,9 @@ const useCases = [
             <
           <
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -166,35 +185,25 @@ const useCases = [
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
+
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
+
                     </li>
                   ));
+
                 </ul>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8">
-            {features.map((feature), index) => (<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hove,
-    r:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" 
-                <
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
-                <p className="text-gray-300 mb-4">{feature.description}<
-                <ul className="space-y-2">)
-                  {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <div className="max-w-7xl mx-auto">
+
+      <section className="py-20 px-4">        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services<
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -202,32 +211,19 @@ const useCases = [
             <
           <
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
+
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
             ));
+
           </div>
         </div>
       </section>
-=======
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-            {services.map((service), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white
-                <div className="text-4xl mb-4">{service.icon}<
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}<
-                <p className="text-gray-300">{service.description}<
-              <)
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* Use Cases Section *
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -238,33 +234,19 @@ const useCases = [
             <
           <
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
+
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
             ));
+
           </div>
         </div>
       </section>
-=======
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8">
-            {useCases.map((useCase), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white
-                <div className="text-4xl mb-4 group-hove,
-    r:scale-110 transition-transform">{useCase.icon}<
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}<
-                <p className="text-gray-300">{useCase.description}<
-              <)
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* Benefits Section *
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -279,26 +261,15 @@ const useCases = [
     g:grid-cols-3 gap-6">
             {benefits.map((benefit), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-<<<<<<< HEAD
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ));
+
           </div>
         </div>
       </section>
-=======
-                  <CheckCircle className="w-8 h-8 text-white" 
-                <
-                <h3 className="text-lg font-semibold text-white">{benefit}<
-              <)
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* CTA Section *
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -318,14 +289,5 @@ const useCases = [
         <
       <
 
-<<<<<<< HEAD
       <Footer />
-    </div>)
-=======
-      <Footer 
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default EdgeComputingPage;
+    </div>)export default EdgeComputingPage;

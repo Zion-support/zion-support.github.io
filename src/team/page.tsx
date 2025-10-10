@@ -1,11 +1,19 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+import Footer from '../components/Footer;
+
 ;
-const TeamPage: React.FC = () => {;
-const teamMembers = [
+
+const TeamPage: React.FC = () => {';
+
+const teamMembers = [;';
+
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -60,16 +68,24 @@ const teamMembers = [
       email: 'james@ziontechgroup.com',
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
     }
+
   ];
+
 ;
-const stats = [
+
+const stats = [;;
+
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
     { icon: Brain, label: 'Years Experience', value: '15+' },
     { icon: Shield, label: 'Client Satisfaction', value: '99%' }
+
   ];
+
 ;
-const values = [
+
+const values = [;;
+
     {
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
@@ -90,13 +106,16 @@ const values = [
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
       icon: Shield
     }
+
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
+
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -109,10 +128,12 @@ const values = [
       </section>
 
       {/* Stats Section */}
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
+
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
@@ -121,11 +142,13 @@ const values = [
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Team Members */}
+
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -138,6 +161,7 @@ const values = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
+
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
                   <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
@@ -153,16 +177,20 @@ const values = [
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.expertise.map((skill, skillIndex) => (
+
                         <span key={skillIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">
                           {skill}
+
                         </span>
                       ))}
+
                     </div>
                   </div>
                   
                   <div className="flex space-x-3">
                     <a
                       href={member.linkedin}
+
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-cyan-600 transition-colors"
@@ -171,6 +199,7 @@ const values = [
                     </a>
                     <a
                       href={`mailto:${member.email}`}
+
                       className="text-gray-400 hover:text-cyan-600 transition-colors"
                     >
                       <Mail className="w-5 h-5" />
@@ -179,11 +208,13 @@ const values = [
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Values Section */}
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -196,6 +227,7 @@ const values = [
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
+
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-white" />
@@ -204,11 +236,13 @@ const values = [
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

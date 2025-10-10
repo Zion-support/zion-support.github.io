@@ -4,14 +4,18 @@
 import { Link } from 'react-router-dom';
 
 import { Star, Phone } from 'lucide-react';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const ApiDocs: React.FC = () => {
-return (
 
+import React from 'react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer';
+
+';
+
+const ApiDocs: React.FC = () => {
   return (
+
     <div>Coming Soon</div>
 
   )
@@ -23,6 +27,7 @@ return (
           <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text"></h1>
 // Api Docs;
+
           </h1>"
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
 // API documentation and developer resources;
@@ -44,6 +49,7 @@ return (
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation;
+
           </Link>
 
             <a
@@ -51,6 +57,7 @@ return (
               <Phone className="w-4 h-4 mr-2" />
 
 // (302) 464-0950;
+
           </a>
           </div>
         </section>
@@ -60,10 +67,9 @@ return (
 
     </div>
 );
+
 }
+
   )};
 
-
 export default ApiDocsPage;
-
-

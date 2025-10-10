@@ -1,27 +1,29 @@
 import React from 'react';
+
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
+
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
+
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 
 import { Link } from 'react-router-dom';
 
 'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const AIMLPlatformPage: React.FC = () => {;
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const AIMLPlatformPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+import React from 'react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer;
+
+;
+
+const AIMLPlatformPage: React.FC = () => {';
+
+const features = [    {;';
+
       ico,
     n: Brain,
       title: 'Complete ML Platform',
@@ -41,12 +43,16 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
+
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
       name: 'Developer',
       price: '$999',
-      period: '
+      period: 
       descriptio,
     n: 'Perfect for individual developers',
       features: [
@@ -54,22 +60,22 @@ const pricingPlans = [
         'Basic ML tools',
         'Email support',
         'Standard compute',
-        'Basic analytics'
+        Basic analytics
       ],
       popular: false
       nam,
     e: 'Team',
       price: '$2,499',
-      description: 'Ideal for development teams',;
-const features = [];
+      description: 'Ideal for development teams,;
+
+const features = [];;
+
   return (
-<<<<<<< HEAD
+
     {// TODO: Add content}
-=======
-    {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 };
+
   ico,
   n: Brain,
       titl,
@@ -95,8 +101,11 @@ const features = [];
       benefit,
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
+
   ];
-  const pricingPlans = [
+
+  const pricingPlans = [;;
+
       nam,
   e: 'Team',
       pric,
@@ -108,7 +117,7 @@ const features = [];
         'Priority support',
         'High-performance compute',
         'Advanced analytics',
-        'Team collaboration'
+        Team collaboration
       popular: true
       nam,
     e: 'Enterprise',
@@ -130,20 +139,15 @@ const features = [];
         'Custom compute',
         'Custom analytics',
         'White-label options',
-<<<<<<< HEAD
-        'API access';
-const stats = [;
-const stats = [
-  // TOD,
-=======
-        'API access'
+        'API access;
 
-  const stats = [
-  const stats = [
-  /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  O: Add items;
-];;
+const stats = [;;
+
+const stats = [;;
+
+  // TOD,  O: Add items;
+
+];
 
     { ico,
     n: Users, value: '500+', label: 'Data Scientists' },
@@ -152,6 +156,7 @@ const stats = [
     { icon: Star, value: '4.9
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
         <title>AI ML Platform | Zion Tech Group<
@@ -188,6 +193,7 @@ const stats = [
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors"><
 Learn More;
+
           <
 
       <Footer 
@@ -196,5 +202,5 @@ Learn More;
   )};
 
 export default $1;
-export default AiMlPlatformPage;
 
+export default AiMlPlatformPage;

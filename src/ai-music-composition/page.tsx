@@ -1,21 +1,19 @@
 import React from 'react';
-import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-;
-const AIMusicCompositionPage: React.FC = () => {;
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
 
-const AIMusicCompositionPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    'AI Composition',
+import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer';
+
+import SEOOptimizer from '../components/SEOOptimizer;
+
+';
+
+const AIMusicCompositionPage: React.FC = () => {';
+
+const features = [    'AI Composition,;;
+
     'Multiple Genres',
     'Custom Length',
     'Royalty-free',
@@ -24,23 +22,29 @@ const AIMusicCompositionPage: React.FC = () => {
     'Mood Selection',
     'Instrument Selection',
     'Tempo Control',
-    'Export Options'
+    Export Options
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Unlimited music',
     'No copyright issues',
     'Custom compositions',
     'Professional quality',
     'Fast generation',
-    'Cost-effective'
+    Cost-effective
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
     {
       name: 'Starter',
       price: '$99',
-      period: '
+      period: 
       features: ['10 tracks
       popula,
     r: false
@@ -48,7 +52,7 @@ const pricingPlans = [
     {
       name: 'Professional',
       price: '$199',
-      period: '
+      period: 
       feature,
     s: ['Unlimited tracks', 'WAV
       popular: true
@@ -56,20 +60,22 @@ const pricingPlans = [
     {
       name: 'Enterprise',
       price: '$399',
-      period: '
+      period: 
       feature,
     s: ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
     }
+
   ];
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <SEOOptimizer
         title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
         description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
         keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}
+
         canonicalUrl="https://ziontechgroup.com/ai-music-composition"
       />
       
@@ -77,13 +83,7 @@ const pricingPlans = [
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-=======
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <section className="text-center mb-16">
+          {/* Hero Section */}          <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
@@ -118,6 +118,7 @@ const pricingPlans = [
                   <
                 <)
               ))}
+
             <
           <
 
@@ -135,6 +136,7 @@ const pricingPlans = [
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}<
                 <)
               ))}
+
             <
           <
 
@@ -145,14 +147,17 @@ const pricingPlans = [
             <
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan), index) => (
+
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
+
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       <
                     <
                   )}
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<
                     <div className="flex items-baseline justify-center">
@@ -167,6 +172,7 @@ const pricingPlans = [
                   <
                 <
               ))}
+
             <
           <
 
@@ -198,17 +204,9 @@ const pricingPlans = [
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default AIMusicCompositionPage;

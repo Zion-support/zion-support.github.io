@@ -1,31 +1,38 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: Advanced AI technology to transform your business operations and improve efficiency
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: Lightning-fast processing and real-time analytics for optimal results
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: Bank-level security with encryption and compliance standards
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: Worldwide deployment and support for international businesses
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -33,7 +40,7 @@ const benefits = [
     '24
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -47,32 +54,19 @@ const benefits = [
         <
       <
 
-<<<<<<< HEAD
               </div>
             ));
+
           </div>
         </div>
       </section>
 
               </div>
             ));
+
           </div>
         </div>
       </section>
-=======
-              <)
-            ))}
-          <
-        <
-      <
-
-              <
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -89,22 +83,9 @@ const benefits = [
                 
                 <Mail className="mr-2 h-5 w-5" 
                 Email Us
-<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </section>
-    </div>)
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default PagePage;
+    </div>)export default PagePage;

@@ -1,41 +1,48 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { Shield, CheckCircle, FileText, Lock, Award, Globe } from 'lucide-react';
-const CompliancePage: React.FC = () => {const complianceStandards = [
+
+const CompliancePage: React.FC = () => {const complianceStandards = [;';
+
     {
       icon: Shield,
       title: 'SOC 2 Type II',
-      description: 'Comprehensive security and availability controls for service organizations.'
+      description: Comprehensive security and availability controls for service organizations.
     },
     {
       icon: Lock,
       title: 'ISO 27001',
-      description: 'International standard for information security management systems.'
+      description: International standard for information security management systems.
     },
     {
       icon: FileText,
       title: 'GDPR Compliance',
-      description: 'Full compliance with European data protection regulations.'
+      description: Full compliance with European data protection regulations.
     },
     {
       icon: CheckCircle,
       title: 'HIPAA Ready',
-      description: 'Healthcare data protection standards and requirements.'
+      description: Healthcare data protection standards and requirements.
     },
     {
       icon: Award,
       title: 'PCI DSS',
-      description: 'Payment card industry data security standards.'
+      description: Payment card industry data security standards.
     },
     {
       icon: Globe,
       title: 'CCPA Compliance',
-      description: 'California Consumer Privacy Act compliance and data rights.'
+      description: California Consumer Privacy Act compliance and data rights.
     }
+
   ];
 
   return (
+
     <>
       <Helmet>
         <title>Compliance & Security | Zion Tech Group</title>
@@ -45,6 +52,7 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -57,10 +65,12 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
         </section>
 
         {/* Compliance Standards */}
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceStandards.map((standard, index) => (
+
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
                     <standard.icon className="w-6 h-6 text-white" />
@@ -69,11 +79,13 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
               ));
+
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
@@ -91,37 +103,40 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
+
 import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
 
 const CompliancePage: React.FC = () => {
-  const features = [
+  const features = [;';
+
     {
       icon: Shield,
       title: 'Security Compliance',
-      description: 'Comprehensive security compliance with industry standards'
+      description: Comprehensive security compliance with industry standards
     },
     {
       icon: FileCheck,
       title: 'Regulatory Compliance',
-      description: 'Full compliance with GDPR, HIPAA, and other regulations'
+      description: Full compliance with GDPR, HIPAA, and other regulations
     },
     {
       icon: Lock,
       title: 'Data Protection',
-      description: 'Advanced data protection and privacy measures'
+      description: Advanced data protection and privacy measures
     },
     {
       icon: Award,
       title: 'Certifications',
-      description: 'Industry-recognized certifications and audits'
+      description: Industry-recognized certifications and audits
     }
+
   ];
 
-  const benefits = [
+  const benefits = [;;
+
     'GDPR compliance',
     'HIPAA compliance',
     'SOC 2 Type II',
@@ -129,10 +144,11 @@ const CompliancePage: React.FC = () => {
     'Regular security audits',
     'Data encryption',
     'Access controls',
-    'Compliance monitoring'
+    Compliance monitoring
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Compliance | Zion Tech Group</title>
@@ -143,6 +159,7 @@ const CompliancePage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
+
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -171,6 +188,7 @@ const CompliancePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -184,6 +202,7 @@ const CompliancePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
@@ -192,11 +211,13 @@ const CompliancePage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -210,16 +231,19 @@ const CompliancePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
+
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -238,14 +262,17 @@ const CompliancePage: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         </div>
       </section>
 
       <Footer />
     </div>
   );
+
 }
+
 export default CompliancePage;
+
 }
+
 export default PagePage;

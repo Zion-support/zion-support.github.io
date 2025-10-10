@@ -1,11 +1,19 @@
 'use client';
+
 import React from 'react';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
+
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-;
-const EnterprisePage: React.FC = () => {const features = [
+
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react;
+
+';
+
+const EnterprisePage: React.FC = () => {const features = [;';
+
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -42,9 +50,13 @@ const EnterprisePage: React.FC = () => {const features = [
       description: 'Seamless integration with existing enterprise systems and workflows.',
 benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
     }
+
   ];
+
 ;
-const solutions = [
+
+const solutions = [;;
+
     {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
@@ -69,9 +81,13 @@ const solutions = [
       icon: Zap,
 benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
     }
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -79,17 +95,22 @@ const benefits = [
     'Enable data-driven decisions',
     'Scale with business growth',
     'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
+    Provide 24/7 support and monitoring
   ];
+
 ;
-const stats = [
+
+const stats = [;;
+
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
+
   ];
 
   return (
+
     <div>
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
@@ -99,6 +120,7 @@ const stats = [
       <Navigation />
       
       {/* Hero Section */}
+
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div>
         <div>
@@ -126,10 +148,12 @@ const stats = [
       </section>
 
       {/* Stats Section */}
+
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
+
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
                   <stat.icon className="w-12 h-12 text-purple-400" />
@@ -138,11 +162,13 @@ const stats = [
                 <div className="text-gray-300 text-sm"></di>{stat.label}</div>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* Features Section */}
+
       <section className="py-20 px-4"></section>
         <div>
           <div>
@@ -161,14 +187,18 @@ const stats = [
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2"></ul>
                   {feature.benefits.map((benefit, idx) => (
+
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
+
                     </li>
                   ));
+
                 </ul>
               </div>
             ));
+
           </div>
         </div>
       </section>
@@ -183,14 +213,17 @@ const stats = [
           
                     </li>
                   ));
+
                 </ul>
               </div>
             ));
+
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+
       <section className="py-20 px-4"></section>
                 </button>
               </div>
@@ -200,6 +233,7 @@ const stats = [
       </section>
 
       {/* CTA Section */}
+
       <section className="py-20 px-4"></section>
         <div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
@@ -224,4 +258,5 @@ const stats = [
     </div>
 )]
     };
+
 export default EnterprisePage;

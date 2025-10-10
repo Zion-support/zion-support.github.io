@@ -1,21 +1,20 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const ITConsultingPage: React.FC = () => {;
-const consultingServices = [
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer;
+
+;
+
+const ITConsultingPage: React.FC = () => {';
+
+const consultingServices = [    {;';
 
       titl,
     e: 'Digital Transformation',
@@ -34,23 +33,15 @@ const ITConsultingPage: React.FC = () => {
       price: 'Starting at $3,500
 
     }
+
   ];
 
-<<<<<<< HEAD
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
-      </Helmet>
-=======
-  return (<div><Helmet><
-        <title>IT Consulting Services - Zion Tech Group<
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /><
-        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /><
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      "
+      </Helmet>      "
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"><
         <Navigation /><
         <main className="pt-24 pb-16 px-4"><
@@ -59,6 +50,7 @@ const ITConsultingPage: React.FC = () => {
               <h1 className="text-4xl,"
   md:text-6xl font-bold text-gray-900 mb-6"><
                 IT Consulting Services;
+
               <
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"><
                 Transform your business with expert IT consulting. We provide strategic guidance, 
@@ -86,8 +78,10 @@ const ITConsultingPage: React.FC = () => {
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" 
 
                           {feature}
+
                         <)
                       ))}
+
                     <
 
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits: <
@@ -95,8 +89,10 @@ const ITConsultingPage: React.FC = () => {
                       {service.benefits.map((benefit), idx) => (<li key={idx} className="flex items-center text-gray-600">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" 
                           {benefit}
+
                         <)
                       ))}
+
                     <
 
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits: <
@@ -112,6 +108,7 @@ const ITConsultingPage: React.FC = () => {
                   <
                 <
               ))}
+
             <
 
           <
@@ -140,15 +137,7 @@ const ITConsultingPage: React.FC = () => {
         <Footer 
       <
 
-<<<<<<< HEAD
-
     </React.Fragment>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default ITConsultingPage;
-

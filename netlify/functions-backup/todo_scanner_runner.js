@@ -5,13 +5,13 @@ exports.handler = async function (event, context) {
     return {
       statusCode: 200;
       body: JSON.stringify({)
-        message: 'todo_scanner_runner function executed successfully'),
+        message: 'todo_scanner_runner function executed successfully'),'
         timestamp: timestamp),;
-function: 'todo_scanner_runner')})}} catch (error) {
+function: 'todo_scanner_runner')})}} catch (error) {'
     //     return {
       statusCode: 500;
       body: JSON.stringify({)
-        error: 'todo_scanner_runner function failed'),
+        error: 'todo_scanner_runner function failed'),'
         message: error.message),
         timestamp: new Date().toISOString(),
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}

@@ -1,9 +1,11 @@
 import React from 'react';
 
-
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'};
+
+import Footer from '../components/Footer}';
+
   titl,
   e: 'IoT Device Management Platform',
       descriptio,
@@ -144,8 +146,11 @@ titl,
       technologie,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
+
   ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+
+  const categories = [...new Set(iotServices.map(service => service.category))];;
+
   return (<div>Coming Soon</div>)
   )
     
@@ -160,21 +165,25 @@ titl,
               <h1 className="text-4xl,"
   md:text-6xl font-bold mb-6"></h1>
 // IoT & Edge Computing Services;
+
           </h1>"
               <p className="text-xl,"
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
 // Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;
+
           </p>"
               <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-cyan-50 transition-colors"></button>
 // Explore IoT Solutions;
+
           </button>"
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-cyan-600 transition-colors"></button>
 Schedule Demo;
+
               </div>
         </section>
         {/* Key Benefits */}"
@@ -218,14 +227,17 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>"
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
         {/* Services by Category */}
+
         {categories.map(category => ()}"
           <section key={category} className="py-16 bg-gray-50"></section>
                   {category} Solutions;
+
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {iotServices}
+
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
@@ -248,8 +260,10 @@ Save up to 40% vs market rates;"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                               {feature}
+
                             </li>
                           ))}
+
                         </ul>"
                         <h4 className="font-semibold text-gray-900 mb-2">Technologie,
   s:</h4>"
@@ -257,6 +271,7 @@ Save up to 40% vs market rates;"
                           {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded"></span>
                               {tech}
+
                             </span>"
                       <div className="mb-6"></div>"
                         <h4 className="font-semibold text-gray-900 mb-2">Business,
@@ -268,8 +283,11 @@ Save up to 40% vs market rates;"
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"
   hover:bg-cyan-700 transition-colors"></button>
                         Get IoT Consultation;
+
         {/* IoT Capabilities Showcase */}
+
                 Our IoT & Edge Capabilities;
+
                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
               <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>"
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" /></Wifi>"
@@ -310,15 +328,14 @@ Ready to Connect Your World?"
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
 //                  +1 302 464 0950;
+
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
+
             <div className="mt-8 text-sm text-cyan-200">
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   )};
 
-
 export default IotEdgePage;
-
-

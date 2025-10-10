@@ -1,31 +1,33 @@
 'use client';
+
 import React, { useState } from 'react';
+
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer'
-export default function APIDocsPage() {;
-const [copiedCode, setCopiedCode] = useState<string | null>(null);
-const [searchQuery, setSearchQuery] = useState('');
+
+import SEOOptimizer from '../components/SEOOptimizer;
+
+export default function APIDocsPage() {';
+
+const [copiedCode, setCopiedCode] = useState<string | null>(null)';
+
+const [searchQuery, setSearchQuery] = useState(');
+
 ;
-const copyToClipboard = (code: string, id: string) => {
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
 
-export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+const copyToClipboard = (code: string, id: string) => {    navigator.clipboard.writeText(code);;
 
-  const copyToClipboard = (code: string, id: string) => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    navigator.clipboard.writeText(code);
     setCopiedCode(id);
+
     setTimeout(() => setCopiedCode(null), 2000);
+
 ;
-const apiEndpoints = [
+
+const apiEndpoints = [;;
+
     {
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
@@ -62,6 +64,7 @@ const apiEndpoints = [
     "features": ["objects", "faces", "text"]
   }'`
         }
+
       ]
     },
     {
@@ -88,8 +91,10 @@ const apiEndpoints = [
       "memory": "4GB",
       "instances": 3
     }
+
   }'`
         }
+
       ]
     },
     {
@@ -114,11 +119,16 @@ const apiEndpoints = [
     "output_format": "json"
   }'`
         }
+
       ]
     }
+
   ];
+
 ;
-const filteredEndpoints = apiEndpoints.map(category => ({
+
+const filteredEndpoints = apiEndpoints.map(category => ({;;
+
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -129,9 +139,8 @@ const filteredEndpoints = apiEndpoints.map(category => ({
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
-<<<<<<< HEAD
-=======
       {/* Hero Section */}
+
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -145,8 +154,8 @@ const filteredEndpoints = apiEndpoints.map(category => ({
       </section>
 
       {/* Quick Start */}
+
       <section className="py-16 px-4">
->>>>>>> main
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start<
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
@@ -213,12 +222,13 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                               : 'bg-blue-500
                           }`}>
                             {endpoint.method}
-<<<<<<< HEAD
+
                           </span>
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button
                           onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`);
+
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
@@ -227,60 +237,31 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                               Copied!
                             </React.Fragment>
                           ) : (
+
                             <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
                             </React.Fragment>);
-                        </button>
-                      </div>
-=======
-                          <
-                          <code className="text-purple-400 font-mono">{endpoint.path}<
-                        <
-                        <button)
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (<>
-                              
-                              <Copy className="w-4 h-4" 
 
-                            <)
-                          )}
-                        <
-                      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                      
+                        </button>
+                      </div>                      
                       <p className="text-gray-300 mb-4">{endpoint.description}<
                       
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
-<<<<<<< HEAD
                           <code>{endpoint.code}</code>
                         </pre>
                       </div>
                     </div>
                   ));
+
                 </div>
               </div>
             ));
+
           </div>
         </div>
       </section>
-=======
-                          <code>{endpoint.code}<
-                        <
-                      <
-                    <
-                  ))}
-                <
-              <
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* CTA Section *
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -302,12 +283,5 @@ const filteredEndpoints = apiEndpoints.map(category => ({
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </div>);
-=======
-      <Footer 
-    <
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

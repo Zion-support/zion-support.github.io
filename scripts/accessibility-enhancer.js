@@ -1,247 +1,409 @@
 #!/usr/bin/env node;
+
 /**
  * Accessibility Enhancement Script;
+
  * Enhances accessibility for better user experience;
+
  */
 
 import fs from 'fs';
+
 import path from 'path';
-import { fileURLToPath } from 'url';
+
+import { fileURLToPath } from 'url;
+
 ;
-const __filename = fileURLToPath(import.meta.url);
+
+const __filename = fileURLToPath(import.meta.url);';
+
 // __dirname removed
 // console.log removed for production
-// Create accessibility improvements for the main HTML file;
-const indexPath = path.join(__dirname, '../dist/index.html');
+// Create accessibility improvements for the main HTML file';
+
+const indexPath = path.join(__dirname, '../dist/index.html);;
+
 if (fs.existsSync(indexPath)) {;
-let indexContent = fs.readFileSync(indexPath, 'utf8');
-  
+
+let indexContent = fs.readFileSync(indexPath, 'utf8);;
+
   // Add accessibility improvements;
-const accessibilityScript = `
+
+const accessibilityScript = `;;
+
     <script></scrip>
       // Accessibility enhancements
       (function() {
-        'use strict';
-        
+        'use strict;
+
         // Skip to main content functionality;
+
 function addSkipLink() {;
-const skipLink = document.createElement('a');
-          skipLink.href = '#main-content';
-          skipLink.textContent = 'Skip to main content';
-          skipLink.className = 'skip-link';
+
+const skipLink = document.createElement('a);;
+
+          skipLink.href = '#main-content;
+
+          skipLink.textContent = 'Skip to main content;
+
+          skipLink.className = 'skip-link;
+
           skipLink.style.cssText = \`
             position: absolute;
+
             top: -40 px;
+
             left: 6 px;
+
             background: #000;
+
             color: #fff;
+
             padding: 8 px;
+
             text-decoration: none;
+
             z-index: 1000;
+
             border-radius: 4 px;
+
             transition: top 0.3 s;
+
           \`;
+
           skipLink.addEventListener('focus', function() {
-            this.style.top = '6 px'});
+            this.style.top = '6 px});
+
           skipLink.addEventListener('blur', function() {
-            this.style.top = '-40 px'});
+            this.style.top = '-40 px});
+
           document.body.insertBefore(skipLink, document.body.firstChild)}
-        
+
         // High contrast mode toggle;
+
 function addHighContrastToggle() {;
-const toggle = document.createElement('button');
-          toggle.textContent = 'High Contrast';
-          toggle.className = 'accessibility-toggle';
+
+const toggle = document.createElement('button);;
+
+          toggle.textContent = 'High Contrast;
+
+          toggle.className = 'accessibility-toggle;
+
           toggle.style.cssText = \`
             position: fixed;
+
             top: 10 px;
+
             right: 10 px;
+
             z-index: 1000;
+
             background: #000;
+
             color: #fff;
+
             border: 2 px solid #fff;
+
             padding: 8 px 16 px;
+
             border-radius: 4 px;
+
             cursor: pointer;
+
             font-size: 14 px;
+
           \`;
+
           toggle.addEventListener('click', function() {
-            document.body.classList.toggle('high-contrast');
-            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast'});
+            document.body.classList.toggle('high-contrast);
+
+            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast});
+
           document.body.appendChild(toggle)}
-        
+
         // Font size controls;
+
 function addFontSizeControls() {;
-const controls = document.createElement('div');
-          controls.className = 'font-size-controls';
+
+const controls = document.createElement('div);;
+
+          controls.className = 'font-size-controls;
+
           controls.style.cssText = \`
             position: fixed;
+
             top: 50 px;
+
             right: 10 px;
+
             z-index: 1000;
+
             background: #000;
+
             color: #fff;
+
             padding: 10 px;
+
             border-radius: 4 px;
+
             display: flex;
+
             flex-direction: column;
+
             gap: 5 px;
+
           \`;
+
           ;
-const increaseBtn = document.createElement('button');
-          increaseBtn.textContent = 'A+';
-          increaseBtn.addEventListener('click', () => {;
-const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px'});
+
+const increaseBtn = document.createElement('button);;
+
+          increaseBtn.textContent = 'A+;
+
+          increaseBtn.addEventListener('click, () => {;
+
+const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);;
+
+            document.documentElement.style.fontSize = (currentSize + 2) + 'px});
+
           ;
-const decreaseBtn = document.createElement('button');
-          decreaseBtn.textContent = 'A-';
-          decreaseBtn.addEventListener('click', () => {;
-const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'});
+
+const decreaseBtn = document.createElement('button);;
+
+          decreaseBtn.textContent = 'A-;
+
+          decreaseBtn.addEventListener('click, () => {;
+
+const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);;
+
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px});
+
           ;
-const resetBtn = document.createElement('button');
-          resetBtn.textContent = 'Reset';
+
+const resetBtn = document.createElement('button);;
+
+          resetBtn.textContent = 'Reset;
+
           resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16 px'});
-          
+            document.documentElement.style.fontSize = '16 px});
+
           controls.appendChild(increaseBtn);
+
           controls.appendChild(decreaseBtn);
+
           controls.appendChild(resetBtn);
+
           document.body.appendChild(controls)}
-        
+
         // Focus management for modals and dropdowns;
+
 function enhanceFocusManagement() {
           // Trap focus in modals
           document.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab') {;
-const modal = document.querySelector('.modal:not([style*="display: none"])');
+            if (e.key === 'Tab) {;
+
+const modal = document.querySelector('.modal:not([style*="display: none"]));;
+
               if (modal) {;
-const focusableElements = modal.querySelectorAll(
-                  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+
+const focusableElements = modal.querySelectorAll(;;
+
+                  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
                 );
-                const firstElement = focusableElements[0];
-                const lastElement = focusableElements[focusableElements.length - 1];
-                
+
+                const firstElement = focusableElements[0];;
+
+                const lastElement = focusableElements[focusableElements.length - 1];;
+
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
                     lastElement.focus();
+
                     e.preventDefault()}
+
                 } else {
                   if (document.activeElement === lastElement) {
                     firstElement.focus();
+
                     e.preventDefault()}
+
                 }
+
               }
+
             }
-            
+
             // Close modals with Escape key
-            if (e.key === 'Escape') {;
-const modal = document.querySelector('.modal:not([style*="display: none"])');
+            if (e.key === 'Escape) {;
+
+const modal = document.querySelector('.modal:not([style*="display: none"]));;
+
               if (modal) {;
-const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn');
+
+const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn);;
+
                 if (closeBtn) closeBtn.click()}
+
             }
+
           })}
-        
+
         // Add ARIA labels to interactive elements;
+
 function addAriaLabels() {
           // Add aria-labels to buttons without text;
-const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+
+const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby]));;
+
           iconButtons.forEach(button => {;
-const icon = button.querySelector('svg, i');
+
+const icon = button.querySelector('svg, i);;
+
             if (icon) {;
-const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
+
+const iconName = icon.getAttribute('class) || icon.tagName.toLowerCase();;
+
               button.setAttribute('aria-label', \`\${iconName} button\`)}
+
           });
-          
+
           // Add role="button" to clickable divs;
-const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
+
+const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]);;
+
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role')) {
-              div.setAttribute('role', 'button');
+              div.setAttribute('role', 'button);
+
               div.setAttribute('tabindex', '0')}
+
           });
-          
+
           // Add aria-expanded to collapsible elements;
-const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
+
+const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]);;
+
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded')) {
               element.setAttribute('aria-expanded', 'false')}
+
           })}
-        
+
         // Announce page changes to screen readers;
+
 function addLiveRegion() {;
-const liveRegion = document.createElement('div');
-          liveRegion.setAttribute('aria-live', 'polite');
-          liveRegion.setAttribute('aria-atomic', 'true');
-          liveRegion.className = 'sr-only';
+
+const liveRegion = document.createElement('div);;
+
+          liveRegion.setAttribute('aria-live', 'polite);
+
+          liveRegion.setAttribute('aria-atomic', 'true);
+
+          liveRegion.className = 'sr-only;
+
           liveRegion.style.cssText = \`
             position: absolute;
+
             width: 1 px;
+
             height: 1 px;
+
             padding: 0;
+
             margin: -1 px;
+
             overflow: hidden;
+
             clip: rect(0, 0, 0, 0);
+
             white-space: nowrap;
+
             border: 0;
+
           \`;
+
           document.body.appendChild(liveRegion);
-          
+
           // Announce navigation changes;
-const originalPushState = history.pushState;
+
+const originalPushState = history.pushState;;
+
           history.pushState = function() {
             originalPushState.apply(history, arguments);
+
             liveRegion.textContent = 'Page navigation complete'}}
-        
+
         // Initialize accessibility features
         document.addEventListener('DOMContentLoaded', function() {
           addSkipLink();
+
           addHighContrastToggle();
+
           addFontSizeControls();
+
           enhanceFocusManagement();
+
           addAriaLabels();
+
           addLiveRegion()});
-        
+
         // Add high contrast styles;
-const highContrastStyles = \`
+
+const highContrastStyles = \`;;
+
           .high-contrast {
             filter: contrast(150%) brightness(120%)}
+
           .high-contrast * {
             border-color: currentColor !important}
+
           .high-contrast button,
           .high-contrast a {
             border: 2 px solid currentColor !important}
+
         \`;
-        ;
-const styleSheet = document.createElement('style');
+
+        ';
+
+const styleSheet = document.createElement('style);;
+
         styleSheet.textContent = highContrastStyles;
+
         document.head.appendChild(styleSheet)})();
+
     </script>
   `;
-  
+
   // Insert accessibility script before closing body tag
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`);
-  
+
   fs.writeFileSync(indexPath, indexContent);
+
   // console.log removed for production
 }
 
 // Create accessibility statement;
-const accessibilityStatement = `# Accessibility Statement
+
+const accessibilityStatement = `# Accessibility Statement;;
+
 // 1. Generate accessibility report;
+
 function generateAccessibilityReport() {
   // console.log removed for production
 ;
-const accessibilityReport = {
+
+const accessibilityReport = {;;
+
     timestamp: new Date().toISOString()
     version: '1.0.0',
     summary:
         summary: {
       totalIssues: 0;
+
       criticalIssues: 0;
+
       warnings: 0;
+
       passed: 0},
     checks: [
       {,
@@ -285,6 +447,7 @@ const accessibilityReport = {
         name: "Skip links",
         status: "passed",
         description: "Skip links for keyboard navigation"}
+
     ],
     recommendations: [,
       "Continue regular accessibility audits",
@@ -296,28 +459,24 @@ const accessibilityReport = {
   };
 
   fs.writeFileSync(
+
     path.join(__dirname, '../public/accessibility-report.json'), 
     JSON.stringify(accessibilityReport, null, 2)
   );
+
   // console.log removed for production
 }
 
 // 2. Generate accessibility checklist;
+
 function generateAccessibilityChecklist() {
-<<<<<<< HEAD
   // console.log removed for production
 ;
-const checklist = {
+
+const checklist = {;;
+
     title: "Zion Tech Group Accessibility Checklist"
-    version: "1.0.0"
-=======
-  console.log('✅ Generating accessibility checklist...');
-  
-  const checklist = {
-    title: 'Zion Tech Group Accessibility Checklist',
-    version: '1.0.0',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    lastUpdated: new Date().toISOString()
+    version: "1.0.0"    lastUpdated: new Date().toISOString()
     categories: [,
       {,
         name: "Visual Design",
@@ -364,21 +523,27 @@ const checklist = {
           "Tested with high contrast mode"
         ]
       }
+
     ]
   };
 
   fs.writeFileSync(
+
     path.join(__dirname, '../public/accessibility-checklist.json'), 
     JSON.stringify(checklist, null, 2)
   );
+
   // console.log removed for production
 }
 
 // 3. Generate accessibility improvements;
+
 function generateAccessibilityImprovements() {
   // console.log removed for production
 ;
-const improvements = [
+
+const improvements = [;;
+
     {
       id: "skip-links",
       title: "Add Skip Links",
@@ -409,31 +574,28 @@ const improvements = [
       description: "Ensure all interactive elements are keyboard accessible",
       priority: "high",
       implementation: "Add keyboard event handlers where needed"}
+
   ];
 
   fs.writeFileSync(
+
     path.join(__dirname, '../public/accessibility-improvements.json'), 
     JSON.stringify(improvements, null, 2)
   );
+
   // console.log removed for production
 }
 
 // 4. Generate accessibility testing guide;
+
 function generateAccessibilityTestingGuide() {
-<<<<<<< HEAD
   // console.log removed for production
 ;
-const testingGuide = {
+
+const testingGuide = {;;
+
     title: "Accessibility Testing Guide"
-    version: "1.0.0"
-=======
-  console.log('🧪 Generating accessibility testing guide...');
-  
-  const testingGuide = {
-    title: 'Accessibility Testing Guide',
-    version: '1.0.0',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
-    lastUpdated: new Date().toISOString()
+    version: "1.0.0"    lastUpdated: new Date().toISOString()
     tools: [,
       {,
         name: "axe-core",
@@ -452,6 +614,7 @@ const testingGuide = {
         description: "Test with actual screen readers",
         usage: "NVDA (Windows), JAWS (Windows), VoiceOver (Mac)"
       }
+
     ],
     manualTests: [,
       "Navigate the entire site using only the keyboard",
@@ -476,17 +639,22 @@ Zion Tech Group is committed to ensuring digital accessibility for people with d
 ## Conformance Status
 This website is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
 // Run all accessibility enhancements;
+
 async function runAccessibilityEnhancements() {
   try {
     generateAccessibilityReport();
+
     generateAccessibilityChecklist();
+
     generateAccessibilityImprovements();
+
     generateAccessibilityTestingGuide();
-    
+
     // console.log removed for production
 } catch (error) {
     // console.error removed for production
 process.exit(1)}
+
 }
 
 ## Accessibility Features
@@ -526,6 +694,7 @@ This accessibility statement was last updated on ${new Date().toLocaleDateString
 If you have any questions or concerns about our accessibility efforts, please contact us at kleber@ziontechgroup.com or call +1 (302) 464-0950.
 `;
 
-fs.writeFileSync(path.join(__dirname, '../dist/accessibility-statement.md'), accessibilityStatement);
+fs.writeFileSync(path.join(__dirname, '../dist/accessibility-statement.md), accessibilityStatement);
+
 // console.log removed for production
 // console.log removed for production

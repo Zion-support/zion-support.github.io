@@ -4,14 +4,18 @@
 import { Link } from 'react-router-dom';
 
 import { Star, Phone } from 'lucide-react';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const Status: React.FC = () => {
-return (
 
+import React from 'react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer';
+
+';
+
+const Status: React.FC = () => {
   return (
+
     <div>Coming Soon</div>
   )
     
@@ -24,6 +28,7 @@ return (
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 // System status and service availability;
+
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -41,6 +46,7 @@ return (
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation;
+
           </Link>
 
             <a
@@ -48,6 +54,7 @@ return (
               <Phone className="w-4 h-4 mr-2" />
 
 // (302) 464-0950;
+
           </a>
           </div>
         </section>
@@ -57,10 +64,9 @@ return (
 
     </div>
 );
+
 }
+
   )};
 
-
 export default StatusPage;
-
-

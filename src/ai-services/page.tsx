@@ -1,23 +1,25 @@
 import React from 'react';
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const AIServicesPage: React.FC = () => {;
-const services = [
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const AIServicesPage: React.FC = () => {
-  const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+import { Brain, Zap, Shield, BarChart } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+
+import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
+
+import { Helmet } from 'react-helmet-async';
+
+import React from 'react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer;
+
+;
+
+const AIServicesPage: React.FC = () => {';
+
+const services = [    {;';
+
       titl,
     e: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -41,13 +43,17 @@ titletitle: 'AI Analytics & Insights',
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price:     ,
 $4}
+
   ];
+
 ;
-const benefits = [
+
+const benefits = [;;
+
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
-    '99.9% Uptime Guarantee'
+    99.9% Uptime Guarantee
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
@@ -69,42 +75,36 @@ const benefits = [
               Learn More
           <
       
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
+
 'use client';
+
 import React, { useState, useEffect } from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
+} from 'lucide-react;
 
-export default function AIServicesPage() {;
-const [activeTab, setActiveTab] = useState('overview');
+export default function AIServicesPage() {';
+
+const [activeTab, setActiveTab] = useState('overview);
+
   const [isVisible, setIsVisible] = useState(false);
 
-<<<<<<< HEAD
   useEffect(() => {
     setIsVisible(true)}, []);
-;
-const aiServices = [
-=======
-  useEffect (() => {
-    setIsVisible(true);
-  }, []);
 
-  const aiServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+;
+
+const aiServices = [    {;;
+
       id: 'ai-automation',
       title: 'AI Process Automation',
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
@@ -114,15 +114,15 @@ const aiServices = [
         'Real-time decision making',
         'Custom automation workflows',
         'API integration capabilities',
-        'Performance monitoring & analytics'
+        Performance monitoring & analytics
       ],
       pricing: {
         starter: { pric,
-    e: '$2,500', period: '
+    e: '$2,500, period: 
         professional: { pric,
-    e: '$7,500', period: '
+    e: '$7,500, period: 
         enterprise: { pric,
-    e: '$15,000', period: '
+    e: '$15,000, period: 
       },
       icon: Zap,
       color: 'from-cyan-500 to-blue-600',
@@ -138,15 +138,15 @@ const aiServices = [
         'Custom dashboard creation',
         'Machine learning models',
         'Data visualization tools',
-        'Automated reporting'
+        Automated reporting
       ],
       pricing: {
         starter: { pric,
-    e: '$3,000', period: '
+    e: '$3,000, period: 
         professional: { pric,
-    e: '$8,500', period: '
+    e: '$8,500, period: 
         enterprise: { pric,
-    e: '$18,000', period: '
+    e: '$18,000, period: 
       },
       icon: BarChart,
       color: 'from-purple-500 to-pink-600',
@@ -163,15 +163,15 @@ const aiServices = [
         'Sentiment analysis',
         'Knowledge base integration',
         'Human handoff capabilities',
-        'Performance analytics'
+        Performance analytics
       ],
       pricing: {
         starter: { pric,
-    e: '$1,500', period: '
+    e: '$1,500, period: 
         professional: { pric,
-    e: '$4,500', period: '
+    e: '$4,500, period: 
         enterprise: { pric,
-    e: '$12,000', period: '
+    e: '$12,000, period: 
       },
       icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
@@ -187,7 +187,7 @@ const aiServices = [
         'Video creation & editing',
         'SEO optimization',
         'Brand voice consistency',
-        'Content scheduling & publishing'
+        Content scheduling & publishing
       ],
       pricing: {
         starter: { pric,
@@ -195,7 +195,7 @@ const aiServices = [
         professional: { pric,
     e: '$6,000', period: '/month', features: ['Up to 1,000 pieces
         enterprise: { pric,
-    e: '$15,000', period: '
+    e: '$15,000, period: 
       },
       icon: Code,
       color: 'from-orange-500 to-red-600',
@@ -211,15 +211,15 @@ const aiServices = [
         'Automated incident response',
         'Vulnerability assessment',
         'Compliance monitoring',
-        'Security analytics dashboard'
+        Security analytics dashboard
       ],
       pricing: {
         starter: { pric,
-    e: '$4,000', period: '
+    e: '$4,000, period: 
         professional: { pric,
     e: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24
         enterprise: { pric,
-    e: '$25,000', period: '
+    e: '$25,000, period: 
       },
       icon: Shield,
       color: 'from-red-500 to-pink-600',
@@ -236,32 +236,37 @@ const aiServices = [
         'Custom model training',
         'Model deployment & scaling',
         'A
-        'Performance monitoring'
+        Performance monitoring
       ],
       pricing: {
         starter: { pric,
-    e: '$3,500', period: '
+    e: '$3,500, period: 
         professional: { pric,
-    e: '$9,000', period: '
+    e: '$9,000, period: 
         enterprise: { pric,
-    e: '$20,000', period: '
+    e: '$20,000, period: 
       },
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
       popular: false
     }
+
   ];
+
 ;
-const stats = [
+
+const stats = [;;
+
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24
     { ico,
     n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
+
   ];
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
@@ -272,19 +277,6 @@ const stats = [
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
       </Helmet>
-=======
-  return (<div>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing<
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." 
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" 
-        <meta property="og: title" content="AI Services - Zion Tech Group" 
-        <meta property="o,
-    g:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." 
-        <meta property="og: type" content="website" 
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       <div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section *
         <section className="relative py-20 l,
@@ -315,6 +307,7 @@ const stats = [
                   <div className="text-gray-300">{stat.label}<
                 <)
               ))}
+
             <
           <
         <
@@ -334,16 +327,19 @@ const stats = [
             <div className="grid grid-cols-1 l,
     g:grid-cols-2 gap-8">
               {aiServices.map((service), index) => (
+
                 <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                       <service.icon className="w-8 h-8 text-white" 
                     <
                     {service.popular && (
+
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       <
                     )}
+
                   <
 
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}<
@@ -366,6 +362,7 @@ const stats = [
                           <
                         <)
                       ))}
+
                     <
                   <
 
@@ -386,6 +383,7 @@ const stats = [
                   <
                 <
               ))}
+
             <
           <
         <
@@ -408,7 +406,6 @@ const stats = [
                 
                 <Mail className="w-5 h-5 mr-2" 
                 Email Us
-<<<<<<< HEAD
               </a>
             </div>
           </div>
@@ -416,13 +413,3 @@ const stats = [
       </div>
     </React.Fragment>
   )}
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

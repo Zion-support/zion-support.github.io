@@ -1,37 +1,40 @@
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
+
 'use client';
+
 import React, { useState } from 'react';
-<<<<<<< HEAD
+
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
+
+import Footer from '../components/Footer;
+
+';
+
 const FAQPage: React.FC = () => {
-return (
-;
-const [searchTerm, setSearchTerm] = useState('');
+  return (
+
+';
+
+const [searchTerm, setSearchTerm] = useState(');
+
   const [openItems, setOpenItems] = useState<number[]>
 );
+
 }([]);
+
 ;
-const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+const toggleItem = (index: number) => {;;
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      prev.includes(index) 
+    setOpenItems(prev =>       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
     )};
+
 ;
-const faqData = [
+
+const faqData = [;;
+
     {
       category: 'General Questions',
       questions: [
@@ -42,11 +45,12 @@ $4},
           question: 'What services do you offer?',
           answer:           ,
 questionquestion: 'How can I get started?',
-          answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
+          answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\ll assess your needs and recommend the best solutions for your business.
           questio,
     n: 'Do you offer custom solutions?',
           answer:         ,
 $4}
+
       ]
       category: 'AI Services',
           question: 'What AI services do you provide?',
@@ -82,7 +86,7 @@ categorycategory: 'Pricing & Billing',
 questionquestion: 'Do you offer free consultations?',
           answer:           ,
 questionquestion: 'Are there any setup fees?',
-          answer: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\'ll provide clear pricing details during consultation.'
+          answer: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\ll provide clear pricing details during consultation.
           question: 'Do you offer discounts for long-term contracts?',
           answer:       ,
 categorycategory: 'Support & Contact',
@@ -95,8 +99,11 @@ questionquestion: 'Do you offer remote support?',
 questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4];
+
 ;
-const filteredData = faqData.map(category => ({
+
+const filteredData = faqData.map(category => ({;;
+
     ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -104,16 +111,11 @@ const filteredData = faqData.map(category => ({
     )
   })).filter(category => category.questions.length > 0);
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -131,6 +133,7 @@ const filteredData = faqData.map(category => ({
                 placeholder="Search FAQs..."
                 value = { searchTerm };)
                 onChange = { (e) => setSearchTerm(e.target.value) };
+
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
               
@@ -141,29 +144,32 @@ const filteredData = faqData.map(category => ({
             {filteredData.map((category), categoryIndex) => (<div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
+
                 <
                 <div className="space-y-4">)
                   {category.questions.map((item, itemIndex) => {
-return (
+  return (
+
 ;
-const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
-                    
-<<<<<<< HEAD
+
+const globalIndex = categoryIndex * 100 + itemIndex;;
+
+                    const isOpen = openItems.includes(globalIndex);;
+
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
 );
-}
-=======
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                        <button
+
+}                        <button
                           onClick = { () => toggleItem(globalIndex) };
+
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700
                         >
                           <span className="text-white font-medium pr-4">{item.question}<
                           {isOpen ? (
+
                             <p className="text-gray-300 leading-relaxed">{item.answer}<)
                   })}
+
             ))}
 
           {/* Contact CTA *
@@ -188,14 +194,8 @@ const globalIndex = categoryIndex * 100 + itemIndex;
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" 
                 Contact Form
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-=======
-      <Footer 
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default FAQPage;
 
 import { Link } from 'react-router-dom';
@@ -203,41 +203,37 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components
 import Footer from '../components
 const FAQPage: React.FC = () => {
-<<<<<<< HEAD
-return (
-
   return (
+
     <div>Coming Soon</div>
-);
+)';
+
 }
 
-  )};
-=======
-  return (<div>Coming Soon<)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  const [searchTerm, setSearchTerm] = useState('');
+  )};  const [searchTerm, setSearchTerm] = useState(');
+
   const [openItems, setOpenItems] = useState<number[]>([]);
-const toggleItem = (inde)
+
+const toggleItem = (inde);;
+
   x: number) => {setOpenItems(prev =>});
+
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     )};
-  const faqData = [
+
+  const faqData = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   categor,
   y: 'General Questions',
       question,
@@ -246,12 +242,12 @@ const toggleItem = (inde)
       questio,
   n: 'What is Zion Tech Group?',
           answe,
-  r: 'Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.'
+  r: Zion Tech Group is a leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. We help businesses transform their operations with cutting-edge technology.
         },
           questio,
   n: 'What services do you offer?',
           answe,
-  r: 'We offer comprehensive AI services, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.'
+  r: We offer comprehensive AI services, IT infrastructure solutions, micro SAAS applications, cloud migration, cybersecurity, quantum computing, and digital transformation consulting. Our services span from AI automation to complete enterprise solutions.
           questio,
   n: 'How can I get started?',
           answe,
@@ -260,15 +256,16 @@ const toggleItem = (inde)
           questio,
   n: 'Do you offer custom solutions?',
           answe,
-  r: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
+  r: Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.
         }
+
       ]
       categor,
   y: 'AI Services',
           questio,
   n: 'What AI services do you provide?',
           answe,
-  r: 'We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.'
+  r: We provide comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, AI fintech applications, and custom AI development.
           questio,
   n: 'How much do AI services cost?',
           answe,
@@ -276,11 +273,11 @@ const toggleItem = (inde)
           questio,
   n: 'Do you provide AI training for our team?',
           answe,
-  r: 'Yes, we offer comprehensive AI training programs to help your team understand and effectively use AI technologies. We provide both on-site and remote training sessions.'
+  r: Yes, we offer comprehensive AI training programs to help your team understand and effectively use AI technologies. We provide both on-site and remote training sessions.
           questio,
   n: 'Can you integrate AI with our existing systems?',
           answe,
-  r: 'Absolutely! We specialize in integrating AI solutions with existing enterprise systems, ensuring seamless operation and minimal disruption to your current workflows.'
+  r: Absolutely! We specialize in integrating AI solutions with existing enterprise systems, ensuring seamless operation and minimal disruption to your current workflows.
       categor,
   y: 'IT Services',
           questio,
@@ -294,17 +291,17 @@ const toggleItem = (inde)
           questio,
   n: 'Can you help with cloud migration?',
           answe,
-  r: 'Absolutely! We specialize in cloud migration services for AWS, Azure, and GCP. We ensure seamless migration with 99.9% uptime guarantee and minimal business disruption.'
+  r: Absolutely! We specialize in cloud migration services for AWS, Azure, and GCP. We ensure seamless migration with 99.9% uptime guarantee and minimal business disruption.
           questio,
   n: 'What cybersecurity services do you provide?',
           answe,
-  r: 'We provide comprehensive cybersecurity services including threat detection, vulnerability assessment, security monitoring, compliance management, and incident response.'
+  r: We provide comprehensive cybersecurity services including threat detection, vulnerability assessment, security monitoring, compliance management, and incident response.
       categor,
   y: 'Micro SAAS Solutions',
           questio,
   n: 'What are Micro SAAS solutions?',
           answe,
-  r: 'Micro SAAS solutions are ready-to-use AI-powered applications that solve specific business problems. They include AI CRM, analytics dashboards, chatbot builders, and other specialized tools.'
+  r: Micro SAAS solutions are ready-to-use AI-powered applications that solve specific business problems. They include AI CRM, analytics dashboards, chatbot builders, and other specialized tools.
           questio,
   n: 'How quickly can I deploy a Micro SAAS solution?',
           answe,
@@ -313,29 +310,29 @@ const toggleItem = (inde)
           questio,
   n: 'Do I need technical expertise to use Micro SAAS?',
           answe,
-  r: 'No, our Micro SAAS solutions are designed to be user-friendly and require minimal technical expertise. We provide training and support to ensure smooth adoption.'
+  r: No, our Micro SAAS solutions are designed to be user-friendly and require minimal technical expertise. We provide training and support to ensure smooth adoption.
           questio,
   n: 'Can Micro SAAS solutions be customized?',
           answe,
-  r: 'Yes, while our Micro SAAS solutions are ready-to-use, they can be customized to better fit your specific business processes and requirements.'
+  r: Yes, while our Micro SAAS solutions are ready-to-use, they can be customized to better fit your specific business processes and requirements.
       categor,
   y: 'Pricing & Billing',
           questio,
   n: 'What are your pricing models?',
           answe,
-  r: 'We offer flexible pricing models including monthly subscriptions, project-based pricing, and enterprise contracts. Pricing depends on the scope and complexity of services required.'
+  r: We offer flexible pricing models including monthly subscriptions, project-based pricing, and enterprise contracts. Pricing depends on the scope and complexity of services required.
           questio,
   n: 'Do you offer free consultations?',
           answe,
-  r: 'Yes, we offer free initial consultations to assess your needs and recommend the best solutions. Contact us to schedule your free consultation.'
+  r: Yes, we offer free initial consultations to assess your needs and recommend the best solutions. Contact us to schedule your free consultation.
           questio,
   n: 'Are there any setup fees?',
           answe,
-  r: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\'ll provide clear pricing details during consultation.'
+  r: 'Setup fees vary by service type. Some services include setup in the monthly fee, while others may have one-time setup charges. We\ll provide clear pricing details during consultation.
           questio,
   n: 'Do you offer discounts for long-term contracts?',
           answe,
-  r: 'Yes, we offer attractive discounts for annual contracts and long-term partnerships. Contact us to discuss the best pricing options for your needs.'
+  r: Yes, we offer attractive discounts for annual contracts and long-term partnerships. Contact us to discuss the best pricing options for your needs.
       categor,
   y: 'Support & Contact',
           questio,
@@ -349,21 +346,17 @@ const toggleItem = (inde)
           questio,
   n: 'Do you offer remote support?',
           answe,
-  r: 'Yes, we provide comprehensive remote support services, allowing us to assist you quickly and efficiently without the need for on-site visits.'
+  r: Yes, we provide comprehensive remote support services, allowing us to assist you quickly and efficiently without the need for on-site visits.
           questio,
   n: 'How quickly do you respond to support requests?',
           answe,
-  r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
+  r: We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.
   ];
-<<<<<<< HEAD
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;)}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-}
+
+  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */};;
+
+  O: Add content}}
+
 /
     question,
   s: category.questions.filter(q =>)
@@ -371,25 +364,16 @@ const toggleItem = (inde)
 /
 /
   })).filter(category => category.questions.length > 0);
+
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
-          <div className="text-center mb-12"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-12"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-            <h1 className="text-4xl,"
+          <div className="text-center mb-12"></div>"            <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
           <
@@ -405,6 +389,7 @@ const toggleItem = (inde)
 type="text" placeholder="Search FAQs..."
 
                 value = { searchTerm };
+
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
   focus:outline-none,
@@ -420,22 +405,15 @@ type="text" placeholder="Search FAQs..."
           <div key={categoryIndex} className="mb-12"><
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"><
                   {category.category}
-<<<<<<< HEAD
+
                 </h2>"
                 <div className="space-y-4"></div>
                   {category.questions.map((item, itemIndex) => {}
+
   // TOD,
-  O: Add content}
-=======
-                <
-                <div className="space-y-4"><
-                  {category.questions.map ((item, itemIndex) => {}
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                    const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
+  O: Add content}                    const globalIndex = categoryIndex * 100 + itemIndex;;
+
+                    const isOpen = openItems.includes(globalIndex);;
 
           "
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"><
@@ -453,11 +431,13 @@ type="text" placeholder="Search FAQs..."
                             "
           <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /><
                           )}
+
                         <
                         {isOpen && ()}"
           <div className="px-6 pb-4"><
                             <p className="text-gray-300 leading-relaxed">{item.answer}<
                   })}
+
             ))}
 
 {/* Contact CTA *
@@ -476,18 +456,13 @@ type="text" placeholder="Search FAQs..."
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us;
+
                 href="
                 <MessageSquare className="w-4 h-4 mr-2" 
 
                 Contact Form;
-<<<<<<< HEAD
+
       <Footer /></Footer>
-    </React.Fragment>
-=======
-      <Footer /><
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default FAQPage;
+    </React.Fragment>export default FAQPage;
 
 export default FaqPage;
-

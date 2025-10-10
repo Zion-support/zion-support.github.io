@@ -1,16 +1,16 @@
 import React from 'react';
 
-
-
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
 
 import { CheckCircle, Star } from 'lucide-react';
-const BusinessAppsPage: React.FC = () => {
-return (
 
+const BusinessAppsPage: React.FC = () => {
   return (
+
     <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -26,8 +26,11 @@ return (
           </p>
         </section>
 );
+
 }
+
         {/* Key Benefits */}
+
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 
@@ -59,6 +62,7 @@ return (
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
             <div>{businessApps}
+
                 .filter(app => app.category === category)
                 .map((app, index) => ("
 <div className="text-4xl mb-4 text-center">{app.icon}</div>"
@@ -75,11 +79,14 @@ return (
           <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                             {feature}
+
                           </li>
                         ))}
+
                         {app.features.length > 3 && (}"
 <li className="text-xs text-gray-400">+{app.features.length - 3} more features</li>)
                         )}
+
                       </ul>"
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefit,
   s:</h5>
@@ -103,7 +110,5 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
       </main>
       <Footer /></Footer>
 </div>)}
+
 export default BusinessAppsPage;
-
-
-

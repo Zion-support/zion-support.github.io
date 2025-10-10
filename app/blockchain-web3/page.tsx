@@ -1,10 +1,15 @@
 'use client';
 
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const BlockchainWeb3Page: React.FC = () => {const features = [
+
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+
+';
+
+const BlockchainWeb3Page: React.FC = () => {const features = [;';
+
     {
       ico,
     n: Zap,
@@ -30,22 +35,16 @@ const BlockchainWeb3Page: React.FC = () => {const features = [
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24
     }
+
   ];
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
-      </Helmet>
-=======
-  return (<div>
-        <title>Blockchain & Web3 Solutions - Zion Tech Group<
-        <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      
+      </Helmet>      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -73,28 +72,15 @@ const BlockchainWeb3Page: React.FC = () => {const features = [
                   {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" 
                       {benefit}
-<<<<<<< HEAD
+
                     </li>
                   ));
+
                 </ul>
               </div>
             ));
+
           </div>
         </div>
       </div>
-    </React.Fragment>)
-=======
-                    <)
-                  ))}
-                <
-              <
-            ))}
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-export default BlockchainWeb3Page;
+    </React.Fragment>)export default BlockchainWeb3Page;

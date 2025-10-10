@@ -1,7 +1,8 @@
 'use client';
-import React from 'react';
-import React, { useState, useEffect } from 'react';
 
+import React from 'react';
+
+import React, { useState, useEffect } from 'react;
 
 interface PerformanceMetrics {
   loadTime: number,
@@ -15,65 +16,93 @@ interface PerformanceMetrics {
   memoryUsage: number,
   fps: number,
   [key: string]: number}
+
 ;
+
 const PerformanceDashboard: React.FC = () => {
 return (;
+
 const [metrics, setMetrics] = useState<PerformanceMetrics>
 );
+
 }({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0});
+
 const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {;
-const updateMetrics = () => {const navigation = performance.getEntriesByType(
-        'navigation'
+
+const updateMetrics = () => {const navigation = performance.getEntriesByType(;;
+
+        navigation
       )[0] as PerformanceNavigationTiming;
-const loadTime = navigation
+
+const loadTime = navigation;;
+
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
 
-      // Measure render time// Measure memory usage;
-let _memoryUsage = 0;
+      // Measure render time// Measure memory usage';
+
+let _memoryUsage = 0;';
+
       if ('memory' in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
 
       // Measure FPS (simplified);
-let _fps = 0;
-      if ($1) { let _lastTime = performance.now();
-        let _frameCount = 0;
-const measureFPS = (currentTime: number) => {
+
+let _fps = 0;;
+
+      if ($1) { let _lastTime = performance.now();;
+
+        let _frameCount = 0;;
+
+const measureFPS = (currentTime: number) => {;;
+
           frameCount++;
+
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+
             frameCount = 0;
+
             lastTime = currentTime}
+
           requestAnimationFrame(measureFPS);
+
         requestAnimationFrame(measureFPS);
+
       setMetrics({
         loadTime,
         renderTime,
         memoryUsage,
         fps});
+
     updateMetrics();
 
     // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);
 
   if (!isVisible) {
-    return (
+  return (
+
       <button
         onClick={() => setIsVisible(true);
+
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
         Show Performance
       </button>);
+
   return (
+
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
           onClick={() => setIsVisible(false);
+
           className="text-gray-500 hover:text-gray-700"
         >
           ×

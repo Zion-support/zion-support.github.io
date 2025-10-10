@@ -1,49 +1,59 @@
 'use client';
+
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components
 import Footer from '../components
 
 'use client';
+
 import React, { useState } from 'react';
-const LoginPage: React.FC = () => {;
+
+const LoginPage: React.FC = () => {';
+
 const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false)
   });
+
   const [showPassword, setShowPassword] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
+
 ;
-const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+
+const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
+
 const { name, value, type, checked } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }))};
+
 ;
-const handleSubmit = async (e: React.FormEvent) => {
+
+const handleSubmit = async (e: React.FormEvent) => {;;
+
     e.preventDefault();
+
     setIsLoading(true);
-    
+
     /
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsLoading(false);
-<<<<<<< HEAD
-    // Redirect to dashboard or home page
-    window.location.href = '/'};
-;
-const features = [
-=======
-    /
-    window.location.href = '
-  };
 
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+    setIsLoading(false);
+
+    // Redirect to dashboard or home page
+    window.location.href = '/};
+
+;
+
+const features = [    {;;
+
       icon: Shield,
       title: 'Secure Access',
       description:     ,
@@ -59,18 +69,14 @@ $4},
       title: 'Mobile Ready',
       description:     ,
 $4}
+
   ];
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <div className="max-w-6xl mx-auto px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">        <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Login Form *
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700
@@ -94,26 +100,15 @@ $4}
                       type="email"
                       name="email"
                       value = { formData.email };
+
                       onChange = { handleInputChange };
 
-<<<<<<< HEAD
   )};
+
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      placeholder="Enter your email"
-                    
-                  <
-    <div>Coming Soon<)
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   emai,
   l: '',
     passwor,
@@ -121,122 +116,94 @@ $4}
     rememberM,)
   e: false;)
   });
+
   const [showPassword, setShowPassword] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent;)
-<<<<<<< HEAD
+
+  const _handleInputChange = (e: React.ChangeEvent;);;
+
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
     const { name, value, type, checked } = e.target;
+
     setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
-}
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-}
+
+  O: Add content}}
+
 /
       [name]: type === 'checkbox' ? checked : value;)
-<<<<<<< HEAD
     }))};
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-}
+
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */};;
+
+  O: Add content}}
+
     e.preventDefault();
+
     setIsLoading(true);
+
     /
     await new Promise(resolve => setTimeout(resolve, 2000));
+
     setIsLoading(false);
-<<<<<<< HEAD
+
     // Redirect to dashboard or home page;
-    window.location.href = '/'};
-=======
-    /
-    window.location.href = '
-  };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  const features = [
+
+    window.location.href = '/};  const features = [;;
+
   /
   O: Add items;
-];;
-<<<<<<< HEAD
+
+];
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: Shield,
       titl,
   e: 'Secure Access',
       descriptio,
-  n: 'Bank-level security with multi-factor authentication'
+  n: Bank-level security with multi-factor authentication
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: CheckCircle,
       titl,
   e: '24
       descriptio,
-  n: 'Round-the-clock support for all your needs'
+  n: Round-the-clock support for all your needs
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   ico,
   n: Phone,
       titl,
   e: 'Mobile Ready',
       descriptio,
-  n: 'Access your account from any device, anywhere'
+  n: Access your account from any device, anywhere
     }
-  ];
+
+  ]';
+
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
-        <div className="max-w-6xl mx-auto px-4"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"><
-        <div className="max-w-6xl mx-auto px-4"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-          <div className="grid grid-cols-1,"
+        <div className="max-w-6xl mx-auto px-4"></div>"          <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-12 items-center"><
             {/* Left Side - Login Form *
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"><
@@ -262,9 +229,11 @@ $4}
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
                     <input
-                      type = { showPassword ? 'text' : 'password' };
+                      type = { showPassword ? 'text' : 'password };
+
                       name="password"
                       value = { formData.password };
+
                       onChange = { handleInputChange };
 
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -274,6 +243,7 @@ $4}
                     <button
                       type="button"
                       onClick = { () => setShowPassword(!showPassword) };
+
                       className="absolute right-3 top-1/2 transform -translate-y-1
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : 
@@ -282,7 +252,9 @@ $4}
                       type="checkbox"
                       name="rememberMe"
                       checked = { formData.rememberMe };
+
                       onChange = { handleInputChange };
+
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus: ring-cyan-400 focus:ring-2"
                     
                     <span className="ml-2 text-sm text-gray-300">Remember me<
@@ -299,6 +271,7 @@ $4}
                 <button
                   type="submit"
                   disabled = { isLoading };
+
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed"
                 >
@@ -308,12 +281,14 @@ $4}
                     <)
                   ) : ('Sign In')
                   )}
+
                 <
               <
 
               <div className="mt-8 text-center">
                 <p className="text-gray-300">
                   Don't have an account?{' '}
+
                   <a
                     href="
                     className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
@@ -372,9 +347,12 @@ $4}
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
                     <input
-type = { showPassword ? 'text' : 'password' };
+type = { showPassword ? 'text' : 'password };
+
                       name="password" value = { formData.password };
+
                       onChange = { handleInputChange };
+
 /
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -383,6 +361,7 @@ className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-l
 
           <button)
 type="button" onClick = { () => setShowPassword(!showPassword) };
+
                       className="absolute right-3 top-1/2 transform -translate-y-1
 
 /
@@ -393,6 +372,7 @@ type="button" onClick = { () => setShowPassword(!showPassword) };
 type="checkbox" name="rememberMe"
 
                       checked = { formData.rememberMe };
+
                       onChange={handleInputChange}"
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
   focus:ring-cyan-400,"
@@ -414,6 +394,7 @@ type="checkbox" name="rememberMe"
 
                 <button
 type="submit" disabled = { isLoading };
+
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed"
 
@@ -445,6 +426,7 @@ type="submit" disabled = { isLoading };
               <div className="mt-8 pt-6 border-t border-gray-700"><
                 <p className="text-center text-sm text-gray-400 mb-4"><
                   Or continue with;
+
                 <
                 <div className="grid grid-cols-2 gap-3"><
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
@@ -493,6 +475,7 @@ type="submit" disabled = { isLoading };
                     <
                   <
                 ))}
+
               <
 
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
@@ -534,20 +517,10 @@ type="submit" disabled = { isLoading };
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
 
     </div>
   )};
-=======
-      <Footer 
-    <
-
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default LoginPage;
-

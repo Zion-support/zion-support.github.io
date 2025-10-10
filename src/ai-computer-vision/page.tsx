@@ -1,19 +1,25 @@
 import React from 'react';
 
-
-
 import { Link } from 'react-router-dom';
+
 import Navigation from '../components/Navigation';
+
 import Footer from '../components/Footer';
+
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 
-import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
+import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react;
+
 const AIComputerVisionPage: React.FC = () => {;
-const features = [];
+
+const features = [];';
+
   return (
+
     {// TODO: Add content}
 
-};
+}';
+
   ico,
   n: Eye,
       titl,
@@ -39,8 +45,11 @@ const features = [];
       benefit,
   s: ['Identity verification', 'Access control', 'Privacy protection']
     }
+
   ];
-  const applications = [
+
+  const applications = [;;
+
       titl,
   e: 'Security & Surveillance',
       descriptio,
@@ -48,7 +57,8 @@ const features = [];
       ico,
   n: Shield,
       useCase,
-  s: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
+  s: ['Intrusion detection', 'Person tracking', 'Anomaly detection];
+
       titl,
   e: 'Manufacturing',
       descriptio,
@@ -56,8 +66,10 @@ const features = [];
       ico,
   n: Settings,
       useCase,
-  s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
-const pricing = [
+  s: ['Defect detection', 'Quality assurance', 'Process monitoring];
+
+const pricing = [;;
+
       nam,
   e: 'Starter',
       pric,
@@ -68,17 +80,18 @@ const pricing = [
   s: [
   // TOD,
   O: Add items];
+
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
-//         'Standard API'
+//         Standard API
 //       ],
 
       popular: false,;
-const PagePage: React.FC = () => {
-return (
 
+const PagePage: React.FC = () => {
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
@@ -86,9 +99,11 @@ return (
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision;
+
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
 // Advanced Visual Intelligence Solutions;
+
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
@@ -98,20 +113,25 @@ Transform your business with cutting-edge computer vision technology. From objec
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started;
+
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Eye className="w-5 h-5" />
               +1 302 464 0950;
+
           </div>
         </section>
 );
+
 }
 
         {/* Features Section */}
+
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
+
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -123,6 +143,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
                   {feature.title}
+
                 </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
                   {feature.description}"
@@ -131,10 +152,13 @@ Transform your business with cutting-edge computer vision technology. From objec
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}
+
                     </li>
                   ))}
+
                 </ul>
         {/* Applications Section */}
+
             Industry Applications;"
           <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>
@@ -155,17 +179,22 @@ Transform your business with cutting-edge computer vision technology. From objec
           <div key={useCaseIndex} className="flex items-center text-sm text-gray-300"></div>"
                       <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></ArrowRight>
                       {useCase}
+
 {/* Pricing Section */}
+
             Choose Your Plan;"
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricing.map((plan, index) => ()}
+
           <div key={index} className={/* TODO: Fix JSX expression */}
+
   hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                 {plan.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold"></div>
 Most Popular;
+
                 )}"
                 <div className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2 neon-text">{plan.name}</h3>"
@@ -177,23 +206,20 @@ Most Popular;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+
   // TOD,
   O: Add content}
+
 //                     plan.popular;
-//                       ? 'cyber-button'
+
+//                       ? cyber-button
                       : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-slate-900'`
                   }`}
+
         {/* CTA Section */}
-        
-          
-          
-          
-          
-          
-          
-          
+
           "
           <section className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
@@ -204,17 +230,16 @@ Ready to See the Future?"
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
 
                 Start Your Vision Journey;
+
                 href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
 
                 Request Demo;
+
       </main>
       <Footer /></Footer>
 
     </div>
   )};
 
-
 export default PagePage;
-
-

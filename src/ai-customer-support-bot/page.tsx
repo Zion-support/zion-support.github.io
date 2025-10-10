@@ -1,23 +1,25 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const AICustomerSupportBotPage: React.FC = () => {;
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+import { Helmet } from 'react-helmet-async';
+
+import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
+
+import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+
+'use client';
+
+import React from 'react';
+
+import Navigation from '../components/Navigation';
+
+import Footer from '../components/Footer;
+
+;
+
+const AICustomerSupportBotPage: React.FC = () => {';
+
+const features = [    {;';
+
       ico,
     n: Bot,
       title: '24
@@ -38,12 +40,16 @@ const AICustomerSupportBotPage: React.FC = () => {
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
+
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
       name: 'Starter',
       price: '$149',
-      period: '
+      period: 
       descriptio,
     n: 'Perfect for small businesses',
       features: [
@@ -51,7 +57,7 @@ const pricingPlans = [
         'Basic AI responses',
         'Email support',
         'Basic analytics',
-        'Standard integrations'
+        Standard integrations
       ],
       popular: false
       nam,
@@ -63,7 +69,7 @@ const pricingPlans = [
         'Priority support',
         'Advanced analytics',
         'Custom integrations',
-        'Multi-language support'
+        Multi-language support
       popular: true
       nam,
     e: 'Enterprise',
@@ -75,8 +81,10 @@ const pricingPlans = [
         'Custom analytics',
         'White-label options',
         'API access',
-        'Custom training';
-const stats = [
+        'Custom training;
+
+const stats = [;;
+
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
@@ -113,17 +121,21 @@ const stats = [
                 {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" 
                     {benefit}
+
                   <
               <
 
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans<
           <div className="grid md: grid-cols-3 gap-8">)
             {pricingPlans.map((plan), index) => (
+
               <div key={index} className = { `bg-slate-800
                 {plan.popular && (
+
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
                 ) };
+
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}<
                 <div className="text-3xl font-bold text-white mb-1">
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}<
@@ -131,6 +143,7 @@ const stats = [
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
+
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
                   Get Started
                 <
@@ -146,19 +159,17 @@ const stats = [
     r:text-slate-900 transition-colors">
               View Case Studies
       
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default $1;
+
 'use client';
+
 import React, { useState, useEffect } from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
 
-export default AICustomerSupportBotPage;
+export default AICustomerSupportBotPage';

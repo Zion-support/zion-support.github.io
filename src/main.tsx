@@ -1,7 +1,11 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom/client';
+
 import App from '../App';
+
 import './globals.css';
+
 import { measureWebVitals } from './utils/performanceMonitor';
 
 // Initialize performance monitoring
@@ -17,29 +21,39 @@ if ('serviceWorker' in navigator) {
         if (process.env.NODE_ENV === 'development') {
           // console.log removed for production
 }
-        
+
         // Handle updates
-        registration.addEventListener('updatefound', () => {;
-const newWorker = registration.installing;
+        registration.addEventListener('updatefound, () => {;
+
+const newWorker = registration.installing;;
+
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                 // New content is available, prompt user to refresh
                 if (confirm('New version available! Refresh to update?')) {
                   window.location.reload()}
+
               }
+
             })}
+
         })})
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently
         if (process.env.NODE_ENV === 'development') {
           // console.log removed for production
 }
+
       })})}
+
 ;
-const root = document.getElementById('root');
+
+const root = document.getElementById('root);;
+
 if (root) {
   ReactDOM.createRoot(root).render(
+
     <React.StrictMode>
       <App />
     </React.StrictMode>

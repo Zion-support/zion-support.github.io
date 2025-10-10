@@ -1,13 +1,23 @@
 'use client';
+
 import React from 'react';
+
 import { Zap, ArrowRight } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+import Footer from '../components/Footer;
+
 ;
-const AIAutomationPage: React.FC = () => {;
-const features = [
+
+const AIAutomationPage: React.FC = () => {';
+
+const features = [;';
+
     {
       icon: Settings,
       title: 'Process Automation',
@@ -32,9 +42,13 @@ const features = [
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
+
   ];
+
 ;
-const pricingPlans = [
+
+const pricingPlans = [;;
+
     {
       name: 'Starter',
       price: '$1,400',
@@ -45,7 +59,7 @@ const pricingPlans = [
         'Basic AI decision making',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+        Basic analytics
       ],
       popular: false
     },
@@ -60,7 +74,7 @@ const pricingPlans = [
         'Priority support',
         'Custom integrations',
         'Advanced analytics',
-        'Workflow optimization'
+        Workflow optimization
       ],
       popular: true
     },
@@ -76,21 +90,27 @@ const pricingPlans = [
         'Custom development',
         'White-label options',
         'API access',
-        'Dedicated support'
+        Dedicated support
       ],
       popular: false
     }
+
   ];
+
 ;
-const stats = [
+
+const stats = [;;
+
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
+
   ];
 
 export default function AIAutomationPage() {
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">

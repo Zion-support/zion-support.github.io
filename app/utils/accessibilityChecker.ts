@@ -1,32 +1,40 @@
 'use client';
+
 import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
 const AccessibilityCheckerPage: React.FC = () => {
-  const features = [
+  const features = [;';
+
     {
       ico,
     n: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: Advanced AI technology to transform your business operations and improve efficiency
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: Lightning-fast processing and real-time analytics for optimal results
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: Bank-level security with encryption and compliance standards
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: Worldwide deployment and support for international businesses
     }
+
   ];
-  const benefits = [
+
+  const benefits = [;;
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -34,12 +42,9 @@ const AccessibilityCheckerPage: React.FC = () => {
     '24
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    Proven track record of success
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
         <title>AccessibilityChecker | Zion Tech Group<
@@ -65,55 +70,13 @@ const AccessibilityCheckerPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AccessibilityChecker | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AccessibilityChecker
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced accessibilitychecker solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-<<<<<<< HEAD
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-=======
-              <button></button>
->>>>>>> main
-                Learn More
+                                Learn More
               <
             <
           <
         <
       <
 
-<<<<<<< HEAD
       {/* Features Section *
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -122,30 +85,10 @@ const AccessibilityCheckerPage: React.FC = () => {
     d:text-4xl font-bold text-white mb-4">
               Why Choose Our AccessibilityChecker?
             <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AccessibilityChecker?
-            </h2>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-            <p></p>
->>>>>>> main
-              Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
             <
           <
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8">)
             {features.map((feature), index) => (<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white
@@ -156,6 +99,7 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}<
               <)
             ))}
+
           <
         <
       <
@@ -167,11 +111,7 @@ const AccessibilityCheckerPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-          <div></div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-            {features.map((feature, index) => (
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">            {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
@@ -180,30 +120,26 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
       {/* Benefits Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our accessibilitychecker solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-            <p></p>
->>>>>>> main
-              Experience the power of our accessibilitychecker solutions for your business.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">              Experience the power of our accessibilitychecker solutions for your business.
             <
           <
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 m,
     d:grid-cols-2 gap-6">
             {benefits.map((benefit), index) => (<div key={index} className="flex items-start space-x-3">
@@ -211,6 +147,7 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <p className="text-gray-300 text-lg">{benefit}<
               <)
             ))}
+
           <
         <
       <
@@ -237,20 +174,19 @@ const AccessibilityCheckerPage: React.FC = () => {
         <
       <
     <
-  );
-=======
-          <div></div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-            {benefits.map((benefit, index) => (
+  );            {benefits.map((benefit, index) => (
+
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
       {/* CTA Section */}
+
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -274,12 +210,6 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-=======
-    </>
-  ));)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+  );};
+
 export default AccessibilityCheckerPage;

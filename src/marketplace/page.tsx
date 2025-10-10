@@ -1,25 +1,25 @@
 import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
+
 'use client';
+
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const MarketplacePage: React.FC = () => {;
-const [activeCategory, setActiveCategory] = useState('products');
-=======
-import Navigation from '../components
-import Footer from '../components
 
-const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  const [searchTerm, setSearchTerm] = useState('');
+import Footer from '../components/Footer;
+
+';
+
+const MarketplacePage: React.FC = () => {';
+
+const [activeCategory, setActiveCategory] = useState('products');  const [searchTerm, setSearchTerm] = useState(');
+
 ;
-const categories = [
+
+const categories = [;;
+
     {
       id: 'products',
       name: 'Products',
@@ -44,9 +44,13 @@ idid: 'equipment',
       descriptio,
     n:     ,
 $4}
+
   ];
+
 ;
-const products = [
+
+const products = [;;
+
       id: 1,
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -93,8 +97,10 @@ const products = [
     s: 45,
       image: '🔒',
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
-      vendor: 'QuantumSec',;
-const talent = [
+      vendor: 'QuantumSec,;
+
+const talent = [;;
+
       name: 'Dr. Sarah Chen',
       title: 'AI Research Scientist',
       expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
@@ -119,23 +125,13 @@ const talent = [
       expertise: ['Penetration Testing', 'Security Audits', 'Compliance', 'Incident Response'],
       experience: '10 years',
       projects: 89,
-<<<<<<< HEAD
       rate: '$180/hour',
       image: '👩‍🔬',
       available: false;
-const equipment = [
-      name: 'AI Workstation Pro',
-=======
-      rate: '$180
-      imag,
-    e: '👩‍🔬',
-      available: false
 
-  const equipment = [
-      nam,
-    e: 'AI Workstation Pro',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      description: 'High-performance workstation optimized for AI development and training',
+const equipment = [;;
+
+      name: 'AI Workstation Pro',      description: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
       price: '$4,999',
       reviews: 23,
@@ -151,39 +147,34 @@ const equipment = [
       review,
     s: 15,
       image: '⚛️',
-<<<<<<< HEAD
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
-      vendor: 'QuantumCloud',;
-const getCurrentItems = () => {
-=======
-      features: ['100 qubits', '24
-      vendor: 'QuantumCloud',
+      vendor: 'QuantumCloud,;
 
-  const getCurrentItems = () => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    switch (activeCategory) {
+const getCurrentItems = () => {    switch (activeCategory) {;;
+
       case 'products':
         return products;
+
       case 'talent':
         return talent;
+
       case 'equipment':
         return equipment;
-      default:
-<<<<<<< HEAD
-        return []};
-;
-const filteredItems = getCurrentItems().filter(item =>
-=======
-        return [];
-  };
 
-  const filteredItems = getCurrentItems().filter(item =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      default:
+        return []};
+
+;
+
+const filteredItems = getCurrentItems().filter(item =>    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
+
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
 ;
-const stats = [
+
+const stats = [;;
+
       value: '500+',
       label: 'Products Available',
       color:       ,
@@ -196,18 +187,11 @@ valuevalue: '100+',
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
-<<<<<<< HEAD
-      color: 'text-yellow-400';
-const benefits = [
-      icon: CheckCircle,
-=======
-      color: 'text-yellow-400'
+      color: 'text-yellow-400;
 
-  const benefits = [
-      ico,
-    n: CheckCircle,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-      title: 'Verified Vendors',
+const benefits = [;;
+
+      icon: CheckCircle,      title: 'Verified Vendors',
       description:       ,
 icon$5: Shield,
       title: 'Secure Transactions',
@@ -218,18 +202,13 @@ icon$5: Clock,
     n:       ,
 icon$5: Award,
       title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
+      description: 100% satisfaction guarantee on all purchases
 
-<<<<<<< HEAD
   return (
+
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
             <h1 className="text-4xl m,
@@ -246,7 +225,8 @@ icon$5: Award,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">
             {stats.map((stat), index) => (<div key={index} className="text-center">)
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} 
+                  <stat.icon className={`w-8 h-8 ${stat.color}`}
+
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}<
                 <div className="text-gray-300 text-sm">{stat.label}<)
             ))}
@@ -260,7 +240,9 @@ icon$5: Award,
                   type="text"
                   placeholder="Search marketplace..."
                   value = { searchTerm };
+
                   onChange = { (e) => setSearchTerm(e.target.value) };
+
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400
                 
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hove,
@@ -269,11 +251,13 @@ icon$5: Award,
               {categories.map((category) => (<button
                   key = { category.id };)
                   onClick = { () => setActiveCategory(category.id) };
+
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700
                   }`}
+
                 >
                   <category.icon className="w-5 h-5 mr-2" 
                   <span className="font-medium">{category.name}<
@@ -282,10 +266,12 @@ icon$5: Award,
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length});
+
             <
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-6">
               {filteredItems.map((item) => (
+
                 <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
                   <div className="flex items-start mb-4">
                     <div className="text-4xl mr-4">{item.image}<
@@ -293,9 +279,11 @@ icon$5: Award,
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-lg font-semibold text-white">{item.name}<
                         {item.verified && (
+
                           <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
                             <CheckCircle className="w-3 h-3 text-white" 
                         )}
+
                       <p className="text-gray-300 text-sm mb-2">{item.description}<
                       <div className="flex items-center text-sm text-gray-400 mb-2">
                         <span className="mr-2">{item.category}<
@@ -307,24 +295,16 @@ icon$5: Award,
                           {item.features.map((feature), index) => (<li key={index} className="text-sm text-gray-300 flex items-start">
                               
                         <div className="flex items-center">
-<<<<<<< HEAD
                           <Star className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
                         <div className="text-lg font-bold text-cyan-400">{item.price}</div>
                     </React.Fragment>
-=======
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" 
-                          <span className="text-sm text-white font-medium">{item.rating}<)
-                          <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)<
-                        <div className="text-lg font-bold text-cyan-400">{item.price}<
-                    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
                   {activeCategory === 'talent' && (<h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise: <
                         <div className="flex flex-wrap gap-1">)
                           {item.expertise.map((skill), index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
                               {skill}
+
                             <)
                           <span className="text-sm text-gray-400 ml-1">({item.projects} projects)<
                         <div className="text-lg font-bold text-cyan-400">{item.rate}<
@@ -342,7 +322,7 @@ icon$5: Award,
 
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
                     {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
-                    
+
               Why Choose Our Marketplace?
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-6">)
@@ -374,30 +354,23 @@ icon$5: Award,
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
   return (
+
     <div>Coming Soon</div>
 
   )};
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-const categories = [
+
+  const [activeCategory, setActiveCategory] = useState('products);
+
+  const [searchTerm, setSearchTerm] = useState(');
+
+const categories = [;;
+
     {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-      <Footer 
-  return (<div>Coming Soon<)
-  );
-};
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-const categories = [
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-};
+
+  O: Add content}};
+
   i,
   d: 'products',
       nam,
@@ -409,7 +382,7 @@ const categories = [
       bgColo,
   r: 'bg-blue-500
       descriptio,
-  n: 'AI-powered software products and solutions'
+  n: AI-powered software products and solutions
     },
       i,
   d: 'talent',
@@ -503,11 +476,12 @@ const categories = [
                 href="tel: +13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" 
                 (302) 464-0950;
+
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
 
                 Email Us;
+
       <Footer /><
 export default MarketplacePage;
-

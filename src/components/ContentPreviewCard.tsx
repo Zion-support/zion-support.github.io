@@ -1,12 +1,15 @@
-import React from 'react';
+import React from 'react;
 
 interface ContentPreviewCardProps {// TODO: Add content}
 
 };
+
   i,
   d: string;
+
     titl,
   e: string;
+
     descriptio,
   n: string;,
     categor,
@@ -19,20 +22,31 @@ interface ContentPreviewCardProps {// TODO: Add content}
   h: string;,
     imag,
   e: string;
+
   featured?: boolean;
+
   stats?: {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   view,
   s: number;,
     engagemen,
-  t: number};
+  t: number}';
+
   excerpt?: string}
+
 const,
-  ContentPreviewCard: React.FC;
+  ContentPreviewCard: React.FC';
+
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
   // id,
 //   title,
 //   description,
@@ -45,19 +59,31 @@ const,
 //   stats,
 //   excerpt;)
 }) => {if (num >= 1000) {}
+
   // TOD,
   O: Add content}
+
       return (num / 1000).toFixed(1) + 'k'}
+
     return num.toString()};
-  const getCategoryColor = (categor)
+
+  const getCategoryColor = (categor);;
+
   y: string): string => {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
     const,
   colors: {/* TODO: Fix JSX expression */}
+
   y: string]: string } = {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
@@ -65,27 +91,25 @@ const,
       'Cost Optimization': 'from-yellow-500 to-orange-600',
       'Intelligence': 'from-indigo-500 to-purple-600',
       'Transformation': 'from-teal-500 to-blue-600',
-      'default': 'from-gray-500 to-gray-600'
+      'default': from-gray-500 to-gray-600
     };
-    return colors[category] || colors.default};
+
+    return colors[category] || colors.default}';
+
   return (<div>Coming Soon</div>)
   )
     
           <article className={/* TODO: Fix JSX expression */}
+
   hover:-translate-y-1 ${}
+
   // TOD,
   O: Add content}
-      featured ? 'ring-2 ring-indigo-200' : ''
+
+      featured ? 'ring-2 ring-indigo-200' : 
     }`}></article>
       {/* Image/Visual Header */}
-      
-          
-          
-          
-          
-          
-          
-          
+
           `
           <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
         <div className="text-center text-white"></div>"
@@ -93,28 +117,35 @@ const,
           <div className="text-sm font-medium opacity-90">{category}</div>
         </div>
         {/* Featured Badge */}
+
         {featured && ()}"
           <div className="absolute top-4 left-4"></div>"
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold"></span>
 // Featured;
+
           </span>
           </div>
         )}
+
         {/* Stats Overlay */}
+
         {stats && ()}"
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
             <div className="text-center"></div>"
               <div className="text-lg font-bold text-white"></div>
                 {formatNumber(stats.views)}
+
               </div>"
               <div className="text-xs text-white opacity-90">views</div>
             </div>
           </div>
         )}
+
         {/* Read Time Badge */}"
         <div className="absolute bottom-4 left-4"></div>"
           <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
             {readTime}
+
           </span>
         </div>
       </div>
@@ -123,15 +154,19 @@ const,
         <div className="mb-3"></div>"
           <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
             {category}
+
           </span>
         </div>"
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2"></h3>
           {title}
+
         </h3>"
         <p className="text-gray-600 mb-4 line-clamp-3"></p>
           {excerpt || description}
+
         </p>
         {/* Stats Row */}
+
         {stats && ()}"
           <div className="flex items-center justify-between mb-4 text-sm"></div>"
             <div className="flex items-center space-x-4"></div>"
@@ -151,6 +186,7 @@ const,
             </div>
           </div>
         )}
+
         {/* Date and CTA */}"
         <div className="flex items-center justify-between"></div>"
           <span className="text-sm text-gray-500">{date}</span>
