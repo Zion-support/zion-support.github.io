@@ -2,8 +2,15 @@ import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 
+// Import enhancers
+import PerformanceEnhancer from './utils/performanceEnhancer';
+import SEOEnhancer from './components/SEOEnhancer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./pageOptimized'));
+const HomePage = lazy(() => import('./page-optimized'));
 
 // AI Services Pages
 const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));

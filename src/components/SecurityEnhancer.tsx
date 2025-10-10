@@ -218,7 +218,7 @@ const SecurityEnhancer: React.FC = () => {
     };
   }, []);
 
-  // Monitor for unusual network requests
+  // Monitor for suspicious code and network requests
   useEffect(() => {
     checkSuspiciousCode();
 
@@ -235,6 +235,7 @@ const SecurityEnhancer: React.FC = () => {
       return originalFetch.apply(window, args);
     };
 
+    // Cleanup function
     return () => {
       window.fetch = originalFetch;
     };
