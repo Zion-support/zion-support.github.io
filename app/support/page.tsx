@@ -77,7 +77,6 @@ icon: Mail,
     },
     {
       name: 'Live Chat',
-      description: 'Instant help when you need it most',
       icon: MessageCircle,
       title: 'Live Chat',
       description: 'Chat with our support team in real-time',

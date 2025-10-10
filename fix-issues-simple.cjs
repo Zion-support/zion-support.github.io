@@ -1,68 +1,12 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
-
-// Function to fix JSX syntax errors
-function fixJSXErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix common JSX issues
-    const fixes = [
-      // Fix missing closing tags
-      { pattern: /<div([^>]*)>\s*$/gm, replacement: '<div$1></div>' },
-      // Fix unclosed JSX elements
-      { pattern: /<([a-zA-Z][a-zA-Z0-9]*)([^>]*?)(?<!/)>(?!.*<\/\1>)/gs, replacement: (match, tag, attrs) => {
-        // Only fix if it's not a self-closing tag and doesn't have a closing tag
-        if (!match.includes('</' + tag + '>') && !match.endsWith('/>')) {
-          return match + '</' + tag + '>';
-        }
-        return match;
-      }},
-      // Fix malformed JSX expressions
-      { pattern: /}\s*\)\s*\)\s*\)/g, replacement: '})' },
-      // Fix unterminated regular expressions in JSX
-      { pattern: /<([^>]*?)\s*\/\s*$/gm, replacement: '<$1 />' },
-      // Fix missing opening tags
-      { pattern: /<\/div>\s*<\/section>/g, replacement: '</div>\n          </div>\n        </section>' },
-      // Fix JSX fragment issues
-      { pattern: /<>\s*$/gm, replacement: '<React.Fragment>' },
-      { pattern: /^\s*<\/>/gm, replacement: '</React.Fragment>' }
-    ];
-
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/\s+$/gm, '');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed JSX errors in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
 // Function to create clean versions of problematic files
 function createCleanFile(filePath) {
-  const fileName = path.basename(filePath);
-  const dirName = path.dirname(filePath);
+  const fileName = filePath.split('/').pop();
   
-  // Create clean versions for known problematic files
   const cleanFiles = {
     'consultation/page.tsx': `'use client';
 
@@ -276,7 +220,189 @@ const ConsultationPage: React.FC = () => {
   );
 };
 
-export default ConsultationPage;`
+export default ConsultationPage;`,
+    'case-studies/page.tsx': `'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, TrendingUp, Award } from 'lucide-react';
+
+const CaseStudiesPage: React.FC = () => {
+  const caseStudies = [
+    {
+      id: '1',
+      title: 'AI-Powered Supply Chain Optimization',
+      client: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Inefficient supply chain management leading to 30% waste and delayed deliveries',
+      solution: 'Implemented AI-driven demand forecasting and automated inventory management',
+      results: [
+        '40% reduction in inventory costs',
+        '25% improvement in delivery times',
+        '60% decrease in waste',
+        'ROI of 300% within 6 months'
+      ],
+      image: '/images/case-studies/supply-chain.jpg',
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'Quantum-Enhanced Financial Modeling',
+      client: 'Investment Bank Ltd',
+      industry: 'Finance',
+      challenge: 'Complex risk calculations taking days to complete with traditional methods',
+      solution: 'Deployed quantum computing algorithms for real-time risk assessment',
+      results: [
+        '95% faster risk calculations',
+        '50% more accurate predictions',
+        'Real-time decision making',
+        'Competitive advantage in trading'
+      ],
+      image: '/images/case-studies/quantum-finance.jpg',
+      featured: false
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Transformation',
+      client: 'Healthcare Network',
+      industry: 'Healthcare',
+      challenge: 'Multiple security breaches threatening patient data and compliance',
+      solution: 'Comprehensive security overhaul with AI-powered threat detection',
+      results: [
+        'Zero security incidents in 12 months',
+        '100% compliance with HIPAA',
+        '50% reduction in security costs',
+        'Enhanced patient trust'
+      ],
+      image: '/images/case-studies/healthcare-security.jpg',
+      featured: false
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '98%', label: 'Client Satisfaction' },
+    { number: '300%', label: 'Average ROI' },
+    { number: '50+', label: 'Industries Served' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Explore our successful case studies showcasing AI, quantum computing, and digital transformation solutions for various industries." />
+        <meta name="keywords" content="case studies, AI solutions, quantum computing, digital transformation, success stories, Zion Tech Group" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Success Stories
+              </span>
+              <br />
+              <span className="text-white">Real Results</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how we've helped businesses across industries achieve remarkable results with our innovative solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {caseStudies.map((study) => (
+              <div key={study.id} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border ${study.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/10'} hover:border-purple-400 transition-all duration-300`}>
+                {study.featured && (
+                  <div className="flex items-center gap-2 mb-4">
+                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    <span className="text-yellow-400 text-sm font-semibold">Featured Case Study</span>
+                  </div>
+                )}
+                
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-bold text-white">{study.title}</h3>
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
+                    {study.industry}
+                  </span>
+                </div>
+                
+                <p className="text-gray-300 mb-6"><strong>Client:</strong> {study.client}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
+                  <p className="text-gray-300">{study.challenge}</p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
+                  <p className="text-gray-300">{study.solution}</p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                  <span>Read Full Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Create Your Success Story?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Let us help you achieve similar results with our innovative solutions.
+            </p>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center mx-auto">
+              Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default CaseStudiesPage;`
   };
 
   if (cleanFiles[fileName]) {
@@ -287,39 +413,30 @@ export default ConsultationPage;`
   return false;
 }
 
-// Function to find all problematic files
-function findProblematicFiles() {
-  try {
-    // Find files with JSX errors
-    const jsxErrorFiles = execSync('find . -name "*.tsx" -o -name "*.jsx" | head -20', { encoding: 'utf8' })
-      .trim().split('\n').filter(file => file.length > 0);
-    
-    return jsxErrorFiles;
-  } catch (error) {
-    return [];
-  }
-}
-
 // Main execution
 console.log('Starting comprehensive fix...');
 
-// First, fix remaining merge conflicts
+// Fix remaining merge conflicts
 console.log('Fixing remaining merge conflicts...');
-const conflictFiles = execSync('grep -r "^<<<<<<< HEAD\\|^=======\\|^>>>>>>> " . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l', { encoding: 'utf8' });
-if (conflictFiles.trim()) {
-  conflictFiles.trim().split('\n').forEach(file => {
-    if (file.length > 0) {
-      let content = fs.readFileSync(file, 'utf8');
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-      fs.writeFileSync(file, content);
-      console.log(`Fixed merge conflicts in: ${file}`);
-    }
-  });
+try {
+  const conflictFiles = execSync('grep -r "^<<<<<<< HEAD\\|^=======\\|^>>>>>>> " . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l', { encoding: 'utf8' });
+  if (conflictFiles.trim()) {
+    conflictFiles.trim().split('\n').forEach(file => {
+      if (file.length > 0) {
+        let content = fs.readFileSync(file, 'utf8');
+        content = content.replace(/<<<<<<< HEAD\n?/g, '');
+        content = content.replace(/=======\n?/g, '');
+        content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+        fs.writeFileSync(file, content);
+        console.log(`Fixed merge conflicts in: ${file}`);
+      }
+    });
+  }
+} catch (error) {
+  console.log('No merge conflicts found');
 }
 
-// Fix known problematic files
+// Create clean versions of problematic files
 const problematicFiles = [
   './app/consultation/page.tsx',
   './app/case-studies/page.tsx',
@@ -335,18 +452,4 @@ problematicFiles.forEach(file => {
   }
 });
 
-// Fix remaining JSX errors
-console.log('Fixing JSX errors...');
-const allFiles = findProblematicFiles();
-let fixedCount = 0;
-
-allFiles.forEach(file => {
-  if (fs.existsSync(file) && !problematicFiles.includes(file)) {
-    if (fixJSXErrors(file)) {
-      fixedCount++;
-    }
-  }
-});
-
-console.log(`Fixed JSX errors in ${fixedCount} files`);
 console.log('Comprehensive fix completed!');
