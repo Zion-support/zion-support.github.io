@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone}}from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -32,12 +32,13 @@ const process = [
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,}}
   ]
-return(<>)
-      <SEOOptimizer;
+return (
+    <>
+  <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
 
-const WebDevelopmentPage: React.FC = () => {,
+const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
       title: 'Frontend Development',
@@ -99,8 +100,9 @@ const WebDevelopmentPage: React.FC = () => {,
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield;,}]
 
-  return(<>)
-      <SEOOptimizer;
+  return (
+    <>
+  <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
 

@@ -1,5 +1,5 @@
 'use client';
-import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
@@ -8,7 +8,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import StructuredData from './components/StructuredData';
 
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText}}from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (,
@@ -20,8 +20,8 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
-const HomePage: React.FC = () => {,
-    const [isLoaded, setIsLoaded] = useState(false);
+const HomePage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

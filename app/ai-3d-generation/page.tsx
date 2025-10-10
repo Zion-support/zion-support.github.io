@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const Ai3dGenerationPage: React.FC = () => {,
-    const features = [
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const Ai3dGenerationPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -22,15 +22,15 @@ const Ai3dGenerationPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
+
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
 ];
-=======
+
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   },
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -38,8 +38,9 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Ai 3d Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered 3D generation solution for modern businesses" />
         <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />

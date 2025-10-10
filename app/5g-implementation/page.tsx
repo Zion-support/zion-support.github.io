@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart}}from 'lucide-react';
-const FiveGImplementationPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+
+const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,
@@ -30,8 +31,9 @@ const FiveGImplementationPage: React.FC = () => {,
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']},
   ]
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />

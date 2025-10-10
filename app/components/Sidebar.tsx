@@ -1,35 +1,15 @@
 'use client';
-<<<<<<< HEAD
-import React, {Suspense, lazy}from 'react';
-import {Link, useLocation}}from 'react-router-dom';
-import {X,}
-=======
+
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import {
-    X,
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-  Menu,
-  Home,
-  Users,
-  Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  BarChart,
-  ChevronDown,
-  ChevronRight,
+import {X,}
 
-  Phone,
-
-  Mail,
-
-  MapPin,
-
-  Clock;}} from 'lucide-react'
-const Sidebar: React.FC = () => {,
-    const [isOpen, setIsOpen] = useState(false);
+import React, { Suspense, lazy } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { X, >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+  Menu, Home, Users, Settings, Brain, Cloud, Shield, Code, BarChart, ChevronDown, ChevronRight, Phone, Mail, MapPin, Clock; } from 'lucide-react'
+const Sidebar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
 useEffect(() => {
@@ -126,12 +106,13 @@ const navigationSections = [
 const contactInfo = {phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
+
     hours: 'Mon-Fri 9AM-6PM EST',}}
-return(<>)
-      {/* Mobile Menu Button */} <button;
+return (
+    <>
+  {/* Mobile Menu Button */} <button;
         onClick={() =>setIsOpen(true)</button>}className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all",
-=======
+
     hours: 'Mon-Fri 9AM-6PM EST'
   }
   }
@@ -143,7 +124,7 @@ return (
         onClick={() =></button> setIsOpen(true)}
 
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
         aria-label="Open sidebar"
       >,
         <Menu></Menu>
@@ -154,12 +135,12 @@ return (
         <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
   }
-<<<<<<< HEAD
+
           onClick={() =>setIsOpen(false)</div>}/>
-=======
+
           onClick={() =></div> setIsOpen(false)}
         />
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
       )}
 {/* Sidebar */}</div>
       <aside></aside>
@@ -175,19 +156,19 @@ return (
               </div>
             </Link>
             <button;
-<<<<<<< HEAD
+
               onClick={() =>setIsOpen(false)</button>}className="lg: hidden text-gray-400 hover:text-white transition-colors",
               aria-label="Close sidebar"
             >,
               <X>
-=======
+
               onClick={() =></button> setIsOpen(false)}
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >,
               <X></X>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
             </button>
           </div>
 

@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp}}from 'lucide-react';
-const PageBackupPage: React.FC = () => {,
-    const features = [
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+const PageBackupPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',
@@ -23,8 +23,9 @@ const PageBackupPage: React.FC = () => {,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Page Backup - Zion Tech Group</title>
         <meta />
       </Helmet>

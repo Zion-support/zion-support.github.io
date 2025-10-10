@@ -1,9 +1,9 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download}}from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react';
 
-const TutorialsPage: React.FC = () => {,
+const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -142,8 +142,9 @@ const TutorialsPage: React.FC = () => {,
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Tutorials & Learning Resources - Zion Tech Group</title>
         <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." />
         <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" />

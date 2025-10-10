@@ -1,15 +1,15 @@
 'use client';
-import React, {useState}from 'react';
-import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download}}from 'lucide-react';
+import React, { useState } from 'react';
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
+
 export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);
-=======
+
 export default function APIDocsPage() {
     const [copiedCode, setCopiedCode] = useState<string | null></string>(null);
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
   const [searchQuery, setSearchQuery] = useState('');
   const copyToClipboard = (code: string, id: string) => {,
     navigator.clipboard.writeText(code)
@@ -92,24 +92,24 @@ export default function APIDocsPage() {
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-<<<<<<< HEAD
+
     )})).filter(category => category.endpoints.length > 0);
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <SEOOptimizer;
-=======
+
     )
   })).filter(category => category.endpoints.length > 0);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
         title="API Documentation - Zion Tech Group"
         description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       /></SEOOptimizer>
       <Navigation /></Navigation>
       {/* Hero Section */}
-<<<<<<< HEAD
+
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
@@ -123,7 +123,7 @@ export default function APIDocsPage() {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Download className="mr-2 h-5 w-5" />
-=======
+
 <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl font-bold text-white mb-6"></h1>
@@ -140,13 +140,13 @@ export default function APIDocsPage() {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
               <Download className="mr-2 h-5 w-5" /></Download>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               Download SDK,
   </
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* Quick Start */} <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
@@ -154,7 +154,7 @@ export default function APIDocsPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
-=======
+
       {/* Quick Start */}
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -163,15 +163,15 @@ export default function APIDocsPage() {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
                 <Key className="w-6 h-6 text-white" /></Key>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </div>
               <h3 className="text-xl font-semibold text-white mb-3"></h>1. Get API Key</h3>
               <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
-<<<<<<< HEAD
+
               <button className="text-purple-400 hover: text-purple-300 font-medium">,</button>
-=======
+
               <button className="text-purple-400 hover:text-purple-300 font-medium"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 Get API Key →
               </button>
             </div>
@@ -181,11 +181,11 @@ export default function APIDocsPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3"></h>2. Make Request</h3>
               <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
-<<<<<<< HEAD
+
               <button className="text-purple-400 hover: text-purple-300 font-medium">,</button>
-=======
+
               <button className="text-purple-400 hover:text-purple-300 font-medium"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 View Examples →
               </button>
             </div>
@@ -195,18 +195,18 @@ export default function APIDocsPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-3"></h>3. Integrate</h3>
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
-<<<<<<< HEAD
+
               <button className="text-purple-400 hover: text-purple-300 font-medium">,</button>
-=======
+
               <button className="text-purple-400 hover:text-purple-300 font-medium"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 Start Building →
               </button>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* API Endpoints */} <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
@@ -234,7 +234,7 @@ export default function APIDocsPage() {
                         <button;
                           onClick={() =>copyToClipboard(endpoint.code, `${categoryIndex)</button>}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover: text-white transition-colors">,
-=======
+
       {/* API Endpoints */}
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -268,37 +268,37 @@ export default function APIDocsPage() {
                         <button
                           onClick={() =></button> copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
                             <React.Fragment></React>
                               <Check className="w-4 h-4" /></Check>
                               Copied!
                             </React.Fragment>
                           ) : (
-<<<<<<< HEAD
+
                             <React.Fragment>
                               <Copy className="w-4 h-4" />
                               Copy;
-=======
+
                             <React.Fragment></React>
                               <Copy className="w-4 h-4" /></Copy>
                               Copy
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                             </React.Fragment>
                           )}
                         </button>
                       </div>
-<<<<<<< HEAD
+
                       <p className="text-gray-300 mb-4">{endpoint.description</p>}</p>
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
-=======
+
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto"></div>
                         <pre className="text-gray-300 text-sm"></pre>
                           <code></cod>{endpoint.code}</code>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                         </pre>
                       </div>
                     </div>
@@ -309,7 +309,7 @@ export default function APIDocsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* CTA Section */} <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
@@ -323,7 +323,7 @@ export default function APIDocsPage() {
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover: bg-white hover:text-purple-600 transition-colors">,</button>
               View SDKs;
-=======
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -339,7 +339,7 @@ export default function APIDocsPage() {
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors"></button>
               View SDKs
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
   </
           </div>
         </div>

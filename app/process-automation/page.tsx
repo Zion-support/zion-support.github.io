@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Zap,}
   Settings,
   CheckCircle,
@@ -24,9 +24,9 @@ import {Zap,}
 
   Workflow,
 
-  Bot;}} from 'lucide-react'
-const ProcessAutomationPage: React.FC = () => {,
-    const features = [
+  Bot;} from 'lucide-react'
+const ProcessAutomationPage: React.FC = () => {
+  const features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
@@ -55,8 +55,9 @@ const benefits = [
 
     'Custom automation solutions'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

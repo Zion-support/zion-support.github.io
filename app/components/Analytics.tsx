@@ -1,5 +1,5 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
+import React, { Suspense, lazy } from 'react';
 interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
@@ -146,8 +146,9 @@ declare global {interface Window {}
 
 export default Analytics;
 // Analytics Provider for context;
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
-      <Analytics />}{children}
+export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return (
+    <>
+  <Analytics />}{children}
     </>
   );
 }

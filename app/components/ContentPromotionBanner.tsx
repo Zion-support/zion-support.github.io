@@ -1,20 +1,18 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {,
-=======
+
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => { , =======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => { >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -28,16 +26,16 @@ const ContentPromotionBanner: React.FC = () => {
       icon: Star;,},
     {title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
-<<<<<<< HEAD
+
       icon: Users;,}];
-=======
+
       icon: Users
     }
   ];
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+
+
+
+
 
   return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">
@@ -49,7 +47,7 @@ const ContentPromotionBanner: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
+
         {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,</div>
           {features.map((feature, index) => (
             <div key={index}className="text-center">
@@ -57,12 +55,12 @@ const ContentPromotionBanner: React.FC = () => {
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-<<<<<<< HEAD
+
               <p className="text-purple-100 text-sm">{feature.description</p>}</p>
-=======
+
               <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
+
+
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {features.map((feature, index) => (
@@ -72,17 +70,17 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
+
         {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-=======
+
         {/* CTA Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
           <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Get Started?
           </h3>

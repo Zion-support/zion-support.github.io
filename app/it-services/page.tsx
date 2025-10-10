@@ -1,7 +1,7 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {Cloud,}
   Shield, 
   Settings, 
@@ -21,11 +21,11 @@ import {Cloud,}
   ShoppingCart,
   Monitor,
   Headphones,
-  BarChart;}from 'lucide-react';
+  BarChart;} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ItServicesPage: React.FC = () => {,
+const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
@@ -969,8 +969,9 @@ const ItServicesPage: React.FC = () => {,
     selectedCategory === 'all' || service.category === selectedCategory;
   );
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
       </Helmet>

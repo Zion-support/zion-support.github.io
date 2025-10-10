@@ -1,6 +1,6 @@
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-import {Settings, Zap, CheckCircle, AlertTriangle}}from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {children: React.ReactNode;,}
   enableImageOptimization?: boolean;

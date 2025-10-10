@@ -1,20 +1,20 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight}}from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-const SupportPage: React.FC = () => {,
-=======
+
 const SupportPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+  =======
+const SupportPage: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
     {
       question: 'How do I get started with your AI services?',
-<<<<<<< HEAD
+
       answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.',},
     {question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.'},
@@ -22,7 +22,7 @@ const SupportPage: React.FC = () => {
       answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.'},
     {question: 'What technologies do you work with?',
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'}];
-=======
+
       answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.'
     },
     {
@@ -39,7 +39,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
   const supportChannels = [
     {title: 'Email Support',
       description: 'Get help via email within 24 hours',
@@ -60,9 +60,10 @@ const SupportPage: React.FC = () => {
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-<<<<<<< HEAD
-  return(<>)
-      <Helmet />
+
+  return (
+    <>
+  <Helmet />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -81,7 +82,7 @@ const SupportPage: React.FC = () => {
                   type="text"
                   placeholder="Search for help..."
                   value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500",
-=======
+
   return (
     <>
       <Helmet></Helmet>
@@ -106,12 +107,12 @@ const SupportPage: React.FC = () => {
                   value={searchTerm}
                   onChange={(e) =></input> setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
+
             <div className="mb-12">
               <div className="relative max-w-2xl mx-auto">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -119,7 +120,7 @@ const SupportPage: React.FC = () => {
                   type="text"
                   placeholder="Search for help..."
                   value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20",
-=======
+
             <div className="mb-12"></div>
               <div className="relative max-w-2xl mx-auto"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
@@ -129,12 +130,12 @@ const SupportPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) =></input> setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
+
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,</div>
               {supportChannels.map((channel, index) => (
                 <div key={index}className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-cyan-400/30 transition-all duration-300 text-center">,</div>
@@ -146,7 +147,7 @@ const SupportPage: React.FC = () => {
                   <div className="text-sm text-gray-400 flex items-center justify-center">
                     <Clock className="w-4 h-4 mr-2" />
                     {channel.availability} </div>
-=======
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"></div>
               {supportChannels.map((channel, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center"></div>
@@ -159,7 +160,7 @@ const SupportPage: React.FC = () => {
                     <Clock className="w-4 h-4 mr-2" /></Clock>
                     {channel.availability}
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 </div>
               ))}
             </div>
@@ -169,7 +170,7 @@ const SupportPage: React.FC = () => {
                 ))}
               </div>
             </h2>
-<<<<<<< HEAD
+
             <p className="text-xl text-gray-300 mb-8">Our support team is here to help you succeed with our AI and IT solutions.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
@@ -185,7 +186,7 @@ const SupportPage: React.FC = () => {
                 </button>
                 <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover: bg-white/20 transition-all duration-300">,</button>
                   Schedule Call;
-=======
+
             <p className="text-xl text-gray-300 mb-8"></p>
               Our support team is here to help you succeed with our AI and IT solutions.
             </p>
@@ -203,7 +204,7 @@ const SupportPage: React.FC = () => {
                 </button>
                 <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300"></button>
                   Schedule Call
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 </button>
               </div>
             </div>
@@ -211,19 +212,19 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
+
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
                 Contact Support;
               </button>
               <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
                 View Documentation;
-=======
+
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Contact Support
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Documentation
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </button>
             </div>
           </div>

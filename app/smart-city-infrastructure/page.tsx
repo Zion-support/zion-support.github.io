@@ -1,13 +1,12 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database}}from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const SmartCityInfrastructurePage: React.FC = () => {,
-
+const SmartCityInfrastructurePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -24,7 +23,7 @@ const SmartCityInfrastructurePage: React.FC = () => {,
       description: 'Bank-level security with advanced encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-const PagePage: React.FC = () => {,
+const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -127,8 +126,9 @@ export default PagePage;
     'Proven track record of success'
   ]
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Smart City Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />

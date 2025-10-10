@@ -1,7 +1,7 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {Brain,}
   MessageSquare, 
   Eye, 
@@ -22,11 +22,11 @@ import {Brain,}
   FileText,
   Cpu,
   Link,
-  Server;}from 'lucide-react';
+  Server;} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiServicesPage: React.FC = () => {,
+const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
@@ -966,8 +966,9 @@ const AiServicesPage: React.FC = () => {,
     selectedCategory === 'all' || service.category === selectedCategory;
   );
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
       </Helmet>

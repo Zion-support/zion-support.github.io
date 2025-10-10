@@ -1,6 +1,6 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle}}from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
 interface PerformanceMetrics {loadTime: number;,}
   renderTime: number;,
   memoryUsage: number;,

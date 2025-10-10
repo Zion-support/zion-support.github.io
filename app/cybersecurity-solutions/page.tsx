@@ -1,9 +1,10 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-const CybersecuritySolutionsPage: React.FC = () => {,
-  return(<>)
-      <Helmet />
+const CybersecuritySolutionsPage: React.FC = () => {
+  return (
+    <>
+  <Helmet />
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />
         <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection" />

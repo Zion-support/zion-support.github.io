@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Shield,}
   Eye,
   AlertTriangle,
@@ -23,9 +23,9 @@ import {Shield,}
 
   Settings,
 
-  Database;}} from 'lucide-react'
-const SecurityMonitoringPage: React.FC = () => {,
-    const features = [
+  Database;} from 'lucide-react'
+const SecurityMonitoringPage: React.FC = () => {
+  const features = [
     {
       icon: Eye,
       title: '24/7 Real-time Monitoring',
@@ -54,8 +54,9 @@ const benefits = [
 
     'Customizable monitoring rules'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

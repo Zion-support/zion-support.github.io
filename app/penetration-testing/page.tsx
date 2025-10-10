@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Shield,}
   Search,
   AlertTriangle,
@@ -25,9 +25,9 @@ import {Shield,}
 
   Target,
 
-  Eye;}} from 'lucide-react'
-const PenetrationTestingPage: React.FC = () => {,
-    const features = [
+  Eye;} from 'lucide-react'
+const PenetrationTestingPage: React.FC = () => {
+  const features = [
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
@@ -56,8 +56,9 @@ const benefits = [
 
     'Ongoing security improvement guidance'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

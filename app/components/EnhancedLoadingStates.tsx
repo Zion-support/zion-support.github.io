@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import {Loader2, Brain, Cloud, Shield, Code}}from 'lucide-react';
+
+import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react';
 
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
   text?: string;}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
@@ -39,7 +39,7 @@ export const ServiceCardSkeleton: React.FC = () => (,
       <div className="h-3 bg-gray-600 rounded"></div>
       <div className="h-3 bg-gray-600 rounded"></div>
       <div className="h-3 bg-gray-600 rounded w-3/4"></div>
-=======
+
 
 export const ServiceCardSkeleton: React.FC = () => (
   <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 animate-pulse" role="status" aria-label="Loading service card">
@@ -57,12 +57,12 @@ export const ServiceCardSkeleton: React.FC = () => (
     <div className="flex justify-between items-center">
       <div className="h-8 bg-gray-300/20 rounded w-20"></div>
       <div className="h-8 bg-gray-300/20 rounded w-24"></div>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+
     </div>
   </div>
 );
 
-<<<<<<< HEAD
+
 export const StatsSkeleton: React.FC = () => (,
   <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>
     {Array.from({ length: 4 ,)}).map((_, index) => (
@@ -77,7 +77,7 @@ export const StatsSkeleton: React.FC = () => (,
 export const ContentSkeleton: React.FC = () => (,
   <div className="space-y-6 animate-pulse">
     <div className="h-8 bg-gray-600 rounded w-3/4"></div>
-=======
+
 export const StatsSkeleton: React.FC = () => (
   <div className="text-center animate-pulse" role="status" aria-label="Loading statistics">
     <div className="w-16 h-16 bg-gray-300/20 rounded-2xl mx-auto mb-4"></div>
@@ -112,7 +112,7 @@ export const TestimonialSkeleton: React.FC = () => (
         <div className="h-4 bg-gray-300/20 rounded w-24"></div>
       </div>
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+
     <div className="space-y-2">
       <div className="h-4 bg-gray-300/20 rounded"></div>
       <div className="h-4 bg-gray-300/20 rounded w-4/5"></div>

@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star}}from 'lucide-react';
-const AccessibilityPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
+const AccessibilityPage: React.FC = () => {
   const features = [
     {
       icon: Eye,
@@ -44,8 +44,9 @@ const standards = [
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant',}]
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />

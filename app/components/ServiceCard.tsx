@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {ArrowRight, CheckCircle}}from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 interface ServiceCardProps {title: string;,}
   description: string;,
   features: string[],

@@ -1,33 +1,33 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const LayoutPage: React.FC = () => {,
+const LayoutPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-<<<<<<< HEAD
+
       description: 'Advanced AI technology to transform your business operations and improve efficiency',},
     {icon: Zap,
-=======
+
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   },
     {
     icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',},
     {icon: Shield,
       title: 'Enterprise Security',
-<<<<<<< HEAD
+
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',}]
 const benefits = [
-=======
+
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
@@ -39,7 +39,7 @@ const benefits = [
   ]
 const benefits = [
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -53,7 +53,7 @@ const benefits = [
 
     'Proven track record of success'
   ]
-<<<<<<< HEAD
+
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
         <title>Layout | Zion Tech Group</title>
@@ -64,7 +64,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
+
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></di></div>
       <Helmet></Helmet>
@@ -77,12 +77,12 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h>Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
+
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
@@ -101,7 +101,7 @@ return (
               </button>
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-all duration-300">,</button>
                 Learn More;
-=======
+
         <div className="max-w-7xl mx-auto"></di></div>
           <div className="text-center"></di></div>
             <h1></h1>
@@ -123,29 +123,29 @@ return (
               </button>
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"></button>
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </button>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
+
       {/* Features Section */}
       <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h>Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
+
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Layout?,</h2>
@@ -160,7 +160,7 @@ return (
                   <feature />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
-=======
+
         <div className="max-w-7xl mx-auto"></di></div>
           <div className="text-center mb-16"></di></div>
             <h2></h2>
@@ -178,29 +178,29 @@ return (
 
                 <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* Benefits Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
+
       {/* Benefits Section */}
       <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h>Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
+
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
@@ -213,7 +213,7 @@ return (
                 <div key={index}className="flex items-start space-x-3"></div>
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
-=======
+
         <div className="max-w-7xl mx-auto"></di></div>
           <div className="text-center mb-16"></di></div>
             <h2></h2>
@@ -230,29 +230,29 @@ return (
                 <CheckCircle></CheckCircle>
 
                 <p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* CTA Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
+
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h>Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
+
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
             <h2>Ready to Get Started?</h2>
@@ -267,7 +267,7 @@ return (
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-all duration-300 flex items-center gap-2">,</button>
                 <Mail className="w-5 h-5" />
                 Email Us;
-=======
+
         <div className="max-w-4xl mx-auto text-center"></di></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></di></div>
             <h2></h2>
@@ -285,7 +285,7 @@ return (
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2"></button>
                 <Mail className="w-5 h-5" /></Mail>
                 Email Us
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </button>
             </div>
           </div>
@@ -293,10 +293,10 @@ return (
       </section>
     </div>
   ),
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
+
+
 };
 
 export default LayoutPage;

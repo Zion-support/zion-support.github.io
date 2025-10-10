@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info}}from 'lucide-react';
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 
-const CookiesPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
+
+
+const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
   
   const cookieTypes = [
@@ -67,17 +67,18 @@ const CookiesPage: React.FC = () => {,
       description: 'Deliver relevant content and advertisements',
       icon: Eye;,}]
 
-<<<<<<< HEAD
-  return(<>)
-      <Helmet />
+
+  return (
+    <>
+  <Helmet />
         <title>Cookie Policy - Zion Tech Group</title>
-=======
+
 
   return (
     <>
       <Helmet></Helmet>
         <title></titl>Cookie Policy - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 </div>
               </div>
             </div>

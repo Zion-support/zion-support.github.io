@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap}}from 'lucide-react';
-const BlockchainPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+const BlockchainPage: React.FC = () => {
   const features = [
     {
       icon: Shield,
@@ -27,7 +27,7 @@ const BlockchainPage: React.FC = () => {,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-<<<<<<< HEAD
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
         <title>Blockchain Solutions | Zion Tech Group</title>
@@ -61,7 +61,7 @@ const BlockchainPage: React.FC = () => {,
               <div key={index}className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit</span>}</span>
-=======
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
@@ -101,12 +101,12 @@ const BlockchainPage: React.FC = () => {,
               <div key={index} className="flex items-center space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300"></spa>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
+
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
             <div className="text-center mb-12">
@@ -120,7 +120,7 @@ const BlockchainPage: React.FC = () => {,
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Link className="w-8 h-8 text-blue-600" />
-=======
+
         <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
@@ -135,7 +135,7 @@ const BlockchainPage: React.FC = () => {,
               <div className="text-center"></div>
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Link className="w-8 h-8 text-blue-600" /></Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Blockchain Experts</h3>
                 <p className="text-gray-600">Certified blockchain developers and architects</p>
@@ -164,7 +164,7 @@ const BlockchainPage: React.FC = () => {,
             </div>
           </div>
         </section>
-<<<<<<< HEAD
+
         {/* Services by Category */}{categories.map(category => ()
           <section key={category}className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
@@ -219,7 +219,7 @@ const BlockchainPage: React.FC = () => {,
                         </ul>
                       </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors">,</button>
-=======
+
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50"></section>
@@ -282,7 +282,7 @@ const BlockchainPage: React.FC = () => {,
                         </ul>
                       </div>
                       <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                         Get Blockchain Quote,
   </
                     </div>
@@ -291,7 +291,7 @@ const BlockchainPage: React.FC = () => {,
             </div>
           </section>
         ))}
-<<<<<<< HEAD
+
         {/* Blockchain Capabilities Showcase */} <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
             <div className="text-center mb-12">
@@ -305,7 +305,7 @@ const BlockchainPage: React.FC = () => {,
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
                 <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
-=======
+
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
@@ -321,7 +321,7 @@ const BlockchainPage: React.FC = () => {,
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>
                 <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" /></Link>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Smart Contracts</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 <p className="text-gray-600">Automated contract execution with transparency and security</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
@@ -352,7 +352,7 @@ const BlockchainPage: React.FC = () => {,
             </div>
           </div>
         </section>
-<<<<<<< HEAD
+
         {/* Contact Section */} <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,</div>
             <h2 className="text-3xl md: text-4xl font-bold mb-4">,</h2>
@@ -369,7 +369,7 @@ const BlockchainPage: React.FC = () => {,
               <a;
                 href="mailto: kleber@ziontechgroup.com",
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">,
-=======
+
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
@@ -388,7 +388,7 @@ const BlockchainPage: React.FC = () => {,
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
                 ✉️ kleber@ziontechgroup.com,
   </
             </div>

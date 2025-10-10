@@ -1,6 +1,6 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {Brain,}
   Cloud,
   Shield,
@@ -18,11 +18,11 @@ import {Brain,}
   Users,
   MessageSquare,
   FileText,
-  Target;}from 'lucide-react';
+  Target;} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ServicesPage: React.FC = () => {,
+const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -174,8 +174,9 @@ const ServicesPage: React.FC = () => {,
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;})
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of AI, IT, and Micro SaaS services designed to transform your business." />
       </Helmet>

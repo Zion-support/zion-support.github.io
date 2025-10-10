@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {BarChart,}
   TrendingUp,
   Database,
@@ -24,9 +24,9 @@ import {BarChart,}
 
   PieChart,
 
-  LineChart;}} from 'lucide-react'
-const DataAnalyticsPage: React.FC = () => {,
-    const features = [
+  LineChart;} from 'lucide-react'
+const DataAnalyticsPage: React.FC = () => {
+  const features = [
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
@@ -55,8 +55,9 @@ const benefits = [
 
     'Custom analytics solutions'
   ]
-return(<>)
-      <Helmet />
+return (
+    <>
+  <Helmet />
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

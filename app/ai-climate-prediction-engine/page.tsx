@@ -1,9 +1,9 @@
 'use client';
-import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Globe, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap, Target, Thermometer, Wind, Droplets}}from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Globe, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap, Target, Thermometer, Wind, Droplets } from 'lucide-react';
 
-const AIClimatePredictionEngine: React.FC = () => {,
+const AIClimatePredictionEngine: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -91,8 +91,9 @@ const AIClimatePredictionEngine: React.FC = () => {,
       icon: Target,
       results: 'Enhanced urban resilience',}];
 
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
         <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />

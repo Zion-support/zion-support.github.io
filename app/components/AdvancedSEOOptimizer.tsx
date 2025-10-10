@@ -1,6 +1,6 @@
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;
@@ -77,8 +77,9 @@ interface SEOOptimizerProps {title?: string;}
       })
     }
   }
-  return(<>)
-      <Helmet />
+  return (
+    <>
+  <Helmet />
         <title>{title}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>

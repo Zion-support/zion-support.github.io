@@ -1,11 +1,11 @@
 'use client';
-import React, {useEffect, useState}from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {lcp?: number;}
   fid?: number;
   cls?: number;
   fcp?: number;
-  ttfb?: number;}const PerformanceMonitor: React.FC = () => {,
+  ttfb?: number;}const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
   const [isVisible, setIsVisible] = useState(false);
 

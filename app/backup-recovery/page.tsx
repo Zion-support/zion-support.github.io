@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck}}from 'lucide-react';
-const BackupRecoveryPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
+const BackupRecoveryPage: React.FC = () => {
   const features = [
     {}];
   const benefits = [
@@ -13,7 +13,7 @@ const BackupRecoveryPage: React.FC = () => {,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-<<<<<<< HEAD
+
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
         <title>Backup & Recovery | Zion Tech Group</title>
@@ -43,7 +43,7 @@ const BackupRecoveryPage: React.FC = () => {,
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
-=======
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
@@ -79,13 +79,13 @@ const BackupRecoveryPage: React.FC = () => {,
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" /></feature>
                 <h3 className="text-xl font-semibold text-white mb-2"></h>{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* Benefits Section */} <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -100,7 +100,7 @@ const BackupRecoveryPage: React.FC = () => {,
               <div key={index}className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit</span>}</span>
-=======
+
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -117,13 +117,13 @@ const BackupRecoveryPage: React.FC = () => {,
               <div key={index} className="flex items-center space-x-3"></div>
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300"></spa>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+
       {/* CTA Section */} <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
@@ -155,7 +155,7 @@ const BackupRecoveryPage: React.FC = () => {,
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
               Email Us;
-=======
+
       {/* CTA Section */}
       <section className="py-16 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -192,7 +192,7 @@ const BackupRecoveryPage: React.FC = () => {,
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
               <Mail className="mr-2 h-5 w-5" /></Mail>
               Email Us
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+
   </
           </div>
         </div>
