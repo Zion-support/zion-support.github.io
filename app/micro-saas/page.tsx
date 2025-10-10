@@ -339,6 +339,7 @@ const MicroSAASPage: React.FC = () => {
 <<<<<<< HEAD
       trial: '21-day free trial'
     },
+<<<<<<< HEAD
     { 
       name: 'AI Quantum Financial Oracle', 
       href: '/ai-quantum-financial-oracle', 
@@ -347,12 +348,25 @@ const MicroSAASPage: React.FC = () => {
       price: '$2,999/mo',
       description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
       features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
+=======
+
+    // Advanced AI Solutions
+    { 
+      name: 'AI Quantum Financial Oracle', 
+      href: '/ai-quantum-financial-oracle', 
+      icon: Brain, 
+      category: 'Quantum AI', 
+      price: '$8,500/mo',
+      description: 'Revolutionary quantum-powered financial predictions with 99.7% accuracy and real-time market analysis',
+      features: ['Quantum Risk Analysis', 'Market Prediction', 'Portfolio Optimization', 'Real-time Trading Signals', 'Fraud Detection', 'Compliance Monitoring'],
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       popular: true,
       rating: 4.9,
       users: '150+',
       trial: '30-day free trial'
     },
     { 
+<<<<<<< HEAD
       name: 'AI 3D Generation Studio', 
       href: '/ai-3d-generation', 
       icon: FileText, 
@@ -362,10 +376,22 @@ const MicroSAASPage: React.FC = () => {
       features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization'],
       popular: true,
       rating: 4.7,
+=======
+      name: 'AI Neural Memory Assistant', 
+      href: '/ai-neural-memory-assistant', 
+      icon: Brain, 
+      category: 'Cognitive AI', 
+      price: '$299/mo',
+      description: 'Advanced AI memory system for enhanced cognitive performance and accelerated learning',
+      features: ['Memory Enhancement', 'Learning Acceleration', 'Cognitive Training', 'Knowledge Management', 'Pattern Recognition', 'Neural Optimization'],
+      popular: true,
+      rating: 4.8,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
       users: '1,200+',
       trial: '14-day free trial'
     },
     { 
+<<<<<<< HEAD
       name: 'AI Mobile App Builder Pro', 
       href: '/ai-mobile-app-builder', 
       icon: Smartphone, 
@@ -697,6 +723,101 @@ const MicroSAASPage: React.FC = () => {
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+=======
+      name: 'AI Holographic Workspace', 
+      href: '/ai-holographic-workspace', 
+      icon: Rocket, 
+      category: 'Immersive Tech', 
+      price: '$1,200/mo',
+      description: 'Next-generation 3D workspace with holographic interfaces and spatial computing capabilities',
+      features: ['3D Workspace', 'Holographic UI', 'Spatial Computing', 'Collaborative Environment', 'Virtual Meetings', 'AR Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      trial: '7-day free trial'
+    },
+    { 
+      name: 'AI Autonomous Systems Pro', 
+      href: '/ai-autonomous-systems', 
+      icon: Settings, 
+      category: 'Autonomous AI', 
+      price: '$4,200/mo',
+      description: 'Self-managing systems with advanced AI decision-making and autonomous operations',
+      features: ['Autonomous Operations', 'Self-Healing Systems', 'Predictive Maintenance', 'Intelligent Monitoring', 'Adaptive Learning', 'Risk Management'],
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Blockchain Solutions Pro', 
+      href: '/ai-blockchain-solutions', 
+      icon: Shield, 
+      category: 'Blockchain AI', 
+      price: '$3,800/mo',
+      description: 'Advanced blockchain integration with AI-powered smart contracts and DeFi protocols',
+      features: ['Smart Contracts', 'DeFi Integration', 'NFT Marketplace', 'Cross-chain Operations', 'Token Economics', 'Governance Systems'],
+      popular: false,
+      rating: 4.6,
+      users: '250+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Energy Grid Management', 
+      href: '/ai-energy-grid-management', 
+      icon: Zap, 
+      category: 'Energy AI', 
+      price: '$6,500/mo',
+      description: 'Intelligent energy distribution and optimization for smart cities and utilities',
+      features: ['Grid Optimization', 'Demand Forecasting', 'Renewable Integration', 'Load Balancing', 'Energy Trading', 'Carbon Tracking'],
+      popular: false,
+      rating: 4.7,
+      users: '180+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Space Technology Pro', 
+      href: '/ai-space-technology-pro', 
+      icon: Rocket, 
+      category: 'Space Tech', 
+      price: '$5,500/mo',
+      description: 'Advanced space exploration and satellite management solutions with AI optimization',
+      features: ['Satellite Operations', 'Space Mission Planning', 'Astronomical Data Analysis', 'Orbital Mechanics', 'Space Weather', 'Mission Control'],
+      popular: false,
+      rating: 4.9,
+      users: '120+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Climate Solutions Pro', 
+      href: '/ai-climate-solutions-pro', 
+      icon: Globe, 
+      category: 'Environmental AI', 
+      price: '$3,200/mo',
+      description: 'Combat climate change with intelligent environmental monitoring and prediction systems',
+      features: ['Carbon Footprint Analysis', 'Weather Prediction', 'Sustainability Planning', 'Emission Tracking', 'Climate Modeling', 'Green Energy'],
+      popular: false,
+      rating: 4.8,
+      users: '350+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Drug Discovery Pro', 
+      href: '/ai-drug-discovery-pro', 
+      icon: Stethoscope, 
+      category: 'Pharma AI', 
+      price: '$4,500/mo',
+      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis and drug development',
+      features: ['Molecular Modeling', 'Drug Interaction Analysis', 'Clinical Trial Optimization', 'Protein Folding', 'Toxicity Prediction', 'Patent Analysis'],
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      trial: '30-day free trial'
+    }
+  ];
+
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 
   if (!isLoaded) {
     return (
