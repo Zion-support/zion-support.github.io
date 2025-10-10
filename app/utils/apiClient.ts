@@ -2,149 +2,95 @@
  * API Client Utility;
  * Provides a centralized API client with error handling and caching;
  */
-
-import { apiCache } from './apiCache';
-
+import { apiCache } from './apiCache'
 interface RequestConfig {}
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'
   headers?: Record<string, string></strin>;</<<<string></strin>body</string>?: any;
   cache?: boolean;
-<<<<<<< HEAD
-  cacheTTL?: number;);
-=======
   cacheTTL?: number]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface APIResponse<T = any></T> {}
   data: T,
   status: number,
   statusText: string,
-<<<<<<< HEAD
-  headers: Record<string, string></string>;</strin>;);
-=======
-  headers: Record<string, string></string>;</strin>]
+  headers: Record<string, string></string> ; </strin>]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 class APIClient {}
   private baseURL: string,
-  private defaultHeaders: Record<string, string></string>;
-
-  constructor(baseURL: string = '', defaultHeaders: Record<string, string></string> = {}); {}
+  private defaultHeaders: Record<string, string></string>
+constructor(baseURL: string = , defaultHeaders: Record<string, string></string> = {}); {}
     this.baseURL = baseURL;
     this.defaultHeaders = {}
-      'Content-Type': 'application/json',
-<<<<<<< HEAD
-      ...defaultHeaders;)
-};);
-=======
+      'Content-Type': 'application/json','
       ...defaultHeaders]
-    }]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  ]
+    }
   private async makeRequest<T></T>(
     endpoint: string,
     config: RequestConfig = {}
   ): Promise<APIResponse<T></APIResponse>> {}
-    const {}
-      method = 'GET',
+const {}
+      method = 'GET','
       headers = {},
       body,
       cache = false,
-<<<<<<< HEAD
-      cacheTTL;)
-} = config;
-const url = `${this.baseURL}${endpoint}`;
-const cacheKey = apiCache.generateKey(url, body);
-=======
       cacheTTL]
-    } = config;
-
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = apiCache.generateKey(url, body);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-
-    // Check cache for GET requests;
-    if (method === 'GET' && cache) {
+    } = config
+const url = `${this.baseURL}${endpoint}```
+const cacheKey = apiCache.generateKey(url, body)
+// Check cache for GET requests;
+    if (method === 'GET' && cache) {'
     // Check cache for GET requests
-    if (method === 'GET' && cache) {}
-      const cachedData = apiCache.get(cacheKey);
+    if (method === 'GET' && cache) {}'
+const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
-<<<<<<< HEAD
-        return cachedData;);
-=======
         return cachedData]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
-
-    try {;
+    try {
 const response = await fetch(url, {)
         method)
         headers: {,
           ...this.defaultHeaders),
           ...headers]
     });
-        body: body ? JSON.stringify(body) : undefined;
-const data = await response.json();
+        body: body ? JSON.stringify(body) : undefined
+const data = await response.json()
 const apiResponse: APIResponse<T></T> = {
         data;
         status: response.status;
         statusText: response.statusText;
-        headers: Object.fromEntries(response.headers.entries());;
-
-      // Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {
+        headers: Object.fromEntries(response.headers.entries());
+// Cache successful GET requests;
+      if (method === 'GET' && cache && response.ok) {'
     try {}
-      const response = await fetch(url, {);
+const response = await fetch(url, {);
         method,
         headers: {}
           ...this.defaultHeaders,
-<<<<<<< HEAD
-          ...headers;)
-},
-        body: body ? JSON.stringify(body) : undefined;
-const data = await response.json();
+          ...headers]
+    },
+        body: body ? JSON.stringify(body) : undefined
+const data = await response.json()
 const apiResponse: APIResponse<T></T> = {}
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()););
-      // Cache successful GET requests
-      if (method === 'GET' && cache && response.ok) {}
-        apiCache.set(cacheKey, apiResponse, cacheTTL););
-      return apiResponse;)
-} catch (error) {}
-=======
-          ...headers]
-    },
-        body: body ? JSON.stringify(body) : undefined
-
-      const data = await response.json();
-
-      const apiResponse: APIResponse<T></T> = {}
-        data,
-        status: response.status,
-        statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries())]
-    };
-
-      // Cache successful GET requests
-      if (method === 'GET' && cache && response.ok) {}
+    }
+// Cache successful GET requests
+      if (method === 'GET' && cache && response.ok) {}'
         apiCache.set(cacheKey, apiResponse, cacheTTL)]
     }
-
       return apiResponse]
     } catch (error) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-      throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`)``
  * Enhanced API Client with retry logic, caching, and error handling;
  */
 export interface ApiClientConfig {/* TODO: Fix JSX expression */});
 }
-export interface RequestConfig extends Omit<RequestInit, 'cache'></RequestInit> {/* TODO: Fix JSX expression */});
+export interface RequestConfig extends Omit<RequestInit, 'cache'></RequestInit> {/* TODO: Fix JSX expression */})'
 }
 export interface ApiResponse<T = unknown></T> {/* TODO: Fix JSX expression */});
 }
@@ -154,33 +100,25 @@ export class ApiError extends Error {/* TODO: Fix JSX expression */});
 class ApiClient {/* TODO: Fix JSX expression */});
 };
   private,
-  abortControllers: Map<string, AbortController></string> = new Map();
-  constructor(confi)
+  abortControllers: Map<string, AbortController></string> = new Map()
+constructor(confi)
   g: ApiClientConfig = {}); {/* TODO: Fix JSX expression */});
 },
       cacheOption,
-<<<<<<< HEAD
-  s: config.cacheOptions;)
-};);
-=======
   s: config.cacheOptions]
-    }]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  ]
+    }
   /**
    * GET request;
    */
   async get<T = unknown></T>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfig> = {});
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfig> = {})'
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * POST request;
    */
@@ -188,14 +126,10 @@ class ApiClient {/* TODO: Fix JSX expression */});
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {});
+  g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {})'
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * PUT request;
    */
@@ -203,28 +137,20 @@ class ApiClient {/* TODO: Fix JSX expression */});
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {});
+  g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {})'
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * DELETE request;
    */
   async delete<T = unknown></T>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfig> = {});
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfig> = {})'
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * PATCH request;
    */
@@ -232,14 +158,10 @@ class ApiClient {/* TODO: Fix JSX expression */});
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {});
+  g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {})'
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Main request method with retry logic;
    */
@@ -251,28 +173,19 @@ class ApiClient {/* TODO: Fix JSX expression */});
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
-<<<<<<< HEAD
-      ...fetchConfig;)
-} = config;
-const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`;
-const cacheKey = `${method}:${fullUrl}`;
-    // Check cache for GET requests;
-    if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */});
-};);
-=======
       ...fetchConfig]
-    } = config;
-    const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`
-    const cacheKey = `${method}:${fullUrl}`;
-    // Check cache for GET requests;
-    if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */});
-}]
+    } = config
+const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}```
+const cacheKey = `${method}:${fullUrl}```
+// Check cache for GET requests;
+    if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */})'
+}
+  ]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
-    // Create abort controller for timeout;
+    // Create abort controller for timeout
 const controller = new AbortController();
-    this.abortControllers.set(cacheKey, controller);
+    this.abortControllers.set(cacheKey, controller)
 const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */});
 }, timeout);
     let,
@@ -282,51 +195,36 @@ const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */});
 },
           signa,
   l: controller.signal]
-    });;
+    });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
-        if (!response.ok) {/* TODO: Fix JSX expression */}`
-            `HTTP ${response.status}: ${response.statusText}`,
+        if (!response.ok) {/* TODO: Fix JSX expression */}``
+            `HTTP ${response.status}: ${response.statusText}`,``
             response.status,
             await response.text()
-<<<<<<< HEAD
-          ););
-const contentType = response.headers.get('content-type');
-=======
           )]
     }
-        const contentType = response.headers.get('content-type');
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const contentType = response.headers.get('content-type')'
         let,
   data: T,
-        if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */});
+        if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */})'
 } else {/* TODO: Fix JSX expression */});
 }
         // Cache successful GET requests;
-        if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});;);
-        return {/* TODO: Fix JSX expression */});
-};)
-} catch (error) {/* TODO: Fix JSX expression */}`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */});;)
-});;)
-} else {/* TODO: Fix JSX expression */});
-});;);
-=======
+        if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}'
           cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});]
     }
         return {/* TODO: Fix JSX expression */});
-}]
-    } catch (error) {/* TODO: Fix JSX expression */}`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */});]
+}
+  ]
+    } catch (error) {/* TODO: Fix JSX expression */}``
+            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */});]``
     });]
     } else {/* TODO: Fix JSX expression */});
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }
-        // Don't retry on certain errors;
+        // Don't retry on certain errors'
         if (error instanceof ApiError && error.status < 500) {/* TODO: Fix JSX expression */});
 }
         // Wait before retrying;
@@ -336,19 +234,15 @@ const contentType = response.headers.get('content-type');
 }
     clearTimeout(timeoutId);
     this.abortControllers.delete(cacheKey);
-<<<<<<< HEAD
-    throw lastError || new Error('Request failed'););
-=======
-    throw lastError || new Error('Request failed')]
+    throw lastError || new Error('Request failed')]'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Cancel a pending request;
    */
   cancel(ur,
   l: string, metho)
-  d: string = 'GET'): void {/* TODO: Fix JSX expression */}`;
-const cacheKey = `${method}:${url}`;
+  d: string = 'GET'): void {/* TODO: Fix JSX expression */}``
+const cacheKey = `${method}:${url}```
 const controller = this.abortControllers.get(cacheKey);
     if (controller) {/* TODO: Fix JSX expression */});
 }
@@ -357,38 +251,26 @@ const controller = this.abortControllers.get(cacheKey);
    * Cancel all pending requests;
    */
   cancelAll(): void {/* TODO: Fix JSX expression */});
-});;
-<<<<<<< HEAD
-    this.abortControllers.clear(););
-=======
+});
     this.abortControllers.clear()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Update default config;
    */
   setConfig(confi)
   g: Partial<ApiClientConfig></ApiClientConfig>): void {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-        ...(config.headers || {});;);
-    };);
-=======
         ...(config.headers || {});]
     }
-    }]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  ]
+    }
   /**
    * Set authorization header;
    */
   setAuthToken(toke)
-  n: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-    this.config.headers['Authorization'] = `Bearer ${token}`;);
-=======
-    this.config.headers['Authorization'] = `Bearer ${token}`]
+  n: string): void {/* TODO: Fix JSX expression */}``
+    this.config.headers['Authorization'] = `Bearer ${token}`]``
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Remove authorization header;
    */
@@ -404,105 +286,62 @@ const controller = this.abortControllers.get(cacheKey);
    * Health check;
    */
   async healthCheck(endpoin)
-  t: string = '/health'): Promise<boolean></boolean> {/* TODO: Fix JSX expression */}
-  s: 1 });;
+  t: string = '/health'): Promise<boolean></boolean> {/* TODO: Fix JSX expression */}'
+  s: 1 });
       return response.status === 200]
     } catch {/* TODO: Fix JSX expression */});
 }
   }
-
-  async get<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-<<<<<<< HEAD
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'GET' });;);
-  async post<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'POST', body });;);
-  async put<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PUT', body });;);
-  async patch<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PATCH', body });;);
-  async delete<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'DELETE' });;);
-  // Set base URL;
-  setBaseURL(baseURL: string): void {,
-    this.baseURL = baseURL;);
-  // Set default headers;
-  setDefaultHeaders(headers: Record<string, string></string>): void {
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers };);
-=======
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'GET' });]
+  async get<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}'
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'GET' });]'
     }
-
-  async post<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'POST', body });]
+  async post<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}'
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'POST', body });]'
     }
-
-  async put<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PUT', body });]
+  async put<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}'
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PUT', body });]'
     }
-
-  async patch<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PATCH', body });]
+  async patch<T></T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}'
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'PATCH', body });]'
     }
-
-  async delete<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
-    return this.makeRequest<T></T>(endpoint, { ...config, method: 'DELETE' });]
+  async delete<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}'
+    return this.makeRequest<T></T>(endpoint, { ...config, method: 'DELETE' });]'
     }
-
   // Set base URL;
   setBaseURL(baseURL: string): void {,
     this.baseURL = baseURL]
     }
-
   // Set default headers;
   setDefaultHeaders(headers: Record<string, string></string>): void {
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers }]
+    this.defaultHeaders = { ...this.defaultHeaders, ...headers }
+  ]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Clear cache;
   clearCache(): void {
   // Set base URL
   setBaseURL(baseURL: string): void {}
-<<<<<<< HEAD
-    this.baseURL = baseURL;);
-  // Set default headers
-  setDefaultHeaders(headers: Record<string, string></string>): void {}
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers };);
-  // Clear cache
-  clearCache(): void {}
-    apiCache.clear(););
-=======
     this.baseURL = baseURL]
     }
-
   // Set default headers
   setDefaultHeaders(headers: Record<string, string></string>): void {}
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers }]
+    this.defaultHeaders = { ...this.defaultHeaders, ...headers }
+  ]
     }
-
   // Clear cache
   clearCache(): void {}
     apiCache.clear()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
-
 // Create singleton instance
 export const apiClient = new APIClient()
-export default APIClient;
-// Create default instance;
+export default APIClient
+// Create default instance
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;)
-});;
-// Export both the class and default instance
-export { apiClient }
-=======
 });]
-    });;
-// Export both the class and default instance;
-export { apiClient };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    });
+// Export both the
+class and default instance
+export { apiClient }
 export default ApiClient;
-`
+``
 }

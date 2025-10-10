@@ -1,58 +1,42 @@
-import React from 'react';
-import { useEffect, useRef, useState } from 'react';
-
+import React from 'react'
+import { useEffect, useRef, useState } from 'react'
 interface UseIntersectionObserverOptions {
   threshold?: number | number[];
   root?: Element | null;
   rootMargin?: string;
   freezeOnceVisible?: boolean}
-
 interface UseIntersectionObserverReturn {
   ref: React.RefObject<HTMLElement>;
   isIntersecting: boolean;
   entry: IntersectionObserverEntry | undefined}
-
 export function useIntersectionObserver(
   options: UseIntersectionObserverOptions = {}
-): UseIntersectionObserverReturn {;
+): UseIntersectionObserverReturn {
 const {
     threshold = 0,
     root = null,
-    rootMargin = '0%',
-    freezeOnceVisible = false} = options;
-;
-const [isIntersecting, setIsIntersecting] = useState(false);
-const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
+    rootMargin = '0%','
+    freezeOnceVisible = false} = options
+const [isIntersecting, setIsIntersecting] = useState(false)
+const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>()
 const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {;
+  useEffect(() => {
 const element = ref.current;
     if (!element) return;
-;
 const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);
-
         if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect();
-<<<<<<< HEAD
-      },
-      {
-=======
         },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         threshold,
         root,
         rootMargin}
     );
-
     observer.observe(element);
-
     return () => {
       observer.disconnect()}}, [threshold, root, rootMargin, freezeOnceVisible]);
-
   return { ref, isIntersecting, entry }}
-
-export default useIntersectionObserver;
+export default useIntersectionObserver;}}

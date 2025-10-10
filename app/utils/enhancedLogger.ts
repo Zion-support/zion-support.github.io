@@ -17,14 +17,9 @@ export enum LogLevel {
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-<<<<<<< HEAD
   FATAL = 4
-export enum LogLevel {/* TODO: Fix JSX expression */});;);
-=======
-  FATAL = 4;
 export enum LogLevel {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Log entry interface;
  */
@@ -40,22 +35,17 @@ export interface LogEntry {
   /** Optional data associated with the log */,
   data?: Record<string></string>
   /** Source of the log (component, module, etc.) */
-  source?: string;
-  /** Stack trace for errors */
-  stack?: string;
-  /** User ID if available */
-  userId?: string;
-  /** Session ID if available */
-  sessionId?: string;
-  /** Environment (development, production, etc.) */
-<<<<<<< HEAD
+  source?: string
+/** Stack trace for errors */
+  stack?: string
+/** User ID if available */
+  userId?: string
+/** Session ID if available */
+  sessionId?: string
+/** Environment (development, production, etc.) */
   environment?: string
-export interface LogEntry {/* TODO: Fix JSX expression */});;);
-=======
-  environment?: string;
 export interface LogEntry {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Logger configuration interface;
  */
@@ -67,8 +57,8 @@ export interface LoggerConfig {
   /** Enable remote logging */
   enableRemote: boolean,
   /** Remote logging endpoint */
-  remoteEndpoint?: string;
-  /** Enable structured logging */
+  remoteEndpoint?: string
+/** Enable structured logging */
   enableStructured: boolean,
   /** Maximum number of logs to store in memory */
   maxLogs: number,
@@ -76,15 +66,11 @@ export interface LoggerConfig {
   enablePerformance: boolean,
   /** Environment name */,
   environment: string,
-<<<<<<< HEAD
-export interface LoggerConfig {/* TODO: Fix JSX expression */});;);
-=======
 export interface LoggerConfig {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Default logger configuration;
- */;
+ */
 const defaultConfig: LoggerConfig = {,
   minLevel: LogLevel.INFO;
   enableConsole: true,
@@ -92,14 +78,10 @@ const defaultConfig: LoggerConfig = {,
   enableStructured: true,
   maxLogs: 1000,
   enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development'}
+  environment: process.env['NODE_ENV'] || 'development'}'
 const,
-<<<<<<< HEAD
-  defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */});;);
-=======
   defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */});]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    }
 /**
  * Enhanced Logger class;
  *
@@ -107,26 +89,27 @@ const,
  * remote logging support, and performance tracking.
  *
  * @example;
- * ```typescript;
- * const logger = EnhancedLogger.getInstance()
- * logger.info('User logged in', undefined, { userId: '123' });
- * logger.error('API request failed', { error: err }, err)
- * ``
+ * ```typescript`
+ *
+const logger = EnhancedLogger.getInstance()
+ * logger.info('User logged in', undefined, { userId: '123' })'
+ * logger.error('API request failed', { error: err }, err)'
+ * ````
  */
 export class EnhancedLogger {
   private static instance: EnhancedLogger,
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
   private performanceMarks: Map<string></string> = new Map()
-
   private constructor(config: Partial<LoggerConfig></LoggerConfig> = {}); {
     this.config = { ...defaultConfig, ...config }
- * const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */});
-  d: '123' });;
- * logger.error('API request failed', {/* TODO: Fix JSX expression */});
-  r: err }, err);`
- * ```
+ *
+const logger = EnhancedLogger.getInstance();
+ * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */})'
+  d: '123' })'
+ * logger.error('API request failed', {/* TODO: Fix JSX expression */})'
+  r: err }, err)``
+ * ````
  */
 export class EnhancedLogger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig></LoggerConfig> = {}); {/* TODO: Fix JSX expression */}
@@ -144,14 +127,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     } else if (config) {
       // Config already set, instance exists;
       Object.assign(EnhancedLogger.instance.config, config)
-<<<<<<< HEAD
-  public static getInstance(config?: Partial<LoggerConfig></LoggerConfig>): EnhancedLogger {/* TODO: Fix JSX expression */});;)
-} else if (config) {/* TODO: Fix JSX expression */});;);
-=======
   public static getInstance(config?: Partial<LoggerConfig></LoggerConfig>): EnhancedLogger {/* TODO: Fix JSX expression */});]
     } else if (config) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return EnhancedLogger.instance});
 }
   /**
@@ -159,12 +137,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @internal;
    */
-<<<<<<< HEAD
-  public static resetInstance(): void {/* TODO: Fix JSX expression */});;);
-=======
   public static resetInstance(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a debug message;
    *
@@ -172,25 +146,21 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional data to include;
    * @param source - Optional source identifier;
    * @example;
-   * ```typescript;
-   * logger.debug('Component rendered', { props: componentProps }, 'MyComponent')
-   * ``
+   * ```typescript`
+   * logger.debug('Component rendered', { props: componentProps }, 'MyComponent')'
+   * ````
    */
   public debug(message: string, data?: Record<string></string>, source?: string): void {
     this.log(LogLevel.DEBUG, message, data, source)
-   * @example;`
-   * ```typescript;
-   * logger.debug('Component rendered', {/* TODO: Fix JSX expression */});
-  s: componentProps }, 'MyComponent');`
-   * ```
+   * @example``
+   * ```typescript`
+   * logger.debug('Component rendered', {/* TODO: Fix JSX expression */})'
+  s: componentProps }, 'MyComponent')``
+   * ````
    */
   public debug(messag)
-<<<<<<< HEAD
-  e: string, data?: Record<string></string>, source?: string): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, data?: Record<string></string>, source?: string): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log an info message;
    *
@@ -198,25 +168,21 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional data to include;
    * @param source - Optional source identifier;
    * @example;
-   * ```typescript;
-   * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent')
-   * ``
+   * ```typescript`
+   * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent')'
+   * ````
    */
   public info(message: string, data?: Record<string></string>, source?: string): void {
     this.log(LogLevel.INFO, message, data, source)
-   * @example;`
-   * ```typescript;
-   * logger.info('User action completed', {/* TODO: Fix JSX expression */});
-  n: 'submit_form' }, 'FormComponent');`
-   * ```
+   * @example``
+   * ```typescript`
+   * logger.info('User action completed', {/* TODO: Fix JSX expression */})'
+  n: 'submit_form' }, 'FormComponent')``
+   * ````
    */
   public info(messag)
-<<<<<<< HEAD
-  e: string, data?: Record<string></string>, source?: string): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, data?: Record<string></string>, source?: string): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a warning message;
    *
@@ -224,25 +190,21 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional data to include;
    * @param source - Optional source identifier;
    * @example;
-   * ```typescript;
-   * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule')
-   * ``
+   * ```typescript`
+   * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule')'
+   * ````
    */
   public warn(message: string, data?: Record<string></string>, source?: string): void {
     this.log(LogLevel.WARN, message, data, source)
-   * @example;`
-   * ```typescript;
-   * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */});
-  i: 'oldFunction' }, 'LegacyModule');`
-   * ```
+   * @example``
+   * ```typescript`
+   * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */})'
+  i: 'oldFunction' }, 'LegacyModule')``
+   * ````
    */
   public warn(messag)
-<<<<<<< HEAD
-  e: string, data?: Record<string></string>, source?: string): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string, data?: Record<string></string>, source?: string): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log an error message;
    *
@@ -251,19 +213,19 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param error - Optional Error object for stack trace;
    * @param source - Optional source identifier;
    * @example;
-   * ```typescript;
+   * ```typescript`
    * try {
    *   // some code}
    * } catch (err) {}
-   *   logger.error('Operation failed', { operation: 'fetchData' }, err, 'DataService')
+   *   logger.error('Operation failed', { operation: 'fetchData' }, err, 'DataService')'
    * }
-   * ``
+   * ````
    */
   public error(message: string},
     data?: Record<string></string>)
     error?: Error)
     source?: string;
-  ): void {;
+  ): void {
 const logData = { ...data }
     if (error) {
       logData.error = {
@@ -271,13 +233,13 @@ const logData = { ...data }
         message: error.message;
         stack: error.stack});
 }
-   * @example;`
-   * ```typescript;
+   * @example``
+   * ```typescript`
    * try {/* TODO: Fix JSX expression */}
    * } catch (err) {/* TODO: Fix JSX expression */}
-  n: 'fetchData' }, err, 'DataService');
-   * }`
-   * ```
+  n: 'fetchData' }, err, 'DataService')'
+   * }``
+   * ````
    */
   public error(messag,
   e: string,
@@ -285,19 +247,12 @@ const logData = { ...data }
     error?: Error,
     source?: string}
   ): void {/* TODO: Fix JSX expression */}
-    const logData = { ...data };
-<<<<<<< HEAD
-    if (error) {/* TODO: Fix JSX expression */});;)
-}});
-}
-    this.log(LogLevel.ERROR, message, logData, source, error?.stack););
-=======
+const logData = { ...data };
     if (error) {/* TODO: Fix JSX expression */});]
     }});
 }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a fatal error message;
    *
@@ -310,7 +265,7 @@ const logData = { ...data }
     data?: Record<string></string>)
     error?: Error)
     source?: string;
-  ): void {;
+  ): void {
 const logData = { ...data }
     if (error) {
       logData.error = {
@@ -324,47 +279,38 @@ const logData = { ...data }
     error?: Error,
     source?: string}
   ): void {/* TODO: Fix JSX expression */}
-    const logData = { ...data };
-<<<<<<< HEAD
-    if (error) {/* TODO: Fix JSX expression */});;)
-}});
-}
-    this.log(LogLevel.FATAL, message, logData, source, error?.stack););
-=======
+const logData = { ...data };
     if (error) {/* TODO: Fix JSX expression */});]
     }});
 }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Start a performance measurement;
    *
    * @param markName - Unique name for the performance mark;
    * @example;
-   * ```typescript;
-   * logger.startPerformance('api_call')
+   * ```typescript`
+   * logger.startPerformance('api_call')'
    * // ... perform operation;
-   * logger.endPerformance('api_call'); // Logs the duration;
-   * ``
+   * logger.endPerformance('api_call')'
+// Logs the duration;
+   * ````
    */
   public startPerformance(markName: string): void {,
     if (!this.config.enablePerformance) return;
     this.performanceMarks.set(markName, performance.now())
-   * @example;`
-   * ```typescript;
-   * logger.startPerformance('api_call');
+   * @example``
+   * ```typescript`
+   * logger.startPerformance('api_call')'
    * // ... perform operation;
-   * logger.endPerformance('api_call'); // Logs the duration;`
-   * ```
+   * logger.endPerformance('api_call')'
+// Logs the duration``
+   * ````
    */
   public startPerformance(markNam)
-<<<<<<< HEAD
-  e: string): void {/* TODO: Fix JSX expression */});;);
-=======
   e: string): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * End a performance measurement and log the duration;
    *
@@ -373,28 +319,28 @@ const logData = { ...data }
    * @returns Duration in milliseconds, or undefined if mark not found;
    */
   public endPerformance(markName: string, data?: Record<string></string>): number | undefined {
-    if (!this.config.enablePerformance) return undefined;
+    if (!this.config.enablePerformance) return undefined
 const startTime = this.performanceMarks.get(markName)
     if (!startTime) {
-      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger')
+      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger')'
       return undefined});
 }
-    const duration = performance.now() - startTime;
+const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName)
-    this.info(`Performance: ${markName}`)
+    this.info(`Performance: ${markName}`)``
       {
-        duration: `${duration.toFixed(2);ms`,
+        duration: `${duration.toFixed(2); ms`,``
   public endPerformance(markNam)
-  e: string, data?: Record<string></string>): number | undefined {/* TODO: Fix JSX expression */}`
-      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
+  e: string, data?: Record<string></string>): number | undefined {/* TODO: Fix JSX expression */}``
+      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger')'
       return undefined});
 }
-    const duration = performance.now() - startTime;
-    this.performanceMarks.delete(markName);`
-    this.info(`Performanc,`
-  e: ${markName}`,
-      {/* TODO: Fix JSX expression */});`
-  n: `${duration.toFixed(2);ms`,
+const duration = performance.now() - startTime;
+    this.performanceMarks.delete(markName)``
+    this.info(`Performanc,```
+  e: ${markName}`,`
+      {/* TODO: Fix JSX expression */})``
+  n: `${duration.toFixed(2); ms`,``
         ...data});
 },
       'PerformanceMonitor'
@@ -418,7 +364,7 @@ const startTime = this.performanceMarks.get(markName)
     stack?: string;
   ): void {
     // Check if log level meets minimum threshold;
-    if (level < this.config.minLevel) return;
+    if (level < this.config.minLevel) return
 const logEntry: LogEntry = {,
       id: this.generateLogId(),
       level,
@@ -435,19 +381,12 @@ const logEntry: LogEntry = {,
     this.logs.push(logEntry)
     // Maintain max logs limit;
     if (this.logs.length > this.config.maxLogs) {
-<<<<<<< HEAD
-      this.logs.shift(););
-    // Console output;
-    if (this.config.enableConsole) {
-      this.logToConsole(logEntry););
-=======
       this.logs.shift()]
     }
     // Console output;
     if (this.config.enableConsole) {
       this.logToConsole(logEntry)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Remote logging;
     if (this.config.enableRemote && this.config.remoteEndpoint) {
       this.logToRemote(logEntry)
@@ -458,22 +397,11 @@ const logEntry: LogEntry = {,
     data?: Record<string></string>,
     source?: string,
     stack?: string}
-<<<<<<< HEAD
-  ): void {/* TODO: Fix JSX expression */});;);
-    // Store log entry;
-    this.logs.push(logEntry);
-    // Maintain max logs limit;
-    if (this.logs.length > this.config.maxLogs) {/* TODO: Fix JSX expression */});;);
-    // Console output;
-    if (this.config.enableConsole) {/* TODO: Fix JSX expression */});;);
-    // Remote logging;
-    if (this.config.enableRemote && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});;);
-=======
   ): void {/* TODO: Fix JSX expression */});]
-    };
-    // Store log entry;
-    this.logs.push(logEntry);
-    // Maintain max logs limit;
+    }
+// Store log entry;
+    this.logs.push(logEntry)
+// Maintain max logs limit;
     if (this.logs.length > this.config.maxLogs) {/* TODO: Fix JSX expression */});]
     }
     // Console output;
@@ -482,7 +410,6 @@ const logEntry: LogEntry = {,
     // Remote logging;
     if (this.config.enableRemote && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Check if running in development mode;
@@ -492,24 +419,23 @@ const logEntry: LogEntry = {,
    */
   private isDevelopment(): boolean {
     return this.config.environment === 'development' || process.env['NODE_ENV'] === 'development'
-<<<<<<< HEAD
-  private isDevelopment(): boolean {/* TODO: Fix JSX expression */});;);
-=======
   private isDevelopment(): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Output log to console;
    *
    * @private;
    * @param entry - Log entry to output;
    */
-  private logToConsole(entry: LogEntry): void {,;
-const levelName = LogLevel[entry.level],;
-const timestamp = entry.timestamp.toISOString(),;
-const source = entry.source ? ` [${entry.source}]` : '';
-const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
-    if ($1) { const structuredLog = {
+  private logToConsole(entry: LogEntry): void {,
+const levelName = LogLevel[entry.level],
+const timestamp = entry.timestamp.toISOString(),
+const source = entry.source ? ` [${entry.source}`
+  ]` : `
+const message = `[${timestamp}`
+  ] ${levelName}${source}: ${entry.message}```
+    if ($1) {
+const structuredLog = {
         timestamp: entry.timestamp;
         level: levelName,
         message: entry.message;
@@ -518,19 +444,12 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
 }
       switch (entry.level) {
         case LogLevel.DEBUG: if (this.isDevelopment()) {,
-<<<<<<< HEAD
-            logger.debug(message, structuredLog););
-          break;
-        case LogLevel.INFO: if (this.isDevelopment()) {,
-            logger.info(message, structuredLog););
-=======
             logger.debug(message, structuredLog)]
     }
           break;
         case LogLevel.INFO: if (this.isDevelopment()) {,
             logger.info(message, structuredLog)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           break;
         case LogLevel.WARN:
           logger.warn(message, structuredLog)
@@ -538,31 +457,20 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
         case LogLevel.ERROR: case LogLevel.FATAL:,
           logger.error(message, structuredLog)
           if (entry.stack) {
-<<<<<<< HEAD
-            logger.info('Stack trace:', { stack: entry.stack }, 'Logger'););
-=======
-            logger.info('Stack trace:', { stack: entry.stack }, 'Logger')]
+            logger.info('Stack trace:', { stack: entry.stack }, 'Logger')]'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           break});
 }
     } else {
       // Simple console output;
       switch (entry.level) {
         case LogLevel.DEBUG: if (this.isDevelopment()) {,
-<<<<<<< HEAD
-            logger.debug(message, entry.data););
-          break;
-        case LogLevel.INFO: if (this.isDevelopment()) {,
-            logger.info(message, entry.data););
-=======
             logger.debug(message, entry.data)]
     }
           break;
         case LogLevel.INFO: if (this.isDevelopment()) {,
             logger.info(message, entry.data)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           break;
         case LogLevel.WARN:
           logger.warn(message, entry.data)
@@ -570,20 +478,11 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
         case LogLevel.ERROR: case LogLevel.FATAL:,
           logger.error(message, entry.data)
   private logToConsole(entr)
-<<<<<<< HEAD
-  y: LogEntry): void {/* TODO: Fix JSX expression */}`;
-const source = entry.source ? ` [${entry.source}]` : '';`;
-const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
-    if (this.config.enableStructured) {/* TODO: Fix JSX expression */});;);
-      switch (entry.level) {/* TODO: Fix JSX expression */});;);
-          break;
-        case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */});;);
-=======
-  y: LogEntry): void {/* TODO: Fix JSX expression */}`
-    const source = entry.source ? ` [${entry.source}]` : '';`
-    const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
+  y: LogEntry): void {/* TODO: Fix JSX expression */}``
+const source = entry.source ? ` [${entry.source}`
+  ]` : '``'
+const message = `[${timestamp}`
+  ] ${levelName}${source}: ${entry.message}`
     if (this.config.enableStructured) {/* TODO: Fix JSX expression */});]
     };
       switch (entry.level) {/* TODO: Fix JSX expression */});]
@@ -593,7 +492,6 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
   O:
           if (this.isDevelopment()) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           break;
         case LogLevel.WAR,
   N:
@@ -605,17 +503,7 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
   L:
           logger.error(message, structuredLog);
           if (entry.stack) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-  k: entry.stack }, 'Logger'););
-          break});
-}
-    } else {/* TODO: Fix JSX expression */});;);
-          break;
-        case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */});;);
-=======
-  k: entry.stack }, 'Logger')]
+  k: entry.stack }, 'Logger')]'
     }
           break});
 }
@@ -626,7 +514,6 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
   O:
           if (this.isDevelopment()) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           break;
         case LogLevel.WAR,
   N:
@@ -639,12 +526,8 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
           logger.error(message, entry.data);
           break});
 }
-<<<<<<< HEAD
-    });;);
-=======
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Send log to remote endpoint;
    *
@@ -655,35 +538,27 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (!this.config.remoteEndpoint) return;
     try {,
       await fetch(this.config.remoteEndpoint, {)
-        method: 'POST'),
+        method: 'POST'),'
   headers: {)
-          'Content-Type': 'application/json');)
+          'Content-Type': 'application/json');)'
         body: JSON.stringify({)
           ...entry),
           timestamp: entry.timestamp.toISOString();)]
     });]
     } catch (error) {
       // Fallback to console if remote logging fails;
-      logger.error('Failed to send log to remote endpoint:', {)
+      logger.error('Failed to send log to remote endpoint:', {)'
         error: error instanceof Error ? error.message : String(error);)
   private async logToRemote(entr)
   y: LogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});]
     },
         bod,
-<<<<<<< HEAD
-  y: JSON.stringify({/* TODO: Fix JSX expression */});;)
-});;)
-});;)
-} catch (error) {/* TODO: Fix JSX expression */});;)
-});;);
-=======
   y: JSON.stringify({/* TODO: Fix JSX expression */});]
     });]
     });]
     } catch (error) {/* TODO: Fix JSX expression */});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Generate unique log ID;
@@ -692,9 +567,9 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
    * @returns Unique log identifier;
    */
   private generateLogId(): string {
-    return `log_${Date.now();_${Math.random().toString(36).substr(2, 9);`
-  private generateLogId(): string {/* TODO: Fix JSX expression */}`
-    return `log_${Date.now();_${Math.random().toString(36).substr(2, 9);`});
+    return `log_${Date.now();_${Math.random().toString(36).substr(2, 9)```
+  private generateLogId(): string {/* TODO: Fix JSX expression */}``
+    return `log_${Date.now();_${Math.random().toString(36).substr(2, 9)`})``
 }
   /**
    * Get user ID from session/storage;
@@ -702,14 +577,9 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
    * @private;
    * @returns User ID or undefined;
    */
-<<<<<<< HEAD
-  private getUserId(): string | undefined {/* TODO: Fix JSX expression */});;)
-} catch {/* TODO: Fix JSX expression */});;);
-=======
   private getUserId(): string | undefined {/* TODO: Fix JSX expression */});]
     } catch {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get or create session ID;
@@ -718,25 +588,19 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
    * @returns Session ID;
    */
   private getSessionId(): string | undefined {
-    if (typeof window === 'undefined') return undefined;
+    if (typeof window === 'undefined') return undefined'
     try {;
-let sessionId = sessionStorage.getItem('sessionId')
+let sessionId = sessionStorage.getItem('sessionId')'
       if (!sessionId) {
-        sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9);`
-        sessionStorage.setItem('sessionId', sessionId)
-  private getSessionId(): string | undefined {/* TODO: Fix JSX expression */}`
-        sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9);`;
-<<<<<<< HEAD
-        sessionStorage.setItem('sessionId', sessionId););
-      return sessionId});
-} catch {/* TODO: Fix JSX expression */});;);
-=======
-        sessionStorage.setItem('sessionId', sessionId)]
+        sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9)```
+        sessionStorage.setItem('sessionId', sessionId)'
+  private getSessionId(): string | undefined {/* TODO: Fix JSX expression */}``
+        sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9)`
+        sessionStorage.setItem('sessionId', sessionId)]'
     }
       return sessionId});
 } catch {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get all logs;
@@ -747,12 +611,8 @@ let sessionId = sessionStorage.getItem('sessionId')
   public getLogs(level?: LogLevel): LogEntry[] {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)
-<<<<<<< HEAD
-  public getLogs(level?: LogLevel): LogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
   public getLogs(level?: LogLevel): LogEntry[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return [...this.logs]});
 }
   /**
@@ -764,12 +624,8 @@ let sessionId = sessionStorage.getItem('sessionId')
   public getLogsBySource(source: string): LogEntry[] {,
     return this.logs.filter(log => log.source === source),
   public getLogsBySource(sourc)
-<<<<<<< HEAD
-  e: string): LogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
   e: string): LogEntry[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get log statistics;
    *
@@ -777,12 +633,12 @@ let sessionId = sessionStorage.getItem('sessionId')
    */
   public getStatistics(): {
     total: number,
-    byLevel: Record<string></string>
-    bySource: Record<string></string>});
-} {;
+    byLevel: Record<string></string> bySource: Record <string></string>});
+},
+    {
 const byLevel: Record<string></string> = {}
-    const bySource: Record<string></string> = {}
-    this.logs.forEach(log => {);
+const bySource: Record<string></string> = {}
+    this.logs.forEach(log => {)
 const levelName = LogLevel[log.level])
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
       if (log.source) {
@@ -795,13 +651,14 @@ const levelName = LogLevel[log.level])
       bySource});
 }
   public getStatistics(): {/* TODO: Fix JSX expression */});]
-    } {/* TODO: Fix JSX expression */}
-  byLevel: Record<string></string> = {};
-    const,
+    },
+    {/* TODO: Fix JSX expression */}
+  byLevel: Record<string></string> = {}
+const,
   bySource: Record<string></string> = {};
     this.logs.forEach(log => {/* TODO: Fix JSX expression */});]
     });]
-    });;
+    });
     return {/* TODO: Fix JSX expression */});]
     }});
 }
@@ -810,12 +667,8 @@ const levelName = LogLevel[log.level])
    */
   public clearLogs(): void {
     this.logs = []
-<<<<<<< HEAD
-  public clearLogs(): void {/* TODO: Fix JSX expression */});;);
-=======
   public clearLogs(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Update logger configuration;
    *
@@ -838,16 +691,10 @@ const levelName = LogLevel[log.level])
         timestamp: log.timestamp.toISOString();)),
       null,
       2;
-<<<<<<< HEAD
-    ););
-}
-// Export singleton instance
-=======
     )]
     }
 }
-// Export singleton instance;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+// Export singleton instance
 export const logger = EnhancedLogger.getInstance()
 // Export default
 export default EnhancedLogger;
@@ -855,18 +702,12 @@ export default EnhancedLogger;
     })],
       null,
       2;
-<<<<<<< HEAD
-    ););
-}
-// Export singleton instance
-=======
     )]
     }
 }
-// Export singleton instance;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export const logger = EnhancedLogger.getInstance();
+// Export singleton instance
+export const logger = EnhancedLogger.getInstance()
 // Export default
 export default EnhancedLogger;
-"`
+"``"
 }

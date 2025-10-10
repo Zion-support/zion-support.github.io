@@ -1,4 +1,3 @@
-
 interface LinkProps {
   href: string,
     children: React.ReactNode
@@ -9,7 +8,7 @@ interface LinkProps {}
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label'?: string;});
+  'aria-label'?: string;})'
 }
 export const Link: React.FC<LinkProps></LinkProps>= ({
 export const Link: React.FC<LinkProps></LinkProps> = ({}
@@ -20,7 +19,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({}
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string;});
+  'aria-label'?: string;})'
 }
 export const Link: React.FC<LinkProps></LinkProps> = ({,
   href;
@@ -29,29 +28,24 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
   target,
   rel,
   onClick,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel,'
   ...props});
 }); => {}
-  const handleClick = useCallback((...args) => {}
+const handleClick = useCallback((...args) => {}
     if (onClick) {}
       onClick();});
 }
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {
+    if (href.startsWith('/') && !href.startsWith('//')) {'
     // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {}
+    if (href.startsWith('/') && !href.startsWith('//')) {}'
       e.preventDefault()
       window.location.href = href;});
 }
-  }</LinkProps>
-<<<<<<< HEAD
-  return (<a;);
-=======
-  return (<a]
+  }</LinkProps> return ( <a]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  return(<a;
-import React from 'react';
+  return(<a
+import React from 'react'
 interface LinkProps {/* TODO: Fix JSX expression */});
 }
 export const,
@@ -59,7 +53,7 @@ export const,
     }); => {/* TODO: Fix JSX expression */});
 }
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */});
+    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */})'
 }
   };
   return (<a></a>
@@ -68,8 +62,8 @@ export const,
       target={target}
       rel={rel}
       onClick={handleClick}
-      aria-label={ariaLabel}
-      {...props}
+      aria-label={ariaLabel},
+    {...props}
     >{children}</a>
     </a>
       aria-label={ariaLabel});
@@ -77,21 +71,13 @@ export const,
     >)
       {children});
     </a>)
-<<<<<<< HEAD
-  );)
-=======
   )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Link;
     >
       {children}
     </a>)
-<<<<<<< HEAD
-  );)
-=======
   )]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    }
 export default Link;
 }

@@ -1,59 +1,39 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CookiesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title>Cookie Policy - Zion Tech Group</title>
-        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
-      </Helmet>
-      
+        <title> Cookie Policy - Zion Tech Group </title>
+        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." /> " </Helmet>"
       <div>
         <Navigation />
-        
-        <main className="pt-20"></main>
+        <main className="pt-20"></main>"
           <div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>"
                 Cookie Policy</h1>
               </h1>
-              
               <div>
-                <p className="text-xl text-gray-600 mb-8"></p>
+                <p className="text-xl text-gray-600 mb-8"></p>"
                   Last updated: {new Date().toLocaleDateString();
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>What Are Cookies</h2>
-                <p className="text-gray-700 mb-6"></p>
-                  Cookies are small text files that are placed on your computer or mobile device when you visit our website.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>How We Use Cookies</h2>
-                <p className="text-gray-700 mb-6"></p>
-                  We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>Managing Cookies</h2>
-                <p className="text-gray-700 mb-6"></p>
-                  You can control and/or delete cookies as you wish through your browser settings.
-                </p>
+                </p>}}
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>What Are Cookies</h2> " <p className="text-gray-700 mb-6"></p> "
+                  Cookies are small text files that are placed on your computer or mobile device when you visit our website. </p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>How We Use Cookies</h2> " <p className="text-gray-700 mb-6"></p> "
+                  We use cookies to improve your experience on our website, analyze site traffic, and personalize content. </p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>Managing Cookies</h2> " <p className="text-gray-700 mb-6"></p> "
+                  You can control and/or delete cookies as you wish through your browser settings. </p>
               </div>
             </div>
           </div>
         </main>
-        
         <Footer />
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    }
 export default CookiesPage;

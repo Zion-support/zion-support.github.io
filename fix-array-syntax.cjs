@@ -3,44 +3,28 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixAllSyntax(filePath) {
+function fixArraySyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     const originalContent = content;
     
-    // Fix all common syntax issues
+    // Fix array syntax issues
     content = content
-      // Fix extra quotes in JSX
-      .replace(/""/g, '')
-      .replace(/''/g, '')
-      .replace(/`/g, '`')
-      
-      // Fix extra semicolons in imports and statements
-      .replace(/;'/g, "'")
-      .replace(/;"/g, '"')
-      .replace(/;`/g, '`')
-      
-      // Fix array syntax
+      // Fix extra quotes and commas in arrays
       .replace(/},\s*''\s*{/g, '},\n    {')
       .replace(/},\s*''\s*]/g, '}\n  ]')
       .replace(/},\s*''\s*$/gm, '},')
+      .replace(/},\s*''\s*\n/g, '},\n')
       
-      // Fix object syntax
-      .replace(/:\s*''\s*,/g, ',')
-      .replace(/:\s*''\s*}/g, '}')
-      
-      // Fix JSX syntax
+      // Fix missing commas in arrays
       .replace(/}\s*{/g, '},\n    {')
       .replace(/}\s*]/g, '}\n  ]')
       
-      // Fix unterminated strings
-      .replace(/(['"`])([^'"`]*?)(\n|$)/g, (match, quote, str, end) => {
-        if (!str.includes(quote) && str.trim()) {
-          return quote + str + quote + end;
-        }
-        return match;
-      })
+      // Fix extra quotes in object properties
+      .replace(/:\s*''\s*,/g, ',')
+      .replace(/:\s*''\s*}/g, '}')
+      .replace(/:\s*''\s*$/gm, '')
       
       // Clean up extra whitespace
       .replace(/\n\s*\n\s*\n/g, '\n\n')
@@ -59,7 +43,7 @@ function fixAllSyntax(filePath) {
   }
 }
 
-function findFilesWithSyntaxIssues(dir) {
+function findFilesWithArrays(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -73,7 +57,7 @@ function findFilesWithSyntaxIssues(dir) {
         traverse(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('""') || content.includes("''") || content.includes('`') || content.includes(';')) {
+        if (content.includes("''") || content.includes('},\s*{') || content.includes('},\s*]')) {
           files.push(fullPath);
         }
       }
@@ -86,16 +70,16 @@ function findFilesWithSyntaxIssues(dir) {
 
 // Main execution
 const appDir = '/workspace/app';
-console.log('Finding files with syntax issues...');
+console.log('Finding files with array syntax issues...');
 
-const files = findFilesWithSyntaxIssues(appDir);
+const files = findFilesWithArrays(appDir);
 console.log(`Found ${files.length} files to check`);
 
 let fixedCount = 0;
 let errorCount = 0;
 
 for (const file of files) {
-  if (fixAllSyntax(file)) {
+  if (fixArraySyntax(file)) {
     fixedCount++;
     console.log(`Fixed: ${file}`);
   }
