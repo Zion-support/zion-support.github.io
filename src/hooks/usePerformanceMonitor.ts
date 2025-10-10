@@ -3,76 +3,90 @@ import { useEffect } from 'react';
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    const monitorWebVitals = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        const logMetric = (metric: any, type: string) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`${type}:`, metric);
-          }
-          // Send to analytics service in production
-          if (process.env.NODE_ENV === 'production') {
-            // Send to analytics service
-          }
-        };
-        
-        getCLS((metric) => logMetric(metric, 'CLS'));
-        getFID((metric) => logMetric(metric, 'FID'));
-        getFCP((metric) => logMetric(metric, 'FCP'));
-        getLCP((metric) => logMetric(metric, 'LCP'));
-        getTTFB((metric) => logMetric(metric, 'TTFB'));
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Web Vitals not available:', error);
+    const monitorCoreWebVitals = () => {
+      // Largest Contentful Paint (LCP)
+      const observeLCP = () => {
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            console.log('LCP:', lastEntry.startTime);
+          });
+          observer.observe({ entryTypes: ['largest-contentful-paint'] });
         }
+      };
+
+      // First Input Delay (FID)
+      const observeFID = () => {
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              console.log('FID:', entry.processingStart - entry.startTime);
+            });
+          });
+          observer.observe({ entryTypes: ['first-input'] });
+        }
+      };
+
+      // Cumulative Layout Shift (CLS)
+      const observeCLS = () => {
+        if ('PerformanceObserver' in window) {
+          let clsValue = 0;
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry: any) => {
+              if (!entry.hadRecentInput) {
+                clsValue += entry.value;
+              }
+            });
+            console.log('CLS:', clsValue);
+          });
+          observer.observe({ entryTypes: ['layout-shift'] });
+        }
+      };
+
+      observeLCP();
+      observeFID();
+      observeCLS();
+    };
+
+    // Monitor Resource Loading
+    const monitorResourceLoading = () => {
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.duration > 1000) { // Log slow resources
+              console.warn('Slow resource:', entry.name, entry.duration);
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['resource'] });
       }
     };
 
-    // Monitor resource loading
-    const monitorResourceLoading = () => {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', {
-                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-              });
-            }
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
-
-      return () => observer.disconnect();
-    };
-
-    // Monitor memory usage
-    const monitorMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Memory usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+    // Monitor Long Tasks
+    const monitorLongTasks = () => {
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            console.warn('Long task detected:', entry.duration);
           });
-        }
+        });
+        observer.observe({ entryTypes: ['longtask'] });
       }
     };
 
     // Initialize monitoring
-    monitorWebVitals();
-    const cleanupResource = monitorResourceLoading();
-    monitorMemoryUsage();
+    monitorCoreWebVitals();
+    monitorResourceLoading();
+    monitorLongTasks();
 
-    // Cleanup on unmount
+    // Cleanup
     return () => {
-      cleanupResource();
+      // Cleanup if needed
     };
   }, []);
 };

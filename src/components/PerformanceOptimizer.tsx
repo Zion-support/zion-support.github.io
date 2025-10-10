@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = memo(({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/logo.png',
-        '/og-image.png'
+        '/images/hero-bg.jpg',
+        '/images/logo.png',
+        '/images/og-image.jpg'
       ];
 
       criticalImages.forEach(src => {
@@ -29,28 +26,46 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (!img.loading) {
           img.loading = 'lazy';
         }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
       });
     };
 
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        script.setAttribute('defer', '');
+    // Preconnect to external domains
+    const preconnectExternalDomains = () => {
+      const domains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://www.google-analytics.com',
+        'https://www.googletagmanager.com'
+      ];
+
+      domains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        if (domain.includes('gstatic.com')) {
+          link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
       });
     };
 
+    // Initialize performance optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalScripts();
+    preconnectExternalDomains();
 
-    // Cleanup
+    // Cleanup function
     return () => {
-      // Cleanup if needed
+      // Remove any event listeners or cleanup if needed
     };
   }, []);
 
   return <>{children}</>;
-};
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;

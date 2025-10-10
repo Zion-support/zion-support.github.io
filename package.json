@@ -96,8 +96,8 @@
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
-    "postbuild": "npm run generate:sitemap && node scripts/performance-optimizer.js && echo \"Build completed successfully\""
+    "generate:sitemap": "node scripts/generate-sitemap.cjs",
+    "postbuild": "npm run generate:sitemap && node scripts/performance-optimizer.cjs && echo \"Build completed successfully\""
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

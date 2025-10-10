@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
+  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -21,26 +21,60 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize analytics
-    const initAnalytics = () => {
-      // Google Analytics initialization would go here
-      console.log('Analytics initialized');
+    // Initialize Google Analytics
+    const initGoogleAnalytics = () => {
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        // Google Analytics 4
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: any[]) {
+          window.dataLayer.push(args);
+        }
+        gtag('js', new Date());
+        gtag('config', process.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX');
+      }
     };
 
-    initAnalytics();
+    initGoogleAnalytics();
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Event tracked:', eventName, properties);
-    // Send to analytics service
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', eventName, properties);
+      }
+
+      // Console log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Event:', eventName, properties);
+      }
+    }
   };
 
-  const trackPageView = (pageName: string) => {
-    console.log('Page view tracked:', pageName);
-    // Send to analytics service
+  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('config', process.env.VITE_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX', {
+          page_title: pageName,
+          page_location: window.location.href,
+          ...properties
+        });
+      }
+
+      // Console log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Page View:', pageName, properties);
+      }
+    }
   };
 
-  const value: AnalyticsContextType = {
+  const value = {
     trackEvent,
     trackPageView
   };
@@ -51,3 +85,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
+
+// Declare global gtag function
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}

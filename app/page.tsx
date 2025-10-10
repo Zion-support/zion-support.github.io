@@ -1,10 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock, Star, Phone, Mail, MapPin, Award, TrendingUp, Building, Activity, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap, Music as MusicIcon } from 'lucide-react';
 import Header from './components/Header';
-
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
 
 import Footer from './components/Footer';
 
@@ -504,6 +502,39 @@ const itServices = [
     icon: Shield,
     link: "https://ziontechgroup.com/smart-contract-security-audit"
   }
+];
+
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CTO",
+    company: "TechCorp Solutions",
+    avatar: "SJ",
+    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs by 70%. The team's expertise in quantum computing is unmatched."
+  },
+  {
+    name: "Michael Chen",
+    role: "CEO",
+    company: "InnovateLabs",
+    avatar: "MC",
+    content: "The AI-powered automation tools from Zion Tech Group revolutionized our workflow. We've seen a 90% improvement in project delivery times and our team productivity has skyrocketed."
+  },
+  {
+    name: "Dr. Emily Rodriguez",
+    role: "Research Director",
+    company: "BioTech Innovations",
+    avatar: "ER",
+    content: "Their AI drug discovery platform accelerated our research by 5x. The quantum computing solutions helped us solve complex molecular problems that would have taken years to crack."
+  }
+];
+
+// Stats data
+const stats = [
+  { number: "500+", label: "Projects Completed", icon: BarChart },
+  { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
+  { number: "50+", label: "Expert Team Members", icon: Users },
+  { number: "24/7", label: "Support Available", icon: Clock }
 ];
 
 const HomePage: React.FC = () => {

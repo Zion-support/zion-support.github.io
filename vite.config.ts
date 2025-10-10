@@ -21,6 +21,8 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     cssMinify: true,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     terserOptions: {
       compress: {
         drop_console: true,
