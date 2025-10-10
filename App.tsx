@@ -15,6 +15,7 @@ import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import ServiceWorker from './app/components/ServiceWorker';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
@@ -57,11 +58,12 @@ const App: React.FC = () => {
               <PerformanceOptimizer>
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
+                    <ServiceWorker />
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                       <Navigation />
                       <Breadcrumb />
-                      <main id="main-content" className="flex-1">
+                      <main id="main-content" className="flex-1" role="main" aria-label="Main content">
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
