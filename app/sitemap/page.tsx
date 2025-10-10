@@ -26,7 +26,6 @@ const SitemapPage: React.FC = () => {const pages = [
     { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
     { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
-
   return (
     <div>
       <div>
@@ -86,11 +85,5 @@ const SitemapPage: React.FC = () => {const pages = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default SitemapPage;

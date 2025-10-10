@@ -72,7 +72,6 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
 ;
@@ -80,16 +79,6 @@ const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCa
 const [searchTerm, setSearchTerm] = useState('');
 ;
 const itServices = [
-=======
-  Webcam as WebcamIcon, Speaker as SpeakerIcon]
-    } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -409,12 +398,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);
-=======
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [
@@ -437,7 +421,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch]
     });;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
@@ -588,7 +571,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>
                 );
-
                 <div>
                   <a
                     href={service.link}
@@ -641,11 +623,5 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ITConsultingPage;

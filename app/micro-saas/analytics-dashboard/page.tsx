@@ -31,12 +31,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
     {
       icon: Target,
       title: 'Goal Tracking',
-<<<<<<< HEAD
       description: 'Monitor KPIs and business objectives with automated alerts.';);
-=======
-      description: 'Monitor KPIs and business objectives with automated alerts.']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const benefits = [
@@ -54,7 +49,6 @@ const metrics = [
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ];
-
   return (
     <>
       <Helmet></Helmet>
@@ -204,11 +198,5 @@ const metrics = [
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default AIAnalyticsDashboardPage;

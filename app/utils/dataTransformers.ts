@@ -14,37 +14,25 @@ export function deepClone<T></T>(ob)
   if (obj instanceof Array) {/* TODO: Fix JSX expression */});
 }
   if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
+const clonedObj = {} as T;
     for (const key in obj) {/* TODO: Fix JSX expression */});
 }
     }
-<<<<<<< HEAD
     return clonedObj;);
   return obj;);
-=======
-    return clonedObj]
-    }
-  return obj]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Deep merge two objects;
  */
 export function deepMerge<T extends Record<string, unknown></T>>(targe,
   t: T, sourc)
   e: Partial<T></T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target };
+const output = { ...target };
   for (const key in source) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */});
 }
     });
 }
-<<<<<<< HEAD
   return output;);
-=======
-  return output]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Flatten a nested object;
  */
@@ -55,18 +43,13 @@ export function flattenObject(ob,
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown></string> = {};
   for (const key in obj) {/* TODO: Fix JSX expression */}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
+const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */});
 }
     });
 }
-<<<<<<< HEAD
   return flattened;);
-=======
-  return flattened]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Unflatten a flattened object;
  */
@@ -78,21 +61,11 @@ export function unflattenObject(ob,
   for (const key in obj) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {};
-<<<<<<< HEAD
           current = current[k] as Record<string, unknown></string>;);
       });
 }
   }
   return result;);
-=======
-          current = current[k] as Record<string, unknown></string>]
-    }
-      });
-}
-  }
-  return result]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Pick specific keys from an object;
  */
@@ -101,18 +74,11 @@ export function pick<T extends Record<string, unknown></T>, K extends keyof T>(o
   key,
   s: K[])
 ): Pick<T, K></T> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T, K></T>;
+const result = {} as Pick<T, K></T>;
   keys.forEach(key => {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
 });;)
 });;
   return result;);
-=======
-});]
-    });;
-  return result]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Omit specific keys from an object;
  */
@@ -121,17 +87,10 @@ export function omit<T extends Record<string, unknown></T>, K extends keyof T>(o
   key,
   s: K[])
 ): Omit<T, K></T> {/* TODO: Fix JSX expression */}
-  const result = { ...obj };
-<<<<<<< HEAD
+const result = { ...obj };
   keys.forEach(key => {/* TODO: Fix JSX expression */});;)
 });;
   return result as Omit<T, K></T>;);
-=======
-  keys.forEach(key => {/* TODO: Fix JSX expression */});]
-    });;
-  return result as Omit<T, K></T>]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Group array items by a key;
  */
@@ -143,30 +102,19 @@ export function groupBy<T></T>(arra,
 ): Record<string, T[]></string> {/* TODO: Fix JSX expression */});
 },
     {} as Record<string></string>
-<<<<<<< HEAD
   ););
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get unique items from an array;
  */
 export function unique<T></T>(arra)
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */});
 }
-  const seen = new Set();
+const seen = new Set();
   return array.filter(item => {/* TODO: Fix JSX expression */});
 });
     seen.add(value);
-<<<<<<< HEAD
     return true;)
 });;);
-=======
-    return true]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Sort array by multiple keys;
  */
@@ -189,17 +137,9 @@ const bComp =
           ? bVal;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
-<<<<<<< HEAD
       if (aComp > bComp) return order === 'asc' ? 1 : -1;);
     return 0;)
 });;);
-=======
-      if (aComp > bComp) return order === 'asc' ? 1 : -1]
-    }
-    return 0]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Chunk array into smaller arrays;
  */
@@ -207,35 +147,20 @@ export function chunk<T></T>(arra,
   y: T[], siz)
   e: number): T[][] {/* TODO: Fix JSX expression */});
 }
-<<<<<<< HEAD
   return chunks;);
-=======
-  return chunks]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Zip multiple arrays together;
  */
 export function zip<T></T>(...array)
   s: T[][]): T[][] {/* TODO: Fix JSX expression */});
 }
-<<<<<<< HEAD
   return result;);
-=======
-  return result]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format bytes to human readable string;
  */
 export function formatBytes(byte)
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`;);
-=======
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format number with separators;
  */
@@ -247,12 +172,7 @@ export function formatNumber(nu)
  */
 export function formatCurrency(amoun)
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
 });.format(amount););
-=======
-});.format(amount)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format date;
  */
@@ -273,12 +193,7 @@ export function formatRelativeTime(dat)
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-<<<<<<< HEAD
   return `${years} year${years > 1 ? 's' : ''} ago`;);
-=======
-  return `${years} year${years > 1 ? 's' : ''} ago`]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Truncate string;
  */

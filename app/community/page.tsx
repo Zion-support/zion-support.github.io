@@ -7,19 +7,6 @@ const CommunityPage: React.FC = () => {const communityFeatures = [
       icon: Users,
       title: 'Expert Network',
       description: 'Connect with industry professionals and AI experts from around the world.'
-<<<<<<< HEAD
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Users, MessageCircle, Calendar, Award } from 'lucide-react';
-
-const CommunityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Users,
-      title: 'Expert Community',
-      description: 'Connect with industry experts and like-minded professionals'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: MessageCircle,
@@ -30,15 +17,6 @@ const CommunityPage: React.FC = () => {
       icon: Calendar,
       title: 'Events & Webinars',
       description: 'Join our regular events, workshops, and educational sessions.'
-<<<<<<< HEAD
-=======
-      description: 'Share insights and learn from community discussions'
-    },
-    {
-      icon: Calendar,
-      title: 'Events & Workshops',
-      description: 'Participate in exclusive events and training sessions'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: Award,
@@ -56,7 +34,6 @@ const CommunityPage: React.FC = () => {
       description: 'Get help and support from fellow community members.'
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -75,85 +52,7 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Connect with like-minded professionals, share knowledge, and grow together in the world of AI and technology.
             </p>
-<<<<<<< HEAD
             ));
-=======
-      description: 'Get recognized for your contributions and achievements'
-    }
-  ];
-
-  const benefits = [
-    'Access to exclusive content',
-    'Networking opportunities',
-    'Expert mentorship',
-    'Early access to new features',
-    'Community support',
-    'Professional development',
-    'Industry insights',
-    'Collaboration opportunities'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Community | Zion Tech Group</title>
-        <meta name="description" content="Join our community of AI and IT professionals. Connect, learn, and grow together." />
-        <meta name="keywords" content="community, networking, AI professionals, IT community, Zion Tech Group" />
-      </Helmet>
-
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Community
-              </span>
-              <br />
-              <span className="text-white">Connect & Grow</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join our vibrant community of AI and IT professionals. 
-              Connect, learn, and grow together in the tech industry.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Join Community
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Join Our Community?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our community offers unique opportunities for growth and collaboration.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -192,28 +91,6 @@ const CommunityPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Community Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover what makes our community special.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </div>
       </section>
@@ -246,4 +123,4 @@ const CommunityPage: React.FC = () => {
 }
 export default CommunityPage;
     </div>)
-export default PagePage;
+export default Page;

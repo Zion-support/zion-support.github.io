@@ -22,14 +22,8 @@ const preloadComponents = () => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-<<<<<<< HEAD
       import('./components/ContentCarousel');)
 }, 100););
-=======
-      import('./components/ContentCarousel')]
-    }, 100)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -43,14 +37,12 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = memo(() => {;
 const [isLoaded, setIsLoaded] = useState(false);
 const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation;
 const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-<<<<<<< HEAD
     return () => clearTimeout(timer);)
 }, []);
   // Analytics tracking for phone clicks - optimized;
@@ -60,18 +52,6 @@ const handlePhoneClick = useCallback(() => {
         event_category: 'engagement',
         event_label: 'main_phone_number';)
 });;);
-=======
-    return () => clearTimeout(timer)]
-    }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number']
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
   return (
     <React.Fragment>
@@ -111,12 +91,7 @@ const handlePhoneClick = useCallback(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-<<<<<<< HEAD
             addressCountry: 'US';);
-=======
-            addressCountry: 'US']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }}
       />
       <PerformanceOptimizer
@@ -1490,6 +1465,5 @@ const handlePhoneClick = useCallback(() => {
     </>
   )]
     });;
-
 HomePage.displayName = 'HomePage'
 export default HomePage;

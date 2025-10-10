@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 'use client';
-
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -10,18 +9,10 @@ import {
   MapPin,
   Clock,
   Send,
-<<<<<<< HEAD
   CheckCircle;)
 } from 'lucide-react';
 ;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-=======
-  CheckCircle]
-    } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     name: '',
     email: '',
     company: '',
@@ -29,7 +20,6 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
     message: '';)
 });
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,27 +32,9 @@ const { name, value } = e.target;
 }););)
 }, []);
 const handleSubmit = async (e: React.FormEvent) => {
-=======
-    message: '']
-    });;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value]
-    });)]
-    }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -75,22 +47,12 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         budget: '',
         timeline: '',
-<<<<<<< HEAD
         message: '';)
 });;)
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
       setIsSubmitting(false););
-=======
-        message: '']
-    });]
-    } catch (error) {
-      setSubmitStatus('error')]
-    } finally {
-      setIsSubmitting(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 ;
 const services = [
@@ -128,14 +90,8 @@ const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
       description: 'Eastern Time';);
-=======
-      description: 'Eastern Time']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-
   return (
     <>
       <Helmet></Helmet>
@@ -173,13 +129,11 @@ const contactInfo = [
                   <span className="text-green-400"></spa>Message sent successfully! We'll get back to you soon.</span>
                 </div>
               );
-
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400"></spa>Failed to send message. Please try again.</span>
                 </div>
               );
-
               <form onSubmit={handleSubmit} className="space-y-6"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div>
@@ -391,11 +345,5 @@ const contactInfo = [
       </div>
 </div>
 
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;

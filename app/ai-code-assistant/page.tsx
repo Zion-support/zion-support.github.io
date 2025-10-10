@@ -3,43 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
+const Page: React.FC = () => {const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: Globe,
@@ -48,7 +18,6 @@ const PagePage: React.FC = () => {
       benefits: ['Global deployment', 'Edge computing', 'Load balancing', 'Geographic optimization']
     },
     {
-<<<<<<< HEAD
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
@@ -58,24 +27,8 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-=======
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Enterprise-grade security to protect your data and operations.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-
-  const benefits = [
-    'Transform your business with AI technology',
-    'Make data-driven decisions with confidence',
-    'Identify trends and opportunities early',
-    'Optimize business processes and workflows',
-    'Reduce costs through intelligent automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <>
       <Helmet>
@@ -126,7 +79,6 @@ const benefits = [
                 Our comprehensive platform provides everything you need to succeed.
               </p>
             </div>
-<<<<<<< HEAD
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -154,7 +106,6 @@ const benefits = [
     'Benefit 5',
     'Benefit 6'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -234,8 +185,6 @@ const benefits = [
               </p>
             </div>
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
@@ -302,7 +251,6 @@ const benefits = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
       {/* Benefits Section */}
       </div>      {/* Benefits Section */}
@@ -324,38 +272,9 @@ const benefits = [
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ));
-=======
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join hundreds of companies that have already transformed their business with our solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started Now</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/pricing"
-                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>View Pricing</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -378,17 +297,7 @@ const benefits = [
     </div>
   );
 };
-
     </div>)
-export default PagePage
+export default Page
 export default AiCodeAssistantPage
-export default PagePage;
-=======
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+export default Page;

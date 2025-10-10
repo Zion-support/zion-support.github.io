@@ -12,7 +12,7 @@ export function dynamic<T extends ComponentType<unknown></unknown>>(</<<<T>impor
 const LazyComponent = lazy(importFunc)</unknown>
   return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div></Suspens>Loading...</Suspense>}>
 ): ComponentType<unknown></unknown> {}
-  const LazyComponent = lazy(importFunc)
+const LazyComponent = lazy(importFunc)
   return (props: unknown) => (}
     <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
       <LazyComponent {...props} />
@@ -29,10 +29,5 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
     <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
       <LazyComponent></LazyComponent>
     </Suspense>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default dynamic;

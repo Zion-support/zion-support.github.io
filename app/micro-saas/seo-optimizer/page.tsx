@@ -6,7 +6,6 @@ const MicroSaaSPage: React.FC = () => {
 return (;
 const serviceName = 'seo-optimizer';
 const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-
   return (
     <>
       <Helmet></Helmet>
@@ -53,12 +52,6 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default MicroSaaSPage;
 }

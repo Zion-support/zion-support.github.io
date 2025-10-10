@@ -1,18 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+const Page: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -50,7 +41,6 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
 ;
 const benefits = [
     'Advanced AI technology integration',
@@ -61,18 +51,7 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
-
-  const benefits = [
-    'Transform your business with AI technology',
-    'Make data-driven decisions with confidence',
-    'Identify trends and opportunities early',
-    'Optimize business processes and workflows',
-    'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-
   return (
     <>
       <Helmet>
@@ -110,11 +89,7 @@ const benefits = [
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
-<<<<<<< HEAD
             ));
-=======
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -167,34 +142,7 @@ const benefits = [
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
             ));
-=======
-              <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                  <div className="text-center">
-                    <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <Brain className="w-10 h-10 text-cyan-400" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>
-                    <p className="text-gray-300 mb-6">
-                      Leverage the power of artificial intelligence to transform your business.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -224,18 +172,7 @@ const benefits = [
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>)
-=======
-        </section>
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-export default PagePage;
+export default Page;

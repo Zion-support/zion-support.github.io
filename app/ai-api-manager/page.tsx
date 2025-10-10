@@ -3,43 +3,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 ;
-const PagePage: React.FC = () => {const features = [
+const Page: React.FC = () => {const features = [
     {
       title: 'Feature 1',
       description: 'Description of feature 1',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code, Cloud, Lock, Monitor } from 'lucide-react';
-
-const AiApiManagerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered API Management',
-      description: 'Advanced AI algorithms that optimize API management and provide intelligent insights.',
-      benefits: ['Smart API optimization', 'Predictive scaling', 'Automated insights', 'Real-time monitoring']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive API analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Performance metrics', 'Usage analytics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Management',
-      description: 'Target specific API endpoints and optimize them with precision and accuracy.',
-      benefits: ['Endpoint optimization', 'Performance tuning', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your API infrastructure for business growth with data-driven strategies.',
-      benefits: ['Scalability planning', 'Performance analysis', 'Cost optimization', 'ROI tracking']
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: Globe,
@@ -48,7 +18,6 @@ const AiApiManagerPage: React.FC = () => {
       benefits: ['Global CDN', 'Edge computing', 'Load balancing', 'Geographic optimization']
     },
     {
-<<<<<<< HEAD
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
@@ -67,66 +36,18 @@ const benefits = [
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
-=======
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Enterprise-grade security to protect your APIs and sensitive data.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
   ];
-
-  const benefits = [
-    'Streamline API development and management',
-    'Improve API performance and reliability',
-    'Reduce development time and costs',
-    'Enhance developer experience',
-    'Scale APIs efficiently',
-    'Ensure security and compliance'
-  ];
-
-  const useCases = [
-    {
-      title: 'API Gateway Management',
-      description: 'Centralized management of all your APIs through a single gateway',
-      icon: Code
-    },
-    {
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and optimization of API performance',
-      icon: Monitor
-    },
-    {
-      title: 'Security Management',
-      description: 'Comprehensive security controls and threat protection',
-      icon: Shield
-    },
-    {
-      title: 'Cloud Integration',
-      description: 'Seamless integration with cloud platforms and services',
-      icon: Cloud
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-  ];
-
   return (
     <>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
-=======
-      <Helmet>
-        <title>AI API Manager - Zion Tech Group</title>
-        <meta name="description" content="Transform your API management with our AI-powered platform. Get intelligent monitoring, optimization, and security for all your APIs." />
-        <meta name="keywords" content="API management, AI APIs, API gateway, API monitoring, API security, microservices, API optimization" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         {/* Hero Section */}
@@ -252,11 +173,6 @@ const benefits = [
 
         {/* Features Section */}
         <section className="py-20 px-4">
-=======
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -301,7 +217,6 @@ const benefits = [
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -313,41 +228,6 @@ const benefits = [
                         </li>
                       ));
                     </ul>);
-=======
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI API management platform can transform your development workflow.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
-                  <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <useCase.icon className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
               ));
             </div>
@@ -395,11 +275,7 @@ const benefits = [
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               ));
-=======
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -432,7 +308,6 @@ const benefits = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <Footer />
       </div>
       <Footer />
@@ -444,18 +319,7 @@ const benefits = [
     </div>
   );
 };
-
     </div>)
-export default PagePage;
+export default Page;
       </section>export default AiApiManagerPage
-export default PagePage;
-=======
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default AiApiManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+export default Page;

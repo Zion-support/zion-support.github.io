@@ -84,7 +84,6 @@ const process = [
       icon: Shield,});
 }
   ];
-
   return(<React.Fragment>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
@@ -202,7 +201,6 @@ const process = [
                       </ul>
                     </div>
                   );
-
                   <a;
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
@@ -302,11 +300,5 @@ const process = [
 
         <Footer />
       </div>,
-<<<<<<< HEAD
     </>);)
-=======
-    </>)]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default WebDevelopmentPage;

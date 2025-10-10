@@ -1,123 +1,80 @@
-'use client';
-
-import React, { useEffect } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 
 interface SecurityEnhancerProps {
+  children: ReactNode;
   enableCSP?: boolean;
   enableHSTS?: boolean;
   enableXSSProtection?: boolean;
   enableClickjackingProtection?: boolean;
   enableContentTypeSniffing?: boolean;
 }
-;
+
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+  children,
   enableCSP = true,
   enableHSTS = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
-  enableContentTypeSniffing = true
+  enableContentTypeSniffing = true,
 }) => {
   useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
+    // Set security headers
+    if (typeof document !== 'undefined') {
+      // Content Security Policy
+      if (enableCSP) {
+        const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
+        const meta = document.createElement('meta');
+        meta.httpEquiv = 'Content-Security-Policy';
+        meta.content = csp;
+        document.head.appendChild(meta);
+      }
+
+      // XSS Protection
+      if (enableXSSProtection) {
+        const meta = document.createElement('meta');
+        meta.httpEquiv = 'X-XSS-Protection';
+        meta.content = '1; mode=block';
+        document.head.appendChild(meta);
+      }
+
+      // Clickjacking Protection
+      if (enableClickjackingProtection) {
+        const meta = document.createElement('meta');
+        meta.httpEquiv = 'X-Frame-Options';
+        meta.content = 'DENY';
+        document.head.appendChild(meta);
+      }
+
+      // Content Type Sniffing Protection
+      if (enableContentTypeSniffing) {
+        const meta = document.createElement('meta');
+        meta.httpEquiv = 'X-Content-Type-Options';
+        meta.content = 'nosniff';
+        document.head.appendChild(meta);
+      }
+
+      // Referrer Policy
+      const referrerMeta = document.createElement('meta');
+      referrerMeta.name = 'referrer';
+      referrerMeta.content = 'strict-origin-when-cross-origin';
+      document.head.appendChild(referrerMeta);
+
+      // Permissions Policy
+      const permissionsMeta = document.createElement('meta');
+      permissionsMeta.httpEquiv = 'Permissions-Policy';
+      permissionsMeta.content = 'camera=(), microphone=(), geolocation=(), payment=()';
+      document.head.appendChild(permissionsMeta);
     }
 
-    // Content Security Policy
-    if ($1) { const cspMeta = document.createElement('meta');
-      cspMeta.httpEquiv = 'Content-Security-Policy';
-      cspMeta.content = [
-        "default-src 'self'",
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-        "img-src 'self' data: https: blob:",
-        "font-src 'self' data: https://fonts.gstatic.com",
-        "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
-        "frame-ancestors 'none'",
-        "base-uri 'self'",
-        "form-action 'self'",
-        "object-src 'none'",
-        "media-src 'self'",
-        "worker-src 'self' blob:"
-      ].join('; ');
-      document.head.appendChild(cspMeta);
+    // Set HSTS header (this would typically be done server-side)
+    if (enableHSTS && typeof window !== 'undefined') {
+      // In a real application, this would be set by the server
+      // For now, we'll just log that it should be enabled
+      console.log('HSTS should be enabled server-side');
     }
+  }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
 
-    // XSS Protection
-    if ($1) { const xssMeta = document.createElement('meta');
-      xssMeta.httpEquiv = 'X-XSS-Protection';
-      xssMeta.content = '1; mode=block';
-      document.head.appendChild(xssMeta);
-    }
-
-    // Clickjacking Protection
-    if ($1) { const frameOptionsMeta = document.createElement('meta');
-      frameOptionsMeta.httpEquiv = 'X-Frame-Options';
-      frameOptionsMeta.content = 'DENY';
-      document.head.appendChild(frameOptionsMeta);
-    }
-
-    // Content Type Sniffing Protection
-    if ($1) { const contentTypeMeta = document.createElement('meta');
-      contentTypeMeta.httpEquiv = 'X-Content-Type-Options';
-      contentTypeMeta.content = 'nosniff';
-      document.head.appendChild(contentTypeMeta);
-    }
-
-    // Referrer Policy;
-const referrerMeta = document.createElement('meta');
-    referrerMeta.name = 'referrer';
-    referrerMeta.content = 'strict-origin-when-cross-origin';
-    document.head.appendChild(referrerMeta);
-
-    // Permissions Policy;
-const permissionsMeta = document.createElement('meta');
-    permissionsMeta.httpEquiv = 'Permissions-Policy';
-    permissionsMeta.content = 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()';
-    document.head.appendChild(permissionsMeta);
-
-    // Security headers for API calls;
-const originalFetch = window.fetch;
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-const headers = new Headers(init?.headers);
-      
-      // Add security headers
-      headers.set('X-Requested-With', 'XMLHttpRequest');
-      headers.set('X-Content-Type-Options', 'nosniff');
-      
-      return originalFetch(input, {
-        ...init,
-        headers,
-        credentials: 'same-origin'
-      });
-    };
-
-    // Input sanitization for forms;
-const sanitizeInput = (input: string): string => {
-      return input
-        .replace(/[<>]/g, '') // Remove potential HTML tags
-        .replace(/javascript:/gi, '') // Remove javascript: protocol
-        .replace(/on\w+=/gi, '') // Remove event handlers
-        .trim();
-    };
-
-    // Apply input sanitization to all form inputs;
-const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach(input => {
-      input.addEventListener('input', (e) => {;
-const target = e.target as HTMLInputElement;
-        if (target.value !== sanitizeInput(target.value)) {
-          target.value = sanitizeInput(target.value);
-        }
-      });
-    });
-
-    // Console warning for security
-    // console.log removed for production
-// console.log removed for production
-}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
-
-  return null;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
-  return <React.Fragment>{children}</React.Fragment>}
 export default SecurityEnhancer;

@@ -133,16 +133,10 @@ const IoTPage: React.FC = () => {const iotServices = [
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-<<<<<<< HEAD
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);
-=======
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [...new Set(iotServices.map(service => service.category))];
-
   return (
     <>
       <Helmet></Helmet>
@@ -295,7 +289,6 @@ const categories = [...new Set(iotServices.map(service => service.category))];
             </div>
           </section>
         ));
-
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white"></section>
           <div>
@@ -372,11 +365,5 @@ const categories = [...new Set(iotServices.map(service => service.category))];
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default IoTPage;

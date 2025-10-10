@@ -20,18 +20,11 @@ export const waitFor = async (
 ): Promise<void></void> => {
   interval = 100
 ): Promise<void></void> => {}
-  const startTime = Date.now()
+const startTime = Date.now()
   while (!condition()) {}
     if (Date.now() - startTime > timeout) {}
-<<<<<<< HEAD
       throw new Error(`Timeout waiting for condition after ${timeout}ms`););
     await wait(interval););
-=======
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)]
-    }
-    await wait(interval)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Mock fetch for testing;
@@ -51,16 +44,9 @@ export const mockFetch = (
         status,
         headers: new Headers(headers),
         json: async () => response;
-<<<<<<< HEAD
         text: async () => JSON.stringify(response);)
 } as Response)
     ) as typeof fetch;);
-=======
-        text: async () => JSON.stringify(response)]
-    } as Response)
-    ) as typeof fetch]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Mock local storage;
@@ -88,7 +74,7 @@ const keys = Array.from(this.store.keys()),
     return this.store.get(key) || null;});
 }
   key(index: number): string | null {}
-    const keys = Array.from(this.store.keys())
+const keys = Array.from(this.store.keys())
     return keys[index] || null;});
 }
   removeItem(key: string): void {}
@@ -119,13 +105,8 @@ export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {
         ...global.window,
         ...overrides});
 });
-<<<<<<< HEAD
       writable: true,;)
 })
-=======
-      writable: true,]
-    });
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const wait = (m)
   s: number): Promise<void></void> => {/* TODO: Fix JSX expression */});
 };
@@ -137,15 +118,8 @@ export const waitFor = async (conditio)
   timeout = 5000,
   interval = 100;
 ): Promise<void></void> => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
       throw new Error(`Timeout waiting for condition after ${timeout}ms`););
     await wait(interval););
-=======
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)]
-    }
-    await wait(interval)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 /**
  * Mock fetch for testing;
@@ -157,16 +131,9 @@ export const mockFetch = (respons,
   s: Record<string, string></string> = {});
 ): void => {/* TODO: Fix JSX expression */}
   h: typeof fetch });.fetch = jest.fn(() =>
-<<<<<<< HEAD
       Promise.resolve({/* TODO: Fix JSX expression */});;)
 } as Response)
     ) as typeof fetch;);
-=======
-      Promise.resolve({/* TODO: Fix JSX expression */});]
-    } as Response)
-    ) as typeof fetch]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 /**
  * Mock local storage;
@@ -201,20 +168,14 @@ export const mockWindow = (override)
   s: Partial<Window></Window> = {});: void => {/* TODO: Fix JSX expression */});
 },
       writabl,
-<<<<<<< HEAD
   e: true,;)
 });;);
-=======
-  e: true,]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Create a mock performance API;
  */
 export const createMockPerformance = (): Performance => {}
-  const entries: PerformanceEntry[] = []
+const entries: PerformanceEntry[] = []
   return {
     now: () => Date.now(),
   mark: (name: string) => {,
@@ -306,14 +267,8 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     onresourcetimingbufferful,
   l: null,
     timeOrigi,
-<<<<<<< HEAD
   n: Date.now();)
 } as unknown as Performance;);
-=======
-  n: Date.now()]
-    } as unknown as Performance]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Generate random test data;
  */
@@ -368,12 +323,7 @@ export const generateTestData = {/* TODO: Fix JSX expression */});
   arra,
   y: <T></T>(generato),
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     return Array.from({ length }, generator););
-=======
-    return Array.from({ length }, generator)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Deep clone an object;
@@ -404,12 +354,7 @@ export class ConsoleSpy {}
   private warnings: string[] = [];
 constructor() {}
     this.originalConsole = { ...console }
-<<<<<<< HEAD
     this.mock(););
-=======
-    this.mock()]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private mock(): void {
       this.logs.push(args.map(String).join(' '));});
 }
@@ -438,7 +383,8 @@ constructor() {}
   clear(): void {}
     this.logs = []
     this.errors = []
-    this.warnings = [];}
+    this.warnings = [];
+}
 export const deepClone = <T></T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */});
 };
@@ -454,23 +400,13 @@ export const deepEqual = (obj,
  */
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
     this.originalConsole = { ...console };
-<<<<<<< HEAD
     this.mock(););
-=======
-    this.mock()]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private mock(): void {/* TODO: Fix JSX expression */});
 };
   s: unknown[]) => {/* TODO: Fix JSX expression */});
 };
   s: unknown[]) => {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
 };);
-=======
-}]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   getLogs(): string[] {/* TODO: Fix JSX expression */});
 }
   getErrors(): string[] {/* TODO: Fix JSX expression */});
@@ -513,12 +449,7 @@ export interface Deferred<T></T> {/* TODO: Fix JSX expression */});
 }
 export const createDeferred = <T></T>(): Deferred<T></T> => {/* TODO: Fix JSX expression */});
 });;
-<<<<<<< HEAD
   return { promise, resolve, reject };);
-=======
-  return { promise, resolve, reject }]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Retry a function with exponential backoff;
  */
@@ -550,12 +481,7 @@ let lastError: Error,
 }
     });
 }
-<<<<<<< HEAD
   throw lastError as any;);
-=======
-  throw lastError as any]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Measure execution time of a function;
  */
@@ -563,9 +489,10 @@ export const measureExecutionTime = async <T></T>(
   fn: () => T | Promise<T></T>): Promise<{ result: T; duration: number }> => {
   fn: () => T | Promise<T></T>
 ): Promise<{ result: T; duration: number }> => {}
-  const start = performance.now();
+const start = performance.now();
 const result = await fn();
-const duration = performance.now() - start;}
+const duration = performance.now() - start;
+}
   return { result, duration });
 }
 export default {}
@@ -587,12 +514,7 @@ export const measureExecutionTime = async <T></T>(f)
   n: () => T | Promise<T></T>
 ): Promise<{/* TODO: Fix JSX expression */}
   n: number }> => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   return { result, duration };)
-=======
-  return { result, duration }]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default {/* TODO: Fix JSX expression */});
 };
 `

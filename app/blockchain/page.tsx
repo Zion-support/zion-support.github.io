@@ -67,7 +67,6 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       benefits: ['Build decentralized applications', 'Enable user ownership', 'Create new business models'],
       marketPrice: '$25,000-100,000/project',
       category: 'Web3',
-<<<<<<< HEAD
       technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
 },
     {
@@ -102,14 +101,9 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       marketPrice: '$500-1,500/hour',
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];);
-=======
-      technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'IPFS']
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [...new Set(blockchainServices.map(service => service.category))];
-
   return (
     <>
       <Helmet>
@@ -244,11 +238,5 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );)
-=======
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default BlockchainPage;

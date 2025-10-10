@@ -11,37 +11,19 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
-    message: '';)
-});
+    message: ''
+  });
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value;)
 }););)
 }, []);
 const handleSubmit = useCallback(async (e: React.FormEvent) => {
-=======
-    message: '']
-    });;
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value]
-    });)]
-    }, []);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -52,24 +34,13 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
         message: '';)
 });;)
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
       setIsSubmitting(false););
-=======
-        message: '']
-    });]
-    } catch (error) {
-      setSubmitStatus('error')]
-    } finally {
-      setIsSubmitting(false)]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
@@ -112,13 +83,11 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
                   <span className="text-green-400"></spa>Message sent successfully!</span>
                 </div>
               );
-
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg"></div>
                   <span className="text-red-400"></spa>Failed to send message. Please try again.</span>
                 </div>
               );
-
               <form onSubmit={handleSubmit} className="space-y-6"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div>
@@ -299,12 +268,6 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
       <Footer />
     </div>
-<<<<<<< HEAD
   );)
-=======
-  )]
-    };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;
 }

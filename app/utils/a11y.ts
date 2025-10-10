@@ -21,9 +21,7 @@ const announcement = document.createElement('div');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
-  
   document.body.appendChild(announcement);
-  
   // Remove announcement after it's been read
   setTimeout(() => {
     document.body.removeChild(announcement)}, 3000);
@@ -47,13 +45,11 @@ const handleKeyDown = (e: KeyboardEvent) => {
         if (document.activeElement === lastFocusable) {
           firstFocusable?.focus();
           e.preventDefault();
-      }
+}
     }
   };
-
   element.addEventListener('keydown', handleKeyDown);
   firstFocusable?.focus();
-
   return () => {
     element.removeEventListener('keydown', handleKeyDown)}}
 
@@ -75,7 +71,6 @@ export function makeKeyboardAccessible(
     tabindex?: number} = {}
 ): () => void {;
 const { role = 'button', tabindex = 0 } = options;
-  
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   ;
@@ -84,10 +79,8 @@ const handleKeyDown = (e: KeyboardEvent) => {
       e.preventDefault();
       onClick(e);
   };
-
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
-
   return () => {
     element.removeEventListener('click', onClick);
     element.removeEventListener('keydown', handleKeyDown)}}
@@ -108,7 +101,6 @@ const lum1 = getLuminance(color1);
 const lum2 = getLuminance(color2);
 const brightest = Math.max(lum1, lum2);
 const darkest = Math.min(lum1, lum2);
-  
   return (brightest + 0.05) / (darkest + 0.05);
 /**
  * Check if contrast ratio meets WCAG standards
@@ -140,13 +132,10 @@ const skipLink = document.createElement('a');
   skipLink.style.padding = '8px';
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
-  
   skipLink.addEventListener('focus', () => {
     skipLink.style.top = '0'});
-  
   skipLink.addEventListener('blur', () => {
     skipLink.style.top = '-40px'});
-  
   return skipLink}
 
 /**
@@ -189,13 +178,11 @@ const tooltip = document.createElement('div');
   tooltip.style.fontSize = '14px';
   tooltip.style.zIndex = '1000';
   tooltip.style.display = 'none';
-  
   document.body.appendChild(tooltip);
   ;
 const showTooltip = () => {
     tooltip.style.display = 'block';
 const triggerRect = trigger.getBoundingClientRect();
-    
     switch (placement) {
       case 'top':
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`;
@@ -217,12 +204,10 @@ const triggerRect = trigger.getBoundingClientRect();
   ;
 const hideTooltip = () => {
     tooltip.style.display = 'none'};
-  
   trigger.addEventListener('mouseenter', showTooltip);
   trigger.addEventListener('mouseleave', hideTooltip);
   trigger.addEventListener('focus', showTooltip);
   trigger.addEventListener('blur', hideTooltip);
-  
   return () => {
     trigger.removeEventListener('mouseenter', showTooltip);
     trigger.removeEventListener('mouseleave', hideTooltip);
@@ -235,24 +220,17 @@ const hideTooltip = () => {
  */
 export class FocusManager {
   private previousActiveElement: HTMLElement | null = null;
-
   saveFocus(): void {
     this.previousActiveElement = document.activeElement as HTMLElement}
 
   restoreFocus(): void {
     if (this.previousActiveElement) {
       this.previousActiveElement.focus();
-  }
-
+}
   moveFocusInside(container: HTMLElement): void {;
 const focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
-<<<<<<< HEAD
 }
-=======
-  }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
