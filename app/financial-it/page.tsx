@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,10 +20,18 @@ import {
   Settings,
   FileText
 } from 'lucide-react';
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Star, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
 
 const FinancialITPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Shield,
       title: 'SOX Compliance',
       description: 'Full compliance with Sarbanes-Oxley Act and financial regulatory requirements.',
@@ -187,10 +196,47 @@ export default function FinancialITPage() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+      icon: DollarSign,
+      title: 'SOX Compliance',
+      description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
+      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']
+    },
+    {
+      icon: Zap,
+      title: 'Financial Data Security',
+      description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',
+      benefits: ['Data encryption', 'Access controls', 'Security monitoring']
+    },
+    {
+      icon: Clock,
+      title: 'Real-time Processing',
+      description: 'High-frequency trading and real-time financial data processing capabilities.',
+      benefits: ['Low latency', 'High throughput', 'Real-time analytics']
+    },
+    {
+      icon: Users,
+      title: 'Regulatory Compliance',
+      description: 'Comprehensive compliance with financial regulations including PCI DSS, GDPR, and more.',
+      benefits: ['Multi-regulation support', 'Automated compliance', 'Risk management']
+    },
+    {
+      icon: Shield,
+      title: 'Fraud Detection',
+      description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',
+      benefits: ['Real-time detection', 'Machine learning', 'Risk scoring']
+    },
+    {
+      icon: BarChart,
+      title: 'Financial Analytics',
+      description: 'Comprehensive analytics and reporting for financial operations and compliance.',
+      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <>
@@ -420,10 +466,40 @@ export default FinancialITPage;
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Financial Services
+            <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              IT Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements. 
+            Built for banks, credit unions, investment firms, and fintech companies.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo
+            </button>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -526,6 +602,34 @@ export default FinancialITPage;
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions designed specifically for financial services industry
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -533,6 +637,7 @@ export default FinancialITPage;
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -567,3 +672,28 @@ export default FinancialITPage;
 =======
 }
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading financial institutions using our specialized IT solutions for compliance and security
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default FinancialITPage;
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70

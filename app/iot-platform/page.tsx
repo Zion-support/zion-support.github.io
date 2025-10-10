@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,11 +19,19 @@ import {
   Network,
   Server
 } from 'lucide-react';
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, Star, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
 
 const IoTPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Wifi,
+<<<<<<< HEAD
       title: 'Device Connectivity',
       description: 'Connect and manage millions of IoT devices with our scalable connectivity platform.',
       benefits: ['Multi-protocol support', 'Device management', 'Remote provisioning', 'OTA updates']
@@ -309,10 +318,34 @@ export default function IoTPlatformPage() {
       title: 'Data Storage',
       description: 'Scalable data storage solutions for massive IoT data volumes.',
       features: ['Time Series DB', 'Data Lake', 'Data Warehousing', 'Data Archiving']
+=======
+      title: 'Device Management',
+      description: 'Comprehensive IoT device management with remote monitoring, updates, and configuration.',
+      benefits: ['Remote monitoring', 'OTA updates', 'Device configuration']
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Data Processing',
+      description: 'Process IoT data in real-time with edge computing and cloud analytics capabilities.',
+      benefits: ['Real-time processing', 'Edge computing', 'Cloud analytics']
+    },
+    {
+      icon: Clock,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring of IoT devices and networks with instant alerts and notifications.',
+      benefits: ['Always-on monitoring', 'Instant alerts', 'Network health']
+    },
+    {
+      icon: Users,
+      title: 'Scalable Infrastructure',
+      description: 'Easily scale your IoT platform as your device fleet grows with millions of connected devices.',
+      benefits: ['Auto-scaling', 'Device onboarding', 'Fleet management']
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
     },
     {
       icon: Shield,
       title: 'IoT Security',
+<<<<<<< HEAD
       description: 'End-to-end security solutions for IoT devices and data.',
       features: ['Device Authentication', 'Data Encryption', 'Network Security', 'Threat Detection']
     }
@@ -411,10 +444,52 @@ export default function IoTPlatformPage() {
                 <span className="text-white font-medium">Secure</span>
               </div>
             </div>
+=======
+      description: 'Comprehensive security measures designed specifically for IoT environments and devices.',
+      benefits: ['Device security', 'Data encryption', 'Access controls']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Advanced analytics and insights from your IoT data to optimize operations and performance.',
+      benefits: ['Data analytics', 'Predictive insights', 'Performance optimization']
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(249,115,22,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            IoT Platform
+            <span className="block bg-gradient-to-r from-orange-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive IoT platform for connecting, managing, and analyzing millions of devices. 
+            Built for smart cities, industrial IoT, and connected device ecosystems.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo
+            </button>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -517,6 +592,34 @@ export default function IoTPlatformPage() {
                 <div className="text-gray-300 text-sm">
                   {benefit.description}
                 </div>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IoT platform designed for modern connected device ecosystems
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-orange-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
               </div>
             ))}
           </div>
@@ -524,6 +627,7 @@ export default function IoTPlatformPage() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -558,3 +662,28 @@ export default function IoTPlatformPage() {
 =======
 }
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading organizations using our IoT platform to connect and manage millions of devices
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default IoTPlatformPage;
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-db70
