@@ -3,8 +3,8 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix all remaining syntax errors
-function fixAllSyntaxErrors(content) {
+// Function to fix remaining syntax errors
+function fixRemainingSyntax(content) {
   let fixed = content;
   
   // Fix common syntax errors
@@ -15,30 +15,16 @@ function fixAllSyntaxErrors(content) {
     .replace(/,\)/g, '}')
     // Fix ,; -> ;
     .replace(/,;/g, ';')
-    // Fix malformed TypeScript generics
-    .replace(/<([^>]+)><\/\1>/g, '<$1>')
-    // Fix malformed JSX closing tags
-    .replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
-      const tags = match.match(/<\/([^>]+)>/g);
-      if (tags && tags.length > 1) {
-        return tags[tags.length - 1]; // Keep only the last closing tag
-      }
-      return match;
-    })
+    // Fix missing commas in object literals
+    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2')
     // Fix missing semicolons
     .replace(/([^;}])\n\s*}/g, '$1;\n}')
     // Fix missing closing parentheses
     .replace(/([^)])\n\s*}/g, '$1)\n}')
-    // Fix missing commas in object literals
-    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2')
-    // Fix malformed function calls
-    .replace(/\)\}/g, ');')
-    .replace(/\}\)/g, '});')
-    // Fix missing closing braces
-    .replace(/([^}])\n\s*$/g, '$1\n}')
-    // Fix malformed JSX elements
-    .replace(/<(\w+)[^>]*><\/\1>/g, '<$1>')
-    // Fix missing closing tags for common elements
+    // Fix JSX fragment issues
+    .replace(/<>\s*<div/g, '<>\n      <div')
+    .replace(/<\/div>\s*<\/>/g, '</div>\n    </>')
+    // Fix missing closing tags
     .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
       // Only add closing tag if it's not a self-closing tag
       if (!match.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tag)) {
@@ -52,7 +38,7 @@ function fixAllSyntaxErrors(content) {
 
 // Main function to process files
 async function processFiles() {
-  console.log('Starting comprehensive syntax error fixes...');
+  console.log('Starting remaining syntax fixes...');
   
   const patterns = [
     'app/**/*.tsx',
@@ -84,14 +70,11 @@ async function processFiles() {
             content.includes(',)') ||
             content.includes(',;') ||
             content.includes('Property assignment expected') ||
-            content.includes('Declaration or statement expected') ||
-            content.includes('Unexpected ")"') ||
-            content.includes('Expected ")"') ||
-            content.includes('</') && content.includes('></')) {
+            content.includes('Declaration or statement expected')) {
           
           console.log(`Processing syntax errors in: ${file}`);
           
-          let fixed = fixAllSyntaxErrors(content);
+          let fixed = fixRemainingSyntax(content);
           
           fs.writeFileSync(file, fixed);
           processedCount++;
@@ -103,7 +86,7 @@ async function processFiles() {
     }
   }
   
-  console.log(`\nComprehensive syntax fixes complete!`);
+  console.log(`\nRemaining syntax fixes complete!`);
   console.log(`Files processed: ${processedCount}`);
   console.log(`Errors encountered: ${errorCount}`);
 }

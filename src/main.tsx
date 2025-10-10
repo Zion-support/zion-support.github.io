@@ -18,6 +18,21 @@ if ('serviceWorker' in navigator) {
         if (process.env.NODE_ENV === 'development') {
           console.log('SW registered: ', registration);
         }
+        
+        // Handle updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available, prompt user to refresh
+                if (confirm('New version available! Refresh to update?')) {
+                  window.location.reload();
+                }
+              }
+            });
+          }
+        });
       })
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently

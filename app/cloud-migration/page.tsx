@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const CloudMigrationPage: React.FC = () => {
   const features = [
     {
       icon: Zap,
@@ -11,6 +11,19 @@ const PagePage: React.FC = () => {
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
@@ -25,18 +38,24 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <title>Cloud Migration | Zion Tech Group</title>
+        <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="cloud migration, cloud services, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </div>
-          </div>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cloud Migration
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our advanced cloud migration solutions. 
+            Powered by cutting-edge AI technology and industry expertise.
+          </p>
         </div>
       </section>
 
@@ -46,10 +65,10 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
+              Why Choose Our Cloud Migration?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
+              Our cloud migration solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
@@ -76,7 +95,7 @@ const PagePage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
+              Experience the power of our cloud migration solutions for your business.
             </p>
           </div>
 
@@ -100,7 +119,7 @@ const PagePage: React.FC = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
+              Contact our experts to discuss your cloud migration needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -119,4 +138,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default CloudMigrationPage;
