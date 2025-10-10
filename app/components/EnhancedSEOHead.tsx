@@ -3,12 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const EnhancedSEOHead: React.FC = () => {
-  return (;
-const EnhancedSEOHead: React.FC = () => {
-return (
+  return (
     <Helmet>
-);
-}
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -57,12 +53,13 @@ return (
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-      ));
+      ))}
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData);
-        </script>);
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -94,11 +91,11 @@ return (
             'https://linkedin.com/company/ziontechgroup',
             'https://twitter.com/ziontechgroup'
           ]
-        });
+        })}
       </script>
       
       <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData);
+        {JSON.stringify(breadcrumbStructuredData)}
       </script>
       
       {/* Additional SEO Meta Tags */}

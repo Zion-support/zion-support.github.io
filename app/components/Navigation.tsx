@@ -221,9 +221,10 @@ const emergingTech = [
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                      ))}
+                    ))}
                   </div>
                 </div>
+              )}
             </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
@@ -252,9 +253,10 @@ const emergingTech = [
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                      ))}
+                    ))}
                   </div>
                 </div>
+              )}
             </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
@@ -283,9 +285,10 @@ const emergingTech = [
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                      ))}
+                    ))}
                   </div>
                 </div>
+              )}
             </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
@@ -361,7 +364,7 @@ const emergingTech = [
                       >
                         {service.name}
                       </Link>
-                      ))}
+                    ))}
                     <Link
                       href="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -370,6 +373,7 @@ const emergingTech = [
                       View All AI Services →
                     </Link>
                   </div>
+                )}
               </div>
               {/* Mobile IT Services */}
               <div>
@@ -394,8 +398,9 @@ const emergingTech = [
                       >
                         {service.name}
                       </Link>
-                      ))}
+                    ))}
                   </div>
+                )}
               </div>
               {/* Mobile Micro SAAS */}
               <div>
@@ -420,7 +425,7 @@ const emergingTech = [
                       >
                         {service.name}
                       </Link>
-                      ))}
+                    ))}
                     <Link
                       href="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -429,6 +434,7 @@ const emergingTech = [
                       View All Micro SAAS →
                     </Link>
                   </div>
+                )}
               </div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
@@ -467,9 +473,11 @@ const emergingTech = [
                 </div>
               </div>
             </div>
-          </div>);
+          </div>
+        )}
       </div>
-      </nav>
+    </nav>
     );
-  }
-export default Navigation;
+  };
+  
+  export default Navigation;
