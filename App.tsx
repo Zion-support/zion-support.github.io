@@ -21,6 +21,7 @@ import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 =======
 import LoadingSpinner from './src/components/LoadingSpinner';
+<<<<<<< HEAD
 import PerformanceMonitor from './src/components/PerformanceMonitor';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 
@@ -30,6 +31,13 @@ const InteractiveAIROICalculator = lazy(() => import('./src/components/Interacti
 const ContentShowcase = lazy(() => import('./src/components/ContentShowcase'));
 const InteractiveContentShowcase2026 = lazy(() => import('./src/components/InteractiveContentShowcase2026'));
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
+=======
+import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
+import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
+import ContentShowcase from './src/components/ContentShowcase';
+import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+import './src/styles/futuristic.css';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
 
 // Structured data for SEO
 const structuredData = {
