@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import { execSync } from 'child_process';
 
 // Find all files with merge conflicts
@@ -25,21 +26,36 @@ const resolveMergeConflicts = (filePath) => {
     
     console.log(`Resolving merge conflicts in: ${filePath}`);
     
-    // Remove all merge conflict markers and keep the newer version
-    let resolvedContent = content;
+    // Split by merge conflict markers and keep the newer version
+    const parts = content.split(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g);
+    const conflictSections = content.match(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g) || [];
     
-    // Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    let resolvedContent = '';
+    let partIndex = 0;
     
-    // Pattern 2: <<<<<<< HEAD ... >>>>>>> branch (no =======)
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    for (let i = 0; i < conflictSections.length; i++) {
+      // Add content before conflict
+      resolvedContent += parts[partIndex];
+      
+      // Extract the newer version (after =======)
+      const conflictSection = conflictSections[i];
+      const afterEquals = conflictSection.split('=======')[1];
+      if (afterEquals) {
+        const newerVersion = afterEquals.split('>>>>>>>')[0];
+        resolvedContent += newerVersion;
+      }
+      
+      partIndex++;
+    }
+    
+    // Add remaining content
+    if (partIndex < parts.length) {
+      resolvedContent += parts[partIndex];
+    }
     
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Clean up extra whitespace and empty lines
-    resolvedContent = resolvedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     fs.writeFileSync(filePath, resolvedContent);
     return true;
