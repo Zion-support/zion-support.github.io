@@ -1,12 +1,9 @@
 declare module 'lucide-react' {
-  export interface LucideProps extends SVGProps<SVGSVGElement> {
-    size?: string | number;
+  export interface LucideProps extends SVGProps<SVGSVGElement> {</SVGSVGElement>size</SVGSVGElement>?: string | number;
     absoluteStrokeWidth?: boolean;
   }
 
-  export type LucideIcon = ComponentType<LucideProps>;
-
-  export const Calendar: LucideIcon;
+  export type LucideIcon = ComponentType<LucideProps>;</LucideProps>export</LucideProps> const Calendar: LucideIcon;
   export const Clock: LucideIcon;
   export const ListChecks: LucideIcon;
   export const FileWarning: LucideIcon;

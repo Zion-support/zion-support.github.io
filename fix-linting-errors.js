@@ -54,7 +54,7 @@ function fixUnusedVariables(filePath) {
     },
     // Unused variable declarations
     {
-      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
+      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=/g,
       fix: (match, varName) => {
         if (varName.startsWith('_')) return match;
         if (matches && matches.length <= 1) {

@@ -26,8 +26,7 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetrics;
   private observers: MutationObserver[] = [];
   private isInitialized = false;
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<AccessibilityConfig> = {}) {</AccessibilityConfig></<<<AccessibilityConfig>this</AccessibilityConfig></AccessibilityConfig>.config = {
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
       enableHighContrast: true,
@@ -207,24 +206,24 @@ class AccessibilityEnhancer {
     style.textContent = `
       .skip-links {
         position: absolute;
-        top: -40px;
-        left: 6px;
+        top: -40 px;
+        left: 6 px;
         z-index: 1000;
       }
       .skip-link {
         position: absolute;
-        top: -40px;
-        left: 6px;
+        top: -40 px;
+        left: 6 px;
         background: #000;
         color: #fff;
-        padding: 8px;
+        padding: 8 px;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 4 px;
         z-index: 1000;
-        transition: top 0.3s;
+        transition: top 0.3 s;
       }
       .skip-link:focus {
-        top: 6px;
+        top: 6 px;
       }
     `;
     document.head.appendChild(style);

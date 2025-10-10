@@ -65,8 +65,8 @@ class PerformanceEnhancer {
       this.report.metrics.fileSizes = fileSizes;
       
       // Add recommendations based on bundle size
-      if (totalSize > 1024 * 1024) { // 1MB
-        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.');
+      if (totalSize > 1024 * 1024) { // 1 MB
+        this.report.recommendations.push('Bundle size is large (>1 MB). Consider code splitting.');
       }
       
       this.report.optimizations.push({
@@ -100,7 +100,7 @@ class PerformanceEnhancer {
 //           const imagePath = path.join(imagesPath, image);
           const _stats = await fs.stat(imagePath);
           
-          // Check if image is large (>100KB)
+          // Check if image is large (>100 KB)
           if (stats.size > 100 * 1024) {
             this.report.recommendations.push(`Large image detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`);
           }
@@ -124,16 +124,16 @@ class PerformanceEnhancer {
       // Generate critical CSS
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
-.min-h-screen { min-height: 100vh; }
+.min-h-screen { min-height: 100 vh; }
 .bg-slate-950 { background-color: #020617; }
 .flex { display: flex; }
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
 .text-white { color: #ffffff; }
 .font-bold { font-weight: 700; }
-.text-xl { font-size: 1.25rem; }
-.p-4 { padding: 1rem; }
-.rounded { border-radius: 0.25rem; }
+.text-xl { font-size: 1.25 rem; }
+.p-4 { padding: 1 rem; }
+.rounded { border-radius: 0.25 rem; }
 `;
 
 //       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css');

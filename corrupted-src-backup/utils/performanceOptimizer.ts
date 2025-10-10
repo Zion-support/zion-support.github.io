@@ -1,9 +1,7 @@
 // Performance optimization utilities
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
-
-  static getInstance(): PerformanceOptimizer {
+  private metrics: Map<string, number> = new Map();</string>static</string> getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
     }
@@ -82,8 +80,7 @@ export class PerformanceOptimizer {
   }
 
   // Get performance metrics
-  getMetrics(): Record<string, number> {
-    return Object.fromEntries(this.metrics);
+  getMetrics(): Record<string, number> {</string>return</string> Object.fromEntries(this.metrics);
   }
 
   // Add critical resource hints method

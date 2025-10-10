@@ -9,7 +9,7 @@ interface UserEvent {
   sessionId: string
   userId?: string
   url: string
-  metadata?: Record<string, unknown>
+  metadata?: Record<string, unknown></strin>
 }
 
 interface UserSession {
@@ -143,8 +143,7 @@ class AdvancedAnalytics {
   /**
    * Track custom events
    */
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {
-    const event: UserEvent = {
+  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {</string></<<<string>const</string></<<string>event</string>: UserEvent = {
       id: this.generateEventId(),
       type: 'custom_event',
       name,

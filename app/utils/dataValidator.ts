@@ -3,8 +3,7 @@
  * Data Validation Utility
  * Provides comprehensive data validation with type safety
  */
-export interface ValidationRule<T = unknown> {
-  validate: (value: T) => boolean;
+export interface ValidationRule<T = unknown> {</T></<<<T>validate</T>: (value: T) => boolean;
   message: string;
 }
 export interface FieldRule {
@@ -16,10 +15,9 @@ export interface FieldRule {
   maxLength?: number;
   custom?: (value: unknown) => boolean;
 }
-export type ValidationRules = Record<string, FieldRule[]>;
-export interface ValidationResult {
+export type ValidationRules = Record<string, FieldRule[]>;</string></<<<string>export</string></<<string>interface</string> ValidationResult {
   isValid: boolean;
-  errors: Record<string, string[]>;
+  errors: Record<string, string[]>;</strin>
 }
 export class ValidationError extends Error {
   constructor(
@@ -139,7 +137,7 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
   const time = date.getTime();
   if (min && time < min.getTime()) return false;
-  if (max && time > max.getTime()) return false;
+  if (max && <<<time>max</time></time>.getTime()) return false;
   return true;
 }
 /**
@@ -147,7 +145,7 @@ export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
  */
 export function sanitizeHTML(html: string): string {
   // Remove script tags
-  let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)</script><[^<]*)*<\/script>/gi, '');
   // Remove event handlers
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
@@ -156,8 +154,7 @@ export function sanitizeHTML(html: string): string {
 /**
  * Create custom validator
  */
-export function createCustomValidator<T>(
-  validator: (value: T) => boolean,
+export function createCustomValidator<T>(</T></<<<T>validator</T>: (value: T) => boolean,
   message: string
 ): (value: T) => { isValid: boolean; errors: string[] } {
   return (value: T) => {
@@ -185,12 +182,12 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
     case 'number':
       if (typeof value !== 'number') return false;
       if (rule.min !== undefined && value < rule.min) return false;
-      if (rule.max !== undefined && value > rule.max) return false;
+      if (rule.max !== undefined && <<<value>rule</value></value>.max) return false;
       return true;
     case 'string':
       if (typeof value !== 'string') return false;
       if (rule.minLength !== undefined && value.length < rule.minLength) return false;
-      if (rule.maxLength !== undefined && value.length > rule.maxLength) return false;
+      if (rule.maxLength !== undefined && value.<<<length>rule</length></length>.maxLength) return false;
       return true;
     case 'custom':
       return rule.custom ? rule.custom(value) : true;
@@ -201,12 +198,10 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
 /**
  * Validate form data
  */
-export function validateForm<T extends Record<string, unknown>>(
-  data: T,
+export function validateForm<T extends Record<string, unknown>>(</T></<<<T>data</T>: T,
   rules: ValidationRules
 ): ValidationResult {
-  const errors: Record<string, string[]> = {};
-  for (const field in rules) {
+  const errors: Record<string, string[]> = {};</string></<<<string>for</string></string> (const field in rules) {
     const value = data[field];
     const fieldRules = rules[field] || [];
     const fieldErrors: string[] = [];
@@ -240,8 +235,7 @@ export function validateForm<T extends Record<string, unknown>>(
  * Validation rules builder
  */
 export const ValidationRulesBuilder = {
-  required: <T>(): ValidationRule<T> => ({
-    validate: (value: T) => {
+  required: <T>(): ValidationRule</T><T> => ({</T></<<<T>validate</T>: (value: T) => {
       if (value === null || value === undefined) return false;
       if (typeof value === 'string' && value.trim() === '') return false;
       if (Array.isArray(value) && value.length === 0) return false;
@@ -249,32 +243,25 @@ export const ValidationRulesBuilder = {
     },
     message: 'This field is required'
   }),
-  email: (): ValidationRule<string> => ({
-    validate: (value: string) => validateEmail(value),
+  email: (): ValidationRule<string> => ({</string></<<<string>validate</string></string>: (value: string) => validateEmail(value),
     message: 'Please enter a valid email address'
   }),
-  url: (): ValidationRule<string> => ({
-    validate: (value: string) => validateURL(value),
+  url: (): ValidationRule<string> => ({</string></<<<string>validate</string></string>: (value: string) => validateURL(value),
     message: 'Please enter a valid URL'
   }),
-  minLength: (min: number): ValidationRule<string> => ({
-    validate: (value: string) => value.length >= min,
+  minLength: (min: number): ValidationRule<string> => ({</string></<<<string>validate</string></string>: (value: string) => value.length >= min,
     message: `Must be at least ${min} characters long`
   }),
-  maxLength: (max: number): ValidationRule<string> => ({
-    validate: (value: string) => value.length <= max,
+  maxLength: (max: number): ValidationRule<string> => ({</string></<<<string>validate</string></string>: (value: string) => value.length <= max,
     message: `Must be no more than ${max} characters long`
   }),
-  pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
-    validate: (value: string) => pattern.test(value),
+  pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({</string></<<<string>validate</string></string>: (value: string) => pattern.test(value),
     message
   }),
-  range: (min: number, max: number): ValidationRule<number> => ({
-    validate: (value: number) => validateNumberRange(value, min, max),
+  range: (min: number, max: number): ValidationRule<number> => ({</number></<<<number>validate</number></number>: (value: number) => validateNumberRange(value, min, max),
     message: `Must be between ${min} and ${max}`
   }),
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-    validate: validator,
+  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => ({</T></<<<T>validate</T>: validator,
     message
   })
 };
@@ -306,8 +293,7 @@ class DataValidator {
   isArray(value: unknown): value is unknown[] {
     return Array.isArray(value);
   }
-  isObject(value: unknown): value is Record<string, unknown> {
-    return typeof value === 'object' && value !== null && !Array.isArray(value);
+  isObject(value: unknown): value is Record<string, unknown> {</string></<<<string>return</string></<<string>typeof</string> value === 'object' && value !== null && !Array.isArray(value);
   }
   matchesPattern(value: string, pattern: RegExp): boolean {
     return pattern.test(value);
@@ -358,7 +344,7 @@ export function validatePassword(password: string): { isValid: boolean; error?: 
   if (!/[A-Z]/.test(password)) return { isValid: false, error: 'Password must contain at least one uppercase letter' };
   if (!/[a-z]/.test(password)) return { isValid: false, error: 'Password must contain at least one lowercase letter' };
   if (!/\d/.test(password)) return { isValid: false, error: 'Password must contain at least one number' };
-  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) return { isValid: false, error: 'Password must contain at least one special character' };
+  if (!/[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password)) return { isValid: false, error: 'Password must contain at least one special character' };
   return { isValid: true };
 }
 
@@ -371,7 +357,7 @@ export function sanitizeHTML(html: string): string {
   clean = clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');
   clean = clean.replace(/'/g, '&#x27;');
-  clean = clean.replace(/\//g, '&#x2F;');
+  clean = clean.replace(/\//g, '&#x2 F;');
 
   return clean;
 }
@@ -381,11 +367,11 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
   if (input.trim() === '') return null;
 
   // Remove null bytes and control characters
-  let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+  let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0 B\x0 C\x0 E-\x1 F\x7 F]/g, '');
 
   // Trim and limit length
   clean = clean.trim();
-  if (clean.length > maxLength) {
+  if (clean.<<<length>maxLength</length></length>) {
     clean = clean.substring(0, maxLength);
   }
 

@@ -1,7 +1,7 @@
 // January 2026 - New Revolutionary Content
 // Brand new cutting-edge AI breakthroughs and enterprise solutions
 
-export const january2026NewContent = {
+export const january2026 NewContent = {
   featuredArticles: [
     {
       id: 'ai-2026-january-autonomous-enterprise-mesh',
@@ -22,7 +22,7 @@ export const january2026NewContent = {
       id: 'ai-2026-january-quantum-edge-computing',
       title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution',
       description:
-        'Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing',
+        'Breakthrough quantum-edge convergence delivering 200-250 x speed improvements with ultra-low latency processing',
       link: '/blog/ai-2026-january-quantum-edge-computing',
       type: 'article',
       featured: true,
@@ -37,7 +37,7 @@ export const january2026NewContent = {
       id: 'ai-2026-january-synthetic-consciousness',
       title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
       description:
-        'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value',
+        'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500 B enterprise value',
       link: '/blog/ai-2026-january-synthetic-consciousness',
       type: 'article',
       featured: true,
@@ -76,10 +76,10 @@ export const january2026NewContent = {
       type: 'service',
       featured: true,
       category: 'Quantum Computing',
-      pricing: 'Starting at $50K/month',
+      pricing: 'Starting at $50 K/month',
       features: [
         'Sub-millisecond latency',
-        '200-250x speed improvement',
+        '200-250 x speed improvement',
         'Quantum processing',
         'Edge optimization',
       ],
@@ -90,14 +90,14 @@ export const january2026NewContent = {
       id: 'fortune-100-autonomous-transformation',
       title: 'Fortune 100 Autonomous Business Transformation',
       description:
-        'Complete enterprise automation achieving 95% operational efficiency with $2.8B value creation',
+        'Complete enterprise automation achieving 95% operational efficiency with $2.8 B value creation',
       link: '/case-studies/fortune-100-autonomous-transformation',
       type: 'case-study',
       featured: true,
       industry: 'Enterprise',
       results: [
         '95% automation rate',
-        '$2.8B value creation',
+        '$2.8 B value creation',
         '99.7% efficiency',
         'Zero human error',
       ],
@@ -106,4 +106,4 @@ export const january2026NewContent = {
   ],
 };
 
-export default january2026NewContent;
+export default january2026 NewContent;

@@ -37,7 +37,7 @@ const routes = [
   '/micro-saas',
 
   // AI Services Pages
-  '/ai-3d-generation',
+  '/ai-3 d-generation',
   '/ai-agricultural-intelligence-pro',
   '/ai-analytics-dashboard',
   '/ai-api-management',
@@ -107,7 +107,7 @@ const routes = [
   '/financial-it',
   '/healthcare-it',
   '/iot-platform',
-  '/5g-implementation'
+  '/5 g-implementation'
 ];
 
 const baseUrl = 'https://ziontechgroup.com';

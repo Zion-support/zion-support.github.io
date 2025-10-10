@@ -92,7 +92,7 @@ function fixParsingErrors(filePath) {
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
     
-    if (openBraces > closeBraces) {
+    if (openBraces>closeBraces</openBraces>) {
       const missingBraces = openBraces - closeBraces;
       const newContent = content + '\n' + '}'.repeat(missingBraces);
       fs.writeFileSync(filePath, newContent, 'utf8');

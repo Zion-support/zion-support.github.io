@@ -11,7 +11,7 @@ export interface ErrorReport {
   userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical'
-  context?: Record<string, unknown>;}
+  context?: Record<string, unknown>;}</strin>
 }
 export interface ErrorReporterConfig {
   enableConsoleLogging: boolean
@@ -33,15 +33,12 @@ export class ErrorReporter {
   private static instance: ErrorReporter
   private config: ErrorReporterConfig
   private errorQueue: ErrorReport[] = []
-  private errorCount: Map<string, number> = new Map();}
-  private constructor(config: Partial<ErrorReporterConfig> = {}) {}
-    this.config = { ...defaultConfig, ...config }
+  private errorCount: Map<string, number> = new Map();}</string></<<<string>private</string></<<string>constructor</string>(config: Partial<ErrorReporterConfig> = {}) {}</ErrorReporterConfig></<<<ErrorReporterConfig>this</ErrorReporterConfig></ErrorReporterConfig>.config = { ...defaultConfig, ...config }
   }
   /**
    * Get singleton instance
    */
-  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
-    if (!ErrorReporter.instance) {
+  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {</ErrorReporterConfig></<<<ErrorReporterConfig>if</ErrorReporterConfig></ErrorReporterConfig> (!ErrorReporter.instance) {
       ErrorReporter.instance = new ErrorReporter(config);}
     }
     return ErrorReporter.instance
@@ -52,7 +49,7 @@ export class ErrorReporter {
   reportError(
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></strin>
   ): void {
     const errorReport: ErrorReport = {
       message: error.message,
@@ -68,7 +65,7 @@ export class ErrorReporter {
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport)
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {
+    if (this.errorQueue.<<<length>this</length></length>.config.maxErrorsInMemory) {
       this.errorQueue.shift();}
     }
     // Console logging
@@ -107,18 +104,17 @@ export class ErrorReporter {
    */
   private getConsoleStyle(severity: ErrorReport['severity']): string {
     const styles = {
-      low: 'color: #2196F3; font-weight: bold',
+      low: 'color: #2196 F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'}
+      critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'}
     }
     return styles[severity]
   }
   /**
    * Send error to remote logging service
    */
-  private async sendToRemote(report: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return
+  private async sendToRemote(report: ErrorReport): Promise<void> {</void></<<<void>if</void></void> (!this.config.remoteEndpoint) return
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
@@ -146,7 +142,7 @@ export class ErrorReporter {
   getErrorStats(): {
     totalErrors: number
     uniqueErrors: number
-    errorsByType: Record<string, number>;}
+    errorsByType: Record<string, number>;}</strin>
   } {
     return {
       totalErrors: this.errorQueue.length,
@@ -182,7 +178,7 @@ export class ErrorReporter {
 export const reportError = (
   error: Error,
   severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
+  context?: Record<string, unknown></strin>
 ): void => {
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }

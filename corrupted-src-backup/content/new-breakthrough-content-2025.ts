@@ -46,7 +46,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
     valueProposition: '300% ROI improvement',
     metrics: {
       performance: '99.9% uptime',
-      savings: '$2.8M annually',
+      savings: '$2.8 M annually',
       accuracy: '95% optimization',
       roi: '300%',
     },
@@ -77,7 +77,7 @@ Protect your AI systems with next-generation quantum security frameworks.
     valueProposition: '99.99% threat prevention',
     metrics: {
       performance: '99.99% prevention',
-      savings: '$2.8B protected',
+      savings: '$2.8 B protected',
       accuracy: 'Zero breaches',
       roi: '500%',
     },

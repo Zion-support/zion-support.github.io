@@ -35,7 +35,7 @@ function fixDuplicateDeclarations(filePath) {
         closeBraces += (line.match(/}/g) || []).length;
       }
       
-      if (openBraces > closeBraces) {
+      if (openBraces>closeBraces</openBraces>) {
         const missingBraces = openBraces - closeBraces;
         return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`;
       }

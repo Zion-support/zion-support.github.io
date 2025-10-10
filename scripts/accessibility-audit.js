@@ -70,7 +70,7 @@ const accessibilityChecklist = {
       'Content is readable at 200% zoom',
       'Layout works on mobile devices',
       'Text is not cut off on small screens',
-      'Touch targets are at least 44px'
+      'Touch targets are at least 44 px'
     ]
   }
 };
@@ -90,24 +90,22 @@ function auditHTMLFiles() {
     
     // Check for semantic HTML
     if (!content.includes('<main')) {
-      console.log('    ⚠️  Missing <main> element');
+      console.log('    ⚠️  Missing <main>element</main>');</main>
     }
     
     if (!content.includes('<nav')) {
-      console.log('    ⚠️  Missing <nav> element');
+      console.log('    ⚠️  Missing <nav>element</nav>');</nav>
     }
     
     // Check for alt attributes
-    const imgTags = content.match(/<img[^>]*>/g) || [];
-    imgTags.forEach(img => {
+    const imgTags = content.match(/<img[^>]*>/g) || [];</img>imgTags</img>.forEach(img => {
       if (!img.includes('alt=')) {
         console.log('    ⚠️  Image missing alt attribute');
       }
     });
     
     // Check for heading hierarchy
-    const headings = content.match(/<h[1-6][^>]*>/g) || [];
-    if (headings.length === 0) {
+    const headings = content.match(/<h[1-6][^>]*>/g) || [];</h>if</h> (headings.length === 0) {
       console.log('    ⚠️  No heading elements found');
     }
     
@@ -194,7 +192,7 @@ function generateAccessibilityImprovements() {
 
 // 1. Add ARIA labels to interactive elements
 <button aria-label="Close dialog">×</button>
-<input aria-describedby="email-help" type="email" />
+<input aria-describedby="email-help" type="email" /></input>
 <div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management
@@ -223,14 +221,14 @@ const trapFocus = (element) => {
 };
 
 // 3. Add live regions for dynamic content
-<div aria-live="polite" aria-atomic="true" className="sr-only">
+<div aria-live="polite" aria-atomic="true" className="sr-only"></di>
   {announcement}
 </div>
 
 // 4. Ensure proper heading hierarchy
-<h1>Main Page Title</h1>
-  <h2>Section Title</h2>
-    <h3>Subsection Title</h3>
+<h1>Main</h1> Page Title</h1>
+  <h2>Section</h2> Title</h2>
+    <h3>Subsection</h3> Title</h3>
 
 // 5. Add skip links
 <a href="#main-content" className="skip-link">
@@ -238,32 +236,32 @@ const trapFocus = (element) => {
 </a>
 
 // 6. Use semantic HTML
-<main>
-  <nav aria-label="Main navigation">
-    <ul>
+<main></main>
+  <nav aria-label="Main navigation"></nav>
+    <ul></ul>
       <li><a href="/">Home</a></li>
     </ul>
   </nav>
-  <section>
-    <h2>Section Title</h2>
-    <article>
-      <h3>Article Title</h3>
+  <section></section>
+    <h2>Section</h2> Title</h2>
+    <article></article>
+      <h3>Article</h3> Title</h3>
     </article>
   </section>
 </main>
 
 // 7. Form accessibility
-<form>
-  <fieldset>
-    <legend>Contact Information</legend>
+<form></form>
+  <fieldset></fieldset>
+    <legend>Contact</legend> Information</legend>
     <label htmlFor="email">Email Address</label>
     <input 
       id="email" 
       type="email" 
       required 
       aria-describedby="email-error"
-    />
-    <div id="email-error" role="alert" aria-live="polite">
+    /></input>
+    <div id="email-error" role="alert" aria-live="polite"></di>
       {emailError}
     </div>
   </fieldset>
@@ -274,7 +272,7 @@ const trapFocus = (element) => {
   src="chart.png" 
   alt="Sales chart showing 25% increase in Q3 2024"
   role="img"
-/>
+/></img>
 
 // 9. Color contrast considerations
 // Ensure sufficient contrast ratios:

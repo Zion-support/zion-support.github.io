@@ -13,7 +13,7 @@ const TrendingContentBanne, r: React.FC = () => {
     },
     {",
       title: "Private, Feature, Flags: Ze, r, o‑PII, Experimen, t, s",
-      description: "Signed, confi, g, s, scoped, ID, s, and, edge, analytics under, 100m, s.",",
+      description: "Signed, confi, g, s, scoped, ID, s, and, edge, analytics under, 100 m, s.",",
       vie, w, s: "13.6, K",
       readTime: "8, m, i, n",",
       category: "Experimentat, i, o, n",
@@ -63,7 +63,7 @@ const TrendingContentBanne, r: React.FC = () => {
     },
     {",
       title: "Edge, LLM, Caching Blueprint, 20, 2, 6",
-      description: "S, u, b‑100ms, prompts, via tiered, caches, and freshness, windo, w, s.",",
+      description: "S, u, b‑100 ms, prompts, via tiered, caches, and freshness, windo, w, s.",",
       vie, w, s: "8.9, K",
       readTime: "6, m, i, n",",
       category: "Architect, u, r, e",
@@ -96,13 +96,13 @@ const TrendingContentBanne, r: React.FC = () => {
     }
   };
   const Ico, n = currentIt, e, m.ic, o, n; return (
-    <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
+    <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2 xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2 xl, transitio, n-all, duratio, n-500, grou, p"></div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
         <div, className="fl, e, x-1"></div>
           <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />
-              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>
+              <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" /></TrendingUp>
+              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n"></span>TRENDING</span>, NO, W</sp, a, n>
             </div>
             <div, classNam, e = { `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}></div>
               {currentIt, e, m.bad, g, e}
@@ -125,15 +125,15 @@ const TrendingContentBanne, r: React.FC = () => {
               </p>
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t"></div>
                 <div, className="flex, item, s-center, ga, p-1"></div>
-                  <Eye, className="w-3 h-3" />
+                  <Eye, className="w-3 h-3" /></Eye>
                   <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s</sp, a, n>
                 </div>
                 <div, className="flex, item, s-center, ga, p-1"></div>
-                  <Clock, className="w-3 h-3" />
+                  <Clock, className="w-3 h-3" /></Clock>
                   <sp, a, n>{currentIt, e, m.readTime} re, a, d</sp, a, n>
                 </div>
                 <div, className="flex, item, s-center, ga, p-1"></div>
-                  <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />
+                  <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" /></Star>
                   <sp, a, n>4.9/5</sp, a, n>
                 </div>
               </div>
@@ -143,15 +143,13 @@ const TrendingContentBanne, r: React.FC = () => {
         <div, className="flex, fle, x-col, item, s-end, ga, p-3"></div>
           <Link, t, o = { currentIt, e, m.l, i, n, k }, classNa, m, e = "bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/b, t, n"
           ></Link>
-            <BookOpen, className="w-4 h-4" />
-            Read, No, w
-            <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
+            <BookOpen, className="w-4 h-4" /></BookOpen>Read</BookOpen>, No, w
+            <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
           </Li, n, k>
           {/* Navigation, d, o, t, s */}
           <div, classNam, e = "flex, ga, p-2"></div>
             { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${
-                  ind, e, x === currentInd, e, x 
+              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${</butto>ind</butto>, e, x === currentInd, e, x 
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
                  }`}
@@ -161,8 +159,7 @@ const TrendingContentBanne, r: React.FC = () => {
       </div>
       {/* Progress, ba, r */}
       <div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>
-        <d, i, v > className="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
-          sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
+        <d, i, v>className</v>="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"</d>sty</d>, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>
     </div>
   );

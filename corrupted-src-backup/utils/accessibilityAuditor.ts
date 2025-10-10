@@ -57,7 +57,7 @@ export class AccessibilityAuditor {
     headings.forEach((heading, index) => {
       //       const level = parseInt(heading.tagName.charAt(1));
 
-      if (level > previousLevel + 1) {
+      if (level>previousLevel</level> + 1) {
         this.addIssue(
           'serious',
           `heading[${index}]`,

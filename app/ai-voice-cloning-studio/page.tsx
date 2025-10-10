@@ -64,7 +64,7 @@ import {
   Shuffle,
   VolumeX,
   Volume1,
-  Volume2 as Volume2Icon,
+  Volume2 as Volume2 Icon,
   Maximize,
   Minimize,
   Fullscreen,
@@ -721,9 +721,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   });
 
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);
-
-  const voices = [
+  const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);</string></<<<string>const</string></<<string>voices</string> = [
     { id: 'default', name: 'Default Voice', gender: 'Neutral', accent: 'American' },
     { id: 'male1', name: 'Professional Male', gender: 'Male', accent: 'British' },
     { id: 'female1', name: 'Warm Female', gender: 'Female', accent: 'Australian' },
@@ -860,67 +858,65 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}>
-      <Helmet>
-        <title>AI Voice Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Group</title>
-        <meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." />
-        <meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" />
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}></div>
+      <Helmet></Helme>
+        <<<<title>AI</title></<<title>Voice</title> Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Group</title>
+        <meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." /></met>
+        <meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" /></met>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" /></lin>
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="relative py-20 overflow-hidden"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3 Csvg%20 width%3 D%2260%22%20 height%3 D%2260%22%20 viewBox%3 D%220%200%2060%2060%22%20 xmlns%3 D%22 http%3 A//www.w3.org/2000/svg%22%3 E%3 Cg%20 fill%3 D%22 none%22%20 fill-rule%3 D%22 evenodd%22%3 E%3 Cg%20 fill%3 D%22%239 C92 AC%22%20 fill-opacity%3 D%220.1%22%3 E%3 Ccircle%20 cx%3 D%2230%22%20 cy%3 D%2230%22%20 r%3 D%222%22/%3 E%3 C/g%3 E%3 C/g%3 E%3 C/svg%3 E')] opacity-20"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8">
-              <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-300 font-medium">AI Voice Cloning Studio Pro</span>
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8"></div>
+              <Sparkles className="w-5 h-5 text-purple-400 mr-2" /></Sparkle>
+              <span className="text-purple-300 font-medium">AI Voice Cloning Studio Pro</spa>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Professional Voice Synthesis
+            <h1 className="text-6 xl md:text-8 xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text"></h1></<<<h>Professional</h></<<h>Voice</h> Synthesis
             </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+            <p className="text-2 xl md:text-3 xl text-gray-300 mb-4 font-light">
               Clone Any Voice with AI Precision
             </p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-400 mb-8 max-w-4 xl mx-auto leading-relaxed">
               Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>
+              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2 xl hover:shadow-purple-500/25"></butto>
+                <span className="relative z-10">Start Free Trial</spa>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRigh>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
 
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
+              <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"></butto>
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4 xl mx-auto"></div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-gray-400">Languages</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-pink-400 mb-2">99.9%</div>
                 <div className="text-gray-400">Accuracy</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">30s</div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">30 s</div>
                 <div className="text-gray-400">Sample Time</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-yellow-400 mb-2">24/7</div>
                 <div className="text-gray-400">Processing</div>
               </div>
             </div>
@@ -929,53 +925,46 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Voice Cloning Interface */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Try Voice Cloning Now
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Try</h></<<h>Voice</h> Cloning Now
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Experience the power of AI voice cloning with our interactive demo
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="max-w-6 xl mx-auto"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
               {/* Voice Input Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Mic className="w-8 h-8 text-purple-400 mr-3" />
-                  Voice Input
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6 flex items-center"></h>
+                  <Mic className="w-8 h-8 text-purple-400 mr-3" /></Mic></<<<Mic>Voice</Mic></<<Mic>Input</Mic>
                 </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-6"></div>
                   {/* Text Input */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Text to Convert
-                    </label>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label></<<<labe>Text</labe></<<labe>to</labe></<labe>Convert</labe>
                     <textarea
                       value={textToSpeak}
-                      onChange={(e) => setTextToSpeak(e.target.value)}
-                      placeholder="Enter the text you want to convert to speech..."
+                      onChange={(e) => setTextToSpeak(e.target.value)}</textarea></<<<textarea>placeholder</textarea></textarea>="Enter the text you want to convert to speech..."
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 resize-none"
                       rows={4}
                     />
                   </div>
 
                   {/* Voice Selection */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Select Voice
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label></<<<labe>Select</labe></<<labe>Voice</labe>
                     </label>
                     <select
                       value={currentVoice}
-                      onChange={(e) => setCurrentVoice(e.target.value)}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                      onChange={(e) => setCurrentVoice(e.target.value)}</select></<<<select>className</select></select>="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                     >
                       {voices.map((voice) => (
-                        <option key={voice.id} value={voice.id} className="bg-slate-800">
+                        <option key={voice.id} value={voice.id} className="bg-slate-800"></option>
                           {voice.name} ({voice.gender}, {voice.accent})
                         </option>
                       ))}
@@ -983,23 +972,20 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   </div>
 
                   {/* Voice Settings */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Pitch: {voiceSettings.pitch}
+                  <div className="grid grid-cols-2 gap-4"></div>
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label></<<<labe>Pitch</labe></labe>: {voiceSettings.pitch}
                       </label>
                       <input
                         type="range"
                         min="-10"
                         max="10"
                         value={voiceSettings.pitch}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}
-                        className="w-full"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}</input></<<<input>className</input></input>="w-full"
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Speed: {voiceSettings.speed}x
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label></<<<labe>Speed</labe></labe>: {voiceSettings.speed}x
                       </label>
                       <input
                         type="range"
@@ -1007,40 +993,35 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         max="2"
                         step="0.1"
                         value={voiceSettings.speed}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}
-                        className="w-full"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}</input></<<<input>className</input></input>="w-full"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Emotion
+                  <div className="grid grid-cols-2 gap-4"></div>
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label></<<<labe>Emotion</labe></labe>
                       </label>
                       <select
                         value={voiceSettings.emotion}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}</select></<<<select>className</select></select>="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
                         {emotions.map((emotion) => (
-                          <option key={emotion} value={emotion} className="bg-slate-800 capitalize">
+                          <option key={emotion} value={emotion} className="bg-slate-800 capitalize"></option>
                             {emotion}
                           </option>
                         ))}
                       </select>
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Language
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label></<<<labe>Language</labe></labe>
                       </label>
                       <select
                         value={voiceSettings.language}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}</select></<<<select>className</select></select>="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
                         {languages.map((lang) => (
-                          <option key={lang.code} value={lang.code} className="bg-slate-800">
+                          <option key={lang.code} value={lang.code} className="bg-slate-800"></option>
                             {lang.name}
                           </option>
                         ))}
@@ -1053,54 +1034,51 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     onClick={handleGenerateVoice}
                     disabled={!textToSpeak.trim() || isGenerating}
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
+                  ></butto>
                     {isGenerating ? (
-                      <>
-                        <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
-                        Generating Voice...
-                      </>
+                      <>{}</>{}{}
+                        <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" /></RefreshCw></<<<RefreshCw>Generating</RefreshCw></<<RefreshCw>Voice</RefreshCw>...
+                      
                     ) : (
-                      <>
-                        <Zap className="w-5 h-5 mr-2 inline" />
-                        Generate Voice
-                      </>
+                      <>{}</>{}{}
+                        <Zap className="w-5 h-5 mr-2 inline" /></Zap></<<<Zap>Generate</Zap></<<Zap>Voice</Zap>
+                      
                     )}
                   </button>
                 </div>
               </div>
 
               {/* Audio Output Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Volume2 className="w-8 h-8 text-purple-400 mr-3" />
-                  Generated Audio
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6 flex items-center"></h>
+                  <Volume2 className="w-8 h-8 text-purple-400 mr-3" /></Volume2></<<<Volume2>Generated</Volume2></<<Volume2>Audio</Volume2>
                 </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-6"></div>
                   {/* Audio Player */}
-                  <div className="bg-white/5 rounded-lg p-6 text-center">
+                  <div className="bg-white/5 rounded-lg p-6 text-center"></div>
                     {generatedAudio ? (
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto">
-                          <Play className="w-8 h-8 text-white" />
+                      <div className="space-y-4"></div>
+                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto"></div>
+                          <Play className="w-8 h-8 text-white" /></Pla>
                         </div>
                         <p className="text-gray-300">Audio Generated Successfully!</p>
-                        <div className="flex justify-center space-x-4">
+                        <div className="flex justify-center space-x-4"></div>
                           <button
                             onClick={handlePlayAudio}
                             className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors"
-                          >
-                            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                          ></butto>
+                            {isPlaying ? <Pause className="w-5 h-5" /> :</Pause> <Play className="w-5 h-5" />}</Pla>
                           </button>
-                          <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors">
-                            <Download className="w-5 h-5" />
+                          <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors"></butto>
+                            <Download className="w-5 h-5" /></Downloa>
                           </button>
                         </div>
                       </div>
                     ) : (
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">
-                          <FileAudio className="w-8 h-8 text-gray-400" />
+                      <div className="space-y-4"></div>
+                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto"></div>
+                          <FileAudio className="w-8 h-8 text-gray-400" /></FileAudi>
                         </div>
                         <p className="text-gray-400">Generate audio to hear the result</p>
                       </div>
@@ -1108,8 +1086,8 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   </div>
 
                   {/* Recording Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-white">Record Your Voice</h4>
+                  <div className="space-y-4"></div>
+                    <h4 className="text-lg font-semibold text-white">Record Your Voice</h>
                     <p className="text-gray-400 text-sm">
                       Record 30 seconds of your voice to create a custom voice clone
                     </p>
@@ -1117,31 +1095,29 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       onClick={handleStartRecording}
                       disabled={isRecording}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                    >
+                    ></butto>
                       {isRecording ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div>
-                          Recording... (30s)
-                        </>
+                        <>{}</>{}{}
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div></<<<div>Recording</div></div>... (30 s)
+                        
                       ) : (
-                        <>
-                          <Mic className="w-5 h-5 mr-2 inline" />
-                          Start Recording
-                        </>
+                        <>{}</>{}{}
+                          <Mic className="w-5 h-5 mr-2 inline" /></Mic></<<<Mic>Start</Mic></<<Mic>Recording</Mic>
+                        
                       )}
                     </button>
                   </div>
 
                   {/* Upload Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-white">Upload Audio File</h4>
+                  <div className="space-y-4"></div>
+                    <h4 className="text-lg font-semibold text-white">Upload Audio File</h>
                     <p className="text-gray-400 text-sm">
-                      Upload an audio file (MP3, WAV, M4A) to create a voice clone
+                      Upload an audio file (MP3, WAV, M4 A) to create a voice clone
                     </p>
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer"></div>
+                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" /></Uploa>
                       <p className="text-gray-400">Click to upload or drag and drop</p>
-                      <p className="text-gray-500 text-sm">MP3, WAV, M4A up to 10MB</p>
+                      <p className="text-gray-500 text-sm">MP3, WAV, M4 A up to 10 MB</p>
                     </div>
                   </div>
                 </div>
@@ -1152,28 +1128,27 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Powerful Features
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Powerful</h></<<h>Features</h>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Everything you need to create professional voice content
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6 xl mx-auto"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
+                  <feature.icon className="w-6 h-6 text-white" /></featur>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h>
                 <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                <div className="flex items-center justify-between"></div>
+                  <span className="text-purple-400 font-semibold">{feature.price}</spa>
+                  <CheckCircle className="w-5 h-5 text-green-400" /></CheckCircl>
                 </div>
               </div>
             ))}
@@ -1182,42 +1157,40 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Simple</h></<<h>Pricing</h>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Choose the plan that fits your needs. All plans include our core voice cloning features.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6 xl mx-auto"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full"></span></<<<spa>Most</spa></<<spa>Popular</spa>
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <div className="text-center mb-8"></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-5 xl font-bold text-white">{plan.price}</spa>
+                    <span className="text-gray-400 ml-2">{plan.period}</spa>
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"></u>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                    <li key={featureIndex} className="flex items-center"></l>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" /></CheckCircl>
+                      <span className="text-gray-300">{feature}</spa>
                     </li>
                   ))}
                 </ul>
@@ -1226,7 +1199,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
+                }`}></button>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
               </div>
@@ -1236,67 +1209,64 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       </div>
 
       {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Ready to Get Started?
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Ready</h></<<h>to</h> Get Started?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Contact our team to discuss your voice cloning needs and get a custom quote.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-purple-400 mr-3" />
+          <div className="max-w-4 xl mx-auto"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6">Contact Information</h>
+                <div className="space-y-4"></div>
+                  <div className="flex items-center"></div>
+                    <Phone className="w-5 h-5 text-purple-400 mr-3" /></Phon>
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors">
                       +1 (302) 464-0950
                     </a>
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-purple-400 mr-3" />
+                  <div className="flex items-center"></div>
+                    <Mail className="w-5 h-5 text-purple-400 mr-3" /></Mai>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors">
                       kleber@ziontechgroup.com
                     </a>
                   </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
+                  <div className="flex items-start"></div>
+                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" /></MapPi>
+                    <div className="text-gray-300"></div>
                       <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
+                      <<<<div>Middletown</div></div>, DE 19709</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Start</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free 14-day trial</span>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6">Quick Start</h>
+                <div className="space-y-4"></div>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">Free 14-day trial</spa>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No credit card required</span>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">No credit card required</spa>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Cancel anytime</span>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">Cancel anytime</spa>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">24/7 support</span>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">24/7 support</spa>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
+                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"></button></<<<butto>Start</butto></<<butto>Free</butto></<butto>Trial</butto>
               </div>
             </div>
           </div>

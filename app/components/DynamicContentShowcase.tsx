@@ -23,7 +23,7 @@ const DynamicContentShowcase: React.FC = () => {
         ],
         stats: [
           { label: 'Accuracy', value: '99.5%', icon: TrendingUp },
-          { label: 'Processing Speed', value: '10x Faster', icon: Zap },
+          { label: 'Processing Speed', value: '10 x Faster', icon: Zap },
           { label: 'Cost Reduction', value: '60%', icon: TrendingUp }
         ]
       }
@@ -45,7 +45,7 @@ const DynamicContentShowcase: React.FC = () => {
         ],
         stats: [
           { label: 'Uptime', value: '99.9%', icon: Clock },
-          { label: 'Response Time', value: '< 1min', icon: Zap },
+          { label: 'Response Time', value: '< 1 min', icon: Zap },
           { label: 'Client Satisfaction', value: '98%', icon: Star }
         ]
       }
@@ -67,7 +67,7 @@ const DynamicContentShowcase: React.FC = () => {
         ],
         stats: [
           { label: 'Efficiency Gain', value: '300%', icon: TrendingUp },
-          { label: 'Time Saved', value: '40hrs/week', icon: Clock },
+          { label: 'Time Saved', value: '40 hrs/week', icon: Clock },
           { label: 'ROI', value: '250%', icon: TrendingUp }
         ]
       }
@@ -77,13 +77,12 @@ const DynamicContentShowcase: React.FC = () => {
   const currentTab = tabs[activeTab];
 
   return (
-    <section className="py-16" aria-labelledby="showcase-heading">
-      <div className="container mx-auto px-4">
-        <h2 id="showcase-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Our Solutions<div className="max-w-6xl mx-auto">{/* Tab Navigation */}</div>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">{tabs.map((tab, index) => (<button
+    <section className="py-16" aria-labelledby="showcase-heading"></sectio>
+      <div className="container mx-auto px-4"></div>
+        <h2 id="showcase-heading" className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text"></h2></<<<h2>Our</h2></<<h2>Solutions</h2><div className="max-w-6 xl mx-auto">{/* Tab Navigation */}</div>
+          <div className="flex flex-wrap justify-center gap-4 mb-8"></div>{tabs.map((tab, index) => (<button
                 key={tab.id}
-                onClick={() =>setActiveTab(index)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
+                onClick={() =>setActiveTab(index)}</button></<<<butto>className</butto></butto>={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
                   activeTab === index
                     ? `${tab.bgColor} ${tab.color} border-2 border-current`
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
@@ -91,22 +90,22 @@ const DynamicContentShowcase: React.FC = () => {
                 aria-selected={activeTab === index}
                 role="tab"</button>
               ></button>
-                <tab.icon className="w-5 h-5" />
-                <span className="font-medium">{tab.title}</span>
+                <tab.icon className="w-5 h-5" /></ta>
+                <span className="font-medium">{tab.title}</spa>
               </button>
             ))}
           </div>
 
           {/* Tab Content */}
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2 xl p-8 md:p-12 cyber-card"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{currentTab.content.title}<p className="text-gray-300 text-lg mb-8 leading-relaxed">{currentTab.content.description}<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{currentTab.content.features.map((feature, index) => (</div>
-                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors">
-                      <div className="flex items-start space-x-3">
-                        <span className="text-2xl">{feature.icon}</span>
-                        <div>
-                          <h4 className="font-semibold text-white mb-1">{feature.name}<p className="text-gray-400 text-sm">{feature.description}</p>
+              <div></div>
+                <h3 className="text-2 xl md:text-3 xl font-bold text-white mb-4"></h>{currentTab.content.title}<p className="text-gray-300 text-lg mb-8 leading-relaxed"></p>{currentTab.content.description}<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{currentTab.content.features.map((feature, index) => (</div>
+                    <div key={index} className="bg-slate-700/50 rounded-lg p-4 hover:bg-slate-700/70 transition-colors"></div>
+                      <div className="flex items-start space-x-3"></div>
+                        <span className="text-2 xl">{feature.icon}</spa>
+                        <div></div>
+                          <h4 className="font-semibold text-white mb-1">{feature.name}</h4><p className="text-gray-400 text-sm">{feature.description}</p>
                         </div>
                       </div>
                     </div>
@@ -115,24 +114,24 @@ const DynamicContentShowcase: React.FC = () => {
               </div>
 
               {/* Stats */}
-              <div className="space-y-6">
-                <h4 className="text-xl font-semibold text-white mb-6">Key Metrics<div className="space-y-4">{currentTab.content.stats.map((stat, index) => (</div>
-                    <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4">
-                      <div className="flex items-center space-x-3">
-                        <stat.icon className={`w-6 h-6 ${currentTab.color}`} />
-                        <span className="text-gray-300">{stat.label}<span className={`text-2xl font-bold ${currentTab.color}`}>{stat.value}</span>
+              <div className="space-y-6"></div>
+                <h4 className="text-xl font-semibold text-white mb-6">Key Metrics</h4><div className="space-y-4">{currentTab.content.stats.map((stat, index) => (</div>
+                    <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4"></div>
+                      <div className="flex items-center space-x-3"></div>
+                        <stat.icon className={`w-6 h-6 ${currentTab.color}`} /></sta>
+                        <span className="text-gray-300"></spa>{stat.label}<span className={`text-2 xl font-bold ${currentTab.color}`}>{stat.value}</spa>
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-6">
+                <div className="pt-6"></div>
                   <a
                     href={`/${currentTab.id}`}
                     className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                  ></a>
+                    <<<<span>Learn</span></<<span>More</span></span>
+                    <ArrowRight className="w-4 h-4" /></ArrowRigh>
                   </a>
                 </div>
               </div>

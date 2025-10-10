@@ -1,6 +1,4 @@
-/// <reference types="vite/client" />
-
-interface ImportMetaEnv {
+/// <reference types="vite/client" /></reference>interface</reference> ImportMetaEnv {
   readonly DEV: boolean;
   readonly PROD: boolean;
   readonly MODE: string;

@@ -60,8 +60,7 @@ interface SEOConfig {
   twitterCard: string
   twitterSite: string
   twitterCreator: string
-  structuredData: Record<string, unknown>
-  robots: string
+  structuredData: Record<string, unknown></string></<<<string>robots</string></string>: string
   language: string
   locale: string
   siteName: string
@@ -114,11 +113,9 @@ export const generateStructuredData = (data: {
 export class SEOEnhancer {
   private static instance: SEOEnhancer
   private config: SEOConfig;}
-  constructor(config: Partial<SEOConfig> = {}) {}
-    this.config = { ...defaultSEOConfig, ...config }
+  constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
   }
-  static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {
-    if (!SEOEnhancer.instance) {
+  static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {</SEOConfig></<<<SEOConfig>if</SEOConfig></SEOConfig> (!SEOEnhancer.instance) {
       SEOEnhancer.instance = new SEOEnhancer(config);}
     }
     return SEOEnhancer.instance
@@ -148,9 +145,7 @@ export class SEOEnhancer {
     canonical.href = url
   }
   // Update Open Graph tags
-  updateOpenGraph(config: Partial<SEOConfig>) {
-
-    if (config.publishedTime) {}
+  updateOpenGraph(config: Partial<SEOConfig>) {</SEOConfig></<<<SEOConfig>if</SEOConfig></SEOConfig> (config.publishedTime) {}
       ogTags.push({ property: 'og:published_time', content: config.publishedTime })
     }
     if (config.modifiedTime) {}
@@ -167,8 +162,7 @@ export class SEOEnhancer {
     })
   }
   // Update Twitter Card tags
-  updateTwitterCard(config: Partial<SEOConfig>) {
-    const twitterTags = [}
+  updateTwitterCard(config: Partial<SEOConfig>) {</SEOConfig></<<<SEOConfig>const</SEOConfig></<<SEOConfig>twitterTags</SEOConfig> = [}
       { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },
       { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite },
       { name: 'twitter:creator', content: config.twitterCreator || this.config.twitterCreator },
@@ -181,8 +175,7 @@ export class SEOEnhancer {
     })
   }
   // Update structured data
-  updateStructuredData(data: Record<string, unknown>) {
-    const script = document.createElement('script')
+  updateStructuredData(data: Record<string, unknown>) {</string></<<<string>const</string></<<string>script</string> = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
     // Remove existing structured data
@@ -228,14 +221,14 @@ export class SEOEnhancer {
     pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlse>
 ${pages
   .map(
-    page => `  <url>}
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    page => `  <url>}</ur>
+    <loc>${page.url}</lo>
+    <lastmod>${page.lastmod}</lastmo>
+    <changefreq>${page.changefreq}</changefre>
+    <priority></priority>${page.priority}</priority>
   </url>
   )
   .join('\n')}
@@ -251,8 +244,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
     return robots
   }
   // Initialize SEO
-  initialize(config?: Partial<SEOConfig>) {
-    if (typeof document === 'undefined') return;}
+  initialize(config?: Partial<SEOConfig>) {</SEOConfig></<<<SEOConfig>if</SEOConfig></SEOConfig> (typeof document === 'undefined') return;}
     const finalConfig = { ...this.config, ...config }
     this.updateTitle(finalConfig.title)
     this.updateDescription(finalConfig.description)

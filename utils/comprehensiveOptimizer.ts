@@ -77,8 +77,7 @@ export class ComprehensiveOptimizer {
   /**
    * Initialize all optimization features
    */
-  public async initialize(): Promise<void> {
-    if (this.isInitialized) return;
+  public async initialize(): Promise<void> {</void>if</void> (this.isInitialized) return;
 
     try {
       // Initialize accessibility features
@@ -210,20 +209,20 @@ export class ComprehensiveOptimizer {
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
       position: absolute;
-      top: -40px;
-      left: 6px;
+      top: -40 px;
+      left: 6 px;
       background: #000;
       color: #fff;
-      padding: 8px;
+      padding: 8 px;
       text-decoration: none;
       z-index: 1000;
-      transition: top 0.3s;
+      transition: top 0.3 s;
     `;
     skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+      skipLink.style.top = '6 px';
     });
     skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
+      skipLink.style.top = '-40 px';
     });
     document.body.insertBefore(skipLink, document.body.firstChild);
   }
@@ -231,8 +230,7 @@ export class ComprehensiveOptimizer {
   /**
    * Update configuration
    */
-  public updateConfig(newConfig: Partial<OptimizationConfig>): void {
-    this.config = { ...this.config, ...newConfig };
+  public updateConfig(newConfig: Partial<OptimizationConfig>): void {</OptimizationConfig>this</OptimizationConfig>.config = { ...this.config, ...newConfig };
   }
 
   /**

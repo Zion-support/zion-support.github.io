@@ -18,28 +18,28 @@ export const generateMetaTags = (data: SEOData): string => {
   const { title, description, keywords, canonicalUrl, ogImage = 'https://ziontechgroup.com/og-image.webp', ogType = 'website', twitterCard = 'summary_large_image' } = data;
 
   return `
-    <title>${title}</title>
-    <meta name="description" content="${description}" />
-    <meta name="keywords" content="${keywords.join(', ')}" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <link rel="canonical" href="${canonicalUrl}" />
+    <title>${title}</titl>
+    <meta name="description" content="${description}" /></met>
+    <meta name="keywords" content="${keywords.join(', ')}" /></met>
+    <meta name="robots" content="index, follow" /></met>
+    <meta name="googlebot" content="index, follow" /></met>
+    <link rel="canonical" href="${canonicalUrl}" /></lin>
 
     <!-- Open Graph -->
-    <meta property="og:type" content="${ogType}" />
-    <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="${description}" />
-    <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:image" content="${ogImage}" />
-    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:type" content="${ogType}" /></met>
+    <meta property="og:title" content="${title}" /></met>
+    <meta property="og:description" content="${description}" /></met>
+    <meta property="og:url" content="${canonicalUrl}" /></met>
+    <meta property="og:image" content="${ogImage}" /></met>
+    <meta property="og:site_name" content="Zion Tech Group" /></met>
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="${twitterCard}" />
-    <meta name="twitter:title" content="${title}" />
-    <meta name="twitter:description" content="${description}" />
-    <meta name="twitter:image" content="${ogImage}" />
-    <meta name="twitter:site" content="@ziontechgroup" />
-    <meta name="twitter:creator" content="@ziontechgroup" />
+    <meta name="twitter:card" content="${twitterCard}" /></met>
+    <meta name="twitter:title" content="${title}" /></met>
+    <meta name="twitter:description" content="${description}" /></met>
+    <meta name="twitter:image" content="${ogImage}" /></met>
+    <meta name="twitter:site" content="@ziontechgroup" /></met>
+    <meta name="twitter:creator" content="@ziontechgroup" /></met>
   `;
 };
 
@@ -100,7 +100,7 @@ export const generateServiceSchema = (serviceName: string, description: string) 
         '@type': 'PriceSpecification',
         price: '1500',
         priceCurrency: 'USD',
-        billingIncrement: 'P1M'
+        billingIncrement: 'P1 M'
       }
     }
 
@@ -198,13 +198,13 @@ export const generateWebSiteSchema = () => {
 
 export const generateSitemap = (pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlse>
   ${pages.map(page => `
-    <url>
-      <loc>${page.url}</loc>
-      <lastmod>${page.lastmod}</lastmod>
-      <changefreq>${page.changefreq}</changefreq>
-      <priority>${page.priority}</priority>
+    <url></ur>
+      <loc>${page.url}</lo>
+      <lastmod>${page.lastmod}</lastmo>
+      <changefreq>${page.changefreq}</changefre>
+      <priority></priority>${page.priority}</priority>
     </url>
   `).join('')}
 </urlset>`;
@@ -255,8 +255,7 @@ export const generateKeywords = (content: string, maxKeywords: number = 10): str
     .split(/\s+/)
     .filter(word => word.length > 3);
 
-  const wordCount: Record<string, number> = {};
-  words.forEach(word => {
+  const wordCount: Record<string, number> = {};</string></<<<string>words</string></string>.forEach(word => {
     wordCount[word] = (wordCount[word] || 0) + 1;
 
   return Object.entries(wordCount)
@@ -362,9 +361,7 @@ const addStructuredData = (data: unknown): void => {
 };
 
 class SEOOptimizer {
-  private config: Partial<SEOConfig> = {};
-
-  init(): void {
+  private config: Partial<SEOConfig> = {};</SEOConfig></<<<SEOConfig>init</SEOConfig></SEOConfig>(): void {
     if (typeof window === 'undefined') return;
 
     // Initialize SEO optimizations
@@ -412,8 +409,7 @@ class SEOOptimizer {
     meta.setAttribute('content', content);
   }
 
-  setConfig(config: Partial<SEOConfig>): void {
-    this.config = { ...this.config, ...config };
+  setConfig(config: Partial<SEOConfig>): void {</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...this.config, ...config };
     this.init();
   }
 

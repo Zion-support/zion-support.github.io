@@ -32,14 +32,12 @@ for (const filePath of files) {
 
     //Fix common patterns where /> appears in wrong places
     content = content.replace(/\s*\/>\s*<span/g, ' <span');
-    content = content.replace(/\s*\/>\s*<\/span>/g, '</span>');
+    content = content.replace(/\s*\/></span>\s*<\/span>/g, '</span>');
     content = content.replace(/\s*\/>\s*<\/div>/g, '</div>');
     content = content.replace(/\s*\/>\s*<\/a>/g, '</a>');
     content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');
 
-    //Fix malformed <br> tags that should be self-closing
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
-    content = content.replace(/<br\s*>\s*$/gm, '<br />');
+    //Fix malformed <br>tags</br> that should be self-closing</br>content</br> = content.replace(/<br\s*>\s*<\/br>/g, '<br />');</br>content</br> = content.replace(/<br\s*>\s*$/gm, '<br />');</br>
 
     //Fix unterminated regular expressions in array/object literals
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {

@@ -14,7 +14,7 @@ if (fs.existsSync(indexPath)) {
   
   // Add accessibility improvements
   const accessibilityScript = `
-    <script>
+    <script></scrip>
       // Accessibility enhancements
       (function() {
         'use strict';
@@ -27,21 +27,21 @@ if (fs.existsSync(indexPath)) {
           skipLink.className = 'skip-link';
           skipLink.style.cssText = \`
             position: absolute;
-            top: -40px;
-            left: 6px;
+            top: -40 px;
+            left: 6 px;
             background: #000;
             color: #fff;
-            padding: 8px;
+            padding: 8 px;
             text-decoration: none;
             z-index: 1000;
-            border-radius: 4px;
-            transition: top 0.3s;
+            border-radius: 4 px;
+            transition: top 0.3 s;
           \`;
           skipLink.addEventListener('focus', function() {
-            this.style.top = '6px';
+            this.style.top = '6 px';
           });
           skipLink.addEventListener('blur', function() {
-            this.style.top = '-40px';
+            this.style.top = '-40 px';
           });
           document.body.insertBefore(skipLink, document.body.firstChild);
         }
@@ -53,16 +53,16 @@ if (fs.existsSync(indexPath)) {
           toggle.className = 'accessibility-toggle';
           toggle.style.cssText = \`
             position: fixed;
-            top: 10px;
-            right: 10px;
+            top: 10 px;
+            right: 10 px;
             z-index: 1000;
             background: #000;
             color: #fff;
-            border: 2px solid #fff;
-            padding: 8px 16px;
-            border-radius: 4px;
+            border: 2 px solid #fff;
+            padding: 8 px 16 px;
+            border-radius: 4 px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 14 px;
           \`;
           toggle.addEventListener('click', function() {
             document.body.classList.toggle('high-contrast');
@@ -77,16 +77,16 @@ if (fs.existsSync(indexPath)) {
           controls.className = 'font-size-controls';
           controls.style.cssText = \`
             position: fixed;
-            top: 50px;
-            right: 10px;
+            top: 50 px;
+            right: 10 px;
             z-index: 1000;
             background: #000;
             color: #fff;
-            padding: 10px;
-            border-radius: 4px;
+            padding: 10 px;
+            border-radius: 4 px;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 5 px;
           \`;
           
           const increaseBtn = document.createElement('button');
@@ -106,7 +106,7 @@ if (fs.existsSync(indexPath)) {
           const resetBtn = document.createElement('button');
           resetBtn.textContent = 'Reset';
           resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16px';
+            document.documentElement.style.fontSize = '16 px';
           });
           
           controls.appendChild(increaseBtn);
@@ -191,10 +191,10 @@ if (fs.existsSync(indexPath)) {
           liveRegion.className = 'sr-only';
           liveRegion.style.cssText = \`
             position: absolute;
-            width: 1px;
-            height: 1px;
+            width: 1 px;
+            height: 1 px;
             padding: 0;
-            margin: -1px;
+            margin: -1 px;
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
@@ -230,7 +230,7 @@ if (fs.existsSync(indexPath)) {
           }
           .high-contrast button,
           .high-contrast a {
-            border: 2px solid currentColor !important;
+            border: 2 px solid currentColor !important;
           }
         \`;
         

@@ -24,8 +24,7 @@ export interface ErrorMetadata {
   severity: ErrorSeverity
   userId?: string
   sessionId?: string
-  context?: Record<string, unknown>
-  tags?: string[]
+  context?: Record<string, unknown></string></<<<string>tags</string></string>?: string[]
   timestamp: number
   stackTrace?: string
   userAgent?: string
@@ -43,8 +42,7 @@ export interface TrackedError {
 
 class ErrorTrackingService {
   private static instance: ErrorTrackingService
-  private errors: Map<string, TrackedError> = new Map()
-  private errorListeners: Array<(error: TrackedError) => void> = []
+  private errors: Map<string, TrackedError> = new Map()</string></<<<string>private</string></<<string>errorListeners</string>: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000
 
   private constructor() {
@@ -86,7 +84,7 @@ class ErrorTrackingService {
 
   trackError(
     error: Error,
-    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }</ErrorMetadat>
   ): string {
     const errorId = this.generateErrorId(error.message)
     const now = Date.now()
@@ -121,7 +119,7 @@ class ErrorTrackingService {
       this.errors.set(errorId, trackedError)
 
       // Clean up old errors if we exceed the limit
-      if (this.errors.size > this.maxStoredErrors) {
+      if (this.errors.<<<size>this</size></size>.maxStoredErrors) {
         const oldestError = Array.from(this.errors.values())
           .sort((a, b) => a.firstSeen - b.firstSeen)[0]
         this.errors.delete(oldestError.id)
@@ -183,7 +181,7 @@ class ErrorTrackingService {
     })
   }
 
-  private async reportToExternalService(errorId: string): Promise<void> {
+  private async reportToExternalService(errorId: string): Promise<void> {</voi>
     // In a real implementation, this would send to an external service
     // like Sentry, LogRocket, or a custom error reporting service
     logger.info('Error reported to external service', { errorId })
@@ -203,12 +201,10 @@ class ErrorTrackingService {
 
   getErrorStats(): {
     total: number
-    byCategory: Record<ErrorCategory, number>
-    bySeverity: Record<ErrorSeverity, number>
+    byCategory: Record<ErrorCategory, number></ErrorCategory></<<<ErrorCategory>bySeverity</ErrorCategory></ErrorCategory>: Record<ErrorSeverity, number></ErrorSeverit>
   } {
     const errors = this.getErrors()
-    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number>
-    const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number>
+    const byCategory: Record<ErrorCategory, number> = {} as Record</ErrorCategory><ErrorCategory, number></ErrorCategory></<<<ErrorCategory>const</ErrorCategory></<<ErrorCategory>bySeverity</ErrorCategory>: Record<ErrorSeverity, number> = {} as Record</ErrorSeverity><ErrorSeverity, number></ErrorSeverit>
 
     // Initialize counters
     Object.values(ErrorCategory).forEach(category => {

@@ -50,7 +50,7 @@ export interface Metadata {
     google?: string;
     yandex?: string;
     yahoo?: string;
-    other?: Record<string, string>;
+    other?: Record<string, string>;</strin>
   };
 }
 
@@ -64,9 +64,7 @@ export interface Viewport {
 }
 
 export interface GenerateMetadataParams {
-  params: Record<string, string>;
-  searchParams: Record<string, string | string[] | undefined>;
+  params: Record<string, string>;</string></<<<string>searchParams</string></string>: Record<string, string | string[] | undefined>;</strin>
 }
 
-export type GenerateMetadata = (params: GenerateMetadataParams) => Metadata | Promise<Metadata>;
-export type GenerateViewport = (params: GenerateMetadataParams) => Viewport | Promise<Viewport>;
+export type GenerateMetadata = (params: GenerateMetadataParams) => Metadata | Promise<Metadata>;</Metadata></<<<Metadata>export</Metadata></<<Metadata>type</Metadata> GenerateViewport = (params: GenerateMetadataParams) => Viewport | Promise<Viewport>;</Viewpor>

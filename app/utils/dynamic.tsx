@@ -4,13 +4,10 @@ interface DynamicOptions {
   loading?: () => React.ReactElement
   ssr?: boolean;}
 }
-export function dynamic<T extends ComponentType<unknown>>(</T>
-  importFunc: () => Promise<{ default: T }>,
+export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,
   options: DynamicOptions = {}
-): ComponentType<unknown>{
-  const LazyComponent = lazy(importFunc)</unknown>
-  return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>
-      <LazyComponent {...props} />
+): ComponentType<unknown>{</unknown></<<<unknow>const</unknow></<<unknow>LazyComponent</unknow> = lazy(importFunc)</<<<unknown>return</unknown></unknown> (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div></Suspense></<<<div>Loading</div></div>...</Suspense>}>
+      <LazyComponent {...props} /></LazyComponen>
     </Suspense>
   )
 }

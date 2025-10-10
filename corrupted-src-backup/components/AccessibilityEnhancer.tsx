@@ -8,8 +8,7 @@ interface AccessibilityEnhancerProps {
   enableReducedMotion?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({</AccessibilityEnhancerProps>children</AccessibilityEnhancerProps>,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -143,7 +142,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       role="main"
       aria-label="Main content"
-    >
+    ></div>
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -161,18 +160,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       </a>
 
       {/* Accessibility controls */}
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button
-          onClick={() => setIsHighContrast(!isHighContrast)}
-          className="accessibility-toggle"
+          onClick={() => setIsHighContrast(!isHighContrast)}</butto>className</butto>="accessibility-toggle"
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
         >
           {isHighContrast ? '🔆' : '🌙'} High Contrast
         </button>
 
         <button
-          onClick={() => setIsReducedMotion(!isReducedMotion)}
-          className="accessibility-toggle"
+          onClick={() => setIsReducedMotion(!isReducedMotion)}</butto>className</butto>="accessibility-toggle"
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion

@@ -16,24 +16,18 @@ export function formatEmail(email: string): string {
   return email.toLowerCase().trim();
 }
 
-export function debounce<T extends (...args: unknown[]) => any>(
-  func: T,
+export function debounce<T extends (...args: unknown[]) => any>(</T>func</T>: T,
   wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
+): (...args: Parameters<T>) => void {</T>let</T> timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {</T>clearTimeout</T>(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 }
 
-export function throttle<T extends (...args: unknown[]) => any>(
-  func: T,
+export function throttle<T extends (...args: unknown[]) => any>(</T>func</T>: T,
   limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+): (...args: Parameters<T>) => void {</T>let</T> inThrottle: boolean;
+  return (...args: Parameters<T>) => {</T>if</T> (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);

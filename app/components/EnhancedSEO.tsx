@@ -37,8 +37,7 @@ interface EnhancedSEOProps {
   preconnect?: string[];
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+const EnhancedSEO: React.FC<EnhancedSEOProps>= ({</EnhancedSEOProps></<<<EnhancedSEOProp>title</EnhancedSEOProp></EnhancedSEOProp> = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
   canonicalUrl = 'https://ziontechgroup.com',
@@ -57,7 +56,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
   alternateLocales = [],
   robots,
   viewport = 'width=device-width, initial-scale=1, viewport-fit=cover',
-  themeColor = '#0f172a',
+  themeColor = '#0 f172 a',
   colorScheme = 'dark light',
   preload = [],
   prefetch = [],
@@ -106,47 +105,46 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
-</EnhancedSEOProps>
-  return (<Helmet>{/* Basic Meta Tags */}<title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={robotsContent} />
-      <meta name="viewport" content={viewport} />
-      <meta name="theme-color" content={themeColor} />
-      <meta name="color-scheme" content={colorScheme} />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" >{/* Canonical URL */}<link rel="canonical" href={canonicalUrl} >{/* Language and Locale */}</link>
-      <html lang={locale.split('_')[0]} >{alternateLocales.map((altLocale) => (<link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`} >))}
+</<<<EnhancedSEOProps>return</EnhancedSEOProps></EnhancedSEOProps> (<Helmet></Helme>{/* Basic Meta Tags */}<title>{title}</titl>
+      <meta name="description" content={description} /></met>
+      <meta name="keywords" content={keywords.join(', ')} /></met>
+      <meta name="author" content={author} /></met>
+      <meta name="robots" content={robotsContent} /></met>
+      <meta name="viewport" content={viewport} /></met>
+      <meta name="theme-color" content={themeColor} /></met>
+      <meta name="color-scheme" content={colorScheme} /></met>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /></met>
+      <meta name="format-detection" content="telephone=no,address=no,email=no" >{/* Canonical URL */}</meta><link rel="canonical" href={canonicalUrl} >{/* Language and Locale */}</lin>
+      <html lang={locale.split('_')[0]} >{alternateLocales.map((altLocale) => (</html><link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`} >))}</link>
 </link>
       {/* Open Graph / Facebook */}</link>
-      </link><meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content={locale} >{publishedTime && <meta property="article:published_time" content={publishedTime} >}</meta>
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} >}</meta>
-      {section && <meta property="article:section" content={section} >}</meta>
-      {tags.map((tag) => (<meta key={tag} property="article:tag" content={tag} >))}
+      </link><meta property="og:type" content={ogType} /></met>
+      <meta property="og:url" content={canonicalUrl} /></met>
+      <meta property="og:title" content={title} /></met>
+      <meta property="og:description" content={description} /></met>
+      <meta property="og:image" content={ogImage} /></met>
+      <meta property="og:image:width" content="1200" /></met>
+      <meta property="og:image:height" content="630" /></met>
+      <meta property="og:image:alt" content={title} /></met>
+      <meta property="og:site_name" content="Zion Tech Group" /></met>
+      <meta property="og:locale" content={locale} >{publishedTime &&</meta> <meta property="article:published_time" content={publishedTime} >}</met>
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} >}</met>
+      {section && <meta property="article:section" content={section} >}</met>
+      {tags.map((tag) => (<meta key={tag} property="article:tag" content={tag} >))}</meta>
 </meta>
       {/* Twitter */}</meta>
-      </meta><meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" >{/* Preconnect to external domains */}</meta>
-      {preconnect.map((domain) => (<link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" >))}
+      </meta><meta name="twitter:card" content={twitterCard} /></met>
+      <meta name="twitter:url" content={canonicalUrl} /></met>
+      <meta name="twitter:title" content={title} /></met>
+      <meta name="twitter:description" content={description} /></met>
+      <meta name="twitter:image" content={ogImage} /></met>
+      <meta name="twitter:image:alt" content={title} /></met>
+      <meta name="twitter:site" content="@ziontechgroup" /></met>
+      <meta name="twitter:creator" content="@ziontechgroup" >{/* Preconnect to external domains */}</met>
+      {preconnect.map((domain) => (<link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" >))}</link>
 
       {/* DNS Prefetch */}</link>
-      {dnsPrefetch.map((domain) => (<link key={domain} rel="dns-prefetch" href={domain} >))}
+      {dnsPrefetch.map((domain) => (<link key={domain} rel="dns-prefetch" href={domain} >))}</link>
 
       {/* Preload critical resources */}</link>
       {preload.map((resource, index) => (<link
@@ -155,7 +153,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
           href={resource.href}
           as={resource.as}
           type={resource.type}
-        >))}
+        >))}</link>
 
       {/* Prefetch likely next pages */}</link>
       {prefetch.map((resource, index) => (<link
@@ -163,27 +161,27 @@ const EnhancedSEO: React.FC<EnhancedSEOProps>= ({
           rel="prefetch"
           href={resource.href}
           as={resource.as}
-        >))}
+        >))}</link>
 </link>
-      {/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+      {/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</scrip>
       </script>
 
       {/* Additional SEO Meta Tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" >{/* Security Headers */}</meta>
-      </meta><meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" >{/* Performance Hints */}</meta>
-      </meta><meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Favicon and Icons */}</meta>
-      </meta><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.webp" />
-      <link rel="manifest" href="/manifest.json" />
+      <meta name="google-site-verification" content="your-google-verification-code" /></met>
+      <meta name="msvalidate.01" content="your-bing-verification-code" /></met>
+      <meta name="yandex-verification" content="your-yandex-verification-code" >{/* Security Headers */}</met>
+      </meta><meta httpEquiv="X-Content-Type-Options" content="nosniff" /></met>
+      <meta httpEquiv="X-Frame-Options" content="DENY" /></met>
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /></met>
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" >{/* Performance Hints */}</met>
+      </meta><meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" /></met>
+      <meta name="mobile-web-app-capable" content="yes" /></met>
+      <meta name="apple-mobile-web-app-capable" content="yes" /></met>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></met>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Favicon and Icons */}</met>
+      </meta><link rel="icon" type="image/svg+xml" href="/favicon.svg" /></lin>
+      <link rel="apple-touch-icon" href="/logo192.webp" /></lin>
+      <link rel="manifest" href="/manifest.json" /></lin>
     </Helmet>
   );
 };

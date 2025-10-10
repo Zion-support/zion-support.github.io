@@ -5,24 +5,18 @@
  */
 import React from 'react';
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
-  func: T,
+export const debounce = <T extends (...args: unknown[]) => unknown>(</T></<<<T>func</T>: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
+): ((...args: Parameters<T>) => void) => {</T></<<<T>let</T></<<T>timeout</T>: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {</T></<<<T>clearTimeout</T>(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: unknown[]) => unknown>(
-  func: T,
+export const throttle = <T extends (...args: unknown[]) => unknown>(</T></<<<T>func</T>: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+): ((...args: Parameters<T>) => void) => {</T></<<<T>let</T></<<T>inThrottle</T>: boolean;
+  return (...args: Parameters<T>) => {</T></<<<T>if</T> (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
@@ -32,8 +26,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-  private metrics: Map<string, number> = new Map();
-  private observers: PerformanceObserver[] = [];
+  private metrics: Map<string, number> = new Map();</string></<<<string>private</string></<<string>observers</string>: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor();
@@ -70,7 +63,7 @@ export class PerformanceMonitor {
     }
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
+        if (entry.duration > 50) { // Tasks longer than 50 ms
           }ms`);
         }
 
@@ -86,8 +79,7 @@ export class PerformanceMonitor {
 }
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
-  const renderStartTime = useRef<number>(0);
-  const monitor = PerformanceMonitor.getInstance();
+  const renderStartTime = useRef<number>(0);</number></<<<number>const</number></<<number>monitor</number> = PerformanceMonitor.getInstance();
   useEffect(() => {
     renderStartTime.current = performance.now();
     return () => {

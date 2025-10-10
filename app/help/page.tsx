@@ -22,9 +22,7 @@ import {
 
 const HelpPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
-  const faqCategories = [
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);</string></<<<string>const</string></<<string>faqCategories</string> = [
     {
       title: 'Getting Started',
       icon: BookOpen,
@@ -141,31 +139,29 @@ const HelpPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigatio>
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <section className="relative py-20 overflow-hidden"></sectio>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3 Csvg%20 width%3 D%2260%22%20 height%3 D%2260%22%20 viewBox%3 D%220%200%2060%2060%22%20 xmlns%3 D%22 http%3 A//www.w3.org/2000/svg%22%3 E%3 Cg%20 fill%3 D%22 none%22%20 fill-rule%3 D%22 evenodd%22%3 E%3 Cg%20 fill%3 D%22%239 C92 AC%22%20 fill-opacity%3 D%220.1%22%3 E%3 Ccircle%20 cx%3 D%2230%22%20 cy%3 D%2230%22%20 r%3 D%222%22/%3 E%3 C/g%3 E%3 C/g%3 E%3 C/svg%3 E')] opacity-20"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Help Center
+        <div className="relative z-10 max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h1 className="text-5 xl md:text-7 xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></h1></<<<h>Help</h></<<h>Center</h>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
             Find answers, get support, and learn how to make the most of our AI solutions
           </p>
 
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <div className="max-w-2 xl mx-auto"></div>
+            <div className="relative"></div>
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Searc>
               <input
                 type="text"
                 placeholder="Search for help articles, guides, and FAQs..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                onChange={(e) => setSearchQuery(e.target.value)}</input></<<<input>className</input></input>="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
             </div>
           </div>
@@ -173,34 +169,33 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* Quick Links */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quick Links
+      <section className="py-16 bg-white/5"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h>Quick</h></<<h>Links</h>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Access our most popular resources and support channels
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {quickLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.link}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="flex items-center mb-4">
-                  <link.icon className={`w-8 h-8 ${link.color} mr-3`} />
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              ></a>
+                <div className="flex items-center mb-4"></div>
+                  <link.icon className={`w-8 h-8 ${link.color} mr-3`} /></lin>
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors"></h3>
                     {link.title}
                   </h3>
                 </div>
                 <p className="text-gray-300 mb-4">{link.description}</p>
-                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                  <span className="text-sm font-medium">Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
+                  <span className="text-sm font-medium">Learn More</spa>
+                  <ArrowRight className="w-4 h-4 ml-2" /></ArrowRigh>
                 </div>
               </a>
             ))}
@@ -209,40 +204,38 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h>Frequently</h></<<h>Asked</h> Questions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Find answers to common questions about our services and solutions
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
             {faqCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="cyber-card">
+              <div key={categoryIndex} className="cyber-card"></div>
                 <button
-                  onClick={() => toggleCategory(category.title)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  onClick={() => toggleCategory(category.title)}</button></<<<button>className</button></button>="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <div className="flex items-center">
-                    <category.icon className="w-6 h-6 text-cyan-400 mr-4" />
-                    <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                  <div className="flex items-center"></div>
+                    <category.icon className="w-6 h-6 text-cyan-400 mr-4" /></categor>
+                    <h3 className="text-xl font-bold text-white">{category.title}</h>
                   </div>
                   {expandedCategory === category.title ? (
-                    <ChevronDown className="w-6 h-6 text-cyan-400" />
+                    <ChevronDown className="w-6 h-6 text-cyan-400" /></ChevronDow>
                   ) : (
-                    <ChevronRight className="w-6 h-6 text-cyan-400" />
+                    <ChevronRight className="w-6 h-6 text-cyan-400" /></ChevronRigh>
                   )}
                 </button>
 
                 {expandedCategory === category.title && (
-                  <div className="px-6 pb-6 space-y-4">
+                  <div className="px-6 pb-6 space-y-4"></div>
                     {category.questions.map((faq, faqIndex) => (
-                      <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4">
-                        <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
+                      <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4"></div>
+                        <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h>
                         <p className="text-gray-300">{faq.answer}</p>
                       </div>
                     ))}
@@ -255,27 +248,26 @@ const HelpPage: React.FC = () => {
       </section>
 
       {/* Contact Support */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Still Need Help?
+      <section className="py-16 bg-white/5"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h>Still</h></<<h>Need</h> Help?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our support team is here to help you succeed
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {contactMethods.map((method, index) => (
-              <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <method.icon className="w-8 h-8 text-white" />
+              <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+                  <method.icon className="w-8 h-8 text-white" /></metho>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{method.title}</h>
                 <p className="text-gray-300 mb-4">{method.description}</p>
                 <div className="text-cyan-400 font-semibold mb-4">{method.contact}</div>
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all"></button>
                   {method.action}
                 </button>
               </div>
@@ -284,7 +276,7 @@ const HelpPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

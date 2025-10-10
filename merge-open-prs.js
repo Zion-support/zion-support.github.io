@@ -7,10 +7,10 @@ import fs from 'fs';
 
 // //The specific PR branches we identified
 const openPRBranches = [
-  'cursor/fix-web-application-console-errors-0bf5', //PR #11935
-  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4', //PR #24703
-  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7', //PR #24702
-  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e', //PR #24701
+  'cursor/fix-web-application-console-errors-0 bf5', //PR #11935
+  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44 c4', //PR #24703
+  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3 e7', //PR #24702
+  'cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21 e', //PR #24701
 ];
 
 // //Function to merge a single branch

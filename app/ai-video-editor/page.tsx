@@ -9,48 +9,41 @@ import Footer from '../components/Footer';
 
 const AIVideoEditorPage: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Video Editor Pro - Automated Video Editing | Zion Tech Group"
         description="Create professional videos with AI-powered editing tools. Automated cutting, effects, and optimization. Starting at $149/month."
         keywords="AI video editor, automated video editing, video AI, video production, AI video tools, video automation"
         canonical="https://ziontechgroup.com/ai-video-editor"
-      />
-      <Navigation />
+      /></SEOHea>
+      <Navigation /></Navigatio>
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></mai>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
-                <Video className="w-4 h-4 mr-2" />
-                AI Video Technology
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Professional Video Production
-                </span>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></sectio>
+          <div className="max-w-7 xl mx-auto"></div>
+            <div className="text-center"></div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6"></div>
+                <Video className="w-4 h-4 mr-2" /></Video></<<<Video>AI</Video></<<Video>Video</Video></<Video>Technology</Video>
+              <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6"></h1></<<<h1>AI</h1></<<h1>Video</h1> Editor
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"></span></<<<spa>Professional</spa></<<spa>Video</spa></<spa>Production</spa>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
                 Create professional videos with AI-powered editing tools. Automated cutting, effects, 
                 and optimization for content creators and businesses.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                ></a></<<<a>Start</a></<<a>Free</a> Trial
+                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
                 </a>
                 <a 
                   href="#demo" 
                   className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                ></a>
+                  <Play className="mr-2 w-5 h-5" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
                 </a>
               </div>
             </div>
@@ -58,134 +51,119 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Revolutionary AI Video Editing
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"></sectio>
+          <div className="max-w-7 xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3 xl md:text-4 xl font-bold text-gray-900 mb-4"></h2></<<<h>Revolutionary</h></<<h>AI</h> Video Editing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Transform your video content with intelligent automation and professional editing tools
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-100">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <Scissors className="w-6 h-6 text-white" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-100"></div>
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
+                  <Scissors className="w-6 h-6 text-white" /></Scissor>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h>
                 <p className="text-gray-600 mb-4">
                   AI automatically detects and cuts out dead air, filler words, and unwanted segments.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Silence detection
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Silence</CheckCircle></<<CheckCircle>detection</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Filler word removal
-                  </li>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Filler</CheckCircle></<<CheckCircle>word</CheckCircle></<CheckCircle>removal</CheckCircle>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                  <Film className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100"></div>
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
+                  <Film className="w-6 h-6 text-white" /></Fil>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Auto Scene Detection</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Auto Scene Detection</h>
                 <p className="text-gray-600 mb-4">
                   Automatically detect scene changes and apply appropriate transitions and effects.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Scene analysis
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Scene</CheckCircle></<<CheckCircle>analysis</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Smart transitions
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Smart</CheckCircle></<<CheckCircle>transitions</CheckCircle>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
-                  <Music className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100"></div>
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
+                  <Music className="w-6 h-6 text-white" /></Musi>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Music & Sound</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Music & Sound</h>
                 <p className="text-gray-600 mb-4">
                   Automatically add background music, sound effects, and audio enhancement.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Royalty-free music
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Royalty</CheckCircle></CheckCircle>-free music
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Audio enhancement
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Audio</CheckCircle></<<CheckCircle>enhancement</CheckCircle>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100">
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
-                  <Palette className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100"></div>
+                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
+                  <Palette className="w-6 h-6 text-white" /></Palett>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Color Grading AI</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Color Grading AI</h>
                 <p className="text-gray-600 mb-4">
                   Automatic color correction and professional color grading for cinematic look.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Auto color correction
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Style presets
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Auto</CheckCircle></<<CheckCircle>color</CheckCircle></<CheckCircle>correction</CheckCircle>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Style</CheckCircle></<<CheckCircle>presets</CheckCircle>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100"></div>
+                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
+                  <Zap className="w-6 h-6 text-white" /></Za>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Optimization</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Optimization</h>
                 <p className="text-gray-600 mb-4">
                   AI optimizes video for different platforms and automatically adjusts quality settings.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Platform optimization
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Platform</CheckCircle></<<CheckCircle>optimization</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Quality enhancement
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Quality</CheckCircle></<<CheckCircle>enhancement</CheckCircle>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100">
-                <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100"></div>
+                <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6"></div>
+                  <Users className="w-6 h-6 text-white" /></User>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h>
                 <p className="text-gray-600 mb-4">
                   Collaborate with team members on video projects with real-time editing.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Real-time editing
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Real</CheckCircle></CheckCircle>-time editing
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Version control
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Version</CheckCircle></<<CheckCircle>control</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -194,43 +172,42 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Choose Your Video Editing Plan
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50"></sectio>
+          <div className="max-w-7 xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3 xl md:text-4 xl font-bold text-gray-900 mb-4"></h2></<<<h>Choose</h></<<h>Your</h> Video Editing Plan
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Professional video editing tools for every budget
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Creator</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">$149</span>
-                    <span className="text-gray-600">/month</span>
+            <div className="grid md:grid-cols-3 gap-8"></div>
+              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
+                <div className="text-center"></div>
+                  <h3 className="text-2 xl font-bold text-gray-900 mb-4">Creator</h>
+                  <div className="mb-6"></div>
+                    <span className="text-4 xl font-bold text-gray-900">$149</spa>
+                    <span className="text-gray-600">/month</spa>
                   </div>
                   <p className="text-gray-600 mb-8">Perfect for content creators and influencers</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">10 hours video processing</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">10 hours video processing</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">HD export quality</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">HD export quality</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Basic AI features</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Basic AI features</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Email support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Email support</spa>
                   </li>
                 </ul>
                 <a 
@@ -241,40 +218,39 @@ const AIVideoEditorPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border-2 border-blue-500 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
+              <div className="bg-white p-8 rounded-xl border-2 border-blue-500 relative"></div>
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></span></<<<spa>Most</spa></<<spa>Popular</spa>
                   </span>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">$299</span>
-                    <span className="text-gray-600">/month</span>
+                <div className="text-center"></div>
+                  <h3 className="text-2 xl font-bold text-gray-900 mb-4">Professional</h>
+                  <div className="mb-6"></div>
+                    <span className="text-4 xl font-bold text-gray-900">$299</spa>
+                    <span className="text-gray-600">/month</spa>
                   </div>
                   <p className="text-gray-600 mb-8">Ideal for businesses and agencies</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">50 hours video processing</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">50 hours video processing</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">4K export quality</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">4 K export quality</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Advanced AI features</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Advanced AI features</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Priority support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Priority support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Team collaboration</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Team collaboration</spa>
                   </li>
                 </ul>
                 <a 
@@ -285,35 +261,35 @@ const AIVideoEditorPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">$799</span>
-                    <span className="text-gray-600">/month</span>
+              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
+                <div className="text-center"></div>
+                  <h3 className="text-2 xl font-bold text-gray-900 mb-4">Enterprise</h>
+                  <div className="mb-6"></div>
+                    <span className="text-4 xl font-bold text-gray-900">$799</spa>
+                    <span className="text-gray-600">/month</spa>
                   </div>
                   <p className="text-gray-600 mb-8">For large organizations and studios</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited processing</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Unlimited processing</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">8K export quality</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">8 K export quality</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">All AI features</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">All AI features</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">24/7 phone support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">24/7 phone support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom integrations</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom integrations</spa>
                   </li>
                 </ul>
                 <a 
@@ -328,55 +304,52 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600"></sectio>
+          <div className="max-w-4 xl mx-auto text-center"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6"></h2></<<<h>Ready</h></<<h>to</h> Create Amazing Videos?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of creators using our AI video editing technology
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Inquiry"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+              ></a></<<<a>Start</a></<<a>Free</a> Trial
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
               </a>
               <a 
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+              ></a>
+                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
               </a>
             </div>
           </div>
         </section>
 
         {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="grid md:grid-cols-3 gap-8 text-white">
-              <div className="flex items-center justify-center">
-                <Phone className="w-5 h-5 mr-2" />
-                <span>+1 302 464 0950</span>
+        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900"></sectio>
+          <div className="max-w-4 xl mx-auto text-center"></div>
+            <div className="grid md:grid-cols-3 gap-8 text-white"></div>
+              <div className="flex items-center justify-center"></div>
+                <Phone className="w-5 h-5 mr-2" /></Phon>
+                <span>+1 302 464 0950</spa>
               </div>
-              <div className="flex items-center justify-center">
-                <Mail className="w-5 h-5 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
+              <div className="flex items-center justify-center"></div>
+                <Mail className="w-5 h-5 mr-2" /></Mai>
+                <<<<span>kleber</span></span>@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center justify-center">
-                <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <div className="flex items-center justify-center"></div>
+                <MapPin className="w-5 h-5 mr-2" /></MapPi>
+                <span>364 E Main St STE 1008, Middletown DE 19709</spa>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </ErrorBoundary>
   );
 };

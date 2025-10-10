@@ -1,9 +1,8 @@
 // const DATA_DIR = path.join(process.cwd(), 'datakyc');
 // const FILE = path.join(DATA_DIR) 'profiles.json');
-function load(): Record<string, KycProfile> {
-  try {
+function load(): Record<string, KycProfile> {</string>try</string> {
   } catch {
     return {};
   }
 }
-const DATA_DIR = path.join(process.cwd(), 'datakyc')' const FILE = path.join(DATA_DIR) 'profiles.json') function load(): Record<string, KycProfile> { try {} catch { return {}; } } '
+const DATA_DIR = path.join(process.cwd(), 'datakyc')' const FILE = path.join(DATA_DIR) 'profiles.json') function load(): Record<string, KycProfile> { try {} catch { return {}; } } '</string>

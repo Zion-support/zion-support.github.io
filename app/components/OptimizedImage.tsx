@@ -16,8 +16,7 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps>= ({
-  src,
+const OptimizedImage: React.FC<OptimizedImageProps>= ({</OptimizedImageProps></<<<OptimizedImageProp>src</OptimizedImageProp></OptimizedImageProp>,
   alt,
   width,
   height,
@@ -25,16 +24,12 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
   placeholder,
   priority = false,
   quality = 75,
-  sizes = '100vw',
+  sizes = '100 vw',
   onLoad,
   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);</OptimizedImageProps>
-  const [hasError, setHasError] = useState(false);</OptimizedImageProps>
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
+  const [isInView, setIsInView] = useState(priority);</<<<OptimizedImageProps>const</OptimizedImageProps></OptimizedImageProps> [hasError, setHasError] = useState(false);</<<<OptimizedImageProps>const</OptimizedImageProps></<<OptimizedImageProps>imgRef</OptimizedImageProps> = useRef<HTMLImageElement>(null);</HTMLImageElement></<<<HTMLImageElemen>useEffect</HTMLImageElemen></HTMLImageElemen>(() => {
     if (priority) return;
 
     const observer = new IntersectionObserver(
@@ -46,7 +41,7 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'
+        rootMargin: '50 px'
       }
     );
 
@@ -74,11 +69,11 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
     const canvas = document.createElement('canvas');
     canvas.width = width || 400;
     canvas.height = height || 300;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2 d');
     
     if (ctx) {
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, '#1e293b');
+      gradient.addColorStop(0, '#1 e293 b');
       gradient.addColorStop(1, '#334155');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -87,17 +82,16 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
     return canvas.toDataURL();
   };
 
-  if (hasError) {</HTMLImageElement>
-    return (</HTMLImageElement>
+  if (hasError) {</<<<HTMLImageElement>return</HTMLImageElement></HTMLImageElement> (
       <div
         ref={imgRef}
         className={`bg-slate-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
-        <div className="text-gray-400 text-center">
-          <div className="w-8 h-8 mx-auto mb-2">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+      ></div>
+        <div className="text-gray-400 text-center"></div>
+          <div className="w-8 h-8 mx-auto mb-2"></div>
+            <svg viewBox="0 0 24 24" fill="currentColor"></sv>
+              <path d="M21 19 V5 c0-1.1-.9-2-2-2 H5 c-1.1 0-2 .9-2 2 v14 c0 1.1.9 2 2 2 h14 c1.1 0 2-.9 2-2 zM8.5 13.5 l2.5 3.01 L14.5 12 l4.5 6 H5 l3.5-4.5 z"/></path>
             <p className="text-xs">Failed to load</p>
         </div>
       </div>
@@ -117,7 +111,7 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
-        >)}
+        >)}</div>
 
       {/* Actual Image */}</div>
       {isInView && (<img
@@ -138,11 +132,11 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
             height: '100%',
             objectFit: 'cover'
           }}
-        >)}
+        >)}</img>
 
       {/* Loading indicator */}</img>
       {!isLoaded && isInView && (</img>
-        </img><div className="absolute inset-0 flex items-center justify-center">
+        </img><div className="absolute inset-0 flex items-center justify-center"></div>
           <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)}</div>
     </div>
   );

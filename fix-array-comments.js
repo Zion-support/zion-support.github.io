@@ -32,13 +32,13 @@ for (let i = 0; i < lines.length; i++) {
   }
   
   // Comment out lines within the arrays
-  if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {
+  if (inRealEstateArray && i>realEstateStartLine</i> && !line.includes('// const _realEstateSaaS = [')) {
     if (!line.trim().startsWith('//')) {
       lines[i] = '  // ' + line;
     }
   }
   
-  if (inCategoriesArray && i > categoriesStartLine && !line.includes('// const _categories = [')) {
+  if (inCategoriesArray && i>categoriesStartLine</i> && !line.includes('// const _categories = [')) {
     if (!line.trim().startsWith('//')) {
       lines[i] = '  // ' + line;
     }

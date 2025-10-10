@@ -1,8 +1,8 @@
 
 const TestComponent = () => {
   return (
-    <div>
-      <h1>Test</h1>
+    <div></div>
+      <h1>Test</h1></h1>
     </div>
   );
 };

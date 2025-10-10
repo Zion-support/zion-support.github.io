@@ -66,7 +66,7 @@ function removeUnusedImports(content) {
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         const totalOccurrences = matches.length;
         
-        return totalOccurrences > importOccurrences;
+        return totalOccurrences>importOccurrences</totalOccurrences>;
       });
 
       // If no names are used, remove the entire import

@@ -10,8 +10,7 @@ interface AccessibilityEnhancerProps {
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
  */
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
- children,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({</AccessibilityEnhancerProps>children</AccessibilityEnhancerProps>,
  enableSkipLinks = true,
  enableKeyboardNav = true,
  enableFocusIndicators = true,
@@ -57,7 +56,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  highContrastQuery.addEventListener('change', handleContrastChange);
 
  // Check for font size preference
- const fontSizeQuery = window.matchMedia('(min-width: 1px)');
+ const fontSizeQuery = window.matchMedia('(min-width: 1 px)');
  const computedStyle = getComputedStyle(document.documentElement);
  const rootFontSize = parseFloat(computedStyle.fontSize);
  setFontSize(rootFontSize);
@@ -142,16 +141,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  const _style = document.createElement('style');
  style.textContent = `
  .keyboard-navigation *:focus {
- outline: 3px solid #3B82F6 !important;
- outline-offset: 2px !important;
+ outline: 3 px solid #3 B82 F6 !important;
+ outline-offset: 2 px !important;
  }
 
  .sr-only {
  position: absolute;
- width: 1px;
- height: 1px;
+ width: 1 px;
+ height: 1 px;
  padding: 0;
- margin: -1px;
+ margin: -1 px;
  overflow: hidden;
  clip: rect(0, 0, 0, 0);
  white-space: nowrap;
@@ -171,15 +170,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  /* Skip link styles */
  .skip-link {
  position: absolute;
- top: -40px;
+ top: -40 px;
  left: 0;
- background: #3B82F6;
+ background: #3 B82 F6;
  color: white;
- padding: 8px 16px;
+ padding: 8 px 16 px;
  text-decoration: none;
  z-index: 100;
  font-weight: 600;
- border-radius: 0 0 4px 0;
+ border-radius: 0 0 4 px 0;
  }
 
  .skip-link:focus {
@@ -189,7 +188,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  /* High contrast mode support */
  @media (prefers-contrast: high) {
  * {
- border-width: 2px !important;
+ border-width: 2 px !important;
  }
  }
 
@@ -198,9 +197,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  *,
  *::before,
  *::after {
- animation-duration: 0.01ms !important;
+ animation-duration: 0.01 ms !important;
  animation-iteration-count: 1 !important;
- transition-duration: 0.01ms !important;
+ transition-duration: 0.01 ms !important;
  scroll-behavior: auto !important;
  }
  }
@@ -211,8 +210,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  }
 
  *:focus-visible {
- outline: 3px solid #3B82F6;
- outline-offset: 2px;
+ outline: 3 px solid #3 B82 F6;
+ outline-offset: 2 px;
  }
  `;
  document.head.appendChild(style);origin/
@@ -248,7 +247,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
  }, [announceToScreenReader]);
 
  return (
- <div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>
+ <div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}></di>
  {children}
  </div>
  );

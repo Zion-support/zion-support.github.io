@@ -23,8 +23,7 @@ class Logger {
   private config: LoggerConfig;
   private static instance: Logger;
 
-  private constructor(config: Partial<LoggerConfig> = {}) {
-    this.config = {
+  private constructor(config: Partial<LoggerConfig> = {}) {</LoggerConfig>this</LoggerConfig>.config = {
       level: this.getLogLevelFromEnv(),
       prefix: config.prefix || 'APP',
       timestamp: config.timestamp !== false,
@@ -32,8 +31,7 @@ class Logger {
     };
   }
 
-  public static getInstance(config?: Partial<LoggerConfig>): Logger {
-    if (!Logger.instance) {
+  public static getInstance(config?: Partial<LoggerConfig>): Logger {</LoggerConfig>if</LoggerConfig> (!Logger.instance) {
       Logger.instance = new Logger(config);
     }
     return Logger.instance;

@@ -23,7 +23,7 @@ export const generateSitemap = useCallback((...args) => {
     '/ai-content-writer',
     '/ai-financial-advisor',
     '/ai-data-visualization',
-    '/ai-3d-generation',
+    '/ai-3 d-generation',
     '/ai-customer-support',
     '/ai-inventory-manager',
     '/ai-hr-assistant',
@@ -41,13 +41,13 @@ export const generateSitemap = useCallback((...args) => {
     '/productivity'
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlse>
   ${staticPages.map(page =>
-  <url>}
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+  <url>}</ur>
+    <loc>${baseUrl}${page}</lo>
+    <lastmod>${new Date().toISOString()}</lastmo>
+    <<<<changefreq>weekly</changefreq></changefreq>
+    <priority></priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`).join('')}
 </urlset>`
   return sitemap

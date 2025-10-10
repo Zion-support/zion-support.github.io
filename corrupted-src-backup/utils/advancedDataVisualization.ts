@@ -6,10 +6,7 @@ import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, Colo
 
 export class AdvancedDataVisualization {
   private config: VisualizationConfig;
-  private charts: Map<string, StoredChart> = new Map();
-
-  constructor(config: Partial<VisualizationConfig> = {}) {
-    this.config = {
+  private charts: Map<string, StoredChart> = new Map();</string>constructor</string>(config: Partial<VisualizationConfig> = {}) {</VisualizationConfig>this</VisualizationConfig>.config = {
       defaultChartType: 'line',
       defaultColorScheme: 'blue',
       animationDuration: 300,

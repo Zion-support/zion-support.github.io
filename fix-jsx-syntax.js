@@ -13,7 +13,7 @@ function fixJSXSyntax(content) {
   );
 
   //Fix malformed JSX elements that are self-closing but shouldn't be
-  //Pattern: <div></div> followed by content that should be inside
+  //Pattern: <div></div>followed</div> by content that should be inside
   fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
 
   //Fix malformed JSX elements with attributes

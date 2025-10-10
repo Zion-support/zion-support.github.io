@@ -85,55 +85,51 @@ const SystemAdminPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            System <span className="text-cyan-400">Administration<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Professional system administration services to keep your infrastructure running smoothly.</p>
-            Our certified administrators provide 24/7 monitoring, maintenance, and optimization for your critical systems.</p>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5 xl font-bold text-white mb-6"></h1></<<<h1>System</h1></h1> <span className="text-cyan-400"></span></<<<span>Administration</span></span><p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">Professional system administration services to keep your infrastructure running smoothly.</p></<<<p>Our</p></<<p>certified</p> administrators provide 24/7 monitoring, maintenance, and optimization for your critical systems.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <Phone className="w-5 h-5 mr-2" >Get Started</Phone>
+            ></Lin>
+              <Phone className="w-5 h-5 mr-2" >Get Started</Phon>
             </Phone>
             <Link
               href="/consultation"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Settings className="w-5 h-5 mr-2" >Free Assessment</Settings>
+            ></Lin>
+              <Settings className="w-5 h-5 mr-2" >Free Assessment</Setting>
             </Settings>
           </div>
         </div>
 
         {/* Services Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our <span className="text-cyan-400">Services<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{services.map((service, index) => (</div>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Our</h2></h2> <span className="text-cyan-400"></span></<<<span>Services</span></span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{services.map((service, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
-                  <service.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}<p className="text-gray-300">{service.description}</p>
+                className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
+                  <service.icon className="w-6 h-6 text-white" /></servic>
+                <h3 className="text-xl font-semibold text-white mb-3"></h>{service.title}<p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Features Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Key <span className="text-cyan-400">Features<div className="grid md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Key</h2></h2> <span className="text-cyan-400"></span></<<<span>Features</span></span><div className="grid md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}<p className="text-gray-300 mb-6">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-cyan-400">
-                      <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" >{benefit}</CheckCircle>
+                className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <h3 className="text-2 xl font-semibold text-white mb-4"></h>{feature.title}<p className="text-gray-300 mb-6"></p>{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</u>
+                    <li key={benefitIndex} className="flex items-center text-cyan-400"></l>
+                      <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" >{benefit}</CheckCircl>
                     </CheckCircle>
                   ))}
                 </ul>
@@ -143,84 +139,82 @@ const SystemAdminPage: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our <span className="text-cyan-400">System Administration</span>?
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Why</h2></<<h2>Choose</h2> Our <span className="text-cyan-400">System Administration</spa>?
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
+                  <benefit.icon className="w-8 h-8 text-white" /></benefi>
+                <h3 className="text-xl font-semibold text-white mb-3"></h>{benefit.title}<p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Process Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our <span className="text-cyan-400">Process</span>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Our</h2></h2> <span className="text-cyan-400">Process</spa>
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1<h3 className="text-xl font-semibold text-white mb-3">Assessment<p className="text-gray-300">Comprehensive analysis of your current infrastructure and needs</p>
+          <div className="grid md:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>1<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Assessment</h3></h3><p className="text-gray-300">Comprehensive analysis of your current infrastructure and needs</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2<h3 className="text-xl font-semibold text-white mb-3">Planning<p className="text-gray-300">Develop a customized administration strategy and timeline</p>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>2<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Planning</h3></h3><p className="text-gray-300">Develop a customized administration strategy and timeline</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3<h3 className="text-xl font-semibold text-white mb-3">Implementation<p className="text-gray-300">Deploy monitoring tools and establish administration protocols</p>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>3<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Implementation</h3></h3><p className="text-gray-300">Deploy monitoring tools and establish administration protocols</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4<h3 className="text-xl font-semibold text-white mb-3">Ongoing Support<p className="text-gray-300">Continuous monitoring, maintenance, and optimization</p>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>4<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Ongoing</h3></<<h3>Support</h3><p className="text-gray-300">Continuous monitoring, maintenance, and optimization</p>
             </div>
           </div>
         </div>
 
         {/* Emergency Support */}
-        <div className="mb-16">
-          <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2xl p-8 border border-red-500/30">
-            <div className="flex items-center mb-4">
-              <AlertTriangle className="w-8 h-8 text-red-400 mr-3" />
-              <h2 className="text-2xl font-bold text-white">24/7 Emergency Support<p className="text-gray-300 mb-6">Critical system issues can't wait. Our emergency support team is available around the clock to resolve urgent problems and minimize downtime.</p>
+        <div className="mb-16"></div>
+          <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2 xl p-8 border border-red-500/30"></div>
+            <div className="flex items-center mb-4"></div>
+              <AlertTriangle className="w-8 h-8 text-red-400 mr-3" /></AlertTriangl>
+              <h2 className="text-2 xl font-bold text-white"></h>24/7 Emergency Support<p className="text-gray-300 mb-6">Critical system issues can't wait. Our emergency support team is available around the clock to resolve urgent problems and minimize downtime.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4"></div>
               <a
                 href="tel:+13024640950"
                 className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 flex items-center justify-center"
-              >
-                <Phone className="w-5 h-5 mr-2" >Emergency Hotline</Phone>
+              ></a>
+                <Phone className="w-5 h-5 mr-2" >Emergency Hotline</Phon>
               </Phone>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-gray-600 hover:border-red-400 hover:bg-red-400/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Mail className="w-5 h-5 mr-2" >Emergency Email</Mail>
+              ></a>
+                <Mail className="w-5 h-5 mr-2" >Emergency Email</Mai>
               </Mail>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Secure Your Infrastructure Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't wait for system failures. Let our expert administrators keep your infrastructure running smoothly and securely.</p>
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2 xl p-12 text-center"></div>
+          <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h2>Secure</h2></<<h2>Your</h2> Infrastructure Today<p className="text-xl text-gray-300 mb-8 max-w-2 xl mx-auto">Don't wait for system failures. Let our expert administrators keep your infrastructure running smoothly and securely.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" >Get Started Now</ArrowRight>
+            ></Lin>
+              <ArrowRight className="w-5 h-5 mr-2" >Get Started Now</ArrowRigh>
             </ArrowRight>
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Settings className="w-5 h-5 mr-2" >View Pricing</Settings>
+            ></Lin>
+              <Settings className="w-5 h-5 mr-2" >View Pricing</Setting>
             </Settings>
           </div>
         </div>

@@ -8,8 +8,7 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps>= ({
-  size = 'md',
+const LoadingSpinner: React.FC<LoadingSpinnerProps>= ({</LoadingSpinnerProps></<<<LoadingSpinnerProp>size</LoadingSpinnerProp></LoadingSpinnerProp> = 'md',
   text,
   className = ''
 }) => {
@@ -18,10 +17,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps>= ({
     md: 'w-6 h-6',
     lg: 'w-8 h-8'
   };
-</LoadingSpinnerProps>
-  return (</LoadingSpinnerProps>
-    <div className={`flex flex-col items-center justify-center gap-3 ${className}`}>
-      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} >{text && (<p className="text-gray-300 text-sm animate-pulse">{text}</p>
+</<<<LoadingSpinnerProps>return</LoadingSpinnerProps></LoadingSpinnerProps> (
+    <div className={`flex flex-col items-center justify-center gap-3 ${className}`}></div>
+      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} >{text && (</Loader2><p className="text-gray-300 text-sm animate-pulse">{text}</p>
       )}
     </div>
   );

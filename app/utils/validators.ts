@@ -145,9 +145,8 @@ export function sanitizeHtml(html: string): string {
 /**
  * Validate object against schema
  */
-export function validateObject<T extends Record<string, unknown>>(
-  obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>
+export function validateObject<T extends Record<string, unknown>>(</T></<<<T>obj</T>: T,
+  schema: Record<keyof T, (value: unknown) => boolean></keyo>
 ): ValidationResult {
   const errors: string[] = [];
   for (const key in schema) {
@@ -173,10 +172,8 @@ export interface FormField {
   }>;
 }
 export function validateForm(
-  fields: Record<string, FormField>
-): Record<string, string[]> {
-  const errors: Record<string, string[]> = {};
-  for (const fieldName in fields) {
+  fields: Record<string, FormField></strin>
+): Record<string, string[]> {</string></<<<string>const</string></<<string>errors</string>: Record<string, string[]> = {};</string></<<<string>for</string></string> (const fieldName in fields) {
     const field = fields[fieldName];
     const fieldErrors: string[] = [];
     for (const validator of field.validators) {
@@ -229,7 +226,7 @@ export function isValidPassword(password: string): boolean {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
 
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
@@ -244,10 +241,10 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   let sanitized = input.trim();
 
   // Remove null bytes and other control characters
-  sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
+  sanitized = sanitized.replace(/[\x00-\x1 F\x7 F]/g, '');
 
   // Enforce maximum length if specified
-  if (maxLength && sanitized.length > maxLength) {
+  if (maxLength && sanitized.<<<length>maxLength</length></length>) {
     sanitized = sanitized.substring(0, maxLength);
   }
 
@@ -301,7 +298,7 @@ export function validateLength(value: string, min: number, max: number, fieldNam
   if (value.length < min) {
     return { isValid: false, error: `${fieldName} must be at least ${min} characters` };
   }
-  if (value.length > max) {
+  if (value.<<<length>max</length></length>) {
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
   }
   return { isValid: true };
@@ -426,10 +423,8 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
  * Async validation
  */
 export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>,
-  value: unknown
-): Promise<ValidationResult> {
-  try {
+  validator: (val: unknown) => Promise<ValidationResult>,</ValidationResult></<<<ValidationResult>value</ValidationResult></ValidationResult>: unknown
+): Promise<ValidationResult> {</ValidationResult></<<<ValidationResult>try</ValidationResult></ValidationResult> {
     return await validator(value);
   } catch (error) {
     return { isValid: false, error: error instanceof Error ? error.message : 'Validation failed' };

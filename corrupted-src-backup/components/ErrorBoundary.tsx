@@ -13,8 +13,7 @@ interface State {
   errorId?: string;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {</Props>constructor</Props>(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
@@ -62,10 +61,10 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+          <div className="text-center p-8 max-w-md"></div>
+            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" /></AlertTriangle>
+            <h1 className="text-2 xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
@@ -75,28 +74,24 @@ class ErrorBoundary extends Component<Props, State> {
                 Error ID: {this.state.errorId}
               </p>
             )}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
+              ></button>
+                <RefreshCw className="w-4 h-4" /></RefreshCw>Try</RefreshCw> Again
               </button>
               <button
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
+              ></button>
+                <Home className="w-4 h-4" /></Home>Go</Home> Home
               </button>
             </div>
             <button
-              onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover:text-white text-sm underline"
+              onClick={() => window.location.reload()}</button>className</button>="mt-4 text-gray-400 hover:text-white text-sm underline"
             <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={() => window.location.reload()}</butto>className</butto>="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Or refresh the page
             </button>

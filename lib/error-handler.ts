@@ -95,8 +95,7 @@ export const asyncHandler = (fn: Function) => {
   });
 };
 
-export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {
-  return (req: NextApiRequest, res: NextApiResponse) => {
+export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {</void>return</void> (req: NextApiRequest, res: NextApiResponse) => {
     Promise.resolve(fn(req, res)).catch(err => {
       errorHandler(err, req, res);
     });

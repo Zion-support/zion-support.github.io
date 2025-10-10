@@ -119,28 +119,27 @@ const AICybersecurityMonitor: React.FC = memo(() => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Cybersecurity Monitor - Advanced Threat Detection | Zion Tech Group</title>
-        <meta name="description" content="Protect your business with AI-powered cybersecurity monitoring. Real-time threat detection, automated response, and 99.9% accuracy." />
-        <meta name="keywords" content="cybersecurity, threat detection, AI security, network monitoring, incident response, compliance" />
-        <meta property="og:title" content="AI Cybersecurity Monitor - Advanced Threat Detection" />
-        <meta property="og:description" content="Protect your business with AI-powered cybersecurity monitoring and threat detection." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helme>
+        <<<<title>AI</title></<<title>Cybersecurity</title> Monitor - Advanced Threat Detection | Zion Tech Group</title>
+        <meta name="description" content="Protect your business with AI-powered cybersecurity monitoring. Real-time threat detection, automated response, and 99.9% accuracy." /></met>
+        <meta name="keywords" content="cybersecurity, threat detection, AI security, network monitoring, incident response, compliance" /></met>
+        <meta property="og:title" content="AI Cybersecurity Monitor - Advanced Threat Detection" /></met>
+        <meta property="og:description" content="Protect your business with AI-powered cybersecurity monitoring and threat detection." /></met>
+        <meta property="og:type" content="website" /></met>
+        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor" /></met>
       <div className="container mx-auto px-4 py-16">{/* Hero Section */}</div>
-        </div><section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Shield className="w-4 h-4" />
-            <span>AI-Powered Security<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cybersecurity Monitor<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Protect your business with advanced AI-powered cybersecurity monitoring.</p>
-            Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.</p>
+        </div><section className="text-center mb-16"></sectio>
+          <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+            <Shield className="w-4 h-4" /></Shiel>
+            <span></span></<<<span>AI</span></span>-Powered Security<h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6"></h1></<<<h1>AI</h1></<<h1>Cybersecurity</h1> Monitor<p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Protect your business with advanced AI-powered cybersecurity monitoring.</p></<<<p>Detect</p></<<p>threats</p> in real-time, automate responses, and maintain compliance with 99.9% accuracy.</p>
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
-            ><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950<a
+            ></a><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950</Phone><a
               href="/contact"
               className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
             >Get Security Assessment</a>
@@ -149,25 +148,25 @@ const AICybersecurityMonitor: React.FC = memo(() => {
         </section>
 
         {/* Security Metrics */}
-        <section className="mb-16">
+        <section className="mb-16"></sectio>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{securityMetrics.map((metric, index) => (</div>
-              </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20">
-                <div className={`text-3xl font-bold ${metric.color} mb-2`}>{metric.metric}<div className="text-white font-semibold mb-2">{metric.label}<div className="text-gray-400 text-sm">Industry-leading security performance</div>
+              </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-red-500/20"></div>
+                <div className={`text-3 xl font-bold ${metric.color} mb-2`}></div>{metric.metric}<div className="text-white font-semibold mb-2"></div>{metric.label}<div className="text-gray-400 text-sm">Industry-leading security performance</div>
               </div>
             ))}
           </div>
         </section>
 
         {/* Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
-              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
-                    <feature.icon className="w-6 h-6" />
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Advanced</h2></<<h2>Security</h2> Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300"></div>
+                <div className="flex items-start space-x-4"></div>
+                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
+                    <feature.icon className="w-6 h-6" /></featur>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}<p className="text-gray-400">{feature.description}</p>
+                  <div></div>
+                    <h3 className="text-xl font-semibold text-white mb-2"></h>{feature.title}<p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -176,32 +175,32 @@ const AICybersecurityMonitor: React.FC = memo(() => {
         </section>
 
         {/* Use Cases */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
-              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <useCase.icon className="w-8 h-8 text-red-400" />
-                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Security</h2></<<h2>Solutions</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between mb-4"></div>
+                  <useCase.icon className="w-8 h-8 text-red-400" /></useCas>
+                  <div className="text-sm font-semibold text-green-400"></div>{useCase.result}<h3 className="text-lg font-semibold text-white mb-2"></h>{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Pricing */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Investment Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>{plan.popular && (</div>
-                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Security</h2></<<h2>Investment</h2> Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-red-500 ring-2 ring-red-500/20' : 'border-gray-700'} hover:border-red-500/50 transition-all duration-300`}>{plan.popular && (</div>
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
                     </div>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}<span className="text-gray-400 ml-1">{plan.period}<p className="text-gray-400 mt-2">{plan.description}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
-                    </ul><li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4 xl font-bold text-white"></spa>{plan.price}<span className="text-gray-400 ml-1"></spa>{plan.period}<p className="text-gray-400 mt-2"></p>{plan.description}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</u>
+                    </ul><li key={featureIndex} className="flex items-center space-x-3"></l>
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircl>
+                      <span className="text-gray-300">{feature}</spa>
                     </li>
                   ))}
                 <a
@@ -219,19 +218,19 @@ const AICybersecurityMonitor: React.FC = memo(() => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-red-600/20 to-orange-600/20 p-12 rounded-lg border border-red-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Don't Wait for a Breach<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ organizations already protected by our AI Cybersecurity Monitor.</p>
+        <section className="text-center bg-gradient-to-r from-red-600/20 to-orange-600/20 p-12 rounded-lg border border-red-500/30"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h2>Don</h2></h2>'t Wait for a Breach<p className="text-xl text-gray-300 mb-8 max-w-2 xl mx-auto">Join 1,000+ organizations already protected by our AI Cybersecurity Monitor.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
-            ><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950</Phone>
+            ></a><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950</Phon>
             </Phone>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-            ><MessageSquare className="w-5 h-5 mr-2" >Email Us</MessageSquare>
+            ></a><MessageSquare className="w-5 h-5 mr-2" >Email Us</MessageSquar>
             </MessageSquare>
           </div>
         </section>

@@ -62,7 +62,7 @@ class AnalyticsOptimizer {
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
         );
-        if (scrollDepth > maxScrollDepth) {
+        if (scrollDepth>maxScrollDepth</scrollDepth>) {
           maxScrollDepth = scrollDepth;
           this.track('scroll_depth', {
             depth: scrollDepth,
@@ -345,7 +345,7 @@ class AnalyticsOptimizer {
     return function (...args) {
       //       const currentTime = Date.now();
 
-      if (currentTime - lastExecTime > delay) {
+      if (currentTime - lastExecTime>delay</lastExecTime>) {
         func.apply(this, args);
         lastExecTime = currentTime;
       } else {

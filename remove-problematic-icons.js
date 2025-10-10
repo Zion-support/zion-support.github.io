@@ -11,14 +11,14 @@ async function removeProblematicIcons() {
 
       //Remove all problematic icon usage patterns
       //Remove <span className="...">IconName</span>
-      //       const spanRegex = /<span className="[^"]+">\w+<\/span>/g;
+      //       const spanRegex = /<span className="[^"]+"></span>\w+<\/span>/g;
       content = content.replace(spanRegex, match => {
         modified = true;
         return '';
       });
 
       //Remove <div className="...">IconName</div>
-      //       const divRegex = /<div className="[^"]+">\w+<\/div>/g;
+      //       const divRegex = /<div className="[^"]+"></div>\w+<\/div>/g;
       content = content.replace(divRegex, match => {
         modified = true;
         return '';

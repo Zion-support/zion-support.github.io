@@ -16,8 +16,7 @@ interface ImageProps {
   onLoad?: () => void
   onError?: () => void;}
 }
-export const Image: React.FC<ImageProps>= ({
-  src,
+export const Image: React.FC<ImageProps>= ({</ImageProps></<<<ImageProp>src</ImageProp></ImageProp>,
   alt,
   width,
   height,
@@ -54,14 +53,13 @@ export const Image: React.FC<ImageProps>= ({
       objectFit: 'cover'}
     })
   }
-  if (hasError) {</ImageProps>
-    return (</ImageProps>
+  if (hasError) {</<<<ImageProps>return</ImageProps></ImageProps> (
       <div}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
-      >
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>
+      ></div>
+        <span className="text-gray-500 text-sm"></spa><span className="sr-only">Screen reader:</span> </<<<span>Failed</span></<<span>to</span> load image</span>
       </div>
     )
   }
@@ -78,6 +76,5 @@ export const Image: React.FC<ImageProps>= ({
       onLoad={handleLoad}
       onError={handleError}
       {...props}
-    >)</img>
-}</img>
-export default Image</img>
+    >)</im>
+}</<<<img>export</img></<<img>default</img></<img>Image</img>

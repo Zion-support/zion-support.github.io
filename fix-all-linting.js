@@ -46,7 +46,7 @@ const fixes = [
   {
     file: '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
     changes: [
-      { from: 'const AI2026ImplementationRoadmap', to: 'const _AI2026ImplementationRoadmap' },
+      { from: 'const AI2026 ImplementationRoadmap', to: 'const _AI2026 ImplementationRoadmap' },
     ],
   },
   {

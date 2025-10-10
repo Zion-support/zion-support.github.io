@@ -49,38 +49,36 @@ const ContentPromotionBanner: React.FC = () => {
   const currentBannerData = banners[currentBanner];
 
   return (
-    <div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}>
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <currentBannerData.icon className="w-5 h-5 animate-pulse" />
-          <div>
-            <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}<span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
+    <div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}></div>
+      <div className="container mx-auto flex items-center justify-between"></div>
+        <div className="flex items-center space-x-3"></div>
+          <currentBannerData.icon className="w-5 h-5 animate-pulse" /></currentBannerDat>
+          <div></div>
+            <span className="font-semibold text-sm sm:text-base"></spa>{currentBannerData.title}<span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</spa>
             </span>
           </div>
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2"></div>
           <a
             href={currentBannerData.link}
             className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
-          >
-            <span>{currentBannerData.cta}</span>
-            <ArrowRight className="w-3 h-3" />
+          ></a>
+            <span>{currentBannerData.cta}</spa>
+            <ArrowRight className="w-3 h-3" /></ArrowRigh>
           <button
-            onClick={() =>setIsVisible(false)}
-            className="text-white/80 hover:text-white transition-colors p-1"
+            onClick={() =>setIsVisible(false)}</button></<<<butto>className</butto></butto>="text-white/80 hover:text-white transition-colors p-1"
             aria-label="Close banner"</button>
           ></button>
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4" /></X>
           </button>
         </div>
       </div>
 
       {/* Banner indicators */}
-      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) => (<button
+      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1"></div>{banners.map((_, index) => (<button
             key={index}
-            onClick={() =>setCurrentBanner(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            onClick={() =>setCurrentBanner(index)}</button></<<<butto>className</butto></butto>={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentBanner ? 'bg-white' : 'bg-white/50'
             }`}
             aria-label={`Go to banner ${index + 1}`}

@@ -342,7 +342,7 @@ name: 'AI-Powered Infrastructure Management',
         {
           name: 'Decentralized Infrastructure',
           description: 'Decentralized infrastructure solutions with distributed computing and storage',
-          features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2P Networks', 'Consensus Mechanisms', 'Token Incentives'],
+          features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2 P Networks', 'Consensus Mechanisms', 'Token Incentives'],
           pricing: 'Starting at $9,999/mo',
           trial: 'Free pilot',
           timeline: '6-12 weeks',
@@ -408,7 +408,7 @@ name: 'AI-Powered Infrastructure Management',
         {
           name: 'Edge Computing Solutions',
           description: 'Edge computing solutions with real-time processing and low-latency applications',
-          features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5G Integration'],
+          features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5 G Integration'],
           pricing: 'Starting at $8,999/mo',
           trial: 'Free edge assessment',
           timeline: '4-8 weeks',
@@ -530,13 +530,13 @@ name: 'AI-Powered Infrastructure Management',
       bgColor: 'bg-pink-500/10',
       services: [
         {
-          name: '5G Network Implementation Pro',
-          description: 'Advanced 5G network implementation with AI-powered optimization and edge computing integration',
-          features: ['5G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
+          name: '5 G Network Implementation Pro',
+          description: 'Advanced 5 G network implementation with AI-powered optimization and edge computing integration',
+          features: ['5 G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
           pricing: 'Starting at $35,999',
-          trial: 'Free 5G assessment',
+          trial: 'Free 5 G assessment',
           timeline: '16-32 weeks',
-          link: 'https://ziontechgroup.com/5g-implementation-pro',
+          link: 'https://ziontechgroup.com/5 g-implementation-pro',
           popular: false
         },
         {
@@ -685,44 +685,43 @@ name: 'AI-Powered Infrastructure Management',
 
   return (
 
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg"></div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-20 lg:py-32 overflow-hidden"></sectio>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4 xl mx-auto text-center"></div>
 
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
-              From infrastructure to security, we've got you covered.</p>
+<h1 className="text-4 xl lg:text-6 xl font-bold text-white mb-6 cyber-text neon-pulse"></h1></<<<h1>IT</h1></<<h1>Services</h1><p className="text-xl lg:text-2 xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p></<<<p>From</p></<<p>infrastructure</p> to security, we've got you covered.</p>
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+<div className="text-gray-300">IT Services</div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5 xl mx-auto mb-12"></div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"></div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2"></div>150+<div className="text-gray-300">IT Services</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+<div className="text-gray-300">Enterprise Clients</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"></div>
+                <div className="text-3 xl font-bold text-purple-400 mb-2"></div>750+<div className="text-gray-300">Enterprise Clients</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%<div className="text-gray-300">Uptime SLA</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20"></div>
+                <div className="text-3 xl font-bold text-pink-400 mb-2"></div>99.9%<div className="text-gray-300">Uptime SLA</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7<div className="text-gray-300">Support</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"></div>
+                <div className="text-3 xl font-bold text-green-400 mb-2"></div>24/7<div className="text-gray-300">Support</div>
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Enterprise Security</span>
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
+                <Shield className="w-5 h-5 text-cyan-400" /></Shiel>
+                <span className="text-white font-medium">Enterprise Security</spa>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Cloud className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Cloud Solutions</span>
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
+                <Cloud className="w-5 h-5 text-purple-400" /></Clou>
+                <span className="text-white font-medium">Cloud Solutions</spa>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Settings className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">24/7 Support</span>
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
+                <Settings className="w-5 h-5 text-green-400" /></Setting>
+                <span className="text-white font-medium">24/7 Support</spa>
               </div>
             </div>
           </div>
@@ -730,15 +729,15 @@ name: 'AI-Powered Infrastructure Management',
       </section>
 
       {/* Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+      <section className="py-20"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Why</h2></<<h2>Choose</h2> Our IT Services?<p className="text-lg text-gray-300 max-w-3 xl mx-auto"></p></<<<p>Proven</p></<<p>expertise</p> and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center group"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                  <benefit.icon className="w-10 h-10 text-white" /></benefi>
+                <div className="text-4 xl font-bold text-white mb-2">{benefit.stat}</div>
+                <h3 className="text-xl font-bold text-white mb-3"></h>{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -746,56 +745,56 @@ name: 'AI-Powered Infrastructure Management',
       </section>
 
       {/* IT Services */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
-              <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
+      <section className="py-20 bg-slate-800/50"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Our</h2></<<h2>IT</h2> Services<p className="text-lg text-gray-300 max-w-3 xl mx-auto"></p></<<<p>Comprehensive</p></<<p>IT</p> solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
+              <div key={categoryIndex}></div>
+                <div className="flex items-center space-x-3 mb-8"></div>
+                  <category.icon className={`w-8 h-8 ${category.color}`} /></categor>
+                  <h3 className="text-2 xl font-bold text-white"></h>{category.category}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
 </div>
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
+<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative"></div>
+<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative"></div>{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
                         </div>
                       )}
 
-                      <div className="relative z-10">
-                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <div className="relative z-10"></div>
+                        <h4 className="text-2 xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h4><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
-                        <div className="space-y-4 mb-6">
-                          <h5 className="text-lg font-semibold text-white flex items-center">
-                            <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
-                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                <span>{feature}</span>
+                        <div className="space-y-4 mb-6"></div>
+                          <h5 className="text-lg font-semibold text-white flex items-center"></h>
+                            <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:</Zap><ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</u>
+                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300"></l>
+                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /></CheckCircl>
+                                <span>{feature}</spa>
                               </li>
                             ))}
                             {service.features.length > 4 && (
-                              <li className="text-cyan-400 text-sm font-medium">+{service.features.length - 4} more features</li>
+                              <li className="text-cyan-400 text-sm font-medium">+{service.features.length - 4} more features</l>
                               </li>
                             )}
                           </ul>
                         </div>
 
-                        <div className="space-y-3 mb-6">
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Pricing:<span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
+                        <div className="space-y-3 mb-6"></div>
+                          <div className="flex justify-between items-center"></div>
+                            <span className="text-sm text-gray-400"></span></<<<span>Pricing</span></span>:<span className="text-lg font-bold text-cyan-400">{service.pricing}</spa>
                           </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Trial:<span className="text-sm font-medium text-green-400">{service.trial}</span>
+                          <div className="flex justify-between items-center"></div>
+                            <span className="text-sm text-gray-400"></span></<<<span>Trial</span></span>:<span className="text-sm font-medium text-green-400">{service.trial}</spa>
                           </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Timeline:<span className="text-sm font-medium text-purple-400">{service.timeline}</span>
+                          <div className="flex justify-between items-center"></div>
+                            <span className="text-sm text-gray-400"></span></<<<span>Timeline</span></span>:<span className="text-sm font-medium text-purple-400">{service.timeline}</spa>
                           </div>
                         </div>
 
-                        <div className="space-y-3">
+                        <div className="space-y-3"></div>
                           <a
                             href={service.link}
                             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                           >Learn More</a>
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" /></ArrowRigh>
                           <a
                             href="/contact"
                             className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
@@ -803,11 +802,11 @@ name: 'AI-Powered Infrastructure Management',
                           </a>
                         </div>
                       </div>
-<div className="space-y-2">
+<div className="space-y-2"></div>
                         <a
                           href={service.link}
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >Learn More<a
+                        >Learn More</a><a
                           href="/contact"
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
                         >Get Started</a>
@@ -824,15 +823,15 @@ name: 'AI-Powered Infrastructure Management',
       </section>
 
       {/* Technologies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (<div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
+      <section className="py-20"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Technologies</h2></<<h2>We</h2> Work With<p className="text-lg text-gray-300 max-w-3 xl mx-auto"></p></<<<p>We</p></<<p>work</p> with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                  <tech.icon className="w-8 h-8 text-white" /></tec>
+                <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h>
+                <div className="space-y-2"></div>{tech.techs.map((technology, techIndex) => (<div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
                     </div>
                   ))}
                 </div>
@@ -843,48 +842,48 @@ name: 'AI-Powered Infrastructure Management',
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
+      <section className="py-20 bg-slate-800/50"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Our</h2></<<h2>IT</h2> Implementation Process<p className="text-lg text-gray-300 max-w-3 xl mx-auto">A proven methodology that ensures successful IT implementation</p>
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
+          <div className="max-w-4 xl mx-auto"></div>
+            <div className="relative"></div>
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
-                </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
+                </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
+                    <div className="bg-slate-800/50 p-6 rounded-lg"></div>
+                      <div className="text-cyan-400 font-bold text-lg mb-2"></div></<<<div>Step</div></div> {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h>
+                      <p className="text-gray-300 mb-2"></p>{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">))}</div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div><div className="w-1/2">))}</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Case Studies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories<p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}<p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:<p className="text-sm text-gray-400">{study.challenge}</p>
+      <section className="py-20"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Success</h2></<<h2>Stories</h2><p className="text-lg text-gray-300 max-w-3 xl mx-auto"></p></<<<p>Real</p></<<p>results</p> from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
+                  <span className="text-2 xl font-bold text-white"></spa>{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2"></h>{study.company}<p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
+                <div className="space-y-3"></div>
+                  <div></div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:</h4><p className="text-sm text-gray-400">{study.challenge}</p>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:<p className="text-sm text-gray-400">{study.solution}</p>
+                  <div></div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:</h4><p className="text-sm text-gray-400">{study.solution}</p>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:<ul className="space-y-1">{study.results.map((result, resultIndex) => (</ul>
-                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
-                          <CheckCircle className="w-3 h-3 flex-shrink-0" />
-                          <span>{result}</span>
+                  <div></div>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:</h4><ul className="space-y-1">{study.results.map((result, resultIndex) => (</u>
+                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400"></l>
+                          <CheckCircle className="w-3 h-3 flex-shrink-0" /></CheckCircl>
+                          <span>{result}</spa>
                         </li>
                       ))}
                     </ul>
@@ -897,33 +896,33 @@ name: 'AI-Powered Infrastructure Management',
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</sectio>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1 s' }} /></div>
 
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
+        <div className="container mx-auto px-4 text-center relative z-10"></div>
+          <h2 className="text-4 xl lg:text-6 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>Ready</h2></<<h2>to</h2> Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3 xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
             <a
               href="https://ziontechgroup.com/contact"
 className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
 
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
 
-            >
-              <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquare>
+            ></a>
+              <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquar>
             </MessageSquare>
             <a
               href="tel:+13024640950"
 
 className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
 
-            >
-              <Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-0950</Phone>
+            ></a>
+              <Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-0950</Phon>
             </Phone>
           </div>
-          <div className="text-gray-200 text-sm">
+          <div className="text-gray-200 text-sm"></div>
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
 
           </div>

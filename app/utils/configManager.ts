@@ -115,8 +115,7 @@ class ConfigManager {
     return { ...this.config }
   }
 
-  public updateConfig(updates: Partial<AppConfig>): void {
-    this.config = { ...this.config, ...updates }
+  public updateConfig(updates: Partial<AppConfig>): void {</AppConfig></<<<AppConfig>this</AppConfig></AppConfig>.config = { ...this.config, ...updates }
   }
 
   public getApiConfig() {

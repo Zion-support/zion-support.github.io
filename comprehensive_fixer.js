@@ -10,10 +10,9 @@ const fixes = [
   },
   //Fix JSX syntax issues
   {
-    pattern: /<br\s*\/?>/g,
-    replacement: '<br />',
+    pattern: /<br\s*\/?>/g,</br>replacement</br>: '<br />',</br>
   },
-  //Fix unescaped > in JSX
+  //Fix unescaped>in</unescaped> JSX
   {
     pattern: /{'>'}/g,
     replacement: '{">"}',

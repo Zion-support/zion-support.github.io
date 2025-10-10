@@ -1,5 +1,4 @@
-export const reportError = (error: Error, context?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+export const reportError = (error: Error, context?: Record<string, any>) => {</string>if</string> (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
       description: error.message,
       fatal: false,

@@ -8,8 +8,7 @@ interface PerformanceMetrics {
 }
 
 export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isSupported, setIsSupported] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});</PerformanceMetrics>const</PerformanceMetrics> [isSupported, setIsSupported] = useState(false);
 
   useEffect(() => {
     if (!('PerformanceObserver' in window)) {

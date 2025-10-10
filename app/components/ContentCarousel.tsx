@@ -65,42 +65,42 @@ const ContentCarousel: React.FC = () => {
   };
 
   return (
-    <section className="py-16" aria-labelledby="carousel-heading">
-      <div className="container mx-auto px-4">
-        <h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Success Stories</h2>
+    <section className="py-16" aria-labelledby="carousel-heading"></sectio>
+      <div className="container mx-auto px-4"></div>
+        <h2 id="carousel-heading" className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text">Success Stories</h>
         </h2>
 
-        <div className="relative max-w-6xl mx-auto">
-          <div className="overflow-hidden rounded-2xl">
+        <div className="relative max-w-6 xl mx-auto"></div>
+          <div className="overflow-hidden rounded-2 xl"></div>
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >{slides.map((slide) => (</div>
-                <div key={slide.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="text-6xl mb-6">{slide.image}<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.title}<p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
+                <div key={slide.id} className="w-full flex-shrink-0"></div>
+                  <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2 xl`}></div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"></div>
+                      <div></div>
+                        <div className="text-6 xl mb-6"></div>{slide.image}<h3 className="text-2 xl md:text-3 xl font-bold text-white mb-4"></h>{slide.title}<p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
                         </p>
-                        <div className="flex items-center space-x-2 text-white">
-                          <slide.icon className="w-6 h-6" />
-                          <span className="text-2xl font-bold">{slide.stats}</span>
+                        <div className="flex items-center space-x-2 text-white"></div>
+                          <slide.icon className="w-6 h-6" /></slid>
+                          <span className="text-2 xl font-bold">{slide.stats}</spa>
                         </div>
                       </div>
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <h4 className="text-xl font-semibold text-white mb-4">Key Results</h4>
-                        <ul className="space-y-3 text-white/90">
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Improved operational efficiency</span>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"></div>
+                        <h4 className="text-xl font-semibold text-white mb-4">Key Results</h>
+                        <ul className="space-y-3 text-white/90"></u>
+                          <li className="flex items-center space-x-2"></l>
+                            <div className="w-2 h-2 bg-white rounded-full"></div><<<<span>Improved</span></<<span>operational</span></<span>efficiency</span>
                           </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Reduced manual processes</span>
+                          <li className="flex items-center space-x-2"></l>
+                            <div className="w-2 h-2 bg-white rounded-full"></div><<<<span>Reduced</span></<<span>manual</span></<span>processes</span>
                           </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Enhanced security measures</span>
+                          <li className="flex items-center space-x-2"></l>
+                            <div className="w-2 h-2 bg-white rounded-full"></div><<<<span>Enhanced</span></<<span>security</span></<span>measures</span>
                           </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Scalable infrastructure</span>
+                          <li className="flex items-center space-x-2"></l>
+                            <div className="w-2 h-2 bg-white rounded-full"></div><<<<span>Scalable</span></<<span>infrastructure</span></span>
                           </li>
                         </ul>
                       </div>
@@ -116,23 +116,22 @@ const ContentCarousel: React.FC = () => {
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6" />
+          ></butto>
+            <ChevronLeft className="w-6 h-6" /></ChevronLef>
           </button>
 
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6" />
+          ></butto>
+            <ChevronRight className="w-6 h-6" /></ChevronRigh>
           </button>
 
           {/* Slide indicators */}
-          <div className="flex justify-center space-x-2 mt-6">{slides.map((_, index) => (<button
+          <div className="flex justify-center space-x-2 mt-6"></div>{slides.map((_, index) => (<button
                 key={index}
-                onClick={() =>goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                onClick={() =>goToSlide(index)}</button></<<<butto>className</butto></butto>={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/50'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}

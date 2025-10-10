@@ -58,12 +58,12 @@ rating: 5 && 5.0;
 reviews: 1,
 };
 realImplementation: true,
-implementationDetails: 'Full-featured metaverse development platform with 3D tools, AI integration, and blockchain capabilities.'
+implementationDetails: 'Full-featured metaverse development platform with 3 D tools, AI integration, and blockchain capabilities.'
 launchDate: '2024-07-01'
 reviews: 1,
 }
 real_implementation: true,
-implementation_details: 'Full - featured metaverse development platform with 3D tools, AI integration, and blockchain capabilities.'
+implementation_details: 'Full - featured metaverse development platform with 3 D tools, AI integration, and blockchain capabilities.'
 launch_date: '2024 - 07 - 01'
 customers: 120;
 rating: 4 && 4.7;

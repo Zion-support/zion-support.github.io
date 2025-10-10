@@ -9,7 +9,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate compelling email content, subject lines, and CTAs using advanced AI algorithms',
-      benefits: ['10x faster content creation', 'Higher open rates', 'Personalized messaging', 'A/B testing automation']
+      benefits: ['10 x faster content creation', 'Higher open rates', 'Personalized messaging', 'A/B testing automation']
     },
     {
       icon: Target,
@@ -160,43 +160,42 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
 
   const stats = [
     { icon: Users, value: '15,000+', label: 'Active Users' },
-    { icon: Send, value: '50M+', label: 'Emails Sent' },
+    { icon: Send, value: '50 M+', label: 'Emails Sent' },
     { icon: TrendingUp, value: '40%', label: 'Avg. Open Rate Increase' },
     { icon: DollarSign, value: '60%', label: 'Revenue Increase' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Helmet>
-        <title>AI Email Marketing Automation - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered email marketing platform with automation, personalization, and analytics. Increase open rates by 40% and revenue by 60%. Starting at $39/month." />
-        <meta name="keywords" content="ai email marketing, email automation, email personalization, email analytics, drip campaigns, lead nurturing" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <Helmet></Helme>
+        <<<<title>AI</title></<<title>Email</title> Marketing Automation - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered email marketing platform with automation, personalization, and analytics. Increase open rates by 40% and revenue by 60%. Starting at $39/month." /></met>
+        <meta name="keywords" content="ai email marketing, email automation, email personalization, email analytics, drip campaigns, lead nurturing" /></met>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4 mr-2" >AI-Powered Email Marketing<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">AI Email Marketing Automation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your email marketing with AI-powered automation, personalization, and analytics.</p>
-            Increase open rates by 40% and revenue by 60% with our intelligent platform.</p>
+      <section className="pt-24 pb-16 px-4"></sectio>
+        <div className="max-w-7 xl mx-auto text-center"></div>
+          <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+            <Sparkles className="w-4 h-4 mr-2" >AI-Powered Email Marketing</Sparkles><h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6 neon-text"></h1></<<<h1>AI</h1></<<h1>Email</h1> Marketing Automation<p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Transform your email marketing with AI-powered automation, personalization, and analytics.</p></<<<p>Increase</p></<<p>open</p> rates by 40% and revenue by 60% with our intelligent platform.</p>
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">{stats.map((stat, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-                <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-blue-400 mb-1">{stat.value}<div className="text-gray-300 text-sm">{stat.label}</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card"></div>
+                <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-2" /></sta>
+                <div className="text-2 xl font-bold text-blue-400 mb-1"></div>{stat.value}<div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center justify-center"
-            >
-              <Phone className="w-4 h-4 mr-2" >Call (302) 464-0950<a
+            ></a>
+              <Phone className="w-4 h-4 mr-2" >Call (302) 464-0950</Phone><a
               href="mailto:kleber@ziontechgroup.com?subject=AI Email Marketing Automation Demo"
               className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
             >Get Free Demo</a>
@@ -206,14 +205,14 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       </section>
 
       {/* Automation Types Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Powerful Automation Types<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{automationTypes.map((type, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
-                <type.icon className="w-12 h-12 text-blue-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{type.name}<p className="text-gray-300 mb-4">{type.description}<ul className="space-y-2">{type.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
+      <section className="py-16 px-4"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text"></h2></<<<h2>Powerful</h2></<<h2>Automation</h2> Types<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{automationTypes.map((type, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card"></div>
+                <type.icon className="w-12 h-12 text-blue-400 mb-4" /></typ>
+                <h3 className="text-xl font-bold text-white mb-3"></h>{type.name}<p className="text-gray-300 mb-4"></p>{type.description}<ul className="space-y-2">{type.benefits.map((benefit, benefitIndex) => (</u>
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircl>
                     </CheckCircle>
                   ))}
                 </ul>
@@ -224,14 +223,14 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Advanced AI Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
-                <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text"></h2></<<<h2>Advanced</h2></<<h2>AI</h2> Features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card"></div>
+                <feature.icon className="w-12 h-12 text-blue-400 mb-4" /></featur>
+                <h3 className="text-xl font-bold text-white mb-3"></h>{feature.title}<p className="text-gray-300 mb-4"></p>{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</u>
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircl>
                     </CheckCircle>
                   ))}
                 </ul>
@@ -242,20 +241,20 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''} cyber-card`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+      <section className="py-16 px-4"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text"></h2></<<<h2>Simple</h2></h2>, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>{pricingPlans.map((plan, index) => (<div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-blue-400 scale-105' : ''} cyber-card`}>{plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-blue-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</spa>
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-blue-400">{plan.price}<span className="text-gray-300 ml-1">{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2"></h>{plan.name}<p className="text-gray-300 text-sm mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4 xl font-bold text-blue-400"></spa>{plan.price}<span className="text-gray-300 ml-1"></spa>{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</u>
+                    <li key={featureIndex} className="flex items-center text-gray-300"></l>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircl>
                     </CheckCircle>
                   ))}
                 <a
@@ -274,13 +273,13 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">What Our Customers Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}<div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text"></h2></<<<h2>What</h2></<<h2>Our</h2> Customers Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card"></div>
+                <div className="flex items-center mb-4"></div>{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}</Star><p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div></div>
+                  <div className="font-semibold text-white"></div>{testimonial.name}<div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -289,15 +288,15 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?<p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600"></sectio>
+        <div className="max-w-4 xl mx-auto text-center"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6"></h2></<<<h2>Ready</h2></<<h2>to</h2> Transform Your Email Marketing?<p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using AI Email Marketing Automation to grow their revenue and engagement.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >Call (302) 464-0950<a
+            >Call (302) 464-0950</a><a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
             >Email Us</a>

@@ -58,73 +58,69 @@ const SEOOptimizerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            SEO <span className="text-cyan-400">Optimizer<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Boost your search rankings with our AI-powered SEO optimization platform.</p>
-            Get more organic traffic, higher rankings, and better visibility in search results.</p>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5 xl font-bold text-white mb-6"></h1></<<<h1>SEO</h1></h1> <span className="text-cyan-400"></span></<<<span>Optimizer</span></span><p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">Boost your search rankings with our AI-powered SEO optimization platform.</p></<<<p>Get</p></<<p>more</p> organic traffic, higher rankings, and better visibility in search results.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <Search className="w-5 h-5 mr-2" >Get Started</Search>
+            ></Lin>
+              <Search className="w-5 h-5 mr-2" >Get Started</Searc>
             </Search>
             <Link
               href="/demo"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <BarChart className="w-5 h-5 mr-2" >View Demo</BarChart>
+            ></Lin>
+              <BarChart className="w-5 h-5 mr-2" >View Demo</BarChar>
             </BarChart>
           </div>
         </div>
 
         {/* Features Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful <span className="text-cyan-400">SEO Tools<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Powerful</h2></h2> <span className="text-cyan-400"></span></<<<span>SEO</span></<<span>Tools</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
+                className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
+                  <feature.icon className="w-6 h-6 text-white" /></featur>
+                <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}<p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Benefits Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Proven <span className="text-cyan-400">Results<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Proven</h2></h2> <span className="text-cyan-400"></span></<<<span>Results</span></span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
+                  <TrendingUp className="w-8 h-8 text-white" /></TrendingU>
+                <h3 className="text-xl font-semibold text-white mb-3"></h>{benefit.title}<p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Dominate Search Results?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using our SEO optimizer to rank higher and get more traffic.</p>
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2 xl p-12 text-center"></div>
+          <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h2>Ready</h2></<<h2>to</h2> Dominate Search Results?<p className="text-xl text-gray-300 mb-8 max-w-2 xl mx-auto">Join thousands of businesses using our SEO optimizer to rank higher and get more traffic.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" >Start Optimizing</ArrowRight>
+            ></Lin>
+              <ArrowRight className="w-5 h-5 mr-2" >Start Optimizing</ArrowRigh>
             </ArrowRight>
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Target className="w-5 h-5 mr-2" >View Pricing</Target>
+            ></Lin>
+              <Target className="w-5 h-5 mr-2" >View Pricing</Targe>
             </Target>
           </div>
         </div>

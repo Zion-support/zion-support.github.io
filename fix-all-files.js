@@ -21,12 +21,12 @@ function createProperComponent(filePath) {
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+    <div className="min-h-screen bg-gray-50"></div>
+      <div className="container mx-auto px-4 py-8"></div>
+        <h1 className="text-3 xl font-bold text-gray-900 mb-6"></h>
           ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ')}
         </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
+        <div className="bg-white rounded-lg shadow-md p-6"></div>
           <p className="text-gray-600">
             This page is under development. Content will be added soon.
           </p>
@@ -48,10 +48,10 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
   children 
 }: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
   return (
-    <div className={\`${fileName.toLowerCase()} \${className}\`}>
+    <div className={\`${fileName.toLowerCase()} \${className}\`}></div>
       {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">
+        <div className="p-4"></div>
+          <h3 className="text-lg font-semibold mb-2"></h>
             ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
           </h3>
           <p className="text-gray-600">

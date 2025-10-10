@@ -5,16 +5,15 @@ import fs from 'fs';
 function fixJSXErrors(filePath) {
   try {
 
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
+    //Fix malformed JSX elements like: className="..." <span></span> -> className="..." /> <span></span>const</span> patterns = [
       {
         //Fix CheckCircleIcon and similar patterns
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g,
-        replacement: '$1 />\n                  <span',
+        replacement: '$1 /></span>\n                  <span',
       },
       {
         //Fix other icon patterns
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
+        pattern: /(<[A-Z][a-zA-Z]*Icon[^></span>]*>)\s*<[^/]/g,
         replacement: '$1 />\n                <',
       },
       {

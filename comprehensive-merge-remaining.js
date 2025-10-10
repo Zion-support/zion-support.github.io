@@ -17,19 +17,19 @@ import fs from 'fs';
 //Step 2: Define remaining branches to merge
 const remainingBranches = [
   'ai-dashboard-improvements-merged',
-  'bw06m0-codex/fix-typescript-errors-in-components',
+  'bw06 m0-codex/fix-typescript-errors-in-components',
   'bwren1-codex/fix-typescript-errors-in-files',
   'candidate/build-fix-postcss-esm',
-  'cursor/add-new-services-and-deploy-updates-0c4f',
-  'cursor/add-new-services-and-deploy-updates-0f78',
+  'cursor/add-new-services-and-deploy-updates-0 c4 f',
+  'cursor/add-new-services-and-deploy-updates-0 f78',
   'cursor/add-new-services-and-deploy-updates-1399',
   'cursor/add-new-services-and-deploy-updates-1503',
   'cursor/add-new-services-and-deploy-updates-1817',
-  'cursor/add-new-services-and-deploy-updates-19c7',
-  'cursor/add-new-services-and-deploy-updates-27d2',
-  'cursor/add-new-services-and-deploy-updates-45bb',
-  'cursor/add-new-services-and-deploy-updates-483a',
-  'cursor/add-new-services-and-deploy-updates-4d5b',
+  'cursor/add-new-services-and-deploy-updates-19 c7',
+  'cursor/add-new-services-and-deploy-updates-27 d2',
+  'cursor/add-new-services-and-deploy-updates-45 bb',
+  'cursor/add-new-services-and-deploy-updates-483 a',
+  'cursor/add-new-services-and-deploy-updates-4 d5 b',
 ];
 
 // //Step 3: Enhanced conflict resolution function

@@ -46,7 +46,7 @@ try {
   // Try to merge our improvements branch
   console.log('Attempting to merge improvements branch...');
   try {
-    execSync('git merge cursor/analyze-improve-and-deploy-application-574f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' });
+    execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' });
     console.log('✅ Successfully merged improvements branch');
   } catch (error) {
     console.log('❌ Could not merge improvements branch automatically');

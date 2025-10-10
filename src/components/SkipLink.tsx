@@ -5,30 +5,29 @@ interface SkipLinkProps {
   children: React.ReactNode;
 }
 
-const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
-  return (
+const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps>return</SkipLinkProps> (
     <a
       href={to}
       className="skip-link"
       style={{
         position: 'absolute',
-        top: '-40px',
-        left: '6px',
+        top: '-40 px',
+        left: '6 px',
         background: '#000',
         color: '#fff',
-        padding: '8px',
+        padding: '8 px',
         textDecoration: 'none',
         zIndex: 1000,
-        transition: 'top 0.3s',
-        borderRadius: '4px',
-        fontSize: '14px',
+        transition: 'top 0.3 s',
+        borderRadius: '4 px',
+        fontSize: '14 px',
         fontWeight: 'bold'
       }}
       onFocus={(e) => {
-        e.currentTarget.style.top = '6px';
+        e.currentTarget.style.top = '6 px';
       }}
       onBlur={(e) => {
-        e.currentTarget.style.top = '-40px';
+        e.currentTarget.style.top = '-40 px';
       }}
     >
       {children}

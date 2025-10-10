@@ -115,15 +115,15 @@ export const createFocusIndicator = (): void => {
   style.id = 'focus-indicator';
   style.textContent = `
     *:focus {
-      outline: 2px solid #3b82f6 !important;
-      outline-offset: 2px !important;
+      outline: 2 px solid #3 b82 f6 !important;
+      outline-offset: 2 px !important;
     }
     *:focus:not(:focus-visible) {
       outline: none !important;
     }
     *:focus-visible {
-      outline: 2px solid #3b82f6 !important;
-      outline-offset: 2px !important;
+      outline: 2 px solid #3 b82 f6 !important;
+      outline-offset: 2 px !important;
     }
   `;
   document.head.appendChild(style);
@@ -137,9 +137,9 @@ export const createReducedMotionMode = (): void => {
       *,
       *::before,
       *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration: 0.01 ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.01 ms !important;
         scroll-behavior: auto !important;
       }
     }
@@ -173,10 +173,10 @@ export const createScreenReaderOnly = (): void => {
   style.textContent = `
     .sr-only {
       position: absolute;
-      width: 1px;
-      height: 1px;
+      width: 1 px;
+      height: 1 px;
       padding: 0;
-      margin: -1px;
+      margin: -1 px;
       overflow: hidden;
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
@@ -274,8 +274,7 @@ class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics | null = null;
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<AccessibilityConfig> = {}) {</AccessibilityConfig></<<<AccessibilityConfig>this</AccessibilityConfig></AccessibilityConfig>.config = {
       enableHighContrast: true,
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
@@ -319,13 +318,13 @@ class AccessibilityEnhancer {
     style.textContent = `
       @media (prefers-contrast: high) {
         .cyber-card, .quantum-card {
-          border: 2px solid #ffffff !important;
+          border: 2 px solid #ffffff !important;
           background: #000000 !important;
           color: #ffffff !important;
         }
 
         .neon-text, .cyber-text {
-          text-shadow: 0 0 5px #00ffff !important;
+          text-shadow: 0 0 5 px #00 ffff !important;
         }
       }
     `;
@@ -346,8 +345,8 @@ class AccessibilityEnhancer {
     const focusStyle = document.createElement('style');
     focusStyle.textContent = `
       .keyboard-navigation *:focus {
-        outline: 2px solid #00ffff !important;
-        outline-offset: 2px !important;
+        outline: 2 px solid #00 ffff !important;
+        outline-offset: 2 px !important;
       }
     `;
     document.head.appendChild(focusStyle);

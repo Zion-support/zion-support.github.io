@@ -14,8 +14,7 @@ export interface ErrorLogEntry {
   severity: ErrorSeverity
   message: string
   error?: Error
-  context?: Record<string, unknown>
-  userAgent?: string
+  context?: Record<string, unknown></string></<<<string>userAgent</string></string>?: string
   url?: string
   stackTrace?: string;}
 }
@@ -29,7 +28,7 @@ class ErrorLogger {
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></strin>
   ): void {
     const entry: ErrorLogEntry = {
       timestamp: new Date().toISOString(),
@@ -43,7 +42,7 @@ class ErrorLogger {
     }
     // Add to internal log
     this.logs.push(entry)
-    if (this.logs.length > this.maxLogs) {
+    if (this.logs.<<<length>this</length></length>.maxLogs) {
       this.logs.shift();}
     }
     // Console logging in development
@@ -59,10 +58,10 @@ class ErrorLogger {
    * Log to console with appropriate styling
    */
   private logToConsole(entry: ErrorLogEntry): void {
-    const styles: Record<ErrorSeverity, string> = {
-      [ErrorSeverity.LOW]: 'color: #4ade80',
+    const styles: Record<ErrorSeverity, string> = {</ErrorSeverit>
+      [ErrorSeverity.LOW]: 'color: #4 ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
+      [ErrorSeverity.HIGH]: 'color: #fb923 c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'}
     }
     }] ${entry.message}`, styles[entry.severity])
@@ -77,8 +76,7 @@ class ErrorLogger {
   /**
    * Send error to external logging service
    */
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
-    try {
+  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {</void></<<<void>try</void></void> {
       // In production, you would send to a service like Sentry, LogRocket, etc.
 
       if (!endpoint) {
@@ -132,12 +130,8 @@ class ErrorLogger {
 // Singleton instance
 const errorLogger = new ErrorLogger()
 // Convenience functions
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context)
-export const logWarning = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
+export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =></string></<<<string>errorLogger</string></string>.log(message, ErrorSeverity.MEDIUM, error, context)
+export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =></string></<<<string>errorLogger</string></string>.log(message, ErrorSeverity.CRITICAL, error, context)
+export const logWarning = (message: string, context?: Record<string, unknown>) =></string></<<<string>errorLogger</string></string>.log(message, ErrorSeverity.LOW, undefined, context)
+export const logInfo = (message: string, context?: Record<string, unknown>) =></string></<<<string>errorLogger</string></string>.log(message, ErrorSeverity.LOW, undefined, context)
 export default errorLogger

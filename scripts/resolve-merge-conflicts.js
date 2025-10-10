@@ -138,7 +138,7 @@ async function main() {
   console.log('\n🔍 Checking for other branches to merge...');
   
   const branchesToMerge = [
-    'cursor/website-audit-and-update-with-deployment-f31a',
+    'cursor/website-audit-and-update-with-deployment-f31 a',
     'add-new-2026-content',
     'add-revolutionary-content-2026',
     'ai-2027-content-integration',

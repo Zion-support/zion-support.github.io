@@ -46,7 +46,7 @@ const PerformanceOptimizationPage: React.FC = () => {
     {
       title: 'Scalability',
       description: 'Prepare your systems for future growth and demand',
-      metric: '10x scalability'
+      metric: '10 x scalability'
     }
   ];
 
@@ -75,55 +75,51 @@ const PerformanceOptimizationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Performance <span className="text-cyan-400">Optimization<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Maximize your system performance with our comprehensive optimization services.</p>
-            We analyze, tune, and optimize every aspect of your infrastructure for maximum speed and efficiency.</p>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5 xl font-bold text-white mb-6"></h1></<<<h1>Performance</h1></h1> <span className="text-cyan-400"></span></<<<span>Optimization</span></span><p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">Maximize your system performance with our comprehensive optimization services.</p></<<<p>We</p></<<p>analyze</p>, tune, and optimize every aspect of your infrastructure for maximum speed and efficiency.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <Zap className="w-5 h-5 mr-2" >Get Optimized</Zap>
+            ></Lin>
+              <Zap className="w-5 h-5 mr-2" >Get Optimized</Za>
             </Zap>
             <Link
               href="/consultation"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Gauge className="w-5 h-5 mr-2" >Free Assessment</Gauge>
+            ></Lin>
+              <Gauge className="w-5 h-5 mr-2" >Free Assessment</Gaug>
             </Gauge>
           </div>
         </div>
 
         {/* Services Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our <span className="text-cyan-400">Services<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Our</h2></h2> <span className="text-cyan-400"></span></<<<span>Services</span></span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{services.map((service, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
-                  <service.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}<p className="text-gray-300">{service.description}</p>
+                className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
+                  <service.icon className="w-6 h-6 text-white" /></servic>
+                <h3 className="text-xl font-semibold text-white mb-3"></h>{service.title}<p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Optimization Areas */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Optimization <span className="text-cyan-400">Areas<div className="grid md:grid-cols-2 gap-8">{optimizationAreas.map((area, index) => (</div>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Optimization</h2></h2> <span className="text-cyan-400"></span></<<<span>Areas</span></span><div className="grid md:grid-cols-2 gap-8">{optimizationAreas.map((area, index) => (</div>
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold text-white mb-4">{area.title}<p className="text-gray-300 mb-6">{area.description}<ul className="space-y-2">{area.features.map((feature, featureIndex) => (</ul>
-                    <li key={featureIndex} className="flex items-center text-cyan-400">
-                      <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+                className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <h3 className="text-2 xl font-semibold text-white mb-4"></h>{area.title}<p className="text-gray-300 mb-6"></p>{area.description}<ul className="space-y-2">{area.features.map((feature, featureIndex) => (</u>
+                    <li key={featureIndex} className="flex items-center text-cyan-400"></l>
+                      <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" >{feature}</CheckCircl>
                     </CheckCircle>
                   ))}
                 </ul>
@@ -133,81 +129,78 @@ const PerformanceOptimizationPage: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Performance <span className="text-cyan-400">Benefits<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 mb-4">{benefit.description}<div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Performance</h2></h2> <span className="text-cyan-400"></span></<<<span>Benefits</span></span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
+                  <TrendingUp className="w-8 h-8 text-white" /></TrendingU>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h>
+                <p className="text-gray-300 mb-4"></p>{benefit.description}<div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Process Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our <span className="text-cyan-400">Process</span>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Our</h2></h2> <span className="text-cyan-400">Process</spa>
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1<h3 className="text-xl font-semibold text-white mb-3">Analysis<p className="text-gray-300">Comprehensive performance analysis and bottleneck identification</p>
+          <div className="grid md:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>1<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Analysis</h3></h3><p className="text-gray-300">Comprehensive performance analysis and bottleneck identification</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2<h3 className="text-xl font-semibold text-white mb-3">Planning<p className="text-gray-300">Develop optimization strategy and implementation roadmap</p>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>2<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Planning</h3></h3><p className="text-gray-300">Develop optimization strategy and implementation roadmap</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3<h3 className="text-xl font-semibold text-white mb-3">Implementation<p className="text-gray-300">Execute optimization changes with minimal downtime</p>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>3<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Implementation</h3></h3><p className="text-gray-300">Execute optimization changes with minimal downtime</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4<h3 className="text-xl font-semibold text-white mb-3">Monitoring<p className="text-gray-300">Continuous monitoring and fine-tuning for optimal performance</p>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <span className="text-2 xl font-bold text-white"></spa>4<h3 className="text-xl font-semibold text-white mb-3"></h3></<<<h3>Monitoring</h3></h3><p className="text-gray-300">Continuous monitoring and fine-tuning for optimal performance</p>
             </div>
           </div>
         </div>
 
         {/* Performance Metrics */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Performance <span className="text-cyan-400">Metrics</span>
+        <div className="mb-16"></div>
+          <h2 className="text-3 xl font-bold text-white text-center mb-12"></h2></<<<h2>Performance</h2></h2> <span className="text-cyan-400">Metrics</spa>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 text-center">
-              <Clock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Load Time<p className="text-3xl font-bold text-cyan-400 mb-2">1.2s<p className="text-gray-300">Average page load time after optimization</p>
+          <div className="grid md:grid-cols-3 gap-8"></div>
+            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2 xl p-8 text-center"></div>
+              <Clock className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></Cloc>
+              <h3 className="text-2 xl font-bold text-white mb-2"></h3></<<<h3>Load</h3></<<h3>Time</h3><p className="text-3 xl font-bold text-cyan-400 mb-2"></p>1.2 s<p className="text-gray-300">Average page load time after optimization</p>
             </div>
-            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl p-8 text-center">
-              <Gauge className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Uptime<p className="text-3xl font-bold text-green-400 mb-2">99.9%<p className="text-gray-300">System availability and reliability</p>
+            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2 xl p-8 text-center"></div>
+              <Gauge className="w-12 h-12 text-green-400 mx-auto mb-4" /></Gaug>
+              <h3 className="text-2 xl font-bold text-white mb-2"></h3></<<<h3>Uptime</h3></h3><p className="text-3 xl font-bold text-green-400 mb-2"></p>99.9%<p className="text-gray-300">System availability and reliability</p>
             </div>
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8 text-center">
-              <TrendingUp className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Efficiency<p className="text-3xl font-bold text-purple-400 mb-2">85%<p className="text-gray-300">Resource utilization efficiency</p>
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2 xl p-8 text-center"></div>
+              <TrendingUp className="w-12 h-12 text-purple-400 mx-auto mb-4" /></TrendingU>
+              <h3 className="text-2 xl font-bold text-white mb-2"></h3></<<<h3>Efficiency</h3></h3><p className="text-3 xl font-bold text-purple-400 mb-2"></p>85%<p className="text-gray-300">Resource utilization efficiency</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Boost Your Performance Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2 xl p-12 text-center"></div>
+          <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h2>Boost</h2></<<h2>Your</h2> Performance Today<p className="text-xl text-gray-300 mb-8 max-w-2 xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" >Get Started Now</ArrowRight>
+            ></Lin>
+              <ArrowRight className="w-5 h-5 mr-2" >Get Started Now</ArrowRigh>
             </ArrowRight>
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Zap className="w-5 h-5 mr-2" >View Pricing</Zap>
+            ></Lin>
+              <Zap className="w-5 h-5 mr-2" >View Pricing</Za>
             </Zap>
           </div>
         </div>

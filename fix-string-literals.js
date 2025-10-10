@@ -126,9 +126,9 @@ function fixStringLiterals(filePath) {
     if (content.trim().length === 0) {
       content = `export default function Page() {
   return (
-    <div>
-      <h1>Page</h1>
-      <p>Content coming soon...</p>
+    <div></div>
+      <h1>Page</h1></h1>
+      <p>Content</p> coming soon...</p>
     </div>
   );
 }`;

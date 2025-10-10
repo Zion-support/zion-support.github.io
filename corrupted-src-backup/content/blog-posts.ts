@@ -121,7 +121,7 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
 - Canary playbooks with instant rollback hooks
 
 ## Outcomes
-- 8–12x deployment velocity with lower change-failure rate
+- 8–12 x deployment velocity with lower change-failure rate
 - 30–70% GenAI cost reduction via quality tiers and caches
     `,
     author: 'Zion Tech Group AI Governance',

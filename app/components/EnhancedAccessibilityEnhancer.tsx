@@ -13,8 +13,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableFontScaling?: boolean;
 }
 
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({
-  enableKeyboardNavigation = true,
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps>= ({</EnhancedAccessibilityEnhancerProps></<<<EnhancedAccessibilityEnhancerProp>enableKeyboardNavigation</EnhancedAccessibilityEnhancerProp></EnhancedAccessibilityEnhancerProp> = true,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
@@ -155,13 +154,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const style = document.createElement('style');
     style.textContent = `
       *:focus {
-        outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+        outline: 2 px solid #3 b82 f6 !important;
+        outline-offset: 2 px !important;
       }
 
       .focus-visible: focus {,
-    outline: 2px solid #3b82f6 !important;
-        outline-offset: 2px !important;
+    outline: 2 px solid #3 b82 f6 !important;
+        outline-offset: 2 px !important;
       }
 
       .focus-visible: focus:not(:focus-visible) {,
@@ -279,8 +278,8 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.style.cssText = `
       position: absolute;,
-    top: -40px;
-      left: 6px;
+    top: -40 px;
+      left: 6 px;
       z-index: 1000;
     `;
 
@@ -291,21 +290,21 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       link.className = 'skip-link';
       link.style.cssText = `
         position: absolute;,
-    top: -40px;
-        left: 6px;,
+    top: -40 px;
+        left: 6 px;,
     background: #000;
         color: #fff;,
-    padding: 8px;
+    padding: 8 px;
         text-decoration: none;
         z-index: 1000;,
-    transition: top 0.3s;
+    transition: top 0.3 s;
       `;
 
       link.addEventListener('focus', () => {
-        link.style.top = '6px';
+        link.style.top = '6 px';
 
       link.addEventListener('blur', () => {
-        link.style.top = '-40px';
+        link.style.top = '-40 px';
 
       skipLinksContainer.appendChild(link);
 
@@ -321,10 +320,10 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     style.textContent = `
       .high-contrast {
         --text-primary: #ffffff;
-        --text-secondary: #e5e7eb;
+        --text-secondary: #e5 e7 eb;
         --bg-primary: #000000;
-        --bg-secondary: #1f2937;
-        --accent: #60a5fa;
+        --bg-secondary: #1 f2937;
+        --accent: #60 a5 fa;
       }
 
       .high-contrast * {
@@ -338,7 +337,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       }
 
       .high-contrast button {
-        border: 2px solid var(--accent) !important;
+        border: 2 px solid var(--accent) !important;
         background-color: var(--bg-secondary) !important;
       }
     `;
@@ -353,27 +352,27 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const style = document.createElement('style');
     style.textContent = `
       html {
-        font-size: 16px;
+        font-size: 16 px;
       }
 
       @media (prefers-font-size: large) {
         html {
-          font-size: 18px;
+          font-size: 18 px;
         }
       }
 
       @media (prefers-font-size: x-large) {
         html {
-          font-size: 20px;
+          font-size: 20 px;
         }
       }
 
       .font-scale-large {
-        font-size: 1.125rem;
+        font-size: 1.125 rem;
       }
 
       .font-scale-x-large {
-        font-size: 1.25rem;
+        font-size: 1.25 rem;
       }
     `;
     document.head.appendChild(style);
@@ -409,5 +408,4 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
   return null;
 };
-</EnhancedAccessibilityEnhancerProps>
-export default EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>
+</<<<EnhancedAccessibilityEnhancerProps>export</EnhancedAccessibilityEnhancerProps></<<EnhancedAccessibilityEnhancerProps>default</EnhancedAccessibilityEnhancerProps> EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>

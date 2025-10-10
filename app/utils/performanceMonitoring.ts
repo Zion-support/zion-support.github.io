@@ -119,8 +119,7 @@ class PerformanceMonitoringService {
    * Get rating for a Web Vital metric
    */
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {}
-    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {}
-      FCP: { good: 1800, poor: 3000 },
+    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: 1800, poor: 3000 },
       LCP: { good: 2500, poor: 4000 },
       FID: { good: 100, poor: 300 },
       CLS: { good: 0.1, poor: 0.25 },
@@ -145,7 +144,7 @@ class PerformanceMonitoringService {
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit
-    if (this.customMetrics.length > this.maxMetrics) {
+    if (this.customMetrics.<<<length>this</length></length>.maxMetrics) {
       this.customMetrics.shift();}
     }
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
@@ -153,8 +152,7 @@ class PerformanceMonitoringService {
   /**
    * Send metric to analytics service
    */
-  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {
-    try {
+  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {</void></<<<void>try</void></void> {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/analytics/performance', {
           method: 'POST',}
@@ -231,8 +229,7 @@ class PerformanceMonitoringService {
   /**
    * Measure function execution time
    */
-  measureFunction<T>(name: string, fn: () => T): T {
-    const start = performance.now()
+  measureFunction<T>(name: string, fn: () => T): T {</T></<<<T>const</T></<<T>start</T> = performance.now()
     const result = fn()
     const duration = performance.now() - start;`}
     this.recordCustomMetric(`fn_${name}`, duration, 'ms')
@@ -241,8 +238,7 @@ class PerformanceMonitoringService {
   /**
    * Measure async function execution time
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const start = performance.now()
+  async measureAsyncFunction<T>(name: string, fn: () => Promise</T><T>): Promise</T><T> {</T></<<<T>const</T></<<T>start</T> = performance.now()
     const result = await fn()
     const duration = performance.now() - start;`}
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
@@ -308,8 +304,7 @@ interface MetricData {
   unit: string
   rating?: 'good' | 'needs-improvement' | 'poor';}
 }
-const simpleMetrics = new Map<string, MetricData>()
-export const recordMetric = useCallback((...args) => {
+const simpleMetrics = new Map<string, MetricData>()</string></<<<string>export</string></<<string>const</string> recordMetric = useCallback((...args) => {
   // Record in our simple metrics store for testing
   const existing = simpleMetrics.get(name)
   if (existing) {
@@ -333,7 +328,7 @@ export const recordMetric = useCallback((...args) => {
   performanceMonitoring.recordCustomMetric(name, value, unit)
 }
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {}
-  const thresholds: Record<string, { good: number; poor: number }> = {}
+  const thresholds: Record<string, { good: number; poor: number }> = {}</strin>
     'FCP': { good: 1800, poor: 3000 },
     'LCP': { good: 2500, poor: 4000 },
     'FID': { good: 100, poor: 300 },
@@ -347,9 +342,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
   if (value <= threshold.poor) return 'needs-improvement'
   return 'poor'
 }
-export const getMetrics = (): Record<string, MetricData> => {}
-  const result: Record<string, MetricData> = {}
-  simpleMetrics.forEach((value, key) => {}
+export const getMetrics = (): Record<string, MetricData> => {}</string></<<<string>const</string></<<string>result</string>: Record<string, MetricData> = {}</string></<<<string>simpleMetrics</string></string>.forEach((value, key) => {}
     result[key] = { ...value }
   })
   return result
@@ -358,15 +351,13 @@ export const clearMetrics = useCallback((...args) => {
   simpleMetrics.clear()
   performanceMonitoring.clearMetrics();}
 }
-export const measureFunction = <T>(name: string, fn: () => T): T => {
-  const start = performance.now()
+export const measureFunction = <T>(name: string, fn: () => T): T => {</T></<<<T>const</T></<<T>start</T> = performance.now()
   const result = fn()
   const duration = performance.now() - start
   recordMetric(name, duration, MetricUnit.Milliseconds)
   return result;}
 }
-export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
-  const start = performance.now()
+export const measureAsyncFunction = async <T>(name: string, fn: () => Promise</T><T>): Promise</T><T> => {</T></<<<T>const</T></<<T>start</T> = performance.now()
   const result = await fn()
   const duration = performance.now() - start
   recordMetric(name, duration, MetricUnit.Milliseconds)

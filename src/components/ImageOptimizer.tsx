@@ -12,8 +12,7 @@ interface ImageOptimizerProps {
   onError?: () => void;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({</ImageOptimizerProps>src</ImageOptimizerProps>,
   alt,
   className = '',
   width,
@@ -26,9 +25,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
     if (priority) return;
 
     const observer = new IntersectionObserver(
@@ -39,7 +36,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         }
       },
       {
-        rootMargin: '50px 0px',
+        rootMargin: '50 px 0 px',
         threshold: 0.01
       }
     );
@@ -65,14 +62,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     if (placeholder) return placeholder;
     
     const svg = `
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="#1e293b"/>
-        <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
-        <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
-        <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
-          Loading...
+      <svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org/2000/svg"></svg>
+        <rect width="100%" height="100%" fill="#1 e293 b"/></rect>
+        <rect x="0" y="0" width="100%" height="2" fill="#00 ffff" opacity="0.3"/></rect>
+        <rect x="0" y="0" width="2" height="100%" fill="#00 ffff" opacity="0.3"/></rect>
+        <rect x="0" y="98%" width="100%" height="2" fill="#00 ffff" opacity="0.3"/></rect>
+        <rect x="98%" y="0" width="2" height="100%" fill="#00 ffff" opacity="0.3"/></rect>
+        <text x="50%" y="50%" text-anchor="middle" fill="#64748 b" font-family="monospace" font-size="14"></tex>Loading</tex>...
         </text>
       </svg>
     `;
@@ -85,9 +81,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       <div 
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
-        <div className="text-gray-400 text-center">
-          <div className="text-4xl mb-2">⚠️</div>
+      ></div>
+        <div className="text-gray-400 text-center"></div>
+          <div className="text-4 xl mb-2">⚠️</div>
           <div className="text-sm">Image failed to load</div>
         </div>
       </div>
@@ -99,15 +95,15 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
+    ></div>
       {/* Placeholder */}
       {!isLoaded && (
         <img
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1px)' }}
-        />
+          style={{ filter: 'blur(1 px)' }}
+        /></img>
       )}
       
       {/* Actual Image */}
@@ -123,7 +119,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           onLoad={handleLoad}
           onError={handleError}
           style={{ width, height }}
-        />
+        /></img>
       )}
     </div>
   );

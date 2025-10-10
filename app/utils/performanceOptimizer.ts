@@ -1,23 +1,17 @@
 // Performance optimization utilities
 
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
+export const debounce = <T extends (...args: any[]) => any>(</T></<<<T>func</T>: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
+): ((...args: Parameters<T>) => void) => {</T></<<<T>let</T></<<T>timeout</T>: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {</T></<<<T>clearTimeout</T>(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
+export const throttle = <T extends (...args: any[]) => any>(</T></<<<T>func</T>: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+): ((...args: Parameters<T>) => void) => {</T></<<<T>let</T></<<T>inThrottle</T>: boolean;
+  return (...args: Parameters<T>) => {</T></<<<T>if</T> (!inThrottle) {
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
@@ -43,8 +37,7 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
   return observer;
 };
 
-export const preloadImage = (src: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
+export const preloadImage = (src: string): Promise<void> => {</void></<<<void>return</void></<<void>new</void> Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
@@ -52,8 +45,7 @@ export const preloadImage = (src: string): Promise<void> => {
 
 };
 
-export const preloadScript = (src: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
+export const preloadScript = (src: string): Promise<void> => {</void></<<<void>return</void></<<void>new</void> Promise((resolve, reject) => {
     const script = document.createElement('script');
     script.src = src;
     script.onload = () => resolve();
@@ -89,8 +81,7 @@ export const getDeviceInfo = () => {
   };
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {
-    this.config = { ...this.config, ...config };
+  constructor(config?: Partial<OptimizationConfig>) {</OptimizationConfig></<<<OptimizationConfig>this</OptimizationConfig></OptimizationConfig>.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
   }
   /**

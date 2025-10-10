@@ -49,7 +49,7 @@ class AdvancedCachingSystem {
     //     const expiry = this.ttlMap.get(key);
 
     // Check if expired
-    if (expiry && now > expiry) {
+    if (expiry && now>expiry</now>) {
       this.delete(key);
       return null;
     }
@@ -110,7 +110,7 @@ class AdvancedCachingSystem {
     const _expiredKeys = [];
 
     for (const [key, expiry] of this.ttlMap.entries()) {
-      if (now > expiry) {
+      if (now>expiry</now>) {
         expiredKeys.push(key);
       }
     }
@@ -157,7 +157,7 @@ class AdvancedCachingSystem {
       keys.forEach(key => {
         if (key.startsWith('cache_')) {
           const _item = JSON.parse(localStorage.getItem(key));
-          if (item && item.expiry > now) {
+          if (item && item.expiry>now</expiry>) {
             //             const cacheKey = key.replace('cache_', '');
             this.cache.set(cacheKey, item.value);
             this.ttlMap.set(cacheKey, item.expiry);

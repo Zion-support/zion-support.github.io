@@ -61,12 +61,10 @@ const optimizations = {
   // Add performance hints
   addPerformanceHints: (content) => {
     // Add preload hints for critical resources
-    if (content.includes('<head>')) {
-      const preloadHints = `
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
-      content = content.replace('<head>', `<head>${preloadHints}`);
+    if (content.includes('<head>')) {</head>const</head> preloadHints = `
+    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></link>
+    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></link>
+    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style">`;</link>content</link> = content.replace('<head>', `<head>${preloadHints}`);</head>
     }
     return content;
   }

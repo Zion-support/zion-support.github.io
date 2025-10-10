@@ -17,15 +17,15 @@ import fs from 'fs';
 //Step 2: Get analysis and improvement branches
 // const analysisBranches = [
   'cursor/analyze-improve-and-deploy-application-0472',
-  'cursor/analyze-improve-and-deploy-application-05dd',
-  'cursor/analyze-improve-and-deploy-application-06c2',
-  'cursor/analyze-improve-and-deploy-application-08d3',
+  'cursor/analyze-improve-and-deploy-application-05 dd',
+  'cursor/analyze-improve-and-deploy-application-06 c2',
+  'cursor/analyze-improve-and-deploy-application-08 d3',
   'cursor/analyze-improve-and-deploy-application-2650',
-  'cursor/analyze-improve-and-deploy-application-2fdd',
-  'cursor/analyze-improve-and-deploy-application-360d',
+  'cursor/analyze-improve-and-deploy-application-2 fdd',
+  'cursor/analyze-improve-and-deploy-application-360 d',
   'cursor/analyze-improve-and-deploy-application-3647',
-  'cursor/analyze-improve-and-deploy-application-3cc7',
-  'cursor/analyze-improve-and-deploy-application-3db4',
+  'cursor/analyze-improve-and-deploy-application-3 cc7',
+  'cursor/analyze-improve-and-deploy-application-3 db4',
 ];
 
 // //Step 3: Enhanced merge function with conflict resolution

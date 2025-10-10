@@ -85,64 +85,64 @@ const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const FiveGImplementationPage = React.lazy(() => import('./app/5 g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <>{children}</>;
+  return <>{}</>{children};
 };
 
 const App: React.FC = memo(() => {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer>
-              <EnhancedAccessibility>
-                <AppWithPerformanceMonitoring>
-                  <SEOHead />
-                  <Router>
-                    <div className="min-h-screen bg-white overflow-x-hidden">
-                      <SkipLink to="#main-content">Skip to main content</SkipLink>
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="w-full">
-                        <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/ai-services" element={<AIServicesPage />} />
-                            <Route path="/it-services" element={<ITServicesPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/team" element={<TeamPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/cookies" element={<CookiesPage />} />
-                            <Route path="/docs" element={<DocsPage />} />
-                            <Route path="/api-docs" element={<ApiDocsPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/status" element={<StatusPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/ai-ops" element={<AIOpsPage />} />
-                            <Route path="/healthcare-it" element={<HealthcareITPage />} />
-                            <Route path="/financial-it" element={<FinancialITPage />} />
-                            <Route path="/edge-computing" element={<EdgeComputingPage />} />
-                            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                            <Route path="/iot-platform" element={<IoTPlatformPage />} />
+    <ErrorBoundary></ErrorBoundar>
+      <HelmetProvider></HelmetProvider>
+        <AnalyticsProvider></AnalyticsProvide>
+          <PerformanceOptimizer></PerformanceOptimize>
+            <AccessibilityEnhancer></AccessibilityEnhance>
+              <EnhancedAccessibility></EnhancedAccessibilit>
+                <AppWithPerformanceMonitoring></AppWithPerformanceMonitorin>
+                  <SEOHead /></SEOHea>
+                  <Router></Route>
+                    <div className="min-h-screen bg-white overflow-x-hidden"></div>
+                      <SkipLink to="#main-content">Skip to main content</SkipLin>
+                      <Navigation /></Navigatio>
+                      <Breadcrumb /></Breadcrum>
+                      <main id="main-content" className="w-full"></mai>
+                        <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}></Suspens>
+                          <Routes></Route>
+                            <Route path="/" element={<HomePage />} /></Rout>
+                            <Route path="/about" element={<AboutPage />} /></Rout>
+                            <Route path="/contact" element={<ContactPage />} /></Rout>
+                            <Route path="/pricing" element={<PricingPage />} /></Rout>
+                            <Route path="/ai-services" element={<AIServicesPage />} /></Rout>
+                            <Route path="/it-services" element={<ITServicesPage />} /></Rout>
+                            <Route path="/micro-saas" element={<MicroSaasPage />} /></Rout>
+                            <Route path="/blog" element={<BlogPage />} /></Rout>
+                            <Route path="/case-studies" element={<CaseStudiesPage />} /></Rout>
+                            <Route path="/team" element={<TeamPage />} /></Rout>
+                            <Route path="/careers" element={<CareersPage />} /></Rout>
+                            <Route path="/privacy" element={<PrivacyPage />} /></Rout>
+                            <Route path="/terms" element={<TermsPage />} /></Rout>
+                            <Route path="/cookies" element={<CookiesPage />} /></Rout>
+                            <Route path="/docs" element={<DocsPage />} /></Rout>
+                            <Route path="/api-docs" element={<ApiDocsPage />} /></Rout>
+                            <Route path="/support" element={<SupportPage />} /></Rout>
+                            <Route path="/status" element={<StatusPage />} /></Rout>
+                            <Route path="/demo" element={<DemoPage />} /></Rout>
+                            <Route path="/consultation" element={<ConsultationPage />} /></Rout>
+                            <Route path="/services" element={<ServicesPage />} /></Rout>
+                            <Route path="/ai-ops" element={<AIOpsPage />} /></Rout>
+                            <Route path="/healthcare-it" element={<HealthcareITPage />} /></Rout>
+                            <Route path="/financial-it" element={<FinancialITPage />} /></Rout>
+                            <Route path="/edge-computing" element={<EdgeComputingPage />} /></Rout>
+                            <Route path="/5 g-implementation" element={<FiveGImplementationPage />} /></Rout>
+                            <Route path="/iot-platform" element={<IoTPlatformPage />} /></Rout>
                           </Routes>
                         </Suspense>
                       </main>
-                      <Footer />
+                      <Footer /></Foote>
                     </div>
                   </Router>
                 </AppWithPerformanceMonitoring>

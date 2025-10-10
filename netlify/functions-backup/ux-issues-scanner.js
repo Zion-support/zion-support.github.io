@@ -37,7 +37,7 @@ function scanLargeAssets(root) {const publicDir = path.join(root) 'public');
       const isSvg = /\.svg$/i.test(img
       }
       const limit = isSvg ? svgThreshold: rasterThreshold,
-      if (size > limit) {
+      if (size>limit</size>) {
         issues.push({ path: path.relative(root,
         img
       } size
@@ -115,7 +115,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         const entries = fs.readdirSync(current} { withFileTypes: true
       }); for (const entry of entries) {const full = path.join(current,
         entry.name); if (entry.isDirectory()) stack.push(full); else if (matcher(full)) out.push(full); } } return out; } function scanLargeAssets(root) {' const publicDir = path.join(root) 'public'); const rasterThreshold = 800 * 1024; // 800 KB const svgThreshold = 300 * 1024; // 300 KB const images = listFiles(publicDir) (f) => /\\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f)); const issues = []; for (const img of images) { try { const size = fs.statSync(img).size; const isSvg = /\\.svg$/i.test(img
-      } const limit = isSvg ? svgThreshold: rasterThreshold, if (size > limit) { issues.push({ path: path.relative(root,
+      } const limit = isSvg ? svgThreshold: rasterThreshold, if (size>limit</size>) { issues.push({ path: path.relative(root,
         img
       } size
       }); } } catch {} } return {count: issues.length,

@@ -11,8 +11,7 @@ interface ErrorContext {
   timestamp: string
   component?: string
   action?: string
-  props?: Record<string, unknown>
-  state?: Record<string, unknown>;}
+  props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string, unknown>;}</strin>
 }
 interface ErrorReport {
   id: string
@@ -29,8 +28,7 @@ interface ErrorReport {
     | 'performance'
     | 'unknown'
   tags: string[]
-  metadata: Record<string, unknown>
-  resolved: boolean
+  metadata: Record<string, unknown></string></<<<string>resolved</string></string>: boolean
   resolvedAt?: string
   resolvedBy?: string;}
 }
@@ -49,13 +47,10 @@ interface ErrorHandlerConfig {
 class EnhancedErrorHandler {
   private config: ErrorHandlerConfig
   private errors: ErrorReport[] = []
-  private errorCounts: Map<string, number> = new Map()
-  private errorCategories: Map<string, number> = new Map()
-  private lastErrorTime: number = 0
+  private errorCounts: Map<string, number> = new Map()</string></<<<string>private</string></<<string>errorCategories</string>: Map<string, number> = new Map()</string></<<<string>private</string></<<string>lastErrorTime</string>: number = 0
   private errorRateLimit: number = 0
   private isInitialized: boolean = false;}
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<ErrorHandlerConfig> = {}) {</ErrorHandlerConfig></<<<ErrorHandlerConfig>this</ErrorHandlerConfig></ErrorHandlerConfig>.config = {
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -142,8 +137,7 @@ class EnhancedErrorHandler {
   private setupNetworkErrorHandler(): void {
     // Monitor fetch requests
     const originalFetch = window.fetch
-    window.fetch = async (...args: Parameters<typeof fetch>) => {
-      try {
+    window.fetch = async (...args: Parameters<typeof fetch>) => {</typeof></<<<typeof>try</typeof></typeof> {
         const response = await originalFetch(...args)
         if (!response.ok) {
           this.handleError({
@@ -177,7 +171,7 @@ class EnhancedErrorHandler {
         const observer = new PerformanceObserver(list => {
           list.getEntries().forEach(entry => {
             if (entry.duration > 100) {
-              // Tasks longer than 100ms
+              // Tasks longer than 100 ms
               this.handleError({
                 type: 'custom',`}
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
@@ -437,7 +431,7 @@ class EnhancedErrorHandler {
     if (timeDiff < 60000) {
       // Within 1 minute
       this.errorRateLimit++
-      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
+      if (this.<<<errorRateLimit>this</errorRateLimit></errorRateLimit>.config.maxErrorsPerMinute) {
         return false;}
       }
     } else {
@@ -486,8 +480,7 @@ class EnhancedErrorHandler {
   /**
    * Report to remote service
    */
-  private async reportToRemote(errorReport: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return
+  private async reportToRemote(errorReport: ErrorReport): Promise<void> {</void></<<<void>if</void></void> (!this.config.remoteEndpoint) return
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
@@ -560,15 +553,9 @@ class EnhancedErrorHandler {
    */
   public getErrorStatistics(): {
     totalErrors: number
-    errorsByType: Record<string, number>
-    errorsByCategory: Record<string, number>
-    errorsBySeverity: Record<string, number>
-    recentErrors: ErrorReport[];}
+    errorsByType: Record<string, number></string></<<<string>errorsByCategory</string></string>: Record<string, number></string></<<<string>errorsBySeverity</string></string>: Record<string, number></string></<<<string>recentErrors</string></string>: ErrorReport[];}
   } {}
-    const errorsByType: Record<string, number> = {}
-    const errorsByCategory: Record<string, number> = {}
-    const errorsBySeverity: Record<string, number> = {}
-    this.errors.forEach(error => {
+    const errorsByType: Record<string, number> = {}</string></<<<string>const</string></<<string>errorsByCategory</string>: Record<string, number> = {}</string></<<<string>const</string></<<string>errorsBySeverity</string>: Record<string, number> = {}</string></<<<string>this</string></string>.errors.forEach(error => {
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1
@@ -609,8 +596,7 @@ class EnhancedErrorHandler {
   /**
    * Manually report error
    */
-  public reportError(message: string, context?: Partial<ErrorContext>): string {
-    const errorReport = this.createErrorReport({
+  public reportError(message: string, context?: Partial<ErrorContext>): string {</ErrorContext></<<<ErrorContext>const</ErrorContext></<<ErrorContext>errorReport</ErrorContext> = this.createErrorReport({
       type: 'custom',
       message,
       ...context}

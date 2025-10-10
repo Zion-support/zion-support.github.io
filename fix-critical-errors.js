@@ -52,7 +52,7 @@ function fixCriticalErrors(filePath) {
     content = content.replace(/}\s*;\s*export/g, '}\nexport');
     
     // Fix malformed JSX
-    content = content.replace(/<div[^>]*>\s*$/gm, '<div>');
+    content = content.replace(/<div[^></div>]*>\s*$/gm, '<div></div>');
     content = content.replace(/<\/div>\s*$/gm, '</div>');
     
     // Fix function declarations

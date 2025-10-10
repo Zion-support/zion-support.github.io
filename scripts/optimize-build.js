@@ -43,12 +43,12 @@ function generateSitemap() {
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page.url}</loc>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+${pages.map(page => `  <url></url>
+    <loc>https</loc>://ziontechgroup.com${page.url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    <priority></p>${page.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
 
@@ -82,7 +82,7 @@ async function checkPerformance() {
   const files = await glob('app/**/*.{ts,tsx,js,jsx}');
   for (const file of files) {
     const stats = fs.statSync(file);
-    if (stats.size > 100000) { // 100KB
+    if (stats.size > 100000) { // 100 KB
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
     }
   }

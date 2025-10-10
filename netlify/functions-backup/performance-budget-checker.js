@@ -77,14 +77,14 @@ exports.handler = async function (event, context) {const baseUrl = (
   try {const htmlRes = await fetch(baseUrl);
     const _html = await htmlRes.text();
     const scriptSrcs = Array.from(
-      html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi),
+      html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi),</script>
     )
       .map(m => m[1])
       .map(abs)
       .filter(Boolean);
     const cssHrefs = Array.from(
       html.matchAll(
-        /<link[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi,
+        /<link[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi,</link>
       ),
     )
       .map(m => m[1])
@@ -92,7 +92,7 @@ exports.handler = async function (event, context) {const baseUrl = (
       .filter(Boolean
       }
     const imgSrcs = Array.from(
-      html.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi),
+      html.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi),</img>
     )
       .map(m => m[1])
       .map(abs)
@@ -179,8 +179,8 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
       }); return {ok: putRes.ok,
         status: putRes.status; error: putRes.ok ? undefined : await putRes.text() }; } if (!baseUrl) {' return { statusCode: 200,
         body: JSON.stringify({ok: false,
-        error: 'No base URL' }) }; } try {const htmlRes = await fetch(baseUrl); const html = await htmlRes.text();' const scriptSrcs = Array.from(html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(m => m[1]).map(abs).filter(Boolean);' const cssHrefs = Array.from(html.matchAll(/<link[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)).map(m => m[1]).map(abs).filter(Boolean
-      }' const imgSrcs = Array.from(html.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(m => m[1]).map(abs).filter(Boolean).slice(0,
+        error: 'No base URL' }) }; } try {const htmlRes = await fetch(baseUrl); const html = await htmlRes.text();' const scriptSrcs = Array.from(html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(m => m[1]).map(abs).filter(Boolean);' const cssHrefs = Array.from(html.matchAll(/<link[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi)).map(m => m[1]).map(abs).filter(Boolean</link>
+      }' const imgSrcs = Array.from(html.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(m => m[1]).map(abs).filter(Boolean).slice(0,</img>
         20); const sizes = {}; let totalJs = 0, totalCss = 0, totalImg = 0; for (const u of scriptSrcs) {const s = await headOrGetContentLength(u); sizes[u] = s; totalJs += s} } for (const u of cssHrefs) {const s = await headOrGetContentLength(u); sizes[u] = s; totalCss += s} } for (const u of imgSrcs) {const s = await headOrGetContentLength(u); sizes[u] = s; totalImg += s} } const largestAssets = Object.entries(sizes).sort((a,
         b) => b[1]-a[1]).slice(0,
         10).map(([url,

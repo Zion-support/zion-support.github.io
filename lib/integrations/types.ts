@@ -56,7 +56,7 @@ export interface ProviderConnection {
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
-  config?: Record<string, any>;
+  config?: Record<string, any>;</string>
 }
 }
 
@@ -92,8 +92,7 @@ export interface ProviderConnection {
   updatedAt: number;
   status: SyncStatus;
   lastSync?: number;
-  config?: Record<string, any>;
-  expiresAt?: number;
+  config?: Record<string, any>;</string>expiresAt</string>?: number;
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
@@ -101,7 +100,7 @@ export interface ProviderConnection {
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  config?: Record<string, any>;
+  config?: Record<string, any>;</string>
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -124,8 +123,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
   lastSync?: Date;
-  config: Record<string, unknown>;
-  createdAt: Date;
+  config: Record<string, unknown>;</string>createdAt</string>: Date;
   updatedAt: Date;
 }
 
@@ -133,37 +131,37 @@ export interface SyncLogEntry {
   id: string;
   connectionId: string;
   action: string;
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
 export interface ManualOverride {
@@ -179,8 +177,7 @@ export interface ZapierEvent {
 export interface IntegrationProviderMeta {
   status: 'success' | 'error' | 'warning';
   message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+  details?: Record<string, unknown>;</string>timestamp</string>: Date;
 }
 
 export interface IntegrationOverride {
@@ -198,8 +195,7 @@ export interface IntegrationEvent {
   type: 'sync' | 'error' | 'warning' | 'connection';
   connectionId?: string;
   message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+  details?: Record<string, unknown>;</string>timestamp</string>: Date;
 }
 
 export interface IntegrationsState {
@@ -211,10 +207,10 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
 export interface IntegrationProviderMeta {
@@ -226,10 +222,10 @@ export interface IntegrationProviderMeta {
 
 }
 
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
 export interface IntegrationsState {
@@ -243,7 +239,7 @@ export interface IntegrationsState {
 }
 }
 }
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
 export interface IntegrationProviderMeta {
@@ -251,7 +247,7 @@ export interface IntegrationProviderMeta {
   name: string;
   category: 'crm' | 'ats';
   description: string;
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
 export interface IntegrationsState {
@@ -260,7 +256,7 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
 }
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
 export interface ProviderConnection {
@@ -284,7 +280,7 @@ export interface IntegrationProviderMeta {
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 }
 

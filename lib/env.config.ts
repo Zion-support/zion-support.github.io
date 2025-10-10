@@ -132,8 +132,7 @@ class EnvironmentConfig {
     }
   }
 
-  public get(): Readonly<EnvConfig> {
-    return { ...this.config };
+  public get(): Readonly<EnvConfig> {</EnvConfig>return</EnvConfig> { ...this.config };
   }
 
   public isDevelopment(): boolean {

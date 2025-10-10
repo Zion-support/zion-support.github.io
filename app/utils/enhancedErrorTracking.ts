@@ -8,7 +8,7 @@ export interface ErrorContext {
   action?: string
   userId?: string
   sessionId?: string
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>;}</strin>
 }
 export interface TrackedError {
   message: string
@@ -60,7 +60,7 @@ class EnhancedErrorTracker {
     }
     this.errors.push(trackedError)
     // Keep only the most recent errors
-    if (this.errors.length > this.maxErrors) {
+    if (this.errors.<<<length>this</length></length>.maxErrors) {
       this.errors.shift();}
     }
     // Log to console in development
@@ -74,13 +74,13 @@ class EnhancedErrorTracker {
       typeof window !== 'undefined' &&
       (
         window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}</strin>
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}</strin>
         }
       ).gtag('event', 'exception', {
         description: error.message,
@@ -97,11 +97,9 @@ class EnhancedErrorTracker {
   }
   public getErrorStats(): {
     total: number
-    byComponent: Record<string, number>
-    recent: TrackedError[];}
+    byComponent: Record<string, number></string></<<<string>recent</string></string>: TrackedError[];}
   } {}
-    const byComponent: Record<string, number> = {}
-    this.errors.forEach(error => {
+    const byComponent: Record<string, number> = {}</string></<<<string>this</string></string>.errors.forEach(error => {
       const component = error.context.component || 'Unknown'
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })

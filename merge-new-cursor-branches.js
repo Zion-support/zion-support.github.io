@@ -7,16 +7,16 @@ import fs from 'fs';
 
 // //New cursor branches to merge
 const newCursorBranches = [
-  'cursor/fix-errors-and-merge-to-main-016f',
-  'cursor/fix-errors-and-merge-to-main-073a',
-  'cursor/fix-errors-and-merge-to-main-0ebe',
-  'cursor/fix-errors-and-merge-to-main-0fc7',
-  'cursor/fix-errors-and-merge-to-main-214f',
-  'cursor/fix-errors-and-merge-to-main-277a',
-  'cursor/fix-errors-and-merge-to-main-4feb',
+  'cursor/fix-errors-and-merge-to-main-016 f',
+  'cursor/fix-errors-and-merge-to-main-073 a',
+  'cursor/fix-errors-and-merge-to-main-0 ebe',
+  'cursor/fix-errors-and-merge-to-main-0 fc7',
+  'cursor/fix-errors-and-merge-to-main-214 f',
+  'cursor/fix-errors-and-merge-to-main-277 a',
+  'cursor/fix-errors-and-merge-to-main-4 feb',
   'cursor/fix-errors-and-merge-to-main-5597',
-  'cursor/fix-errors-and-merge-to-main-77cd',
-  'cursor/fix-errors-and-merge-to-main-921e',
+  'cursor/fix-errors-and-merge-to-main-77 cd',
+  'cursor/fix-errors-and-merge-to-main-921 e',
 ];
 
 // //Function to safely execute git commands

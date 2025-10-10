@@ -20,8 +20,7 @@ export interface CacheConfig {
   defaultTTL?: number;
 }
 
-export interface CacheEntry<T> {
-  value: T;
+export interface CacheEntry<T> {</T></<<<T>value</T>: T;
   timestamp: number;
   ttl: number;
 }
@@ -34,18 +33,14 @@ export interface CacheStats {
   entries: number;
 }
 
-export class CacheManager<T = unknown> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private stats: CacheStats = {
+export class CacheManager<T = unknown> {</T></<<<T>private</T></<<T>cache</T>: Map<string, CacheEntry<T>> = new Map();</string></<<<string>private</string></<<string>stats</string>: CacheStats = {
     hits: 0,
     misses: 0,
     hitRate: 0,
     count: 0,
     entries: 0
   };
-  private config: Required<CacheConfig>;
-
-  constructor(config: CacheConfig = {}) {
+  private config: Required<CacheConfig>;</CacheConfig></<<<CacheConfig>constructor</CacheConfig></CacheConfig>(config: CacheConfig = {}) {
     this.config = {
       storage: config.storage || CacheStorage.Memory,
       defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
@@ -56,8 +51,7 @@ export class CacheManager<T = unknown> {
    * Set a value in the cache
    */
   set(key: string, value: T, ttl?: number): void {
-    const entry: CacheEntry<T> = {
-      value,
+    const entry: CacheEntry<T> = {</T></<<<T>value</T>,
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL
     };
@@ -84,7 +78,7 @@ export class CacheManager<T = unknown> {
     }
 
     // Check if entry has expired
-    if (Date.now() - entry.timestamp > entry.ttl) {
+    if (Date.now() - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
       this.cache.delete(key);
       this.stats.misses++;
       this.stats.entries = this.cache.size;
@@ -108,7 +102,7 @@ export class CacheManager<T = unknown> {
     }
 
     // Check if entry has expired
-    if (Date.now() - entry.timestamp > entry.ttl) {
+    if (Date.now() - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
       this.cache.delete(key);
       this.stats.entries = this.cache.size;
       return false;
@@ -175,7 +169,7 @@ export class CacheManager<T = unknown> {
     let cleaned = 0;
 
     for (const [key, entry] of this.cache.entries()) {
-      if (now - entry.timestamp > entry.ttl) {
+      if (now - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
         this.cache.delete(key);
         cleaned++;
       }

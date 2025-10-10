@@ -829,67 +829,65 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}>
-      <Helmet>
-        <title>AI Smart Home Controller Pro - Intelligent Home Automation | Zion Tech Group</title>
-        <meta name="description" content="Control your smart home with AI-powered automation. Voice control, predictive maintenance, energy optimization, and security integration for the ultimate smart home experience." />
-        <meta name="keywords" content="smart home, home automation, voice control, IoT, energy optimization, security, predictive maintenance" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-smart-home-controller" />
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}></div>
+      <Helmet></Helme>
+        <<<<title>AI</title></<<title>Smart</title> Home Controller Pro - Intelligent Home Automation | Zion Tech Group</title>
+        <meta name="description" content="Control your smart home with AI-powered automation. Voice control, predictive maintenance, energy optimization, and security integration for the ultimate smart home experience." /></met>
+        <meta name="keywords" content="smart home, home automation, voice control, IoT, energy optimization, security, predictive maintenance" /></met>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-smart-home-controller" /></lin>
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="relative py-20 overflow-hidden"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3 Csvg%20 width%3 D%2260%22%20 height%3 D%2260%22%20 viewBox%3 D%220%200%2060%2060%22%20 xmlns%3 D%22 http%3 A//www.w3.org/2000/svg%22%3 E%3 Cg%20 fill%3 D%22 none%22%20 fill-rule%3 D%22 evenodd%22%3 E%3 Cg%20 fill%3 D%22%239 C92 AC%22%20 fill-opacity%3 D%220.1%22%3 E%3 Ccircle%20 cx%3 D%2230%22%20 cy%3 D%2230%22%20 r%3 D%222%22/%3 E%3 C/g%3 E%3 C/g%3 E%3 C/svg%3 E')] opacity-20"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-green-500/10 border border-green-400/20 rounded-full px-6 py-3 mb-8">
-              <Home className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">AI Smart Home Controller Pro</span>
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center bg-green-500/10 border border-green-400/20 rounded-full px-6 py-3 mb-8"></div>
+              <Home className="w-5 h-5 text-green-400 mr-2" /></Hom>
+              <span className="text-green-300 font-medium">AI Smart Home Controller Pro</spa>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Intelligent Home Automation
+            <h1 className="text-6 xl md:text-8 xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text"></h1></<<<h>Intelligent</h></<<h>Home</h> Automation
             </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+            <p className="text-2 xl md:text-3 xl text-gray-300 mb-4 font-light">
               Control Your Home with AI-Powered Intelligence
             </p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-400 mb-8 max-w-4 xl mx-auto leading-relaxed">
               Transform your home into a smart, energy-efficient, and secure environment.
               Control everything with voice commands, automate routines, and optimize energy usage with advanced AI.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>
+              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2 xl hover:shadow-green-500/25"></butto>
+                <span className="relative z-10">Start Free Trial</spa>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRigh>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
 
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
+              <button className="group inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"></butto>
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4 xl mx-auto"></div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-green-400 mb-2">50+</div>
                 <div className="text-gray-400">Device Types</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">30%</div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-blue-400 mb-2">30%</div>
                 <div className="text-gray-400">Energy Savings</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">24/7</div>
                 <div className="text-gray-400">Monitoring</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+              <div className="text-center"></div>
+                <div className="text-3 xl font-bold text-yellow-400 mb-2">99.9%</div>
                 <div className="text-gray-400">Uptime</div>
               </div>
             </div>
@@ -898,83 +896,77 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       </div>
 
       {/* Smart Home Dashboard */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Dashboard
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Smart</h></<<h>Home</h> Dashboard
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Control and monitor all your smart devices from one place
             </p>
           </div>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="max-w-7 xl mx-auto"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
               {/* Devices Control */}
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Home className="w-8 h-8 text-green-400 mr-3" />
-                  Smart Devices
+              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6 flex items-center"></h>
+                  <Home className="w-8 h-8 text-green-400 mr-3" /></Home></<<<Home>Smart</Home></<<Home>Devices</Home>
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                   {devices.map((device) => (
-                    <div key={device.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
-                      <div className="flex items-center justify-between mb-3">
-                        <h4 className="text-white font-semibold">{device.name}</h4>
+                    <div key={device.id} className="bg-white/5 rounded-lg p-4 border border-white/10"></div>
+                      <div className="flex items-center justify-between mb-3"></div>
+                        <h4 className="text-white font-semibold">{device.name}</h>
                         <button
-                          onClick={() => toggleDevice(device.id)}
-                          className={`w-12 h-6 rounded-full transition-colors ${
+                          onClick={() => toggleDevice(device.id)}</button></<<<button>className</button></button>={`w-12 h-6 rounded-full transition-colors ${
                             device.status === 'on' ? 'bg-green-500' : 'bg-gray-600'
                           }`}
                         >
                           <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
                             device.status === 'on' ? 'translate-x-6' : 'translate-x-0.5'
-                          }`} />
+                          }`} /></div>
                         </button>
                       </div>
 
                       <p className="text-gray-400 text-sm mb-3">{device.room}</p>
 
                       {device.type === 'light' && (
-                        <div className="space-y-2">
-                          <label className="text-gray-300 text-sm">Brightness: {device.brightness}%</label>
+                        <div className="space-y-2"></div>
+                          <label className="text-gray-300 text-sm">Brightness: {device.brightness}%</labe>
                           <input
                             type="range"
                             min="0"
                             max="100"
                             value={device.brightness}
-                            onChange={(e) => adjustBrightness(device.id, parseInt(e.target.value))}
-                            className="w-full"
+                            onChange={(e) => adjustBrightness(device.id, parseInt(e.target.value))}</input></<<<input>className</input></input>="w-full"
                           />
                         </div>
                       )}
 
                       {device.type === 'thermostat' && (
-                        <div className="space-y-2">
-                          <label className="text-gray-300 text-sm">Temperature: {device.temperature}°F</label>
+                        <div className="space-y-2"></div>
+                          <label className="text-gray-300 text-sm">Temperature: {device.temperature}°F</labe>
                           <input
                             type="range"
                             min="60"
                             max="80"
                             value={device.temperature}
-                            onChange={(e) => adjustTemperature(device.id, parseInt(e.target.value))}
-                            className="w-full"
+                            onChange={(e) => adjustTemperature(device.id, parseInt(e.target.value))}</input></<<<input>className</input></input>="w-full"
                           />
                         </div>
                       )}
 
                       {device.type === 'speaker' && (
-                        <div className="space-y-2">
-                          <label className="text-gray-300 text-sm">Volume: {device.volume}%</label>
+                        <div className="space-y-2"></div>
+                          <label className="text-gray-300 text-sm">Volume: {device.volume}%</labe>
                           <input
                             type="range"
                             min="0"
                             max="100"
                             value={device.volume}
-                            onChange={(e) => setDevices(devices.map(d =>
-                              d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d
+                            onChange={(e) => setDevices(devices.map(d =></input></<<<input>d</input></input>.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d
                             ))}
                             className="w-full"
                           />
@@ -986,27 +978,25 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
               </div>
 
               {/* Scenes and Energy */}
-              <div className="space-y-8">
+              <div className="space-y-8"></div>
                 {/* Scenes */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Settings className="w-6 h-6 text-green-400 mr-2" />
-                    Scenes
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-6"></div>
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h>
+                    <Settings className="w-6 h-6 text-green-400 mr-2" /></Settings></<<<Settings>Scenes</Settings></Settings>
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-3"></div>
                     {scenes.map((scene) => (
                       <button
                         key={scene.id}
-                        onClick={() => activateScene(scene.id)}
-                        className={`w-full p-3 rounded-lg border transition-all ${
+                        onClick={() => activateScene(scene.id)}</button></<<<button>className</button></button>={`w-full p-3 rounded-lg border transition-all ${
                           scene.active
                             ? 'border-green-400 bg-green-400/10'
                             : 'border-white/20 hover:border-green-400/50'
                         }`}
                       >
-                        <div className="flex items-center">
-                          <scene.icon className="w-5 h-5 text-green-400 mr-3" />
-                          <span className="text-white font-medium">{scene.name}</span>
+                        <div className="flex items-center"></div>
+                          <scene.icon className="w-5 h-5 text-green-400 mr-3" /></scen>
+                          <span className="text-white font-medium">{scene.name}</spa>
                         </div>
                       </button>
                     ))}
@@ -1014,27 +1004,26 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 </div>
 
                 {/* Energy Usage */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Zap className="w-6 h-6 text-green-400 mr-2" />
-                    Energy Usage
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-6"></div>
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center"></h>
+                    <Zap className="w-6 h-6 text-green-400 mr-2" /></Zap></<<<Zap>Energy</Zap></<<Zap>Usage</Zap>
                   </h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">Today</span>
-                      <span className="text-white font-semibold">{energyUsage.today} kWh</span>
+                  <div className="space-y-4"></div>
+                    <div className="flex justify-between"></div>
+                      <span className="text-gray-300">Today</spa>
+                      <span className="text-white font-semibold">{energyUsage.today} kWh</spa>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">This Week</span>
-                      <span className="text-white font-semibold">{energyUsage.thisWeek} kWh</span>
+                    <div className="flex justify-between"></div>
+                      <span className="text-gray-300">This Week</spa>
+                      <span className="text-white font-semibold">{energyUsage.thisWeek} kWh</spa>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-300">This Month</span>
-                      <span className="text-white font-semibold">{energyUsage.thisMonth} kWh</span>
+                    <div className="flex justify-between"></div>
+                      <span className="text-gray-300">This Month</spa>
+                      <span className="text-white font-semibold">{energyUsage.thisMonth} kWh</spa>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-green-400">Savings</span>
-                      <span className="text-green-400 font-semibold">{energyUsage.savings}%</span>
+                    <div className="flex justify-between"></div>
+                      <span className="text-green-400">Savings</spa>
+                      <span className="text-green-400 font-semibold">{energyUsage.savings}%</spa>
                     </div>
                   </div>
                 </div>
@@ -1045,28 +1034,27 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Features
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Smart</h></<<h>Home</h> Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Advanced AI-powered features for the ultimate smart home experience
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6 xl mx-auto"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
+                  <feature.icon className="w-6 h-6 text-white" /></featur>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h>
                 <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-green-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                <div className="flex items-center justify-between"></div>
+                  <span className="text-green-400 font-semibold">{feature.price}</spa>
+                  <CheckCircle className="w-5 h-5 text-green-400" /></CheckCircl>
                 </div>
               </div>
             ))}
@@ -1075,42 +1063,40 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Plans
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Smart</h></<<h>Home</h> Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Choose the smart home plan that fits your needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6 xl mx-auto"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}>
+              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-400 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-green-400 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full"></span></<<<spa>Most</spa></<<spa>Popular</spa>
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <div className="text-center mb-8"></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-5 xl font-bold text-white">{plan.price}</spa>
+                    <span className="text-gray-400 ml-2">{plan.period}</spa>
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"></u>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                    <li key={featureIndex} className="flex items-center"></l>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl>
+                      <span className="text-gray-300">{feature}</spa>
                     </li>
                   ))}
                 </ul>
@@ -1119,7 +1105,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                   plan.popular
                     ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
+                }`}></button>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
               </div>
@@ -1129,66 +1115,64 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       </div>
 
       {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Transform Your Home Today
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"></h2></<<<h>Transform</h></<<h>Your</h> Home Today
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Contact our smart home experts to get started with your AI-powered home automation
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-green-400 mr-3" />
+          <div className="max-w-4 xl mx-auto"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6">Contact Information</h>
+                <div className="space-y-4"></div>
+                  <div className="flex items-center"></div>
+                    <Phone className="w-5 h-5 text-green-400 mr-3" /></Phon>
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-green-400 transition-colors">
                       +1 (302) 464-0950
                     </a>
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-green-400 mr-3" />
+                  <div className="flex items-center"></div>
+                    <Mail className="w-5 h-5 text-green-400 mr-3" /></Mai>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-green-400 transition-colors">
                       kleber@ziontechgroup.com
                     </a>
                   </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-green-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
+                  <div className="flex items-start"></div>
+                    <MapPin className="w-5 h-5 text-green-400 mr-3 mt-1" /></MapPi>
+                    <div className="text-gray-300"></div>
                       <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
+                      <<<<div>Middletown</div></div>, DE 19709</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free consultation</span>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2 xl p-8"></div>
+                <h3 className="text-2 xl font-bold text-white mb-6">Get Started</h>
+                <div className="space-y-4"></div>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">Free consultation</spa>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Professional installation</span>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">Professional installation</spa>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">30-day money back guarantee</span>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">30-day money back guarantee</spa>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">24/7 support</span>
+                  <div className="flex items-center"></div>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" /></CheckCircl>
+                    <span className="text-gray-300">24/7 support</spa>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Schedule Consultation
+                <button className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"></button></<<<butto>Schedule</butto></<<butto>Consultation</butto>
                 </button>
               </div>
             </div>

@@ -5,7 +5,7 @@ const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
   'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
   'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner')),
-  'breakthrough-content': lazy(() => import('./BreakthroughContent2026Banner')),
+  'breakthrough-content': lazy(() => import('./BreakthroughContent2026 Banner')),
   'comprehensive-promo': lazy(() => import('./ComprehensivePromoBanner')),
   advertising: lazy(() => import('./AdvertisingBanner')),
   'content-showcase': lazy(() => import('./ContentShowcase')),
@@ -13,7 +13,7 @@ const bannerComponents = {
     () => import('./ContentValueTestimonials')
   ),
   'december-revolutionary': lazy(
-    () => import('./December2025RevolutionaryContentShowcase')
+    () => import('./December2025 RevolutionaryContentShowcase')
   ),
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
@@ -38,14 +38,13 @@ interface BannerRotationManagerProps {
  * - Limits the number of visible banners
  * - Provides fallback loading states
  */
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [],
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({</BannerRotationManagerProps>banners</BannerRotationManagerProps> = [],
   maxBanners = 3,
   rotationInterval = 10000,
   className = '',
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
@@ -75,12 +74,12 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     <div className={`banner-rotation-manager ${className}`}></div>
       <Suspense
         fallback={
-          <div className='flex items-center justify-center py-16'></Suspense>
+          <div className='flex items-center justify-center py-16'></div></Suspense>
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
           </div>
         }
       >
-        <BannerComponent />
+        <BannerComponent /></BannerComponent>
       </Suspense>
 
       {/* Banner indicators */}
@@ -89,8 +88,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
           {visibleBanners.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
+              onClick={() => setCurrentIndex(index)}</butto>className</butto>={`w-3 h-3 rounded-full transition-colors ${
                 index === currentIndex
                   ? 'bg-blue-600'
                   : 'bg-gray-300 hover:bg-gray-400'

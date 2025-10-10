@@ -27,7 +27,7 @@ export interface RevolutionaryBreakthroughContent {
   superintelligenceLevel?: string;
 }
 
-export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
+export const december2025 RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   {
     id: 'quantum-ai-transcendence-revolution-2025',
     slug: 'ai-2025-december-quantum-ai-transcendence-revolution',
@@ -45,12 +45,12 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     image: '/images/quantum-ai-transcendence-revolution-2025.jpg',
     newBadge: true,
     trending: true,
-    valueProposition: '$1.2B+ annual value creation',
+    valueProposition: '$1.2 B+ annual value creation',
     metrics: {
       performance: 'Infinite processing power',
-      savings: '$1.2B+ annual savings',
+      savings: '$1.2 B+ annual savings',
       accuracy: '99.99% consciousness accuracy',
-      roi: '10,000x ROI',
+      roi: '10,000 x ROI',
     },
     consciousnessLevel: 'Transcendent',
     transcendenceLevel: 'Ultimate',
@@ -73,12 +73,12 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     image: '/images/artificial-superintelligence-breakthrough-2025.jpg',
     newBadge: true,
     trending: true,
-    valueProposition: '$2.5B+ annual value creation',
+    valueProposition: '$2.5 B+ annual value creation',
     metrics: {
       performance: 'Exponential learning',
-      savings: '$2.5B+ annual savings',
+      savings: '$2.5 B+ annual savings',
       accuracy: '99.99% superintelligence accuracy',
-      roi: '25,000x ROI',
+      roi: '25,000 x ROI',
     },
     consciousnessLevel: 'Superintelligent',
     transcendenceLevel: 'Ultimate',

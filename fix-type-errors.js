@@ -16,8 +16,7 @@ const filesToFix = [
 function processFile(filePath) {
   try {
 
-    // Fix <a> tags with 'to' prop to use Link components
-    if (content.includes('<a') && content.includes('to=')) {
+    // Fix <a>tags</a> with 'to' prop to use Link components</a>if</a> (content.includes('<a') && content.includes('to=')) {
       // Add Link import if not present
       if (!content.includes("import { Link } from 'react-router-dom';")) {
         content = content.replace(
@@ -27,8 +26,7 @@ function processFile(filePath) {
         modified = true;
       }
 
-      // Replace <a> tags with to prop to <Link> components
-      content = content.replace(/<a\s+to=/g, '<Link to=');
+      // Replace <a>tags</a> with to prop to <Link>components</Link></Link>content</Link> = content.replace(/<a\s+to=/g, '<Link to=');
       content = content.replace(/<\/a>/g, '</Link>');
       modified = true;
     }

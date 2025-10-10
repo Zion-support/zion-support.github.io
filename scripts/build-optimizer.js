@@ -61,7 +61,7 @@ class BuildOptimizer {
     // Check for large files
     const largeFiles = files.filter(file => {
       const stats = fs.statSync(file);
-      return stats.size > 100 * 1024; // 100KB
+      return stats.size > 100 * 1024; // 100 KB
     });
 
     if (largeFiles.length > 0) {
@@ -113,8 +113,7 @@ class BuildOptimizer {
   async optimizeCSS() {
     console.log('🎨 Optimizing CSS...');
     
-    const cssFiles = this.getFilesRecursively(this.distPath).filter(file => 
-      file.endsWith('.css')
+    const cssFiles = this.getFilesRecursively(this.distPath).filter(file =></img>file</img>.endsWith('.css')
     );
 
     cssFiles.forEach(cssFile => {
@@ -176,13 +175,13 @@ class BuildOptimizer {
 
     const securityHeaders = `
 <!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"></meta>
+<meta http-equiv="X-Frame-Options" content="DENY"></meta>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"></meta>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"></meta>
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()"></meta>
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"></meta>
+<meta http-equiv="X-XSS-Protection" content="1; mode=block"></meta>
 `;
 
     htmlFiles.forEach(htmlFile => {
@@ -205,36 +204,36 @@ class BuildOptimizer {
     console.log('🗺️  Generating sitemap...');
     
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ziontechgroup.com/</loc>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+  <url></url>
+    <loc>https</loc>://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <changefreq>daily</changefreq></changefreq>
+    <priority></p>1.0</priority>
   </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
+  <url></url>
+    <loc>https</loc>://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq></changefreq>
+    <priority></p>0.8</priority>
   </url>
-  <url>
-    <loc>https://ziontechgroup.com/services</loc>
+  <url></url>
+    <loc>https</loc>://ziontechgroup.com/services</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq></changefreq>
+    <priority></p>0.8</priority>
   </url>
-  <url>
-    <loc>https://ziontechgroup.com/contact</loc>
+  <url></url>
+    <loc>https</loc>://ziontechgroup.com/contact</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq></changefreq>
+    <priority></p>0.7</priority>
   </url>
-  <url>
-    <loc>https://ziontechgroup.com/pricing</loc>
+  <url></url>
+    <loc>https</loc>://ziontechgroup.com/pricing</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq></changefreq>
+    <priority></p>0.7</priority>
   </url>
 </urlset>`;
 
@@ -286,8 +285,8 @@ Disallow: /private/`;
       manifest.short_name = manifest.short_name || 'Zion Tech';
       manifest.start_url = manifest.start_url || '/';
       manifest.display = manifest.display || 'standalone';
-      manifest.theme_color = manifest.theme_color || '#4f46e5';
-      manifest.background_color = manifest.background_color || '#0f172a';
+      manifest.theme_color = manifest.theme_color || '#4 f46 e5';
+      manifest.background_color = manifest.background_color || '#0 f172 a';
       
       fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
     }

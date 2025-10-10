@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   cls?: number; // Cumulative Layout Shift
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;
+  customMetrics: Record<string, number>;</strin>
 }
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {
@@ -173,7 +173,7 @@ class PerformanceMonitor {
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
     // Track large resources
-    if (size > 100000) { // 100KB
+    if (size > 100000) { // 100 KB
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }

@@ -1,6 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t";
-const October2025NewContentBanner, 2 = () => {
+const October2025 NewContentBanner, 2 = () => {
   const newArticle, s = [
     {
       title: "AI-Powered, Sustainable, Data Cen, t, e, r, s",
@@ -28,77 +28,76 @@ const October2025NewContentBanner, 2 = () => {
     },
     {
       title: "Intelligent, Automatio, n & RP, A, 2., 0",
-      description: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, R, O, I",
+      description: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10 x, R, O, I",
       ic, o, n: Bo, t,
       slug: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-ge, n",
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-60, 0",
       bad, g, e: "Automat, i, o, n"
     }
   ]; return (
-    <section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+    <section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></section>
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
-        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
+      <div, className="absolute, inse, t-0, opacit, y-10"></div>
+        <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3 xl, animat, e-pul, s, e" /></div>
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3 xl, animat, e-pulse, dela, y-10, 0, 0" /></di>
       </div>
-      <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">
+      <div, className="m, a, x-w-7 xl, m, x-auto, relative, z-10"></div>
         {/* Head, e, r */}
-        <div, className="te, x, t-center, m, b-12">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
-            <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />
-            <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
+        <div, className="te, x, t-center, m, b-12"></div>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6"></div>
+            <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Brain>
+            <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d"></span>FRESH</span>, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Latest, AI, Breakthroughs & Innovatio, n, s
+          <h2, className="te, x, t-4 xl, m, d: te, x, t-5 xl, fon, t-bold, tex, t-white, m, b-4"></h>Latest</h>, AI, Breakthroughs & Innovatio, n, s
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3 xl, m, x-au, t, o">
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation
           </p>
         </div>
         {/* Articles, G, r, i, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {
             const Ico, n = artic, l, e.ic, o, n; return (
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
-                className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
-              >
+                className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2 x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2 xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
+              ></Link>
                 {/* B, a, d, g, e */}
-                <div, classNam, e = "absolute, to, p-4, righ, t-4">
-                  <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">
+                <div, classNam, e = "absolute, to, p-4, righ, t-4"></div>
+                  <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></span>
                     {artic, l, e.bad, g, e}
                   </sp, a, n>
                 </d, i, v  > {/* Ic, o, n */}
-                <div, classNam, e = { `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
-                  <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"</div>
+                <div, classNam, e = { `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>
+                  <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"</div></Icon>
                 {/* Conte, n, t */}
-                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">
+                <h3, className="te, x, t-2 xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s"></h>
                   {artic, l, e.t, i, t, l, e}
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-4, leadin, g-relax, e, d">
                   {artic, l, e.description}
                 </p>
                 {/* Read, More, Link */}
-                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
-                  <sp, a, n>Read, Articl, e</sp, a, n>
-                  <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
+                  <sp, a, n>Read</n>, Articl, e</sp, a, n>
+                  <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
+                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2 xl, transitio, n-opacity, duratio, n-30, 0`} /></div>
               </Li, n, k>
             );
           })}
         </div>
         {/* CTA, Sectio, n */}
-        <div, classNam, e = "te, x, t-cent, e, r">
+        <div, classNam, e = "te, x, t-cent, e, r"></div>
           <Link, t, o="/bl, o, g"
-            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
-          >
-            <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
-            <Link, className="w-5 h-5" />
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2 xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
+          ></Link>
+            <sp, a, n>Explore</n>, All, AI Insigh, t, s</sp, a, n>
+            <Link, className="w-5 h-5" /></Link>
           </Li, n, k>
         </div>
       </div>
     </sec, t, i, o, n>
   );
 };
-export default October2025NewContentBanner2;
+export default October2025 NewContentBanner2;

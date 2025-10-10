@@ -16,8 +16,7 @@ interface SEOData {
  twitterTitle?: string;
  twitterDescription?: string;
  twitterImage?: string;
- structuredData?: Record<string, unknown>;
- robots?: string;
+ structuredData?: Record<string, unknown>;</string>robots</string>?: string;
  author?: string;
  publishedTime?: string;
  modifiedTime?: string;
@@ -33,15 +32,13 @@ interface AdvancedSEOOptimizerProps {
  enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
- seoData,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({</AdvancedSEOOptimizerProps>seoData</AdvancedSEOOptimizerProps>,
  enableStructuredData = true,
  enableOpenGraph = true,
  enableTwitterCards = true,
  enableSchemaMarkup = true,
 }) => {
- const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
- const generateStructuredData = useCallback(() => {
+ const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
  if (!enableStructuredData || !seoData.structuredData) return null;
 
  const baseStructuredData = {
@@ -184,7 +181,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  // }
  // };origin/
 
- // const _addStructuredData = (data: Record<string, unknown>) => {
+ // const _addStructuredData = (data: Record<string, unknown>) => {</string>
  // // Remove existing structured data
  // // if (structuredDataRef.current) {
  // // structuredDataRef.current.remove();
@@ -207,8 +204,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
  const _trackPageView = (config: SEOData) => {
  if (typeof window !== 'undefined' && 'gtag' in window) {
- (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
- page_title: config.title,
+ (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {</string>page_title</string>: config.title,
  page_location: config.canonicalUrl,
  });
  }
@@ -219,8 +215,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  window.addEventListener('load', () => {
  const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
  if (perfData && typeof window !== 'undefined' && 'gtag' in window) {
- (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
- event_category: 'Performance',
+ (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {</string>event_category</string>: 'Performance',
  event_label: 'Page Load',
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
  });
@@ -230,77 +225,77 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
  };origin/
 
  return (
- <Helmet>
+ <Helmet></Helmet>
  {/* Basic Meta Tags */}
  <title>{seoData.title}</title>
- <meta name="description" content={seoData.description} />
- <meta name="keywords" content={seoData.keywords.join(', ')} />
- <link rel="canonical" href={seoData.canonicalUrl} />
+ <meta name="description" content={seoData.description} /></meta>
+ <meta name="keywords" content={seoData.keywords.join(', ')} /></meta>
+ <link rel="canonical" href={seoData.canonicalUrl} /></link>
  
  {/* Open Graph Tags */}
  {enableOpenGraph && (
- <>
- <meta property="og:title" content={seoData.title} />
- <meta property="og:image:height" content="630" />
- <meta property="og:site_name" content="Zion Tech Group" />
- <meta property="og:locale" content="en_US" />
- </>
+ <>{}
+ <meta property="og:title" content={seoData.title} /></meta>
+ <meta property="og:image:height" content="630" /></meta>
+ <meta property="og:site_name" content="Zion Tech Group" /></meta>
+ <meta property="og:locale" content="en_US" /></meta>
+ 
  )}
 
  {/* Twitter Card Tags */}
  {enableTwitterCards && (
- <>
- <meta name="twitter:card" content="summary_large_image" />
- <meta name="twitter:title" content={seoData.title} />
- <meta name="twitter:description" content={seoData.description} />
- <meta name="twitter:image" content={seoData.ogImage} />
- <meta name="twitter:site" content="@ziontechgroup" />
- <meta name="twitter:creator" content="@ziontechgroup" />
- </>
+ <>{}
+ <meta name="twitter:card" content="summary_large_image" /></meta>
+ <meta name="twitter:title" content={seoData.title} /></meta>
+ <meta name="twitter:description" content={seoData.description} /></meta>
+ <meta name="twitter:image" content={seoData.ogImage} /></meta>
+ <meta name="twitter:site" content="@ziontechgroup" /></meta>
+ <meta name="twitter:creator" content="@ziontechgroup" /></meta>
+ 
  )}
 
  {/* Additional SEO Meta Tags */}
- <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
- <meta name="googlebot" content="index, follow" />
- <meta name="bingbot" content="index, follow" />
- <meta name="author" content="Zion Tech Group" />
- <meta name="publisher" content="Zion Tech Group" />
- <meta name="copyright" content="Zion Tech Group" />
- <meta name="language" content="en" />
- <meta name="revisit-after" content="7 days" />
- <meta name="distribution" content="global" />
- <meta name="rating" content="general" />
- <meta name="theme-color" content="#4F46E5" />
+ <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /></meta>
+ <meta name="googlebot" content="index, follow" /></meta>
+ <meta name="bingbot" content="index, follow" /></meta>
+ <meta name="author" content="Zion Tech Group" /></meta>
+ <meta name="publisher" content="Zion Tech Group" /></meta>
+ <meta name="copyright" content="Zion Tech Group" /></meta>
+ <meta name="language" content="en" /></meta>
+ <meta name="revisit-after" content="7 days" /></meta>
+ <meta name="distribution" content="global" /></meta>
+ <meta name="rating" content="general" /></meta>
+ <meta name="theme-color" content="#4 F46 E5" /></meta>
 
  {/* Structured Data */}
  {enableSchemaMarkup && structuredData && (
- <script type="application/ld+json">
+ <script type="application/ld+json"></scrip>
  {JSON.stringify(structuredData)}
  </script>
  )}
 
  {enableSchemaMarkup && breadcrumbData && (
- <script type="application/ld+json">
+ <script type="application/ld+json"></scrip>
  {JSON.stringify(breadcrumbData)}
  </script>
  )}
 
  {enableSchemaMarkup && faqData && (
- <script type="application/ld+json">
+ <script type="application/ld+json"></scrip>
  {JSON.stringify(faqData)}
  </script>
  )}
 
  {/* Preconnect to external domains for performance */}
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
- <link rel="preconnect" href="https://www.google-analytics.com" />
- <link rel="preconnect" href="https://www.googletagmanager.com" />
+ <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
+ <link rel="preconnect" href="https://www.google-analytics.com" /></link>
+ <link rel="preconnect" href="https://www.googletagmanager.com" /></link>
 
  {/* DNS Prefetch for better performance */}
- <link rel="dns-prefetch" href="//fonts.googleapis.com" />
- <link rel="dns-prefetch" href="//www.google-analytics.com" />
- <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+ <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>
+ <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
+ <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
  </Helmet>
  );
 };

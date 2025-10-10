@@ -122,9 +122,7 @@ export const contentOptimization = {/* content */}
     const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
-    
-    return Object.entries(wordCount)
+    }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word);
@@ -195,8 +193,7 @@ export const analyticsUtils = {/* content */}
   },
 
   // Track custom events
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}</string>if</string> (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
       (window as Window & { gtag: Function }).gtag('event', eventName, parameters);
     }
   },
@@ -254,7 +251,7 @@ export const SEOComponent = ({/* content */}
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>;</string>
 }) => {/* content */}
 //   const siteName = 'Zion Tech Group';
 //   const siteUrl = 'https://zion.app';
@@ -265,26 +262,26 @@ export const SEOComponent = ({/* content */}
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
 
   return (
-  <div> </div><Helmet>
+  <div> </div><Helmet></Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullUrl} />
+      <meta name="description" content={description} /></meta>
+      <meta name="keywords" content={keywords} /></meta>
+      <link rel="canonical" href={fullUrl} /></link>
       {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:type" content={type} /></meta>
+      <meta property="og:title" content={fullTitle} /></meta>
+      <meta property="og:description" content={description} /></meta>
+      <meta property="og:url" content={fullUrl} /></meta>
+      <meta property="og:image" content={fullImage} /></meta>
+      <meta property="og:site_name" content={siteName} /></meta>
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:card" content="summary_large_image" /></meta>
+      <meta name="twitter:title" content={fullTitle} /></meta>
+      <meta name="twitter:description" content={description} /></meta>
+      <meta name="twitter:image" content={fullImage} /></meta>
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></scrip>
           {JSON.stringify(structuredData)}
         </script>
       )}

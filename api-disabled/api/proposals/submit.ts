@@ -71,7 +71,7 @@ Delegate Note: ${delegateNote || 'N/A'}`;
     let ensRecordHash: string | undefined;
     try {
       const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
-      ensRecordHash = `0x${hash}`;
+      ensRecordHash = `0 x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {
       // ignore

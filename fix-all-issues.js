@@ -34,7 +34,7 @@ function fixFile(filePath) {
         closeBraces += (line.match(/}/g) || []).length;
       }
       
-      if (openBraces > closeBraces) {
+      if (openBraces>closeBraces</openBraces>) {
         const missingBraces = openBraces - closeBraces;
         return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`;
       }
@@ -51,8 +51,7 @@ function fixFile(filePath) {
     
     // Fix missing closing braces for JSX
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
-      if (tag.includes('<div') && !match.includes('</div>')) {
-        return match + '</div>';
+      if (tag.includes('<div') && !match.includes('</div>')) {</di>return</di> match + '</div>';
       }
       return match;
     });

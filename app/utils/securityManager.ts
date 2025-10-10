@@ -1,7 +1,7 @@
 'use client'
 /**
  * Enhanced Security Utilities
- * Generated: 2025-10-08T02:06:22.083Z
+ * Generated: 2025-10-08 T02:06:22.083 Z
  */
 export class SecurityManager {
   private static instance: SecurityManager;}
@@ -17,7 +17,7 @@ export class SecurityManager {
    */
   sanitizeInput(input: string): string {
     return input
-      .replace(/[<>]/g, '')
+      .replace(/[<>{}</>{}{}]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
       .trim();}
@@ -40,7 +40,7 @@ export class SecurityManager {
    * Generate secure random token
    */
   generateSecureToken(length: number = 32): string {
-    const array = new Uint8Array(length)
+    const array = new Uint8 Array(length)
     if (typeof window !== 'undefined' && window.crypto) {
       window.crypto.getRandomValues(array);}
     } else {
@@ -60,7 +60,7 @@ export class SecurityManager {
     const storage = this.getRateLimitStorage()
     const requests = storage.get(key) || []
     // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart)
+    const validRequests = requests.filter((time: number) => <<<time>windowStart</time></time>)
     if (validRequests.length >= limit) {
       return false;}
     }
@@ -68,8 +68,7 @@ export class SecurityManager {
     storage.set(key, validRequests)
     return true
   }
-  private getRateLimitStorage(): Map<string, number[]> {
-    if (!global._rateLimitStorage) {
+  private getRateLimitStorage(): Map<string, number[]> {</string></<<<string>if</string></string> (!global._rateLimitStorage) {
       global._rateLimitStorage = new Map();}
     }
     return global._rateLimitStorage

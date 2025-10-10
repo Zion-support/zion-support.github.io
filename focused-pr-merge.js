@@ -16,25 +16,25 @@ import fs from 'fs';
 //Step 2: Define specific branches to merge (most recent and relevant)
 const branchesToMerge = [
   //Recent error fixing branches
-  'cursor/build-and-fix-errors-008f',
-  'cursor/build-and-fix-errors-079c',
-  'cursor/build-and-fix-errors-0ebf',
-  'cursor/build-and-fix-errors-0ec8',
-  'cursor/build-and-fix-errors-0f78',
+  'cursor/build-and-fix-errors-008 f',
+  'cursor/build-and-fix-errors-079 c',
+  'cursor/build-and-fix-errors-0 ebf',
+  'cursor/build-and-fix-errors-0 ec8',
+  'cursor/build-and-fix-errors-0 f78',
   //Enhancement branches
-  'cursor/automate-futuristic-front-page-enhancements-738d',
+  'cursor/automate-futuristic-front-page-enhancements-738 d',
   'cursor/automate-futuristic-front-page-enhancements-aafa',
   'cursor/automate-project-enhancement-and-merge-cac0',
-  'cursor/automate-site-navigation-enhancement-285c',
+  'cursor/automate-site-navigation-enhancement-285 c',
   //Build improvement branches
-  'cursor/automate-automation-redundancy-and-build-improvement-e3e4',
+  'cursor/automate-automation-redundancy-and-build-improvement-e3 e4',
   'cursor/automate-automation-redundancy-and-build-improvement-ea74',
-  'cursor/automate-netlify-build-fixes-and-monitoring-43ee',
-  'cursor/automate-netlify-build-fixing-and-monitoring-f10e',
+  'cursor/automate-netlify-build-fixes-and-monitoring-43 ee',
+  'cursor/automate-netlify-build-fixing-and-monitoring-f10 e',
   //AI-powered features
   'cursor/build-ai-powered-project-teams-dcf8',
-  'cursor/build-ai-powered-smart-contract-generator-b22e',
-  'cursor/build-ai-pricing-suggestion-engine-ea4e',
+  'cursor/build-ai-powered-smart-contract-generator-b22 e',
+  'cursor/build-ai-pricing-suggestion-engine-ea4 e',
   'cursor/build-ai-resume-and-portfolio-builder-workflow-2029',
 ];
 

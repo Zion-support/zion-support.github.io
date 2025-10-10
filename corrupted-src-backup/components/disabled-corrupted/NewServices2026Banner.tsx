@@ -1,14 +1,14 @@
 
-type NewServices2026BannerProp, s = { 
+type NewServices2026 BannerProp, s = { 
   varia, n, t?: 'showca, s, e' | 'he, r, o' | 'in, f, o'; showCou, n, t?: number;
   classNa, m, e ?  : string;
  };
 
-export default function NewServices2026Bann, e, r({
+export default function NewServices2026 Bann, e, r({
   varia, n, t = 'showc, a, s, e',
   showCou, n, t =  , 6,
   classNa, m, e = '',
-}: NewServices2026BannerPro, p, s) {
+}: NewServices2026 BannerPro, p, s) {
   const services = [
     {
       title: 'AI, Autonomous, Cloud O, p, s',
@@ -48,36 +48,33 @@ export default function NewServices2026Bann, e, r({
              ? 'bg-gradie, n, t-to-r, fro, m-emera, l, d-50, t, o-te, a, l-50'
              : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
-    >
-      <div, className='container, m, x-auto, p, x-6'>
-        <div, className='te, x, t-center, m, b-8' > <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
+    ></section>
+      <div, className='container, m, x-auto, p, x-6'></div>
+        <div, className='te, x, t-center, m, b-8' ></div> <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
               varia, n, t === 'in, f, o'
                  ? 'bg-white, tex, t-gr, a, y-9, 0, 0'
                  : 'bg-whi, t, e/20, tex, t-whi, t, e'
              }`}
-          >
-            NEW, 2026, SERVICES
-          </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
-          >
-            Latest, AI, Services
-          </h2 > <p, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-6, 0, 0'  : 'te, x, t-whi, t, e/8, 0'  }, m, a, x-w-3xl, m, x-au, t, o`}
+          ></div>NEW</div>, 2026, SERVICES
+          </d, i, v > <h2, className={ `te, x, t-3 xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
+          ></h2>Latest</h2>, AI, Services
+          </h2 > <p, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-6, 0, 0'  : 'te, x, t-whi, t, e/8, 0'  }, m, a, x-w-3 xl, m, x-au, t, o`}
           >
             Accelerate, transformation, with our, newest, AI-powered, solution, s.
           </p>
         </div>
 
-        <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
+        <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6 xl, m, x-au, t, o'></div>
           { servic, e, s.m, a, p(s =  > (
             <Link, ke, y = { s.li, n, k  }, to={ s.li, n, k } classNa, m, e = {  `round, e, d-xl, borde, r ${varia, n, t === 'in, f, o'  ? 'bg-white, borde, r-gr, a, y-1, 0, 0'  : 'bg-whi, t, e/10, borde, r-whi, t, e/2, 0'  }, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-30, 0`}
-            >
-              <div, classNam, e = 'te, x, t-xs, uppercase, tracking-wider, m, b-2, opacit, y-80'>
+            ></Link>
+              <div, classNam, e = 'te, x, t-xs, uppercase, tracking-wider, m, b-2, opacit, y-80'></div>
                 {s.t, a, g}
               </d, i, v > <div, className={ `te, x, t-xl, fon, t-semibo, l, d ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
-              >
+              ></div>
                 {s.title}
               </d, i, v > <div, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-5, 0, 0'  : 'te, x, t-whi, t, e/7, 0'  }, mt-2, tex, t-sm`}
-              >
-                Learn, mor, e →
+              ></di>Learn</di>, mor, e →
               </div>
             </Li, n, k>
           ))}

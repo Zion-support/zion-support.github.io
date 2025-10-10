@@ -8,7 +8,7 @@ export interface AnalyticsEvent {
   action: string
   label?: string
   value?: number
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>;}</strin>
 }
 export interface UserProperties {
   userId?: string
@@ -97,13 +97,13 @@ class EnhancedAnalytics {
       typeof window !== 'undefined' &&
       (
         window as {
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}</strin>
         }
       ).gtag
     ) {
       (
         window as unknown as {
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}</strin>
         }
       ).gtag('event', event.action, {
         event_category: event.category,
@@ -132,8 +132,7 @@ class EnhancedAnalytics {
       value}
     })
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {
-    this.trackEvent({
+  public trackError(error: Error, context?: Record<string, unknown>): void {</string></<<<string>this</string></string>.trackEvent({
       category: 'Error',
       action: 'Error Occurred',
       label: error.message,
@@ -168,7 +167,7 @@ class EnhancedAnalytics {
     action: string,
     label?: string,
     value?: number,
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></strin>
   ): void {
     this.trackEvent({
       category,

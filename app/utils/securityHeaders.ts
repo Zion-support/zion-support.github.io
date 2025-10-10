@@ -49,10 +49,9 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
  * Get security headers as key-value pairs
  */
 export function getSecurityHeaders(
-  customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfi>
+): Record<string, string> {}</string></<<<string>const</string></<<string>config</string> = { ...defaultSecurityHeaders, ...customConfig }
+  const headers: Record<string, string> = {</strin>
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
   }
@@ -80,7 +79,7 @@ export function getSecurityHeaders(
  * Get security headers in Next.js format
  */
 export function getNextSecurityHeaders(
-  customConfig?: Partial<SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfi>
 ): Array<{ key: string; value: string }> {
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ({

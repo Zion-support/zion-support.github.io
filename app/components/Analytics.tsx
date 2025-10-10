@@ -8,8 +8,7 @@ interface AnalyticsProps {
   enableUserBehaviorTracking?: boolean;
 }
 
-const Analytics: React.FC<AnalyticsProps>= ({
-  enableGoogleAnalytics = true,
+const Analytics: React.FC<AnalyticsProps>= ({</AnalyticsProps></<<<AnalyticsProp>enableGoogleAnalytics</AnalyticsProp></AnalyticsProp> = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
   enableUserBehaviorTracking = true
@@ -124,7 +123,7 @@ const Analytics: React.FC<AnalyticsProps>= ({
     let maxScroll = 0;)
     window.addEventListener('scroll', () => {
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll) {
+      if (<<<scrollPercent>maxScroll</scrollPercent></scrollPercent>) {
         maxScroll = scrollPercent;
         if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
           trackEvent('engagement', 'scroll_depth', maxScroll);
@@ -178,5 +177,4 @@ const Analytics: React.FC<AnalyticsProps>= ({
 
   return null;
 };
-</AnalyticsProps>
-export default Analytics;</AnalyticsProps>
+</<<<AnalyticsProps>export</AnalyticsProps></<<AnalyticsProps>default</AnalyticsProps> Analytics;</AnalyticsProps>

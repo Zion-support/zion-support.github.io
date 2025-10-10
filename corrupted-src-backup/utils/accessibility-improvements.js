@@ -43,9 +43,9 @@ export const accessibilityUtils = {
   checkColorContrast: (foreground, background) => {
     const getLuminance = color => {
       //       const rgb = parseInt(color.replace('#', ''), 16);
-      const _r = (rgb >> 16) & 0xff;
-      //       const g = (rgb >> 8) & 0xff;
-      //       const b = (rgb >> 0) & 0xff;
+      const _r = (rgb >> 16) & 0 xff;
+      //       const g = (rgb >> 8) & 0 xff;
+      //       const b = (rgb >> 0) & 0 xff;
 
       const [rs, gs, bs] = [r, g, b].map(c => {
         c = c / 255;

@@ -69,12 +69,12 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
     };
   });
   items.sort((a,
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9));
+        b) => (a.ageDays ?? 1 e9) - (b.ageDays ?? 1 e9));
   const summary = {generatedAt: new Date().toISOString(),
     totalFiles: items.length,
     staleCount: items.filter(i => i.stale).length,
     freshCount: items.filter(i => !i.stale).length,
-    top10MostRecent: items.slice(0,
+    top10 MostRecent: items.slice(0,
         10),
     items}
   };
@@ -128,7 +128,7 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
         f);' const stale = typeof ageDays === 'number' ? ageDays > 30 : true;' const freshnessScore = typeof ageDays === 'number' ? Math.max(0, 100 - Math.min(100,
         ageDays)) : 0; return {path: rel, size, mtimeIso: stat ? new Date(mtime).toISOString() : null, ageDays,
         stale; freshnessScore }; }); items.sort((a,
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {generatedAt: new Date().toISOString(), totalFiles: items.length, staleCount: items.filter(i => i.stale).length, freshCount: items.filter(i => !i.stale).length, top10MostRecent: items.slice(0,
+        b) => (a.ageDays ?? 1 e9) - (b.ageDays ?? 1 e9)); const summary = {generatedAt: new Date().toISOString(), totalFiles: items.length, staleCount: items.filter(i => i.stale).length, freshCount: items.filter(i => !i.stale).length, top10 MostRecent: items.slice(0,
         10), items} }; ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} { recursive: true
       }); } catch {}' const outPath = path.join(outDir) 'docs-freshness.json'); fs.writeFileSync(outPath, JSON.stringify(summary, null,
         2)); return {outPath,

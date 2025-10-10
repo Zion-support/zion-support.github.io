@@ -6,8 +6,7 @@
 /**
  * Wait for a specified amount of time
  */
-export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms));}
+export const wait = (ms: number): Promise<void> => {</void></<<<void>return</void></<<void>new</void> Promise(resolve => setTimeout(resolve, ms));}
 }
 /**
  * Wait for a condition to be true
@@ -16,10 +15,9 @@ export const waitFor = async (
   condition: () => boolean,
   timeout = 5000,
   interval = 100
-): Promise<void> => {
-  const startTime = Date.now()
+): Promise<void> => {</void></<<<void>const</void></<<void>startTime</void> = Date.now()
   while (!condition()) {
-    if (Date.now() - startTime > timeout) {}
+    if (Date.now() - <<<startTime>timeout</startTime></startTime>) {}
       throw new Error(`Timeout waiting for condition after ${timeout}ms`)
     }
     await wait(interval)
@@ -31,7 +29,7 @@ export const waitFor = async (
 export const mockFetch = (
   response: unknown,
   status = 200,
-  headers: Record<string, string> = {}
+  headers: Record<string, string> = {}</strin>
 ): void => {
   if (typeof global !== 'undefined') {}
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
@@ -49,8 +47,7 @@ export const mockFetch = (
  * Mock local storage
  */
 export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map()
-  get length(): number {
+  private store: Map<string, string> = new Map()</string></<<<string>get</string></<<string>length</string>(): number {
     return this.store.size;}
   }
   clear(): void {
@@ -79,8 +76,7 @@ export const createMockStorage = (): MockStorage => {
 /**
  * Mock window object
  */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
+export const mockWindow = (overrides: Partial<Window> = {}): void => {</Window></<<<Window>if</Window></Window> (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
         ...global.window,
@@ -158,15 +154,13 @@ export const generateTestData = {
   date: (): Date => {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);}
   },
-  array: <T>(generator: () => T, length = 5): T[] => {}
-    return Array.from({ length }, generator)
+  array: <T>(generator: () => T, length = 5): T[] => {}</T></<<<T>return</T></<<T>Array</T>.from({ length }, generator)
   }
 }
 /**
  * Deep clone an object
  */
-export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj));}
+export const deepClone = <T>(obj: T): T => {</T></<<<T>return</T></<<T>JSON</T>.parse(JSON.stringify(obj));}
 }
 /**
  * Compare objects for equality
@@ -220,16 +214,12 @@ export class ConsoleSpy {
 /**
  * Create a deferred promise
  */
-export interface Deferred<T> {
-  promise: Promise<T>
-  resolve: (value: T) => void
+export interface Deferred<T> {</T></<<<T>promise</T>: Promise<T></T></<<<T>resolve</T>: (value: T) => void
   reject: (reason?: unknown) => void;}
 }
-export const createDeferred = <T>(): Deferred<T> => {
-  let resolve as any: (value: T) => void
+export const createDeferred = <T>(): Deferred</T><T> => {</T></<<<T>let</T></<<T>resolve</T> as any: (value: T) => void
   let reject as any: (reason?: unknown) => void
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res
+  const promise = new Promise<T>((res, rej) => {</T></<<<T>resolve</T> = res
     reject = rej;}
   })
   return { promise, resolve, reject }
@@ -237,12 +227,9 @@ export const createDeferred = <T>(): Deferred<T> => {
 /**
  * Retry a function with exponential backoff
  */
-export const retryWithBackoff = async <T>(
-  fn: () => Promise<T>,
-  maxRetries = 3,
+export const retryWithBackoff = async <T>(</T></<<<T>fn</T>: () => Promise<T>,</T></<<<T>maxRetries</T> = 3,
   initialDelay = 1000
-): Promise<T> => {
-  let lastError: Error
+): Promise<T> => {</T></<<<T>let</T></<<T>lastError</T>: Error
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn();}
@@ -258,8 +245,7 @@ export const retryWithBackoff = async <T>(
 /**
  * Measure execution time of a function
  */
-export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>
+export const measureExecutionTime = async <T>(</T></<<<T>fn</T>: () => T | Promise<T></T>
 ): Promise<{ result: T; duration: number }> => {
   const start = performance.now()
   const result = await fn()

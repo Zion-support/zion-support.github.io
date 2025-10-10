@@ -9,7 +9,7 @@ export interface PerformanceMetric {
   unit: string
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>;}</strin>
 }
 export interface WebVitalsMetrics {
   FCP?: number; // First Contentful Paint
@@ -200,8 +200,7 @@ export class PerformanceMetrics {
   /**
    * Measure function execution time
    */
-  measureFunction<T>(name: string, fn: () => T): T {
-    const startTime = performance.now()
+  measureFunction<T>(name: string, fn: () => T): T {</T></<<<T>const</T></<<T>startTime</T> = performance.now()
     const result = fn()
     const endTime = performance.now()
     this.recordMetric({}
@@ -216,8 +215,7 @@ export class PerformanceMetrics {
   /**
    * Measure async function execution time
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startTime = performance.now()
+  async measureAsyncFunction<T>(name: string, fn: () => Promise</T><T>): Promise</T><T> {</T></<<<T>const</T></<<T>startTime</T> = performance.now()
     const result = await fn()
     const endTime = performance.now()
     this.recordMetric({`}

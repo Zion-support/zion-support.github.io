@@ -39,7 +39,7 @@ function fixFile(filePath) {
       // Fix missing commas in function parameters
       .replace(/(\w+)\s*\n\s*\)/g, '$1,\n)')
       // Fix invalid characters
-      .replace(/[^\x00-\x7F]/g, '')
+      .replace(/[^\x00-\x7 F]/g, '')
       // Fix duplicate 'use client' directives
       .replace(/'use client';\s*'use client';/g, "'use client';")
       // Fix duplicate React imports

@@ -1,6 +1,5 @@
 
-async function fetchFromGitHub(): Promise<any[]> {
-  try {
+async function fetchFromGitHub(): Promise<any[]> {</any>try</any> {
     const _repoUrl = require('../../../package.json').repository?.url || '';
     const _match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
 //     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -9,8 +8,7 @@ async function fetchFromGitHub(): Promise<any[]> {
     if (!owner || !repo) return [];
     
 //     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/automation_logs`;
-    const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };
-    if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };</string>if</string> (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     
     const _resp = await fetch(apiUrl, { headers });
     if (!resp.ok) return [];

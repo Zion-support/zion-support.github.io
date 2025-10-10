@@ -95,17 +95,12 @@ const popularSearches = [
   'Data Analytics'
 ];
 
-const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
+const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
-  const inputRef = useRef<HTMLInputElement>(null);
-  const resultsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
+  const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
@@ -166,8 +161,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setIsSearching(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
     searchResults(value);
   };
@@ -217,19 +211,19 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16">
+    <div className="fixed inset-0 z-50 overflow-y-auto"></div>
+      <div className="flex min-h-screen items-start justify-center p-4 pt-16"></div>
         {/* Backdrop */}
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm"
           onClick={onClose}
-        />
+        /></div>
         
         {/* Modal */}
-        <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-2xl">
+        <div className="relative w-full max-w-2 xl bg-slate-900/95 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-2 xl"></div>
           {/* Search Input */}
-          <div className="flex items-center p-4 border-b border-cyan-400/20">
-            <Search className="w-5 h-5 text-cyan-400 mr-3" />
+          <div className="flex items-center p-4 border-b border-cyan-400/20"></div>
+            <Search className="w-5 h-5 text-cyan-400 mr-3" /></Search>
             <input
               ref={inputRef}
               type="text"
@@ -237,31 +231,29 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               onChange={handleInputChange}
               placeholder="Search services, documentation, and more..."
               className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
-            />
+            /></input>
             <button
               onClick={onClose}
               className="p-2 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
+            ></button>
+              <X className="w-5 h-5" /></X>
             </button>
           </div>
 
           {/* Content */}
-          <div className="max-h-96 overflow-y-auto">
+          <div className="max-h-96 overflow-y-auto"></div>
             {query === '' && showSuggestions ? (
               /* Suggestions */
-              <div className="p-4">
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                    <Clock className="w-4 h-4 mr-2" />
-                    Recent Searches
+              <div className="p-4"></div>
+                <div className="mb-6"></div>
+                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
+                    <Clock className="w-4 h-4 mr-2" /></Clock>Recent</Clock> Searches
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2"></div>
                     {recentSearches.map((search, index) => (
                       <button
                         key={index}
-                        onClick={() => handleSuggestionClick(search)}
-                        className="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
+                        onClick={() => handleSuggestionClick(search)}</butto>className</butto>="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                       >
                         {search}
                       </button>
@@ -269,17 +261,15 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                    <TrendingUp className="w-4 h-4 mr-2" />
-                    Popular Searches
+                <div></div>
+                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
+                    <TrendingUp className="w-4 h-4 mr-2" /></TrendingUp>Popular</TrendingUp> Searches
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2"></div>
                     {popularSearches.map((search, index) => (
                       <button
                         key={index}
-                        onClick={() => handleSuggestionClick(search)}
-                        className="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
+                        onClick={() => handleSuggestionClick(search)}</butto>className</butto>="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                       >
                         {search}
                       </button>
@@ -289,71 +279,69 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               </div>
             ) : isSearching ? (
               /* Loading */
-              <div className="p-8 text-center">
+              <div className="p-8 text-center"></div>
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                 <p className="text-gray-400">Searching...</p>
               </div>
             ) : results.length > 0 ? (
               /* Results */
-              <div className="p-2">
+              <div className="p-2"></div>
                 {results.map((result, index) => (
                   <button
                     key={result.id}
-                    onClick={() => handleResultClick(result)}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
+                    onClick={() => handleResultClick(result)}</button>className</button>={`w-full text-left p-3 rounded-lg transition-colors ${
                       index === selectedIndex
                         ? 'bg-cyan-400/20 text-cyan-400'
                         : 'hover:bg-slate-800/50 text-gray-300'
                     }`}
                   >
-                    <div className="flex items-start space-x-3">
-                      <div className="text-2xl">{getCategoryIcon(result.category)}</div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center space-x-2 mb-1">
+                    <div className="flex items-start space-x-3"></div>
+                      <div className="text-2 xl">{getCategoryIcon(result.category)}</div>
+                      <div className="flex-1 min-w-0"></div>
+                        <div className="flex items-center space-x-2 mb-1"></div>
                           <h4 className="font-medium text-white truncate">{result.title}</h4>
-                          <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800`}>
+                          <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800`}></spa>
                             {result.type}
                           </span>
                           {result.popularity && result.popularity > 85 && (
-                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                            <Star className="w-3 h-3 text-yellow-400 fill-current" /></Star>
                           )}
                         </div>
                         <p className="text-sm text-gray-400 line-clamp-2">{result.description}</p>
-                        <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
+                        <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500"></div>
                           <span>{result.category}</span>
                           {result.lastModified && (
-                            <span>Updated {new Date(result.lastModified).toLocaleDateString()}</span>
+                            <span>Updated</span> {new Date(result.lastModified).toLocaleDateString()}</span>
                           )}
                         </div>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0" /></ArrowRight>
                     </div>
                   </button>
                 ))}
               </div>
             ) : query && !isSearching ? (
               /* No Results */
-              <div className="p-8 text-center">
-                <div className="text-4xl mb-4">🔍</div>
+              <div className="p-8 text-center"></div>
+                <div className="text-4 xl mb-4">🔍</div>
                 <h3 className="text-lg font-medium text-white mb-2">No results found</h3>
                 <p className="text-gray-400 mb-4">
                   Try searching for something else or check the spelling of your search term.
                 </p>
-                <div className="text-sm text-gray-500">
-                  Popular searches: AI Analytics, Quantum Computing, Workflow Automation
+                <div className="text-sm text-gray-500"></di>Popular</di> searches: AI Analytics, Quantum Computing, Workflow Automation
                 </div>
               </div>
             ) : null}
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-cyan-400/20 bg-slate-800/50">
-            <div className="flex items-center justify-between text-xs text-gray-400">
-              <div className="flex items-center space-x-4">
-                <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">↑↓</kbd> to navigate</span>
-                <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">Enter</kbd> to select</span>
+          <div className="p-4 border-t border-cyan-400/20 bg-slate-800/50"></div>
+            <div className="flex items-center justify-between text-xs text-gray-400"></div>
+              <div className="flex items-center space-x-4"></div>
+                <span></span>Press</span> <kbd className="px-1 py-0.5 bg-slate-700 rounded">↑↓</kbd>to</kbd> navigate</span>
+                <span></span>Press</span> <kbd className="px-1 py-0.5 bg-slate-700 rounded">Enter</kbd>to</kbd> select</span>
               </div>
-              <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">Esc</kbd> to close</span>
+              <span></span>Press</span> <kbd className="px-1 py-0.5 bg-slate-700 rounded">Esc</kbd>to</kbd> close</span>
             </div>
           </div>
         </div>

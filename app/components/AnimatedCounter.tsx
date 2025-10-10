@@ -9,8 +9,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps></<<<AnimatedCounterProps>end</AnimatedCounterProps></AnimatedCounterProps>,
   duration = 2000,
   suffix = '',
   prefix = '',
@@ -59,7 +58,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [isVisible, end, duration]);
 
   return (
-    <span ref={setNode} className={className}>
+    <span ref={setNode} className={className}></span>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   );

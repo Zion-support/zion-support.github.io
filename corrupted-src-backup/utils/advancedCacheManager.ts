@@ -8,22 +8,18 @@ interface CacheConfig {
   strategy: 'LRU' | 'LFU' | 'FIFO';
 }
 
-interface CacheEntry<T> {
-  key: string;
+interface CacheEntry<T> {</T>key</T>: string;
   value: T;
   timestamp: number;
   accessCount: number;
   lastAccessed: number;
 }
 
-class AdvancedCacheManager<T> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private config: CacheConfig;
+class AdvancedCacheManager<T> {</T>private</T> cache: Map<string, CacheEntry<T>> = new Map();</string>private</string> config: CacheConfig;
   private hits = 0;
   private misses = 0;
 
-  constructor(config: Partial<CacheConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<CacheConfig> = {}) {</CacheConfig>this</CacheConfig>.config = {
       maxAge: 5 * 60 * 1000, // 5 minutes
       maxSize: 1000,
       strategy: 'LRU',
@@ -40,7 +36,7 @@ class AdvancedCacheManager<T> {
     }
 
     // Check if entry has expired
-    if (Date.now() - entry.timestamp > this.config.maxAge) {
+    if (Date.now() - entry.timestamp>this</timestamp>.config.maxAge) {
       this.cache.delete(key);
       this.misses++;
       return null;
@@ -60,8 +56,7 @@ class AdvancedCacheManager<T> {
       this.evictEntry();
     }
 
-    const entry: CacheEntry<T> = {
-      key,
+    const entry: CacheEntry<T> = {</T>key</T>,
       value,
       timestamp: Date.now(),
       accessCount: 1,
@@ -79,7 +74,7 @@ class AdvancedCacheManager<T> {
     }
 
     // Check if entry has expired
-    if (Date.now() - entry.timestamp > this.config.maxAge) {
+    if (Date.now() - entry.timestamp>this</timestamp>.config.maxAge) {
       this.cache.delete(key);
       return false;
     }
@@ -177,7 +172,7 @@ class AdvancedCacheManager<T> {
     const expiredKeys: string[] = [];
 
     for (const [key, entry] of this.cache.entries()) {
-      if (now - entry.timestamp > this.config.maxAge) {
+      if (now - entry.timestamp>this</timestamp>.config.maxAge) {
         expiredKeys.push(key);
       }
     }

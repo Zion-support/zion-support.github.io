@@ -20,19 +20,19 @@ function App() {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <div>
-        <Router>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
+    <ErrorBoundary></ErrorBoundary>
+      <div></div>
+        <Router></Router>
+          <Suspense fallback={<div>Loading</div>...</div>}>
+            <Routes></Routes>
+              <Route path="/" element={<Home />} /></Route>
+              <Route path="/about" element={<About />} /></Route>
+              <Route path="/services" element={<Services />} /></Route>
+              <Route path="/blog" element={<Blog />} /></Route>
+              <Route path="/contact" element={<Contact />} /></Route>
+              <Route path="/team" element={<Team />} /></Route>
+              <Route path="/privacy" element={<Privacy />} /></Route>
+              <Route path="/terms" element={<Terms />} /></Route>
             </Routes>
           </Suspense>
         </Router>
@@ -62,12 +62,11 @@ class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+            <div className="text-center"></div>
+              <h1 className="text-2 xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
-                onClick={() => this.setState({ hasError: false })}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                onClick={() => this.setState({ hasError: false })}</butto>className</butto>="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
               >
                 Try again
               </button>

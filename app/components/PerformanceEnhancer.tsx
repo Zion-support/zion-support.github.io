@@ -28,8 +28,7 @@ interface PerformanceEnhancerProps {
   };
 }
 
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
-  enableWebVitals = true,
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({</PerformanceEnhancerProps></<<<PerformanceEnhancerProp>enableWebVitals</PerformanceEnhancerProp></PerformanceEnhancerProp> = true,
   enableResourceTiming = true,
   enableMemoryMonitoring = true,
   enableNetworkMonitoring = true,
@@ -54,10 +53,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
   }
 }) => {
 
-  // Performance metrics storage</PerformanceEnhancerProps>
-  const performanceMetrics = useMemo(() => ({</PerformanceEnhancerProps>
-    webVitals: {} as Record<string, any>,
-    resourceTiming: [] as PerformanceEntry[],
+  // Performance metrics storage</<<<PerformanceEnhancerProps>const</PerformanceEnhancerProps></<<PerformanceEnhancerProps>performanceMetrics</PerformanceEnhancerProps> = useMemo(() => ({</<<<PerformanceEnhancerProps>webVitals</PerformanceEnhancerProps></PerformanceEnhancerProps>: {} as Record<string, any>,</string></<<<strin>resourceTiming</strin></strin>: [] as PerformanceEntry[],
     userTiming: [] as PerformanceEntry[],
     memoryUsage: {} as any,
     networkInfo: {} as any,
@@ -110,7 +106,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
         // Check performance budget
         if (enablePerformanceBudget && performanceBudget[metric.name as keyof typeof performanceBudget]) {
           const budget = performanceBudget[metric.name as keyof typeof performanceBudget];
-          if (budget && metric.value > budget) {
+          if (budget && metric.<<<value>budget</value></value>) {
             reportError(new Error(`Performance budget exceeded for ${metric.name}: ${metric.value} > ${budget}`), 'PerformanceBudget');
           }
         }
@@ -233,7 +229,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
           };
 
           // Check for memory leaks
-          if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
+          if (memory.<<<usedJSHeapSize>memory</usedJSHeapSize></usedJSHeapSize>.jsHeapSizeLimit * 0.8) {
             reportError(new Error('High memory usage detected'), 'MemoryMonitoring');
           }
 
@@ -398,5 +394,4 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
 
   return null;
 };
-</string>
-export default PerformanceEnhancer;</string>
+</<<<string>export</string></<<string>default</string> PerformanceEnhancer;</string>

@@ -17,8 +17,7 @@ interface OptimizationStatus {
 }
 
 export const PerformanceOptimizer: React.FC = () => {
-  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
-    preloaded: 0,
+  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({</OptimizationStatus></<<<OptimizationStatu>preloaded</OptimizationStatu></OptimizationStatu>: 0,
     codeSplit: false,
     serviceWorker: false,
     optimized: false
@@ -152,5 +151,4 @@ export const PerformanceOptimizer: React.FC = () => {
   // This component doesn't render anything visible
   return null;
 };
-</OptimizationStatus>
-export default PerformanceOptimizer;</OptimizationStatus>
+</<<<OptimizationStatus>export</OptimizationStatus></<<OptimizationStatus>default</OptimizationStatus> PerformanceOptimizer;</OptimizationStatus>

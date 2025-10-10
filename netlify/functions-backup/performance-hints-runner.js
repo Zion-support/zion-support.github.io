@@ -88,14 +88,14 @@ exports.handler = async function () {const baseUrl = (
     const _html = await res.text();
     const imgSrcs = Array.from(
       new Set(
-        [...html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi)]
+        [...html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi)]</img>
           .map(m => absolute(m[1]))
           .filter(Boolean),
       ),
     );
     const scriptSrcs = Array.from(
       new Set(
-        [...html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi)]
+        [...html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi)]</script>
           .map(m => absolute(m[1]))
           .filter(Boolean),
       ),
@@ -131,7 +131,7 @@ exports.handler = async function () {const baseUrl = (
       `Base URL: ${baseUrl}`,
       '',
       `Assets checked: ${summary.totals.assetsChecked}`,
-      `Large assets (>200KB): ${summary.totals.large}`,
+      `Large assets (>200 KB): ${summary.totals.large}`,
       '',
       '## Large Assets',
       ...summary.large.map(
@@ -187,7 +187,7 @@ exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function 
         error: 'No base URL' }) }; const res = await fetch(baseUrl); if (!res.ok,
         return {statusCode: 200,
         body: JSON.stringify({ok: false,
-        error: `Fetch ${res.status}` }) }; const html = await res.text(); ' const imgSrcs = Array.from(new Set([...(html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi))].map(m => absolute(m[1])).filter(Boolean)));' const scriptSrcs = Array.from(new Set([...(html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi))].map(m => absolute(m[1])).filter(Boolean))); const checks = []; for (const src of [...imgSrcs, ...scriptSrcs].slice(0,
+        error: `Fetch ${res.status}` }) }; const html = await res.text(); ' const imgSrcs = Array.from(new Set([...(html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi))].map(m => absolute(m[1])).filter(Boolean)));' const scriptSrcs = Array.from(new Set([...(html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi))].map(m => absolute(m[1])).filter(Boolean))); const checks = []; for (const src of [...imgSrcs, ...scriptSrcs].slice(0,</script>
         60)) {const r = await head(src
       } checks.push({ url: src,
         size: r.size,
@@ -198,7 +198,7 @@ exports.config = { schedule: '*/15 * * * *' }; exports.handler = async function 
         50
       }; ' const jsonPath = 'automation/reports/performance-hints.json'' const mdPath = 'docs/performance-hints.md' const jsonContent = JSON.stringify({...summary,
         all: checks }, null,
-        2); const mdLines = [' '# Performance Hints', `Generated: ${summary.generatedAt}`, `Base URL: ${baseUrl}`,' '', `Assets checked: ${summary.totals.assetsChecked}`, `Large assets (>200KB): ${summary.totals.large}`,' '',' '## Large Assets', ...summary.large.map(r => `- ${r.url} — ${(r.size/1024).toFixed(0
+        2); const mdLines = [' '# Performance Hints', `Generated: ${summary.generatedAt}`, `Base URL: ${baseUrl}`,' '', `Assets checked: ${summary.totals.assetsChecked}`, `Large assets (>200 KB): ${summary.totals.large}`,' '',' '## Large Assets', ...summary.large.map(r => `- ${r.url} — ${(r.size/1024).toFixed(0
       } KB`) ]; const msg = `chore(report): performance hints (${new Date().toISOString()})`; const [jsonRes, mdRes] = await Promise.all([ commitFile(jsonPath, jsonContent,
         msg),' commitFile(mdPath,
         mdLines.join('\n'), msg), ]); return {statusCode: 200, body: JSON.stringify({ ok: true,

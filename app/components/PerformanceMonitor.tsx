@@ -11,8 +11,7 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);</PerformanceMetrics></<<<PerformanceMetric>const</PerformanceMetric></PerformanceMetric> [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Only show in development or if user has enabled debug mode
@@ -104,55 +103,52 @@ const PerformanceMonitor: React.FC = () => {
   };
 
   if (!isVisible || !metrics) return null;
-</PerformanceMetrics>
-  const getPerformanceColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {</PerformanceMetrics>
-    if (value <= thresholds.good) return 'text-green-400';
+</<<<PerformanceMetrics>const</PerformanceMetrics></<<PerformanceMetrics>getPerformanceColor</PerformanceMetrics> = (value: number, thresholds: { good: number; needsImprovement: number }) => {</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 shadow-lg z-50 max-w-sm">
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center space-x-2">
-          <BarChart3 className="w-4 h-4 text-cyan-400" />
-          <h3 className="text-white font-semibold text-sm">Performance<button
-          onClick={() =>setIsVisible(false)}
-          className="text-gray-400 hover:text-white transition-colors"
+    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 shadow-lg z-50 max-w-sm"></div>
+      <div className="flex items-center justify-between mb-3"></div>
+        <div className="flex items-center space-x-2"></div>
+          <BarChart3 className="w-4 h-4 text-cyan-400" /></BarChart>
+          <h3 className="text-white font-semibold text-sm"></h3></<<<h3>Performance</h3></h3><button
+          onClick={() =>setIsVisible(false)}</button></<<<butto>className</butto></butto>="text-gray-400 hover:text-white transition-colors"
         ></button>
           ×</button>
         </button>
       </div>
 
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">Load Time:<span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</span>
+      <div className="space-y-2 text-xs"></div>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300"></span></<<<span>Load</span></<<span>Time</span>:<span className={getPerformanceColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>{metrics.loadTime}ms</spa>
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">First Paint:<span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</span>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300"></span></<<<span>First</span></<<span>Paint</span>:<span className={getPerformanceColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>{metrics.firstContentfulPaint}ms</spa>
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">Largest Paint:<span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</span>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300"></span></<<<span>Largest</span></<<span>Paint</span>:<span className={getPerformanceColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>{metrics.largestContentfulPaint}ms</spa>
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">Connection:</span>
-          <div className="flex items-center space-x-1">
-            <Wifi className="w-3 h-3 text-cyan-400" />
-            <span className="text-cyan-400">{metrics.connectionSpeed}</span>
+        <div className="flex justify-between items-center"></div>
+          <span className="text-gray-300">Connection:</spa>
+          <div className="flex items-center space-x-1"></div>
+            <Wifi className="w-3 h-3 text-cyan-400" /></Wif>
+            <span className="text-cyan-400">{metrics.connectionSpeed}</spa>
           </div>
         </div>
       </div>
 
-      <div className="mt-3 pt-2 border-t border-gray-700">
-        <div className="flex items-center space-x-1 text-xs text-gray-400">
-          <Clock className="w-3 h-3" />
-          <span>Measured at {new Date().toLocaleTimeString()}</span>
+      <div className="mt-3 pt-2 border-t border-gray-700"></div>
+        <div className="flex items-center space-x-1 text-xs text-gray-400"></div>
+          <Clock className="w-3 h-3" /></Cloc>
+          <<<<span>Measured</span></<<span>at</span> {new Date().toLocaleTimeString()}</span>
         </div>
       </div>
     </div>

@@ -123,8 +123,7 @@ function fixImportsInFile(filePath) {
 
 //Get all files that need fixing
 
-directories.forEach(dir => {
-  if (fs.existsSync(dir)) {
+directories.forEach(dir => {</Link>if</Link> (fs.existsSync(dir)) {
     const dirFiles = fs
       .readdirSync(dir, { recursive: true })
       .filter(file => file.endsWith('.tsx'))

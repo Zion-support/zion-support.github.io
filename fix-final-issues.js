@@ -60,8 +60,7 @@ function processFile(filePath) {
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
 
-  files.forEach(file => {
-    if (processFile(file)) {
+  files.forEach(file => {</Link>if</Link> (processFile(file)) {
       fixedCount++;
     }
   });

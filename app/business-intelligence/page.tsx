@@ -92,32 +92,31 @@ const BusinessIntelligencePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Business Intelligence Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
-            Make informed decisions with our comprehensive BI solutions.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helme>
+        <<<<title>Business</title></<<title>Intelligence</title> Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." /></met>
+      <Navigation >{/* Hero Section */}</Navigatio>
+      </Navigation><section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"></sectio>
+        <div className="absolute inset-0 bg-black opacity-20"></div><div className="relative max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4 xl md:text-6 xl font-bold mb-6"></h1></<<<h1>Business</h1></<<h1>Intelligence</h1> Services<p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Transform your data into strategic insights that drive business growth.</p></<<<p>Make</p></<<p>informed</p> decisions with our comprehensive BI solutions.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Free Consultation<a href="tel:+13024640950" className="cyber-button-outline px-8 py-4 text-lg">Call (302) 464-0950</a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Free Consultation</a><a href="tel:+13024640950" className="cyber-button-outline px-8 py-4 text-lg">Call (302) 464-0950</a>
             </a>
           </div>
         </div>
       </section>
 
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}<ul className="text-sm text-gray-400 space-y-1">{feature.benefits.map((benefit, idx) => (<li key={idx}>• {benefit}</li>
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center"></h2></<<<h2>Key</h2></<<h2>Features</h2><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
+              <div key={index} className="cyber-card p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                  <feature.icon className="w-8 h-8 text-white" /></featur>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h>
+                <p className="text-gray-300 mb-4"></p>{feature.description}<ul className="text-sm text-gray-400 space-y-1">{feature.benefits.map((benefit, idx) => (</ul><li key={idx}>• {benefit}</l>
                   ))}
                 </ul>
               </div>
@@ -126,11 +125,11 @@ const BusinessIntelligencePage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="mb-16 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases<div className="grid md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
-              <div key={index} className="cyber-card p-6">
-                <div className="text-4xl mb-4">{useCase.icon}<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4">{useCase.description}<ul className="text-sm text-gray-400 space-y-1">{useCase.examples.map((example, idx) => (<li key={idx}>• {example}</li>
+        <section className="mb-16 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-8"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center"></h2></<<<h2>Use</h2></<<h2>Cases</h2><div className="grid md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="text-4 xl mb-4"></div>{useCase.icon}<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h>
+                <p className="text-gray-300 mb-4"></p>{useCase.description}<ul className="text-sm text-gray-400 space-y-1">{useCase.examples.map((example, idx) => (</ul><li key={idx}>• {example}</l>
                   ))}
                 </ul>
               </div>
@@ -139,25 +138,25 @@ const BusinessIntelligencePage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{benefits.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center"></h2></<<<h2>Pricing</h2></<<h2>Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>{benefits.map((plan, index) => (<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>{plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</spa>
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
-                  <p className="text-gray-300">{plan.description}<ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2"></h>{plan.name}<div className="text-4 xl font-bold text-indigo-400 mb-2"></div>{plan.price}<span className="text-lg text-gray-400">{plan.period}</spa>
+                  <p className="text-gray-300"></p>{plan.description}<ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</u>
+                    <li key={featureIndex} className="flex items-center text-gray-300"></l>
+                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" >{feature}</CheckCircl>
                     </CheckCircle>
                   ))}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>Get Started</button>
+                }`}>Get Started</butto>
                 </button>
               </div>
             ))}
@@ -165,71 +164,71 @@ const BusinessIntelligencePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="cyber-card p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
+        <section className="text-center"></sectio>
+          <div className="cyber-card p-12 max-w-4 xl mx-auto"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>Ready</h2></<<h2>to</h2> Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" >+1 302 464 0950</Phone>
+              ></a>
+                <Phone className="w-5 h-5 mr-2" >+1 302 464 0950</Phon>
               </Phone>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-              >
-                <Mail className="w-5 h-5 mr-2" >kleber@ziontechgroup.com</Mail>
+              ></a>
+                <Mail className="w-5 h-5 mr-2" >kleber@ziontechgroup.com</Mai>
               </Mail>
             </div>
-            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center">
-              <MapPin className="w-4 h-4 mr-2" />
+            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center"></div>
+              <MapPin className="w-4 h-4 mr-2" /></MapPi>
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Services<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive business intelligence solutions to unlock the power of your data.<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{biServices.map((service, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <service.icon className="w-12 h-12 text-purple-400 mr-4" />
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}<span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">{service.category}<p className="text-gray-300 mb-6">{service.description}</p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Our</h2></<<h2>BI</h2> Services<p className="text-xl text-gray-300 max-w-3 xl mx-auto"></p></<<<p>Comprehensive</p></<<p>business</p> intelligence solutions to unlock the power of your data.<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{biServices.map((service, index) => (</div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8"></div>
+                <div className="flex items-center mb-4"></div>
+                  <service.icon className="w-12 h-12 text-purple-400 mr-4" /></servic>
+                  <div></div>
+                    <h3 className="text-2 xl font-bold text-white mb-2"></h>{service.title}<span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full"></spa>{service.category}<p className="text-gray-300 mb-6">{service.description}</p>
 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl font-bold text-white">{service.price}<span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
+                <div className="mb-6"></div>
+                  <div className="flex items-center justify-between mb-2"></div>
+                    <span className="text-2 xl font-bold text-white"></spa>{service.price}<span className="text-sm text-gray-400">Market: {service.marketPrice}</spa>
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{feature}</CheckCircle>
+                <div className="mb-6"></div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4><ul className="space-y-2">{service.features.map((feature, idx) => (</u>
+                      <li key={idx} className="flex items-center text-gray-300"></l>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{feature}</CheckCircl>
                       </CheckCircle>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <Star className="w-4 h-4 text-yellow-400 mr-2" >{benefit}</Star>
+                <div className="mb-6"></div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4><ul className="space-y-2">{service.benefits.map((benefit, idx) => (</u>
+                      <li key={idx} className="flex items-center text-gray-300"></l>
+                        <Star className="w-4 h-4 text-yellow-400 mr-2" >{benefit}</Sta>
                       </Star>
                     ))}
                   </ul>
                 </div>
 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, idx) => (<span key={idx} className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm">{tech}</span>
+                <div className="mb-6"></div>
+                  <h4 className="text-lg font-semibold text-white mb-3">Technologies:</h4><div className="flex flex-wrap gap-2"></div>{service.technologies.map((tech, idx) => (<span key={idx} className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm">{tech}</spa>
                       </span>
                     ))}
-                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">Get Started</button>
+                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">Get Started</butto>
                 </button>
               </div>
             ))}
@@ -238,13 +237,13 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process<p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-semibold text-white mb-2">{step.title}<p className="text-gray-300">{step.description}</p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Our</h2></<<h2>BI</h2> Process<p className="text-xl text-gray-300 max-w-3 xl mx-auto"></p></<<<p>A</p></<<p>proven</p> methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                  <span className="text-2 xl font-bold text-white"></spa>{step.step}<h3 className="text-xl font-semibold text-white mb-2"></h>{step.title}<p className="text-gray-300">{step.description}</p>
               </div>
             ))}
           </div>
@@ -252,13 +251,13 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our BI Services?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of data-driven decision making with our expert BI solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Why</h2></<<h2>Choose</h2> Our BI Services?<p className="text-xl text-gray-300 max-w-3 xl mx-auto"></p></<<<p>Experience</p></<<p>the</p> power of data-driven decision making with our expert BI solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                  <CheckCircle className="w-8 h-8 text-white" /></CheckCircl>
                 <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
@@ -267,28 +266,28 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?<p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600"></sectio>
+        <div className="max-w-4 xl mx-auto text-center"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6"></h2></<<<h2>Ready</h2></<<h2>to</h2> Transform Your Data?<p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" >Call Now</Phone>
+            ></a>
+              <Phone className="w-5 h-5 mr-2" >Call Now</Phon>
             </Phone>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
-            >
-              <Mail className="w-5 h-5 mr-2" >Email Us</Mail>
+            ></a>
+              <Mail className="w-5 h-5 mr-2" >Email Us</Mai>
             </Mail>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

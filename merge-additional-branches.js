@@ -15,26 +15,26 @@ import fs from 'fs';
 
 //Step 2: Get additional branches to merge
 const additionalBranches = [
-  'y7v6qh-codex/implement-eprivacy-directive-consent-banner',
-  'y8b6t3-codex/fix-type-errors-in-typescript-files',
-  'y8pqmi-codex/fix-services-fetch-and-fallback-logic',
-  'ybn8hb-codex/fix-npm-eio-error-during-install',
-  'ye4cs2-codex/add-i18n-support-with-next-i18next',
-  'ye7hs1-codex/fix-npm-eio-error-during-install',
+  'y7 v6 qh-codex/implement-eprivacy-directive-consent-banner',
+  'y8 b6 t3-codex/fix-type-errors-in-typescript-files',
+  'y8 pqmi-codex/fix-services-fetch-and-fallback-logic',
+  'ybn8 hb-codex/fix-npm-eio-error-during-install',
+  'ye4 cs2-codex/add-i18 n-support-with-next-i18 next',
+  'ye7 hs1-codex/fix-npm-eio-error-during-install',
   'yggxu4-codex/implement-checkout-flow-with-auth-redirect',
   'yjjjqb-codex/check-logs-and-fix-errors',
   'ypnv26-codex/fix-talent-profile-rendering-issues',
   'yuysa9-codex/fix-errors-and-improve-project',
-  'yvyz2j-codex/add-i18n-support-with-next-i18next',
-  'yw5tz2-codex/implement-instant-messaging-for-negotiations',
+  'yvyz2 j-codex/add-i18 n-support-with-next-i18 next',
+  'yw5 tz2-codex/implement-instant-messaging-for-negotiations',
   'yxewy6-codex/fix-toggle-icon-layout-issue',
-  'z4gpnj-codex/implement-axios-interceptor-for-api-failures',
-  'z5t0go-codex/fix-login-form-submission',
-  'zdh03e-codex/fix-link-under-register-form',
+  'z4 gpnj-codex/implement-axios-interceptor-for-api-failures',
+  'z5 t0 go-codex/fix-login-form-submission',
+  'zdh03 e-codex/fix-link-under-register-form',
   'zhnryo-codex/implement-eprivacy-directive-consent-banner',
   'zjqw50-codex/fix-ui-and-functional-bugs',
   'zreeup-codex/check-logs-and-fix-errors',
-  'zzdg1a-codex/add-i18n-support-with-next-i18next',
+  'zzdg1 a-codex/add-i18 n-support-with-next-i18 next',
 ];
 
 // //Step 3: Enhanced conflict resolution function

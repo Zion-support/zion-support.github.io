@@ -16,7 +16,7 @@ const navigationLinks = [
   '/ai-lead-generation', '/ai-document-processing', '/ai-seo-optimizer', '/ai-ecommerce-solutions',
   '/ai-financial-analyzer', '/ai-video-generation', '/ai-voice-cloning', '/ai-music-composition',
   '/ai-fashion-design', '/ai-fitness-coach', '/ai-workflow-automation', '/ai-sales-automation',
-  '/ai-data-visualization', '/ai-3d-generation',
+  '/ai-data-visualization', '/ai-3 d-generation',
   
   // AI Services
   '/machine-learning', '/ai-business-intelligence', '/ai-supply-chain', '/ai-quality-assurance',

@@ -14,8 +14,7 @@ interface AccessibilitySettings {
 }
 
 const AccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
+  const [settings, setSettings] = useState<AccessibilitySettings>({</AccessibilitySettings></<<<AccessibilitySettings>highContrast</AccessibilitySettings></AccessibilitySettings>: false,
     reducedMotion: false,
     fontSize: 'medium',
     focusVisible: true,
@@ -124,27 +123,27 @@ const AccessibilityEnhancer: React.FC = () => {
     style.textContent = `
       /* High contrast mode */
       .high-contrast {
-        --neon-cyan: #00ffff;
-        --neon-purple: #ff00ff;
+        --neon-cyan: #00 ffff;
+        --neon-purple: #ff00 ff;
         --neon-pink: #ff0080;
-        --neon-green: #00ff00;
+        --neon-green: #00 ff00;
         --neon-orange: #ff8000;
         --neon-red: #ff0040;
         --neon-yellow: #ffff00;
-        --neon-blue: #0080ff;
+        --neon-blue: #0080 ff;
       }
 
       .high-contrast .neon-text {
-        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+        text-shadow: 0 0 10 px currentColor, 0 0 20 px currentColor, 0 0 30 px currentColor;
       }
 
       .high-contrast .cyber-card {
-        border-width: 2px;
+        border-width: 2 px;
         border-color: var(--neon-cyan);
       }
 
       .high-contrast .cyber-button {
-        border-width: 2px;
+        border-width: 2 px;
         border-color: var(--neon-cyan);
       }
 
@@ -152,59 +151,59 @@ const AccessibilityEnhancer: React.FC = () => {
       .reduced-motion *,
       .reduced-motion *::before,
       .reduced-motion *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration: 0.01 ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.01 ms !important;
       }
 
       /* Font size adjustments */
       .font-small {
-        font-size: 0.875rem;
+        font-size: 0.875 rem;
       }
 
       .font-medium {
-        font-size: 1rem;
+        font-size: 1 rem;
       }
 
       .font-large {
-        font-size: 1.125rem;
+        font-size: 1.125 rem;
       }
 
       /* Focus visible improvements */
       .focus-visible *:focus {
-        outline: 2px solid var(--neon-cyan);
-        outline-offset: 2px;
+        outline: 2 px solid var(--neon-cyan);
+        outline-offset: 2 px;
       }
 
       .focus-visible .cyber-button:focus {
-        box-shadow: 0 0 0 2px var(--neon-cyan);
+        box-shadow: 0 0 0 2 px var(--neon-cyan);
       }
 
       /* Skip link */
       .skip-link {
         position: absolute;
-        top: -40px;
-        left: 6px;
+        top: -40 px;
+        left: 6 px;
         background: var(--neon-cyan);
         color: #000;
-        padding: 8px;
+        padding: 8 px;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 4 px;
         z-index: 1000;
         font-weight: bold;
       }
 
       .skip-link:focus {
-        top: 6px;
+        top: 6 px;
       }
 
       /* Screen reader only content */
       .sr-only {
         position: absolute;
-        width: 1px;
-        height: 1px;
+        width: 1 px;
+        height: 1 px;
         padding: 0;
-        margin: -1px;
+        margin: -1 px;
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;

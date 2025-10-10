@@ -9,8 +9,7 @@ interface AccessibilitySettings {
 }
 
 const EnhancedAccessibility: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 'medium',
+  const [settings, setSettings] = useState<AccessibilitySettings>({</AccessibilitySettings></<<<AccessibilitySetting>fontSize</AccessibilitySetting></AccessibilitySetting>: 'medium',
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
@@ -107,18 +106,16 @@ const EnhancedAccessibility: React.FC = () => {
       setIsVisible(false);
     }
   };
-</AccessibilitySettings>
-  return (</AccessibilitySettings>
-    <>
+</<<<AccessibilitySettings>return</AccessibilitySettings></AccessibilitySettings> (
+    <>{}</>{}{}
       {/* Accessibility Toggle Button */}
       <button
         className="fixed bottom-4 right-4 z-50 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-all duration-200"
-        onClick={() =>setIsVisible(!isVisible)}
-        aria-label="Open accessibility settings"
+        onClick={() =>setIsVisible(!isVisible)}</button></<<<butto>aria</butto></butto>-label="Open accessibility settings"
         title="Accessibility Settings"</button>
       ></button>
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></sv>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6 V4 m0 2 a2 2 0 100 4 m0-4 a2 2 0 110 4 m-6 8 a2 2 0 100-4 m0 4 a2 2 0 100 4 m0-4 v2 m0-6 V4 m6 6 v10 m6-2 a2 2 0 100-4 m0 4 a2 2 0 100 4 m0-4 v2 m0-6 V4" /></path>
         </svg>
       </button>
 
@@ -130,21 +127,19 @@ const EnhancedAccessibility: React.FC = () => {
           role="dialog"
           aria-labelledby="accessibility-title"
           aria-modal="true"
-        >
-          <div className="flex justify-between items-center mb-4">
-            <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900">Accessibility Settings<button
-              onClick={() =>setIsVisible(false)}
-              className="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded"
+        ></div>
+          <div className="flex justify-between items-center mb-4"></div>
+            <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900"></h2></<<<h2>Accessibility</h2></<<h2>Settings</h2><button
+              onClick={() =>setIsVisible(false)}</button></<<<butto>className</butto></butto>="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded"
               aria-label="Close accessibility settings"</button>
             ></button>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></sv>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18 L18 6 M6 6 l12 12" /></path>
               <div className="space-y-4">{/* Font Size */}</div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Font Size<div className="flex space-x-2">{(['small', 'medium', 'large'] as const).map((size) => (<button
+            <div></div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Font Size</label><div className="flex space-x-2"></div>{(['small', 'medium', 'large'] as const).map((size) => (<button
                     key={size}
-                    onClick={() =>{
-                      updateSetting('fontSize', size);
+                    onClick={() =>{</button></<<<butto>updateSetting</butto></butto>('fontSize', size);
                       announceToScreenReader(`Font size changed to ${size}`);
                     }}
                     className={`px-3 py-1 rounded text-sm ${
@@ -160,10 +155,9 @@ const EnhancedAccessibility: React.FC = () => {
             </div>
 
             {/* High Contrast */}
-            <div className="flex items-center justify-between">
-              <label className="text-sm font-medium text-gray-700">High Contrast<button
-                onClick={() =>{
-                  updateSetting('highContrast', !settings.highContrast);
+            <div className="flex items-center justify-between"></div>
+              <label className="text-sm font-medium text-gray-700">High Contrast</label><button
+                onClick={() =>{</button></<<<butto>updateSetting</butto></butto>('highContrast', !settings.highContrast);
                   announceToScreenReader(`High contrast ${!settings.highContrast ? 'enabled' : 'disabled'}`);
                 }}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -176,15 +170,14 @@ const EnhancedAccessibility: React.FC = () => {
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
             {/* Reduced Motion */}
-            <div className="flex items-center justify-between">
-              <label className="text-sm font-medium text-gray-700">Reduced Motion<button
-                onClick={() =>{
-                  updateSetting('reducedMotion', !settings.reducedMotion);
+            <div className="flex items-center justify-between"></div>
+              <label className="text-sm font-medium text-gray-700">Reduced Motion</label><button
+                onClick={() =>{</button></<<<butto>updateSetting</butto></butto>('reducedMotion', !settings.reducedMotion);
                   announceToScreenReader(`Reduced motion ${!settings.reducedMotion ? 'enabled' : 'disabled'}`);
                 }}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -197,15 +190,14 @@ const EnhancedAccessibility: React.FC = () => {
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
             {/* Screen Reader Optimizations */}
-            <div className="flex items-center justify-between">
-              <label className="text-sm font-medium text-gray-700">Screen Reader Optimized<button
-                onClick={() =>{
-                  updateSetting('screenReader', !settings.screenReader);
+            <div className="flex items-center justify-between"></div>
+              <label className="text-sm font-medium text-gray-700">Screen Reader Optimized</label><button
+                onClick={() =>{</button></<<<butto>updateSetting</butto></butto>('screenReader', !settings.screenReader);
                   announceToScreenReader(`Screen reader optimizations ${!settings.screenReader ? 'enabled' : 'disabled'}`);
                 }}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -218,15 +210,14 @@ const EnhancedAccessibility: React.FC = () => {
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.screenReader ? 'translate-x-6' : 'translate-x-1'
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
             {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between">
-              <label className="text-sm font-medium text-gray-700">Enhanced Keyboard Navigation<button
-                onClick={() =>{
-                  updateSetting('keyboardNavigation', !settings.keyboardNavigation);
+            <div className="flex items-center justify-between"></div>
+              <label className="text-sm font-medium text-gray-700">Enhanced Keyboard Navigation</label><button
+                onClick={() =>{</button></<<<butto>updateSetting</butto></butto>('keyboardNavigation', !settings.keyboardNavigation);
                   announceToScreenReader(`Enhanced keyboard navigation ${!settings.keyboardNavigation ? 'enabled' : 'disabled'}`);
                 }}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
@@ -239,14 +230,13 @@ const EnhancedAccessibility: React.FC = () => {
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
             {/* Reset Button */}
             <button
-              onClick={() =>{
-                const defaultSettings: AccessibilitySettings = {,
+              onClick={() =>{</button></<<<butto>const</butto></<<butto>defaultSettings</butto>: AccessibilitySettings = {,
     fontSize: 'medium',
                   highContrast: false,
                   reducedMotion: false,
@@ -259,8 +249,7 @@ const EnhancedAccessibility: React.FC = () => {
                 announceToScreenReader('Accessibility settings reset to default');
               }}
               className="w-full bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-colors"
-            ></button>
-              Reset to Default</button>
+            ></<<<button>Reset</button></<<button>to</button></<button>Default</button>
             </button>
           </div>
         </div>
@@ -272,7 +261,7 @@ const EnhancedAccessibility: React.FC = () => {
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
       >Skip to main content</a>
       </a>
-    </>
+    
   );
 };
 

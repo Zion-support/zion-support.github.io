@@ -46,8 +46,7 @@ function processFile(filePath) {
     for (let i = 0; i < lines.length; i++) {
 
       // Skip broken metadata lines
-      if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
-        skipUntilSemicolon = true;
+      if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {</title>skipUntilSemicolon</title> = true;
         continue;
       }
 
@@ -92,16 +91,16 @@ function processFile(filePath) {
 
     // Update Helmet with extracted metadata
     if (metadata.title || metadata.description) {
-      //       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
+      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {
-        const newHelmet = `<Helmet>
+        const newHelmet = `<Helmet></Helmet>
         <title>${metadata.title || 'Zion Tech Group'}</title>
-        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />
-        ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}
-        ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}
+        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
+        ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}</meta>
+        ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}</meta>
       </Helmet>`;
 
-        content = content.replace(/(<Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
+        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
       }
     }

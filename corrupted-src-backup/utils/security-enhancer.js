@@ -95,7 +95,7 @@ class SecurityEnhancer {
   }
 
   generateCSRFToken() {
-//     const array = new Uint8Array(32);
+//     const array = new Uint8 Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(
       ''
@@ -251,7 +251,7 @@ class SecurityEnhancer {
       /<embed/i,
     ];
 
-    return !xssPatterns.some(pattern => pattern.test(text));
+    return !xssPatterns.some(pattern => pattern.test(text));</script>
   }
 
   setupURLValidation() {
@@ -293,7 +293,7 @@ class SecurityEnhancer {
       'text/plain',
     ];
 
-    const maxSize = 10 * 1024 * 1024; // 10MB
+    const maxSize = 10 * 1024 * 1024; // 10 MB
 
     return allowedTypes.includes(file.type) && file.size <= maxSize;
   }
@@ -423,8 +423,7 @@ class SecurityEnhancer {
     const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
 
 //     const content = node.innerHTML || node.textContent || '';
-    if (maliciousPatterns.some(pattern => pattern.test(content))) {
-      this.reportSecurityEvent('malicious_content', {
+    if (maliciousPatterns.some(pattern => pattern.test(content))) {</script>this</script>.reportSecurityEvent('malicious_content', {
         content,
         node: node.tagName,
       });
@@ -460,8 +459,8 @@ class SecurityEnhancer {
     errorDiv.className = 'input-error';
     errorDiv.textContent = message;
     errorDiv.style.color = 'red';
-    errorDiv.style.fontSize = '12px';
-    errorDiv.style.marginTop = '4px';
+    errorDiv.style.fontSize = '12 px';
+    errorDiv.style.marginTop = '4 px';
 
     input.parentNode.appendChild(errorDiv);
     input.style.borderColor = 'red';
@@ -481,16 +480,16 @@ class SecurityEnhancer {
     warning.innerHTML = `
       <div style="
         position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #ff6b6b;
+        top: 20 px;
+        right: 20 px;
+        background: #ff6 b6 b;
         color: white;
-        padding: 15px;
-        border-radius: 4px;
+        padding: 15 px;
+        border-radius: 4 px;
         z-index: 9999;
-        max-width: 300px;
-      ">
-        <strong>Security Warning:</strong> ${message}
+        max-width: 300 px;
+      "></div>
+        <strong>Security</strong> Warning:</strong> ${message}
         <button onclick="this.parentElement.parentElement.remove()" style="
           background: none;
           border: none;
@@ -558,7 +557,7 @@ class SecurityEnhancer {
   }
 
   sanitizeText(text) {
-    return text.replace(/[<>]/g, '');
+    return text.replace(/[<>{}]/g, '');
   }
 }
 

@@ -57,26 +57,26 @@ const Breadcrumb: React.FC = () => {
   };
 
   return (
-    <>
-      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex items-center space-x-2 text-sm">
+    <>{}
+      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3"></nav>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <ol className="flex items-center space-x-2 text-sm"></ol>
             {breadcrumbs.map((item, index) => (
-              <li key={item.href} className="flex items-center">
+              <li key={item.href} className="flex items-center"></li>
                 {index > 0 && (
-                  <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                  <ChevronRight className="w-4 h-4 text-gray-400 mx-2" /></ChevronRight>
                 )}
                 
                 {item.current ? (
-                  <span className="text-cyan-400 font-medium" aria-current="page">
+                  <span className="text-cyan-400 font-medium" aria-current="page"></spa>
                     {item.name}
                   </span>
                 ) : (
                   <Link
                     to={item.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
-                  >
-                    {index === 0 && <Home className="w-4 h-4 mr-1" />}
+                  ></Link>
+                    {index === 0 && <Home className="w-4 h-4 mr-1" />}</Home>
                     {item.name}
                   </Link>
                 )}
@@ -90,8 +90,8 @@ const Breadcrumb: React.FC = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-    </>
+      /></script>
+    
   );
 };
 

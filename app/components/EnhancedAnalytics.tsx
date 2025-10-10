@@ -12,8 +12,7 @@ interface EnhancedAnalyticsProps {
   enableHeatmapTracking?: boolean;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
-  enableGoogleAnalytics = true,
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({</EnhancedAnalyticsProps></<<<EnhancedAnalyticsProp>enableGoogleAnalytics</EnhancedAnalyticsProp></EnhancedAnalyticsProp> = true,
   enableGoogleTagManager = true,
   enableFacebookPixel = false,
   enableCustomEvents = true,
@@ -190,7 +189,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / documentHeight) * 100);
 
-      if (scrollPercent > maxScrollDepth) {
+      if (<<<scrollPercent>maxScrollDepth</scrollPercent></scrollPercent>) {
         maxScrollDepth = scrollPercent;
 
         // Track at 25%, 50%, 75%, 100%

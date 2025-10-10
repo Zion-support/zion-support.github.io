@@ -52,7 +52,7 @@ const fixComponentNames = () => {
       }
       
       // Fix title in JSX
-      const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
+      const titleMatch = content.match(/<h1[^></h1>]*>([^<]+)<\/h1>/);
       if (titleMatch) {
         const oldTitle = titleMatch[1];
         const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase());

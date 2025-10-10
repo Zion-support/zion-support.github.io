@@ -4,7 +4,7 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {</PerformanceOptimizerProps>
   // Intersection Observer for lazy loading
   const setupIntersectionObserver = useCallback(() => {
     if ('IntersectionObserver' in window) {
@@ -20,7 +20,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
           }
         });
       }, {
-        rootMargin: '50px 0px',
+        rootMargin: '50 px 0 px',
         threshold: 0.01
       });
 
@@ -54,7 +54,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
   // Critical CSS inlining
   const inlineCriticalCSS = useCallback(() => {
     const criticalCSS = `
-      .hero-section { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }
+      .hero-section { opacity: 0; animation: fadeIn 0.6 s ease-out forwards; }
       @keyframes fadeIn { to { opacity: 1; } }
       .loading { display: none; }
       .loaded .loading { display: none; }
@@ -184,7 +184,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
     monitorWebVitals();
   }, []);
 
-  return <>{children}</>;
+  return <>{children};
 
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 

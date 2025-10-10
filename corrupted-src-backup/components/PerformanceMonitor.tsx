@@ -7,15 +7,11 @@ interface PerformanceMonitorProps {
   enableLongTaskMonitoring?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({</PerformanceMonitorProps>children</PerformanceMonitorProps>, 
   enableReporting = true,
   enableLongTaskMonitoring = true 
 }) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
-  const [, setLongTasks] = useState<PerformanceEntry[]>([]);
-
-  useEffect(() => {
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});</WebVitalsMetrics>const</WebVitalsMetrics> [, setLongTasks] = useState<PerformanceEntry[]>([]);</PerformanceEntry>useEffect</PerformanceEntry>(() => {
     // Initialize performance monitoring
     // Add critical resource hints manually
     if (typeof document !== 'undefined') {
@@ -109,7 +105,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 //       }
   }, [metrics]);
 
-  return <>{children}</>;
+  return <>{children};
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMonitorProps {
@@ -119,19 +115,17 @@ interface PerformanceMonitorProps {
   onBudgetViolation?: (violations: string[]) => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = true,
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({</PerformanceMonitorProps>enabled</PerformanceMonitorProps> = true,
   budget = {
-    maxBundleSize: 500, // 500KB
-    maxImageSize: 100, // 100KB
+    maxBundleSize: 500, // 500 KB
+    maxImageSize: 100, // 100 KB
     maxFirstLoad: 3000, // 3 seconds
     maxInteractive: 2000 // 2 seconds
   },
   onMetricsUpdate,
   onBudgetViolation
 }) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});</WebVitalsMetrics>const</WebVitalsMetrics> [isVisible, setIsVisible] = useState(false);
   const [budgetStatus, setBudgetStatus] = useState<{ passed: boolean; violations: string[] }>({ passed: true, violations: [] });
 
   const updateMetrics = useCallback(() => {
@@ -199,11 +193,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   if (!enabled) return null;
 
   return (
-    <div className="performance-monitor">
+    <div className="performance-monitor"></div>
       {/* Toggle button */}
       <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        onClick={() => setIsVisible(!isVisible)}</butto>className</butto>="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
         aria-label="Toggle performance monitor"
       >
         📊
@@ -211,12 +204,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       {/* Performance panel */}
       {isVisible && (
-        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
-          <div className="flex justify-between items-center mb-3">
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"></div>
+          <div className="flex justify-between items-center mb-3"></div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
             <button
-              onClick={() => setIsVisible(false)}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              onClick={() => setIsVisible(false)}</butto>className</butto>="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label="Close performance monitor"
             >
               ✕
@@ -224,37 +216,37 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
 
           {/* Metrics */}
-          <div className="space-y-2 mb-4">
-            <div className="text-sm">
+          <div className="space-y-2 mb-4"></div>
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">FCP:</span>
-              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}></spa>
                 {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N/A'}
               </span>
             </div>
-            <div className="text-sm">
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">LCP:</span>
-              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}></spa>
                 {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N/A'}
               </span>
             </div>
-            <div className="text-sm">
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">TTFB:</span>
-              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}></spa>
                 {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N/A'}
               </span>
             </div>
           </div>
 
           {/* Budget Status */}
-          <div className="border-t pt-3">
-            <div className="flex items-center gap-2 mb-2">
+          <div className="border-t pt-3"></div>
+            <div className="flex items-center gap-2 mb-2"></div>
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Status:</span>
-              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>
+              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}></spa>
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
               </span>
             </div>
             {budgetStatus.violations.length > 0 && (
-              <div className="text-xs text-red-600 dark:text-red-400">
+              <div className="text-xs text-red-600 dark:text-red-400"></div>
                 {budgetStatus.violations.map((violation, index) => (
                   <div key={index}>• {violation}</div>
                 ))}
@@ -263,16 +255,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
 
           {/* Connection Quality */}
-          <div className="border-t pt-3 mt-3">
-            <div className="text-sm">
+          <div className="border-t pt-3 mt-3"></div>
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">Connection:</span>
-              <span className="ml-2 text-blue-600">
+              <span className="ml-2 text-blue-600"></spa>
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
               </span>
             </div>
-            <div className="text-sm">
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">WebP Support:</span>
-              <span className="ml-2 text-blue-600">
+              <span className="ml-2 text-blue-600"></spa>
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
               </span>
             </div>

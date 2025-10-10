@@ -13,12 +13,12 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'global-energy-digital-twin-850m',
-    title: 'Global Energy Corporation: $850M Digital Twin Transformation Success',
+    id: 'global-energy-digital-twin-850 m',
+    title: 'Global Energy Corporation: $850 M Digital Twin Transformation Success',
     company: 'Global Energy Corporation (Fortune 100)',
     industry: 'Energy & Utilities',
     challenge:
-      'Critical infrastructure aging with $2.3B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction',
+      'Critical infrastructure aging with $2.3 B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction',
     solution:
       'Enterprise AI-Powered Digital Twin Platform with real-time monitoring, predictive analytics, and autonomous optimization across 125,000 assets',
     results: [
@@ -34,7 +34,7 @@ export const caseStudies: CaseStudy[] = [
       'TensorFlow',
       'Apache Kafka',
       'Azure ML',
-      'Unity 3D',
+      'Unity 3 D',
       'Kubernetes',
     ],
     duration: '18 months',
@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
       'Reduced analysis time from 40 hours to 2 hours per week',
       'Improved prediction accuracy by 85%',
       'Increased client satisfaction scores by 40%',
-      'Generated $2.3M in additional revenue through better insights',
+      'Generated $2.3 M in additional revenue through better insights',
     ],
     technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL', 'Docker'],
     duration: '12 weeks',
@@ -91,7 +91,7 @@ export const caseStudies: CaseStudy[] = [
       'Increased conversion rates from 2.1% to 4.7%',
       'Reduced cart abandonment from 78% to 45%',
       'Boosted average order value by 35%',
-      'Generated $1.8M in additional revenue in 6 months',
+      'Generated $1.8 M in additional revenue in 6 months',
     ],
     technologies: ['Machine Learning', 'Python', 'Vue.js', 'Redis', 'Kubernetes'],
     duration: '10 weeks',
@@ -103,13 +103,13 @@ export const caseStudies: CaseStudy[] = [
     company: 'Precision Manufacturing Co.',
     industry: 'Manufacturing',
     challenge:
-      'Equipment downtime was costing $50K per hour with no predictive maintenance capabilities, leading to unexpected failures.',
+      'Equipment downtime was costing $50 K per hour with no predictive maintenance capabilities, leading to unexpected failures.',
     solution:
       'Developed an IoT platform with real-time monitoring, predictive maintenance algorithms, and automated alert systems for equipment optimization.',
     results: [
       'Reduced unplanned downtime by 65%',
       'Improved equipment efficiency by 25%',
-      'Saved $2.1M annually in maintenance costs',
+      'Saved $2.1 M annually in maintenance costs',
       'Increased production output by 18%',
     ],
     technologies: ['IoT Sensors', 'Edge Computing', 'Python', 'React', 'Azure IoT Hub'],
@@ -128,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
     results: [
       'Reduced churn rate from 15% to 8%',
       'Improved user engagement by 45%',
-      'Increased MRR by $500K through better retention',
+      'Increased MRR by $500 K through better retention',
       'Enabled 90% faster product decision-making',
     ],
     technologies: ['Apache Kafka', 'ClickHouse', 'React', 'D3.js', 'AWS'],
@@ -148,7 +148,7 @@ export const caseStudies: CaseStudy[] = [
       'Reduced threat detection time from 6 hours to 15 minutes',
       'Improved threat detection accuracy to 98%',
       'Achieved 100% compliance audit success rate',
-      'Prevented $3.2M in potential security breaches',
+      'Prevented $3.2 M in potential security breaches',
     ],
     technologies: ['SIEM', 'Machine Learning', 'Python', 'Elasticsearch', 'Kubernetes'],
     duration: '20 weeks',
@@ -163,10 +163,10 @@ export const caseStudies: CaseStudy[] = [
     solution:
       'Implemented end-to-end tracing from device to POP, latency budgets, and automated error budget alerts across 40 regions.',
     results: [
-      'Cut P95 latency from 180ms to 85ms',
+      'Cut P95 latency from 180 ms to 85 ms',
       'Reduced incident MTTR by 62%',
       'Decreased churn by 18% in 2 quarters',
-      '$4.7M annual SLA penalty savings',
+      '$4.7 M annual SLA penalty savings',
     ],
     technologies: ['OpenTelemetry', 'ClickHouse', 'Edge Workers', 'TypeScript', 'Kubernetes'],
     duration: '18 weeks',
@@ -185,7 +185,7 @@ export const caseStudies: CaseStudy[] = [
       'Increased self-service deflection by 32%',
       'Raised CSAT from 3.7 to 4.5',
       'Cut average handle time by 28%',
-      '$3.1M/year support cost savings',
+      '$3.1 M/year support cost savings',
     ],
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',

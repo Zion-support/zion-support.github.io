@@ -23,7 +23,7 @@ function fixUnusedVariables(content) {
 
   // Fix unused variables in function parameters
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, (varName) => {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
         return `_${varName}`;
       }
@@ -33,7 +33,7 @@ function fixUnusedVariables(content) {
 
   // Fix arrow function parameters
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, (varName) => {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
         return `_${varName}`;
       }
@@ -61,7 +61,7 @@ function fixAnyTypes(content) {
 // Function to fix JSX parsing errors
 function fixJSXErrors(content) {
   // Fix unclosed JSX tags
-  content = content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
+  content = content.replace(/<div([^></div>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
     if (!content.includes('</div>')) {
       return match + '</div>';
     }
@@ -69,8 +69,8 @@ function fixJSXErrors(content) {
   });
 
   // Fix JSX expressions with multiple parent elements
-  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
-    return `<div>${match.replace(/<>\s*|<\/>/g, '')}</div>`;
+  content = content.replace(/<>{}\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
+    return `<div></div>${match.replace(/<>{}\s*|<\/>/g, '')}</div>`;
   });
 
   return content;
@@ -83,7 +83,7 @@ function removeUnusedImports(content) {
   const usedImports = new Set();
   
   // Find all used identifiers
-  const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;
+  const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9 _$]*\b/g;
   const body = lines.slice(1).join('\n'); // Skip first line (imports)
   
   let match;

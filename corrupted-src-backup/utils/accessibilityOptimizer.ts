@@ -20,8 +20,7 @@ class AccessibilityOptimizer {
   private config: AccessibilityConfig;
   private results: OptimizationResult[] = [];
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<AccessibilityConfig> = {}) {</AccessibilityConfig>this</AccessibilityConfig>.config = {
       enableARIALabels: true,
       enableKeyboardNavigation: true,
       enableColorContrast: true,

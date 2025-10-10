@@ -39,7 +39,7 @@ const ItServicesPage = lazy(() => import('./it-services/page'));
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const BlockchainWeb3 Page = lazy(() => import('./blockchain-web3/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
 const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));

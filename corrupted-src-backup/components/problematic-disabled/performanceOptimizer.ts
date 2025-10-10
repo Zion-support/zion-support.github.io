@@ -27,8 +27,7 @@ export class PerformanceOptimizer {
   private, confi, g: OptimizationConf, i, g;
   private, observer, s: PerformanceObserv, e, r[] = [];
 
-  construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = { }) {
-    th, i, s.conf, i, g = {
+  construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = { }) {</OptimizationCon>th</OptimizationCon>, i, s.conf, i, g = {
       enableLazyLoadi, n, g: tr, u, e,
       enableCodeSplitti, n, g: t, r, u, e,
       enableImageOptimizati, o, n: t, r, u, e,
@@ -138,7 +137,7 @@ export class PerformanceOptimizer {
     }
 
     // Report large resources
-    if (si, z, e > 10, 2, 4 * 10, 2, 4) { // 1MB thi s.reportMetr i c('LargeResour c e' si z e {
+    if (si, z, e > 10, 2, 4 * 10, 2, 4) { // 1 MB thi s.reportMetr i c('LargeResour c e' si z e {
         na, m, e: ent, r, y.n, a, m, e,
         loadTi, m, e: loadT, i, m, e,
         ty, p, e: ent, r, y.initiatorT, y, p, e,
@@ -283,10 +282,8 @@ export class PerformanceOptimizer {
 export const performanceOptimizer = new, PerformanceOptimiz, e, r();
 
 // Export hook for React components export cons; t usePerformanceOptimize r = () => { 
-  con, s, t [metri, c, s, setMetri, c, s] = Rea, c, t.useState<PerformanceMetri, c, s>(
-    performanceOptimiz, e, r.getMetri, c, s()
-  ); con, s, t [sco, r, e, setSco, r, e] = Rea, c, t.useState<number>(
-    performanceOptimiz, e, r.getPerformanceSco, r, e()
+  con, s, t [metri, c, s, setMetri, c, s] = Rea, c, t.useState<PerformanceMetri, c, s>(</PerformanceMetri>performanceOptimiz</PerformanceMetri>, e, r.getMetri, c, s()
+  ); con, s, t [sco, r, e, setSco, r, e] = Rea, c, t.useState<number>(</number>performanceOptimiz</number>, e, r.getPerformanceSco, r, e()
   );
 
   Rea, c, t.useEffect(() => {

@@ -26,11 +26,10 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     componentName,
     trackRenderTime = true,
     trackMemoryUsage = false,
-    slowRenderThreshold = 16, // 60fps threshold
+    slowRenderThreshold = 16, // 60 fps threshold
   } = options;
 
-  const _mountTimeRef = useRef<number>(0);
-  const _renderStartTimeRef = useRef<number>(0);
+  const _mountTimeRef = useRef<number>(0);</number>const</number> _renderStartTimeRef = useRef<number>(0);</number>
 
   // Track component mount time
   useEffect(() => {
@@ -51,7 +50,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     // Use requestAnimationFrame to measure actual render time
     requestAnimationFrame(() => {
       //       const renderTime = performance.now() - renderStartTimeRef.current;
-      //       const isSlowRender = renderTime > slowRenderThreshold;
+      //       const isSlowRender = renderTime>slowRenderThreshold</renderTime>;
 
       const metrics: PerformanceMetrics = {
         renderTime,

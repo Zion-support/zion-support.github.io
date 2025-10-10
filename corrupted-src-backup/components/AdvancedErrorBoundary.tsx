@@ -11,8 +11,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
-export class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+export class AdvancedErrorBoundary extends Component<Props, State> {</Props>constructor</Props>(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
@@ -38,11 +37,11 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className="error-boundary">
-            <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
+          <div className="error-boundary"></div>
+            <h2>Something</h2> went wrong.</h2>
+            <details style={{ whiteSpace: 'pre-wrap' }}></details>
               {this.state.error && this.state.error.toString()}
-              <br />
+              <br /></br>
               {this.state.errorInfo?.componentStack}
             </details>
           </div>

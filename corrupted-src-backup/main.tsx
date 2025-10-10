@@ -24,8 +24,8 @@ if (!container) {
 
 const _root = createRoot(container);
 root.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode></React>
+    <App /></App>
   </React.StrictMode>
 );
 

@@ -21,9 +21,7 @@ for (const filePath of files) {
       return match;
     });
 
-    //Fix malformed <br> tags
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
-    content = content.replace(/<br\s*>\s*$/gm, '<br />');
+    //Fix malformed <br>tags</br></br>content</br> = content.replace(/<br\s*>\s*<\/br>/g, '<br />');</br>content</br> = content.replace(/<br\s*>\s*$/gm, '<br />');</br>
 
     //Fix backticks after JSX tags
     content = content.replace(/<(\w+)`/g, '<$1');

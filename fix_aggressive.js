@@ -45,22 +45,22 @@ function fixCorruptedSyntax(text) {
 
   //Fix corrupted function declarations
   fixed = fixed.replace(
-    /export\s*default\s*function\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
+    /export\s*default\s*function\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\(/g,
     'export default function $1('
   );
   fixed = fixed.replace(
-    /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
+    /const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*:\s*React\.FC\s*=\s*\(/g,
     'const $1: React.FC = ('
   );
-  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(/g, 'const $1 = (');
+  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (');
 
   //Fix corrupted JSX
-  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9_$]*)\s*([^>]*)\s*>/g, '<$1 $2>');
-  fixed = fixed.replace(/<\/\s*([A-Z][a-zA-Z0-9_$]*)\s*>/g, '</$1>');
+  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9 _$]*)\s*([^>]*)\s*>/g, '<$1 $2>');
+  fixed = fixed.replace(/<\/\s*([A-Z][a-zA-Z0-9 _$]*)\s*>/g, '</$1>');
 
   //Fix corrupted object properties
   fixed = fixed.replace(
-    /\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+),\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+)\s*\}/g,
+    /\{\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*:\s*([^,}]+),\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*:\s*([^,}]+)\s*\}/g,
     '{ $1: $2, $3: $4 }'
   );
 
@@ -68,7 +68,7 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/\[\s*([^[\]]+)\s*\]/g, '[$1]');
 
   //Fix corrupted function calls
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
 
   //Fix corrupted arrow functions
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
@@ -82,9 +82,9 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/`([^`]*),\s*([^`]*)`/g, '`$1$2`');
 
   //Fix corrupted variable declarations
-  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'const $1 = $2;');
-  fixed = fixed.replace(/let\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'let $1 = $2;');
-  fixed = fixed.replace(/var\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, 'var $1 = $2;');
+  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*([^;]+);?/g, 'const $1 = $2;');
+  fixed = fixed.replace(/let\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*([^;]+);?/g, 'let $1 = $2;');
+  fixed = fixed.replace(/var\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*([^;]+);?/g, 'var $1 = $2;');
 
   //Fix corrupted return statements
   fixed = fixed.replace(/return\s*([^;]+);?/g, 'return $1;');
@@ -107,19 +107,19 @@ function fixCorruptedSyntax(text) {
 
   //Fix corrupted class declarations
   fixed = fixed.replace(
-    /class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g,
+    /class\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\{/g,
     'class $1 extends $2 {'
   );
-  fixed = fixed.replace(/class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g, 'class $1 {');
+  fixed = fixed.replace(/class\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\{/g, 'class $1 {');
 
   //Fix corrupted method declarations
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)\s*\{/g, '$1($2) {');
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\(\s*([^)]*)\s*\)\s*\{/g, '$1($2) {');
 
   //Fix corrupted property access
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\.\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/g, '$1.$2');
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\.\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)/g, '$1.$2');
 
   //Fix corrupted array access
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\[\s*([^\]]+)\s*\]/g, '$1[$2]');
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\[\s*([^\]]+)\s*\]/g, '$1[$2]');
 
   //Fix corrupted ternary operators
   fixed = fixed.replace(/([^?]+)\s*\?\s*([^:]+)\s*:\s*([^;]+)/g, '$1 ? $2 : $3');
@@ -135,7 +135,7 @@ function fixCorruptedSyntax(text) {
   fixed = fixed.replace(/([^!]+)\s*!=\s*([^!]+)/g, '$1 != $2');
 
   //Fix corrupted assignment operators
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);?/g, '$1 = $2;');
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*([^;]+);?/g, '$1 = $2;');
 
   //Fix corrupted semicolons
   fixed = fixed.replace(/;\s*;/g, ';');

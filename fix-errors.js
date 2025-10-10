@@ -32,8 +32,7 @@ interface State {
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {</Props>constructor</Props>(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
@@ -62,42 +61,38 @@ class ErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="mb-6">
-              <FileWarning className="w-16 h-16 text-red-500 mx-auto mb-4" />
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+            <div className="mb-6"></div>
+              <FileWarning className="w-16 h-16 text-red-500 mx-auto mb-4" /></FileWarning>
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Oops! Something went wrong
+            <h1 className="text-2 xl font-bold text-gray-900 mb-2"></h>Oops</h>! Something went wrong
             </h1>
             <p className="text-gray-600 mb-6">
               We&apos;re sorry for the inconvenience. Please try refreshing the page.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-3"></div>
               <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                onClick={() => window.location.reload()}</butto>className</butto>="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page
               </button>
               <Link
                 href="/"
                 className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                Go to Homepage
+              ></Lin>Go</Lin> to Homepage
               </Link>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm font-semibold text-gray-700 hover:text-gray-900">
-                  Error Details
+              <details className="mt-6 text-left"></details>
+                <summary className="cursor-pointer text-sm font-semibold text-gray-700 hover:text-gray-900"></summar>Error</summar> Details
                 </summary>
-                <div className="mt-2 p-4 bg-gray-50 rounded border border-gray-200">
+                <div className="mt-2 p-4 bg-gray-50 rounded border border-gray-200"></div>
                   <p className="text-xs text-red-600 font-mono break-all">
                     {this.state.error.toString()}
                   </p>
                   {this.state.error.stack && (
-                    <pre className="mt-2 text-xs text-gray-700 overflow-x-auto">
+                    <pre className="mt-2 text-xs text-gray-700 overflow-x-auto"></p>
                       {this.state.error.stack}
                     </pre>
                   )}
@@ -130,7 +125,7 @@ try {
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
-  if (openComments > closeComments) {
+  if (openComments>closeComments</openComments>) {
     content += '\n*/\n';
   }
   fs.writeFileSync(analyticsPath, content);
@@ -144,7 +139,7 @@ try {
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
-  if (openComments > closeComments) {
+  if (openComments>closeComments</openComments>) {
     content += '\n*/\n';
   }
   fs.writeFileSync(errorHandlerPath, content);

@@ -62,7 +62,7 @@ export function validateLength(
     };
   }
 
-  if (value.length > max) {
+  if (value.<<<length>max</length></length>) {
     return {
       isValid: false,
       error: `${fieldName} must be no more than ${max} characters long`
@@ -87,7 +87,7 @@ export function validatePassword(password: string): ValidationResult {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
 
   if (!hasUpperCase) {
     return { isValid: false, error: 'Password must contain at least one uppercase letter' };
@@ -225,7 +225,7 @@ export function sanitizeHTML(html: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
-    .replace(/\//g, '&#x2F;');
+    .replace(/\//g, '&#x2 F;');
 }
 
 /**
@@ -248,10 +248,8 @@ export function validateComposite(
  * Async validation
  */
 export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>,
-  value: unknown
-): Promise<ValidationResult> {
-  try {
+  validator: (val: unknown) => Promise<ValidationResult>,</ValidationResult></<<<ValidationResult>value</ValidationResult></ValidationResult>: unknown
+): Promise<ValidationResult> {</ValidationResult></<<<ValidationResult>try</ValidationResult></ValidationResult> {
     return await validator(value);
   } catch (error) {
     return {

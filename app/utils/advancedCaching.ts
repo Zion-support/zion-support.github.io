@@ -9,18 +9,14 @@ export interface CacheOptions {
   maxSize?: number; // Maximum number of entries
 }
 
-export interface CacheEntry<T> {
-  value: T;
+export interface CacheEntry<T> {</T></<<<T>value</T>: T;
   expiry: number;
   hits: number;
   lastAccessed: number;
 }
 
-class AdvancedCache<T = unknown> {
-  private cache: Map<string, CacheEntry<T>> = new Map();
-  private accessOrder: string[] = [];
-  private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
+class AdvancedCache<T = unknown> {</T></<<<T>private</T></<<T>cache</T>: Map<string, CacheEntry<T>> = new Map();</string></<<<string>private</string></<<string>accessOrder</string>: string[] = [];
+  private options: Required<CacheOptions>;</CacheOptions></<<<CacheOptions>private</CacheOptions></<<CacheOptions>storageKey</CacheOptions> = 'advanced-cache';
 
   constructor(options: CacheOptions = {}) {
     this.options = {
@@ -152,8 +148,7 @@ class AdvancedCache<T = unknown> {
       this.evictLRU();
     }
 
-    const entry: CacheEntry<T> = {
-      value,
+    const entry: CacheEntry<T> = {</T></<<<T>value</T>,
       expiry: now + ttl,
       hits: 0,
       lastAccessed: now

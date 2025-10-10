@@ -110,44 +110,43 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigatio>
 
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
+      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</mai>
+        <section className="text-center mb-16"></sectio>
+          <h1 className="text-4 xl md:text-5 xl lg:text-6 xl font-bold text-white mb-6 neon-text"></h1></<<<h1>Book</h1></<<h1>a</h1> Demo<p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-              <Play className="w-5 h-5 text-cyan-400" />
-              <span className="text-white font-medium">Live Demo</span>
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
+              <Play className="w-5 h-5 text-cyan-400" /></Pla>
+              <span className="text-white font-medium">Live Demo</spa>
             </div>
-            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-              <Users className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-medium">Expert Guidance</span>
+            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
+              <Users className="w-5 h-5 text-purple-400" /></User>
+              <span className="text-white font-medium">Expert Guidance</spa>
             </div>
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">Q&A Session</span>
+            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
+              <CheckCircle className="w-5 h-5 text-green-400" /></CheckCircl>
+              <span className="text-white font-medium">Q&A Session</spa>
             </div>
           </div>
         </section>
 
         {/* Demo Types */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (<div
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"></h2></<<<h2>Choose</h2></<<h2>Your</h2> Demo<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>{demos.map((demo) => (<div
                 key={demo.id}
-                onClick={() =>setSelectedDemo(demo.id)}
-                className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
+                onClick={() =>setSelectedDemo(demo.id)}</div></<<<di>className</di></di>={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
                   selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
                 }`}</div>
               ></div>
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{demo.icon}<h3 className="text-xl font-bold text-white mb-2">{demo.title}<p className="text-gray-300 text-sm mb-4">{demo.description}</p>
-                  <div className="flex items-center justify-center text-cyan-400 text-sm mb-4">
-                    <Clock className="w-4 h-4 mr-1" >{demo.duration}<ul className="space-y-1 text-xs text-gray-400">{demo.features.map((feature, index) => (</ul>
-                      <li key={index} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
+                <div className="text-center"></div>
+                  <div className="text-4 xl mb-4"></div>{demo.icon}<h3 className="text-xl font-bold text-white mb-2"></h>{demo.title}<p className="text-gray-300 text-sm mb-4">{demo.description}</p>
+                  <div className="flex items-center justify-center text-cyan-400 text-sm mb-4"></div>
+                    <Clock className="w-4 h-4 mr-1" >{demo.duration}</Clock><ul className="space-y-1 text-xs text-gray-400">{demo.features.map((feature, index) => (</u>
+                      <li key={index} className="flex items-center"></l>
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircl>
                       </CheckCircle>
                     ))}
                   </ul>
@@ -158,13 +157,13 @@ const DemoPage: React.FC = () => {
         </section>
 
         {/* Demo Benefits */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-lg font-bold text-white mb-2">{benefit.title}<p className="text-gray-300 text-sm">{benefit.description}</p>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>What</h2></<<h2>to</h2> Expect<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                    <benefit.icon className="w-8 h-8 text-white" /></benefi>
+                  <h3 className="text-lg font-bold text-white mb-2"></h>{benefit.title}<p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -172,12 +171,12 @@ const DemoPage: React.FC = () => {
         </section>
 
         {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="cyber-card p-6">
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}<p className="text-gray-400 text-sm">{testimonial.company}</p>
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"></h2></<<<h2>What</h2></<<h2>Our</h2> Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="flex justify-center mb-4"></div>{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}</Star><p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
+                <div className="text-center"></div>
+                  <h4 className="text-white font-bold">{testimonial.name}</h4><p className="text-cyan-400 text-sm"></p>{testimonial.role}<p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
               </div>
             ))}
@@ -185,124 +184,124 @@ const DemoPage: React.FC = () => {
         </section>
 
         {/* Booking Form */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Schedule Your Demo</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Demo Information</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Demo<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{demos.find(d => d.id === selectedDemo)?.title}</div>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text">Schedule Your Demo</h>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+              <div></div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Demo Information</h>
+                <div className="space-y-4"></div>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Demo</label><div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{demos.find(d => d.id === selectedDemo)?.title}</div>
                     </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Duration<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{demos.find(d => d.id === selectedDemo)?.duration}</div>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Duration</label><div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{demos.find(d => d.id === selectedDemo)?.duration}</div>
                     </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</labe>
                     <input
                       type="text"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="Your company name"
-                    />
+                    /></inpu>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</labe>
                     <input
                       type="text"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="Your full name"
-                    />
+                    /></inpu>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</labe>
                     <input
                       type="email"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="your.email@company.com"
-                    />
+                    /></inpu>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</labe>
                     <input
                       type="tel"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="+1 (555) 123-4567"
-                    />
+                    /></inpu>
                   </div>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Preferred Time</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Date</label>
+              <div></div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Preferred Time</h>
+                <div className="space-y-4"></div>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Date</labe>
                     <input
                       type="date"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                    />
+                    /></inpu>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>9:00 AM - 10:00 AM<option>10:00 AM - 11:00 AM</option>
-                      <option>11:00 AM - 12:00 PM<option>1:00 PM - 2:00 PM</option>
-                      <option>2:00 PM - 3:00 PM<option>3:00 PM - 4:00 PM<option>4:00 PM - 5:00 PM</option>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Time</labe>
+                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"></selec>
+                      <option>9:00 AM - 10:00 AM</option><option>10:00 AM - 11:00 AM</optio>
+                      <option>11:00 AM - 12:00 PM</option><option>1:00 PM - 2:00 PM</optio>
+                      <option>2:00 PM - 3:00 PM</option><option>3:00 PM - 4:00 PM</option><option>4:00 PM - 5:00 PM</optio>
                     </select>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time Zone</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>Eastern Time (ET)<option>Central Time (CT)</option>
-                      <option>Mountain Time (MT)<option>Pacific Time (PT)<option>GMT</option>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Time Zone</labe>
+                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"></selec>
+                      <<<<option>Eastern</option></<<option>Time</option> (ET)<<<<option>Central</option></<<option>Time</option> (CT)</option>
+                      <<<<option>Mountain</option></<<option>Time</option> (MT)<<<<option>Pacific</option></<<option>Time</option> (PT)<<<<option>GMT</option></option>
                     </select>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Additional Notes</labe>
                     <textarea
                       rows={4}
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="Tell us about your specific needs or questions..."
-                    />
+                    /></textare>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 text-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center">
-                <Calendar className="w-5 h-5 mr-2" >Schedule Demo</Calendar>
-                </Calendar><ArrowRight className="w-5 h-5 ml-2" />
+            <div className="mt-8 text-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center"></butto>
+                <Calendar className="w-5 h-5 mr-2" >Schedule Demo</Calenda>
+                </Calendar><ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
               </button>
             </div>
           </div>
         </section>
 
         {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?<p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>Need</h2></<<h2>Help</h2> Scheduling?<p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us<p className="text-gray-300 mb-2">+1 (302) 464-0950<p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+              <div className="text-center"></div>
+                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" /></Phon>
+                <h3 className="text-lg font-semibold text-white mb-2"></h3></<<<h3>Call</h3></<<h3>Us</h3><p className="text-gray-300 mb-2"></p>+1 (302) 464-0950<p className="text-sm text-gray-400">Mon-Fri 9 AM-6 PM EST</p>
               </div>
-              <div className="text-center">
-                <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us<p className="text-gray-300 mb-2">demo@ziontechgroup.com<p className="text-sm text-gray-400">Response within 24 hours</p>
+              <div className="text-center"></div>
+                <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" /></Mai>
+                <h3 className="text-lg font-semibold text-white mb-2"></h3></<<<h3>Email</h3></<<h3>Us</h3><p className="text-gray-300 mb-2"></p></<<<p>demo</p>@ziontechgroup.com<p className="text-sm text-gray-400">Response within 24 hours</p>
               </div>
-              <div className="text-center">
-                <Calendar className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Book Online<p className="text-gray-300 mb-2">Instant scheduling<p className="text-sm text-gray-400">Available 24/7</p>
+              <div className="text-center"></div>
+                <Calendar className="w-8 h-8 text-cyan-400 mx-auto mb-3" /></Calenda>
+                <h3 className="text-lg font-semibold text-white mb-2"></h3></<<<h3>Book</h3></<<h3>Online</h3><p className="text-gray-300 mb-2"></p></<<<p>Instant</p></<<p>scheduling</p><p className="text-sm text-gray-400">Available 24/7</p>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

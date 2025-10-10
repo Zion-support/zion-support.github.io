@@ -11,15 +11,15 @@ async function main() {
 
       //Fix common JSX syntax issues
 
-      //1. Fix key prop placement: <div>\nkey={...} -> <div\nkey={...}
+      //1. Fix key prop placement: <div></div>\nkey={...} -> <div\nkey={...}
       if (keyPropFix !== content) {
         content = keyPropFix;
         modified = true;
       }
 
-      //2. Fix onClick prop placement: <button>\nonClick={...} -> <button\nonClick={...}
+      //2. Fix onClick prop placement: <button></div>\nonClick={...} -> <button\nonClick={...}
       const onClickFix = content.replace(
-        /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
+        /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,</button>
         '<$1\nonClick={$2}'
       );
       if (onClickFix !== content) {
@@ -27,9 +27,9 @@ async function main() {
         modified = true;
       }
 
-      //3. Fix className prop placement: <div>\nclassName={...} -> <div\nclassName={...}
+      //3. Fix className prop placement: <div></div>\nclassName={...} -> <div\nclassName={...}
       const classNameFix = content.replace(
-        /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
+        /<(\w+)></div>\s*\n\s*className=\{([^}]+)\}/g,
         '<$1\nclassName={$2}'
       );
       if (classNameFix !== content) {
@@ -37,13 +37,13 @@ async function main() {
         modified = true;
       }
 
-      //4. Fix style prop placement: <div>\nstyle={...} -> <div\nstyle={...}
+      //4. Fix style prop placement: <div></div>\nstyle={...} -> <div\nstyle={...}
       if (styleFix !== content) {
         content = styleFix;
         modified = true;
       }
 
-      //5. Fix template literal syntax: ${> -> ${
+      //5. Fix template literal syntax: ${></div> -> ${
       //       const templateFix = content.replace(/\$\{>/g, '${');
       if (templateFix !== content) {
         content = templateFix;
@@ -60,9 +60,8 @@ async function main() {
         modified = true;
       }
 
-      //7. Fix unclosed br tags: <br> -> <br />
-      //       const brFix = content.replace(/<br>/g, '<br />');
-      if (brFix !== content) {
+      //7. Fix unclosed br tags: <br> -> <br /></br>
+      //       const brFix = content.replace(/<br>/g, '<br />');</br>if</br> (brFix !== content) {
         content = brFix;
         modified = true;
       }

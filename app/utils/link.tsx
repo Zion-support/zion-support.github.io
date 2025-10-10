@@ -8,8 +8,7 @@ interface LinkProps {
   onClick?: () => void
   'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps>= ({
-  href,
+export const Link: React.FC<LinkProps>= ({</LinkProps></<<<LinkProp>href</LinkProp></LinkProp>,
   children,
   className,
   target,
@@ -27,8 +26,7 @@ export const Link: React.FC<LinkProps>= ({
       e.preventDefault()
       window.location.href = href;}
     }
-  }</LinkProps>
-  return (<a
+  }</<<<LinkProps>return</LinkProps></LinkProps> (<a
       href={href}
       className={className}
       target={target}

@@ -6,17 +6,16 @@
  */
 
 interface BannerModule {
-  default: ComponentType<Record<string, unknown>>;
+  default: ComponentType<Record<string, unknown>>;</Record>
 }
 
 /**
  * Lazy load a banner component with retry logic
  */
 export const lazyLoadBanner = (
-  importFn: () => Promise<BannerModule>,
+  importFn: () => Promise<BannerModule>,</BannerModule>
       // Retry once after a delay
-      return new Promise<BannerModule>(resolve => {
-        setTimeout(() => {
+      return new Promise<BannerModule>(resolve => {</BannerModule>setTimeout</BannerModule>(() => {
           importFn()
             .then(resolve)
             .catch(retryError => {
@@ -30,8 +29,7 @@ export const lazyLoadBanner = (
 /**
  * Preload banner components for better performance
  */
-export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
-  if (typeof window !== 'undefined') {
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {</BannerModule>if</BannerModule> (typeof window !== 'undefined') {
     // Preload on idle
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
@@ -57,7 +55,7 @@ export const createBannerLoader = () => {
         }
       });
     },
-    { rootMargin: '50px' }
+    { rootMargin: '50 px' }
   );
 
   return {

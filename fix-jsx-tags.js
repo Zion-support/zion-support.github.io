@@ -31,12 +31,12 @@ function fixJSXTags(content) {
 function fixDestructuringVariables(content) {
   // Fix destructuring in function parameters
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, '$1');
+    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1');
   });
   
   // Fix arrow function parameters
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, '$1');
+    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1');
   });
   
   // Fix destructuring assignments

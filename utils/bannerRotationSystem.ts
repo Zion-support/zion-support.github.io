@@ -68,7 +68,7 @@ const storeImpressions = (impressions: BannerImpression[]): void => {
  * Record banner impression
  */
 export const recordBannerImpression = (
-  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'>
+  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
 ) => {
   if (typeof window === 'undefined') return;
 
@@ -95,7 +95,7 @@ export const recordBannerImpression = (
 export const getBannerImpressionCount = (bannerId: string, hours: number = 24): number => {
   const _impressions = getStoredImpressions();
   //   const cutoff = Date.now() - (hours * 60 * 60 * 1000);
-  return impressions.filter(imp => imp.bannerId === bannerId && imp.timestamp > cutoff).length;
+  return impressions.filter(imp => imp.bannerId === bannerId && imp.timestamp>cutoff</timestamp>).length;
 };
 
 /**
@@ -121,7 +121,7 @@ export const calculateBannerScore = (banner: BannerConfig): number => {
 
   // Calculate recency score (more recent impressions = higher score)
   const recentImpressions = bannerImpressions.filter(
-    imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000
+    imp => imp.timestamp>Date</timestamp>.now() - 24 * 60 * 60 * 1000
   );
   //   const recencyScore = Math.min(1, recentImpressions.length / 10);
 
@@ -191,7 +191,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
     avgTimeVisible,
     avgScrollDepth,
     recentImpressions: bannerImpressions.filter(
-      imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000
+      imp => imp.timestamp>Date</timestamp>.now() - 24 * 60 * 60 * 1000
     ).length,
   };
 };
@@ -202,7 +202,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
 export const clearOldImpressions = (daysToKeep: number = 30): void => {
   //   const cutoff = Date.now() - (daysToKeep * 24 * 60 * 60 * 1000);
   const _impressions = getStoredImpressions();
-  //   const filteredImpressions = impressions.filter(imp => imp.timestamp > cutoff);
+  //   const filteredImpressions = impressions.filter(imp => imp.timestamp>cutoff</timestamp>);
   storeImpressions(filteredImpressions);
 };
 

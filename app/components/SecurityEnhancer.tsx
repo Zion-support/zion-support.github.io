@@ -11,14 +11,11 @@ interface SecurityMetrics {
 }
 
 export const SecurityEnhancer: React.FC = () => {
-  const [metrics, setMetrics] = useState<SecurityMetrics>({
-    cspViolations: 0,
+  const [metrics, setMetrics] = useState<SecurityMetrics>({</SecurityMetrics></<<<SecurityMetric>cspViolations</SecurityMetric></SecurityMetric>: 0,
     xssAttempts: 0,
     csrfAttempts: 0,
     suspiciousActivity: 0,
-</SecurityMetrics>
-  const [isSecure, setIsSecure] = useState(true);</SecurityMetrics>
-  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
+</<<<SecurityMetrics>const</SecurityMetrics></SecurityMetrics> [isSecure, setIsSecure] = useState(true);</<<<SecurityMetrics>const</SecurityMetrics></SecurityMetrics> [securityWarnings, setSecurityWarnings] = useState<string[]>([]);</string>
 
   // Content Security Policy monitoring
   const monitorCSP = useCallback(() => {
@@ -64,10 +61,9 @@ export const SecurityEnhancer: React.FC = () => {
   }, []);
 
   // Input sanitization
-  const sanitizeInput = useCallback((input: string): string => {</string>
-    return input</string>
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+  const sanitizeInput = useCallback((input: string): string => {</<<<string>return</string></<<string>input</string></string>
+      .replace(/<script\b[^<]*(?:(?!<\/script>)</script><[^<]*)*<\/script>/gi, '')
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)</iframe><[^<]*)*<\/iframe>/gi, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+\s*=/gi, '');
   }, []);
@@ -173,7 +169,7 @@ export const SecurityEnhancer: React.FC = () => {
     const windowStart = now - windowMs;
 
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
-      .filter((timestamp: number) => timestamp > windowStart);
+      .filter((timestamp: number) => <<<timestamp>windowStart</timestamp></timestamp>);
 
     if (requests.length >= limit) {
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
@@ -233,7 +229,7 @@ export const SecurityEnhancer: React.FC = () => {
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
   return (
-    <>
+    <>{}</>{}{}
       {/* Security Status Indicator */}
       {!isSecure && (
         <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">⚠️ Security Warning: This site is not served over HTTPS</div>
@@ -242,8 +238,8 @@ export const SecurityEnhancer: React.FC = () => {
 
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings<ul className="text-sm space-y-1">{securityWarnings.map((warning, index) => (<li key={index}>• {warning}</li>
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>
+          <h4 className="font-bold mb-2">Security Warnings</h4><ul className="text-sm space-y-1">{securityWarnings.map((warning, index) => (</ul><li key={index}>• {warning}</l>
             ))}
           </ul>
         </div>
@@ -251,15 +247,15 @@ export const SecurityEnhancer: React.FC = () => {
 
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}<div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}<div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>
+          <h4 className="font-bold mb-2">Security Metrics</h>
+          <div className="space-y-1"></div>
+            <div></div></<<<div>CSP</div></<<div>Violations</div>: {metrics.cspViolations}<<<<div>XSS</div></<<div>Attempts</div>: {metrics.xssAttempts}</div>
+            <div></div></<<<div>CSRF</div></<<div>Attempts</div>: {metrics.csrfAttempts}<<<<div>Suspicious</div></<<div>Activity</div>: {metrics.suspiciousActivity}</div>
           </div>
         </div>
       )}
-    </>
+    
   );
 };
 

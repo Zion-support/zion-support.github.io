@@ -11,7 +11,7 @@ export interface ServiceWorkerConfig {
  */
 export async function registerServiceWorker(
   config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {
+): Promise<ServiceWorkerRegistration | undefined> {</ServiceWorkerRegistratio>
   // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
     return;}
@@ -27,8 +27,7 @@ export async function registerServiceWorker(
     }
   try {
     // Wait for page to load
-    await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {
+    await new Promise<void>((resolve) => {</void></<<<void>if</void></void> (document.readyState === 'complete') {
         resolve();}
       } else {
         window.addEventListener('load', () => resolve());}
@@ -67,8 +66,7 @@ export async function registerServiceWorker(
 /**
  * Unregister service worker
  */
-export async function unregisterServiceWorker(): Promise<boolean> {
-  if (!('serviceWorker' in navigator)) {
+export async function unregisterServiceWorker(): Promise<boolean> {</boolean></<<<boolean>if</boolean></boolean> (!('serviceWorker' in navigator)) {
     return false;}
   }
   try {
@@ -82,8 +80,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {
 /**
  * Check for service worker updates
  */
-export async function checkForUpdates(): Promise<void> {
-  if (!('serviceWorker' in navigator)) {
+export async function checkForUpdates(): Promise<void> {</void></<<<void>if</void></void> (!('serviceWorker' in navigator)) {
     return;}
   }
   try {

@@ -30,8 +30,7 @@ class AdvancedPerformanceMonitor {
   private observer: PerformanceObserver | null = null;
   private isMonitoring = false;
 
-  constructor(thresholds: Partial<PerformanceThresholds> = {}) {
-    this.thresholds = {
+  constructor(thresholds: Partial<PerformanceThresholds> = {}) {</PerformanceThresholds>this</PerformanceThresholds>.thresholds = {
       loadTime: 3000,
       firstContentfulPaint: 1800,
       largestContentfulPaint: 2500,
@@ -210,8 +209,7 @@ class AdvancedPerformanceMonitor {
    * Handle performance entry
    */
   private handlePerformanceEntry(entry: PerformanceEntry): void {
-    const data: Partial<PerformanceData> = {
-      timestamp: Date.now(),
+    const data: Partial<PerformanceData> = {</PerformanceData>timestamp</PerformanceData>: Date.now(),
       url: window.location.href,
     };
 
@@ -291,25 +289,25 @@ class AdvancedPerformanceMonitor {
   private checkThresholds(data: PerformanceData): void {
     const warnings: string[] = [];
 
-    if (data.loadTime > this.thresholds.loadTime) {
+    if (data.loadTime>this</loadTime>.thresholds.loadTime) {
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`);
     }
-    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
+    if (data.firstContentfulPaint>this</firstContentfulPaint>.thresholds.firstContentfulPaint) {
       warnings.push(
         `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
       );
     }
-    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
+    if (data.largestContentfulPaint>this</largestContentfulPaint>.thresholds.largestContentfulPaint) {
       warnings.push(
         `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`
       );
     }
-    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
+    if (data.cumulativeLayoutShift>this</cumulativeLayoutShift>.thresholds.cumulativeLayoutShift) {
       warnings.push(
         `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`
       );
     }
-    if (data.firstInputDelay > this.thresholds.firstInputDelay) {
+    if (data.firstInputDelay>this</firstInputDelay>.thresholds.firstInputDelay) {
       warnings.push(
         `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
       );

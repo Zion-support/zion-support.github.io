@@ -18,9 +18,9 @@ const optimizeHTML = (filePath) => {
     
     // Add preload hints for critical resources
     const preloadHints = `
-    <link rel="preload" href="/assets/index.css" as="style">
-    <link rel="preload" href="/assets/index.js" as="script">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="/assets/index.css" as="style"></link>
+    <link rel="preload" href="/assets/index.js" as="script"></link>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style"></link>
     `;
     
     content = content.replace('</head>', `${preloadHints}</head>`);
@@ -65,8 +65,7 @@ Allow: /blog`;
 
 const createHtaccess = () => {
   const htaccessContent = `# Enable compression
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/plain
+<IfModule mod_deflate.c></IfModul>AddOutputFilterByType</IfModul> DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
     AddOutputFilterByType DEFLATE text/xml
     AddOutputFilterByType DEFLATE text/css
@@ -78,8 +77,7 @@ const createHtaccess = () => {
 </IfModule>
 
 # Enable browser caching
-<IfModule mod_expires.c>
-    ExpiresActive on
+<IfModule mod_expires.c></IfModul>ExpiresActive</IfModul> on
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
@@ -90,8 +88,7 @@ const createHtaccess = () => {
 </IfModule>
 
 # Security headers
-<IfModule mod_headers.c>
-    Header always set X-Content-Type-Options nosniff
+<IfModule mod_headers.c></IfModul>Header</IfModul> always set X-Content-Type-Options nosniff
     Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
@@ -99,8 +96,7 @@ const createHtaccess = () => {
 </IfModule>
 
 # Redirect to HTTPS
-<IfModule mod_rewrite.c>
-    RewriteEngine On
+<IfModule mod_rewrite.c></IfModul>RewriteEngine</IfModul> On
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>`;

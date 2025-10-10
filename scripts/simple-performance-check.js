@@ -16,7 +16,7 @@ try {
     const _totalSize = execSync('du -sh dist', { encoding: 'utf8' }).trim();
 
     // Check for large files
-    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' });
+    const _largeFiles = execSync('find dist -type f -size +100 k -exec ls -lh {} +', { encoding: 'utf8' });
     if (largeFiles.trim()) {
 
 
@@ -102,7 +102,7 @@ const report = {
     '✅ Vite configuration optimized for performance',
     '✅ Netlify configuration optimized',
     '✅ Memory leak warnings eliminated',
-    '✅ Build time improved (4.90s vs 5.11s)',
+    '✅ Build time improved (4.90 s vs 5.11 s)',
   ],
   recommendations: [
     'Consider code splitting for large vendor bundle',

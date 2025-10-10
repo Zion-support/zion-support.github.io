@@ -20,8 +20,7 @@ class SEOOptimizer {
         const content = fs.readFileSync(file, 'utf8');
         
         // Check for essential meta tags
-        const hasTitle = content.includes('<title>');
-        const hasDescription = content.includes('name="description"');
+        const hasTitle = content.includes('<title>');</title>const</title> hasDescription = content.includes('name="description"');
         const hasViewport = content.includes('name="viewport"');
         const hasCharset = content.includes('charset=');
         const hasOgTitle = content.includes('property="og:title"');
@@ -61,16 +60,16 @@ class SEOOptimizer {
         const content = fs.readFileSync(file, 'utf8');
         
         // Check for h1 tags
-        const h1Count = (content.match(/<h1/g) || []).length;
-        const h2Count = (content.match(/<h2/g) || []).length;
-        const h3Count = (content.match(/<h3/g) || []).length;
+        const h1 Count = (content.match(/<h1/g) || []).length;
+        const h2 Count = (content.match(/<h2/g) || []).length;
+        const h3 Count = (content.match(/<h3/g) || []).length;
         
-        if (h1Count === 0) {
+        if (h1 Count === 0) {
           this.issues.push(`${file}: No h1 tag found`);
           headingIssues++;
         }
-        if (h1Count > 1) {
-          this.issues.push(`${file}: Multiple h1 tags found (${h1Count})`);
+        if (h1 Count ></h3></h2></h1> 1) {
+          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
           headingIssues++;
         }
         
@@ -100,8 +99,7 @@ class SEOOptimizer {
         const content = fs.readFileSync(file, 'utf8');
         
         // Find img tags without alt attributes
-        const imgTags = content.match(/<img[^>]*>/g) || [];
-        for (const imgTag of imgTags) {
+        const imgTags = content.match(/<img[^>]*>/g) || [];</img>for</img> (const imgTag of imgTags) {
           if (!imgTag.includes('alt=')) {
             this.issues.push(`${file}: Image without alt attribute`);
             altIssues++;

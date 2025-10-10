@@ -4,17 +4,17 @@ exports.handler = async function (event, context) {try {
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'a11y_alt_text_runner function executed successfully',
+        message: 'a11 y_alt_text_runner function executed successfully',
         timestamp: timestamp,
-        function: 'a11y_alt_text_runner'}
+        function: 'a11 y_alt_text_runner'}
       });
     };
-//   } catch (error) {// console.error('❌ a11y_alt_text_runner function failed: ') error
+//   } catch (error) {// console.error('❌ a11 y_alt_text_runner function failed: ') error
       }
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'a11y_alt_text_runner function failed',
+        error: 'a11 y_alt_text_runner function failed',
         message: error.message,
         timestamp: new Date().toISOString()}
       });

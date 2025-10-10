@@ -42,7 +42,7 @@ export default [
       'dao/**',
       'deployments/**',
       'disabled-api/**',
-      'e2e/**',
+      'e2 e/**',
       'factories/**',
       'hooks/**',
       'lib_backup/**',

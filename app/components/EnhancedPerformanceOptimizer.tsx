@@ -15,8 +15,7 @@ interface PerformanceOptimizerProps {
   enableCriticalResourcePreloading?: boolean;
 }
 
-const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
-  enableImageOptimization = true,
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({</PerformanceOptimizerProps></<<<PerformanceOptimizerProp>enableImageOptimization</PerformanceOptimizerProp></PerformanceOptimizerProp> = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,
   enablePreloading = true,
@@ -63,7 +62,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
 
     const observerOptions = {
       root: null,
-      rootMargin: '50px',
+      rootMargin: '50 px',
       threshold: 0.1
     };
 
@@ -343,5 +342,4 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
 
   return null;
 };
-</PerformanceOptimizerProps>
-export default EnhancedPerformanceOptimizer;</PerformanceOptimizerProps>
+</<<<PerformanceOptimizerProps>export</PerformanceOptimizerProps></<<PerformanceOptimizerProps>default</PerformanceOptimizerProps> EnhancedPerformanceOptimizer;</PerformanceOptimizerProps>

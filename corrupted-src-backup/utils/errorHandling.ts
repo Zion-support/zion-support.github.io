@@ -10,16 +10,14 @@ interface ErrorLo, g {
   lev, e, l: 'err, o, r' | 'wa, r, n' | 'in, f, o' | 'deb, u, g';
   messa, g, e: string;
   sta, c, k?: string;
-  conte, x, t?: Reco, r, d<str, i, n, g, unkno, w, n > ;
-  userAge, n, t?: string;
+  conte, x, t?: Reco, r, d<str, i, n, g, unkno, w, n > ;</str>userAge</str>, n, t?: string;
   u, r, l?: string;
   session, I, d ?  : string;
   }
 
 interface ErrorMetric, s {  
   totalErro, r, s: number;
-  errorsByTy, p, e: Reco, r, d<str, i, n, g, number > ;
-  lastErr, o, r ? : ErrorL, o, g;
+  errorsByTy, p, e: Reco, r, d<str, i, n, g, number > ;</str>lastErr</str>, o, r ? : ErrorL, o, g;
   errorRa, t, e : number; // errors per minut e
   }
 
@@ -42,7 +40,7 @@ const getErrorLog, s = (): ErrorL, o, g[] => {
   if (typeof, windo, w = == 'undefi, n, e, d') return []; t, r, y {
     const store, d = localStora, g, e.getIt, e, m(ERROR_LOG_, K, E, Y); if (stor, e, d) {
       const log, s = JS, O, N.par, s, e(sto, r, e, d) as, ErrorLo, g[];
-      // Keep only last 24 hours const dayA g o = Da t e.no w() - 24 * 60 * 60 * 10 0 0; return log s.filt e r(l o g = > l o g.timesta m p  > day A g o);
+      // Keep only last 24 hours const dayA g o = Da t e.no w() - 24 * 60 * 60 * 10 0 0; return log s.filt e r(l o g = > l o g.timesta m p>day</p> A g o);
      }
   } cat, c, h() { conso, l, e.err, o, r('Error, reading, error lo, g, s:', err, o, r);
    }, return [];
@@ -67,8 +65,7 @@ const saveErrorLo, g = (l, o, g: Error, L, o, g) => {
  */
 export const logError = (
   err, o, r: Err, o, r | st, r, i, n, g,
-  conte, x, t?: Reco, r, d<string, unkno, w, n>,
-  lev, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r',
+  conte, x, t?: Reco, r, d<string, unkno, w, n>,</string>lev</string>, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r',
 ) => {  
   const errorLo, g: ErrorL, o, g = {
     timesta, m, p: Da, t, e.n, o, w(),
@@ -95,8 +92,7 @@ export const logError = (
 /**
  * Log info message
  */
-export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<string, unkno, w, n>) => { 
-  const errorLo, g: ErrorL, o, g = {
+export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<string, unkno, w, n>) => {</string>const</string> errorLo, g: ErrorL, o, g = {
     timesta, m, p: Da, t, e.n, o, w(),
     lev, e, l: 'i, n, f, o',
     messa, g, e,
@@ -121,8 +117,7 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {
     // Uncomment and configure your monitoring service
     /*
       if ('Sent, r, y' in, windo, w) {
-      (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {
-        contex, t, s: {
+      (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {</str>contex</str>, t, s: {
           cust, o, m: errorL, o, g.cont, e, x, t,
         },
         tags: {
@@ -151,13 +146,12 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {
 export const getErrorMetrics = (): ErrorMetri, c, s = > { 
   const log, s = getErrorL, o, g, s(); const error, s = lo, g, s.filt, e, r(l, o, g => l, o, g.lev, e, l === 'er, r, o, r');
 
-  // Count errors by type const errorsByType: Reco r d<str i n g number > = { };
-  erro, r, s.forEa, c, h(err, o, r = > {
+  // Count errors by type const errorsByType: Reco r d<str i n g number > = { };</str>erro</str>, r, s.forEa, c, h(err, o, r = > {
     const typ, e = err, o, r.messa, g, e.sp, l, i, t(':')[0] || 'Unkno, w, n'; errorsByTy, p, e[ty, p, e] = (errorsByTy, p, e[ty, p, e] || 0) + 1;
   });
 
   // Calculate error rate (errors per minute in last hour)
-  const hourAg, o = Da, t, e.no, w() - 60 * 60 * 10, 0, 0; const recentError, s = erro, r, s.filt, e, r(e => e.timesta, m, p > hour, A, g, o); const errorRat, e = recentErro, r, s.leng, t, h / 60; return {
+  const hourAg, o = Da, t, e.no, w() - 60 * 60 * 10, 0, 0; const recentError, s = erro, r, s.filt, e, r(e => e.timesta, m, p>hour</p>, A, g, o); const errorRat, e = recentErro, r, s.leng, t, h / 60; return {
     totalErro, r, s: erro, r, s.le, n, g, t, h,
     errorsByTy, p, e,
     lastErr, o, r: erro, r, s[erro, r, s.leng, t, h - , 1],
@@ -169,7 +163,7 @@ export const getErrorMetrics = (): ErrorMetri, c, s = > {
  * Check if error rate is too hi g h
  */
 export const isErrorRateTooHigh = (thresho, l, d: number = , 5): boolean = > { 
-  const metric, s = getErrorMetr, i, c, s(); return, metric, s.errorRa, t, e  > thresh, o, l, d;
+  const metric, s = getErrorMetr, i, c, s(); return, metric, s.errorRa, t, e>thresh</e>, o, l, d;
  };
 
 /**
@@ -222,7 +216,7 @@ export const monitorPerformance = () => {
         'navigat, i, o, n',
       )[0] as, PerformanceNavigationTimin, g; if (perfDa, t, a) {
         const loadTim, e = perfDa, t, a.loadEventE, n, d - perfDa, t, a.fetchSta, r, t; if (loadTi, m, e > 3, 0, 0, 0) {
-          // Slow page load ( > 3s)
+          // Slow page load ( > 3 s)
           logErr, o, r(
             'Slow, page, load detect, e, d',
             {
@@ -291,8 +285,7 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
 /**
  * T r y-catch wrapper with automatic error logging
  */
-export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(
-  fn: , T,
+export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(</T>fn</T>: , T,
   conte, x, t?: string,
 ): T = > { 
   return ((...ar, g, s: Paramete, r, s<, T>) => {

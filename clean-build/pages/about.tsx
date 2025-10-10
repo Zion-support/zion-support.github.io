@@ -1,23 +1,22 @@
 
 export default function About() {
   return (
-    <>
-      <Head>
-        <title>About Us - Zion Tech Group</title>
+    <>{}
+      <Head></Head>
+        <title>About</title> Us - Zion Tech Group</title>
         <meta
           name="description"
           content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        /></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
+        <link rel="icon" href="/favicon.ico" /></link>
       </Head>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50"></div>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                About <span className="text-yellow-300">Zion Tech Group</span>
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-4 xl mx-auto text-center"></div>
+              <h1 className="text-4 xl md:text-5 xl font-bold mb-6"></h1>About</h1> <span className="text-yellow-300">Zion Tech Group</span>
               </h1>
               <p className="text-xl">
                 We are a leading technology solutions provider dedicated to transforming businesses
@@ -28,12 +27,11 @@ export default function About() {
         </section>
 
         {/* Mission Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  Our <span className="text-blue-600">Mission</span>
+        <section className="py-16"></section>
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-6 xl mx-auto"></div>
+              <div className="mb-12"></div>
+                <h2 className="text-3 xl font-bold text-gray-800 mb-4"></h2>Our</h2> <span className="text-blue-600">Mission</span>
                 </h2>
                 <p className="text-lg text-gray-600 mb-4">
                   To empower businesses with innovative technology solutions that drive growth,
@@ -46,21 +44,21 @@ export default function About() {
                   future growth and innovation.
                 </p>
               </div>
-              <div className="grid md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <div className="grid md:grid-cols-4 gap-8"></div>
+                <div className="text-center"></div>
+                  <div className="text-4 xl font-bold text-blue-600 mb-2">100+</div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-center"></div>
+                  <div className="text-4 xl font-bold text-blue-600 mb-2">50+</div>
                   <div className="text-gray-600">Happy Clients</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
+                <div className="text-center"></div>
+                  <div className="text-4 xl font-bold text-blue-600 mb-2">5+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                <div className="text-center"></div>
+                  <div className="text-4 xl font-bold text-blue-600 mb-2">24/7</div>
                   <div className="text-gray-600">Support Available</div>
                 </div>
               </div>
@@ -69,22 +67,21 @@ export default function About() {
         </section>
 
         {/* Values Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  Our <span className="text-blue-600">Values</span>
+        <section className="py-16 bg-white"></section>
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-6 xl mx-auto"></div>
+              <div className="text-center mb-12"></div>
+                <h2 className="text-3 xl font-bold text-gray-800 mb-4"></h2>Our</h2> <span className="text-blue-600">Values</span>
                 </h2>
                 <p className="text-lg text-gray-600">
                   The principles that guide everything we do and shape our approach to technology
                   solutions.
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-4xl mb-4">
-                    <span role="img" aria-label="target">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                  <div className="text-4 xl mb-4"></div>
+                    <span role="img" aria-label="target"></spa>
                       🎯
                     </span>
                   </div>
@@ -94,9 +91,9 @@ export default function About() {
                     that exceed expectations.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-4xl mb-4">
-                    <span role="img" aria-label="handshake">
+                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                  <div className="text-4 xl mb-4"></div>
+                    <span role="img" aria-label="handshake"></spa>
                       🤝
                     </span>
                   </div>
@@ -106,9 +103,9 @@ export default function About() {
                     reality.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-4xl mb-4">
-                    <span role="img" aria-label="lightbulb">
+                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                  <div className="text-4 xl mb-4"></div>
+                    <span role="img" aria-label="lightbulb"></spa>
                       💡
                     </span>
                   </div>
@@ -118,9 +115,9 @@ export default function About() {
                     challenges.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <div className="text-4xl mb-4">
-                    <span role="img" aria-label="lock">
+                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                  <div className="text-4 xl mb-4"></div>
+                    <span role="img" aria-label="lock"></spa>
                       🔒
                     </span>
                   </div>
@@ -136,22 +133,21 @@ export default function About() {
         </section>
 
         {/* Team Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  Our <span className="text-blue-600">Team</span>
+        <section className="py-16"></section>
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-6 xl mx-auto"></div>
+              <div className="text-center mb-12"></div>
+                <h2 className="text-3 xl font-bold text-gray-800 mb-4"></h2>Our</h2> <span className="text-blue-600">Team</span>
                 </h2>
                 <p className="text-lg text-gray-600">
                   Meet the talented individuals who make Zion Tech Group a leader in technology
                   solutions.
                 </p>
               </div>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-                  <div className="text-5xl mb-4">
-                    <span role="img" aria-label="developer">
+              <div className="grid md:grid-cols-3 gap-8"></div>
+                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
+                  <div className="text-5 xl mb-4"></div>
+                    <span role="img" aria-label="developer"></spa>
                       👨‍💻
                     </span>
                   </div>
@@ -162,9 +158,9 @@ export default function About() {
                     development, and cloud architecture.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-                  <div className="text-5xl mb-4">
-                    <span role="img" aria-label="designer">
+                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
+                  <div className="text-5 xl mb-4"></div>
+                    <span role="img" aria-label="designer"></spa>
                       🎨
                     </span>
                   </div>
@@ -175,9 +171,9 @@ export default function About() {
                     users and drive business results.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg">
-                  <div className="text-5xl mb-4">
-                    <span role="img" aria-label="robot">
+                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
+                  <div className="text-5 xl mb-4"></div>
+                    <span role="img" aria-label="robot"></spa>
                       🤖
                     </span>
                   </div>
@@ -194,14 +190,14 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+          <div className="container mx-auto px-4 text-center"></div>
+            <h2 className="text-3 xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-8">
               Let&apos;s discuss how our team can help transform your business with innovative
               technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -218,6 +214,6 @@ export default function About() {
           </div>
         </section>
       </div>
-    </>
+    
   );
 }

@@ -12,24 +12,24 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossOrigin="" />
-        <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin="" />
-        <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.webp" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0f172a" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="format-detection" content="telephone=no,address=no,email=no" />
-        <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</meta>
-        </meta><link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
+    <html lang="en" className="dark"></htm>
+      <head></hea>
+        <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossOrigin="" /></lin>
+        <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossOrigin="" /></lin>
+        <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style" /></lin>
+        <link rel="icon" href="/favicon.ico" /></lin>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.webp" /></lin>
+        <link rel="manifest" href="/manifest.json" /></lin>
+        <meta name="theme-color" content="#0 f172 a" /></met>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" /></met>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" /></met>
+        <meta name="format-detection" content="telephone=no,address=no,email=no" /></met>
+        <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</met>
+        </meta><link rel="preconnect" href="https://fonts.googleapis.com" /></lin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}</link><link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
-        >{/* Structured Data */}</link>
+        >{/* Structured Data */}</lin>
         </link><script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -82,13 +82,13 @@ export default function RootLayout({
               ],
             }),
           }}
-        />
+        /></scrip>
       </head>
-      <body className='antialiased'>
-        <EnhancedSEOHead />
-        <AccessibilityEnhancer />
-        <PerformanceMonitor />
-        <ServiceWorkerRegistration >{children}</ServiceWorkerRegistration>
+      <body className='antialiased'></bod>
+        <EnhancedSEOHead /></EnhancedSEOHea>
+        <AccessibilityEnhancer /></AccessibilityEnhance>
+        <PerformanceMonitor /></PerformanceMonito>
+        <ServiceWorkerRegistration >{children}</ServiceWorkerRegistratio>
       </ServiceWorkerRegistration>
     </html>
   );

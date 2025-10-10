@@ -1,4 +1,4 @@
-export interface January2026Content {
+export interface January2026 Content {
   id: string;
   title: string;
   description: string;
@@ -17,7 +17,7 @@ export interface January2026Content {
   };
 }
 
-export const newJanuary2026Content: January2026Content[] = [
+export const newJanuary2026 Content: January2026 Content[] = [
   {
     id: 'ai-2026-hyperconscious-computing',
     title: 'AI 2026: Hyperconscious Computing Revolution',
@@ -31,7 +31,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
 ## Revolutionary Features
 - Genuine self-awareness and emotional intelligence
 - Creative autonomy and artistic expression
-- $1.2T enterprise value creation potential
+- $1.2 T enterprise value creation potential
 - Revolutionary applications across all industries
     `,
     author: 'Zion Tech Group',
@@ -41,7 +41,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     featured: true,
     readTime: '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
-    valueProposition: '$1.2T enterprise value creation',
+    valueProposition: '$1.2 T enterprise value creation',
     pricing: {
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',

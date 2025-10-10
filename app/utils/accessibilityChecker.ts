@@ -2,7 +2,7 @@
 /**
  * Accessibility Checker Utility
  *
- * Provides tools for checking and improving accessibility (a11y) in React applications.
+ * Provides tools for checking and improving accessibility (a11 y) in React applications.
  * Helps ensure WCAG 2.1 AA compliance.
  *
  * @module accessibilityChecker
@@ -12,7 +12,7 @@
 /**
  * Accessibility issue severity levels
  */
-export enum A11ySeverity {
+export enum A11 ySeverity {
   /** Minor issue that may affect some users */
   MINOR = 'MINOR',
   /** Moderate issue that affects usability */
@@ -36,13 +36,13 @@ export enum WCAGLevel {
 /**
  * Accessibility issue interface
  */
-export interface A11yIssue {
+export interface A11 yIssue {
   /** Unique identifier for the issue */
   id: string;
   /** Issue type/category */
   type: string;
   /** Severity level */
-  severity: A11ySeverity;
+  severity: A11 ySeverity;
   /** WCAG level this issue violates */
   wcagLevel: WCAGLevel;
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
@@ -59,13 +59,13 @@ export interface A11yIssue {
 /**
  * Accessibility check result
  */
-export interface A11yCheckResult {
+export interface A11 yCheckResult {
   /** Whether the check passed */
   passed: boolean;
   /** Number of issues found */
   issueCount: number;
   /** List of issues */
-  issues: A11yIssue[];
+  issues: A11 yIssue[];
   /** Timestamp of the check */
   timestamp: Date;
   /** Overall accessibility score (0-100) */
@@ -84,14 +84,14 @@ export interface A11yCheckResult {
  * ```
  */
 export class AccessibilityChecker {
-  private issues: A11yIssue[] = [];
+  private issues: A11 yIssue[] = [];
   /**
    * Check an element and its descendants for accessibility issues
    *
    * @param element - The DOM element to check
    * @returns Accessibility check result
    */
-  public checkElement(element: Element): A11yCheckResult {
+  public checkElement(element: Element): A11 yCheckResult {
     this.issues = [];
     // Run all checks
     this.checkImages(element);
@@ -117,7 +117,7 @@ export class AccessibilityChecker {
    *
    * @returns Accessibility check result
    */
-  public checkDocument(): A11yCheckResult {
+  public checkDocument(): A11 yCheckResult {
     if (typeof document === 'undefined') {
       return {
         passed: true,
@@ -144,26 +144,26 @@ export class AccessibilityChecker {
       if (alt === null && role !== 'presentation') {
         this.addIssue({
           type: 'missing-alt-text',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img src="..." alt="Description of image" />'</im>
 
       }
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
         this.addIssue({
           type: 'empty-alt-without-role',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img src="..." alt="" role="presentation" />'</im>
 
       }
 
@@ -181,10 +181,10 @@ export class AccessibilityChecker {
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
       // Check for skipped heading levels
-      if (level > previousLevel + 1 && previousLevel !== 0) {
+      if (<<<level>previousLevel</level></level> + 1 && previousLevel !== 0) {
         this.addIssue({
           type: 'skipped-heading-level',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.6',
           message: `Heading level skipped from h${previousLevel} to h${level}`,
@@ -197,7 +197,7 @@ export class AccessibilityChecker {
       if (!heading.textContent?.trim()) {
         this.addIssue({
           type: 'empty-heading',
-          severity: A11ySeverity.SERIOUS,
+          severity: A11 ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.6',
           message: `Empty ${heading.tagName} at position ${index + 1}`,
@@ -207,15 +207,15 @@ export class AccessibilityChecker {
       }
       previousLevel = level;
 
-    // Check for multiple h1s
-    const h1Count = element.querySelectorAll('h1').length;
-    if (h1Count > 1) {
+    // Check for multiple h1 s
+    const h1 Count = element.querySelectorAll('h1').length;
+    if (h1 Count > 1) {
       this.addIssue({
         type: 'multiple-h1',
-        severity: A11ySeverity.MODERATE,
+        severity: A11 ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.6',
-        message: `Found ${h1Count} h1 elements (should have only one)`,
+        message: `Found ${h1 Count} h1 elements (should have only one)`,
         element: 'h1',
         fix: 'Use only one h1 per page for the main heading'
 
@@ -238,20 +238,20 @@ export class AccessibilityChecker {
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
         this.addIssue({
           type: 'link-no-text',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<Link to="..." aria-label="Description">...</Link>'
+          codeExample: '<Link to="..." aria-label="Description">...</Lin>'
 
       }
       // Check for generic link text
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {
         this.addIssue({
           type: 'generic-link-text',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has generic text: "${text}"`,
@@ -269,14 +269,14 @@ export class AccessibilityChecker {
       ) {
         this.addIssue({
           type: 'new-window-no-warning',
-          severity: A11ySeverity.MINOR,
+          severity: A11 ySeverity.MINOR,
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
-            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
+            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Lin>'
 
       }
 
@@ -297,13 +297,13 @@ export class AccessibilityChecker {
       if (!text && !ariaLabel && !ariaLabelledBy) {
         this.addIssue({
           type: 'button-no-text',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
           fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
+          codeExample: '<button aria-label="Close dialog">×</butto>'
 
       }
 
@@ -328,13 +328,13 @@ export class AccessibilityChecker {
       if (!label && !ariaLabel && !ariaLabelledBy) {
         this.addIssue({
           type: 'form-no-label',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.3.1',
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<label for="email">Email:</labe><input id="email" name="email" />'</inpu>
 
       }
 
@@ -354,7 +354,7 @@ export class AccessibilityChecker {
       if (style?.includes('color:') && !style.includes('background')) {
         this.addIssue({
           type: 'color-without-background',
-          severity: A11ySeverity.MINOR,
+          severity: A11 ySeverity.MINOR,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '1.4.3',
           message: 'Element has inline color without explicit background',
@@ -378,13 +378,13 @@ export class AccessibilityChecker {
       if (tabindex === '-1') {
         this.addIssue({
           type: 'interactive-not-focusable',
-          severity: A11ySeverity.SERIOUS,
+          severity: A11 ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '<button tabindex="0">Accessible button</button>'
+          codeExample: '<button tabindex="0">Accessible button</butto>'
 
       }
 
@@ -397,13 +397,13 @@ export class AccessibilityChecker {
       if (!role || !tabindex || !onKeyDown) {
         this.addIssue({
           type: 'click-without-keyboard',
-          severity: A11ySeverity.SERIOUS,
+          severity: A11 ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={handleClick}>Click me</butto>'
 
       }
 
@@ -443,7 +443,7 @@ export class AccessibilityChecker {
       if (role && !validRoles.includes(role)) {
         this.addIssue({
           type: 'invalid-aria-role',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
           message: `Invalid ARIA role: "${role}"`,
@@ -458,7 +458,7 @@ export class AccessibilityChecker {
         if (!referencedElement) {
           this.addIssue({
             type: 'aria-labelledby-missing',
-            severity: A11ySeverity.SERIOUS,
+            severity: A11 ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
             wcagCriterion: '4.1.2',
             message: `aria-labelledby references non-existent element: "${labelledBy}"`,
@@ -481,12 +481,11 @@ export class AccessibilityChecker {
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',
-        severity: A11ySeverity.MODERATE,
+        severity: A11 ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
-        fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
+        fix: 'Add a <<<<main>element</main></<<main>or</main> role="main"',</<<<main>codeExample</main></main>: '<main></main><!-- Main content --></main>'
 
     }
   }
@@ -496,8 +495,7 @@ export class AccessibilityChecker {
    * @private
    * @param issue - Partial issue object
    */
-  private addIssue(issue: Omit<A11yIssue, 'id'>): void {
-    this.issues.push({
+  private addIssue(issue: Omit<A11 yIssue, 'id'>): void {</A11></<<<A11>this</A11></A11>.issues.push({
       id: this.generateIssueId(),
       ...issue
 
@@ -509,7 +507,7 @@ export class AccessibilityChecker {
    * @returns Unique identifier
    */
   private generateIssueId(): string {
-    return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `a11 y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   /**
    * Calculate accessibility score based on issues
@@ -520,10 +518,10 @@ export class AccessibilityChecker {
   private calculateScore(): number {
     if (this.issues.length === 0) return 100;
     const severityWeights = {
-      [A11ySeverity.MINOR]: 1,
-      [A11ySeverity.MODERATE]: 3,
-      [A11ySeverity.SERIOUS]: 7,
-      [A11ySeverity.CRITICAL]: 15
+      [A11 ySeverity.MINOR]: 1,
+      [A11 ySeverity.MODERATE]: 3,
+      [A11 ySeverity.SERIOUS]: 7,
+      [A11 ySeverity.CRITICAL]: 15
     };
     const totalPenalty = this.issues.reduce((sum, issue) => {
       return sum + severityWeights[issue.severity];
@@ -538,7 +536,7 @@ export class AccessibilityChecker {
    * @param severity - Severity level to filter by
    * @returns Array of issues with the specified severity
    */
-  public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {
+  public getIssuesBySeverity(severity: A11 ySeverity): A11 yIssue[] {
     return this.issues.filter(issue => issue.severity === severity);
   }
   /**
@@ -547,7 +545,7 @@ export class AccessibilityChecker {
    * @param level - WCAG level to filter by
    * @returns Array of issues that violate the specified WCAG level
    */
-  public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {
+  public getIssuesByWCAGLevel(level: WCAGLevel): A11 yIssue[] {
     return this.issues.filter(issue => issue.wcagLevel === level);
   }
   /**

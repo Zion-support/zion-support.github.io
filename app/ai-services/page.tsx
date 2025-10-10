@@ -82,7 +82,7 @@ const AIServicesPage: React.FC = () => {
       color: 'from-indigo-500 to-purple-600',
       pricing: 'Starting at $2,999/mo',
       capabilities: [
-        '1000x faster optimization',
+        '1000 x faster optimization',
         'Unbreakable encryption',
         'Quantum advantage in ML',
         'Scientific breakthrough potential'
@@ -119,10 +119,10 @@ const AIServicesPage: React.FC = () => {
     {
       id: 13,
       name: 'AI Holographic Workspace',
-      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      description: 'Immersive 3 D workspace with AI-powered collaboration tools and virtual reality integration',
       icon: Globe,
       features: [
-        '3D Holographic Interface',
+        '3 D Holographic Interface',
         'Virtual Collaboration',
         'AI-Powered Gestures',
         'Spatial Computing',
@@ -139,7 +139,7 @@ const AIServicesPage: React.FC = () => {
       pricing: 'Starting at $1,299/mo',
       capabilities: [
         'Immersive collaboration',
-        '3D data visualization',
+        '3 D data visualization',
         'Virtual presence',
         'Next-gen workspace'
       ]
@@ -194,7 +194,7 @@ const AIServicesPage: React.FC = () => {
       color: 'from-red-500 to-pink-600',
       pricing: 'Starting at $4,999/mo',
       capabilities: [
-        '10x faster drug discovery',
+        '10 x faster drug discovery',
         '95% accuracy in predictions',
         'Reduced clinical trial costs',
         'Personalized treatment options'
@@ -402,10 +402,10 @@ const AIServicesPage: React.FC = () => {
     {
       id: 23,
       name: 'AI Holographic Workspace Pro',
-      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      description: 'Immersive 3 D workspace with AI-powered collaboration tools and virtual reality integration',
       icon: Globe,
       features: [
-        '3D Holographic Interface',
+        '3 D Holographic Interface',
         'Virtual Collaboration',
         'AI-Powered Gestures',
         'Spatial Computing',
@@ -422,7 +422,7 @@ const AIServicesPage: React.FC = () => {
       pricing: 'Starting at $1,299/mo',
       capabilities: [
         'Immersive collaboration',
-        '3D data visualization',
+        '3 D data visualization',
         'Virtual presence',
         'Next-gen workspace'
       ],
@@ -546,11 +546,11 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 28,
-      name: 'AI 3D Generation Studio Pro',
-      description: 'AI-powered 3D model generation and animation with photorealistic rendering capabilities',
+      name: 'AI 3 D Generation Studio Pro',
+      description: 'AI-powered 3 D model generation and animation with photorealistic rendering capabilities',
       icon: Palette,
       features: [
-        '3D Model Generation',
+        '3 D Model Generation',
         'Texture Synthesis',
         'Animation Creation',
         'Rigging Automation',
@@ -559,19 +559,19 @@ const AIServicesPage: React.FC = () => {
         'Scene Composition',
         'Export Options'
       ],
-      category: '3D AI',
+      category: '3 D AI',
       popular: true,
       rating: 4.8,
       users: '1,800+',
       color: 'from-purple-500 to-pink-600',
       pricing: 'Starting at $999/mo',
       capabilities: [
-        '10x faster 3D creation',
+        '10 x faster 3 D creation',
         'Photorealistic quality',
         'Automated rigging',
         'Multiple export formats'
       ],
-      link: 'https://ziontechgroup.com/ai-3d-generation'
+      link: 'https://ziontechgroup.com/ai-3 d-generation'
     },
     {
       id: 29,
@@ -910,7 +910,7 @@ const AIServicesPage: React.FC = () => {
       color: 'from-indigo-500 to-purple-600',
       pricing: 'Starting at $179/mo',
       capabilities: [
-        '10x faster content creation',
+        '10 x faster content creation',
         'SEO-optimized content',
         'Brand consistency',
         'Multi-platform publishing'
@@ -1170,11 +1170,11 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
+const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3 D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
 
   if (!isLoaded) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center"></div>
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
       </div>
     );
@@ -1182,49 +1182,48 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
 
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden"></div>
       {/* Futuristic Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" /></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1 s' }} /></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1 px,transparent_1 px),linear-gradient(90 deg,rgba(0,255,255,0.03)_1 px,transparent_1 px)] bg-[length:50 px_50 px]" /></div>
 
       {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
+      <div className="absolute inset-0 opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90 deg,rgba(0,255,255,0.1)_1 px,transparent_1 px),linear-gradient(rgba(0,255,255,0.1)_1 px,transparent_1 px)] bg-[length:100 px_100 px] animate-pulse" /></div>
       </div>
 
       {/* Header */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
-          <div className="text-center">
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10"></div>
+          <div className="text-center"></div>
 
-            <div className="inline-block mb-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
-                AI Services
+            <div className="inline-block mb-6"></div>
+              <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-4 neon-text"></h1></<<<h>AI</h></<<h>Services</h>
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
             </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed">
               Transform your business with our comprehensive suite of cutting-edge AI-powered solutions
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">35+</div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5 xl mx-auto mb-12"></div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"></div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">35+</div>
                 <div className="text-gray-300">AI Services</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">25K+</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"></div>
+                <div className="text-3 xl font-bold text-purple-400 mb-2">25 K+</div>
                 <div className="text-gray-300">Active Users</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20"></div>
+                <div className="text-3 xl font-bold text-pink-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Accuracy Rate</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"></div>
+                <div className="text-3 xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Support</div>
               </div>
             </div>
@@ -1233,23 +1232,22 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI Services
+      <div className="relative z-10 max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5 xl md:text-7 xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></h1></<<<h>AI</h></<<h>Services</h>
           </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+              <div className="holographic px-6 py-3 rounded-lg"></div>
+                <span className="text-cyan-400 font-semibold">15+ AI Platforms</spa>
               </div>
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-purple-400 font-semibold">25,000+ Companies</span>
+              <div className="holographic px-6 py-3 rounded-lg"></div>
+                <span className="text-purple-400 font-semibold">25,000+ Companies</spa>
               </div>
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-pink-400 font-semibold">99.9% Accuracy</span>
+              <div className="holographic px-6 py-3 rounded-lg"></div>
+                <span className="text-pink-400 font-semibold">99.9% Accuracy</spa>
 
               </div>
             </div>
@@ -1258,13 +1256,13 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       </div>
 
       {/* Category Filter */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-wrap justify-center gap-4">
+      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-8"></div>
+        <div className="flex flex-wrap justify-center gap-4"></div>
           {categories.map((category) => (
             <button
               key={category}
               className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
-            >
+            ></button>
               {category}
             </button>
           ))}
@@ -1272,39 +1270,38 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       </div>
 
       {/* Services Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
           {services.map((service) => (
             <div
               key={service.id}
 
-              className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
+              className={`group bg-white/5 backdrop-blur-sm rounded-2 xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2 xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20 neon-glow-purple' : ''
               }`}
-            >
+            ></div>
               {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" /></div>
 
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <service.icon className="h-8 w-8" />
+              <div className="relative z-10"></div>
+                <div className="flex items-start justify-between mb-6"></div>
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}></div>
+                    <service.icon className="h-8 w-8" /></servic>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2"></div>
                     {service.popular && (
-                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
-                        <Star className="w-3 h-3 mr-1" />
-                        Popular
+                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg"></spa>
+                        <Star className="w-3 h-3 mr-1" /></Star></<<<Star>Popular</Star></Star>
                       </span>
                     )}
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    <div className="flex items-center text-yellow-400"></div>
+                      <Star className="w-4 h-4 fill-current" /></Sta>
+                      <span className="ml-1 text-sm font-medium">{service.rating}</spa>
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                <h3 className="text-2 xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300"></h3>
                   {service.name}
                 </h3>
 
@@ -1312,57 +1309,55 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                   {service.description}
                 </p>
 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                    <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-                    Key Features:
+                <div className="mb-6"></div>
+                  <h4 className="text-lg font-semibold text-white mb-3 flex items-center"></h>
+                    <Zap className="w-4 h-4 mr-2 text-cyan-400" /></Zap></<<<Zap>Key</Zap></<<Zap>Features</Zap>:
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></u>
                     {service.features.slice(0, 4).map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={index} className="flex items-center text-gray-300 text-sm"></l>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl>
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
-                      <li className="text-cyan-400 text-sm font-medium">
+                      <li className="text-cyan-400 text-sm font-medium"></li>
                         +{service.features.length - 4} more features
                       </li>
                     )}
                   </ul>
                 </div>
 
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-sm text-gray-400">
+                <div className="flex items-center justify-between mb-6"></div>
+                  <div className="text-sm text-gray-400"></div>
                     {service.users} users
                   </div>
-                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">
+                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium"></div>
                     {service.category}
                   </div>
                 </div>
 
-                <div className="mb-6">
-                  <div className="text-lg font-semibold text-cyan-400 mb-2">
+                <div className="mb-6"></div>
+                  <div className="text-lg font-semibold text-cyan-400 mb-2"></div>
                     {service.pricing}
                   </div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
-                  <ul className="space-y-1">
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h>
+                  <ul className="space-y-1"></u>
                     {service.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={index} className="flex items-center text-gray-300 text-sm"></l>
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircl>
                         {capability}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3"></div>
                   <a
                     href={service.link}
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  ></a></<<<a>Get</a></<<a>Started</a>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" /></ArrowRigh>
                   </a>
                   <a
                     href="/contact"
@@ -1379,15 +1374,14 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       </div>
 
       {/* CTA Section */}
-<div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business with AI?
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16"></div>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"></h2></<<<h>Ready</h></<<h>to</h> Transform Your Business with AI?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Join 25,000+ companies already using our cutting-edge AI solutions. Start your free trial today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"></div>
             <a
               href="https://ziontechgroup.com/contact"
               className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
@@ -1401,7 +1395,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               Call: +1 (302) 464-0950
             </a>
           </div>
-          <div className="text-purple-100 text-sm">
+          <div className="text-purple-100 text-sm"></div>
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

@@ -15,9 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const system =
       'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.';
-    const results: Record<string, string> = {};
-
-    for (const lng of targets) {
+    const results: Record<string, string> = {};</string>for</string> (const lng of targets) {
       const langName = lng.startsWith('pt')
         ? 'Portuguese'
         : lng.startsWith('es')
@@ -27,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             : 'English';
 
       const completion = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4 o-mini',
         messages: [
           { role: 'system', content: system },
           {

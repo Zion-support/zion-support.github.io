@@ -1,9 +1,8 @@
 import { ProviderConnection, SyncLogEntry } from './types';
 
-export async function simulateAction<T = unknown>(
-  connection: ProviderConnection,
+export async function simulateAction<T = unknown>(</T>connection</T>: ProviderConnection,
   action: string,
-  details: Record<string, unknown> = {}
+  details: Record<string, unknown> = {}</string>
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
@@ -12,10 +11,9 @@ const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 };
 
-export async function simulateAction<T = any>(
-  connection: ProviderConnection,
+export async function simulateAction<T = any>(</T>connection</T>: ProviderConnection,
   action: string,
-  details: Record<string, any> = {}
+  details: Record<string, any> = {}</string>
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -63,38 +61,30 @@ export async function simulateAction<T = any>(
   return { log, result };
 }
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 };
 // ATS actions
 export const ats = {
-  async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
-    return simulateAction(connection, 'ats.pushApplicant', { applicant });
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {</string>return</string> simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
 
 export async function testConnection(
   connection: ProviderConnection
-): Promise<boolean> {
-  try {
+): Promise<boolean> {</boolean>try</boolean> {
     await simulateAction(connection, 'test_connection');
     return true;
   } catch {
@@ -104,46 +94,35 @@ export async function testConnection(
 
 export async function syncData(
   connection: ProviderConnection
-): Promise<SyncLogEntry[]> {
-  const logs: SyncLogEntry[] = [];
+): Promise<SyncLogEntry[]> {</SyncLogEntry>const</SyncLogEntry> logs: SyncLogEntry[] = [];
 
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>
 
 // CRM actions
 export const crm = {
-  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
-    return simulateAction(connection, 'crm.syncContact', { contact });
+  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.syncContact', { contact });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   try {
     const { log } = await simulateAction(connection, 'sync_data', {
       lastSync: connection.lastSync?.toISOString(),
@@ -160,18 +139,7 @@ export const crm = {
     });
   }
 
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-    return simulateAction(connection, 'ats.updateStatus', { change });
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>async</string> updateStatus(connection: ProviderConnection, change: Record<string, any>) {</string>return</string> simulateAction(connection, 'ats.updateStatus', { change });
   }
 };
   return logs;

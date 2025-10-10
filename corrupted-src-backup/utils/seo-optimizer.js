@@ -107,14 +107,11 @@ class SEOOptimizer {
     //     const lastmod = new Date().toISOString().split('T')[0];
 
     let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
-    pages.forEach(page => {
-      xml += '  <url>\n';
-      xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';</urlset>pages</urlset>.forEach(page => {
+      xml += '  <url>\n';</url>xml</url> += `    <loc>${baseUrl}${page.url}</loc>\n`;
       xml += `    <lastmod>${lastmod}</lastmod>\n`;
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
-      xml += `    <priority>${page.priority}</priority>\n`;
+      xml += `    <priority></p>${page.priority}</priority>\n`;
       xml += '  </url>\n';
     });
 
@@ -166,7 +163,7 @@ Disallow: /data_backup/
 Disallow: /dao/
 Disallow: /deployments/
 Disallow: /disabled-api/
-Disallow: /e2e/
+Disallow: /e2 e/
 Disallow: /factories/
 Disallow: /src/pages/blog-disabled/
 Disallow: /hooks/
@@ -373,10 +370,10 @@ Disallow: /middleware/`;
     // Inline critical CSS for above-the-fold content
     const criticalCSS = `
       body { font-family: Inter, sans-serif; margin: 0; padding: 0; }
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-      .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-      .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
-      .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }
+      .container { max-width: 1200 px; margin: 0 auto; padding: 0 20 px; }
+      .header { background: #fff; box-shadow: 0 2 px 4 px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+      .hero { background: linear-gradient(135 deg, #667 eea 0%, #764 ba2 100%); color: white; padding: 80 px 0; text-align: center; }
+      .btn { background: #007 bff; color: white; padding: 12 px 24 px; border: none; border-radius: 4 px; cursor: pointer; text-decoration: none; display: inline-block; }
     `;
 
     const _style = document.createElement('style');

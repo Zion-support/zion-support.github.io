@@ -15,8 +15,7 @@ interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
+  structuredData?: Record<string, unknown>;</string></<<<string>robots</string></string>?: string;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -32,16 +31,13 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({</AdvancedSEOOptimizerProps></<<<AdvancedSEOOptimizerProps>seoData</AdvancedSEOOptimizerProps></AdvancedSEOOptimizerProps>,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-
-  const generateStructuredData = useCallback(() => {
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement></<<<HTMLScriptElement>const</HTMLScriptElement></<<HTMLScriptElement>generateStructuredData</HTMLScriptElement> = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
       return null;
     }
@@ -160,8 +156,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'author', content: seoData.author || 'Zion Tech Group' },
       { name: 'robots', content: seoData.robots || 'index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
+      { name: 'theme-color', content: '#3 B82 F6' },
+      { name: 'msapplication-TileColor', content: '#3 B82 F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
     return metaTags;
@@ -196,7 +192,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const addStructuredData = (data: Record<string, unknown>) => {
+  const addStructuredData = (data: Record<string, unknown>) => {</strin>
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
@@ -232,52 +228,52 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, []);
 
   return (
-    <Helmet>
+    <Helmet></Helme>
       {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
+      <title>{seoData.title}</titl>
       {metaTags.map((tag, index) => (
-        <meta key={index} name={tag.name} content={tag.content} />
+        <meta key={index} name={tag.name} content={tag.content} /></met>
       ))}
 
       {/* Canonical URL */}
       {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
+        <link rel="canonical" href={seoData.canonicalUrl} /></lin>
       )}
 
       {/* Open Graph Tags */}
       {Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
+        <meta key={property} property={property} content={content} /></met>
       ))}
 
       {/* Twitter Card Tags */}
       {Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
+        <meta key={name} name={name} content={content} /></met>
       ))}
 
       {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="format-detection" content="telephone=no" /></met>
+      <meta name="mobile-web-app-capable" content="yes" /></met>
+      <meta name="apple-mobile-web-app-capable" content="yes" /></met>
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></met>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></met>
 
       {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></lin>
+      <link rel="icon" type="image/png" sizes="16 x16" href="/favicon-16 x16.webp" /></lin>
+      <link rel="icon" type="image/png" sizes="32 x32" href="/favicon-32 x32.webp" /></lin>
+      <link rel="apple-touch-icon" sizes="180 x180" href="/apple-touch-icon.webp" /></lin>
+      <link rel="manifest" href="/site.webmanifest" /></lin>
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></lin>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></lin>
+      <link rel="preconnect" href="https://www.google-analytics.com" /></lin>
+      <link rel="preconnect" href="https://www.googletagmanager.com" /></lin>
 
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></lin>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></lin>
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></lin>
     </Helmet>
   );
 };

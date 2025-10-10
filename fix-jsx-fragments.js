@@ -27,13 +27,13 @@ function processFile(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix JSX fragment issues - ensure proper opening and closing
-    if (content.includes('<>') && !content.includes('</>')) {
-      // Find the last closing div or main tag and add </> before it
+    if (content.includes('<>') && !content.includes('')) {
+      // Find the last closing div or main tag and add  before it
 
       for (let i = lines.length - 1; i >= 0; i--) {
         if (
           lines[i].trim().startsWith('</') &&
-          !lines[i].includes('</>') &&
+          !lines[i].includes('') &&
           !lines[i].includes('</Helmet>')
         ) {
           lastClosingTagIndex = i;
@@ -42,7 +42,7 @@ function processFile(filePath) {
       }
 
       if (lastClosingTagIndex !== -1) {
-        lines.splice(lastClosingTagIndex + 1, 0, '    </>');
+        lines.splice(lastClosingTagIndex + 1, 0, '    ');
         content = lines.join('\n');
         modified = true;
       }

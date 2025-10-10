@@ -7,14 +7,11 @@ interface FuturisticServiceCardProps {
     description: string;
   price: string;,
     features: string[];
-  icon: React.ComponentType<any>;,
-    color: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
+  icon: React.ComponentType<any>;,</any></<<<an>color</an></an>: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
   href: string;
   popular?: boolean;
 }</any>
-</any>
-const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
-  title,
+</<<<any>const</any></<<any>FuturisticServiceCard</any>: React.FC<FuturisticServiceCardProps>= ({</FuturisticServiceCardProps></<<<FuturisticServiceCardProp>title</FuturisticServiceCardProp></FuturisticServiceCardProp>,
   description,
   price,
   features,
@@ -71,17 +68,15 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
   };
 
   const currentColor = colorClasses[color];
-</FuturisticServiceCardProps>
-  return (<div
+</<<<FuturisticServiceCardProps>return</FuturisticServiceCardProps></FuturisticServiceCardProps> (<div
       className={`relative group cursor-pointer transition-all duration-500 transform ${
         popular ? 'scale-105' : 'hover:scale-105'
       }`}
-      onMouseEnter={() =>setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() =>setIsHovered(true)}</div></<<<di>onMouseLeave</di></di>={() => setIsHovered(false)}
     >
       {/* Popular Badge */}</div>
       {popular && (</div>
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"></div>
           <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Most Popular</div>
           </div>
         </div>
@@ -89,23 +84,23 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
 
       {/* Card */}
       <div
-        className={`glass rounded-2xl p-8 border transition-all duration-500 ${
+        className={`glass rounded-2 xl p-8 border transition-all duration-500 ${
           popular ? currentColor.border : 'border-white/10'
         } ${currentColor.hover} ${
-          isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'
+          isHovered ? `shadow-2 xl ${currentColor.shadow}` : 'shadow-lg'
         }`}
       >{/* Icon */}</div>
-        <div className="relative mb-6">
+        <div className="relative mb-6"></div>
           <div
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
               isHovered ? 'neon-cyan' : ''
             }`}
-          >
-            <Icon className="w-8 h-8 text-white" />
+          ></div>
+            <Icon className="w-8 h-8 text-white" /></Ico>
           </div>
 
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{/* Title */}<h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>{/* Title */}<h3 className="text-2 xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h>
         </h3>
 
         {/* Description */}
@@ -113,18 +108,18 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
         </p>
 
         {/* Price */}
-        <div className="mb-6">
-          <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>{price}<div className="text-sm text-gray-400">per month</div>
+        <div className="mb-6"></div>
+          <div className={`text-3 xl font-bold ${currentColor.text} mb-2`}></div>{price}<div className="text-sm text-gray-400">per month</div>
         </div>
 
         {/* Features */}
-        <ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</ul>
-            <li key={index} className="flex items-center text-sm text-gray-300">
-              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+        <ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</u>
+            <li key={index} className="flex items-center text-sm text-gray-300"></l>
+              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircl>
             </CheckCircle>
           ))}
           {features.length > 4 && (
-            <li className="text-sm text-gray-400">+{features.length - 4} more features</li>
+            <li className="text-sm text-gray-400">+{features.length - 4} more features</l>
             </li>
           )}
         </ul>
@@ -136,16 +131,15 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps>= ({
               ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700'
               : `border border-${color}-500 text-${color}-300 hover:bg-${color}-500/20`
           } flex items-center justify-center group`}
-        >Get Started</button>
-          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        >Get Started</butto>
+          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRigh>
         </button>
 
         {/* Hover Effect Overlay */}
         <div
-          className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}
-        >{/* Glow Effect */}<div
-        className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-500 -z-10`}
-      >);
+          className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-5 rounded-2 xl transition-opacity duration-500`}
+        ></div>{/* Glow Effect */}<div
+        className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hover:opacity-20 rounded-2 xl blur-xl transition-opacity duration-500 -z-10`}
+      >);</div>
 };</div>
-</div>
-export default FuturisticServiceCard;</div>
+</<<<div>export</div></<<div>default</div> FuturisticServiceCard;</div>

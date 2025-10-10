@@ -135,38 +135,38 @@ const SecurityPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigatio>
 
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Security & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.</p>
+      <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</mai>
+        <section className="text-center mb-16"></sectio>
+          <h1 className="text-4 xl md:text-5 xl lg:text-6 xl font-bold text-white mb-6 neon-text"></h1></<<<h1>Security</h1></h1> & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.</p>
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <Shield className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">SOC 2 Type II Certified</span>
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
+              <Shield className="w-5 h-5 text-green-400" /></Shiel>
+              <span className="text-white font-medium">SOC 2 Type II Certified</spa>
             </div>
-            <div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg">
-              <Lock className="w-5 h-5 text-blue-400" />
-              <span className="text-white font-medium">ISO 27001 Compliant</span>
+            <div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg"></div>
+              <Lock className="w-5 h-5 text-blue-400" /></Loc>
+              <span className="text-white font-medium">ISO 27001 Compliant</spa>
             </div>
-            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-medium">GDPR Compliant</span>
+            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
+              <CheckCircle className="w-5 h-5 text-purple-400" /></CheckCircl>
+              <span className="text-white font-medium">GDPR Compliant</spa>
             </div>
           </div>
         </section>
 
         {/* Security Measures */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityMeasures.map((measure, index) => (</div>
-              <div key={index} className="cyber-card p-6">
-                <div className="flex items-center mb-4">
-                  <measure.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{measure.title}<p className="text-gray-300 mb-4">{measure.description}<ul className="space-y-2">{measure.details.map((detail, detailIndex) => (</ul>
-                    <li key={detailIndex} className="flex items-start text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >{detail}</CheckCircle>
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"></h2></<<<h2>Security</h2></<<h2>Measures</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityMeasures.map((measure, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="flex items-center mb-4"></div>
+                  <measure.icon className="w-8 h-8 text-cyan-400 mr-3" /></measur>
+                  <h3 className="text-xl font-bold text-white"></h>{measure.title}<p className="text-gray-300 mb-4"></p>{measure.description}<ul className="space-y-2">{measure.details.map((detail, detailIndex) => (</u>
+                    <li key={detailIndex} className="flex items-start text-sm text-gray-300"></l>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >{detail}</CheckCircl>
                     </CheckCircle>
                   ))}
                 </ul>
@@ -176,14 +176,14 @@ const SecurityPage: React.FC = () => {
         </section>
 
         {/* Compliance Standards */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-gray-300 mb-8">We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) => (</div>
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-semibold text-white">{standard.name}</h3>
-                    <standard.icon className="w-6 h-6 text-green-400" />
-                  <p className="text-gray-300 text-sm mb-3">{standard.description}<span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">{standard.status}</span>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>Compliance</h2></h2> & Certifications<p className="text-gray-300 mb-8"></p></<<<p>We</p></<<p>maintain</p> compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) => (</div>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <div className="flex items-center justify-between mb-3"></div>
+                    <h3 className="text-lg font-semibold text-white">{standard.name}</h>
+                    <standard.icon className="w-6 h-6 text-green-400" /></standar>
+                  <p className="text-gray-300 text-sm mb-3"></p>{standard.description}<span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">{standard.status}</spa>
                   </span>
                 </div>
               ))}
@@ -192,12 +192,12 @@ const SecurityPage: React.FC = () => {
         </section>
 
         {/* Security Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) => (</div>
-              <div key={index} className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.features.map((item, itemIndex) => (</ul>
-                    <li key={itemIndex} className="flex items-start text-sm text-gray-300">
-                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">{item}</span>
+        <section className="mb-16"></sectio>
+          <h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"></h2></<<<h2>Security</h2></<<h2>Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) => (</div>
+              <div key={index} className="cyber-card p-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3"></h>{feature.title}<p className="text-gray-300 mb-4"></p>{feature.description}<ul className="space-y-2">{feature.features.map((item, itemIndex) => (</u>
+                    <li key={itemIndex} className="flex items-start text-sm text-gray-300"></l>
+                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">{item}</spa>
                     </span>
                   ))}
                 </ul>
@@ -207,57 +207,57 @@ const SecurityPage: React.FC = () => {
         </section>
 
         {/* Security Best Practices */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Best Practices</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">For Our Clients</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Use strong, unique passwords for all accounts</span>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text">Security Best Practices</h>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div></div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">For Our Clients</h>
+                <ul className="space-y-3 text-gray-300"></u>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Use</span></<<span>strong</span>, unique passwords for all accounts</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Enable multi-factor authentication (MFA)</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Enable</span></<<span>multi</span>-factor authentication (MFA)</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Keep software and systems updated</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Keep</span></<<span>software</span> and systems updated</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Be cautious with email attachments and links</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Be</span></<<span>cautious</span> with email attachments and links</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regularly review account access and permissions</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regularly</span></<<span>review</span> account access and permissions</span>
                   </li>
                 </ul>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Our Internal Practices</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular security training for all employees</span>
+              <div></div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Our Internal Practices</h>
+                <ul className="space-y-3 text-gray-300"></u>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regular</span></<<span>security</span> training for all employees</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Background checks for all personnel</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Background</span></<<span>checks</span> for all personnel</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Secure development lifecycle (SDL)</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Secure</span></<<span>development</span> lifecycle (SDL)</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular penetration testing and vulnerability assessments</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regular</span></<<span>penetration</span> testing and vulnerability assessments</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Incident response and business continuity planning</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Incident</span></<<span>response</span> and business continuity planning</span>
                   </li>
                 </ul>
               </div>
@@ -266,54 +266,54 @@ const SecurityPage: React.FC = () => {
         </section>
 
         {/* Incident Response */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Incident Response<p className="text-gray-300 mb-6">In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickly.</p>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>Incident</h2></<<h2>Response</h2><p className="text-gray-300 mb-6">In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickly.</p>
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Response Process</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Immediate detection and assessment</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div></div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Response Process</h>
+                <ul className="space-y-2 text-gray-300"></u>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Immediate</span></<<span>detection</span> and assessment</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Containment and mitigation measures</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Containment</span></<<span>and</span> mitigation measures</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Investigation and root cause analysis</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Investigation</span></<<span>and</span> root cause analysis</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Recovery and service restoration</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Recovery</span></<<span>and</span> service restoration</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Post-incident review and improvements</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Post</span></span>-incident review and improvements</span>
                   </li>
                 </ul>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Communication</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Immediate notification to affected clients</span>
+              <div></div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Communication</h>
+                <ul className="space-y-2 text-gray-300"></u>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Immediate</span></<<span>notification</span> to affected clients</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular updates throughout the incident</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regular</span></<<span>updates</span> throughout the incident</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Detailed post-incident report</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Detailed</span></<<span>post</span>-incident report</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Lessons learned and preventive measures</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Lessons</span></<<span>learned</span> and preventive measures</span>
                   </li>
                 </ul>
               </div>
@@ -322,24 +322,24 @@ const SecurityPage: React.FC = () => {
         </section>
 
         {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?<p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security team:</p>
+        <section className="mb-16"></sectio>
+          <div className="cyber-card p-8"></div>
+            <h2 className="text-2 xl font-bold text-white mb-6 neon-text"></h2></<<<h2>Security</h2></<<h2>Questions</h2>?<p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security team:</p>
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Team</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>Chief Information Security Officer<p>Zion Tech Group</p>
-                  <p>364 E Main St STE 1008<p>Middletown, DE 19709</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Team</h>
+                <div className="space-y-2 text-gray-300"></div>
+                  <p></p></<<<p>Chief</p></<<p>Information</p> Security Officer<<<<p>Zion</p></<<p>Tech</p> Group</p>
+                  <p></p>364 E Main St STE 1008<<<<p>Middletown</p>, DE 19709</p>
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.com</a>
-                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
-                  <p>Emergency: <a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 0951</a>
+              <div></div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h>
+                <div className="space-y-2 text-gray-300"></div>
+                  <p></p></<<<p>Email</p>: <a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.com</a>
+                  <p></p></<<<p>Phone</p>: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
+                  <p></p></<<<p>Emergency</p>: <a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 0951</a>
                 </div>
               </div>
             </div>
@@ -347,7 +347,7 @@ const SecurityPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

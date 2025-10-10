@@ -317,8 +317,8 @@ class PerformanceOptimizer {
     // For runtime, we can add critical styles to head
     const criticalCSS = `
       body { font-family: Inter, sans-serif; }
-      .container { max-width: 1200px; margin: 0 auto; }
-      .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      .container { max-width: 1200 px; margin: 0 auto; }
+      .header { background: #fff; box-shadow: 0 2 px 4 px rgba(0,0,0,0.1); }
     `;
 
     const _style = document.createElement('style');

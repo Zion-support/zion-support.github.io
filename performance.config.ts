@@ -41,7 +41,7 @@ export const performanceConfig = {
   // Lazy loading configuration
   lazyLoading: {
     imagePlaceholder: 'blur',
-    rootMargin: '50px',
+    rootMargin: '50 px',
     threshold: 0.01,
     enableNativeLazyLoading: true,
   },
@@ -63,8 +63,8 @@ export const performanceConfig = {
 
   // Bundle optimization
   bundling: {
-    maxChunkSize: 244000, // ~240KB
-    minChunkSize: 20000, // ~20KB
+    maxChunkSize: 244000, // ~240 KB
+    minChunkSize: 20000, // ~20 KB
     splitChunks: true,
     treeshaking: true,
   },

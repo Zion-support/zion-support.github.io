@@ -23,8 +23,7 @@ class AccessibilityEnhancer {
   private isInitialized = false;
   private focusTrapElements: HTMLElement[] = [];
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
+  constructor(config: Partial<AccessibilityConfig> = {}) {</AccessibilityConfig>this</AccessibilityConfig>.config = {
       enableFocusManagement: true,
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
@@ -54,8 +53,8 @@ class AccessibilityEnhancer {
     const _style = document.createElement('style');
     style.textContent = `
       *:focus {
-        outline: 2px solid #0066cc;
-        outline-offset: 2px;
+        outline: 2 px solid #0066 cc;
+        outline-offset: 2 px;
       }
       
       .focus-trap {
@@ -85,21 +84,21 @@ class AccessibilityEnhancer {
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
       position: absolute;
-      top: -40px;
-      left: 6px;
+      top: -40 px;
+      left: 6 px;
       background: #000;
       color: #fff;
-      padding: 8px;
+      padding: 8 px;
       text-decoration: none;
       z-index: 1000;
     `;
 
     skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+      skipLink.style.top = '6 px';
     });
 
     skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
+      skipLink.style.top = '-40 px';
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
@@ -127,9 +126,9 @@ class AccessibilityEnhancer {
     style.textContent = `
       @media (prefers-reduced-motion: reduce) {
         * {
-          animation-duration: 0.01ms !important;
+          animation-duration: 0.01 ms !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+          transition-duration: 0.01 ms !important;
         }
       }
     `;
@@ -203,7 +202,7 @@ class AccessibilityEnhancer {
 
     headings.forEach(heading => {
       //       const level = parseInt(heading.tagName.charAt(1));
-      if (level > previousLevel + 1) {
+      if (level>previousLevel</level> + 1) {
         score -= 20; // Penalty for skipped heading levels
       }
       previousLevel = level;

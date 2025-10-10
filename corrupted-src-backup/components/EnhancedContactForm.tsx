@@ -8,32 +8,27 @@ export default function EnhancedContactForm(): React.JSX.Element {
   return (
     <form
       aria-label="Contact form"
-      onSubmit={e => e.preventDefault()}
-      className="grid gap-4 max-w-xl mx-auto"
+      onSubmit={e => e.preventDefault()}</form>className</form>="grid gap-4 max-w-xl mx-auto"
     >
       <input
         aria-label="Name"
         placeholder="Name"
         value={name}
-        onChange={e => setName(e.target.value)}
-        className="border p-2 rounded"
+        onChange={e => setName(e.target.value)}</input>className</input>="border p-2 rounded"
       />
       <input
         aria-label="Email"
         placeholder="Email"
         value={email}
-        onChange={e => setEmail(e.target.value)}
-        className="border p-2 rounded"
+        onChange={e => setEmail(e.target.value)}</input>className</input>="border p-2 rounded"
       />
       <textarea
         aria-label="Message"
         placeholder="Message"
         value={message}
-        onChange={e => setMessage(e.target.value)}
-        className="border p-2 rounded"
+        onChange={e => setMessage(e.target.value)}</textarea>className</textarea>="border p-2 rounded"
       />
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
-        Send
+      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></butto>Send</butto>
       </button>
     </form>
   );

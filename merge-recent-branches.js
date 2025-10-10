@@ -15,10 +15,10 @@ import fs from 'fs';
 
 //Step 2: Get recent branches
 // const recentBranches = [
-  'cursor/fix-errors-and-merge-to-main-3b04',
+  'cursor/fix-errors-and-merge-to-main-3 b04',
   'cursor/fix-errors-and-merge-to-main-4800',
-  'cursor/fix-errors-and-merge-to-main-9caa',
-  'cursor/fix-errors-and-merge-to-main-b8f9',
+  'cursor/fix-errors-and-merge-to-main-9 caa',
+  'cursor/fix-errors-and-merge-to-main-b8 f9',
   'cursor/fix-errors-and-merge-to-main-cefe',
   'cursor/fix-errors-and-merge-to-main-dc65',
   'cursor/fix-errors-and-merge-to-main-fbf8',
@@ -27,12 +27,12 @@ import fs from 'fs';
   'cursor/fix-errors-and-merge-to-main-ffab',
   'cursor/fix-errors-and-merge-to-main-ffee',
   'cursor/fix-errors-and-merge-to-main-5696',
-  'cursor/fix-errors-and-merge-to-main-6ee3',
-  'cursor/fix-errors-and-merge-to-main-dc0f',
-  'candidate/fix-errors-and-merge-to-main-a79e',
-  'candidate/fix-syntax-push-and-merge-to-main-44ce',
-  'chore/a11y-reduced-motion',
-  'chore/a11y-single-main',
+  'cursor/fix-errors-and-merge-to-main-6 ee3',
+  'cursor/fix-errors-and-merge-to-main-dc0 f',
+  'candidate/fix-errors-and-merge-to-main-a79 e',
+  'candidate/fix-syntax-push-and-merge-to-main-44 ce',
+  'chore/a11 y-reduced-motion',
+  'chore/a11 y-single-main',
   'chore/add-2027-content-and-homepage-promo',
 ];
 

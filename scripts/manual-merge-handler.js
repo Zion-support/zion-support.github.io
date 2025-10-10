@@ -24,10 +24,10 @@ function execGitCommand(command, description) {
 
 // List of important branches to merge
 const importantBranches = [
-  'cursor/enhance-app-with-new-services-and-futuristic-design-2e4e',
-  'cursor/enhance-app-with-new-services-and-futuristic-design-7bf2',
-  'cursor/enhance-app-with-new-services-and-futuristic-design-80f7',
-  'cursor/website-audit-and-update-with-deployment-d0c2',
+  'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e',
+  'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2',
+  'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7',
+  'cursor/website-audit-and-update-with-deployment-d0 c2',
   'cursor/website-audit-and-update-with-deployment-db70',
   'add-new-2026-content',
   'add-revolutionary-content-2026',

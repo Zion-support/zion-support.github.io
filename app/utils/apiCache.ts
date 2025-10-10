@@ -10,8 +10,7 @@ interface CacheEntry {
 }
 
 class APICache {
-  private cache: Map<string, CacheEntry> = new Map();
-  private maxSize: number = 100;
+  private cache: Map<string, CacheEntry> = new Map();</string></<<<string>private</string></<<string>maxSize</string>: number = 100;
   private defaultTTL: number = 5 * 60 * 1000; // 5 minutes
 
   constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {
@@ -41,7 +40,7 @@ class APICache {
     if (!entry) return null;
 
     const now = Date.now();
-    if (now - entry.timestamp > entry.ttl) {
+    if (now - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
       this.cache.delete(key);
       return null;
     }
@@ -54,7 +53,7 @@ class APICache {
     if (!entry) return false;
 
     const now = Date.now();
-    if (now - entry.timestamp > entry.ttl) {
+    if (now - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
       this.cache.delete(key);
       return false;
     }
@@ -79,8 +78,7 @@ class APICache {
   }
 
   // Generate cache key from request parameters
-  generateKey(url: string, params?: Record<string, any>): string {
-    const paramString = params ? JSON.stringify(params) : '';
+  generateKey(url: string, params?: Record<string, any>): string {</string></<<<string>const</string></<<string>paramString</string> = params ? JSON.stringify(params) : '';
     return `${url}:${paramString}`;
   }
 
@@ -90,7 +88,7 @@ class APICache {
     const expiredKeys: string[] = [];
 
     for (const [key, entry] of this.cache.entries()) {
-      if (now - entry.timestamp > entry.ttl) {
+      if (now - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
         expiredKeys.push(key);
       }
     }

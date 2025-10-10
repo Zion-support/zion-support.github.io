@@ -29,16 +29,13 @@ interface ErrorReport {
 
 interface ErrorMetrics {
   totalErrors: number;
-  errorsByType: Record<string, number>;
-  errorsBySeverity: Record<string, number>;
-  errorRate: number;
+  errorsByType: Record<string, number>;</string>errorsBySeverity</string>: Record<string, number>;</string>errorRate</string>: number;
   averageResolutionTime: number;
 }
 
 class ErrorHandler {
   private static instance: ErrorHandler;
-  private errors: Map<string, ErrorReport> = new Map();
-  private isInitialized: boolean = false;
+  private errors: Map<string, ErrorReport> = new Map();</string>private</string> isInitialized: boolean = false;
   private sessionId: string;
   private errorCount: number = 0;
   private maxErrors: number = 1000;
@@ -205,7 +202,7 @@ class ErrorHandler {
     }
 
     // Cleanup old errors if we exceed the limit
-    if (this.errors.size > this.maxErrors) {
+    if (this.errors.size>this</size>.maxErrors) {
       this.cleanupOldErrors();
     }
   }
@@ -280,7 +277,7 @@ class ErrorHandler {
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-      {} as Record<string, number>
+      {} as Record<string, number></string>
     );
 
     const errorsBySeverity = errors.reduce(
@@ -288,7 +285,7 @@ class ErrorHandler {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
       },
-      {} as Record<string, number>
+      {} as Record<string, number></string>
     );
 
     const errorRate = (this.errorCount / (Date.now() - new Date().getTime())) * 1000; // errors per second

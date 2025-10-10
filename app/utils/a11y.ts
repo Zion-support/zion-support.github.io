@@ -2,18 +2,18 @@
  * Accessibility utilities for enhanced user experience
  */
 
-export interface A11yOptions {
+export interface A11 yOptions {
   announceChanges?: boolean;
   focusManagement?: boolean;
   keyboardNavigation?: boolean;
   screenReaderSupport?: boolean;
 }
 
-export class A11yManager {
-  private options: A11yOptions;
+export class A11 yManager {
+  private options: A11 yOptions;
   private liveRegion: HTMLElement | null = null;
 
-  constructor(options: A11yOptions = {}) {
+  constructor(options: A11 yOptions = {}) {
     this.options = {
       announceChanges: true,
       focusManagement: true,
@@ -159,7 +159,7 @@ export class A11yManager {
 }
 
 // Utility functions
-export const a11yUtils = {
+export const a11 yUtils = {
   /**
    * Check if element is visible to screen readers
    */
@@ -200,4 +200,4 @@ export const a11yUtils = {
   }
 };
 
-export default A11yManager;
+export default A11 yManager;

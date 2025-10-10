@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeState(state);
 
   //   const body = { ...event, propagate: false };
-  const headers: Record<string, string> = {};
+  const headers: Record<string, string> = {};</string>
   //   const sig = signPayload(body);
   if (sig) headers['x-zion-signature'] = sig;
 

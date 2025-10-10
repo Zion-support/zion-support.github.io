@@ -39,7 +39,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
     {
       icon: BarChart,
       title: "Advanced Visualization",
-      description: "Interactive 3D models with real-time data overlays and analytics"
+      description: "Interactive 3 D models with real-time data overlays and analytics"
     }
   ];
 
@@ -184,48 +184,45 @@ const DigitalTwinPlatformPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigatio>
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <section className="relative py-20 overflow-hidden"></sectio>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3 Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3 E%3 Cg fill="none" fill-rule="evenodd"%3 E%3 Cg fill="%239 C92 AC" fill-opacity="0.1"%3 E%3 Ccircle cx="30" cy="30" r="2"/%3 E%3 C/g%3 E%3 C/g%3 E%3 C/svg%3 E')] opacity-20"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Digital Twin Platform
+        <div className="relative z-10 max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h1 className="text-5 xl md:text-7 xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></h1></<<<h>Digital</h></<<h>Twin</h> Platform
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
             Create virtual replicas of your physical assets and systems. Monitor, analyze, and optimize 
             performance in real-time with our advanced digital twin technology.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Start Building
-              <ArrowRight className="w-5 h-5 ml-2" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"></button></<<<button>Start</button></<<button>Building</button>
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              View Demo
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>View</butto></<<butto>Demo</butto>
             </button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">45%</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="text-4 xl font-bold text-cyan-400 mb-2">45%</div>
               <div className="text-gray-400">Downtime Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">30%</div>
+            <div className="text-center"></div>
+              <div className="text-4 xl font-bold text-purple-400 mb-2">30%</div>
               <div className="text-gray-400">Efficiency Gain</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">60%</div>
+            <div className="text-center"></div>
+              <div className="text-4 xl font-bold text-pink-400 mb-2">60%</div>
               <div className="text-gray-400">Faster Decisions</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            <div className="text-center"></div>
+              <div className="text-4 xl font-bold text-green-400 mb-2">99.9%</div>
               <div className="text-gray-400">Accuracy</div>
             </div>
           </div>
@@ -233,23 +230,23 @@ const DigitalTwinPlatformPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-6">Platform Features</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+      <section className="py-24 px-4 sm:px-6 lg:px-8"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <div className="text-center mb-20"></div>
+            <h2 className="text-5 xl font-bold text-white mb-6">Platform Features</h>
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Comprehensive digital twin capabilities that provide real-time insights and predictive analytics.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300"></div>
+                <div className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
+                    <feature.icon className="w-8 h-8 text-white" /></featur>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -259,31 +256,30 @@ const DigitalTwinPlatformPage: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Real-World Applications
+      <section className="py-24 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-20"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6"></h2></<<<h>Real</h>-World Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               See how digital twins are transforming industries and driving innovation.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
+                <div className="flex items-center mb-6"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4"></div>
+                    <useCase.icon className="w-6 h-6 text-white" /></useCas>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{useCase.title}</h3>
+                  <h3 className="text-2 xl font-bold text-white">{useCase.title}</h>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{useCase.description}</p>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {useCase.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <div key={benefitIndex} className="flex items-center text-gray-300"></div>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl>
                       {benefit}
                     </div>
                   ))}
@@ -295,29 +291,28 @@ const DigitalTwinPlatformPage: React.FC = () => {
       </section>
 
       {/* Industries Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industry Solutions
+      <section className="py-24 px-4 sm:px-6 lg:px-8"></sectio>
+        <div className="max-w-7 xl mx-auto"></div>
+          <div className="text-center mb-20"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6"></h2></<<<h>Industry</h></<<h>Solutions</h>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Tailored digital twin solutions for every industry and use case.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {industries.map((industry, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <industry.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"></div>
+                <div className="text-center"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                    <industry.icon className="w-6 h-6 text-white" /></industr>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">{industry.name}</h3>
+                  <h3 className="text-lg font-bold text-white mb-3">{industry.name}</h>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{industry.description}</p>
-                  <div className="space-y-1">
+                  <div className="space-y-1"></div>
                     {industry.examples.map((example, exampleIndex) => (
-                      <div key={exampleIndex} className="text-xs text-gray-400">
+                      <div key={exampleIndex} className="text-xs text-gray-400"></div>
                         • {example}
                       </div>
                     ))}
@@ -330,40 +325,38 @@ const DigitalTwinPlatformPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Choose Your Plan
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-20"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6"></h2></<<<h>Choose</h></<<h>Your</h> Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Flexible pricing options to match your digital twin needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
                 plan.popular ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' : 'border-gray-700'
-              }`}>
+              }`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full"></span></<<<spa>Most</spa></<<spa>Popular</spa>
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
+                <div className="text-center mb-8"></div>
+                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h>
+                  <div className="text-4 xl font-bold text-cyan-400 mb-2">{plan.price}</div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"></u>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-300"></l>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" /></CheckCircl>
                       {feature}
                     </li>
                   ))}
@@ -373,8 +366,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                }`}>
-                  Get Started
+                }`}></button></<<<butto>Get</butto></<<butto>Started</butto>
                 </button>
               </div>
             ))}
@@ -383,36 +375,35 @@ const DigitalTwinPlatformPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Success Stories
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-20"></div>
+            <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6"></h2></<<<h>Success</h></<<h>Stories</h>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               See how organizations are transforming their operations with digital twins.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="flex text-yellow-400"></div>
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
+                      <Star key={i} className="w-5 h-5 fill-current" /></Sta>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6 italic">
                   "{testimonial.content}"
                 </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                <div className="flex items-center"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4"></div>
                     {testimonial.avatar}
                   </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                  <div></div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-500 text-xs">{testimonial.company}</p>
                   </div>
@@ -424,28 +415,25 @@ const DigitalTwinPlatformPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Start Your Digital Twin Journey
+      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></sectio>
+        <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-4 xl md:text-5 xl font-bold text-white mb-8"></h2></<<<h>Start</h></<<h>Your</h> Digital Twin Journey
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-12 max-w-4 xl mx-auto leading-relaxed">
             Transform your physical assets into intelligent, connected digital twins that drive efficiency and innovation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"></button></<<<button>Start</button></<<button>Free</button> Trial
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Schedule Demo
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Schedule</butto></<<butto>Demo</butto>
             </button>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

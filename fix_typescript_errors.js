@@ -69,8 +69,7 @@ if (fs.existsSync(advancedComponentsTestPath)) {
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
 ];
 
-blogPages.forEach(pagePath => {
-  if (fs.existsSync(pagePath)) {
+blogPages.forEach(pagePath => {</AdvancedSEOOptimizer>if</AdvancedSEOOptimizer> (fs.existsSync(pagePath)) {
 
     // Remove the 'type' property from metadata
     content = content.replace(/\s+type: ['"][^'"]*['"],?\s*/g, '');
@@ -148,7 +147,7 @@ if (fs.existsSync(performancePath)) {
     /declare global \{/,
     `declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (...args: unknown[]) => void;</Calculator>
   }`
   );
 

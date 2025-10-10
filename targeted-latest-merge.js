@@ -19,19 +19,19 @@ try {
 //Step 2: Target specific new branches we identified
 
 const targetBranches = [
-  'cursor/fix-errors-and-merge-to-main-016f',
-  'cursor/fix-errors-and-merge-to-main-073a',
-  'cursor/fix-errors-and-merge-to-main-0ebe',
-  'cursor/fix-errors-and-merge-to-main-0fc7',
-  'cursor/fix-errors-and-merge-to-main-19db',
+  'cursor/fix-errors-and-merge-to-main-016 f',
+  'cursor/fix-errors-and-merge-to-main-073 a',
+  'cursor/fix-errors-and-merge-to-main-0 ebe',
+  'cursor/fix-errors-and-merge-to-main-0 fc7',
+  'cursor/fix-errors-and-merge-to-main-19 db',
   'cursor/fix-errors-and-merge-to-main-5597',
-  'cursor/fix-errors-and-merge-to-main-77cd',
+  'cursor/fix-errors-and-merge-to-main-77 cd',
   'cursor/fix-errors-and-merge-to-main-8510',
   'cursor/fix-errors-and-merge-to-main-9658',
   'cursor/fix-errors-and-merge-to-main-afb8',
   'cursor/fix-errors-and-merge-to-main-b319',
-  'cursor/fix-errors-and-merge-to-main-cf0f',
-  'cursor/fix-errors-and-merge-to-main-e15f',
+  'cursor/fix-errors-and-merge-to-main-cf0 f',
+  'cursor/fix-errors-and-merge-to-main-e15 f',
 ];
 
 //Step 3: Enhanced conflict resolution function

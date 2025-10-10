@@ -36,9 +36,9 @@ function processFile(filePath) {
       // Look for lines that might be missing colons
       for (let i = 0; i < lines.length; i++) {
         // Fix lines that look like property assignments but are missing colons
-        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
+        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9 _]*\s+[a-zA-Z_][a-zA-Z0-9 _]*\s*$/)) {
           line = line.replace(
-            /^(\s*[a-zA-Z_][a-zA-Z0-9_]*)\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*$/,
+            /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
             '$1: $2,'
           );
           modified = true;

@@ -8,8 +8,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end,
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
   suffix = '',
@@ -17,9 +16,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const counterRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
+  const counterRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
@@ -68,7 +65,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={counterRef} className={className}>
+    <div ref={counterRef} className={className}></di>
       {prefix}{count.toLocaleString()}{suffix}
     </div>
   );

@@ -205,14 +205,14 @@ async function main() {
   
   // Priority branches to merge first
   const priorityBranches = [
-    'cursor/website-audit-and-update-with-deployment-f31a',
+    'cursor/website-audit-and-update-with-deployment-f31 a',
     'add-new-2026-content',
     'add-revolutionary-content-2026',
     'ai-2027-content-integration',
     'ai-dashboard-improvements',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-2e4e',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-7bf2',
-    'cursor/enhance-app-with-new-services-and-futuristic-design-80f7'
+    'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e',
+    'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2',
+    'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7'
   ];
   
   // Merge priority branches first

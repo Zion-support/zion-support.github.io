@@ -38,11 +38,11 @@ const ${componentName}: React.FC<${componentName}Props> = ({
   children 
 }) => {
   return (
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
+    <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
       {children || (
-        <div className="p-4 text-center text-gray-600">
+        <div className="p-4 text-center text-gray-600"></div>
           <h3 className="text-lg font-semibold mb-2">${componentName}</h3>
-          <p>Component placeholder - implementation needed</p>
+          <p>Component</p> placeholder - implementation needed</p>
         </div>
       )}
     </div>

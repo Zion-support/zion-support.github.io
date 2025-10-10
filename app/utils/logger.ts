@@ -26,8 +26,7 @@ class Logger {
     level: LogLevel
     message: string
     context?: LogContext
-    metadata?: Record<string, unknown>
-    timestamp: number
+    metadata?: Record<string, unknown></string></<<<string>timestamp</string></string>: number
   }> = []
 
   setLogLevel(level: LogLevel): void {
@@ -38,27 +37,22 @@ class Logger {
     return this.logLevel
   }
 
-  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata)
+  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
   }
 
-  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata)
+  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.INFO, message, context, metadata)
   }
 
-  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata)
+  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)
   }
 
   error(
     message: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
-    metadata?: Record<string, unknown>
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,</string></<<<string>contextOrMetadata</string></string>?: string | Record<string, unknown>,</string></<<<string>metadata</string></string>?: Record<string, unknown></strin>
   ): void {
     let error: Error | undefined
     let context: LogContext | undefined
-    let meta: Record<string, unknown> | undefined
+    let meta: Record<string, unknown> | undefined</strin>
 
     // Handle different parameter combinations
     if (errorOrContextOrMetadata instanceof Error) {
@@ -70,21 +64,20 @@ class Logger {
       meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined
     } else if (typeof errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata
-      meta = contextOrMetadata as Record<string, unknown>
+      meta = contextOrMetadata as Record<string, unknown></strin>
     }
 
     this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
   }
 
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.FATAL, message, context, metadata)
+  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
   }
 
   private log(
     level: LogLevel,
     message: string,
     context?: LogContext,
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></strin>
   ): void {
     if (level < this.logLevel) return
 
@@ -129,8 +122,7 @@ class Logger {
     level: LogLevel
     message: string
     context?: LogContext
-    metadata?: Record<string, unknown>
-    timestamp: number
+    metadata?: Record<string, unknown></string></<<<string>timestamp</string></string>: number
   }> {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)

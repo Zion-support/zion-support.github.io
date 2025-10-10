@@ -111,8 +111,8 @@ class SEOOptimizer {
     }
     // Additional meta tags
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
-    this.setMetaTag('theme-color', '#1e40af')
-    this.setMetaTag('msapplication-TileColor', '#1e40af')
+    this.setMetaTag('theme-color', '#1 e40 af')
+    this.setMetaTag('msapplication-TileColor', '#1 e40 af')
   }
   /**
    * Set meta tag
@@ -297,10 +297,10 @@ Disallow: /static/`
       }
     })
     // Check for heading structure
-    const h1s = document.querySelectorAll('h1')
-    if (h1s.length === 0) {
+    const h1 s = document.querySelectorAll('h1')
+    if (h1 s.length === 0) {
       issues.push('Page is missing H1 tag');}
-    } else if (h1s.length > 1) {
+    } else if (h1 s.length > 1) {
       issues.push('Page has multiple H1 tags');}
     }
     return issues

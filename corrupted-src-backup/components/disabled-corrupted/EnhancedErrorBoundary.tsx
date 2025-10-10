@@ -14,8 +14,7 @@ interface State {
   errorId: string | null;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryCount = 0;
+class EnhancedErrorBoundary extends Component<Props, State> {</Props>private</Props> retryCount = 0;
   private maxRetries = 3;
 
   constructor(props: Props) {
@@ -28,7 +27,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): Partial<State> {</State>
     // Update state so the next render will show the fallback UI
     return {
       hasError: true,
@@ -134,21 +133,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-md w-full space-y-8'>
-            <div className='text-center'>
-              <div className='mx-auto h-12 w-12 text-red-500'>
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'></div>
+          <div className='max-w-md w-full space-y-8'></div>
+            <div className='text-center'></div>
+              <div className='mx-auto h-12 w-12 text-red-500'></div>
+                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
                     strokeWidth={2}
-                    d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-                  />
+                    d='M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z'
+                  /></p>
                 </svg>
               </div>
-              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                Oops! Something went wrong
+              <h2 className='mt-6 text-3 xl font-extrabold text-gray-900'></h>Oops</h>! Something went wrong
               </h2>
               <p className='mt-2 text-sm text-gray-600'>
                 We're sorry, but something unexpected happened. Our team has
@@ -161,35 +159,31 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               )}
             </div>
 
-            <div className='space-y-4'>
-              <div className='flex space-x-4'>
+            <div className='space-y-4'></div>
+              <div className='flex space-x-4'></div>
                 {this.retryCount < this.maxRetries && (
                   <button
                     onClick={this.handleRetry}
                     className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                  >
-                    Try Again ({this.maxRetries - this.retryCount} attempts
+                  ></butto>Try</butto> Again ({this.maxRetries - this.retryCount} attempts
                     left)
                   </button>
                 )}
                 <button
                   onClick={this.handleReload}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
-                  Reload Page
+                ></butto>Reload</butto> Page
                 </button>
               </div>
 
-              <div className='flex space-x-4'>
+              <div className='flex space-x-4'></div>
                 <button
                   onClick={this.handleReportBug}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
-                  Report Bug
+                ></butto>Report</butto> Bug
                 </button>
                 <button
-                  onClick={() => window.history.back()}
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                  onClick={() => window.history.back()}</butto>className</butto>='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Go Back
                 </button>
@@ -197,12 +191,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
 
             {this.props.showDetails && this.state.error && (
-              <details className='mt-8'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
-                  Technical Details
+              <details className='mt-8'></details>
+                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'></summar>Technical</summar> Details
                 </summary>
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'>
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
+                <div className='mt-2 p-4 bg-gray-100 rounded-md'></div>
+                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'></p>
                     {this.state.error.message}
                     {'\n\n'}
                     {this.state.error.stack}

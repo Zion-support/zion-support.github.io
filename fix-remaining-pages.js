@@ -22,7 +22,7 @@ function processFile(filePath) {
       if (
         line.includes('const metadata: Metadata = {') ||
         line.includes('const metadata = {') ||
-        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||
+        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||</title>
         (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
@@ -30,7 +30,7 @@ function processFile(filePath) {
         (line.includes('openGraph:') && !line.includes('//')) ||
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||
+        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||</meta>
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
       ) {

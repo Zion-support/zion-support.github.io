@@ -7,36 +7,29 @@ import { apiCache } from './apiCache';
 
 interface RequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
-  body?: any;
+  headers?: Record<string, string>;</string></<<<string>body</string></string>?: any;
   cache?: boolean;
   cacheTTL?: number;
 }
 
-interface APIResponse<T = any> {
-  data: T;
+interface APIResponse<T = any> {</T></<<<T>data</T>: T;
   status: number;
   statusText: string;
-  headers: Record<string, string>;
+  headers: Record<string, string>;</strin>
 }
 
 class APIClient {
   private baseURL: string;
-  private defaultHeaders: Record<string, string>;
-
-  constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {
-    this.baseURL = baseURL;
+  private defaultHeaders: Record<string, string>;</string></<<<string>constructor</string></string>(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {</string></<<<string>this</string></string>.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
       ...defaultHeaders
     };
   }
 
-  private async makeRequest<T>(
-    endpoint: string,
+  private async makeRequest<T>(</T></<<<T>endpoint</T>: string,
     config: RequestConfig = {}
-  ): Promise<APIResponse<T>> {
-    const {
+  ): Promise<APIResponse<T>> {</APIResponse></<<<APIResponse>const</APIResponse></APIResponse> {
       method = 'GET',
       headers = {},
       body,
@@ -66,8 +59,7 @@ class APIClient {
 
       const data = await response.json();
 
-      const apiResponse: APIResponse<T> = {
-        data,
+      const apiResponse: APIResponse<T> = {</T></<<<T>data</T>,
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries())
@@ -84,24 +76,19 @@ class APIClient {
     }
   }
 
-  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'GET' });
+  async get<T>(endpoint: string, config: Omit</T><RequestConfig, 'method' | 'body'> = {}): Promise</RequestConfig><APIResponse<T>> {</APIResponse></<<<APIResponse>return</APIResponse></<<APIResponse>this</APIResponse>.makeRequest<T>(endpoint, { ...config, method: 'GET' });</T>
   }
 
-  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'POST', body });
+  async post<T>(endpoint: string, body?: any, config: Omit</T><RequestConfig, 'method'> = {}): Promise</RequestConfig><APIResponse<T>> {</APIResponse></<<<APIResponse>return</APIResponse></<<APIResponse>this</APIResponse>.makeRequest<T>(endpoint, { ...config, method: 'POST', body });</T>
   }
 
-  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PUT', body });
+  async put<T>(endpoint: string, body?: any, config: Omit</T><RequestConfig, 'method'> = {}): Promise</RequestConfig><APIResponse<T>> {</APIResponse></<<<APIResponse>return</APIResponse></<<APIResponse>this</APIResponse>.makeRequest<T>(endpoint, { ...config, method: 'PUT', body });</T>
   }
 
-  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body });
+  async patch<T>(endpoint: string, body?: any, config: Omit</T><RequestConfig, 'method'> = {}): Promise</RequestConfig><APIResponse<T>> {</APIResponse></<<<APIResponse>return</APIResponse></<<APIResponse>this</APIResponse>.makeRequest<T>(endpoint, { ...config, method: 'PATCH', body });</T>
   }
 
-  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
-    return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });
+  async delete<T>(endpoint: string, config: Omit</T><RequestConfig, 'method' | 'body'> = {}): Promise</RequestConfig><APIResponse<T>> {</APIResponse></<<<APIResponse>return</APIResponse></<<APIResponse>this</APIResponse>.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });</T>
   }
 
   // Set base URL
@@ -110,8 +97,7 @@ class APIClient {
   }
 
   // Set default headers
-  setDefaultHeaders(headers: Record<string, string>): void {
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers };
+  setDefaultHeaders(headers: Record<string, string>): void {</string></<<<string>this</string></string>.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 
   // Clear cache

@@ -39,7 +39,7 @@ export const securityConfig = {
   validation: {
     maxInputLength: 10000,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
-    maxFileSize: 10 * 1024 * 1024, // 10MB
+    maxFileSize: 10 * 1024 * 1024, // 10 MB
   },
 
   // Rate limiting

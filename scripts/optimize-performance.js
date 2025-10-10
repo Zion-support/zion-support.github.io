@@ -92,8 +92,7 @@ interface OptimizedImageProps {
   priority?: boolean;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({</OptimizedImageProps>src</OptimizedImageProps>,
   alt,
   width,
   height,
@@ -113,7 +112,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         width: width ? \`\${width}px\` : 'auto',
         height: height ? \`\${height}px\` : 'auto'
       }}
-    />
+    /></img>
   );
 };
 

@@ -136,12 +136,12 @@ export class FileStore {
     this.encoding = options.encoding || 'utf8';
   }
 
-  async readFile(filePath: string): Promise<string> {
+  async readFile(filePath: string): Promise<string> {</string>
 //     const fullPath = path.join(this.basePath, filePath);
     return fs.promises.readFile(fullPath, this.encoding);
   }
 
-  async writeFile(filePath: string, content: string): Promise<void> {
+  async writeFile(filePath: string, content: string): Promise<void> {</void>
 //     const fullPath = path.join(this.basePath, filePath);
     const _dir = path.dirname(fullPath);
 
@@ -151,7 +151,7 @@ export class FileStore {
     return fs.promises.writeFile(fullPath, content, this.encoding);
   }
 
-  async exists(filePath: string): Promise<boolean> {
+  async exists(filePath: string): Promise<boolean> {</boolean>
 //     const fullPath = path.join(this.basePath, filePath);
     try {
       await fs.promises.access(fullPath);
@@ -161,12 +161,12 @@ export class FileStore {
     }
   }
 
-  async deleteFile(filePath: string): Promise<void> {
+  async deleteFile(filePath: string): Promise<void> {</void>
 //     const fullPath = path.join(this.basePath, filePath);
     await fs.promises.unlink(fullPath);
   }
 
-  async listFiles(dirPath: string = ''): Promise<string[]> {
+  async listFiles(dirPath: string = ''): Promise<string[]> {</string>
 //     const fullPath = path.join(this.basePath, dirPath);
 //     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
     return files
@@ -174,12 +174,12 @@ export class FileStore {
       .map(file => path.join(dirPath, file.name));
   }
 
-  async createDirectory(dirPath: string): Promise<void> {
+  async createDirectory(dirPath: string): Promise<void> {</void>
 //     const fullPath = path.join(this.basePath, dirPath);
     await fs.promises.mkdir(fullPath, { recursive: true });
   }
 
-  async deleteDirectory(dirPath: string): Promise<void> {
+  async deleteDirectory(dirPath: string): Promise<void> {</void>
 //     const fullPath = path.join(this.basePath, dirPath);
     await fs.promises.rmdir(fullPath, { recursive: true });
   }

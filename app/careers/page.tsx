@@ -107,7 +107,7 @@ export default function CareersPage() {
       benefits: [
         'Competitive salary + equity',
         'Health, dental, vision insurance',
-        '401k with company matching',
+        '401 k with company matching',
         'Flexible work arrangements'
       ],
       postedDate: '2024-01-15',
@@ -326,24 +326,23 @@ export default function CareersPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Join Our Team<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Build the future of AI with us. Join a team of passionate innovators</p>
-              working on cutting-edge technology that transforms businesses worldwide.</p>
+      <section className="relative py-20 lg:py-32 overflow-hidden"></sectio>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4 xl mx-auto text-center"></div>
+            <h1 className="text-4 xl lg:text-6 xl font-bold text-white mb-6 cyber-text neon-pulse"></h1></<<<h1>Join</h1></<<h1>Our</h1> Team<p className="text-xl lg:text-2 xl text-gray-300 mb-8 leading-relaxed">Build the future of AI with us. Join a team of passionate innovators</p></<<<p>working</p></<<p>on</p> cutting-edge technology that transforms businesses worldwide.</p>
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Users className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">100+ Open Positions</span>
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
+                <Users className="w-5 h-5 text-cyan-400" /></User>
+                <span className="text-white font-medium">100+ Open Positions</spa>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Home className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Remote-First</span>
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
+                <Home className="w-5 h-5 text-purple-400" /></Hom>
+                <span className="text-white font-medium">Remote-First</spa>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Award className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">Top Benefits</span>
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
+                <Award className="w-5 h-5 text-green-400" /></Awar>
+                <span className="text-white font-medium">Top Benefits</spa>
               </div>
             </div>
           </div>
@@ -351,21 +350,20 @@ export default function CareersPage() {
       </section>
 
       {/* Filters */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+      <section className="py-8"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6 xl mx-auto"></div>
+            <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+              <div className="flex-1 relative"></div>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Searc>
                 <input
                   type="text"
                   placeholder="Search positions..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                />
-              <div className="flex gap-2 overflow-x-auto">{departments.map((dept) => (<button
+                /></inpu>
+              <div className="flex gap-2 overflow-x-auto"></div>{departments.map((dept) => (<button
                     key={dept.name}
-                    onClick={() =>setSelectedDepartment(dept.name)}
-                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                    onClick={() =>setSelectedDepartment(dept.name)}</button></<<<butto>className</butto></butto>={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
                       selectedDepartment === dept.name
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -374,10 +372,9 @@ export default function CareersPage() {
                     {dept.label} ({dept.count})</button>
                   </button>
                 ))}
-              <div className="flex gap-2 overflow-x-auto">{locations.map((location) => (<button
+              <div className="flex gap-2 overflow-x-auto"></div>{locations.map((location) => (<button
                   key={location.name}
-                  onClick={() =>setSelectedLocation(location.name)}
-                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  onClick={() =>setSelectedLocation(location.name)}</button></<<<butto>className</butto></butto>={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
                     selectedLocation === location.name
                       ? 'bg-purple-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -386,10 +383,9 @@ export default function CareersPage() {
                   {location.label} ({location.count})</button>
                 </button>
               ))}
-            <div className="flex gap-2 overflow-x-auto mt-2">{jobTypes.map((type) => (<button
+            <div className="flex gap-2 overflow-x-auto mt-2"></div>{jobTypes.map((type) => (<button
                   key={type.name}
-                  onClick={() =>setSelectedType(type.name)}
-                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  onClick={() =>setSelectedType(type.name)}</button></<<<butto>className</butto></butto>={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
                     selectedType === type.name
                       ? 'bg-green-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -404,59 +400,59 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">Open Positions<div className="space-y-6">{filteredPositions.map((position) => (</div>
-                <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h3 className="text-2xl font-bold text-white">{position.title}<span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">{position.level}</span>
+      <section className="py-20"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="max-w-6 xl mx-auto"></div>
+            <h2 className="text-3 xl font-bold text-white mb-8"></h2></<<<h2>Open</h2></<<h2>Positions</h2><div className="space-y-6">{filteredPositions.map((position) => (</div>
+                <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"></div>
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4"></div>
+                    <div className="flex-1"></div>
+                      <div className="flex items-center space-x-3 mb-2"></div>
+                        <h3 className="text-2 xl font-bold text-white"></h>{position.title}<span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">{position.level}</spa>
                         </span>
                       </div>
-                      <div className="flex items-center space-x-4 text-gray-400 text-sm mb-3">
-                        <div className="flex items-center space-x-1">
-                          <MapPin className="w-4 h-4" />
-                          <span className="capitalize">{position.location.replace('-', ', ')}</span>
+                      <div className="flex items-center space-x-4 text-gray-400 text-sm mb-3"></div>
+                        <div className="flex items-center space-x-1"></div>
+                          <MapPin className="w-4 h-4" /></MapPi>
+                          <span className="capitalize">{position.location.replace('-', ', ')}</spa>
                         </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
-                          <span className="capitalize">{position.type.replace('-', ' ')}</span>
+                        <div className="flex items-center space-x-1"></div>
+                          <Clock className="w-4 h-4" /></Cloc>
+                          <span className="capitalize">{position.type.replace('-', ' ')}</spa>
                         </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>Posted {new Date(position.postedDate).toLocaleDateString()}<p className="text-gray-300 mb-4">{position.description}</p>
+                        <div className="flex items-center space-x-1"></div>
+                          <Calendar className="w-4 h-4" /></Calenda>
+                          <span></span></<<<span>Posted</span></span> {new Date(position.postedDate).toLocaleDateString()}<p className="text-gray-300 mb-4">{position.description}</p>
                     </div>
-                    <div className="lg:ml-6 lg:text-right">
-                      <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}<div className="text-gray-400 text-sm">{position.experience}</div>
+                    <div className="lg:ml-6 lg:text-right"></div>
+                      <div className="text-2 xl font-bold text-cyan-400 mb-1"></div>{position.salary}<div className="text-gray-400 text-sm">{position.experience}</div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:<ul className="space-y-1">{position.requirements.slice(0, 3).map((req, index) => (</ul>
-                          <li key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{req}</CheckCircle>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"></div>
+                    <div></div>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4><ul className="space-y-1">{position.requirements.slice(0, 3).map((req, index) => (</u>
+                          <li key={index} className="flex items-center text-sm text-gray-300"></l>
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{req}</CheckCircl>
                           </CheckCircle>
                         ))}
                       </ul>
                     </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:<div className="flex flex-wrap gap-2">{position.skills.map((skill, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{skill}</span>
+                    <div></div>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:</h4><div className="flex flex-wrap gap-2"></div>{position.skills.map((skill, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{skill}</spa>
                           </span>
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4"></div>
                     <Link
                       to={`/careers/${position.id}`}
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center"
-                    >Apply Now</Link>
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
-                    <button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">Save Job</button>
+                    >Apply Now</Lin>
+                      <ArrowRight className="w-4 h-4 ml-2 inline" /></ArrowRigh>
+                    <button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">Save Job</butto>
                     </button>
                   </div>
                 </div>
@@ -467,14 +463,14 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Work With Us?<p className="text-lg text-gray-300 max-w-3xl mx-auto">We offer competitive benefits and a culture that values innovation, growth, and work-life balance<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+      <section className="py-20 bg-slate-800/50"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Why</h2></<<h2>Work</h2> With Us?<p className="text-lg text-gray-300 max-w-3 xl mx-auto"></p></<<<p>We</p></<<p>offer</p> competitive benefits and a culture that values innovation, growth, and work-life balance<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center group"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                  <benefit.icon className="w-8 h-8 text-white" /></benefi>
+                <h3 className="text-xl font-bold text-white mb-3"></h>{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -482,14 +478,14 @@ export default function CareersPage() {
       </section>
 
       {/* Culture */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Culture<p className="text-lg text-gray-300 max-w-3xl mx-auto">The values and principles that shape how we work together<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{culture.map((item, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}<p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
+      <section className="py-20"></sectio>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"></h2></<<<h2>Our</h2></<<h2>Culture</h2><p className="text-lg text-gray-300 max-w-3 xl mx-auto"></p></<<<p>The</p></<<p>values</p> and principles that shape how we work together<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{culture.map((item, index) => (</div>
+              <div key={index} className="text-center group"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                  <item.icon className="w-8 h-8 text-white" /></ite>
+                <h3 className="text-xl font-bold text-white mb-3"></h>{item.title}<p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -497,23 +493,22 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't See the Right Role?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll</p>
-            reach out when we have a position that matches your skills.</p>
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"></sectio>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-6"></h2></<<<h2>Don</h2></h2>'t See the Right Role?<p className="text-xl text-gray-200 mb-8 max-w-3 xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll</p></<<<p>reach</p></<<p>out</p> when we have a position that matches your skills.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-            >
-              <Mail className="w-5 h-5 mr-2" >Send Your Resume</Mail>
+            ></Lin>
+              <Mail className="w-5 h-5 mr-2" >Send Your Resume</Mai>
             </Mail>
             <Link
               to="/team"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
-              <Users className="w-5 h-5 mr-2" >Meet Our Team</Users>
+            ></Lin>
+              <Users className="w-5 h-5 mr-2" >Meet Our Team</User>
             </Users>
           </div>
         </div>

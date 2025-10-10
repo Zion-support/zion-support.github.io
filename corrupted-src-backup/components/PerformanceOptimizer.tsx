@@ -10,8 +10,7 @@ tt, f, b: numb, e, r | nu, l, l;
 sc, o, r
   e: numb, e, r;
 }
-const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
-  isVisib, l, e
+const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({</PerformanceOptimizerPro>isVisib</PerformanceOptimizerPro>, l, e
   onClo, s, e;
 }) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
@@ -23,7 +22,7 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
     c, d, n: fal, s, e;
   });
 
-  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>(
+  con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>(</string>
     [],
   );
 
@@ -54,10 +53,9 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
       enabl, e, d: optimizatio, n, s.cd, n,
     },
   ]; retu, r, n (
-    <div, classNam, e = 'spa, c, e-y-6'>
-      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-        <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-          Performance, Optimize, r
+    <div, classNam, e = 'spa, c, e-y-6'></div>
+      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
+        <h2, classNam, e='te, x, t-2 xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'></h>Performance</h>, Optimize, r
         </h2>
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>
-          <X, classNam, e='h-6 w-6' />
+        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'></button>
+          <X, classNam, e='h-6 w-6' /></X>

@@ -54,7 +54,7 @@ const replacements = [
   { from: '<Link href=', to: '<Link to=' },
 
   // Dynamic import patterns
-  { from: 'dynamic(() => import(', to: 'lazy(() => import(' },
+  { from: 'dynamic(() => import(', to: 'lazy(() => import(' },</Link>
   { from: 'loading: () => <', to: 'fallback={<' },
 
   // Image patterns (replace with regular img or custom component)
@@ -73,8 +73,7 @@ function processFile(filePath) {
   try {
 
     // Apply replacements
-    replacements.forEach(({ from, to, context }) => {
-      if (context) {
+    replacements.forEach(({ from, to, context }) => {</Image>if</Image> (context) {
         // Context-specific replacement
         const regex = new RegExp(
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,

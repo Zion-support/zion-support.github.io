@@ -32,7 +32,7 @@ export interface LogEntry {
   /** Timestamp when the log was created */
   timestamp: Date
   /** Optional data associated with the log */
-  data?: Record<string, unknown>
+  data?: Record<string, unknown></strin>
   /** Source of the log (component, module, etc.) */
   source?: string
   /** Stack trace for errors */
@@ -94,10 +94,7 @@ export class EnhancedLogger {
   private static instance: EnhancedLogger
   private config: LoggerConfig
   private logs: LogEntry[] = []
-  private performanceMarks: Map<string, number> = new Map()
-
-  private constructor(config: Partial<LoggerConfig> = {}) {
-    this.config = { ...defaultConfig, ...config }
+  private performanceMarks: Map<string, number> = new Map()</string></<<<string>private</string></<<string>constructor</string>(config: Partial<LoggerConfig> = {}) {</LoggerConfig></<<<LoggerConfig>this</LoggerConfig></LoggerConfig>.config = { ...defaultConfig, ...config }
   }
   /**
    * Get singleton instance of EnhancedLogger
@@ -105,8 +102,7 @@ export class EnhancedLogger {
    * @param config - Optional configuration override
    * @returns EnhancedLogger instance
    */
-  public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {
-    if (!EnhancedLogger.instance) {
+  public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {</LoggerConfig></<<<LoggerConfig>if</LoggerConfig></LoggerConfig> (!EnhancedLogger.instance) {
       EnhancedLogger.instance = new EnhancedLogger(config)
     } else if (config) {
       // Config already set, instance exists
@@ -133,8 +129,7 @@ export class EnhancedLogger {
    * logger.debug('Component rendered', { props: componentProps }, 'MyComponent')
    * ``
    */
-  public debug(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.DEBUG, message, data, source)
+  public debug(message: string, data?: Record<string, unknown>, source?: string): void {</string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, data, source)
   }
   /**
    * Log an info message
@@ -147,8 +142,7 @@ export class EnhancedLogger {
    * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent')
    * ``
    */
-  public info(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.INFO, message, data, source)
+  public info(message: string, data?: Record<string, unknown>, source?: string): void {</string></<<<string>this</string></string>.log(LogLevel.INFO, message, data, source)
   }
   /**
    * Log a warning message
@@ -161,8 +155,7 @@ export class EnhancedLogger {
    * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule')
    * ``
    */
-  public warn(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.WARN, message, data, source)
+  public warn(message: string, data?: Record<string, unknown>, source?: string): void {</string></<<<string>this</string></string>.log(LogLevel.WARN, message, data, source)
   }
   /**
    * Log an error message
@@ -182,8 +175,7 @@ export class EnhancedLogger {
    */
   public error(
     message: string,
-    data?: Record<string, unknown>,
-    error?: Error,
+    data?: Record<string, unknown>,</string></<<<string>error</string></string>?: Error,
     source?: string
   ): void {
     const logData = { ...data }
@@ -206,8 +198,7 @@ export class EnhancedLogger {
    */
   public fatal(
     message: string,
-    data?: Record<string, unknown>,
-    error?: Error,
+    data?: Record<string, unknown>,</string></<<<string>error</string></string>?: Error,
     source?: string
   ): void {
     const logData = { ...data }
@@ -242,8 +233,7 @@ export class EnhancedLogger {
    * @param data - Optional additional data to include
    * @returns Duration in milliseconds, or undefined if mark not found
    */
-  public endPerformance(markName: string, data?: Record<string, unknown>): number | undefined {
-    if (!this.config.enablePerformance) return undefined
+  public endPerformance(markName: string, data?: Record<string, unknown>): number | undefined {</string></<<<string>if</string></string> (!this.config.enablePerformance) return undefined
     const startTime = this.performanceMarks.get(markName)
     if (!startTime) {
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger')
@@ -274,8 +264,7 @@ export class EnhancedLogger {
   private log(
     level: LogLevel,
     message: string,
-    data?: Record<string, unknown>,
-    source?: string,
+    data?: Record<string, unknown>,</string></<<<string>source</string></string>?: string,
     stack?: string
   ): void {
     // Check if log level meets minimum threshold
@@ -295,7 +284,7 @@ export class EnhancedLogger {
     // Store log entry
     this.logs.push(logEntry)
     // Maintain max logs limit
-    if (this.logs.length > this.config.maxLogs) {
+    if (this.logs.<<<length>this</length></length>.config.maxLogs) {
       this.logs.shift()
     }
     // Console output
@@ -386,8 +375,7 @@ export class EnhancedLogger {
    * @private
    * @param entry - Log entry to send
    */
-  private async logToRemote(entry: LogEntry): Promise<void> {
-    if (!this.config.remoteEndpoint) return
+  private async logToRemote(entry: LogEntry): Promise<void> {</void></<<<void>if</void></void> (!this.config.remoteEndpoint) return
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
@@ -476,12 +464,9 @@ export class EnhancedLogger {
    */
   public getStatistics(): {
     total: number
-    byLevel: Record<string, number>
-    bySource: Record<string, number>
+    byLevel: Record<string, number></string></<<<string>bySource</string></string>: Record<string, number></strin>
   } {
-    const byLevel: Record<string, number> = {}
-    const bySource: Record<string, number> = {}
-    this.logs.forEach(log => {
+    const byLevel: Record<string, number> = {}</string></<<<string>const</string></<<string>bySource</string>: Record<string, number> = {}</string></<<<string>this</string></string>.logs.forEach(log => {
       const levelName = LogLevel[log.level]
       byLevel[levelName] = (byLevel[levelName] || 0) + 1
       if (log.source) {
@@ -505,8 +490,7 @@ export class EnhancedLogger {
    *
    * @param config - Partial configuration to merge
    */
-  public configure(config: Partial<LoggerConfig>): void {
-    this.config = { ...this.config, ...config }
+  public configure(config: Partial<LoggerConfig>): void {</LoggerConfig></<<<LoggerConfig>this</LoggerConfig></LoggerConfig>.config = { ...this.config, ...config }
   }
   /**
    * Export logs as JSON

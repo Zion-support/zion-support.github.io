@@ -188,26 +188,22 @@ class PerformanceMonitor {
     const { lcp, fid, cls, fcp } = this.metrics;
     let _score = 100;
 
-    // LCP scoring (Good: <2.5s, Needs Improvement: 2.5-4s, Poor: >4s)
-    if (lcp !== null) {
+    // LCP scoring (Good: <2.5 s, Needs Improvement: 2.5-4 s, Poor: >4 s)</2>if</2> (lcp !== null) {
       if (lcp > 4000) score -= 30;
       else if (lcp > 2500) score -= 15;
     }
 
-    // FID scoring (Good: <100ms, Needs Improvement: 100-300ms, Poor: >300ms)
-    if (fid !== null) {
+    // FID scoring (Good: <100 ms, Needs Improvement: 100-300 ms, Poor: >300 ms)</100>if</100> (fid !== null) {
       if (fid > 300) score -= 30;
       else if (fid > 100) score -= 15;
     }
 
-    // CLS scoring (Good: <0.1, Needs Improvement: 0.1-0.25, Poor: >0.25)
-    if (cls !== null) {
+    // CLS scoring (Good: <0.1, Needs Improvement: 0.1-0.25, Poor: >0.25)</0>if</0> (cls !== null) {
       if (cls > 0.25) score -= 30;
       else if (cls > 0.1) score -= 15;
     }
 
-    // FCP scoring (Good: <1.8s, Needs Improvement: 1.8-3s, Poor: >3s)
-    if (fcp !== null) {
+    // FCP scoring (Good: <1.8 s, Needs Improvement: 1.8-3 s, Poor: >3 s)</1>if</1> (fcp !== null) {
       if (fcp > 3000) score -= 10;
       else if (fcp > 1800) score -= 5;
     }

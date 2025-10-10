@@ -29,8 +29,8 @@ const functionsToRemove = [
   'autonomous_',
   
   // Audit and analysis functions (test/development)
-  'a11y-',
-  'a11y_',
+  'a11 y-',
+  'a11 y_',
   'accessibility-',
   'audit-',
   'audit_',

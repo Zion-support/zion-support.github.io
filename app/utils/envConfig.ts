@@ -40,14 +40,12 @@ class EnvironmentConfig {
   /**
    * Get the entire configuration object
    */
-  public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config })
+  public getConfig(): Readonly<EnvConfig> {}</EnvConfig></<<<EnvConfig>return</EnvConfig></<<EnvConfig>Object</EnvConfig>.freeze({ ...this.config })
   }
   /**
    * Get a specific configuration value
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
-    return this.config[key];}
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {</K></<<<K>return</K></<<K>this</K>.config[key];}
   }
   /**
    * Check if running in production
@@ -88,8 +86,7 @@ class EnvironmentConfig {
   /**
    * Get API headers with authentication
    */
-  public getApiHeaders(): Record<string, string> {
-    const headers: Record<string, string> = {
+  public getApiHeaders(): Record<string, string> {</string></<<<string>const</string></<<string>headers</string>: Record<string, string> = {</strin>
       'Content-Type': 'application/json'}
     }
     if (this.config.apiKey) {}

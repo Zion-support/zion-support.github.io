@@ -14,8 +14,7 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
-  enableKeyboardNavigation = true,
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({</AdvancedAccessibilityEnhancerProps></<<<AdvancedAccessibilityEnhancerProp>enableKeyboardNavigation</AdvancedAccessibilityEnhancerProp></AdvancedAccessibilityEnhancerProp> = true,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
@@ -182,9 +181,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
-      ) as NodeListOf<HTMLElement>;
-
-      const firstElement = focusableElements[0];
+      ) as NodeListOf<HTMLElement>;</HTMLElement></<<<HTMLElemen>const</HTMLElemen></<<HTMLElemen>firstElement</HTMLElemen> = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];
 
       const handleTabKey = (e: KeyboardEvent) => {
@@ -365,5 +362,4 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   return null;
 };
-</HTMLElement>
-export default AdvancedAccessibilityEnhancer;</HTMLElement>
+</<<<HTMLElement>export</HTMLElement></<<HTMLElement>default</HTMLElement> AdvancedAccessibilityEnhancer;</HTMLElement>
