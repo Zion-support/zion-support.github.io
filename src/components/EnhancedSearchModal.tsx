@@ -1,19 +1,37 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 interface SearchResult {}
+=======
+import React, { useState, useEffect, useRef } from 'react;
+
+import { Search, X, ArrowRight, Clock, TrendingUp, Star } from lucide-react;
+
+interface SearchResult {
+>>>>>>> origin/main
   id: string;
+
   title: string;
+
   description: string;
+
   url: string;
+
   category: string;
-  type: 'page' | 'service' | 'blog' | 'documentation';
+
+  type: 'page' | 'service' | 'blog' | documentation;
+
   popularity?: number;
+
   lastModified?: string}
 
 interface SearchModalProps {}
   isOpen: boolean;
+
   onClose: () => void}
+
 ;
+<<<<<<< HEAD
 const mockSearchResults: SearchResult[] = []
   {}
     id: '1',
@@ -22,9 +40,21 @@ const mockSearchResults: SearchResult[] = []
     url: '/ai-analytics-dashboard',
     category: 'Micro SAAS',
     type: 'service',
+=======
+
+const mockSearchResults: SearchResult[] = [
+  {
+    id: '1,
+    title: 'AI Analytics Dashboard,
+    description: 'AI-powered business intelligence and analytics platform with real-time insights and predictive modeling.,
+    url: '/ai-analytics-dashboard,
+    category: 'Micro SAAS,
+    type: 'service,
+>>>>>>> origin/main
     popularity: 95,
-    lastModified: '2024-01-15'
+    lastModified: 2024-01-15
   },
+<<<<<<< HEAD
   {}
     id: '2',
     title: 'AI Workflow Automation',
@@ -32,9 +62,19 @@ const mockSearchResults: SearchResult[] = []
     url: '/ai-workflow-automation',
     category: 'AI Services',
     type: 'service',
+=======
+  {
+    id: '2,
+    title: 'AI Workflow Automation,
+    description: 'Visual workflow builder with AI-powered process optimization and automation capabilities.,
+    url: '/ai-workflow-automation,
+    category: 'AI Services,
+    type: 'service,
+>>>>>>> origin/main
     popularity: 88,
-    lastModified: '2024-01-10'
+    lastModified: 2024-01-10
   },
+<<<<<<< HEAD
   {}
     id: '3',
     title: 'About Us',
@@ -42,9 +82,19 @@ const mockSearchResults: SearchResult[] = []
     url: '/about',
     category: 'Company',
     type: 'page',
+=======
+  {
+    id: '3,
+    title: 'About Us,
+    description: 'Learn about Zion Tech Group, our mission, team, and commitment to AI innovation.,
+    url: '/about,
+    category: 'Company,
+    type: 'page,
+>>>>>>> origin/main
     popularity: 75,
-    lastModified: '2024-01-08'
+    lastModified: 2024-01-08
   },
+<<<<<<< HEAD
   {}
     id: '4',
     title: 'AI Customer Support',
@@ -52,9 +102,19 @@ const mockSearchResults: SearchResult[] = []
     url: '/ai-customer-support',
     category: 'AI Services',
     type: 'service',
+=======
+  {
+    id: '4,
+    title: 'AI Customer Support,
+    description: 'Intelligent customer support solutions with natural language processing and automated responses.,
+    url: '/ai-customer-support,
+    category: 'AI Services,
+    type: 'service,
+>>>>>>> origin/main
     popularity: 90,
-    lastModified: '2024-01-14'
+    lastModified: 2024-01-14
   },
+<<<<<<< HEAD
   {}
     id: '5',
     title: 'API Documentation',
@@ -62,38 +122,94 @@ const mockSearchResults: SearchResult[] = []
     url: '/api-docs',
     category: 'Documentation',
     type: 'documentation',
+=======
+  {
+    id: '5,
+    title: 'API Documentation,
+    description: 'Comprehensive API documentation for integrating with our AI services and platforms.,
+    url: '/api-docs,
+    category: 'Documentation,
+    type: 'documentation,
+>>>>>>> origin/main
     popularity: 80,
-    lastModified: '2024-01-05'
+    lastModified: 2024-01-05
   }
+
 ];
+
 ;
+<<<<<<< HEAD
 const recentSearches = []
   'AI Analytics',
   'Workflow Automation',
   'Healthcare AI'
+=======
+
+const recentSearches = [;;
+
+  'AI Analytics,
+  'Workflow Automation,
+  Healthcare AI
+>>>>>>> origin/main
 ];
+
 ;
+<<<<<<< HEAD
 const popularSearches = []
   'AI Services',
   'Quantum Computing',
   'Cybersecurity',
   'Data Analytics'
+=======
+
+const popularSearches = [;;
+
+  'AI Services,
+  'Quantum Computing,
+  'Cybersecurity,
+  Data Analytics
+>>>>>>> origin/main
 ];
+
 ;
+<<<<<<< HEAD
 const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {}
 return (
 </SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
+=======
+
+const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+  return (
+
+</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState();
+
+>>>>>>> origin/main
   const [results, setResults] = useState<SearchResult[]>([]);</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
+
   const [selectedIndex, setSelectedIndex] = useState(-1);
+
   const [showSuggestions, setShowSuggestions] = useState(false);
+
   ;
+<<<<<<< HEAD
 const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = "useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>"
 );
 }(() => {}
     if (isOpen && inputRef.current) {}
+=======
+
+const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>;;
+
+);
+
+}(() => {
+    if (isOpen && inputRef.current) {
+>>>>>>> origin/main
       inputRef.current.focus()}
+
   }, [isOpen]);
   useEffect(() => {;
+<<<<<<< HEAD
 const handleKeyDown = (e: KeyboardEvent) => {}
       if (!isOpen) return;
       if (e.key === 'Escape') {}
@@ -104,53 +220,145 @@ const handleKeyDown = (e: KeyboardEvent) => {}
         )} else if (e.key === 'ArrowUp') {}
         e.preventDefault();
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter' && selectedIndex >= 0) {}
+=======
+
+const handleKeyDown = (e: KeyboardEvent) => {;;
+
+      if (!isOpen) return;
+
+      if (e.key === 'Escape) {
+        onClose()} else if (e.key === 'ArrowDown) {
         e.preventDefault();
+
+        setSelectedIndex(prev => 
+          prev < results.length - 1 ? prev + 1 : prev
+        )} else if (e.key === 'ArrowUp) {
+        e.preventDefault();
+
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter && selectedIndex >= 0) {
+>>>>>>> origin/main
+        e.preventDefault();
+
         handleResultClick(results[selectedIndex])}
+
     };
+<<<<<<< HEAD
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, onClose]);
 ;
 const searchResults = async (searchQuery: string) => {}
     if (!searchQuery.trim()) {}
+=======
+
+    document.addEventListener(keydown, handleKeyDown);
+
+    return () => document.removeEventListener(keydown, handleKeyDown)}, [isOpen, results, selectedIndex, onClose]);
+
+;
+
+const searchResults = async (searchQuery: string) => {;;
+
+    if (!searchQuery.trim()) {
+>>>>>>> origin/main
       setResults([]);
+
       setShowSuggestions(true);
+
       return}
 
     setIsSearching(true);
+
     setShowSuggestions(false);
+<<<<<<< HEAD
     // Simulate API call delay;
     await new Promise(resolve = "> setTimeout(resolve, 300));"
 ;
 const filteredResults = mockSearchResults.filter(result=">"
+=======
+
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+;
+
+const filteredResults = mockSearchResults.filter(result =>;;
+
+>>>>>>> origin/main
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
     // Sort by popularity and relevance;
+<<<<<<< HEAD
 const sortedResults = filteredResults.sort((a, b) => {;
 const aRelevance = "a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;"
       const bRelevance = "b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;"
+=======
+
+const sortedResults = filteredResults.sort((a, b) => {;;
+
+const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;;
+
+      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;;
+
+>>>>>>> origin/main
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance});
     setResults(sortedResults);
+
     setSelectedIndex(-1);
+
     setIsSearching(false)};
+
 ;
+<<<<<<< HEAD
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
+=======
+
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
+
+>>>>>>> origin/main
 return (
+
 </HTMLInputElement>const</HTMLInputElement>
 );
+<<<<<<< HEAD
 } value="e.target.value;"
+=======
+
+} value = e.target.value;
+
+>>>>>>> origin/main
     setQuery(value);
+
     searchResults(value)};
+
 ;
+<<<<<<< HEAD
 const handleResultClick = (result: SearchResult) => {}
     window.location.href="result.url;"
+=======
+
+const handleResultClick = (result: SearchResult) => {;;
+
+    window.location.href = result.url;
+
+>>>>>>> origin/main
     onClose()};
+
 ;
+<<<<<<< HEAD
 const handleSuggestionClick = (suggestion: string) => {}
+=======
+
+const handleSuggestionClick = (suggestion: string) => {;;
+
+>>>>>>> origin/main
     setQuery(suggestion);
+
     searchResults(suggestion)};
+
 ;
+<<<<<<< HEAD
 const getCategoryIcon = (category: string) => {}
     switch (category) {}
       case 'AI Services':
@@ -163,10 +371,34 @@ const getCategoryIcon = (category: string) => {}
         return '🏢';
       case 'Documentation':
         return '📚';
+=======
+
+const getCategoryIcon = (category: string) => {;;
+
+    switch (category) {
+      case 'AI Services:
+        return 🧠;
+
+      case 'Micro SAAS:
+        return ⚡;
+
+      case 'IT Services:
+        return ☁️;
+
+      case 'Company:
+        return 🏢;
+
+      case 'Documentation:
+        return 📚;
+
+>>>>>>> origin/main
       default:
-        return '🔍'}
+        return '🔍}
+
   };
+
 ;
+<<<<<<< HEAD
 const getTypeColor = (type: string) => {}
     switch (type) {}
       case 'service':
@@ -177,17 +409,48 @@ const getTypeColor = (type: string) => {}
         return 'text-pink-400';
       case 'documentation':
         return 'text-green-400';
+=======
+
+const getTypeColor = (type: string) => {;;
+
+    switch (type) {
+      case 'service:
+        return text-cyan-400;
+
+      case 'page:
+        return text-purple-400;
+
+      case 'blog:
+        return text-pink-400;
+
+      case 'documentation:
+        return text-green-400;
+
+>>>>>>> origin/main
       default:
-        return 'text-gray-400'}
+        return 'text-gray-400}
+
   };
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
     <div className=""fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16"></div>"
       {/* Backdrop */}
       <div className=""fixed inset-0 bg-black/50 backdrop-blur-sm"></div>"
         onClick="{onClose}"
+=======
+
+    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16>
+      {/* Backdrop */}
+
+      <div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm
+        onClick={onClose}
+
+>>>>>>> origin/main
       />
       {/* Modal */}
+<<<<<<< HEAD
       <div className=""relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20"></div>"
         {/* Header */}
         <div className=""flex items-center p-4 border-b border-cyan-400/20"></div>"
@@ -202,9 +465,35 @@ const getTypeColor = (type: string) => {}
           <button onClick = "{onClose}></button>"
             className=""p-2 text-gray-400 hover:text-white transition-colors">"
             <X className=""w-5 h-5" /></X>"
+=======
+
+      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20>
+        {/* Header */}
+
+        <div className="flex items-center p-4 border-b border-cyan-400/20>
+          <Search className="w-5 h-5 text-cyan-400 mr-3 />
+          <input
+            ref={inputRef}
+
+            type="text
+            placeholder="Search services, pages, documentation...
+            value={query}
+
+            onChange={handleInputChange}
+
+            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg
+          />
+          <button
+            onClick={onClose}
+
+            className="p-2 text-gray-400 hover:text-white transition-colors
+          >
+            <X className="w-5 h-5 />
+>>>>>>> origin/main
           </button>
         </div>
         {/* Content */}
+<<<<<<< HEAD
         <div className=""max-h-96 overflow-y-auto"></div>"
           {showSuggestions && !query && (
             <div className=""p-4 space-y-6"></div>"
@@ -219,12 +508,39 @@ const getTypeColor = (type: string) => {}
                     <button key = "{index}></button>"
                       onClick={() => handleSuggestionClick(search)}
                       className=""px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">"
+=======
+
+        <div className="max-h-96 overflow-y-auto>
+          {showSuggestions && !query && (
+
+            <div className="p-4 space-y-6>
+              {/* Recent Searches */}
+
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center>
+                  <Clock className="w-4 h-4 mr-2 />
+                  Recent Searches
+                </h3>
+                <div className="flex flex-wrap gap-2>
+                  {recentSearches.map((search, index) => (
+
+                    <button
+                      key={index}
+
+                      onClick={() => handleSuggestionClick(search)}
+
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors
+                    >
+>>>>>>> origin/main
                       {search}
+
                     </button>
                   ))}
+
                 </div>
               </div>
               {/* Popular Searches */}
+<<<<<<< HEAD
               <div></div>
                 <h3 className=""text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>"
                   <TrendingUp className=""w-4 h-4 mr-2" /></TrendingUp>"
@@ -235,16 +551,38 @@ const getTypeColor = (type: string) => {}
                     <button key = "{index}></button>"
                       onClick={() => handleSuggestionClick(search)}
                       className=""px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">"
+=======
+
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center>
+                  <TrendingUp className="w-4 h-4 mr-2 />
+                  Popular Searches
+                </h3>
+                <div className="flex flex-wrap gap-2>
+                  {popularSearches.map((search, index) => (
+
+                    <button
+                      key={index}
+
+                      onClick={() => handleSuggestionClick(search)}
+
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors
+                    >
+>>>>>>> origin/main
                       {search}
+
                     </button>
                   ))}
+
                 </div>
               </div>
             </div>
           )}
 
           {/* Search Results */}
+
           {query && (
+<<<<<<< HEAD
             <div className=""p-4"></div>"
               {isSearching ? (
                 <div className=""flex items-center justify-center py-8"></div>"
@@ -266,29 +604,80 @@ const getTypeColor = (type: string) => {}
                             <span className=""text-lg">{getCategoryIcon(result.category)}</span>"
                             <h3 className=""font-medium">{result.title}</h3>"
                             <span className="{`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}></span>"
+=======
+
+            <div className="p-4>
+              {isSearching ? (
+
+                <div className="flex items-center justify-center py-8>
+                  <div $2></div>
+              ) : results.length > 0 ? (
+
+                <div className="space-y-2>
+                  {results.map((result, index) => (
+
+                    <button
+                      key={result.id}
+
+                      onClick={() => handleResultClick(result)}
+
+                      className={w-full text-left p-3 rounded-lg transition-colors ${
+                        index === selectedIndex
+                          ? bg-cyan-400/20 text-cyan-400
+                          : hover:bg-slate-800/50 text-gray-300
+                      }}
+
+                    >
+                      <div className="flex items-start justify-between>
+                        <div className="flex-1>
+                          <div className="flex items-center space-x-2 mb-1>
+                            <span className="text-lg>{getCategoryIcon(result.category)}</span>
+                            <h3 className="font-medium>{result.title}</h3>
+                            <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50}>
+>>>>>>> origin/main
                               {result.type}
+
                             </span>
                           </div>
+<<<<<<< HEAD
                           <p className=""text-sm text-gray-400 mb-2">{result.description}</p>"
                           <div className=""flex items-center space-x-4 text-xs text-gray-500"></div>"
                             <span>{result.category}</span>
                             {result.popularity && (
                               <div className=""flex items-center space-x-1"></div>"
                                 <Star className=""w-3 h-3" /></Star>"
+=======
+                          <p className="text-sm text-gray-400 mb-2>{result.description}</p>
+                          <div className="flex items-center space-x-4 text-xs text-gray-500>
+                            <span>{result.category}</span>
+                            {result.popularity && (
+
+                              <div className="flex items-center space-x-1>
+                                <Star className="w-3 h-3 />
+>>>>>>> origin/main
                                 <span>{result.popularity}%</span>
                               </div>
                             )}
+
                             {result.lastModified && (
+
                               <span>Updated {result.lastModified}</span>
                             )}
+
                           </div>
                         </div>
+<<<<<<< HEAD
                         <ArrowRight className=""w-4 h-4 text-gray-400" /></ArrowRight>"
+=======
+                        <ArrowRight className="w-4 h-4 text-gray-400 />
+>>>>>>> origin/main
                       </div>
                     </button>
                   ))}
+
                 </div>
               ) : (
+<<<<<<< HEAD
                 <div className=""text-center py-8"></div>"
                   <Search className=""w-12 h-12 text-gray-600 mx-auto mb-4" /></Search>"
                   <h3 className=""text-lg font-medium text-gray-300 mb-2">No results found</h3>"
@@ -297,13 +686,31 @@ const getTypeColor = (type: string) => {}
                   </p>
                   <div className=""text-sm text-gray-500 mt-4"></div>"
                     Popular searches: AI Analytics, Quantum Computing, Workflow Automation;
+=======
+
+                <div className="text-center py-8>
+                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4 />
+                  <h3 className="text-lg font-medium text-gray-300 mb-2>No results found</h3>
+                  <p className="text-sm text-gray-500>
+                    Try searching for something else or check your spelling
+                  </p>
+                  <div className="text-sm text-gray-500 mt-4>
+                    Popular searches: AI Analytics, Quantum Computing, Workflow Automation
+>>>>>>> origin/main
                   </div>
                 </div>
               )}
+
             </div>
           )}
+
         </div>
       </div>
     </div>
   )};
+<<<<<<< HEAD
 export default EnhancedSearchModal;
+=======
+
+export default EnhancedSearchModal;
+>>>>>>> origin/main

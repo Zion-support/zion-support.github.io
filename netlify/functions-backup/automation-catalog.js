@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
       return JSON.parse(fs.readFileSync(p) 'utf8'))}
+=======
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+
+      return JSON.parse(fs.readFileSync(p) 'utf8))}
+
+>>>>>>> origin/main
     } catch {return null}
+
     }
+
   }
+<<<<<<< HEAD
   function listAutomationScripts() {const dir = "path.join(process.cwd(), 'automation');"
     const _items="[];"
     try {}
@@ -10,49 +20,115 @@ exports.handler = "async function (event, context) {/* TODO: Fix JSX expression 
 //         const full="path.join(dir)"
         name);
         const stat="fs.statSync(full;)"
+=======
+
+  function listAutomationScripts() {const dir = path.join(process.cwd(), automation);;
+
+    const _items = [];;
+
+    try {
+      for (const name of fs.readdirSync(dir)) {
+//         const full = path.join(dir);;
+
+        name);
+
+        const stat = fs.statSync(full;);;
+
+>>>>>>> origin/main
       })
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {}
           items.push({ type: script),
         name),
-        path: `automation/${name}` });
+        path: `automation/${name} });
+
   function listAutomationScripts() {/* TODO: Fix JSX expression */}
+
       }
+
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {/* TODO: Fix JSX expression */}
-  h: `automation/${name}` })}
+
+  h: `automation/${name} })}
+
       }
+
     } catch {}
+
     return items}
+<<<<<<< HEAD
   function listNetlifyFunctions() {const manifest="readJson(path.join()"
+=======
+
+  function listNetlifyFunctions() {const manifest = readJson(path.join();;
+
+>>>>>>> origin/main
         process.cwd(),
-        'netlify',
-        'functions',
-        'functions-manifest.json'));
+        'netlify,
+        'functions,
+        functions-manifest.json));
+
     if (!manifest || !Array.isArray(manifest.functions)) return []}
+<<<<<<< HEAD
     return manifest.functions.map(fn = "> ({)"
+=======
+
+    return manifest.functions.map(fn => ({)
+>>>>>>> origin/main
       type: function),
         name: fn),
-        href: `/.netlify/functions/${fn}`;
+        href: `/.netlify/functions/${fn};
+
   function listNetlifyFunctions() {/* TODO: Fix JSX expression */}
+
     if (!manifest || !Array.isArray(manifest.functions)) return []}
+<<<<<<< HEAD
     return manifest.functions.map(fn = "> ({/* TODO: Fix JSX expression */}`"
   f: `/.netlify/functions/${fn}`;)
     }))}
   const catalog = "{/* TODO: Fix JSX expression */}"
+=======
+
+    return manifest.functions.map(fn => ({/* TODO: Fix JSX expression */}
+
+  f: `/.netlify/functions/${fn};)
+    }))}
+
+  const catalog = {/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
   s: listAutomationScripts()}
+
   };
+
   return {statusCode: 200;
-        headers: { 'Content-Type': 'application/json' },
+
+        headers: { 'Content-Type': 'application/json },
     body: JSON.stringify(catalog)}};
+<<<<<<< HEAD
 exports.handler = async function(event, context) {const fs = require('fs');' const path = require('path'); ' function readJson(p) { try { return JSON.parse(fs.readFileSync(p) 'utf8'))} } catch {return null} } } function listAutomationScripts() {' const dir = path.join(process.cwd(), 'automation'); const items = []; try { for (const name of fs.readdirSync(dir)) { const full="path.join(dir)"
         name); const stat="fs.statSync(full;)"
       } if (stat.isFile() && /\\.(cjs|js|mjs|ts)$/.test(name)) {' items.push({ type: script),
         name),
         path: `automation/${name}` })} } } catch {} return items} function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json')); if (!manifest || !Array.isArray(manifest.functions)) return []}' return manifest.functions.map((fn) => ({ type: 'function'} name: fn;
         href: `/.netlify/functions/${fn}` }))} const catalog = "{generatedAt: new Date().toISOString(), functions: listNetlifyFunctions()} scripts: listAutomationScripts() }; return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }; body: JSON.stringify(catalog;)}};'"
+=======
+
+exports.handler = async function(event, context) {const fs = require('fs');' const path = require('path'); ' function readJson(p) { try { return JSON.parse(fs.readFileSync(p) 'utf8'))} } catch {return null} } } function listAutomationScripts() {' const dir = path.join(process.cwd(), automation); const items = []; try { for (const name of fs.readdirSync(dir)) { const full = path.join(dir);;
+
+        name); const stat = fs.statSync(full;);;
+
+      } if (stat.isFile() && /\\.(cjs|js|mjs|ts)$/.test(name)) { items.push({ type: script),
+        name),
+        path: `automation/${name}` })} } } catch {} return items} function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json')); if (!manifest || !Array.isArray(manifest.functions)) return []}' return manifest.functions.map((fn) => ({ type: function} name: fn;;
+
+        href: `/.netlify/functions/${fn}` }))} const catalog = {generatedAt: new Date().toISOString(), functions: listNetlifyFunctions()} scripts: listAutomationScripts() }; return {statusCode: 200}' headers: { 'Content-Type': 'application/json }; body: JSON.stringify(catalog;)}};;
+
+>>>>>>> origin/main
   return {/* TODO: Fix JSX expression */}
-  s: { 'Content-Type': 'application/json' },
+
+  s: { 'Content-Type': 'application/json },
     bod,
   y: JSON.stringify(catalog)}};
+<<<<<<< HEAD
 exports.handler = async function(event, context) {const fs = require('fs');' const path = "require('path'); ' function readJson(p) { try { return JSON.parse(fs.readFileSync(p) 'utf8'))} } catch {return null} } } function listAutomationScripts() {/* TODO: Fix JSX expression */}"
       } if (stat.isFile() && /\\.(cjs|js|mjs|ts)$/.test(name)) {/* TODO: Fix JSX expression */}`
   h: `automation/${name}` })} } } catch {} return items} function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json')); if (!manifest || !Array.isArray(manifest.functions)) return []}' return manifest.functions.map((fn) => ({/* TODO: Fix JSX expression */}
@@ -60,8 +136,23 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
   e: fn,
         hre)`
   f: `/.netlify/functions/${fn}` }))} const catalog = "{/* TODO: Fix JSX expression */}"
+=======
+
+exports.handler = async function(event, context) {const fs = require('fs');' const path = require('path'); ' function readJson(p) { try { return JSON.parse(fs.readFileSync(p) utf8))} } catch {return null} } } function listAutomationScripts() {/* TODO: Fix JSX expression */};;
+
+      } if (stat.isFile() && /\\.(cjs|js|mjs|ts)$/.test(name)) {/* TODO: Fix JSX expression */}
+
+  h: `automation/${name}` })} } } catch {} return items} function listNetlifyFunctions() {' const manifest = readJson(path.join(process.cwd(), 'netlify', 'functions', 'functions-manifest.json)); if (!manifest || !Array.isArray(manifest.functions)) return []} return manifest.functions.map((fn) => ({/* TODO: Fix JSX expression */};;
+
+  e: 'function} nam,
+  e: fn,
+        hre)
+  f: `/.netlify/functions/${fn} }))} const catalog = {/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
   s: listNetlifyFunctions()} script,
   s: listAutomationScripts() }; return {/* TODO: Fix JSX expression */}
-  e: 200}' header,
-  s: { 'Content-Type': 'application/json' }; bod,
-  y: JSON.stringify(catalog}};')`
+
+  e: 200} header,
+  s: { 'Content-Type': 'application/json }; bod,
+  y: JSON.stringify(catalog}};')

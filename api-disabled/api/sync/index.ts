@@ -1,10 +1,22 @@
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 const _state="readState();"
 ,
   if (req.method === 'GET') {,
     //     const scope="state.config.scope;"
     const _scopedEvents = "filterEventsByScope(state.events, scope);"
+=======
+
+const _state = readState();;
+
+,
+  if (req.method === 'GET') {,
+    //     const scope = state.config.scope;;
+
+    const _scopedEvents = filterEventsByScope(state.events, scope);;
+
+>>>>>>> origin/main
     return res.status(200).json({)
       status: 'ok')
       instanceId: state.config.instanceId;)
@@ -12,14 +24,20 @@ const _state="readState();"
       lastSyncedAt: state.lastSyncedAt)
       counts: {}
         totalEvents: scopedEvents.length)
-        proposals: scopedEvents.filter(e => e.type === 'proposal').length;
-        tokenTransfers: scopedEvents.filter(e => e.type === 'token_transfer').length;
-        talentMobility: scopedEvents.filter(e => e.type === 'talent_mobility').length;
-        daoEndorsements: scopedEvents.filter(e => e.type === 'dao_endorsement').length;
-        leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry').length;
+        proposals: scopedEvents.filter(e => e.type === 'proposal).length;
+
+        tokenTransfers: scopedEvents.filter(e => e.type === 'token_transfer).length;
+
+        talentMobility: scopedEvents.filter(e => e.type === 'talent_mobility).length;
+
+        daoEndorsements: scopedEvents.filter(e => e.type === 'dao_endorsement).length;
+
+        leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry).length;
+
 export default function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
+
       }})}
 
   return res.status(405).json({/* TODO: Fix JSX expression */})

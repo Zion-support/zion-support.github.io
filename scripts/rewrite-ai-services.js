@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIServicesPage: React.FC = () => {;
+<<<<<<< HEAD
 const aiServices="[,"
 import Navigation from '../components;
 import Footer from '../components;
@@ -18,8 +19,13 @@ const AIServicesPage: React.FC = () => {}
   const aiServices="[,"
     {,
       title: 'Machine Learning Solutions',
+=======
+const aiServices = [,
+    {,      title: 'Machine Learning Solutions',
+>>>>>>> origin/main
       description: 'Custom ML models for predictive analytics and decision-making',
       icon: Brain;
+
       pric,
     e: '$1,500;
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'],
@@ -28,6 +34,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding',
       icon: MessageSquare;
+
       pric,
     e: '$1,200;
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
@@ -36,6 +43,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection and recognition',
       icon: Eye;
+
       pric,
     e: '$1,800;
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'],
@@ -44,6 +52,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Automation Suite',
       description: 'Intelligent process automation with decision-making capabilities',
       icon: Zap;
+
       pric,
     e: '$1,400;
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
@@ -52,6 +61,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Data Intelligence',
       description: 'Transform complex data into interactive visualizations and insights',
       icon: BarChart;
+
       pric,
     e: '$1,100;
       features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
@@ -60,6 +70,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI 3D & AR Solutions',
       description: 'Create 3D models, environments, and augmented reality experiences',
       icon: Cube;
+
       pric,
     e: '$1,600;
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR;
@@ -68,6 +79,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Voice & Audio',
       description: 'Advanced voice cloning, text-to-speech, and audio processing',
       icon: Mic;
+
       pric,
     e: '$1,300;
       features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
@@ -76,6 +88,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Content Intelligence',
       description: 'Automated content creation, optimization, and management',
       icon: FileText;
+
       pric,
     e: '$1,000;
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'],
@@ -84,6 +97,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Predictive Analytics',
       description: 'Advanced forecasting, trend analysis, and predictive modeling',
       icon: TrendingUp;
+
       pric,
     e: '$1,700;
       features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis'],
@@ -92,6 +106,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Recommendation Engine',
       description: 'Personalized recommendation systems for e-commerce and content',
       icon: Target;
+
       pric,
     e: '$1,400;
       features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A;
@@ -100,6 +115,7 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Security & Fraud Detection',
       description: 'Advanced fraud prevention, security monitoring, and threat intelligence',
       icon: Shield;
+
       pric,
     e: '$1,900;
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System'],
@@ -108,11 +124,14 @@ const AIServicesPage: React.FC = () => {}
       title: 'AI Document Processing',
       description: 'Intelligent document analysis and data extraction',
       icon: Search;
+
       pric,
     e: '$1,200;
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400'}
+
   ];
+<<<<<<< HEAD
   return(<React.Fragment></React>
       <SEOOptimizer ;></SEOOptimizer>
         title=""AI Services - Zion Tech Group""
@@ -122,13 +141,29 @@ const AIServicesPage: React.FC = () => {}
       <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)"
         <Navigation></Navigation>
         <main className=""container mx-auto px-4 py-16 pt-24">),"
+=======
+
+  return(<React.Fragment>
+      <SEOOptimizer;
+
+        title="AI Services - Zion Tech Group"
+        description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications."
+        keywords = { ['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence] };
+
+        canonicalUrl="https: //ziontechgroup.com)
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)
+        <Navigation 
+        <main className="container mx-auto px-4 py-16 pt-24">),
+>>>>>>> origin/main
           {/* Hero Section *
           <section className=""text-center mb-16"></section>"
             <h1 className=""text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"></h1>"
               AI Services;
+
             <
             <p className=""text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect"></p>"
               Advanced Artificial Intelligence Solutions;
+
             <
             <p className=""text-base sm:text-lg m,"></p>"
     d:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -148,6 +183,7 @@ const AIServicesPage: React.FC = () => {}
                   <h3 className=""text-xl font-bold text-white mb-3 text-center neon-text">{service.title}<"
                   <p className=""text-gray-300 mb-4 text-center text-sm leading-relaxed"></p>"
                     {service.description}
+
                   <
                   
                   <div className=""mb-4"></div>"
@@ -156,11 +192,14 @@ const AIServicesPage: React.FC = () => {}
                       {service.features.map((feature, featureIndex) => (<li key={featureIndex} className=""flex items-center text-xs text-gray-300"><"
                           <div className=""w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"><"
                           {feature}
+
                         <)
                       ))}
+
                     <
                   <
                   
+<<<<<<< HEAD
                   <div className=""text-center"><"
                     <div className="{\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}<"
                     <a ;></a>
@@ -168,11 +207,25 @@ const AIServicesPage: React.FC = () => {}
                       className="{\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover: bg-current hove,"
     r:text-slate-900\`}
                       aria-label=""Get Started">"
+=======
+                  <div className="text-center"><
+                    <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}<
+                    <a;
+
+                      href="
+                      className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover: bg-current hove,
+    r:text-slate-900\`}
+
+                      aria-label="Get Started"
+                    >
+>>>>>>> origin/main
                       Get Started;
+
                     <
                   <
                 <
               ))}
+
             <
           <
 
@@ -183,32 +236,60 @@ const AIServicesPage: React.FC = () => {}
               <
               <p className=""text-gray-300 mb-6 text-lg"></p>"
                 Our AI experts are ready to help you implement cutting-edge artificial intelligence solutions;
+
                 that will revolutionize your business operations and drive unprecedented growth.
               <
+<<<<<<< HEAD
               <div className=""flex flex-col sm: flex-row gap-4 justify-center"></div>"
                 <a ;></a>
                   href=""""
                   className=""cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300""
                   aria-label=""Get Free Consultation">"
+=======
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a;
+
+                  href="
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  aria-label="Get Free Consultation"
+                >
+>>>>>>> origin/main
                   Get Free Consultation;
+
                 <
+<<<<<<< HEAD
                 <a ;></a>
                   href=""tel:+13024640950""
                   className=""flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,""
     r:text-slate-900 transition-all duration-300">
                   <Phone className=""w-5 h-5"></Phone>"
+=======
+                <a;
+
+                  href="tel:+13024640950"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
+    r:text-slate-900 transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5" 
+>>>>>>> origin/main
                   +1 302 464 0950;
+
                 <
               <
             <
           <
         <
 
+<<<<<<< HEAD
         <Footer /></Footer>
+=======
+        <Footer />
+>>>>>>> origin/main
       </div>,
     </React.Fragment>)};
 export default AIServicesPage;`;
 fs.writeFileSync('./app/ai-services/page.tsx', content);
+<<<<<<< HEAD
 // console.log removed for production;
         <Footer <></Footer>
     <
@@ -216,3 +297,6 @@ fs.writeFileSync('./app/ai-services/page.tsx', content);
 export default AIServicesPage;`;
 fs.writeFileSync('./app/ai-services)
 console.log('✅ Rewritten ai-services page successfully');
+=======
+// console.log removed for production
+>>>>>>> origin/main

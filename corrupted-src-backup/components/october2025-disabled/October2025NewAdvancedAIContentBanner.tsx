@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function October2025NewAdvancedAIContentBann, e, r() {}
   return(<div, classNam, e = "'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }"
       {/* Animated, background, elements */}
@@ -32,8 +33,60 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
             <Sparkles, className="'w-5 h-5, animat, e-pul, s, e' /></Sparkles>"
           </div>
           <h2, className="'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4'></h2>"
+=======
+export default function October2025NewAdvancedAIContentBann, e, r() { 
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {  }
+
+      {/* Animated, background, elements */}
+
+      <div, className=absolute, inse, t-0, opacit, y-20>
+        <div, className=absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e />
+  return (
+
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {  }
+
+      {/* Animated, background, elements */}</div>
+      <div, className=absolute, inse, t-0, opacit, y-20></div>
+        <div, className=absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e /></div>
+        <div, className=absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0 />
+      </div>
+      <div, className=relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8>
+        {/* Header, Sect, i, o, n */}</div>
+export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fix JSX expression */}
+
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {  }
+
+      {/* Animated, background, elements */}
+
+      <div, className=absolute, inse, t-0, opacit, y-20></div>
+        <div, className=absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e /></div>
+        <div, className=absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0 /></div>
+      </div>
+      <div, className=relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8></div>
+        {/* Header, Sect, i, o, n */}
+
+        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+
+          anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+
+          transiti, o, n = {/* TODO: Fix JSX expression */}
+
+  n: , 0., 6 }}
+
+          classNa, m, e = te, x, t-center, m, b-8
+        >
+          <div, className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4></div>
+            <Sparkles, className=w-5 h-5, animat, e-pul, s, e />
+            OCTOBER, 2025, BREAKTHROUGH;
+
+            <Sparkles, className=w-5 h-5, animat, e-pul, s, e />
+          </div>
+          <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4>
+>>>>>>> origin/main
             🚀 3, Revolutionary, AI Platform, Breakthrough, s;
+
           </h2>
+<<<<<<< HEAD
           <p, className="'te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'></p>"
         ></moti>
           <div, className="'inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4'></div>"
@@ -42,11 +95,29 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
             <Sparkles, className="'w-5 h-5, animat, e-pul, s, e' /></Sparkles>"
           </div>
           <h2, className="'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4'></h2>"
+=======
+          <p, className=te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d>
+        ></moti>
+          <div, className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4></div>
+            <Sparkles, className=w-5 h-5, animat, e-pul, s, e /></Sparkles>
+            OCTOBER, 2025, BREAKTHROUGH;
+
+            <Sparkles, className=w-5 h-5, animat, e-pul, s, e /></Sparkles>
+          </div>
+          <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4></h2>
+>>>>>>> origin/main
             🚀 3, Revolutionary, AI Platform, Breakthrough, s;
+
           </h2>
+<<<<<<< HEAD
           <p, className="'te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'></p>"
+=======
+          <p, className=te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d></p>
+>>>>>>> origin/main
             Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance;
+
           </p>
+<<<<<<< HEAD
           <div, className="'flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d'></div>"
             <div, className="'flex, item, s-center, ga, p-2'></div>"
               <TrendingUp, className="'w-5 h-5' /></TrendingUp>"
@@ -67,11 +138,34 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
             </div>
             <div, className="'flex, item, s-center, ga, p-2'></div>"
               <Shield, className="'w-5 h-5' /></Shield>"
+=======
+          <div, className=flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d></div>
+            <div, className=flex, item, s-center, ga, p-2></div>
+              <TrendingUp, className=w-5 h-5 />
+              <sp, a, n>$1.02B, Combined, Value</sp, a, n>
+            </div>
+            <div, className=flex, item, s-center, ga, p-2></div>
+              <Zap, className=w-5 h-5 />
+              <sp, a, n>1, 0, 0% Complian, c, e</sp, a, n>
+            </div>
+            <div, className=flex, item, s-center, ga, p-2></div>
+              <Shield, className=w-5 h-5 />
+              <TrendingUp, className=w-5 h-5 /></TrendingUp>
+              <sp, a, n>$1.02B, Combined, Value</sp, a, n>
+            </div>
+            <div, className=flex, item, s-center, ga, p-2></div>
+              <Zap, className=w-5 h-5 /></Zap>
+              <sp, a, n>1, 0, 0% Complian, c, e</sp, a, n>
+            </div>
+            <div, className=flex, item, s-center, ga, p-2></div>
+              <Shield, className=w-5 h-5 /></Shield>
+>>>>>>> origin/main
               <sp, a, n>99.8% Privacy, Protectio, n</sp, a, n>
             </div>
           </div>
         </moti, o, n.d, i, v>
         {/* Content, G, r, i, d */}
+<<<<<<< HEAD
         <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'></div>"
           {/* Federat, e, d , A, I */}</div>
         <div, classNam, e = "'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'></div>"
@@ -79,8 +173,24 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           <moti , o, n.div, initia, l = "{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
             anima, t, e = "{{ opac, i, t, y:  , 1, y:  , 0 }}"
             transiti, o, n = "{/* TODO: Fix JSX expression */}"
+=======
+
+        <div, classNam, e = grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8>
+          {/* Federat, e, d , A, I */}</div>
+        <div, classNam, e = grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8></div>
+          {/* Federat, e, d , A, I */}
+
+          <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+
+            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+
+            transiti, o, n = {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
   n: , 0., 6, del, a, y: 0., 1 }}
+
           ></moti>
+<<<<<<< HEAD
             <Link , t, o = "'/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n'></Link>"
               className="'block, grou, p'>"
               <div, className="'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l'></div>"
@@ -89,12 +199,30 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Brain, className="'w-6 h-6, tex, t-whi, t, e' /></Brain>"
                   </div>
                   <span, className="'te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r'></span>"
+=======
+            <Link, t, o = /bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n
+              className=block, grou, p
+            >
+              <div, className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l></div>
+                <div, className=flex, item, s-center, ga, p-3, m, b-4></div>
+                  <div, className=p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg></div>
+                    <Brain, className=w-6 h-6, tex, t-whi, t, e />
+                  </div>
+                  <span, className=te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r>
+>>>>>>> origin/main
                     Federated, A, I;
+
                   </sp, a, n>
                 </div>
+<<<<<<< HEAD
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
+=======
+                <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s>
+>>>>>>> origin/main
                   Advanced, Federated, AI Enterprise, Revolutio, n;
+
                 </h3>
+<<<<<<< HEAD
                 <p, className="'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>"
                   Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{' '}</p>
             ></Link>
@@ -104,12 +232,30 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Brain, className="'w-6 h-6, tex, t-whi, t, e' /></Brain>"
                   </div>
                   <span, className="'te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r'></span>"
+=======
+                <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d>
+                  Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{ }</p>
+            ></Link>
+              <div, className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/5, 0, h-fu, l, l></div>
+                <div, className=flex, item, s-center, ga, p-3, m, b-4></div>
+                  <div, className=p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg></div>
+                    <Brain, className=w-6 h-6, tex, t-whi, t, e /></Brain>
+                  </div>
+                  <span, className=te, x, t-xs, fon, t-bold, tex, t-purp, l, e-300, uppercase, tracking-wid, e, r></span>
+>>>>>>> origin/main
                     Federated, A, I;
+
                   </sp, a, n>
                 </div>
+<<<<<<< HEAD
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>"
+=======
+                <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s></h3>
+>>>>>>> origin/main
                   Advanced, Federated, AI Enterprise, Revolutio, n;
+
                 </h3>
+<<<<<<< HEAD
                 <p, className="'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>"
                   Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{' '}
                   <span, classNam, e = "'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$287M, valu, e</span>"
@@ -127,24 +273,63 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                   <div, className="'flex, item, s-center, ga, p-2'></div>"
                     <div, className="'w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>"
                     <sp, a, n></sp>
+=======
+                <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d></p>
+                  Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{ }
+
+                  <span, classNam, e = te, x, t-yell, o, w-300, fon, t-bo, l, d>$287M, valu, e</span>
+                  , 99.8% privacy, complianc, e, 67% faster, trainin, g — zero, data, movement.
+                </p>
+                <div, classNam, e = spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0></div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>47, Fortune, 500 deployments, across, 42 countri, e, s</sp, a, n>
+                  </div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>47M, patients, served without, data, centralization</sp, a, n>
+                  </div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>
+>>>>>>> origin/main
                     <sp, a, n></sp>
                       94.7% model, accuracy, matching centralized, trainin, g;
+
                     </sp, a, n>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div, className="'mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'></div>"
                   <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <Link, className="'w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>"
+=======
+                <div, className=mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s></div>
+                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
+                  <Link, className=w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /></Link>
+>>>>>>> origin/main
                 </div>
               </div>
             </Li, n, k>
           </moti, o, n.d, i, v>
           {/* Synthetic, D, a, t, a */}
+<<<<<<< HEAD
           <moti , o, n.div, initia, l = "{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
             anima, t, e = "{{ opac, i, t, y:  , 1, y:  , 0 }}"
             transiti, o, n = "{/* TODO: Fix JSX expression */}"
+=======
+
+          <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+
+            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+
+            transiti, o, n = {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
   n: , 0., 6, del, a, y: 0., 2 }}
+
           ></moti>
+<<<<<<< HEAD
             <Link , t, o = "'/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h'></Link>"
               className="'block, grou, p'>"
               <div, className="'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l'></div>"
@@ -153,12 +338,30 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Database, className="'w-6 h-6, tex, t-whi, t, e' /></Database>"
                   </div>
                   <span, className="'te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r'></span>"
+=======
+            <Link, t, o = /bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h
+              className=block, grou, p
+            >
+              <div, className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l></div>
+                <div, className=flex, item, s-center, ga, p-3, m, b-4></div>
+                  <div, className=p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg></div>
+                    <Database, className=w-6 h-6, tex, t-whi, t, e />
+                  </div>
+                  <span, className=te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r>
+>>>>>>> origin/main
                     Synthetic, Dat, a;
+
                   </sp, a, n>
                 </div>
+<<<<<<< HEAD
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>"
+=======
+                <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s>
+>>>>>>> origin/main
                   Synthetic, Data, Generation Enterprise, Breakthroug, h;
+
                 </h3>
+<<<<<<< HEAD
                 <p, className="'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>"
                   Unlimited, privac, y-safe, data, generati, o, n.{' '}</p>
             ></Link>
@@ -168,12 +371,30 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Database, className="'w-6 h-6, tex, t-whi, t, e' /></Database>"
                   </div>
                   <span, className="'te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r'></span>"
+=======
+                <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d>
+                  Unlimited, privac, y-safe, data, generati, o, n.{ }</p>
+            ></Link>
+              <div, className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/5, 0, h-fu, l, l></div>
+                <div, className=flex, item, s-center, ga, p-3, m, b-4></div>
+                  <div, className=p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg></div>
+                    <Database, className=w-6 h-6, tex, t-whi, t, e /></Database>
+                  </div>
+                  <span, className=te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wid, e, r></span>
+>>>>>>> origin/main
                     Synthetic, Dat, a;
+
                   </sp, a, n>
                 </div>
+<<<<<<< HEAD
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>"
+=======
+                <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s></h3>
+>>>>>>> origin/main
                   Synthetic, Data, Generation Enterprise, Breakthroug, h;
+
                 </h3>
+<<<<<<< HEAD
                 <p, className="'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>"
                   Unlimited, privac, y-safe, data, generati, o, n.{' '}
                   <span, classNam, e = "'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$312M, valu, e</span>"
@@ -196,16 +417,53 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                 <div, className="'mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'></div>"
                   <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
                   <Link, className="'w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>"
+=======
+                <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d></p>
+                  Unlimited, privac, y-safe, data, generati, o, n.{ }
+
+                  <span, classNam, e = te, x, t-yell, o, w-300, fon, t-bo, l, d>$312M, valu, e</span>
+                  , 10x, data, availability, 99.4% statistical, fidelit, y — solve, data, scarcity.
+                </p>
+                <div, classNam, e = spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0></div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>470M, synthetic, transactions for, to, p-3, ban, k</sp, a, n>
+                  </div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>1000x, fraud, examples — 94.7% detection, accurac, y</sp, a, n>
+                  </div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>1, 0, 0% privacy, compliance, across 67, countrie, s</sp, a, n>
+                  </div>
+                </div>
+                <div, className=mt-6, flex, items-center, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s></div>
+                  <sp, a, n>Unlock, Unlimited, Data</sp, a, n>
+                  <Link, className=w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /></Link>
+>>>>>>> origin/main
                 </div>
               </div>
             </Li, n, k>
           </moti, o, n.d, i, v>
           {/* AI, Governa, n, c, e */}
+<<<<<<< HEAD
           <moti , o, n.div, initia, l = "{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
             anima, t, e = "{{ opac, i, t, y:  , 1, y:  , 0 }}"
             transiti, o, n = "{/* TODO: Fix JSX expression */}"
+=======
+
+          <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+
+            anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+
+            transiti, o, n = {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
   n: , 0., 6, del, a, y: 0., 3 }}
+
           ></moti>
+<<<<<<< HEAD
             <Link , t, o = "'/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h'></Link>"
               className="'block, grou, p'>"
               <div, className="'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l'></div>"
@@ -214,12 +472,30 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Shield, className="'w-6 h-6, tex, t-whi, t, e' /></Shield>"
                   </div>
                   <span, className="'te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r'></span>"
+=======
+            <Link, t, o = /bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h
+              className=block, grou, p
+            >
+              <div, className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l></div>
+                <div, className=flex, item, s-center, ga, p-3, m, b-4></div>
+                  <div, className=p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg></div>
+                    <Shield, className=w-6 h-6, tex, t-whi, t, e />
+                  </div>
+                  <span, className=te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r>
+>>>>>>> origin/main
                     AI, Governanc, e;
+
                   </sp, a, n>
                 </div>
+<<<<<<< HEAD
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'></h3>"
+=======
+                <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s>
+>>>>>>> origin/main
                   AI, Model, Governance & Compliance, Breakthroug, h;
+
                 </h3>
+<<<<<<< HEAD
                 <p, className="'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>"
                   Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{' '}</p>
             ></Link>
@@ -229,12 +505,30 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     <Shield, className="'w-6 h-6, tex, t-whi, t, e' /></Shield>"
                   </div>
                   <span, className="'te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r'></span>"
+=======
+                <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d>
+                  Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{ }</p>
+            ></Link>
+              <div, className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l></div>
+                <div, className=flex, item, s-center, ga, p-3, m, b-4></div>
+                  <div, className=p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg></div>
+                    <Shield, className=w-6 h-6, tex, t-whi, t, e /></Shield>
+                  </div>
+                  <span, className=te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r></span>
+>>>>>>> origin/main
                     AI, Governanc, e;
+
                   </sp, a, n>
                 </div>
+<<<<<<< HEAD
                 <h3, className="'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'></h3>"
+=======
+                <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s></h3>
+>>>>>>> origin/main
                   AI, Model, Governance & Compliance, Breakthroug, h;
+
                 </h3>
+<<<<<<< HEAD
                 <p, className="'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>"
                   Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{' '}
                   <span, classNam, e = "'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$421M, valu, e</span>"
@@ -257,12 +551,38 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                 <div, className="'mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'></div>"
                   <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <Link, className="'w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>"
+=======
+                <p, className=te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d></p>
+                  Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{ }
+
+                  <span, classNam, e = te, x, t-yell, o, w-300, fon, t-bo, l, d>$421M, valu, e</span>
+                  , 1, 0, 0% audit, complianc, e, 8, 4, 0+ models, governe, d — complete, accountabilit, y.
+                </p>
+                <div, classNam, e = spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0></div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>340, models, governed for, to, p-10, insure, r</sp, a, n>
+                  </div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>$87M, penalties, avoided — 1, 0, 0% audit, pass, rate</sp, a, n>
+                  </div>
+                  <div, className=flex, item, s-center, ga, p-2></div>
+                    <div, className=w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l /></div>
+                    <sp, a, n>92% risk, reduction, with automated, governanc, e</sp, a, n>
+                  </div>
+                </div>
+                <div, className=mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s></div>
+                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>
+                  <Link, className=w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /></Link>
+>>>>>>> origin/main
                 </div>
               </div>
             </Li, n, k>
           </moti, o, n.d, i, v>
         </div>
         {/* Call, to, Acti, o, n */}
+<<<<<<< HEAD
         <moti , o, n.div, initia, l = "{{ opac, i, t, y:  , 0, y: 2, 0 }}></moti>"
           anima, t, e = "{{ opac, i, t, y:  , 1, y:  , 0 }}"
           transiti, o, n = "{/* TODO: Fix JSX expression */}"
@@ -281,8 +601,34 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
             <Link, className="'w-5 h-5' /></Link>"
           </Li, n, k>
           <p, className="'mt-4, tex, t-bl, u, e-200, tex, t-sm'></p>"
+=======
+
+        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
+
+          anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+
+          transiti, o, n = {/* TODO: Fix JSX expression */}
+
+  n: , 0., 6, del, a, y: 0., 4 }}
+
+          classNa, m, e = te, x, t-cent, e, r
+        ></moti>
+          <Link, t, o=/bl, o, g
+            className=inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove,
+  r:sca, l, e-1, 0, 5
+          ></Link>
+            <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
+            <Link, className=w-5 h-5 />)
+          </Li, n, k>)
+          <p, className=mt-4, tex, t-bl, u, e-200, tex, t-sm>)
+            Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-fir, s, t , A, I)
+            <Link, className=w-5 h-5 /></Link>
+          </Li, n, k>
+          <p, className=mt-4, tex, t-bl, u, e-200, tex, t-sm></p>
+>>>>>>> origin/main
             Join, 12, 7+ Fortune, 500, companies transforming, with, privacy-fir, s, t , A, I,
             synthetic, dat, a, and, enterprise, governance;
+
           </p>
         </moti, o, n.d, i, v>
       </div>

@@ -1,22 +1,40 @@
 exports.handler = "async function (event) context) {// // console.log removed for production;"
 }
+<<<<<<< HEAD
   return {}
+=======
+
+  return {
+>>>>>>> origin/main
     statusCode: 200;
+
     body: JSON.stringify({)
-      message: 'Test function working correctly')
+      message: 'Test function working correctly)
       timestamp: new Date().toISOString()
       event: event;
+
       context: {,
         awsRequestId: context.awsRequestId;
+
         functionName: context.functionName}
+
   return {/* TODO: Fix JSX expression */}
+
   e: context.functionName}
+
       }}),
     header,
-  s: {'Content-Type': 'application/json'}
+  s: {'Content-Type': 'application/json}
+
     }}};
+<<<<<<< HEAD
 exports.handler = "async function(event) context) {// // console.log removed for production;"
+=======
+
+exports.handler = async function(event) context) {// // console.log removed for production
+>>>>>>> origin/main
 } return {/* TODO: Fix JSX expression */}
+
   d: context.awsRequestId} functionNam,
   e: context.functionName } }); header,
-  s: {' 'Content-Type': 'application/json' } }};'
+  s: {' 'Content-Type': 'application/json' } }};

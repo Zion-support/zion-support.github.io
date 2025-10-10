@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 ;
 const Loading: React.FC = () => {}
 return (
+=======
+import React from 'react;
+>>>>>>> origin/main
 
+;
+
+const Loading: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className=""min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <div className=""text-center"></div>"
         <div className=""cyber-loader mx-auto mb-4"></div>"
@@ -11,11 +19,29 @@ return (
         <div className=""mt-4 flex space-x-2 justify-center"></div>"
           <div className=""w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>"
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style = "{{ animationDelay: '0.2 s' }}></div>"
+=======
+
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900></div>
+      <div className="text-center></div>
+        <div className="cyber-loader mx-auto mb-4></div>
+        <p className="text-cyan-400 text-lg font-semibold>Loading...</p>
+        <div className="mt-4 flex space-x-2 justify-center></div>
+          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse></div>
+          <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2 s }}>
+>>>>>>> origin/main
 );
+
 }</div>
+<<<<<<< HEAD
           <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style = "{{ animationDelay: '0.4 s' }}></div>"
         </div>
       </div>
     </div>
   )};
 export default Loading;
+=======
+          <div $2></div>
+  )};
+
+export default Loading;
+>>>>>>> origin/main

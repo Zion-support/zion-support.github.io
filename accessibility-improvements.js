@@ -5,6 +5,7 @@
 // <input aria-describedby="email-help" type=""email" /></input>"
 // <div id=""email-help">Enter your email address</div>"
 // 2. Implement focus management;
+<<<<<<< HEAD
 const trapFocus = (element) => {;
 const focusableElements="element.querySelectorAll("
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=""-1"])'"
@@ -15,19 +16,49 @@ const focusableElements="element.querySelectorAll("
     if (e.key === 'Tab') {}
       if (e.shiftKey) {}
         if (document.activeElement === firstElement) {}
+=======
+
+const trapFocus = (element) => {;;
+
+const focusableElements = element.querySelectorAll(;;
+
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
+  );
+
+  const firstElement = focusableElements[0];;
+
+  const lastElement = focusableElements[focusableElements.length - 1];;
+
+  element.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+>>>>>>> origin/main
           lastElement.focus();
+
           e.preventDefault()}
+<<<<<<< HEAD
       } else {}
         if (document.activeElement === lastElement) {}
+=======
+
+      } else {
+        if (document.activeElement === lastElement) {
+>>>>>>> origin/main
           firstElement.focus();
+
           e.preventDefault()}
+
       }
+
     }
+
   })};
 // 3. Add live regions for dynamic content;
 // Example JSX:
 // <div aria-live="polite" aria-atomic="true" className=""sr-only"></div>"
 //   {announcement}
+
 // </div>
 // 4. Ensure proper heading hierarchy;
 // Example JSX:
@@ -69,7 +100,9 @@ const focusableElements="element.querySelectorAll("
 // Example CSS:
 // .focus-visible:focus {}
 //   outline: 2px solid #0066cc;
+
 //   outline-offset: 2px;
+
 // }
 
 // 9. Keyboard navigation;
@@ -81,5 +114,11 @@ const focusableElements="element.querySelectorAll("
 // Example JSX:
 // <div aria-live="assertive" aria-atomic=""true"></div>"
 //   {errorMessage}
+
 // </div>
+<<<<<<< HEAD
 export { trapFocus };
+=======
+
+export { trapFocus };
+>>>>>>> origin/main

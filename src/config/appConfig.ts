@@ -1,26 +1,36 @@
 
 /**
  * Application Configuration;
+
  * Centralized configuration management for the Zion Tech Group application;
+
  */
 
 export interface AppConfig {// TODO: Add content}
 
 }
+
   ap,
   p: {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   nam,
   e: string;,
     versio,
   n: string;,
     environmen,
-  t: 'development' | 'production' | 'test'};
+  t: 'development' | 'production' | 'test};
+
   ap,
   i: {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
+
   baseUr,
   l: string;,
     timeou,
@@ -29,31 +39,38 @@ export interface AppConfig {// TODO: Add content}
   s: number;,
     feature,
   s: {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 };
   analytics: boolean;,
     monitoring: boolean;,
     errorTracking: boolean;,
     performanceOptimization: boolean;,
     performance: {// TODO: Add content}
+
 };
+
   enableLazyLoading: boolean;,
     imageLazyLoadThreshold: number;,
     componentLazyLoadThreshold: number;,
     cacheMaxAge: number;,
     security: {// TODO: Add content}
+
 };
+
   enableCSP: boolean;,
     enableHSTS: boolean;,
     enableXSSProtection: boolean;
 }
+
     nam,
   e: 'Zion Tech Group',
     versio,
   n: '1.0.0',
     environmen,
   t:
-//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
+//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || development
   },
     enableLazyLoadin,
   g: true,
@@ -63,51 +80,106 @@ export interface AppConfig {// TODO: Add content}
   d: 0.25,
     cacheMaxAg,
   e: 3600000, // 1 hour in milliseconds;
+
 // enableCS,
   P: true,
 // enableHST,
   S: true,
 // enableXSSProtectio,
   n: true;
+
  * Get configuration value by key path;
- * @example getConfig('app.name') => 'Zion Tech Group'
+
+ * @example getConfig('app.name') => Zion Tech Group
 export function getConfig;
+<<<<<<< HEAD
           <T="unknown>(keyPat)"
   h: string): T {const keys="keyPath.split('.')}"
   const __keys="keyPath.split('.');"
   let,
   value: unknown="config;"
+=======
+
+          <T = unknown>(keyPat)
+  h: string): T {const keys = keyPath.split('.)};;
+
+  const __keys = keyPath.split('.);;
+
+  let,
+  value: unknown = config;
+
+>>>>>>> origin/main
   for (const key of keys) {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
     if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+<<<<<<< HEAD
       value = "(value as Record;)"
+=======
+
+      value = (value as Record;)
+>>>>>>> origin/main
           <string, unknown>)[key]} else {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
       throw new Error(`Configuration key "${keyPath}" not found`);
+
   return value as T;
+
  * Check if a feature is enabled;
+
 export function isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
   return config.features[feature];
+
  * Get current environment;
+
 export function getEnvironment(): string {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
   return config.app.environment;
+
  * Check if running in production;
+
 export function isProduction(): boolean {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
-  return config.app.environment === 'production';
+
+  return config.app.environment === 'production;
+
  * Check if running in development;
+
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+<<<<<<< HEAD
   return config.app.environment === 'development';
 export default config;
+=======
+
+  return config.app.environment === 'development;
+
+export default config;
+>>>>>>> origin/main

@@ -1,6 +1,13 @@
 // Analysis of missing pages based on navigation links;
+<<<<<<< HEAD
 const navigationLinks = []
   // From Header navigation;
+=======
+
+const navigationLinks = [;;
+
+  // From Header navigation
+>>>>>>> origin/main
   '/ai-services',
   '/it-services', 
   '/cloud-infrastructure',
@@ -32,10 +39,17 @@ const navigationLinks = []
   '/docs',
   '/api-docs',
   '/support',
-  '/status'
+  /status
 ];
+
 ;
+<<<<<<< HEAD
 const existingPages = []
+=======
+
+const existingPages = [;;
+
+>>>>>>> origin/main
   '/pricing',
   '/quantum-computing',
   '/privacy',
@@ -129,9 +143,10 @@ const existingPages = []
   '/ai-enterprise-solutions',
   '/ai-project-manager',
   '/ai-3d-generation',
-  '/about'
+  /about
 ];
 // Find missing pages;
+<<<<<<< HEAD
 const missingPages = navigationLinks.filter(link = "> !existingPages.includes(link));"
 // console.log removed for production;
 missingPages.forEach(page = "> // console.log removed for production;"
@@ -140,8 +155,24 @@ missingPages.forEach(page = "> // console.log removed for production;"
 const extraPages = existingPages.filter(page = "> !navigationLinks.includes(page));"
 // console.log removed for production;
 extraPages.forEach(page = "> // console.log removed for production;"
+=======
+
+const missingPages = navigationLinks.filter(link => !existingPages.includes(link));;
+
+// console.log removed for production
+missingPages.forEach(page => // console.log removed for production
+);
+
+// Find pages that exist but arent in navigation;
+
+const extraPages = existingPages.filter(page => !navigationLinks.includes(page));;
+
+// console.log removed for production
+extraPages.forEach(page => // console.log removed for production
+>>>>>>> origin/main
 );
 // Check for broken links (pages that should exist based on navigation);
+<<<<<<< HEAD
 const brokenLinks = missingPages.filter(page = "> {}"
   // These are critical pages that should exist;
 const criticalPages = "['/blockchain-web3'];"
@@ -150,3 +181,19 @@ const criticalPages = "['/blockchain-web3'];"
 :');
 brokenLinks.forEach(page = "> // console.log removed for production;"
 );
+=======
+
+const brokenLinks = missingPages.filter(page => {;;
+
+  // These are critical pages that should exist;
+
+const criticalPages = ['/blockchain-web3];;
+
+  return criticalPages.includes(page)});
+
+// console.log removed for production
+:);
+
+brokenLinks.forEach(page => // console.log removed for production
+);
+>>>>>>> origin/main

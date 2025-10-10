@@ -1,19 +1,37 @@
 
 /**
  * Security Middleware;
+
  * Applies security headers and implements security policies;
+
  */
 
 export function middleware(request: NextRequest) {;
+<<<<<<< HEAD
 const _response="NextResponse.next();"
   // Security Headers;
   const securityHeaders="{,"
+=======
+
+const _response = NextResponse.next();;
+
+  // Security Headers;
+
+  const securityHeaders = {,;;
+
+>>>>>>> origin/main
     // Prevent XSS attacks;
+
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode="block',"
     // Content Security Policy;
+<<<<<<< HEAD
     'Content-Security-Policy': []
+=======
+
+    'Content-Security-Policy': [
+>>>>>>> origin/main
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com https://vercel.live"
       "style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com",
@@ -27,8 +45,15 @@ const _response="NextResponse.next();"
       "upgrade-insecure-requests"].join('; '),
     
     // Force HTTPS;
+<<<<<<< HEAD
     'Strict-Transport-Security': 'max-age = "31536000; includeSubDomains; preload',"
+=======
+
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    
+>>>>>>> origin/main
     // Referrer policy;
+
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     
     // Permissions policy (Feature-Policy replacement)
@@ -42,13 +67,23 @@ const _response="NextResponse.next();"
       'accelerometer="()',"
       'gyroscope = "()'].join(', '),"
     // Additional security headers;
+
     'X-DNS-Prefetch-Control': 'on',
     'X-Download-Options': 'noopen',
+<<<<<<< HEAD
     'X-Permitted-Cross-Domain-Policies': 'none'};
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {}
+=======
+    'X-Permitted-Cross-Domain-Policies': 'none};
+
+  // Apply all security headers;
+
+  Object.entries(securityHeaders).forEach(([key, value]) => {
+>>>>>>> origin/main
     response.headers.set(key, value)});
   // CORS headers for API routes;
+<<<<<<< HEAD
   if (request.nextUrl.pathname.startsWith('/api/')) {}
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
@@ -57,32 +92,68 @@ const _response="NextResponse.next();"
 
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {}
+=======
+
+  if (request.nextUrl.pathname.startsWith('/api/')) {
+    response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*);
+
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS);
+
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization);
+
+    response.headers.set('Access-Control-Max-Age', '86400')}
+
+  // Handle preflight requests;
+
+  if (request.method === 'OPTIONS') {
+>>>>>>> origin/main
     return new NextResponse(null, { status: 204, headers: response.headers });
+
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
+
   };
   // Apply all security headers;
+
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+
   });
   // CORS headers for API routes;
+
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
+
   }
 
   // Handle preflight requests;
+
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
+
   s: response.headers })}
 
   return response}
 
+<<<<<<< HEAD
 export const config = {}
   matcher: []
+=======
+export const config = {;;
+
+  matcher: [
+>>>>>>> origin/main
     /*
      * Match all request paths except:
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - public folder;
+
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
+<<<<<<< HEAD
 export const config = "{/* TODO: Fix JSX expression */}"
 };
+=======
+export const config = {/* TODO: Fix JSX expression */};;
+
+};
+>>>>>>> origin/main

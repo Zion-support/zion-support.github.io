@@ -1,16 +1,17 @@
 'use client';
+
 /**
- * Advanced Performance Monitoring Utility;
- * Tracks Core Web Vitals and custom metrics;
+ * Advanced Performance Monitoring Utility
+ * Tracks Core Web Vitals and custom metrics
  */
 
 interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;
-  fid?: number; // First Input Delay;
-  cls?: number; // Cumulative Layout Shift;
-  ttfb?: number; // Time to First Byte;
-  fmp?: number; // First Meaningful Paint;
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+  fmp?: number; // First Meaningful Paint
   customMetrics: Record<string, number>;
 }
 
@@ -20,21 +21,26 @@ class PerformanceMonitor {
   };
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
+
   init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
+    
     this.isInitialized = true;
     this.setupWebVitals();
     this.setupCustomMetrics();
   }
 
   private setupWebVitals(): void {
-    // First Contentful Paint;
+    // First Contentful Paint
     this.observePaint('first-contentful-paint', 'fcp');
-    // Largest Contentful Paint;
+    
+    // Largest Contentful Paint
     this.observeLCP();
-    // First Input Delay;
+    
+    // First Input Delay
     this.observeFID();
-    // Cumulative Layout Shift;
+    
+    // Cumulative Layout Shift
     this.observeCLS();
   }
 
@@ -50,7 +56,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn removed for production;
+      // console.warn removed for production
     }
   }
 
@@ -66,7 +72,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn removed for production;
+      // console.warn removed for production
     }
   }
 
@@ -81,7 +87,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn removed for production;
+      // console.warn removed for production
     }
   }
 
@@ -100,16 +106,16 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      // console.warn removed for production;
+      // console.warn removed for production
     }
   }
 
   private setupCustomMetrics(): void {
-    // Time to First Byte;
+    // Time to First Byte
     if (performance.timing) {
       this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
     }
-    // Navigation timing;
+    // Navigation timing
     if (performance.navigation) {
       this.addCustomMetric('navigation_type', performance.navigation.type);
     }
@@ -125,8 +131,9 @@ class PerformanceMonitor {
 
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
-    // console.log removed for production;
-    // Send to analytics service;
+    
+    // console.log removed for production
+    // Send to analytics service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'performance_metrics', {
         event_category: 'performance',
@@ -134,7 +141,7 @@ class PerformanceMonitor {
         value: Math.round(this._metrics.lcp || 0),
         custom_parameter_1: this._metrics.fcp,
         custom_parameter_2: this._metrics.cls,
-        custom_parameter_3: this._metrics.fid;
+        custom_parameter_3: this._metrics.fid
       });
     }
   }
@@ -146,13 +153,15 @@ class PerformanceMonitor {
   }
 }
 
-// Global instance;
+// Global instance
 const performanceMonitor = new PerformanceMonitor();
-// Initialize on load;
+
+// Initialize on load
 if (typeof window !== 'undefined') {
   window.addEventListener('load', () => {
     performanceMonitor.init();
-    // Report metrics after a delay to ensure all metrics are collected;
+    
+    // Report metrics after a delay to ensure all metrics are collected
     setTimeout(() => {
       performanceMonitor.reportMetrics();
     }, 5000);
@@ -162,10 +171,13 @@ if (typeof window !== 'undefined') {
 export const measureWebVitals = () => {
   performanceMonitor.init();
 };
+
 export const getPerformanceMetrics = () => {
   return performanceMonitor.getMetrics();
 };
+
 export const addCustomMetric = (name: string, value: number) => {
   performanceMonitor.addCustomMetric(name, value);
 };
+
 export default performanceMonitor;

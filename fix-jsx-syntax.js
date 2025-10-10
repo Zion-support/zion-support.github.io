@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 #!/usr/bin;
 import fs from 'fs';
@@ -121,12 +122,28 @@ function fixFile(filePath) {}
       }
     });
     if (modified) {}
+=======
+#!/usr/bin/env node
+        content = newContent;
+
+        modified = true;
+
+      }
+
+    });
+
+    if (modified) {
+>>>>>>> origin/main
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed JSX syntax in: ${filePath}`);
       return true;
     }
     return false;
+<<<<<<< HEAD
   } catch (error) {}
+=======
+  } catch (error) {
+>>>>>>> origin/main
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -139,6 +156,7 @@ if (fixJSXSyntax(filePath)) {}
 } else {}
   console.log('No JSX syntax issues found');
 }
+<<<<<<< HEAD
   } catch (error) {/* TODO: Fix JSX expression *
   }
 }
@@ -187,3 +205,5 @@ if (import.meta.url === `fil)`
 
 export { fixJSXSyntax, processFile };
 }"`
+=======
+>>>>>>> origin/main

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */;
 const nextConfig = {}
+=======
+/** @type {import('next).NextConfig} */;
+
+const nextConfig = {;;
+
+>>>>>>> origin/main
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
@@ -34,5 +41,11 @@ const nextConfig = {}
         headers: []
           {}
             key: 'Cache-Control',
+<<<<<<< HEAD
             value: 'public, max-age=3600, s-maxage="3600'}]}]}};"
 module.exports="nextConfig;"
+=======
+            value: 'public, max-age=3600, s-maxage=3600}]}]}};
+
+module.exports = nextConfig;
+>>>>>>> origin/main

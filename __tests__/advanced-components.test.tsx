@@ -1,6 +1,9 @@
 import React from 'react';
+
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
 import { HelmetProvider } from 'react-helmet-async';
+
 import { MemoryRouter } from 'react-router-dom';
 // Mock components;
 const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {}
@@ -12,11 +15,19 @@ const AdvancedSEOOptimizer = ({ title, description }: { title?: string; descript
 const AdvancedPerformanceMonitor = () => {}
   return <div data-testid=""performance-monitor">Performance Monitor</div>;"
 };
+<<<<<<< HEAD
 // Mock component that throws an error;
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {}
   if (shouldThrow) {}
     throw new Error('Test error');
   }
+=======
+
+// Mock component that throws an error
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');  }
+>>>>>>> origin/main
   return <div>Test content</div>;
 };
 describe('Advanced Components', () => {}

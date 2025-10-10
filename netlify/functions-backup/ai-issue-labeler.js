@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
   const openaiKey = "process.env.OPENAI_API_KEY || ''}"
   if (!githubToken) {}
     return {}
+=======
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+
+  const openaiKey = process.env.OPENAI_API_KEY || };;
+
+  if (!githubToken) {
+    return {
+>>>>>>> origin/main
       statusCode: 200;
+
       body: JSON.stringify({ ok: false),
-        error: 'GITHUB_TOKEN required' });
+        error: GITHUB_TOKEN required });
+
   if (!githubToken) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   r: 'GITHUB_TOKEN required' })}}
   const ghHeaders = "{/* TODO: Fix JSX expression */}"
   n: `token ${githubToken}`,
@@ -13,8 +25,25 @@ exports.handler = "async function (event, context) {/* TODO: Fix JSX expression 
     'User-Agent': 'netlify-ai-issue-labeler'};
   async function listRecentIssues() {;
 const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page="20`)"
+=======
+
+  r: 'GITHUB_TOKEN required })}}
+
+  const ghHeaders = {/* TODO: Fix JSX expression */};;
+
+  n: `token ${githubToken},
+    'Content-Type': 'application/json,
+    'User-Agent': netlify-ai-issue-labeler};
+
+  async function listRecentIssues() {;
+
+const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20);;
+
+>>>>>>> origin/main
       { headers: ghHeaders;
+
   async function listRecentIssues() {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 }`;
 const res = "await fetch(`http,`"
   s://api.github.com/repos/${githubRepo}/issues?state=open&per_page="20`,"
@@ -23,9 +52,27 @@ const res = "await fetch(`http,`"
     );
     const _arr = "await res.json();"
     return Array.isArray(arr) ? arr.filter(i = "> !i.pull_request) : []}"
+=======
+
+};
+
+const res = await fetch(`http,;;
+
+  s://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20,
+      {/* TODO: Fix JSX expression */})
+      })
+    );
+
+    const _arr = await res.json();;
+
+    return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []}
+
+>>>>>>> origin/main
   function ruleLabels(title)
         body) {;
+
 function ruleLabels(title)
+<<<<<<< HEAD
         body) {/* TODO: Fix JSX expression */}`
 //     const text = "`${title}\n${body || ''}`.toLowerCase();"
     const _labels = "new Set();"
@@ -33,67 +80,140 @@ function ruleLabels(title)
     if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');
     if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');
     if (/(a11 y|accessibility|contrast|alt)/.test(text)) labels.add('a11 y');
+=======
+        body) {/* TODO: Fix JSX expression */}
+
+//     const text = `${title}\n${body || ''}.toLowerCase();;
+
+    const _labels = new Set();;
+
+    if (/(bug|error|exception|crash|fail)/.test(text)) labels.add(bug);
+
+    if (/(docs|readme|documentation|typo)/.test(text)) labels.add(docs);
+
+    if (/(perf|performance|slow|bundle)/.test(text)) labels.add(performance);
+
+    if (/(a11 y|accessibility|contrast|alt)/.test(text)) labels.add(a11 y);
+
+>>>>>>> origin/main
     if (/(feat|feature|enhancement|improve)/.test(text))
-      labels.add('enhancement');
+      labels.add(enhancement);
+
     if(labels.size === 0)
-        labels.add('triage');
+        labels.add(triage);
+
     return Array.from(labels)}
+
   async function aiSuggestLabels(title)
         body) {if(!openaiKey,
         return null,
+<<<<<<< HEAD
         try {}
 //       const prompt = "`Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11 y, enhancement, security, question, chore,"
         design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;
       const res = "await fetch('https: //api.openai.com/v1/chat/completions', {method: 'POST'}"
+=======
+        try {
+//       const prompt = Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11 y, enhancement, security, question, chore,;;
+
+        design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''};
+
+      const res = await fetch('https: //api.openai.com/v1/chat/completions', {method: POST};;
+
+>>>>>>> origin/main
         headers: {)
-          Authorization: `Bearer ${openaiKey}`)
-          'Content-Type': 'application/json')
+          Authorization: `Bearer ${openaiKey})
+          'Content-Type': 'application/json)
         })
-        body: JSON.stringify({model: 'gpt-4o-mini'),
-          messages: [{ role: 'user'} content: prompt }])
+        body: JSON.stringify({model: 'gpt-4o-mini),
+          messages: [{ role: 'user} content: prompt }])
           temperature: 0;
+
     if (labels.size === 0)
-        labels.add('triage');
+        labels.add(triage);
+
     return Array.from(labels)}
+
   async function aiSuggestLabels(title)
         body) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   e: ${title}\nBod,`
   y: ${body || ''}`;
       const res = "await fetch('http,"
   s: //api.openai.com/v1/chat/completions', {/* TODO: Fix JSX expression */}
   d: 'POST'}
+=======
+
+  e: ${title}\nBod,
+  y: ${body || ''};
+
+      const res = await fetch(http,;;
+
+  s: //api.openai.com/v1/chat/completions, {/* TODO: Fix JSX expression */}
+
+  d: 'POST}
+
+>>>>>>> origin/main
         header,
-  s: {/* TODO: Fix JSX expression */}`
-  n: `Bearer ${openaiKey}`,
-          'Content-Type': 'application/json'},
+  s: {/* TODO: Fix JSX expression */}
+
+  n: `Bearer ${openaiKey},
+          'Content-Type': 'application/json},
         bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  e: 'user'} conten,
+
+  e: 'user} conten,
   t: prompt }],
           temperatur,
   e: 0;)
       })});
+<<<<<<< HEAD
       const _json = "await res.json();"
 //       const content="json?.choices?.[0]?.message?.content?.trim();"
       try {const arr="JSON.parse(content);"
+=======
+
+      const _json = await res.json();;
+
+//       const content = json?.choices?.[0]?.message?.content?.trim();;
+
+      try {const arr = JSON.parse(content);;
+
+>>>>>>> origin/main
         if (Array.isArray(arr)) return arr.slice(0)
         3;
+
       try {/* TODO: Fix JSX expression */}
+
       }
+
       } catch {}
+
       return null} catch {return null}
+
     }
+
   }
+
   async function addLabels(issueNumber)
         labels) {if(!labels || labels.length === 0)
         return { ok: true;)
         skipped: true };);
+<<<<<<< HEAD
 const res = "await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`)"
+=======
+
+const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels);;
+
+>>>>>>> origin/main
       {method: POST),
         headers: ghHeaders),
         body: JSON.stringify({ labels;)})});
+
     return {ok: res.ok;
+
         status: res.status }}
+<<<<<<< HEAD
   const _issues = "await listRecentIssues();"
   const _actions="[];"
   for (const issue of issues) {if(issue.labels && issue.labels.length > 0)
@@ -102,16 +222,46 @@ const res = "await fetch(`https://api.github.com/repos/${githubRepo}/issues/${is
     const _ai = "await aiSuggestLabels(issue.title || '') issue.body || '');"
 //     const finalLabels = "Array.from(new Set([...(rule || []), ...(ai || [])]));"
     const res = "await addLabels(issue.number)"
+=======
+
+  const _issues = await listRecentIssues();;
+
+  const _actions = [];;
+
+  for (const issue of issues) {if(issue.labels && issue.labels.length > 0)
+        continue;
+
+//     const rule = ruleLabels(issue.title || '') issue.body || );;
+
+    const _ai = await aiSuggestLabels(issue.title || '') issue.body || );;
+
+//     const finalLabels = Array.from(new Set([...(rule || []), ...(ai || [])]));;
+
+    const res = await addLabels(issue.number);;
+
+>>>>>>> origin/main
         finalLabels}
+
     actions.push({ issue: issue.number),
         labels: finalLabels),
         result: res})}
+<<<<<<< HEAD
   const log = "{generatedAt: new Date().toISOString(),"
+=======
+
+  const log = {generatedAt: new Date().toISOString(),;;
+
+>>>>>>> origin/main
     totalOpen: issues.length;
+
     labeled: actions.length;
+
     actions}
+
   };
+
   // Try to store log as an artifact in repo;
+<<<<<<< HEAD
   try {const headers="ghHeaders;"
     let sha,;
 const path = "'data/reports/ai-issue-labeler-log.json';"
@@ -123,45 +273,116 @@ const getRes = "await fetch(`https://api.github.com/repos/${githubRepo}/contents
   d: true };`;
 const res = "await fetch(`http,`"
   s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels`,
+=======
+
+  try {const headers = ghHeaders;;
+
+    let sha,;
+
+const path = data/reports/ai-issue-labeler-log.json;;
+
+const getRes = await fetch(https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;);;
+
+      })
+      { headers })
+  async function addLabels(issueNumber)
+        labels) {/* TODO: Fix JSX expression */}
+
+  d: true };;
+
+const res = await fetch(`http,;;
+
+  s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels,
+>>>>>>> origin/main
       {/* TODO: Fix JSX expression */})
       })});
+
     return {/* TODO: Fix JSX expression */}
+
   s: res.status }}
+<<<<<<< HEAD
   const _issues = "await listRecentIssues();"
   const _actions="[];"
+=======
+
+  const _issues = await listRecentIssues();;
+
+  const _actions = [];;
+
+>>>>>>> origin/main
   for (const issue of issues) {/* TODO: Fix JSX expression */}
+
       }
+
     actions.push({/* TODO: Fix JSX expression */})
       })}
+<<<<<<< HEAD
   const log = "{/* TODO: Fix JSX expression */}"
+=======
+
+  const log = {/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
     actions}
+
   };
+
   // Try to store log as an artifact in repo;
+
   try {/* TODO: Fix JSX expression */}
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`,
+
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+
+      },
       { headers });
+
     if (getRes.ok) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
       sha="j.sha}"
     }
     const putRes = "await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)"
       }`)
       {method: 'PUT'),
+=======
+
+      sha = j.sha}
+
+    }
+
+    const putRes = await fetch(https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;);;
+
+      })
+      {method: 'PUT),
+>>>>>>> origin/main
         headers),
         body: JSON.stringify({),
-          message: `chore: update AI issue labeler log (${new Date().toISOString()})`,
+          message: `chore: update AI issue labeler log (${new Date().toISOString()}),
           content: Buffer.from(JSON.stringify(log, null)
+<<<<<<< HEAD
     }`;
 const putRes = "await fetch(`http,"
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */})`
   e: update AI issue labeler log (${new Date().toISOString()})`,
+=======
+    };
+
+const putRes = await fetch(http,;;
+
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+
+      },
+      {/* TODO: Fix JSX expression */})
+  e: update AI issue labeler log (${new Date().toISOString()}),
+>>>>>>> origin/main
           conten,
   t: Buffer.from(JSON.stringify(log, null)
-        2)).toString('base64'),
+        2)).toString('base64),
           sha})});
+
     return {statusCode: 200;
+
       body: JSON.stringify({)
         ok: true;)
         log),
@@ -169,16 +390,21 @@ const putRes = "await fetch(`http,"
         status: putRes.status})
       })}} catch (e) {return {}
       statusCode: 200;
+
       body: JSON.stringify({)
         ok: true;)
         log)
         store: { ok: false),
         error: String(e;)})
     return {/* TODO: Fix JSX expression */}
+
       })
       })}} catch (e) {/* TODO: Fix JSX expression */}
+
       }})}}
+
 };
+<<<<<<< HEAD
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = "process.env.OPENAI_API_KEY || ''} if (!githubToken) {' return { statusCode: 200;"
         body: JSON.stringify({ok: false),
         error: 'GITHUB_TOKEN required' }) }} ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() { const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20` ) { headers: ghHeaders}); const arr = await res.json(); return Array.isArray(arr) ? arr.filter(i = "> !i.pull_request) : []} function ruleLabels(title)"
@@ -205,11 +431,53 @@ exports.handler = async function(event, context) {const githubToken = process.en
       }`, {' method: 'PUT', headers)
         body: JSON.stringify({ message: `chore: update AI issue labeler log (${new Date().toISOString()})`, content: Buffer.from(JSON.stringify(log, null)
         2)).toString('base64'), sha}) }); return {statusCode: 200, body: JSON.stringify({ ok: true;),
+=======
+
+exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || '} if (!githubToken) { return { statusCode: 200;;
+
+        body: JSON.stringify({ok: false),
+        error: 'GITHUB_TOKEN required' }) }} ' const ghHeaders = { Authorization: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() { const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20 ) { headers: ghHeaders}); const arr = await res.json(); return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []} function ruleLabels(title);;
+
+        body) {' const text = `${title}\n${body || ''}`.toLowerCase(); const labels = new Set();' if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');' if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');' if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');' if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');' if (/(feat|feature|enhancement|improve)/.test(text)) labels.add('enhancement); if(labels.size === 0);;
+
+        labels.add('triage); return Array.from(labels)} async function aiSuggestLabels(title)
+        body) {if(!openaiKey)
+        return null)
+        try {' const prompt = Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11y, enhancement, security, question, chore);;
+
+        design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;' const res = await fetch('https: //api.openai.com/v1/chat/completions', {' method: 'POST'}' headers: { 'Authorization': `Bearer ${openaiKey}`, 'Content-Type': 'application/json' },' body: JSON.stringify({model: 'gpt-4o-mini', messages: [{ role: user} content: prompt }]) temperature: 0}) }); const json = await res.json(); const content = json?.choices?.[0]?.message?.content?.trim(); try {const arr = JSON.parse(content); if (Array.isArray(arr)) return arr.slice(0);;
+
+        3} } catch {} return null} catch {return null} } } async function addLabels(issueNumber)
+        labels) {if(!labels || labels.length === 0)
+        return { ok: true;),
+        skipped: true }; const res = await fetch(`https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels, { method: POST),;;
+
+        headers: ghHeaders),
+        body: JSON.stringify({ labels;)}) }); return {ok: res.ok;
+
+        status: res.status }} const issues = await listRecentIssues(); const actions = []; for (const issue of issues) {if(issue.labels && issue.labels.length > 0);;
+
+        continue;' const rule = ruleLabels(issue.title || '') issue.body || '');' const ai = await aiSuggestLabels(issue.title || '') issue.body || ); const finalLabels = Array.from(new Set([...(rule||[]), ...(ai||[])])); const res = await addLabels(issue.number);;
+
+        finalLabels} actions.push({ issue: issue.number),
+        labels: finalLabels),
+        result: res})} const log = {generatedAt: new Date().toISOString(), totalOpen: issues.length, labeled: actions.length;;
+
+        actions }; // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;);;
+
+      } , { headers;)
+      }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;);;
+
+      }`, {' method: 'PUT, headers)
+        body: JSON.stringify({ message: `chore: update AI issue labeler log (${new Date().toISOString()}), content: Buffer.from(JSON.stringify(log, null)
+        2)).toString('base64), sha}) }); return {statusCode: 200, body: JSON.stringify({ ok: true;),
+>>>>>>> origin/main
         log),
         store: {ok: putRes.ok),
         status: putRes.status } }) }} catch (e) {return { statusCode: 200, body: JSON.stringify({ ok: true;)
         log)
         store: {ok: false),
+<<<<<<< HEAD
         error: String(e;)} }) }} };'
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = "process.env.OPENAI_API_KEY || ''} if (!githubToken) {/* TODO: Fix JSX expression */}"
   r: 'GITHUB_TOKEN required' }) }} ' const ghHeaders = "{/* TODO: Fix JSX expression */}`"
@@ -224,9 +492,37 @@ exports.handler = async function(event, context) {const githubToken = process.en
   s: //api.openai.com/v1/chat/completions', {/* TODO: Fix JSX expression */}
   d: 'POST'}' header,`
   s: { 'Authorization': `Bearer ${openaiKey}`, 'Content-Type': 'application/json' },' bod,
+=======
+        error: String(e;)} }) }} };
+
+exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const openaiKey = process.env.OPENAI_API_KEY || } if (!githubToken) {/* TODO: Fix JSX expression */};;
+
+  r: 'GITHUB_TOKEN required' }) }} ' const ghHeaders = {/* TODO: Fix JSX expression */};;
+
+  n: `token ${githubToken}`, 'Content-Type': 'application/json', 'User-Agent': 'netlify-ai-issue-labeler' }; async function listRecentIssues() {/* TODO: Fix JSX expression */}
+
+  s://api.github.com/repos/${githubRepo}/issues?state=open&per_page=20 ) {/* TODO: Fix JSX expression */}
+
+      }); const arr = await res.json(); return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : []} function ruleLabels(title);;
+
+        body) {' const text = `${title}\n${body || ''}`.toLowerCase(); const labels = new Set();' if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');' if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');' if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');' if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');' if (/(feat|feature|enhancement|improve)/.test(text)) labels.add('enhancement); if (labels.size === 0);;
+
+        labels.add('triage); return Array.from(labels)} async function aiSuggestLabels(title)
+        body) {/* TODO: Fix JSX expression */}
+
+  e: ${title}\nBod,
+  y: ${body || ''}`; const res = await fetch(http,;;
+
+  s: //api.openai.com/v1/chat/completions, {/* TODO: Fix JSX expression */}
+
+  d: 'POST'}' header,
+  s: { 'Authorization': `Bearer ${openaiKey}`, 'Content-Type': 'application/json' }, bod,
+>>>>>>> origin/main
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  e: 'user'} conten)
+
+  e: 'user} conten)
   t: prompt }]) temperatur,
+<<<<<<< HEAD
   e: 0}) }); const json = await res.json(); const content = "json?.choices?.[0]?.message?.content?.trim(); try {/* TODO: Fix JSX expression */}"
       } } catch {} return null} catch {return null} } } async function addLabels(issueNumber)
         labels) {/* TODO: Fix JSX expression */}`
@@ -243,7 +539,37 @@ exports.handler = async function(event, context) {const githubToken = process.en
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})`
   e: update AI issue labeler log (${new Date().toISOString()})`, conten,
+=======
+  e: 0}) }); const json = await res.json(); const content = json?.choices?.[0]?.message?.content?.trim(); try {/* TODO: Fix JSX expression */};;
+
+      } } catch {} return null} catch {return null} } } async function addLabels(issueNumber)
+        labels) {/* TODO: Fix JSX expression */}
+
+  d: true }; const res = await fetch(`http,;;
+
+  s://api.github.com/repos/${githubRepo}/issues/${issueNumber}/labels, {/* TODO: Fix JSX expression */})
+      }) }); return {/* TODO: Fix JSX expression */}
+
+  s: res.status }} const issues = await listRecentIssues(); const actions = []; for (const issue of issues) {/* TODO: Fix JSX expression */};;
+
+      } actions.push({/* TODO: Fix JSX expression */})
+      })} const log = {/* TODO: Fix JSX expression */};;
+
+        actions }; // Try to store log as an artifact in repo try {const headers = ghHeaders; let sha}' const path = 'data/reports/ai-issue-labeler-log.json' const getRes = await fetch(http,;;
+
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+
+      }` , {/* TODO: Fix JSX expression */})
+      }); if (getRes.ok) {const j = await getRes.json(); sha = j.sha} } const putRes = await fetch(http,;;
+
+  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
+
+      }`, {/* TODO: Fix JSX expression */})
+  e: update AI issue labeler log (${new Date().toISOString()}), conten,
+>>>>>>> origin/main
   t: Buffer.from(JSON.stringify(log, null)
-        2)).toString('base64'), sha}) }); return {/* TODO: Fix JSX expression */}
+        2)).toString('base64), sha}) }); return {/* TODO: Fix JSX expression */}
+
   s: putRes.status } }) }} catch (e) {/* TODO: Fix JSX expression */}
-      } }) }} };'`
+
+      } }) }} };'

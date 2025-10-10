@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
@@ -23,9 +24,37 @@ const MicroSAASPage: React.FC = () => {}
       contactInfo: 'Contac,
     t: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com;
+=======
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react;
+
+const MicroSAASPage: React.FC = () => {;
+
+const _microSAASServices = [;
+    // AI-Powered Developer Tools
+    {      titl,
+    e: 'AI Code Review Assistant Pro,
+      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.,
+      icon: '🔍,
+      price: $89
+      feature,
+    s: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets],
+      benefits: ['Reduce bugs by 70%', 'Improve code quality', Save 15+ hours
+      marketPrice: $150-300
+      categor,
+    y: 'Developer Tools,
+      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex],
+      contactInfo: Contac,
+    t: kleber@ziontechgroup.com | +1 302 464 0950,
+      link: https://ziontechgroup.com
+>>>>>>> origin/main
       popula,
     r: true;
     },
+<<<<<<< HEAD
     {}
       title: 'AI Test Generation Suite',
       description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
@@ -35,11 +64,23 @@ const MicroSAASPage: React.FC = () => {}
     s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI;
       benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Test Generation Suite,
+      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.,
+      icon: '🧪,
+      price: $149
+      feature,
+    s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', CI
+      benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Developer Tools',
-      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
+    y: 'Developer Tools,
+      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'Smart API Documentation Generator',
       description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
@@ -49,12 +90,24 @@ $4},
     s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
       benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'Smart API Documentation Generator,
+      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.,
+      icon: '📚,
+      price: $79
+      feature,
+    s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration],
+      benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Developer Tools',
-      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
+    y: 'Developer Tools,
+      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI SEO Optimizer Pro',
       description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
@@ -64,11 +117,23 @@ $4},
     s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
       benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours;
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI SEO Optimizer Pro,
+      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.,
+      icon: '🎯,
+      price: $199
+      feature,
+    s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis],
+      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', Save 25+ hours
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
+    y: 'Marketing,
+      technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Social Media Manager',
       description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
@@ -78,11 +143,23 @@ $4},
     s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
       benefits: ['Increase engagement by 45%', 'Save 20 hours;
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Social Media Manager,
+      description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.,
+      icon: '📱,
+      price: $129
+      feature,
+    s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach],
+      benefits: ['Increase engagement by 45%', Save 20 hours
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
+    y: 'Marketing,
+      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Email Marketing Platform',
       description: 'Intelligent email campaigns with personalization, A;
@@ -92,11 +169,23 @@ $4},
     s: ['Smart segmentation', 'A;
       benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours;
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Email Marketing Platform,
+      description: Intelligent email campaigns with personalization, A
+      icon: '📧,
+      price: $149
+      feature,
+    s: ['Smart segmentation', A
+      benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', Save 15 hours
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Marketing,
+      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Content Generator Pro',
       description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
@@ -106,12 +195,24 @@ $4},
     s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
       benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
       marketPrice: '$180-350;
+=======
+    {
+      title: 'AI Content Generator Pro,
+      description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.,
+      icon: '✍️,
+      price: $119
+      feature,
+    s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support],
+      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production],
+      marketPrice: $180-350
+>>>>>>> origin/main
       categor,
-    y: 'Content Creation',
-      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
+    y: 'Content Creation,
+      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Analytics Dashboard Pro',
       description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
@@ -121,11 +222,23 @@ $4},
     s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
       benefits: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Analytics Dashboard Pro,
+      description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.,
+      icon: '📊,
+      price: $199
+      feature,
+    s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system],
+      benefits: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Analytics',
-      technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
+    y: 'Analytics,
+      technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Lead Scoring Engine',
       description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
@@ -135,11 +248,23 @@ $4},
     s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
       benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Lead Scoring Engine,
+      description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.,
+      icon: '🎯,
+      price: $139
+      feature,
+    s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking],
+      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Sales',
-      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
+    y: 'Sales,
+      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Customer Insights Platform',
       description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
@@ -149,12 +274,24 @@ $4},
     s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
       benefits: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Customer Insights Platform,
+      description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.,
+      icon: '👥,
+      price: $179
+      feature,
+    s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking],
+      benefits: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
+    y: 'Customer Analytics,
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Invoice Generator Pro',
       description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
@@ -164,11 +301,23 @@ $4},
     s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
       benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Invoice Generator Pro,
+      description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.,
+      icon: '💰,
+      price: $79
+      feature,
+    s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support],
+      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Finance',
-      technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Finance,
+      technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Financial Planning Assistant',
       description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
@@ -178,11 +327,23 @@ $4},
     s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
       benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Financial Planning Assistant,
+      description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.,
+      icon: '📈,
+      price: $89
+      feature,
+    s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations],
+      benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Finance',
-      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
+    y: 'Finance,
+      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Expense Management System',
       description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
@@ -192,12 +353,24 @@ $4},
     s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
       benefits: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Expense Management System,
+      description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.,
+      icon: '🧾,
+      price: $99
+      feature,
+    s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app],
+      benefits: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
+    y: 'Finance,
+      technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Health Monitoring Platform',
       description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
@@ -207,11 +380,23 @@ $4},
     s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
       benefits: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Health Monitoring Platform,
+      description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.,
+      icon: '🏥,
+      price: $99
+      feature,
+    s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync],
+      benefits: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Healthcare',
-      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
+    y: 'Healthcare,
+      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Fitness Coach Pro',
       description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
@@ -221,11 +406,23 @@ $4},
     s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
       benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI Fitness Coach Pro,
+      description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.,
+      icon: '💪,
+      price: $49
+      feature,
+    s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration],
+      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Health & Fitness',
-      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
+    y: 'Health & Fitness,
+      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Mental Health Assistant',
       description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
@@ -235,12 +432,24 @@ $4},
     s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
       benefits: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Mental Health Assistant,
+      description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.,
+      icon: '🧠,
+      price: $79
+      feature,
+    s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals],
+      benefits: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Mental Health',
-      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+    y: 'Mental Health,
+      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Language Learning Platform',
       description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
@@ -250,11 +459,23 @@ $4},
     s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
       benefits: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Language Learning Platform,
+      description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.,
+      icon: '🌍,
+      price: $79
+      feature,
+    s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context],
+      benefits: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
+    y: 'Education,
+      technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Study Assistant Pro',
       description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
@@ -264,11 +485,23 @@ $4},
     s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
       benefits: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'AI Study Assistant Pro,
+      description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.,
+      icon: '📚,
+      price: $59
+      feature,
+    s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis],
+      benefits: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Education,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Skill Assessment Platform',
       description: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
@@ -278,12 +511,24 @@ $4},
     s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
       benefits: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Skill Assessment Platform,
+      description: 'Automated skill testing and certification with adaptive questioning and performance analytics.,
+      icon: '🎓,
+      price: $149
+      feature,
+    s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards],
+      benefits: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
+    y: 'Education,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Inventory Optimizer Pro',
       description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
@@ -293,11 +538,23 @@ $4},
     s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
       benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Inventory Optimizer Pro,
+      description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.,
+      icon: '📦,
+      price: $299
+      feature,
+    s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments],
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Supply Chain',
-      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+    y: 'Supply Chain,
+      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Product Recommendation Engine',
       description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
@@ -307,11 +564,23 @@ $4},
     s: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A;
       benefits: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Product Recommendation Engine,
+      description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.,
+      icon: '🛍️,
+      price: $199
+      feature,
+    s: ['Personalized recommendations', 'Cross-selling', 'Upselling', A
+      benefits: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
+    y: 'E-commerce,
+      technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Price Optimization Tool',
       description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
@@ -321,12 +590,24 @@ $4},
     s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A;
       benefits: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Price Optimization Tool,
+      description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.,
+      icon: '💲,
+      price: $249
+      feature,
+    s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', A
+      benefits: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
+    y: 'E-commerce,
+      technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Legal Document Analyzer',
       description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
@@ -336,12 +617,24 @@ $4},
     s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
       benefits: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Legal Document Analyzer,
+      description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.,
+      icon: '⚖️,
+      price: $399
+      feature,
+    s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction],
+      benefits: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Legal,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Property Valuation Engine',
       description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
@@ -351,12 +644,24 @@ $4},
     s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],
       benefits: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Property Valuation Engine,
+      description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.,
+      icon: '🏠,
+      price: $199
+      feature,
+    s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations],
+      benefits: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Real Estate',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
+    y: 'Real Estate,
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Resume Parser & Matcher',
       description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
@@ -366,11 +671,23 @@ $4},
     s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],
       benefits: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Resume Parser & Matcher,
+      description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.,
+      icon: '👥,
+      price: $149
+      feature,
+    s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection],
+      benefits: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'HR & Recruitment',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'HR & Recruitment,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Interview Scheduler Pro',
       description: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
@@ -380,11 +697,23 @@ $4},
     s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],
       benefits: ['Save 10+ hours;
       marketPrice: '$120-300;
+=======
+    {
+      title: 'AI Interview Scheduler Pro,
+      description: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.,
+      icon: '📅,
+      price: $79
+      feature,
+    s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection],
+      benefits: [Save 10+ hours
+      marketPrice: $120-300
+>>>>>>> origin/main
       categor,
-    y: 'HR & Recruitment',
-      technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
+    y: 'HR & Recruitment,
+      technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Employee Performance Tracker',
       description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
@@ -394,12 +723,24 @@ $4},
     s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
       benefits: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Employee Performance Tracker,
+      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.,
+      icon: '📈,
+      price: $199
+      feature,
+    s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system],
+      benefits: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'HR & Recruitment',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+    y: 'HR & Recruitment,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Expense Tracker & Categorizer',
       description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
@@ -409,11 +750,23 @@ $4},
     s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],
       benefits: ['Save 5+ hours;
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Expense Tracker & Categorizer,
+      description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.,
+      icon: '💰,
+      price: $99
+      feature,
+    s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection],
+      benefits: [Save 5+ hours
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Finance & Accounting',
-      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Finance & Accounting,
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Invoice Processing System',
       description: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
@@ -423,11 +776,23 @@ $4},
     s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],
       benefits: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Invoice Processing System,
+      description: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.,
+      icon: '🧾,
+      price: $179
+      feature,
+    s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks],
+      benefits: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Finance & Accounting',
-      technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Finance & Accounting,
+      technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Financial Forecasting Tool',
       description: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
@@ -437,12 +802,24 @@ $4},
     s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],
       benefits: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Financial Forecasting Tool,
+      description: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.,
+      icon: '📊,
+      price: $299
+      feature,
+    s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports],
+      benefits: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Finance & Accounting',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
+    y: 'Finance & Accounting,
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Project Manager Assistant',
       description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
@@ -452,11 +829,23 @@ $4},
     s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],
       benefits: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Project Manager Assistant,
+      description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.,
+      icon: '📋,
+      price: $149
+      feature,
+    s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management],
+      benefits: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+    y: 'Project Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Time Tracking & Analytics',
       description: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
@@ -466,12 +855,24 @@ $4},
     s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],
       benefits: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],
       marketPrice: '$120-300;
+=======
+    {
+      title: 'AI Time Tracking & Analytics,
+      description: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.,
+      icon: '⏰,
+      price: $79
+      feature,
+    s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting],
+      benefits: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements],
+      marketPrice: $120-300
+>>>>>>> origin/main
       categor,
-    y: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
+    y: 'Project Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Live Chat Assistant',
       description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
@@ -481,11 +882,23 @@ $4},
     s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],
       benefits: ['24;
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Live Chat Assistant,
+      description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.,
+      icon: '💬,
+      price: $129
+      feature,
+    s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics],
+      benefits: [24
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Service',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+    y: 'Customer Service,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Ticket Classification System',
       description: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
@@ -495,12 +908,24 @@ $4},
     s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],
       benefits: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],
       marketPrice: '$150-350;
+=======
+    {
+      title: 'AI Ticket Classification System,
+      description: 'Automated ticket routing and prioritization with intelligent categorization and escalation.,
+      icon: '🎫,
+      price: $99
+      feature,
+    s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs],
+      benefits: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience],
+      marketPrice: $150-350
+>>>>>>> origin/main
       categor,
-    y: 'Customer Service',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Customer Service,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Lead Scoring Engine',
       description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
@@ -510,11 +935,23 @@ $4},
     s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A;
       benefits: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Lead Scoring Engine,
+      description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.,
+      icon: '🎯,
+      price: $199
+      feature,
+    s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', A
+      benefits: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Sales & CRM',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+    y: 'Sales & CRM,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Sales Forecasting Platform',
       description: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
@@ -524,12 +961,24 @@ $4},
     s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],
       benefits: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Sales Forecasting Platform,
+      description: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.,
+      icon: '📈,
+      price: $249
+      feature,
+    s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting],
+      benefits: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Sales & CRM',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
+    y: 'Sales & CRM,
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Symptom Checker Pro',
       description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
@@ -539,11 +988,23 @@ $4},
     s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],
       benefits: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Symptom Checker Pro,
+      description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.,
+      icon: '🏥,
+      price: $299
+      feature,
+    s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts],
+      benefits: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Healthcare',
-      technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
+    y: 'Healthcare,
+      technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Fitness Coach Platform',
       description: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
@@ -553,12 +1014,24 @@ $4},
     s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],
       benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Fitness Coach Platform,
+      description: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.,
+      icon: '💪,
+      price: $149
+      feature,
+    s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features],
+      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Healthcare',
-      technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+    y: 'Healthcare,
+      technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Security Monitoring System',
       description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
@@ -568,11 +1041,23 @@ $4},
     s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],
       benefits: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Security Monitoring System,
+      description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.,
+      icon: '🛡️,
+      price: $399
+      feature,
+    s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics],
+      benefits: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Security',
-      technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
+    y: 'Security,
+      technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Compliance Checker',
       description: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
@@ -582,12 +1067,24 @@ $4},
     s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],
       benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Compliance Checker,
+      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.,
+      icon: '📋,
+      price: $249
+      feature,
+    s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting],
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Security',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Security,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Meeting Assistant Pro',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
@@ -597,11 +1094,23 @@ $4},
     s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
       benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Meeting Assistant Pro,
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.,
+      icon: '🎤,
+      price: $129
+      feature,
+    s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration],
+      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+    y: 'Productivity,
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Email Management System',
       description: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
@@ -611,11 +1120,23 @@ $4},
     s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],
       benefits: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Email Management System,
+      description: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.,
+      icon: '📧,
+      price: $99
+      feature,
+    s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics],
+      benefits: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
+    y: 'Productivity,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Document Management Platform',
       description: 'Intelligent document organization with search, version control, and collaboration features.',
@@ -625,12 +1146,24 @@ $4},
     s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],
       benefits: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Document Management Platform,
+      description: 'Intelligent document organization with search, version control, and collaboration features.,
+      icon: '📄,
+      price: $149
+      feature,
+    s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls],
+      benefits: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+    y: 'Productivity,
+      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Business Intelligence Suite',
       description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
@@ -640,11 +1173,23 @@ $4},
     s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],
       benefits: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Business Intelligence Suite,
+      description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.,
+      icon: '📊,
+      price: $299
+      feature,
+    s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access],
+      benefits: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Analytics',
-      technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
+    y: 'Analytics,
+      technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Social Media Analytics',
       description: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
@@ -654,12 +1199,24 @@ $4},
     s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],
       benefits: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Social Media Analytics,
+      description: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.,
+      icon: '📱,
+      price: $179
+      feature,
+    s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis],
+      benefits: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Analytics',
-      technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
+    y: 'Analytics,
+      technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Code Quality Monitor',
       description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
@@ -669,11 +1226,23 @@ $4},
     s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],
       benefits: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Code Quality Monitor,
+      description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.,
+      icon: '🔍,
+      price: $199
+      feature,
+    s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules],
+      benefits: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Development',
-      technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
+    y: 'Development,
+      technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Deployment Automation',
       description: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
@@ -686,10 +1255,25 @@ $4},
       categor,
     y: 'Development',
       technologies: ['CI;
+=======
+    {
+      title: 'AI Deployment Automation,
+      description: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.,
+      icon: '🚀,
+      price: $249
+      feature,
+    s: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning],
+      benefits: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring],
+      marketPrice: $400-800
+      categor,
+    y: 'Development,
+      technologies: [CI
+>>>>>>> origin/main
       contactInf,
     o:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Team Collaboration Hub',
       description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
@@ -699,11 +1283,23 @@ $4},
     s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],
       benefits: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Team Collaboration Hub,
+      description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.,
+      icon: '👥,
+      price: $199
+      feature,
+    s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access],
+      benefits: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Collaboration',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
+    y: 'Collaboration,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Video Conferencing Assistant',
       description: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
@@ -713,12 +1309,24 @@ $4},
     s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],
       benefits: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Video Conferencing Assistant,
+      description: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.,
+      icon: '📹,
+      price: $149
+      feature,
+    s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics],
+      benefits: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Collaboration',
-      technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
+    y: 'Collaboration,
+      technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Ad Campaign Optimizer',
       description: 'Intelligent ad campaign management with automated optimization, A;
@@ -728,11 +1336,23 @@ $4},
     s: ['Campaign optimization', 'A;
       benefits: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Ad Campaign Optimizer,
+      description: Intelligent ad campaign management with automated optimization, A
+      icon: '📢,
+      price: $299
+      feature,
+    s: ['Campaign optimization', A
+      benefits: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
+    y: 'Marketing,
+      technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Influencer Marketing Platform',
       description: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
@@ -742,12 +1362,24 @@ $4},
     s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],
       benefits: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Influencer Marketing Platform,
+      description: 'Smart influencer discovery and management with performance tracking and campaign optimization.,
+      icon: '⭐,
+      price: $199
+      feature,
+    s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing],
+      benefits: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Marketing,
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Customer Behavior Analyzer',
       description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
@@ -757,11 +1389,23 @@ $4},
     s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],
       benefits: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Customer Behavior Analyzer,
+      description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.,
+      icon: '🛒,
+      price: $249
+      feature,
+    s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine],
+      benefits: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
+    y: 'E-commerce,
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
@@ -771,12 +1415,24 @@ $4},
     s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],
       benefits: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Supply Chain Optimizer,
+      description: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.,
+      icon: '🚚,
+      price: $399
+      feature,
+    s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking],
+      benefits: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Supply Chain',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
+    y: 'Supply Chain,
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Corporate Training Platform',
       description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
@@ -786,11 +1442,23 @@ $4},
     s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],
       benefits: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Corporate Training Platform,
+      description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.,
+      icon: '🎓,
+      price: $199
+      feature,
+    s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics],
+      benefits: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
+    y: 'Education,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Knowledge Management System',
       description: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
@@ -800,12 +1468,24 @@ $4},
     s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],
       benefits: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Knowledge Management System,
+      description: 'Smart knowledge base with intelligent search, content organization, and automated updates.,
+      icon: '📚,
+      price: $149
+      feature,
+    s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics],
+      benefits: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+    y: 'Education,
+      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Contract Management System',
       description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
@@ -815,11 +1495,23 @@ $4},
     s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],
       benefits: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Contract Management System,
+      description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.,
+      icon: '📋,
+      price: $299
+      feature,
+    s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation],
+      benefits: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Legal,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Privacy Compliance Monitor',
       description: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
@@ -829,12 +1521,24 @@ $4},
     s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],
       benefits: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Privacy Compliance Monitor,
+      description: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.,
+      icon: '🔒,
+      price: $199
+      feature,
+    s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection],
+      benefits: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
+    y: 'Legal,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Property Management Suite',
       description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
@@ -844,11 +1548,23 @@ $4},
     s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],
       benefits: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Property Management Suite,
+      description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.,
+      icon: '🏢,
+      price: $249
+      feature,
+    s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics],
+      benefits: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Real Estate',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
+    y: 'Real Estate,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Market Research Platform',
       description: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
@@ -858,12 +1574,24 @@ $4},
     s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],
       benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Market Research Platform,
+      description: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.,
+      icon: '🔍,
+      price: $179
+      feature,
+    s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system],
+      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Research',
-      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Research,
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Crop Monitoring System',
       description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
@@ -873,11 +1601,23 @@ $4},
     s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],
       benefits: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Crop Monitoring System,
+      description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.,
+      icon: '🌾,
+      price: $299
+      feature,
+    s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning],
+      benefits: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Agriculture',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Agriculture,
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Environmental Monitoring',
       description: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
@@ -887,12 +1627,24 @@ $4},
     s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],
       benefits: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Environmental Monitoring,
+      description: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.,
+      icon: '🌍,
+      price: $199
+      feature,
+    s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking],
+      benefits: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Environment',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Environment,
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Fleet Management System',
       description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
@@ -902,11 +1654,23 @@ $4},
     s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],
       benefits: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Fleet Management System,
+      description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.,
+      icon: '🚛,
+      price: $349
+      feature,
+    s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics],
+      benefits: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Transportation',
-      technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Transportation,
+      technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Logistics Optimizer',
       description: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
@@ -916,12 +1680,24 @@ $4},
     s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],
       benefits: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Logistics Optimizer,
+      description: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.,
+      icon: '📦,
+      price: $299
+      feature,
+    s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics],
+      benefits: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Logistics',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
+    y: 'Logistics,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Content Moderation Platform',
       description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
@@ -931,11 +1707,23 @@ $4},
     s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],
       benefits: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Content Moderation Platform,
+      description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.,
+      icon: '🎬,
+      price: $199
+      feature,
+    s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics],
+      benefits: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Media',
-      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Media,
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Video Production Assistant',
       description: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
@@ -945,12 +1733,24 @@ $4},
     s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],
       benefits: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Video Production Assistant,
+      description: 'Intelligent video production with automated editing, subtitle generation, and content optimization.,
+      icon: '🎥,
+      price: $249
+      feature,
+    s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics],
+      benefits: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Media',
-      technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
+    y: 'Media,
+      technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Game Development Platform',
       description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
@@ -974,12 +1774,38 @@ $4},
     s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A;
       benefits: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Game Development Platform,
+      description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.,
+      icon: '🎮,
+      price: $299
+      feature,
+    s: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation],
+      benefits: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs],
+      marketPrice: $500-1000
       categor,
-    y: 'Gaming',
-      technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Gaming,
+      technologies: ['Game Engines', 'Machine Learning', 'React', 'Node.js', Unity
+      contactInfo:     ,
+$4},
+    {
+      title: 'AI Player Behavior Analytics,
+      description: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.,
+      icon: '📊,
+      price: $199
+      feature,
+    s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', A
+      benefits: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions],
+      marketPrice: $300-600
+>>>>>>> origin/main
+      categor,
+    y: 'Gaming,
+      technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
@@ -989,11 +1815,23 @@ $4},
     s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
       benefits: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Research Assistant Pro,
+      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.,
+      icon: '🔬,
+      price: $299
+      feature,
+    s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking],
+      benefits: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Research,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Patent Analysis Tool',
       description: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
@@ -1003,12 +1841,24 @@ $4},
     s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],
       benefits: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Patent Analysis Tool,
+      description: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.,
+      icon: '📋,
+      price: $399
+      feature,
+    s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking],
+      benefits: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+    y: 'Research,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Energy Management System',
       description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
@@ -1018,11 +1868,23 @@ $4},
     s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],
       benefits: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Energy Management System,
+      description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.,
+      icon: '⚡,
+      price: $249
+      feature,
+    s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting],
+      benefits: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Energy',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Energy,
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Smart Grid Optimizer',
       description: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
@@ -1032,12 +1894,24 @@ $4},
     s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],
       benefits: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Smart Grid Optimizer,
+      description: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.,
+      icon: '🔌,
+      price: $399
+      feature,
+    s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance],
+      benefits: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Energy',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Energy,
+      technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Quality Control System',
       description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
@@ -1047,11 +1921,23 @@ $4},
     s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],
       benefits: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Quality Control System,
+      description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.,
+      icon: '🏭,
+      price: $349
+      feature,
+    s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system],
+      benefits: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Manufacturing',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Manufacturing,
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Production Planning Optimizer',
       description: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
@@ -1061,12 +1947,24 @@ $4},
     s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],
       benefits: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Production Planning Optimizer,
+      description: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.,
+      icon: '📊,
+      price: $299
+      feature,
+    s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking],
+      benefits: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Manufacturing',
-      technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
+    y: 'Manufacturing,
+      technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Risk Assessment Platform',
       description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
@@ -1076,11 +1974,23 @@ $4},
     s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],
       benefits: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Risk Assessment Platform,
+      description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.,
+      icon: '🛡️,
+      price: $399
+      feature,
+    s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring],
+      benefits: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Insurance',
-      technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
+    y: 'Insurance,
+      technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Claims Processing System',
       description: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
@@ -1090,12 +2000,24 @@ $4},
     s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],
       benefits: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Claims Processing System,
+      description: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.,
+      icon: '📋,
+      price: $299
+      feature,
+    s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics],
+      benefits: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Insurance',
-      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Insurance,
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Citizen Services Platform',
       description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
@@ -1105,11 +2027,23 @@ $4},
     s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],
       benefits: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],
       marketPrice: '$800-1500;
+=======
+    {
+      title: 'AI Citizen Services Platform,
+      description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.,
+      icon: '🏛️,
+      price: $499
+      feature,
+    s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics],
+      benefits: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs],
+      marketPrice: $800-1500
+>>>>>>> origin/main
       categor,
-    y: 'Government',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Government,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Public Safety System',
       description: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
@@ -1119,12 +2053,24 @@ $4},
     s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],
       benefits: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],
       marketPrice: '$1000-2000;
+=======
+    {
+      title: 'AI Public Safety System,
+      description: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.,
+      icon: '🚨,
+      price: $599
+      feature,
+    s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools],
+      benefits: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention],
+      marketPrice: $1000-2000
+>>>>>>> origin/main
       categor,
-    y: 'Government',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Government,
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Donor Management System',
       description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
@@ -1134,11 +2080,23 @@ $4},
     s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],
       benefits: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Donor Management System,
+      description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.,
+      icon: '❤️,
+      price: $199
+      feature,
+    s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics],
+      benefits: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Non-Profit',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+    y: 'Non-Profit,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Volunteer Matching Platform',
       description: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
@@ -1148,12 +2106,24 @@ $4},
     s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],
       benefits: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Volunteer Matching Platform,
+      description: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.,
+      icon: '🤝,
+      price: $149
+      feature,
+    s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system],
+      benefits: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Non-Profit',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
+    y: 'Non-Profit,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Travel Planning Assistant',
       description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
@@ -1163,11 +2133,23 @@ $4},
     s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],
       benefits: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Travel Planning Assistant,
+      description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.,
+      icon: '✈️,
+      price: $179
+      feature,
+    s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking],
+      benefits: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Travel',
-      technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Travel,
+      technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Hotel Revenue Optimizer',
       description: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
@@ -1177,12 +2159,24 @@ $4},
     s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],
       benefits: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Hotel Revenue Optimizer,
+      description: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.,
+      icon: '🏨,
+      price: $299
+      feature,
+    s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation],
+      benefits: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Hospitality',
-      technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
+    y: 'Hospitality,
+      technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Sports Performance Analyzer',
       description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
@@ -1192,11 +2186,23 @@ $4},
     s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],
       benefits: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Sports Performance Analyzer,
+      description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.,
+      icon: '⚽,
+      price: $249
+      feature,
+    s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling],
+      benefits: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Sports',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Sports,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Fitness Nutrition Coach',
       description: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
@@ -1206,12 +2212,24 @@ $4},
     s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],
       benefits: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Fitness Nutrition Coach,
+      description: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.,
+      icon: '🥗,
+      price: $149
+      feature,
+    s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting],
+      benefits: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Fitness',
-      technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Fitness,
+      technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Virtual Try-On Platform',
       description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
@@ -1235,12 +2253,38 @@ $4},
     s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],
       benefits: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Virtual Try-On Platform,
+      description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.,
+      icon: '👗,
+      price: $299
+      feature,
+    s: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions],
+      benefits: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy],
+      marketPrice: $500-1000
       categor,
-    y: 'Beauty',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Fashion,
+      technologies: ['Computer Vision', AR
+      contactInfo:     ,
+$4},
+    {
+      title: 'AI Beauty Analysis Tool,
+      description: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.,
+      icon: '💄,
+      price: $199
+      feature,
+    s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking],
+      benefits: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend],
+      marketPrice: $300-600
+>>>>>>> origin/main
+      categor,
+    y: 'Beauty,
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Smart Home Controller',
       description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
@@ -1250,11 +2294,23 @@ $4},
     s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],
       benefits: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Smart Home Controller,
+      description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.,
+      icon: '🏠,
+      price: $199
+      feature,
+    s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics],
+      benefits: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Smart Home',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
+    y: 'Smart Home,
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Personal Assistant Platform',
       description: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
@@ -1264,12 +2320,24 @@ $4},
     s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],
       benefits: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Personal Assistant Platform,
+      description: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.,
+      icon: '🤖,
+      price: $149
+      feature,
+    s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities],
+      benefits: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Personal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
+    y: 'Personal,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Pet Health Monitor',
       description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
@@ -1279,11 +2347,23 @@ $4},
     s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],
       benefits: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Pet Health Monitor,
+      description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.,
+      icon: '🐕,
+      price: $99
+      feature,
+    s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts],
+      benefits: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Pets',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
+    y: 'Pets,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Pet Training Assistant',
       description: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
@@ -1293,12 +2373,24 @@ $4},
     s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],
       benefits: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Pet Training Assistant,
+      description: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.,
+      icon: '🐱,
+      price: $79
+      feature,
+    s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features],
+      benefits: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Pets',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
+    y: 'Pets,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Tutoring Platform',
       description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
@@ -1308,11 +2400,23 @@ $4},
     s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],
       benefits: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Tutoring Platform,
+      description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.,
+      icon: '🎓,
+      price: $199
+      feature,
+    s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics],
+      benefits: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
+    y: 'Education,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Homework Helper',
       description: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
@@ -1322,12 +2426,24 @@ $4},
     s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],
       benefits: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Homework Helper,
+      description: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.,
+      icon: '📝,
+      price: $99
+      feature,
+    s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard],
+      benefits: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Education',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Education,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Music Composition Tool',
       description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
@@ -1337,11 +2453,23 @@ $4},
     s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],
       benefits: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Music Composition Tool,
+      description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.,
+      icon: '🎵,
+      price: $149
+      feature,
+    s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options],
+      benefits: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Music',
-      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
+    y: 'Music,
+      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Audio Enhancement Platform',
       description: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
@@ -1351,12 +2479,24 @@ $4},
     s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],
       benefits: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Audio Enhancement Platform,
+      description: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.,
+      icon: '🎧,
+      price: $199
+      feature,
+    s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion],
+      benefits: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Audio',
-      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
+    y: 'Audio,
+      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Design Assistant Pro',
       description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
@@ -1366,11 +2506,23 @@ $4},
     s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],
       benefits: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Design Assistant Pro,
+      description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.,
+      icon: '🎨,
+      price: $199
+      feature,
+    s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options],
+      benefits: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Design',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
+    y: 'Design,
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Logo Generator Platform',
       description: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
@@ -1380,12 +2532,24 @@ $4},
     s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],
       benefits: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Logo Generator Platform,
+      description: 'Intelligent logo creation with brand analysis, style matching, and customization options.,
+      icon: '🏷️,
+      price: $149
+      feature,
+    s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system],
+      benefits: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Design',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
+    y: 'Design,
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Dating Assistant',
       description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
@@ -1395,11 +2559,23 @@ $4},
     s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],
       benefits: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Dating Assistant,
+      description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.,
+      icon: '💕,
+      price: $99
+      feature,
+    s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking],
+      benefits: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Dating',
-      technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Dating,
+      technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Relationship Counselor',
       description: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
@@ -1409,12 +2585,24 @@ $4},
     s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],
       benefits: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Relationship Counselor,
+      description: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.,
+      icon: '💑,
+      price: $149
+      feature,
+    s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities],
+      benefits: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Relationships',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Relationships,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Parenting Assistant',
       description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
@@ -1424,11 +2612,23 @@ $4},
     s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],
       benefits: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Parenting Assistant,
+      description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.,
+      icon: '👶,
+      price: $199
+      feature,
+    s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support],
+      benefits: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Parenting',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
+    y: 'Parenting,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Family Organizer',
       description: 'Smart family management with scheduling, task coordination, and communication tools.',
@@ -1438,12 +2638,24 @@ $4},
     s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],
       benefits: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Family Organizer,
+      description: 'Smart family management with scheduling, task coordination, and communication tools.,
+      icon: '👨‍👩‍👧‍👦,
+      price: $149
+      feature,
+    s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing],
+      benefits: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Family',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+    y: 'Family,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Senior Care Monitor',
       description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
@@ -1453,11 +2665,23 @@ $4},
     s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],
       benefits: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Senior Care Monitor,
+      description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.,
+      icon: '👴,
+      price: $299
+      feature,
+    s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response],
+      benefits: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Senior Care',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Senior Care,
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Memory Assistant',
       description: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
@@ -1467,12 +2691,24 @@ $4},
     s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],
       benefits: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Memory Assistant,
+      description: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.,
+      icon: '🧠,
+      price: $149
+      feature,
+    s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance],
+      benefits: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Memory',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
+    y: 'Memory,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Accessibility Assistant',
       description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
@@ -1482,11 +2718,23 @@ $4},
     s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],
       benefits: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Accessibility Assistant,
+      description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.,
+      icon: '♿,
+      price: $199
+      feature,
+    s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization],
+      benefits: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Accessibility',
-      technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
+    y: 'Accessibility,
+      technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Language Translation Pro',
       description: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
@@ -1496,12 +2744,24 @@ $4},
     s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],
       benefits: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Language Translation Pro,
+      description: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.,
+      icon: '🌐,
+      price: $149
+      feature,
+    s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration],
+      benefits: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Translation',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
+    y: 'Translation,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Emergency Response System',
       description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
@@ -1511,11 +2771,23 @@ $4},
     s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],
       benefits: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],
       marketPrice: '$800-1500;
+=======
+    {
+      title: 'AI Emergency Response System,
+      description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.,
+      icon: '🚨,
+      price: $499
+      feature,
+    s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization],
+      benefits: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved],
+      marketPrice: $800-1500
+>>>>>>> origin/main
       categor,
-    y: 'Emergency',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
+    y: 'Emergency,
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Crisis Communication Platform',
       description: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
@@ -1525,12 +2797,24 @@ $4},
     s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],
       benefits: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Crisis Communication Platform,
+      description: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.,
+      icon: '📢,
+      price: $299
+      feature,
+    s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking],
+      benefits: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Crisis Management',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
+    y: 'Crisis Management,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Space Mission Planner',
       description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
@@ -1540,11 +2824,23 @@ $4},
     s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],
       benefits: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],
       marketPrice: '$1000-2000;
+=======
+    {
+      title: 'AI Space Mission Planner,
+      description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.,
+      icon: '🚀,
+      price: $599
+      feature,
+    s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools],
+      benefits: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency],
+      marketPrice: $1000-2000
+>>>>>>> origin/main
       categor,
-    y: 'Space',
-      technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Space,
+      technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Astronomical Data Analyzer',
       description: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
@@ -1554,12 +2850,24 @@ $4},
     s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],
       benefits: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Astronomical Data Analyzer,
+      description: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.,
+      icon: '🔭,
+      price: $399
+      feature,
+    s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support],
+      benefits: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Astronomy',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Astronomy,
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Marine Life Tracker',
       description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
@@ -1569,11 +2877,23 @@ $4},
     s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],
       benefits: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Marine Life Tracker,
+      description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.,
+      icon: '🐋,
+      price: $299
+      feature,
+    s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support],
+      benefits: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Marine',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Marine,
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Ocean Current Predictor',
       description: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
@@ -1583,12 +2903,24 @@ $4},
     s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],
       benefits: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Ocean Current Predictor,
+      description: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.,
+      icon: '🌊,
+      price: $399
+      feature,
+    s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools],
+      benefits: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Oceanography',
-      technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
+    y: 'Oceanography,
+      technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Archaeological Site Analyzer',
       description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
@@ -1598,11 +2930,23 @@ $4},
     s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],
       benefits: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Archaeological Site Analyzer,
+      description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.,
+      icon: '🏛️,
+      price: $299
+      feature,
+    s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration],
+      benefits: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Archaeology',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Archaeology,
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Historical Document Processor',
       description: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
@@ -1612,12 +2956,24 @@ $4},
     s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],
       benefits: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Historical Document Processor,
+      description: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.,
+      icon: '📜,
+      price: $199
+      feature,
+    s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools],
+      benefits: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'History',
-      technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'History,
+      technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Mental Health Tracker',
       description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
@@ -1627,11 +2983,23 @@ $4},
     s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],
       benefits: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Mental Health Tracker,
+      description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.,
+      icon: '🧘,
+      price: $149
+      feature,
+    s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support],
+      benefits: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Mental Health',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Mental Health,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Therapy Assistant',
       description: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
@@ -1641,12 +3009,24 @@ $4},
     s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],
       benefits: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Therapy Assistant,
+      description: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.,
+      icon: '💬,
+      price: $299
+      feature,
+    s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction],
+      benefits: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Therapy',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Therapy,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Ethical Decision Maker',
       description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
@@ -1656,11 +3036,23 @@ $4},
     s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],
       benefits: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Ethical Decision Maker,
+      description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.,
+      icon: '⚖️,
+      price: $199
+      feature,
+    s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation],
+      benefits: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Ethics',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Ethics,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Philosophy Research Assistant',
       description: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
@@ -1670,12 +3062,24 @@ $4},
     s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],
       benefits: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Philosophy Research Assistant,
+      description: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.,
+      icon: '🤔,
+      price: $149
+      feature,
+    s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis],
+      benefits: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Philosophy',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Philosophy,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Spiritual Guidance Platform',
       description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
@@ -1685,11 +3089,23 @@ $4},
     s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],
       benefits: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Spiritual Guidance Platform,
+      description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.,
+      icon: '🙏,
+      price: $99
+      feature,
+    s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring],
+      benefits: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Spirituality',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Spirituality,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Religious Text Analyzer',
       description: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
@@ -1699,12 +3115,24 @@ $4},
     s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],
       benefits: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Religious Text Analyzer,
+      description: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.,
+      icon: '📖,
+      price: $149
+      feature,
+    s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools],
+      benefits: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Religion',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Religion,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Innovation Predictor',
       description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
@@ -1714,11 +3142,23 @@ $4},
     s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],
       benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Innovation Predictor,
+      description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.,
+      icon: '🔮,
+      price: $399
+      feature,
+    s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights],
+      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Innovation',
-      technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
+    y: 'Innovation,
+      technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Future Scenario Generator',
       description: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
@@ -1728,12 +3168,24 @@ $4},
     s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],
       benefits: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Future Scenario Generator,
+      description: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.,
+      icon: '🌐,
+      price: $299
+      feature,
+    s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support],
+      benefits: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Future Planning',
-      technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
+    y: 'Future Planning,
+      technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Consciousness Monitor',
       description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
@@ -1743,11 +3195,23 @@ $4},
     s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],
       benefits: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],
       marketPrice: '$800-1500;
+=======
+    {
+      title: 'AI Consciousness Monitor,
+      description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.,
+      icon: '🤖,
+      price: $499
+      feature,
+    s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy],
+      benefits: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI],
+      marketPrice: $800-1500
+>>>>>>> origin/main
       categor,
-    y: 'AI Ethics',
-      technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
+    y: 'AI Ethics,
+      technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Rights Management System',
       description: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
@@ -1757,12 +3221,24 @@ $4},
     s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],
       benefits: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Rights Management System,
+      description: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.,
+      icon: '⚖️,
+      price: $399
+      feature,
+    s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training],
+      benefits: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'AI Rights',
-      technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'AI Rights,
+      technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Time Management Master',
       description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
@@ -1772,11 +3248,23 @@ $4},
     s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],
       benefits: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Time Management Master,
+      description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.,
+      icon: '⏰,
+      price: $149
+      feature,
+    s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics],
+      benefits: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Time Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+    y: 'Time Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Space-Time Analyzer',
       description: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
@@ -1786,12 +3274,24 @@ $4},
     s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],
       benefits: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],
       marketPrice: '$1000-2000;
+=======
+    {
+      title: 'AI Space-Time Analyzer,
+      description: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.,
+      icon: '🌌,
+      price: $599
+      feature,
+    s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research],
+      benefits: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights],
+      marketPrice: $1000-2000
+>>>>>>> origin/main
       categor,
-    y: 'Space-Time',
-      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+    y: 'Space-Time,
+      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Quantum Simulator Pro',
       description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
@@ -1801,11 +3301,23 @@ $4},
     s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],
       benefits: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],
       marketPrice: '$1200-2500;
+=======
+    {
+      title: 'AI Quantum Simulator Pro,
+      description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.,
+      icon: '⚛️,
+      price: $799
+      feature,
+    s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration],
+      benefits: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress],
+      marketPrice: $1200-2500
+>>>>>>> origin/main
       categor,
-    y: 'Quantum Computing',
-      technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Quantum Computing,
+      technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Physics Research Assistant',
       description: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
@@ -1815,12 +3327,24 @@ $4},
     s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],
       benefits: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Physics Research Assistant,
+      description: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.,
+      icon: '🔬,
+      price: $399
+      feature,
+    s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support],
+      benefits: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Physics',
-      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+    y: 'Physics,
+      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Multiverse Explorer',
       description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
@@ -1830,11 +3354,23 @@ $4},
     s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],
       benefits: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],
       marketPrice: '$1500-3000;
+=======
+    {
+      title: 'AI Multiverse Explorer,
+      description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.,
+      icon: '🌌,
+      price: $999
+      feature,
+    s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration],
+      benefits: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights],
+      marketPrice: $1500-3000
+>>>>>>> origin/main
       categor,
-    y: 'Multiverse',
-      technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Multiverse,
+      technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Reality Manipulation Tool',
       description: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
@@ -1844,12 +3380,24 @@ $4},
     s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],
       benefits: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],
       marketPrice: '$2000-4000;
+=======
+    {
+      title: 'AI Reality Manipulation Tool,
+      description: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.,
+      icon: '🌀,
+      price: $1299
+      feature,
+    s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration],
+      benefits: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights],
+      marketPrice: $2000-4000
+>>>>>>> origin/main
       categor,
-    y: 'Reality',
-      technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
+    y: 'Reality,
+      technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Enlightenment Assistant',
       description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
@@ -1859,11 +3407,23 @@ $4},
     s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],
       benefits: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],
       marketPrice: '$800-1500;
+=======
+    {
+      title: 'AI Enlightenment Assistant,
+      description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.,
+      icon: '🧘‍♂️,
+      price: $599
+      feature,
+    s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support],
+      benefits: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence],
+      marketPrice: $800-1500
+>>>>>>> origin/main
       categor,
-    y: 'Enlightenment',
-      technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Enlightenment,
+      technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Transcendence Platform',
       description: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
@@ -1873,12 +3433,24 @@ $4},
     s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],
       benefits: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],
       marketPrice: '$1500-3000;
+=======
+    {
+      title: 'AI Transcendence Platform,
+      description: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.,
+      icon: '🌟,
+      price: $999
+      feature,
+    s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support],
+      benefits: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence],
+      marketPrice: $1500-3000
+>>>>>>> origin/main
       categor,
-    y: 'Transcendence',
-      technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Transcendence,
+      technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Universal Consciousness Connector',
       description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
@@ -1888,11 +3460,23 @@ $4},
     s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],
       benefits: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],
       marketPrice: '$3000-6000;
+=======
+    {
+      title: 'AI Universal Consciousness Connector,
+      description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.,
+      icon: '🌌,
+      price: $1999
+      feature,
+    s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection],
+      benefits: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness],
+      marketPrice: $3000-6000
+>>>>>>> origin/main
       categor,
-    y: 'Universal Consciousness',
-      technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Universal Consciousness,
+      technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Cosmic Intelligence Platform',
       description: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
@@ -1902,12 +3486,24 @@ $4},
     s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],
       benefits: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],
       marketPrice: '$5000-10000;
+=======
+    {
+      title: 'AI Cosmic Intelligence Platform,
+      description: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.,
+      icon: '🌠,
+      price: $2999
+      feature,
+    s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection],
+      benefits: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness],
+      marketPrice: $5000-10000
+>>>>>>> origin/main
       categor,
-    y: 'Cosmic Intelligence',
-      technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Cosmic Intelligence,
+      technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Infinite Possibility Generator',
       description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
@@ -1917,11 +3513,23 @@ $4},
     s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],
       benefits: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],
       marketPrice: '$10000-20000;
+=======
+    {
+      title: 'AI Infinite Possibility Generator,
+      description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.,
+      icon: '♾️,
+      price: $4999
+      feature,
+    s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth],
+      benefits: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation],
+      marketPrice: $10000-20000
+>>>>>>> origin/main
       categor,
-    y: 'Infinite Possibilities',
-      technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Infinite Possibilities,
+      technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Ultimate Reality Creator',
       description: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
@@ -1931,12 +3539,25 @@ $4},
     s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],
       benefits: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],
       marketPrice: '$20000-50000;
+=======
+    {
+      title: 'AI Ultimate Reality Creator,
+      description: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.,
+      icon: '🌌,
+      price: $9999
+      feature,
+    s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power],
+      benefits: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation],
+      marketPrice: $20000-50000
+>>>>>>> origin/main
       categor,
-    y: 'Ultimate Reality',
-      technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Ultimate Reality,
+      technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4}
+
   ];
+<<<<<<< HEAD
     {}
       title: 'AI Property Valuation Platform',
       description: 'Advanced property valuation using machine learning and real estate data analysis.',
@@ -1946,11 +3567,24 @@ $4}
     s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
       benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
       marketPrice: '$300-600;
+=======
+
+    {
+      title: 'AI Property Valuation Platform,
+      description: 'Advanced property valuation using machine learning and real estate data analysis.,
+      icon: '🏠,
+      price: $299
+      feature,
+    s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations],
+      benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Real Estate',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
+    y: 'Real Estate,
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Tenant Screening Platform',
       description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
@@ -1960,12 +3594,24 @@ $4},
     s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
       benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Tenant Screening Platform,
+      description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.,
+      icon: '🔍,
+      price: $149
+      feature,
+    s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening],
+      benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Property Management',
-      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Property Management,
+      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Crop Monitoring System',
       description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
@@ -1975,11 +3621,23 @@ $4},
     s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],
       benefits: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Crop Monitoring System,
+      description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.,
+      icon: '🌾,
+      price: $299
+      feature,
+    s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics],
+      benefits: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Agriculture',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Agriculture,
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Food Safety Inspector',
       description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
@@ -1989,12 +3647,24 @@ $4},
     s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],
       benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Food Safety Inspector,
+      description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.,
+      icon: '🍎,
+      price: $199
+      feature,
+    s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system],
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Food Safety',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Food Safety,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Route Optimization Pro',
       description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
@@ -2004,11 +3674,23 @@ $4},
     s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],
       benefits: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Route Optimization Pro,
+      description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.,
+      icon: '🚛,
+      price: $249
+      feature,
+    s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis],
+      benefits: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Logistics',
-      technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Logistics,
+      technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Fleet Maintenance Predictor',
       description: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
@@ -2018,12 +3700,24 @@ $4},
     s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],
       benefits: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Fleet Maintenance Predictor,
+      description: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.,
+      icon: '🔧,
+      price: $179
+      feature,
+    s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management],
+      benefits: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Fleet Management',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Fleet Management,
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
@@ -2033,11 +3727,23 @@ $4},
     s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],
       benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Energy Management System,
+      description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.,
+      icon: '⚡,
+      price: $199
+      feature,
+    s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid],
+      benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Energy Management',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Energy Management,
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Carbon Footprint Tracker',
       description: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
@@ -2047,12 +3753,24 @@ $4},
     s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],
       benefits: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Carbon Footprint Tracker,
+      description: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.,
+      icon: '🌱,
+      price: $99
+      feature,
+    s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification],
+      benefits: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Sustainability',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
+    y: 'Sustainability,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Content Moderation Suite',
       description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
@@ -2062,11 +3780,23 @@ $4},
     s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],
       benefits: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Content Moderation Suite,
+      description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.,
+      icon: '🛡️,
+      price: $299
+      feature,
+    s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules],
+      benefits: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Content Moderation',
-      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Content Moderation,
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Video Editor Pro',
       description: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
@@ -2076,12 +3806,24 @@ $4},
     s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],
       benefits: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Video Editor Pro,
+      description: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.,
+      icon: '🎬,
+      price: $149
+      feature,
+    s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization],
+      benefits: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Video Production',
-      technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
+    y: 'Video Production,
+      technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Security Camera System',
       description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
@@ -2091,11 +3833,23 @@ $4},
     s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],
       benefits: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Security Camera System,
+      description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.,
+      icon: '📹,
+      price: $199
+      feature,
+    s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app],
+      benefits: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Security',
-      technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Security,
+      technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Fraud Detection Engine',
       description: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
@@ -2105,12 +3859,24 @@ $4},
     s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],
       benefits: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Fraud Detection Engine,
+      description: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.,
+      icon: '🔒,
+      price: $249
+      feature,
+    s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning],
+      benefits: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Fraud Prevention',
-      technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Fraud Prevention,
+      technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
@@ -2120,11 +3886,23 @@ $4},
     s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
       benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Research Assistant Pro,
+      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.,
+      icon: '🔬,
+      price: $199
+      feature,
+    s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking],
+      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Research,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Patent Search Engine',
       description: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
@@ -2134,11 +3912,23 @@ $4},
     s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],
       benefits: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Patent Search Engine,
+      description: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.,
+      icon: '📋,
+      price: $299
+      feature,
+    s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking],
+      benefits: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Intellectual Property',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+    y: 'Intellectual Property,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Compliance Monitoring Suite',
       description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
@@ -2148,12 +3938,24 @@ $4},
     s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
       benefits: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Compliance Monitoring Suite,
+      description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.,
+      icon: '📜,
+      price: $299
+      feature,
+    s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting],
+      benefits: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Compliance',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Compliance,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Real Estate Analyzer Pro',
       description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
@@ -2163,11 +3965,23 @@ $4},
     s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
       benefits: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Real Estate Analyzer Pro,
+      description: 'Advanced property analysis with market trends, investment potential, and automated valuations.,
+      icon: '🏠,
+      price: $199
+      feature,
+    s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis],
+      benefits: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Real Estate',
-      technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
+    y: 'Real Estate,
+      technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Property Management System',
       description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
@@ -2177,12 +3991,24 @@ $4},
     s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
       benefits: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Property Management System,
+      description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.,
+      icon: '🏢,
+      price: $149
+      feature,
+    s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools],
+      benefits: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Real Estate',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
+    y: 'Real Estate,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI HR Recruitment Suite',
       description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
@@ -2192,11 +4018,23 @@ $4},
     s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
       benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI HR Recruitment Suite,
+      description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.,
+      icon: '👥,
+      price: $179
+      feature,
+    s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks],
+      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'HR & Recruitment',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'HR & Recruitment,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Employee Performance Tracker',
       description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
@@ -2206,12 +4044,24 @@ $4},
     s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
       benefits: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Employee Performance Tracker,
+      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.,
+      icon: '📈,
+      price: $129
+      feature,
+    s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system],
+      benefits: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'HR & Recruitment',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+    y: 'HR & Recruitment,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
@@ -2221,11 +4071,23 @@ $4},
     s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],
       benefits: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Project Manager Pro,
+      description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.,
+      icon: '📋,
+      price: $199
+      feature,
+    s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting],
+      benefits: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+    y: 'Project Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Task Automation Suite',
       description: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
@@ -2235,12 +4097,24 @@ $4},
     s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],
       benefits: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Task Automation Suite,
+      description: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.,
+      icon: '⚡,
+      price: $99
+      feature,
+    s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications],
+      benefits: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
+    y: 'Project Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
@@ -2250,11 +4124,23 @@ $4},
     s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
       benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Supply Chain Optimizer,
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.,
+      icon: '🚚,
+      price: $399
+      feature,
+    s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking],
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Supply Chain',
-      technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+    y: 'Supply Chain,
+      technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Warehouse Management System',
       description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
@@ -2264,12 +4150,24 @@ $4},
     s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
       benefits: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Warehouse Management System,
+      description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.,
+      icon: '🏭,
+      price: $299
+      feature,
+    s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard],
+      benefits: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Supply Chain',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Supply Chain,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Precision Agriculture Platform',
       description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
@@ -2279,11 +4177,23 @@ $4},
     s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
       benefits: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Precision Agriculture Platform,
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.,
+      icon: '🌾,
+      price: $199
+      feature,
+    s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization],
+      benefits: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Agriculture',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+    y: 'Agriculture,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Food Safety Monitor',
       description: 'Automated food safety inspection with contamination detection and quality control.',
@@ -2293,12 +4203,24 @@ $4},
     s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
       benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Food Safety Monitor,
+      description: 'Automated food safety inspection with contamination detection and quality control.,
+      icon: '🥗,
+      price: $249
+      feature,
+    s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system],
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Food Tech',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Food Tech,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
@@ -2308,11 +4230,23 @@ $4},
     s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
       benefits: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Energy Management System,
+      description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.,
+      icon: '⚡,
+      price: $179
+      feature,
+    s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking],
+      benefits: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Energy',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
+    y: 'Energy,
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Carbon Footprint Tracker',
       description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
@@ -2322,12 +4256,24 @@ $4},
     s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
       benefits: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Carbon Footprint Tracker,
+      description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.,
+      icon: '🌱,
+      price: $99
+      feature,
+    s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement],
+      benefits: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Sustainability',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
+    y: 'Sustainability,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Game Development Suite',
       description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
@@ -2337,11 +4283,23 @@ $4},
     s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
       benefits: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Game Development Suite,
+      description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.,
+      icon: '🎮,
+      price: $299
+      feature,
+    s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization],
+      benefits: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Gaming',
-      technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
+    y: 'Gaming,
+      technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Content Moderation Platform',
       description: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
@@ -2351,12 +4309,24 @@ $4},
     s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
       benefits: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Content Moderation Platform,
+      description: 'Automated content moderation with toxicity detection, spam filtering, and community management.,
+      icon: '🛡️,
+      price: $199
+      feature,
+    s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring],
+      benefits: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Content Moderation',
-      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Content Moderation,
+      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Fleet Management System',
       description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
@@ -2366,11 +4336,23 @@ $4},
     s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
       benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Fleet Management System,
+      description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.,
+      icon: '🚛,
+      price: $349
+      feature,
+    s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard],
+      benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Transportation',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Transportation,
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Traffic Management Platform',
       description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
@@ -2380,12 +4362,24 @@ $4},
     s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
       benefits: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],
       marketPrice: '$800-1500;
+=======
+    {
+      title: 'AI Traffic Management Platform,
+      description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.,
+      icon: '🚦,
+      price: $499
+      feature,
+    s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts],
+      benefits: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety],
+      marketPrice: $800-1500
+>>>>>>> origin/main
       categor,
-    y: 'Smart Cities',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+    y: 'Smart Cities,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
@@ -2395,11 +4389,23 @@ $4},
     s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
       benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Research Assistant Pro,
+      description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.,
+      icon: '🔬,
+      price: $199
+      feature,
+    s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking],
+      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+    y: 'Research,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Patent Analysis Tool',
       description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
@@ -2409,12 +4415,24 @@ $4},
     s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
       benefits: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],
       marketPrice: '$500-1000;
+=======
+    {
+      title: 'AI Patent Analysis Tool,
+      description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.,
+      icon: '📋,
+      price: $299
+      feature,
+    s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment],
+      benefits: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement],
+      marketPrice: $500-1000
+>>>>>>> origin/main
       categor,
-    y: 'Intellectual Property',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+    y: 'Intellectual Property,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Personal Assistant Pro',
       description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
@@ -2424,11 +4442,23 @@ $4},
     s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
       benefits: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI Personal Assistant Pro,
+      description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.,
+      icon: '👤,
+      price: $49
+      feature,
+    s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights],
+      benefits: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Personal Productivity',
-      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+    y: 'Personal Productivity,
+      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Meeting Assistant',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
@@ -2438,11 +4468,23 @@ $4},
     s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
       benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Meeting Assistant,
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.,
+      icon: '📹,
+      price: $79
+      feature,
+    s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration],
+      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Meeting Management',
-      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+    y: 'Meeting Management,
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Insurance Underwriting Assistant',
       description: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
@@ -2452,10 +4494,22 @@ $4},
     s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],
       benefits: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Insurance Underwriting Assistant,
+      description: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.,
+      icon: '🛡️,
+      price: $179
+      feature,
+    s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard],
+      benefits: ['Assess risks', 'Optimize pricing', 'Recommend policies],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Insurance Underwriting',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Insurance Underwriting,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Onboarding Platform',
       description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
@@ -2465,10 +4519,22 @@ $4},
     s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],
       benefits: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Customer Onboarding Platform,
+      description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.,
+      icon: '👤,
+      price: $149
+      feature,
+    s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard],
+      benefits: ['Automate onboarding', 'Verify identity', 'Ensure compliance],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Customer Onboarding',
-      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+    y: 'Customer Onboarding,
+      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Retention Manager',
       description: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
@@ -2478,10 +4544,22 @@ $4},
     s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],
       benefits: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Customer Retention Manager,
+      description: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.,
+      icon: '💝,
+      price: $129
+      feature,
+    s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard],
+      benefits: ['Predict churn', 'Optimize engagement', 'Increase loyalty],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Retention',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Retention,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Support Optimizer',
       description: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
@@ -2491,10 +4569,22 @@ $4},
     s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],
       benefits: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
       marketPrice: '$180-350;
+=======
+    {
+      title: 'AI Customer Support Optimizer,
+      description: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.,
+      icon: '🎧,
+      price: $119
+      feature,
+    s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard],
+      benefits: ['Optimize support', 'Improve satisfaction', 'Automate responses],
+      marketPrice: $180-350
+>>>>>>> origin/main
       categor,
-    y: 'Customer Support',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+    y: 'Customer Support,
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Feedback Analyzer',
       description: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
@@ -2504,10 +4594,22 @@ $4},
     s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],
       benefits: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Customer Feedback Analyzer,
+      description: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.,
+      icon: '💬,
+      price: $99
+      feature,
+    s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard],
+      benefits: ['Analyze feedback', 'Identify trends', 'Recommend actions],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Customer Feedback',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+    y: 'Customer Feedback,
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Journey Mapper',
       description: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
@@ -2517,10 +4619,22 @@ $4},
     s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],
       benefits: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Customer Journey Mapper,
+      description: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.,
+      icon: '🗺️,
+      price: $149
+      feature,
+    s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard],
+      benefits: ['Map journeys', 'Optimize touchpoints', 'Enhance experience],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Customer Journey',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Journey,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Lifetime Value Predictor',
       description: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
@@ -2530,10 +4644,22 @@ $4},
     s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],
       benefits: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Customer Lifetime Value Predictor,
+      description: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.,
+      icon: '💎,
+      price: $139
+      feature,
+    s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard],
+      benefits: ['Predict CLV', 'Segment customers', 'Optimize targeting],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Analytics',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Analytics,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Segmentation Engine',
       description: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
@@ -2543,10 +4669,22 @@ $4},
     s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],
       benefits: ['Segment customers', 'Create personas', 'Optimize targeting'],
       marketPrice: '$180-350;
+=======
+    {
+      title: 'AI Customer Segmentation Engine,
+      description: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.,
+      icon: '👥,
+      price: $119
+      feature,
+    s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard],
+      benefits: ['Segment customers', 'Create personas', 'Optimize targeting],
+      marketPrice: $180-350
+>>>>>>> origin/main
       categor,
-    y: 'Customer Segmentation',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Segmentation,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Personalization Engine',
       description: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
@@ -2556,10 +4694,22 @@ $4},
     s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],
       benefits: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
       marketPrice: '$250-450;
+=======
+    {
+      title: 'AI Customer Personalization Engine,
+      description: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.,
+      icon: '🎯,
+      price: $159
+      feature,
+    s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard],
+      benefits: ['Personalize experiences', 'Recommend content', 'Optimize engagement],
+      marketPrice: $250-450
+>>>>>>> origin/main
       categor,
-    y: 'Customer Personalization',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Personalization,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Data Platform',
       description: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
@@ -2569,10 +4719,22 @@ $4},
     s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],
       benefits: ['Integrate data', 'Clean data', 'Enable analytics'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Customer Data Platform,
+      description: 'Unified customer data management with integration, cleansing, and analytics capabilities.,
+      icon: '🗄️,
+      price: $199
+      feature,
+    s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard],
+      benefits: ['Integrate data', 'Clean data', 'Enable analytics],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Customer Data',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Data,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Privacy Manager',
       description: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
@@ -2582,10 +4744,22 @@ $4},
     s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],
       benefits: ['Track consent', 'Protect data', 'Ensure compliance'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Customer Privacy Manager,
+      description: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.,
+      icon: '🔒,
+      price: $149
+      feature,
+    s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard],
+      benefits: ['Track consent', 'Protect data', 'Ensure compliance],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Customer Privacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Privacy,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Communication Manager',
       description: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
@@ -2595,10 +4769,22 @@ $4},
     s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],
       benefits: ['Optimize channels', 'Personalize messages', 'Track engagement'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Customer Communication Manager,
+      description: 'Smart communication management with channel optimization, message personalization, and engagement tracking.,
+      icon: '📢,
+      price: $129
+      feature,
+    s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard],
+      benefits: ['Optimize channels', 'Personalize messages', 'Track engagement],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Communication',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+    y: 'Customer Communication,
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Experience Optimizer',
       description: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
@@ -2608,10 +4794,22 @@ $4},
     s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],
       benefits: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
       marketPrice: '$250-450;
+=======
+    {
+      title: 'AI Customer Experience Optimizer,
+      description: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.,
+      icon: '⭐,
+      price: $159
+      feature,
+    s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard],
+      benefits: ['Map experiences', 'Recommend improvements', 'Track satisfaction],
+      marketPrice: $250-450
+>>>>>>> origin/main
       categor,
-    y: 'Customer Experience',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Experience,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Success Manager',
       description: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
@@ -2621,10 +4819,22 @@ $4},
     s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],
       benefits: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Customer Success Manager,
+      description: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.,
+      icon: '🎯,
+      price: $179
+      feature,
+    s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard],
+      benefits: ['Score health', 'Recommend interventions', 'Optimize outcomes],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Customer Success',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Success,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Advocacy Platform',
       description: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
@@ -2634,10 +4844,22 @@ $4},
     s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],
       benefits: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Customer Advocacy Platform,
+      description: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.,
+      icon: '🌟,
+      price: $139
+      feature,
+    s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard],
+      benefits: ['Track referrals', 'Collect testimonials', 'Optimize advocacy],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Advocacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Advocacy,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Insights Platform',
       description: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
@@ -2647,10 +4869,22 @@ $4},
     s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],
       benefits: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
       marketPrice: '$200-500;
+=======
+    {
+      title: 'AI Customer Insights Platform,
+      description: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.,
+      icon: '🔍,
+      price: $149
+      feature,
+    s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard],
+      benefits: ['Analyze behavior', 'Identify trends', 'Provide recommendations],
+      marketPrice: $200-500
+>>>>>>> origin/main
       categor,
-    y: 'Customer Insights',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Insights,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI Customer Intelligence Suite',
       description: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
@@ -2660,11 +4894,23 @@ $4},
     s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],
       benefits: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Customer Intelligence Suite,
+      description: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.,
+      icon: '🧠,
+      price: $299
+      feature,
+    s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard],
+      benefits: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Customer Intelligence',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+    y: 'Customer Intelligence,
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     /
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Meeting Transcriber',
       description: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
@@ -2674,10 +4920,22 @@ $4},
     s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],
       benefits: ['Save 5+ hours;
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI-Powered Meeting Transcriber,
+      description: 'Real-time meeting transcription with action item extraction and intelligent summarization.,
+      icon: '🎙️,
+      price: $79
+      feature,
+    s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars],
+      benefits: [Save 5+ hours
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+    y: 'Productivity,
+      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Expense Tracker AI',
       description: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
@@ -2687,10 +4945,22 @@ $4},
     s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],
       benefits: ['Save 10+ hours;
       marketPrice: '$150-300;
+=======
+    {
+      title: 'Smart Expense Tracker AI,
+      description: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.,
+      icon: '💳,
+      price: $99
+      feature,
+    s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support],
+      benefits: [Save 10+ hours
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+    y: 'Finance,
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Password Manager',
       description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
@@ -2700,10 +4970,22 @@ $4},
     s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],
       benefits: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI-Powered Password Manager,
+      description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.,
+      icon: '🔐,
+      price: $49
+      feature,
+    s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration],
+      benefits: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Security',
-      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+    y: 'Security,
+      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Time Tracking Assistant',
       description: 'AI-powered time tracking with automatic project detection and productivity insights.',
@@ -2713,10 +4995,22 @@ $4},
     s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],
       benefits: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart Time Tracking Assistant,
+      description: 'AI-powered time tracking with automatic project detection and productivity insights.,
+      icon: '⏰,
+      price: $69
+      feature,
+    s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools],
+      benefits: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+    y: 'Productivity,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Logo Generator',
       description: 'Professional logo creation with brand analysis and unlimited variations using AI.',
@@ -2726,10 +5020,22 @@ $4},
     s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],
       benefits: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Logo Generator,
+      description: 'Professional logo creation with brand analysis and unlimited variations using AI.,
+      icon: '🎨,
+      price: $89
+      feature,
+    s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines],
+      benefits: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Design',
-      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Design,
+      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Invoice Generator',
       description: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
@@ -2739,10 +5045,22 @@ $4},
     s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],
       benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart Invoice Generator,
+      description: 'Automated invoice creation with payment tracking, reminders, and financial analytics.,
+      icon: '📄,
+      price: $59
+      feature,
+    s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support],
+      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Finance',
-      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+    y: 'Finance,
+      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Website Builder',
       description: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
@@ -2752,10 +5070,22 @@ $4},
     s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],
       benefits: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI-Powered Website Builder,
+      description: 'Intelligent website creation with content generation, SEO optimization, and responsive design.,
+      icon: '🌐,
+      price: $199
+      feature,
+    s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard],
+      benefits: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Web Development',
-      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+    y: 'Web Development,
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Contract Generator',
       description: 'AI-powered legal document creation with template customization and compliance checking.',
@@ -2765,10 +5095,22 @@ $4},
     s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],
       benefits: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'Smart Contract Generator,
+      description: 'AI-powered legal document creation with template customization and compliance checking.,
+      icon: '📋,
+      price: $149
+      feature,
+    s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control],
+      benefits: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Legal',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+    y: 'Legal,
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Email Signature Generator',
       description: 'Professional email signature creation with brand consistency and contact management.',
@@ -2778,10 +5120,22 @@ $4},
     s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],
       benefits: ['Professional email presence', 'Consistent branding', 'Easy team management'],
       marketPrice: '$60-120;
+=======
+    {
+      title: 'AI-Powered Email Signature Generator,
+      description: 'Professional email signature creation with brand consistency and contact management.,
+      icon: '✍️,
+      price: $39
+      feature,
+    s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking],
+      benefits: ['Professional email presence', 'Consistent branding', 'Easy team management],
+      marketPrice: $60-120
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+    y: 'Marketing,
+      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart QR Code Generator',
       description: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
@@ -2791,10 +5145,22 @@ $4},
     s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],
       benefits: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'Smart QR Code Generator,
+      description: 'Advanced QR code creation with analytics, customization, and dynamic content management.,
+      icon: '📱,
+      price: $49
+      feature,
+    s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration],
+      benefits: ['Track engagement', 'Customize branding', 'Manage campaigns effectively],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+    y: 'Marketing,
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Color Palette Generator',
       description: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
@@ -2804,10 +5170,22 @@ $4},
     s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],
       benefits: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'AI-Powered Color Palette Generator,
+      description: 'Intelligent color scheme creation with accessibility checking and brand analysis.,
+      icon: '🎨,
+      price: $59
+      feature,
+    s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis],
+      benefits: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Design',
-      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+    y: 'Design,
+      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Business Card Designer',
       description: 'AI-powered business card creation with professional templates and contact management.',
@@ -2817,10 +5195,22 @@ $4},
     s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],
       benefits: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'Smart Business Card Designer,
+      description: 'AI-powered business card creation with professional templates and contact management.,
+      icon: '💼,
+      price: $79
+      feature,
+    s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions],
+      benefits: ['Professional business cards', 'Consistent branding', 'Easy contact sharing],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Design',
-      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+    y: 'Design,
+      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Newsletter Generator',
       description: 'Automated newsletter creation with content curation and subscriber analytics.',
@@ -2830,10 +5220,22 @@ $4},
     s: ['Content curation', 'AI writing', 'Subscriber analytics', 'A;
       benefits: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours;
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Newsletter Generator,
+      description: 'Automated newsletter creation with content curation and subscriber analytics.,
+      icon: '📰,
+      price: $99
+      feature,
+    s: ['Content curation', 'AI writing', 'Subscriber analytics', A
+      benefits: ['Create engaging newsletters', 'Increase subscriber engagement', Save 15+ hours
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Marketing',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+    y: 'Marketing,
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart PDF Converter Pro',
       description: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
@@ -2843,10 +5245,22 @@ $4},
     s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],
       benefits: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'Smart PDF Converter Pro,
+      description: 'Advanced PDF conversion with OCR, form filling, and document optimization.,
+      icon: '📄,
+      price: $89
+      feature,
+    s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing],
+      benefits: ['Convert any document format', 'Extract text from images', 'Optimize file sizes],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Productivity,
+      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Video Thumbnail Generator',
       description: 'Intelligent thumbnail creation with A;
@@ -2857,10 +5271,23 @@ $4},
     s: ['AI thumbnail generation', 'A;
       benefits: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI-Powered Video Thumbnail Generator,
+      description: Intelligent thumbnail creation with A
+      ico,
+    n: '🎬,
+      price: $79
+      feature,
+    s: ['AI thumbnail generation', A
+      benefits: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Video Marketing',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+    y: 'Video Marketing,
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Social Media Scheduler',
       description: 'AI-powered social media scheduling with optimal timing and content optimization.',
@@ -2870,10 +5297,22 @@ $4},
     s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],
       benefits: ['Increase engagement by 60%', 'Save 20+ hours;
       marketPrice: '$200-400;
+=======
+    {
+      title: 'Smart Social Media Scheduler,
+      description: 'AI-powered social media scheduling with optimal timing and content optimization.,
+      icon: '📅,
+      price: $119
+      feature,
+    s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research],
+      benefits: ['Increase engagement by 60%', Save 20+ hours
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Social Media',
-      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+    y: 'Social Media,
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Hashtag Generator',
       description: 'Intelligent hashtag research and generation for maximum social media reach.',
@@ -2883,10 +5322,22 @@ $4},
     s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],
       benefits: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI-Powered Hashtag Generator,
+      description: 'Intelligent hashtag research and generation for maximum social media reach.,
+      icon: '#️⃣,
+      price: $49
+      feature,
+    s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation],
+      benefits: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Social Media',
-      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Social Media,
+      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Email Template Builder',
       description: 'AI-powered email template creation with responsive design and A;
@@ -2910,10 +5361,36 @@ $4},
     s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],
       benefits: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'Smart Email Template Builder,
+      description: AI-powered email template creation with responsive design and A
+      ico,
+    n: '📧,
+      price: $89
+      feature,
+    s: ['AI template generation', 'Responsive design', A
+      benefits: ['Create professional emails', 'Improve open rates', 'Consistent branding],
+      marketPrice: $150-300
       categor,
-    y: 'Market Research',
-      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+    y: 'Email Marketing,
+      technologies: ['Email APIs', 'React', 'Node.js', A
     },
+    {
+      title: 'AI-Powered Competitor Analysis Tool,
+      description: 'Comprehensive competitor research with pricing analysis and market insights.,
+      icon: '🔍,
+      price: $199
+      feature,
+    s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system],
+      benefits: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities],
+      marketPrice: $300-600
+>>>>>>> origin/main
+      categor,
+    y: 'Market Research,
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics]
+    },
+<<<<<<< HEAD
     {}
       title: 'Smart Customer Feedback Analyzer',
       description: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
@@ -2923,10 +5400,22 @@ $4},
     s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],
       benefits: ['Understand customer sentiment', 'Improve products;
       marketPrice: '$200-400;
+=======
+    {
+      title: 'Smart Customer Feedback Analyzer,
+      description: 'AI-powered sentiment analysis and feedback categorization for customer insights.,
+      icon: '💬,
+      price: $129
+      feature,
+    s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics],
+      benefits: ['Understand customer sentiment', Improve products
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Analytics',
-      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Customer Analytics,
+      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Landing Page Optimizer',
       description: 'Intelligent landing page testing and optimization for maximum conversion rates.',
@@ -2949,10 +5438,35 @@ $4},
     s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],
       benefits: ['Professional product photos', 'Save 20+ hours;
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Landing Page Optimizer,
+      description: 'Intelligent landing page testing and optimization for maximum conversion rates.,
+      icon: '🚀,
+      price: $149
+      features: [A
+      benefit,
+    s: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience],
+      marketPrice: $250-500
       categor,
-    y: 'E-commerce',
-      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Conversion Optimization,
+      technologies: [A
     },
+    {
+      title: 'Smart Inventory Photo Manager,
+      description: 'AI-powered product photo organization, editing, and optimization for e-commerce.,
+      icon: '📸,
+      price: $99
+      feature,
+    s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing],
+      benefits: ['Professional product photos', Save 20+ hours
+      marketPrice: $150-300
+>>>>>>> origin/main
+      categor,
+    y: 'E-commerce,
+      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models]
+    },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Price Monitoring Tool',
       description: 'Automated price tracking and alerts for competitive pricing strategies.',
@@ -2962,10 +5476,22 @@ $4},
     s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],
       benefits: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI-Powered Price Monitoring Tool,
+      description: 'Automated price tracking and alerts for competitive pricing strategies.,
+      icon: '💰,
+      price: $79
+      feature,
+    s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization],
+      benefits: ['Stay competitive', 'Optimize pricing', 'Increase profit margins],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'E-commerce',
-      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+    y: 'E-commerce,
+      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Appointment Scheduler',
       description: 'AI-powered scheduling with time zone handling and automated reminders.',
@@ -2975,10 +5501,22 @@ $4},
     s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],
       benefits: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart Appointment Scheduler,
+      description: 'AI-powered scheduling with time zone handling and automated reminders.,
+      icon: '📅,
+      price: $69
+      feature,
+    s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing],
+      benefits: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Scheduling',
-      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+    y: 'Scheduling,
+      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Resume Builder',
       description: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
@@ -2988,10 +5526,22 @@ $4},
     s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],
       benefits: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'AI-Powered Resume Builder,
+      description: 'Intelligent resume creation with ATS optimization and industry-specific templates.,
+      icon: '📝,
+      price: $59
+      feature,
+    s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export],
+      benefits: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Career Tools',
-      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+    y: 'Career Tools,
+      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Weather API Service',
       description: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
@@ -3001,10 +5551,22 @@ $4},
     s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],
       benefits: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'Smart Weather API Service,
+      description: 'Advanced weather data with AI-powered forecasts and business impact analysis.,
+      icon: '🌤️,
+      price: $89
+      feature,
+    s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts],
+      benefits: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Weather Services',
-      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Weather Services,
+      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Translation Service',
       description: 'Real-time translation with context awareness and industry-specific terminology.',
@@ -3014,10 +5576,22 @@ $4},
     s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],
       benefits: ['Break language barriers', 'Improve global reach', 'Professional translations'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Translation Service,
+      description: 'Real-time translation with context awareness and industry-specific terminology.,
+      icon: '🌍,
+      price: $99
+      feature,
+    s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration],
+      benefits: ['Break language barriers', 'Improve global reach', 'Professional translations],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Translation',
-      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Translation,
+      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Data Backup Service',
       description: 'Automated data backup with AI-powered deduplication and recovery optimization.',
@@ -3027,10 +5601,22 @@ $4},
     s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],
       benefits: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'Smart Data Backup Service,
+      description: 'Automated data backup with AI-powered deduplication and recovery optimization.,
+      icon: '💾,
+      price: $79
+      feature,
+    s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption],
+      benefits: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Data Management',
-      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+    y: 'Data Management,
+      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Form Builder',
       description: 'Intelligent form creation with conditional logic and response analysis.',
@@ -3040,10 +5626,22 @@ $4},
     s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],
       benefits: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Form Builder,
+      description: 'Intelligent form creation with conditional logic and response analysis.,
+      icon: '📋,
+      price: $89
+      feature,
+    s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling],
+      benefits: ['Create complex forms easily', 'Gather better data', 'Improve user experience],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Form Management',
-      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'Form Management,
+      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Uptime Monitor',
       description: 'AI-powered website monitoring with predictive alerts and performance optimization.',
@@ -3053,10 +5651,22 @@ $4},
     s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],
       benefits: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart Uptime Monitor,
+      description: 'AI-powered website monitoring with predictive alerts and performance optimization.,
+      icon: '📊,
+      price: $69
+      feature,
+    s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports],
+      benefits: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Monitoring',
-      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+    y: 'Monitoring,
+      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Survey Creator',
       description: 'Intelligent survey design with question optimization and response analysis.',
@@ -3066,10 +5676,22 @@ $4},
     s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],
       benefits: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI-Powered Survey Creator,
+      description: 'Intelligent survey design with question optimization and response analysis.,
+      icon: '📊,
+      price: $79
+      feature,
+    s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics],
+      benefits: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Survey Tools',
-      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'Survey Tools,
+      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart File Converter',
       description: 'AI-powered file conversion with format optimization and quality enhancement.',
@@ -3079,10 +5701,22 @@ $4},
     s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],
       benefits: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart File Converter,
+      description: 'AI-powered file conversion with format optimization and quality enhancement.,
+      icon: '🔄,
+      price: $59
+      feature,
+    s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access],
+      benefits: ['Convert any file format', 'Maintain quality', 'Process files in bulk],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'File Management',
-      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+    y: 'File Management,
+      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered QR Code Scanner',
       description: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
@@ -3092,10 +5726,22 @@ $4},
     s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],
       benefits: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI-Powered QR Code Scanner,
+      description: 'Advanced QR code scanning with analytics, customization, and business intelligence.,
+      icon: '📱,
+      price: $49
+      feature,
+    s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration],
+      benefits: ['Track QR code performance', 'Customize designs', 'Gather business insights],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'QR Code Tools',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+    y: 'QR Code Tools,
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Password Generator',
       description: 'AI-powered password creation with security analysis and breach monitoring.',
@@ -3105,10 +5751,22 @@ $4},
     s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],
       benefits: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
       marketPrice: '$60-120;
+=======
+    {
+      title: 'Smart Password Generator,
+      description: 'AI-powered password creation with security analysis and breach monitoring.,
+      icon: '🔑,
+      price: $39
+      feature,
+    s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs],
+      benefits: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management],
+      marketPrice: $60-120
+>>>>>>> origin/main
       categor,
-    y: 'Security',
-      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+    y: 'Security,
+      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Color Picker',
       description: 'Intelligent color selection with accessibility checking and brand analysis.',
@@ -3118,10 +5776,22 @@ $4},
     s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],
       benefits: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI-Powered Color Picker,
+      description: 'Intelligent color selection with accessibility checking and brand analysis.,
+      icon: '🎨,
+      price: $49
+      feature,
+    s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options],
+      benefits: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Design Tools',
-      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+    y: 'Design Tools,
+      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Text Summarizer',
       description: 'AI-powered text summarization with key point extraction and multi-language support.',
@@ -3131,10 +5801,22 @@ $4},
     s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],
       benefits: ['Save reading time', 'Extract key insights', 'Process large documents'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart Text Summarizer,
+      description: 'AI-powered text summarization with key point extraction and multi-language support.,
+      icon: '📝,
+      price: $69
+      feature,
+    s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration],
+      benefits: ['Save reading time', 'Extract key insights', 'Process large documents],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Text Processing',
-      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+    y: 'Text Processing,
+      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Image Resizer',
       description: 'Intelligent image resizing with quality optimization and batch processing.',
@@ -3144,10 +5826,22 @@ $4},
     s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],
       benefits: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'AI-Powered Image Resizer,
+      description: 'Intelligent image resizing with quality optimization and batch processing.,
+      icon: '🖼️,
+      price: $59
+      feature,
+    s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration],
+      benefits: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Image Processing',
-      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+    y: 'Image Processing,
+      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart URL Shortener',
       description: 'AI-powered URL shortening with analytics, customization, and link management.',
@@ -3157,10 +5851,22 @@ $4},
     s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],
       benefits: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
       marketPrice: '$60-120;
+=======
+    {
+      title: 'Smart URL Shortener,
+      description: 'AI-powered URL shortening with analytics, customization, and link management.,
+      icon: '🔗,
+      price: $39
+      feature,
+    s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access],
+      benefits: ['Track link performance', 'Customize URLs', 'Manage campaigns],
+      marketPrice: $60-120
+>>>>>>> origin/main
       categor,
-    y: 'URL Management',
-      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+    y: 'URL Management,
+      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Favicon Generator',
       description: 'Intelligent favicon creation with brand analysis and multiple format generation.',
@@ -3170,10 +5876,22 @@ $4},
     s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],
       benefits: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'AI-Powered Favicon Generator,
+      description: 'Intelligent favicon creation with brand analysis and multiple format generation.,
+      icon: '🌟,
+      price: $49
+      feature,
+    s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization],
+      benefits: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'Web Development',
-      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+    y: 'Web Development,
+      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Meta Tag Generator',
       description: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
@@ -3183,10 +5901,22 @@ $4},
     s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],
       benefits: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'Smart Meta Tag Generator,
+      description: 'AI-powered SEO meta tag creation with optimization and performance tracking.,
+      icon: '🏷️,
+      price: $59
+      feature,
+    s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs],
+      benefits: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Sitemap Generator',
       description: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
@@ -3196,10 +5926,22 @@ $4},
     s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],
       benefits: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'AI-Powered Sitemap Generator,
+      description: 'Intelligent sitemap creation with SEO optimization and search engine submission.,
+      icon: '🗺️,
+      price: $69
+      feature,
+    s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration],
+      benefits: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Robots.txt Generator',
       description: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
@@ -3209,10 +5951,22 @@ $4},
     s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],
       benefits: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
       marketPrice: '$60-120;
+=======
+    {
+      title: 'Smart Robots.txt Generator,
+      description: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.,
+      icon: '🤖,
+      price: $39
+      feature,
+    s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates],
+      benefits: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues],
+      marketPrice: $60-120
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Schema Markup Generator',
       description: 'Intelligent schema markup creation for enhanced search engine visibility.',
@@ -3222,10 +5976,22 @@ $4},
     s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],
       benefits: ['Improve search visibility', 'Rich snippets', 'Better search results'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI-Powered Schema Markup Generator,
+      description: 'Intelligent schema markup creation for enhanced search engine visibility.,
+      icon: '📋,
+      price: $79
+      feature,
+    s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs],
+      benefits: ['Improve search visibility', 'Rich snippets', 'Better search results],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Alt Text Generator',
       description: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
@@ -3235,10 +6001,22 @@ $4},
     s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],
       benefits: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
       marketPrice: '$80-150;
+=======
+    {
+      title: 'Smart Alt Text Generator,
+      description: 'AI-powered alt text creation for images with SEO optimization and accessibility.,
+      icon: '🖼️,
+      price: $49
+      feature,
+    s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring],
+      benefits: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text],
+      marketPrice: $80-150
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Internal Link Optimizer',
       description: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
@@ -3248,10 +6026,22 @@ $4},
     s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],
       benefits: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Internal Link Optimizer,
+      description: 'Intelligent internal linking strategy with SEO optimization and performance tracking.,
+      icon: '🔗,
+      price: $99
+      feature,
+    s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration],
+      benefits: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Keyword Density Analyzer',
       description: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
@@ -3261,10 +6051,22 @@ $4},
     s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],
       benefits: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'Smart Keyword Density Analyzer,
+      description: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.,
+      icon: '🔍,
+      price: $79
+      feature,
+    s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting],
+      benefits: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'SEO Tools,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Page Speed Optimizer',
       description: 'Intelligent page speed optimization with performance monitoring and recommendations.',
@@ -3274,10 +6076,22 @@ $4},
     s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],
       benefits: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI-Powered Page Speed Optimizer,
+      description: 'Intelligent page speed optimization with performance monitoring and recommendations.,
+      icon: '⚡,
+      price: $149
+      feature,
+    s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting],
+      benefits: ['Improve page speed', 'Better user experience', 'Higher search rankings],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Performance Optimization',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'Performance Optimization,
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Core Web Vitals Monitor',
       description: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
@@ -3287,10 +6101,22 @@ $4},
     s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],
       benefits: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'Smart Core Web Vitals Monitor,
+      description: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.,
+      icon: '📊,
+      price: $99
+      feature,
+    s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting],
+      benefits: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Performance Monitoring',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+    y: 'Performance Monitoring,
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Mobile Optimization Tool',
       description: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
@@ -3300,10 +6126,22 @@ $4},
     s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],
       benefits: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI-Powered Mobile Optimization Tool,
+      description: 'Intelligent mobile optimization with responsive design analysis and performance improvements.,
+      icon: '📱,
+      price: $119
+      feature,
+    s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing],
+      benefits: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Mobile Optimization',
-      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+    y: 'Mobile Optimization,
+      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Local SEO Optimizer',
       description: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
@@ -3313,10 +6151,22 @@ $4},
     s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],
       benefits: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'Smart Local SEO Optimizer,
+      description: 'AI-powered local SEO optimization with Google My Business management and review monitoring.,
+      icon: '📍,
+      price: $129
+      feature,
+    s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting],
+      benefits: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Local SEO',
-      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+    y: 'Local SEO,
+      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Competitor SEO Analyzer',
       description: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
@@ -3326,10 +6176,22 @@ $4},
     s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],
       benefits: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI-Powered Competitor SEO Analyzer,
+      description: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.,
+      icon: '🔍,
+      price: $199
+      feature,
+    s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting],
+      benefits: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Competitive Analysis',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'Competitive Analysis,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Backlink Analyzer',
       description: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
@@ -3339,10 +6201,22 @@ $4},
     s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],
       benefits: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'Smart Backlink Analyzer,
+      description: 'AI-powered backlink analysis with quality assessment and link building recommendations.,
+      icon: '🔗,
+      price: $149
+      feature,
+    s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring],
+      benefits: ['Analyze backlink profile', 'Improve link quality', 'Build better links],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Link Building',
-      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'Link Building,
+      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Content Gap Analyzer',
       description: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
@@ -3352,10 +6226,22 @@ $4},
     s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],
       benefits: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI-Powered Content Gap Analyzer,
+      description: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.,
+      icon: '📝,
+      price: $179
+      feature,
+    s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning],
+      benefits: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Content Strategy',
-      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+    y: 'Content Strategy,
+      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Technical SEO Auditor',
       description: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
@@ -3365,10 +6251,22 @@ $4},
     s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],
       benefits: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'Smart Technical SEO Auditor,
+      description: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.,
+      icon: '🔧,
+      price: $199
+      feature,
+    s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting],
+      benefits: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Technical SEO',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+    y: 'Technical SEO,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered E-commerce SEO Optimizer',
       description: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
@@ -3378,10 +6276,22 @@ $4},
     s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],
       benefits: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI-Powered E-commerce SEO Optimizer,
+      description: 'Intelligent e-commerce SEO optimization with product page optimization and category management.,
+      icon: '🛒,
+      price: $249
+      feature,
+    s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking],
+      benefits: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'E-commerce SEO',
-      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+    y: 'E-commerce SEO,
+      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Voice Search Optimizer',
       description: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
@@ -3391,10 +6301,22 @@ $4},
     s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],
       benefits: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'Smart Voice Search Optimizer,
+      description: 'AI-powered voice search optimization with conversational content and featured snippet optimization.,
+      icon: '🎤,
+      price: $149
+      feature,
+    s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics],
+      benefits: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Voice Search SEO',
-      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+    y: 'Voice Search SEO,
+      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Video SEO Optimizer',
       description: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
@@ -3404,10 +6326,22 @@ $4},
     s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],
       benefits: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI-Powered Video SEO Optimizer,
+      description: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.,
+      icon: '🎬,
+      price: $179
+      feature,
+    s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking],
+      benefits: ['Improve video visibility', 'Increase video traffic', 'Optimize video content],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Video SEO',
-      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+    y: 'Video SEO,
+      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart Featured Snippet Optimizer',
       description: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
@@ -3417,10 +6351,22 @@ $4},
     s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],
       benefits: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'Smart Featured Snippet Optimizer,
+      description: 'AI-powered featured snippet optimization with content analysis and ranking improvements.,
+      icon: '📋,
+      price: $129
+      feature,
+    s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring],
+      benefits: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Featured Snippets',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+    y: 'Featured Snippets,
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered Image SEO Optimizer',
       description: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
@@ -3430,10 +6376,22 @@ $4},
     s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],
       benefits: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI-Powered Image SEO Optimizer,
+      description: 'Intelligent image SEO optimization with alt text generation and image performance analysis.,
+      icon: '🖼️,
+      price: $99
+      feature,
+    s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring],
+      benefits: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Image SEO',
-      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+    y: 'Image SEO,
+      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'Smart International SEO Manager',
       description: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
@@ -3443,10 +6401,22 @@ $4},
     s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],
       benefits: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'Smart International SEO Manager,
+      description: 'AI-powered international SEO management with hreflang optimization and multi-language content.,
+      icon: '🌍,
+      price: $199
+      feature,
+    s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking],
+      benefits: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'International SEO',
-      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+    y: 'International SEO,
+      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models]
     },
+<<<<<<< HEAD
     {}
       title: 'AI-Powered SEO Reporting Dashboard',
       description: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
@@ -3456,12 +6426,24 @@ $4},
     s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
       benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI-Powered SEO Reporting Dashboard,
+      description: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.,
+      icon: '📊,
+      price: $149
+      feature,
+    s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis],
+      benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'SEO Reporting',
-      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+    y: 'SEO Reporting,
+      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models]
     },
     /
     /
+<<<<<<< HEAD
     {}
       title: 'AI Time Tracking & Productivity Analyzer',
       description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
@@ -3471,11 +6453,23 @@ $4},
     s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],
       benefits: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Time Tracking & Productivity Analyzer,
+      description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.,
+      icon: '⏰,
+      price: $79
+      feature,
+    s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics],
+      benefits: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Productivity,
+      technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Task Management & Prioritization',
       description: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
@@ -3485,11 +6479,23 @@ $4},
     s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],
       benefits: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Task Management & Prioritization,
+      description: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.,
+      icon: '✅,
+      price: $89
+      feature,
+    s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools],
+      benefits: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Productivity',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+    y: 'Productivity,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Email Management & Prioritization',
       description: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
@@ -3499,12 +6505,24 @@ $4},
     s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],
       benefits: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],
       marketPrice: '$100-200;
+=======
+    {
+      title: 'AI Email Management & Prioritization,
+      description: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.,
+      icon: '📧,
+      price: $69
+      feature,
+    s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection],
+      benefits: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily],
+      marketPrice: $100-200
+>>>>>>> origin/main
       categor,
-    y: 'Communication',
-      technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
+    y: 'Communication,
+      technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Resume Parser & Candidate Matcher',
       description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
@@ -3514,11 +6532,23 @@ $4},
     s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],
       benefits: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Resume Parser & Candidate Matcher,
+      description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.,
+      icon: '👔,
+      price: $199
+      feature,
+    s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation],
+      benefits: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'HR & Recruitment',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'HR & Recruitment,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Employee Performance Tracker',
       description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
@@ -3528,11 +6558,23 @@ $4},
     s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
       benefits: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Employee Performance Tracker,
+      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.,
+      icon: '📊,
+      price: $149
+      feature,
+    s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system],
+      benefits: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'HR & Performance',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+    y: 'HR & Performance,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Workplace Safety Monitor',
       description: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
@@ -3542,12 +6584,24 @@ $4},
     s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],
       benefits: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Workplace Safety Monitor,
+      description: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.,
+      icon: '🛡️,
+      price: $299
+      feature,
+    s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system],
+      benefits: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Workplace Safety',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+    y: 'Workplace Safety,
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Customer Support Ticket Router',
       description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
@@ -3557,11 +6611,23 @@ $4},
     s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],
       benefits: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Customer Support Ticket Router,
+      description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.,
+      icon: '🎫,
+      price: $129
+      feature,
+    s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics],
+      benefits: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Customer Support',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Customer Support,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Customer Feedback Analyzer',
       description: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
@@ -3571,11 +6637,23 @@ $4},
     s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],
       benefits: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Customer Feedback Analyzer,
+      description: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.,
+      icon: '💬,
+      price: $99
+      feature,
+    s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting],
+      benefits: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Customer Analytics',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Customer Analytics,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Live Chat Assistant',
       description: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
@@ -3585,12 +6663,24 @@ $4},
     s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],
       benefits: ['Provide 24;
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Live Chat Assistant,
+      description: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.,
+      icon: '💬,
+      price: $79
+      feature,
+    s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics],
+      benefits: [Provide 24
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Customer Support',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+    y: 'Customer Support,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Sales Pipeline Optimizer',
       description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
@@ -3600,11 +6690,23 @@ $4},
     s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],
       benefits: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Sales Pipeline Optimizer,
+      description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.,
+      icon: '📈,
+      price: $199
+      feature,
+    s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration],
+      benefits: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Sales & CRM',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
+    y: 'Sales & CRM,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Sales Call Analyzer',
       description: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
@@ -3614,11 +6716,23 @@ $4},
     s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],
       benefits: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Sales Call Analyzer,
+      description: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.,
+      icon: '📞,
+      price: $149
+      feature,
+    s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics],
+      benefits: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Sales Training',
-      technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Sales Training,
+      technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Proposal Generator Pro',
       description: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
@@ -3628,12 +6742,24 @@ $4},
     s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],
       benefits: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],
       marketPrice: '$180-350;
+=======
+    {
+      title: 'AI Proposal Generator Pro,
+      description: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.,
+      icon: '📋,
+      price: $119
+      feature,
+    s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow],
+      benefits: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content],
+      marketPrice: $180-350
+>>>>>>> origin/main
       categor,
-    y: 'Sales Tools',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Sales Tools,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Project Risk Predictor',
       description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
@@ -3643,11 +6769,23 @@ $4},
     s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],
       benefits: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Project Risk Predictor,
+      description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.,
+      icon: '⚠️,
+      price: $179
+      feature,
+    s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization],
+      benefits: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+    y: 'Project Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Resource Allocation Optimizer',
       description: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
@@ -3657,11 +6795,23 @@ $4},
     s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],
       benefits: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Resource Allocation Optimizer,
+      description: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.,
+      icon: '👥,
+      price: $199
+      feature,
+    s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis],
+      benefits: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Resource Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
+    y: 'Resource Management,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Project Timeline Predictor',
       description: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
@@ -3671,12 +6821,24 @@ $4},
     s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],
       benefits: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Project Timeline Predictor,
+      description: 'Accurate project timeline prediction with milestone tracking and delay prevention.,
+      icon: '📅,
+      price: $149
+      feature,
+    s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning],
+      benefits: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Project Planning',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+    y: 'Project Planning,
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Security Threat Detector',
       description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
@@ -3686,11 +6848,23 @@ $4},
     s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],
       benefits: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Security Threat Detector,
+      description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.,
+      icon: '🔒,
+      price: $299
+      feature,
+    s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics],
+      benefits: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Cybersecurity',
-      technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Cybersecurity,
+      technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Compliance Monitor',
       description: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
@@ -3700,11 +6874,23 @@ $4},
     s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],
       benefits: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],
       marketPrice: '$350-700;
+=======
+    {
+      title: 'AI Compliance Monitor,
+      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.,
+      icon: '📋,
+      price: $249
+      feature,
+    s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting],
+      benefits: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs],
+      marketPrice: $350-700
+>>>>>>> origin/main
       categor,
-    y: 'Compliance',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Compliance,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Data Privacy Manager',
       description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
@@ -3714,12 +6900,24 @@ $4},
     s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],
       benefits: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Data Privacy Manager,
+      description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.,
+      icon: '🔐,
+      price: $199
+      feature,
+    s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification],
+      benefits: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Data Privacy',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Data Privacy,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Automated Testing Suite',
       description: 'Comprehensive automated testing with test generation, execution, and maintenance.',
@@ -3729,11 +6927,23 @@ $4},
     s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],
       benefits: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],
       marketPrice: '$250-500;
+=======
+    {
+      title: 'AI Automated Testing Suite,
+      description: 'Comprehensive automated testing with test generation, execution, and maintenance.,
+      icon: '🧪,
+      price: $179
+      feature,
+    s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing],
+      benefits: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs],
+      marketPrice: $250-500
+>>>>>>> origin/main
       categor,
-    y: 'Quality Assurance',
-      technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
+    y: 'Quality Assurance,
+      technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Bug Prediction & Prevention',
       description: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
@@ -3743,11 +6953,23 @@ $4},
     s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],
       benefits: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Bug Prediction & Prevention,
+      description: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.,
+      icon: '🐛,
+      price: $149
+      feature,
+    s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights],
+      benefits: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Quality Assurance',
-      technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Quality Assurance,
+      technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Performance Monitoring Pro',
       description: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
@@ -3757,12 +6979,24 @@ $4},
     s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],
       benefits: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Performance Monitoring Pro,
+      description: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.,
+      icon: '⚡,
+      price: $199
+      feature,
+    s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics],
+      benefits: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Performance Monitoring',
-      technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Performance Monitoring,
+      technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Video Content Generator',
       description: 'Intelligent video creation with script generation, editing, and optimization for social media.',
@@ -3772,11 +7006,23 @@ $4},
     s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],
       benefits: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Video Content Generator,
+      description: 'Intelligent video creation with script generation, editing, and optimization for social media.,
+      icon: '🎬,
+      price: $299
+      feature,
+    s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export],
+      benefits: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Content Creation',
-      technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
+    y: 'Content Creation,
+      technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Podcast Production Suite',
       description: 'Complete podcast production with audio editing, transcription, and show notes generation.',
@@ -3786,11 +7032,23 @@ $4},
     s: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro;
       benefits: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Podcast Production Suite,
+      description: 'Complete podcast production with audio editing, transcription, and show notes generation.,
+      icon: '🎙️,
+      price: $199
+      feature,
+    s: ['Audio editing', 'Transcription', 'Show notes generation', Intro
+      benefits: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Audio Production',
-      technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
+    y: 'Audio Production,
+      technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Image & Design Generator',
       description: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
@@ -3800,12 +7058,24 @@ $4},
     s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],
       benefits: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Image & Design Generator,
+      description: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.,
+      icon: '🎨,
+      price: $149
+      feature,
+    s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing],
+      benefits: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Design',
-      technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Design,
+      technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
@@ -3815,11 +7085,23 @@ $4},
     s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],
       benefits: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Research Assistant Pro,
+      description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.,
+      icon: '🔬,
+      price: $199
+      feature,
+    s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools],
+      benefits: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Research,
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Patent Analyzer & Generator',
       description: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
@@ -3829,11 +7111,23 @@ $4},
     s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],
       benefits: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],
       marketPrice: '$600-1200;
+=======
+    {
+      title: 'AI Patent Analyzer & Generator,
+      description: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.,
+      icon: '📜,
+      price: $399
+      feature,
+    s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management],
+      benefits: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio],
+      marketPrice: $600-1200
+>>>>>>> origin/main
       categor,
-    y: 'Intellectual Property',
-      technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
+    y: 'Intellectual Property,
+      technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Innovation Tracker',
       description: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
@@ -3843,12 +7137,24 @@ $4},
     s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],
       benefits: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],
       marketPrice: '$200-400;
+=======
+    {
+      title: 'AI Innovation Tracker,
+      description: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.,
+      icon: '💡,
+      price: $149
+      feature,
+    s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system],
+      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation],
+      marketPrice: $200-400
+>>>>>>> origin/main
       categor,
-    y: 'Innovation',
-      technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
+    y: 'Innovation,
+      technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Personal Finance Manager',
       description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
@@ -3858,11 +7164,23 @@ $4},
     s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],
       benefits: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Personal Finance Manager,
+      description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.,
+      icon: '💰,
+      price: $79
+      feature,
+    s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking],
+      benefits: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Personal Finance',
-      technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Personal Finance,
+      technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Personal Assistant Pro',
       description: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
@@ -3872,11 +7190,23 @@ $4},
     s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],
       benefits: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],
       marketPrice: '$150-300;
+=======
+    {
+      title: 'AI Personal Assistant Pro,
+      description: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.,
+      icon: '🤖,
+      price: $99
+      feature,
+    s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands],
+      benefits: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress],
+      marketPrice: $150-300
+>>>>>>> origin/main
       categor,
-    y: 'Personal Assistant',
-      technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
+    y: 'Personal Assistant,
+      technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Home Energy Optimizer',
       description: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
@@ -3886,12 +7216,24 @@ $4},
     s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],
       benefits: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],
       marketPrice: '$120-250;
+=======
+    {
+      title: 'AI Home Energy Optimizer,
+      description: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.,
+      icon: '🏠,
+      price: $89
+      feature,
+    s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis],
+      benefits: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals],
+      marketPrice: $120-250
+>>>>>>> origin/main
       categor,
-    y: 'Smart Home',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+    y: 'Smart Home,
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInfo:     ,
 $4},
     /
+<<<<<<< HEAD
     {}
       title: 'AI Game Development Assistant',
       description: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
@@ -3901,11 +7243,23 @@ $4},
     s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],
       benefits: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],
       marketPrice: '$400-800;
+=======
+    {
+      title: 'AI Game Development Assistant,
+      description: 'Intelligent game development with asset generation, level design, and gameplay optimization.,
+      icon: '🎮,
+      price: $299
+      feature,
+    s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation],
+      benefits: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs],
+      marketPrice: $400-800
+>>>>>>> origin/main
       categor,
-    y: 'Game Development',
-      technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
+    y: 'Game Development,
+      technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Music Composition Studio',
       description: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
@@ -3915,11 +7269,23 @@ $4},
     s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],
       benefits: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],
       marketPrice: '$300-600;
+=======
+    {
+      title: 'AI Music Composition Studio,
+      description: 'Intelligent music creation with composition assistance, style transfer, and production tools.,
+      icon: '🎵,
+      price: $199
+      feature,
+    s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration],
+      benefits: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively],
+      marketPrice: $300-600
+>>>>>>> origin/main
       categor,
-    y: 'Music Production',
-      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
+    y: 'Music Production,
+      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs],
       contactInfo:     ,
 $4},
+<<<<<<< HEAD
     {}
       title: 'AI Streaming Content Optimizer',
       description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
@@ -3929,41 +7295,64 @@ $4},
     s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],
       benefits: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],
       marketPrice: '$350-700;
+=======
+    {
+      title: 'AI Streaming Content Optimizer,
+      description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.,
+      icon: '📺,
+      price: $249
+      feature,
+    s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform],
+      benefits: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience],
+      marketPrice: $350-700
+>>>>>>> origin/main
       categor,
-    y: 'Streaming',
-      technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
+    y: 'Streaming,
+      technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js],
       contactInfo:     ,
 $4}
+
   ];
+<<<<<<< HEAD
   const categories = []
       contactInfo: 'Contac,
     t: kleber@ziontechgroup.com | +1 302 464 0950'
+=======
+
+  const categories = [;;
+
+      contactInfo: Contac,
+    t: kleber@ziontechgroup.com | +1 302 464 0950
+>>>>>>> origin/main
     }
+
   ]; *
   
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },
-    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
+    { name: 'All, count: microSAASServices.length },
+    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools).length },
+    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing).length },
+    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics).length },
+    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance).length },
+    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare).length },
+    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education).length },
+    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce).length },
+    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal).length },
+    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate).length },
+    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment).length },
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management).length },
+    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity).length },
+    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication).length },
+    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support).length },
+    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM).length },
+    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity).length },
+    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance).length },
+    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation).length },
+    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research).length },
+    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance).length },
+    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development).length }
+
   ]; *
+<<<<<<< HEAD
   return (<div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <title>Micro SAAS Solutions - Zion Tech Group<
         <meta name="description" content=""50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month."></meta>"
@@ -3994,9 +7383,33 @@ return (
   /
   O: Add items;
 ];;
+=======
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+      
+        <title>Micro SAAS Solutions - Zion Tech Group<
+        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month. 
+        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps 
+      <
+      {/* Hero Section *
+      <section className="pt-24 pb-16 px-4>
+        <div className="max-w-7xl mx-auto text-center>
+          <h1 className=text-4xl sm: text-5xl m,
+    d:text-6xl font-bold text-white mb-6>
+            Micro SAAS Solutions
+          <
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
+            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react;)
+const MicroSAASPage: React.FC = () => {
+  return (
+
+>>>>>>> origin/main
     // AI-Powered Developer Tools;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4004,32 +7417,54 @@ return (
 };
   titl,
   e: 'AI Code Review Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Code Review Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
+  n: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
+  s: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets],
       benefit,
+<<<<<<< HEAD
   s: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours;
       marketPric,
   e: '$150-300;
+=======
+  s: ['Reduce bugs by 70%', 'Improve code quality', Save 15+ hours
+      marketPric,
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Developer Tools',
+  y: 'Developer Tools,
       technologie,
-  s: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
+  s: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950',
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950,
       lin,
+<<<<<<< HEAD
   k: 'http,
   s://ziontechgroup.com;
+=======
+  k: http,
+  s://ziontechgroup.com
+>>>>>>> origin/main
       popula,
   r: true},
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
   r: true;
     },
     {/* TODO: Fix JSX expression *
@@ -4038,57 +7473,90 @@ return (
 };
   titl,
   e: 'AI Test Generation Suite',
+=======
+
+};  titl,
+  e: 'AI Test Generation Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
+  n: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
       feature,
   s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI;
+=======
+  e: $149
+      feature,
+  s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', CI
+>>>>>>> origin/main
       benefit,
-  s: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
+  s: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Developer Tools',
+  y: 'Developer Tools,
       technologie,
-  s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
+  s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart API Documentation Generator',
+=======
+
+};  titl,
+  e: 'Smart API Documentation Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
+  n: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
+  s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration],
       benefit,
-  s: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
+  s: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Developer Tools',
+  y: 'Developer Tools,
       technologie,
-  s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
+  s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Marketing & SEO Tools;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4096,56 +7564,90 @@ return (
 };
   titl,
   e: 'AI SEO Optimizer Pro',
+=======
+
+};  titl,
+  e: 'AI SEO Optimizer Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
+  n: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
+  s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis],
       benefit,
+<<<<<<< HEAD
   s: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours;
       marketPric,
   e: '$300-600;
+=======
+  s: ['Increase organic traffic by 150%', 'Improve search rankings', Save 25+ hours
+      marketPric,
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
+  s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Social Media Manager',
+=======
+
+};  titl,
+  e: 'AI Social Media Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
+  n: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
+  s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach],
       benefit,
+<<<<<<< HEAD
   s: ['Increase engagement by 45%', 'Save 20 hours;
       marketPric,
   e: '$200-400;
+=======
+  s: ['Increase engagement by 45%', Save 20 hours
+      marketPric,
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
+  s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -4154,9 +7656,17 @@ return (
   e: 'AI Email Marketing Platform',
       descriptio,
   n: 'Intelligent email campaigns with personalization, A;
+=======
+
+};  titl,
+  e: 'AI Email Marketing Platform,
+      descriptio,
+  n: Intelligent email campaigns with personalization, A
+>>>>>>> origin/main
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
       feature,
   s: ['Smart segmentation', 'A;
@@ -4164,45 +7674,72 @@ return (
   s: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours;
       marketPric,
   e: '$200-400;
+=======
+  e: $149
+      feature,
+  s: ['Smart segmentation', A
+      benefit,
+  s: ['Increase open rates by 35%', 'Boost conversion by 50%', Save 15 hours
+      marketPric,
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
+  s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Content Generator Pro',
+=======
+
+};  titl,
+  e: 'AI Content Generator Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
+  n: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$119;
+=======
+  e: $119
+>>>>>>> origin/main
       feature,
-  s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
+  s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support],
       benefit,
-  s: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
+  s: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production],
       marketPric,
+<<<<<<< HEAD
   e: '$180-350;
+=======
+  e: $180-350
+>>>>>>> origin/main
       categor,
-  y: 'Content Creation',
+  y: 'Content Creation,
       technologie,
-  s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
+  s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Business Intelligence & Analytics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4210,85 +7747,131 @@ return (
 };
   titl,
   e: 'AI Analytics Dashboard Pro',
+=======
+
+};  titl,
+  e: 'AI Analytics Dashboard Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
+  n: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
+  s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system],
       benefit,
-  s: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
+  s: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Analytics',
+  y: 'Analytics,
       technologie,
-  s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
+  s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Lead Scoring Engine',
+=======
+
+};  titl,
+  e: 'AI Lead Scoring Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
+  n: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$139;
+=======
+  e: $139
+>>>>>>> origin/main
       feature,
-  s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
+  s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking],
       benefit,
-  s: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
+  s: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Sales',
+  y: 'Sales,
       technologie,
-  s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
+  s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Insights Platform',
+=======
+
+};  titl,
+  e: 'AI Customer Insights Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
+  n: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
+  s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking],
       benefit,
-  s: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
+  s: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics,
       technologie,
-  s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
+  s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Finance & Accounting Tools;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4296,85 +7879,131 @@ return (
 };
   titl,
   e: 'AI Invoice Generator Pro',
+=======
+
+};  titl,
+  e: 'AI Invoice Generator Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
+  n: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
+  s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support],
       benefit,
-  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
+  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Finance',
+  y: 'Finance,
       technologie,
-  s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Financial Planning Assistant',
+=======
+
+};  titl,
+  e: 'AI Financial Planning Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
+  n: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
+  s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations],
       benefit,
-  s: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
+  s: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Finance',
+  y: 'Finance,
       technologie,
-  s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
+  s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Expense Management System',
+=======
+
+};  titl,
+  e: 'AI Expense Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
+  n: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
+  s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app],
       benefit,
-  s: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],
+  s: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Finance',
+  y: 'Finance,
       technologie,
-  s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
+  s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Healthcare & Wellness;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4382,85 +8011,131 @@ return (
 };
   titl,
   e: 'AI Health Monitoring Platform',
+=======
+
+};  titl,
+  e: 'AI Health Monitoring Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
+  n: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
+  s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync],
       benefit,
-  s: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],
+  s: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Healthcare',
+  y: 'Healthcare,
       technologie,
-  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
+  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Fitness Coach Pro',
+=======
+
+};  titl,
+  e: 'AI Fitness Coach Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
+  n: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
+  s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration],
       benefit,
-  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],
+  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Health & Fitness',
+  y: 'Health & Fitness,
       technologie,
-  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
+  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Mental Health Assistant',
+=======
+
+};  titl,
+  e: 'AI Mental Health Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
+  n: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
+  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals],
       benefit,
-  s: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],
+  s: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Mental Health',
+  y: 'Mental Health,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Education & Learning;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4468,85 +8143,131 @@ return (
 };
   titl,
   e: 'AI Language Learning Platform',
+=======
+
+};  titl,
+  e: 'AI Language Learning Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
+  n: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
+  s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context],
       benefit,
-  s: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],
+  s: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
+  s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Study Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Study Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
+  n: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
+  s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis],
       benefit,
-  s: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],
+  s: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Skill Assessment Platform',
+=======
+
+};  titl,
+  e: 'AI Skill Assessment Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
+  n: 'Automated skill testing and certification with adaptive questioning and performance analytics.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
+  s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards],
       benefit,
-  s: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],
+  s: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI E-commerce & Retail;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4554,85 +8275,135 @@ return (
 };
   titl,
   e: 'AI Inventory Optimizer Pro',
+=======
+
+};  titl,
+  e: 'AI Inventory Optimizer Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
+  n: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
+  s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments],
       benefit,
-  s: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],
+  s: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain,
       technologie,
-  s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+  s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Product Recommendation Engine',
+=======
+
+};  titl,
+  e: 'AI Product Recommendation Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
+  n: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
       feature,
   s: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A;
+=======
+  e: $199
+      feature,
+  s: ['Personalized recommendations', 'Cross-selling', 'Upselling', A
+>>>>>>> origin/main
       benefit,
-  s: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],
+  s: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
+  s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Price Optimization Tool',
+=======
+
+};  titl,
+  e: 'AI Price Optimization Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
+  n: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
       feature,
   s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A;
+=======
+  e: $249
+      feature,
+  s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', A
+>>>>>>> origin/main
       benefit,
-  s: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],
+  s: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce,
       technologie,
-  s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
+  s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Legal & Compliance;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4640,29 +8411,45 @@ return (
 };
   titl,
   e: 'AI Legal Document Analyzer',
+=======
+
+};  titl,
+  e: 'AI Legal Document Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
+  n: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
+  s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction],
       benefit,
-  s: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],
+  s: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Legal',
+  y: 'Legal,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Real Estate & Property Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4670,29 +8457,45 @@ return (
 };
   titl,
   e: 'AI Property Valuation Engine',
+=======
+
+};  titl,
+  e: 'AI Property Valuation Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
+  n: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],
+  s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations],
       benefit,
-  s: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],
+  s: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI HR & Recruitment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4700,85 +8503,133 @@ return (
 };
   titl,
   e: 'AI Resume Parser & Matcher',
+=======
+
+};  titl,
+  e: 'AI Resume Parser & Matcher,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
+  n: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],
+  s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection],
       benefit,
-  s: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],
+  s: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Interview Scheduler Pro',
+=======
+
+};  titl,
+  e: 'AI Interview Scheduler Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
+  n: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],
+  s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection],
       benefit,
+<<<<<<< HEAD
   s: ['Save 10+ hours;
       marketPric,
   e: '$120-300;
+=======
+  s: [Save 10+ hours
+      marketPric,
+  e: $120-300
+>>>>>>> origin/main
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment,
       technologie,
-  s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
+  s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Employee Performance Tracker',
+=======
+
+};  titl,
+  e: 'AI Employee Performance Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
+  s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system],
       benefit,
-  s: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],
+  s: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Finance & Accounting;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4786,85 +8637,133 @@ return (
 };
   titl,
   e: 'AI Expense Tracker & Categorizer',
+=======
+
+};  titl,
+  e: 'AI Expense Tracker & Categorizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
+  n: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],
+  s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection],
       benefit,
+<<<<<<< HEAD
   s: ['Save 5+ hours;
       marketPric,
   e: '$150-300;
+=======
+  s: [Save 5+ hours
+      marketPric,
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Finance & Accounting',
+  y: 'Finance & Accounting,
       technologie,
-  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Invoice Processing System',
+=======
+
+};  titl,
+  e: 'AI Invoice Processing System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
+  n: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],
+  s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks],
       benefit,
-  s: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],
+  s: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Finance & Accounting',
+  y: 'Finance & Accounting,
       technologie,
-  s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Financial Forecasting Tool',
+=======
+
+};  titl,
+  e: 'AI Financial Forecasting Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
+  n: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],
+  s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports],
       benefit,
-  s: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],
+  s: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Finance & Accounting',
+  y: 'Finance & Accounting,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Project Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4872,57 +8771,88 @@ return (
 };
   titl,
   e: 'AI Project Manager Assistant',
+=======
+
+};  titl,
+  e: 'AI Project Manager Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
+  n: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],
+  s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management],
       benefit,
-  s: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],
+  s: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Project Management',
+  y: 'Project Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Time Tracking & Analytics',
+=======
+
+};  titl,
+  e: 'AI Time Tracking & Analytics,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
+  n: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],
+  s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting],
       benefit,
-  s: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],
+  s: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements],
       marketPric,
+<<<<<<< HEAD
   e: '$120-300;
+=======
+  e: $120-300
+>>>>>>> origin/main
       categor,
-  y: 'Project Management',
+  y: 'Project Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Customer Service;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4930,57 +8860,90 @@ return (
 };
   titl,
   e: 'AI Live Chat Assistant',
+=======
+
+};  titl,
+  e: 'AI Live Chat Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
+  n: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],
+  s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics],
       benefit,
+<<<<<<< HEAD
   s: ['24;
       marketPric,
   e: '$200-400;
+=======
+  s: [24
+      marketPric,
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Service',
+  y: 'Customer Service,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Ticket Classification System',
+=======
+
+};  titl,
+  e: 'AI Ticket Classification System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
+  n: 'Automated ticket routing and prioritization with intelligent categorization and escalation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],
+  s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs],
       benefit,
-  s: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],
+  s: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience],
       marketPric,
+<<<<<<< HEAD
   e: '$150-350;
+=======
+  e: $150-350
+>>>>>>> origin/main
       categor,
-  y: 'Customer Service',
+  y: 'Customer Service,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Sales & CRM;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -4988,57 +8951,90 @@ return (
 };
   titl,
   e: 'AI Lead Scoring Engine',
+=======
+
+};  titl,
+  e: 'AI Lead Scoring Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
+  n: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
       feature,
   s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A;
+=======
+  e: $199
+      feature,
+  s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', A
+>>>>>>> origin/main
       benefit,
-  s: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],
+  s: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Sales & CRM',
+  y: 'Sales & CRM,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Sales Forecasting Platform',
+=======
+
+};  titl,
+  e: 'AI Sales Forecasting Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
+  n: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],
+  s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting],
       benefit,
-  s: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],
+  s: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Sales & CRM',
+  y: 'Sales & CRM,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Healthcare & Wellness;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5046,57 +9042,88 @@ return (
 };
   titl,
   e: 'AI Symptom Checker Pro',
+=======
+
+};  titl,
+  e: 'AI Symptom Checker Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
+  n: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],
+  s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts],
       benefit,
-  s: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],
+  s: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Healthcare',
+  y: 'Healthcare,
       technologie,
-  s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
+  s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Fitness Coach Platform',
+=======
+
+};  titl,
+  e: 'AI Fitness Coach Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
+  n: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],
+  s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features],
       benefit,
-  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],
+  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Healthcare',
+  y: 'Healthcare,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Security & Compliance;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5104,57 +9131,88 @@ return (
 };
   titl,
   e: 'AI Security Monitoring System',
+=======
+
+};  titl,
+  e: 'AI Security Monitoring System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
+  n: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],
+  s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics],
       benefit,
-  s: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],
+  s: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Security',
+  y: 'Security,
       technologie,
-  s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Compliance Checker',
+=======
+
+};  titl,
+  e: 'AI Compliance Checker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
+  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],
+  s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting],
       benefit,
-  s: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],
+  s: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Security',
+  y: 'Security,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Productivity & Automation;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5162,85 +9220,131 @@ return (
 };
   titl,
   e: 'AI Meeting Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Meeting Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
+  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration],
       benefit,
-  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],
+  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Email Management System',
+=======
+
+};  titl,
+  e: 'AI Email Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
+  n: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],
+  s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics],
       benefit,
-  s: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],
+  s: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Document Management Platform',
+=======
+
+};  titl,
+  e: 'AI Document Management Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent document organization with search, version control, and collaboration features.',
+  n: 'Intelligent document organization with search, version control, and collaboration features.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],
+  s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls],
       benefit,
-  s: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],
+  s: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Analytics & Reporting;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5248,57 +9352,88 @@ return (
 };
   titl,
   e: 'AI Business Intelligence Suite',
+=======
+
+};  titl,
+  e: 'AI Business Intelligence Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
+  n: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],
+  s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access],
       benefit,
-  s: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],
+  s: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Analytics',
+  y: 'Analytics,
       technologie,
-  s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
+  s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Social Media Analytics',
+=======
+
+};  titl,
+  e: 'AI Social Media Analytics,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
+  n: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],
+  s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis],
       benefit,
-  s: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],
+  s: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Analytics',
+  y: 'Analytics,
       technologie,
-  s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
+  s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Development & DevOps;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5306,57 +9441,92 @@ return (
 };
   titl,
   e: 'AI Code Quality Monitor',
+=======
+
+};  titl,
+  e: 'AI Code Quality Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
+  n: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],
+  s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules],
       benefit,
-  s: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],
+  s: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Development',
+  y: 'Development,
       technologie,
-  s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
+  s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Deployment Automation',
+=======
+
+};  titl,
+  e: 'AI Deployment Automation,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
+  n: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],
+  s: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning],
       benefit,
-  s: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring'],
+  s: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Development',
+  y: 'Development,
       technologie,
+<<<<<<< HEAD
   s: ['CI;
+=======
+  s: [CI
+>>>>>>> origin/main
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Communication & Collaboration;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5364,57 +9534,88 @@ return (
 };
   titl,
   e: 'AI Team Collaboration Hub',
+=======
+
+};  titl,
+  e: 'AI Team Collaboration Hub,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
+  n: 'Intelligent team workspace with smart notifications, task management, and productivity insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],
+  s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access],
       benefit,
-  s: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],
+  s: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Collaboration',
+  y: 'Collaboration,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Video Conferencing Assistant',
+=======
+
+};  titl,
+  e: 'AI Video Conferencing Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
+  n: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],
+  s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics],
       benefit,
-  s: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],
+  s: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Collaboration',
+  y: 'Collaboration,
       technologie,
-  s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
+  s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Marketing & Advertising;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5424,55 +9625,90 @@ return (
   e: 'AI Ad Campaign Optimizer',
       descriptio,
   n: 'Intelligent ad campaign management with automated optimization, A;
+=======
+
+};  titl,
+  e: 'AI Ad Campaign Optimizer,
+      descriptio,
+  n: Intelligent ad campaign management with automated optimization, A
+>>>>>>> origin/main
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
       feature,
   s: ['Campaign optimization', 'A;
+=======
+  e: $299
+      feature,
+  s: ['Campaign optimization', A
+>>>>>>> origin/main
       benefit,
-  s: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],
+  s: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
+  s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Influencer Marketing Platform',
+=======
+
+};  titl,
+  e: 'AI Influencer Marketing Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
+  n: 'Smart influencer discovery and management with performance tracking and campaign optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],
+  s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing],
       benefit,
-  s: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],
+  s: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI E-commerce & Retail;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5480,57 +9716,88 @@ return (
 };
   titl,
   e: 'AI Customer Behavior Analyzer',
+=======
+
+};  titl,
+  e: 'AI Customer Behavior Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
+  n: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],
+  s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine],
       benefit,
-  s: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],
+  s: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Supply Chain Optimizer',
+=======
+
+};  titl,
+  e: 'AI Supply Chain Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
+  n: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],
+  s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking],
       benefit,
-  s: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],
+  s: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Education & Training;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5538,57 +9805,88 @@ return (
 };
   titl,
   e: 'AI Corporate Training Platform',
+=======
+
+};  titl,
+  e: 'AI Corporate Training Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
+  n: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],
+  s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics],
       benefit,
-  s: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],
+  s: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Knowledge Management System',
+=======
+
+};  titl,
+  e: 'AI Knowledge Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
+  n: 'Smart knowledge base with intelligent search, content organization, and automated updates.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],
+  s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics],
       benefit,
-  s: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],
+  s: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Legal & Compliance;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5596,57 +9894,88 @@ return (
 };
   titl,
   e: 'AI Contract Management System',
+=======
+
+};  titl,
+  e: 'AI Contract Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
+  n: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],
+  s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation],
       benefit,
-  s: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],
+  s: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Legal',
+  y: 'Legal,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Privacy Compliance Monitor',
+=======
+
+};  titl,
+  e: 'AI Privacy Compliance Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
+  n: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],
+  s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection],
       benefit,
-  s: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],
+  s: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Legal',
+  y: 'Legal,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Real Estate & Property;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5654,57 +9983,88 @@ return (
 };
   titl,
   e: 'AI Property Management Suite',
+=======
+
+};  titl,
+  e: 'AI Property Management Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
+  n: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],
+  s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics],
       benefit,
-  s: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],
+  s: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Market Research Platform',
+=======
+
+};  titl,
+  e: 'AI Market Research Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
+  n: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],
+  s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system],
       benefit,
-  s: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],
+  s: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Research',
+  y: 'Research,
       technologie,
-  s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Agriculture & Environment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5712,57 +10072,88 @@ return (
 };
   titl,
   e: 'AI Crop Monitoring System',
+=======
+
+};  titl,
+  e: 'AI Crop Monitoring System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
+  n: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],
+  s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning],
       benefit,
-  s: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],
+  s: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Agriculture',
+  y: 'Agriculture,
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Environmental Monitoring',
+=======
+
+};  titl,
+  e: 'AI Environmental Monitoring,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
+  n: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],
+  s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking],
       benefit,
-  s: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],
+  s: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Environment',
+  y: 'Environment,
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Transportation & Logistics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5770,57 +10161,88 @@ return (
 };
   titl,
   e: 'AI Fleet Management System',
+=======
+
+};  titl,
+  e: 'AI Fleet Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
+  n: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$349;
+=======
+  e: $349
+>>>>>>> origin/main
       feature,
-  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],
+  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics],
       benefit,
-  s: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],
+  s: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Transportation',
+  y: 'Transportation,
       technologie,
-  s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Logistics Optimizer',
+=======
+
+};  titl,
+  e: 'AI Logistics Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
+  n: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],
+  s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics],
       benefit,
-  s: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],
+  s: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Logistics',
+  y: 'Logistics,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Entertainment & Media;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5828,57 +10250,88 @@ return (
 };
   titl,
   e: 'AI Content Moderation Platform',
+=======
+
+};  titl,
+  e: 'AI Content Moderation Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
+  n: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],
+  s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics],
       benefit,
-  s: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],
+  s: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Media',
+  y: 'Media,
       technologie,
-  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Video Production Assistant',
+=======
+
+};  titl,
+  e: 'AI Video Production Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
+  n: 'Intelligent video production with automated editing, subtitle generation, and content optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],
+  s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics],
       benefit,
-  s: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],
+  s: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Media',
+  y: 'Media,
       technologie,
-  s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
+  s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Gaming & Entertainment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5886,57 +10339,94 @@ return (
 };
   titl,
   e: 'AI Game Development Platform',
+=======
+
+};  titl,
+  e: 'AI Game Development Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
+  n: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],
+  s: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation],
       benefit,
-  s: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs'],
+  s: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Gaming',
+  y: 'Gaming,
       technologie,
+<<<<<<< HEAD
   s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity;
+=======
+  s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', Unity
+>>>>>>> origin/main
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Player Behavior Analytics',
+=======
+
+};  titl,
+  e: 'AI Player Behavior Analytics,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
+  n: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
       feature,
   s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A;
+=======
+  e: $199
+      feature,
+  s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', A
+>>>>>>> origin/main
       benefit,
-  s: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],
+  s: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Gaming',
+  y: 'Gaming,
       technologie,
-  s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -5944,57 +10434,88 @@ return (
 };
   titl,
   e: 'AI Research Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Research Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
+  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking],
       benefit,
-  s: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],
+  s: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Research',
+  y: 'Research,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Patent Analysis Tool',
+=======
+
+};  titl,
+  e: 'AI Patent Analysis Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
+  n: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],
+  s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking],
       benefit,
-  s: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],
+  s: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Research',
+  y: 'Research,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Energy & Utilities;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6002,57 +10523,88 @@ return (
 };
   titl,
   e: 'AI Energy Management System',
+=======
+
+};  titl,
+  e: 'AI Energy Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
+  n: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],
+  s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting],
       benefit,
-  s: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],
+  s: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Energy',
+  y: 'Energy,
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Smart Grid Optimizer',
+=======
+
+};  titl,
+  e: 'AI Smart Grid Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
+  n: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],
+  s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance],
       benefit,
-  s: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],
+  s: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Energy',
+  y: 'Energy,
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Manufacturing & Industrial;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6060,57 +10612,88 @@ return (
 };
   titl,
   e: 'AI Quality Control System',
+=======
+
+};  titl,
+  e: 'AI Quality Control System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
+  n: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$349;
+=======
+  e: $349
+>>>>>>> origin/main
       feature,
-  s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],
+  s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system],
       benefit,
-  s: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],
+  s: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Manufacturing',
+  y: 'Manufacturing,
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Production Planning Optimizer',
+=======
+
+};  titl,
+  e: 'AI Production Planning Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
+  n: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],
+  s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking],
       benefit,
-  s: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],
+  s: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Manufacturing',
+  y: 'Manufacturing,
       technologie,
-  s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Insurance & Risk Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6118,57 +10701,88 @@ return (
 };
   titl,
   e: 'AI Risk Assessment Platform',
+=======
+
+};  titl,
+  e: 'AI Risk Assessment Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
+  n: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],
+  s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring],
       benefit,
-  s: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],
+  s: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Insurance',
+  y: 'Insurance,
       technologie,
-  s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Claims Processing System',
+=======
+
+};  titl,
+  e: 'AI Claims Processing System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
+  n: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],
+  s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics],
       benefit,
-  s: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],
+  s: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Insurance',
+  y: 'Insurance,
       technologie,
-  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Government & Public Sector;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6176,57 +10790,88 @@ return (
 };
   titl,
   e: 'AI Citizen Services Platform',
+=======
+
+};  titl,
+  e: 'AI Citizen Services Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
+  n: 'Intelligent government services with automated processing, citizen engagement, and service optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$499;
+=======
+  e: $499
+>>>>>>> origin/main
       feature,
-  s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],
+  s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics],
       benefit,
-  s: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],
+  s: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs],
       marketPric,
+<<<<<<< HEAD
   e: '$800-1500;
+=======
+  e: $800-1500
+>>>>>>> origin/main
       categor,
-  y: 'Government',
+  y: 'Government,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Public Safety System',
+=======
+
+};  titl,
+  e: 'AI Public Safety System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
+  n: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$599;
+=======
+  e: $599
+>>>>>>> origin/main
       feature,
-  s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],
+  s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools],
       benefit,
-  s: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],
+  s: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention],
       marketPric,
+<<<<<<< HEAD
   e: '$1000-2000;
+=======
+  e: $1000-2000
+>>>>>>> origin/main
       categor,
-  y: 'Government',
+  y: 'Government,
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Non-Profit & Social Impact;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6234,57 +10879,88 @@ return (
 };
   titl,
   e: 'AI Donor Management System',
+=======
+
+};  titl,
+  e: 'AI Donor Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
+  n: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],
+  s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics],
       benefit,
-  s: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],
+  s: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Non-Profit',
+  y: 'Non-Profit,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Volunteer Matching Platform',
+=======
+
+};  titl,
+  e: 'AI Volunteer Matching Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
+  n: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],
+  s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system],
       benefit,
-  s: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],
+  s: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Non-Profit',
+  y: 'Non-Profit,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Travel & Hospitality;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6292,57 +10968,88 @@ return (
 };
   titl,
   e: 'AI Travel Planning Assistant',
+=======
+
+};  titl,
+  e: 'AI Travel Planning Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
+  n: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],
+  s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking],
       benefit,
-  s: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],
+  s: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Travel',
+  y: 'Travel,
       technologie,
-  s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Hotel Revenue Optimizer',
+=======
+
+};  titl,
+  e: 'AI Hotel Revenue Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
+  n: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],
+  s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation],
       benefit,
-  s: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],
+  s: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Hospitality',
+  y: 'Hospitality,
       technologie,
-  s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Sports & Fitness;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6350,57 +11057,88 @@ return (
 };
   titl,
   e: 'AI Sports Performance Analyzer',
+=======
+
+};  titl,
+  e: 'AI Sports Performance Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
+  n: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],
+  s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling],
       benefit,
-  s: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],
+  s: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Sports',
+  y: 'Sports,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Fitness Nutrition Coach',
+=======
+
+};  titl,
+  e: 'AI Fitness Nutrition Coach,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
+  n: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],
+  s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting],
       benefit,
-  s: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],
+  s: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Fitness',
+  y: 'Fitness,
       technologie,
-  s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Beauty & Fashion;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6408,57 +11146,92 @@ return (
 };
   titl,
   e: 'AI Virtual Try-On Platform',
+=======
+
+};  titl,
+  e: 'AI Virtual Try-On Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
+  n: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],
+  s: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions],
       benefit,
-  s: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy'],
+  s: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Fashion',
+  y: 'Fashion,
       technologie,
+<<<<<<< HEAD
   s: ['Computer Vision', 'AR;
+=======
+  s: ['Computer Vision', AR
+>>>>>>> origin/main
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Beauty Analysis Tool',
+=======
+
+};  titl,
+  e: 'AI Beauty Analysis Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
+  n: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],
+  s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking],
       benefit,
-  s: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],
+  s: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Beauty',
+  y: 'Beauty,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Home & Lifestyle;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6466,57 +11239,88 @@ return (
 };
   titl,
   e: 'AI Smart Home Controller',
+=======
+
+};  titl,
+  e: 'AI Smart Home Controller,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
+  n: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],
+  s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics],
       benefit,
-  s: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],
+  s: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Smart Home',
+  y: 'Smart Home,
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Personal Assistant Platform',
+=======
+
+};  titl,
+  e: 'AI Personal Assistant Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
+  n: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],
+  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities],
       benefit,
-  s: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],
+  s: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Personal',
+  y: 'Personal,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Pets & Animals;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6524,57 +11328,88 @@ return (
 };
   titl,
   e: 'AI Pet Health Monitor',
+=======
+
+};  titl,
+  e: 'AI Pet Health Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
+  n: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],
+  s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts],
       benefit,
-  s: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],
+  s: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Pets',
+  y: 'Pets,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Pet Training Assistant',
+=======
+
+};  titl,
+  e: 'AI Pet Training Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
+  n: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],
+  s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features],
       benefit,
-  s: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],
+  s: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Pets',
+  y: 'Pets,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Education & Learning;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6582,57 +11417,88 @@ return (
 };
   titl,
   e: 'AI Tutoring Platform',
+=======
+
+};  titl,
+  e: 'AI Tutoring Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
+  n: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],
+  s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics],
       benefit,
-  s: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],
+  s: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Homework Helper',
+=======
+
+};  titl,
+  e: 'AI Homework Helper,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
+  n: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],
+  s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard],
       benefit,
-  s: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],
+  s: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Education',
+  y: 'Education,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Music & Audio;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6640,57 +11506,88 @@ return (
 };
   titl,
   e: 'AI Music Composition Tool',
+=======
+
+};  titl,
+  e: 'AI Music Composition Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
+  n: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],
+  s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options],
       benefit,
-  s: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],
+  s: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Music',
+  y: 'Music,
       technologie,
-  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
+  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Audio Enhancement Platform',
+=======
+
+};  titl,
+  e: 'AI Audio Enhancement Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
+  n: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],
+  s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion],
       benefit,
-  s: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],
+  s: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Audio',
+  y: 'Audio,
       technologie,
-  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
+  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Art & Design;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6698,57 +11595,88 @@ return (
 };
   titl,
   e: 'AI Design Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Design Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
+  n: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],
+  s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options],
       benefit,
-  s: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],
+  s: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Design',
+  y: 'Design,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Logo Generator Platform',
+=======
+
+};  titl,
+  e: 'AI Logo Generator Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
+  n: 'Intelligent logo creation with brand analysis, style matching, and customization options.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],
+  s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system],
       benefit,
-  s: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],
+  s: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Design',
+  y: 'Design,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Dating & Relationships;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6756,57 +11684,88 @@ return (
 };
   titl,
   e: 'AI Dating Assistant',
+=======
+
+};  titl,
+  e: 'AI Dating Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
+  n: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],
+  s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking],
       benefit,
-  s: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],
+  s: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Dating',
+  y: 'Dating,
       technologie,
-  s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Relationship Counselor',
+=======
+
+};  titl,
+  e: 'AI Relationship Counselor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
+  n: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],
+  s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities],
       benefit,
-  s: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],
+  s: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Relationships',
+  y: 'Relationships,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Parenting & Family;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6814,57 +11773,88 @@ return (
 };
   titl,
   e: 'AI Parenting Assistant',
+=======
+
+};  titl,
+  e: 'AI Parenting Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
+  n: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],
+  s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support],
       benefit,
-  s: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],
+  s: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Parenting',
+  y: 'Parenting,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Family Organizer',
+=======
+
+};  titl,
+  e: 'AI Family Organizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart family management with scheduling, task coordination, and communication tools.',
+  n: 'Smart family management with scheduling, task coordination, and communication tools.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],
+  s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing],
       benefit,
-  s: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],
+  s: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Family',
+  y: 'Family,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Senior Care & Aging;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6872,57 +11862,88 @@ return (
 };
   titl,
   e: 'AI Senior Care Monitor',
+=======
+
+};  titl,
+  e: 'AI Senior Care Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
+  n: 'Intelligent senior care with health monitoring, safety alerts, and family communication.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],
+  s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response],
       benefit,
-  s: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],
+  s: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Senior Care',
+  y: 'Senior Care,
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Memory Assistant',
+=======
+
+};  titl,
+  e: 'AI Memory Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
+  n: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],
+  s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance],
       benefit,
-  s: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],
+  s: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Memory',
+  y: 'Memory,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Accessibility & Inclusion;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6930,57 +11951,88 @@ return (
 };
   titl,
   e: 'AI Accessibility Assistant',
+=======
+
+};  titl,
+  e: 'AI Accessibility Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
+  n: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],
+  s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization],
       benefit,
-  s: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],
+  s: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Accessibility',
+  y: 'Accessibility,
       technologie,
-  s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
+  s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Language Translation Pro',
+=======
+
+};  titl,
+  e: 'AI Language Translation Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
+  n: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],
+  s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration],
       benefit,
-  s: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],
+  s: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Translation',
+  y: 'Translation,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Emergency & Crisis Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -6988,57 +12040,88 @@ return (
 };
   titl,
   e: 'AI Emergency Response System',
+=======
+
+};  titl,
+  e: 'AI Emergency Response System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
+  n: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$499;
+=======
+  e: $499
+>>>>>>> origin/main
       feature,
-  s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],
+  s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization],
       benefit,
-  s: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],
+  s: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved],
       marketPric,
+<<<<<<< HEAD
   e: '$800-1500;
+=======
+  e: $800-1500
+>>>>>>> origin/main
       categor,
-  y: 'Emergency',
+  y: 'Emergency,
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Crisis Communication Platform',
+=======
+
+};  titl,
+  e: 'AI Crisis Communication Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
+  n: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],
+  s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking],
       benefit,
-  s: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],
+  s: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Crisis Management',
+  y: 'Crisis Management,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Space & Astronomy;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7046,57 +12129,88 @@ return (
 };
   titl,
   e: 'AI Space Mission Planner',
+=======
+
+};  titl,
+  e: 'AI Space Mission Planner,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
+  n: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$599;
+=======
+  e: $599
+>>>>>>> origin/main
       feature,
-  s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],
+  s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools],
       benefit,
-  s: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],
+  s: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency],
       marketPric,
+<<<<<<< HEAD
   e: '$1000-2000;
+=======
+  e: $1000-2000
+>>>>>>> origin/main
       categor,
-  y: 'Space',
+  y: 'Space,
       technologie,
-  s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Astronomical Data Analyzer',
+=======
+
+};  titl,
+  e: 'AI Astronomical Data Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
+  n: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],
+  s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support],
       benefit,
-  s: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],
+  s: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Astronomy',
+  y: 'Astronomy,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Ocean & Marine;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7104,57 +12218,88 @@ return (
 };
   titl,
   e: 'AI Marine Life Tracker',
+=======
+
+};  titl,
+  e: 'AI Marine Life Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
+  n: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],
+  s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support],
       benefit,
-  s: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],
+  s: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Marine',
+  y: 'Marine,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Ocean Current Predictor',
+=======
+
+};  titl,
+  e: 'AI Ocean Current Predictor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
+  n: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],
+  s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools],
       benefit,
-  s: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],
+  s: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Oceanography',
+  y: 'Oceanography,
       technologie,
-  s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Archaeology & History;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7162,57 +12307,88 @@ return (
 };
   titl,
   e: 'AI Archaeological Site Analyzer',
+=======
+
+};  titl,
+  e: 'AI Archaeological Site Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
+  n: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],
+  s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration],
       benefit,
-  s: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],
+  s: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Archaeology',
+  y: 'Archaeology,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Historical Document Processor',
+=======
+
+};  titl,
+  e: 'AI Historical Document Processor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
+  n: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],
+  s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools],
       benefit,
-  s: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],
+  s: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'History',
+  y: 'History,
       technologie,
-  s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Psychology & Mental Health;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7220,57 +12396,88 @@ return (
 };
   titl,
   e: 'AI Mental Health Tracker',
+=======
+
+};  titl,
+  e: 'AI Mental Health Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
+  n: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],
+  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support],
       benefit,
-  s: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],
+  s: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Mental Health',
+  y: 'Mental Health,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Therapy Assistant',
+=======
+
+};  titl,
+  e: 'AI Therapy Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
+  n: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],
+  s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction],
       benefit,
-  s: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],
+  s: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Therapy',
+  y: 'Therapy,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Philosophy & Ethics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7278,57 +12485,88 @@ return (
 };
   titl,
   e: 'AI Ethical Decision Maker',
+=======
+
+};  titl,
+  e: 'AI Ethical Decision Maker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
+  n: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],
+  s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation],
       benefit,
-  s: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],
+  s: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Ethics',
+  y: 'Ethics,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Philosophy Research Assistant',
+=======
+
+};  titl,
+  e: 'AI Philosophy Research Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
+  n: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],
+  s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis],
       benefit,
-  s: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],
+  s: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Philosophy',
+  y: 'Philosophy,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Spirituality & Religion;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7336,57 +12574,88 @@ return (
 };
   titl,
   e: 'AI Spiritual Guidance Platform',
+=======
+
+};  titl,
+  e: 'AI Spiritual Guidance Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
+  n: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],
+  s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring],
       benefit,
-  s: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],
+  s: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Spirituality',
+  y: 'Spirituality,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Religious Text Analyzer',
+=======
+
+};  titl,
+  e: 'AI Religious Text Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
+  n: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],
+  s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools],
       benefit,
-  s: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],
+  s: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Religion',
+  y: 'Religion,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Future & Innovation;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7394,57 +12663,88 @@ return (
 };
   titl,
   e: 'AI Innovation Predictor',
+=======
+
+};  titl,
+  e: 'AI Innovation Predictor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
+  n: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],
+  s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights],
       benefit,
-  s: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],
+  s: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Innovation',
+  y: 'Innovation,
       technologie,
-  s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Future Scenario Generator',
+=======
+
+};  titl,
+  e: 'AI Future Scenario Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
+  n: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],
+  s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support],
       benefit,
-  s: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],
+  s: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Future Planning',
+  y: 'Future Planning,
       technologie,
-  s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Consciousness & AI Ethics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7452,57 +12752,88 @@ return (
 };
   titl,
   e: 'AI Consciousness Monitor',
+=======
+
+};  titl,
+  e: 'AI Consciousness Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
+  n: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$499;
+=======
+  e: $499
+>>>>>>> origin/main
       feature,
-  s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],
+  s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy],
       benefit,
-  s: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],
+  s: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI],
       marketPric,
+<<<<<<< HEAD
   e: '$800-1500;
+=======
+  e: $800-1500
+>>>>>>> origin/main
       categor,
-  y: 'AI Ethics',
+  y: 'AI Ethics,
       technologie,
-  s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Rights Management System',
+=======
+
+};  titl,
+  e: 'AI Rights Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
+  n: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],
+  s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training],
       benefit,
-  s: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],
+  s: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'AI Rights',
+  y: 'AI Rights,
       technologie,
-  s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Time & Space;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7510,57 +12841,88 @@ return (
 };
   titl,
   e: 'AI Time Management Master',
+=======
+
+};  titl,
+  e: 'AI Time Management Master,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
+  n: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],
+  s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics],
       benefit,
-  s: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],
+  s: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Time Management',
+  y: 'Time Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Space-Time Analyzer',
+=======
+
+};  titl,
+  e: 'AI Space-Time Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
+  n: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$599;
+=======
+  e: $599
+>>>>>>> origin/main
       feature,
-  s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],
+  s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research],
       benefit,
-  s: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],
+  s: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights],
       marketPric,
+<<<<<<< HEAD
   e: '$1000-2000;
+=======
+  e: $1000-2000
+>>>>>>> origin/main
       categor,
-  y: 'Space-Time',
+  y: 'Space-Time,
       technologie,
-  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Quantum & Advanced Physics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7568,57 +12930,88 @@ return (
 };
   titl,
   e: 'AI Quantum Simulator Pro',
+=======
+
+};  titl,
+  e: 'AI Quantum Simulator Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
+  n: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$799;
+=======
+  e: $799
+>>>>>>> origin/main
       feature,
-  s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],
+  s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration],
       benefit,
-  s: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],
+  s: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress],
       marketPric,
+<<<<<<< HEAD
   e: '$1200-2500;
+=======
+  e: $1200-2500
+>>>>>>> origin/main
       categor,
-  y: 'Quantum Computing',
+  y: 'Quantum Computing,
       technologie,
-  s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Physics Research Assistant',
+=======
+
+};  titl,
+  e: 'AI Physics Research Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
+  n: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],
+  s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support],
       benefit,
-  s: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],
+  s: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Physics',
+  y: 'Physics,
       technologie,
-  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Multiverse & Parallel Realities;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7626,57 +13019,88 @@ return (
 };
   titl,
   e: 'AI Multiverse Explorer',
+=======
+
+};  titl,
+  e: 'AI Multiverse Explorer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
+  n: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$999;
+=======
+  e: $999
+>>>>>>> origin/main
       feature,
-  s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],
+  s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration],
       benefit,
-  s: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],
+  s: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights],
       marketPric,
+<<<<<<< HEAD
   e: '$1500-3000;
+=======
+  e: $1500-3000
+>>>>>>> origin/main
       categor,
-  y: 'Multiverse',
+  y: 'Multiverse,
       technologie,
-  s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Reality Manipulation Tool',
+=======
+
+};  titl,
+  e: 'AI Reality Manipulation Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
+  n: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$1299;
+=======
+  e: $1299
+>>>>>>> origin/main
       feature,
-  s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],
+  s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration],
       benefit,
-  s: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],
+  s: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights],
       marketPric,
+<<<<<<< HEAD
   e: '$2000-4000;
+=======
+  e: $2000-4000
+>>>>>>> origin/main
       categor,
-  y: 'Reality',
+  y: 'Reality,
       technologie,
-  s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
+  s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Transcendence & Enlightenment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7684,57 +13108,88 @@ return (
 };
   titl,
   e: 'AI Enlightenment Assistant',
+=======
+
+};  titl,
+  e: 'AI Enlightenment Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
+  n: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$599;
+=======
+  e: $599
+>>>>>>> origin/main
       feature,
-  s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],
+  s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support],
       benefit,
-  s: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],
+  s: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence],
       marketPric,
+<<<<<<< HEAD
   e: '$800-1500;
+=======
+  e: $800-1500
+>>>>>>> origin/main
       categor,
-  y: 'Enlightenment',
+  y: 'Enlightenment,
       technologie,
-  s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Transcendence Platform',
+=======
+
+};  titl,
+  e: 'AI Transcendence Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
+  n: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$999;
+=======
+  e: $999
+>>>>>>> origin/main
       feature,
-  s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],
+  s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support],
       benefit,
-  s: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],
+  s: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence],
       marketPric,
+<<<<<<< HEAD
   e: '$1500-3000;
+=======
+  e: $1500-3000
+>>>>>>> origin/main
       categor,
-  y: 'Transcendence',
+  y: 'Transcendence,
       technologie,
-  s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Universal Consciousness;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7742,57 +13197,88 @@ return (
 };
   titl,
   e: 'AI Universal Consciousness Connector',
+=======
+
+};  titl,
+  e: 'AI Universal Consciousness Connector,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
+  n: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$1999;
+=======
+  e: $1999
+>>>>>>> origin/main
       feature,
-  s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],
+  s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection],
       benefit,
-  s: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],
+  s: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness],
       marketPric,
+<<<<<<< HEAD
   e: '$3000-6000;
+=======
+  e: $3000-6000
+>>>>>>> origin/main
       categor,
-  y: 'Universal Consciousness',
+  y: 'Universal Consciousness,
       technologie,
-  s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Cosmic Intelligence Platform',
+=======
+
+};  titl,
+  e: 'AI Cosmic Intelligence Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
+  n: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$2999;
+=======
+  e: $2999
+>>>>>>> origin/main
       feature,
-  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],
+  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection],
       benefit,
-  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],
+  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness],
       marketPric,
+<<<<<<< HEAD
   e: '$5000-10000;
+=======
+  e: $5000-10000
+>>>>>>> origin/main
       categor,
-  y: 'Cosmic Intelligence',
+  y: 'Cosmic Intelligence,
       technologie,
-  s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Infinite Possibilities;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7800,115 +13286,182 @@ return (
 };
   titl,
   e: 'AI Infinite Possibility Generator',
+=======
+
+};  titl,
+  e: 'AI Infinite Possibility Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
+  n: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$4999;
+=======
+  e: $4999
+>>>>>>> origin/main
       feature,
-  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],
+  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth],
       benefit,
-  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],
+  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation],
       marketPric,
+<<<<<<< HEAD
   e: '$10000-20000;
+=======
+  e: $10000-20000
+>>>>>>> origin/main
       categor,
-  y: 'Infinite Possibilities',
+  y: 'Infinite Possibilities,
       technologie,
-  s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Ultimate Reality Creator',
+=======
+
+};  titl,
+  e: 'AI Ultimate Reality Creator,
+>>>>>>> origin/main
       descriptio,
-  n: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
+  n: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$9999;
+=======
+  e: $9999
+>>>>>>> origin/main
       feature,
-  s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],
+  s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power],
       benefit,
-  s: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],
+  s: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation],
       marketPric,
+<<<<<<< HEAD
   e: '$20000-50000;
+=======
+  e: $20000-50000
+>>>>>>> origin/main
       categor,
-  y: 'Ultimate Reality',
+  y: 'Ultimate Reality,
       technologie,
-  s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     }
+
   ];
+<<<<<<< HEAD
 const realEstateSaaS = []
+=======
+
+const realEstateSaaS = [;
+>>>>>>> origin/main
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Property Valuation Platform',
+=======
+
+};  titl,
+  e: 'AI Property Valuation Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced property valuation using machine learning and real estate data analysis.',
+  n: 'Advanced property valuation using machine learning and real estate data analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
+  s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations],
       benefit,
-  s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
+  s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate,
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Tenant Screening Platform',
+=======
+
+};  titl,
+  e: 'AI Tenant Screening Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
+  n: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
+  s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening],
       benefit,
-  s: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
+  s: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Property Management',
+  y: 'Property Management,
       technologie,
-  s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Agriculture & Food Tech;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7916,57 +13469,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Crop Monitoring System',
+=======
+
+};  titl,
+  e: 'AI Crop Monitoring System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
+  n: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],
+  s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics],
       benefit,
-  s: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],
+  s: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Agriculture',
+  y: 'Agriculture,
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Food Safety Inspector',
+=======
+
+};  titl,
+  e: 'AI Food Safety Inspector,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
+  n: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],
+  s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system],
       benefit,
-  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
+  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Food Safety',
+  y: 'Food Safety,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Transportation & Logistics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -7974,57 +13558,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Route Optimization Pro',
+=======
+
+};  titl,
+  e: 'AI Route Optimization Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
+  n: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],
+  s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis],
       benefit,
-  s: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],
+  s: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Logistics',
+  y: 'Logistics,
       technologie,
-  s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Fleet Maintenance Predictor',
+=======
+
+};  titl,
+  e: 'AI Fleet Maintenance Predictor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
+  n: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],
+  s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management],
       benefit,
-  s: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],
+  s: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Fleet Management',
+  y: 'Fleet Management,
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Energy & Sustainability;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8032,57 +13647,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Energy Management System',
+=======
+
+};  titl,
+  e: 'AI Energy Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
+  n: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],
+  s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid],
       benefit,
-  s: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],
+  s: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Energy Management',
+  y: 'Energy Management,
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Carbon Footprint Tracker',
+=======
+
+};  titl,
+  e: 'AI Carbon Footprint Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
+  n: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],
+  s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification],
       benefit,
-  s: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],
+  s: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Sustainability',
+  y: 'Sustainability,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Entertainment & Media;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8090,57 +13736,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Content Moderation Suite',
+=======
+
+};  titl,
+  e: 'AI Content Moderation Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
+  n: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],
+  s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules],
       benefit,
-  s: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],
+  s: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Content Moderation',
+  y: 'Content Moderation,
       technologie,
-  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Video Editor Pro',
+=======
+
+};  titl,
+  e: 'AI Video Editor Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
+  n: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],
+  s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization],
       benefit,
-  s: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],
+  s: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Video Production',
+  y: 'Video Production,
       technologie,
-  s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
+  s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Security & Surveillance;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8148,57 +13825,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Security Camera System',
+=======
+
+};  titl,
+  e: 'AI Security Camera System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
+  n: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],
+  s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app],
       benefit,
-  s: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],
+  s: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Security',
+  y: 'Security,
       technologie,
-  s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Fraud Detection Engine',
+=======
+
+};  titl,
+  e: 'AI Fraud Detection Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
+  n: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],
+  s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning],
       benefit,
-  s: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],
+  s: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Fraud Prevention',
+  y: 'Fraud Prevention,
       technologie,
-  s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8206,85 +13914,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Research Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Research Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
+  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking],
       benefit,
-  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
+  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Research',
+  y: 'Research,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Patent Search Engine',
+=======
+
+};  titl,
+  e: 'AI Patent Search Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
+  n: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],
+  s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking],
       benefit,
-  s: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],
+  s: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Intellectual Property',
+  y: 'Intellectual Property,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Compliance Monitoring Suite',
+=======
+
+};  titl,
+  e: 'AI Compliance Monitoring Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
+  n: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
+  s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting],
       benefit,
-  s: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],
+  s: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Compliance',
+  y: 'Compliance,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Real Estate & Property;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8292,57 +14046,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Real Estate Analyzer Pro',
+=======
+
+};  titl,
+  e: 'AI Real Estate Analyzer Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
+  n: 'Advanced property analysis with market trends, investment potential, and automated valuations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
+  s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis],
       benefit,
-  s: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],
+  s: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate,
       technologie,
-  s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Property Management System',
+=======
+
+};  titl,
+  e: 'AI Property Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
+  n: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
+  s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools],
       benefit,
-  s: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],
+  s: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI HR & Recruitment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8350,57 +14135,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI HR Recruitment Suite',
+=======
+
+};  titl,
+  e: 'AI HR Recruitment Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
+  n: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
+  s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks],
       benefit,
-  s: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],
+  s: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Employee Performance Tracker',
+=======
+
+};  titl,
+  e: 'AI Employee Performance Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
+  s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system],
       benefit,
-  s: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],
+  s: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Project Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8408,57 +14224,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Project Manager Pro',
+=======
+
+};  titl,
+  e: 'AI Project Manager Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
+  n: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],
+  s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting],
       benefit,
-  s: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],
+  s: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Project Management',
+  y: 'Project Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Task Automation Suite',
+=======
+
+};  titl,
+  e: 'AI Task Automation Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
+  n: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],
+  s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications],
       benefit,
-  s: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],
+  s: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Project Management',
+  y: 'Project Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Supply Chain & Logistics;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8466,57 +14313,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Supply Chain Optimizer',
+=======
+
+};  titl,
+  e: 'AI Supply Chain Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+  n: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
+  s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking],
       benefit,
-  s: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
+  s: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain,
       technologie,
-  s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+  s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Warehouse Management System',
+=======
+
+};  titl,
+  e: 'AI Warehouse Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
+  n: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
+  s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard],
       benefit,
-  s: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],
+  s: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Agriculture & Food Tech;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8524,57 +14402,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Precision Agriculture Platform',
+=======
+
+};  titl,
+  e: 'AI Precision Agriculture Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+  n: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
+  s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization],
       benefit,
-  s: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],
+  s: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Agriculture',
+  y: 'Agriculture,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Food Safety Monitor',
+=======
+
+};  titl,
+  e: 'AI Food Safety Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated food safety inspection with contamination detection and quality control.',
+  n: 'Automated food safety inspection with contamination detection and quality control.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
+  s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system],
       benefit,
-  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
+  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Food Tech',
+  y: 'Food Tech,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Energy & Sustainability;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8582,57 +14491,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Energy Management System',
+=======
+
+};  titl,
+  e: 'AI Energy Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
+  n: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
+  s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking],
       benefit,
-  s: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],
+  s: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Energy',
+  y: 'Energy,
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Carbon Footprint Tracker',
+=======
+
+};  titl,
+  e: 'AI Carbon Footprint Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
+  n: 'Automated carbon footprint monitoring and reduction recommendations for businesses.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
+  s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement],
       benefit,
-  s: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],
+  s: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Sustainability',
+  y: 'Sustainability,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Gaming & Entertainment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8640,57 +14580,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Game Development Suite',
+=======
+
+};  titl,
+  e: 'AI Game Development Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
+  n: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
+  s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization],
       benefit,
-  s: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],
+  s: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Gaming',
+  y: 'Gaming,
       technologie,
-  s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
+  s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Content Moderation Platform',
+=======
+
+};  titl,
+  e: 'AI Content Moderation Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
+  n: 'Automated content moderation with toxicity detection, spam filtering, and community management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
+  s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring],
       benefit,
-  s: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],
+  s: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Content Moderation',
+  y: 'Content Moderation,
       technologie,
-  s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
+  s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Transportation & Mobility;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8698,57 +14669,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Fleet Management System',
+=======
+
+};  titl,
+  e: 'AI Fleet Management System,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
+  n: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$349;
+=======
+  e: $349
+>>>>>>> origin/main
       feature,
-  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
+  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard],
       benefit,
-  s: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
+  s: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Transportation',
+  y: 'Transportation,
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Traffic Management Platform',
+=======
+
+};  titl,
+  e: 'AI Traffic Management Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
+  n: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$499;
+=======
+  e: $499
+>>>>>>> origin/main
       feature,
-  s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
+  s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts],
       benefit,
-  s: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],
+  s: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety],
       marketPric,
+<<<<<<< HEAD
   e: '$800-1500;
+=======
+  e: $800-1500
+>>>>>>> origin/main
       categor,
-  y: 'Smart Cities',
+  y: 'Smart Cities,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8756,57 +14758,88 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Research Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Research Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
+  n: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+  s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking],
       benefit,
-  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
+  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Research',
+  y: 'Research,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Patent Analysis Tool',
+=======
+
+};  titl,
+  e: 'AI Patent Analysis Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
+  n: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
+  s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment],
       benefit,
-  s: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],
+  s: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement],
       marketPric,
+<<<<<<< HEAD
   e: '$500-1000;
+=======
+  e: $500-1000
+>>>>>>> origin/main
       categor,
-  y: 'Intellectual Property',
+  y: 'Intellectual Property,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Personal Productivity;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -8814,482 +14847,768 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Personal Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Personal Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
+  n: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
+  s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights],
       benefit,
-  s: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],
+  s: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Personal Productivity',
+  y: 'Personal Productivity,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Meeting Assistant',
+=======
+
+};  titl,
+  e: 'AI Meeting Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
+  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration],
       benefit,
-  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],
+  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Meeting Management',
+  y: 'Meeting Management,
       technologie,
-  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Insurance Underwriting Assistant',
+=======
+
+};  titl,
+  e: 'AI Insurance Underwriting Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
+  n: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],
+  s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard],
       benefit,
-  s: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
+  s: ['Assess risks', 'Optimize pricing', 'Recommend policies],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Insurance Underwriting',
+  y: 'Insurance Underwriting,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Onboarding Platform',
+=======
+
+};  titl,
+  e: 'AI Customer Onboarding Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
+  n: 'Automated customer onboarding with identity verification, document processing, and compliance checking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],
+  s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard],
       benefit,
-  s: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
+  s: ['Automate onboarding', 'Verify identity', 'Ensure compliance],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Customer Onboarding',
+  y: 'Customer Onboarding,
       technologie,
-  s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Retention Manager',
+=======
+
+};  titl,
+  e: 'AI Customer Retention Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
+  n: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],
+  s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard],
       benefit,
-  s: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
+  s: ['Predict churn', 'Optimize engagement', 'Increase loyalty],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Retention',
+  y: 'Customer Retention,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Support Optimizer',
+=======
+
+};  titl,
+  e: 'AI Customer Support Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
+  n: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$119;
+=======
+  e: $119
+>>>>>>> origin/main
       feature,
-  s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],
+  s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard],
       benefit,
-  s: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
+  s: ['Optimize support', 'Improve satisfaction', 'Automate responses],
       marketPric,
+<<<<<<< HEAD
   e: '$180-350;
+=======
+  e: $180-350
+>>>>>>> origin/main
       categor,
-  y: 'Customer Support',
+  y: 'Customer Support,
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Feedback Analyzer',
+=======
+
+};  titl,
+  e: 'AI Customer Feedback Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
+  n: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],
+  s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard],
       benefit,
-  s: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
+  s: ['Analyze feedback', 'Identify trends', 'Recommend actions],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Customer Feedback',
+  y: 'Customer Feedback,
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Journey Mapper',
+=======
+
+};  titl,
+  e: 'AI Customer Journey Mapper,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
+  n: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],
+  s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard],
       benefit,
-  s: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
+  s: ['Map journeys', 'Optimize touchpoints', 'Enhance experience],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Customer Journey',
+  y: 'Customer Journey,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Lifetime Value Predictor',
+=======
+
+};  titl,
+  e: 'AI Customer Lifetime Value Predictor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
+  n: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$139;
+=======
+  e: $139
+>>>>>>> origin/main
       feature,
-  s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],
+  s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard],
       benefit,
-  s: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
+  s: ['Predict CLV', 'Segment customers', 'Optimize targeting],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Segmentation Engine',
+=======
+
+};  titl,
+  e: 'AI Customer Segmentation Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
+  n: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$119;
+=======
+  e: $119
+>>>>>>> origin/main
       feature,
-  s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],
+  s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard],
       benefit,
-  s: ['Segment customers', 'Create personas', 'Optimize targeting'],
+  s: ['Segment customers', 'Create personas', 'Optimize targeting],
       marketPric,
+<<<<<<< HEAD
   e: '$180-350;
+=======
+  e: $180-350
+>>>>>>> origin/main
       categor,
-  y: 'Customer Segmentation',
+  y: 'Customer Segmentation,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Personalization Engine',
+=======
+
+};  titl,
+  e: 'AI Customer Personalization Engine,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
+  n: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$159;
+=======
+  e: $159
+>>>>>>> origin/main
       feature,
-  s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],
+  s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard],
       benefit,
-  s: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
+  s: ['Personalize experiences', 'Recommend content', 'Optimize engagement],
       marketPric,
+<<<<<<< HEAD
   e: '$250-450;
+=======
+  e: $250-450
+>>>>>>> origin/main
       categor,
-  y: 'Customer Personalization',
+  y: 'Customer Personalization,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Data Platform',
+=======
+
+};  titl,
+  e: 'AI Customer Data Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
+  n: 'Unified customer data management with integration, cleansing, and analytics capabilities.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],
+  s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard],
       benefit,
-  s: ['Integrate data', 'Clean data', 'Enable analytics'],
+  s: ['Integrate data', 'Clean data', 'Enable analytics],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Customer Data',
+  y: 'Customer Data,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Privacy Manager',
+=======
+
+};  titl,
+  e: 'AI Customer Privacy Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
+  n: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],
+  s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard],
       benefit,
-  s: ['Track consent', 'Protect data', 'Ensure compliance'],
+  s: ['Track consent', 'Protect data', 'Ensure compliance],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Customer Privacy',
+  y: 'Customer Privacy,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Communication Manager',
+=======
+
+};  titl,
+  e: 'AI Customer Communication Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
+  n: 'Smart communication management with channel optimization, message personalization, and engagement tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],
+  s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard],
       benefit,
-  s: ['Optimize channels', 'Personalize messages', 'Track engagement'],
+  s: ['Optimize channels', 'Personalize messages', 'Track engagement],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Communication',
+  y: 'Customer Communication,
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Experience Optimizer',
+=======
+
+};  titl,
+  e: 'AI Customer Experience Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
+  n: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$159;
+=======
+  e: $159
+>>>>>>> origin/main
       feature,
-  s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],
+  s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard],
       benefit,
-  s: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
+  s: ['Map experiences', 'Recommend improvements', 'Track satisfaction],
       marketPric,
+<<<<<<< HEAD
   e: '$250-450;
+=======
+  e: $250-450
+>>>>>>> origin/main
       categor,
-  y: 'Customer Experience',
+  y: 'Customer Experience,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Success Manager',
+=======
+
+};  titl,
+  e: 'AI Customer Success Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
+  n: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],
+  s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard],
       benefit,
-  s: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
+  s: ['Score health', 'Recommend interventions', 'Optimize outcomes],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Customer Success',
+  y: 'Customer Success,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Advocacy Platform',
+=======
+
+};  titl,
+  e: 'AI Customer Advocacy Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
+  n: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$139;
+=======
+  e: $139
+>>>>>>> origin/main
       feature,
-  s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],
+  s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard],
       benefit,
-  s: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
+  s: ['Track referrals', 'Collect testimonials', 'Optimize advocacy],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Advocacy',
+  y: 'Customer Advocacy,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Insights Platform',
+=======
+
+};  titl,
+  e: 'AI Customer Insights Platform,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
+  n: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],
+  s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard],
       benefit,
-  s: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
+  s: ['Analyze behavior', 'Identify trends', 'Provide recommendations],
       marketPric,
+<<<<<<< HEAD
   e: '$200-500;
+=======
+  e: $200-500
+>>>>>>> origin/main
       categor,
-  y: 'Customer Insights',
+  y: 'Customer Insights,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Intelligence Suite',
+=======
+
+};  titl,
+  e: 'AI Customer Intelligence Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
+  n: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],
+  s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard],
       benefit,
-  s: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
+  s: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Customer Intelligence',
+  y: 'Customer Intelligence,
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models]
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -9297,311 +15616,501 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI-Powered Meeting Transcriber',
+=======
+
+};  titl,
+  e: 'AI-Powered Meeting Transcriber,
+>>>>>>> origin/main
       descriptio,
-  n: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
+  n: 'Real-time meeting transcription with action item extraction and intelligent summarization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],
+  s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars],
       benefit,
+<<<<<<< HEAD
   s: ['Save 5+ hours;
       marketPric,
   e: '$120-250;
+=======
+  s: [Save 5+ hours
+      marketPric,
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+  s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Expense Tracker AI',
+=======
+
+};  titl,
+  e: 'Smart Expense Tracker AI,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
+  n: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],
+  s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support],
       benefit,
+<<<<<<< HEAD
   s: ['Save 10+ hours;
       marketPric,
   e: '$150-300;
+=======
+  s: [Save 10+ hours
+      marketPric,
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Finance',
+  y: 'Finance,
       technologie,
-  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Password Manager',
+=======
+
+};  titl,
+  e: 'AI-Powered Password Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
+  n: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],
+  s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration],
       benefit,
-  s: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
+  s: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Security',
+  y: 'Security,
       technologie,
-  s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+  s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Time Tracking Assistant',
+=======
+
+};  titl,
+  e: 'Smart Time Tracking Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered time tracking with automatic project detection and productivity insights.',
+  n: 'AI-powered time tracking with automatic project detection and productivity insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$69;
+=======
+  e: $69
+>>>>>>> origin/main
       feature,
-  s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],
+  s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools],
       benefit,
-  s: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
+  s: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Logo Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Logo Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Professional logo creation with brand analysis and unlimited variations using AI.',
+  n: 'Professional logo creation with brand analysis and unlimited variations using AI.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],
+  s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines],
       benefit,
-  s: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
+  s: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Design',
+  y: 'Design,
       technologie,
-  s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+  s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Invoice Generator',
+=======
+
+};  titl,
+  e: 'Smart Invoice Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
+  n: 'Automated invoice creation with payment tracking, reminders, and financial analytics.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],
+  s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support],
       benefit,
-  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
+  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Finance',
+  y: 'Finance,
       technologie,
-  s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+  s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Website Builder',
+=======
+
+};  titl,
+  e: 'AI-Powered Website Builder,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
+  n: 'Intelligent website creation with content generation, SEO optimization, and responsive design.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],
+  s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard],
       benefit,
-  s: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
+  s: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Web Development',
+  y: 'Web Development,
       technologie,
-  s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+  s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Contract Generator',
+=======
+
+};  titl,
+  e: 'Smart Contract Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered legal document creation with template customization and compliance checking.',
+  n: 'AI-powered legal document creation with template customization and compliance checking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],
+  s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control],
       benefit,
-  s: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
+  s: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Legal',
+  y: 'Legal,
       technologie,
-  s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+  s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Email Signature Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Email Signature Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Professional email signature creation with brand consistency and contact management.',
+  n: 'Professional email signature creation with brand consistency and contact management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$39;
+=======
+  e: $39
+>>>>>>> origin/main
       feature,
-  s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],
+  s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking],
       benefit,
-  s: ['Professional email presence', 'Consistent branding', 'Easy team management'],
+  s: ['Professional email presence', 'Consistent branding', 'Easy team management],
       marketPric,
+<<<<<<< HEAD
   e: '$60-120;
+=======
+  e: $60-120
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+  s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart QR Code Generator',
+=======
+
+};  titl,
+  e: 'Smart QR Code Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
+  n: 'Advanced QR code creation with analytics, customization, and dynamic content management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],
+  s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration],
       benefit,
-  s: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
+  s: ['Track engagement', 'Customize branding', 'Manage campaigns effectively],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Color Palette Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Color Palette Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
+  n: 'Intelligent color scheme creation with accessibility checking and brand analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],
+  s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis],
       benefit,
-  s: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
+  s: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Design',
+  y: 'Design,
       technologie,
-  s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Business Card Designer',
+=======
+
+};  titl,
+  e: 'Smart Business Card Designer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered business card creation with professional templates and contact management.',
+  n: 'AI-powered business card creation with professional templates and contact management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],
+  s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions],
       benefit,
-  s: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
+  s: ['Professional business cards', 'Consistent branding', 'Easy contact sharing],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Design',
+  y: 'Design,
       technologie,
-  s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+  s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Newsletter Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Newsletter Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated newsletter creation with content curation and subscriber analytics.',
+  n: 'Automated newsletter creation with content curation and subscriber analytics.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
       feature,
   s: ['Content curation', 'AI writing', 'Subscriber analytics', 'A;
@@ -9609,38 +16118,64 @@ const realEstateSaaS = []
   s: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours;
       marketPric,
   e: '$150-300;
+=======
+  e: $99
+      feature,
+  s: ['Content curation', 'AI writing', 'Subscriber analytics', A
+      benefit,
+  s: ['Create engaging newsletters', 'Increase subscriber engagement', Save 15+ hours
+      marketPric,
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Marketing',
+  y: 'Marketing,
       technologie,
-  s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+  s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart PDF Converter Pro',
+=======
+
+};  titl,
+  e: 'Smart PDF Converter Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
+  n: 'Advanced PDF conversion with OCR, form filling, and document optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],
+  s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing],
       benefit,
-  s: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
+  s: ['Convert any document format', 'Extract text from images', 'Optimize file sizes],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+  s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -9649,73 +16184,124 @@ const realEstateSaaS = []
   e: 'AI-Powered Video Thumbnail Generator',
       descriptio,
   n: 'Intelligent thumbnail creation with A;
+=======
+
+};  titl,
+  e: 'AI-Powered Video Thumbnail Generator,
+      descriptio,
+  n: Intelligent thumbnail creation with A
+>>>>>>> origin/main
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
       feature,
   s: ['AI thumbnail generation', 'A;
+=======
+  e: $79
+      feature,
+  s: ['AI thumbnail generation', A
+>>>>>>> origin/main
       benefit,
-  s: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
+  s: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Video Marketing',
+  y: 'Video Marketing,
       technologie,
-  s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+  s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Social Media Scheduler',
+=======
+
+};  titl,
+  e: 'Smart Social Media Scheduler,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered social media scheduling with optimal timing and content optimization.',
+  n: 'AI-powered social media scheduling with optimal timing and content optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$119;
+=======
+  e: $119
+>>>>>>> origin/main
       feature,
-  s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],
+  s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research],
       benefit,
+<<<<<<< HEAD
   s: ['Increase engagement by 60%', 'Save 20+ hours;
       marketPric,
   e: '$200-400;
+=======
+  s: ['Increase engagement by 60%', Save 20+ hours
+      marketPric,
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Social Media',
+  y: 'Social Media,
       technologie,
-  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Hashtag Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Hashtag Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent hashtag research and generation for maximum social media reach.',
+  n: 'Intelligent hashtag research and generation for maximum social media reach.,
       ico,
-  n: '#',
+  n: '#,
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],
+  s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation],
       benefit,
-  s: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
+  s: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Social Media',
+  y: 'Social Media,
       technologie,
-  s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -9724,1100 +16310,1780 @@ const realEstateSaaS = []
   e: 'Smart Email Template Builder',
       descriptio,
   n: 'AI-powered email template creation with responsive design and A;
+=======
+
+};  titl,
+  e: 'Smart Email Template Builder,
+      descriptio,
+  n: AI-powered email template creation with responsive design and A
+>>>>>>> origin/main
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
       feature,
   s: ['AI template generation', 'Responsive design', 'A;
+=======
+  e: $89
+      feature,
+  s: ['AI template generation', 'Responsive design', A
+>>>>>>> origin/main
       benefit,
-  s: ['Create professional emails', 'Improve open rates', 'Consistent branding'],
+  s: ['Create professional emails', 'Improve open rates', 'Consistent branding],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Email Marketing',
+  y: 'Email Marketing,
       technologie,
+<<<<<<< HEAD
   s: ['Email APIs', 'React', 'Node.js', 'A;
+=======
+  s: ['Email APIs', 'React', 'Node.js', A
+>>>>>>> origin/main
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Competitor Analysis Tool',
+=======
+
+};  titl,
+  e: 'AI-Powered Competitor Analysis Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive competitor research with pricing analysis and market insights.',
+  n: 'Comprehensive competitor research with pricing analysis and market insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],
+  s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system],
       benefit,
-  s: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
+  s: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Market Research',
+  y: 'Market Research,
       technologie,
-  s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Customer Feedback Analyzer',
+=======
+
+};  titl,
+  e: 'Smart Customer Feedback Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
+  n: 'AI-powered sentiment analysis and feedback categorization for customer insights.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],
+  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics],
       benefit,
+<<<<<<< HEAD
   s: ['Understand customer sentiment', 'Improve products;
       marketPric,
   e: '$200-400;
+=======
+  s: ['Understand customer sentiment', Improve products
+      marketPric,
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics,
       technologie,
-  s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+  s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Landing Page Optimizer',
+=======
+
+};  titl,
+  e: 'AI-Powered Landing Page Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent landing page testing and optimization for maximum conversion rates.',
+  n: 'Intelligent landing page testing and optimization for maximum conversion rates.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
       feature,
   s: ['A;
+=======
+  e: $149
+      feature,
+  s: [A
+>>>>>>> origin/main
       benefit,
-  s: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],
+  s: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Conversion Optimization',
+  y: 'Conversion Optimization,
       technologie,
+<<<<<<< HEAD
   s: ['A;
+=======
+  s: [A
+>>>>>>> origin/main
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Inventory Photo Manager',
+=======
+
+};  titl,
+  e: 'Smart Inventory Photo Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered product photo organization, editing, and optimization for e-commerce.',
+  n: 'AI-powered product photo organization, editing, and optimization for e-commerce.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],
+  s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing],
       benefit,
+<<<<<<< HEAD
   s: ['Professional product photos', 'Save 20+ hours;
       marketPric,
   e: '$150-300;
+=======
+  s: ['Professional product photos', Save 20+ hours
+      marketPric,
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce,
       technologie,
-  s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Price Monitoring Tool',
+=======
+
+};  titl,
+  e: 'AI-Powered Price Monitoring Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated price tracking and alerts for competitive pricing strategies.',
+  n: 'Automated price tracking and alerts for competitive pricing strategies.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],
+  s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization],
       benefit,
-  s: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
+  s: ['Stay competitive', 'Optimize pricing', 'Increase profit margins],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce,
       technologie,
-  s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+  s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Appointment Scheduler',
+=======
+
+};  titl,
+  e: 'Smart Appointment Scheduler,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered scheduling with time zone handling and automated reminders.',
+  n: 'AI-powered scheduling with time zone handling and automated reminders.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$69;
+=======
+  e: $69
+>>>>>>> origin/main
       feature,
-  s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],
+  s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing],
       benefit,
-  s: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
+  s: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Scheduling',
+  y: 'Scheduling,
       technologie,
-  s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+  s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Resume Builder',
+=======
+
+};  titl,
+  e: 'AI-Powered Resume Builder,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
+  n: 'Intelligent resume creation with ATS optimization and industry-specific templates.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],
+  s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export],
       benefit,
-  s: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
+  s: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Career Tools',
+  y: 'Career Tools,
       technologie,
-  s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+  s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Weather API Service',
+=======
+
+};  titl,
+  e: 'Smart Weather API Service,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
+  n: 'Advanced weather data with AI-powered forecasts and business impact analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],
+  s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts],
       benefit,
-  s: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
+  s: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Weather Services',
+  y: 'Weather Services,
       technologie,
-  s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Translation Service',
+=======
+
+};  titl,
+  e: 'AI-Powered Translation Service,
+>>>>>>> origin/main
       descriptio,
-  n: 'Real-time translation with context awareness and industry-specific terminology.',
+  n: 'Real-time translation with context awareness and industry-specific terminology.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],
+  s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration],
       benefit,
-  s: ['Break language barriers', 'Improve global reach', 'Professional translations'],
+  s: ['Break language barriers', 'Improve global reach', 'Professional translations],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Translation',
+  y: 'Translation,
       technologie,
-  s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Data Backup Service',
+=======
+
+};  titl,
+  e: 'Smart Data Backup Service,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated data backup with AI-powered deduplication and recovery optimization.',
+  n: 'Automated data backup with AI-powered deduplication and recovery optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],
+  s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption],
       benefit,
-  s: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
+  s: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Data Management',
+  y: 'Data Management,
       technologie,
-  s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Form Builder',
+=======
+
+};  titl,
+  e: 'AI-Powered Form Builder,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent form creation with conditional logic and response analysis.',
+  n: 'Intelligent form creation with conditional logic and response analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],
+  s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling],
       benefit,
-  s: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
+  s: ['Create complex forms easily', 'Gather better data', 'Improve user experience],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Form Management',
+  y: 'Form Management,
       technologie,
-  s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Uptime Monitor',
+=======
+
+};  titl,
+  e: 'Smart Uptime Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered website monitoring with predictive alerts and performance optimization.',
+  n: 'AI-powered website monitoring with predictive alerts and performance optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$69;
+=======
+  e: $69
+>>>>>>> origin/main
       feature,
-  s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],
+  s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports],
       benefit,
-  s: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
+  s: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Monitoring',
+  y: 'Monitoring,
       technologie,
-  s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Survey Creator',
+=======
+
+};  titl,
+  e: 'AI-Powered Survey Creator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent survey design with question optimization and response analysis.',
+  n: 'Intelligent survey design with question optimization and response analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],
+  s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics],
       benefit,
-  s: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
+  s: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Survey Tools',
+  y: 'Survey Tools,
       technologie,
-  s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart File Converter',
+=======
+
+};  titl,
+  e: 'Smart File Converter,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered file conversion with format optimization and quality enhancement.',
+  n: 'AI-powered file conversion with format optimization and quality enhancement.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],
+  s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access],
       benefit,
-  s: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
+  s: ['Convert any file format', 'Maintain quality', 'Process files in bulk],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'File Management',
+  y: 'File Management,
       technologie,
-  s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered QR Code Scanner',
+=======
+
+};  titl,
+  e: 'AI-Powered QR Code Scanner,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
+  n: 'Advanced QR code scanning with analytics, customization, and business intelligence.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],
+  s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration],
       benefit,
-  s: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
+  s: ['Track QR code performance', 'Customize designs', 'Gather business insights],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'QR Code Tools',
+  y: 'QR Code Tools,
       technologie,
-  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Password Generator',
+=======
+
+};  titl,
+  e: 'Smart Password Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered password creation with security analysis and breach monitoring.',
+  n: 'AI-powered password creation with security analysis and breach monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$39;
+=======
+  e: $39
+>>>>>>> origin/main
       feature,
-  s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],
+  s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs],
       benefit,
-  s: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
+  s: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management],
       marketPric,
+<<<<<<< HEAD
   e: '$60-120;
+=======
+  e: $60-120
+>>>>>>> origin/main
       categor,
-  y: 'Security',
+  y: 'Security,
       technologie,
-  s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Color Picker',
+=======
+
+};  titl,
+  e: 'AI-Powered Color Picker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent color selection with accessibility checking and brand analysis.',
+  n: 'Intelligent color selection with accessibility checking and brand analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],
+  s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options],
       benefit,
-  s: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
+  s: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Design Tools',
+  y: 'Design Tools,
       technologie,
-  s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+  s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Text Summarizer',
+=======
+
+};  titl,
+  e: 'Smart Text Summarizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered text summarization with key point extraction and multi-language support.',
+  n: 'AI-powered text summarization with key point extraction and multi-language support.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$69;
+=======
+  e: $69
+>>>>>>> origin/main
       feature,
-  s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],
+  s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration],
       benefit,
-  s: ['Save reading time', 'Extract key insights', 'Process large documents'],
+  s: ['Save reading time', 'Extract key insights', 'Process large documents],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Text Processing',
+  y: 'Text Processing,
       technologie,
-  s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Image Resizer',
+=======
+
+};  titl,
+  e: 'AI-Powered Image Resizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent image resizing with quality optimization and batch processing.',
+  n: 'Intelligent image resizing with quality optimization and batch processing.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],
+  s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration],
       benefit,
-  s: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
+  s: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Image Processing',
+  y: 'Image Processing,
       technologie,
-  s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart URL Shortener',
+=======
+
+};  titl,
+  e: 'Smart URL Shortener,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered URL shortening with analytics, customization, and link management.',
+  n: 'AI-powered URL shortening with analytics, customization, and link management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$39;
+=======
+  e: $39
+>>>>>>> origin/main
       feature,
-  s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],
+  s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access],
       benefit,
-  s: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
+  s: ['Track link performance', 'Customize URLs', 'Manage campaigns],
       marketPric,
+<<<<<<< HEAD
   e: '$60-120;
+=======
+  e: $60-120
+>>>>>>> origin/main
       categor,
-  y: 'URL Management',
+  y: 'URL Management,
       technologie,
-  s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+  s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Favicon Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Favicon Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent favicon creation with brand analysis and multiple format generation.',
+  n: 'Intelligent favicon creation with brand analysis and multiple format generation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],
+  s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization],
       benefit,
-  s: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
+  s: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'Web Development',
+  y: 'Web Development,
       technologie,
-  s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+  s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Meta Tag Generator',
+=======
+
+};  titl,
+  e: 'Smart Meta Tag Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
+  n: 'AI-powered SEO meta tag creation with optimization and performance tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$59;
+=======
+  e: $59
+>>>>>>> origin/main
       feature,
-  s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],
+  s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs],
       benefit,
-  s: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
+  s: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Sitemap Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Sitemap Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
+  n: 'Intelligent sitemap creation with SEO optimization and search engine submission.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$69;
+=======
+  e: $69
+>>>>>>> origin/main
       feature,
-  s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],
+  s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration],
       benefit,
-  s: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
+  s: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Robots.txt Generator',
+=======
+
+};  titl,
+  e: 'Smart Robots.txt Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
+  n: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$39;
+=======
+  e: $39
+>>>>>>> origin/main
       feature,
-  s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],
+  s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates],
       benefit,
-  s: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
+  s: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues],
       marketPric,
+<<<<<<< HEAD
   e: '$60-120;
+=======
+  e: $60-120
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Schema Markup Generator',
+=======
+
+};  titl,
+  e: 'AI-Powered Schema Markup Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent schema markup creation for enhanced search engine visibility.',
+  n: 'Intelligent schema markup creation for enhanced search engine visibility.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],
+  s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs],
       benefit,
-  s: ['Improve search visibility', 'Rich snippets', 'Better search results'],
+  s: ['Improve search visibility', 'Rich snippets', 'Better search results],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Alt Text Generator',
+=======
+
+};  titl,
+  e: 'Smart Alt Text Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
+  n: 'AI-powered alt text creation for images with SEO optimization and accessibility.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$49;
+=======
+  e: $49
+>>>>>>> origin/main
       feature,
-  s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],
+  s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring],
       benefit,
-  s: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
+  s: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text],
       marketPric,
+<<<<<<< HEAD
   e: '$80-150;
+=======
+  e: $80-150
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Internal Link Optimizer',
+=======
+
+};  titl,
+  e: 'AI-Powered Internal Link Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
+  n: 'Intelligent internal linking strategy with SEO optimization and performance tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],
+  s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration],
       benefit,
-  s: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
+  s: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Keyword Density Analyzer',
+=======
+
+};  titl,
+  e: 'Smart Keyword Density Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
+  n: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],
+  s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting],
       benefit,
-  s: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
+  s: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Page Speed Optimizer',
+=======
+
+};  titl,
+  e: 'AI-Powered Page Speed Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent page speed optimization with performance monitoring and recommendations.',
+  n: 'Intelligent page speed optimization with performance monitoring and recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],
+  s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting],
       benefit,
-  s: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
+  s: ['Improve page speed', 'Better user experience', 'Higher search rankings],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Performance Optimization',
+  y: 'Performance Optimization,
       technologie,
-  s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Core Web Vitals Monitor',
+=======
+
+};  titl,
+  e: 'Smart Core Web Vitals Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
+  n: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],
+  s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting],
       benefit,
-  s: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
+  s: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Performance Monitoring',
+  y: 'Performance Monitoring,
       technologie,
-  s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Mobile Optimization Tool',
+=======
+
+};  titl,
+  e: 'AI-Powered Mobile Optimization Tool,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
+  n: 'Intelligent mobile optimization with responsive design analysis and performance improvements.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$119;
+=======
+  e: $119
+>>>>>>> origin/main
       feature,
-  s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],
+  s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing],
       benefit,
-  s: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
+  s: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Mobile Optimization',
+  y: 'Mobile Optimization,
       technologie,
-  s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+  s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Local SEO Optimizer',
+=======
+
+};  titl,
+  e: 'Smart Local SEO Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
+  n: 'AI-powered local SEO optimization with Google My Business management and review monitoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],
+  s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting],
       benefit,
-  s: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
+  s: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Local SEO',
+  y: 'Local SEO,
       technologie,
-  s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+  s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Competitor SEO Analyzer',
+=======
+
+};  titl,
+  e: 'AI-Powered Competitor SEO Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
+  n: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],
+  s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting],
       benefit,
-  s: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
+  s: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Competitive Analysis',
+  y: 'Competitive Analysis,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Backlink Analyzer',
+=======
+
+};  titl,
+  e: 'Smart Backlink Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
+  n: 'AI-powered backlink analysis with quality assessment and link building recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],
+  s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring],
       benefit,
-  s: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
+  s: ['Analyze backlink profile', 'Improve link quality', 'Build better links],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Link Building',
+  y: 'Link Building,
       technologie,
-  s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Content Gap Analyzer',
+=======
+
+};  titl,
+  e: 'AI-Powered Content Gap Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
+  n: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],
+  s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning],
       benefit,
-  s: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
+  s: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Content Strategy',
+  y: 'Content Strategy,
       technologie,
-  s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Technical SEO Auditor',
+=======
+
+};  titl,
+  e: 'Smart Technical SEO Auditor,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
+  n: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],
+  s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting],
       benefit,
-  s: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
+  s: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Technical SEO',
+  y: 'Technical SEO,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered E-commerce SEO Optimizer',
+=======
+
+};  titl,
+  e: 'AI-Powered E-commerce SEO Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
+  n: 'Intelligent e-commerce SEO optimization with product page optimization and category management.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],
+  s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking],
       benefit,
-  s: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
+  s: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'E-commerce SEO',
+  y: 'E-commerce SEO,
       technologie,
-  s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+  s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Voice Search Optimizer',
+=======
+
+};  titl,
+  e: 'Smart Voice Search Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
+  n: 'AI-powered voice search optimization with conversational content and featured snippet optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],
+  s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics],
       benefit,
-  s: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
+  s: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Voice Search SEO',
+  y: 'Voice Search SEO,
       technologie,
-  s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+  s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Video SEO Optimizer',
+=======
+
+};  titl,
+  e: 'AI-Powered Video SEO Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
+  n: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],
+  s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking],
       benefit,
-  s: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
+  s: ['Improve video visibility', 'Increase video traffic', 'Optimize video content],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Video SEO',
+  y: 'Video SEO,
       technologie,
-  s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+  s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart Featured Snippet Optimizer',
+=======
+
+};  titl,
+  e: 'Smart Featured Snippet Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
+  n: 'AI-powered featured snippet optimization with content analysis and ranking improvements.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],
+  s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring],
       benefit,
-  s: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
+  s: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Featured Snippets',
+  y: 'Featured Snippets,
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered Image SEO Optimizer',
+=======
+
+};  titl,
+  e: 'AI-Powered Image SEO Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
+  n: 'Intelligent image SEO optimization with alt text generation and image performance analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],
+  s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring],
       benefit,
-  s: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
+  s: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Image SEO',
+  y: 'Image SEO,
       technologie,
-  s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+  s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'Smart International SEO Manager',
+=======
+
+};  titl,
+  e: 'Smart International SEO Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
+  n: 'AI-powered international SEO management with hreflang optimization and multi-language content.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],
+  s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking],
       benefit,
-  s: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
+  s: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'International SEO',
+  y: 'International SEO,
       technologie,
-  s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+  s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models]
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI-Powered SEO Reporting Dashboard',
+=======
+
+};  titl,
+  e: 'AI-Powered SEO Reporting Dashboard,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
+  n: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
+  s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis],
       benefit,
-  s: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
+  s: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'SEO Reporting',
+  y: 'SEO Reporting,
       technologie,
-  s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+  s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models]
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES;
+
     // AI Productivity & Time Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     /
     {/* TODO: Fix JSX expression *
@@ -10826,85 +18092,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Time Tracking & Productivity Analyzer',
+=======
+
+};  titl,
+  e: 'AI Time Tracking & Productivity Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
+  n: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],
+  s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics],
       benefit,
-  s: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],
+  s: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Task Management & Prioritization',
+=======
+
+};  titl,
+  e: 'AI Task Management & Prioritization,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
+  n: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],
+  s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools],
       benefit,
-  s: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],
+  s: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Productivity',
+  y: 'Productivity,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Email Management & Prioritization',
+=======
+
+};  titl,
+  e: 'AI Email Management & Prioritization,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
+  n: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$69;
+=======
+  e: $69
+>>>>>>> origin/main
       feature,
-  s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],
+  s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection],
       benefit,
-  s: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],
+  s: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily],
       marketPric,
+<<<<<<< HEAD
   e: '$100-200;
+=======
+  e: $100-200
+>>>>>>> origin/main
       categor,
-  y: 'Communication',
+  y: 'Communication,
       technologie,
-  s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
+  s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI HR & Recruitment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -10912,85 +18224,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Resume Parser & Candidate Matcher',
+=======
+
+};  titl,
+  e: 'AI Resume Parser & Candidate Matcher,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
+  n: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],
+  s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation],
       benefit,
-  s: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],
+  s: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Employee Performance Tracker',
+=======
+
+};  titl,
+  e: 'AI Employee Performance Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
+  s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system],
       benefit,
-  s: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],
+  s: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'HR & Performance',
+  y: 'HR & Performance,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Workplace Safety Monitor',
+=======
+
+};  titl,
+  e: 'AI Workplace Safety Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
+  n: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],
+  s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system],
       benefit,
-  s: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],
+  s: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Workplace Safety',
+  y: 'Workplace Safety,
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Customer Service & Support;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -10998,85 +18356,133 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Customer Support Ticket Router',
+=======
+
+};  titl,
+  e: 'AI Customer Support Ticket Router,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
+  n: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$129;
+=======
+  e: $129
+>>>>>>> origin/main
       feature,
-  s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],
+  s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics],
       benefit,
-  s: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],
+  s: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Customer Support',
+  y: 'Customer Support,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Customer Feedback Analyzer',
+=======
+
+};  titl,
+  e: 'AI Customer Feedback Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
+  n: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],
+  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting],
       benefit,
-  s: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],
+  s: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Live Chat Assistant',
+=======
+
+};  titl,
+  e: 'AI Live Chat Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
+  n: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],
+  s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics],
       benefit,
+<<<<<<< HEAD
   s: ['Provide 24;
       marketPric,
   e: '$120-250;
+=======
+  s: [Provide 24
+      marketPric,
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Customer Support',
+  y: 'Customer Support,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Sales & CRM;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11084,85 +18490,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Sales Pipeline Optimizer',
+=======
+
+};  titl,
+  e: 'AI Sales Pipeline Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
+  n: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],
+  s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration],
       benefit,
-  s: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],
+  s: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Sales & CRM',
+  y: 'Sales & CRM,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Sales Call Analyzer',
+=======
+
+};  titl,
+  e: 'AI Sales Call Analyzer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
+  n: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],
+  s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics],
       benefit,
-  s: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],
+  s: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Sales Training',
+  y: 'Sales Training,
       technologie,
-  s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Proposal Generator Pro',
+=======
+
+};  titl,
+  e: 'AI Proposal Generator Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
+  n: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$119;
+=======
+  e: $119
+>>>>>>> origin/main
       feature,
-  s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],
+  s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow],
       benefit,
-  s: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],
+  s: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content],
       marketPric,
+<<<<<<< HEAD
   e: '$180-350;
+=======
+  e: $180-350
+>>>>>>> origin/main
       categor,
-  y: 'Sales Tools',
+  y: 'Sales Tools,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Project Management;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11170,85 +18622,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Project Risk Predictor',
+=======
+
+};  titl,
+  e: 'AI Project Risk Predictor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
+  n: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],
+  s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization],
       benefit,
-  s: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],
+  s: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Project Management',
+  y: 'Project Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Resource Allocation Optimizer',
+=======
+
+};  titl,
+  e: 'AI Resource Allocation Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
+  n: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],
+  s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis],
       benefit,
-  s: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],
+  s: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Resource Management',
+  y: 'Resource Management,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Project Timeline Predictor',
+=======
+
+};  titl,
+  e: 'AI Project Timeline Predictor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
+  n: 'Accurate project timeline prediction with milestone tracking and delay prevention.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],
+  s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning],
       benefit,
-  s: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],
+  s: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Project Planning',
+  y: 'Project Planning,
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Security & Compliance;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11256,85 +18754,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Security Threat Detector',
+=======
+
+};  titl,
+  e: 'AI Security Threat Detector,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
+  n: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],
+  s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics],
       benefit,
-  s: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],
+  s: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Cybersecurity',
+  y: 'Cybersecurity,
       technologie,
-  s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Compliance Monitor',
+=======
+
+};  titl,
+  e: 'AI Compliance Monitor,
+>>>>>>> origin/main
       descriptio,
-  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
+  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],
+  s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting],
       benefit,
-  s: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],
+  s: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs],
       marketPric,
+<<<<<<< HEAD
   e: '$350-700;
+=======
+  e: $350-700
+>>>>>>> origin/main
       categor,
-  y: 'Compliance',
+  y: 'Compliance,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Data Privacy Manager',
+=======
+
+};  titl,
+  e: 'AI Data Privacy Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
+  n: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],
+  s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification],
       benefit,
-  s: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],
+  s: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Data Privacy',
+  y: 'Data Privacy,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Quality Assurance & Testing;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11342,85 +18886,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Automated Testing Suite',
+=======
+
+};  titl,
+  e: 'AI Automated Testing Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive automated testing with test generation, execution, and maintenance.',
+  n: 'Comprehensive automated testing with test generation, execution, and maintenance.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$179;
+=======
+  e: $179
+>>>>>>> origin/main
       feature,
-  s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],
+  s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing],
       benefit,
-  s: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],
+  s: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs],
       marketPric,
+<<<<<<< HEAD
   e: '$250-500;
+=======
+  e: $250-500
+>>>>>>> origin/main
       categor,
-  y: 'Quality Assurance',
+  y: 'Quality Assurance,
       technologie,
-  s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Bug Prediction & Prevention',
+=======
+
+};  titl,
+  e: 'AI Bug Prediction & Prevention,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
+  n: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],
+  s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights],
       benefit,
-  s: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],
+  s: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Quality Assurance',
+  y: 'Quality Assurance,
       technologie,
-  s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Performance Monitoring Pro',
+=======
+
+};  titl,
+  e: 'AI Performance Monitoring Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
+  n: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],
+  s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics],
       benefit,
-  s: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],
+  s: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Performance Monitoring',
+  y: 'Performance Monitoring,
       technologie,
-  s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Content & Media;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11428,85 +19018,133 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Video Content Generator',
+=======
+
+};  titl,
+  e: 'AI Video Content Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent video creation with script generation, editing, and optimization for social media.',
+  n: 'Intelligent video creation with script generation, editing, and optimization for social media.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],
+  s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export],
       benefit,
-  s: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],
+  s: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Content Creation',
+  y: 'Content Creation,
       technologie,
-  s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
+  s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Podcast Production Suite',
+=======
+
+};  titl,
+  e: 'AI Podcast Production Suite,
+>>>>>>> origin/main
       descriptio,
-  n: 'Complete podcast production with audio editing, transcription, and show notes generation.',
+  n: 'Complete podcast production with audio editing, transcription, and show notes generation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
       feature,
   s: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro;
+=======
+  e: $199
+      feature,
+  s: ['Audio editing', 'Transcription', 'Show notes generation', Intro
+>>>>>>> origin/main
       benefit,
-  s: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],
+  s: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Audio Production',
+  y: 'Audio Production,
       technologie,
-  s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
+  s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Image & Design Generator',
+=======
+
+};  titl,
+  e: 'AI Image & Design Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
+  n: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],
+  s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing],
       benefit,
-  s: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],
+  s: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Design',
+  y: 'Design,
       technologie,
-  s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Research & Development;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11514,85 +19152,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Research Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Research Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
+  n: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],
+  s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools],
       benefit,
-  s: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],
+  s: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Research',
+  y: 'Research,
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Patent Analyzer & Generator',
+=======
+
+};  titl,
+  e: 'AI Patent Analyzer & Generator,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
+  n: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$399;
+=======
+  e: $399
+>>>>>>> origin/main
       feature,
-  s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],
+  s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management],
       benefit,
-  s: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],
+  s: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio],
       marketPric,
+<<<<<<< HEAD
   e: '$600-1200;
+=======
+  e: $600-1200
+>>>>>>> origin/main
       categor,
-  y: 'Intellectual Property',
+  y: 'Intellectual Property,
       technologie,
-  s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
+  s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Innovation Tracker',
+=======
+
+};  titl,
+  e: 'AI Innovation Tracker,
+>>>>>>> origin/main
       descriptio,
-  n: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
+  n: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$149;
+=======
+  e: $149
+>>>>>>> origin/main
       feature,
-  s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],
+  s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system],
       benefit,
-  s: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],
+  s: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation],
       marketPric,
+<<<<<<< HEAD
   e: '$200-400;
+=======
+  e: $200-400
+>>>>>>> origin/main
       categor,
-  y: 'Innovation',
+  y: 'Innovation,
       technologie,
-  s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
+  s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Personal & Lifestyle;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11600,85 +19284,131 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Personal Finance Manager',
+=======
+
+};  titl,
+  e: 'AI Personal Finance Manager,
+>>>>>>> origin/main
       descriptio,
-  n: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
+  n: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$79;
+=======
+  e: $79
+>>>>>>> origin/main
       feature,
-  s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],
+  s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking],
       benefit,
-  s: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],
+  s: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Personal Finance',
+  y: 'Personal Finance,
       technologie,
-  s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Personal Assistant Pro',
+=======
+
+};  titl,
+  e: 'AI Personal Assistant Pro,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
+  n: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$99;
+=======
+  e: $99
+>>>>>>> origin/main
       feature,
-  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],
+  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands],
       benefit,
-  s: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],
+  s: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress],
       marketPric,
+<<<<<<< HEAD
   e: '$150-300;
+=======
+  e: $150-300
+>>>>>>> origin/main
       categor,
-  y: 'Personal Assistant',
+  y: 'Personal Assistant,
       technologie,
-  s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
+  s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Home Energy Optimizer',
+=======
+
+};  titl,
+  e: 'AI Home Energy Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
+  n: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$89;
+=======
+  e: $89
+>>>>>>> origin/main
       feature,
-  s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],
+  s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis],
       benefit,
-  s: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],
+  s: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals],
       marketPric,
+<<<<<<< HEAD
   e: '$120-250;
+=======
+  e: $120-250
+>>>>>>> origin/main
       categor,
-  y: 'Smart Home',
+  y: 'Smart Home,
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     // AI Gaming & Entertainment;
+
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     /
     {/* TODO: Fix JSX expression *
   ,
@@ -11686,153 +19416,206 @@ const realEstateSaaS = []
 };
   titl,
   e: 'AI Game Development Assistant',
+=======
+
+};  titl,
+  e: 'AI Game Development Assistant,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
+  n: 'Intelligent game development with asset generation, level design, and gameplay optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$299;
+=======
+  e: $299
+>>>>>>> origin/main
       feature,
-  s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],
+  s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation],
       benefit,
-  s: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],
+  s: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs],
       marketPric,
+<<<<<<< HEAD
   e: '$400-800;
+=======
+  e: $400-800
+>>>>>>> origin/main
       categor,
-  y: 'Game Development',
+  y: 'Game Development,
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
+  s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Music Composition Studio',
+=======
+
+};  titl,
+  e: 'AI Music Composition Studio,
+>>>>>>> origin/main
       descriptio,
-  n: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
+  n: 'Intelligent music creation with composition assistance, style transfer, and production tools.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$199;
+=======
+  e: $199
+>>>>>>> origin/main
       feature,
-  s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],
+  s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration],
       benefit,
-  s: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],
+  s: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively],
       marketPric,
+<<<<<<< HEAD
   e: '$300-600;
+=======
+  e: $300-600
+>>>>>>> origin/main
       categor,
-  y: 'Music Production',
+  y: 'Music Production,
       technologie,
-  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
+  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     },
     {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
     {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   titl,
   e: 'AI Streaming Content Optimizer',
+=======
+
+};  titl,
+  e: 'AI Streaming Content Optimizer,
+>>>>>>> origin/main
       descriptio,
-  n: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
+  n: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.,
       ico,
-  n: '',
+  n: ',
       pric,
+<<<<<<< HEAD
   e: '$249;
+=======
+  e: $249
+>>>>>>> origin/main
       feature,
-  s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],
+  s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform],
       benefit,
-  s: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],
+  s: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience],
       marketPric,
+<<<<<<< HEAD
   e: '$350-700;
+=======
+  e: $350-700
+>>>>>>> origin/main
       categor,
-  y: 'Streaming',
+  y: 'Streaming,
       technologie,
-  s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
+  s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js],
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: Contac,
+  t: kleber@ziontechgroup.com | +1 302 464 0950
     }
+
   ];
+<<<<<<< HEAD
 const categories = []
+=======
+
+const categories = [;;
+
+>>>>>>> origin/main
     {/* TODO: Fix JSX expression *
   ,
     t: microSAASServices.length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Developer Tools').length },
+    t: microSAASServices.filter(s => s.category === 'Developer Tools).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Marketing').length },
+    t: microSAASServices.filter(s => s.category === 'Marketing).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Analytics').length },
+    t: microSAASServices.filter(s => s.category === 'Analytics).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Finance').length },
+    t: microSAASServices.filter(s => s.category === 'Finance).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Healthcare').length },
+    t: microSAASServices.filter(s => s.category === 'Healthcare).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Education').length },
+    t: microSAASServices.filter(s => s.category === 'Education).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'E-commerce').length },
+    t: microSAASServices.filter(s => s.category === 'E-commerce).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Legal').length },
+    t: microSAASServices.filter(s => s.category === 'Legal).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Real Estate').length },
+    t: microSAASServices.filter(s => s.category === 'Real Estate).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
+    t: microSAASServices.filter(s => s.category === 'HR & Recruitment).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Project Management').length },
+    t: microSAASServices.filter(s => s.category === 'Project Management).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Productivity').length },
+    t: microSAASServices.filter(s => s.category === 'Productivity).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Communication').length },
+    t: microSAASServices.filter(s => s.category === 'Communication).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Customer Support').length },
+    t: microSAASServices.filter(s => s.category === 'Customer Support).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
+    t: microSAASServices.filter(s => s.category === 'Sales & CRM).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
+    t: microSAASServices.filter(s => s.category === 'Cybersecurity).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
+    t: microSAASServices.filter(s => s.category === 'Quality Assurance).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Content Creation').length },
+    t: microSAASServices.filter(s => s.category === 'Content Creation).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Research').length },
+    t: microSAASServices.filter(s => s.category === 'Research).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
+    t: microSAASServices.filter(s => s.category === 'Personal Finance).length },
     {/* TODO: Fix JSX expression *
   ,
-    t: microSAASServices.filter(s => s.category === 'Game Development').length }
+    t: microSAASServices.filter(s => s.category === 'Game Development).length }
+
   ];
+
   return (<div>Coming Soon<)
   )
+<<<<<<< HEAD
           <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><"
       <Helmet><
         <title>Micro SAAS Solutions - Zion Tech Group<
@@ -11914,12 +19697,96 @@ const categories = []
               <div className=""flex items-center space-x-2"><"
                 <MapPin className=""w-5 h-5" /><"
                 <span className=""text-white font-medium">Middletown, DE<"
+=======
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900><
+      <Helmet><
+        <title>Micro SAAS Solutions - Zion Tech Group<
+        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month. /><
+        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps /><
+      <
+      {/* Hero Section *
+      <section className="pt-24 pb-16 px-4><
+        <div className="max-w-7xl mx-auto text-center><
+          <h1 className=text-4xl,
+  sm:text-5xl,
+  md: text-6xl font-bold text-white mb-6><
+/
+          <
+          <p className="text-xl text-cyan-400 mb-8 font-medium>
+            Coming Soon
+          <
+          {/* Stats *
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12>
+            <div className=bg-white
+              <div className="text-3xl font-bold text-cyan-400 mb-2>50+<
+              <div className="text-gray-300>Applications<
+            <
+            <div className=bg-white
+              <div className="text-3xl font-bold text-green-400 mb-2>$49<
+              <div className="text-gray-300>Starting Price<
+            <
+            <div className=bg-white
+              <div className="text-3xl font-bold text-purple-400 mb-2>24/7<
+              <div className="text-gray-300>Support<
+            <
+            <div className=bg-white
+              <div className="text-3xl font-bold text-orange-400 mb-2>99.9%<
+              <div className="text-gray-300>Uptime<
+            <
+          <
+          {/* Contact Info *
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12>
+            <div className=flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 m,
+    d:space-x-8>
+              <div className="flex items-center space-x-2>
+                <Phone className="w-5 h-5 
+                <span className="text-white font-medium>+1 302 464 0950<
+              <
+              <div className="flex items-center space-x-2>
+                <Mail className="w-5 h-5 
+                <span className="text-white font-medium>kleber@ziontechgroup.com<
+              <
+              <div className="flex items-center space-x-2>
+                <MapPin className="w-5 h-5 
+            <
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6><
+              <div className="text-3xl font-bold text-green-400 mb-2>$49<
+              <div className="text-gray-300>Starting Price<
+            <
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6><
+              <div className="text-3xl font-bold text-purple-400 mb-2>24/7<
+              <div className="text-gray-300>Support<
+            <
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6><
+              <div className="text-3xl font-bold text-orange-400 mb-2>99.9%<
+              <div className="text-gray-300>Uptime<
+            <
+          <
+          {/* Contact Info *
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12><
+            <div className=flex flex-col,
+  md:flex-row items-center justify-center space-y-4,
+  md:space-y-0,
+  md:space-x-8><
+              <div className="flex items-center space-x-2><
+                <Phone className="w-5 h-5 /><
+                <span className="text-white font-medium>+1 302 464 0950<
+              <
+              <div className="flex items-center space-x-2><
+                <Mail className="w-5 h-5 /><
+                <span className="text-white font-medium>kleber@ziontechgroup.com<
+              <
+              <div className="flex items-center space-x-2><
+                <MapPin className="w-5 h-5 /><
+                <span className="text-white font-medium>Middletown, DE<
+>>>>>>> origin/main
               <
             <
           <
         <
       <
       {/* Services Grid *
+<<<<<<< HEAD
       <section className=""py-16 px-4"></section>"
         <div className=""max-w-7xl mx-auto"></div>"
           <h2 className=""text-3xl font-bold text-white text-center mb-12"></h2>"
@@ -11940,23 +19807,63 @@ const categories = []
                     <span className=""text-sm text-gray-500">Market: {service.marketPrice}<"
                   <
                   <div className=""bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>"
+=======
+      <section className="py-16 px-4>
+        <div className="max-w-7xl mx-auto>
+          <h2 className="text-3xl font-bold text-white text-center mb-12>
+            Choose Your Perfect AI Tools
+          <
+          <div className=grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8>
+            {microSAASServices.map((service), index) => (<div key={index} className=bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hove,
+    r:scale-105>
+                <div className="text-center mb-6>
+                  <div className="text-5xl mb-4>{service.icon}<
+                  <h3 className="text-xl font-bold text-gray-900 mb-2>{service.title}<
+                  <p className="text-gray-600 text-sm>{service.description}<
+                <
+                <div className="mb-6>
+                  <div className="flex items-center justify-between mb-4>
+                    <span className="text-2xl font-bold text-green-600>{service.price}<
+                    <span className="text-sm text-gray-500>Market: {service.marketPrice}<
+                  <
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block>
+>>>>>>> origin/main
                     {service.category}
+
                   <
                 <
+<<<<<<< HEAD
                 <div className=""mb-6"></div>"
                   <h4 className=""font-semibold text-gray-900 mb-3">Key Features: <"
                   <ul className=""space-y-2">)"
                     {service.features.slice(0), 4).map((feature, featureIndex) => (<li key={featureIndex} className=""flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className=""w-4 h-4 text-green-500 mr-2 flex-shrink-0"></CheckCircle>"
+=======
+                <div className="mb-6>
+                  <h4 className="font-semibold text-gray-900 mb-3>Key Features: <
+                  <ul className="space-y-2>)
+                    {service.features.slice(0), 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-600>
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 
+>>>>>>> origin/main
                         {feature}
+
                       <)
                     ))}
+<<<<<<< HEAD
                     {service.features.length > 4 && (<li className=""text-sm text-gray-500"></li>"
                         +{service.features.length - 4} more features;
+=======
+
+                    {service.features.length > 4 && (<li className="text-sm text-gray-500>
+                        +{service.features.length - 4} more features
+>>>>>>> origin/main
                       <)
                     )}
+
                   <
                 <
+<<<<<<< HEAD
                 <div className=""mb-6"></div>"
                   <h4 className=""font-semibold text-gray-900 mb-3">Benefits: <"
                   <ul className=""space-y-1"></ul>"
@@ -11987,9 +19894,44 @@ const categories = []
   t: {service.marketPrice}<
                   <
                   <div className=""bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"><"
+=======
+                <div className="mb-6>
+                  <h4 className="font-semibold text-gray-900 mb-3>Benefits: <
+                  <ul className="space-y-1>
+                    {service.benefits.map((benefit), benefitIndex) => (<li key={benefitIndex} className="text-sm text-gray-600 flex items-center>
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0 
+      {/* Services Grid *
+      <section className="py-16 px-4><
+        <div className="max-w-7xl mx-auto><
+          <h2 className="text-3xl font-bold text-white text-center mb-12><
+/
+          <
+          <div className=grid grid-cols-1,
+  md:grid-cols-2,
+  lg: grid-cols-3 gap-8><)
+            {microSAASServices.map((service), index) => ()}
+
+          <div key={index} className=bg-white rounded-xl shadow-lg p-6,
+  hover:shadow-2xl transition-all duration-300,
+  hover:scale-105><
+                <div className="text-center mb-6><
+                  <div className="text-5xl mb-4>{service.icon}<
+                  <h3 className="text-xl font-bold text-gray-900 mb-2>{service.title}<
+                  <p className="text-gray-600 text-sm>{service.description}<
+                <
+                <div className="mb-6><
+                  <div className="flex items-center justify-between mb-4><
+                    <span className="text-2xl font-bold text-green-600>{service.price}<
+                    <span className="text-sm text-gray-500>Marke,
+  t: {service.marketPrice}<
+                  <
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block><
+>>>>>>> origin/main
                     {service.category}
+
                   <
                 <
+<<<<<<< HEAD
                 <div className=""mb-6"><"
                   <h4 className=""font-semibold text-gray-900 mb-3">Key,"
   Features: <
@@ -11997,16 +19939,37 @@ const categories = []
                     {service.features.slice(0), 4).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className=""flex items-center text-sm text-gray-600"><"
                         <CheckCircle className=""w-4 h-4 text-green-500 mr-2 flex-shrink-0" /><"
+=======
+                <div className="mb-6><
+                  <h4 className="font-semibold text-gray-900 mb-3>Key,
+  Features: <
+                  <ul className="space-y-2><
+                    {service.features.slice(0), 4).map((feature, featureIndex) => ()}
+
+          <li key={featureIndex} className="flex items-center text-sm text-gray-600><
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 /><
+>>>>>>> origin/main
                         {feature}
+
                       <
                     ))}
+<<<<<<< HEAD
                     {service.features.length > 4 && ()}"
           <li className=""text-sm text-gray-500"><"
+=======
+
+                    {service.features.length > 4 && ()}
+
+          <li className="text-sm text-gray-500><
+>>>>>>> origin/main
                         +{service.features.length - 4} more features;
+
                       <
                     )}
+
                   <
                 <
+<<<<<<< HEAD
                 <div className=""mb-6"><"
                   <h4 className=""font-semibold text-gray-900 mb-3">Benefit,"
   s: <
@@ -12014,11 +19977,24 @@ const categories = []
                     {service.benefits.map((benefit), benefitIndex) => ()}"
           <li key={benefitIndex} className=""text-sm text-gray-600 flex items-center"><"
                         <TrendingUp className=""w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /><"
+=======
+                <div className="mb-6><
+                  <h4 className="font-semibold text-gray-900 mb-3>Benefit,
+  s: <
+                  <ul className="space-y-1><
+                    {service.benefits.map((benefit), benefitIndex) => ()}
+
+          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center><
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0 /><
+>>>>>>> origin/main
                         {benefit}
+
                       <
                     ))}
+
                   <
                 <
+<<<<<<< HEAD
                 <div className=""mb-6"></div>"
                   <h4 className=""font-semibold text-gray-900 mb-3">Technologies: <"
                   <div className=""flex flex-wrap gap-2"></div>"
@@ -12030,11 +20006,28 @@ const categories = []
                   <div className=""flex flex-wrap gap-2"><)"
                     {service.technologies.map((tech), techIndex) => ()}"
           <span key={techIndex} className=""bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"><"
+=======
+                <div className="mb-6>
+                  <h4 className="font-semibold text-gray-900 mb-3>Technologies: <
+                  <div className="flex flex-wrap gap-2>
+                    {service.technologies.map((tech), techIndex) => (<span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded>
+                <
+                <div className="mb-6><
+                  <h4 className="font-semibold text-gray-900 mb-3>Technologie,
+  s: <
+                  <div className="flex flex-wrap gap-2><)
+                    {service.technologies.map((tech), techIndex) => ()}
+
+          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded><
+>>>>>>> origin/main
                         {tech}
+
                       <
                     ))}
+
                   <
                 <
+<<<<<<< HEAD
                 <div className=""text-center"></div>"
                   <a href={`mailto:kleber@ziontechgroup.com?subject = "Interest in ${service.title}`}></a>"
                     className=""w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">"
@@ -12043,9 +20036,23 @@ const categories = []
                   <p className=""text-xs text-gray-500 mt-2"></p>"
                 <
                 <div className=""text-center"><"
+=======
+                <div className="text-center>
+                  <a
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}}
+
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block
+                  >
+                    Get Started Now
+                  <
+                  <p className="text-xs text-gray-500 mt-2>
+                <
+                <div className="text-center><
+>>>>>>> origin/main
                   <a><
                     href="{/* TODO: Fix JSX expression *"
   ,
+<<<<<<< HEAD
     o:kleber@ziontechgroup.com?subject = "Interest in ${service.title}`}""
                     className=""w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,""
   hover:from-purple-700,"
@@ -12054,15 +20061,29 @@ const categories = []
 /
           <
                   <p className=""text-xs text-gray-500 mt-2"><"
+=======
+    o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+
+                    className=w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
+  hover:from-purple-700,
+  hover:to-blue-700 transition-all inline-block
+/
+/
+          <
+                  <p className="text-xs text-gray-500 mt-2><
+>>>>>>> origin/main
                     {service.contactInfo}
+
                   <
                 <
               <
             ))}
+
           <
         <
       <
       {/* CTA Section *
+<<<<<<< HEAD
       <section className=""py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
         <div className=""max-w-4xl mx-auto text-center"></div>"
           <h2 className=""text-3xl font-bold text-white mb-6"></h2>"
@@ -12096,13 +20117,56 @@ const categories = []
           <
             <a href="mailto:kleber@ziontechgroup.com" className=""bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"></a>"
 //>
+=======
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600>
+        <div className="max-w-4xl mx-auto text-center>
+          <h2 className="text-3xl font-bold text-white mb-6>
+            Ready to Transform Your Business?
+          <
+          <p className="text-xl text-purple-100 mb-8>
+            Get started with our micro SAAS solutions today and see the difference AI can make.
+          <
+          <div className="flex flex-col sm: flex-row gap-4 justify-center>
+            <a
+              href="tel:+13024640950
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors
+            >
+              Call (302) 464-0950
+            <
+            <a
+              href="mailto:kleber@ziontechgroup.com
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors
+            >
+              Email Us
+            <
+      {/* CTA Section *
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600><
+        <div className="max-w-4xl mx-auto text-center><
+          <h2 className="text-3xl font-bold text-white mb-6><
+/
+          <
+          <p className="text-xl text-purple-100 mb-8><
+/
+          <
+          <div className="flex flex-col sm:flex-row gap-4 justify-center>
+            <a
+              href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors
+/
+/
+          <
+            <a
+              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors
+// >
+>>>>>>> origin/main
 //               Email Us;
+
           </a>
           </div>
         </div>
       </section>
     </div>
   )};
+<<<<<<< HEAD
               href="mailto:kleber@ziontechgroup.com" className=""bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,""
     r:text-purple-600 transition-colors"
 /
@@ -12115,3 +20179,7 @@ const categories = []
   );
 };
 export default MicroSAASPage;"`
+=======
+
+export default MicroSAASPage;"`
+>>>>>>> origin/main

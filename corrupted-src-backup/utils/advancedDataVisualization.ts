@@ -1,32 +1,63 @@
 /**
  * Advanced data visualization utilities;
+
  */
 
+<<<<<<< HEAD
 import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization';;
 export class AdvancedDataVisualization {}
   private config: VisualizationConfig;
   private charts: Map<string, StoredChart> = new Map();</string>constructor</string>(config: Partial<VisualizationConfig> = {}) {</VisualizationConfig>this</VisualizationConfig>.config="{}"
+=======
+import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization';
+
+export class AdvancedDataVisualization {
+  private config: VisualizationConfig';
+
+  private charts: Map<string, StoredChart> = new Map();</string>constructor</string>(config: Partial<VisualizationConfig> = {}) {</VisualizationConfig>this</VisualizationConfig>.config = {
+>>>>>>> origin/main
       defaultChartType: 'line',
       defaultColorScheme: 'blue',
       animationDuration: 300;
+
       responsive: true;
+
       ...config}}
 
   public createChart(id: string)
     data: ChartData)
+<<<<<<< HEAD
     type: ChartType="this.config.defaultChartType;"
   ): StoredChart {,;
 const chart: StoredChart="{,"
+=======
+    type: ChartType = this.config.defaultChartType;
+
+  ): StoredChart {,;
+
+const chart: StoredChart = {,
+>>>>>>> origin/main
       id;
+
       type,
       data,
       config: {,
         ...this.config;
+
         colorScheme: this.config.defaultColorScheme;
+
 import {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 } from '../types/visualization';
+=======
+
+} from '../types/visualization;
+
+>>>>>>> origin/main
 export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
+
   g: Partial<VisualizationConfig> = {}) {/* TODO: Fix JSX expression */}
+
     }}
 
   public createChart(i,
@@ -36,96 +67,179 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     typ,
   e: ChartType="this.config.defaultChartType;)"
   ): StoredChart {/* TODO: Fix JSX expression */}
+
       },
       createdA,
   t: new Date(),
       updatedA,
   t: new Date()};
     this.charts.set(id, chart);
+
     return chart}
 
   public updateChart(i,
   d: string, dat)
   a: ChartData): boolean {/* TODO: Fix JSX expression */}
+
   }
 
   public getChart(id: string): StoredChart | undefined {,
     return this.charts.get(id)}
 
   public deleteChart(id: string): boolean {,
-    return this.charts.delete(id);
+    return this.charts.delete(id)';
+
   public getChart(i)
   d: string): StoredChart | undefined {/* TODO: Fix JSX expression */}
+
   }
 
   public deleteChart(i)
   d: string): boolean {/* TODO: Fix JSX expression */}
+
   }
 
   public getAllCharts(): StoredChart[] {/* TODO: Fix JSX expression */}
+
   }
 
+<<<<<<< HEAD
   public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {,;
 const _chart="this.charts.get(id);"
+=======
+  public exportChart(id: string, format: 'json' | 'csv' = 'json): string {,;
+
+const _chart = this.charts.get(id);;
+
+>>>>>>> origin/main
   public exportChart(i,
   d: string, forma)
   t: 'json' | 'csv' = 'json'): string {/* TODO: Fix JSX expression */}
+
     if (!chart) throw new Error(`Chart with id ${id} not found`);
     if (format === 'json') {/* TODO: Fix JSX expression */}
+
     } else {/* TODO: Fix JSX expression */}
+
     }
+
   }
 
   public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {,
+<<<<<<< HEAD
     if (format === 'json') {,;
 const _chart = "JSON.parse(data) as StoredChart;"
       this.charts.set(chart.id, chart);
       return chart} else {}
       //       const chartData="this.parseCSV(data);"
+=======
+    if (format === 'json) {,;
+
+const _chart = JSON.parse(data) as StoredChart;;
+
+      this.charts.set(chart.id, chart);
+
+      return chart} else {
+      //       const chartData = this.parseCSV(data);;
+
+>>>>>>> origin/main
   public importChart(dat,
   a: string, forma)
   t: 'json' | 'csv' = 'json'): StoredChart {/* TODO: Fix JSX expression */}
+
     } else {/* TODO: Fix JSX expression */}`;
+<<<<<<< HEAD
 const _chart = "this.createChart(`imported-${Date.now()}`, chartData, 'line');"
+=======
+
+const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line);;
+
+>>>>>>> origin/main
       return chart}
+
   }
 
   private convertToCSV(data: ChartData): string {,
+<<<<<<< HEAD
     //     const headers = "['x', 'y'];"
     //     const rows = data.points.map(point = "> [point.x, point.y]);"
     return [headers, ...rows].map(row = "> row.join(',')).join('\n')}"
   private parseCSV(csv: string): ChartData {,;
 const _lines="csv.trim().split('\n');"
     //     const headers="lines[0].split(',');"
+=======
+    //     const headers = ['x', 'y];;
+
+    //     const rows = data.points.map(point => [point.x, point.y]);;
+
+    return [headers, ...rows].map(row => row.join(',')).join('\n')}
+
+  private parseCSV(csv: string): ChartData {,;
+
+const _lines = csv.trim().split('\n);;
+
+    //     const headers = lines[0].split(',);;
+
+>>>>>>> origin/main
     const points: DataPoint[] = [];
+
 ,
+<<<<<<< HEAD
     for (let i = "1; i < lines.length; i++) {,;"
 const _values="lines[i].split(',');"
       if (values.length >= 2) {}
+=======
+    for (let i = 1; i < lines.length; i++) {,;;
+
+const _values = lines[i].split(',);;
+
+      if (values.length >= 2) {
+>>>>>>> origin/main
         points.push({)
           x: parseFloat(values[0]) || 0;
+
           y: parseFloat(values[1]) || 0;
+
   private convertToCSV(dat)
   a: ChartData): string {/* TODO: Fix JSX expression */}
+
   }
 
   private parseCSV(cs)
   v: string): ChartData {/* TODO: Fix JSX expression */}
+
         })}
+
     }
 
     return { points }}
 
+<<<<<<< HEAD
   public generateRandomData(count: number, min: number = 0, max: number = "100): ChartData {;"
 const points: DataPoint[] = [];
     for (let i = "0; i < count; i++) {}"
+=======
+  public generateRandomData(count: number, min: number = 0, max: number = 100): ChartData {;
+
+const points: DataPoint[] = [];
+
+    for (let i = 0; i < count; i++) {;;
+
+>>>>>>> origin/main
       points.push({),
         x: i),
         y: Math.random() * (max - min) + min;
+
   public generateRandomData(coun,
   t: number, mi,
+<<<<<<< HEAD
   n: number = "0, ma)"
   x: number = "100): ChartData {/* TODO: Fix JSX expression */}"
+=======
+  n: number = 0, ma)
+  x: number = 100): ChartData {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
       })}
 
     return { points }}
@@ -134,26 +248,61 @@ const points: DataPoint[] = [];
   public applyColorScheme(char,
   t: StoredChart, colorSchem)
   e: ColorScheme): StoredChart {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
     const _updatedChart = "{ ...chart };"
     updatedChart.config.colorScheme="colorScheme;"
     updatedChart.updatedAt = "new Date();"
+=======
+
+    const _updatedChart = { ...chart };;
+
+    updatedChart.config.colorScheme = colorScheme;
+
+    updatedChart.updatedAt = new Date();
+
+>>>>>>> origin/main
     this.charts.set(chart.id, updatedChart);
+
     return updatedChart}
 
   public getChartStatistics(id: string): {,
     pointCount: number;
+
     xRange: { min: number; max: number };
+
     yRange: { min: number; max: number };
+
     averageY: number} | null {;
+<<<<<<< HEAD
 const _chart="this.charts.get(id);"
+=======
+
+const _chart = this.charts.get(id);;
+
+>>>>>>> origin/main
     if (!chart) return null;
+
 ;
+<<<<<<< HEAD
 const _points="chart.data.points;"
     if (points.length === 0) return null;
     //     const xValues = points.map(p = "> p.x);"
     const _yValues = points.map(p = "> p.y);"
     return {}
+=======
+
+const _points = chart.data.points;;
+
+    if (points.length === 0) return null;
+
+    //     const xValues = points.map(p => p.x);;
+
+    const _yValues = points.map(p => p.y);;
+
+    return {
+>>>>>>> origin/main
       pointCount: points.length;
+
       xRange: {,
         min: Math.min(...xValues),
         max: Math.max(...xValues)},
@@ -162,19 +311,27 @@ const _points="chart.data.points;"
         max: Math.max(...yValues),
   public getChartStatistics(i)
   d: string): {/* TODO: Fix JSX expression */}
+
   x: number };
+
     yRang,
   e: {/* TODO: Fix JSX expression */}
+
   x: number };
+
     average,
   Y: number} | null {/* TODO: Fix JSX expression */}
+
       },
       yRang,
   e: {/* TODO: Fix JSX expression */}
+
       },
       average,
   Y: yValues.reduce((sum, y) => sum + y, 0) / yValues.length}}
+
 }
 
 export default AdvancedDataVisualization;
+
 `

@@ -1,22 +1,44 @@
+<<<<<<< HEAD
 import React from 'react';
 'use client';
+=======
+import React from 'react;
+
+'use client;
+
+>>>>>>> origin/main
 interface LazyImageProps {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
 interface LazyImageProps {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
 };
   sr,
+=======
+
+};  sr,
+>>>>>>> origin/main
   c: string;,
     al,
   t: string;
   className?: string;
+
   children?: React.ReactNode}
+
 ;
+
 const,
   LazyImage: React.FC;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
           <LazyImageProps> = ({/* TODO: Fix JSX expression *)
   ,
     O: Add content;)}
@@ -29,10 +51,23 @@ const,
 /
 /
   priority="false,"
+=======
+
+}/
+/
+/
+  placeholder = dat,
+  a:image
+/
+/
+  priority = false,
+>>>>>>> origin/main
 //   onLoad,
 //   onError)
 }) => {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
 /
 /
 }) => {/* TODO: Fix JSX expression *
@@ -40,18 +75,42 @@ const,
     O: Add content;}
 }
   const [isLoaded, setIsLoaded] = useState(false);
+=======
+
+}  const [isLoaded, setIsLoaded] = useState(false);
+
+>>>>>>> origin/main
   const [isInView, setIsInView] = useState(priority);
+
   const [hasError, setHasError] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
   useEffect(() => {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
     if (priority) return;
+<<<<<<< HEAD
     const observer = "new IntersectionObserver()"
+=======
+
+    const observer = new IntersectionObserver();;
+
+>>>>>>> origin/main
       ([entry]) => {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
   useEffect (() => {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -66,10 +125,18 @@ const,
     O: Add content;}
 }
           setIsInView(true);
+=======
+
+}          setIsInView(true);
+
+>>>>>>> origin/main
           observer.disconnect()}
+
       },
       {/* TODO: Fix JSX expression */}
+
   O: Add content}
+<<<<<<< HEAD
       {/* TODO: Fix JSX expression *
   ,
     O: Add content;}
@@ -78,23 +145,48 @@ const,
   d: 0.1,
         rootMargi,
   n: '50px'}
+=======
+
+};  threshol,
+  d: 0.1,
+        rootMargi,
+  n: '50px}
+
+>>>>>>> origin/main
     );
+
     if (imgRef.current) {/* TODO: Fix JSX expression */}
+
   O: Add content}
+
 }
+
       observer.observe(imgRef.current)}
+
     return () => observer.disconnect()}, [priority]);
-  const handleLoad = () => {/* TODO: Fix JSX expression */}
+
+  const handleLoad = () => {/* TODO: Fix JSX expression */};;
+
   O: Add content}
+
 }
+
     setIsLoaded(true);
+
     onLoad?.()};
-  const handleError = () => {/* TODO: Fix JSX expression */}
+
+  const handleError = () => {/* TODO: Fix JSX expression */};;
+
   O: Add content}
+
 }
+
     setHasError(true);
+
     onError?.()};
+
   return (<div>Coming Soon</div>)
+<<<<<<< HEAD
   n: '50px'});
     if (imgRef.current) {/* TODO: Fix JSX expression *
   ,
@@ -127,9 +219,19 @@ const,
           <div><
       ref={imgRef} className="{ cn('relative overflow-hidden', className) };"
       style = "{{ width, height }}"
+=======
+  )    
+          <div><
+      ref={imgRef} className = { cn(relative overflow-hidden, className) };
+
+      style={{ width, height }}
+
+>>>>>>> origin/main
 /
       {!isInView ? ()}
+
           <img><
+<<<<<<< HEAD
           src="{ placeholder };"
           alt="" className=""w-full h-full object-cover"""
           aria-hidden=""true""
@@ -152,14 +254,47 @@ const,
           {!isLoaded && !hasError && (}"
           <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className=""w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /><)"
           )}
+=======
+          src = { placeholder };
+
+          alt="" className="w-full h-full object-cover"
+          aria-hidden="true
+// />
+      ) : (<React.Fragment><img></img>
+            src={hasError ? placeholder : src}
+
+            alt={alt} className={cn(}
+
+              'w-full h-full object-cover transition-opacity duration-300',              isLoaded ? 'opacity-100' : 'opacity-0)
+            )}
+
+            onLoad = { handleLoad };
+
+            onError = { handleError };
+
+            loading={priority ? 'eager' : 'lazy'}
+
+            decoding="async
+// 
+          {!isLoaded && !hasError && (}
+
+          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin /><)
+          )}
+
+>>>>>>> origin/main
         </React.Fragment>
       )}
+
     </div>
   )};
+<<<<<<< HEAD
         <
       )}
     <
   );
 };
 export default LazyImage;"
+=======
+>>>>>>> origin/main
 
+export default LazyImage;

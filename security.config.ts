@@ -3,37 +3,51 @@
  * Comprehensive security settings and best practices;
  */
 
+<<<<<<< HEAD
 export const securityConfig = {}
+=======
+export const securityConfig = {;
+>>>>>>> origin/main
   // Content Security Policy;
   csp: {,
     directives: {,
-      'default-src': ["'self'"],
-      'script-src': [,
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
-        'https: //www.googletagmanager.com'],
-      'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
-      'img-src': ["'self'", 'data:', 'https:', 'blob: '],
-      'font-src': ["'self'", 'https: //fonts.gstatic.com'],
-      'connect-src': ["'self'", 'https: //www.google-analytics.com'],
-      'frame-ancestors': ["'none'"],
-      'base-uri': ["'self'"],
-      'form-action': ["'self'"]},
+      'default-src': ["'self'"],"
+      'script-src': [,'
+        "'self'","
+        "'unsafe-inline'","
+        "'unsafe-eval'","
+        'https: //www.googletagmanager.com'],'
+      'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],'
+      'img-src': ["'self'", 'data:', 'https:', 'blob: '],'
+      'font-src': ["'self'", 'https: //fonts.gstatic.com'],'
+      'connect-src': ["'self'", 'https: //www.google-analytics.com'],'
+      'frame-ancestors': ["'none'"],"
+      'base-uri': ["'self'"],"
+      'form-action': ["'self'"]},"
     reportOnly: false},
 
   // Security Headers;
   headers: {,
+<<<<<<< HEAD
     'X-Frame-Options': 'DENY',
     'X-Content-Type-Options': 'nosniff',
     'X-XSS-Protection': '1; mode="block',"
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation="()',"
     'Strict-Transport-Security': 'max-age = "31536000; includeSubDomains; preload'},"
+=======
+    'X-Frame-Options': 'DENY','
+    'X-Content-Type-Options': 'nosniff','
+    'X-XSS-Protection': '1; mode=block','
+    'Referrer-Policy': 'strict-origin-when-cross-origin','
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()','
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},'
+
+>>>>>>> origin/main
   // Input validation;
   validation: {,
     maxInputLength: 10000;
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
+    allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],'
     maxFileSize: 10 * 1024 * 1024, // 10MB},
 
   // Rate limiting;
@@ -45,9 +59,9 @@ export const securityConfig = {}
 
   // CORS configuration;
   cors: {,
-    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],'
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],'
+    allowedHeaders: ['Content-Type', 'Authorization'],'
     credentials: true;
     maxAge: 86400, // 24 hours},
 
@@ -67,7 +81,11 @@ export const securityConfig = {}
     encodeSpecialChars: true;
     trimWhitespace: true;
     removeNullBytes: true;
+<<<<<<< HEAD
 export const securityConfig = "{/* TODO: Fix JSX expression */}"
+=======
+export const securityConfig = {/* TODO: Fix JSX expression */};
+>>>>>>> origin/main
     },
     reportOnl,
   y: false},

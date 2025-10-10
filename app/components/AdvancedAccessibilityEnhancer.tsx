@@ -1,13 +1,26 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {}
+=======
+'use client;
+
+import React, { useEffect, useState } from react;
+
+interface AccessibilityEnhancerProps {
+>>>>>>> origin/main
   children: React.ReactNode;
+
 }
+
 ;
+
 const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
+
 const [isEnhanced, setIsEnhanced] = useState(false);
   useEffect(() => {}
     // Initialize accessibility enhancements;
+<<<<<<< HEAD
 const initAccessibility = () => {}
       // Add high contrast mode support;
 const prefersHighContrast = "window.matchMedia('(prefers-contrast: high)').matches;"
@@ -25,27 +38,85 @@ const prefersReducedMotion = "window.matchMedia('(prefers-reduced-motion: reduce
 const style="document.createElement('style');"
       style.textContent="`"
         .focus-visible {}
+=======
+
+const initAccessibility = () => {;;;
+
+      // Add high contrast mode support;
+
+const prefersHighContrast = window.matchMedia((prefers-contrast: high)).matches;;
+
+      if (prefersHighContrast) {
+        document.documentElement.classList.add(high-contrast);
+
+      }
+
+      // Add reduced motion support;
+
+const prefersReducedMotion = window.matchMedia((prefers-reduced-motion: reduce)).matches;;
+
+      if (prefersReducedMotion) {
+        document.documentElement.classList.add(reduced-motion);
+
+      }
+
+      // Add focus indicators;
+
+const style = document.createElement(style);;
+
+      style.textContent = 
+        .focus-visible {
+>>>>>>> origin/main
           outline: 2px solid #3b82f6;
+
           outline-offset: 2px;
+
         }
+<<<<<<< HEAD
         
         .high-contrast {}
+=======
+
+        .high-contrast {
+>>>>>>> origin/main
           filter: contrast(150%);
+
         }
+<<<<<<< HEAD
         
         .reduced-motion * {}
+=======
+
+        .reduced-motion * {
+>>>>>>> origin/main
           animation-duration: 0.01ms !important;
+
           animation-iteration-count: 1 !important;
+
           transition-duration: 0.01ms !important;
+
         }
-      `;
+
+      ;
+
       document.head.appendChild(style);
       // Add keyboard navigation support;
+<<<<<<< HEAD
 const handleKeyDown = (e: KeyboardEvent) => {}
         if (e.key === 'Tab') {}
           document.body.classList.add('keyboard-navigation');
+=======
+
+const handleKeyDown = (e: KeyboardEvent) => {;;;
+
+        if (e.key === 'Tab) {
+          document.body.classList.add(keyboard-navigation);
+
+>>>>>>> origin/main
         }
+
       }
+<<<<<<< HEAD
 const handleMouseDown = () => {}
         document.body.classList.remove('keyboard-navigation');
       };
@@ -55,20 +126,62 @@ const handleMouseDown = () => {}
       return () => {}
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
-        document.head.removeChild(style);
+=======
+
+const handleMouseDown = () => {;;
+
+        document.body.classList.remove(keyboard-navigation);
+
       };
+
+      document.addEventListener(keydown, handleKeyDown);
+
+      document.addEventListener(mousedown, handleMouseDown);
+
+      setIsEnhanced(true);
+
+      return () => {
+        document.removeEventListener(keydown, handleKeyDown);
+
+        document.removeEventListener(mousedown, handleMouseDown);
+
+>>>>>>> origin/main
+        document.head.removeChild(style);
+
+      };
+
     }
+<<<<<<< HEAD
 const cleanup="initAccessibility();"
+=======
+
+const cleanup = initAccessibility();;
+
+>>>>>>> origin/main
     return cleanup;
+
   }, []);
+<<<<<<< HEAD
   if (!isEnhanced) {}
+=======
+
+  if (!isEnhanced) {
+>>>>>>> origin/main
     return <>{children}</>;
+
   }
 
   return (
+<<<<<<< HEAD
     <div className=""accessibility-enhanced"></div>"
+=======
+
+    <div className="accessibility-enhanced>
+>>>>>>> origin/main
       {children}
+
     </div>
+<<<<<<< HEAD
   const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -183,3 +296,8 @@ const cleanup="initAccessibility();"
   );
 }
 export default AdvancedAccessibilityEnhancer;
+=======
+  );}
+
+export default AdvancedAccessibilityEnhancer;
+>>>>>>> origin/main

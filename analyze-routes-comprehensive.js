@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import https from 'https';
 import http from 'http';
 import { JSDOM } from 'jsdom';
@@ -8,6 +9,28 @@ const TIMEOUT="10000;"
 const USER_AGENT = "'Mozilla/5.0 (compatible; ZionTechBot/1.0)';"
 // All routes defined in the app;
 const definedRoutes="[,"
+=======
+import https from 'https;
+
+import http from 'http;
+
+import { JSDOM } from 'jsdom;
+
+import fs from 'fs;
+
+// Configuration;
+
+const BASE_URL = 'https: //ziontechgroup.com;;
+
+const TIMEOUT = 10000;;
+
+const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);;
+
+// All routes defined in the app;
+
+const definedRoutes = [,;;
+
+>>>>>>> origin/main
   '/',
   '/about',
   '/contact',
@@ -36,6 +59,7 @@ const definedRoutes="[,"
   '/5 g-implementation',
   '/iot-platform',
   // AI Services;
+
   '/ai-quantum-financial-oracle',
   '/ai-neural-memory-assistant',
   '/ai-holographic-workspace',
@@ -198,6 +222,7 @@ const definedRoutes="[,"
   '/ai-workforce',
   '/ai-zoo',
   // Additional routes from footer;
+
   '/cloud-migration',
   '/cybersecurity',
   '/it-infrastructure',
@@ -226,15 +251,22 @@ const definedRoutes="[,"
   '/compliance',
   '/data-protection',
   '/accessibility',
-  '/sitemap'
+  /sitemap
 ];
 // Track results;
+<<<<<<< HEAD
 const results = {}
+=======
+
+const results = {;;
+
+>>>>>>> origin/main
   working: [],
   broken: [],
   errors: [],
   total: 0};
 // Helper function to make HTTP requests;
+<<<<<<< HEAD
 function makeRequest(url) {}
   return new Promise((resolve, reject) => {;
 const urlObj = "new URL(url);"
@@ -242,25 +274,63 @@ const urlObj = "new URL(url);"
     const client = "isHttps ? https : http;"
     ;
 const requestOptions = {}
+=======
+
+function makeRequest(url) {
+  return new Promise((resolve, reject) => {;
+
+const urlObj = new URL(url);;
+
+    const isHttps = urlObj.protocol === 'https: ;;
+
+    const client = isHttps ? https : http;;
+
+    ;
+
+const requestOptions = {;;
+
+>>>>>>> origin/main
       hostname: urlObj.hostname;
+
       port: urlObj.port || (isHttps ? 443 : 80)
       path: urlObj.pathname + urlObj.search;
+
       method: 'GET',
       headers: {,
+<<<<<<< HEAD
         'User-Agent': USER_AGENT;
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q="0.8',"
         'Accept-Language': 'en-US,en;q="0.5',"
+=======
+        'User-Agent: USER_AGENT;
+
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+>>>>>>> origin/main
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
+        'Upgrade-Insecure-Requests': 1
       },
       timeout: TIMEOUT};
+
 ;
+<<<<<<< HEAD
 const req = client.request(requestOptions, (res) => {;
 let data="'';"
       res.on('data', (chunk) => {}
         data += chunk});
       res.on('end', () => {}
+=======
+
+const req = client.request(requestOptions, (res) => {;;
+
+let data = ';;
+
+      res.on('data', (chunk) => {
+        data += chunk});
+
+      res.on('end', () => {
+>>>>>>> origin/main
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
@@ -270,42 +340,84 @@ let data="'';"
       reject(error)});
     req.on('timeout', () => {}
       req.destroy();
+<<<<<<< HEAD
       reject(new Error('Request timeout'))});
+=======
+
+      reject(new Error('Request timeout))});
+
+>>>>>>> origin/main
     req.setTimeout(TIMEOUT);
+
     req.end()})}
 
 // Analyze a single route;
+
 async function analyzeRoute(route) {;
+<<<<<<< HEAD
 const url = "BASE_URL + route;"
   results.total++;
   try {}
     // console.log removed for production;
 const response = "await makeRequest(url);"
     if (response.statusCode >= 200 && response.statusCode < 300) {}
+=======
+
+const url = BASE_URL + route;;
+
+  results.total++;
+
+  try {
+    // console.log removed for production
+const response = await makeRequest(url);;
+
+    if (response.statusCode >= 200 && response.statusCode < 300) {
+>>>>>>> origin/main
       results.working.push({)
         route: route),
         url: url),
         statusCode: response.statusCode});
+<<<<<<< HEAD
       // console.log removed for production;
 } else {}
+=======
+
+      // console.log removed for production
+} else {
+>>>>>>> origin/main
       results.broken.push({)
         route: route;),
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
       });
+<<<<<<< HEAD
       // console.log removed for production;
 }
   } catch (error) {}
+=======
+
+      // console.log removed for production
+}
+
+  } catch (error) {
+>>>>>>> origin/main
     results.errors.push({)
       route: route),
       url: url),
       error: error.message});
+<<<<<<< HEAD
     // console.log removed for production;
+=======
+
+    // console.log removed for production
+>>>>>>> origin/main
 }
+
 }
 
 // Main analysis function;
+<<<<<<< HEAD
 async function analyzeAllRoutes() {}
   // console.log removed for production;
 // console.log removed for production;
@@ -319,9 +431,31 @@ const batch = "definedRoutes.slice(i, i + batchSize);"
     try {}
       await Promise.all(promises)} catch (error) {}
       // console.log removed for production;
+=======
+
+async function analyzeAllRoutes() {
+  // console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// Process routes in batches to avoid overwhelming the server;
+
+  const batchSize = 10;;
+
+  for (let i = 0; i < definedRoutes.length; i += batchSize) {;;
+
+const batch = definedRoutes.slice(i, i + batchSize);;
+
+    const promises = batch.map(route => analyzeRoute(route));;
+
+    try {
+      await Promise.all(promises)} catch (error) {
+      // console.log removed for production
+>>>>>>> origin/main
 }
-    
+
     // Small delay between batches;
+<<<<<<< HEAD
     if (i + batchSize < definedRoutes.length) {}
       await new Promise(resolve = "> setTimeout(resolve, 1000))}"
   }
@@ -331,14 +465,36 @@ const batch = "definedRoutes.slice(i, i + batchSize);"
     timestamp: new Date().toISOString()
     baseUrl: BASE_URL;
     summary: {}
+=======
+
+    if (i + batchSize < definedRoutes.length) {
+      await new Promise(resolve => setTimeout(resolve, 1000))}
+
+  }
+
+  // Generate report;
+
+  const report = {;;
+
+    timestamp: new Date().toISOString()
+    baseUrl: BASE_URL;
+
+    summary: {
+>>>>>>> origin/main
       total: results.total;
+
       working: results.working.length;
+
       broken: results.broken.length;
+
       errors: results.errors.length},
     working: results.working;
+
     broken: results.broken;
+
     errors: results.errors};
   // Save detailed report;
+<<<<<<< HEAD
   fs.writeFileSync('route-analysis-report.json', JSON.stringify(report, null, 2));
   // Generate summary;
   // console.log removed for production;
@@ -350,6 +506,22 @@ if (results.broken.length > 0) {}
     // console.log removed for production;
 results.broken.forEach(route = "> {)"
       // console.log removed for production;
+=======
+
+  fs.writeFileSync('route-analysis-report.json, JSON.stringify(report, null, 2));
+
+  // Generate summary;
+
+  // console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
+// console.log removed for production
+if (results.broken.length > 0) {
+    // console.log removed for production
+results.broken.forEach(route => {)
+      // console.log removed for production
+>>>>>>> origin/main
 })}
 
   if (results.errors.length > 0) {}
@@ -362,4 +534,5 @@ results.errors.forEach(route = "> {)"
 }
 
 // Run the analysis;
+
 analyzeAllRoutes();

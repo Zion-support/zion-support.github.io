@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export const metadata: Metadata="{,"
   title: 'About | Zion Tech Group',
   description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
@@ -21,29 +22,79 @@ export default function about() {}
             <p className=""text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>"
             <div className=""flex justify-center space-x-4"></div>"
               <span className=""bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"></span>"
+=======
+export const metadata: Metadata = {,
+  title: About | Zion Tech Group,
+  description: Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.,
+  keywords: AI, automation, enterprise, breakthrough, technology,
+  openGraph: {,
+    title: About,
+    description: Discover the latest AI breakthroughs and enterprise automation solutions.,
+    type: article}};
+
+export default function about() {
+  return(<div className=min-h-screen bg-gray-50>
+      <div className=max-w-4xl mx-auto px-4 py-8>
+        <div className=bg-white rounded-lg shadow-lg p-8>
+          <div className=text-center mb-8>
+  return (
+
+    <div className=min-h-screen bg-gray-50></div>
+      <div className=max-w-4xl mx-auto px-4 py-8></div>
+        <div className=bg-white rounded-lg shadow-lg p-8></div>
+          <div className=text-center mb-8></div>
+            <h1 className=text-4xl font-bold text-gray-900 mb-4>About</h1>
+            <p className=text-xl text-gray-600 mb-6>Revolutionary AI Breakthrough</p>
+            <div className=flex justify-center space-x-4></div>
+              <span className=bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium>
+>>>>>>> origin/main
                 BREAKTHROUGH;
+
               </span>
+<<<<<<< HEAD
               <span className=""bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"></span>"
+=======
+              <span className=bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium>
+>>>>>>> origin/main
                 AI;
+
               </span>
+<<<<<<< HEAD
               <span className=""bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"></span>"
+=======
+              <span className=bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium>
+>>>>>>> origin/main
                 ENTERPRISE;
+
               </span>
             </div>
           </div>
+<<<<<<< HEAD
           <div className=""prose max-w-none"></div>"
             <p className=""text-lg text-gray-700 mb-6"></p>"
+=======
+          <div className=prose max-w-none></div>
+            <p className=text-lg text-gray-700 mb-6>
+>>>>>>> origin/main
               This page is currently under development. Please check back soon for the complete;
+
               content.
             </p>)
           </div>)
         </div>)
       </div>)
 export const,
+<<<<<<< HEAD
   metadata: Metadata = "{/* TODO: Fix JSX expression */}"
+=======
+  metadata: Metadata = {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
   }};
 export default function about() {/* TODO: Fix JSX expression */}
+
 }
+<<<<<<< HEAD
   return (<div className=""min-h-screen bg-gray-50"></div>""
       <div className=""max-w-4xl mx-auto px-4 py-8"></div>""
         <div className=""bg-white rounded-lg shadow-lg p-8"></div>""
@@ -58,13 +109,40 @@ export default function about() {/* TODO: Fix JSX expression */}
                 AI;
               </span>"
               <span className=""bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"></span>"
+=======
+
+  return (<div className="min-h-screen bg-gray-50></div>
+      <div className="max-w-4xl mx-auto px-4 py-8></div>
+        <div className="bg-white rounded-lg shadow-lg p-8></div>
+          <div className="text-center mb-8></div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4>About</h1>
+            <p className="text-xl text-gray-600 mb-6>Revolutionary AI Breakthrough</p>
+            <div className="flex justify-center space-x-4></div>
+              <span className=bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium></span>
+                BREAKTHROUGH;
+
+              </span>
+              <span className=bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium></span>
+                AI;
+
+              </span>
+              <span className=bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium></span>
+>>>>>>> origin/main
                 ENTERPRISE;
+
               </span>
             </div>
+<<<<<<< HEAD
           </div>"
           <div className=""prose max-w-none"></div>""
             <p className=""text-lg text-gray-700 mb-6"></p>"
+=======
+          </div>
+          <div className="prose max-w-none></div>
+            <p className=text-lg text-gray-700 mb-6></p>
+>>>>>>> origin/main
               This page is currently under development. Please check back soon for the complete;
+
               content.
             </p>
           </div>
@@ -72,4 +150,5 @@ export default function about() {/* TODO: Fix JSX expression */}
       </div>
     </div>)
   )}
+
 "

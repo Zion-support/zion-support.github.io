@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -16,14 +17,50 @@ const PartnersPage = () => {}
       logo: '/api/placeholder/200/100',
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 interface Partner {}
+=======
+'use client;
+
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import { Link } from 'react-router-dom;
+
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react;
+
+import { Link } from 'react-router-dom;
+
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+
+import { CheckCircle, Handshake, Users, Award } from 'lucide-react;
+
+const PartnersPage = () => {;
+  const partners = [;
+    {
+      name: 'Microsoft,
+      logo: '/api/placeholder/200/100,
+    },
+    {
+      name: 'Amazon Web Services,
+      logo: '/api/placeholder/200/100,
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react;
+
+interface Partner {
+>>>>>>> origin/main
   name: string;
+
   logo: string;
+
   description: string;
+
   category: string;
+
   website?: string;
-  tier: 'strategic' | 'preferred' | 'certified'});;)
+
+  tier: 'strategic' | 'preferred' | 'certified});)
 }
 
+<<<<<<< HEAD
 const PartnersPage: React.FC = () => {}
   const partners: Partner[] = []
     {}
@@ -164,8 +201,120 @@ const PartnersPage: React.FC = () => {}
     return partnershipTiers.find(t = "> t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)"
 };
 const PagePage: React.FC = () => {}
+=======
+const PartnersPage: React.FC = () => {
+  const partners: Partner[] = [
+    {
+      name: 'Microsoft,
+      logo: '/images/partners/microsoft.png,
+      description: 'Strategic partnership for Azure cloud solutions and AI services,
+      category: 'Cloud & AI,
+      website: 'https://microsoft.com,
+      tier: 'strategic
+    },    {
+      name: 'Amazon Web Services,
+      logo: '/images/partners/aws.png,
+      description: 'Leading cloud infrastructure and machine learning platform provider,
+      category: 'Cloud Computing,
+      website: 'https://aws.amazon.com,
+      tier: 'strategic
+    },
+      tier: 'strategic});)},
+    {
+      name: 'Google Cloud,
+      logo: '/images/partners/google-cloud.png,
+      description: 'Advanced AI and machine learning platform with global reach,
+      category: 'Cloud & AI,
+      website: 'https://cloud.google.com,
+      tier: 'strategic
+    },    {
+      name: 'IBM,
+      logo: '/images/partners/ibm.png,
+      description: 'Enterprise AI solutions and hybrid cloud platform,
+      category: 'Enterprise AI,
+      website: 'https://ibm.com,
+      tier: 'preferred
+    },
+    {
+      name: 'Salesforce,
+      logo: '/images/partners/salesforce.png,
+      description: 'Customer relationship management and business automation,
+      description: 'Customer relationship management and business automation platform',      category: 'CRM & Automation,
+      website: 'https://salesforce.com,
+      tier: 'preferred});)
+},
+    {
+      name: 'Oracle,
+      logo: '/images/partners/oracle.png,
+      description: 'Database solutions and enterprise applications,
+      category: 'Database & Enterprise,
+      website: 'https://oracle.com,
+      tier: 'preferred});)
+},
+    {
+      name: 'ServiceNow,
+      logo: '/images/partners/servicenow.png,
+      description: 'IT service management and workflow automation,
+      category: 'IT Management,
+      website: 'https://servicenow.com,
+      tier: 'certified});)
+},
+    {
+      name: 'Splunk,
+      logo: '/images/partners/splunk.png,
+      description: 'Data analytics and security monitoring platform,
+      category: 'Analytics & Security,
+      website: 'https://splunk.com,
+      tier: 'certified
+    }  ];
+
+  const benefits = [;;
+
+    'Access to cutting-edge technology platforms,
+    'Joint go-to-market strategies,
+    'Co-marketing opportunities,
+    'Technical support and training,
+    'Early access to new features,
+    Dedicated partner success manager
+  ];
+
+  const partnershipTiers = [;;
+
+    {
+      name: 'Strategic,
+      description: 'Deep integration and co-innovation,
+      bgColor: 'bg-gradient-to-br from-purple-500/20 to-blue-500/20,
+      borderColor: 'border-purple-400/50,
+      icon: Award
+    },
+    {
+      name: 'Preferred,
+      description: 'Enhanced support and collaboration,
+      bgColor: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20,
+      borderColor: 'border-blue-400/50,
+      icon: Handshake
+    },
+    {
+      name: 'Certified,
+      description: 'Verified expertise and capabilities,
+      bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20,
+      borderColor: 'border-green-400/50,
+      icon: CheckCircle
+    }
+
+  ];
+
+  const getTierInfo = (tier: string) => {;;
+
+    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});)
+};
+
+const PagePage: React.FC = () => {
+>>>>>>> origin/main
   return (
+
     <>
+<<<<<<< HEAD
       <Helmet></Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content=""Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." /></meta>"
@@ -188,6 +337,21 @@ const PagePage: React.FC = () => {}
           <div></div>
             <h1></h1>
               Strategic <spa></spa>Partnerships</span>
+=======
+      <Helmet>
+        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
+        <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions. />
+        <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+        {/* Hero Section */}
+
+        <section className="py-20 px-4>
+          <div className="max-w-7xl mx-auto text-center>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400>Partnerships</span>
+>>>>>>> origin/main
             </h1>
             <p></p>
               We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
@@ -209,6 +373,7 @@ const PagePage: React.FC = () => {}
           </div>
         </section>
         {/* Partnership Tiers */}
+
         <section></section>
           <div></div>
             <div></div>
@@ -219,18 +384,28 @@ const PagePage: React.FC = () => {}
             </div>
             <div></div>
               {partnershipTiers.map((tier, index) => (
+
                 <div></div>
                   <div></div>
+<<<<<<< HEAD
                     <tier.icon className="{`w-8 h-8 ${tier.color}`} /></tier>"
                   </div>
                   <h></h>{tier.name}</h3>
                   <p className=""text-gray-300">{tier.description}</p>"
+=======
+                    <tier.icon className={`w-8 h-8 ${tier.color}} />
+                  </div>
+                  <h></h>{tier.name}</h3>
+                  <p className="text-gray-300>{tier.description}</p>
+>>>>>>> origin/main
                 </div>
               ));
+
             </div>
           </div>
         </section>
         {/* Partners Grid */}
+<<<<<<< HEAD
         <section className=""py-16 px-4"></section>"
           <div className=""max-w-7xl mx-auto"></div>"
             <div className=""text-center mb-16"></div>"
@@ -242,12 +417,22 @@ const PagePage: React.FC = () => {}
               <h></h>Our Technology Partners</h2>
               <p></p>
                 We work with the world's leading technology companies to deliver comprehensive solutions.
+=======
+
+        <section className="py-16 px-4>
+          <div className="max-w-7xl mx-auto>
+            <div className="text-center mb-16>
+              <h2 className="text-3xl font-bold text-white mb-6>Our Technology Partners</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
+                We work with the worlds leading technology companies to deliver comprehensive solutions.
+>>>>>>> origin/main
               </p>
             </div>
             <div></div>
     </>
   )
                 return (
+
     <>
       <div></div>
                     <div></div>
@@ -256,27 +441,46 @@ const PagePage: React.FC = () => {}
                       </div>
                       <h3></h3>
                         {partner.name}
+
                       </h3>
+<<<<<<< HEAD
                       <p className=""text-sm text-gray-300 mb-3">{partner.description}</p>"
+=======
+                      <p className="text-sm text-gray-300 mb-3>{partner.description}</p>
+>>>>>>> origin/main
                       <div></div>
                         {partner.category}
+
                       </div>
                       {partner.website && (
+
                         <a></a>
+<<<<<<< HEAD
                           Visit Website;
                           <ExternalLink className=""w-3 h-3" /></ExternalLink>"
+=======
+                          Visit Website
+                          <ExternalLink className="w-3 h-3 />
+>>>>>>> origin/main
                         </a>
                       );
+
                     </div>
                   </div>
                 );
+
               })}
+<<<<<<< HEAD
                 ););)
 });;
+=======
+
+>>>>>>> origin/main
             </div>
           </div>
         </section>
         {/* Partnership Benefits */}
+<<<<<<< HEAD
         <section className=""py-16 px-4"></section>"
           <div className=""max-w-7xl mx-auto"></div>"
             <div className=""text-center mb-16"></div>"
@@ -287,32 +491,49 @@ const PagePage: React.FC = () => {}
             <div></div>
               <h></h>Partnership Benefits</h2>
               <p></p>
+=======
+
+        <section className="py-16 px-4>
+          <div className="max-w-7xl mx-auto>
+            <div className="text-center mb-16>
+              <h2 className="text-3xl font-bold text-white mb-6>Partnership Benefits</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
+>>>>>>> origin/main
                 Our strategic partnerships provide significant advantages for your business.
               </p>
             </div>
             <div></div>
               <div></div>
                 {benefits.map((benefit, index) => (
+
                   <div></div>
+<<<<<<< HEAD
                     <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0 mt-1" /></CheckCircle>"
                     <span className=""text-gray-300">{benefit}</span>"
                     <spa></spa>{benefit}</span>
+=======
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />
+                    <span className="text-gray-300>{benefit}</span>
+>>>>>>> origin/main
                   </div>
                 ));
+
               </div>
             </div>
           </div>
         </section>
         {/* Become a Partner CTA */}
+
         <section></section>
           <div></div>
             <div></div>
               <h></h>Become a Partner</h2>
               <p></p>
-                Interested in partnering with us? We're always looking for innovative companies to join our ecosystem.
+                Interested in partnering with us? Were always looking for innovative companies to join our ecosystem.
               </p>
               <div></div>
                 <button></button>
+<<<<<<< HEAD
                   <Handshake className=""w-5 h-5" /></Handshake>"
                   Partner With Us;
                 </button>
@@ -330,17 +551,36 @@ const PagePage: React.FC = () => {}
       nam,
     e: 'Microsoft',
       logo: '/api/placeholder/200;
+=======
+                  <Handshake className="w-5 h-5 />
+                  Partner With Us
+                </button>
+                <button></button>
+                  <TrendingUp className="w-5 h-5 />
+                  View Partnership Program
+                </button>
+              </div>
+      nam,    e: 'Microsoft,
+      logo: /api/placeholder/200
+>>>>>>> origin/main
       descriptio,
-    n: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI'
+    n: 'Strategic partnership for Azure cloud solutions and AI services,
+      category: Cloud & AI
     },
+<<<<<<< HEAD
     {}
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200;
+=======
+    {
+      name: 'Amazon Web Services,
+      logo: /api/placeholder/200
+>>>>>>> origin/main
       descriptio,
-    n: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing'
+    n: 'Leading cloud infrastructure and machine learning platform provider,
+      category: Cloud Computing
     },
+<<<<<<< HEAD
     {}
       name: 'Google Cloud',
       logo: '/api/placeholder/200;
@@ -348,12 +588,23 @@ const PagePage: React.FC = () => {}
     {}
       name: 'IBM',
       logo: '/api/placeholder/200;
+=======
+    {
+      name: 'Google Cloud,
+      logo: /api/placeholder/200
+    },
+    {
+      name: 'IBM,
+      logo: /api/placeholder/200
+>>>>>>> origin/main
   ];
   return (<div></div>
                 <)
               ))}
+
             <
 
+<<<<<<< HEAD
             <div className=""bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white"></div>"
               <h2 className=""text-2xl font-bold text-white mb-6 text-center">Partnership Benefits<"
               <div className=""grid grid-cols-1 md: grid-cols-2 l,"></div>"
@@ -361,8 +612,18 @@ const PagePage: React.FC = () => {}
                 {benefits.map((benefit), index) => (<div key={index} className=""flex items-center space-x-3"></div>"
                     <CheckCircle className=""w-5 h-5 text-green-400 flex-shrink-0"></CheckCircle>"
                     <span className=""text-gray-300">{benefit}<"
+=======
+            <div className=bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white
+              <h2 className="text-2xl font-bold text-white mb-6 text-center>Partnership Benefits<
+              <div className=grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-4>
+                {benefits.map((benefit), index) => (<div key={index} className="flex items-center space-x-3>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 
+                    <span className="text-gray-300>{benefit}<
+>>>>>>> origin/main
                   <)
                 ))}
+
               <
             <
           <
@@ -370,10 +631,16 @@ const PagePage: React.FC = () => {}
       <
     <
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
+<<<<<<< HEAD
         <meta name="description" content=""Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." /></meta>"
         <meta name="keywords" content=""technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" /></meta>"
+=======
+        <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions. />
+        <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions />
+>>>>>>> origin/main
       </Helmet>
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className=""relative py-20 px-4 sm:px-6 lg:px-8"></section>"
         <div className=""max-w-7xl mx-auto"></div>"
           <div className=""text-center"></div>"
@@ -393,11 +660,38 @@ const PagePage: React.FC = () => {}
                 className=""inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300">"
                 Learn More;
                 <ArrowRight className=""w-5 h-5" /></ArrowRight>"
+=======
+
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8>
+        <div className="max-w-7xl mx-auto>
+          <div className="text-center>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
+              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400>Partnerships</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
+              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center>
+              <Link
+                to="/contact
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 />
+              </Link>
+              <Link
+                to="/services
+                className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300
+              >
+                Learn More
+                <ArrowRight className="w-5 h-5 />
+>>>>>>> origin/main
               </Link>
             </div>
           </div>
         </section>
         {/* Features Section */}
+<<<<<<< HEAD
         <section className=""py-16 px-4"></section>"
           <div className=""max-w-7xl mx-auto"></div>"
             <h2 className=""text-3xl font-bold text-white mb-12 text-center">Why Choose Our Page Services?</h2>"
@@ -422,11 +716,39 @@ const PagePage: React.FC = () => {}
                 </div>
                 <h3 className=""text-xl font-bold text-white mb-3">Custom Solutions</h3>"
                 <p className=""text-gray-300">Tailored Page solutions for your specific requirements</p>"
+=======
+
+        <section className="py-16 px-4>
+          <div className="max-w-7xl mx-auto>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center>Why Choose Our Page Services?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center>
+                  <CheckCircle className="w-8 h-8 text-white />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3>Expert Solutions</h3>
+                <p className="text-gray-300>Professional Page services with proven results</p>
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center>
+                  <CheckCircle className="w-8 h-8 text-white />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3>24/7 Support</h3>
+                <p className="text-gray-300>Round-the-clock assistance for your business needs</p>
+              </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center>
+                  <CheckCircle className="w-8 h-8 text-white />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3>Custom Solutions</h3>
+                <p className="text-gray-300>Tailored Page solutions for your specific requirements</p>
+>>>>>>> origin/main
               </div>
             </div>
           </div>
         </section>
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className=""py-16 px-4"></section>"
           <div className=""max-w-4xl mx-auto text-center"></div>"
             <div className=""bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12"></div>"
@@ -446,6 +768,32 @@ const PagePage: React.FC = () => {}
                   className=""inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300">"
                   <Mail className=""w-5 h-5" /></Mail>"
                   Email Us;
+=======
+
+        <section className="py-16 px-4>
+          <div className="max-w-4xl mx-auto text-center>
+            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12>
+              <h2 className="text-3xl font-bold text-white mb-4>
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8>
+                Contact our experts to discuss your Page needs and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center>
+                <a
+                  href="tel:+13024640950
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300
+                >
+                  <Phone className="w-5 h-5 />
+                  Call Now
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300
+                >
+                  <Mail className="w-5 h-5 />
+                  Email Us
+>>>>>>> origin/main
                 </a>
               </div>
             </div>
@@ -456,6 +804,12 @@ const PagePage: React.FC = () => {}
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 };
 export default PagePage;
+=======
+  );};
+
+export default PagePage;
+>>>>>>> origin/main

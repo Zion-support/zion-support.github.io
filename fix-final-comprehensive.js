@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 // Files that need specific fixes;
@@ -6,18 +7,41 @@ const specificFixes = {}
     keywords:
       'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough',;
 const specificFixes = "{/* TODO: Fix JSX expression */}"
+=======
+import fs from 'fs;
+
+import { fileURLToPath } from 'url;
+
+// Files that need specific fixes;
+
+const specificFixes = {;;
+
+  'app/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough/page.tsx': {
+    keywords:
+      'autonomous business intelligence, AI 2026, enterprise AI, business automation, machine learning, AI breakthrough,;
+
+const specificFixes = {/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
   },
   'app/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}
+
   },
   'app/blog/ai-2026-enterprise-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}
+
   },
   'app/blog/ai-2026-february-mega-breakthrough-revolution/page.tsx': {/* TODO: Fix JSX expression */}
+
   },
   'app/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}
+
   },
   'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx': {/* TODO: Fix JSX expression */}
+
   }};
+
 ;
+<<<<<<< HEAD
 function processFile(filePath) {}
   try {}
     // Apply specific fixes;
@@ -31,10 +55,36 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
   s: [${keywordArray}],`);
           modified="true}"
+=======
+
+function processFile(filePath) {
+  try {
+    // Apply specific fixes;
+
+    if (specificFixes[relativePath]) {
+      if (fix.keywords) {;
+
+const keywordArray = fix.keywords;;
+
+          .split(', );
+
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+
+          .map(k => `'${k}'`)
+          .join(', );
+
+        if (pattern.test(content)) {/* TODO: Fix JSX expression */}`
+  s: [${keywordArray}],`);
+
+          modified = true}
+
+>>>>>>> origin/main
       }
+
     }
 
     // General fixes;
+<<<<<<< HEAD
     const replacements = []
       // Fix import paths for components;
       {}
@@ -46,40 +96,82 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacement: "import { Metadata } from './types/next';"},
       {}
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
+=======
+
+    const replacements = [;;
+
+      // Fix import paths for components;
+
+      {
+        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
+        replacement: "import { useRouter } from '../utils/navigation';"},
+      // Fix import paths for root-level files;
+
+      {
+        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
+        replacement: "import { Metadata } from './types/next';"},
+      {
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link;/g;
+
+>>>>>>> origin/main
         replacement: "import Link from './utils/link';",
       {/* TODO: Fix JSX expression */}
+
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacemen,
   t: "import { useRouter } from '../utils/navigation';"},
       // Fix import paths for root-level files;
+
       {/* TODO: Fix JSX expression */}
+
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,"
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
+
       }];
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+
       }
+
     });
     if (modified) {/* TODO: Fix JSX expression */}
+
     }
+
     return false} catch (error) {/* TODO: Fix JSX expression */}
+
   }
+
 }
+
 ;
+<<<<<<< HEAD
 function processDirectory(dirPath) {}
   items.forEach(item = "> {)"
+=======
+
+function processDirectory(dirPath) {
+
+  items.forEach(item => {)
+>>>>>>> origin/main
 )
     if (stat.isDirectory()) {}
       totalFixed += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
       if (processFile(fullPath)) {}
         totalFixed++;
+
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
+
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
+
       }
+
     }
+
   });
   return totalFixed}
 
 // Process the app directory;
+
 // Process the app directory;"`

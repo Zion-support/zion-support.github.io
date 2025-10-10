@@ -3,17 +3,38 @@ async function submitByEmail(to: string;)
   subject: string)
   text: string)
   attachments: unknown[] = []
+<<<<<<< HEAD
 ) {}
   //   const host="process.env.EMAIL_HOST;"
   //   const port = "Number(process.env.EMAIL_PORT || 587);"
   //   const user="process.env.EMAIL_USER;"
   //   const pass="process.env.EMAIL_PASS;"
   //   const from = "process.env.EMAIL_FROM || user;"
+=======
+) {
+  //   const host = process.env.EMAIL_HOST;;
+
+  //   const port = Number(process.env.EMAIL_PORT || 587);;
+
+  //   const user = process.env.EMAIL_USER;;
+
+  //   const pass = process.env.EMAIL_PASS;;
+
+  //   const from = process.env.EMAIL_FROM || user;;
+
+>>>>>>> origin/main
 ,
   if (!host || !user || !pass) {,
     throw new Error('Email not configured')}
+
 ;
+<<<<<<< HEAD
 const transporter="nodemailer.createTransporter({)"
+=======
+
+const transporter = nodemailer.createTransporter({);;
+
+>>>>>>> origin/main
     host)
     port)
     secure: port === 465),
@@ -29,7 +50,8 @@ const transporter="nodemailer.createTransporter({)"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed });
+
 async function submitByEmail(t,
   o: string,
   subjec,
@@ -39,9 +61,17 @@ async function submitByEmail(t,
   attachment,
   s: unknown[] = [])
 ) {/* TODO: Fix JSX expression */}
+
   }
+
 ;
+<<<<<<< HEAD
 const transporter = "nodemailer.createTransporter({/* TODO: Fix JSX expression */}"
+=======
+
+const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
   h: { user, pass })
   });
   await transporter.sendMail({/* TODO: Fix JSX expression */})
@@ -50,38 +80,74 @@ const transporter = "nodemailer.createTransporter({/* TODO: Fix JSX expression *
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
+
   r: 'Method not allowed' })}
 
   try {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
+=======
+
+    const { id, channels = ['email], emailTo, delegateNote } = req.body || {};
+
+>>>>>>> origin/main
     if (!id) {/* TODO: Fix JSX expression */}
+
   r: 'Proposal ID required' })}
+
 ;
+<<<<<<< HEAD
 const _meta="getProposal(id);"
+=======
+
+const _meta = getProposal(id);;
+
+>>>>>>> origin/main
     if (!meta) {/* TODO: Fix JSX expression */}
+
   r: 'Proposal not found' })}
 
     // Email submission;
+<<<<<<< HEAD
     if (channels.includes('email')) {}
       //       const to = "emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';"
       //       const subject = "`[Proposal] ${meta.title} - ${meta.targetInstitution}`;"
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
       //       const subject = "`[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;"
 const text = "`Please find the proposal attached."
+=======
+
+    if (channels.includes('email')) {
+      //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org;;
+
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;;
+
+    if (channels.includes('email')) {/* TODO: Fix JSX expression */}
+
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`;;
+
+const text = `Please find the proposal attached.;;
+
+>>>>>>> origin/main
 Titl,
   e: ${meta.title}
+
 Targe,
   t: ${meta.targetInstitution}
+
 Typ,
   e: ${meta.type}
+
 Regio,
   n: ${meta.regionalScope}
+
 Budget/Resolutio,
   n: ${meta.budgetOrResolution}
 
 DAO Governance: See document.,
 ,
 Delegate Note: ${delegateNote || 'N/A'}`;
+
 DAO,
   Governance: See document.
 
@@ -90,32 +156,72 @@ Delegate,`
       await submitByEmail(to, subject, text)}
 
     // ENS record hash (default: compute and store hash only);
+
 let ensRecordHash: string | undefined;
+
     try {,;
+<<<<<<< HEAD
 const _hash="crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');"
       ensRecordHash = "`0 x${hash}`;"
       updateArtifacts(id, { ensRecordHash })} catch {}
+=======
+
+const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex);;
+
+      ensRecordHash = `0 x${hash}`;
+
+      updateArtifacts(id, { ensRecordHash })} catch {
+>>>>>>> origin/main
       // ignore}
+
 ;
+<<<<<<< HEAD
 const updated = updateProposalMeta(id, m = "> ({)"
       ...m)
       status: 'Submitted')}));
+=======
+
+const updated = updateProposalMeta(id, m => ({);;
+
+      ...m)
+      status: 'Submitted)}));
+
+>>>>>>> origin/main
     return res.status(200).json({ meta: updated })} catch (error: unknown) {,
-    return res.status(500).json({ error: error?.message || 'Submission failed' });
+    return res.status(500).json({ error: error?.message || 'Submission failed });
+
     // ENS record hash (defaul)
   t: compute and store hash only);
+
 let,
   ensRecordHash: string | undefined;
+
     try {/* TODO: Fix JSX expression */}`
+<<<<<<< HEAD
       ensRecordHash="`0x${hash}`;"
+=======
+      ensRecordHash = `0x${hash}`;
+
+>>>>>>> origin/main
       updateArtifacts(id, { ensRecordHash })} catch {/* TODO: Fix JSX expression */}
+
     }
+
 ;
+<<<<<<< HEAD
 const updated = updateProposalMeta(id, m = "> ({/* TODO: Fix JSX expression */})"
+=======
+
+const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */});;
+
+>>>>>>> origin/main
     }));
     return res.status(200).json({/* TODO: Fix JSX expression */})
   a: updated })} catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
+
   r: error?.message || 'Submission failed' })}
+
 }
+
 `

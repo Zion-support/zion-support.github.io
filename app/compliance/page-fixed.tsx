@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -7,31 +8,50 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 ;
 const PageFixedPage: React.FC = () => {const features = []
     {}
+=======
+'use client;
+
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import Navigation from ../components
+import Footer from ../components
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from lucide-react;
+
+;
+
+const PageFixedPage: React.FC = () => {const features = [;;;
+
+    {
+>>>>>>> origin/main
       ico,
     n: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      title: 'AI-Powered Analysis,
+      description: 'Advanced AI algorithms provide intelligent insights and recommendations.,
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]
     },
     {}
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      title: 'Advanced Analytics,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics]
     },
     {}
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: 'Precision Targeting,
+      description: 'Target specific goals and objectives with precision and accuracy.,
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics]
     },
     {}
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: 'Growth Optimization,
+      description: 'Optimize your business growth with data-driven strategies.,
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization]
     }
+
   ];
+<<<<<<< HEAD
   return (
     <React.Fragment></React>
       <Helmet></Helmet>
@@ -98,10 +118,21 @@ const PageFixedPage: React.FC = () => {const features = []
                     </ul>
                 </div>
               ))
+=======
+
+  return (
+
+    <React.Fragment>
+      <Helmet>
+        <title>Page Fixed - Zion Tech Group</title>
+        <meta name="description" content="Advanced page fixed solutions powered by AI technology. />
+      </Helmet>
+>>>>>>> origin/main
             </div>
           </div>
         </section>
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className=""py-20 px-4"></section>"
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className=""flex items-center text-sm text-gray-400"></li>"
           <div className=""max-w-4xl mx-auto text-center"></div>"
@@ -119,6 +150,24 @@ const PageFixedPage: React.FC = () => {const features = []
                 <button className=""border border-purple-400 text-purple-400 hover:bg-purple-400 hove,"></button>"
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More;
+=======
+
+        <section className="py-20 px-4>
+          <div className="max-w-4xl mx-auto text-center">            <div className=bg-white
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6>
+                Ready to Get Started?
+              <
+              <p className="text-xl text-gray-300 mb-8>
+                Contact our experts to discuss your requirements and get started today.
+              <
+              <div className="flex flex-col sm:flex-row gap-4 justify-center>
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105>
+                  Contact Us
+                <
+                <button className=border border-purple-400 text-purple-400 hover:bg-purple-400 hove,
+    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300>
+                  Learn More
+>>>>>>> origin/main
                 </button>
               </div>
             </div>
@@ -127,6 +176,7 @@ const PageFixedPage: React.FC = () => {const features = []
       </div>
       <Footer /></Footer>
     </React.Fragment>)
+<<<<<<< HEAD
                 <
               <
             <
@@ -137,3 +187,6 @@ const PageFixedPage: React.FC = () => {const features = []
   );
 };
 export default PageFixedPage;
+=======
+export default PageFixedPage;
+>>>>>>> origin/main

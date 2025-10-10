@@ -1,5 +1,6 @@
     text: string;)
 }>;
+<<<<<<< HEAD
   onSubscribe?: (email: string) => void;);
     text: string]
     }>;
@@ -15,26 +16,51 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
   buttonText=""Subscribe Now","
   features="[]"
     {}
+=======
+
+  onSubscribe?: (email: string) => void;);
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)
+  title = "Stay Updated with Our Latest Insights),
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
+  title = "Stay Updated with Our Latest Insights,
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",  placeholder = "Enter your email address,
+  buttonText = "Subscribe Now,
+  features = [
+    {
+>>>>>>> origin/main
       icon: CheckCircle,
-      text: "Weekly industry insights"]
+      text: "Weekly industry insights]
     },
     {}
       icon: Star,
-      text: "Exclusive content and tips"]
+      text: "Exclusive content and tips]
     },
     {}
       icon: Users,
-      text: "Join 10,000+ subscribers"]
+      text: "Join 10,000+ subscribers]
     },
     {}
       icon: Globe,
+<<<<<<< HEAD
       text: "Global community access";);
   ]}) => {}
   onSubscribe;)
+=======
+      text: "Global community access;);
+
+  ],
+
+}) => {
+>>>>>>> origin/main
 }); => {;
-const [email, setEmail] = useState('');
+
+const [email, setEmail] = useState(');
+
 const [isSubscribed, setIsSubscribed] = useState(false);
+
 const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
 const handleSubmit = async (e: React.FormEvent) => {}
       text: "Global community access"]
     }
@@ -47,8 +73,19 @@ const handleSubmit = async (e: React.FormEvent) => {}
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
+=======
+
+const handleSubmit = async (e: React.FormEvent) => {;
+  const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {    e.preventDefault();;
+
+>>>>>>> origin/main
     if (!email) return;
     setIsLoading(true);
+<<<<<<< HEAD
     try {}
       if (onSubscribe) {}
         await onSubscribe(email)]
@@ -70,13 +107,42 @@ const handleSubmit = async (e: React.FormEvent) => {}
       setEmail('');)
 } catch (error) {}
       // console.error removed for production;
+=======
+
+    try {
+      if (onSubscribe) {
+        await onSubscribe(email)]
+    } else {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000)););
+
+        await onSubscribe(email);
+
+      } else {
+        /
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+      }
+
+            setIsSubscribed(true);
+
+      setEmail(');)
+} catch (error) {
+      // console.error removed for production
+>>>>>>> origin/main
 )
 } finally {}
       setIsLoading(false););
+<<<<<<< HEAD
         await new Promise(resolve = "> setTimeout(resolve, 1000))]"
+=======
+
+        await new Promise(resolve => setTimeout(resolve, 1000))]
+>>>>>>> origin/main
     }
-      
+
       setIsSubscribed(true);
+<<<<<<< HEAD
       setEmail('')]
     } catch (error) {}
       console.error('Subscription failed:', error)]
@@ -92,17 +158,47 @@ const handleSubmit = async (e: React.FormEvent) => {}
           <
           <p className=""text-xl text-blue-100 mb-8"></p>"
             Thank you for subscribing. You'll receive our latest insights and updates soon.
+=======
+
+      setEmail(')]
+    } catch (error) {
+      console.error('Subscription failed:, error)]
+    } finally {
+      setIsLoading(false)]
+    }
+
+  };
+
+  if (isSubscribed) {
+    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
+        <div className="max-w-4xl mx-auto text-center>
+          <div className=w-16 h-16 bg-white
+            
+            Welcome to Our Community!
+          <
+          <p className="text-xl text-blue-100 mb-8>
+            Thank you for subscribing. Youll receive our latest insights and updates soon.
+>>>>>>> origin/main
           <
           <button )></button>
             onClick = { () => setIsSubscribed(false) };
+<<<<<<< HEAD
             className=""text-white underline hover:text-blue-200 transition-colors">"
             Subscribe another email;
+=======
+
+            className="text-white underline hover:text-blue-200 transition-colors
+          >
+            Subscribe another email
+>>>>>>> origin/main
           <
         <
       <
     );
+
   }
 
+<<<<<<< HEAD
   return (<div className=""bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>"
       <div className=""max-w-6xl mx-auto"></div>"
         <div className=""grid grid-cols-1 lg: grid-cols-2 gap-12 items-center"></div>"
@@ -110,8 +206,19 @@ const handleSubmit = async (e: React.FormEvent) => {}
           <div></div>
             <h2 className=""text-4xl m,"></h2>"
     d:text-5xl font-bold text-white mb-6">
+=======
+  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>
+      <div className="max-w-6xl mx-auto>
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center>
+          {/* Content *
+          <div>
+            <h2 className=text-4xl m,
+    d:text-5xl font-bold text-white mb-6>
+>>>>>>> origin/main
               {title}
+
             <
+<<<<<<< HEAD
             <p className=""text-xl text-blue-100 mb-8"></p>"
     return (
       <div className=""bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4"></div>"
@@ -153,12 +260,25 @@ const handleSubmit = async (e: React.FormEvent) => {}
                     <feature .icon className=""w-4 h-4 text-white"></feature>"
                   <
                   <span className=""text-blue-100">{feature.text}<"
+=======
+            <p className="text-xl text-blue-100 mb-8>
+              {subtitle}            <
+            
+            <div className="space-y-4>)
+              {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3>
+                  <div className=w-6 h-6 bg-white
+                    <feature.icon className="w-4 h-4 text-white 
+                  <
+                  <span className="text-blue-100>{feature.text}<
+>>>>>>> origin/main
                 <)
               ))}
+
             <
           <
 
           {/* Newsletter Form *
+<<<<<<< HEAD
           <div className=""bg-white/10 backdrop-blur-sm border border-white"></div>"
             <form onSubmit={handleSubmit} className=""space-y-6"></form>"
               <div></div>
@@ -215,12 +335,53 @@ const handleSubmit = async (e: React.FormEvent) => {}
                 ) : (
                   <React.Fragment></React>
                     <div></div>
+=======
+          <div className=bg-white/10 backdrop-blur-sm border border-white
+            <form onSubmit={handleSubmit} className="space-y-6>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2>
+                  Email Address                <
+                <input
+                  type="email
+                  id="email
+                  value = { email };
+
+                  onChange = { (e) => setEmail(e.target.value) };
+
+                  placeholder = { placeholder };
+
+                  className=w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus: outline-none focus:ring-2 focu,
+    s:ring-white
+                
+              <
+              
+              <button
+                type="submit
+                disabled = { isLoading || !email };
+
+                className=w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
+    d:cursor-not-allowed transition-all duration-300 flex items-center justify-center
+              >
+                {isLoading ? (<>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2><
+                    <div>
+                    Subscribing...
+                  </React.Fragment>
+                ) : (
+
+                  <React.Fragment>
+>>>>>>> origin/main
                     Subscribing...
                   <)
                 ) : (<>
                     {buttonText}
+<<<<<<< HEAD
                     
                 We respect your privacy. Unsubscribe at any time.
+=======
+
+                                    We respect your privacy. Unsubscribe at any time.
+>>>>>>> origin/main
               <
             <
           <
@@ -228,6 +389,7 @@ const handleSubmit = async (e: React.FormEvent) => {}
       <
     <
   );
+<<<<<<< HEAD
                     <ArrowRight className=""w-5 h-5 ml-2" /></ArrowRight>"
                   </>
                 );
@@ -246,3 +408,12 @@ const handleSubmit = async (e: React.FormEvent) => {}
 };
 export default ContentNewsletterSignup;
 }
+=======
+
+)]
+    };
+
+};
+
+export default ContentNewsletterSignup;}
+>>>>>>> origin/main

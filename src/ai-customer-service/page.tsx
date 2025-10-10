@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 'use client';
 import { Helmet } from 'react-helmet-async';
+=======
+'use client;
+
+import { Helmet } from 'react-helmet-async;
+
+>>>>>>> origin/main
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
 }
+
   return (<div><Helmet><
         <title>AI Customer Service Solutions - Zion Tech Group<
+<<<<<<< HEAD
         <meta name="description" content=""Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /><"
         <meta name="keywords" content=""AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /><"
         <link rel="canonical" href=""http,"></link>"
@@ -17,17 +26,41 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           <section className=""text-center mb-16"><"
             <h1 className=""text-4xl,"></h1>"
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"><
+=======
+        <meta name="description" content=Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month. /><
+        <meta name="keywords" content=AI customer service, chatbot, virtual assistant, customer support automation, multilingual support /><
+        <link rel="canonical" href=http,
+  s://ziontechgroup.com/ai-customer-service /><
+      <
+      
+      <div className=min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg><
+        <Navigation /><
+        <main className=container mx-auto px-4 py-16 pt-24><
+          {/* Hero Section *
+          <section className=text-center mb-16><
+            <h1 className=text-4xl,
+  md:text-6xl font-bold text-white mb-6 neon-text cyber-text><
+>>>>>>> origin/main
               AI Customer Service Solutions;
+
             <
+<<<<<<< HEAD
             <p className=""text-xl text-cyan-400 mb-8 font-medium"><"
               Revolutionary 24;
             <
             <p className=""text-lg text-gray-300 max-w-4xl mx-auto mb-8"><"
+=======
+            <p className=text-xl text-cyan-400 mb-8 font-medium><
+              Revolutionary 24
+            <
+            <p className=text-lg text-gray-300 max-w-4xl mx-auto mb-8><
+>>>>>>> origin/main
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
             <
           <
 
           {/* Features Grid *
+<<<<<<< HEAD
           <section className=""mb-16"><"
             <h2 className=""text-3xl font-bold text-white mb-12 text-center neon-text">Key Features<"
             <div className=""grid grid-cols-1,"></div>"
@@ -77,6 +110,57 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 <div className=""text-4xl mb-4 text-center">🎯<"
                 <h3 className=""text-xl font-bold text-white mb-4 text-center">Personalization<"
                 <p className=""text-gray-300 text-center"><"
+=======
+          <section className=mb-16><
+            <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>Key Features<
+            <div className=grid grid-cols-1,
+  md:grid-cols-2,
+  lg:grid-cols-3 gap-8><
+              <div className=cyber-card p-6 energy-pulse><
+                <div className=text-4xl mb-4 text-center>🤖<
+                <h3 className=text-xl font-bold text-white mb-4 text-center>Intelligent Chatbots<
+                <p className=text-gray-300 text-center><
+                  Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.
+                <
+              <
+              
+              <div className=cyber-card p-6 energy-pulse><
+                <div className=text-4xl mb-4 text-center>🌍<
+                <h3 className=text-xl font-bold text-white mb-4 text-center>Multilingual Support<
+                <p className=text-gray-300 text-center><
+                  Support customers in 50+ languages with real-time translation and cultural context awareness.
+                <
+              <
+              
+              <div className=cyber-card p-6 energy-pulse><
+                <div className=text-4xl mb-4 text-center>📊<
+                <h3 className=text-xl font-bold text-white mb-4 text-center>Analytics Dashboard<
+                <p className=text-gray-300 text-center><
+                  Real-time insights into customer satisfaction, response times, and conversation quality.
+                <
+              <
+              
+              <div className=cyber-card p-6 energy-pulse><
+                <div className=text-4xl mb-4 text-center>⚡<
+                <h3 className=text-xl font-bold text-white mb-4 text-center>Instant Response<
+                <p className=text-gray-300 text-center><
+                  Sub-second response times with 99.9% uptime guarantee for uninterrupted customer support.
+                <
+              <
+              
+              <div className=cyber-card p-6 energy-pulse><
+                <div className=text-4xl mb-4 text-center>🔗<
+                <h3 className=text-xl font-bold text-white mb-4 text-center>Easy Integration<
+                <p className=text-gray-300 text-center><
+                  Seamless integration with existing CRM, helpdesk, and communication platforms.
+                <
+              <
+              
+              <div className=cyber-card p-6 energy-pulse><
+                <div className=text-4xl mb-4 text-center>🎯<
+                <h3 className=text-xl font-bold text-white mb-4 text-center>Personalization<
+                <p className=text-gray-300 text-center><
+>>>>>>> origin/main
                   AI learns from each interaction to provide increasingly personalized and relevant responses.
                 <
               <
@@ -84,6 +168,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           <
 
           {/* Pricing Section *
+<<<<<<< HEAD
           <section className=""mb-16"><"
             <h2 className=""text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<"
             <div className=""grid grid-cols-1,"></div>"
@@ -92,12 +177,23 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 <h3 className=""text-2xl font-bold text-white mb-4">Starter<"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className=""text-lg">/month</span><"
                 <ul className=""text-gray-300 space-y-3 mb-8"><"
+=======
+          <section className=mb-16><
+            <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>Pricing Plans<
+            <div className=grid grid-cols-1,
+  md:grid-cols-3 gap-8><
+              <div className=cyber-card p-8 text-center><
+                <h3 className=text-2xl font-bold text-white mb-4>Starter<
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className=text-lg>/month</span><
+                <ul className=text-gray-300 space-y-3 mb-8><
+>>>>>>> origin/main
                   <li>Up to 1,000 conversations/month<
                   <li>5 languages supported<
                   <li>Basic analytics<
                   <li>Email support<
                   <li>Standard integrations<
                 <
+<<<<<<< HEAD
                 <a href="/contact" className=""cyber-button w-full">Get Started<"
               <
               "
@@ -105,6 +201,15 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 <h3 className=""text-2xl font-bold text-white mb-4">Professional<"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className=""text-lg">/month</span><"
                 <ul className=""text-gray-300 space-y-3 mb-8"><"
+=======
+                <a href="/contact" className=cyber-button w-full>Get Started<
+              <
+              
+              <div className=cyber-card p-8 text-center border-2 border-cyan-400><
+                <h3 className=text-2xl font-bold text-white mb-4>Professional<
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className=text-lg>/month</span><
+                <ul className=text-gray-300 space-y-3 mb-8><
+>>>>>>> origin/main
                   <li>Up to 10,000 conversations/month<
                   <li>25 languages supported<
                   <li>Advanced analytics<
@@ -112,6 +217,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   <li>Custom integrations<
                   <li>Voice support<
                 <
+<<<<<<< HEAD
                 <a href="/contact" className=""cyber-button w-full">Get Started<"
               <
               "
@@ -119,6 +225,15 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                 <h3 className=""text-2xl font-bold text-white mb-4">Enterprise<"
                 <div className=""text-4xl font-bold text-cyan-400 mb-6">Custom<"
                 <ul className=""text-gray-300 space-y-3 mb-8"><"
+=======
+                <a href="/contact" className=cyber-button w-full>Get Started<
+              <
+              
+              <div className=cyber-card p-8 text-center><
+                <h3 className=text-2xl font-bold text-white mb-4>Enterprise<
+                <div className=text-4xl font-bold text-cyan-400 mb-6>Custom<
+                <ul className=text-gray-300 space-y-3 mb-8><
+>>>>>>> origin/main
                   <li>Unlimited conversations<
                   <li>50+ languages supported<
                   <li>Real-time analytics<
@@ -126,12 +241,17 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   <li>White-label solution<
                   <li>Custom AI training<
                 <
+<<<<<<< HEAD
                 <a href="/contact" className=""cyber-button w-full">Contact Sales<"
+=======
+                <a href="/contact" className=cyber-button w-full>Contact Sales<
+>>>>>>> origin/main
               <
             <
           <
 
           {/* Benefits Section *
+<<<<<<< HEAD
           <section className=""mb-16"><"
             <h2 className=""text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?<"
             <div className=""grid grid-cols-1,"></div>"
@@ -160,6 +280,36 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
               <div className=""cyber-card p-6"><"
                 <h3 className=""text-xl font-bold text-white mb-4">Instant Scalability<"
                 <p className=""text-gray-300"><"
+=======
+          <section className=mb-16><
+            <h2 className=text-3xl font-bold text-white mb-12 text-center neon-text>Why Choose Our AI Customer Service?<
+            <div className=grid grid-cols-1,
+  md:grid-cols-2 gap-8><
+              <div className=cyber-card p-6><
+                <h3 className=text-xl font-bold text-white mb-4>95% Customer Satisfaction<
+                <p className=text-gray-300><
+                  Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.
+                <
+              <
+              
+              <div className=cyber-card p-6><
+                <h3 className=text-xl font-bold text-white mb-4>70% Cost Reduction<
+                <p className=text-gray-300><
+                  Reduce customer service costs by up to 70% while maintaining high-quality support standards.
+                <
+              <
+              
+              <div className=cyber-card p-6><
+                <h3 className=text-xl font-bold text-white mb-4>24/7 Availability<
+                <p className=text-gray-300><
+                  Never miss a customer inquiry with round-the-clock AI support that never sleeps or takes breaks.
+                <
+              <
+              
+              <div className=cyber-card p-6><
+                <h3 className=text-xl font-bold text-white mb-4>Instant Scalability<
+                <p className=text-gray-300><
+>>>>>>> origin/main
                   Handle traffic spikes effortlessly with AI that scales automatically to meet demand.
                 <
               <
@@ -167,6 +317,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
           <
 
           {/* CTA Section *
+<<<<<<< HEAD
           <section className=""text-center"><"
             <h2 className=""text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?<"
             <p className=""text-lg text-gray-300 mb-8 max-w-2xl mx-auto"><"
@@ -176,14 +327,31 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
   sm:flex-row gap-4 justify-center"><
               <a href=""te,"></a>"
   l: +13024640950" className=""cyber-button"><)"
+=======
+          <section className=text-center><
+            <h2 className=text-3xl font-bold text-white mb-6>Ready to Transform Your Customer Service?<
+            <p className=text-lg text-gray-300 mb-8 max-w-2xl mx-auto><
+              Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.
+            <
+            <div className=flex flex-col,
+  sm:flex-row gap-4 justify-center><
+              <a href=te,
+  l: +13024640950" className=cyber-button><)
+>>>>>>> origin/main
                 📞 Cal)
   l: (302) 464-0950;
+
               <
+<<<<<<< HEAD
               <a href="""></a>"
+=======
+              <a href=
+>>>>>>> origin/main
   hove,
-    r:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"><
+    r:bg-white,
+  hover:text-indigo-600 transition-all duration-300><
                 Get Free Demo;
+
               <
             <
           <
@@ -192,9 +360,13 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
+<<<<<<< HEAD
   )}"
         <Footer /><
       <
     <
   );
 }"
+=======
+  )}"
+>>>>>>> origin/main

@@ -1,56 +1,128 @@
 #!/usr/bin/env node;
+
 import fs from 'fs';
+
 import path from 'path';
+<<<<<<< HEAD
 import { fileURLToPath } from 'url';
 // Function to fix console statements;
 function fixConsoleStatements(content) {}
   // Replace console.log with proper logging in production;
   content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {}
+=======
+
+import { fileURLToPath } from 'url;
+
+// Function to fix console statements';
+
+function fixConsoleStatements(content) {
+  // Replace console.log with proper logging in production';
+
+  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
+>>>>>>> origin/main
     return `if (process.env.NODE_ENV === 'development') console.${method}(`});
   // Add closing parenthesis for the if statement;
+<<<<<<< HEAD
   content="content.replace(;"
+=======
+
+  content = content.replace(;
+
+>>>>>>> origin/main
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
+
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
   });
   // Add closing parenthesis for the if statement;
+<<<<<<< HEAD
   content="content.replace()"
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
     match = "> {/* TODO: Fix JSX expression */}"
+=======
+
+  content = content.replace()
+    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
+    match => {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
       return match.replace(/\);$/, ')}')}
+
   );
   return content}
 
 // Function to fix unused variables by prefixing with underscore;
+<<<<<<< HEAD
 function fixUnusedVariables(content) {}
   // Fix unused function parameters;
   content = "content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any');"
 ,
   // Fix unused variables in function parameters;
   content = "content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any)');"
+=======
+
+function fixUnusedVariables(content) {
+  // Fix unused function parameters;
+
+  content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any);
+
+,
+  // Fix unused variables in function parameters;
+
+  content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any));
+
+>>>>>>> origin/main
 ,
   return content}
 
 // Function to fix specific files;
+<<<<<<< HEAD
 function fixFile(filePath) {}
   try {}
     if (!fs.existsSync(fullPath)) {}
+=======
+
+function fixFile(filePath) {
+  try {
+    if (!fs.existsSync(fullPath)) {
+
+>>>>>>> origin/main
       return;
+
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
+
 }
 
 // Function to fix specific files;
+
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
+
     }
 
     // Apply fixes;
+<<<<<<< HEAD
     content="fixConsoleStatements(content);"
     content="fixUnusedVariables(content);"
+=======
+
+    content = fixConsoleStatements(content);
+
+    content = fixUnusedVariables(content);
+
+>>>>>>> origin/main
     fs.writeFileSync(fullPath, content)} catch (error) {/* TODO: Fix JSX expression */}
+
   }
+
 }
 
 // Files that need fixing;
+<<<<<<< HEAD
 const filesToFix = []
+=======
+
+const filesToFix = [;;
+
+>>>>>>> origin/main
   'app/components/AdvancedPerformanceMonitor.tsx',
   'app/components/EnhancedErrorBoundary.tsx',
   'app/components/ImprovedErrorBoundary.tsx',
@@ -76,7 +148,14 @@ const filesToFix = []
   'app/utils/errorLogger.ts',
   'app/utils/errorReporter.ts',
   'app/utils/logger.ts',
+<<<<<<< HEAD
   'app/utils/monitoring.ts'];
+=======
+  'app/utils/monitoring.ts];
+
+>>>>>>> origin/main
 // Fix all files;
+
 filesToFix.forEach(fixFile);
+
 `

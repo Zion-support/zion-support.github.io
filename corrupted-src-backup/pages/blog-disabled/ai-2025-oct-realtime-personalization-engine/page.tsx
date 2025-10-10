@@ -1,5 +1,6 @@
 impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+<<<<<<< HEAD
 export default function RealtimePersonalizationEngine20, 2, 5() {}
   return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
     <React.Fragment></React>
@@ -8,6 +9,14 @@ export default function RealtimePersonalizationEngine20, 2, 5() {}
     <>
         <title></title>
           Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group;
+=======
+
+export default function RealtimePersonalizationEngine20, 2, 5() { 
+  return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
+    <React.Fragment>
+      <Helm, e, t>
+        <title>          Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group;
+>>>>>>> origin/main
         <
         <meta , nam, e = "'description'></meta>"
           conte, n, t = "'Deploy, rea, l-time, AI, personalization that, adapts, to user, behavior, in millisecon, d, s. Achieve, 9, 8.4% relevance, scori, n, g, 8.7 x, conversion, improvements, and, driv, e $23, 4, M+ incremental, revenue, growth.'"

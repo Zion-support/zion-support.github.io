@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 const fs="require('fs');"
 const path="require('path');"
 // Generate sitemap for the website;
 const generateSitemap = () => {}
+=======
+const fs = require(fs);;
+
+const path = require(path);;
+
+// Generate sitemap for the website;
+
+const generateSitemap = () => {;;
+
+>>>>>>> origin/main
 return (
+
 ;
+<<<<<<< HEAD
 const baseUrl = "'https://ziontechgroup.com';"
   const pages = []
     '',
@@ -20,22 +33,68 @@ const baseUrl = "'https://ziontechgroup.com';"
     '/consultation',
     '/contact',
     '/micro-saas'
+=======
+
+const baseUrl = https://ziontechgroup.com;;
+
+  const pages = [;;
+
+    ',
+    '/about,
+    '/services,
+    '/pricing,
+    '/blog,
+    '/case-studies,
+    '/careers,
+    '/partners,
+    '/support,
+    '/faq,
+    '/demo,
+    '/consultation,
+    '/contact,
+    /micro-saas
+>>>>>>> origin/main
   ];
+
 ;
+<<<<<<< HEAD
 const sitemap = `<?xml version="1.0" encoding=""UTF-8"?>"
 <urlset xmlns=""http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>"
 ${pages.map(page = "> `  <url></url>"
     <loc></loc>
+=======
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9>
+${pages.map(page =>   <url>
+    <loc>
+>>>>>>> origin/main
 );
+
 }${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
-</urlset>`;
+    <priority>${page === '' ? '1.0' : '0.8}</priority>
+  </url>`).join('\n)}
+
+</urlset>;
+
 ;
+<<<<<<< HEAD
 const sitemapPath = "path.join(__dirname, '..', 'public', 'sitemap.xml');"
   fs.writeFileSync(sitemapPath, sitemap);
   // console.log removed for production;
 };
 generateSitemap();
+=======
+
+const sitemapPath = path.join(__dirname, '..', 'public', sitemap.xml);;
+
+  fs.writeFileSync(sitemapPath, sitemap);
+
+  // console.log removed for production
+};
+
+generateSitemap();
+>>>>>>> origin/main

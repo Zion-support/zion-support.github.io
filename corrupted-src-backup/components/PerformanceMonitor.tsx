@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components;
 import React, { useEffect, useState } from 'react';
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
@@ -12,12 +13,39 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ),
 return (
 ;
 const [metrics, setMetrics] = useState<WebVitalsMetrics></WebVitalsMetrics>
+=======
+:src/components
+import React, { useEffect, useState } from react;
+
+interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
+}
+
+;
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
+  children;  enableReporting = true,
+  enableLongTaskMonitoring = true}) => {
+  return (
+
+;
+
+const [metrics, setMetrics] = useState<WebVitalsMetrics>
+>>>>>>> origin/main
 );
+
 }({});
+
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
+<<<<<<< HEAD
   useEffect(() => {}
+=======
+
+  useEffect(() => {
+>>>>>>> origin/main
     // Initialize performance monitoring;
+
     // Add critical resource hints manually;
+<<<<<<< HEAD
     if (typeof document !== 'undefined') {;
 const hints = []
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
@@ -44,11 +72,37 @@ const _link="document.createElement('link');"
         link.href="hint.href;"
         if (hint.crossOrigin) {}
           link.crossOrigin="hint.crossOrigin}"
+=======
+
+    if (typeof document !== undefined) {;
+
+const hints = [;;
+
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com },
+        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous }
+
+      ];
+
+            hints.forEach(hint => {);
+
+const _link = document.createElement(link);;
+
+        link.rel = hint.rel;
+
+        link.href = hint.href;
+
+        if (hint.crossOrigin) {
+          link.crossOrigin = hint.crossOrigin}
+
+>>>>>>> origin/main
 const,
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TOD,
     O: Fix JSX expression *)
 )}) => {/* TODO: Fix JSX expression *
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
+
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
   useEffect (() => {/* TODO: Fix JSX expression *
   s:/
@@ -58,8 +112,10 @@ const,
   s:/
         {/* TODO: Fix JSX expression *
   ,
-    n: 'anonymous' }
+    n: 'anonymous }
+
       ];
+<<<<<<< HEAD
       hints.forEach(hint = "> {/* TODO: Fix JSX expression */}"
         })
         document.head.appendChild(link)})}
@@ -70,28 +126,51 @@ const,
     }
     
     /
+=======
+
+            hints.forEach(hint => {/* TODO: Fix JSX expression */}
+
+        })
+        document.head.appendChild(link)})}
+
+        /
+>>>>>>> origin/main
 /
     if (pageLoadMetrics) {/* TODO: Fix JSX expression *
       }
+
     }
 
     // Monitor long tasks if enabled;
+
     if (enableLongTaskMonitoring) {;
+<<<<<<< HEAD
 const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
     /
     if (enableLongTaskMonitoring) {}
       const observer = performanceOptimizer.monitorLongTasks ((entries: PerformanceEntryList) => {,
         setLongTasks(prev = "> [...prev, ...entries]);"
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression *
+=======
+
+const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,;
+        setLongTasks(prev => [...prev, ...entries]);    if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression *
+>>>>>>> origin/main
 /
       
       return (<div>)
       {) => {/* TOD,
     O: Fix JSX expression *
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       }}
+
   }, [enableReporting, enableLongTaskMonitoring]);
   // Monitor Web Vitals using Performance Observer;
+<<<<<<< HEAD
   useEffect(() => {}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 ;
@@ -114,31 +193,67 @@ const _entries="list.getEntries();"
           setMetrics(prev = "> ({ ...prev, LCP: lcp }));"
           if (enableReporting) {}
             performanceOptimizer.reportWebVitals({ LCP: lcp });
+=======
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('PerformanceObserver in window)) return;
+
+;
+
+const observer = new PerformanceObserver((list) => {;;
+
+const _entries = list.getEntries();;
+
+      entries.forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint) {/
+          setMetrics(prev => ({ ...prev, LCP: lcp }));
+
+          if (enableReporting) {
+            performanceOptimizer.reportWebVitals({ LCP: lcp });
+
+>>>>>>> origin/main
   useEffect(() => {/* TODO: Fix JSX expression */}
+
   P: lcp }));
+
           if (enableReporting) {/* TODO: Fix JSX expression */}
+
   P: lcp })}
+
         }
-        
-        if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+
+        if (entry.entryType === 'first-input) {/* TODO: Fix JSX expression */}
+
   D: fid }));
+
           if (enableReporting) {/* TODO: Fix JSX expression */}
+
   D: fid })}
+
         }
-        
-        if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
+
+        if (entry.entryType === 'layout-shift) {/* TODO: Fix JSX expression */}
+
   S: cls }));
+
           if (enableReporting) {/* TODO: Fix JSX expression */}
+
   S: cls })}
+
         }
+
       })});
     try {/* TODO: Fix JSX expression */}
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] })} catch (e) {/* TODO: Fix JSX expression */}
+
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift] })} catch (e) {/* TODO: Fix JSX expression */}
+
 //       }
 
     return () => {/* TODO: Fix JSX expression */}
+
     }}, [enableReporting]);
   // Development mode: Log performance metrics;
+<<<<<<< HEAD
   useEffect(() => {,
   useEffect (() => {/* TODO: Fix JSX expression *
   ,
@@ -185,17 +300,34 @@ const _entries="list.getEntries();"
   useEffect (() => {,
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
   /
+=======
+
+  useEffect(() => {,
+    if (process.env['NODE_ENV'] === 'development && Object.keys(metrics).length > 0) {,  /
+>>>>>>> origin/main
   mode: Log performance metrics;
+
   useEffect (() => {/* TOD,
     O: Fix JSX expression *
 /
   }, [metrics]);
   return <React.Fragment>{children};
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
 }
+=======
+
+import React, { useEffect, useState, useCallback } from react;
+
+interface PerformanceMonitorProps {/* TODO: Fix JSX expression *
+}
+
+>>>>>>> origin/main
 ;
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
+<<<<<<< HEAD
   enabled="true;"
   budget="{,"
     maxBundleSize: 500, // 500KB;
@@ -214,24 +346,58 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({),
   onMetricsUpdate,
   onBudgetViolation}) => {}
 return (
+=======
+  enabled = true;
+
+  budget = {,
+    maxBundleSize: 500, // 500KB;
+
+    maxImageSize: 100, // 100KB;
+
+    maxFirstLoad: 3000, // 3 seconds;
+
+    maxInteractive: 2000 // 2 seconds},
+  onMetricsUpdate,  onBudgetViolation}) => {
+  return (
+
+>>>>>>> origin/main
 ;
+
 const,
+<<<<<<< HEAD
   PerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps>
+=======
+  PerformanceMonitor: React.FC<PerformanceMonitorProps>
+>>>>>>> origin/main
 );
+
 } = ({/* TODO: Fix JSX expression */}
+
   },
+<<<<<<< HEAD
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TOD,
     O: Fix JSX expression *)
   )},
   onMetricsUpdate,
   onBudgetViolation;)
+=======
+  onMetricsUpdate,  onBudgetViolation;)
+>>>>>>> origin/main
 }) => {/* TODO: Fix JSX expression *
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
+
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
+
   s: string[] }>({/* TODO: Fix JSX expression */})
   s: [] });
+
 ;
+<<<<<<< HEAD
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev = "> ({ ...prev, ...newMetrics }));"
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression *
@@ -245,24 +411,47 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       /
       const _budgetCheck="performanceOptimizer.checkPerformanceBudget(budget);"
       setBudgetStatus(budgetCheck);
+=======
+
+const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */};
+
+      setMetrics(prev => ({ ...prev, ...newMetrics }));
+
+      onMetricsUpdate?.(newMetrics);
+
+            /
+      const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);;
+
+      setBudgetStatus(budgetCheck);
+
+>>>>>>> origin/main
       if (!budgetCheck.passed) {/* TODO: Fix JSX expression *
       }
+
     }
+
   }, [budget, onMetricsUpdate, onBudgetViolation]);
   useEffect (() => {}
     if (!enabled) return;
     /
     updateMetrics();
     /
+<<<<<<< HEAD
     const longTaskObserver = performanceOptimizer.monitorLongTasks ((entries) => {}
+=======
+    const longTaskObserver = performanceOptimizer.monitorLongTasks ((entries) => {;;
+
+>>>>>>> origin/main
 /
 
     /
-    const reportVitals = (newMetrics: WebVitalsMetrics) => {,
+    const reportVitals = (newMetrics: WebVitalsMetrics) => {,;;
+
   useEffect (() => {/* TODO: Fix JSX expression *
 /
 
     /
+<<<<<<< HEAD
     const reportVitals="(newMetric)"
   s: WebVitalsMetrics) => {/* TOD,
     O: Fix JSX expression *
@@ -275,20 +464,52 @@ const observer = new PerformanceObserver((list) => {}
           if (entry.entryType === 'paint') {;
 const _paintEntry = "entry as PerformancePaintTiming;"
             if (paintEntry.name === 'first-contentful-paint') {}
+=======
+    const reportVitals = (newMetric);;
+
+  s: WebVitalsMetrics) => {/* TOD,
+    O: Fix JSX expression *
+      setMetrics(prev => ({ ...prev, ...newMetrics }));
+
+    // Set up performance monitoring;
+
+    if ('PerformanceObserver in window) {;
+
+const observer = new PerformanceObserver((list) => {        list.getEntries().forEach((entry) => {;
+          if (entry.entryType === paint) {;
+
+const _paintEntry = entry as PerformancePaintTiming;;
+
+            if (paintEntry.name === 'first-contentful-paint) {
+>>>>>>> origin/main
               reportVitals({ FCP: paintEntry.startTime });
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+
+    if ('PerformanceObserver in window) {/* TODO: Fix JSX expression */}
+
   P: paintEntry.startTime })}
+
           }
-          if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
+
+          if (entry.entryType === 'largest-contentful-paint) {/* TODO: Fix JSX expression */}
+
   P: lcpEntry.startTime })}
+
         })});
       observer.observe({/* TODO: Fix JSX expression */})
+<<<<<<< HEAD
   s: ['paint', 'largest-contentful-paint'] });
+=======
+  s: ['paint', largest-contentful-paint] });
+
+>>>>>>> origin/main
       return () => {/* TODO: Fix JSX expression */}
+
       }}
 
     return () => {/* TODO: Fix JSX expression */}
+
     }}, [enabled, updateMetrics]);
+<<<<<<< HEAD
     /
     if ('PerformanceObserver' in window) {}
       const observer = new PerformanceObserver ((list) => {}
@@ -326,16 +547,32 @@ const _paintEntry = "entry as PerformancePaintTiming;"
       {/* Toggle button *
       <button ;)></button>
   return (<div className=""performance-monitor"></div>"
+=======
+
+  if (!enabled) return null;
+
+  return(<div className="performance-monitor>)
+      {/* Toggle button *
+      <button;)
+  return (<div className="performance-monitor>
+>>>>>>> origin/main
       {/* Toggle button */}<
       <button )></button>
         onClick = { () => setIsVisible(!isVisible) };
+<<<<<<< HEAD
         className=""fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors""
         aria-label=""Toggle performance monitor","
+=======
+
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors
+        aria-label="Toggle performance monitor,
+>>>>>>> origin/main
       >,
         📊,
       <
 ,
       {/* Performance panel *
+<<<<<<< HEAD
       {isVisible && (<div className=""fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dar,"></div>"
     k:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">,
           <div className=""flex justify-between items-center mb-3">,"
@@ -350,12 +587,31 @@ const _paintEntry = "entry as PerformancePaintTiming;"
               className=""text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hove,""
     r:text-gray-200"
               aria-label=""Close performance monitor""
+=======
+      {isVisible && (<div className=fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dar,
+    k:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto>,
+          <div className="flex justify-between items-center mb-3>,
+            <h3 className="text-lg font-semibold text-gray-900 dark: text-white>Performance Monitor<
+            <button;
+
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto><
+          <div className="flex justify-between items-center mb-3><
+            <h3 className=text-lg font-semibold text-gray-900 dar,
+    k:text-white>Performance Monitor<
+            <button)
+              onClick = { () => setIsVisible(false) };
+
+              className=text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hove,
+    r:text-gray-200
+              aria-label="Close performance monitor
+>>>>>>> origin/main
             >,
               ✕,
             <
           <
 ,
           {/* Metrics *
+<<<<<<< HEAD
           <div className=""space-y-2 mb-4"></div>"
             <div className=""text-sm"></div>"
               <span className=""font-medium text-gray-700 dark: text-gray-300">FCP:<"
@@ -389,12 +645,50 @@ const _paintEntry = "entry as PerformancePaintTiming;"
         className=""fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,""
   hover: bg-blue-700 transition-colors""
         aria-label=""Toggle performance monitor">"
+=======
+          <div className="space-y-2 mb-4>
+            <div className="text-sm>
+              <span className="font-medium text-gray-700 dark: text-gray-300>FCP:<
+          <div className="space-y-2 mb-4><
+            <div className="text-sm><
+              <span className="font-medium text-gray-700 dark:text-gray-300>FC,
+    P:<
+              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}}>
+                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : N
+              <
+            <
+            <div className="text-sm>
+              <span className="font-medium text-gray-700 dark: text-gray-300>LCP:<
+            <div className="text-sm><
+              <span className="font-medium text-gray-700 dark:text-gray-300>LC,
+    P:<
+              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}}>
+                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : N
+              <
+            <
+            <div className="text-sm>
+              <span className="font-medium text-gray-700 dark: text-gray-300>TTFB:<
+            <div className="text-sm><
+              <span className="font-medium text-gray-700 dark:text-gray-300>TTF,
+    B:<
+              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}}>
+  return (<div className="performance-monitor><
+      {/* Toggle button *
+      <button><)
+        onClick={() => setIsVisible(!isVisible)}
+
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,
+  hover: bg-blue-700 transition-colors"
+        aria-label="Toggle performance monitor
+      >
+>>>>>>> origin/main
         📊
       <
 
       {/* Performance panel *
       {/* TOD,
     O: Fix JSX expression *
+<<<<<<< HEAD
               onClick={() => setIsVisible(false)}"
               className=""text-gray-500,""
   hover:text-gray-700,
@@ -402,11 +696,23 @@ const _paintEntry = "entry as PerformancePaintTiming;"
   dark:hove,"
   r:text-gray-200""
               aria-label=""Close performance monitor">"
+=======
+              onClick={() => setIsVisible(false)}
+
+              className=text-gray-500,
+  hover:text-gray-700,
+  dark:text-gray-400,
+  dark:hove,
+  r:text-gray-200"
+              aria-label="Close performance monitor
+            >
+>>>>>>> origin/main
               ✕
             <
           <
 
           {/* Metrics *
+<<<<<<< HEAD
           <div className=""space-y-2 mb-4"><"
             <div className=""text-sm"><"
               <span className=""font-medium text-gray-700,"></span>"
@@ -430,11 +736,37 @@ const _paintEntry = "entry as PerformancePaintTiming;"
   B:<
               <span className="{`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}><"
                 {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N;
+=======
+          <div className="space-y-2 mb-4><
+            <div className="text-sm><
+              <span className="font-medium text-gray-700,
+  dark:text-gray-300>FC,
+  P:<
+              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}}><
+                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : N
+              <
+            <
+            <div className="text-sm><
+              <span className="font-medium text-gray-700,
+  dark:text-gray-300>LC,
+  P:<
+              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}}><
+                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : N
+              <
+            <
+            <div className="text-sm><
+              <span className="font-medium text-gray-700,
+  dark:text-gray-300>TTF,
+  B:<
+              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}}><
+                {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : N
+>>>>>>> origin/main
               <
             <
           <
 
           {/* Budget Status *
+<<<<<<< HEAD
           <div className=""border-t pt-3"></div>"
             <div className=""flex items-center gap-2 mb-2"></div>"
               <span className=""text-sm font-medium text-gray-700 dark: text-gray-300">Budget Status:<"
@@ -457,24 +789,62 @@ const _paintEntry = "entry as PerformancePaintTiming;"
   Status:<
               <span className="{`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}><"
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
+=======
+          <div className="border-t pt-3>
+            <div className="flex items-center gap-2 mb-2>
+              <span className="text-sm font-medium text-gray-700 dark: text-gray-300>Budget Status:<
+          <div className="border-t pt-3><
+            <div className="flex items-center gap-2 mb-2><
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300>Budget Statu,
+    s:<
+              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}}>
+                {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED}
+
+              <
+            <
+            {budgetStatus.violations.length > 0 && (<div className="text-xs text-red-600 dark: text-red-400>,)
+                {budgetStatus.violations.map((violation, index) => (<div className="text-xs text-red-600 dark: text-red-400>)
+                {budgetStatus.violations.map((violation), index) => (<
+          {/* Budget Status *
+          <div className="border-t pt-3><
+            <div className="flex items-center gap-2 mb-2><
+              <span className="text-sm font-medium text-gray-700,
+  dark:text-gray-300>Budget,
+  Status:<
+              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}}><
+                {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED}
+
+>>>>>>> origin/main
               <
             <
             {/* TODO: Fix JSX expression *
                   <div key = "{index}>• {violation}<)"
                 ))}
+
               <
             )}
+
           <
 
           {/* Connection Quality *
+<<<<<<< HEAD
           <div className=""border-t pt-3 mt-3"></div>"
             <div className=""text-sm"></div>"
               <span className=""font-medium text-gray-700 dark: text-gray-300">Connectio,"
     n:<
               <span className=""ml-2 text-blue-600">,"
+=======
+          <div className="border-t pt-3 mt-3>
+            <div className="text-sm>
+              <span className="font-medium text-gray-700 dark: text-gray-300>Connectio,
+    n:<
+              <span className="ml-2 text-blue-600>,
+>>>>>>> origin/main
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
+
               <
             <
+<<<<<<< HEAD
             <div className=""text-sm"></div>"
               <span className=""font-medium text-gray-700 dark: text-gray-300">WebP Suppor,"
     t:<
@@ -484,9 +854,22 @@ const _paintEntry = "entry as PerformancePaintTiming;"
               <span className=""font-medium text-gray-700 dark: text-gray-300">Connectio,"
     n:<
               <span className=""ml-2 text-blue-600"><"
+=======
+            <div className="text-sm>
+              <span className="font-medium text-gray-700 dark: text-gray-300>WebP Suppor,
+    t:<
+              <span className="ml-2 text-blue-600>,
+          <div className="border-t pt-3 mt-3><
+            <div className="text-sm><
+              <span className="font-medium text-gray-700 dark: text-gray-300>Connectio,
+    n:<
+              <span className="ml-2 text-blue-600><
+>>>>>>> origin/main
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
+
               <
             <
+<<<<<<< HEAD
             <div className=""text-sm"><"
               <span className=""font-medium text-gray-700 dark: text-gray-300">WebP Suppor,"
     t:<
@@ -498,23 +881,54 @@ const _paintEntry = "entry as PerformancePaintTiming;"
   dark:text-gray-300">Connectio,
   n:<
               <span className=""ml-2 text-blue-600"><"
+=======
+            <div className="text-sm><
+              <span className="font-medium text-gray-700 dark: text-gray-300>WebP Suppor,
+    t:<
+              <span className="ml-2 text-blue-600>
+          {/* Connection Quality *
+          <div className="border-t pt-3 mt-3><
+            <div className="text-sm><
+              <span className="font-medium text-gray-700,
+  dark:text-gray-300>Connectio,
+  n:<
+              <span className="ml-2 text-blue-600><
+>>>>>>> origin/main
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
+
               <
             <
+<<<<<<< HEAD
             <div className=""text-sm"><"
               <span className=""font-medium text-gray-700,"></span>"
   dark:text-gray-300">WebP,
   Support:<
               <span className=""ml-2 text-blue-600"><"
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
+=======
+            <div className="text-sm><
+              <span className="font-medium text-gray-700,
+  dark:text-gray-300>WebP,
+  Support:<
+              <span className="ml-2 text-blue-600><
+                {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO}
+
+>>>>>>> origin/main
               <
             <
           <
         <
       )}
+<<<<<<< HEAD
     </div>
   )};
     <
   );
 };
+=======
+
+    </div>
+  )};
+
+>>>>>>> origin/main
 export default PerformanceMonitor}"`

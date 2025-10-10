@@ -1,10 +1,17 @@
-import React from 'react';
+import React from react;
+
 #!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+
+import fs from fs;
+
+import path from path;
+
+import { execSync } from child_process;
+
+import { fileURLToPath } from url;
+
 ;
+<<<<<<< HEAD
 const __filename="fileURLToPath(import.meta.url);"
 // __dirname removed;
 // Function to fix duplicate function declarations;
@@ -18,35 +25,104 @@ let content = "fs.readFileSync(filePath, 'utf8');"
     // Fix duplicate const declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {}
       return `const ${name} = () => {`});
+=======
+
+const __filename = fileURLToPath(import.meta.url);;
+
+// __dirname removed
+// Function to fix duplicate function declarations;
+
+function fixDuplicateDeclarations(filePath) {
+  try {;
+
+let content = fs.readFileSync(filePath, utf8);;
+
+    let originalContent = content;;
+
+    // Fix duplicate function declarations;
+
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
+      return `const ${name}: React.FC = () => {});
+
+    // Fix duplicate const declarations;
+
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
+      return `const ${name} = () => {});
+
+>>>>>>> origin/main
     // Fix missing closing braces in simple cases;
+
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {;
+<<<<<<< HEAD
 const lines="body.split('\n');"
       let openBraces="0;"
       let closeBraces="0;"
       for (const line of lines) {}
+=======
+
+const lines = body.split(\n);;
+
+      let openBraces = 0;;
+
+      let closeBraces = 0;;
+
+      for (const line of lines) {
+>>>>>>> origin/main
         openBraces += (line.match(/{/g) || []).length;
+
 function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
+
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
+
+      return const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
+
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     // Fix duplicate const declarations;
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
+
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
+
+      return const ${name} = () => {/* TODO: Fix JSX expression */}
+
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     // Fix missing closing braces in simple cases;
+
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
+
         closeBraces += (line.match(/}/g) || []).length}
-      
-      if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}
+
+      if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
+
+        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}}
+
       return match});
+<<<<<<< HEAD
     // Fix missing semicolons;
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {}
       if (!match.endsWith(';')) {}
         return match + ';';
+=======
+
+    // Fix missing semicolons;
+
+    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
+      if (!match.endsWith(';)) {
+        return match + ;
+
+>>>>>>> origin/main
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
+
       }
+
       return match});
+<<<<<<< HEAD
     // Only write if content changed;
     if (content !== originalContent) {}
       fs.writeFileSync(filePath, content, 'utf8');
@@ -57,11 +133,32 @@ if (content !== originalContent) {/* TODO: Fix JSX expression */}`
     
     return false} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production;
+=======
+
+    // Only write if content changed;
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, utf8);
+
+      // console.log removed for production
+if (content !== originalContent) {/* TODO: Fix JSX expression */}
+
+  in: ${filePath});
+
+      return true}
+
+    return false} catch (error) {/* TODO: Fix JSX expression */}
+
+    // console.error removed for production
+>>>>>>> origin/main
 return false}
+
 }
 
 // Function to find all TypeScript/JavaScript files;
+
 function findFiles(dir) {;
+<<<<<<< HEAD
 const files="[];"
   ;
 function walkDir(currentPath) {}
@@ -72,22 +169,58 @@ const fullPath = "path.join(currentPath, item);"
         const stat="fs.statSync(fullPath);"
         if (stat.isDirectory()) {}
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {}
+=======
+
+const files = [];;
+
+  ;
+
+function walkDir(currentPath) {
+    try {;
+
+const items = fs.readdirSync(currentPath);;
+
+      for (const item of items) {;
+
+const fullPath = path.join(currentPath, item);;
+
+        const stat = fs.statSync(fullPath);;
+
+        if (stat.isDirectory()) {
+          if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
+>>>>>>> origin/main
             walkDir(fullPath);
+
 function findFiles(dir) {/* TODO: Fix JSX expression */}
+
           }
+
         } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
+
           }
+
         }
+
       }
+<<<<<<< HEAD
     } catch (error) {}
       // Skip directories that can't be read} catch (error) {/* TODO: Fix JSX expression */}
+=======
+
+    } catch (error) {
+      // Skip directories that cant be read} catch (error) {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
     }
+
   }
-  
+
   walkDir(dir);
+
   return files}
 
 // Main execution;
+<<<<<<< HEAD
 // console.log removed for production;
 const srcDir = "path.join(__dirname, 'src');"
 const files="findFiles(srcDir);"
@@ -95,9 +228,25 @@ const files="findFiles(srcDir);"
 // console.log removed for production;
 ;
 let fixedCount="0;"
+=======
+
+// console.log removed for production
+const srcDir = path.join(__dirname, src);;
+
+const files = findFiles(srcDir);;
+
+// console.log removed for production
+;
+
+let fixedCount = 0;;
+
+>>>>>>> origin/main
 for (const file of files) {/* TODO: Fix JSX expression */}
+
   }
+
 }
+<<<<<<< HEAD
 `
 // console.log removed for production;
 // Run linting to check results;
@@ -105,7 +254,20 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
   // console.log removed for production;
+=======
+
+// console.log removed for production
+// Run linting to check results;
+
+// console.log removed for production
+try {/* TODO: Fix JSX expression */}
+
+  o: pipe });
+
+  // console.log removed for production
+>>>>>>> origin/main
 } catch (error) {/* TODO: Fix JSX expression */}
+
 }
 
 // console.log removed for production;

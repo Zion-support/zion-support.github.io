@@ -1,5 +1,7 @@
-import React from 'react';
+import React from 'react;
+
 #!/usr/bin/env node;
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -31,24 +33,88 @@ const ${componentName}: React.FC<${componentName}Props> = ({}
   className="'',"
   children}) => {}
 return (
+=======
 
+import fs from 'fs;
+
+import path from 'path;
+
+import { fileURLToPath } from url;
+
+// const __filename = fileURLToPath(import.meta.url);;;
+
+// // __dirname removed
+//Files that need to be fixed;
+>>>>>>> origin/main
+
+const filesToFix = [;;;
+
+  'src/components/SiteHeader.tsx,
+  'src/components/SiteSidebar.tsx,
+  'src/content/blog-posts.ts,
+  'src/content/case-studies.ts,
+  'src/content/content-config.ts,
+  'src/content/enhanced-promotional-banners.ts,
+  'src/content/latest-articles.ts,
+  'src/content/new-articles-2025.ts,
+  'src/content/new-insights.ts,
+  'src/content/new-services-2026.ts,
+  'src/content/october-2025-cutting-edge-innovations.ts,
+  'src/content/revolutionary-ai-breakthroughs-2025.ts,
+  'src/content/sept-30-breakthrough-articles-2025.ts,
+  'src/data/blog-posts.ts,
+  'src/router.tsx,
+  'src/types/index.ts,
+  src/types/next-stubs.d.ts];
+
+function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
+
+interface ${componentName}Props {/* TODO: Fix JSX expression */}
+
+}
+
+const ${componentName}: React.FC<${componentName}Props> = ({ 
+  className = ', 
+  children}) => {
   return (
+<<<<<<< HEAD
     <div className="{\`${componentName.toLowerCase()}-component \${className}\`}></div>"
+=======
+
+    <div className={\`${componentName.toLowerCase()}-component \${className}\}>
+>>>>>>> origin/main
 );
+
 }</div>
       {children || (
+<<<<<<< HEAD
         <div className=""p-4 text-center text-gray-600">;"
 const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     <div className="{\`${componentName.toLowerCase()}-component \${className}\`}></div>"
       {/* TODO: Fix JSX expression */}
           <h3 className=""text-lg font-semibold mb-2">${componentName}</h3>"
+=======
+
+        <div className="p-4 text-center text-gray-600>;
+
+const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+
+    <div className={\`${componentName.toLowerCase()}-component \${className}\}></div>
+      {/* TODO: Fix JSX expression */}
+
+          <h3 className="text-lg font-semibold mb-2>${componentName}</h3>
+>>>>>>> origin/main
           <p>Component</p> placeholder - implementation needed</p>
         </div>
       )}
+
     </div>
   )};
+
 export default ${componentName};`
+<<<<<<< HEAD
 `} else if (isTs) {}
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {}
@@ -58,43 +124,93 @@ export const default${componentName}Config: ${componentName}Config="{}"
 export default {}
   default${componentName}Config} else if (isTs) {/* TODO: Fix JSX expression */}`
     return `//${componentName} - TypeScript definitions and utilities;
+=======
+} else if (isTs) {
+    return //${componentName} - TypeScript definitions and utilities;
+
+export interface ${componentName}Config {
+  //Configuration properties}
+
+export const default${componentName}Config: ${componentName}Config = {
+  //Default configuration};
+
+export default {
+  default${componentName}Config} else if (isTs) {/* TODO: Fix JSX expression */}
+
+    return //${componentName} - TypeScript definitions and utilities;
+
+>>>>>>> origin/main
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
+
 }
+
 export const default${componentName}Confi,
+<<<<<<< HEAD
   g: ${componentName}Config = "{/* TODO: Fix JSX expression */}"
+=======
+  g: ${componentName}Config = {/* TODO: Fix JSX expression */}
+
+>>>>>>> origin/main
 };
+
 export default {/* TODO: Fix JSX expression */}
+
   default${componentName}Config};`
+<<<<<<< HEAD
 `} else {}
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {}
   //Module implementation} else {/* TODO: Fix JSX expression */}`
     return `//${componentName} - JavaScript module;
+=======
+} else {
+    return //${componentName} - JavaScript module;
+
+export const ${componentName} = {
+  //Module implementation} else {/* TODO: Fix JSX expression */}
+
+    return //${componentName} - JavaScript module;
+
+>>>>>>> origin/main
 export const ${componentName} = {/* TODO: Fix JSX expression */}
+
 };
+
 export default ${componentName};`
-`}
 }
+
+}
+
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
+
     }
+
     // Check if file has severe corruption;
+
     if (
+
     if ()
-      content.includes('<< HEAD') ||
-      content.includes('import, Reac, t') ||
-      content.includes('con, s, t') ||
-      content.includes('useSta, t, e') ||
-      content.includes('Declaration or statement expected') ||
-      content.includes('Unterminated string constant') ||
-      content.includes('impo, r, t') ||
-      content.includes('const,') ||
-      (content.includes('{/* TODO: Fix JSX expression */}
+      content.includes('<< HEAD) ||
+      content.includes('import, Reac, t) ||
+      content.includes('con, s, t) ||
+      content.includes('useSta, t, e) ||
+      content.includes('Declaration or statement expected) ||
+      content.includes('Unterminated string constant) ||
+      content.includes('impo, r, t) ||
+      content.includes('const,) ||
+      (content.includes({/* TODO: Fix JSX expression */}
+
       //       } else {/* TODO: Fix JSX expression */}
+
       //       })
   } catch (error) {/* TODO: Fix JSX expression */}
+
     //     }
+
 }
+
 // filesToFix.forEach(fixFile);
+
 // 
 
 }"`

@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {}
+=======
+'use client;
+
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import {
+>>>>>>> origin/main
   Shield,
   Search,
   AlertTriangle,
@@ -21,30 +31,43 @@ import {}
   TrendingUp,
   Settings,
   Database,
+<<<<<<< HEAD
   Target} from 'lucide-react';
 ;
 const PenetrationTestingPage: React.FC = () => {const features = []
     {}
+=======
+  Target,
+
+} from lucide-react;
+
+;
+
+const PenetrationTestingPage: React.FC = () => {const features = [;;;
+
+    {
+>>>>>>> origin/main
       ico,
     n: Search,
-      title: 'Comprehensive Vulnerability Assessment',
-      description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
+      title: 'Comprehensive Vulnerability Assessment,
+      description: Thorough testing of your systems to identify security weaknesses and potential attack vectors.
     },
     {}
       icon: Target,
-      title: 'Simulated Attack Scenarios',
-      description: 'Real-world attack simulations to test your defenses and response capabilities.'
+      title: 'Simulated Attack Scenarios,
+      description: Real-world attack simulations to test your defenses and response capabilities.
     },
     {}
       icon: BarChart,
-      title: 'Detailed Security Reports',
-      description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
+      title: 'Detailed Security Reports,
+      description: Comprehensive reports with prioritized recommendations and remediation guidance.
     },
     {}
       icon: Zap,
-      title: 'Expert Security Analysis',
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
+      title: 'Expert Security Analysis,
+      description: Professional security experts conduct thorough testing using industry-standard methodologies.
     }
+<<<<<<< HEAD
   ];
 ;
 const benefits = []
@@ -125,20 +148,65 @@ const benefits = []
                 Key Benefits;
               <
               <p className=""text-xl text-gray-300 max-w-3xl mx-auto"></p>"
+=======
+
+  ];
+
+;
+
+const benefits = [;;
+
+    'Identify security vulnerabilities before attackers do,
+    'Comply with industry regulations and standards,
+    'Improve your security posture and defenses,
+    'Receive detailed remediation recommendations,
+    'Test incident response procedures,
+    'Validate security controls effectiveness,
+    'Expert analysis and reporting,
+    Ongoing security improvement guidance
+  ];
+
+  return (
+
+    <React.Fragment>
+      <Helmet>
+        <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
+        <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis. />
+        <meta name="keywords" content="penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group />
+      </Helmet>
+        {/* Benefits Section *
+        <section className=py-20 px-4 sm: px-6 lg:px-8 bg-white
+          <div className="max-w-7xl mx-auto>
+            <div className="text-center mb-16>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
+                Key Benefits
+              <
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
+>>>>>>> origin/main
                 Strengthen your security defenses with our comprehensive penetration testing services.
               <
             <
 
+<<<<<<< HEAD
             <div className=""grid grid-cols-1 md:grid-cols-2 gap-6"></div>"
               {benefits.map((benefit, index) => (
                 <div key={index} className=""flex items-start space-x-3"></div>"
                   <CheckCircle className=""h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></CheckCircle>"
                   <p className=""text-gray-300 text-lg">{benefit}</p>"
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
+              {benefits.map((benefit, index) => (
+
+                <div key={index} className="flex items-start space-x-3>
+                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
+                  <p className="text-gray-300 text-lg>{benefit}</p>
+>>>>>>> origin/main
                 </div>
               ))
             </div>
           </div>
         </section>
+<<<<<<< HEAD
             <div className=""grid grid-cols-1 m,"></div>"
     d:grid-cols-2 gap-6">
               {benefits.map((benefit), index) => (<div key={index} className=""flex items-start space-x-3"></div>"
@@ -165,6 +233,24 @@ const benefits = []
     r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   <Mail className=""mr-2 h-5 w-5"></Mail>"
                   Email Us;
+=======
+        {/* CTA Section *
+        <section className="py-20 px-4 sm: px-6 lg:px-8>
+          <div className="max-w-4xl mx-auto text-center>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
+                Ready to Test Your Security?
+              <
+              <p className="text-xl text-purple-100 mb-8>
+                Contact our security experts to schedule a comprehensive penetration test for your systems.
+              <
+              <div className="flex flex-col sm:flex-row gap-4 justify-center>
+                <button className=bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-gray-100 transition-all duration-300 flex items-center justify-center>
+                  
+                  <Mail className="mr-2 h-5 w-5 
+                  Email Us
+>>>>>>> origin/main
                 </button>
               </div>
             </div>
@@ -172,6 +258,7 @@ const benefits = []
         </section>
       </div>
     </React.Fragment>)
+<<<<<<< HEAD
                 <
               <
             <
@@ -182,3 +269,6 @@ const benefits = []
   );
 };
 export default PenetrationTestingPage;
+=======
+export default PenetrationTestingPage;
+>>>>>>> origin/main

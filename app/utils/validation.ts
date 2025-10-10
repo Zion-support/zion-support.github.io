@@ -5,13 +5,20 @@
 
 export interface ValidationResult {}
   isValid: boolean;
+
   error?: string;
+
   errors?: string[];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 }
 
 /**
  * Email validation with length check;
  */
+<<<<<<< HEAD
 export function validateEmail(email: string): ValidationResult {}
   if (!email || email.length > 254) {}
     return { isValid: false, error: 'Email is too long' };
@@ -20,14 +27,29 @@ export function validateEmail(email: string): ValidationResult {}
   const emailRegex = "/^[^\s@]+@[^\s@]+\.[^\s@]+$/;"
   if (!emailRegex.test(email)) {}
     return { isValid: false, error: 'Invalid email format' };
+=======
+export function validateEmail(email: string): ValidationResult {
+  if (!email || email.length > 254) {
+    return { isValid: false, error: Email is too long };
+
   }
-  
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
+
+  if (!emailRegex.test(email)) {
+    return { isValid: false, error: Invalid email format };
+
+>>>>>>> origin/main
+  }
+
   return { isValid: true };
+
 }
 
 /**
  * Phone number validation;
  */
+<<<<<<< HEAD
 export function validatePhone(phone: string): ValidationResult {}
   if (!phone) {}
     return { isValid: false, error: 'Phone number is required' };
@@ -36,14 +58,29 @@ export function validatePhone(phone: string): ValidationResult {}
   const phoneRegex = "/^[\+]?[1-9][\d]{0,15}$/;"
   if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {}
     return { isValid: false, error: 'Invalid phone number format' };
+=======
+export function validatePhone(phone: string): ValidationResult {
+  if (!phone) {
+    return { isValid: false, error: Phone number is required };
+
   }
-  
+
+  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;;
+
+  if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, '))) {
+    return { isValid: false, error: Invalid phone number format };
+
+>>>>>>> origin/main
+  }
+
   return { isValid: true };
+
 }
 
 /**
  * Name validation;
  */
+<<<<<<< HEAD
 export function validateName(name: string): ValidationResult {}
   if (!name || name.trim().length === 0) {}
     return { isValid: false, error: 'Name is required' };
@@ -188,12 +225,34 @@ export function validateCompanyName(companyName: string): ValidationResult {}
     return { isValid: false, error: 'Company name must be less than 100 characters' };
   }
 
+=======
+export function validateName(name: string): ValidationResult {
+  if (!name || name.trim().length === 0) {
+    return { isValid: false, error: Name is required };
+
+  }
+
+  if (name.length > 100) {
+    return { isValid: false, error: Name is too long };
+
+  }
+
+  const nameRegex = /^[a-zA-Z\s\-\.]+$/;;
+
+  if (!nameRegex.test(name)) {
+    return { isValid: false, error: Name contains invalid characters };
+
+  }
+
+>>>>>>> origin/main
   return { isValid: true };
+
 }
 
 /**
  * Message validation;
  */
+<<<<<<< HEAD
 export function validateMessage(message: string): ValidationResult {}
   if (!message || message.trim().length === 0) {}
     return { isValid: false, error: 'Message is required' };
@@ -213,12 +272,25 @@ export function validateMessage(message: string): ValidationResult {}
 
   if (message.length > 1000) {}
     return { isValid: false, error: 'Message must be less than 1000 characters' };
+=======
+export function validateMessage(message: string): ValidationResult {
+  if (!message || message.trim().length === 0) {
+    return { isValid: false, error: Message is required };
+
+  }
+
+  if (message.length > 1000) {
+    return { isValid: false, error: Message is too long };
+
+>>>>>>> origin/main
   }
 
   return { isValid: true };
+
 }
 
 /**
+<<<<<<< HEAD
  * URL validation;
  */
 export function validateUrl(url: string): ValidationResult {}
@@ -227,11 +299,31 @@ export function validateUrl(url: string): ValidationResult {}
   }
   
   try {}
+=======
+ * URL validation
+ */
+export function validateUrl(url: string): ValidationResult {
+  if (!url) {
+    return { isValid: false, error: URL is required };
+
+  }
+
+  try {
+>>>>>>> origin/main
     new URL(url);
+
     return { isValid: true };
+<<<<<<< HEAD
   } catch {}
     return { isValid: false, error: 'Invalid URL format' };
+=======
+
+  } catch {
+    return { isValid: false, error: Invalid URL format };
+
+>>>>>>> origin/main
   }
+
 }
 
 /**
@@ -239,26 +331,60 @@ export function validateUrl(url: string): ValidationResult {}
  */
 export function validateFormData(data: Record<string, any>): ValidationResult {}
   const errors: string[] = [];
+<<<<<<< HEAD
   if (data.email) {}
     const emailResult="validateEmail(data.email);"
     if (!emailResult.isValid) {}
       errors.push(emailResult.error || 'Invalid email');
+=======
+
+  if (data.email) {
+    const emailResult = validateEmail(data.email);;
+
+    if (!emailResult.isValid) {
+      errors.push(emailResult.error || Invalid email);
+
+>>>>>>> origin/main
     }
+
   }
+<<<<<<< HEAD
   
   if (data.phone) {}
     const phoneResult="validatePhone(data.phone);"
     if (!phoneResult.isValid) {}
       errors.push(phoneResult.error || 'Invalid phone');
+=======
+
+  if (data.phone) {
+    const phoneResult = validatePhone(data.phone);;
+
+    if (!phoneResult.isValid) {
+      errors.push(phoneResult.error || Invalid phone);
+
+>>>>>>> origin/main
     }
+
   }
+<<<<<<< HEAD
   
   if (data.name) {}
     const nameResult="validateName(data.name);"
     if (!nameResult.isValid) {}
       errors.push(nameResult.error || 'Invalid name');
+=======
+
+  if (data.name) {
+    const nameResult = validateName(data.name);;
+
+    if (!nameResult.isValid) {
+      errors.push(nameResult.error || Invalid name);
+
+>>>>>>> origin/main
     }
+
   }
+<<<<<<< HEAD
   
   if (data.message) {}
     const messageResult="validateMessage(data.message);"
@@ -299,7 +425,22 @@ export function validateForm(data: Record<string, any>): ValidationResult {}
   }
 
   return {}
+=======
+
+  if (data.message) {
+    const messageResult = validateMessage(data.message);;
+
+    if (!messageResult.isValid) {
+      errors.push(messageResult.error || Invalid message);
+
+    }
+
+  }
+
+  return {
+>>>>>>> origin/main
     isValid: errors.length === 0,
     errors: errors.length > 0 ? errors : undefined;
   };
+
 }

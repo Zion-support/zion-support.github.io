@@ -1,10 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react;
+
+import { Link } from 'react-router-dom;
+
+import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react;
+
+import Navigation from '../components/Navigation;
+
+import Footer from ../components/Footer;
+
 ;
+
 const CareersPage: React.FC = () => {;
+<<<<<<< HEAD
 const openPositions = []
     {}
       id: 'senior-ai-engineer',
@@ -20,9 +27,29 @@ const openPositions = []
         'Proficiency in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong problem-solving and communication skills'
+=======
+
+const openPositions = [;;;
+
+    {
+      id: 'senior-ai-engineer,
+      title: 'Senior AI Engineer,
+      department: 'Engineering,
+      location: 'Remote / New York, NY,
+      type: 'Full-time,
+      experience: '5+ years,
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
+      requirements: [
+        'Master\'s degree in Computer Science, AI, or related field,
+        '5+ years experience in machine learning and deep learning,
+        'Proficiency in Python, TensorFlow, PyTorch,
+        'Experience with cloud platforms (AWS, Azure, GCP),
+        Strong problem-solving and communication skills
+>>>>>>> origin/main
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget]
     },
+<<<<<<< HEAD
     {}
       id: 'full-stack-developer',
       title: 'Full-Stack Developer',
@@ -37,9 +64,26 @@ const openPositions = []
         'Experience with databases (PostgreSQL, MongoDB)',
         'Knowledge of cloud services and DevOps practices',
         'Strong attention to detail and code quality'
+=======
+    {
+      id: 'full-stack-developer,
+      title: 'Full-Stack Developer,
+      department: 'Engineering,
+      location: 'Remote / San Francisco, CA,
+      type: 'Full-time,
+      experience: '3+ years,
+      description: 'Build scalable web applications and APIs that power our AI and IT solutions.,
+      requirements: [
+        'Bachelor\'s degree in Computer Science or related field,
+        '3+ years experience with React, Node.js, and TypeScript,
+        'Experience with databases (PostgreSQL, MongoDB),
+        'Knowledge of cloud services and DevOps practices,
+        Strong attention to detail and code quality
+>>>>>>> origin/main
       ],
-      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
+      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget]
     },
+<<<<<<< HEAD
     {}
       id: 'data-scientist',
       title: 'Data Scientist',
@@ -54,9 +98,26 @@ const openPositions = []
         'Proficiency in Python, R, SQL, and statistical modeling',
         'Experience with big data tools (Spark, Hadoop)',
         'Strong analytical and communication skills'
+=======
+    {
+      id: 'data-scientist,
+      title: 'Data Scientist,
+      department: 'Data Science,
+      location: 'Remote / Boston, MA,
+      type: 'Full-time,
+      experience: '4+ years,
+      description: 'Analyze complex datasets and develop predictive models to drive business insights and AI solutions.,
+      requirements: [
+        'PhD or Master\'s degree in Data Science, Statistics, or related field,
+        '4+ years experience in data analysis and machine learning,
+        'Proficiency in Python, R, SQL, and statistical modeling,
+        'Experience with big data tools (Spark, Hadoop),
+        Strong analytical and communication skills
+>>>>>>> origin/main
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities]
     },
+<<<<<<< HEAD
     {}
       id: 'cybersecurity-specialist',
       title: 'Cybersecurity Specialist',
@@ -71,9 +132,26 @@ const openPositions = []
         'Certifications: CISSP, CISM, or equivalent',
         'Experience with SIEM, EDR, and security frameworks',
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
+=======
+    {
+      id: 'cybersecurity-specialist,
+      title: 'Cybersecurity Specialist,
+      department: 'Security,
+      location: 'Remote / Washington, DC,
+      type: 'Full-time,
+      experience: '4+ years,
+      description: 'Protect our clients\' systems and data with advanced security solutions and threat detection.,
+      requirements: [
+        'Bachelor\'s degree in Cybersecurity, Computer Science, or related field,
+        '4+ years experience in cybersecurity and threat analysis,
+        'Certifications: CISSP, CISM, or equivalent,
+        'Experience with SIEM, EDR, and security frameworks,
+        Knowledge of compliance standards (SOC 2, ISO 27001)
+>>>>>>> origin/main
       ],
-      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
+      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work]
     },
+<<<<<<< HEAD
     {}
       id: 'product-manager',
       title: 'Product Manager',
@@ -88,9 +166,26 @@ const openPositions = []
         'Experience with AI/ML products and enterprise software',
         'Strong analytical and strategic thinking skills',
         'Excellent communication and leadership abilities'
+=======
+    {
+      id: 'product-manager,
+      title: 'Product Manager,
+      department: 'Product,
+      location: 'Remote / Austin, TX,
+      type: 'Full-time,
+      experience: '5+ years,
+      description: 'Lead product strategy and development for our AI and IT solution platforms.,
+      requirements: [
+        'Bachelor\'s degree in Business, Engineering, or related field,
+        '5+ years experience in product management,
+        'Experience with AI/ML products and enterprise software,
+        'Strong analytical and strategic thinking skills,
+        Excellent communication and leadership abilities
+>>>>>>> origin/main
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development]
     },
+<<<<<<< HEAD
     {}
       id: 'sales-engineer',
       title: 'Sales Engineer',
@@ -105,34 +200,62 @@ const openPositions = []
         'Strong technical background in AI/ML or IT solutions',
         'Excellent presentation and communication skills',
         'Ability to travel to client sites (25% travel)'
+=======
+    {
+      id: 'sales-engineer,
+      title: 'Sales Engineer,
+      department: 'Sales,
+      location: 'Remote / Chicago, IL,
+      type: 'Full-time,
+      experience: '3+ years,
+      description: 'Support sales efforts by demonstrating technical solutions and building client relationships.,
+      requirements: [
+        'Bachelor\'s degree in Engineering, Computer Science, or related field,
+        '3+ years experience in technical sales or sales engineering,
+        'Strong technical background in AI/ML or IT solutions,
+        'Excellent presentation and communication skills,
+        Ability to travel to client sites (25% travel)
+>>>>>>> origin/main
       ],
-      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
+      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses]
     }
+
   ];
+
 ;
+<<<<<<< HEAD
 const benefits = []
     {}
+=======
+
+const benefits = [;;
+
+    {
+>>>>>>> origin/main
       icon: Heart,
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and mental health support'
+      title: 'Health & Wellness,
+      description: Comprehensive health insurance, dental, vision, and mental health support
     },
     {}
       icon: Zap,
-      title: 'Learning & Growth',
-      description: 'Professional development budget, conference attendance, and skill development programs'
+      title: 'Learning & Growth,
+      description: Professional development budget, conference attendance, and skill development programs
     },
     {}
       icon: Shield,
-      title: 'Work-Life Balance',
-      description: 'Flexible work hours, remote work options, and unlimited PTO'
+      title: 'Work-Life Balance,
+      description: Flexible work hours, remote work options, and unlimited PTO
     },
     {}
       icon: Star,
-      title: 'Recognition',
-      description: 'Performance bonuses, stock options, and recognition programs'
+      title: 'Recognition,
+      description: Performance bonuses, stock options, and recognition programs
     }
+
   ];
+
 ;
+<<<<<<< HEAD
 const culture = []
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
@@ -140,8 +263,20 @@ const culture = []
     'Mentorship programs and career development support',
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
+=======
+
+const culture = [;;
+
+    'Innovation-driven environment where creativity is encouraged,
+    'Collaborative team culture with diverse perspectives,
+    'Opportunities to work on cutting-edge AI and technology projects,
+    'Mentorship programs and career development support,
+    'Regular team events and company retreats,
+    Open communication and transparent leadership
+>>>>>>> origin/main
   ];
   return (
+<<<<<<< HEAD
     <div className=""min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
       <Navigation /></Navigation>
       {/* Hero Section */}
@@ -161,11 +296,40 @@ const culture = []
             <Link to=""/contact"></Link>"
               className=""border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">"
               Contact Us;
+=======
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+      <Navigation />
+      
+      {/* Hero Section */}
+
+      <section className="relative py-20 px-4>
+        <div className="max-w-7xl mx-auto text-center>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6>
+            Join Our <span className="text-cyan-400>Team</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
+            Be part of the future of AI and IT solutions. Were looking for passionate individuals who want to make a real impact.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center>
+            <Link
+              to="#open-positions
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors
+            >
+              View Open Positions
+            </Link>
+            <Link
+              to="/contact
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors
+            >
+              Contact Us
+>>>>>>> origin/main
             </Link>
           </div>
         </div>
       </section>
       {/* Why Work With Us */}
+<<<<<<< HEAD
       <section className=""py-20 bg-white"></section>"
         <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
           <div className=""text-center mb-16"></div>"
@@ -184,12 +348,36 @@ const culture = []
                 </div>
                 <h3 className=""text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>"
                 <p className=""text-gray-600">{benefit.description}</p>"
+=======
+
+      <section className="py-20 bg-white>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+          <div className="text-center mb-16>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4>
+              Why Work With Us?
+            </h2>
+            <p className="text-xl text-gray-600>
+              We offer more than just a job - we offer a career and a community
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
+            {benefits.map((benefit, index) => (
+
+              <div key={index} className="text-center>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4>
+                  <benefit.icon className="w-8 h-8 text-white />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3>{benefit.title}</h3>
+                <p className="text-gray-600>{benefit.description}</p>
+>>>>>>> origin/main
               </div>
             ))}
+
           </div>
         </div>
       </section>
       {/* Company Culture */}
+<<<<<<< HEAD
       <section className=""py-20 bg-gray-50"></section>"
         <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
           <div className=""grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>"
@@ -198,19 +386,41 @@ const culture = []
                 Our Culture;
               </h2>
               <p className=""text-lg text-gray-600 mb-8"></p>"
+=======
+
+      <section className="py-20 bg-gray-50>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6>
+                Our Culture
+              </h2>
+              <p className="text-lg text-gray-600 mb-8>
+>>>>>>> origin/main
                 At Zion Tech Group, we believe that great technology comes from great people. 
                 We foster an environment where innovation thrives, collaboration is encouraged, 
                 and everyone has the opportunity to grow and succeed.
               </p>
+<<<<<<< HEAD
               <ul className=""space-y-4"></ul>"
                 {culture.map((item, index) => (
                   <li key={index} className=""flex items-start"></li>"
                     <CheckCircle className=""w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>"
                     <span className=""text-gray-600">{item}</span>"
+=======
+              <ul className="space-y-4>
+                {culture.map((item, index) => (
+
+                  <li key={index} className="flex items-start>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0 />
+                    <span className="text-gray-600>{item}</span>
+>>>>>>> origin/main
                   </li>
                 ))}
+
               </ul>
             </div>
+<<<<<<< HEAD
             <div className=""bg-white rounded-xl shadow-lg p-8"></div>"
               <h3 className=""text-2xl font-bold text-gray-900 mb-6">Quick Stats</h3>"
               <div className=""grid grid-cols-2 gap-6"></div>"
@@ -229,6 +439,26 @@ const culture = []
                 <div className=""text-center"></div>"
                   <div className=""text-3xl font-bold text-green-600 mb-2">99%</div>"
                   <div className=""text-gray-600">Satisfaction</div>"
+=======
+            <div className="bg-white rounded-xl shadow-lg p-8>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6>Quick Stats</h3>
+              <div className="grid grid-cols-2 gap-6>
+                <div className="text-center>
+                  <div className="text-3xl font-bold text-cyan-600 mb-2>50+</div>
+                  <div className="text-gray-600>Team Members</div>
+                </div>
+                <div className="text-center>
+                  <div className="text-3xl font-bold text-blue-600 mb-2>15+</div>
+                  <div className="text-gray-600>Years Experience</div>
+                </div>
+                <div className="text-center>
+                  <div className="text-3xl font-bold text-purple-600 mb-2>25+</div>
+                  <div className="text-gray-600>Countries</div>
+                </div>
+                <div className="text-center>
+                  <div className="text-3xl font-bold text-green-600 mb-2>99%</div>
+                  <div className="text-gray-600>Satisfaction</div>
+>>>>>>> origin/main
                 </div>
               </div>
             </div>
@@ -236,6 +466,7 @@ const culture = []
         </div>
       </section>
       {/* Open Positions */}
+<<<<<<< HEAD
       <section id="open-positions" className=""py-20 bg-white"></section>"
         <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
           <div className=""text-center mb-16"></div>"
@@ -256,22 +487,66 @@ const culture = []
                       <div className=""flex flex-wrap items-center gap-4 text-sm text-gray-600"></div>"
                         <span className=""flex items-center"></span>"
                           <Briefcase className=""w-4 h-4 mr-1" /></Briefcase>"
+=======
+
+      <section id="open-positions" className="py-20 bg-white>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
+          <div className="text-center mb-16>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4>
+              Open Positions
+            </h2>
+            <p className="text-xl text-gray-600>
+              Find your next career opportunity with us
+            </p>
+          </div>
+          <div className="space-y-8>
+            {openPositions.map((position) => (
+
+              <div key={position.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow>
+                <div className="p-8>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2>{position.title}</h3>
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600>
+                        <span className="flex items-center>
+                          <Briefcase className="w-4 h-4 mr-1 />
+>>>>>>> origin/main
                           {position.department}
+
                         </span>
+<<<<<<< HEAD
                         <span className=""flex items-center"></span>"
                           <MapPin className=""w-4 h-4 mr-1" /></MapPin>"
+=======
+                        <span className="flex items-center>
+                          <MapPin className="w-4 h-4 mr-1 />
+>>>>>>> origin/main
                           {position.location}
+
                         </span>
+<<<<<<< HEAD
                         <span className=""flex items-center"></span>"
                           <Clock className=""w-4 h-4 mr-1" /></Clock>"
+=======
+                        <span className="flex items-center>
+                          <Clock className="w-4 h-4 mr-1 />
+>>>>>>> origin/main
                           {position.type}
+
                         </span>
+<<<<<<< HEAD
                         <span className=""flex items-center"></span>"
                           <Users className=""w-4 h-4 mr-1" /></Users>"
+=======
+                        <span className="flex items-center>
+                          <Users className="w-4 h-4 mr-1 />
+>>>>>>> origin/main
                           {position.experience}
+
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <Link to=""/contact"></Link>"
                       className=""mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">"
                       Apply Now <ArrowRight className=""w-4 h-4 ml-2" /></ArrowRight>"
@@ -285,30 +560,66 @@ const culture = []
                         {position.requirements.map((req, index) => (
                           <li key={index} className=""flex items-start text-sm text-gray-600"></li>"
                             <CheckCircle className=""w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" /></CheckCircle>"
+=======
+                    <Link
+                      to="/contact
+                      className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center
+                    >
+                      Apply Now <ArrowRight className="w-4 h-4 ml-2 />
+                    </Link>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6>{position.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3>Requirements</h4>
+                      <ul className="space-y-2>
+                        {position.requirements.map((req, index) => (
+
+                          <li key={index} className="flex items-start text-sm text-gray-600>
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0 />
+>>>>>>> origin/main
                             {req}
+
                           </li>
                         ))}
+
                       </ul>
                     </div>
+<<<<<<< HEAD
                     <div></div>
                       <h4 className=""font-semibold text-gray-900 mb-3">Benefits</h4>"
                       <ul className=""space-y-2"></ul>"
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className=""flex items-start text-sm text-gray-600"></li>"
                             <CheckCircle className=""w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" /></CheckCircle>"
+=======
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3>Benefits</h4>
+                      <ul className="space-y-2>
+                        {position.benefits.map((benefit, index) => (
+
+                          <li key={index} className="flex items-start text-sm text-gray-600>
+                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0 />
+>>>>>>> origin/main
                             {benefit}
+
                           </li>
                         ))}
+
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
+
           </div>
         </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className=""py-20 bg-gradient-to-r from-cyan-600 to-blue-600"></section>"
         <div className=""max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>"
           <h2 className=""text-3xl md:text-4xl font-bold text-white mb-4"></h2>"
@@ -325,6 +636,29 @@ const culture = []
             <Link to=""/team"></Link>"
               className=""bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">"
               Meet Our Team;
+=======
+
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4>
+            Dont See Your Perfect Role?
+          </h2>
+          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto>
+            We're always looking for talented individuals. Send us your resume and let us know how youd like to contribute to our mission.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center>
+            <Link
+              to="/contact
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300
+            >
+              Send Us Your Resume
+            </Link>
+            <Link
+              to="/team
+              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300
+            >
+              Meet Our Team
+>>>>>>> origin/main
             </Link>
           </div>
         </div>
@@ -332,4 +666,9 @@ const culture = []
       <Footer /></Footer>
     </div>
   )};
+<<<<<<< HEAD
 export default CareersPage;
+=======
+
+export default CareersPage;
+>>>>>>> origin/main

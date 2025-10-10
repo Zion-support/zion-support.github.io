@@ -1,49 +1,99 @@
 exports.handler = "async function (event, context) {try {}"
 //     // External link check logic;
+<<<<<<< HEAD
     const timestamp = "new Date().toISOString()}"
     const result = {}
       statusCode: 200;
       body: JSON.stringify({}
+=======
+
+    const timestamp = new Date().toISOString()};;
+
+    const result = {;;
+
+      statusCode: 200;
+
+      body: JSON.stringify({
+>>>>>>> origin/main
         message: 'External link check function executed successfully')
         timestamp: timestamp;);
+
 function: 'external-link-check')
         action: 'external_link_validation')
         checkedLinks: 75;),
         workingLinks: 72),
         brokenLinks: 3),
         fixedLinks: 3}
+
       })};
+
 //     return result;
+<<<<<<< HEAD
 //   } catch (error) {// // console.error removed for production;
 error}
     return {}
+=======
+
+//   } catch (error) {// // console.error removed for production
+error}
+
+    return {
+>>>>>>> origin/main
       statusCode: 500;
+
       body: JSON.stringify({),
         error: 'External link check function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
+<<<<<<< HEAD
 exports.handler = "async function (event, context) {/* TODO: Fix JSX expression */}"
     const timestamp = "new Date().toISOString()}"
     const result = "{/* TODO: Fix JSX expression */}"
+=======
+
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+
+    const timestamp = new Date().toISOString()};;
+
+    const result = {/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
   s: 3}
+
       })};
+
 //     return result;
+
 //   } catch (error) {/* TODO: Fix JSX expression */}
+
       }
+
     return {/* TODO: Fix JSX expression */}
+
   p: new Date().toISOString()}
+
       })}}
+
 };
+
         brokenLinks: 3;
+<<<<<<< HEAD
         fixedLinks: 3}) }; ' return result} catch (error) {' // // console.error removed for production;
+=======
+
+        fixedLinks: 3}) }; ' return result} catch (error) {' // // console.error removed for production
+>>>>>>> origin/main
 error} return { statusCode: 500, body: JSON.stringify({' error: 'External link check function failed'} message: error.message),
-        timestamp: new Date().toISOString() }) }} };'
+        timestamp: new Date().toISOString() }) }} };
+
         brokenLink,
   s: 3,
         fixedLink,
   s: 3}) }; ' return result} catch (error) {/* TODO: Fix JSX expression */}
+
       } return {/* TODO: Fix JSX expression */}
+
   r: 'External link check function failed'} messag,
   e: error.message,
         timestam,
-  p: new Date().toISOString() }) }} };'
+  p: new Date().toISOString() }) }} };

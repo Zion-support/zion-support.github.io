@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 export default function BlogPost(): React.JSX.Element {}
   return(<React.Fragment></React>
       <Header /></Header>
@@ -13,6 +14,17 @@ export default function BlogPost(): React.JSX.Element {}
           <meta ;></meta>
             name=""description""
             content=""Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs - Latest insights from Zion Tech Group""
+=======
+
+export default function BlogPost(): React.JSX.Element {
+  return(<React.Fragment>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
+        <Helmet>
+          <title>Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs - Zion Tech Group</title>
+          <meta;            name="description"
+            content="Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs - Latest insights from Zion Tech Group"
+>>>>>>> origin/main
           /><
         <
 
@@ -115,6 +127,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
         </div>
       </div>,
     </React.Fragment>)}
+<<<<<<< HEAD
               <
             <
           <
@@ -122,4 +135,6 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
       <
     <
  };
+=======
+>>>>>>> origin/main
 "`

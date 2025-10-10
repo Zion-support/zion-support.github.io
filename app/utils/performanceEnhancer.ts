@@ -1,3 +1,4 @@
+<<<<<<< HEAD
       setTimeout(() => (inThrottle = "false), limit););"
       setTimeout(() => (inThrottle = "false), limit)]"
     }
@@ -5,27 +6,51 @@
 };
 // Performance monitoring utilities;
 export class PerformanceMonitor {}
+=======
+      setTimeout(() => (inThrottle = false), limit););
+
+  }});};
+
+// Performance monitoring utilities
+export class PerformanceMonitor {
+>>>>>>> origin/main
   private static instance: PerformanceMonitor,
   private metrics: Map<string></string> = new Map();
+
   private observers: PerformanceObserver[] = [];
+
   static getInstance(): PerformanceMonitor {,
     if (!PerformanceMonitor.instance) {,
 // Performance monitoring utilities;
 export class PerformanceMonitor {}
+
   private static instance: PerformanceMonitor,
   private metrics: Map<string></string> = new Map();
+
   private observers: PerformanceObserver[] = [];
+
   static getInstance(): PerformanceMonitor {}
+
     if (!PerformanceMonitor.instance) {}
+<<<<<<< HEAD
       PerformanceMonitor.instance = "new PerformanceMonitor(););"
       PerformanceMonitor.instance = "new PerformanceMonitor()]"
     }
     return PerformanceMonitor.instance});
 }
+=======
+
+      PerformanceMonitor.instance = new PerformanceMonitor(););
+
+    return PerformanceMonitor.instance});}
+
+>>>>>>> origin/main
   // Track component render time;
+
   trackRender(componentName: string, renderTime: number) {,
   // Track component render time;
   trackRender(componentName: string, renderTime: number) {}
+<<<<<<< HEAD
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {});;);
     if (process.env['NODE_ENV'] === 'development') {});]
@@ -40,19 +65,52 @@ export class PerformanceMonitor {}
       const memory = "(performance as { memory?: { usedJSHeapSize: number } });.memory;"
       if (memory) {}
 export const debounce = "<T></T> unknown>(fun,"
+=======
+
+    this.metrics.set(`${componentName}_render, renderTime);
+
+    if (process.env['NODE_ENV'] === 'development) {}););
+
+  }  // Track memory usage;
+
+  trackMemory(componentName: string) {,
+    if ('memory in performance) {,
+  // Track memory usage
+  trackMemory(componentName: string) {}
+
+    if ('memory in performance) {}
+
+      const memory = (performance as { memory?: { usedJSHeapSize: number } });.memory;;
+
+      if (memory) {}
+
+export const debounce = <T></T> unknown>(fun,;;
+
+>>>>>>> origin/main
   c: T,
   wai,
   t: number}
+
 ): ((...arg)
   s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});]
     }});
+
 };
+<<<<<<< HEAD
 // Throttle function for performance optimization;
 export const throttle = "<T></T> unknown>(fun,"
+=======
+
+// Throttle function for performance optimization
+export const throttle = <T></T> unknown>(fun,;;
+
+>>>>>>> origin/main
   c: T,
   limi,
   t: number}
+
 ): ((...arg)
+<<<<<<< HEAD
   s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */});;);
   }});
 };
@@ -67,30 +125,67 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */});]
     }
     return PerformanceMonitor.instance});
 }
+=======
+  s: Parameters<T></T>) => void) => {/* TODO: Fix JSX expression */}););  }});
+
+};
+
+// Performance monitoring utilities
+export class PerformanceMonitor {/* TODO: Fix JSX expression */}););
+
+    return PerformanceMonitor.instance});}
+
+>>>>>>> origin/main
   // Track component render time;
+
   trackRender(componentNam,
   e: string, renderTim)
   e: number) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`});
 }ms`)]
+=======
+
+    this.metrics.set(`${componentName}_render, renderTime);
+
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}});
+
+}ms)]
+>>>>>>> origin/main
     }
+
 });
+
 }
+
   // Track memory usage;
+
   trackMemory(componentNam)
   e: string) {/* TODO: Fix JSX expression */}
+
   e: number } });.memory;
-      if (memory) {/* TODO: Fix JSX expression */}`
-this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)]
+
+      if (memory) {/* TODO: Fix JSX expression */}
+
+this.metrics.set(`${componentName}_memory, memory.usedJSHeapSize)]
     }
+
     });]
     }
+
   // Get performance metrics;
+<<<<<<< HEAD
   getMetrics() {}
+=======
+
+  getMetrics() {
+>>>>>>> origin/main
     return Object.fromEntries(this.metrics)]
     }
+
   // Clear metrics;
+<<<<<<< HEAD
   clearMetrics() {}
     this.metrics.clear()]
     }
@@ -118,20 +213,67 @@ const observer = new PerformanceObserver((list) => {}
       list.getEntries().forEach((entry) => {}
         if (entry.duration > 50) { // Tasks longer than 50ms;
   // Get performance metrics;
-  getMetrics() {}
-return Object.fromEntries(this.metrics)]
-    }
-  // Clear metrics;
-  clearMetrics() {}
+=======
+
+  clearMetrics() {
     this.metrics.clear()]
     }
+
   // Monitor long tasks;
+
+  startLongTaskMonitoring() {
+    if (typeof window === 'undefined' || !('PerformanceObserver in window)) {
+      return;
+
+  // Get performance metrics;
+
+  getMetrics() {/* TODO: Fix JSX expression */}););
+
+  // Clear metrics;
+
+  clearMetrics() {/* TODO: Fix JSX expression */}););
+
+  // Monitor long tasks;
+
+  startLongTaskMonitoring() {/* TODO: Fix JSX expression */}););
+
+const observer = new PerformanceObserver((list) => {;
+      list.getEntries().forEach((entry) => {        if (entry.duration > 50) { // Tasks longer than 50ms;
+
+  // Get performance metrics
+>>>>>>> origin/main
+  getMetrics() {}
+
+return Object.fromEntries(this.metrics)]
+    }
+<<<<<<< HEAD
+  // Clear metrics;
+=======
+
+  // Clear metrics
+>>>>>>> origin/main
+  clearMetrics() {}
+
+    this.metrics.clear()]
+    }
+<<<<<<< HEAD
+  // Monitor long tasks;
+=======
+
+  // Monitor long tasks
+>>>>>>> origin/main
   startLongTaskMonitoring() {}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
+
+    if (typeof window === 'undefined' || !('PerformanceObserver in window)) {}
+
       return});
+
 }
-    const observer = new PerformanceObserver((list) => {}
+
+    const observer = new PerformanceObserver((list) => {};;
+
       list.getEntries().forEach((entry) => {}
+<<<<<<< HEAD
         if (entry.duration > 50) { // Tasks longer than 50ms});;)
 }ms`););
     observer.observe({ entryTypes: ['longtask'] });;
@@ -149,8 +291,28 @@ return Object.fromEntries(this.metrics)]
   cleanup() {}
     this.observers.forEach(observer = "> observer.disconnect());"
     this.observers="[]});"
+=======
+
+        if (entry.duration > 50) { // Tasks longer than 50ms});)
+}ms););
+
+    observer.observe({ entryTypes: ['longtask] });
+
+    this.observers.push(observer););
+
+  // Cleanup observers;  cleanup() {
+  // Cleanup observers
+  cleanup() {}
+
+    this.observers.forEach(observer => observer.disconnect());
+
+    this.observers = []});
+
+>>>>>>> origin/main
 }
+
 }
+<<<<<<< HEAD
 // React hook for performance monitoring;
 export const usePerformanceMonitor = (componentName: string) => {}
 // React hook for performance monitoring;
@@ -162,37 +324,94 @@ const monitor="PerformanceMonitor.getInstance();"
     return () => {,
     return () => {}
       const renderTime = "performance.now() - renderStartTime.current;"
+=======
+
+// React hook for performance monitoring
+export const usePerformanceMonitor = (componentName: string) => {;;
+
+// React hook for performance monitoring
+export const usePerformanceMonitor = (componentName: string) => {};;
+
+  const renderStartTime = useRef<number></number>(0);;
+
+const monitor = PerformanceMonitor.getInstance();;
+
+  useEffect(() => {}
+
+    renderStartTime.current = performance.now();
+
+    return () => {,
+    return () => {}
+
+      const renderTime = performance.now() - renderStartTime.current;;
+
+>>>>>>> origin/main
       monitor.trackRender(componentName, renderTime);
+
       monitor.trackMemory(componentName)]
     }});
+
 }, [componentName, monitor]);
+
   return {}
+
     trackRender: (fn: () => void) => {}
+<<<<<<< HEAD
       const start="performance.now();"
       fn();,;
 const duration = "performance.now() - start;"
+=======
+
+      const start = performance.now();;
+
+      fn();,;
+
+const duration = performance.now() - start;;
+
+>>>>>>> origin/main
         if (entry.duration > 50) { // Tasks longer than 50ms});
+
 }
+
       });]
-    });;
+    });
+
     observer.observe({/* TODO: Fix JSX expression */});
-  s: ['longtask'] });;
+
+  s: [longtask] });
+
 this.observers.push(observer)]
     }
+
   // Cleanup observers;
+
   cleanup() {/* TODO: Fix JSX expression */});]
     }
+
 }
+
 // React hook for performance monitoring;
+<<<<<<< HEAD
 export const usePerformanceMonitor="(componentNam)"
+=======
+
+export const usePerformanceMonitor = (componentNam);;
+
+>>>>>>> origin/main
   e: string) => {/* TODO: Fix JSX expression */});]
     }});
+
 }, [componentName, monitor]);
-  return {/* TODO: Fix JSX expression */}`
-monitor.trackRender(`${componentName}_function`, duration)]
+
+  return {/* TODO: Fix JSX expression */}
+
+monitor.trackRender(`${componentName}_function, duration)]
     }
+
   }});
+
 };
+<<<<<<< HEAD
 // Image lazy loading utility;
 export const lazyLoadImages = () => {}
 // Image lazy loading utility;
@@ -200,8 +419,25 @@ export const lazyLoadImages = () => {}
   if (typeof window === 'undefined') return;
 const images="document.querySelectorAll('img[data-src]');"
 const imageObserver = new IntersectionObserver((entries) => {}
+=======
+
+// Image lazy loading utility
+export const lazyLoadImages = () => {;;
+
+// Image lazy loading utility
+export const lazyLoadImages = () => {};;
+
+  if (typeof window === undefined) return;
+
+const images = document.querySelectorAll(img[data-src]);;
+
+const imageObserver = new IntersectionObserver((entries) => {};;
+
+>>>>>>> origin/main
     entries.forEach((entry) => {}
+
       if (entry.isIntersecting) {}
+<<<<<<< HEAD
         const img = "entry.target as HTMLImageElement;"
         img['src'] = img.dataset['src'] || '';
         img.classList.remove('lazy');
@@ -255,48 +491,183 @@ const updateScrollPosition = () => {}
 const scrollTop = "window.pageYOffset || document.documentElement.scrollTop;"
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
     ticking="false});"
+=======
+
+        const img = entry.target as HTMLImageElement;;
+
+        img['src'] = img.dataset['src'] || ;
+
+        img.classList.remove(lazy);
+
+        imageObserver.unobserve(img);
+
+// Image lazy loading utility
+export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}););;
+
+  images.forEach((img) => imageObserver.observe(img)););
+
+// Preload critical resources
+export const preloadCriticalResources = () => {// Preload critical resources;
+export const preloadCriticalResources = () => {};;
+
+  if (typeof window === undefined) return;
+
+const criticalResources = [;;
+
+    '/fonts/inter-var.woff2,
+    /css/critical.css];
+
+  criticalResources.forEach((resource) => {}
+
+    const link = document.createElement(link);;
+
+    link.rel = preload;
+
+    link.href = resource;
+
+    link.as = resource.endsWith('.woff2') ? 'font' : style;
+
+    if (resource.endsWith('.woff2)) {}
+
+      link.crossOrigin = 'anonymous;
+
+// Preload critical resources
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}););;
+
+    document.head.appendChild(link););
+
+};// Optimize scroll performance
+export const optimizeScrollPerformance = () => {;;
+
+  if (typeof window === undefined) return;
+
+  let ticking = false;;
+
+const updateScrollPosition = () => {;;
+
+    // Update scroll position indicators;
+
+// Optimize scroll performance
+export const optimizeScrollPerformance = () => {};;
+
+  if (typeof window === undefined) return;
+
+  let ticking = false;;
+
+const updateScrollPosition = () => {};;
+
+    // Update scroll position indicators;
+
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop;;
+
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px);
+
+    ticking = false});
+
+>>>>>>> origin/main
 }
-const requestTick = () => {}
+
+const requestTick = () => {};;
+
     if (!ticking) {}
+
       requestAnimationFrame(updateScrollPosition);
+<<<<<<< HEAD
       ticking="true});"
+=======
+
+      ticking = true});
+
+>>>>>>> origin/main
 }
+
   };
+
   // Track Core Web Vitals;
+<<<<<<< HEAD
 const trackCLS = () => {let clsValue="0;"
+=======
+
+const trackCLS = () => {let clsValue = 0;;
+
+>>>>>>> origin/main
     let clsEntries: PerformanceEntry[] = [];
+
     interface LayoutShiftEntry extends PerformanceEntry {,
   // Track Core Web Vitals;
+<<<<<<< HEAD
 const trackCLS = () => {}
     let clsValue="0;"
+=======
+
+const trackCLS = () => {};;
+
+    let clsValue = 0;;
+
+>>>>>>> origin/main
     let clsEntries: PerformanceEntry[] = [];
+
     interface LayoutShiftEntry extends PerformanceEntry {}
+
       hadRecentInput?: boolean;
+<<<<<<< HEAD
       value: number});
+=======
+
+      value: number,});
+
+>>>>>>> origin/main
 }
-    const observer = new PerformanceObserver((list) => {}
+
+    const observer = new PerformanceObserver((list) => {};;
+
       for (const entry of list.getEntries()) {}
+<<<<<<< HEAD
         const layoutEntry = "entry as LayoutShiftEntry;"
+=======
+
+        const layoutEntry = entry as LayoutShiftEntry;;
+
+>>>>>>> origin/main
         if (!layoutEntry.hadRecentInput) {}
+
           clsEntries.push(entry);
+
           clsValue += layoutEntry.value});
+
 }
+
       }
 
-    observer.observe({ entryTypes: ['layout-shift'] });;
+    observer.observe({ entryTypes: [layout-shift] });
+
     return () => {}
+
       observer.disconnect();
+
       return clsValue});
+
 }});
+
 }
-const trackLCP = () => {}
-    const observer = new PerformanceObserver((list) => {}
+
+const trackLCP = () => {};;
+
+    const observer = new PerformanceObserver((list) => {};;
+
       for (const entry of list.getEntries()) {}
+<<<<<<< HEAD
         if (process.env['NODE_ENV'] === 'development') {});;);
       }
+=======
+>>>>>>> origin/main
 
-    observer.observe({ entryTypes: ['largest-contentful-paint'] });;
+        if (process.env['NODE_ENV'] === 'development) {}););      }
+
+    observer.observe({ entryTypes: [largest-contentful-paint] });
+
     return () => observer.disconnect(););
+<<<<<<< HEAD
 const trackFID = () => {}
         if (process.env['NODE_ENV'] === 'development') {});]
     }
@@ -308,16 +679,37 @@ const trackFID = () => {}
   const trackFID = () => {}
     interface FirstInputEntry extends PerformanceEntry {}
       processingStart: number});
+=======
+
+const trackFID = () => {};
+
+    interface FirstInputEntry extends PerformanceEntry {}      processingStart: number,});
+
+>>>>>>> origin/main
 }
-    const observer = new PerformanceObserver((list) => {}
+
+    const observer = new PerformanceObserver((list) => {};;
+
       for (const entry of list.getEntries()) {}
+<<<<<<< HEAD
         const fidEntry = "entry as FirstInputEntry;"
 const fid = "fidEntry.processingStart - entry.startTime;"
         if (process.env['NODE_ENV'] === 'development') {});;);
+=======
+
+        const fidEntry = entry as FirstInputEntry;;
+
+const fid = fidEntry.processingStart - entry.startTime;;
+
+        if (process.env['NODE_ENV'] === 'development) {}););
+
+>>>>>>> origin/main
       }
 
-    observer.observe({ entryTypes: ['first-input'] });;
+    observer.observe({ entryTypes: ['first-input] });
+
     return () => observer.disconnect(););
+<<<<<<< HEAD
         const fid = "fidEntry.processingStart - entry.startTime;"
         if (process.env['NODE_ENV'] === 'development') {});]
     }
@@ -331,32 +723,64 @@ const fid = "fidEntry.processingStart - entry.startTime;"
 export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
     ticking="false});"
+=======
+
+  window.addEventListener('scroll, requestTick, { passive: true });// Optimize scroll performance
+export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */};;
+
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px);
+
+    ticking = false});
+
+>>>>>>> origin/main
 }
-const requestTick = () => {/* TODO: Fix JSX expression */});;);
+
+const requestTick = () => {/* TODO: Fix JSX expression */}););;
+
   };
+
   // Track Core Web Vitals;
-const trackCLS = () => {/* TODO: Fix JSX expression */});;);
-const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});;);
-      });;)
-});;
+
+const trackCLS = () => {/* TODO: Fix JSX expression */}););;
+
+const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}););;
+
+      });)
+});
+
     observer.observe({/* TODO: Fix JSX expression */});
-  s: ['layout-shift'] });;
-    return () => {/* TODO: Fix JSX expression */});;)
+
+  s: [layout-shift] });
+
+    return () => {/* TODO: Fix JSX expression */});)
 }});
+
 }
-const trackLCP = () => {/* TODO: Fix JSX expression */});;);
-      });;)
-});;
+
+const trackLCP = () => {/* TODO: Fix JSX expression */}););;
+
+      });)
+});
+
     observer.observe({/* TODO: Fix JSX expression */});
-  s: ['largest-contentful-paint'] });;
+
+  s: [largest-contentful-paint] });
+
     return () => observer.disconnect(););
-const trackFID = () => {/* TODO: Fix JSX expression */});;);
-const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */});;);
-      });;)
-});;
+
+const trackFID = () => {/* TODO: Fix JSX expression */}););;
+
+const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}););;
+
+      });)
+});
+
     observer.observe({/* TODO: Fix JSX expression */});
-  s: ['first-input'] });;
+
+  s: ['first-input] });
+
     return () => observer.disconnect(););
+<<<<<<< HEAD
 };
   const requestTick = () => {/* TODO: Fix JSX expression */});]
     }
@@ -397,25 +821,64 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
 const cleanupCLS="trackCLS();"
 const cleanupLCP="trackLCP();"
 const cleanupFID="trackFID();"
+=======
+
+  window.addEventListener('scroll, requestTick, {/* TODO: Fix JSX expression */});
+
+  e: true });  // Start tracking;
+
+const cleanupCLS = trackCLS();;
+
+const cleanupLCP = trackLCP();;
+
+const cleanupFID = trackFID();;
+
+>>>>>>> origin/main
   return () => {}
+
     cleanupCLS();
+
     cleanupLCP();
+
     cleanupFID()]
     }});
+
 };
+<<<<<<< HEAD
 // Memory usage monitoring;
 export const getMemoryUsage = () => {}
   if (typeof window === 'undefined' || !('memory' in performance)) {}
+=======
+
+// Memory usage monitoring
+export const getMemoryUsage = () => {;;
+
+  if (typeof window === 'undefined' || !('memory in performance)) {
+>>>>>>> origin/main
     return null});
+
 }
+<<<<<<< HEAD
   const memory = "(performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;"
   return {}
+=======
+
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;;
+
+  return {
+>>>>>>> origin/main
     used: memory.usedJSHeapSize;
+
     total: memory.totalJSHeapSize;
+
     limit: memory.jsHeapSizeLimit;
+
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100});
+
 }});
+
 };
+<<<<<<< HEAD
 // Performance metrics collection;
 export const collectPerformanceMetrics = () => {}
   if (typeof window === 'undefined') return null;
@@ -423,60 +886,146 @@ const navigation = "performance.getEntriesByType('navigation')[0] as Performance
 const paint="performance.getEntriesByType('paint');"
   return {}
     navigation: {}
+=======
+
+// Performance metrics collection
+export const collectPerformanceMetrics = () => {;;
+
+  if (typeof window === undefined) return null;
+
+const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
+
+const paint = performance.getEntriesByType(paint);;
+
+  return {
+    navigation: {
+>>>>>>> origin/main
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+
 // totalTime: navigation.loadEventEnd - navigation.fetchStart});
+
 },
     paint: {,
+<<<<<<< HEAD
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0;
 // Memory usage monitoring;
 export const getMemoryUsage = () => {}
   if (typeof window === 'undefined' || !('memory' in performance)) {}
+=======
+      firstPaint: paint.find((entry) => entry.name === first-paint)?.startTime || 0;
+
+      firstContentfulPaint: paint.find((entry) => entry.name === first-contentful-paint)?.startTime || 0;
+
+// Memory usage monitoring
+export const getMemoryUsage = () => {};;
+
+  if (typeof window === 'undefined' || !('memory in performance)) {}
+
+>>>>>>> origin/main
     return null});
+
 }
+<<<<<<< HEAD
   const memory = "(performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;"
+=======
+
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} });.memory;;
+
+>>>>>>> origin/main
   return {}
+
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100});
+
 }});
+
 };
+<<<<<<< HEAD
 // Performance metrics collection;
 export const collectPerformanceMetrics = () => {}
   if (typeof window === 'undefined') return null;
 const navigation = "performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
 const paint="performance.getEntriesByType('paint');"
+=======
+
+// Performance metrics collection
+export const collectPerformanceMetrics = () => {};;
+
+  if (typeof window === undefined) return null;
+
+const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
+
+const paint = performance.getEntriesByType(paint);;
+
+>>>>>>> origin/main
   return {}
+
     navigation: {}
+
 // domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
 // totalTime: navigation.loadEventEnd - navigation.fetchStart});
+
 },
     paint: {}
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0});
+
+      firstPaint: paint.find((entry) => entry.name === 'first-paint)?.startTime || 0,
+      firstContentfulPaint: paint.find((entry) => entry.name === first-contentful-paint)?.startTime || 0});
+
 },
     memory: getMemoryUsage();});
+
 };
+<<<<<<< HEAD
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = () => {}
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = () => {}
   if (typeof window === 'undefined') return;
+=======
+
+// Initialize performance enhancements
+export const initializePerformanceEnhancements = () => {;;
+
+// Initialize performance enhancements
+export const initializePerformanceEnhancements = () => {};;
+
+  if (typeof window === undefined) return;
+
+>>>>>>> origin/main
   // Initialize lazy loading;
+
   lazyLoadImages();
+
   // Preload critical resources;
+
   preloadCriticalResources();
+
   // Optimize scroll performance;
+
   optimizeScrollPerformance();
+
   // Collect performance metrics;
+<<<<<<< HEAD
 const metrics="collectPerformanceMetrics();"
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {}
+=======
+
+const metrics = collectPerformanceMetrics();;
+
+  if (metrics && (process.env['NODE_ENV'] === 'development || import.meta.env.DEV)) {}
+
+>>>>>>> origin/main
   return () => {/* TODO: Fix JSX expression */});]
     }});
+
 };
+<<<<<<< HEAD
 // Memory usage monitoring;
 export const getMemoryUsage = () => {/* TODO: Fix JSX expression */});;);
 const memory = "(performance as unknown as {/* TODO: Fix JSX expression */});"
@@ -486,8 +1035,19 @@ export const getMemoryUsage = () => {/* TODO: Fix JSX expression */});]
   const memory = "(performance as unknown as {/* TODO: Fix JSX expression */});"
   t: number} });.memory;
   return {/* TODO: Fix JSX expression */});]
+=======
+
+// Memory usage monitoring
+export const getMemoryUsage = () => {/* TODO: Fix JSX expression */}););;
+
+const memory = (performance as unknown as {/* TODO: Fix JSX expression */});;
+
+  t: number} });.memory;  return {/* TODO: Fix JSX expression */});]
+>>>>>>> origin/main
     }});
+
 };
+<<<<<<< HEAD
 // Performance metrics collection;
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */});;)
 },
@@ -496,11 +1056,20 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */})
     },
     pain,
   t: {/* TODO: Fix JSX expression */});]
+=======
+
+// Performance metrics collection
+export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}););
+},
+    pain,  t: {/* TODO: Fix JSX expression */});]
+>>>>>>> origin/main
     },
     memor,
   y: getMemoryUsage()]
     }});
+
 };
+<<<<<<< HEAD
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */});;);
 // Initialize performance enhancements;
@@ -508,3 +1077,10 @@ export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX express
     }
 };`
 }
+=======
+
+// Initialize performance enhancements
+export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}););;
+
+};}
+>>>>>>> origin/main

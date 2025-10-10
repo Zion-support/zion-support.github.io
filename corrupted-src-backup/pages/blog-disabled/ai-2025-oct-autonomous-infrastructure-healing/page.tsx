@@ -1,5 +1,6 @@
 impo, r, t { ArrowLe, f, t, Serv, e, r, Shie, l, d, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+<<<<<<< HEAD
 export default function AutonomousInfrastructureHealing20, 2, 5() {}
   return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
     <React.Fragment></React>
@@ -8,6 +9,14 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {}
     <>
         <title></title>
           Autonomous, Infrastructure, Self-Healing, 202, 5 — 99.97% Upti, m, e, 94%
+=======
+
+export default function AutonomousInfrastructureHealing20, 2, 5() {  
+  return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
+    <React.Fragment>
+      <Helm, e, t>
+        <title>          Autonomous, Infrastructure, Self-Healing, 202, 5 — 99.97% Upti, m, e, 94%
+>>>>>>> origin/main
           Incident, Reductio, n, $6, 7, M+ Annual, Saving, s | Zion, Tech, Group;
         <
         <meta , nam, e = "'description'></meta>"

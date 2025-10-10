@@ -1,9 +1,13 @@
 
 
-'use client';
+'use client;
+
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+
   O: Add content;}
+
 };
+
   loadTim,
   e: number;,
     renderTim,
@@ -12,23 +16,36 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   e: number;,
     fp,
   s: number;
+
 }
+
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+
   O: Add content;}
+
 };
   loadTime: number;,
     renderTime: number;,
     memoryUsage: number;,
     fps: number;
+
   [key: string]: number;
 }
 
 const,
   PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
+
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
   useEffect(() => {/* TODO: Fix JSX expression */}
+
   p: entry.startTime }));
+
         }
+<<<<<<< HEAD
   useEffect(() => {}
     const updateMetrics = () => {}
       const navigation="performance.getEntriesByType("
@@ -71,15 +88,33 @@ const,
         fps;
       });
     });
+=======
+
+      });    });
+
+>>>>>>> origin/main
     try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
+
+  s: [paint] });
+
       return () => observer.disconnect();
+
     } catch (error) {/* TODO: Fix JSX expression */}
+
     }
+
   }, []);
   useEffect(() => {/* TODO: Fix JSX expression */}
+
     }
+
   }, [metrics, onMetricsUpdate]);
   return null;
+
 };
+<<<<<<< HEAD
 export default PerformanceDashboard;
+=======
+
+export default PerformanceDashboard;
+>>>>>>> origin/main

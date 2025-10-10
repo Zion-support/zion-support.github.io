@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs="require('fs');"
 const path="require('path');"
 ;
@@ -8,18 +9,53 @@ export default function handler(req, res) {}
     res.statusCode="405;"
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return}
+=======
+const fs = require(fs);;
+
+const path = require(path);;
+
 ;
+
+const dir = path.join(process.cwd(), data);;
+
+const file = path.join(dir, subscribers.json);;
+
+export default function handler(req, res) {
+  if (req.method !== 'POST) {
+    res.statusCode = 405;
+
+    res.setHeader('Content-Type', application/json);
+
+    res.end(JSON.stringify({ error: Method not allowed }));
+
+>>>>>>> origin/main
+    return}
+
+;
+
 const { email, name, preferences } = req.body || {};
+<<<<<<< HEAD
   if (!email) {}
     res.statusCode="400;"
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
+=======
+
+  if (!email) {
+    res.statusCode = 400;
+
+    res.setHeader('Content-Type', application/json);
+
+    res.end(JSON.stringify({ error: Email is required }));
+
+>>>>>>> origin/main
     return}
 
   if (!fs.existsSync(dir)) {}
     fs.mkdirSync(dir, { recursive: true })}
+
 ;
+<<<<<<< HEAD
 let existing="[];"
   try {}
     if (fs.existsSync(file)) {;
@@ -35,19 +71,56 @@ const existingSubscriber = existing.find(sub => sub.email === email);
     res.statusCode="400;"
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
+=======
+
+let existing = [];;
+
+  try {
+    if (fs.existsSync(file)) {;
+
+const data = fs.readFileSync(file, utf8);;
+
+      existing = JSON.parse(data);
+
+      if (!Array.isArray(existing)) existing = []}
+
+  } catch (error) {
+    // console.error removed for production
+existing = []}
+
+  // Check if email already exists;
+
+const existingSubscriber = existing.find(sub => sub.email === email);;
+
+  if (existingSubscriber) {
+    res.statusCode = 400;
+
+    res.setHeader('Content-Type', application/json);
+
+    res.end(JSON.stringify({ error: Email already subscribed }));
+
+>>>>>>> origin/main
     return}
+
 ;
+<<<<<<< HEAD
 const newSubscriber = {}
+=======
+
+const newSubscriber = {;;
+
+>>>>>>> origin/main
     id: Date.now().toString(),
     email,
-    name: name || '',
+    name: name || ',
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
-    status: 'active'
+    status: active
   };
   existing.push(newSubscriber);
   try {}
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+<<<<<<< HEAD
     res.statusCode="200;"
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({}
@@ -60,3 +133,23 @@ res.statusCode="500;"
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }))}
 }
+=======
+
+    res.statusCode = 200;
+
+    res.setHeader('Content-Type', application/json);
+
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter,
+      id: newSubscriber.id
+    }))} catch (error) {
+    // console.error removed for production
+res.statusCode = 500;
+
+    res.setHeader('Content-Type', application/json);
+
+    res.end(JSON.stringify({ error: 'Failed to save subscription }))}
+
+}
+>>>>>>> origin/main

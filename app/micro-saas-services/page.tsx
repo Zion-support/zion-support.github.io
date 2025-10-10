@@ -1,7 +1,14 @@
-import React from 'react';
+import React from 'react;
+
 // Real Micro SAAS Services for Zion Tech Group;
+<<<<<<< HEAD
 // Comprehensive list of innovative, real-world micro SAAS solutions;
 export interface MicroSaasService {}
+=======
+
+// Comprehensive list of innovative, real-world micro SAAS solutions
+export interface MicroSaasService {
+>>>>>>> origin/main
   id: string,
   title: string,
   description: string,
@@ -9,8 +16,11 @@ export interface MicroSaasService {}
   icon: string,
   price: string,
   originalPrice?: string;
+
   features: string[];
+
   benefits: string[];
+
   link: string,
   popular: boolean,
   category: string,
@@ -19,8 +29,11 @@ export interface MicroSaasService {}
   freeTrial: string,
   marketPrice: string,
   capabilities: string[];
+
   useCases: string[];
+
   integrations: string[];
+
   apiAvailable: boolean,
   mobileApp: boolean,
   whiteLabel: boolean,
@@ -28,17 +41,32 @@ export interface MicroSaasService {}
   setupTime: string,
   technicalSpecs: {}
     languages: string[];
+
     frameworks: string[];
+
     databases: string[];
+<<<<<<< HEAD
     cloudProviders: string[]};
   pricing: {}
+=======
+
+    cloudProviders: string[]}';
+
+  pricing: {
+>>>>>>> origin/main
     monthly: number,
     yearly: number,
     enterprise: number,
     features: string[]}}
 
+<<<<<<< HEAD
 export const microSaasServices: MicroSaasService[] = []
   // AI-Powered Productivity Tools;
+=======
+export const microSaasServices: MicroSaasService[] = [
+  // AI-Powered Productivity Tools';
+
+>>>>>>> origin/main
   {,
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
@@ -55,7 +83,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Automated progress tracking and reporting',
       'Predictive analytics for project success',
       'Integration with 50+ popular tools',
-      'Custom AI models for your industry'
+      Custom AI models for your industry
     ],
     benefits: [,
       '40% increase in project delivery speed',
@@ -63,13 +91,14 @@ export const microSaasServices: MicroSaasService[] = []
       '85% accuracy in timeline predictions',
       '30% cost reduction through optimization',
       '50% improvement in team productivity',
-      '90% reduction in manual reporting time'
+      90% reduction in manual reporting time
     ],
     link: '/ai-project-manager',
     popular:
         popular: true,
     category: 'Productivity',
     rating: 4.9;
+
     users: '15,000+',
     freeTrial: '14 days',
     marketPrice: '$149-299/month',
@@ -79,7 +108,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Computer Vision for progress analysis',
       'Predictive Analytics dashboard',
       'Automated risk assessment',
-      'Smart resource optimization'
+      Smart resource optimization
     ],
     useCases: [,
       'Software development projects',
@@ -87,12 +116,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Construction project oversight',
       'Event planning and execution',
       'Product launch coordination',
-      'Research and development projects'
+      Research and development projects
     ],
     integrations: [,
       'Jira', 'Asana', 'Trello', 'Monday.com', 'Slack', 'Microsoft Teams',
       'GitHub', 'GitLab', 'Bitbucket', 'Figma', 'Adobe Creative Suite',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook integrations'
+      'Salesforce', 'HubSpot', 'Zapier', Webhook integrations
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -127,7 +156,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Productivity analytics and reporting',
       'Time tracking and optimization',
       'Cross-platform synchronization',
-      'Voice-to-task conversion'
+      Voice-to-task conversion
     ],
     benefits: [,
       '60% increase in task completion rate',
@@ -135,13 +164,14 @@ export const microSaasServices: MicroSaasService[] = []
       '35% improvement in focus time',
       '50% better work-life balance',
       '40% increase in goal achievement',
-      '25% reduction in stress levels'
+      25% reduction in stress levels
     ],
     link: '/ai-task-manager',
     popular:
         popular: true,
     category: 'Productivity',
     rating: 4.8;
+
     users: '25,000+',
     freeTrial: '14 days',
     marketPrice: '$79-149/month',
@@ -151,7 +181,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Predictive Analytics for deadline estimation',
       'Behavioral pattern analysis',
       'Smart notification system',
-      'Automated workflow optimization'
+      Automated workflow optimization
     ],
     useCases: [,
       'Personal productivity management',
@@ -159,11 +189,11 @@ export const microSaasServices: MicroSaasService[] = []
       'Project milestone tracking',
       'Habit formation and tracking',
       'Goal setting and achievement',
-      'Time management optimization'
+      Time management optimization
     ],
     integrations: [,
       'Google Calendar', 'Outlook', 'Apple Calendar', 'Slack', 'Microsoft Teams',
-      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', 'Zapier'
+      'Notion', 'Evernote', 'Todoist', 'Any.do', 'TickTick', Zapier
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -182,10 +212,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 149,
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
     }
+
   },
 
   // AI Content & Marketing Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-content-writer-pro',
     title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation platform that generates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more. Uses GPT-4 and custom models trained on your brand voice.',
@@ -201,7 +237,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Content templates and frameworks',
       'Plagiarism detection and originality scoring',
       'Social media content scheduling',
-      'Content performance analytics'
+      Content performance analytics
     ],
     benefits: [,
       '80% reduction in content creation time',
@@ -209,13 +245,14 @@ export const microSaasServices: MicroSaasService[] = []
       '65% improvement in SEO rankings',
       '90% consistency in brand voice',
       '50% increase in engagement rates',
-      '40% cost savings on content creation'
+      40% cost savings on content creation
     ],
     link: '/ai-content-writer',
     popular:
         popular: true,
     category: 'Content & Marketing',
     rating: 4.7;
+
     users: '40,000+',
     freeTrial: '7 days',
     marketPrice: '$129-299/month',
@@ -225,7 +262,7 @@ export const microSaasServices: MicroSaasService[] = []
       'SEO Optimization',
       'Brand Voice Cloning',
       'Content Personalization',
-      'Multi-language Translation'
+      Multi-language Translation
     ],
     useCases: [,
       'Blog post creation',
@@ -233,11 +270,11 @@ export const microSaasServices: MicroSaasService[] = []
       'Email marketing campaigns',
       'Product descriptions',
       'Ad copy creation',
-      'Website content'
+      Website content
     ],
     integrations: [,
       'WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer',
-      'Google Docs', 'Notion', 'Slack', 'Zapier', 'Webhook APIs'
+      'Google Docs', 'Notion', 'Slack', 'Zapier', Webhook APIs
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -272,7 +309,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Hashtag research and optimization',
       'Competitor analysis and monitoring',
       'Social listening and sentiment analysis',
-      'ROI tracking and reporting'
+      ROI tracking and reporting
     ],
     benefits: [,
       '70% increase in social media engagement',
@@ -280,13 +317,14 @@ export const microSaasServices: MicroSaasService[] = []
       '85% improvement in content performance',
       '60% increase in follower growth',
       '40% boost in website traffic from social',
-      '90% automation of routine tasks'
+      90% automation of routine tasks
     ],
     link: '/ai-social-media-manager',
     popular:
         popular: true,
     category: 'Content & Marketing',
     rating: 4.6;
+
     users: '30,000+',
     freeTrial: '14 days',
     marketPrice: '$149-399/month',
@@ -296,7 +334,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Sentiment Analysis for engagement',
       'Predictive Analytics for optimal timing',
       'Automated A/B testing',
-      'Real-time trend analysis'
+      Real-time trend analysis
     ],
     useCases: [,
       'Brand social media management',
@@ -304,12 +342,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Customer service automation',
       'Content calendar optimization',
       'Social media advertising',
-      'Community management'
+      Community management
     ],
     integrations: [,
       'Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok', 'YouTube',
       'Pinterest', 'Snapchat', 'Hootsuite', 'Buffer', 'Sprout Social',
-      'HubSpot', 'Salesforce', 'Zapier'
+      'HubSpot', 'Salesforce', Zapier
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -328,10 +366,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 249,
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
     }
+
   },
 
   // AI Business & Finance Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-crm-intelligence',
     title: 'AI CRM Intelligence',
     description: 'Next-generation CRM powered by AI that predicts customer behavior, automates sales processes, and provides intelligent insights. Features lead scoring, automated follow-ups, and predictive analytics.',
@@ -347,7 +391,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Customer sentiment analysis and insights',
       'Automated data entry and enrichment',
       'Advanced reporting and analytics',
-      'Integration with 100+ business tools'
+      Integration with 100+ business tools
     ],
     benefits: [,
       '45% increase in lead conversion rates',
@@ -355,13 +399,14 @@ export const microSaasServices: MicroSaasService[] = []
       '80% improvement in lead qualification accuracy',
       '50% increase in customer retention',
       '35% boost in sales team productivity',
-      '90% automation of routine sales tasks'
+      90% automation of routine sales tasks
     ],
     link: '/ai-crm',
     popular:
         popular: true,
     category: 'Business & Finance',
     rating: 4.8;
+
     users: '20,000+',
     freeTrial: '21 days',
     marketPrice: '$199-499/month',
@@ -371,7 +416,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Predictive Analytics for sales forecasting',
       'Behavioral pattern recognition',
       'Automated decision making',
-      'Real-time data processing'
+      Real-time data processing
     ],
     useCases: [,
       'Sales pipeline management',
@@ -379,12 +424,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Customer relationship management',
       'Sales forecasting and planning',
       'Customer service automation',
-      'Marketing campaign optimization'
+      Marketing campaign optimization
     ],
     integrations: [,
       'Salesforce', 'HubSpot', 'Pipedrive', 'Zoho CRM', 'Microsoft Dynamics',
       'Mailchimp', 'Constant Contact', 'Zapier', 'Webhook APIs',
-      'Google Workspace', 'Microsoft 365', 'Slack', 'Teams'
+      'Google Workspace', 'Microsoft 365', 'Slack', Teams
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -419,7 +464,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Investment recommendation engine',
       'Market trend analysis and forecasting',
       'Portfolio optimization algorithms',
-      'Regulatory compliance monitoring'
+      Regulatory compliance monitoring
     ],
     benefits: [,
       '70% improvement in financial decision accuracy',
@@ -427,13 +472,14 @@ export const microSaasServices: MicroSaasService[] = []
       '85% better risk prediction accuracy',
       '40% increase in investment returns',
       '60% reduction in compliance costs',
-      '90% automation of financial reporting'
+      90% automation of financial reporting
     ],
     link: '/ai-financial-analyzer',
     popular:
         popular: true,
     category: 'Business & Finance',
     rating: 4.9;
+
     users: '12,000+',
     freeTrial: '14 days',
     marketPrice: '$299-999/month',
@@ -443,7 +489,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Risk Assessment algorithms',
       'Natural Language Processing for news analysis',
       'Computer Vision for document processing',
-      'Real-time data processing'
+      Real-time data processing
     ],
     useCases: [,
       'Investment portfolio management',
@@ -451,12 +497,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Financial planning and forecasting',
       'Compliance and regulatory reporting',
       'Market analysis and research',
-      'Trading strategy optimization'
+      Trading strategy optimization
     ],
     integrations: [,
       'Bloomberg', 'Reuters', 'Yahoo Finance', 'Alpha Vantage', 'Quandl',
       'QuickBooks', 'Xero', 'Sage', 'SAP', 'Oracle', 'Salesforce',
-      'Excel', 'Google Sheets', 'Tableau', 'Power BI'
+      'Excel', 'Google Sheets', 'Tableau', Power BI
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -475,10 +521,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 599,
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
     }
+
   },
 
   // AI Customer Service Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-customer-support-bot',
     title: 'AI Customer Support Bot',
     description: 'Intelligent customer support chatbot that provides 24/7 assistance with natural language understanding, sentiment analysis, and seamless human handoff. Reduces support costs by 70% while improving customer satisfaction.',
@@ -494,7 +546,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Knowledge base integration and learning',
       'Omnichannel support (web, mobile, social)',
       'Advanced analytics and reporting',
-      'Custom branding and white-label options'
+      Custom branding and white-label options
     ],
     benefits: [,
       '70% reduction in support costs',
@@ -502,13 +554,14 @@ export const microSaasServices: MicroSaasService[] = []
       '90% customer satisfaction rate',
       '60% reduction in human agent workload',
       '50% increase in first-contact resolution',
-      '24/7 availability and consistency'
+      24/7 availability and consistency
     ],
     link: '/ai-customer-support-bot',
     popular:
         popular: true,
     category: 'Customer Service',
     rating: 4.7;
+
     users: '35,000+',
     freeTrial: '14 days',
     marketPrice: '$99-299/month',
@@ -518,7 +571,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Intent Recognition',
       'Conversation Management',
       'Knowledge Graph Integration',
-      'Multi-modal Processing'
+      Multi-modal Processing
     ],
     useCases: [,
       'E-commerce customer support',
@@ -526,12 +579,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Technical support automation',
       'FAQ automation',
       'Lead qualification',
-      'Appointment scheduling'
+      Appointment scheduling
     ],
     integrations: [,
       'Zendesk', 'Freshdesk', 'Intercom', 'Help Scout', 'LiveChat',
       'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger',
-      'Salesforce', 'HubSpot', 'Zapier', 'Webhook APIs'
+      'Salesforce', 'HubSpot', 'Zapier', Webhook APIs
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -550,10 +603,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 199,
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
     }
+
   },
 
   // AI Development Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
     description: 'Intelligent code review platform that uses AI to analyze code quality, detect bugs, suggest improvements, and ensure best practices. Integrates with popular development tools and provides detailed feedback.',
@@ -569,7 +628,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Code style and best practices enforcement',
       'Automated test generation',
       'Documentation generation',
-      'Integration with popular IDEs and CI/CD'
+      Integration with popular IDEs and CI/CD
     ],
     benefits: [,
       '60% reduction in code review time',
@@ -577,13 +636,14 @@ export const microSaasServices: MicroSaasService[] = []
       '70% reduction in production bugs',
       '50% increase in development speed',
       '90% automation of routine reviews',
-      '40% improvement in team productivity'
+      40% improvement in team productivity
     ],
     link: '/ai-code-generation',
     popular:
         popular: true,
     category: 'Development',
     rating: 4.8;
+
     users: '18,000+',
     freeTrial: '14 days',
     marketPrice: '$129-399/month',
@@ -593,7 +653,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Natural Language Processing for comments',
       'Security vulnerability detection',
       'Performance profiling',
-      'Automated refactoring suggestions'
+      Automated refactoring suggestions
     ],
     useCases: [,
       'Code quality assurance',
@@ -601,12 +661,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Performance optimization',
       'Team code review automation',
       'Onboarding new developers',
-      'Maintaining coding standards'
+      Maintaining coding standards
     ],
     integrations: [,
       'GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jenkins',
       'VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim',
-      'Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'
+      'Slack', 'Microsoft Teams', 'Jira', 'Trello', Asana
     ],
     apiAvailable: true,
     mobileApp: false,
@@ -625,10 +685,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 249,
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
     }
+
   },
 
   // AI Healthcare Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-healthcare-assistant',
     title: 'AI Healthcare Assistant',
     description: 'Comprehensive AI-powered healthcare platform that provides symptom analysis, medication reminders, health monitoring, and telemedicine capabilities. HIPAA compliant with advanced privacy protection.',
@@ -644,7 +710,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Medical record management',
       'Appointment scheduling and reminders',
       'Health insights and recommendations',
-      'HIPAA compliant data protection'
+      HIPAA compliant data protection
     ],
     benefits: [,
       '60% reduction in unnecessary doctor visits',
@@ -652,13 +718,14 @@ export const microSaasServices: MicroSaasService[] = []
       '70% faster symptom assessment',
       '50% reduction in healthcare costs',
       '90% improvement in patient engagement',
-      '40% increase in preventive care'
+      40% increase in preventive care
     ],
     link: '/ai-healthcare',
     popular:
         popular: true,
     category: 'Healthcare',
     rating: 4.9;
+
     users: '8,000+',
     freeTrial: '30 days',
     marketPrice: '$249-999/month',
@@ -668,7 +735,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Computer Vision for medical imaging',
       'Predictive Analytics for health trends',
       'Real-time monitoring',
-      'Privacy-preserving AI'
+      Privacy-preserving AI
     ],
     useCases: [,
       'Primary care assistance',
@@ -676,12 +743,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Mental health support',
       'Telemedicine consultations',
       'Health monitoring',
-      'Medication management'
+      Medication management
     ],
     integrations: [,
       'Epic', 'Cerner', 'Allscripts', 'NextGen', 'athenahealth',
       'Apple Health', 'Google Fit', 'Fitbit', 'Garmin', 'Samsung Health',
-      'Zoom', 'Microsoft Teams', 'WebRTC', 'Twilio'
+      'Zoom', 'Microsoft Teams', 'WebRTC', Twilio
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -700,10 +767,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 499,
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
     }
+
   },
 
   // AI E-commerce Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-ecommerce-optimizer',
     title: 'AI E-commerce Optimizer',
     description: 'Advanced AI platform for e-commerce optimization that provides personalized product recommendations, dynamic pricing, inventory management, and customer behavior analysis to maximize sales and revenue.',
@@ -719,7 +792,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Personalized shopping experiences',
       'Automated marketing campaigns',
       'A/B testing and optimization',
-      'Revenue analytics and reporting'
+      Revenue analytics and reporting
     ],
     benefits: [,
       '35% increase in conversion rates',
@@ -727,13 +800,14 @@ export const microSaasServices: MicroSaasService[] = []
       '40% reduction in inventory costs',
       '60% improvement in customer retention',
       '50% increase in revenue per visitor',
-      '80% automation of marketing tasks'
+      80% automation of marketing tasks
     ],
     link: '/ai-ecommerce-solutions',
     popular:
         popular: true,
     category: 'E-commerce',
     rating: 4.7;
+
     users: '22,000+',
     freeTrial: '14 days',
     marketPrice: '$199-599/month',
@@ -743,7 +817,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Demand Forecasting',
       'Customer Segmentation',
       'Behavioral Analytics',
-      'Real-time Personalization'
+      Real-time Personalization
     ],
     useCases: [,
       'Online retail optimization',
@@ -751,12 +825,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Subscription box services',
       'B2 B e-commerce',
       'Mobile commerce',
-      'Cross-platform selling'
+      Cross-platform selling
     ],
     integrations: [,
       'Shopify', 'WooCommerce', 'Magento', 'BigCommerce', 'Amazon',
       'eBay', 'Etsy', 'Facebook Shop', 'Instagram Shopping',
-      'Google Shopping', 'PayPal', 'Stripe', 'Square'
+      'Google Shopping', 'PayPal', 'Stripe', Square
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -775,10 +849,16 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 399,
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
     }
+
   },
 
   // AI Education Tools;
+<<<<<<< HEAD
   {}
+=======
+
+  {
+>>>>>>> origin/main
     id: 'ai-education-platform',
     title: 'AI Education Platform',
     description: 'Comprehensive AI-powered educational platform that provides personalized learning experiences, automated assessment, intelligent tutoring, and adaptive curriculum based on individual learning patterns.',
@@ -794,7 +874,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Multi-language support and translation',
       'Progress tracking and analytics',
       'Interactive content creation tools',
-      'Virtual classroom and collaboration features'
+      Virtual classroom and collaboration features
     ],
     benefits: [,
       '50% improvement in learning outcomes',
@@ -802,13 +882,14 @@ export const microSaasServices: MicroSaasService[] = []
       '70% increase in student engagement',
       '60% reduction in teacher workload',
       '85% improvement in assessment accuracy',
-      '90% personalization of learning experience'
+      90% personalization of learning experience
     ],
     link: '/ai-education',
     popular:
         popular: true,
     category: 'Education',
     rating: 4.8;
+
     users: '28,000+',
     freeTrial: '21 days',
     marketPrice: '$149-399/month',
@@ -818,7 +899,7 @@ export const microSaasServices: MicroSaasService[] = []
       'Computer Vision for assessment',
       'Predictive Analytics for performance',
       'Personalization Engine',
-      'Real-time feedback systems'
+      Real-time feedback systems
     ],
     useCases: [,
       'K-12 education',
@@ -826,12 +907,12 @@ export const microSaasServices: MicroSaasService[] = []
       'Corporate training',
       'Language learning',
       'Professional certification',
-      'Skills development'
+      Skills development
     ],
     integrations: [,
       'Google Classroom', 'Microsoft Teams', 'Canvas', 'Blackboard', 'Moodle',
       'Zoom', 'WebEx', 'Slack', 'Discord', 'YouTube', 'Vimeo',
-      'Google Drive', 'OneDrive', 'Dropbox', 'Box'
+      'Google Drive', 'OneDrive', 'Dropbox', Box
     ],
     apiAvailable: true,
     mobileApp: true,
@@ -850,10 +931,19 @@ export const microSaasServices: MicroSaasService[] = []
       enterprise: 299,
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
     }
+
   }
+
 ];
+<<<<<<< HEAD
 // Service categories for filtering and organization;
 export const serviceCategories = []
+=======
+
+// Service categories for filtering and organization
+export const serviceCategories = [;;
+
+>>>>>>> origin/main
   'All',
   'Productivity',
   'Content & Marketing',
@@ -865,10 +955,17 @@ export const serviceCategories = []
   'Education',
   'AI & ML',
   'Analytics',
-  'Automation'
+  Automation
 ];
+<<<<<<< HEAD
 // Pricing tiers for comparison;
 export const pricingTiers = {}
+=======
+
+// Pricing tiers for comparison
+export const pricingTiers = {;;
+
+>>>>>>> origin/main
   starter: {,
     name: 'Starter',
     price: '$29-99/month',
@@ -884,9 +981,17 @@ export const pricingTiers = {}
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
   }
+
 };
+<<<<<<< HEAD
 // Contact information;
 export const contactInfo = {}
+=======
+
+// Contact information
+export const contactInfo = {;;
+
+>>>>>>> origin/main
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

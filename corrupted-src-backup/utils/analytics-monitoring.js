@@ -1,4 +1,5 @@
 // Advanced analytics and monitoring;
+<<<<<<< HEAD
 export const analyticsUtils = {}
   // Performance monitoring;
   measurePerformance: () => {}
@@ -7,58 +8,125 @@ const _navigation="performance.getEntriesByType('navigation')[0];"
       const _paint="performance.getEntriesByType('paint');"
 ;
 const metrics = {}
+=======
+
+export const analyticsUtils = {;;
+
+  // Performance monitoring;
+
+  measurePerformance: () => {
+    if (typeof window !== 'undefined' && 'performance in window) {;
+
+const _navigation = performance.getEntriesByType('navigation)[0];;
+
+      const _paint = performance.getEntriesByType('paint);;
+
+;
+
+const metrics = {;;
+
+>>>>>>> origin/main
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+<<<<<<< HEAD
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
 export const analyticsUtils = "{/* TODO: Fix JSX expression */}"
+=======
+
+        firstPaint: paint.find(entry => entry.name === 'first-paint)?.startTime || 0;
+
+        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint)?.startTime || 0;
+
+export const analyticsUtils = {/* TODO: Fix JSX expression */};;
+
+>>>>>>> origin/main
       };
       return metrics}
+
     return null},
 
   // Error tracking;
+
   trackError: (error, context = {}) => {;
+<<<<<<< HEAD
 const errorData = {}
+=======
+
+const errorData = {;;
+
+>>>>>>> origin/main
       message: error.message;
+
       stack: error.stack;
+
       url: window.location.href;
+
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent;
+
       context,
   // Error tracking,
   trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
+
     };
     // Send to analytics service;
+
     //     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData},
 
   // User behavior tracking;
+
   trackUserInteraction: (action, element, metadata = {}) => {;
+<<<<<<< HEAD
 const interactionData = {}
+=======
+
+const interactionData = {;;
+
+>>>>>>> origin/main
       action,
-      element: element.tagName?.toLowerCase() || 'unknown'
+      element: element.tagName?.toLowerCase() || unknown
       id: element.id || null;
+
       className: element.className || null;
+
       timestamp: new Date().toISOString(),
       url: window.location.href;
+
       metadata,
   // User behavior tracking,
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
+
     };
     //     return interactionData},
 
   // Core Web Vitals;
+
   measureCoreWebVitals: () => {,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
         //           getCLS(console.log);
+
         //           getFID(console.log);
+
         //           getFCP(console.log);
+
         //           getLCP(console.log);
+
         //           getTTFB(console.log);
+
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
+
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+
       })}
+<<<<<<< HEAD
   }};
+=======
+
+  }};
+>>>>>>> origin/main

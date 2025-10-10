@@ -3,6 +3,7 @@ export default async function handler(req, res) {}
     return}
 
   try {;
+
 const { name, email, phone, details, country, service } = req.body || {};
     if (!name || !email || !phone || !details) {}
       return}
@@ -13,7 +14,13 @@ const { name, email, phone, details, country, service } = req.body || {};
     // 2. Send notification to your sales team;
     // 3. Send confirmation email to the customer;
     // 4. Integrate with your CRM;
+<<<<<<< HEAD
 const quoteData = {}
+=======
+
+const quoteData = {;;
+
+>>>>>>> origin/main
       name,
       email,
       phone,
@@ -21,8 +28,9 @@ const quoteData = {}
       country: country || 'Not specified',
       service: service || 'General inquiry',
       timestamp: new Date().toISOString(),
-      status: 'pending'
+      status: pending
     };
+<<<<<<< HEAD
     // console.log removed for production;
 res.statusCode="200;"
     res.setHeader('Content-Type', 'application/json');
@@ -35,5 +43,25 @@ res.statusCode="200;"
     // console.error removed for production;
 res.statusCode="500;"
     res.setHeader('Content-Type', 'application/json');
+=======
+
+    // console.log removed for production
+res.statusCode = 200;
+
+    res.setHeader('Content-Type', 'application/json);
+
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Quote request submitted successfully',
+      quoteId: `quote_${Date.now()}`,
+      data: quoteData
+    }))} catch (error) {
+    // console.error removed for production
+res.statusCode = 500;
+
+    res.setHeader('Content-Type', 'application/json);
+
+>>>>>>> origin/main
     res.end(JSON.stringify({ error: 'Internal server error' }))}
+
 }

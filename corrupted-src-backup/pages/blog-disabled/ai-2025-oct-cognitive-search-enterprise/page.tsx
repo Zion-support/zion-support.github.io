@@ -1,5 +1,6 @@
 impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+<<<<<<< HEAD
 export default function CognitiveSearchEnterprise20, 2, 5() {}
   return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
     <React.Fragment></React>
@@ -8,6 +9,14 @@ export default function CognitiveSearchEnterprise20, 2, 5() {}
     <>
         <title></title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group;
+=======
+
+export default function CognitiveSearchEnterprise20, 2, 5() { 
+  return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
+    <React.Fragment>
+      <Helm, e, t>
+        <title>          Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group;
+>>>>>>> origin/main
         <
         <meta , nam, e = "'description'></meta>"
           conte, n, t = "'Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accura, c, y, 12 x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization.'"
