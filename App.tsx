@@ -10,6 +10,7 @@ import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
 import ContentShowcase from './src/components/ContentShowcase';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+import './src/styles/futuristic.css';
 
 // Structured data for SEO
 const structuredData = {
