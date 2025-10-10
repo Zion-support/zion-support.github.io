@@ -336,48 +336,6 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: DollarSign, 
-      category: 'Finance', 
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
-      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI 3D Generation Studio', 
-      href: '/ai-3d-generation', 
-      icon: FileText, 
-      category: 'Creative', 
-      price: '$299/mo',
-      description: 'AI-powered 3D model generation, animation, and virtual environment creation',
-      features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization'],
-      popular: true,
-      rating: 4.7,
-      users: '1,200+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Mobile App Builder Pro', 
-      href: '/ai-mobile-app-builder', 
-      icon: Smartphone, 
-      category: 'Development', 
-      price: '$399/mo',
-      description: 'AI-powered mobile app development with automated coding, testing, and deployment',
-      features: ['Auto Code Generation', 'UI/UX Design', 'Cross-platform Development', 'Automated Testing', 'App Store Optimization', 'Performance Monitoring'],
-      popular: true,
-      rating: 4.8,
-      users: '2,300+',
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant',
       capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
@@ -488,7 +446,6 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
-<<<<<<< HEAD
     },
     { 
       name: 'AI Logo Designer Pro', 
@@ -690,8 +647,6 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-social-media-scheduler',
       capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
     },
 
     // Advanced AI-Powered Micro SAAS Services
