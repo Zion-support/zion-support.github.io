@@ -1,103 +1,7 @@
 'use client';
-import React from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-    }
-  ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>EnhancedErrorBoundary | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedErrorBoundary, AI solutions, IT services, Zion Tech Group, enhancederrorboundary" />
-      </Helmet>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedErrorBoundary?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancederrorboundary solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancederrorboundary solutions for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now;
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us;
-  </
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-export default EnhancedErrorBoundaryPage;
-  </button>
-  </button>
-  </h2>
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -126,88 +30,144 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to monitoring service
+    // Log error to analytics or monitoring service
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-
-            <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleReload}
-                className="w-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Reload Page
-              </button>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-3">
-                Still having issues? Contact our support team:
-              </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                support@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-        </div>
-      );
+      return this.props.fallback || <ErrorFallback error={this.state.error} />;
     }
 
     return this.props.children;
   }
 }
+
+const ErrorFallback: React.FC<{ error?: Error }> = ({ error }) => {
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+      <Helmet>
+        <title>Error - Zion Tech Group</title>
+        <meta name="description" content="An error occurred. Please try again or contact our support team." />
+      </Helmet>
+      
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+          <div className="mb-8">
+            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Shield className="w-10 h-10 text-red-400" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white/5 rounded-2xl p-6">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                <Brain className="w-6 h-6 mr-2 text-purple-400" />
+                What happened?
+              </h3>
+              <p className="text-gray-300 text-sm">
+                An unexpected error occurred while loading this page. This could be due to a temporary issue with our servers or a problem with your internet connection.
+              </p>
+            </div>
+            
+            <div className="bg-white/5 rounded-2xl p-6">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                <Zap className="w-6 h-6 mr-2 text-yellow-400" />
+                What can you do?
+              </h3>
+              <p className="text-gray-300 text-sm">
+                Try refreshing the page, checking your internet connection, or contact our support team if the problem persists.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Try Again
+            </button>
+            <button
+              onClick={() => window.history.back()}
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Go Back
+            </button>
+          </div>
+
+          <div className="bg-white/5 rounded-2xl p-6 mb-8">
+            <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-sm">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Need Help?</h3>
+            <p className="text-purple-100 mb-6">
+              Our expert team is here to help you get back on track. Contact us for immediate assistance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Email Support
+              </a>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-purple-100 text-sm">
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
+            </div>
+          </div>
+
+          {error && process.env.NODE_ENV === 'development' && (
+            <details className="mt-8 bg-red-900/20 border border-red-500/30 rounded-lg p-4">
+              <summary className="text-red-400 font-semibold cursor-pointer">
+                Error Details (Development Only)
+              </summary>
+              <pre className="mt-4 text-red-300 text-xs overflow-auto">
+                {error.toString()}
+              </pre>
+            </details>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default EnhancedErrorBoundary;

@@ -91,8 +91,8 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Case Studies;
-  </
+            Case Studies
+          </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
           </p>
