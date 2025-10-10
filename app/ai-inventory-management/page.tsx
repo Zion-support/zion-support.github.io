@@ -48,7 +48,7 @@ export default function AIInventoryManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊</div>
+                <div className="text-4xl mb-4 text-center">bar-chart</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Analytics</h3>
                 <p className="text-gray-300 text-center">
                   Get instant insights into inventory performance, turnover rates, and optimization opportunities.
@@ -56,7 +56,7 @@ export default function AIInventoryManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎯</div>
+                <div className="text-4xl mb-4 text-center">target</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Stock Optimization</h3>
                 <p className="text-gray-300 text-center">
                   AI optimizes stock levels to minimize carrying costs while maintaining service levels.
@@ -72,7 +72,7 @@ export default function AIInventoryManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📱</div>
+                <div className="text-4xl mb-4 text-center">smartphone</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access</h3>
                 <p className="text-gray-300 text-center">
                   Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.

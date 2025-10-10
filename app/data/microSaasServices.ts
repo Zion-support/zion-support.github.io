@@ -47,7 +47,7 @@ export const microSaasServices: MicroSaasService[] = [
     title: 'AI Project Manager Pro',
     description: 'Revolutionary AI-powered project management platform that uses machine learning to predict project outcomes, optimize resource allocation, and prevent delays. Trusted by 15,000+ teams worldwide.',
     shortDescription: 'AI-powered project management with predictive analytics and smart resource optimization.',
-    icon: '📊',
+    icon: 'bar-chart',
     price: '$99/month',
     originalPrice: '$149/month',
     features: [
@@ -120,7 +120,7 @@ export const microSaasServices: MicroSaasService[] = [
     title: 'AI Task Manager Pro',
     description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',
     shortDescription: 'Smart task management with AI prioritization and productivity optimization.',
-    icon: '✅',
+    icon: 'check',
     price: '$49/month',
     originalPrice: '$79/month',
     features: [
@@ -265,7 +265,7 @@ export const microSaasServices: MicroSaasService[] = [
     title: 'AI Social Media Manager',
     description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',
     shortDescription: 'AI-powered social media management with automated content creation and optimization.',
-    icon: '📱',
+    icon: 'smartphone',
     price: '$89/month',
     originalPrice: '$149/month',
     features: [
@@ -412,7 +412,7 @@ export const microSaasServices: MicroSaasService[] = [
     title: 'AI Financial Analyzer',
     description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',
     shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.',
-    icon: '💰',
+    icon: 'dollar-sign',
     price: '$199/month',
     originalPrice: '$299/month',
     features: [
@@ -486,7 +486,7 @@ export const microSaasServices: MicroSaasService[] = [
     title: 'AI Customer Support Bot',
     description: 'Intelligent customer support chatbot that provides 24/7 assistance with natural language understanding, sentiment analysis, and seamless human handoff. Reduces support costs by 70% while improving customer satisfaction.',
     shortDescription: 'AI-powered customer support chatbot with natural language understanding and sentiment analysis.',
-    icon: '🎧',
+    icon: 'headphones',
     price: '$59/month',
     originalPrice: '$99/month',
     features: [
@@ -560,7 +560,7 @@ export const microSaasServices: MicroSaasService[] = [
     title: 'AI Code Review Assistant',
     description: 'Intelligent code review platform that uses AI to analyze code quality, detect bugs, suggest improvements, and ensure best practices. Integrates with popular development tools and provides detailed feedback.',
     shortDescription: 'AI-powered code review with automated bug detection and improvement suggestions.',
-    icon: '🔍',
+    icon: 'search',
     price: '$79/month',
     originalPrice: '$129/month',
     features: [

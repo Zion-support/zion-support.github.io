@@ -104,7 +104,7 @@ const OfflinePage: React.FC = () => {
         </div>
         <div className='mt-8 text-sm text-gray-500'>
           <p>
-            Need help?{' '}
+            Need help?" "
             <a href='tel:+13024640950'
               className='text-indigo-600 hover:text-indigo-700 font-medium'
             >

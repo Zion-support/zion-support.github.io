@@ -1024,7 +1024,7 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
             </a>
           </div>
           <div className="text-gray-200 text-sm">
-            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+            <p>Email: kleber@ziontechgroup.com | Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
 
           </div>
         </div>

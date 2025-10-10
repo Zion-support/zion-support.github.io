@@ -109,14 +109,14 @@ const AIAnalyticsPage: React.FC = () => {
     }
   ]
   const integrations = [
-    { name: 'Google Analytics', icon: '📊' },
+    { name: 'Google Analytics', icon: 'bar-chart' },
     { name: 'Salesforce', icon: '☁️' },
-    { name: 'HubSpot', icon: '🎯' },
+    { name: 'HubSpot', icon: 'target' },
     { name: 'Shopify', icon: '🛒' },
     { name: 'Stripe', icon: '💳' },
-    { name: 'Mailchimp', icon: '📧' },
-    { name: 'Facebook Ads', icon: '📱' },
-    { name: 'Google Ads', icon: '🔍' }
+    { name: 'Mailchimp', icon: 'Email:' },
+    { name: 'Facebook Ads', icon: 'smartphone' },
+    { name: 'Google Ads', icon: 'search' }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

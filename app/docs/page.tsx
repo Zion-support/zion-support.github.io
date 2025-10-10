@@ -12,7 +12,7 @@ const DocsPage: React.FC = () => {
   const docCategories = [
     {
       title: 'Getting Started',
-      icon: '🚀',
+      icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
       docs: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
@@ -42,7 +42,7 @@ const DocsPage: React.FC = () => {
     },
     {
       title: 'Micro SAAS',
-      icon: '💻',
+      icon: 'laptop',
       description: 'Micro SAAS solutions and tools',
       docs: [
         { title: 'Available Tools', description: 'List of all micro SAAS tools', link: '/docs/micro-saas/tools' },
@@ -52,7 +52,7 @@ const DocsPage: React.FC = () => {
     },
     {
       title: 'Security',
-      icon: '🔒',
+      icon: 'lock',
       description: 'Security best practices and compliance',
       docs: [
         { title: 'Security Overview', description: 'Our security measures', link: '/docs/security/overview' },
@@ -154,7 +154,7 @@ const DocsPage: React.FC = () => {
 
             {filteredDocs.length === 0 && searchQuery && (
               <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-6xl mb-4">search</div>
                 <h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
                 <p className="text-gray-300 mb-8">Try adjusting your search terms</p>
                 <button

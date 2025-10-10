@@ -95,7 +95,7 @@ const AutonomousSystemsPage: React.FC = () => {
     {
       title: 'Self-Adapting Software Development',
       description: 'Autonomous development systems that automatically write, test, and deploy code based on requirements.',
-      icon: '💻',
+      icon: 'laptop',
       price: 'Starting at $5,500/month',
       features: ['Code generation', 'Automated testing', 'Deployment automation', 'Bug fixing', 'Performance optimization'],
       benefits: ['Accelerate development by 60%', 'Reduce bugs by 70%', 'Improve code quality'],
@@ -106,7 +106,7 @@ const AutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Financial Operations',
       description: 'Self-managing financial systems that handle transactions, compliance, and reporting automatically.',
-      icon: '💰',
+      icon: 'dollar-sign',
       price: 'Starting at $4,200/month',
       features: ['Transaction processing', 'Compliance monitoring', 'Financial reporting', 'Risk assessment', 'Audit automation'],
       benefits: ['Reduce processing time by 85%', 'Improve accuracy to 99.9%', 'Ensure compliance'],
@@ -117,7 +117,7 @@ const AutonomousSystemsPage: React.FC = () => {
     {
       title: 'Self-Optimizing Marketing Campaigns',
       description: 'Autonomous marketing systems that create, test, and optimize campaigns without human intervention.',
-      icon: '📈',
+      icon: 'trending-up',
       price: 'Starting at $2,800/month',
       features: ['Campaign creation', 'A/B testing automation', 'Audience targeting', 'Content optimization', 'Performance analysis'],
       benefits: ['Increase ROI by 45%', 'Reduce campaign management time', 'Improve conversion rates'],
@@ -128,7 +128,7 @@ const AutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Quality Assurance',
       description: 'Self-managing QA systems that automatically test, validate, and ensure quality across all applications.',
-      icon: '🔍',
+      icon: 'search',
       price: 'Starting at $3,000/month',
       features: ['Automated test generation', 'Performance testing', 'Security testing', 'Usability testing', 'Regression testing'],
       benefits: ['Reduce testing time by 75%', 'Improve test coverage', 'Catch bugs earlier'],
@@ -362,7 +362,7 @@ const AutonomousSystemsPage: React.FC = () => {
               </a>
             </div>
             <div className="mt-8 text-sm text-green-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>

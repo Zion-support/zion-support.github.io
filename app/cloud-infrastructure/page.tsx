@@ -40,7 +40,7 @@ export default function CloudInfrastructurePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡</div>
+                <div className="text-4xl mb-4 text-center">zap</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Auto Scaling</h3>
                 <p className="text-gray-300 text-center">
                   Automatically scale resources up or down based on demand to optimize costs and performance.
@@ -48,7 +48,7 @@ export default function CloudInfrastructurePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔒</div>
+                <div className="text-4xl mb-4 text-center">lock</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security</h3>
                 <p className="text-gray-300 text-center">
                   Bank-level security with encryption, access controls, and compliance certifications.
@@ -64,7 +64,7 @@ export default function CloudInfrastructurePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊</div>
+                <div className="text-4xl mb-4 text-center">bar-chart</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Monitoring</h3>
                 <p className="text-gray-300 text-center">
                   24/7 monitoring and alerting to ensure optimal performance and uptime.

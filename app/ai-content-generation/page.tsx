@@ -29,7 +29,7 @@ const AIContentGenerationPage: React.FC = () => {
     {
       title: 'AI Social Media Content Suite',
       description: 'Comprehensive social media content creation with platform-specific optimization, hashtag research, and engagement prediction.',
-      icon: '📱',
+      icon: 'smartphone',
       price: '$149/month',
       features: [
         'Platform-specific optimization',

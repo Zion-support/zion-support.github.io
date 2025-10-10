@@ -45,7 +45,7 @@ const DemoPage: React.FC = () => {
         'Email Marketing',
         'Financial Analytics'
       ],
-      icon: '💻'
+      icon: 'laptop'
     },
     {
       id: 'custom',
@@ -58,7 +58,7 @@ const DemoPage: React.FC = () => {
         'Integration Examples',
         'ROI Analysis'
       ],
-      icon: '🎯'
+      icon: 'target'
     }
   ];
 

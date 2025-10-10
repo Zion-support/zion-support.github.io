@@ -1181,7 +1181,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
   }
 
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1379,7 +1378,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       </div>
 
       {/* CTA Section */}
-<div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business with AI?
@@ -1402,7 +1401,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             </a>
           </div>
           <div className="text-purple-100 text-sm">
-            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+            <p>Email: kleber@ziontechgroup.com | Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>
       </div>

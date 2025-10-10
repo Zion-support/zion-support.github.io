@@ -40,7 +40,7 @@ export default function AIProjectManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡</div>
+                <div className="text-4xl mb-4 text-center">zap</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Task Allocation</h3>
                 <p className="text-gray-300 text-center">
                   Automatically assign tasks to the right team members based on skills, workload, and availability.
@@ -48,7 +48,7 @@ export default function AIProjectManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊</div>
+                <div className="text-4xl mb-4 text-center">bar-chart</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Insights</h3>
                 <p className="text-gray-300 text-center">
                   Get instant visibility into project health, team performance, and budget utilization.
@@ -56,7 +56,7 @@ export default function AIProjectManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎯</div>
+                <div className="text-4xl mb-4 text-center">target</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Resource Optimization</h3>
                 <p className="text-gray-300 text-center">
                   AI optimizes resource allocation to maximize efficiency and minimize project costs.
@@ -72,7 +72,7 @@ export default function AIProjectManagementPage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📈</div>
+                <div className="text-4xl mb-4 text-center">trending-up</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking</h3>
                 <p className="text-gray-300 text-center">
                   Advanced metrics and KPIs to track team productivity and project success rates.

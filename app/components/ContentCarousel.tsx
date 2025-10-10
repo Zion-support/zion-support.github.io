@@ -19,7 +19,7 @@ const ContentCarousel: React.FC = () => {
       id: 2,
       title: "Enterprise Security Solutions",
       description: "Bank-level security implementation for a leading financial institution",
-      image: "🔒",
+      image: "lock",
       stats: "99.9% Uptime",
       icon: Award,
       color: "from-green-500 to-emerald-600"
@@ -37,7 +37,7 @@ const ContentCarousel: React.FC = () => {
       id: 4,
       title: "AI Marketing Automation",
       description: "Automated marketing campaigns increasing lead generation by 250%",
-      image: "📈",
+      image: "trending-up",
       stats: "250% More Leads",
       icon: Star,
       color: "from-orange-500 to-red-600"

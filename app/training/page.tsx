@@ -62,7 +62,7 @@ const TrainingPage: React.FC = () => {
       students: 890,
       price: '$199',
       instructor: 'Mike Rodriguez',
-      thumbnail: '⚡',
+      thumbnail: 'zap',
       modules: 12,
       certificate: true
     },
@@ -77,7 +77,7 @@ const TrainingPage: React.FC = () => {
       students: 456,
       price: '$399',
       instructor: 'Dr. James Liu',
-      thumbnail: '📊',
+      thumbnail: 'bar-chart',
       modules: 15,
       certificate: true
     },

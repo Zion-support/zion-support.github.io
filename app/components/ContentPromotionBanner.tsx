@@ -9,7 +9,7 @@ const ContentPromotionBanner: React.FC = () => {
   const banners = [
     {
       id: 1,
-      title: "🚀 New AI Solutions Available!",
+      title: "rocket New AI Solutions Available!",
       description: "Discover our latest AI-powered tools and services",
       cta: "Explore Now",
       link: "/ai-services",
@@ -18,7 +18,7 @@ const ContentPromotionBanner: React.FC = () => {
     },
     {
       id: 2,
-      title: "⚡ Special Offer: 30% Off First Month",
+      title: "zap Special Offer: 30% Off First Month",
       description: "Get started with our AI services at a discounted rate",
       cta: "Claim Offer",
       link: "/contact",
@@ -27,7 +27,7 @@ const ContentPromotionBanner: React.FC = () => {
     },
     {
       id: 3,
-      title: "🎯 Free AI Consultation",
+      title: "target Free AI Consultation",
       description: "Book a free consultation to discuss your AI needs",
       cta: "Book Now",
       link: "/consultation",

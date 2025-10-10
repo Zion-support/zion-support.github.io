@@ -187,13 +187,13 @@ const ContentStatistics: React.FC = () => {
             </div>
 
             <div className="text-center">
-              <div className="text-3xl mb-2">🔒</div>
+              <div className="text-3xl mb-2">lock</div>
               <h4 className="font-semibold text-white mb-1">ISO 27001 Certified</h4>
               <p className="text-gray-400 text-sm">Security Standards</p>
             </div>
 
             <div className="text-center">
-              <div className="text-3xl mb-2">🚀</div>
+              <div className="text-3xl mb-2">rocket</div>
               <h4 className="font-semibold text-white mb-1">Fastest Growing</h4>
               <p className="text-gray-400 text-sm">AI Solutions Provider</p>
             </div>

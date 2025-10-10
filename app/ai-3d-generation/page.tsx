@@ -30,7 +30,7 @@ const AI3DGenerationPage: React.FC = () => {
     {
       title: 'Game Development',
       description: 'Generate characters, environments, and props for games',
-      icon: '🎮',
+      icon: 'gamepad',
       examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
     },
     {
@@ -54,7 +54,7 @@ const AI3DGenerationPage: React.FC = () => {
     {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
-      icon: '🎬',
+      icon: 'film',
       examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
     },
     {

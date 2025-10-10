@@ -48,7 +48,7 @@ export default function AICustomerServicePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊</div>
+                <div className="text-4xl mb-4 text-center">bar-chart</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Analytics Dashboard</h3>
                 <p className="text-gray-300 text-center">
                   Real-time insights into customer satisfaction, response times, and conversation quality.
@@ -56,7 +56,7 @@ export default function AICustomerServicePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡</div>
+                <div className="text-4xl mb-4 text-center">zap</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Instant Response</h3>
                 <p className="text-gray-300 text-center">
                   Sub-second response times with 99.9% uptime guarantee for uninterrupted customer support.
@@ -72,7 +72,7 @@ export default function AICustomerServicePage() {
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎯</div>
+                <div className="text-4xl mb-4 text-center">target</div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Personalization</h3>
                 <p className="text-gray-300 text-center">
                   AI learns from each interaction to provide increasingly personalized and relevant responses.

@@ -4560,7 +4560,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <div className="text-2xl mb-2">📍</div>
+              <div className="text-2xl mb-2">Address:</div>
               <h3 className="text-lg font-bold text-white mb-2">Location</h3>
               <p className="text-cyan-400 font-medium">
                 Middletown, DE

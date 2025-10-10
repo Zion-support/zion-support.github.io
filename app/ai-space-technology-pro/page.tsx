@@ -449,7 +449,7 @@ export default function AISpaceTechnologyProPage() {
           <div className="text-gray-200 text-sm">
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
-            <p>📍 Address: {contactInfo.address}</p>
+            <p>Address: Address: {contactInfo.address}</p>
           </div>
         </div>
       </section>

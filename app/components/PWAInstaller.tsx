@@ -66,7 +66,7 @@ const PWAInstaller: React.FC = () => {
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-            📱
+            smartphone
           </div>
         </div>
 

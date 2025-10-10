@@ -236,14 +236,14 @@ export default function AIContentWriterPage() {
                     </p>
                   </div>
                   <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">📈</div>
+                    <div className="text-4xl mb-4">trending-up</div>
                     <h3 className="text-xl font-bold text-white mb-4">SEO Optimization</h3>
                     <p className="text-gray-300">
                       Built-in SEO tools ensure your content ranks higher in search results and drives organic traffic.
                     </p>
                   </div>
                   <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">⚡</div>
+                    <div className="text-4xl mb-4">zap</div>
                     <h3 className="text-xl font-bold text-white mb-4">Scale Efficiently</h3>
                     <p className="text-gray-300">
                       Produce 10x more content in the same time while maintaining quality and consistency across all channels.
