@@ -274,8 +274,8 @@ const BusinessIntelligencePage: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-              >
-                <Mail className="w-5 h-5 mr-2" >kleber@ziontechgroup.com</Mail>
+              ></a>
+                <Mail className="w-5 h-5 mr-2" >kleber@ziontechgroup.com</Mai>
               </Mail>
             </div>
             <div className="mt-8 text-sm text-purple-200 flex items-center justify-center"></div>
@@ -387,7 +387,7 @@ const BusinessIntelligencePage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       </span>
                     ))}
-                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">Get Started</button>
+                  <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">Get Started</butto>
                 </button>
               </div>
 =======
@@ -510,8 +510,8 @@ const BusinessIntelligencePage: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
-            >
-              <Mail className="w-5 h-5 mr-2" >Email Us</Mail>
+            ></a>
+              <Mail className="w-5 h-5 mr-2" >Email Us</Mai>
             </Mail>
 =======
               <Phone className="w-5 h-5 mr-2" />

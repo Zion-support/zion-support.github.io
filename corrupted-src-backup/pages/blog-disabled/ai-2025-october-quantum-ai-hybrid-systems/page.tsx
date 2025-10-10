@@ -97,8 +97,7 @@ const QuantumAIHybrid202, 5 = () => {
 =======
                     Quant, u, m-AI, hybrid, systems are, no, longer theoretic, a, l—th, e, y're, deliverin, g</p> <stro, n, g>1000x, processing, speed</st, r, o, n, g>,
                     <stro, n, g>99.9% accuracy, improvement, s</stro, n, g > , a, n, d{' ' }
-                    <stro, n, g>unprecedented, optimization, capabilities</stro, n, g>
-                    for, enterprise, applications tod, a, y.
+                    <stro, n, g>unprecedented</g>, optimization, capabilities</stro, n, g>for</g>, enterprise, applications tod, a, y.
 :src/pages/blog/ai-2025-october-quantum-ai-hybrid-systems/page.tsx
     <div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
@@ -525,42 +524,42 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
                 <div></section>
                   <h3 className="text-xl font-bold text-white mb-4">Key Quantum-AI Use Cases</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
-                      <span className="text-white">Financial Risk Modeling: 100x faster portfolio optimization</span>
+                  <ul className="space-y-3"></ul>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
+                      <span className="text-white">Financial Risk Modeling: 100 x faster portfolio optimization</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
                       <span className="text-white">Supply Chain Optimization: 95% efficiency improvements</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
-                      <span className="text-white">Drug Discovery: 10x faster molecular simulation</span>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
+                      <span className="text-white">Drug Discovery: 10 x faster molecular simulation</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
                       <span className="text-white">Machine Learning: Quantum-enhanced neural networks</span>
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">Real-World Quantum-AI Applications</h2>
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                 <div></section>
                   <h3 className="text-xl font-bold text-white mb-4">Key Quantum-AI Use Cases</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-white">Financial Risk Modeling: 100x faster portfolio optimization</span>
+                  <ul className="space-y-3"></ul>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
+                      <span className="text-white">Financial Risk Modeling: 100 x faster portfolio optimization</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Supply Chain Optimization: 95% efficiency improvements</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-white">Drug Discovery: 10x faster molecular simulation</span>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
+                      <span className="text-white">Drug Discovery: 10 x faster molecular simulation</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Machine Learning: Quantum-enhanced neural networks</span>
                 <div></div>
                   <h2 className="text-2xl font-bold text-white mb-4">

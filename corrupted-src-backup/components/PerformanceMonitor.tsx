@@ -136,7 +136,7 @@ const,
 //       }
   }, [metrics]);
 
-  return <>{children}</>;
+  return <>{children};
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
@@ -426,7 +426,7 @@ const,
           <div className="border-t pt-3 mt-3"></div>
             <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">Connection:</span>
-              <span className="ml-2 text-blue-600">
+              <span className="ml-2 text-blue-600"></spa>
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
               </span>
             </div>

@@ -173,14 +173,14 @@ const AIStockPortfolioManagerPage: React.FC = () => {
 <<<<<<< HEAD
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Unlimited stocks</CheckCircle>
               </CheckCircle>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >AI recommendations</CheckCircle>
+              <li className="flex items-center text-gray-300"></l>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >AI recommendations</CheckCircl>
               </CheckCircle>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Real-time monitoring</CheckCircle>
+              <li className="flex items-center text-gray-300"></l>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Real-time monitoring</CheckCircl>
               </CheckCircle>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Risk assessment</CheckCircle>
+              <li className="flex items-center text-gray-300"></l>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Risk assessment</CheckCircl>
               </CheckCircle>
               <li className="flex items-center text-gray-300">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" >24/7 support<a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Get Started Today</a>

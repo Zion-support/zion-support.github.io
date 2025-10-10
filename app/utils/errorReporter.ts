@@ -32,7 +32,7 @@ export interface ErrorReport {}
   userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical'
-  context?: Record<string, unknown>;}
+  context?: Record<string, unknown>;}</strin>
 }
 export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean
@@ -225,7 +225,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'}
+      critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'}
     }
     return styles[severity]
 =======

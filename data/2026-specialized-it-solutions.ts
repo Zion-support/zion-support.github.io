@@ -1452,7 +1452,7 @@ export const,
     ],
     roi: 'Organizations report 400% ROI through improved data protection and reduced downtime.',
     competitors: ['Veeam', 'Commvault', 'Acronis', 'Rubrik']
-    marketSize: '$11.8B backup and recovery market'
+    marketSize: '$11.8 B backup and recovery market'
     growthRate: '16% annual growth'
     contactInfo: contact;
     realImplementation: true;

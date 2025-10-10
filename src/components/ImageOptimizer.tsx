@@ -26,9 +26,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
+  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
     if (priority) return;
 
     const observer = new IntersectionObserver(
@@ -110,8 +108,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1px)' }}
-        />
+          style={{ filter: 'blur(1 px)' }}
+        /></img>
       )}
       
       {/* Actual Image */}
@@ -127,7 +125,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
           onLoad={handleLoad}
           onError={handleError}
           style={{ width, height }}
-        />
+        /></img>
       )}
     </div>
   );

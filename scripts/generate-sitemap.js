@@ -33,7 +33,7 @@ const pages = [,
   { url: '/healthcare-it', priority: '0.7', changefreq: 'monthly' },
   { url: '/financial-it', priority: '0.7', changefreq: 'monthly' },
   { url: '/edge-computing', priority: '0.7', changefreq: 'monthly' },
-  { url: '/5g-implementation', priority: '0.7', changefreq: 'monthly' },
+  { url: '/5 g-implementation', priority: '0.7', changefreq: 'monthly' },
   { url: '/iot-platform', priority: '0.7', changefreq: 'monthly' }
 ];
 
@@ -44,7 +44,7 @@ ${pages.map(page => `  <url>),
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    <priority></p>${page.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
 

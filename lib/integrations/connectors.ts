@@ -255,8 +255,7 @@ export async function syncData(connectio,
   },
 <<<<<<< HEAD
 
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {

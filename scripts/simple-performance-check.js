@@ -142,7 +142,7 @@ const report = {/* TODO: Fix JSX expression */}
     '✅ Vite configuration optimized for performance',
     '✅ Netlify configuration optimized',
     '✅ Memory leak warnings eliminated',
-    '✅ Build time improved (4.90s vs 5.11s)',
+    '✅ Build time improved (4.90 s vs 5.11 s)',
   ],
 <<<<<<< HEAD
   recommendations: [,

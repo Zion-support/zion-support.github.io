@@ -788,7 +788,7 @@ export const,
           'Standard dashboards',
           'Data visualization tools',
           'Email support',
-          'Up to 100GB data processing',
+          'Up to 100 GB data processing',
           'Basic API access'
         ],
         limitations[
@@ -831,7 +831,7 @@ export const,
           'Custom dashboards',
           'Real-time analytics',
           'Priority support',
-          'Up to 1TB data processing',
+          'Up to 1 TB data processing',
           'Advanced API access',
           'Custom integrations'
         ],

@@ -72,16 +72,16 @@ import Footer from '../components/Footer';
 
 const AIVoiceCloningPage: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Voice Cloning Pro - Professional Voice Synthesis | Zion Tech Group"
         description="Create realistic voice clones with our advanced AI voice cloning technology. Perfect for content creators, businesses, and developers. Starting at $199/month."
         keywords="AI voice cloning, voice synthesis, text to speech, voice generation, AI voice technology, voice cloning software"
         canonical="https://ziontechgroup.com/ai-voice-cloning"
-      />
-      <Navigation />
+      /></SEOHea>
+      <Navigation /></Navigatio>
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></mai>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
@@ -96,7 +96,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   Professional Voice Synthesis
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
                 Create realistic voice clones with our advanced AI technology. Perfect for content creators, 
                 businesses, and developers who need high-quality voice synthesis.
               </p>
@@ -104,16 +104,14 @@ const AIVoiceCloningPage: React.FC = () => {
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                ></a></<<<a>Start</a></<<a>Free</a> Trial
+                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
                 </a>
                 <a 
                   href="#demo" 
                   className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-                >
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                ></a>
+                  <Play className="mr-2 w-5 h-5" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
                 </a>
               </div>
             </div>
@@ -127,7 +125,7 @@ const AIVoiceCloningPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Powerful Voice Cloning Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Our AI voice cloning technology delivers professional-quality results with advanced features
               </p>
             </div>
@@ -137,19 +135,17 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Mic className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">High-Quality Voice Synthesis</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">High-Quality Voice Synthesis</h>
                 <p className="text-gray-600 mb-4">
                   Generate natural-sounding voices with 99% accuracy and professional quality audio output.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    48kHz audio quality
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircl>
+                    48 kHz audio quality
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Multiple voice styles
-                  </li>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Multiple</CheckCircle></<<CheckCircle>voice</CheckCircle></<CheckCircle>styles</CheckCircle>
                 </ul>
               </div>
 
@@ -157,19 +153,15 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Settings className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Voice Training</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Voice Training</h>
                 <p className="text-gray-600 mb-4">
                   Train custom voice models with just 10 minutes of audio samples using our advanced AI.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Quick training process
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Voice emotion control
-                  </li>
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Quick</CheckCircle></<<CheckCircle>training</CheckCircle></<CheckCircle>process</CheckCircle>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Voice</CheckCircle></<<CheckCircle>emotion</CheckCircle></<CheckCircle>control</CheckCircle>
                 </ul>
               </div>
 
@@ -177,18 +169,17 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Globe className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Language Support</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Language Support</h>
                 <p className="text-gray-600 mb-4">
                   Support for 50+ languages and dialects with native pronunciation and accent accuracy.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircl>
                     50+ languages
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Regional accents
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Regional</CheckCircle></<<CheckCircle>accents</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -197,18 +188,16 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Shield className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy & Security</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy & Security</h>
                 <p className="text-gray-600 mb-4">
                   Enterprise-grade security with voice data encryption and secure processing.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    End-to-end encryption
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>End</CheckCircle></CheckCircle>-to-end encryption
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    GDPR compliant
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>GDPR</CheckCircle></<<CheckCircle>compliant</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -217,18 +206,17 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Processing</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Processing</h>
                 <p className="text-gray-600 mb-4">
                   Generate voice audio in real-time with our optimized AI models and cloud infrastructure.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircl>
                     <1 second generation
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Batch processing
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Batch</CheckCircle></<<CheckCircle>processing</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -237,18 +225,15 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h>
                 <p className="text-gray-600 mb-4">
                   Share voice models and collaborate with team members on voice projects.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Shared voice library
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Version control
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Shared</CheckCircle></<<CheckCircle>voice</CheckCircle></<CheckCircle>library</CheckCircle>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Version</CheckCircle></<<CheckCircle>control</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -263,7 +248,7 @@ const AIVoiceCloningPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Simple, Transparent Pricing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Choose the perfect plan for your voice cloning needs
               </p>
             </div>
@@ -278,22 +263,22 @@ const AIVoiceCloningPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">Perfect for individual creators and small projects</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">10 voice models</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">10 voice models</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">10,000 characters/month</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">10,000 characters/month</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">5 languages</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">5 languages</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Email support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Email support</spa>
                   </li>
                 </ul>
                 <a 
@@ -318,26 +303,26 @@ const AIVoiceCloningPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">Ideal for businesses and content creators</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">50 voice models</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">50 voice models</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">100,000 characters/month</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">100,000 characters/month</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">25 languages</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">25 languages</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Priority support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Priority support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">API access</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">API access</spa>
                   </li>
                 </ul>
                 <a 
@@ -357,26 +342,26 @@ const AIVoiceCloningPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For large organizations with custom needs</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited voice models</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Unlimited voice models</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited characters</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Unlimited characters</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">All languages</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">All languages</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">24/7 phone support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">24/7 phone support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom integrations</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom integrations</spa>
                   </li>
                 </ul>
                 <a 
@@ -403,16 +388,14 @@ const AIVoiceCloningPage: React.FC = () => {
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Inquiry"
                 className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+              ></a></<<<a>Start</a></<<a>Free</a> Trial
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
               </a>
               <a 
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+              ></a>
+                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
               </a>
             </div>
           </div>
@@ -439,7 +422,7 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </ErrorBoundary>
   );
 };

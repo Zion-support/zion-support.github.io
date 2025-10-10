@@ -8,8 +8,7 @@ interface SEOOptimizerProps {}
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;
-  noIndex?: boolean;
+  structuredData?: Record<string, unknown>;</string></<<<strin>noIndex</strin></strin>?: boolean;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -468,5 +467,4 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   return null;
 };
-</string>
-export default EnhancedSEOOptimizer;</string>
+</<<<string>export</string></<<string>default</string> EnhancedSEOOptimizer;</string>

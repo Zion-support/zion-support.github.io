@@ -43,7 +43,7 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     google?: string;
     yandex?: string;
     yahoo?: string;
-    other?: Record<string, string>;
+    other?: Record<string, string>;</strin>
   };
 }
 
@@ -70,5 +70,4 @@ export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
-export type GenerateMetadata = (params: GenerateMetadataParams) => Metadata | Promise<Metadata>;
-export type GenerateViewport = (params: GenerateMetadataParams) => Viewport | Promise<Viewport>;
+export type GenerateMetadata = (params: GenerateMetadataParams) => Metadata | Promise<Metadata>;</Metadata></<<<Metadata>export</Metadata></<<Metadata>type</Metadata> GenerateViewport = (params: GenerateMetadataParams) => Viewport | Promise<Viewport>;</Viewpor>

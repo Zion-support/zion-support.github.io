@@ -269,11 +269,10 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
       </section>,)
 ),
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-white/20">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
+      <section className="py-20"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12 border border-white/20"></div>
+            <h2 className="text-4 xl font-bold text-white mb-6"></h>Ready</h> to Transform Your Enterprise?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join 500+ Fortune 500 companies already using our AI solutions;

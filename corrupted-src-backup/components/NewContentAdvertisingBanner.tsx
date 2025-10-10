@@ -25,8 +25,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       reade, r, s: '2, 5, K+','
       bad, g, e: 'N, E, W','
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0','
-      ic, o, n: <Sparkles, className="w-6 h-6/>,"
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
+      ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
     {
       id: 7;
       tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)','
@@ -36,8 +35,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       reade, r, s: '1, 9, K+','
       bad, g, e: 'FEATUR, E, D','
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
-      ic, o, n: <TrendingUp, className="w-6 h-6/>,"
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
+      ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
     {
       id: 1;
       tit, l, e: 'AI, 20, 2;
@@ -48,8 +46,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       reade, r, s: '5, 8, K+','
       bad, g, e: 'N, E, W','
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
-      ic, o, n: <Star, className="w-6 h-6/>,"
-      li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
+      ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
     {
       id: 2;
       tit, l, e: 'Edge, 20, 2;
@@ -60,8 +57,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       reade, r, s: '4, 1, K+','
       bad, g, e: 'TRENDI, N, G','
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
-      ic, o, n: <TrendingUp, className="w-6 h-6/>,"
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
+      ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
     {
       id: 3;
       tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)','
@@ -112,8 +108,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       reade, r, s: '1, 9, K+',';
       bad, g, e: 'FEATUR, E, D',';
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
-      ic, o, n: <TrendingUp, className="w-6 h-6" />,";
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t'
+      ic, o, n: <TrendingUp, className="w-6 h-6" />,";</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t'
     }
     {
       id: 1;
@@ -125,8 +120,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       reade, r, s: '5, 8, K+',';
       bad, g, e: 'N, E, W',';
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
-      ic, o, n: <Star, className="w-6 h-6" />,";
-      li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t'
+      ic, o, n: <Star, className="w-6 h-6" />,";</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t'
     }
     {
       id: 2;
@@ -138,8 +132,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       reade, r, s: '4, 1, K+',';
       bad, g, e: 'TRENDI, N, G',';
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
-      ic, o, n: <TrendingUp, className="w-6 h-6" />,";
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s'
+      ic, o, n: <TrendingUp, className="w-6 h-6" />,";</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s'
     }
     {
       id: 3;

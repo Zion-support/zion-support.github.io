@@ -57,8 +57,8 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p"></div>
             <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}
               transiti, o, n = {{ durat, i, o, n:  , 5, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
-            >
-              <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />
+            ></moti>
+              <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-bl, u, e-5, 0, 0/30"></div>
               <Award, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0" />
@@ -75,7 +75,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
           <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Content, Showcas, e;
           </h3>
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, m, b-12">
+          <p, className="te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-5 xl, m, x-auto, leadin, g-relaxed, m, b-12">
             Master, the, most advanced, AI, technologies with, our, comprehensive 2026, content, library. 
             From, quantu, m-neural, computing, to autonomous, operation, s - everything, you, need to, lead, the AI, revolutio, n.
           </p>
@@ -353,7 +353,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
               <h3, className="te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6">
                 Master, the, AI Revoluti, o, n;
               </h3>
-              <p, className="te, x, t-gr, a, y-300, m, b-12, ma, x-w-3xl, m, x-auto, tex, t-xl, leadin, g-relax, e, d">
+              <p, className="te, x, t-gr, a, y-300, m, b-12, ma, x-w-3 xl, m, x-auto, tex, t-xl, leadin, g-relax, e, d">
                 Join, the, elite group, of, AI leaders, implementing, these breakthrough, technologie, s. 
                 Get, exclusive, access to, implementation, guide, s, expert, consultation, s, and, Fortune, 500 case, studie, s.
               </p>

@@ -378,7 +378,7 @@ export default function CaseStudiesPage() {}
       results: [,
         '70% reduction in infrastructure costs',
         '99.9% uptime achievement',
-        '5x faster deployment cycles',
+        '5 x faster deployment cycles',
         'Unlimited scalability'
       ],
       image: '/images/case-studies/cloud-migration.webp',
@@ -809,8 +809,8 @@ export default function CaseStudiesPage() {}
             <Link
               to="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
-              <Calendar className="w-5 h-5 mr-2" >Free Consultation</Calendar>
+            ></Lin>
+              <Calendar className="w-5 h-5 mr-2" >Free Consultation</Calenda>
             </Calendar>
 =======
               <MessageSquare className="w-5 h-5 mr-2" />

@@ -407,10 +407,10 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     style.textContent = `
       .sr-only {
         position: absolute;
-        width: 1px;
-        height: 1px;
+        width: 1 px;
+        height: 1 px;
         padding: 0;
-        margin: -1px;
+        margin: -1 px;
         overflow: hidden;
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;

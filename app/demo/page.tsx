@@ -170,8 +170,7 @@ const DemoPage: React.FC = () => {,
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (</section><div
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 key={demo.id}
-                onClick={() =>setSelectedDemo(demo.id)}
-                className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
+                onClick={() =>setSelectedDemo(demo.id)}</div></<<<di>className</di></di>={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
                   selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
                 }`}</div>
               ></div>
@@ -298,7 +297,7 @@ const DemoPage: React.FC = () => {,
                       type="text"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
                       placeholder="Your company name"
-                    />
+                    /></inpu>
                   </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
@@ -306,7 +305,7 @@ const DemoPage: React.FC = () => {,
                       type="text"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="Your full name"
-                    />
+                    /></inpu>
                   </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
@@ -314,7 +313,7 @@ const DemoPage: React.FC = () => {,
                       type="email"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="your.email@company.com"
-                    />
+                    /></inpu>
                   </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
@@ -322,7 +321,7 @@ const DemoPage: React.FC = () => {,
                       type="tel"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="+1 (555) 123-4567"
-                    />
+                    /></inpu>
                   </div>
                 </div>
               </div>
@@ -334,7 +333,7 @@ const DemoPage: React.FC = () => {,
                     <input;
                       type="date"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                    />
+                    /></inpu>
                   </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Time</label>
@@ -363,7 +362,7 @@ const DemoPage: React.FC = () => {,
                       rows={4}
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
                       placeholder="Tell us about your specific needs or questions..."
-                    />
+                    /></textare>
                   </div>
                 </div>
               </div>

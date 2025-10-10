@@ -107,8 +107,8 @@ const PerformanceOptimizationPage: React.FC = () => {,
             <Link
               href="/consultation"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Gauge className="w-5 h-5 mr-2" >Free Assessment</Gauge>
+            ></Lin>
+              <Gauge className="w-5 h-5 mr-2" >Free Assessment</Gaug>
             </Gauge>
           </div>
         </div>
@@ -353,8 +353,8 @@ const PerformanceOptimizationPage: React.FC = () => {,
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Zap className="w-5 h-5 mr-2" >View Pricing</Zap>
+            ></Lin>
+              <Zap className="w-5 h-5 mr-2" >View Pricing</Za>
             </Zap>
 =======
               <ArrowRight className="w-5 h-5 mr-2" />

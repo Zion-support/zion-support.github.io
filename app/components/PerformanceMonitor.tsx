@@ -257,9 +257,7 @@ const PerformanceMonitor: React.FC = () => {
 
 <<<<<<< HEAD
   if (!isVisible || !metrics) return null;
-</PerformanceMetrics>
-  const getPerformanceColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {</PerformanceMetrics>
-    if (value <= thresholds.good) return 'text-green-400';
+</<<<PerformanceMetrics>const</PerformanceMetrics></<<PerformanceMetrics>getPerformanceColor</PerformanceMetrics> = (value: number, thresholds: { good: number; needsImprovement: number }) => {</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };

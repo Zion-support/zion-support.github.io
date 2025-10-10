@@ -6,8 +6,7 @@ interface PerformanceOptimizerProp, s {
   onClo, s, e: () = > v, o, i, d;
  }
 
-const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({
-  isVisi, b, l, e,
+const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({</PerformanceOptimizerPro>isVisi</PerformanceOptimizerPro>, b, l, e,
   onClo, s, e,
 }) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useState({)

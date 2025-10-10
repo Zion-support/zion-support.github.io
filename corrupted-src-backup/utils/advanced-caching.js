@@ -147,7 +147,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           const _item = JSON.parse(localStorage.getItem(key));
-          if (item && item.expiry > now) {
+          if (item && item.expiry>now</expiry>) {
             //             const cacheKey = key.replace('cache_', '');
             this.cache.set(cacheKey, item.value);
             this.ttlMap.set(cacheKey, item.expiry);

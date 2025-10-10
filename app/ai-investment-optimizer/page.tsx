@@ -702,9 +702,7 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
   const [investmentGoal, setInvestmentGoal] = useState('growth');
   const [timeHorizon, setTimeHorizon] = useState('5-10 years');
   const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationResults, setOptimizationResults] = useState<any>(null);
-
-  const totalValue = portfolio.reduce((sum, stock) => sum + stock.value, 0);
+  const [optimizationResults, setOptimizationResults] = useState<any>(null);</any></<<<any>const</any></<<any>totalValue</any> = portfolio.reduce((sum, stock) => sum + stock.value, 0);
 
   const features = [
     {}

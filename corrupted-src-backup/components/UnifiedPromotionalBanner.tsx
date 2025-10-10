@@ -81,9 +81,9 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
           ${
             varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
-              ? 'te, x, t-4xl, m, d: te, x, t-5, x, l'
+              ? 'te, x, t-4 xl, m, d: te, x, t-5, x, l'
               : varia, n, t === 'premi, u, m'
-                ? 'te, x, t-3xl, m, d:te, x, t-4, x, l'
+                ? 'te, x, t-3 xl, m, d:te, x, t-4, x, l'
                 : varia, n, t === 'compa, c, t'
                    ? 'te, x, t-xl, m, d:te, x, t-2, x, l'
                   : 'te, x, t-2xl, m, d : te, x, t-3, x, l'

@@ -1870,7 +1870,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['Drug discoveryFinancial modelingCryptographyOptimization problems'];
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage';
     competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI'];
-    marketSize: '$500M quantum computing market';
+    marketSize: '$500 M quantum computing market';
     growthRate: '500% annual growth';
     variant: 'quantum-cloud'}
     contactInfo: {}
@@ -1913,7 +1913,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['IoT managementReal-time analyticsEdge AISmart manufacturing'];
     roi: '300% ROI within 6 months through reduced latency and improved performance';
     competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT'];
-    marketSize: '$50B edge computing market';
+    marketSize: '$50 B edge computing market';
     growthRate: '250% annual growth';
     variant: 'edge-futuristic'}
     contactInfo: {}
@@ -1956,7 +1956,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['Enterprise securityGovernment complianceFinancial securityHealthcare compliance'];
     roi: '400% ROI within 12 months through security improvements and compliance benefits';
     competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler'];
-    marketSize: '$30B zero trust market';
+    marketSize: '$30 B zero trust market';
     growthRate: '200% annual growth';
     variant: 'zero-trust-futuristic'}
     contactInfo: {}
@@ -1999,7 +1999,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['CI/CD automationDevOps optimizationPerformance monitoringSecurity automation'];
     roi: '350% ROI within 6 months through automation and performance improvements';
     competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins'];
-    marketSize: '$8B DevOps market';
+    marketSize: '$8 B DevOps market';
     growthRate: '180% annual growth';
     variant: 'ai-devops-futuristic'}
     contactInfo: {}
@@ -2037,12 +2037,12 @@ export const advancedITServices: AdvancedITService[] = [;
     setupTime: '1 month';
     category: 'Blockchain & Web3';
     realService: true;
-    technology: ['BlockchainSmart ContractsWeb3CryptographyDistributed Systems'];
+    technology: ['BlockchainSmart ContractsWeb3 CryptographyDistributed Systems'];
     integrations: ['EthereumHyperledgerCordaEnterprise systemsPayment platforms'];
     useCases: ['Supply chain trackingFinancial transactionsDigital identitySmart contracts'];
     roi: '500% ROI within 18 months through efficiency improvements and new business models';
     competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda'];
-    marketSize: '$20B enterprise blockchain market';
+    marketSize: '$20 B enterprise blockchain market';
     growthRate: '300% annual growth';
     variant: 'blockchain-futuristic'}
     contactInfo: {}
@@ -2085,7 +2085,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['High-performance computingQuantum researchEnterprise applicationsResearch computing'];
     roi: '800% ROI within 18 months through performance improvements and competitive advantage';
     competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)'];
-    marketSize: '$200B data center market';
+    marketSize: '$200 B data center market';
     growthRate: '150% annual growth';
     variant: 'quantum-infrastructure'}
     contactInfo: {}
@@ -2128,7 +2128,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['Network protectionThreat detectionComplianceSecurity monitoring'];
     roi: '400% ROI within 12 months through threat prevention and security improvements';
     competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)'];
-    marketSize: '$25B network security market';
+    marketSize: '$25 B network security market';
     growthRate: '180% annual growth';
     variant: 'ai-network-futuristic'}
     contactInfo: {}
@@ -2171,7 +2171,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringTransportation tracking'];
     roi: '450% ROI within 12 months through security improvements and operational efficiency';
     competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)'];
-    marketSize: '$100B IoT market';
+    marketSize: '$100 B IoT market';
     growthRate: '250% annual growth';
     variant: 'quantum-iot-futuristic'}
     contactInfo: {}
@@ -2214,7 +2214,7 @@ export const advancedITServices: AdvancedITService[] = [;
     useCases: ['Cloud migrationCost optimizationPerformance improvementSecurity enhancement'];
     roi: '600% ROI within 12 months through cost savings and performance improvements';
     competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub'];
-    marketSize: '$15B cloud migration market';
+    marketSize: '$15 B cloud migration market';
     growthRate: '200% annual growth';
     variant: 'ai-migration-futuristic'}
     contactInfo: {}

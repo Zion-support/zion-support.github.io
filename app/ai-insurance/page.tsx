@@ -21,9 +21,9 @@ const AiInsurancePage: React.FC = () => {
         keywords={["insurance AI","risk assessment","fraud detection","insurance analytics","claims processing"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-insurance"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

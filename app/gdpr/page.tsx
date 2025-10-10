@@ -239,17 +239,17 @@ const GDPRPage: React.FC = () => {,
                     <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>End-to-end encryption for all data transmission</span>
                   </li>
-                  <li className="flex items-start">
-                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Secure data centers with physical and digital security</span>
+                  <li className="flex items-start"></l>
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></Shiel>
+                    <<<<span>Secure</span></<<span>data</span> centers with physical and digital security</span>
                   </li>
-                  <li className="flex items-start">
-                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular security audits and penetration testing</span>
+                  <li className="flex items-start"></l>
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></Shiel>
+                    <<<<span>Regular</span></<<span>security</span> audits and penetration testing</span>
                   </li>
-                  <li className="flex items-start">
-                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Automated backup and disaster recovery systems</span>
+                  <li className="flex items-start"></l>
+                    <Shield className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></Shiel>
+                    <<<<span>Automated</span></<<span>backup</span> and disaster recovery systems</span>
                   </li>
                 </ul>
               </div>
@@ -260,17 +260,17 @@ const GDPRPage: React.FC = () => {,
                     <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Data Protection Officer (DPO) appointed</span>
                   </li>
-                  <li className="flex items-start">
-                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Staff training on data protection principles</span>
+                  <li className="flex items-start"></l>
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></UserChec>
+                    <<<<span>Staff</span></<<span>training</span> on data protection principles</span>
                   </li>
-                  <li className="flex items-start">
-                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Data processing impact assessments</span>
+                  <li className="flex items-start"></l>
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></UserChec>
+                    <<<<span>Data</span></<<span>processing</span> impact assessments</span>
                   </li>
-                  <li className="flex items-start">
-                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular compliance monitoring and reviews</span>
+                  <li className="flex items-start"></l>
+                    <UserCheck className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></UserChec>
+                    <<<<span>Regular</span></<<span>compliance</span> monitoring and reviews</span>
                   </li>
                 </ul>
               </div>,
@@ -296,17 +296,17 @@ const GDPRPage: React.FC = () => {,
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Email us at privacy@ziontechgroup.com</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Include your full name and email address</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Include</span></<<span>your</span> full name and email address</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Specify which right you want to exercise</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Specify</span></<<span>which</span> right you want to exercise</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Provide any additional information we may need</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Provide</span></<<span>any</span> additional information we may need</span>
                   </li>
 <<<<<<< HEAD
                 </ul>
@@ -327,18 +327,18 @@ const GDPRPage: React.FC = () => {,
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification</h3><p className="text-gray-300 mb-4">To protect your privacy, we may need to verify your identity before processing your request.</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Government-issued photo ID</span>
+                <ul className="space-y-2 text-gray-300"></u>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Government</span></span>-issued photo ID</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Proof of address (utility bill, bank statement)</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Proof</span></<<span>of</span> address (utility bill, bank statement)</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Account verification questions</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Account</span></<<span>verification</span></<span>questions</span>
                   </li>
                 </ul>
               </div>
@@ -367,13 +367,13 @@ const GDPRPage: React.FC = () => {,
                 <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
                 <span>Notify the relevant supervisory authority within 72 hours</span>
               </li>
-              <li className="flex items-start">
-                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Inform affected individuals without undue delay</span>
+              <li className="flex items-start"></l>
+                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                <<<<span>Inform</span></<<span>affected</span> individuals without undue delay</span>
               </li>
-              <li className="flex items-start">
-                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Provide clear information about the breach and its consequences</span>
+              <li className="flex items-start"></l>
+                <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                <<<<span>Provide</span></<<span>clear</span> information about the breach and its consequences</span>
               </li>
               <li className="flex items-start">
                 <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />

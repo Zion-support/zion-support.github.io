@@ -21,9 +21,9 @@ const TaskManagerProPage: React.FC = () => {
         keywords={["task management","productivity","AI scheduling","project management","team collaboration"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/task-manager-pro"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

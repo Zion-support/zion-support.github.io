@@ -63,7 +63,7 @@ export const,
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface'
     marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
-    marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
+    marketPosition: 'Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.',
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',
     trialDays: 30;
     setupTime: '2-4 weeks',
@@ -581,8 +581,8 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',    trialDays: 30;
     setupTime: '2-4 weeks',
     category: 'Quantum AI & Neuroscience',
-    realService: true,    marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
-    marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.',
+    realService: true,    marketPosition: 'Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.',
+    marketPosition: 'Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.',
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities',
     trialDays: 30;
     setupTime: '2-4 weeks'
@@ -805,7 +805,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/space-technology'
     marketPosition: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
     link: 'https://ziontechgroup.com/space-technology',
-    marketPosition: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
+    marketPosition: 'First comprehensive commercial space platform. 5 x more features than existing solutions.',
     targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions',
     trialDays: 30;
     setupTime: '4-6 weeks',
@@ -1220,8 +1220,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions',    trialDays: 30;
     setupTime: '4-6 weeks',
     category: 'Space Technology',
-    realService: true,    marketPosition: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
-    marketPosition: 'First comprehensive commercial space platform. 5x more features than existing solutions.',
+    realService: true,    marketPosition: 'First comprehensive commercial space platform. 5 x more features than existing solutions.',
+    marketPosition: 'First comprehensive commercial space platform. 5 x more features than existing solutions.',
     targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions',
     trialDays: 30;
     setupTime: '4-6 weeks'
@@ -1462,7 +1462,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/biotech-ai'
     marketPosition: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
     link: 'https://ziontechgroup.com/biotech-ai',
-    marketPosition: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
+    marketPosition: 'Leading AI drug discovery platform. 5 x faster than traditional methods.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs',
     trialDays: 30;
     setupTime: '2-3 weeks',
@@ -1534,7 +1534,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory databases']
     useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicineDisease research']
     roi: '1000% ROI through accelerated drug development and patent generation',
-    competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)'],
+    competitors: ['Insitro ($100 M+ funding)Recursion ($2 B+ funding)'],
     growthRate: '250% annual growth',
     variant: 'biotech-futuristic',
     contactInfo: unknown;
@@ -1772,7 +1772,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     tagline: 'AI-powered drug discovery and genetic engineering',
     price: '$3,999',
     period: '/month',
-    description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
+    description: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10 x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
     features: [,
 =======
       'Disease research'
@@ -1872,8 +1872,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs',    trialDays: 30;
     setupTime: '2-3 weeks',
     category: 'Biotech & Healthcare AI',
-    realService: true,    marketPosition: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
-    marketPosition: 'Leading AI drug discovery platform. 5x faster than traditional methods.',
+    realService: true,    marketPosition: 'Leading AI drug discovery platform. 5 x faster than traditional methods.',
+    marketPosition: 'Leading AI drug discovery platform. 5 x faster than traditional methods.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs',
     trialDays: 30;
     setupTime: '2-3 weeks'
@@ -2110,7 +2110,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/quantum-financial-trading'
     marketPosition: 'First quantum AI trading platform. 100x faster than traditional systems.',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
-    marketPosition: 'First quantum AI trading platform. 100x faster than traditional systems.',
+    marketPosition: 'First quantum AI trading platform. 100 x faster than traditional systems.',
     targetAudience: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions',
     trialDays: 30;
     setupTime: '3-4 weeks',
@@ -2188,7 +2188,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems']
     useCases: ['Algorithmic tradingPortfolio optimizationRisk managementMarket analysisHigh-frequency trading']
     roi: '1000%+ ROI through superior trading performance and market timing',
-    competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)'],
+    competitors: ['Renaissance Technologies ($100 B+ AUM)Two Sigma ($60 B+ AUM)'],
     growthRate: '150% annual growth',
     variant: 'quantum-finance-futuristic',
     contactInfo: unknown;
@@ -2523,8 +2523,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions',    trialDays: 30;
     setupTime: '3-4 weeks',
     category: 'Quantum Finance & Trading',
-    realService: true,    marketPosition: 'First quantum AI trading platform. 100x faster than traditional systems.',
-    marketPosition: 'First quantum AI trading platform. 100x faster than traditional systems.',
+    realService: true,    marketPosition: 'First quantum AI trading platform. 100 x faster than traditional systems.',
+    marketPosition: 'First quantum AI trading platform. 100 x faster than traditional systems.',
     targetAudience: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions',
     trialDays: 30;
     setupTime: '3-4 weeks'
@@ -2763,7 +2763,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai'
     marketPosition: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
-    marketPosition: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
+    marketPosition: 'Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.',
     targetAudience: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies',
     trialDays: 30;
     setupTime: '4-6 weeks',
@@ -2836,7 +2836,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     integrations: ['Vehicle systemsDrone platformsRobotics hardwareFleet management systems']
     useCases: ['Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities']
     roi: '800% ROI through operational efficiency and safety improvements',
-    competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12)000)'],
+    competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)'],
     growthRate: '200% annual growth',
     variant: 'autonomous-futuristic',
     contactInfo: unknown;
@@ -3051,7 +3051,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     integrations: ['Vehicle systemsDrone platformsRobotics hardwareFleet management systems'];
     useCases: ['Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities']
     roi: '800% ROI through operational efficiency and safety improvements'
-    competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12)000)']
+    competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)']
     growthRate: '200% annual growth'
     variant: 'autonomous-futuristic'
     contactInfo: mobile: '+1 302 464 0950'
@@ -3176,8 +3176,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies',    trialDays: 30;
     setupTime: '4-6 weeks',
     category: 'Autonomous Vehicles & Robotics',
-    realService: true,    marketPosition: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
-    marketPosition: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.',
+    realService: true,    marketPosition: 'Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.',
+    marketPosition: 'Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.',
     targetAudience: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies',
     trialDays: 30;
     setupTime: '4-6 weeks'
@@ -3798,8 +3798,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure',    trialDays: 30;
     setupTime: '2-3 weeks',
     category: 'Quantum Cybersecurity',
-    realService: true,    marketPosition: 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.',
-    marketPosition: 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.',
+    realService: true,    marketPosition: 'First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.',
+    marketPosition: 'First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.',
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure',
     trialDays: 30;
     setupTime: '2-3 weeks'
@@ -4038,7 +4038,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/metaverse-ai-development'
     marketPosition: 'Leading metaverse AI platform. 5x more features than existing solutions.',
     link: 'https://ziontechgroup.com/metaverse-ai-development',
-    marketPosition: 'Leading metaverse AI platform. 5x more features than existing solutions.',
+    marketPosition: 'Leading metaverse AI platform. 5 x more features than existing solutions.',
     targetAudience: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies',
     trialDays: 30;
     setupTime: '2-3 weeks',
@@ -4295,7 +4295,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML'
       'VR/AR'
-      '3D Graphics'
+      '3 D Graphics'
       'Real-time Rendering'
       'Blockchain'
     ]
@@ -4449,8 +4449,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies',    trialDays: 30;
     setupTime: '2-3 weeks',
     category: 'Metaverse & Virtual Reality',
-    realService: true,    marketPosition: 'Leading metaverse AI platform. 5x more features than existing solutions.',
-    marketPosition: 'Leading metaverse AI platform. 5x more features than existing solutions.',
+    realService: true,    marketPosition: 'Leading metaverse AI platform. 5 x more features than existing solutions.',
+    marketPosition: 'Leading metaverse AI platform. 5 x more features than existing solutions.',
     targetAudience: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies',
     trialDays: 30;
     setupTime: '2-3 weeks'
@@ -4498,7 +4498,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI/ML',
       'VR/AR',
-      '3D Graphics',
+      '3 D Graphics',
       'Real-time Rendering',
       'Blockchain',
     ],
@@ -4687,7 +4687,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/quantum-internet-security'
     marketPosition: 'First quantum internet security platform. 100x more secure than traditional solutions.',
     link: 'https://ziontechgroup.com/quantum-internet-security',
-    marketPosition: 'First quantum internet security platform. 100x more secure than traditional solutions.',
+    marketPosition: 'First quantum internet security platform. 100 x more secure than traditional solutions.',
     targetAudience: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30;
     setupTime: '3-4 weeks',
@@ -5098,8 +5098,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations',    trialDays: 30;
     setupTime: '3-4 weeks',
     category: 'Quantum Internet & Security',
-    realService: true,    marketPosition: 'First quantum internet security platform. 100x more secure than traditional solutions.',
-    marketPosition: 'First quantum internet security platform. 100x more secure than traditional solutions.',
+    realService: true,    marketPosition: 'First quantum internet security platform. 100 x more secure than traditional solutions.',
+    marketPosition: 'First quantum internet security platform. 100 x more secure than traditional solutions.',
     targetAudience: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30;
     setupTime: '3-4 weeks'
@@ -5341,7 +5341,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer'
     marketPosition: 'Leading AI legal platform. 10x faster than traditional legal review.',
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
-    marketPosition: 'Leading AI legal platform. 10x faster than traditional legal review.',
+    marketPosition: 'Leading AI legal platform. 10 x faster than traditional legal review.',
     targetAudience: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions',
     trialDays: 30;
     setupTime: '1-2 weeks',
@@ -5753,8 +5753,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions',    trialDays: 30;
     setupTime: '1-2 weeks',
     category: 'AI Legal Services',
-    realService: true,    marketPosition: 'Leading AI legal platform. 10x faster than traditional legal review.',
-    marketPosition: 'Leading AI legal platform. 10x faster than traditional legal review.',
+    realService: true,    marketPosition: 'Leading AI legal platform. 10 x faster than traditional legal review.',
+    marketPosition: 'Leading AI legal platform. 10 x faster than traditional legal review.',
     targetAudience: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions',
     trialDays: 30;
     setupTime: '1-2 weeks'
@@ -5977,7 +5977,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency',
     link: 'https://ziontechgroup.com/quantum-iot-platform',
-    marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
+    marketPosition: 'First quantum IoT platform. 100 x more secure than traditional solutions.',
     targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',
     trialDays: 30;
     setupTime: '2-3 weeks'
@@ -6023,7 +6023,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - purple - 600 to - indigo - 700"
     text_color: "text - purple - 400",
     link: "https://ziontechgroup.com / quantum - ai - brain - computer - interface",
-    market_position: "Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.",
+    market_position: "Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.",
     target_audience: "Research institutions, Medical centers, Defense contractors, Tech companies, Universities",
     trial_days: 30;
     setup_time: "2 - 4 weeks",
@@ -6226,7 +6226,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - cyan - 600 to - blue - 700"
     text_color: "text - cyan - 400",
     link: "https://ziontechgroup.com / space - technology",
-    market_position: "First comprehensive commercial space platform. 5x more features than existing solutions.",
+    market_position: "First comprehensive commercial space platform. 5 x more features than existing solutions.",
     target_audience: "Space companies, Satellite operators, Launch providers, Government agencies, Research institutions",
     trial_days: 30;
     setup_time: "4 - 6 weeks",
@@ -6343,7 +6343,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - emerald - 600 to - teal - 700"
     text_color: "text - emerald - 400",
     link: "https://ziontechgroup.com / biotech - ai",
-    market_position: "Leading AI drug discovery platform. 5x faster than traditional methods.",
+    market_position: "Leading AI drug discovery platform. 5 x faster than traditional methods.",
     target_audience: "Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs",
     trial_days: 30;
     setup_time: "2 - 3 weeks",
@@ -6460,7 +6460,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - yellow - 600 to - orange - 700"
     text_color: "text - yellow - 400",
     link: "https://ziontechgroup.com / quantum - financial - trading",
-    market_position: "First quantum AI trading platform. 100x faster than traditional systems.",
+    market_position: "First quantum AI trading platform. 100 x faster than traditional systems.",
     target_audience: "Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions",
     trial_days: 30;
     setup_time: "3 - 4 weeks",
@@ -6577,7 +6577,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - blue - 600 to - indigo - 700"
     text_color: "text - blue - 400",
     link: "https://ziontechgroup.com / autonomous - vehicle - ai",
-    market_position: "Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.",
+    market_position: "Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.",
     target_audience: "Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies",
     trial_days: 30;
     setup_time: "4 - 6 weeks",
@@ -6694,7 +6694,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - red - 600 to - pink - 700"
     text_color: "text - red - 400",
     link: "https://ziontechgroup.com / quantum - cybersecurity",
-    market_position: "First quantum - resistant cybersecurity platform. 100x more secure than traditional solutions.",
+    market_position: "First quantum - resistant cybersecurity platform. 100 x more secure than traditional solutions.",
     target_audience: "Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure",
     trial_days: 30;
     setup_time: "2 - 3 weeks",
@@ -6811,7 +6811,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - purple - 600 to - pink - 700"
     text_color: "text - purple - 400",
     link: "https://ziontechgroup.com / metaverse - ai - development",
-    market_position: "Leading metaverse AI platform. 5x more features than existing solutions.",
+    market_position: "Leading metaverse AI platform. 5 x more features than existing solutions.",
     target_audience: "Gaming companies, VR / AR developers, Social platforms, Educational institutions, Entertainment companies",
     trial_days: 30;
     setup_time: "2 - 3 weeks",
@@ -6928,7 +6928,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - green - 600 to - emerald - 700"
     text_color: "text - green - 400",
     link: "https://ziontechgroup.com / quantum - internet - security",
-    market_position: "First quantum internet security platform. 100x more secure than traditional solutions.",
+    market_position: "First quantum internet security platform. 100 x more secure than traditional solutions.",
     target_audience: "Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations",
     trial_days: 30;
     setup_time: "3 - 4 weeks",
@@ -7045,7 +7045,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - indigo - 600 to - purple - 700"
     text_color: "text - indigo - 400",
     link: "https://ziontechgroup.com / ai - legal - contract - analyzer",
-    market_position: "Leading AI legal platform. 10x faster than traditional legal review.",
+    market_position: "Leading AI legal platform. 10 x faster than traditional legal review.",
     target_audience: "Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions",
     trial_days: 30;
     setup_time: "1 - 2 weeks",
@@ -7162,7 +7162,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     color: "from - blue - 600 to - cyan - 700"
     text_color: "text - blue - 400",
     link: "https://ziontechgroup.com / quantum - iot - platform",
-    market_position: "First quantum IoT platform. 100x more secure than traditional solutions.",
+    market_position: "First quantum IoT platform. 100 x more secure than traditional solutions.",
     target_audience: "IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics",
     trial_days: 30;
     setup_time: "2 - 3 weeks",
@@ -7326,8 +7326,8 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',    trialDays: 30;
     setupTime: '2-3 weeks',
     category: 'Quantum IoT & Edge Computing',
-    realService: true,    marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
-    marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',
+    realService: true,    marketPosition: 'First quantum IoT platform. 100 x more secure than traditional solutions.',
+    marketPosition: 'First quantum IoT platform. 100 x more secure than traditional solutions.',
     targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',
     trialDays: 30;
     setupTime: '2-3 weeks'
@@ -7471,7 +7471,7 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
     roi: '600% ROI through security improvements and operational efficiency',
     link: 'https://ziontechgroup.com/quantum-iot-platform',
-    marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.',    link: 'https://ziontechgroup.com/quantum-iot-platform',
+    marketPosition: 'First quantum IoT platform. 100 x more secure than traditional solutions.',    link: 'https://ziontechgroup.com/quantum-iot-platform',
     targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics',
     trialDays: 30;
     setupTime: '2-3 weeks'
@@ -7633,7 +7633,7 @@ export const,
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface';
-    marketPosition: 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.';
+    marketPosition: 'Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.';
     targetAudience: 'Research institutions, Medical centers, Defense contractors, Tech companies, Universities';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -7644,7 +7644,7 @@ export const,
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI developmentDefense applications'];
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents';
     competitors: ['Neuralink ($10)000+/month)Kernel ($50)000+/month)'];
-    marketSize: '$1.5B BCI market';
+    marketSize: '$1.5 B BCI market';
     growthRate: '300% annual growth';
     variant: 'quantum-ai-futuristic'}
     contactInfo: {}
@@ -7677,7 +7677,7 @@ export const,
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-400';
     link: 'https://ziontechgroup.com/space-technology';
-    marketPosition: 'First comprehensive commercial space platform. 5x more features than existing solutions.';
+    marketPosition: 'First comprehensive commercial space platform. 5 x more features than existing solutions.';
     targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -7688,7 +7688,7 @@ export const,
     useCases: ['Satellite operationsMission planningSpace infrastructureLaunch coordinationSpace research'];
     roi: '500% ROI through operational efficiency and mission success rates';
     competitors: ['SpaceX Starlink ($99/month)OneWeb ($50/month)'];
-    marketSize: '$469B space economy';
+    marketSize: '$469 B space economy';
     growthRate: '400% annual growth';
     variant: 'space-futuristic'}
     contactInfo: {}
@@ -7721,7 +7721,7 @@ export const,
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/biotech-ai';
-    marketPosition: 'Leading AI drug discovery platform. 5x faster than traditional methods.';
+    marketPosition: 'Leading AI drug discovery platform. 5 x faster than traditional methods.';
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs';
     trialDays: 30;
     setupTime: '2-3 weeks';
@@ -7731,8 +7731,8 @@ export const,
     integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory databases'];
     useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicineDisease research'];
     roi: '1000% ROI through accelerated drug development and patent generation';
-    competitors: ['Insitro ($100M+ funding)Recursion ($2B+ funding)'];
-    marketSize: '$150B AI in healthcare';
+    competitors: ['Insitro ($100 M+ funding)Recursion ($2 B+ funding)'];
+    marketSize: '$150 B AI in healthcare';
     growthRate: '250% annual growth';
     variant: 'biotech-futuristic'}
     contactInfo: {}
@@ -7765,7 +7765,7 @@ export const,
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/quantum-financial-trading';
-    marketPosition: 'First quantum AI trading platform. 100x faster than traditional systems.';
+    marketPosition: 'First quantum AI trading platform. 100 x faster than traditional systems.';
     targetAudience: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -7775,8 +7775,8 @@ export const,
     integrations: ['Trading platformsMarket data feedsRisk management systemsPortfolio systems'];
     useCases: ['Algorithmic tradingPortfolio optimizationRisk managementMarket analysisHigh-frequency trading'];
     roi: '1000%+ ROI through superior trading performance and market timing';
-    competitors: ['Renaissance Technologies ($100B+ AUM)Two Sigma ($60B+ AUM)'];
-    marketSize: '$15T algorithmic trading';
+    competitors: ['Renaissance Technologies ($100 B+ AUM)Two Sigma ($60 B+ AUM)'];
+    marketSize: '$15 T algorithmic trading';
     growthRate: '150% annual growth';
     variant: 'quantum-finance-futuristic'}
     contactInfo: {}
@@ -7809,7 +7809,7 @@ export const,
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai';
-    marketPosition: 'Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.';
+    marketPosition: 'Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.';
     targetAudience: 'Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -7819,8 +7819,8 @@ export const,
     integrations: ['Vehicle systemsDrone platformsRobotics hardwareFleet management systems'];
     useCases: ['Self-driving carsAutonomous dronesIndustrial roboticsLogistics automationSmart cities'];
     roi: '800% ROI through operational efficiency and safety improvements';
-    competitors: ['Waymo ($1B+ investment)Tesla Autopilot ($12)000)'];
-    marketSize: '$2.5T autonomous vehicle market';
+    competitors: ['Waymo ($1 B+ investment)Tesla Autopilot ($12)000)'];
+    marketSize: '$2.5 T autonomous vehicle market';
     growthRate: '200% annual growth';
     variant: 'autonomous-futuristic'}
     contactInfo: {}
@@ -7853,7 +7853,7 @@ export const,
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/quantum-cybersecurity';
-    marketPosition: 'First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.';
+    marketPosition: 'First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.';
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure';
     trialDays: 30;
     setupTime: '2-3 weeks';
@@ -7864,7 +7864,7 @@ export const,
     useCases: ['Data protectionThreat detectionIncident responseComplianceRisk management'];
     roi: '600% ROI through security improvements and risk reduction';
     competitors: ['Palo Alto Networks ($1)000+/month)CrowdStrike ($500+/month)'];
-    marketSize: '$200B cybersecurity market';
+    marketSize: '$200 B cybersecurity market';
     growthRate: '180% annual growth';
     variant: 'quantum-security-futuristic'}
     contactInfo: {}
@@ -7897,18 +7897,18 @@ export const,
     color: 'from-purple-600 to-pink-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/metaverse-ai-development';
-    marketPosition: 'Leading metaverse AI platform. 5x more features than existing solutions.';
+    marketPosition: 'Leading metaverse AI platform. 5 x more features than existing solutions.';
     targetAudience: 'Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies';
     trialDays: 30;
     setupTime: '2-3 weeks';
     category: 'Metaverse & Virtual Reality';
     realService: true;
-    technology: ['AI/MLVR/AR3D GraphicsReal-time RenderingBlockchain'];
+    technology: ['AI/MLVR/AR3 D GraphicsReal-time RenderingBlockchain'];
     integrations: ['VR headsetsGaming platformsSocial mediaPayment systems'];
     useCases: ['Virtual worldsGaming experiencesSocial platformsEducationEntertainment'];
     roi: '700% ROI through user engagement and monetization';
     competitors: ['Meta Horizon ($30/month)Roblox ($25/month)'];
-    marketSize: '$800B metaverse market';
+    marketSize: '$800 B metaverse market';
     growthRate: '300% annual growth';
     variant: 'metaverse-futuristic'}
     contactInfo: {}
@@ -7941,7 +7941,7 @@ export const,
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/quantum-internet-security';
-    marketPosition: 'First quantum internet security platform. 100x more secure than traditional solutions.';
+    marketPosition: 'First quantum internet security platform. 100 x more secure than traditional solutions.';
     targetAudience: 'Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -7952,7 +7952,7 @@ export const,
     useCases: ['Network securityData protectionThreat detectionCompliancePerformance monitoring'];
     roi: '800% ROI through security improvements and operational efficiency';
     competitors: ['Cloudflare ($20/month)Akamai ($100+/month)'];
-    marketSize: '$150B internet security market';
+    marketSize: '$150 B internet security market';
     growthRate: '200% annual growth';
     variant: 'quantum-internet-futuristic'}
     contactInfo: {}
@@ -7985,7 +7985,7 @@ export const,
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer';
-    marketPosition: 'Leading AI legal platform. 10x faster than traditional legal review.';
+    marketPosition: 'Leading AI legal platform. 10 x faster than traditional legal review.';
     targetAudience: 'Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions';
     trialDays: 30;
     setupTime: '1-2 weeks';
@@ -7996,7 +7996,7 @@ export const,
     useCases: ['Contract reviewLegal researchCompliance checkingRisk assessmentDocument analysis'];
     roi: '500% ROI through time savings and improved accuracy';
     competitors: ['DocuSign ($25/month)ContractPodAi ($500+/month)'];
-    marketSize: '$25B legal tech market';
+    marketSize: '$25 B legal tech market';
     growthRate: '150% annual growth';
     variant: 'ai-legal-futuristic'}
     contactInfo: {}
@@ -8029,7 +8029,7 @@ export const,
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/quantum-iot-platform';
-    marketPosition: 'First quantum IoT platform. 100x more secure than traditional solutions.';
+    marketPosition: 'First quantum IoT platform. 100 x more secure than traditional solutions.';
     targetAudience: 'IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics';
     trialDays: 30;
     setupTime: '2-3 weeks';
@@ -8040,7 +8040,7 @@ export const,
     useCases: ['Smart citiesIndustrial IoTHealthcare monitoringConsumer devicesSecurity systems'];
     roi: '600% ROI through security improvements and operational efficiency';
     competitors: ['AWS IoT ($5/month)Microsoft Azure IoT ($25/month)'];
-    marketSize: '$1.5T IoT market';
+    marketSize: '$1.5 T IoT market';
     growthRate: '250% annual growth';
     variant: 'quantum-iot-futuristic'}
     contactInfo: {}
@@ -8374,7 +8374,7 @@ export const,
     color: "from-purple-600 to-indigo-700"
     textColor: "text-purple-400",
     link: "https://ziontechgroup.com/quantum-ai-brain-computer-interface",
-    marketPosition: "Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.",
+    marketPosition: "Leading edge technology with no direct competitors. 10 x more advanced than existing BCI solutions.",
     targetAudience: "Research institutions, Medical centers, Defense contractors, Tech companies, Universities",
     trialDays: 30;
     setupTime: "2-4 weeks",
@@ -8424,7 +8424,7 @@ export const,
     color: "from-cyan-600 to-blue-700"
     textColor: "text-cyan-400",
     link: "https://ziontechgroup.com/space-technology",
-    marketPosition: "First comprehensive commercial space platform. 5x more features than existing solutions.",
+    marketPosition: "First comprehensive commercial space platform. 5 x more features than existing solutions.",
     targetAudience: "Space companies, Satellite operators, Launch providers, Government agencies, Research institutions",
     trialDays: 30;
     setupTime: "4-6 weeks",
@@ -8458,7 +8458,7 @@ export const,
     tagline: "AI-powered drug discovery and genetic engineering",
     price: "$3,999",
     period: "/month",
-    description: "Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.",
+    description: "Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10 x while reducing costs by 90% through advanced AI algorithms and quantum computing.",
     features[ "AI drug discovery algorithms",
       "Genetic sequence analysis",
       "Protein folding prediction",
@@ -8474,7 +8474,7 @@ export const,
     color: "from-emerald-600 to-teal-700"
     textColor: "text-emerald-400",
     link: "https://ziontechgroup.com/biotech-ai",
-    marketPosition: "Leading AI drug discovery platform. 5x faster than traditional methods.",
+    marketPosition: "Leading AI drug discovery platform. 5 x faster than traditional methods.",
     targetAudience: "Pharmaceutical companies, Biotech startups, Research institutions, Universities, Government labs",
     trialDays: 30;
     setupTime: "2-3 weeks",
@@ -8524,7 +8524,7 @@ export const,
     color: "from-yellow-600 to-orange-700"
     textColor: "text-yellow-400",
     link: "https://ziontechgroup.com/quantum-financial-trading",
-    marketPosition: "First quantum AI trading platform. 100x faster than traditional systems.",
+    marketPosition: "First quantum AI trading platform. 100 x faster than traditional systems.",
     targetAudience: "Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions",
     trialDays: 30;
     setupTime: "3-4 weeks",
@@ -8574,7 +8574,7 @@ export const,
     color: "from-blue-600 to-indigo-700"
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/autonomous-vehicle-ai",
-    marketPosition: "Leading autonomous vehicle AI platform. 10x more accurate than existing solutions.",
+    marketPosition: "Leading autonomous vehicle AI platform. 10 x more accurate than existing solutions.",
     targetAudience: "Automotive companies, Drone manufacturers, Robotics companies, Logistics firms, Government agencies",
     trialDays: 30;
     setupTime: "4-6 weeks",
@@ -8624,7 +8624,7 @@ export const,
     color: "from-red-600 to-pink-700"
     textColor: "text-red-400",
     link: "https://ziontechgroup.com/quantum-cybersecurity",
-    marketPosition: "First quantum-resistant cybersecurity platform. 100x more secure than traditional solutions.",
+    marketPosition: "First quantum-resistant cybersecurity platform. 100 x more secure than traditional solutions.",
     targetAudience: "Financial institutions, Healthcare organizations, Government agencies, Tech companies, Critical infrastructure",
     trialDays: 30;
     setupTime: "2-3 weeks",
@@ -8674,7 +8674,7 @@ export const,
     color: "from-purple-600 to-pink-700"
     textColor: "text-purple-400",
     link: "https://ziontechgroup.com/metaverse-ai-development",
-    marketPosition: "Leading metaverse AI platform. 5x more features than existing solutions.",
+    marketPosition: "Leading metaverse AI platform. 5 x more features than existing solutions.",
     targetAudience: "Gaming companies, VR/AR developers, Social platforms, Educational institutions, Entertainment companies",
     trialDays: 30;
     setupTime: "2-3 weeks",
@@ -8724,7 +8724,7 @@ export const,
     color: "from-green-600 to-emerald-700"
     textColor: "text-green-400",
     link: "https://ziontechgroup.com/quantum-internet-security",
-    marketPosition: "First quantum internet security platform. 100x more secure than traditional solutions.",
+    marketPosition: "First quantum internet security platform. 100 x more secure than traditional solutions.",
     targetAudience: "Internet service providers, Cloud providers, Government agencies, Financial institutions, Healthcare organizations",
     trialDays: 30;
     setupTime: "3-4 weeks",
@@ -8774,7 +8774,7 @@ export const,
     color: "from-indigo-600 to-purple-700"
     textColor: "text-indigo-400",
     link: "https://ziontechgroup.com/ai-legal-contract-analyzer",
-    marketPosition: "Leading AI legal platform. 10x faster than traditional legal review.",
+    marketPosition: "Leading AI legal platform. 10 x faster than traditional legal review.",
     targetAudience: "Law firms, Corporate legal departments, Contractors, Real estate companies, Financial institutions",
     trialDays: 30;
     setupTime: "1-2 weeks",
@@ -8824,7 +8824,7 @@ export const,
     color: "from-blue-600 to-cyan-700"
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/quantum-iot-platform",
-    marketPosition: "First quantum IoT platform. 100x more secure than traditional solutions.",
+    marketPosition: "First quantum IoT platform. 100 x more secure than traditional solutions.",
     targetAudience: "IoT manufacturers, Smart city providers, Industrial companies, Healthcare organizations, Consumer electronics",
     trialDays: 30;
     setupTime: "2-3 weeks",

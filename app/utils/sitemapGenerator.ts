@@ -30,7 +30,7 @@ export const generateSitemap = useCallback((...args) => {}
     '/ai-content-writer',
     '/ai-financial-advisor',
     '/ai-data-visualization',
-    '/ai-3d-generation',
+    '/ai-3 d-generation',
     '/ai-customer-support',
     '/ai-inventory-manager',
     '/ai-hr-assistant',

@@ -268,7 +268,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/20"
               sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;`
-            >
+            ></d>
               {/* Card, glow, effect */}
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e;
   r:to-indi, g, o-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>"

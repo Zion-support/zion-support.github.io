@@ -358,7 +358,7 @@ export const,
     period: '/month';
     description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.';
     features: [,
-      'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR) web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware';
+      'AR/VR content creation and managementMetaverse development tools and SDKs3 D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR) web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware';
       'Custom avatar and environment creationE-commerce integration for virtual stores'
     ];
     popular: true;
@@ -377,7 +377,7 @@ export const,
     useCases: ['Virtual training, E-commerce experiences, Educational content, Real estate tours'];
     roi: 'Average 400% ROI through increased engagement and conversion rates'}
     competitors: ['Unity, Unreal Engine, VRChat} AltspaceVR'];
-    marketSize: '$28.8B AR/VR market';
+    marketSize: '$28.8 B AR/VR market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -391,11 +391,11 @@ export const,
     capabilities: ['Content creationMetaverse developmentAnalyticsHardware integration'];
     marketAdvantage: 'First platform to combine AR/VR development with metaverse creation tools',
   };
-  // 5G/6G Network Services;
+  // 5 G/6 G Network Services;
   {;
-    id: '5g-6g-network-optimization';
-    name: '5G/6G Network Optimization Platform';
-    tagline: 'AI-powered 5G/6G network optimization and management platform';
+    id: '5 g-6 g-network-optimization';
+    name: '5 G/6 G Network Optimization Platform';
+    tagline: 'AI-powered 5 G/6 G network optimization and management platform';
     price: '$699';
     period: '/month';
     description: 'Revolutionary platform that optimizes 5G/6G networks using AI, provides real-time monitoring, and ensures optimal performance for next-generation connectivity.';
@@ -407,19 +407,19 @@ export const,
     icon: '';
     color: 'from-blue-600 to-cyan-600';
     textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/5g-6g-network-optimization';
-    marketPosition: 'Advanced 5G/6G optimization platform competing with Ericsson ($500/month) and Nokia ($600/month)';
+    link: 'https://ziontechgroup.com/5 g-6 g-network-optimization';
+    marketPosition: 'Advanced 5 G/6 G optimization platform competing with Ericsson ($500/month) and Nokia ($600/month)';
     targetAudience: 'Telecom operators, Network equipment vendors, Enterprise networks, Government agencies';
     trialDays: 30;
     setupTime: '2 weeks';
-    category: '5G/6G Networks';
+    category: '5 G/6 G Networks';
     realService: true;
-    technology: ['AI/ML, 5G/6G protocols, Python, TensorFlow, Network protocols'];
+    technology: ['AI/ML, 5 G/6 G protocols, Python, TensorFlow, Network protocols'];
     integrations: ['Ericsson, Nokia, Huawei, Cisco, Major telecom equipment'];
     useCases: ['Network optimizationPerformance monitoringCapacity planningMaintenance automation'];
     roi: 'Average 500% ROI through improved network performance and reduced operational costs'}
     competitors: ['Ericsson, Nokia, Huawei} Cisco'];
-    marketSize: '$31.2B 5G network market';
+    marketSize: '$31.2 B 5 G network market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -461,7 +461,7 @@ export const,
     useCases: ['Drug discoveryGenetic researchClinical trialsBiomarker analysis'];
     roi: 'Average 800% ROI through accelerated research and reduced development costs'}
     competitors: ['Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals'];
-    marketSize: '$22.4B AI biotech market';
+    marketSize: '$22.4 B AI biotech market';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -503,7 +503,7 @@ export const,
     useCases: ['Energy optimizationGrid managementPredictive maintenanceCarbon reduction'];
     roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs'}
     competitors: ['GE Digital, Siemens, Schneider Electric} ABB'];
-    marketSize: '$19.8B smart grid market';
+    marketSize: '$19.8 B smart grid market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -545,7 +545,7 @@ export const,
     useCases: ['Real-time processingIoT applicationsLow-latency servicesEdge AI deployment'];
     roi: 'Average 350% ROI through reduced latency and improved performance'}
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry'];
-    marketSize: '$12.4B edge computing market';
+    marketSize: '$12.4 B edge computing market';
     growthRate: '240% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -587,7 +587,7 @@ export const,
     useCases: ['Ultra-secure communicationQuantum networkingGovernment communicationsFinancial transactions'];
     roi: 'Average 1200% ROI through enhanced security and communication capabilities'}
     competitors: ['ID Quantique, Toshiba, Quantum Xchange} Qubitekk'];
-    marketSize: '$3.8B quantum internet market';
+    marketSize: '$3.8 B quantum internet market';
     growthRate: '600% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -629,7 +629,7 @@ export const,
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'];
     roi: 'Average 700% ROI through energy efficiency and cognitive capabilities';
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
-    marketSize: '$2.1B neuromorphic computing market';
+    marketSize: '$2.1 B neuromorphic computing market';
     growthRate: '450% annual growth';
     variant: 'ai-futuristic';
     contactInfo: contact;

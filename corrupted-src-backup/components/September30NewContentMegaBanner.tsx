@@ -15,7 +15,7 @@ const, September30NewContentMegaBanne, r = () => {
       ic, o, n: Laye, r, s;
       li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-20, 2, 5","
       catego, r, y: "Spatial, A, I","
-      impa, c, t: "10x, faster, insights"
+      impa, c, t: "10 x, faster, insights"
     }
     {
       tit, l, e: "AI, Quantum, Consciousness","
@@ -23,7 +23,7 @@ const, September30NewContentMegaBanne, r = () => {
       ic, o, n: At, o, m;
       li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-20, 2, 5","
       catego, r, y: "Quantum, A, I","
-      impa, c, t: "1M× performan, c, e"
+      impa, c, t: "1 M× performan, c, e"
     }
     {
       tit, l, e: "AI, Molecular, Manufacturing","
@@ -52,7 +52,7 @@ const, September30NewContentMegaBanne, r = () => {
       ic, o, n: Laye, r, s;
       li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-20, 2, 5",";
       catego, r, y: "Spatial, A, I",";
-      impa, c, t: "10x, faster, insights"
+      impa, c, t: "10 x, faster, insights"
     }
     {
       tit, l, e: "AI, Quantum, Consciousness",";
@@ -60,7 +60,7 @@ const, September30NewContentMegaBanne, r = () => {
       ic, o, n: At, o, m;
       li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-20, 2, 5",";
       catego, r, y: "Quantum, A, I",";
-      impa, c, t: "1M× performan, c, e"
+      impa, c, t: "1 M× performan, c, e"
     }
     {
       tit, l, e: "AI, Molecular, Manufacturing",";
@@ -94,7 +94,7 @@ const, September30NewContentMegaBanne, r = () => {
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>
           </div>
 <<<<<<< HEAD
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">,

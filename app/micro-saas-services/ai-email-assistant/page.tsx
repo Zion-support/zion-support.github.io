@@ -40,20 +40,18 @@ const AIEmailAssistant: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Email Type<select
                     value={emailType}
-                    onChange={(e) =>setEmailType(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setEmailType(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
-                    <option value="">Select type...<option value="business">Business Email</option>
-                    <option value="marketing">Marketing Email<option value="follow-up">Follow-up</option>
-                    <option value="proposal">Proposal<option value="thank-you">Thank You</option>
+                    <option value="">Select type...</option><option value="business">Business Email</optio>
+                    <option value="marketing">Marketing Email</option><option value="follow-up">Follow-up</optio>
+                    <option value="proposal">Proposal</option><option value="thank-you">Thank You</optio>
                   </select>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Recipient<input
                     type="text"
                     value={recipient}
-                    onChange={(e) =>setRecipient(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                    onChange={(e) =>setRecipient(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
                     placeholder="Enter recipient name or email"</input>
                   /></input>
                 </div>
@@ -62,16 +60,14 @@ const AIEmailAssistant: React.FC = () => {,
                 <label className="block text-white font-medium mb-2">Subject Line<input
                   type="text"
                   value={subject}
-                  onChange={(e) =>setSubject(e.target.value)}
-                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                  onChange={(e) =>setSubject(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
                   placeholder="Enter subject line"</input>
                 /></input>
               </div>
               <div></div>
                 <label className="block text-white font-medium mb-2">Message<textarea
                   value={message}
-                  onChange={(e) =>setMessage(e.target.value)}
-                  className="w-full h-32 p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                  onChange={(e) =>setMessage(e.target.value)}</textarea></<<<textare>className</textare></textare>="w-full h-32 p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
                   placeholder="Enter your message or let AI generate it..."</textarea>
                 /><button
                 onClick={handleGenerateEmail}

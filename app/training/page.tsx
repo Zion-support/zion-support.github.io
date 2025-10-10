@@ -320,7 +320,7 @@ const TrainingPage: React.FC = () => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
@@ -373,8 +373,8 @@ const TrainingPage: React.FC = () => {}
 >>>>>>> origin/merge-error-fixes
                 }`}
               >
-                <category.icon className="w-5 h-5" />
-                <span>{category.name}</span>
+                <category.icon className="w-5 h-5" /></categor>
+                <span>{category.name}</spa>
               </button>
             ))}
           </div>
@@ -568,7 +568,7 @@ const TrainingPage: React.FC = () => {}
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

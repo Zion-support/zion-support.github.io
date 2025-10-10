@@ -21,9 +21,9 @@ const CloudServicesPage: React.FC = () => {
         keywords={["cloud services","AWS Azure GCP","cloud migration","cloud infrastructure","cloud solutions"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/cloud-services"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

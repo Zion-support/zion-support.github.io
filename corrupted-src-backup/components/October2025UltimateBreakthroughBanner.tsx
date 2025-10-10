@@ -248,7 +248,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
                   Quant, u, m-AI, Optimizatio, n;
                 </h3>"
                 <p, className="te, x, t-bl, u, e-200, tex, t-sm">";
-                  10,000x, performance, breakthrough • Enterpri, s, e-grade, quantum, computing • $24, 7, M+ val, u, e • Re, a, l-time, optimizatio, n;
+                  10,000 x, performance, breakthrough • Enterpri, s, e-grade, quantum, computing • $24, 7, M+ val, u, e • Re, a, l-time, optimizatio, n;
                 </p>
               </d, i, v>
 <<<<<<< HEAD
@@ -383,7 +383,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
                   Neuromorphic, Edge, AI;
                 </h3>"
                 <p, className="te, x, t-bl, u, e-200, tex, t-sm">";
-                  Bra, i, n-inspired, computin, g • 10,000x, energy, efficiency • Re, a, l-time, learnin, g • $15, 7, M+ savin, g, s;
+                  Bra, i, n-inspired, computin, g • 10,000 x, energy, efficiency • Re, a, l-time, learnin, g • $15, 7, M+ savin, g, s;
                 </p>
               </d, i, v>
 <<<<<<< HEAD

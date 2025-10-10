@@ -21,9 +21,9 @@ const DatabaseServicesPage: React.FC = () => {
         keywords={["database services","database optimization","database management","data migration","database security"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/database-services"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

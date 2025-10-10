@@ -61,7 +61,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
   alternateLocales = [],
   robots,
   viewport = 'width=device-width, initial-scale=1, viewport-fit=cover',
-  themeColor = '#0f172a',
+  themeColor = '#0 f172 a',
   colorScheme = 'dark light',
   preload = [],
   prefetch = [],
@@ -187,7 +187,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
       {preconnect.map((domain) => (<link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" >))}
 
       {/* DNS Prefetch */}</link>
-      {dnsPrefetch.map((domain) => (<link key={domain} rel="dns-prefetch" href={domain} >))}
+      {dnsPrefetch.map((domain) => (<link key={domain} rel="dns-prefetch" href={domain} >))}</link>
 
       {/* Preload critical resources */}</link>
       {preload.map((resource, index) => (<link
@@ -214,7 +214,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
           href={resource.href}
           as={resource.as}
           type={resource.type}
-        >))}
+        >))}</link>
 
 <<<<<<< HEAD
       {/* Prefetch likely next pages */}</link>
@@ -228,9 +228,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({,
           rel="prefetch"
           href={resource.href}
           as={resource.as}
-        >))}
+        >))}</link>
 </link>
-      {/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+      {/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</scrip>
       </script>
 
       {/* Additional SEO Meta Tags */}

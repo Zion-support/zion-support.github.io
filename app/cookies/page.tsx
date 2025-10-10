@@ -235,22 +235,22 @@ const CookiesPage: React.FC = () => {,
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Browser Settings</h3><p className="text-gray-300 mb-4">Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Chrome: Settings → Privacy and Security → Cookies and other site data</span>
+                <ul className="space-y-2 text-gray-300"></u>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Chrome</span></span>: Settings → Privacy and Security → Cookies and other site data</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Firefox: Options → Privacy & Security → Cookies and Site Data</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Firefox</span></span>: Options → Privacy & Security → Cookies and Site Data</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Safari: Preferences → Privacy → Manage Website Data</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Safari</span></span>: Preferences → Privacy → Manage Website Data</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Edge: Settings → Cookies and site permissions</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Edge</span></span>: Settings → Cookies and site permissions</span>
                   </li>
 <<<<<<< HEAD
                 </ul>

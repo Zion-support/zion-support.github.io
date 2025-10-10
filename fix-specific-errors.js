@@ -42,7 +42,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         // Fix lines that look like property assignments but are missing colons;
         if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
           line = line.replace(
-            /^(\s*[a-zA-Z_][a-zA-Z0-9_]*)\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*$/,
+            /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
             '$1: $2,'
           );
           modified = true;

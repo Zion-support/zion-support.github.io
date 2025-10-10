@@ -62,7 +62,7 @@ export interface ProviderConnection {
   accessToken: string;
   refreshToken?: string;
   expiresAt?: number;
-  config?: Record<string, any>;
+  config?: Record<string, any>;</string>
 }
 =======
   category: 'crm' | 'ats' | 'hr';
@@ -94,7 +94,7 @@ export interface ProviderConnection {
   expiresAt?: number;
   status: SyncStatus;
   lastSync?: number;
-  config?: Record<string, any>;
+  config?: Record<string, any>;</string>
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -117,8 +117,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 }
 
   lastSync?: Date;
-  config: Record<string, unknown>;
-  createdAt: Date;
+  config: Record<string, unknown>;</string>createdAt</string>: Date;
   updatedAt: Date;
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
@@ -132,34 +131,34 @@ export interface SyncLogEntry {
 <<<<<<< HEAD
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
-  details?: Record<string, any>;
+  details?: Record<string, any>;</string>
 }
 
 export interface ManualOverride {
@@ -223,7 +222,7 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
 }
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 
 export interface ProviderConnection {
@@ -247,7 +246,7 @@ export interface IntegrationProviderMeta {
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
-  payload: Record<string, any>;
+  payload: Record<string, any>;</string>
 }
 }
 

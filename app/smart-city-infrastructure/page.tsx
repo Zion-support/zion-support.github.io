@@ -82,7 +82,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
       icon: Brain
     },
     {
-      name: "5G Networks",
+      name: "5 G Networks",
       description: "Ultra-fast connectivity for seamless data transmission and communication",
       icon: Globe
     },
@@ -190,7 +190,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Smart City Infrastructure
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
             Transform your city into a connected, efficient, and sustainable urban environment. 
             Our comprehensive smart city solutions optimize everything from traffic to energy consumption.
           </p>
@@ -203,6 +203,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               View Case Studies
             </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>View</butto></<<butto>Case</butto></<butto>Studies</butto>
           </div>
 
           {/* Stats */}
@@ -244,7 +245,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -260,7 +261,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Proven Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Real-world implementations that deliver measurable results for cities worldwide.
             </p>
           </div>
@@ -272,7 +273,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4"></div>
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+                  <h3 className="text-2 xl font-bold text-white">{solution.title}</h>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
                 <div className="space-y-2">
@@ -296,7 +297,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cutting-Edge Technologies
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Powered by the latest innovations in IoT, AI, and connectivity.
             </p>
           </div>
@@ -308,7 +309,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     <tech.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">{tech.name}</h3>
+                  <h3 className="text-lg font-bold text-white mb-3">{tech.name}</h>
                   <p className="text-gray-300 text-sm leading-relaxed">{tech.description}</p>
                 </div>
               </div>
@@ -324,7 +325,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Smart City Packages
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Scalable solutions designed for cities of all sizes.
             </p>
           </div>
@@ -348,10 +349,10 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"></u>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-300"></l>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" /></CheckCircl>
                       {feature}
                     </li>
                   ))}
@@ -361,8 +362,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                }`}>
-                  Get Started
+                }`}></button></<<<butto>Get</butto></<<butto>Started</butto>
                 </button>
               </div>
             ))}
@@ -377,7 +377,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               City Success Stories
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Hear from city leaders who have transformed their urban environments.
             </p>
           </div>
@@ -417,7 +417,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Build the City of Tomorrow
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-12 max-w-4 xl mx-auto leading-relaxed">
             Join the smart city revolution and create a more sustainable, efficient, and livable urban environment.
           </p>
           
@@ -426,14 +426,13 @@ const SmartCityInfrastructurePage: React.FC = () => {
               Start Planning
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Schedule Consultation
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Schedule</butto></<<butto>Consultation</butto>
             </button>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

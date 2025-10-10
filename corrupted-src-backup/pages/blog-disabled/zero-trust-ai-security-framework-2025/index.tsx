@@ -13,10 +13,10 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;
         <meta, nam, e = 'description'
           conte, n, t='Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'
-        />
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'
-        />
+        /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ze r o-tru s t-ai-securi t y-framewo r k-20 2 5',
         />,
@@ -491,7 +491,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
 =======
   The AI Security Crisis
               </h2>"
-              <p className="text-gray-300 leading-relaxed mb-4">,"
+              <p className="text-gray-300 leading-relaxed mb-4"></p>,"
               </h2>"
               <p className="text-gray-300 leading-relaxed mb-4">,
   AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,</p>
@@ -1404,8 +1404,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 </h2>
                 <p className="text-xl text-white/90 mb-6">"
   Get a comprehensive security audit of your AI systems from our experts.
-                </p>
-                to="/contact"
+                </p>to</p>="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >"
                   Request Security Assessment"

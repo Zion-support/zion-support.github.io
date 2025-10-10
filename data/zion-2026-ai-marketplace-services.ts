@@ -25,7 +25,7 @@ export type Zion2026AIMarketplaceService =
     address: string;
   };
 }
-export const zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
+export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',

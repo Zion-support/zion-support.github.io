@@ -23,7 +23,7 @@ const fixes = [
   },
   //Fix malformed JSX - unclosed tags;
   {
-    pattern: /<div>\{\/\* content \*\/\}/g,
+    pattern: /<div></div>\{\/\* content \*\/\}/g,
     replacement: '<div>{/* content */}</div>',
   },
   //Fix malformed JSX comments in return statements;
@@ -33,7 +33,7 @@ const fixes = [
   },
   //Fix duplicate return statements;
   {
-    pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
+    pattern: /return \(\s*<div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return (',
   },)
   //Fix malformed object syntax in metadata;)
@@ -48,8 +48,8 @@ const fixes = [
   },
   //Fix malformed JSX attributes;
   {
-    pattern: /<div>\{\/\* content \*\/\}/g,
-    replacement: '<div>{/* content */}',
+    pattern: /<div></div>\{\/\* content \*\/\}/g,
+    replacement: '<div></div>{/* content */}',
   },
   //Fix unclosed JSX tags;
   {
@@ -132,7 +132,7 @@ const fixes = [
   },
   //Fix malformed JSX structure;
   {
-    pattern: /<div>\s*\{\/\* content \*\/\}\s*<div>/g,
+    pattern: /<div></div>\s*\{\/\* content \*\/\}\s*<div></div>/g,
     replacement: '<div>{/* content */}</div>',
   },
   //Fix malformed return statements;

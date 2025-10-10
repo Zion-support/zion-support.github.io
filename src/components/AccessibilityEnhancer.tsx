@@ -5,8 +5,7 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {</AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
@@ -23,8 +22,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+          outline: 2 px solid #06 b6 d4 !important;
+          outline-offset: 2 px !important;
         }
       `;
       document.head.appendChild(style);

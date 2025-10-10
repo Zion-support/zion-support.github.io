@@ -21,9 +21,9 @@ const ItPerformancePage: React.FC = () => {
         keywords={["IT performance","system optimization","performance monitoring","capacity planning","system tuning"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/it-performance"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

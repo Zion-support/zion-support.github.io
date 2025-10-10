@@ -46,7 +46,7 @@ export default function RootLayout({)}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
-        >{/* Structured Data */}</link>
+        >{/* Structured Data */}</lin>
         </link><script
 =======
         <meta name="color-scheme" content="dark light" />
@@ -144,13 +144,13 @@ export default function RootLayout({)}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             }),
           }}
-        />
+        /></scrip>
       </head>
-      <body className='antialiased'>
-        <EnhancedSEOHead />
-        <AccessibilityEnhancer />
-        <PerformanceMonitor />
-        <ServiceWorkerRegistration >{children}</ServiceWorkerRegistration>
+      <body className='antialiased'></bod>
+        <EnhancedSEOHead /></EnhancedSEOHea>
+        <AccessibilityEnhancer /></AccessibilityEnhance>
+        <PerformanceMonitor /></PerformanceMonito>
+        <ServiceWorkerRegistration >{children}</ServiceWorkerRegistratio>
       </ServiceWorkerRegistration>
     </html>
   );

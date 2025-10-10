@@ -19,7 +19,7 @@ const,
     <div className={`flex items-center justify-center ${className}`}></div>
       <div
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin`}
-      />
+      /></di>
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
 =======

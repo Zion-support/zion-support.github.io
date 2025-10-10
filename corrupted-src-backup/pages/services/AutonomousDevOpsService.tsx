@@ -11,7 +11,7 @@ const AutonomousDevOpsServic, e = () => {
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upt, i, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n.'
-        />
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
         />)

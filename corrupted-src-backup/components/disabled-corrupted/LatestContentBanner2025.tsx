@@ -39,9 +39,9 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
 <<<<<<< HEAD
     {
       id:  , 2,
-      title: 'AI, Enterprise, Transformation: $50M, Annual, Savings Bluepr, i, n, t',
+      title: 'AI, Enterprise, Transformation: $50 M, Annual, Savings Bluepr, i, n, t',
       slug: 'ai-enterpri, s, e-transformati, o, n-2, 0, 2, 5',
-      excerpt: 'Discover, how, Fortune 500, companies, achieve $50M, annual, saving, s, 95% process, automatio, n, and, 30, 0% ROI, through, comprehensive AI, transformation, strategies and, proven, implementation framewor, k, s.',
+      excerpt: 'Discover, how, Fortune 500, companies, achieve $50 M, annual, saving, s, 95% process, automatio, n, and, 30, 0% ROI, through, comprehensive AI, transformation, strategies and, proven, implementation framewor, k, s.',
       category: 'Enterprise, AI, Transformatio, n',
       date: '20, 2, 5-01-2, 8',
       readTime: '50, m, i, n',
@@ -52,7 +52,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       id:  , 3,
       title: 'AI, Innovation, Labs: Product, Development, Revolution 2, 0, 2, 5',
       slug: 'ai-innovati, o, n-la, b, s-produ, c, t-developme, n, t-2, 0, 2, 5',
-      excerpt: 'Revolutionize, product, development with, AI, Innovation Labs, achieving, 10x faster, tim, e-to-mar, k, e, t, 85% cost, reductio, n, and, 30, 0% innovation, acceleration, through cutti, n, g-edge, A, I-powered, developmen, t.',
+      excerpt: 'Revolutionize, product, development with, AI, Innovation Labs, achieving, 10 x faster, tim, e-to-mar, k, e, t, 85% cost, reductio, n, and, 30, 0% innovation, acceleration, through cutti, n, g-edge, A, I-powered, developmen, t.',
       category: 'AI, Innovation, Lab, s',
       date: '20, 2, 5-01-2, 5',
       readTime: '40, m, i, n',
@@ -92,12 +92,12 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             <span, className="te, x, t-cy, a, n-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
               🔥 3, REVOLUTIONARY, NEW ARTICLES, PUBLISHE, D • Januar, y, 3, 0, 20, 2, 6;
             </sp, a, n>
-            <Sparkles, classNam, e = "w-5 h-5, tex, t-fuchs, i, a-400, animat, e-pul, s, e" />
+            <Sparkles, classNam, e = "w-5 h-5, tex, t-fuchs, i, a-400, animat, e-pul, s, e" /></Sparkles>
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             Latest, Enterprise, AI Guid, e, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3 xl, m, x-auto, leadin, g-relax, e, d">
             Master, revolutionary, AI breakthro, u, g, h, s, explore, future, predictions, and, transform, your enterprise, with, proven framewor, k, s. 
             Batt, l, e-tested, strategies, from Fortune, 500, implementations delivering, unprecedented, results.
           </p>
@@ -257,7 +257,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
                 Stay, Ahead, of the, AI, Revolution;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Get, weekly, insight, s, case, studie, s, and, breakthrough, research delivered, directly, to your, inbo, x. 
                 Join, 5, 0,0, 0, 0+ AI, leaders, and innovato, r, s.
               </p>

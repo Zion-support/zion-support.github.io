@@ -30,7 +30,7 @@ interface UserEvent {}
   sessionId: string
   userId?: string
   url: string
-  metadata?: Record<string, unknown>
+  metadata?: Record<string, unknown></strin>
 }
 
 interface UserSession {}

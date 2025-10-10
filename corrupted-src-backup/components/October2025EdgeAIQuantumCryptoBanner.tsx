@@ -15,7 +15,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">"
               🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides;
             </sp, a, n>
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  />
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>
           </d, i, v>
           {/* Main, Conten, t */}
           <div, className="te, x, t-center, m, b-8"></div>
@@ -28,7 +28,7 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">";
               🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides;
             </sp, a, n>
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";</Sparkles>
           </d, i, v>
           {/* Main, Conten, t */}
           <div, className="te, x, t-center, m, b-8">";</div>

@@ -140,7 +140,7 @@ function isInternalUrl(url, baseUrl) {
 
 // Analyze a single URL;
 async function analyzeUrl(url, depth = 0) {
-  if (visitedUrls.has(url) || depth > MAX_DEPTH) {
+  if (visitedUrls.has(url) || depth>MAX_DEPTH</depth>) {
     return;
   }
 

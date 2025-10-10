@@ -208,7 +208,7 @@ export const,
       competitors: [,
         'UiPath, Automation Anywhere, Blue Prism, Custom solutions'
       ]
-      marketSize: '$25B business process automation market'
+      marketSize: '$25 B business process automation market'
       growthRate: '300% annual growth'
       variant: 'ai-automation',
       contactInfo: mobile: '+1 302 464 0950',
@@ -351,7 +351,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.',
       competitors: ['Salesforce Einstein, HubSpot AI, Custom ML solutions']
-      marketSize: '$18B customer intelligence market'
+      marketSize: '$18 B customer intelligence market'
       growthRate: '280% annual growth'
       variant: 'ai-analytics',
       contactInfo: mobile: '+1 302 464 0950',
@@ -499,7 +499,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.',
       competitors: ['GitHub Copilot, Tabnine, Kite, Custom solutions']
-      marketSize: '$12B AI development tools market'
+      marketSize: '$12 B AI development tools market'
       growthRate: '350% annual growth'
       variant: 'ai-development',
       contactInfo: mobile: '+1 302 464 0950',
@@ -640,7 +640,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.',
       competitors: ['Alpaca, QuantConnect, MetaTrader, Custom solutions']
-      marketSize: '$22B algorithmic trading market'
+      marketSize: '$22 B algorithmic trading market'
       growthRate: '320% annual growth'
       variant: 'ai-finance',
       contactInfo: mobile: '+1 302 464 0950',
@@ -788,7 +788,7 @@ export const,
       competitors: [,
         'IBM Watson Health, Google Health AI, Custom medical AI solutions'
       ]
-      marketSize: '$35B AI healthcare market'
+      marketSize: '$35 B AI healthcare market'
       growthRate: '400% annual growth'
       variant: 'ai-healthcare',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1091,7 +1091,7 @@ export const,
       competitors: [,
         'UiPath, Automation Anywhere, Blue Prism, Custom solutions'
       ]
-      marketSize: '$25B business process automation market'
+      marketSize: '$25 B business process automation market'
       growthRate: '300% annual growth'
       variant: 'ai-automation',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1234,7 +1234,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.',
       competitors: ['Salesforce Einstein, HubSpot AI, Custom ML solutions']
-      marketSize: '$18B customer intelligence market'
+      marketSize: '$18 B customer intelligence market'
       growthRate: '280% annual growth'
       variant: 'ai-analytics',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1382,7 +1382,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.',
       competitors: ['GitHub Copilot, Tabnine, Kite, Custom solutions']
-      marketSize: '$12B AI development tools market'
+      marketSize: '$12 B AI development tools market'
       growthRate: '350% annual growth'
       variant: 'ai-development',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1523,7 +1523,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.',
       competitors: ['Alpaca, QuantConnect, MetaTrader, Custom solutions']
-      marketSize: '$22B algorithmic trading market'
+      marketSize: '$22 B algorithmic trading market'
       growthRate: '320% annual growth'
       variant: 'ai-finance',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1671,7 +1671,7 @@ export const,
       competitors: [,
         'IBM Watson Health, Google Health AI, Custom medical AI solutions'
       ]
-      marketSize: '$35B AI healthcare market'
+      marketSize: '$35 B AI healthcare market'
       growthRate: '400% annual growth'
       variant: 'ai-healthcare',
       contactInfo: mobile: '+1 302 464 0950',

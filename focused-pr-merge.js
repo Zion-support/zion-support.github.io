@@ -47,8 +47,8 @@ const branchesToMerge = [
   'cursor/automate-netlify-build-fixing-and-monitoring-f10e',
   //AI-powered features;
   'cursor/build-ai-powered-project-teams-dcf8',
-  'cursor/build-ai-powered-smart-contract-generator-b22e',
-  'cursor/build-ai-pricing-suggestion-engine-ea4e',
+  'cursor/build-ai-powered-smart-contract-generator-b22 e',
+  'cursor/build-ai-pricing-suggestion-engine-ea4 e',
   'cursor/build-ai-resume-and-portfolio-builder-workflow-2029',
 ];
 

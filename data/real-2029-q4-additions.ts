@@ -295,7 +295,7 @@
     ],
     roi: 'Increase response rates 25x and de-risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey']
-    marketSize: 'Survey market $9B+'
+    marketSize: 'Survey market $9 B+'
     growthRate: '14% YoY'
     variant: 'ai-futuristic'
     contactInfo: contact;
@@ -1106,7 +1106,7 @@
     useCases: ['OKRs/scorecards', 'Exec reporting']
     roi: 'Improve visibility and accountability.',
     competitors: ['Grid', 'Grow']
-    marketSize: 'BI $30B+'
+    marketSize: 'BI $30 B+'
     growthRate: '11% YoY'
     variant: 'ai-futuristic'
     contactInfo: contact;
@@ -1336,7 +1336,7 @@ export const,
 		useCases: ['Customer support triageLead routingInternal helpdesk'];
 		roi: 'Reduce manual triage time by 6080% and improve first-response SLAs.'
 		competitors: ['Superhuman AIZendesk AIHubSpot AI'];
-		marketSize: 'Helpdesk software $20B+'
+		marketSize: 'Helpdesk software $20 B+'
 		growthRate: '25% YoY'
 		variant: 'ai-futuristic',
 		contactInfo: contact;
@@ -1370,9 +1370,9 @@ export const,
 		technology: ['Next && Next.jsPostgreSQLTailwindVercel Edge'];
 		integrations: ['Google SheetsZapierSegmentBigQuery'];
 		useCases: ['Landing page surveysIn-product pollsExit intent feedback'];
-		roi: 'Increase response rates 25x and de-risk product decisions.'
+		roi: 'Increase response rates 25 x and de-risk product decisions.'
 		competitors: ['TypeformSurveyMonkey'];
-		marketSize: 'Survey market $9B+'
+		marketSize: 'Survey market $9 B+'
 		growthRate: '14% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1408,7 +1408,7 @@ export const,
 		useCases: ['MeetupsWebinarsConferences'];
 		roi: 'Cut ops overhead by 50% and improve attendance by 1530%.'
 		competitors: ['EventbriteHopin'];
-		marketSize: 'Event tech $6B+'
+		marketSize: 'Event tech $6 B+'
 		growthRate: '18% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1444,7 +1444,7 @@ export const,
 		useCases: ['On-call managementIncident response'];
 		roi: 'Reduce paging confusion and missed alerts by 3050%.'
 		competitors: ['PagerDutyOpsgenie'];
-		marketSize: 'Incident management $3B+'
+		marketSize: 'Incident management $3 B+'
 		growthRate: '20% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1480,7 +1480,7 @@ export const,
 		useCases: ['Page optimizationContent planningBrief creation'];
 		roi: 'Improve organic traffic 2050% over 36 months.'
 		competitors: ['SurferSEOFraseClearScope'];
-		marketSize: 'SEO software $6B+'
+		marketSize: 'SEO software $6 B+'
 		growthRate: '16% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1516,7 +1516,7 @@ export const,
 		useCases: ['Kill switchesSafe migrationsCohort experiments'];
 		roi: 'Reduce incident impact and deploy more frequently.'
 		competitors: ['LaunchDarkly (entry)Flagsmith'];
-		marketSize: 'Feature management $1 && 1.5B+'
+		marketSize: 'Feature management $1 && 1.5 B+'
 		growthRate: '22% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1552,7 +1552,7 @@ export const,
 		useCases: ['Lead scoringICP matchingOutbound targeting'];
 		roi: 'Improve conversion rates by 1025%.'
 		competitors: ['ClearbitZoomInfo (export)'];
-		marketSize: 'Sales intelligence $30B+'
+		marketSize: 'Sales intelligence $30 B+'
 		growthRate: '12% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1588,7 +1588,7 @@ export const,
 		useCases: ['AP automationExpense processing'];
 		roi: 'Reduce manual data entry by 7090%.'
 		competitors: ['VeryfiRossum'];
-		marketSize: 'Document AI $5B+'
+		marketSize: 'Document AI $5 B+'
 		growthRate: '24% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1624,7 +1624,7 @@ export const,
 		useCases: ['Partner portal automationsData collectionBulk updates'];
 		roi: 'Automate repetitive tasks and cut manual hours by 5090%.'
 		competitors: ['UiPath (SMB)Robocorp'];
-		marketSize: 'RPA $13B+'
+		marketSize: 'RPA $13 B+'
 		growthRate: '20% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1656,11 +1656,11 @@ export const,
 		category: 'Quality & Monitoring'
 		realService: true;
 		technology: ['Next && Next.jsLLMsRegex engines'];
-		integrations: ['S3/R2GCSBigQuery'];
+		integrations: ['S3/R2 GCSBigQuery'];
 		useCases: ['Data minimizationCompliance workflowsPII scrubbing'];
 		roi: 'Reduce compliance risk and review time.'
 		competitors: ['NightfallVery Good Security'];
-		marketSize: 'Data security $20B+'
+		marketSize: 'Data security $20 B+'
 		growthRate: '18% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1696,7 +1696,7 @@ export const,
 		useCases: ['OKRs/scorecardsExec reporting'];
 		roi: 'Improve visibility and accountability.'
 		competitors: ['GridGrow'];
-		marketSize: 'BI $30B+'
+		marketSize: 'BI $30 B+'
 		growthRate: '11% YoY'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -1733,7 +1733,7 @@ export const,
   use_cases: ['Customer support triage_lead routing_internal helpdesk'];
   roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.'
   competitors: ['Superhuman AIZendesk AIHubSpot AI'];
-  market_size: 'Helpdesk software $20B+'
+  market_size: 'Helpdesk software $20 B+'
   growth_rate: '25% YoY'
   variant: 'ai - futuristic',
   contact_info: contact;
@@ -1767,9 +1767,9 @@ export const,
   technology: ['Next.jsPostgreSQLTailwindVercel Edge'];
   integrations: ['Google SheetsZapierSegmentBigQuery'];
   use_cases: ['Landing page surveys_in - product polls_exit intent feedback'];
-  roi: 'Increase response rates 25x and de - risk product decisions.'
+  roi: 'Increase response rates 25 x and de - risk product decisions.'
   competitors: ['TypeformSurveyMonkey'];
-  market_size: 'Survey market $9B+'
+  market_size: 'Survey market $9 B+'
   growth_rate: '14% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -1805,7 +1805,7 @@ export const,
   use_cases: ['MeetupsWebinarsConferences'];
   roi: 'Cut ops overhead by 50% and improve attendance by 1530%.'
   competitors: ['EventbriteHopin'];
-  market_size: 'Event tech $6B+'
+  market_size: 'Event tech $6 B+'
   growth_rate: '18% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -1841,7 +1841,7 @@ export const,
   use_cases: ['On - call management_incident response'];
   roi: 'Reduce paging confusion and missed alerts by 3050%.'
   competitors: ['PagerDutyOpsgenie'];
-  market_size: 'Incident management $3B+'
+  market_size: 'Incident management $3 B+'
   growth_rate: '20% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -1877,7 +1877,7 @@ export const,
   use_cases: ['Page optimization_content planning_brief creation'];
   roi: 'Improve organic traffic 2050% over 36 months.'
   competitors: ['SurferSEOFraseClearScope'];
-  market_size: 'SEO software $6B+'
+  market_size: 'SEO software $6 B+'
   growth_rate: '16% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -1913,7 +1913,7 @@ export const,
   use_cases: ['Kill switches_safe migrations_cohort experiments'];
   roi: 'Reduce incident impact and deploy more frequently.'
   competitors: ['LaunchDarkly (entry)Flagsmith'];
-  market_size: 'Feature management $1.5B+'
+  market_size: 'Feature management $1.5 B+'
   growth_rate: '22% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -1949,7 +1949,7 @@ export const,
   use_cases: ['Lead scoringICP matching_outbound targeting'];
   roi: 'Improve conversion rates by 1025%.'
   competitors: ['ClearbitZoomInfo (export)'];
-  market_size: 'Sales intelligence $30B+'
+  market_size: 'Sales intelligence $30 B+'
   growth_rate: '12% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -1985,7 +1985,7 @@ export const,
   use_cases: ['AP automation_expense processing'];
   roi: 'Reduce manual data entry by 7090%.'
   competitors: ['VeryfiRossum'];
-  market_size: 'Document AI $5B+'
+  market_size: 'Document AI $5 B+'
   growth_rate: '24% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -2021,7 +2021,7 @@ export const,
   use_cases: ['Partner portal automations_data collection_bulk updates'];
   roi: 'Automate repetitive tasks and cut manual hours by 5090%.'
   competitors: ['UiPath (SMB)Robocorp'];
-  market_size: 'RPA $13B+'
+  market_size: 'RPA $13 B+'
   growth_rate: '20% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -2053,11 +2053,11 @@ export const,
   category: 'Quality & Monitoring'
   real_service: true;
   technology: ['Next.jsLLMsRegex engines'];
-  integrations: ['S3 / R2GCSBigQuery'];
+  integrations: ['S3 / R2 GCSBigQuery'];
   use_cases: ['Data minimization_compliance workflowsPII scrubbing'];
   roi: 'Reduce compliance risk and review time.'
   competitors: ['NightfallVery Good Security'];
-  market_size: 'Data security $20B+'
+  market_size: 'Data security $20 B+'
   growth_rate: '18% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -2093,7 +2093,7 @@ export const,
   use_cases: ['OKRs / scorecards_exec reporting'];
   roi: 'Improve visibility and accountability.'
   competitors: ['GridGrow'];
-  market_size: 'BI $30B+'
+  market_size: 'BI $30 B+'
   growth_rate: '11% YoY'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -3692,7 +3692,7 @@ export const,
 		useCases: ['MeetupsWebinarsConferences'];
 		roi: 'Cut ops overhead by 50% and improve attendance by 1530%.';
 		competitors: ['EventbriteHopin'];
-		marketSize: 'Event tech $6B+';
+		marketSize: 'Event tech $6 B+';
 		growthRate: '18% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -3729,7 +3729,7 @@ export const,
 		useCases: ['On-call managementIncident response'];
 		roi: 'Reduce paging confusion and missed alerts by 3050%.';
 		competitors: ['PagerDutyOpsgenie'];
-		marketSize: 'Incident management $3B+';
+		marketSize: 'Incident management $3 B+';
 		growthRate: '20% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -3766,7 +3766,7 @@ export const,
 		useCases: ['Page optimizationContent planningBrief creation'];
 		roi: 'Improve organic traffic 2050% over 36 months.';
 		competitors: ['SurferSEOFraseClearScope'];
-		marketSize: 'SEO software $6B+';
+		marketSize: 'SEO software $6 B+';
 		growthRate: '16% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -3825,7 +3825,7 @@ export const,
 		useCases: ['Lead scoringICP matchingOutbound targeting'];
 		roi: 'Improve conversion rates by 1025%.';
 		competitors: ['ClearbitZoomInfo (export)'];
-		marketSize: 'Sales intelligence $30B+';
+		marketSize: 'Sales intelligence $30 B+';
 		growthRate: '12% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -3884,7 +3884,7 @@ export const,
 		useCases: ['OKRs/scorecardsExec reporting'];
 		roi: 'Improve visibility and accountability.';
 		competitors: ['GridGrow'];
-		marketSize: 'BI $30B+';
+		marketSize: 'BI $30 B+';
 		growthRate: '11% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -3956,7 +3956,7 @@ export const,
 		useCases: ['MeetupsWebinarsConferences'];
 		roi: 'Cut ops overhead by 50% and improve attendance by 1530%.';
 		competitors: ['EventbriteHopin'];
-		marketSize: 'Event tech $6B+';
+		marketSize: 'Event tech $6 B+';
 		growthRate: '18% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -3993,7 +3993,7 @@ export const,
 		useCases: ['On-call managementIncident response'];
 		roi: 'Reduce paging confusion and missed alerts by 3050%.';
 		competitors: ['PagerDutyOpsgenie'];
-		marketSize: 'Incident management $3B+';
+		marketSize: 'Incident management $3 B+';
 		growthRate: '20% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -4030,7 +4030,7 @@ export const,
 		useCases: ['Page optimizationContent planningBrief creation'];
 		roi: 'Improve organic traffic 2050% over 36 months.';
 		competitors: ['SurferSEOFraseClearScope'];
-		marketSize: 'SEO software $6B+';
+		marketSize: 'SEO software $6 B+';
 		growthRate: '16% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -4089,7 +4089,7 @@ export const,
 		useCases: ['Lead scoringICP matchingOutbound targeting'];
 		roi: 'Improve conversion rates by 1025%.';
 		competitors: ['ClearbitZoomInfo (export)'];
-		marketSize: 'Sales intelligence $30B+';
+		marketSize: 'Sales intelligence $30 B+';
 		growthRate: '12% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -4148,7 +4148,7 @@ export const,
 		useCases: ['OKRs/scorecardsExec reporting'];
 		roi: 'Improve visibility and accountability.';
 		competitors: ['GridGrow'];
-		marketSize: 'BI $30B+';
+		marketSize: 'BI $30 B+';
 		growthRate: '11% YoY';
 		variant: 'ai-futuristic';
 		contactInfo: contact;

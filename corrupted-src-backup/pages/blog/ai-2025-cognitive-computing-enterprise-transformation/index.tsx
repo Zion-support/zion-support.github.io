@@ -16,8 +16,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
           Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'
-        />
+          conte, n, t='Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2 B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n'
         />)
@@ -58,7 +58,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Ho, m, e;
               </Li, n, k>
-              <span, className='te, x, t-purp, l, e-4, 0, 0'>/</sp, a, n>
+              <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
               <Link, t, o='/<bl, o, g'
                 className='te, x, t-purp, l, e-300, hove, r:te, x, t-white, transitio, n-colo, r, s'
 <<<<<<< HEAD
@@ -68,8 +68,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Bl, o, g;
               </Li, n, k>
-              <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>/</sp, a, n>
-              <span, classNam, e='te, x, t-whi, t, e'>Cognitive, Computin, g</sp, a, n>
+              <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
+              <span, classNam, e='te, x, t-whi, t, e'></span>Cognitive</span>, Computin, g</sp, a, n>
 
 <<<<<<< HEAD
               <p, className='te, x, t-xl, tex, t-purp, l, e-100, leadin, g-relaxed, m, b-8'>

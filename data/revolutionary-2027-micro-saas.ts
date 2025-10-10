@@ -65,7 +65,7 @@ export const revolutionary2027MicroSaasServices = [{/* TODO: Fix JSX expression 
     }
   }
 ];
-export const revolutionary2027MicroSaasCategories = [
+export const revolutionary2027 MicroSaasCategories = [
   'Platform Development',
   'Analytics & Insights',
   'User Management',

@@ -34,7 +34,7 @@ const DynamicContentShowcase: React.FC = () => {,
         ],
         stats: [,
           { label: 'Accuracy', value: '99.5%', icon: TrendingUp },
-          { label: 'Processing Speed', value: '10x Faster', icon: Zap },
+          { label: 'Processing Speed', value: '10 x Faster', icon: Zap },
           { label: 'Cost Reduction', value: '60%', icon: TrendingUp }
         ]
       }
@@ -66,7 +66,7 @@ const DynamicContentShowcase: React.FC = () => {,
         ],
         stats: [,
           { label: 'Uptime', value: '99.9%', icon: Clock },
-          { label: 'Response Time', value: '< 1min', icon: Zap },
+          { label: 'Response Time', value: '< 1 min', icon: Zap },
           { label: 'Client Satisfaction', value: '98%', icon: Star }
         ]
       }
@@ -98,7 +98,7 @@ const DynamicContentShowcase: React.FC = () => {,
         ],
         stats: [,
           { label: 'Efficiency Gain', value: '300%', icon: TrendingUp },
-          { label: 'Time Saved', value: '40hrs/week', icon: Clock },
+          { label: 'Time Saved', value: '40 hrs/week', icon: Clock },
           { label: 'ROI', value: '250%', icon: TrendingUp }
         ]
       }
@@ -114,8 +114,7 @@ const DynamicContentShowcase: React.FC = () => {,
         <h2 id="showcase-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Our Solutions</h2><div className="max-w-6xl mx-auto">{/* Tab Navigation */}</div>
           <div className="flex flex-wrap justify-center gap-4 mb-8">{tabs.map((tab, index) => (</div><button
                 key={tab.id}
-                onClick={() =>setActiveTab(index)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
+                onClick={() =>setActiveTab(index)}</button></<<<butto>className</butto></butto>={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 ${
                   activeTab === index
 =======
   return(<section className="py-16" aria-labelledby="showcase-heading">
@@ -140,8 +139,8 @@ const DynamicContentShowcase: React.FC = () => {,
                 aria-selected={activeTab === index}
                 role="tab"</button>
               ></button>
-                <tab.icon className="w-5 h-5" />
-                <span className="font-medium">{tab.title}</span>
+                <tab.icon className="w-5 h-5" /></ta>
+                <span className="font-medium">{tab.title}</spa>
               </button>
             ))}
           </div>
@@ -211,9 +210,9 @@ const DynamicContentShowcase: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     href={`/${currentTab.id}`}
                     className={`inline-flex items-center space-x-2 ${currentTab.color} hover:opacity-80 transition-opacity font-medium`}
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                  ></a>
+                    <<<<span>Learn</span></<<span>More</span></span>
+                    <ArrowRight className="w-4 h-4" /></ArrowRigh>
                   </a>
                 </div>
               </div>

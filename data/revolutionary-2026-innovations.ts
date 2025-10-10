@@ -83,7 +83,7 @@ export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
     address: string;
   }
 }
-export const revolutionary2026Innovations: Revolutionary2026Innovation[] = [,
+export const revolutionary2026 Innovations: Revolutionary2026 Innovation[] = [,
     id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform",
     tagline: "Breakthrough innovations for 2026", price: "$399/month"
     description: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026."

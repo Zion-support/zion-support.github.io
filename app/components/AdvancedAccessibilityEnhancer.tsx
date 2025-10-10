@@ -596,5 +596,4 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   return <>{children}</>;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
-</HTMLElement>
-export default AdvancedAccessibilityEnhancer;</HTMLElement>
+</<<<HTMLElement>export</HTMLElement></<<HTMLElement>default</HTMLElement> AdvancedAccessibilityEnhancer;</HTMLElement>

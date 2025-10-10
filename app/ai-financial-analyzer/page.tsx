@@ -21,9 +21,9 @@ const AiFinancialAnalyzerPage: React.FC = () => {
         keywords={["financial analysis","investment AI","portfolio management","financial forecasting","risk assessment"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-financial-analyzer"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

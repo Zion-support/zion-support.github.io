@@ -21,9 +21,9 @@ const BackupRecoveryPage: React.FC = () => {
         keywords={["backup recovery","disaster recovery","business continuity","data protection","backup solutions"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/backup-recovery"
-      />
+      /></SEOOptimize>
       
-      <Navigation />
+      <Navigation /></Navigatio>
       
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

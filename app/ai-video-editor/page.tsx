@@ -9,16 +9,16 @@ import Footer from '../components/Footer';
 
 const AIVideoEditorPage: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Video Editor Pro - Automated Video Editing | Zion Tech Group"
         description="Create professional videos with AI-powered editing tools. Automated cutting, effects, and optimization. Starting at $149/month."
         keywords="AI video editor, automated video editing, video AI, video production, AI video tools, video automation"
         canonical="https://ziontechgroup.com/ai-video-editor"
-      />
-      <Navigation />
+      /></SEOHea>
+      <Navigation /></Navigatio>
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></mai>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
@@ -33,7 +33,7 @@ const AIVideoEditorPage: React.FC = () => {
                   Professional Video Production
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
                 Create professional videos with AI-powered editing tools. Automated cutting, effects, 
                 and optimization for content creators and businesses.
               </p>
@@ -41,16 +41,14 @@ const AIVideoEditorPage: React.FC = () => {
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                ></a></<<<a>Start</a></<<a>Free</a> Trial
+                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
                 </a>
                 <a 
                   href="#demo" 
                   className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                ></a>
+                  <Play className="mr-2 w-5 h-5" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
                 </a>
               </div>
             </div>
@@ -64,7 +62,7 @@ const AIVideoEditorPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Revolutionary AI Video Editing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Transform your video content with intelligent automation and professional editing tools
               </p>
             </div>
@@ -74,19 +72,16 @@ const AIVideoEditorPage: React.FC = () => {
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Scissors className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h>
                 <p className="text-gray-600 mb-4">
                   AI automatically detects and cuts out dead air, filler words, and unwanted segments.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Silence detection
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Silence</CheckCircle></<<CheckCircle>detection</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Filler word removal
-                  </li>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Filler</CheckCircle></<<CheckCircle>word</CheckCircle></<CheckCircle>removal</CheckCircle>
                 </ul>
               </div>
 
@@ -94,18 +89,16 @@ const AIVideoEditorPage: React.FC = () => {
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Film className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Auto Scene Detection</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Auto Scene Detection</h>
                 <p className="text-gray-600 mb-4">
                   Automatically detect scene changes and apply appropriate transitions and effects.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Scene analysis
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Scene</CheckCircle></<<CheckCircle>analysis</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Smart transitions
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Smart</CheckCircle></<<CheckCircle>transitions</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -114,18 +107,16 @@ const AIVideoEditorPage: React.FC = () => {
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Music className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Music & Sound</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Music & Sound</h>
                 <p className="text-gray-600 mb-4">
                   Automatically add background music, sound effects, and audio enhancement.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Royalty-free music
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Royalty</CheckCircle></CheckCircle>-free music
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Audio enhancement
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Audio</CheckCircle></<<CheckCircle>enhancement</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -134,18 +125,15 @@ const AIVideoEditorPage: React.FC = () => {
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Palette className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Color Grading AI</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Color Grading AI</h>
                 <p className="text-gray-600 mb-4">
                   Automatic color correction and professional color grading for cinematic look.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Auto color correction
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Style presets
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Auto</CheckCircle></<<CheckCircle>color</CheckCircle></<CheckCircle>correction</CheckCircle>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Style</CheckCircle></<<CheckCircle>presets</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -154,18 +142,16 @@ const AIVideoEditorPage: React.FC = () => {
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Optimization</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Optimization</h>
                 <p className="text-gray-600 mb-4">
                   AI optimizes video for different platforms and automatically adjusts quality settings.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Platform optimization
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Platform</CheckCircle></<<CheckCircle>optimization</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Quality enhancement
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Quality</CheckCircle></<<CheckCircle>enhancement</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -174,18 +160,16 @@ const AIVideoEditorPage: React.FC = () => {
                 <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h>
                 <p className="text-gray-600 mb-4">
                   Collaborate with team members on video projects with real-time editing.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Real-time editing
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Real</CheckCircle></CheckCircle>-time editing
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Version control
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Version</CheckCircle></<<CheckCircle>control</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -200,7 +184,7 @@ const AIVideoEditorPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Choose Your Video Editing Plan
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Professional video editing tools for every budget
               </p>
             </div>
@@ -215,22 +199,22 @@ const AIVideoEditorPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">Perfect for content creators and influencers</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">10 hours video processing</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">10 hours video processing</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">HD export quality</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">HD export quality</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Basic AI features</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Basic AI features</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Email support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Email support</spa>
                   </li>
                 </ul>
                 <a 
@@ -255,26 +239,26 @@ const AIVideoEditorPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">Ideal for businesses and agencies</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">50 hours video processing</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">50 hours video processing</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">4K export quality</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">4 K export quality</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Advanced AI features</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Advanced AI features</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Priority support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Priority support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Team collaboration</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Team collaboration</spa>
                   </li>
                 </ul>
                 <a 
@@ -294,26 +278,26 @@ const AIVideoEditorPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For large organizations and studios</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited processing</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Unlimited processing</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">8K export quality</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">8 K export quality</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">All AI features</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">All AI features</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">24/7 phone support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">24/7 phone support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom integrations</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom integrations</spa>
                   </li>
                 </ul>
                 <a 
@@ -340,16 +324,14 @@ const AIVideoEditorPage: React.FC = () => {
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Inquiry"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+              ></a></<<<a>Start</a></<<a>Free</a> Trial
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
               </a>
               <a 
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+              ></a>
+                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
               </a>
             </div>
           </div>
@@ -376,7 +358,7 @@ const AIVideoEditorPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </ErrorBoundary>
   );
 };

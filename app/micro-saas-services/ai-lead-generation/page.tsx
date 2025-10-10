@@ -33,28 +33,25 @@ const AILeadGeneration: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Industry<select
                     value={industry}
-                    onChange={(e) =>setIndustry(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setIndustry(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
-                    <option value="">Select industry...<option value="technology">Technology</option>
-                    <option value="healthcare">Healthcare<option value="finance">Finance</option>
-                    <option value="retail">Retail<option value="manufacturing">Manufacturing</option>
+                    <option value="">Select industry...</option><option value="technology">Technology</optio>
+                    <option value="healthcare">Healthcare</option><option value="finance">Finance</optio>
+                    <option value="retail">Retail</option><option value="manufacturing">Manufacturing</optio>
                   </select>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Target Audience<input
                     type="text"
                     value={targetAudience}
-                    onChange={(e) =>setTargetAudience(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                    onChange={(e) =>setTargetAudience(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
                     placeholder="e.g., CTOs, Marketing Directors"</input>
                   /></input>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Budget Range<select
                     value={budget}
-                    onChange={(e) =>setBudget(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setBudget(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select budget...<option value="under-10k">Under $10K</option>
                     <option value="10k-50k">$10K - $50K<option value="50k-100k">$50K - $100K<option value="over-100k">Over $100K<button className="cyber-button w-full">Generate Leads</button>

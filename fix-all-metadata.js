@@ -100,7 +100,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Update Helmet with extracted metadata;
 <<<<<<< HEAD
     if (metadata.title || metadata.description) {
-      //       const helmetMatch = content.match(/(<Helmet>[\s\S]*?<\/Helmet>)/);
+      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);
       if (helmetMatch) {
         const newHelmet = `<Helmet>
 =======
@@ -114,7 +114,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   g:url" content="${metadata.url}" />` : ''}`
       </Helmet>`;
 
-        content = content.replace(/(<Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
+        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
       }
     }

@@ -1007,7 +1007,7 @@ export interface BlockchainWeb3Service {;
   reviews: number;
 }
 ;
-export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
+export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
   {,
     id: 'decentralized-identity-management';
     name: 'Decentralized Identity Management Platform';
@@ -1024,7 +1024,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     };
     features: [
       'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standards';
-      'Compliance with W3C standardsAPI for enterprise integration'
+      'Compliance with W3 C standardsAPI for enterprise integration'
     ];
     benefits: [
       'Eliminate identity theft and fraudReduce compliance costs by 60%Improve user privacy and controlEnable seamless cross-platform authenticationReduce data breach risks'
@@ -1043,7 +1043,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     ];,
     integrations: ['Salesforce, SAP, Oracle, Microsoft 365, Custom enterprise systems'];
     support: '24/7 technical support, compliance consulting, custom development, and dedicated success manager.';
-    compliance: ['GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards'];
+    compliance: ['GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3 C DID standards'];
     link: 'https://ziontechgroup.com/decentralized-identity-management';
     icon: '';
     color: 'from-indigo-500 to-purple-600';

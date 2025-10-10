@@ -224,9 +224,9 @@ const AICustomerSupportPage2: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Get Started</span>
+              ></a>
+                <MessageCircle className="w-4 h-4" /></MessageCircl></MessageCircle>
+                <<<<span>Get</span></span></<<span>Started</span></span></span>
               </a>
               <a;
                 href="/contact"
@@ -257,10 +257,10 @@ const AICustomerSupportPage2: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></u></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l></li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -298,13 +298,13 @@ const AICustomerSupportPage2: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h></h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
-                  <ul className="space-y-3 mb-8">
+                  <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
+                  <ul className="space-y-3 mb-8"></u></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {feature}
                       </li>
                     ))}
@@ -342,9 +342,9 @@ const AICustomerSupportPage2: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
+                ></a>
+                  <Phone className="w-5 h-5" /></Phon></Phone>
+                  <<<<span>Call</span></span></span> (302) 464-0950</span>
                 </a>
                 <a;
                   href="mailto:kleber@ziontechgroup.com",
@@ -358,7 +358,7 @@ const AICustomerSupportPage2: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Foote></Footer>
       </div>
 =======
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">

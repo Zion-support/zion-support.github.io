@@ -22,7 +22,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             <span, className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">
               Just, Publishe, d: Octobe, r, 2, 20, 2, 5;
             </sp, a, n>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
           </d, i, v>
 <<<<<<< HEAD
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"

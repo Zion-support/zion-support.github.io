@@ -109,7 +109,7 @@ export const,
     address: string;
   }
 }
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
+export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control", price: "$79/month"
     description: "AI-powered quality assurance platform that automates testing and ensures software quality."

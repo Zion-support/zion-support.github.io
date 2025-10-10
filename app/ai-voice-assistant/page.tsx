@@ -293,8 +293,7 @@ const AIVoiceAssistantPage: React.FC = () => {,
                 <div className="space-y-3"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <button 
-                    onClick={() =>setIsListening(!isListening)}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    onClick={() =>setIsListening(!isListening)}</button></<<<butto>className</butto></butto>="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
                   ></button>
                     {isListening ? 'Stop Listening' : 'Start Listening'}</button>
 =======
@@ -315,11 +314,11 @@ const AIVoiceAssistantPage: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <Play className="w-4 h-4 mx-auto" />
                     </button>
-                    <button className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg transition-colors">
-                      <Pause className="w-4 h-4 mx-auto" />
+                    <button className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg transition-colors"></butto>
+                      <Pause className="w-4 h-4 mx-auto" /></Paus>
                     </button>
-                    <button className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg transition-colors">
-                      <RotateCcw className="w-4 h-4 mx-auto" />
+                    <button className="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 px-4 rounded-lg transition-colors"></butto>
+                      <RotateCcw className="w-4 h-4 mx-auto" /></RotateCc>
                     </button>
                   </div>,
                 </div>,
@@ -336,8 +335,8 @@ const AIVoiceAssistantPage: React.FC = () => {,
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">Start Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
-                <Play className="w-5 h-5 mr-2" >Watch Demo</Play>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"></butto>
+                <Play className="w-5 h-5 mr-2" >Watch Demo</Pla>
               </Play>
             </div>
           </div>
@@ -513,8 +512,8 @@ const AIVoiceAssistantPage: React.FC = () => {,
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">Start Your Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
-                <Phone className="w-5 h-5 mr-2" >Contact Sales</Phone>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"></butto>
+                <Phone className="w-5 h-5 mr-2" >Contact Sales</Phon>
               </Phone>
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">

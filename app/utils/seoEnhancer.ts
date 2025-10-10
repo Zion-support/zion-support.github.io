@@ -189,8 +189,7 @@ export class SEOEnhancer {}
   private static instance: SEOEnhancer
 >>>>>>> origin/merge-error-fixes
   private config: SEOConfig;}
-  constructor(config: Partial<SEOConfig> = {}) {}
-    this.config = { ...defaultSEOConfig, ...config }
+  constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
   }
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}
     if (!SEOEnhancer.instance) {}

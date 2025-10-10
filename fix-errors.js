@@ -174,7 +174,7 @@ try {
   // Ensure all comment blocks are closed;
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
-  if (openComments > closeComments) {
+  if (openComments>closeComments</openComments>) {
     content += '\n*/\n';
 =======
 try {/* TODO: Fix JSX expression */}
@@ -196,7 +196,7 @@ try {
   // Ensure all comment blocks are closed;)
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
-  if (openComments > closeComments) {
+  if (openComments>closeComments</openComments>) {
     content += '\n*/\n';
 =======
 try {/* TODO: Fix JSX expression */}

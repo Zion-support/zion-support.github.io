@@ -21,9 +21,9 @@ const ProductivityPage: React.FC = () => {
         keywords={["productivity tools","workplace efficiency","task management","collaboration tools","workflow automation"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/productivity"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

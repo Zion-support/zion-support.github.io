@@ -263,7 +263,7 @@
       affiliate: '20% commission for referrals',
       referral: '$25, 000 bonus for partnerships',
       partnership: 'Quantum research partnerships',
-      funding: 'Series B funding, $150M valuation',
+      funding: 'Series B funding, $150 M valuation',
       exit: 'IPO or quantum acquisition',
       contact: unknown;
 =======
@@ -439,7 +439,7 @@
       affiliate: '30% commission for referrals',
       referral: '$10, 000 bonus for partnerships',
       partnership: 'AI research partnerships',
-      funding: 'Series A funding, $80M valuation',
+      funding: 'Series A funding, $80 M valuation',
       exit: 'Acquisition by major research platform',
       contact: unknown;
 =======
@@ -603,11 +603,11 @@
     useCases: [;
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies',
     ],
-    marketSize: '$12 && 12.8B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
+    marketSize: '$12 && 12.8 B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
     technology: ['AI/MLAutomationData ScienceResearch Tools'], integration: ['Research platformsData sourcesAnalysis tools'],
     support: ['24/7 research supportResearch expertsImplementation team'], compliance: ['Research ethicsData privacyScientific standards'],
     scalability: 'Research-grade, multi-discipline support',
-    market_size: '$12.8B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
+    market_size: '$12.8 B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
     technology: ['AI / MLAutomationData ScienceResearch Tools'], integration: ['Research platforms_data sources_analysis tools'],
     support: ['24 / 7 research support_research experts_implementation team'], compliance: ['Research ethics_data privacy_scientific standards'],
     scalability: 'Research - grade, multi - discipline support',
@@ -625,7 +625,7 @@
     white_label: 'Available for research institutions', affiliate: '25% commission for referrals',
     referral: '$15, 000 bonus for partnerships',
     partnership: 'Research institution partnerships',
-    funding: 'Series A funding, $60M valuation',
+    funding: 'Series A funding, $60 M valuation',
     exit: 'Acquisition by major research platform',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -723,11 +723,11 @@
     useCases: [;
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning',
     ],
-    marketSize: '$18 && 18.5B by 2029', competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],
+    marketSize: '$18 && 18.5 B by 2029', competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],
     technology: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integration: ['Quantum hardwareResearch platformsPublication systems'],
     support: ['24/7 quantum supportQuantum expertsResearch team'], compliance: ['Research ethicsQuantum standardsPublication guidelines'],
     scalability: 'Quantum-grade, global research network',
-    market_size: '$18.5B by 2029', competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD - Wave'],
+    market_size: '$18.5 B by 2029', competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD - Wave'],
     technology: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integration: ['Quantum hardware_research platforms_publication systems'],
     support: ['24 / 7 quantum support_quantum experts_research team'], compliance: ['Research ethics_quantum standards_publication guidelines'],
     scalability: 'Quantum - grade, global research network',
@@ -745,7 +745,7 @@
     white_label: 'Available for research institutions', affiliate: '20% commission for referrals',
     referral: '$25, 000 bonus for partnerships',
     partnership: 'Quantum research partnerships',
-    funding: 'Series B funding, $150M valuation',
+    funding: 'Series B funding, $150 M valuation',
     exit: 'IPO or quantum acquisition',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -843,11 +843,11 @@
     useCases: [;
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews',
     ],
-    marketSize: '$15 && 15.2B by 2029', competitors: ['GrammarlyMendeleyZoteroEndNote'],
+    marketSize: '$15 && 15.2 B by 2029', competitors: ['GrammarlyMendeleyZoteroEndNote'],
     technology: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'], integration: ['Research databasesAnalysis toolsPublication platforms'],
     support: ['24/7 AI supportResearch expertsImplementation help'], compliance: ['Research ethicsData privacyAcademic standards'],
     scalability: 'AI-powered, multi-domain support',
-    market_size: '$15.2B by 2029', competitors: ['GrammarlyMendeleyZoteroEndNote'],
+    market_size: '$15.2 B by 2029', competitors: ['GrammarlyMendeleyZoteroEndNote'],
     technology: ['AI / MLNatural Language ProcessingData AnalysisResearch Tools'], integration: ['Research databases_analysis tools_publication platforms'],
     support: ['24 / 7 AI support_research experts_implementation help'], compliance: ['Research ethics_data privacy_academic standards'],
     scalability: 'AI - powered, multi - domain support',
@@ -865,7 +865,7 @@
     white_label: 'Available for research institutions', affiliate: '30% commission for referrals',
     referral: '$10, 000 bonus for partnerships',
     partnership: 'AI research partnerships',
-    funding: 'Series A funding, $80M valuation',
+    funding: 'Series A funding, $80 M valuation',
     exit: 'Acquisition by major research platform',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -981,7 +981,7 @@
     white_label: 'Available for research institutions', affiliate: '25% commission for referrals',
     referral: '$15, 000 bonus for partnerships',
     partnership: 'Research institution partnerships',
-    funding: 'Series A funding, $60M valuation',
+    funding: 'Series A funding, $60 M valuation',
     exit: 'Acquisition by major research platform',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1071,7 +1071,7 @@
     white_label: 'Available for research institutions', affiliate: '20% commission for referrals',
     referral: '$25, 000 bonus for partnerships',
     partnership: 'Quantum research partnerships',
-    funding: 'Series B funding, $150M valuation',
+    funding: 'Series B funding, $150 M valuation',
     exit: 'IPO or quantum acquisition',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1161,7 +1161,7 @@
     white_label: 'Available for research institutions', affiliate: '30% commission for referrals',
     referral: '$10, 000 bonus for partnerships',
     partnership: 'AI research partnerships',
-    funding: 'Series A funding, $80M valuation',
+    funding: 'Series A funding, $80 M valuation',
     exit: 'Acquisition by major research platform',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1237,7 +1237,7 @@
     useCases: [;
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech',
     ],
-    marketSize: '$22 && 22.8B by 2029', competitors: ['BenchlingLabVantageSciNoteLabArchives'],
+    marketSize: '$22 && 22.8 B by 2029', competitors: ['BenchlingLabVantageSciNoteLabArchives'],
     technology: ['AI/MLBiotechnologyData ScienceResearch Tools'], integration: ['Lab equipmentResearch databasesClinical systems'],
     support: ['24/7 biotech supportBiotech expertsResearch team'], compliance: ['FDAHIPAAGCPResearch ethics'],
     scalability: 'Biotech-grade, multi-institution support',
@@ -1255,7 +1255,7 @@
     white_label: 'Available for biotech institutions', affiliate: '25% commission for referrals',
     referral: '$20, 000 bonus for partnerships',
     partnership: 'Biotech research partnerships',
-    funding: 'Series B funding, $120M valuation',
+    funding: 'Series B funding, $120 M valuation',
     exit: 'IPO or biotech acquisition',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1367,7 +1367,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
     ];
-    marketSize: '$12.8B by 2029';
+    marketSize: '$12.8 B by 2029';
     competitors: ['LabVantageBenchlingLabArchivesSciNote'];
     technology: ['AI/MLAutomationData ScienceResearch Tools'];
     integration: ['Research platformsData sourcesAnalysis tools'];
@@ -1390,7 +1390,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '25% commission for referrals';
     referral: '$15,000 bonus for partnerships';
     partnership: 'Research institution partnerships';
-    funding: 'Series A funding, $60M valuation';
+    funding: 'Series A funding, $60 M valuation';
     exit: 'Acquisition by major research platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1414,7 +1414,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning'
     ];
-    marketSize: '$18.5B by 2029';
+    marketSize: '$18.5 B by 2029';
     competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'];
     technology: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'];
     integration: ['Quantum hardwareResearch platformsPublication systems'];
@@ -1437,7 +1437,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '20% commission for referrals';
     referral: '$25,000 bonus for partnerships';
     partnership: 'Quantum research partnerships';
-    funding: 'Series B funding, $150M valuation';
+    funding: 'Series B funding, $150 M valuation';
     exit: 'IPO or quantum acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1461,7 +1461,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'
     ];
-    marketSize: '$15.2B by 2029';
+    marketSize: '$15.2 B by 2029';
     competitors: ['GrammarlyMendeleyZoteroEndNote'];
     technology: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'];
     integration: ['Research databasesAnalysis toolsPublication platforms'];
@@ -1484,7 +1484,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '30% commission for referrals';
     referral: '$10,000 bonus for partnerships';
     partnership: 'AI research partnerships';
-    funding: 'Series A funding, $80M valuation';
+    funding: 'Series A funding, $80 M valuation';
     exit: 'Acquisition by major research platform'}
     contact: {}
       mobile: '+1 302 464 0950';
@@ -1508,7 +1508,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'
     ];
-    marketSize: '$22.8B by 2029';
+    marketSize: '$22.8 B by 2029';
     competitors: ['BenchlingLabVantageSciNoteLabArchives'];
     technology: ['AI/MLBiotechnologyData ScienceResearch Tools'];
     integration: ['Lab equipmentResearch databasesClinical systems'];
@@ -1531,7 +1531,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     affiliate: '25% commission for referrals';
     referral: '$20,000 bonus for partnerships';
     partnership: 'Biotech research partnerships';
-    funding: 'Series B funding, $120M valuation';
+    funding: 'Series B funding, $120 M valuation';
     exit: 'IPO or biotech acquisition'}
     contact: {}
       mobile: '+1 302 464 0950';

@@ -201,8 +201,8 @@ const EnhancedAccessibility: React.FC = () => {}
         aria-label="Open accessibility settings"
         title="Accessibility Settings"</button>
       ></button>
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></sv>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6 V4 m0 2 a2 2 0 100 4 m0-4 a2 2 0 110 4 m-6 8 a2 2 0 100-4 m0 4 a2 2 0 100 4 m0-4 v2 m0-6 V4 m6 6 v10 m6-2 a2 2 0 100-4 m0 4 a2 2 0 100 4 m0-4 v2 m0-6 V4" /></path>
         </svg>
       </button>
 
@@ -349,7 +349,7 @@ const EnhancedAccessibility: React.FC = () => {}
                     settings.highContrast ? 'translate-x-6' : 'translate-x-1'}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
@@ -403,7 +403,7 @@ const EnhancedAccessibility: React.FC = () => {}
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
@@ -457,7 +457,7 @@ const EnhancedAccessibility: React.FC = () => {}
                     settings.screenReader ? 'translate-x-6' : 'translate-x-1'}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
@@ -511,7 +511,7 @@ const EnhancedAccessibility: React.FC = () => {}
                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   }`}
-                />
+                /></spa>
               </button>
             </div>
 
@@ -549,8 +549,7 @@ const EnhancedAccessibility: React.FC = () => {}
               }}
 <<<<<<< HEAD
               className="w-full bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition-colors"
-            ></button>
-              Reset to Default</button>
+            ></<<<button>Reset</button></<<button>to</button></<button>Default</button>
             </button>
           </div>
         </div>

@@ -31,16 +31,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   placeholder,
   priority = false,
   quality = 75,
-  sizes = '100vw',
+  sizes = '100 vw',
   onLoad,
   onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);</OptimizedImageProps>
-  const [hasError, setHasError] = useState(false);</OptimizedImageProps>
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
+  const [isInView, setIsInView] = useState(priority);</<<<OptimizedImageProps>const</OptimizedImageProps></OptimizedImageProps> [hasError, setHasError] = useState(false);</<<<OptimizedImageProps>const</OptimizedImageProps></<<OptimizedImageProps>imgRef</OptimizedImageProps> = useRef<HTMLImageElement>(null);</HTMLImageElement></<<<HTMLImageElemen>useEffect</HTMLImageElemen></HTMLImageElemen>(() => {
     if (priority) return;
 
     const observer = new IntersectionObserver(
@@ -80,11 +76,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
     const canvas = document.createElement('canvas');
     canvas.width = width || 400;
     canvas.height = height || 300;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2 d');
     
     if (ctx) {
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, '#1e293b');
+      gradient.addColorStop(0, '#1 e293 b');
       gradient.addColorStop(1, '#334155');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -148,7 +144,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-        >)}
+        >)}</div>
 
 <<<<<<< HEAD
       {/* Actual Image */}</div>
@@ -175,7 +171,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
             height: '100%',}
             objectFit: 'cover'}
           }}
-        >)}
+        >)}</img>
 
       {/* Loading indicator */}</img>
       {!isLoaded && isInView && (</img>

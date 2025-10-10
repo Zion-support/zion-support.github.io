@@ -23,7 +23,7 @@ const,
       <meta name="keywords" content={keywords.join(', ')} /></meta>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       {children}
-    </>
+    
   );
 };
 

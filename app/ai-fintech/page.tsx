@@ -440,9 +440,9 @@ const AIFintechPage: React.FC = () => {,
             </div>
           </div>
         </section>
-        <Footer />
+        <Footer /></Foote>
       </div>
-    </>
+    
   );
 };
 export default AIFintechPage;

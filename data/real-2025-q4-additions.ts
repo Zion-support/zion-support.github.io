@@ -247,7 +247,7 @@ const contact =
     useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
-    marketSize: '$500M transcription tools',
+    marketSize: '$500 M transcription tools',
     growthRate: '20% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -441,7 +441,7 @@ const contact =
     useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
     roi: 'Increase follow-through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
-    marketSize: '$5B SMB CRM',
+    marketSize: '$5 B SMB CRM',
     growthRate: '12% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -640,7 +640,7 @@ const contact =
     useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
-    marketSize: '$800M returns software',
+    marketSize: '$800 M returns software',
     growthRate: '18% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -821,7 +821,7 @@ const contact =
     reviews: 28;
   },
 ];
-export const real2025Q4Additions = [{id: 'ai - governed - rag - platform',
+export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
     price: '$699',
@@ -851,7 +851,7 @@ export const real2025Q4Additions = [{id: 'ai - governed - rag - platform',
     technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
     integrations: ['Zendesk, Confluence, Google Drive, S3'],
     use_cases: ['Support copilots, Internal search, Drafting with review'],
-    roi: 'Ship copilots 3x faster with governance baked in.',
+    roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
     market_size: '$30B+ AI tooling'
     growth_rate: '45% YoY'
@@ -1029,7 +1029,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
-    marketSize: '$10B helpdesk software',
+    marketSize: '$10 B helpdesk software',
     growthRate: '10% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -1354,7 +1354,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
 ];
-export const real2025Q4Additions = [
+export const real2025 Q4 Additions = [
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
       'Evals and drift tracking',
@@ -1415,9 +1415,9 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
     integrations: ['Zendesk, Confluence, Google Drive, S3'],
     useCases: ['Support copilots, Internal search, Drafting with review'],
-    roi: 'Ship copilots 3x faster with governance baked in.',
+    roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
-    marketSize: '$30B+ AI tooling',
+    marketSize: '$30 B+ AI tooling',
     growthRate: '45% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -1663,7 +1663,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Product review, QA signoff, Demos'],
     roi: 'Cut review cycle time by 3050%.',
     competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
-    market_size: '$4B DevEx',
+    market_size: '$4 B DevEx',
     growth_rate: '18% YoY',
     variant: 'dev - futuristic',
     contact_info: contact;
@@ -1767,7 +1767,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Incident detection, Regression spotting, Postmortems'],
     roi: 'Reduce MTTR by 2540%.',
     competitors: ['Datadog Logs, Elastic ML, Axiom'],
-    market_size: '$10B log analytics',
+    market_size: '$10 B log analytics',
     growth_rate: '20% YoY',
     variant: 'monitoring - futuristic',
     contact_info: contact;
@@ -1855,7 +1855,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 515% via real-time variants.',
     competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
-    marketSize: '$5B experimentation',
+    marketSize: '$5 B experimentation',
     growthRate: '12% YoY',
     variant: 'edge-futuristic',
     contactInfo: contact;
@@ -1934,7 +1934,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Product review, QA signoff, Demos'],
     roi: 'Cut review cycle time by 3050%.',
     competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
-    marketSize: '$4B DevEx',
+    marketSize: '$4 B DevEx',
     growthRate: '18% YoY',
     variant: 'dev-futuristic',
     contactInfo: contact;
@@ -2032,7 +2032,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Incident detection, Regression spotting, Postmortems'],
     roi: 'Reduce MTTR by 2540%.',
     competitors: ['Datadog Logs, Elastic ML, Axiom'],
-    marketSize: '$10B log analytics',
+    marketSize: '$10 B log analytics',
     growthRate: '20% YoY',
     variant: 'monitoring-futuristic',
     contactInfo: contact;
@@ -2137,7 +2137,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Safe launches, Change control, Experiments'],
     roi: 'Reduce incident risk and speed delivery.',
     competitors: ['LaunchDarkly, Flagsmith, Unleash'],
-    market_size: '$2B feature management',
+    market_size: '$2 B feature management',
     growth_rate: '16% YoY',
     variant: 'dev - futuristic',
     contact_info: contact;
@@ -2260,7 +2260,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Outbound, Nurture, Follow - ups'],
     roi: 'Increase positive replies by 1020%.',
     competitors: ['Apollo, Instantly, Yesware'],
-    market_size: '$6B sales engagement',
+    market_size: '$6 B sales engagement',
     growth_rate: '9% YoY',
     variant: 'growth - futuristic',
     contact_info: contact;
@@ -2361,7 +2361,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Safe launches, Change control, Experiments'],
     roi: 'Reduce incident risk and speed delivery.',
     competitors: ['LaunchDarkly, Flagsmith, Unleash'],
-    marketSize: '$2B feature management',
+    marketSize: '$2 B feature management',
     growthRate: '16% YoY',
     variant: 'dev-futuristic',
     contactInfo: contact;
@@ -2444,7 +2444,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Outbound, Nurture, Follow-ups'],
     roi: 'Increase positive replies by 1020%.',
     competitors: ['Apollo, Instantly, Yesware'],
-    marketSize: '$6B sales engagement',
+    marketSize: '$6 B sales engagement',
     growthRate: '9% YoY',
     variant: 'growth-futuristic',
     contactInfo: contact;
@@ -2549,7 +2549,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Stability, SLA enforcement, Incident reduction'],
     roi: 'Reduce data incidents by 3050%.',
     competitors: ['Monte Carlo, open - source stacks'],
-    market_size: '$5B data quality',
+    market_size: '$5 B data quality',
     growth_rate: '18% YoY',
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -2668,7 +2668,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Stability, SLA enforcement, Incident reduction'],
     roi: 'Reduce data incidents by 3050%.',
     competitors: ['Monte Carlo, open-source stacks'],
-    marketSize: '$5B data quality',
+    marketSize: '$5 B data quality',
     growthRate: '18% YoY',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -2757,7 +2757,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Enterprise SSO, Security posture'],
     roi: 'Shorten security review cycles by 24 weeks.',
     competitors: ['WorkOS PS, consultancies'],
-    market_size: '$6B identity services',
+    market_size: '$6 B identity services',
     growth_rate: '13% CAGR',
     variant: 'enterprise - futuristic',
     contact_info: contact;
@@ -2872,7 +2872,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Enterprise SSO, Security posture'],
     roi: 'Shorten security review cycles by 24 weeks.',
     competitors: ['WorkOS PS, consultancies'],
-    marketSize: '$6B identity services',
+    marketSize: '$6 B identity services',
     growthRate: '13% CAGR',
     variant: 'enterprise-futuristic',
     contactInfo: contact;
@@ -2967,7 +2967,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Forecast accuracy, Pipeline velocity'],
     roi: 'Increase forecast accuracy and win rates.',
     competitors: ['People.ai, Clari (lightweight alt)'],
-    marketSize: '$12B RevOps',
+    marketSize: '$12 B RevOps',
     growthRate: '10% CAGR',
     variant: 'holographic-futuristic',
     contactInfo: contact;
@@ -2975,7 +2975,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     implementationDetails: 'Data sync, scoring, weekly reviews.',
     launchDate: '2025-03-04',
     competitors: ['People.ai, Clari (lightweight alt)'],
-    market_size: '$12B RevOps',
+    market_size: '$12 B RevOps',
     growth_rate: '10% CAGR',
     variant: 'holographic - futuristic',
     contact_info: contact;
@@ -3164,7 +3164,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Reliable webhooks, Auditing, Fan - out'],
     roi: 'Reduce failures and save engineering time.',
     competitors: ['Svix, Hookdeck'],
-    market_size: '$1B+ integration tooling',
+    market_size: '$1 B+ integration tooling',
     growth_rate: '14% YoY',
     variant: 'dev - futuristic',
     contact_info: contact;
@@ -3183,7 +3183,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Reliable webhooks, Auditing, Fan-out'],
     roi: 'Reduce failures and save engineering time.',
     competitors: ['Svix, Hookdeck'],
-    marketSize: '$1B+ integration tooling',
+    marketSize: '$1 B+ integration tooling',
     growthRate: '14% YoY',
     variant: 'dev-futuristic',
     contactInfo: contact;
@@ -3351,7 +3351,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     use_cases: ['Reliability, Backups, Performance'],
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'],
-    market_size: '$3B DB ops services',
+    market_size: '$3 B DB ops services',
     growth_rate: '11% YoY',
     variant: 'enterprise - futuristic',
     contact_info: contact;
@@ -3476,7 +3476,7 @@ export const,
 		category: 'Developer Tools', realService: true;
 		technology: ['Next.jsNode.jsPostgreSQLRedis'], integrations: ['ShopifyWooCommerceStripePayPal'],
 		useCases: ['Affiliate programsInfluencer trackingPartnership analytics'], roi: 'Increase attributed sales 1025% with optimized partnerships.',
-		competitors: ['RefersionLeadDynoTapfiliate'], marketSize: '$1.5B affiliate software',
+		competitors: ['RefersionLeadDynoTapfiliate'], marketSize: '$1.5 B affiliate software',
 		growthRate: '15% YoY', variant: 'ai-futuristic',
 		contactInfo: contact, realImplementation: true;
 		implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.', launchDate: '2025-10-01',
@@ -3551,7 +3551,7 @@ export const,
 		category: 'AI & Data', realService: true;
 		technology: ['Whisper Large v3Next.jsNode.js'], integrations: ['SpotifyApple PodcastsYouTube'],
 		useCases: ['TranscriptsSEO summariesEpisode search'], roi: 'Save 48 hours per episode and improve SEO traffic.',
-		competitors: ['OtterDescriptRev'], marketSize: '$500M transcription tools',
+		competitors: ['OtterDescriptRev'], marketSize: '$500 M transcription tools',
 		growthRate: '20% YoY', variant: 'ai-futuristic',
 		contactInfo: contact, realImplementation: true;
 		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
@@ -3575,7 +3575,7 @@ export const,
 		category: 'Developer Tools', realService: true;
 		technology: ['Next.jsSQLite/PostgresTwilio'], integrations: ['GmailOutlookStripe'],
 		useCases: ['LeadsFollow-upsDeal tracking'], roi: 'Increase follow-through and close rates 1020% via reminders.',
-		competitors: ['HubSpot StarterZoho CRMPipedrive'], marketSize: '$5B SMB CRM',
+		competitors: ['HubSpot StarterZoho CRMPipedrive'], marketSize: '$5 B SMB CRM',
 		growthRate: '12% YoY', variant: 'ai-futuristic',
 		contactInfo: contact, realImplementation: true;
 		implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
@@ -3599,7 +3599,7 @@ export const,
 		category: 'Developer Tools', realService: true;
 		technology: ['Next.jsNode.jsStripeShippo'], integrations: ['ShopifyWooCommerceShippoStripe'],
 		useCases: ['Returns portalExchange workflowsRefund automation'], roi: 'Reduce support tickets ~30% and speed refunds.',
-		competitors: ['Loop ReturnsReturnly'], marketSize: '$800M returns software',
+		competitors: ['Loop ReturnsReturnly'], marketSize: '$800 M returns software',
 		growthRate: '18% YoY', variant: 'ai-futuristic',
 		contactInfo: contact, realImplementation: true;
 		implementationDetails: 'Webhook-driven order sync, label/provider adapters.',
@@ -3793,7 +3793,7 @@ export const,
 		technology: ['Next.jsNode.jsPostgreSQL'], integrations: ['ZendeskFreshdeskDatadogGrafana'],
 		useCases: ['IT supportSLA managementClient reporting'],
 		roi: 'Faster resolution, less toil, better client satisfaction.',
-    competitors: ['ZendeskFreshdeskHaloPSA'], marketSize: '$10B helpdesk software',
+    competitors: ['ZendeskFreshdeskHaloPSA'], marketSize: '$10 B helpdesk software',
 		growthRate: '10% YoY', variant: 'ai-futuristic',
 		contactInfo: contact, realImplementation: true;
 		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
@@ -3802,7 +3802,7 @@ export const,
 		reviews: 28;
 	}
 ];
-export const real2025Q4Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
+export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
@@ -3846,7 +3846,7 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform', name: 'AI-G
     useCases: ['Reliability, Backups, Performance'],
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'],
-    marketSize: '$3B DB ops services',
+    marketSize: '$3 B DB ops services',
     growthRate: '11% YoY',
     variant: 'enterprise-futuristic',
     contactInfo: contact;
@@ -4177,7 +4177,7 @@ export const,
     useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
-    marketSize: '$500M transcription tools',
+    marketSize: '$500 M transcription tools',
     growthRate: '20% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -4282,7 +4282,7 @@ export const,
     useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
     roi: 'Increase follow-through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
-    marketSize: '$5B SMB CRM',
+    marketSize: '$5 B SMB CRM',
     growthRate: '12% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -4387,7 +4387,7 @@ export const,
     useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
-    marketSize: '$800M returns software',
+    marketSize: '$800 M returns software',
     growthRate: '18% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -4492,7 +4492,7 @@ export const,
     useCases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
-    marketSize: '$10B helpdesk software',
+    marketSize: '$10 B helpdesk software',
     growthRate: '10% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -4505,7 +4505,7 @@ export const,
   },
 ];
 }
-export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
+export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
@@ -4530,9 +4530,9 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
     integrations: ['Zendesk, Confluence, Google Drive, S3'],
     useCases: ['Support copilots, Internal search, Drafting with review'],
-    roi: 'Ship copilots 3x faster with governance baked in.',
+    roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
-    marketSize: '$30B+ AI tooling',
+    marketSize: '$30 B+ AI tooling',
     growthRate: '45% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -4684,7 +4684,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 515% via real-time variants.',
     competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
-    marketSize: '$5B experimentation',
+    marketSize: '$5 B experimentation',
     growthRate: '12% YoY',
     variant: 'edge-futuristic',
     contactInfo: contact;
@@ -4784,7 +4784,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Product review, QA signoff, Demos'],
     roi: 'Cut review cycle time by 3050%.',
     competitors: ['Uffizzi, Okteto, GitHub Codespaces'],
-    marketSize: '$4B DevEx',
+    marketSize: '$4 B DevEx',
     growthRate: '18% YoY',
     variant: 'dev-futuristic',
     contactInfo: contact;
@@ -4882,7 +4882,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Incident detection, Regression spotting, Postmortems'],
     roi: 'Reduce MTTR by 2540%.',
     competitors: ['Datadog Logs, Elastic ML, Axiom'],
-    marketSize: '$10B log analytics',
+    marketSize: '$10 B log analytics',
     growthRate: '20% YoY',
     variant: 'monitoring-futuristic',
     contactInfo: contact;
@@ -4980,7 +4980,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Safe launches, Change control, Experiments'],
     roi: 'Reduce incident risk and speed delivery.',
     competitors: ['LaunchDarkly, Flagsmith, Unleash'],
-    marketSize: '$2B feature management',
+    marketSize: '$2 B feature management',
     growthRate: '16% YoY',
     variant: 'dev-futuristic',
     contactInfo: contact;
@@ -5078,7 +5078,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Outbound, Nurture, Follow-ups'],
     roi: 'Increase positive replies by 1020%.',
     competitors: ['Apollo, Instantly, Yesware'],
-    marketSize: '$6B sales engagement',
+    marketSize: '$6 B sales engagement',
     growthRate: '9% YoY',
     variant: 'growth-futuristic',
     contactInfo: contact;
@@ -5176,7 +5176,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Stability, SLA enforcement, Incident reduction'],
     roi: 'Reduce data incidents by 3050%.',
     competitors: ['Monte Carlo, open-source stacks'],
-    marketSize: '$5B data quality',
+    marketSize: '$5 B data quality',
     growthRate: '18% YoY',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -5273,7 +5273,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Enterprise SSO, Security posture'],
     roi: 'Shorten security review cycles by 24 weeks.',
     competitors: ['WorkOS PS, consultancies'],
-    marketSize: '$6B identity services',
+    marketSize: '$6 B identity services',
     growthRate: '13% CAGR',
     variant: 'enterprise-futuristic',
     contactInfo: contact;
@@ -5370,7 +5370,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Forecast accuracy, Pipeline velocity'],
     roi: 'Increase forecast accuracy and win rates.',
     competitors: ['People.ai, Clari (lightweight alt)'],
-    marketSize: '$12B RevOps',
+    marketSize: '$12 B RevOps',
     growthRate: '10% CAGR',
     variant: 'holographic-futuristic',
     contactInfo: contact;
@@ -5468,7 +5468,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Reliable webhooks, Auditing, Fan-out'],
     roi: 'Reduce failures and save engineering time.',
     competitors: ['Svix, Hookdeck'],
-    marketSize: '$1B+ integration tooling',
+    marketSize: '$1 B+ integration tooling',
     growthRate: '14% YoY',
     variant: 'dev-futuristic',
     contactInfo: contact;
@@ -5566,7 +5566,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     useCases: ['Reliability, Backups, Performance'],
     roi: 'Reduce incidents and toil for DB ops.',
     competitors: ['Aiven, Crunchy Bridge (managed services)'],
-    marketSize: '$3B DB ops services',
+    marketSize: '$3 B DB ops services',
     growthRate: '11% YoY',
     variant: 'enterprise-futuristic',
     contactInfo: contact;

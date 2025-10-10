@@ -198,8 +198,7 @@ const ContentNewsletterSignup: React.FC = () => {,
                         <span>Subscribe Now</span>,
                       </>,
                     )}
-                  <p className="text-xs text-gray-400 mt-4 text-center">By subscribing, you agree to our Privacy Policy and Terms of Service.</p>
-                  You can unsubscribe at any time.</p>
+                  <p className="text-xs text-gray-400 mt-4 text-center">By subscribing, you agree to our Privacy Policy and Terms of Service.</p></<<<p>You</p></<<p>can</p> unsubscribe at any time.</p>
                 </p>
               </div>
             </div>

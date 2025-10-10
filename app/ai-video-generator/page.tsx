@@ -74,7 +74,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
       description: 'Perfect for content creators',
       features: [,
         'Up to 10 videos/month',
-        'HD quality (1080p)',
+        'HD quality (1080 p)',
         'Basic templates',
         'Text-to-video generation',
         'Email support',
@@ -98,7 +98,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
       description: 'Ideal for businesses',
       features: [,
         'Up to 50 videos/month',
-        '4K quality available',
+        '4 K quality available',
         'Premium templates',
         'Voice synthesis',
         'Priority support',
@@ -459,7 +459,7 @@ const AIVideoGenerator: React.FC = memo(() => {}
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-            ><MessageSquare className="w-5 h-5 mr-2" >Email Us</MessageSquare>
+            ></a><MessageSquare className="w-5 h-5 mr-2" >Email Us</MessageSquar>
             </MessageSquare>
 =======
             >

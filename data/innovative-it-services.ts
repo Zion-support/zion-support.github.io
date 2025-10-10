@@ -237,7 +237,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Load balancing',
       'Edge analytics',
       'IoT integration',
-      '5G optimization',
+      '5 G optimization',
     ],
 <<<<<<< HEAD
     popular: true;
@@ -286,7 +286,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Edge Computing',
       'IoT',
-      '5G',
+      '5 G',
       'Kubernetes',
       'Docker',
       'React',
@@ -310,7 +310,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'IoT applications',
       'Real - time analytics',
       'Edge AI',
-      '5G services',
+      '5 G services',
       'Smart manufacturing',
       'Autonomous vehicles',
     ],
@@ -899,7 +899,7 @@ export const innovativeITServices: InnovativeITService[] = [,
     category: 'IT & Cybersecurity', realService: true;
     technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'], integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'],
     useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'], roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',
-    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45B cybersecurity market',
+    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45 B cybersecurity market',
     growthRate: '110% annual growth', variant: 'cyberpunk',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1146,7 +1146,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Load balancing'
       'Edge analytics'
       'IoT integration'
-      '5G optimization'
+      '5 G optimization'
     ]
 <<<<<<< HEAD
     popular: true;
@@ -1193,7 +1193,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Edge Computing'
       'IoT'
-      '5G'
+      '5 G'
       'Kubernetes'
       'Docker'
       'React'
@@ -1217,7 +1217,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'IoT applications'
       'Real-time analytics'
       'Edge AI'
-      '5G services'
+      '5 G services'
       'Smart manufacturing'
       'Autonomous vehicles'
     ]
@@ -1556,7 +1556,7 @@ export const innovativeITServices: InnovativeITService[] = [;
     useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'];
     roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.';
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'];
-    marketSize: '$45B cybersecurity market';
+    marketSize: '$45 B cybersecurity market';
     growthRate: '110% annual growth';
     variant: 'cyberpunk'}
     contactInfo: {}

@@ -21,9 +21,9 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
         keywords={["AI mobile apps","mobile development","iOS Android","cross-platform","mobile AI"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-mobile-app-development"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

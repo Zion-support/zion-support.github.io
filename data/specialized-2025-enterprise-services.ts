@@ -1534,7 +1534,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Financial optimization, Drug discovery, Logistics optimization, Machine learning research'];
     roi: 'Solve previously intractable problems and accelerate research by 100x',
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'];
-    market_size: '$10B+ quantum computing market'
+    market_size: '$10 B+ quantum computing market'
     growth_rate: '250% YoY'
     variant: 'quantum - futuristic'
     contact_info: contact;
@@ -1545,7 +1545,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     rating: 4 && 4.9;
     reviews: 32;
     benefits: [;
-      '100x research acceleration_quantum advantage in optimization_hybrid computing capabilities_multi - quantum backend support_expert quantum consulting'
+      '100 x research acceleration_quantum advantage in optimization_hybrid computing capabilities_multi - quantum backend support_expert quantum consulting'
     ];
     capabilities: [;
       'Quantum ML algorithms_quantum optimization_hybrid computing_error correction_research tools',
@@ -1580,7 +1580,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Data encryption, Digital signatures, Key management, Secure communications'];
     roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'];
-    market_size: '$8B+ post - quantum cryptography market'
+    market_size: '$8 B+ post - quantum cryptography market'
     growth_rate: '300% YoY'
     variant: 'cybersecurity - futuristic'
     contact_info: contact;
@@ -1626,7 +1626,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Satellite operations, Constellation management, Mission planning, Data processing'];
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'];
-    market_size: '$5B+ satellite operations market'
+    market_size: '$5 B+ satellite operations market'
     growth_rate: '400% YoY'
     variant: 'space - futuristic'
     contact_info: contact;
@@ -1672,7 +1672,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Medical rehabilitation, Cognitive research, Assistive technology, Human augmentation'];
     roi: 'Revolutionary medical applications and breakthrough research capabilities',
     competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'];
-    market_size: '$3B+ BCI market'
+    market_size: '$3 B+ BCI market'
     growth_rate: '600% YoY'
     variant: 'neural - futuristic'
     contact_info: contact;
@@ -1718,7 +1718,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Industrial automation, Smart city management, Energy optimization, Manufacturing IoT'];
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'];
-    market_size: '$20B+ industrial IoT market'
+    market_size: '$20 B+ industrial IoT market'
     growth_rate: '180% YoY'
     variant: 'iot - futuristic'
     contact_info: contact;
@@ -1764,7 +1764,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'];
-    market_size: '$30B+ predictive analytics market'
+    market_size: '$30 B+ predictive analytics market'
     growth_rate: '160% YoY'
     variant: 'analytics - futuristic'
     contact_info: contact;
@@ -2441,9 +2441,9 @@ export const,
     technology: ['Qiskit, Cirq, TensorFlow Quantum, Python, C++, Quantum algorithms'];
     integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, D-Wave'];
     useCases: ['Financial optimization, Drug discovery, Logistics optimization, Machine learning research'];
-    roi: 'Solve previously intractable problems and accelerate research by 100x';
+    roi: 'Solve previously intractable problems and accelerate research by 100 x';
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D-Wave'];
-    marketSize: '$10B+ quantum computing market';
+    marketSize: '$10 B+ quantum computing market';
     growthRate: '250% YoY';
     variant: 'quantum-futuristic';
     contactInfo: contact;
@@ -2498,7 +2498,7 @@ export const,
     useCases: ['Data encryption, Digital signatures, Key management, Secure communications'];
     roi: 'Future-proof security infrastructure and maintain compliance with emerging standards';
     competitors: ['NIST post-quantum candidates, PQShield, PQSecure, ISARA'];
-    marketSize: '$8B+ post-quantum cryptography market';
+    marketSize: '$8 B+ post-quantum cryptography market';
     growthRate: '300% YoY';
     variant: 'cybersecurity-futuristic';
     contactInfo: contact;
@@ -2553,7 +2553,7 @@ export const,
     useCases: ['Satellite operations, Constellation management, Mission planning, Data processing'];
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%';
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'];
-    marketSize: '$5B+ satellite operations market';
+    marketSize: '$5 B+ satellite operations market';
     growthRate: '400% YoY';
     variant: 'space-futuristic';
     contactInfo: contact;
@@ -2608,7 +2608,7 @@ export const,
     useCases: ['Medical rehabilitation, Cognitive research, Assistive technology, Human augmentation'];
     roi: 'Revolutionary medical applications and breakthrough research capabilities';
     competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics'];
-    marketSize: '$3B+ BCI market';
+    marketSize: '$3 B+ BCI market';
     growthRate: '600% YoY';
     variant: 'neural-futuristic';
     contactInfo: contact;
@@ -2663,7 +2663,7 @@ export const,
     useCases: ['Industrial automation, Smart city management, Energy optimization, Manufacturing IoT'];
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%';
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'];
-    marketSize: '$20B+ industrial IoT market';
+    marketSize: '$20 B+ industrial IoT market';
     growthRate: '180% YoY';
     variant: 'iot-futuristic';
     contactInfo: contact;
@@ -2718,7 +2718,7 @@ export const,
     useCases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision-making accuracy by 60% and reduce operational costs by 35%';
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'];
-    marketSize: '$30B+ predictive analytics market';
+    marketSize: '$30 B+ predictive analytics market';
     growthRate: '160% YoY';
     variant: 'analytics-futuristic';
     contactInfo: contact;

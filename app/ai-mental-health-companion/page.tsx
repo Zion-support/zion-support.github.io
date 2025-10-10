@@ -677,11 +677,9 @@ interface MentalHealthCompanionProps {}
 
 export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {}
   const [currentMood, setCurrentMood] = useState('neutral');
-  const [chatMessages, setChatMessages] = useState<any[]>([]);
-  const [userInput, setUserInput] = useState('');
+  const [chatMessages, setChatMessages] = useState<any[]>([]);</any></<<<any>const</any></any> [userInput, setUserInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [moodHistory, setMoodHistory] = useState<any[]>([]);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [moodHistory, setMoodHistory] = useState<any[]>([]);</any></<<<any>const</any></any> [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const moods = [
     { id: 'happy', label: 'Happy', icon: Smile, color: 'text-yellow-400' },
@@ -974,7 +972,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Your Mental Health Companion
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Track your mood, chat with your AI companion, and access professional support
             </p>
           </div>
@@ -1017,7 +1015,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 >>>>>>> origin/merge-error-fixes
                         }`}
                       >
-                        <mood.icon className={`w-8 h-8 mx-auto mb-2 ${mood.color}`} />
+                        <mood.icon className={`w-8 h-8 mx-auto mb-2 ${mood.color}`} /></moo>
                         <p className="text-white text-sm font-medium">{mood.label}</p>
                       </button>
                     ))}
@@ -1036,7 +1034,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                           <span className="text-gray-300">
                             {entry.timestamp.toLocaleDateString()}
                           </span>
-                          <span className="text-pink-400 capitalize">
+                          <span className="text-pink-400 capitalize"></span>
                             {entry.mood}
                           </span>
                         </div>
@@ -1110,8 +1108,8 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                           <div className="flex space-x-1">
 >>>>>>> origin/merge-error-fixes
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1 s' }}></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2 s' }}></div>
                           </div>
                         </div>
                       </div>
@@ -1128,8 +1126,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       type="text"
                       value={userInput}
-                      onChange={(e) => setUserInput(e.target.value)}
-                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                      onChange={(e) => setUserInput(e.target.value)}</input></<<<input>onKeyPress</input></input>={(e) => e.key === 'Enter' && handleSendMessage()}
                       placeholder="Type your message..."
                       className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20",
                     />,

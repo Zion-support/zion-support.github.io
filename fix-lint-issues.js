@@ -28,7 +28,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   // Fix unused variables in function parameters;
 <<<<<<< HEAD
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, (varName) => {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
 =======
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
@@ -42,7 +42,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   // Fix arrow function parameters;
 <<<<<<< HEAD
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g, (varName) => {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
 =======
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`

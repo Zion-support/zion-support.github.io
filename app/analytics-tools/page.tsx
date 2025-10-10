@@ -21,9 +21,9 @@ const AnalyticsToolsPage: React.FC = () => {
         keywords={["analytics tools","data visualization","business analytics","predictive analytics","data insights"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/analytics-tools"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

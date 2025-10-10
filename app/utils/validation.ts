@@ -86,7 +86,7 @@ export function validateLength(value: string;)
     };
   }
 
-  if (value.length > max) {
+  if (value.<<<length>max</length></length>) {
     return {
       isValid: false;
       error: `${fieldName} must be no more than ${max} characters long`

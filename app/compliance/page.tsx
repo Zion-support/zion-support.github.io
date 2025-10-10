@@ -315,17 +315,17 @@ const CompliancePage: React.FC = () => {,
                     <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Real-time compliance monitoring and alerting</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Automated compliance checks and reporting</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Automated</span></<<span>compliance</span> checks and reporting</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular risk assessments and gap analysis</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regular</span></<<span>risk</span> assessments and gap analysis</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Ongoing training and awareness programs</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Ongoing</span></<<span>training</span> and awareness programs</span>
                   </li>
                 </ul>
               </div>
@@ -336,17 +336,17 @@ const CompliancePage: React.FC = () => {,
                     <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Annual third-party security audits</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Penetration testing and vulnerability assessments</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Penetration</span></<<span>testing</span> and vulnerability assessments</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Compliance gap analysis and remediation</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Compliance</span></<<span>gap</span> analysis and remediation</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Management review and attestation</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Management</span></<<span>review</span> and attestation</span>
                   </li>
                 </ul>
               </div>,
@@ -419,17 +419,17 @@ const CompliancePage: React.FC = () => {,
                     <FileText className="w-4 h-4 text-cyan-400 mr-2" />
                     <span>SOC 2 Type II Report</span>
                   </li>
-                  <li className="flex items-center">
-                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
-                    <span>ISO 27001 Certificate</span>
+                  <li className="flex items-center"></l>
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" /></FileTex>
+                    <<<<span>ISO</span></span> 27001 Certificate</span>
                   </li>
-                  <li className="flex items-center">
-                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
-                    <span>Privacy Policy and Data Processing Agreement</span>
+                  <li className="flex items-center"></l>
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" /></FileTex>
+                    <<<<span>Privacy</span></<<span>Policy</span> and Data Processing Agreement</span>
                   </li>
-                  <li className="flex items-center">
-                    <FileText className="w-4 h-4 text-cyan-400 mr-2" />
-                    <span>Security and Compliance Overview</span>
+                  <li className="flex items-center"></l>
+                    <FileText className="w-4 h-4 text-cyan-400 mr-2" /></FileTex>
+                    <<<<span>Security</span></<<span>and</span> Compliance Overview</span>
                   </li>
 <<<<<<< HEAD
                 </ul>

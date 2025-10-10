@@ -623,5 +623,4 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
 
   return null;
 };
-</string>
-export default PerformanceEnhancer;</string>
+</<<<string>export</string></<<string>default</string> PerformanceEnhancer;</string>

@@ -11,7 +11,7 @@ export default function CaseStudy(): React.JSX.Element {
           <meta;
             name="description"
             content="Case study: Fortune 100 Autonomous Operations Transformation 2025 from Zion Tech Group"
-          />
+          /></meta>
         </Helmet>
 
         <div className="max-w-4xl mx-auto px-4 py-20"></div>

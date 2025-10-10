@@ -203,7 +203,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
 <<<<<<< HEAD
               >Get Free Assessment</a>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
               <a
                 href="#demo"
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"
@@ -425,12 +425,12 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400">{plan.period}</span>
                   </div>
                   {plan.originalPrice && (
-                    <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
+                    <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</spa>
                   )}
-                <ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                <ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</u>
+                    <li key={featureIndex} className="flex items-center space-x-3"></l>
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircl>
+                      <span className="text-gray-300">{feature}</spa>
                     </li>
                   ))}
 <<<<<<< HEAD
@@ -523,16 +523,16 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors flex items-center space-x-2"
-            >
-              <Phone className="w-5 h-5" />
-              <span>+1 302 464 0950</span>
+            ></a>
+              <Phone className="w-5 h-5" /></Phon>
+              <span>+1 302 464 0950</spa>
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors flex items-center space-x-2"
-            >
-              <Mail className="w-5 h-5" />
-              <span>kleber@ziontechgroup.com</span>
+            ></a>
+              <Mail className="w-5 h-5" /></Mai>
+              <<<<span>kleber</span></span>@ziontechgroup.com</span>
             </a>
           </div>
 <<<<<<< HEAD
@@ -550,7 +550,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {,
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

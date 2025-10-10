@@ -10,11 +10,11 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
           Re, a, l-Time, AI, Personalization Engine, 202, 5 — 98.4% Relevan, c, e, 8.7x, Conversion, Lift, $23, 4, M+ Revenue, Growt, h | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Deploy, rea, l-time, AI, personalization that, adapts, to user, behavior, in millisecon, d, s. Achieve, 9, 8.4% relevance, scori, n, g, 8.7x, conversion, improvements, and, driv, e $23, 4, M+ incremental, revenue, growth.'
-        />
+          conte, n, t='Deploy, rea, l-time, AI, personalization that, adapts, to user, behavior, in millisecon, d, s. Achieve, 9, 8.4% relevance, scori, n, g, 8.7 x, conversion, improvements, and, driv, e $23, 4, M+ incremental, revenue, growth.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, personalizati, o, n, re, a, l-time, personalizatio, n, recommendation, engin, e, customer, experienc, e, conversion, optimizatio, n, behavioral, targetin, g, predictive, personalizatio, n, marketing, A, I'
-        />
+        /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-realti m e-personalizati o n-engi n e',
         />,
@@ -125,11 +125,11 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 ">
                   <span></span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,
                 </li>
-                <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"
+                <li className="flex items-start gap-3"></li>
+                  <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"</DollarSign>
               </h2>"
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
+              <ul className="space-y-4 text-lg"></ul>
+                <li className="flex items-start gap-3"></li>
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
                   <Zap className=" />
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
@@ -272,11 +272,11 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   contextual data, and intent markers flow through the system continuously, building dynamic user models that;
                   evolve with every action.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Event stream processing at 10M+ events/second scale</li>
-                  <li >Feature computation pipelines with sub-100ms latency</li>
-                  <li >Real-time user state synchronization across channels</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Event</li> stream processing at 10 M+ events/second scale</li>
+                  <li>Feature</li> computation pipelines with sub-100 ms latency</li>
+                  <li>Real</li>-time user state synchronization across channels</li>
                 </ul>
   </div>
               <div></div>
@@ -286,11 +286,11 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   patterns and contextual signals. Multi-task learning enables simultaneous optimization for engagement;
                   conversion, and long-term value.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Transformer models capture long-range behavioral dependencies</li>
-                  <li >Intent classification with 96% accuracy across 200+ categories</li>
-                  <li >Next-action prediction guides experience orchestration</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Transformer</li> models capture long-range behavioral dependencies</li>
+                  <li>Intent</li> classification with 96% accuracy across 200+ categories</li>
+                  <li>Next</li>-action prediction guides experience orchestration</li>
                 </ul>
   </div>
               <div></div>
@@ -299,10 +299,10 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
   AI agents orchestrate content, layout, messaging, and offers in real-time based on predicted user preferences. 
                   Multi-armed bandit algorithms balance exploration and exploitation to continuously improve personalization performance.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Contextual bandits optimize for immediate and long-term value</li>
-                  <li >A/B testing automation discovers winning variations automatically</li>
-                  <li >Causal inference ensures changes drive true lift, not correlation</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Contextual</li> bandits optimize for immediate and long-term value</li>
+                  <li>A</li>/B testing automation discovers winning variations automatically</li>
+                  <li>Causal</li> inference ensures changes drive true lift, not correlation</li>
                 </ul>
   </div>
               <div></div>
@@ -311,10 +311,10 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
   Unified customer profiles enable consistent personalization across web, mobile, email, and in-store. 
                   Journey optimization determines the best message, channel, and timing to move customers toward high-value outcomes.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Identity resolution links anonymous and known user sessions</li>
-                  <li >Channel attribution models optimize cross-channel strategies</li>
-                  <li >Real-time decisioning APIs enable personalization anywhere</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Identity</li> resolution links anonymous and known user sessions</li>
+                  <li>Channel</li> attribution models optimize cross-channel strategies</li>
+                  <li>Real</li>-time decisioning APIs enable personalization anywhere</li>
                 </ul>
   </div>
             </section>
@@ -339,7 +339,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                     <li >• 9.2x lift in product adoption</li>
                     <li >• $156M additional cross-sell revenue</li>
                     <li >• 82% reduction in customer churn</li>
-                    <li >• 23x ROI in first 18 months</li>
+                    <li >• 23 x ROI in first 18 months</li>
                   </ul>
   </div>
   </div>
@@ -418,8 +418,7 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               <h2 className="text-3xl font-bold mb-4">Multiply Your Revenue with AI Personalization</h2>
               <p className="text-xl mb-6 text-rose-100">"
   Deploy real-time personalization and transform every customer interaction into revenue opportunity.
-              </p>
-              to="/contact"
+              </p>to</p>="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors"
               >",
                 Start Your Personalization Journey",

@@ -76,7 +76,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
-    marketSize: '$8B+ content marketing market'
+    marketSize: '$8 B+ content marketing market'
     growthRate: '180% YoY'
     variant: 'ai-futuristic'
     contactInfo: contact;
@@ -105,7 +105,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
-    market_size: '$8B+ content marketing market'
+    market_size: '$8 B+ content marketing market'
     growth_rate: '180% YoY'
     variant: 'ai - futuristic'
     contact_info: contact;
@@ -159,7 +159,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
     competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
-    market_size: '$25B+ identity and access management market'
+    market_size: '$25 B+ identity and access management market'
     growth_rate: '140% YoY'
     variant: 'cybersecurity - futuristic'
     contact_info: contact;
@@ -216,7 +216,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
-    market_size: '$18B+ DevOps tools market'
+    market_size: '$18 B+ DevOps tools market'
     growth_rate: '160% YoY'
     variant: 'devops - futuristic'
     contact_info: contact;
@@ -273,7 +273,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-    market_size: '$12B+ edge computing market'
+    market_size: '$12 B+ edge computing market'
     growth_rate: '220% YoY'
     variant: 'edge - futuristic'
     contact_info: contact;
@@ -330,7 +330,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
-    market_size: '$28B+ medical imaging market'
+    market_size: '$28 B+ medical imaging market'
     growth_rate: '190% YoY'
     variant: 'healthcare - futuristic'
     contact_info: contact;
@@ -384,7 +384,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
     competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
-    market_size: '$32B+ risk management market'
+    market_size: '$32 B+ risk management market'
     growth_rate: '170% YoY'
     variant: 'financial - futuristic'
     contact_info: contact;
@@ -438,7 +438,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
-    market_size: '$15B+ edtech market'
+    market_size: '$15 B+ edtech market'
     growth_rate: '200% YoY'
     variant: 'education - futuristic'
     contact_info: contact;
@@ -492,7 +492,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
     competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
-    market_size: '$22B+ supply chain management market'
+    market_size: '$22 B+ supply chain management market'
     growth_rate: '160% YoY'
     variant: 'logistics - futuristic'
     contact_info: contact;
@@ -549,7 +549,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
-    market_size: '$18B+ energy management market'
+    market_size: '$18 B+ energy management market'
     growth_rate: '180% YoY'
     variant: 'energy - futuristic'
     contact_info: contact;
@@ -1605,7 +1605,7 @@ export const,
     useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%';
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
-    marketSize: '$8B+ content marketing market';
+    marketSize: '$8 B+ content marketing market';
     growthRate: '180% YoY';
     variant: 'ai-futuristic';
     contactInfo: contact;

@@ -20,7 +20,7 @@ function processFile(filePath) {
       if (
         line.includes('const metadata: Metadata = {') ||
         line.includes('const metadata = {') ||
-        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||
+        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||</title>
         (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
         (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||

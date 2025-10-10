@@ -312,7 +312,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI / CD', 'Jenkins', 'CircleCI', 'GitHub Actions'],
-    market_size: '$8B DevOps market, AI segment growing 350% annually',
+    market_size: '$8 B DevOps market, AI segment growing 350% annually',
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
     contact_info: unknown;
@@ -770,7 +770,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     popular: true, icon: '',
     color: 'from-gray-600 to-blue-700', textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/enterprise-it-infrastructure',
-    marketPosition: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.',
+    marketPosition: 'Competes with IBM Global Services ($100 K+), Accenture ($150 K+), and Deloitte ($200 K+). Our advantage: Modern technology stack and competitive pricing.',
     targetAudience: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions',
     trialDays: 0, setupTime: '8-12 weeks',
     category: 'Enterprise IT Infrastructure', realService: true;
@@ -778,7 +778,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'],
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'],
-    marketSize: '$1.2T IT services market, 8% annual growth',
+    marketSize: '$1.2 T IT services market, 8% annual growth',
     growthRate: '8% annual growth', variant: 'enterprise-futuristic',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2308,7 +2308,7 @@ export const,
     color: 'from-gray-600 to-blue-700',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup && ziontechgroup.com/enterprise-it-infrastructure',
-    marketPosition: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.',
+    marketPosition: 'Competes with IBM Global Services ($100 K+), Accenture ($150 K+), and Deloitte ($200 K+). Our advantage: Modern technology stack and competitive pricing.',
     targetAudience: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions',
     trialDays: 0;
     setupTime: '8-12 weeks'
@@ -2372,7 +2372,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
-    marketSize: '$1 && 1.2T IT services market, 8% annual growth',
+    marketSize: '$1 && 1.2 T IT services market, 8% annual growth',
     growthRate: '8% annual growth',
     variant: 'enterprise-futuristic',
     contactInfo: unknown;
@@ -2530,7 +2530,7 @@ export const,
     color: 'from-gray-600 to-blue-700';
     textColor: 'text-gray-400';
     link: 'https://ziontechgroup.com/enterprise-it-infrastructure';
-    marketPosition: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.';
+    marketPosition: 'Competes with IBM Global Services ($100 K+), Accenture ($150 K+), and Deloitte ($200 K+). Our advantage: Modern technology stack and competitive pricing.';
     targetAudience: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions';
     trialDays: 0;
     setupTime: '8-12 weeks';
@@ -2541,7 +2541,7 @@ export const,
     useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'];
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security';
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
-    marketSize: '$1.2T IT services market, 8% annual growth';
+    marketSize: '$1.2 T IT services market, 8% annual growth';
     growthRate: '8% annual growth';
     variant: 'enterprise-futuristic'}
     contactInfo: {}
@@ -3224,7 +3224,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
-    marketSize: '$50B IT consulting market, 10% annual growth'
+    marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth'
     variant: 'consulting-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
@@ -3706,7 +3706,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     ],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
-    marketSize: '$8B DevOps market, AI segment growing 350% annually'
+    marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth'
     variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
@@ -4028,7 +4028,7 @@ export const,
     color: 'from-gray-600 to-blue-700';
     textColor: 'text-gray-400';
     link: 'https://ziontechgroup.com/enterprise-it-infrastructure';
-    marketPosition: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.';
+    marketPosition: 'Competes with IBM Global Services ($100 K+), Accenture ($150 K+), and Deloitte ($200 K+). Our advantage: Modern technology stack and competitive pricing.';
     targetAudience: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions';
     trialDays: 0;
     setupTime: '8-12 weeks';
@@ -4039,7 +4039,7 @@ export const,
     useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'];
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security';
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
-    marketSize: '$1.2T IT services market, 8% annual growth';
+    marketSize: '$1.2 T IT services market, 8% annual growth';
     growthRate: '8% annual growth';
     variant: 'enterprise-futuristic'}
     contactInfo: {}
@@ -4083,7 +4083,7 @@ export const,
     useCases: ['Cloud migrationApplication modernizationCost optimizationPerformance improvementScalability enhancementDisaster recovery'];
     roi: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements';
     competitors: ['AWS Professional ServicesMicrosoft ConsultingGoogle CloudAccentureDeloitte'];
-    marketSize: '$400B cloud services market, 20% annual growth';
+    marketSize: '$400 B cloud services market, 20% annual growth';
     growthRate: '20% annual growth';
     variant: 'cloud-futuristic'}
     contactInfo: {}
@@ -4116,7 +4116,7 @@ export const,
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/cybersecurity-operations-center';
-    marketPosition: 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our advantage: Comprehensive SOC services and AI threat detection.';
+    marketPosition: 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50 K+), and SentinelOne Vigilance ($6/user/month). Our advantage: Comprehensive SOC services and AI threat detection.';
     targetAudience: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations';
     trialDays: 0;
     setupTime: '4-6 weeks';
@@ -4127,7 +4127,7 @@ export const,
     useCases: ['Threat monitoringIncident responseVulnerability managementSecurity complianceSecurity trainingPenetration testing'];
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction';
     competitors: ['CrowdStrike Falcon CompletePalo Alto Networks CortexSentinelOne VigilanceCarbon BlackCylance'];
-    marketSize: '$200B cybersecurity market, 15% annual growth';
+    marketSize: '$200 B cybersecurity market, 15% annual growth';
     growthRate: '15% annual growth';
     variant: 'cybersecurity-futuristic'}
     contactInfo: {}
@@ -4160,7 +4160,7 @@ export const,
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/data-center-management';
-    marketPosition: 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our advantage: Comprehensive management and AI optimization.';
+    marketPosition: 'Competes with Equinix ($10 K+), Digital Realty ($15 K+), and CyrusOne ($20 K+). Our advantage: Comprehensive management and AI optimization.';
     targetAudience: 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies';
     trialDays: 0;
     setupTime: '8-12 weeks';
@@ -4171,7 +4171,7 @@ export const,
     useCases: ['Data center managementInfrastructure optimizationPerformance improvementEnergy efficiencyCapacity planningDisaster recovery'];
     roi: 'Enterprises achieve 450% ROI through improved uptime, energy efficiency, and operational optimization';
     competitors: ['EquinixDigital RealtyCyrusOneCoreSiteQTS Realty'];
-    marketSize: '$200B data center market, 12% annual growth';
+    marketSize: '$200 B data center market, 12% annual growth';
     growthRate: '12% annual growth';
     variant: 'datacenter-futuristic'}
     contactInfo: {}
@@ -4204,7 +4204,7 @@ export const,
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/network-security-sdwan';
-    marketPosition: 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our advantage: Comprehensive security integration and competitive pricing.';
+    marketPosition: 'Competes with Cisco SD-WAN ($50 K+), VMware SD-WAN ($40 K+), and Fortinet ($35 K+). Our advantage: Comprehensive security integration and competitive pricing.';
     targetAudience: 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions';
     trialDays: 0;
     setupTime: '6-8 weeks';
@@ -4215,7 +4215,7 @@ export const,
     useCases: ['Network optimizationSecurity enhancementTraffic managementPerformance improvementRemote work supportMulti-location management'];
     roi: 'Enterprises achieve 350% ROI through improved network performance and security';
     competitors: ['Cisco SD-WANVMware SD-WANFortinetPalo Alto NetworksJuniper Networks'];
-    marketSize: '$8B SD-WAN market, 35% annual growth';
+    marketSize: '$8 B SD-WAN market, 35% annual growth';
     growthRate: '35% annual growth';
     variant: 'network-futuristic'}
     contactInfo: {}
@@ -4248,7 +4248,7 @@ export const,
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/it-project-management';
-    marketPosition: 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our advantage: Specialized IT focus and competitive pricing.';
+    marketPosition: 'Competes with McKinsey ($500 K+), BCG ($400 K+), and Bain ($450 K+). Our advantage: Specialized IT focus and competitive pricing.';
     targetAudience: 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery';
     trialDays: 0;
     setupTime: '2-4 weeks';
@@ -4259,7 +4259,7 @@ export const,
     useCases: ['IT project managementDigital transformationTechnology implementationStrategic planningProject recoveryChange management'];
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance';
     competitors: ['McKinseyBCGBainAccentureDeloitte'];
-    marketSize: '$50B IT consulting market, 10% annual growth';
+    marketSize: '$50 B IT consulting market, 10% annual growth';
     growthRate: '10% annual growth';
     variant: 'consulting-futuristic'}
     contactInfo: {}
@@ -4303,7 +4303,7 @@ export const,
     useCases: ['Professional developmentCareer advancementSkill acquisitionCertification preparationTeam trainingKnowledge transfer'];
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential';
     competitors: ['CompTIACiscoMicrosoftAWS TrainingGoogle Cloud Training'];
-    marketSize: '$15B IT training market, 12% annual growth';
+    marketSize: '$15 B IT training market, 12% annual growth';
     growthRate: '12% annual growth';
     variant: 'training-futuristic'}
     contactInfo: {}
@@ -4346,7 +4346,7 @@ export const,
     useCases: ['High-performance computingFinancial modelingDrug discoveryClimate modelingAI trainingBlockchain operations'];
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.';
     competitors: ['AWSAzureGoogle CloudTraditional cloud providers'];
-    marketSize: '$400B cloud market, quantum segment growing 400% annually';
+    marketSize: '$400 B cloud market, quantum segment growing 400% annually';
     growthRate: '400% annual growth';
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4389,7 +4389,7 @@ export const,
     useCases: ['CI/CD automationInfrastructure managementPerformance optimizationSecurity automationCompliance automationResource optimization'];
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.';
     competitors: ['GitLab CI/CDJenkinsCircleCIGitHub Actions'];
-    marketSize: '$8B DevOps market, AI segment growing 350% annually';
+    marketSize: '$8 B DevOps market, AI segment growing 350% annually';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4432,7 +4432,7 @@ export const,
     useCases: ['Network securityEndpoint protectionData encryptionThreat detectionIncident responseCompliance management'];
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.';
     competitors: ['Palo Alto NetworksCrowdStrikeSymantecTraditional security tools'];
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually';
+    marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
     growthRate: '400% annual growth';
     variant: 'quantum-cyberpunk'}
     contactInfo: {}
@@ -4945,7 +4945,7 @@ export const,
     ],
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
     competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY']
-    marketSize: '$1.2T IT services market, 8% annual growth'
+    marketSize: '$1.2 T IT services market, 8% annual growth'
     growthRate: '8% annual growth'
     variant: 'enterprise-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
@@ -5702,7 +5702,7 @@ export const,
     ],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
     competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
-    marketSize: '$50B IT consulting market, 10% annual growth'
+    marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth'
     variant: 'consulting-futuristic'
     contactInfo: unknown;
@@ -6128,7 +6128,7 @@ export const,
     ],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
     competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
-    marketSize: '$8B DevOps market, AI segment growing 350% annually'
+    marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth'
     variant: 'ai-futuristic'
     contactInfo: unknown;

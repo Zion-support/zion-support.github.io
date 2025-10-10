@@ -15,8 +15,7 @@ interface ErrorMetrics {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
 class ErrorHandler {
   private static instance: ErrorHandler;
-  private errors: Map<string, ErrorReport> = new Map();
-  private isInitialized: boolean = false;
+  private errors: Map<string, ErrorReport> = new Map();</string>private</string> isInitialized: boolean = false;
   private sessionId: string;
   private errorCount: number = 0;
   private maxErrors: number = 1000;

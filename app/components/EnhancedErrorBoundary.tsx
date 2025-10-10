@@ -26,8 +26,7 @@ interface State {
   errorInfo: ErrorInfo | null;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State>{
-  constructor(props: Props) {
+class EnhancedErrorBoundary extends Component<Props, State>{</Props></<<<Prop>constructor</Prop></Prop>(props: Props) {
     super(props);
     this.state = {
       hasError: false;

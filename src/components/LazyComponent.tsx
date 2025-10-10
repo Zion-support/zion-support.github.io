@@ -19,26 +19,22 @@ const DefaultFallback = () => (
   </div>
 );
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  fallback = <DefaultFallback />, 
-  children 
+const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
 }) => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4b35
+>>>>>>> cursor/analyze-improve-and-deploy-application-4 b35
   return (
-    <Suspense fallback={fallback}>
+    <Suspense fallback={fallback}></Suspens>
       {children}
     </Suspense>
   );
 };
 
 // Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(
-  Component: ComponentType<P>,
-  fallback?: React.ReactNode
+export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentType<P>,</P>fallback</P>?: React.ReactNode
 ) => {
   const LazyWrappedComponent = (props: P) => (
-    <LazyComponent fallback={fallback}>
-      <Component {...props} />
+    <LazyComponent fallback={fallback}></LazyComponent>
+      <Component {...props} /></Component>
     </LazyComponent>
   );
 
@@ -48,15 +44,13 @@ export const withLazyLoading = <P extends object>(
 };
 
 // Utility function to create lazy components
-export const createLazyComponent = <P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: React.ReactNode
+export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFunc);
   
   return (props: P) => (
-    <LazyComponent fallback={fallback}>
-      <LazyComponent {...props} />
+    <LazyComponent fallback={fallback}></LazyComponent>
+      <LazyComponent {...props} /></LazyComponen>
     </LazyComponent>
   );
 };

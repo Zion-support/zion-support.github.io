@@ -13,8 +13,7 @@ interface SEOHeadProp, s {
   author ?  : string;
  }
 
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({
-  title = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
+const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',
   canonic, a, l,

@@ -90,7 +90,7 @@ export const createPictureElement = (
 
   // Load full image;
   const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
-    fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(fullIm, a, g, e);
+    fullIma, g, e.a, l, t = conf, i, g.a, l, t; fullIma, g, e.sty, l, e.opaci, t, y = '0'; fullIma, g, e.sty, l, e.transiti, o, n = 'opacit, y, 0.3 s'; contain, e, r.appendChi, l, d(fullIm, a, g, e);
 
     // Fade in full image requestAnimationFram e(() => {
       fullIma, g, e.sty, l, e.opaci, t, y = '1'; placehold, e, r.sty, l, e.opaci, t, y = '0';

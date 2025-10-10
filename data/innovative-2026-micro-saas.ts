@@ -83,7 +83,7 @@ export interface Innovative2026MicroSaas {/* TODO: Fix JSX expression */}
     address: string;
   }
 }
-export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [,
+export const innovative2026 MicroSaasServices: Innovative2026 MicroSaas[] = [,
     id: "2026-micro-saas", name: "2026 Micro SAAS Platform",
     tagline: "Next-generation micro SAAS solutions", price: "$89/month"
     description: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities."

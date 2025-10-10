@@ -37,7 +37,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     featured: true;
     readTime: '25 min read',
     image: '/images/ai-2026-hyperconscious-computing.jpg',
-    valueProposition: '$1.2T enterprise value creation',
+    valueProposition: '$1.2 T enterprise value creation',
   },
   {
     id: 'quantum-ai-synthesis-2026'

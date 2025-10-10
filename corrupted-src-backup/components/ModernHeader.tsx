@@ -300,7 +300,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               fi, l, l="no, n, e"
               stro, k, e="currentCol, o, r"
               viewB, o, x="0, 0, 24 24"
-            >
+            ></s>
               {isMenuOp, e, n ? (
                 <pa, t, h;
   strokeLinec, a, p="rou, n, d"
@@ -377,7 +377,7 @@ isMenuOp, e, n && (
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e,"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colors, fon, t-medi, u, m"
-                    onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}
+                    onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>
                   >
                     {it, e, m.na, m, e}
                   </Li, n, k>
@@ -401,7 +401,7 @@ isMenuOp, e, n && (
                           classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e,"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colo, r, s"
-                          onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}
+                          onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>
                         >
                           {dropdownIt, e, m.na, m, e}
                         </Li, n, k>
@@ -432,7 +432,7 @@ isMenuOp, e, n && (
   to="/conta, c, t""
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   classNa, m, e="block, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medium, tex, t-cent, e, r"
-                  onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}
+                  onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>
                 >
                   Gette, d;
                 </Li, n, k>

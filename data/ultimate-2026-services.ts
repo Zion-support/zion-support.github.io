@@ -127,7 +127,7 @@ export const,
     address: string;
   }
 }
-export const ultimate2026Services: Ultimate2026Service[] = [,
+export const ultimate2026 Services: Ultimate2026 Service[] = [,
     id: "2026-ultimate-service", name: "2026 Ultimate Service Platform",
     tagline: "The ultimate platform for 2026", price: "$699/month",
     description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities."

@@ -21,9 +21,9 @@ const EnterpriseSecurityPage: React.FC = () => {
         keywords={["enterprise security","cybersecurity","threat detection","security monitoring","compliance"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/enterprise-security"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

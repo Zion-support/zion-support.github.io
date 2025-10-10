@@ -10,10 +10,10 @@ const AIMLOpsAutomatio, n = () => {
         <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</title>
         <meta, nam, e = 'description'
           conte, n, t='Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Dep, l, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization.'
-        />
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='ML, O, p, s, AI, automatio, n, ML, deploymen, t, model, monitorin, g, CI/CD, for, ML, automated, ML, pipelines'
-        />
+        /></meta>
       </Helm, e, t>
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>

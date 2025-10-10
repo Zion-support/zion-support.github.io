@@ -258,12 +258,12 @@ export const,
     setup_time: '12 weeks'
     category: 'AI & Data'
     real_service: true;
-    technology: ['dbt_snowflake / BigQuerySegment / GA4Python'];
+    technology: ['dbt_snowflake / BigQuerySegment / GA4 Python'];
     integrations: ['StripePaddleChargebeeLemon Squeezy'];
     use_cases: ['Reduce churn_price optimization_board - ready revenue KPIs'];
     roi: '310% ARR lift from churn reduction and pricing wins.'
     competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
-    market_size: '$30B+ subscription economy tooling'
+    market_size: '$30 B+ subscription economy tooling'
     growth_rate: '30% YoY'
     variant: 'ai - futuristic'
     customers: 24;
@@ -332,7 +332,7 @@ export const,
     setup_time: '24 days'
     category: 'Growth & Marketing'
     real_service: true;
-    technology: ['WordPressGA4Looker Studio'];
+    technology: ['WordPressGA4 Looker Studio'];
     integrations: ['Link WhisperYoast / RankMathSearch Console'];
     use_cases: ['Boost organic traffic_fix site structure_improve crawl and CTR'];
     roi: '525% organic uplift in 812 weeks on content libraries.'
@@ -677,7 +677,7 @@ export const,
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy']
     useCases: [,
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics']
-    marketSize: '$30B+ subscription economy tooling'
+    marketSize: '$30 B+ subscription economy tooling'
     growthRate: '30% YoY'
     variant: 'ai-futuristic'
     customers: 24;
@@ -1314,7 +1314,7 @@ export const,
 <<<<<<< HEAD
     roi: '310% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
-    technology: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],
+    technology: ['dbtSnowflake/BigQuery', 'Segment/GA4 Python'],
     integrations: ['StripePaddle', 'ChargebeeLemon Squeezy'],
     useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'],
     roi: '310% ARR lift from churn reduction and pricing wins.',

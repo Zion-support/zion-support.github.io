@@ -142,8 +142,8 @@ const DigitalTransformationPage: React.FC = () => {
             <Link
               href="/consultation"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Target className="w-5 h-5 mr-2" >Free Assessment</Target>
+            ></Lin>
+              <Target className="w-5 h-5 mr-2" >Free Assessment</Targe>
             </Target>
           </div>
         </div>
@@ -390,8 +390,8 @@ const DigitalTransformationPage: React.FC = () => {
             <Link
               href="/case-studies"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <BarChart className="w-5 h-5 mr-2" >View Case Studies</BarChart>
+            ></Lin>
+              <BarChart className="w-5 h-5 mr-2" >View Case Studies</BarChar>
             </BarChart>
 =======
               <ArrowRight className="w-5 h-5 mr-2" />

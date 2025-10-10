@@ -15,8 +15,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       rati, n, g: 4., 9,
       trendi, n, g: t, r, u, e,
       featured: t, r, u, e,
-      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
+      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'FEATU, R, E, D',
       tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
 =======
@@ -63,7 +62,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
               📚 NEW, BLOG, CONTENT • January, 202, 6;
             </sp, a, n>
-            <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />
+            <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             New, Blog, Content Showcase, 202, 6;
@@ -277,7 +276,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
               Get, Exclusive, Blog Updat, e, s;
             </h3>
-            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s, 
               and, premium, content from industry, experts. Join, 100, K+ subscribe, r, s.
             </p>
@@ -325,7 +324,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
                 Explore, Our, Complete Blog, Librar, y;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Discover, 50, 0+ articles, covering, A, I, machine, learnin, g, quantum, computin, g, and, enterprise, technology. 
                 Find, insights, that matter, to, your business, and, stay ahead, of, the competiti, o, n.
               </p>

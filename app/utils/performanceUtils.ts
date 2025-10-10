@@ -259,8 +259,7 @@ export class VirtualScroller<T> {}
 export function setupLazyImages(selector = 'img[data-src]')
   options?: IntersectionObserverInit;
 ): () => void {
-  const images = document.querySelectorAll<HTMLImageElement>(selector)
-  const observer = new IntersectionObserver((entries) => {
+  const images = document.querySelectorAll<HTMLImageElement>(selector)</HTMLImageElement></<<<HTMLImageElement>const</HTMLImageElement></<<HTMLImageElement>observer</HTMLImageElement> = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;

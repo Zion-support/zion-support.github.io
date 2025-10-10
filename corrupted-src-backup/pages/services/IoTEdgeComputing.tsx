@@ -95,7 +95,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
         "Advanced, integration, s (50)"
         "Custom, device, protocols"
         "Ed, g, e-to-cloud, synchronizatio, n"
-        "5G, connectivity, support"
+        "5 G, connectivity, support"
       ]
       popul, a, r: tr, u, e;
     }
@@ -115,7 +115,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
         "Unlimited, integration, s"
         "Custom, protocol, development"
         "Mul, t, i-region, deploymen, t"
-        "Private, 5G, network set, u, p"
+        "Private, 5 G, network set, u, p"
         "SLA, guarante, e"
         "On-premise, edge, infrastructure"
       ]
@@ -153,7 +153,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
         "Advanced, integration, s (50)",";
         "Custom, device, protocols",";
         "Ed, g, e-to-cloud, synchronizatio, n",";
-        "5G, connectivity, support"
+        "5 G, connectivity, support"
       ]
       popul, a, r: tr, u, e;
     }
@@ -173,7 +173,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
         "Unlimited, integration, s",";
         "Custom, protocol, development",";
         "Mul, t, i-region, deploymen, t",";
-        "Private, 5G, network set, u, p",";
+        "Private, 5 G, network set, u, p",";
         "SLA, guarante, e",";
         "On-premise, edge, infrastructure"
       ]
@@ -184,7 +184,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
     {
       na, m, e: "Robert, Ki, m","
       ro, l, e: "C, T, O, Smart, Manufacturing, Corp","
-      conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2M, annuall, y.","
+      conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2 M, annuall, y.","
       na, m, e: "Robert, Ki, m",";
       ro, l, e: "C, T, O, Smart, Manufacturing, Corp",";
       conte, n, t: "Zi, o, n's, IoT, edge computing, solution, reduced our, production, line latency, by, 98%. Re, a, l-time, quality, control now, catches, defects instant, l, y, saving, u, s $2M, annuall, y.",";
@@ -642,7 +642,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6"></div>
                       <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8">";
+  g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
@@ -765,7 +765,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, tex, t-oran, g, e-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">";
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>

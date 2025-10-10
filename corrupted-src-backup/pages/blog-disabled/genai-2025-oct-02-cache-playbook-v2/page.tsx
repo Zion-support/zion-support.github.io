@@ -11,7 +11,7 @@ export default function BlogPost(): React.JSX.Element {
           <meta;
             name="description"
             content="Genai 2025 Oct 02 Cache Playbook V2 - Latest insights from Zion Tech Group"
-          />
+          /></meta>
         </Helmet>
 
 <<<<<<< HEAD

@@ -512,8 +512,7 @@ export function measureBetween(name: string, startMark: string, endMark: string)
 /**
  * Get navigation timing data;
  */
-export function getNavigationTiming(): Record<string, number> | null {
-  if (typeof window === 'undefined' || !window.performance) return null;
+export function getNavigationTiming(): Record<string, number> | null {</string>if</string> (typeof window === 'undefined' || !window.performance) return null;
 
   const navigation = performance.getEntriesByType('navigation')
   )[0] as PerformanceNavigationTiming;
@@ -547,7 +546,7 @@ export function getNavigationTiming(): Record<string, number> | null {
  */
 export function getSlowResources(threshold: number = 1000): PerformanceResourceTiming[] {,
   const _resources = getResourceTiming();
-  return resources.filter(resource => resource.duration > threshold);
+  return resources.filter(resource => resource.duration>threshold</duration>);
 }
 
 /**
@@ -570,8 +569,7 @@ export function getMemoryUsage(): Record<string, number> | null {
   }
 
   const _memory = (performance as any).memory;
-  const _memory = (performance as Record<string, unknown>).memory as Record<string, number>;
-  if (typeof performance === 'undefined' || !(performance as any).memory) {
+  const _memory = (performance as Record<string, unknown>).memory as Record<string, number>;</string>if</string> (typeof performance === 'undefined' || !(performance as any).memory) {
     return null;
   }
 
@@ -803,7 +801,7 @@ export function isSlowConnection(): boolean {
   }
 
   const _connection = (navigator as NavigatorWithConnection).connection;
-  const _slowTypes = ['slow-2g', '2g'];
+  const _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true;
   );
@@ -910,7 +908,7 @@ export function getConnectionType(): string | null {
   }
 
   const _connection = (navigator as any).connection;
-  const _slowTypes = ['slow-2g', '2g'];
+  const _slowTypes = ['slow-2 g', '2 g'];
   return (
     (connection.effectiveType && slowTypes.includes(connection.effectiveType)) ||
     connection.saveData === true;
@@ -933,7 +931,7 @@ export function isSlowConnection(): boolean {
   }
 
   const _connection = (navigator as any).connection;
-  const _slowTypes = ['slow-2g', '2g'];
+  const _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true;
  * Check if connection is slow;
@@ -946,7 +944,7 @@ export function isSlowConnection(): boolean {
   }
 
   const _connection = (navigator as any).connection;
-  const _slowTypes = ['slow-2g', '2g'];
+  const _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true;
 export function isSlowConnection(): boolean {
@@ -956,8 +954,7 @@ export function isSlowConnection(): boolean {
     return false;
   }
 
-  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
-  const _slowTypes = ['slow-2g', '2g'];
+  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>const</string> _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType as string) ||
     connection.saveData === true;
@@ -998,8 +995,7 @@ export function getConnectionType(): string {
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
-  return (connection.effectiveType as string) || (connection.type as string) || 'unknown';
+  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown';
 }
 
   const _connection = (navigator as any).connection;

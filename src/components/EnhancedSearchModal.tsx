@@ -83,17 +83,12 @@ const popularSearches = [
   'Data Analytics'
 ];
 
-const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
+const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {</SearchModalProps>const</SearchModalProps> [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);</SearchResult>const</SearchResult> [isSearching, setIsSearching] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
-  const inputRef = useRef<HTMLInputElement>(null);
-  const resultsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
+  const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
@@ -154,8 +149,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setIsSearching(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
     searchResults(value);
   };

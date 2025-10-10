@@ -8,8 +8,7 @@ import { apiCache } from './apiCache';
 
 interface RequestConfig {}
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
-  body?: any;
+  headers?: Record<string, string>;</string></<<<string>body</string></string>?: any;
   cache?: boolean;
   cacheTTL?: number;
 }
@@ -18,7 +17,7 @@ interface APIResponse<T = any> {}
   data: T;
   status: number;
   statusText: string;
-  headers: Record<string, string>;
+  headers: Record<string, string>;</strin>
 }
 
 class APIClient {}

@@ -7,8 +7,7 @@ interface NewServicesPromoBannerProp, s {
   featuredOn, l, y?: boolean;
   classNa, m, e ?  : string;
  }
-const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
-  varia, n, t = 'def, a, u, l, t',
+const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</NewServicesPromoBannerPro>varia</NewServicesPromoBannerPro>, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
   classNa, m, e = ''
@@ -55,7 +54,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({
                   <Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />
                   <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.category}</sp, a, n>
                 </div>
-                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>
+                <h3, className="te, x, t-2 xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>
                 <p, className="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.description}</p>
                 <div, className="spa, c, e-y-2, m, b-6">
                   { servi, c, e.benefi, t, s.sli, c, e(, 0, 3).m, a, p((benef, i, t, i, d, x) = > (</div>

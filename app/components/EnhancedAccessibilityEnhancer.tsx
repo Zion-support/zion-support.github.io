@@ -417,8 +417,8 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.style.cssText = `
       position: absolute;,
-    top: -40px;
-      left: 6px;
+    top: -40 px;
+      left: 6 px;
       z-index: 1000;
 <<<<<<< HEAD
     `;,
@@ -435,14 +435,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       link.className = 'skip-link';
       link.style.cssText = `
         position: absolute;,
-    top: -40px;
-        left: 6px;,
+    top: -40 px;
+        left: 6 px;,
     background: #000;
         color: #fff;,
-    padding: 8px;
+    padding: 8 px;
         text-decoration: none;
         z-index: 1000;,
-    transition: top 0.3s;
+    transition: top 0.3 s;
       `;
 <<<<<<< HEAD
 ,
@@ -475,10 +475,10 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     style.textContent = `
       .high-contrast {}
         --text-primary: #ffffff;
-        --text-secondary: #e5e7eb;
+        --text-secondary: #e5 e7 eb;
         --bg-primary: #000000;
-        --bg-secondary: #1f2937;
-        --accent: #60a5fa;
+        --bg-secondary: #1 f2937;
+        --accent: #60 a5 fa;
       }
 
       .high-contrast * {}
@@ -578,5 +578,4 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
   return null;
 };
-</EnhancedAccessibilityEnhancerProps>
-export default EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>
+</<<<EnhancedAccessibilityEnhancerProps>export</EnhancedAccessibilityEnhancerProps></<<EnhancedAccessibilityEnhancerProps>default</EnhancedAccessibilityEnhancerProps> EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>

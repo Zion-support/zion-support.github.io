@@ -117,8 +117,8 @@ const SystemAdminPage: React.FC = () => {,
             <Link
               href="/consultation"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Settings className="w-5 h-5 mr-2" >Free Assessment</Settings>
+            ></Lin>
+              <Settings className="w-5 h-5 mr-2" >Free Assessment</Setting>
             </Settings>
           </div>
         </div>
@@ -314,8 +314,8 @@ const SystemAdminPage: React.FC = () => {,
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-gray-600 hover:border-red-400 hover:bg-red-400/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Mail className="w-5 h-5 mr-2" >Emergency Email</Mail>
+              ></a>
+                <Mail className="w-5 h-5 mr-2" >Emergency Email</Mai>
               </Mail>
 =======
                 <Phone className="w-5 h-5 mr-2" />
@@ -364,8 +364,8 @@ const SystemAdminPage: React.FC = () => {,
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Settings className="w-5 h-5 mr-2" >View Pricing</Settings>
+            ></Lin>
+              <Settings className="w-5 h-5 mr-2" >View Pricing</Setting>
             </Settings>
 =======
               <ArrowRight className="w-5 h-5 mr-2" />

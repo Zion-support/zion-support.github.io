@@ -615,7 +615,7 @@ const,
 
 <<<<<<< HEAD
   return (
-    <>
+    <>{}</>{}{}
       {/* Security Status Indicator */}
 <<<<<<< HEAD
       {!isSecure && (
@@ -669,7 +669,7 @@ const,
           </div>
         </div>
       )}
-    </>
+    
   );
 >>>>>>> origin/main
 };

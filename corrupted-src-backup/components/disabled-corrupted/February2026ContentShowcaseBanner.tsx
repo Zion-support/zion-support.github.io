@@ -29,12 +29,12 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             <span, className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
               🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE;
             </sp, a, n>
-            <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" />
+            <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>
           <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             The, Future, of AI, is, Now;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
             Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.
           </p>
@@ -47,7 +47,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  })
 =======
           {/* Achievement, St, a, t, s */}
-          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">
+          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4 xl, m, x-auto, m, b-12"></div>
             { [
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
@@ -118,7 +118,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>
                   <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-4, 0, 0">
                     {conte, n, t.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
+                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></di>
                     {conte, n, t.bad, g, e}
                   </div>
                 </div>
@@ -216,7 +216,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
               Unlock, Premium, AI Insigh, t, s;
             </h3>
-            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
               Get, exclusive, access to, cuttin, g-edge, resea, r, c, h, early, content, releases, and, premium, AI insigh, t, s. 
               Join, our, elite community, of, technology pioneers, and, thought leade, r, s.
             </p>
@@ -277,7 +277,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
                 Stay, Ahead, with Our, Newslette, r;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, revolutionary, AI breakthroug, h, s. 
                 Join, 500, K+ subscribers, who, never miss, the, future.
               </p>

@@ -21,9 +21,9 @@ const EnterprisePage: React.FC = () => {
         keywords={["enterprise solutions","enterprise software","large-scale solutions","enterprise integration","business solutions"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/enterprise"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

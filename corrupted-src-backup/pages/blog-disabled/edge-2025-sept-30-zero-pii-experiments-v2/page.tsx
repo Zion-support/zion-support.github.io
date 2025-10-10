@@ -11,7 +11,7 @@ export default function BlogPost(): React.JSX.Element {
           <meta;
             name="description"
             content="Edge 2025 Sept 30 Zero Pii Experiments V2 - Latest insights from Zion Tech Group"
-          />
+          /></meta>
         </Helmet>
 
 <<<<<<< HEAD

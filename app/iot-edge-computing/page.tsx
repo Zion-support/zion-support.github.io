@@ -60,7 +60,7 @@ const IoTEdgeComputingPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '10ms', label: 'Ultra-Low Latency', icon: Clock },
+    { number: '10 ms', label: 'Ultra-Low Latency', icon: Clock },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Bandwidth Reduction', icon: BarChart },
     { number: '1000+', label: 'Devices Managed', icon: Users }

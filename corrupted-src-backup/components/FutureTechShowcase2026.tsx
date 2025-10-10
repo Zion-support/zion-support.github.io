@@ -6,7 +6,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   d: 1;
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing','
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6','
-      excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000x, faster, AI inference, with, quantum-enhanced, deep, learning.','
+      excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.','
       catego, r, y: 'Quantum, AI, Revolution','
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
@@ -14,7 +14,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       ic, o, n: <Atom, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
-      sta, t, s: '10,000x, Speed, Boost}
+      sta, t, s: '10,000 x, Speed, Boost}
     {
       id: 2;
       tit, l, e: 'Se, l, f-Evolving, AI, Ecosystems','
@@ -95,7 +95,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: 'Autonomous, Orchestratio, n}
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing',';
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6',';
-      excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000x, faster, AI inference, with, quantum-enhanced, deep, learning.',';
+      excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.',';
       catego, r, y: 'Quantum, AI, Revolution',';
       da, t, e: '20, 2, 6-01-20',';
       readTi, m, e: '18, mi, n',';
@@ -103,7 +103,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Atom, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'QUANTUM, A, I',';
-      sta, t, s: '10,000x, Speed, Boost'
+      sta, t, s: '10,000 x, Speed, Boost'
     }
 <<<<<<< HEAD
     {

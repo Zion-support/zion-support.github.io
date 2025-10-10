@@ -305,7 +305,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
               "Financial, Modelin, g",
               "</div><1ms, Latenc, y",
               "95%+ Accura, c, y",
-              "10,000x, Performanc, e",
+              "10,000 x, Performanc, e",
               "Enterprise, Scal, e"
             ].m, a, p((top, i, c) = > (
               <span, ke, y = { to, p, i, c  }, classNa, m, e = "px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hove, r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">

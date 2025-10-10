@@ -195,10 +195,10 @@ const APIDocsPage: React.FC = () => {,
                                   <span className="text-sm">Copied!</span>
                                 </>
                               ) : (
-                                <>
-                                  <Copy className="w-4 h-4" />
-                                  <span className="text-sm">Copy</span>
-                                </>
+                                <>{}</>{}{}
+                                  <Copy className="w-4 h-4" /></Cop>
+                                  <span className="text-sm">Copy</spa>
+                                
                               )}
                             </button>
                           </div>

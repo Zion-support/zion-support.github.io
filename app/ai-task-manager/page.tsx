@@ -173,14 +173,14 @@ const AITaskManagerPage: React.FC = () => {,
 <<<<<<< HEAD
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Unlimited tasks and projects</CheckCircle>
               </CheckCircle>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >AI-powered prioritization</CheckCircle>
+              <li className="flex items-center text-gray-300"></l>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >AI-powered prioritization</CheckCircl>
               </CheckCircle>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Team collaboration tools</CheckCircle>
+              <li className="flex items-center text-gray-300"></l>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Team collaboration tools</CheckCircl>
               </CheckCircle>
-              <li className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Advanced analytics</CheckCircle>
+              <li className="flex items-center text-gray-300"></l>
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3" >Advanced analytics</CheckCircl>
               </CheckCircle>
               <li className="flex items-center text-gray-300">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" >24/7 support<a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Get Started Today</a>

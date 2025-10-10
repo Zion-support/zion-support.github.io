@@ -56,8 +56,7 @@ export interface AppError {}
   url?: string;
   userAgent?: string;
   componentStack?: string;
-  context?: Record<string, unknown>;
-  resolved?: boolean;
+  context?: Record<string, unknown>;</string></<<<strin>resolved</strin></strin>?: boolean;
   retryCount?: number;
 }
 <<<<<<< HEAD
@@ -165,9 +164,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorHandler.instance;
 <<<<<<< HEAD
   }</ErrorHandlerConfig>
-  // Handle error</ErrorHandlerConfig>
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
-    const appError: AppError = {,
+  // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
     id: this.generateErrorId(),
 =======
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
@@ -599,15 +596,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     notification.className = 'error-notification';
     notification.style.cssText = `
       position: fixed;,
-    top: 20px;
-      right: 20px;,
+    top: 20 px;
+      right: 20 px;,
     background: ${this.getNotificationColor(error.severity)};
       color: white;,
-    padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    padding: 15 px;
+      border-radius: 5 px;
+      box-shadow: 0 2 px 10 px rgba(0,0,0,0.2);
       z-index: 10000;
-      max-width: 400px;
+      max-width: 400 px;
       font-family: Arial, sans-serif;
 <<<<<<< HEAD
     `;</string>
@@ -738,7 +735,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       case ErrorSeverity.CRITICAL:
         return '#dc3545';
       case ErrorSeverity.HIGH:
-        return '#fd7e14';
+        return '#fd7 e14';
       case ErrorSeverity.MEDIUM:
         return '#ffc107';
 <<<<<<< HEAD
@@ -973,8 +970,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;</ErrorType>
       },</ErrorType>
-      {} as Record<ErrorSeverity, number>);
-    const resolved = this.errors.filter(error => error.resolved).length;
+      {} as Record<ErrorSeverity, number>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
 <<<<<<< HEAD
     return {}

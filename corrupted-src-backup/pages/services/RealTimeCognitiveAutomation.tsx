@@ -216,7 +216,7 @@
                         /mon, t, h;
                       </sp, a, n>
                     </div>
-                    <ul, className='spa, c, e-y-3'>
+                    <ul, className='spa, c, e-y-3'></ul>
                       { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
                         <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />

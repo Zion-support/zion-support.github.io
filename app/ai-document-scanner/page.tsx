@@ -262,7 +262,7 @@ const AIDocumentScannerPage: React.FC = () => {,
         '1,000 scans/month',
         '5 languages',
         'Basic OCR',
-        'Cloud storage (10GB)',
+        'Cloud storage (10 GB)',
         'Email support',
         'Mobile app access',
         'PDF export',
@@ -280,7 +280,7 @@ const AIDocumentScannerPage: React.FC = () => {,
         '10,000 scans/month',
         '25 languages',
         'Advanced OCR',
-        'Cloud storage (100GB)',
+        'Cloud storage (100 GB)',
         'Priority support',
         'API access',
         'Multiple formats',
@@ -535,8 +535,8 @@ const AIDocumentScannerPage: React.FC = () => {,
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center">Start Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
-                <Play className="w-5 h-5 mr-2" >Watch Demo</Play>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"></butto>
+                <Play className="w-5 h-5 mr-2" >Watch Demo</Pla>
               </Play>
             </div>
           </div>
@@ -751,8 +751,8 @@ const AIDocumentScannerPage: React.FC = () => {,
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">Start Your Free Trial</button>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
-                <Phone className="w-5 h-5 mr-2" >Contact Sales</Phone>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"></butto>
+                <Phone className="w-5 h-5 mr-2" >Contact Sales</Phon>
               </Phone>
 =======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">

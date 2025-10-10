@@ -11,11 +11,11 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
           Enterprise, AI, Transformation Success, Strategie, s: 2025, Playboo, k | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Master, enterprise, AI transformation, with, proven strategies, achieving, 10x ROI, and, 40% cost, reduction, s. Comprehensive, playbook, from Fortune, 500, companies in, 202, 5.'
-        />
+          conte, n, t='Master, enterprise, AI transformation, with, proven strategies, achieving, 10 x ROI, and, 40% cost, reduction, s. Comprehensive, playbook, from Fortune, 500, companies in, 202, 5.'
+        /></meta>
         <meta, nam, e='keywor, d, s'
           conte, n, t='AI, transformat, i, o, n, enterprise, A, I, digital, transformatio, n, AI, strateg, y, business, innovatio, n, AI, implementatio, n'
-        />
+        /></meta>
       </Helm, e, t>
     <div></div>
       <Helmet>
@@ -229,12 +229,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                     },
                         '23% reduction, in, readmission, s',
                         '19% improvement, in, patient outcom, e, s',
-                        '$127M, in, operational efficienci, e, s',
+                        '$127 M, in, operational efficienci, e, s',
                       ],
                     },
                         '47% reduction, in, unplanned downt, i, m, e',
                         '34% improvement, in, first-pass, qualit, y',
-                        '$180M, in, inventory optimizati, o, n',
+                        '$180 M, in, inventory optimizati, o, n',
                       ],
                     },
 <<<<<<< HEAD
@@ -261,7 +261,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                           <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                             Investme, n, t;
                           </d, i, v>
-                      <ul, classNam, e='spa, c, e-y-2'>
+                      <ul, classNam, e='spa, c, e-y-2'></ul>
                         { sto, r, y.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                           <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
@@ -313,8 +313,8 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
             <div>
               {[
               {[
-                { value="$2.9T", label="AI Business Value 2025" },"
-                { value="10x", label="Average ROI" },"
+                { value="$2.9 T", label="AI Business Value 2025" },"
+                { value="10 x", label="Average ROI" },"
                 { value="40%", label="Cost Reduction" },"
                 { value="73%", label="Initiatives That Fail" }"
               ].map((metric, index) => (</div>
@@ -354,7 +354,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
   Enterprise AI transformation is no longer optional—it's a</p> <strong className="text-white">competitive imperative</strong>. ,"
   In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>"
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ,"
-  However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value."
+  However, <strong className="text-red-400">73% of AI initiatives still fail</strong>to</strong> deliver expected value."
                 </h2>"
                 <div></div>
                   <p className="mb-4">
@@ -481,13 +481,13 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
 =======
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2"></ul>
                           {phase.milestones.map((milestone, mIndex) => (
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                       <div></div>
                         <h4 className="text-white font-semibold mb-2">Key Milestones: </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-2"></ul>
                           {phase.milestones.map((milestone, mIndex) => (
                             <li key={mIndex} className="flex items-start gap-2">
                               <CheckCircle className=" />" />>
@@ -550,9 +550,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         "28% increase in customer lifetime value"
                       company="Global Retail Chain",,"
                       industry="Fortune 100 Retailer",,"
-                      investment="$45M",,"
-                      value="$680M annual value",,"
-                      roi="15x ROI",,"
+                      investment="$45 M",,"
+                      value="$680 M annual value",,"
+                      roi="15 x ROI",,"
                       highlights: [,,
                         "40% reduction in inventory costs;
                         "28% increase in customer lifetime value;
@@ -573,9 +573,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         "19% improvement in patient outcomes"
                       company="Healthcare Provider",,"
                       industry="Multi-hospital system",,"
-                      investment="$28M",,"
-                      value="$420M annual savings",,"
-                      roi="15x ROI",,"
+                      investment="$28 M",,"
+                      value="$420 M annual savings",,"
+                      roi="15 x ROI",,"
                       highlights: [,,
                         "23% reduction in readmissions;
                         "19% improvement in patient outcomes;
@@ -596,9 +596,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         "34% improvement in first-pass quality"
                       company="Manufacturing Enterprise",,"
                       industry="Global manufacturer",,"
-                      investment="$38M",,"
-                      value="$580M annual value",,"
-                      roi="15.3x ROI",,"
+                      investment="$38 M",,"
+                      value="$580 M annual value",,"
+                      roi="15.3 x ROI",,"
                       highlights: [,,
                         "47% reduction in unplanned downtime;
                         "34% improvement in first-pass quality;

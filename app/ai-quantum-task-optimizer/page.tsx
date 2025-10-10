@@ -172,11 +172,11 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {,
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Up to 1,000 tasks per day</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Basic quantum optimization</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Basic quantum optimization</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Real-time analytics</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Real-time analytics</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -215,14 +215,14 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Up to 10,000 tasks per day</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Advanced quantum algorithms</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Advanced quantum algorithms</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >AI learning capabilities</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >AI learning capabilities</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Custom integrations<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -261,14 +261,14 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Unlimited tasks</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Full quantum computing access</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Full quantum computing access</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >On-premise deployment<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>

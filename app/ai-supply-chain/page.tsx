@@ -21,9 +21,9 @@ const AiSupplyChainPage: React.FC = () => {
         keywords={["supply chain AI","logistics optimization","demand forecasting","inventory management","supply chain analytics"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-supply-chain"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

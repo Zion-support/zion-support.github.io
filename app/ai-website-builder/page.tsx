@@ -162,7 +162,7 @@ const AIWebsiteBuilderPage: React.FC = () => {,
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
 <<<<<<< HEAD
               >Start Building</a>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
               <a
                 href="/demo"
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"

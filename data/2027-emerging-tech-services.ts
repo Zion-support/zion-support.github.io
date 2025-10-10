@@ -1156,7 +1156,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Research institutionsPharmaceutical companiesFinancial institutionsGovernment agenciesTech companies'
     ];
-    marketSize: '$18.7B by 2027';
+    marketSize: '$18.7 B by 2027';
     competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms';
     implementationTime: '6-8 weeks';
     roi: '1200% within 18 months';
@@ -1181,7 +1181,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'IoT companiesRobotics manufacturersEdge computing providersSensor manufacturersAutonomous vehicle companies'
     ];
-    marketSize: '$14.2B by 2027';
+    marketSize: '$14.2 B by 2027';
     competitiveAdvantage: 'Most advanced neuromorphic computing platform';
     implementationTime: '4-6 weeks';
     roi: '800% within 12 months';
@@ -1206,7 +1206,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Pharmaceutical companiesAgricultural companiesIndustrial biotech firmsResearch institutionsEnvironmental companies'
     ];
-    marketSize: '$22.8B by 2027';
+    marketSize: '$22.8 B by 2027';
     competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration';
     implementationTime: '8-12 weeks';
     roi: '1500% within 24 months';
@@ -1231,7 +1231,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Medical device companiesEnvironmental monitoring firmsNavigation companiesResearch institutionsIndustrial companies'
     ];
-    marketSize: '$16.5B by 2027';
+    marketSize: '$16.5 B by 2027';
     competitiveAdvantage: 'Only quantum sensors network with multi-application support';
     implementationTime: '6-8 weeks';
     roi: '900% within 15 months';
@@ -1256,7 +1256,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Medical device companiesResearch institutionsAssistive technology firmsGaming companiesHealthcare providers'
     ];
-    marketSize: '$28.9B by 2027';
+    marketSize: '$28.9 B by 2027';
     competitiveAdvantage: 'Most advanced brain-computer interface platform';
     implementationTime: '10-12 weeks';
     roi: '2000% within 30 months';
@@ -1281,7 +1281,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Government agenciesFinancial institutionsHealthcare organizationsMilitary organizationsCritical infrastructure'
     ];
-    marketSize: '$25.4B by 2027';
+    marketSize: '$25.4 B by 2027';
     competitiveAdvantage: 'Only quantum internet security platform with global coverage';
     implementationTime: '4-6 weeks';
     roi: '1000% within 18 months';
@@ -1306,7 +1306,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Manufacturing companiesLogistics companiesAgricultural companiesService providersResearch institutions'
     ];
-    marketSize: '$19.8B by 2027';
+    marketSize: '$19.8 B by 2027';
     competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning';
     implementationTime: '5-7 weeks';
     roi: '700% within 12 months';
@@ -1331,7 +1331,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Semiconductor companiesBattery manufacturersAerospace companiesMedical device companiesEnergy companies'
     ];
-    marketSize: '$21.3B by 2027';
+    marketSize: '$21.3 B by 2027';
     competitiveAdvantage: 'Only quantum materials discovery platform with AI integration';
     implementationTime: '8-10 weeks';
     roi: '1100% within 20 months';
@@ -1356,7 +1356,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Investment banksHedge fundsAsset managersInsurance companiesRegulatory bodies'
     ];
-    marketSize: '$18.9B by 2027';
+    marketSize: '$18.9 B by 2027';
     competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis';
     implementationTime: '6-8 weeks';
     roi: '900% within 16 months';
@@ -1381,7 +1381,7 @@ export const emergingTech2027Services: Service[] = [;
     targetAudience: [
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
-    marketSize: '$17.6B by 2027';
+    marketSize: '$17.6 B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
     implementationTime: '7-9 weeks';
     roi: '800% within 18 months';

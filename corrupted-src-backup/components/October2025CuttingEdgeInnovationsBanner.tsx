@@ -169,7 +169,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                       Spatial, Computin, g + AI, Revolutio, n;
                     </h3>"
                     <p, className="te, x, t-xs, tex, t-indi, g, o-3, 0, 0/80, leadin, g-sn, u, g">";
-                      12x, Productivit, y + 97% Training, Efficienc, y + 85% Cost, Cu, t;
+                      12 x, Productivit, y + 97% Training, Efficienc, y + 85% Cost, Cu, t;
                     </p>
                   </d, i, v>
 <<<<<<< HEAD

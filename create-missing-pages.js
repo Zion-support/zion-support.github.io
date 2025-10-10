@@ -26,10 +26,10 @@ const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
         canonicalUrl="https://ziontechgroup.com${route}"
-      />
-      <PerformanceOptimizer />
-      <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks>
-        <div />
+      /></SEOOptimizer>
+      <PerformanceOptimizer /></PerformanceOptimizer>
+      <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
+        <div /></div>
       </AccessibilityEnhancer>
       
       <Navigation />)
@@ -249,7 +249,7 @@ const pageConfigs = {
   '/iot-solutions': { title: 'IoT Solutions', description: 'Internet of Things platform development and management', category: 'IoT' },
   '/blockchain-solutions': { title: 'Blockchain Solutions', description: 'Blockchain development and implementation services', category: 'Blockchain' },
   '/edge-computing': { title: 'Edge Computing', description: 'Edge computing infrastructure and applications', category: 'Edge' },
-  '/5g-solutions': { title: '5G Solutions', description: '5G network implementation and optimization', category: '5G' },
+  '/5 g-solutions': { title: '5 G Solutions', description: '5 G network implementation and optimization', category: '5 G' },
   '/quantum-crypto': { title: 'Quantum Cryptography', description: 'Quantum-resistant cryptography solutions', category: 'Quantum' },
   '/quantum-simulation': { title: 'Quantum Simulation', description: 'Quantum simulation and modeling services', category: 'Quantum' },
   '/rpa': { title: 'Robotic Process Automation', description: 'RPA implementation and optimization services', category: 'Automation' },

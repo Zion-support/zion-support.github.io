@@ -247,7 +247,7 @@ const,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       </Helmet>
       {children}
-    </>
+    
   );
 };
 

@@ -36,13 +36,13 @@ const targetBranches = [
   'cursor/fix-errors-and-merge-to-main-0fc7',
   'cursor/fix-errors-and-merge-to-main-19db',
   'cursor/fix-errors-and-merge-to-main-5597',
-  'cursor/fix-errors-and-merge-to-main-77cd',
+  'cursor/fix-errors-and-merge-to-main-77 cd',
   'cursor/fix-errors-and-merge-to-main-8510',
   'cursor/fix-errors-and-merge-to-main-9658',
   'cursor/fix-errors-and-merge-to-main-afb8',
   'cursor/fix-errors-and-merge-to-main-b319',
-  'cursor/fix-errors-and-merge-to-main-cf0f',
-  'cursor/fix-errors-and-merge-to-main-e15f',
+  'cursor/fix-errors-and-merge-to-main-cf0 f',
+  'cursor/fix-errors-and-merge-to-main-e15 f',
 ];
 
 <<<<<<< HEAD

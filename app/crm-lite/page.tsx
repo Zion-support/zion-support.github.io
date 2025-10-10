@@ -144,8 +144,8 @@ const CRMLitePage: React.FC = () => {
             <Link
               href="/demo"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <BarChart className="w-5 h-5 mr-2" >Try Demo</BarChart>
+            ></Lin>
+              <BarChart className="w-5 h-5 mr-2" >Try Demo</BarChar>
             </BarChart>
           </div>
         </div>
@@ -457,8 +457,8 @@ const CRMLitePage: React.FC = () => {
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Target className="w-5 h-5 mr-2" >View All Plans</Target>
+            ></Lin>
+              <Target className="w-5 h-5 mr-2" >View All Plans</Targe>
             </Target>
 =======
               <ArrowRight className="w-5 h-5 mr-2" />

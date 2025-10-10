@@ -1072,8 +1072,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                             min="0"
                             max="100"
                             value={device.brightness}
-                            onChange={(e) => adjustBrightness(device.id, parseInt(e.target.value))}
-                            className="w-full"
+                            onChange={(e) => adjustBrightness(device.id, parseInt(e.target.value))}</input></<<<input>className</input></input>="w-full"
                           />
                         </div>
                       )}
@@ -1091,8 +1090,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                             min="60"
                             max="80"
                             value={device.temperature}
-                            onChange={(e) => adjustTemperature(device.id, parseInt(e.target.value))}
-                            className="w-full"
+                            onChange={(e) => adjustTemperature(device.id, parseInt(e.target.value))}</input></<<<input>className</input></input>="w-full"
                           />
                         </div>
                       )}

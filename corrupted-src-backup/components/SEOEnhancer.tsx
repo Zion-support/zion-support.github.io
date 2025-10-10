@@ -85,7 +85,7 @@ const,
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link>
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={title} />
@@ -196,7 +196,7 @@ const,
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
       </Helmet>
       {children}
-    </>
+    
   );
 };
 

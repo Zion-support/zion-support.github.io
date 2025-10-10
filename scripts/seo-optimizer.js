@@ -66,12 +66,12 @@ class SEOOptimizer {
         const h2Count = (content.match(/<h2/g) || []).length;
         const h3Count = (content.match(/<h3/g) || []).length;
         
-        if (h1Count === 0) {
+        if (h1 Count === 0) {
           this.issues.push(`${file}: No h1 tag found`);
           headingIssues++;
         }
-        if (h1Count > 1) {
-          this.issues.push(`${file}: Multiple h1 tags found (${h1Count})`);
+        if (h1 Count ></h3></h2></h1> 1) {
+          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
           headingIssues++;
         }
         

@@ -11,7 +11,7 @@ export default function BlogPost(): React.JSX.Element {
           <meta;
             name="description"
             content="Ai 2025 Oct 02 Agent Safety Scorecards - Latest insights from Zion Tech Group"
-          />
+          /></meta>
         </Helmet>
 
 <<<<<<< HEAD

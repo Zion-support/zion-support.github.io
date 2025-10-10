@@ -5,7 +5,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
     icon: 'Globe',
     category: 'Metaverse & VR',
     features: [,
-      '3D world building tools',
+      '3 D world building tools',
       'Avatar customization',
       'Virtual commerce integration',
       'Multi-platform deployment'

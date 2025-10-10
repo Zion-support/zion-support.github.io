@@ -146,7 +146,7 @@ export const microSAASServices = [
   // Content & Marketing Tools;
   {
     title: 'AI Content Writer Pro',
-    description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10x more content.',
+    description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',
     icon: '✍️',
     price: '$89/month',
     originalPrice: '$129/month',
@@ -266,7 +266,7 @@ export const microSAASServices = [
   },
   {
     title: 'AI Lead Generation Pro',
-    description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5x more qualified leads.',
+    description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',
     icon: '🎯',
     price: '$99/month',
     originalPrice: '$149/month',

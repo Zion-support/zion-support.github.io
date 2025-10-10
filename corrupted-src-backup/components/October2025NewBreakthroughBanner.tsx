@@ -49,7 +49,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">
               🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5;
             </sp, a, n>
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
+            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">"</h2>
         <div, className="te, x, t-center, m, b-16">";</div>
@@ -387,6 +387,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
     </d, i, v>
   );
 };
-export default October2025NewBreakthroughBanner;
+export default October2025 NewBreakthroughBanner;
 ;
 }"`

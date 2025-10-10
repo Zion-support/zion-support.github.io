@@ -9,8 +9,7 @@ interface PerformanceMetrics {
 }
 
 export const usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>loadTime</PerformanceMetrics>: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0,

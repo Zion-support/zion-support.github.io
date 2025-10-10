@@ -289,12 +289,12 @@ const PrivacyPage: React.FC = () => {,
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Policy Updates</h2><p className="text-gray-300 mb-4">We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
-            <ul className="space-y-2 text-gray-300">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Posting the updated policy on our website</span>
+            <ul className="space-y-2 text-gray-300"></u>
+              <li className="flex items-start"></l>
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Posting the updated policy on our website</spa>
               </span>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Sending email notifications to registered users</span>
+              <li className="flex items-start"></l>
+                <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">Sending email notifications to registered users</spa>
               </span>
               <li className="flex items-start">
 <<<<<<< HEAD

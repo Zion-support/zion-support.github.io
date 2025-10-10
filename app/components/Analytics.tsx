@@ -561,7 +561,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     let maxScroll = 0;
     window.addEventListener('scroll', () => {
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll) {
+      if (<<<scrollPercent>maxScroll</scrollPercent></scrollPercent>) {
         maxScroll = scrollPercent;
         // Track scroll depth
       }

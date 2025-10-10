@@ -25,7 +25,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const headers = {/* TODO: Fix JSX expression */}
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'netlify-a11y-quickscan',
+      'User-Agent': 'netlify-a11 y-quickscan',
     };
     let sha;
     try {/* TODO: Fix JSX expression */}

@@ -332,7 +332,7 @@ export const,
   // Cloud and Infra;
     id: 'cloud - cost - optimizer - pro',
     name: 'Cloud Cost Optimizer Pro',
-    tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin - packing',
+    tagline: 'Rightsizing, lifecycle, anomaly detection, and k8 s bin - packing',
     price: '$99',
     period: '/month',
     description: unknown;
@@ -1492,7 +1492,7 @@ export const,
 	{;
 		id: "cloud-cost-optimizer-pro",
 		name: "Cloud Cost Optimizer Pro",
-		tagline: "Rightsizing, lifecycle, anomaly detection, and k8s bin-packing",
+		tagline: "Rightsizing, lifecycle, anomaly detection, and k8 s bin-packing",
 		price: "$99",
 		period: "/month",
 		description: "Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.",

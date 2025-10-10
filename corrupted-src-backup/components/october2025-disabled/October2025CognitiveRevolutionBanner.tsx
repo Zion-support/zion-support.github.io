@@ -133,7 +133,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                   <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 </Li, n, k>
 
-                <span, className='te, x, t-purp, l, e-4, 0, 0'>•</sp, a, n>
+                <span, className='te, x, t-purp, l, e-4, 0, 0'></span>•</sp, a, n>
 
                 <Link, t, o='/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n'
                   className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r:te, x, t-white, transitio, n-colors, grou, p'
@@ -145,7 +145,7 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                   <Link, classNam, e = 'w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 </Li, n, k>
 
-                <span, className='te, x, t-purp, l, e-4, 0, 0'>•</sp, a, n>
+                <span, className='te, x, t-purp, l, e-4, 0, 0'></span>•</sp, a, n>
 
                 <Link, t, o='/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n'
                   className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r:te, x, t-white, transitio, n-colors, grou, p'
@@ -201,4 +201,4 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
   );
 };
 
-export default October2025CognitiveRevolutionBanner;
+export default October2025 CognitiveRevolutionBanner;

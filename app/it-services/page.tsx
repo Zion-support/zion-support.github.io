@@ -660,7 +660,7 @@ name: 'AI-Powered Infrastructure Management',
         {}
           name: 'Decentralized Infrastructure',
           description: 'Decentralized infrastructure solutions with distributed computing and storage',
-          features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2P Networks', 'Consensus Mechanisms', 'Token Incentives'],
+          features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2 P Networks', 'Consensus Mechanisms', 'Token Incentives'],
           pricing: 'Starting at $9,999/mo',
           trial: 'Free pilot',
           timeline: '6-12 weeks',
@@ -746,7 +746,7 @@ name: 'AI-Powered Infrastructure Management',
         {}
           name: 'Edge Computing Solutions',
           description: 'Edge computing solutions with real-time processing and low-latency applications',
-          features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5G Integration'],
+          features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5 G Integration'],
           pricing: 'Starting at $8,999/mo',
           trial: 'Free edge assessment',
           timeline: '4-8 weeks',
@@ -902,7 +902,7 @@ name: 'AI-Powered Infrastructure Management',
           description: 'Advanced 5G network implementation with AI-powered optimization and edge computing integration',
           features: ['5G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
           pricing: 'Starting at $35,999',
-          trial: 'Free 5G assessment',
+          trial: 'Free 5 G assessment',
           timeline: '16-32 weeks',
           link: 'https://ziontechgroup.com/5g-implementation-pro',
           popular: false;
@@ -1752,7 +1752,7 @@ export default ITServicesPage;
 <<<<<<< HEAD
                             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                           >Learn More</a>
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" /></ArrowRigh>
                           <a
                             href="/contact"
                             className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"

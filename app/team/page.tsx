@@ -527,8 +527,8 @@ const TeamPage: React.FC = () => {
                       </span>
                     ))}
                   <div className="flex justify-center space-x-4">{member.social.linkedin && (</div>
-                    <a href={member.social.linkedin} className="text-gray-400 hover:text-cyan-400 transition-colors">
-                      <Linkedin className="w-5 h-5" />
+                    <a href={member.social.linkedin} className="text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                      <Linkedin className="w-5 h-5" /></Linkedi>
                     </a>
 =======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise: </h4>,
@@ -748,8 +748,8 @@ const TeamPage: React.FC = () => {
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
-              <MessageSquare className="w-5 h-5 mr-2" >Contact Us</MessageSquare>
+            ></Lin>
+              <MessageSquare className="w-5 h-5 mr-2" >Contact Us</MessageSquar>
             </MessageSquare>
 =======
               <Briefcase className="w-5 h-5 mr-2" />

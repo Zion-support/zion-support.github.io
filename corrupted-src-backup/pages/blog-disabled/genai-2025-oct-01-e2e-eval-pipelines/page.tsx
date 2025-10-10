@@ -10,8 +10,8 @@ export default function BlogPost(): React.JSX.Element {
           <title>Genai 2025 Oct 01 E2e Eval Pipelines - Zion Tech Group</title>
           <meta;
             name="description"
-            content="Genai 2025 Oct 01 E2e Eval Pipelines - Latest insights from Zion Tech Group"
-          />
+            content="Genai 2025 Oct 01 E2 e Eval Pipelines - Latest insights from Zion Tech Group"
+          /></meta>
         </Helmet>
 
 <<<<<<< HEAD

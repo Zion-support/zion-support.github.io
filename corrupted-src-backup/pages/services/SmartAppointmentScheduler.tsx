@@ -11,7 +11,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>
-        <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";
+        <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />";</meta>
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">";</div>
         <div, className="container, m, x-auto, p, x-4, p, y-12">";
@@ -20,8 +20,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>
               <Users, className="w-1, 0, h-10, tex, t-whi, t, e  />
             </d, i, v>
-            <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"
-              Smart, Appointment, Scheduler;
+            <h1, className="te, x, t-4 xl, m, d: te, x, t-6 xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"</h>Smart</h>, Appointment, Scheduler;
             </h1>
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;</p>

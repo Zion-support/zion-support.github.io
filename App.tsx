@@ -105,7 +105,7 @@ const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const FiveGImplementationPage = React.lazy(() => import('./app/5 g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
 
@@ -118,7 +118,7 @@ const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'
 >>>>>>> cursor/fix-errors-and-merge-to-main-14e4
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
-  return <>{children}</>;
+  return <>{}</>{children};
 };
 
 const App: React.FC = memo(() => {
@@ -170,7 +170,7 @@ const App: React.FC = memo(() => {
                           </Routes>
                         </Suspense>
                       </main>
-                      <Footer />
+                      <Footer /></Foote>
                     </div>
                   </Router>
                 </AppWithPerformanceMonitoring>

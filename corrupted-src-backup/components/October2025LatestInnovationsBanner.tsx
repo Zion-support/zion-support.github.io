@@ -22,7 +22,7 @@ const, October2025LatestInnovationsBanne, r = () => {
             <span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">
               BREAKING, OCTOBER, 1, 20, 2, 5: LATEST, AI, INNOVATIONS;
             </sp, a, n>
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Zap>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"</h2>
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>

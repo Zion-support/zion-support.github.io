@@ -340,10 +340,9 @@ const,
             <select;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               value={preferences.theme}
-              onChange={(e) =>handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
+              onChange={(e) =>handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}</select></<<<selec>className</selec></selec>="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
             ></select>
-              <option value="auto">Auto<option value="light">Light<option value="dark">Dark</option>
+              <option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</optio>
             </select>
           </div>
 
@@ -359,11 +358,10 @@ const,
             <select;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               value={preferences.language}
-              onChange={(e) =>handleLanguageChange(e.target.value)}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
+              onChange={(e) =>handleLanguageChange(e.target.value)}</select></<<<selec>className</selec></selec>="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
             ></select>
-              <option value="en">English<option value="es">Español</option>
-              <option value="fr">Français<option value="de">Deutsch</option>
+              <option value="en">English</option><option value="es">Español</optio>
+              <option value="fr">Français</option><option value="de">Deutsch</optio>
             </select>
           </div>
 
@@ -377,9 +375,8 @@ const,
               type="checkbox"
               id="notifications"
               checked={preferences.notifications}
-              onChange={(e) =>handleNotificationChange(e.target.checked)}
-              className="rounded"</input>
-            /><label htmlFor="notifications" className="text-xs">Notifications</label>
+              onChange={(e) =>handleNotificationChange(e.target.checked)}</input></<<<inpu>className</inpu></inpu>="rounded"</input>
+            /><label htmlFor="notifications" className="text-xs">Notifications</labe>
           </div>
 
 <<<<<<< HEAD
@@ -392,9 +389,8 @@ const,
               type="checkbox"
               id="analytics"
               checked={preferences.analytics}
-              onChange={(e) =>setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
-              className="rounded"</input>
-            /><label htmlFor="analytics" className="text-xs">Analytics</label>
+              onChange={(e) =>setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}</input></<<<inpu>className</inpu></inpu>="rounded"</input>
+            /><label htmlFor="analytics" className="text-xs">Analytics</labe>
           </div>
         </div>
 
@@ -403,7 +399,7 @@ const,
           </p>
         </div>
       </div>
-    </>
+    
   );
 =======
   // Smooth scrolling;

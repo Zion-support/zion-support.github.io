@@ -383,7 +383,7 @@ const AIServicesPage: React.FC = () => {
     {}
       id: 13,
       name: 'AI Holographic Workspace',
-      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      description: 'Immersive 3 D workspace with AI-powered collaboration tools and virtual reality integration',
       icon: Globe,
       features: [
 >>>>>>> origin/merge-error-fixes
@@ -404,7 +404,7 @@ const AIServicesPage: React.FC = () => {
       pricing: 'Starting at $1,299/mo',
       capabilities: [,
         'Immersive collaboration',
-        '3D data visualization',
+        '3 D data visualization',
         'Virtual presence',
         'Next-gen workspace'
       ]
@@ -737,7 +737,7 @@ const AIServicesPage: React.FC = () => {
     {}
       id: 23,
       name: 'AI Holographic Workspace Pro',
-      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      description: 'Immersive 3 D workspace with AI-powered collaboration tools and virtual reality integration',
       icon: Globe,
       features: [
 >>>>>>> origin/merge-error-fixes
@@ -758,7 +758,7 @@ const AIServicesPage: React.FC = () => {
       pricing: 'Starting at $1,299/mo',
       capabilities: [,
         'Immersive collaboration',
-        '3D data visualization',
+        '3 D data visualization',
         'Virtual presence',
         'Next-gen workspace'
       ],
@@ -926,8 +926,8 @@ const AIServicesPage: React.FC = () => {
 =======
     {}
       id: 28,
-      name: 'AI 3D Generation Studio Pro',
-      description: 'AI-powered 3D model generation and animation with photorealistic rendering capabilities',
+      name: 'AI 3 D Generation Studio Pro',
+      description: 'AI-powered 3 D model generation and animation with photorealistic rendering capabilities',
       icon: Palette,
       features: [
 >>>>>>> origin/merge-error-fixes
@@ -2156,7 +2156,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                   <div className="text-sm text-gray-400">
                     {service.users} users;
                   </div>
-                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">
+                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium"></div>
                     {service.category}
                   </div>
                 </div>

@@ -9,11 +9,11 @@ const AdaptiveLearningPlatform, s = () => {
           AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Revolutionary, adaptive, learning systems, using, AI to, personalize, enterprise traini, n, g. Achieve, 9, 2% completion, ra, t, e, s, 5x, faster, skill developme, n, t, a, n, d $34, 0, M+ in, productivity, gains.'
-        />
+          conte, n, t='Revolutionary, adaptive, learning systems, using, AI to, personalize, enterprise traini, n, g. Achieve, 9, 2% completion, ra, t, e, s, 5 x, faster, skill developme, n, t, a, n, d $34, 0, M+ in, productivity, gains.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='adaptive, learni, n, g, AI, trainin, g, enterprise, learnin, g, personalized, educatio, n, skill, developmen, t, L, M, S, learning, analytic, s, G, P, T-4, educatio, n'
-        />
+        /></meta>
       </Helm, e, t>
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>

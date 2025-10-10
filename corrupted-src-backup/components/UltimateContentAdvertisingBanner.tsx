@@ -95,8 +95,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
               transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
-            >
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  />
+            ></moti>
+              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>
               <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0  />

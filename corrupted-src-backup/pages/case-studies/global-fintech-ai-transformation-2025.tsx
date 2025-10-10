@@ -10,11 +10,11 @@ const GlobalFinTechAITransformatio, n = () => {
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Fortune, 500, digital banking, platform, achieves $127M, annual, value through, AI, transformation. 94.7% fraud, detect, i, o, n, 15.2x, RO, I, 10x, customer, growth enabl, e, d.'
-        />
+          conte, n, t='Fortune, 500, digital banking, platform, achieves $127 M, annual, value through, AI, transformation. 94.7% fraud, detect, i, o, n, 15.2 x, RO, I, 10 x, customer, growth enabl, e, d.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='fintec, h, A, I, digital, bankin, g, fraud, detectio, n, AI, transformation, case stu, d, y, financial, services, AI'
-        />
+        /></meta>
       </Helm, e, t>
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>

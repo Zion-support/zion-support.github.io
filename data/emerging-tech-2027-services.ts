@@ -83,7 +83,7 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
     address: string;
   }
 }
-export const emergingTech2027Services: EmergingTech2027Service[] = [,
+export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
     id: "2027-emerging-tech", name: "2027 Emerging Tech Platform",
     tagline: "Emerging tech for 2027", price: "$349/month"
     description: "Advanced platform showcasing emerging technologies and innovations for 2027."

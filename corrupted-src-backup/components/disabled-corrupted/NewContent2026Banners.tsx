@@ -18,7 +18,7 @@
               <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
                 NEW, 202, 6;
               </sp, a, n>
-              <span, className='te, x, t-sm, opacit, y-90'>Latest, AI, Content</sp, a, n>
+              <span, className='te, x, t-sm, opacit, y-90'></span>Latest</span>, AI, Content</sp, a, n>
             </div>
             <div, className='hidden, m, d:flex, item, s-center, ga, p-4, tex, t-sm'></div>
               <Link, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'
@@ -26,7 +26,7 @@
               >
                 AI, Autonomous, Cloud Operatio, n, s;
               </Li, n, k>
-              <span, className='opaci, t, y-50'>•</sp, a, n>
+              <span, className='opaci, t, y-50'></span>•</sp, a, n>
               <Link, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'
                 className='hov, e, r:te, x, t-yell, o, w-200, transitio, n-colo, r, s'
               >
@@ -60,12 +60,12 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>Enterprise, Securit, y</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>Enterprise</span>, Securit, y</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             AI-Powered, Enterprise, Security 20, 2, 6;
           </h2>
-          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             Revolutionary, threat, detection with, 9, 9.7% accura, c, y. Autonomous, incident, response and, zer, o-trust, architecture, for enterpri, s, e-grade, securit, y.
           </p>
           <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
@@ -101,12 +101,12 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>Multimodal, A, I</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>Multimodal</span>, A, I</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             AI, Multimodal, Enterprise Solutions, 202, 6;
           </h2>
-          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             Harness, the, power of, t, e, x, t, image, aud, i, o, and, video, processing with, unified, AI models, that, deliver 95% accuracy, across, all modaliti, e, s.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
@@ -203,12 +203,12 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>Latest, Conten, t</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>Latest</span>, Conten, t</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             Revolutionary, AI, Content 20, 2, 6;
           </h2>
-          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             Discover, cuttin, g-edge, AI, insigh, t, s, case, studie, s, and, implementation, guides that, are, transforming industries, worldwid, e.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6'></div>
@@ -263,12 +263,12 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>Cloud, Operation, s</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>Cloud</span>, Operation, s</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             AI, Autonomous, Cloud Operations, 202, 6;
           </h2>
-          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             Transform, your, cloud infrastructure, with, AI-powered, sel, f-healing, syst, e, m, s, predictive, maintenanc, e, and, zer, o-touch, operation, s.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
@@ -315,7 +315,7 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>FinTech, Revolutio, n</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>FinTech</span>, Revolutio, n</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             AI, FinTech, Transformation 20, 2, 6;)
@@ -343,8 +343,7 @@
           </div>
           <Link, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'
             className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          >
-            Read, FinTech, Guide →
+          ></Link>Read</Link>, FinTech, Guide →
           </Li, n, k>
         </div>
       </div>
@@ -367,14 +366,14 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, Case, Study;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>Fortune, 50, 0</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>Fortune</span>, 50, 0</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             AI, Retail, Automation Success, Stor, y;
           </h2>
-          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             See, how, a Fortune, 500, retailer achieved, 9, 8% automa, t, i, o, n, 3, 0, 0%
-            productivity, gain, s, a, n, d $8M, annual, ROI with, AI, retail automati, o, n.
+            productivity, gain, s, a, n, d $8 M, annual, ROI with, AI, retail automati, o, n.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
@@ -419,12 +418,12 @@
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
-            <span, className='te, x, t-sm, opacit, y-90'>Latest, Conten, t</sp, a, n>
+            <span, className='te, x, t-sm, opacit, y-90'></span>Latest</span>, Conten, t</sp, a, n>
           </div>
           <h2, className='te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3'>
             Cutti, n, g-Edge, AI, Content 20, 2, 6;
           </h2>
-          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
             Explore, the, latest AI, innovati, o, n, s, case, studie, s, and, implementation, guides that, are, revolutionizing industri, e, s.
           </p>
           <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-6'></div>

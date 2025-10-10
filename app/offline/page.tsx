@@ -114,13 +114,11 @@ const OfflinePage: React.FC = () => {
         <div className='space-y-3'></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <button
-            onClick={() =>window.location.reload()}
-            className='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
-          ></button>
-            Try Again<Link
+            onClick={() =>window.location.reload()}</button></<<<butto>className</butto></butto>='w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+          ></<<<button>Try</button></<<button>Again</button><Link
             href="/"
             className="block w-full px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >Go to Homepage</Link>
+          >Go to Homepage</Lin>
           </Link>
         </div>
         <div className='mt-8 text-sm text-gray-500'></div>

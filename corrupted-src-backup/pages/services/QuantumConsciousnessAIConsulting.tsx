@@ -4,7 +4,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => { 
   retu, r, n(<meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, quantum, consciousness AI, consultin, g. Achieve, 9, 9.9% decision, accuracy, and autonomous, operations, with AI, that, thinks and, feel, s.'
-        />
+        /></meta>
         <meta, nam, e='keywor, d, s'
           conte, n, t='quant, u, m , A, I, consciousne, s, s, enterprise, consultin, g, business, transformatio, n, autonomous, system, s'
         />
@@ -21,7 +21,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
         />
         <meta, nam, e='twitt, e, r: description',
           conte, n, t='Transform, your, enterprise with, AI, that truly, thinks, and fee, l, s.'
-        />
+        /></meta>
       </Helm, e, t>
 
       <div, className='m, i, n-h-screen, b, g-sla, t, e-9, 5, 0' > {/* Hero, Sect, i, o, n */ }</div>

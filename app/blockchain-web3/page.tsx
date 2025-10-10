@@ -61,7 +61,7 @@ const BlockchainWeb3Page: React.FC = () => {,
   const stats = [
     { number: '500+', label: 'Smart Contracts Deployed', icon: Code },
     { number: '50+', label: 'DApps Built', icon: Globe },
-    { number: '$100M+', label: 'Total Value Locked', icon: DollarSign },
+    { number: '$100 M+', label: 'Total Value Locked', icon: DollarSign },
     { number: '99.9%', label: 'Security Uptime', icon: Shield }
   ];
 
@@ -370,4 +370,4 @@ const BlockchainWeb3Page: React.FC = () => {,
   );
 };
 
-export default BlockchainWeb3Page;
+export default BlockchainWeb3 Page;

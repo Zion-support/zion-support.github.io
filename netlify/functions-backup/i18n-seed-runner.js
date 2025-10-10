@@ -42,7 +42,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const headers = {/* TODO: Fix JSX expression */}
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
-      'User-Agent': 'netlify-i18n-seed-runner',
+      'User-Agent': 'netlify-i18 n-seed-runner',
     };
     let sha;
     try {/* TODO: Fix JSX expression */}

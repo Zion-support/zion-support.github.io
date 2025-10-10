@@ -3,8 +3,8 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
 <<<<<<< HEAD
   return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
-      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]/>"
-      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t  />
+      <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60 px_60, p, x]/></div>"
+      <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-bla, c, k/50, t, o-transpare, n, t  /></div>
       {/* Floating, particles, effect */}
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  />
@@ -52,7 +52,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
             <span, className="te, x, t-yell, o, w-300, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">";
               🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5;
             </sp, a, n>
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
           </d, i, v>
         </d, i, v>
         {/* Main, headlin, e */}
@@ -174,11 +174,11 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
 <<<<<<< HEAD
           {/* Ca, r, d;
   1: Enterprise, Mes, h */}
-          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/80, t, o-indi, g, o-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">";
-            <div, className="flex, item, s-start, ga, p-4">";
-              <div, className="fl, e, x-shri, n, k-0">";
-                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-xl, flex, items-center, justif, y-center, shado, w-lg, shado, w-purp, l, e-5, 0, 0/50, grou, p-hov, e, r: shad, o, w-purp, l, e-4, 0, 0/70, transitio, n-a, l, l">";
-                  <Zap, className="w-8 h-8, tex, t-whi, t, e" />";
+          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/80, t, o-indi, g, o-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2 xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p"></div>";
+            <div, className="flex, item, s-start, ga, p-4"></div>";
+              <div, className="fl, e, x-shri, n, k-0"></div>";
+                <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-xl, flex, items-center, justif, y-center, shado, w-lg, shado, w-purp, l, e-5, 0, 0/50, grou, p-hov, e, r: shad, o, w-purp, l, e-4, 0, 0/70, transitio, n-a, l, l"></div>";
+                  <Zap, className="w-8 h-8, tex, t-whi, t, e" />";</Zap>
                 </d, i, v>
               </d, i, v>
               <div, className="fl, e, x-1">";

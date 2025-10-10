@@ -21,9 +21,9 @@ const CloudSecurityPage: React.FC = () => {
         keywords={["cloud security","compliance","data protection","cloud compliance","security monitoring"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/cloud-security"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

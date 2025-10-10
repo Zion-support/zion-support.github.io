@@ -2,7 +2,7 @@
 /**
  * Accessibility Checker Utility;
  *
- * Provides tools for checking and improving accessibility (a11y) in React applications.
+ * Provides tools for checking and improving accessibility (a11 y) in React applications.
  * Helps ensure WCAG 2.1 AA compliance.
  *
  * @module accessibilityChecker;
@@ -78,7 +78,7 @@ export interface A11yCheckResult {}
   /** Number of issues found */
   issueCount: number;
   /** List of issues */
-  issues: A11yIssue[];
+  issues: A11 yIssue[];
   /** Timestamp of the check */
   timestamp: Date;
   /** Overall accessibility score (0-100) */,
@@ -214,26 +214,26 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (alt === null && role !== 'presentation') {}
         this.addIssue({)}
           type: 'missing-alt-text',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img src="..." alt="Description of image" />'</im>
 
       }
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {}
         this.addIssue({)}
           type: 'empty-alt-without-role',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img src="..." alt="" role="presentation" />'</im>
 
 >>>>>>> origin/merge-error-fixes
 =======
@@ -293,7 +293,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (level > previousLevel + 1 && previousLevel !== 0) {}
         this.addIssue({)}
           type: 'skipped-heading-level',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.6',
           message: `Heading level skipped from h${previousLevel} to h${level}`,
@@ -317,7 +317,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (!heading.textContent?.trim()) {}
         this.addIssue({)}
           type: 'empty-heading',
-          severity: A11ySeverity.SERIOUS,
+          severity: A11 ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.6',
           message: `Empty ${heading.tagName} at position ${index + 1}`,
@@ -341,7 +341,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
     if (h1Count > 1) {}
       this.addIssue({)}
         type: 'multiple-h1',
-        severity: A11ySeverity.MODERATE,
+        severity: A11 ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.6',
 >>>>>>> origin/merge-error-fixes
@@ -416,7 +416,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {}
         this.addIssue({)}
           type: 'link-no-text',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
@@ -440,7 +440,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {}
         this.addIssue({)}
           type: 'generic-link-text',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has generic text: "${text}"`,
@@ -467,7 +467,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       ) {}
         this.addIssue({)}
           type: 'new-window-no-warning',
-          severity: A11ySeverity.MINOR,
+          severity: A11 ySeverity.MINOR,
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
@@ -555,13 +555,13 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (!text && !ariaLabel && !ariaLabelledBy) {}
         this.addIssue({)}
           type: 'button-no-text',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
           fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
+          codeExample: '<button aria-label="Close dialog">×</butto>'
 
 >>>>>>> origin/merge-error-fixes
 =======
@@ -618,7 +618,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (!label && !ariaLabel && !ariaLabelledBy) {}
         this.addIssue({)}
           type: 'form-no-label',
-          severity: A11ySeverity.CRITICAL,
+          severity: A11 ySeverity.CRITICAL,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.3.1',
 >>>>>>> origin/merge-error-fixes
@@ -674,7 +674,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (style?.includes('color:') && !style.includes('background')) {}
         this.addIssue({)}
           type: 'color-without-background',
-          severity: A11ySeverity.MINOR,
+          severity: A11 ySeverity.MINOR,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '1.4.3',
           message: 'Element has inline color without explicit background',
@@ -718,7 +718,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (tabindex === '-1') {}
         this.addIssue({)}
           type: 'interactive-not-focusable',
-          severity: A11ySeverity.SERIOUS,
+          severity: A11 ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',
 >>>>>>> origin/merge-error-fixes
@@ -750,14 +750,14 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (!role || !tabindex || !onKeyDown) {}
         this.addIssue({)}
           type: 'click-without-keyboard',
-          severity: A11ySeverity.SERIOUS,
+          severity: A11 ySeverity.SERIOUS,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',
 >>>>>>> origin/merge-error-fixes
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={handleClick}>Click me</butto>'
 
 =======
   private checkKeyboardAccess(elemen,)
@@ -840,7 +840,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       if (role && !validRoles.includes(role)) {}
         this.addIssue({)}
           type: 'invalid-aria-role',
-          severity: A11ySeverity.MODERATE,
+          severity: A11 ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
           message: `Invalid ARIA role: "${role}"`,
@@ -865,7 +865,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         if (!referencedElement) {}
           this.addIssue({)}
             type: 'aria-labelledby-missing',
-            severity: A11ySeverity.SERIOUS,
+            severity: A11 ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
             wcagCriterion: '4.1.2',
             message: `aria-labelledby references non-existent element: "${labelledBy}"`,
@@ -925,12 +925,11 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
     if (!hasMain) {}
       this.addIssue({)}
         type: 'missing-main-landmark',
-        severity: A11ySeverity.MODERATE,
+        severity: A11 ySeverity.MODERATE,
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
-        fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
+        fix: 'Add a <<<<main>element</main></<<main>or</main> role="main"',</<<<main>codeExample</main></main>: '<main></main><!-- Main content --></main>'
 
 >>>>>>> origin/merge-error-fixes
 =======

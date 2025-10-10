@@ -179,11 +179,11 @@ const AIHolographicWorkspacePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Basic 3D workspace</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Gesture controls</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Gesture controls</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Up to 5 virtual screens</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Up to 5 virtual screens</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -219,14 +219,14 @@ const AIHolographicWorkspacePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Advanced 3D workspace</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Multi-user collaboration</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Multi-user collaboration</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Unlimited virtual screens</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Unlimited virtual screens</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >AI spatial assistant</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >AI spatial assistant</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Priority support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -265,14 +265,14 @@ const AIHolographicWorkspacePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Full holographic suite</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Enterprise collaboration</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Enterprise collaboration</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom virtual environments</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom virtual environments</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >On-premise deployment<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>

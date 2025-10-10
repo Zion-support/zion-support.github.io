@@ -57,9 +57,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {,
     }
   }, []);
 
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {</PerformanceMetrics>
-    if (value === null) return 'text-gray-400';</PerformanceMetrics>
-    if (value <= thresholds.good) return 'text-green-400';
+  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value === null) return 'text-gray-400';</<<<PerformanceMetrics>if</PerformanceMetrics></PerformanceMetrics> (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };

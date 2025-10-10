@@ -222,7 +222,7 @@ const,
 
       {/* Additional structured data for breadcrumbs */}
       {location.pathname !== '/' && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
             '@type': 'BreadcrumbList',

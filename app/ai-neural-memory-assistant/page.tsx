@@ -168,11 +168,11 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Basic memory storage</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Simple reminders</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Simple reminders</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Text search</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Text search</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -208,14 +208,14 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Advanced neural learning</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Contextual reminders</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Contextual reminders</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Voice commands</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Voice commands</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Memory analytics</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Memory analytics</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Priority support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -254,14 +254,14 @@ const AINeuralMemoryAssistantPage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Full neural network access</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Team collaboration</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Team collaboration</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >On-premise deployment<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>

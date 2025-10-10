@@ -354,7 +354,7 @@ export const,
 <<<<<<< HEAD
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [,
-        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
+        '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
       marketSize: '$78 && 78.6B precision medicine market'
       growthRate: '28% annual growth'

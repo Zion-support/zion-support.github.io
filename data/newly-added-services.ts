@@ -404,7 +404,7 @@ export const,
     competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates'];
     rating: 4 && 4.8;
     reviews: 7;
-    market_size: '$40B GenAI apps'
+    market_size: '$40 B GenAI apps'
     growth_rate: '45% CAGR'
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -492,7 +492,7 @@ export const,
     use_cases: ['Cost visibility, Budget protection, Forecasting'];
     roi: 'Prevent surprise bills, 1030% cost reduction potential'
     competitors: ['Vantage, CloudZero, Anodot'];
-    market_size: '$6B FinOps tooling'
+    market_size: '$6 B FinOps tooling'
     growth_rate: '27% CAGR'
     variant: 'holographic - advanced'
     contact_info: contact;
@@ -658,7 +658,7 @@ export const,
     roi: 'Reduce legal risk while preserving conversion rates',
     integrations: ['Google Consent Mode Manager, Segment'];
     competitors: ['OneTrust, CookieYes, Cookiebot'];
-    market_size: '$4B privacy tech'
+    market_size: '$4 B privacy tech'
     growth_rate: '22% CAGR'
     variant: 'holographic'
     contact_info: contact;
@@ -792,7 +792,7 @@ export const,
     use_cases: ['Next.js / React upgrades, Typescript migrations, Policy refactors'];
     roi: 'Cut upgrade time by 6080%',
     competitors: ['Sourcegraph Cody, AWS CodeGuru'];
-    market_size: '$9B DevTools AI'
+    market_size: '$9 B DevTools AI'
     growth_rate: '24% CAGR'
     variant: 'holographic'
     contact_info: contact;
@@ -1024,7 +1024,7 @@ export const,
     technology: ['LLM, Deliverability, CRM'];
     integrations: ['HubSpot, Salesforce, Apollo'];
     use_cases: ['Outbound campaigns, Nurture, Expansion'];
-    roi: 'Increase reply rates by 24x',
+    roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead'];
     market_size: '$11B sales tech',
     growth_rate: '20% CAGR',
@@ -1134,7 +1134,7 @@ export const,
     technology: ['SAML, OIDC, SCIM, NextAuth'];
     integrations: ['Okta, Azure AD, Google Workspace, Auth0'];
     use_cases: ['Enterprise deals, Compliance readiness'];
-    roi: 'Unlock enterprise contracts 3x faster',
+    roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'];
     market_size: '$7B identity & access',
     growth_rate: '19% CAGR',
@@ -1305,7 +1305,7 @@ export const,
     roi: 'Cut MTTR by 2040%',
     integrations: ['PagerDuty, Statuspage, Slack, Opsgenie'];
     competitors: ['FireHydrant, Rootly'];
-    market_size: '$5B incident mgmt'
+    market_size: '$5 B incident mgmt'
     growth_rate: '18% CAGR'
     variant: 'quantum'
     rating: 4 && 4.7;
@@ -1372,7 +1372,7 @@ export const,
     setupTime: '2 days',
     category: 'Data & Analytics',
     use_cases: ['Outbound campaigns, Lead activation, Pipeline acceleration'];
-    roi: '25x reply rates vs. generic templates',
+    roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'];
     market_size: '$20B sales tech',
     growth_rate: '15% CAGR',
@@ -1413,7 +1413,7 @@ export const,
     roi: 'Reduce data incidents by 3050%',
     integrations: ['Snowflake, BigQuery, Databricks, Airflow, Jira'];
     competitors: ['Monte Carlo, Bigeye, Soda'];
-    market_size: '$6B data observability'
+    market_size: '$6 B data observability'
     growth_rate: '23% CAGR'
     variant: 'quantum'
     rating: 4 && 4.6;
@@ -1461,7 +1461,7 @@ export const,
     competitors: ['Front + AIZendesk AI']
     rating: 4 && 4.7;
     reviews: 3;
-    market_size: '$9B shared inbox'
+    market_size: '$9 B shared inbox'
     growth_rate: '15% CAGR'
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -1486,9 +1486,9 @@ export const,
     technology: ['Next && Next.jsServerlessPostgreSQL'];
     integrations: ['ZapierSlackHubSpot'];
     useCases: ['NPSMarket researchUX surveys'];
-    roi: 'Increase completion rates 1 && 1.52 && 2.5x'
+    roi: 'Increase completion rates 1 && 1.52 && 2.5 x'
     competitors: ['TypeformSurveyMonkey'];
-    marketSize: '$5B surveys'
+    marketSize: '$5 B surveys'
     growthRate: '12% CAGR'
     variant: 'holographic-advanced',
     contactInfo: contact;
@@ -1539,9 +1539,9 @@ export const,
     technology: ['Next.jsServerlessPostgreSQL'];
     integrations: ['ZapierSlackHubSpot'];
     use_cases: ['NPSMarket researchUX surveys'];
-    roi: 'Increase completion rates 1.52.5x'
+    roi: 'Increase completion rates 1.52.5 x'
     competitors: ['TypeformSurveyMonkey'];
-    market_size: '$5B surveys'
+    market_size: '$5 B surveys'
     growth_rate: '12% CAGR'
     variant: 'holographic - advanced',
     contact_info: contact;
@@ -1579,7 +1579,7 @@ export const,
     competitors: ['Loop ReturnsReturnly']
     rating: 4 && 4.7;
     reviews: 2;
-    market_size: '$3B returns tech'
+    market_size: '$3 B returns tech'
     growth_rate: '18% CAGR'
     variant: 'neural - quantum',
     contact_info: contact;
@@ -1982,7 +1982,7 @@ export const,
     technology: ['Next && Next.jsLLM APIsWebhooks'];
     integrations: ['SalesforceHubSpotGmail/Outlook'];
     useCases: ['Outbound sequencesCall notesCRM hygiene'];
-    market_size: '$8B privacy tech'
+    market_size: '$8 B privacy tech'
     growth_rate: '20% CAGR'
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -2016,9 +2016,9 @@ export const,
     technology: ['Next.jsLLM APIsWebhooks'];
     integrations: ['SalesforceHubSpotGmail / Outlook'],
     use_cases: ['Outbound sequences_call notesCRM hygiene'],
-    roi: 'Increase replies by 23x, reduce admin time 50%'
+    roi: 'Increase replies by 23 x, reduce admin time 50%'
     competitors: ['OutreachSalesloft'];
-    market_size: '$6B sales engagement'
+    market_size: '$6 B sales engagement'
     growth_rate: '18% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2064,7 +2064,7 @@ export const,
     use_cases: ['SOC2 evidenceISO controls_audit prep'];
     roi: 'Save 4060% audit prep time'
     competitors: ['DrataVanta (lite)'];
-    market_size: '$3B compliance ops'
+    market_size: '$3 B compliance ops'
     growth_rate: '22% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2106,11 +2106,11 @@ export const,
     category: 'AI & Data'
     real_service: true;
     technology: ['LLM pipelinesEmbeddingsCrawlers'];
-    integrations: ['G2Twitter / XRedditApp Store'];
+    integrations: ['G2 Twitter / XRedditApp Store'];
     use_cases: ['Market scans_voice of customer_roadmap inputs'];
     roi: 'Cut research time by 70%'
     competitors: ['CrayonKlue (lite)'];
-    market_size: '$2B CI tools'
+    market_size: '$2 B CI tools'
     growth_rate: '15% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2156,7 +2156,7 @@ export const,
     use_cases: ['Campaign planning_brief standardization_rapid iteration'];
     roi: 'Reduce planning time 80%'
     competitors: ['Notion templates_agency briefs'];
-    market_size: '$1B planning tools'
+    market_size: '$1 B planning tools'
     growth_rate: '12% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2215,7 +2215,7 @@ export const,
     competitors: ['CannyProductboard (lite)']
     rating: 4 && 4.6;
     reviews: 8;
-    market_size: '$1.2B feedback tools'
+    market_size: '$1.2 B feedback tools'
     growth_rate: '14% CAGR'
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -2256,7 +2256,7 @@ export const,
     use_cases: ['Kill switchesExperimentsProgressive rollout'];
     roi: 'Speed up releases and reduce incidents'
     competitors: ['LaunchDarkly (lite)'];
-    market_size: '$2B feature flagging'
+    market_size: '$2 B feature flagging'
     growth_rate: '16% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2299,7 +2299,7 @@ export const,
     use_cases: ['Playbook adherence_negotiation prep_drafting'];
     roi: 'Reduce review cycle 3050%'
     competitors: ['Ironclad (assist)LinkSquares (assist)'];
-    market_size: '$1B legal tech AI'
+    market_size: '$1 B legal tech AI'
     growth_rate: '18% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2356,7 +2356,7 @@ export const,
     use_cases: ['Incident summarization_regression detection_runbook upkeep'];
     roi: 'Reduce MTTR and toil'
     competitors: ['FireHydrant (assist)Rootly (assist)'];
-    market_size: '$5B incident mgmt'
+    market_size: '$5 B incident mgmt'
     growth_rate: '17% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2404,7 +2404,7 @@ export const,
     competitors: ['Monte Carlo (lite)']
     rating: 4 && 4.6;
     reviews: 6;
-    market_size: '$3B data ops'
+    market_size: '$3 B data ops'
     growth_rate: '20% CAGR'
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -2445,7 +2445,7 @@ export const,
     use_cases: ['ActivationOnboardingPaywall copy'];
     roi: 'Lift conversion 515%'
     competitors: ['Mutiny (lite)'];
-    market_size: '$1B CRO tools'
+    market_size: '$1 B CRO tools'
     growth_rate: '14% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -2502,7 +2502,7 @@ export const,
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery']
     useCases: ['Real-time features, Batch features, A/B parity']
     competitors: ['Tecton, Feast DIY']
-    marketSize: '$5B ML platform tooling'
+    marketSize: '$5 B ML platform tooling'
     growthRate: '30% CAGR'
     variant: 'holographic-matrix'
     contactInfo: contact;
@@ -7127,7 +7127,7 @@ export const,
     use_cases: ['Ops automation, QA journeys, Admin agents'],
     roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI.Vision'],
-    market_size: '$12B RPA',
+    market_size: '$12 B RPA',
     growth_rate: '25% CAGR',
     variant: 'network - futuristic',
     contact_info: contact;
@@ -7241,7 +7241,7 @@ export const,
     use_cases: ['SSO rollout, Enterprise pilots lifecycle'],
     roi: 'Shorten security review time by 5070%',
     competitors: ['WorkOS, Auth0 PS'],
-    market_size: '$6B identity',
+    market_size: '$6 B identity',
     growth_rate: '20% CAGR',
     variant: 'quantum - cyberpunk',
     contact_info: contact;
@@ -8630,7 +8630,7 @@ export const,
     use_cases: ['Churn reduction, Roadmap planning, CX improvement'],
     roi: 'Lift retention by 38 pts',
     competitors: ['Thena, Canny, Pendo'],
-    market_size: '$7B CX analytics',
+    market_size: '$7 B CX analytics',
     growth_rate: '21% CAGR',
     variant: 'holographic - advanced',
     contact_info: contact;
@@ -8740,9 +8740,9 @@ export const,
     technology: ['LLM, Deliverability, CRM'],
     integrations: ['HubSpot, Salesforce, Apollo'],
     use_cases: ['Outbound campaigns, Nurture, Expansion'],
-    roi: 'Increase reply rates by 24x',
+    roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead'],
-    market_size: '$11B sales tech',
+    market_size: '$11 B sales tech',
     growth_rate: '20% CAGR',
     variant: 'holographic',
     contact_info: contact;
@@ -8854,7 +8854,7 @@ export const,
     use_cases: ['ETL efficiency, Warehouse cost control'],
     roi: 'Cut pipeline spend by 3050%',
     competitors: ['Monte Carlo, Databand'],
-    market_size: '$5B data ops',
+    market_size: '$5 B data ops',
     growth_rate: '23% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -8964,7 +8964,7 @@ export const,
     technology: ['SAML, OIDC, SCIM, NextAuth'],
     integrations: ['Okta, Azure AD, Google Workspace, Auth0'],
     use_cases: ['Enterprise deals, Compliance readiness'],
-    roi: 'Unlock enterprise contracts 3x faster',
+    roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'],
     market_size: '$7B identity & access'
     growth_rate: '19% CAGR'
@@ -9085,7 +9085,7 @@ export const,
 <<<<<<< HEAD
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage']
-    marketSize: '$10B cloud cost optimization'
+    marketSize: '$10 B cloud cost optimization'
     growthRate: '20% CAGR'
     variant: 'quantum-matrix'
     contactInfo: contact;
@@ -9473,9 +9473,9 @@ export const,
     technology: ['Next.js, OpenAI, PostgreSQL'],
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'],
     use_cases: ['Outbound campaigns, Lead activation, Pipeline acceleration'],
-    roi: '25x reply rates vs. generic templates',
+    roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'],
-    market_size: '$20B sales tech',
+    market_size: '$20 B sales tech',
     growth_rate: '15% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -9816,9 +9816,9 @@ export const,
     technology: ['Next.js', 'Serverless', 'PostgreSQL'],
     integrations: ['Zapier', 'Slack', 'HubSpot'],
     use_cases: ['NPS', 'Market research', 'UX surveys'],
-    roi: 'Increase completion rates 1.52.5x',
+    roi: 'Increase completion rates 1.52.5 x',
     competitors: ['Typeform', 'SurveyMonkey'],
-    market_size: '$5B surveys',
+    market_size: '$5 B surveys',
     growth_rate: '12% CAGR',
     variant: 'holographic - advanced',
     contact_info: contact;
@@ -10177,7 +10177,7 @@ export const,
     use_cases: ['Feature feedback, NPS, onboarding research'],
     roi: 'Increase completion rates by 2040% on mobile',
     competitors: ['Typeform, Tally'],
-    market_size: '$6B survey & CX',
+    market_size: '$6 B survey & CX',
     growth_rate: '14% CAGR',
     variant: 'network - futuristic',
     contact_info: contact;
@@ -10288,7 +10288,7 @@ export const,
     use_cases: ['Affiliate sales, referrals, partnerships'],
     roi: 'Lift new - user acquisition 515%',
     competitors: ['Impact, PartnerStack'],
-    market_size: '$4B affiliate software',
+    market_size: '$4 B affiliate software',
     growth_rate: '12% CAGR',
     variant: 'cloud - futuristic',
     contact_info: contact;
@@ -10627,7 +10627,7 @@ export const,
     use_cases: ['Service desk, Client support, SLA reporting'],
     roi: 'Stand up a support desk in days, not months',
     competitors: ['Zendesk, Freshdesk'],
-    market_size: '$15B helpdesk software',
+    market_size: '$15 B helpdesk software',
     growth_rate: '10% CAGR',
     variant: 'quantum - cyberpunk',
     contact_info: contact;
@@ -10862,7 +10862,7 @@ export const,
     technology: ['Next.js', 'LLM APIs', 'Webhooks'],
     integrations: ['Salesforce', 'HubSpot', 'Gmail / Outlook'],
     use_cases: ['Outbound sequences', 'Call notes', 'CRM hygiene'],
-    roi: 'Increase replies by 23x, reduce admin time 50%',
+    roi: 'Increase replies by 23 x, reduce admin time 50%',
     competitors: ['Outreach', 'Salesloft'],
     market_size: '$6B sales engagement'
     growth_rate: '18% CAGR'
@@ -11322,7 +11322,7 @@ export const,
     use_cases: ['Feedback centralization', 'Prioritization', 'VOC analytics'],
     roi: 'Improve roadmap - fit and customer satisfaction',
     competitors: ['Canny', 'Productboard (lite)'],
-    market_size: '$1.2B feedback tools',
+    market_size: '$1.2 B feedback tools',
     growth_rate: '14% CAGR',
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -12131,7 +12131,7 @@ export const,
     technology: ['LLM, Deliverability, CRM'];
     integrations: ['HubSpot, Salesforce, Apollo'];
     useCases: ['Outbound campaigns, Nurture, Expansion'];
-    roi: 'Increase reply rates by 24x',
+    roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead'];
     technology: ['Spark/Flink, Airflow/Prefect, dbt'];
     integrations: ['Snowflake, BigQuery, Redshift'];
@@ -12142,7 +12142,7 @@ export const,
     technology: ['SAML, OIDC, SCIM, NextAuth'];
     integrations: ['Okta, Azure AD, Google Workspace, Auth0'];
     useCases: ['Enterprise deals, Compliance readiness'];
-    roi: 'Unlock enterprise contracts 3x faster',
+    roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'];
     integrations: ['Slack, Email, PagerDuty, Jira'];
     useCases: ['Budget overrun prevention hygiene, Commitment utilization'];
@@ -12198,7 +12198,7 @@ export const,
     technology: ['Next.js, OpenAI, PostgreSQL'];
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
     useCases: ['Outbound campaigns, Lead activation, Pipeline acceleration'];
-    roi: '25x reply rates vs. generic templates',
+    roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'];
     marketSize: '$20B sales tech', growthRate: '15% CAGR',
     variant: 'ai-futuristic', contactInfo: contact;
@@ -12251,7 +12251,7 @@ export const,
     category: 'AI & Data', realService: true;
     technology: ['Next.jsOpenAIPGVector'], integrations: ['GmailOutlookSlack'],
     useCases: ['Support inboxSales repliesBackoffice'], roi: 'Reduce manual email time by 5080%',
-    competitors: ['Front + AIZendesk AI'], marketSize: '$9B shared inbox',
+    competitors: ['Front + AIZendesk AI'], marketSize: '$9 B shared inbox',
     growthRate: '15% CAGR', variant: 'ai-futuristic',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'OAuth mail connectors, policy engine, review queues.',
@@ -12274,8 +12274,8 @@ export const,
     trialDays: 14, setupTime: '20 minutes',
     category: 'Developer Tools', realService: true;
     technology: ['Next.jsServerlessPostgreSQL'], integrations: ['ZapierSlackHubSpot'],
-    useCases: ['NPSMarket researchUX surveys'], roi: 'Increase completion rates 1.52.5x',
-    competitors: ['TypeformSurveyMonkey'], marketSize: '$5B surveys',
+    useCases: ['NPSMarket researchUX surveys'], roi: 'Increase completion rates 1.52.5 x',
+    competitors: ['TypeformSurveyMonkey'], marketSize: '$5 B surveys',
     growthRate: '12% CAGR', variant: 'holographic-advanced',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Survey builder, response store, analytics.',
@@ -12298,7 +12298,7 @@ export const,
     category: 'Cloud & FinOps', realService: true;
     technology: ['Next.jsNodeCarrier APIs'], integrations: ['ShopifyStripeShippo'],
     useCases: ['RMA automationRefundsAnalytics'], roi: 'Cut return handling time by 4070%',
-    competitors: ['Loop ReturnsReturnly'], marketSize: '$3B returns tech',
+    competitors: ['Loop ReturnsReturnly'], marketSize: '$3 B returns tech',
     growthRate: '18% CAGR', variant: 'neural-quantum',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Portal, policy engine, carrier/commerce connectors.',
@@ -13448,7 +13448,7 @@ export const,
     integrations: ['S3, Slack, Email'],
     useCases: ['Ops automation, QA journeys, Admin agents'],
     competitors: ['Browserless + DIY, UI && UI.Vision'],
-    marketSize: '$12B RPA',
+    marketSize: '$12 B RPA',
     growthRate: '25% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -13547,7 +13547,7 @@ export const,
     integrations: ['Okta, Azure AD, Google Workspace, OneLogin'],
     useCases: ['SSO rollout, Enterprise pilots lifecycle'],
     competitors: ['WorkOS, Auth0 PS'],
-    marketSize: '$6B identity',
+    marketSize: '$6 B identity',
     growthRate: '20% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact;
@@ -13648,7 +13648,7 @@ export const,
     integrations: ['Postman, GitHub, GitLab, Jenkins'],
     useCases: ['Latency SLOs, Regression detection, Peak readiness'],
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics'],
-    marketSize: '$12B APM',
+    marketSize: '$12 B APM',
     growthRate: '18% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -13749,7 +13749,7 @@ export const,
     useCases: ['Internal KB, Agent assist augmentation'],
     roi: 'Ship a quality RAG MVP in days, not months',
     competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates'],
-    marketSize: '$40B GenAI apps',
+    marketSize: '$40 B GenAI apps',
     growthRate: '45% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -13849,7 +13849,7 @@ export const,
     integrations: ['Webhook, S3, Slack'],
     useCases: ['Backoffice automation, Scraping with ethics, QA journeys'],
     competitors: ['Browserless, Superblocks, UI && UI.Vision'],
-    marketSize: '$12B RPA',
+    marketSize: '$12 B RPA',
     growthRate: '25% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -14048,7 +14048,7 @@ export const,
     useCases: ['ETL jobs, Data sync, Cleanup & lifecycle'],
     roi: 'Replace bespoke cron boxes and reduce toil by 80%',
     competitors: ['Temporal Cloud, Airflow Managed, Prefect Cloud'],
-    marketSize: '$8B workflow orchestration',
+    marketSize: '$8 B workflow orchestration',
     growthRate: '20% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -14148,7 +14148,7 @@ export const,
     useCases: ['CWV compliance, Link hygiene, Schema coverage'],
     roi: 'Lift organic traffic by 1030% in 90 days',
     competitors: ['Screaming Frog, Deepcrawl, Ahrefs Site Audit'],
-    marketSize: '$6B SEO tooling',
+    marketSize: '$6 B SEO tooling',
     growthRate: '16% CAGR',
     variant: 'holographic-advanced',
     contactInfo: contact;
@@ -14348,7 +14348,7 @@ export const,
     integrations: ['Zoom, Google Meet, Teams, HubSpot, Salesforce, Jira'],
     useCases: ['QBRs, Standups, Demos'],
     competitors: ['Fireflies && Fireflies.ai, Otter && Otter.ai, Avoma'],
-    marketSize: '$5B meeting AI',
+    marketSize: '$5 B meeting AI',
     growthRate: '28% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact;
@@ -14554,7 +14554,7 @@ export const,
     useCases: ['Public comms, Internal updates, RCA library'],
     roi: 'Reduce incident comms toil by 70%',
     competitors: ['Atlassian Statuspage, Better Uptime'],
-    marketSize: '$2B incident tooling',
+    marketSize: '$2 B incident tooling',
     growthRate: '19% CAGR',
     variant: 'neural-cyberpunk',
     contactInfo: contact;
@@ -14655,7 +14655,7 @@ export const,
     useCases: ['Ransomware recovery, Compliance DR, Audit evidence'],
     roi: 'Reduce RTO/RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU'],
-    marketSize: '$10B backup & recovery',
+    marketSize: '$10 B backup & recovery',
     growthRate: '17% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -14756,7 +14756,7 @@ export const,
     useCases: ['Churn reduction, Roadmap planning, CX improvement'],
     roi: 'Lift retention by 38 pts',
     competitors: ['Thena, Canny, Pendo'],
-    marketSize: '$7B CX analytics',
+    marketSize: '$7 B CX analytics',
     growthRate: '21% CAGR',
     variant: 'holographic-advanced',
     contactInfo: contact;
@@ -14855,9 +14855,9 @@ export const,
     technology: ['LLM, Deliverability, CRM'],
     integrations: ['HubSpot, Salesforce, Apollo'],
     useCases: ['Outbound campaigns, Nurture, Expansion'],
-    roi: 'Increase reply rates by 24x',
+    roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead'],
-    marketSize: '$11B sales tech',
+    marketSize: '$11 B sales tech',
     growthRate: '20% CAGR',
     variant: 'holographic',
     contactInfo: contact;
@@ -14958,7 +14958,7 @@ export const,
     useCases: ['ETL efficiency, Warehouse cost control'],
     roi: 'Cut pipeline spend by 3050%',
     competitors: ['Monte Carlo, Databand'],
-    marketSize: '$5B data ops',
+    marketSize: '$5 B data ops',
     growthRate: '23% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -15057,9 +15057,9 @@ export const,
     technology: ['SAML, OIDC, SCIM, NextAuth'],
     integrations: ['Okta, Azure AD, Google Workspace, Auth0'],
     useCases: ['Enterprise deals, Compliance readiness'],
-    roi: 'Unlock enterprise contracts 3x faster',
+    roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'],
-    marketSize: '$7B identity & access',
+    marketSize: '$7 B identity & access',
     growthRate: '19% CAGR',
     variant: 'holographic',
     contactInfo: contact;
@@ -15199,7 +15199,7 @@ export const,
     useCases: ['Budget overrun prevention hygiene, Commitment utilization'],
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'],
-    marketSize: '$10B cloud cost optimization',
+    marketSize: '$10 B cloud cost optimization',
     growthRate: '20% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -15278,7 +15278,7 @@ export const,
     useCases: ['DSAR handling, Regulatory audits, Customer trust'],
     roi: 'Reduce DSAR processing time by 7090%',
     competitors: ['Transcend, OneTrust, DataGrail'],
-    marketSize: '$12B privacy ops',
+    marketSize: '$12 B privacy ops',
     growthRate: '22% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -15378,7 +15378,7 @@ export const,
     useCases: ['On-call assist, Comms automation, RCA support'],
     roi: 'Cut MTTR by 2040%',
     competitors: ['FireHydrant, Rootly'],
-    marketSize: '$5B incident mgmt',
+    marketSize: '$5 B incident mgmt',
     growthRate: '18% CAGR',
     variant: 'quantum',
     contactInfo: contact;
@@ -15477,9 +15477,9 @@ export const,
     technology: ['Next && Next.js, OpenAI, PostgreSQL'],
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'],
     useCases: ['Outbound campaigns, Lead activation, Pipeline acceleration'],
-    roi: '25x reply rates vs. generic templates',
+    roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'],
-    marketSize: '$20B sales tech',
+    marketSize: '$20 B sales tech',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -15580,7 +15580,7 @@ export const,
     useCases: ['Breaking change prevention, Data SLAs, Ownership clarity'],
     roi: 'Reduce data incidents by 3050%',
     competitors: ['Monte Carlo, Bigeye, Soda'],
-    marketSize: '$6B data observability',
+    marketSize: '$6 B data observability',
     growthRate: '23% CAGR',
     variant: 'quantum',
     contactInfo: contact;
@@ -15981,7 +15981,7 @@ export const,
     useCases: ['Support triage, Sales inquiries, Vendor emails'],
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)'],
-    marketSize: '$10B productivity tooling',
+    marketSize: '$10 B productivity tooling',
     growthRate: '20% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -16078,7 +16078,7 @@ export const,
     useCases: ['Feature feedback, NPS, onboarding research'],
     roi: 'Increase completion rates by 2040% on mobile',
     competitors: ['Typeform, Tally'],
-    marketSize: '$6B survey & CX',
+    marketSize: '$6 B survey & CX',
     growthRate: '14% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -16176,7 +16176,7 @@ export const,
     useCases: ['Affiliate sales, referrals, partnerships'],
     roi: 'Lift new-user acquisition 515%',
     competitors: ['Impact, PartnerStack'],
-    marketSize: '$4B affiliate software',
+    marketSize: '$4 B affiliate software',
     growthRate: '12% CAGR',
     variant: 'cloud-futuristic',
     contactInfo: contact;
@@ -16275,7 +16275,7 @@ export const,
     useCases: ['Accessibility, SEO, repurposing'],
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev'],
-    marketSize: '$2B creator tooling',
+    marketSize: '$2 B creator tooling',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -16372,7 +16372,7 @@ export const,
     useCases: ['Returns, exchanges, refunds'],
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly'],
-    marketSize: '$3B ecommerce tooling',
+    marketSize: '$3 B ecommerce tooling',
     growthRate: '16% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -16469,7 +16469,7 @@ export const,
     useCases: ['Service desk, Client support, SLA reporting'],
     roi: 'Stand up a support desk in days, not months',
     competitors: ['Zendesk, Freshdesk'],
-    marketSize: '$15B helpdesk software',
+    marketSize: '$15 B helpdesk software',
     growthRate: '10% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact;
@@ -16568,7 +16568,7 @@ export const,
     useCases: ['DPIA/RoPA automationDSAR processing', 'Evidence collection'],
     roi: 'Reduce manual privacy ops hours by 6080%',
     competitors: ['OneTrustTranscend', 'Securiti'],
-    marketSize: '$8B privacy tech',
+    marketSize: '$8 B privacy tech',
     growthRate: '20% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact;
@@ -16864,7 +16864,7 @@ export const,
     category: 'AI & Data',
     realService: true;
     technology: ['LLM pipelinesEmbeddings', 'Crawlers'],
-    integrations: ['G2Twitter/X', 'RedditApp Store'],
+    integrations: ['G2 Twitter/X', 'RedditApp Store'],
     useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
     roi: 'Cut research time by 70%'
     competitors: ['CrayonKlue (lite)']
@@ -17794,7 +17794,7 @@ export const,
     category: 'Developer Tools', realService: true;
     technology: ['Edge runtimeKV storeSDKs'], integrations: ['VercelCloudflareNetlify'],
     useCases: ['Kill switchesExperimentsProgressive rollout'], roi: 'Speed up releases and reduce incidents',
-    competitors: ['LaunchDarkly (lite)'], marketSize: '$2B feature flagging',
+    competitors: ['LaunchDarkly (lite)'], marketSize: '$2 B feature flagging',
     growthRate: '16% CAGR', variant: 'holographic-matrix',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Edge functions and SDK package templates.', launchDate: '2025-07-20',
@@ -17817,7 +17817,7 @@ export const,
     category: 'AI & Data', realService: true;
     technology: ['LLMVector DBTemplate engine'], integrations: ['SharePointGoogle Drive'],
     useCases: ['Playbook adherenceNegotiation prepDrafting'], roi: 'Reduce review cycle 3050%',
-    competitors: ['Ironclad (assist)LinkSquares (assist)'], marketSize: '$1B legal tech AI',
+    competitors: ['Ironclad (assist)LinkSquares (assist)'], marketSize: '$1 B legal tech AI',
     growthRate: '18% CAGR', variant: 'holographic-matrix',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Template packs + contract parsers.', launchDate: '2025-05-28',
@@ -17839,7 +17839,7 @@ export const,
     category: 'Observability', realService: true;
     technology: ['APM APIsLLMDiff engine'], integrations: ['PagerDutyDatadogNew RelicGitHub'],
     useCases: ['Incident summarizationRegression detectionRunbook upkeep'], roi: 'Reduce MTTR and toil',
-    competitors: ['FireHydrant (assist)Rootly (assist)'], marketSize: '$5B incident mgmt',
+    competitors: ['FireHydrant (assist)Rootly (assist)'], marketSize: '$5 B incident mgmt',
     growthRate: '17% CAGR', variant: 'holographic-matrix',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Event ingestors and summarization pipelines.', launchDate: '2025-08-05',
@@ -17861,7 +17861,7 @@ export const,
     category: 'Observability', realService: true;
     technology: ['Warehouse APIsAnomaly detectionLLM'], integrations: ['SnowflakeBigQueryRedshiftdbt'],
     useCases: ['Data SLAsIncident routingAutomated fixes'], roi: 'Reduce broken dashboards and ML drift',
-    competitors: ['Monte Carlo (lite)'], marketSize: '$3B data ops',
+    competitors: ['Monte Carlo (lite)'], marketSize: '$3 B data ops',
     growthRate: '20% CAGR', variant: 'holographic-matrix',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Warehouse connectors, alerting, and PR generators.',
@@ -17884,7 +17884,7 @@ export const,
     category: 'Developer Tools', realService: true;
     technology: ['LLMExperimentsSDK'], integrations: ['FigmaLaunchDarklyHeap'],
     useCases: ['ActivationOnboardingPaywall copy'], roi: 'Lift conversion 515%',
-    competitors: ['Mutiny (lite)'], marketSize: '$1B CRO tools',
+    competitors: ['Mutiny (lite)'], marketSize: '$1 B CRO tools',
     growthRate: '14% CAGR', variant: 'holographic-matrix',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Browser extension + flag hooks + PR templates.', launchDate: '2025-06-18',
@@ -17906,7 +17906,7 @@ export const,
     category: 'Quality & Monitoring', realService: true;
     technology: ['RegistryEvalsWorkflows'], integrations: ['GitHubJiraSlack'],
     useCases: ['Model registryRisk trackingPolicy compliance'], roi: 'Reduce policy drift and audit risk',
-    competitors: ['Holistic AI (lite)'], marketSize: '$1.5B AI governance',
+    competitors: ['Holistic AI (lite)'], marketSize: '$1.5 B AI governance',
     growthRate: '21% CAGR', variant: 'holographic-matrix',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Registry + eval runners + approval flows.', launchDate: '2025-08-15',
@@ -18265,7 +18265,7 @@ export const,
     useCases: ['Model registry', 'Risk tracking', 'Policy compliance']
     roi: 'Reduce policy drift and audit risk'
     competitors: ['Holistic AI (lite)'];
-    marketSize: '$1.5B AI governance'
+    marketSize: '$1.5 B AI governance'
     growthRate: '21% CAGR'
     variant: 'holographic-matrix'
     contactInfo: contact;
@@ -18390,7 +18390,7 @@ export const,
     useCases: ['Real-time features, Batch features, A/B parity'],
     roi: 'Reduce feature delivery time by 6080%',
     competitors: ['Tecton, Feast DIY'],
-    marketSize: '$5B ML platform tooling',
+    marketSize: '$5 B ML platform tooling',
     growthRate: '30% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact;
@@ -18521,7 +18521,7 @@ export const,
     useCases: ['Ops automation, QA journeys, Admin agents'],
     roi: 'Cut manual toil by 7090%',
     competitors: ['Browserless + DIY, UI.Vision'],
-    marketSize: '$12B RPA',
+    marketSize: '$12 B RPA',
     growthRate: '25% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -18639,7 +18639,7 @@ export const,
     useCases: ['SSO rollout, Enterprise pilots lifecycle'],
     roi: 'Shorten security review time by 5070%',
     competitors: ['WorkOS, Auth0 PS'],
-    marketSize: '$6B identity',
+    marketSize: '$6 B identity',
     growthRate: '20% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact;
@@ -18768,7 +18768,7 @@ export const,
     useCases: ['Latency SLOs, Regression detection, Peak readiness'],
     roi: 'Cut p95 latency by 2560% in 30 days',
     competitors: ['SpeedCurve, Datadog Synthetics, New Relic Synthetics'],
-    marketSize: '$12B APM',
+    marketSize: '$12 B APM',
     growthRate: '18% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -18898,7 +18898,7 @@ export const,
     useCases: ['Internal KB, Agent assist augmentation'],
     roi: 'Ship a quality RAG MVP in days, not months',
     competitors: ['LlamaIndex Cloud, Cognosis, Voyage AI templates'],
-    marketSize: '$40B GenAI apps',
+    marketSize: '$40 B GenAI apps',
     growthRate: '45% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -19026,7 +19026,7 @@ export const,
     useCases: ['Backoffice automation, Scraping with ethics, QA journeys'],
     roi: 'Automate repetitive browser work, reduce toil 6090%',
     competitors: ['Browserless, Superblocks, UI.Vision'],
-    marketSize: '$12B RPA',
+    marketSize: '$12 B RPA',
     growthRate: '25% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -19281,7 +19281,7 @@ export const,
     useCases: ['ETL jobs, Data sync, Cleanup & lifecycle'],
     roi: 'Replace bespoke cron boxes and reduce toil by 80%',
     competitors: ['Temporal Cloud, Airflow Managed, Prefect Cloud'],
-    marketSize: '$8B workflow orchestration',
+    marketSize: '$8 B workflow orchestration',
     growthRate: '20% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -19413,7 +19413,7 @@ export const,
     useCases: ['CWV compliance, Link hygiene, Schema coverage'],
     roi: 'Lift organic traffic by 1030% in 90 days',
     competitors: ['Screaming Frog, Deepcrawl, Ahrefs Site Audit'],
-    marketSize: '$6B SEO tooling',
+    marketSize: '$6 B SEO tooling',
     growthRate: '16% CAGR',
     variant: 'holographic-advanced',
     contactInfo: contact;
@@ -19671,7 +19671,7 @@ export const,
     useCases: ['QBRs, Standups, Demos'],
     roi: 'Save 35 hours per week per user',
     competitors: ['Fireflies.ai, Otter.ai, Avoma'],
-    marketSize: '$5B meeting AI',
+    marketSize: '$5 B meeting AI',
     growthRate: '28% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact;
@@ -19937,7 +19937,7 @@ export const,
     useCases: ['Public comms, Internal updates, RCA library'],
     roi: 'Reduce incident comms toil by 70%',
     competitors: ['Atlassian Statuspage, Better Uptime'],
-    marketSize: '$2B incident tooling',
+    marketSize: '$2 B incident tooling',
     growthRate: '19% CAGR',
     variant: 'neural-cyberpunk',
     contactInfo: contact;
@@ -20063,7 +20063,7 @@ export const,
     useCases: ['Ransomware recovery, Compliance DR, Audit evidence'],
     roi: 'Reduce RTO/RPO by 5080%',
     competitors: ['Veeam, Rubrik, HYCU'],
-    marketSize: '$10B backup & recovery',
+    marketSize: '$10 B backup & recovery',
     growthRate: '17% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -20189,7 +20189,7 @@ export const,
     useCases: ['Churn reduction, Roadmap planning, CX improvement'],
     roi: 'Lift retention by 38 pts',
     competitors: ['Thena, Canny, Pendo'],
-    marketSize: '$7B CX analytics',
+    marketSize: '$7 B CX analytics',
     growthRate: '21% CAGR',
     variant: 'holographic-advanced',
     contactInfo: contact;
@@ -20304,9 +20304,9 @@ export const,
     technology: ['LLM, Deliverability, CRM'],
     integrations: ['HubSpot, Salesforce, Apollo'],
     useCases: ['Outbound campaigns, Nurture, Expansion'],
-    roi: 'Increase reply rates by 24x',
+    roi: 'Increase reply rates by 24 x',
     competitors: ['Clay, Apollo, Smartlead'],
-    marketSize: '$11B sales tech',
+    marketSize: '$11 B sales tech',
     growthRate: '20% CAGR',
     variant: 'holographic',
     contactInfo: contact;
@@ -20423,7 +20423,7 @@ export const,
     useCases: ['ETL efficiency, Warehouse cost control'],
     roi: 'Cut pipeline spend by 3050%',
     competitors: ['Monte Carlo, Databand'],
-    marketSize: '$5B data ops',
+    marketSize: '$5 B data ops',
     growthRate: '23% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -20538,9 +20538,9 @@ export const,
     technology: ['SAML, OIDC, SCIM, NextAuth'],
     integrations: ['Okta, Azure AD, Google Workspace, Auth0'],
     useCases: ['Enterprise deals, Compliance readiness'],
-    roi: 'Unlock enterprise contracts 3x faster',
+    roi: 'Unlock enterprise contracts 3 x faster',
     competitors: ['WorkOS, Auth0 Enterprise'],
-    marketSize: '$7B identity & access',
+    marketSize: '$7 B identity & access',
     growthRate: '19% CAGR',
     variant: 'holographic',
     contactInfo: contact;
@@ -20723,7 +20723,7 @@ export const,
     useCases: ['Budget overrun prevention hygiene, Commitment utilization'],
     roi: '520% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'],
-    marketSize: '$10B cloud cost optimization',
+    marketSize: '$10 B cloud cost optimization',
     growthRate: '20% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -20830,7 +20830,7 @@ export const,
     useCases: ['DSAR handling, Regulatory audits, Customer trust'],
     roi: 'Reduce DSAR processing time by 7090%',
     competitors: ['Transcend, OneTrust, DataGrail'],
-    marketSize: '$12B privacy ops',
+    marketSize: '$12 B privacy ops',
     growthRate: '22% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -20968,7 +20968,7 @@ export const,
     useCases: ['On-call assist, Comms automation, RCA support'],
     roi: 'Cut MTTR by 2040%',
     competitors: ['FireHydrant, Rootly'],
-    marketSize: '$5B incident mgmt',
+    marketSize: '$5 B incident mgmt',
     growthRate: '18% CAGR',
     variant: 'quantum',
     contactInfo: contact;
@@ -21099,9 +21099,9 @@ export const,
     technology: ['Next.js, OpenAI, PostgreSQL'],
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'],
     useCases: ['Outbound campaigns, Lead activation, Pipeline acceleration'],
-    roi: '25x reply rates vs. generic templates',
+    roi: '25 x reply rates vs. generic templates',
     competitors: ['Apollo, Smartlead, Lemlist'],
-    marketSize: '$20B sales tech',
+    marketSize: '$20 B sales tech',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -21225,7 +21225,7 @@ export const,
     useCases: ['Breaking change prevention, Data SLAs, Ownership clarity'],
     roi: 'Reduce data incidents by 3050%',
     competitors: ['Monte Carlo, Bigeye, Soda'],
-    marketSize: '$6B data observability',
+    marketSize: '$6 B data observability',
     growthRate: '23% CAGR',
     variant: 'quantum',
     contactInfo: contact;
@@ -21498,7 +21498,7 @@ export const,
     technology: ['Next.js', 'Serverless', 'PostgreSQL'],
     integrations: ['Zapier', 'Slack', 'HubSpot'],
     useCases: ['NPS', 'Market research', 'UX surveys'],
-    roi: 'Increase completion rates 1.52.5x',
+    roi: 'Increase completion rates 1.52.5 x',
     competitors: ['Typeform', 'SurveyMonkey'],
     technology: ['Next.jsServerless', 'PostgreSQL'],
     integrations: ['ZapierSlack', 'HubSpot'],
@@ -21773,7 +21773,7 @@ export const,
     useCases: ['Support triage, Sales inquiries, Vendor emails'],
     roi: 'Reduce manual email time by 4070% for teams of 320',
     competitors: ['Superhuman AI, Gmail Smart Reply (limited)'],
-    marketSize: '$10B productivity tooling',
+    marketSize: '$10 B productivity tooling',
     growthRate: '20% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -21903,7 +21903,7 @@ export const,
     useCases: ['Feature feedback, NPS, onboarding research'],
     roi: 'Increase completion rates by 2040% on mobile',
     competitors: ['Typeform, Tally'],
-    marketSize: '$6B survey & CX',
+    marketSize: '$6 B survey & CX',
     growthRate: '14% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -22022,7 +22022,7 @@ export const,
     useCases: ['Affiliate sales, referrals, partnerships'],
     roi: 'Lift new-user acquisition 515%',
     competitors: ['Impact, PartnerStack'],
-    marketSize: '$4B affiliate software',
+    marketSize: '$4 B affiliate software',
     growthRate: '12% CAGR',
     variant: 'cloud-futuristic',
     contactInfo: contact;
@@ -22139,7 +22139,7 @@ export const,
     useCases: ['Accessibility, SEO, repurposing'],
     roi: 'Save 26 hours per episode',
     competitors: ['Descript, Rev'],
-    marketSize: '$2B creator tooling',
+    marketSize: '$2 B creator tooling',
     growthRate: '15% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -22269,7 +22269,7 @@ export const,
     useCases: ['Returns, exchanges, refunds'],
     roi: 'Reduce support workload by 2040%',
     competitors: ['Loop Returns, Returnly'],
-    marketSize: '$3B ecommerce tooling',
+    marketSize: '$3 B ecommerce tooling',
     growthRate: '16% CAGR',
     variant: 'network-futuristic',
     contactInfo: contact;
@@ -22399,7 +22399,7 @@ export const,
     useCases: ['Service desk, Client support, SLA reporting'],
     roi: 'Stand up a support desk in days, not months',
     competitors: ['Zendesk, Freshdesk'],
-    marketSize: '$15B helpdesk software',
+    marketSize: '$15 B helpdesk software',
     growthRate: '10% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact;
@@ -22567,7 +22567,7 @@ export const,
     useCases: ['DPIA/RoPA automationDSAR processing', 'Evidence collection'],
     roi: 'Reduce manual privacy ops hours by 6080%',
     competitors: ['OneTrustTranscend', 'Securiti'],
-    marketSize: '$8B privacy tech',
+    marketSize: '$8 B privacy tech',
     growthRate: '20% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact;
@@ -22681,7 +22681,7 @@ export const,
     technology: ['Next.js', 'LLM APIs', 'Webhooks'],
     integrations: ['Salesforce', 'HubSpot', 'Gmail/Outlook'],
     useCases: ['Outbound sequences', 'Call notes', 'CRM hygiene'],
-    roi: 'Increase replies by 23x, reduce admin time 50%',
+    roi: 'Increase replies by 23 x, reduce admin time 50%',
     competitors: ['Outreach', 'Salesloft'],
     technology: ['Next.jsLLM APIs', 'Webhooks'],
     integrations: ['SalesforceHubSpot', 'Gmail/Outlook'],
@@ -22965,7 +22965,7 @@ export const,
     roi: 'Cut research time by 70%',
     competitors: ['Crayon', 'Klue (lite)'],
     technology: ['LLM pipelinesEmbeddings', 'Crawlers'],
-    integrations: ['G2Twitter/X', 'RedditApp Store'],
+    integrations: ['G2 Twitter/X', 'RedditApp Store'],
     useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
     roi: 'Cut research time by 70%'
     competitors: ['CrayonKlue (lite)']

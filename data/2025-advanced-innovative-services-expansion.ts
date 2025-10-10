@@ -307,7 +307,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
-    marketSize: '$8B+ DevOps tools market'
+    marketSize: '$8 B+ DevOps tools market'
     growthRate: '25% YoY'
     variant: 'ai-autonomous-enterprise'
     contactInfo: contact;
@@ -408,7 +408,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
     competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
-    marketSize: '$12B+ financial modeling market'
+    marketSize: '$12 B+ financial modeling market'
     growthRate: '35% YoY'
     variant: 'quantum-finance-enterprise'
     contactInfo: contact;
@@ -435,7 +435,7 @@ export const,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '15-25% improvement in portfolio returns'
       '30% reduction in portfolio risk'
-      '1000x faster complex calculations'
+      '1000 x faster complex calculations'
       'Quantum advantage in financial modeling'
       'Regulatory compliance automation'
     ]
@@ -518,7 +518,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
     competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
-    marketSize: '$20B+ cybersecurity market'
+    marketSize: '$20 B+ cybersecurity market'
     growthRate: '40% YoY'
     variant: 'ai-cybersecurity-enterprise'
     contactInfo: contact;
@@ -587,7 +587,7 @@ export const,
     ]
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
-    marketSize: '$15B+ edge computing market'
+    marketSize: '$15 B+ edge computing market'
     growthRate: '45% YoY'
     variant: 'ai-edge-enterprise'
     contactInfo: contact;
@@ -738,7 +738,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
     competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
-    marketSize: '$8B+ satellite operations market'
+    marketSize: '$8 B+ satellite operations market'
     growthRate: '30% YoY'
     variant: 'ai-space-enterprise'
     contactInfo: contact;
@@ -851,7 +851,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Accelerate BCI development by 5x and reduce development costs by 60%',
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
-    marketSize: '$3B+ BCI market'
+    marketSize: '$3 B+ BCI market'
     growthRate: '50% YoY'
     variant: 'neural-advanced'
     contactInfo: contact;
@@ -964,7 +964,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
     competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
-    marketSize: '$18B+ streaming analytics market'
+    marketSize: '$18 B+ streaming analytics market'
     growthRate: '30% YoY'
     variant: 'ai-analytics-enterprise'
     contactInfo: contact;
@@ -1076,7 +1076,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
     competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
-    marketSize: '$22B+ enterprise blockchain market'
+    marketSize: '$22 B+ enterprise blockchain market'
     growthRate: '40% YoY'
     variant: 'blockchain-enterprise'
     contactInfo: contact;
@@ -1187,7 +1187,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
-    marketSize: '$35B+ medical imaging market'
+    marketSize: '$35 B+ medical imaging market'
     growthRate: '45% YoY'
     variant: 'ai-healthcare-enterprise'
     contactInfo: contact;
@@ -1300,7 +1300,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
-    marketSize: '$12B+ climate technology market'
+    marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY'
     variant: 'ai-climate-enterprise'
     contactInfo: contact;
@@ -1449,7 +1449,7 @@ export const,
     useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%';
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
-    marketSize: '$8B+ DevOps tools market';
+    marketSize: '$8 B+ DevOps tools market';
     growthRate: '25% YoY';
     variant: 'ai-autonomous-enterprise';
     contactInfo: contact;
@@ -1500,7 +1500,7 @@ export const,
     useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'];
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%';
     competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
-    marketSize: '$12B+ financial modeling market';
+    marketSize: '$12 B+ financial modeling market';
     growthRate: '35% YoY';
     variant: 'quantum-finance-enterprise';
     contactInfo: contact;
@@ -1555,7 +1555,7 @@ export const,
     useCases: ['Threat detection, Incident response, Security monitoring, Compliance'];
     roi: 'Reduce threat detection time by 80% and false positives by 60%';
     competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
-    marketSize: '$20B+ cybersecurity market';
+    marketSize: '$20 B+ cybersecurity market';
     growthRate: '40% YoY';
     variant: 'ai-cybersecurity-enterprise';
     contactInfo: contact;
@@ -1610,7 +1610,7 @@ export const,
     useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI'];
     roi: 'Reduce latency by 90% and bandwidth costs by 70%';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
-    marketSize: '$15B+ edge computing market';
+    marketSize: '$15 B+ edge computing market';
     growthRate: '45% YoY';
     variant: 'ai-edge-enterprise';
     contactInfo: contact;
@@ -1665,7 +1665,7 @@ export const,
     useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'];
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%';
     competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
-    marketSize: '$8B+ satellite operations market';
+    marketSize: '$8 B+ satellite operations market';
     growthRate: '30% YoY';
     variant: 'ai-space-enterprise';
     contactInfo: contact;
@@ -1718,9 +1718,9 @@ export const,
     technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
     integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
     useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
-    roi: 'Accelerate BCI development by 5x and reduce development costs by 60%';
+    roi: 'Accelerate BCI development by 5 x and reduce development costs by 60%';
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
-    marketSize: '$3B+ BCI market';
+    marketSize: '$3 B+ BCI market';
     growthRate: '50% YoY';
     variant: 'neural-advanced';
     contactInfo: contact;
@@ -1775,7 +1775,7 @@ export const,
     useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading'];
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%';
     competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
-    marketSize: '$18B+ streaming analytics market';
+    marketSize: '$18 B+ streaming analytics market';
     growthRate: '30% YoY';
     variant: 'ai-analytics-enterprise';
     contactInfo: contact;
@@ -1830,7 +1830,7 @@ export const,
     useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization'];
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%';
     competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
-    marketSize: '$22B+ enterprise blockchain market';
+    marketSize: '$22 B+ enterprise blockchain market';
     growthRate: '40% YoY';
     variant: 'blockchain-enterprise';
     contactInfo: contact;
@@ -1885,7 +1885,7 @@ export const,
     useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'];
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%';
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
-    marketSize: '$35B+ medical imaging market';
+    marketSize: '$35 B+ medical imaging market';
     growthRate: '45% YoY';
     variant: 'ai-healthcare-enterprise';
     contactInfo: contact;
@@ -1940,7 +1940,7 @@ export const,
     useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects'];
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%';
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
-    marketSize: '$12B+ climate technology market';
+    marketSize: '$12 B+ climate technology market';
     growthRate: '35% YoY';
     variant: 'ai-climate-enterprise';
     contactInfo: contact;
@@ -2010,7 +2010,7 @@ export const,
     launchDate: '2024-12-01', customers: 34;
     rating: 4.9, reviews: 28;
     benefits: [;
-      '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation'
+      '15-25% improvement in portfolio returns30% reduction in portfolio risk1000 x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation'
     ];
     capabilities: [;
       'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption',
@@ -2138,7 +2138,7 @@ export const,
     technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
     integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
     useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
-    roi: 'Accelerate BCI development by 5x and reduce development costs by 60%',
+    roi: 'Accelerate BCI development by 5 x and reduce development costs by 60%',
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSize: '$3B+ BCI market', growthRate: '50% YoY',
     variant: 'neural-advanced', contactInfo: contact;
@@ -2146,7 +2146,7 @@ export const,
     launchDate: '2024-09-01', customers: 12;
     rating: 4.9, reviews: 8;
     benefits: [;
-      '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance'
+      '5 x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance'
     ];
     capabilities: [;
       'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks',
@@ -2912,7 +2912,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
-    marketSize: '$12B+ climate technology market'
+    marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY'
     variant: 'ai-climate-enterprise'
     contactInfo: contact;
@@ -3065,7 +3065,7 @@ export const,
     useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%';
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
-    marketSize: '$8B+ DevOps tools market';
+    marketSize: '$8 B+ DevOps tools market';
     growthRate: '25% YoY';
     variant: 'ai-autonomous-enterprise';
     contactInfo: contact;
@@ -3116,7 +3116,7 @@ export const,
     useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'];
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%';
     competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
-    marketSize: '$12B+ financial modeling market';
+    marketSize: '$12 B+ financial modeling market';
     growthRate: '35% YoY';
     variant: 'quantum-finance-enterprise';
     contactInfo: contact;
@@ -3171,7 +3171,7 @@ export const,
     useCases: ['Threat detection, Incident response, Security monitoring, Compliance'];
     roi: 'Reduce threat detection time by 80% and false positives by 60%';
     competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
-    marketSize: '$20B+ cybersecurity market';
+    marketSize: '$20 B+ cybersecurity market';
     growthRate: '40% YoY';
     variant: 'ai-cybersecurity-enterprise';
     contactInfo: contact;
@@ -3226,7 +3226,7 @@ export const,
     useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI'];
     roi: 'Reduce latency by 90% and bandwidth costs by 70%';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
-    marketSize: '$15B+ edge computing market';
+    marketSize: '$15 B+ edge computing market';
     growthRate: '45% YoY';
     variant: 'ai-edge-enterprise';
     contactInfo: contact;
@@ -3281,7 +3281,7 @@ export const,
     useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'];
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%';
     competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
-    marketSize: '$8B+ satellite operations market';
+    marketSize: '$8 B+ satellite operations market';
     growthRate: '30% YoY';
     variant: 'ai-space-enterprise';
     contactInfo: contact;
@@ -3334,9 +3334,9 @@ export const,
     technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
     integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
     useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
-    roi: 'Accelerate BCI development by 5x and reduce development costs by 60%';
+    roi: 'Accelerate BCI development by 5 x and reduce development costs by 60%';
     competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
-    marketSize: '$3B+ BCI market';
+    marketSize: '$3 B+ BCI market';
     growthRate: '50% YoY';
     variant: 'neural-advanced';
     contactInfo: contact;
@@ -3391,7 +3391,7 @@ export const,
     useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading'];
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%';
     competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
-    marketSize: '$18B+ streaming analytics market';
+    marketSize: '$18 B+ streaming analytics market';
     growthRate: '30% YoY';
     variant: 'ai-analytics-enterprise';
     contactInfo: contact;
@@ -3446,7 +3446,7 @@ export const,
     useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization'];
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%';
     competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
-    marketSize: '$22B+ enterprise blockchain market';
+    marketSize: '$22 B+ enterprise blockchain market';
     growthRate: '40% YoY';
     variant: 'blockchain-enterprise';
     contactInfo: contact;
@@ -3501,7 +3501,7 @@ export const,
     useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'];
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%';
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
-    marketSize: '$35B+ medical imaging market';
+    marketSize: '$35 B+ medical imaging market';
     growthRate: '45% YoY';
     variant: 'ai-healthcare-enterprise';
     contactInfo: contact;
@@ -3556,7 +3556,7 @@ export const,
     useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects'];
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%';
     competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
-    marketSize: '$12B+ climate technology market';
+    marketSize: '$12 B+ climate technology market';
     growthRate: '35% YoY';
     variant: 'ai-climate-enterprise';
     contactInfo: contact;

@@ -184,7 +184,7 @@ Disallow: /data_backup/
 Disallow: /dao/
 Disallow: /deployments/
 Disallow: /disabled-api/
-Disallow: /e2e/
+Disallow: /e2 e/
 Disallow: /factories/
 Disallow: /src/pages/blog-disabled/
 Disallow: /hooks/,

@@ -885,7 +885,7 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$22.1B';
+    marketSize: '$22.1 B';
     targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions';
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization';
     useCases: [
@@ -961,7 +961,7 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$18.7B';
+    marketSize: '$18.7 B';
     targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers';
     competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization';
     useCases: [
@@ -1037,7 +1037,7 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$31.2B';
+    marketSize: '$31.2 B';
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions';
     competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response';
     useCases: [
@@ -1113,7 +1113,7 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$19.9B';
+    marketSize: '$19.9 B';
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies';
     competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration';
     useCases: [
@@ -1189,7 +1189,7 @@ export const cuttingEdgeITServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$25.6B';
+    marketSize: '$25.6 B';
     targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies';
     competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response';
     useCases: [

@@ -255,9 +255,9 @@ const AIWorkflowAutomationPage = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
-              >
-                <Zap className="w-4 h-4" />
-                <span>Get Started</span>
+              ></a>
+                <Zap className="w-4 h-4" /></Za></Zap>
+                <<<<span>Get</span></span></<<span>Started</span></span></span>
               </a>
               <a;
                 href="/contact"
@@ -288,10 +288,10 @@ const AIWorkflowAutomationPage = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></u></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></l></li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {benefit}
                       </li>
                     ))}
@@ -349,13 +349,13 @@ const AIWorkflowAutomationPage = () => {
                       </span>
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h></h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
-                  <ul className="space-y-3 mb-8">
+                  <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
+                  <ul className="space-y-3 mb-8"></u></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {feature}
                       </li>
                     ))}
@@ -371,9 +371,8 @@ const AIWorkflowAutomationPage = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Automate Your Workflows?
+          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card"></sectio></section>
+            <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h>Ready</h></<<h>to</h> Automate Your Workflows?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact us today to learn how AI workflow automation can transform your business processes.

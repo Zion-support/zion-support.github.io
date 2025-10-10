@@ -26,7 +26,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       tit, l, e: 'Quantum, Computing, Breakthrough;
   s: The, Future, of AI, Processin, g','
       sl, u, g: 'quant, u, m-computi, n, g-breakthroug, h, s-ai-processi, n, g','
-      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000x, processing, speed improvemen, t, s.','
+      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000 x, processing, speed improvemen, t, s.','
       catego, r, y: 'Quantum, Computin, g','
       da, t, e: '20, 2, 6-01-19','
       readTi, m, e: '18, mi, n','
@@ -137,7 +137,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       tit, l, e: 'Quantum, Computing, Breakthrough;
   s: The, Future, of AI, Processin, g',';
       sl, u, g: 'quant, u, m-computi, n, g-breakthroug, h, s-ai-processi, n, g',';
-      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000x, processing, speed improvemen, t, s.',';
+      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve, 1, 0,000 x, processing, speed improvemen, t, s.',';
       catego, r, y: 'Quantum, Computin, g',';
       da, t, e: '20, 2, 6-01-19',';
       readTi, m, e: '18, mi, n',';

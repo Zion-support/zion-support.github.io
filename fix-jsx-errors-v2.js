@@ -38,7 +38,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
 
     //Fix common patterns where /> appears in wrong places;
     content = content.replace(/\s*\/>\s*<span/g, ' <span');
-    content = content.replace(/\s*\/>\s*<\/span>/g, '</span>');
+    content = content.replace(/\s*\/></span>\s*<\/span>/g, '</span>');
     content = content.replace(/\s*\/>\s*<\/div>/g, '</div>');
     content = content.replace(/\s*\/>\s*<\/a>/g, '</a>');
     content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');

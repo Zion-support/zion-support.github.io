@@ -32,16 +32,14 @@ const AIChatbotBuilder: React.FC = () => {,
                 <label className="block text-white font-medium mb-2">Bot Name<input
                   type="text"
                   value={botName}
-                  onChange={(e) =>setBotName(e.target.value)}
-                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                  onChange={(e) =>setBotName(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
                   placeholder="Enter your bot name..."</input>
                 /></input>
               </div>
               <div></div>
                 <label className="block text-white font-medium mb-2">Bot Purpose<select
                   value={botPurpose}
-                  onChange={(e) =>setBotPurpose(e.target.value)}
-                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                  onChange={(e) =>setBotPurpose(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                 ></select>
                   <option value="">Select purpose...<option value="customer-support">Customer Support</option>
                   <option value="sales">Sales Assistant<option value="lead-generation">Lead Generation</option>

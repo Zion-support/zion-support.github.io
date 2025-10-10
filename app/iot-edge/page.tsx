@@ -21,9 +21,9 @@ const IotEdgePage: React.FC = () => {
         keywords={["IoT","edge computing","connected devices","real-time processing","IoT analytics"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/iot-edge"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

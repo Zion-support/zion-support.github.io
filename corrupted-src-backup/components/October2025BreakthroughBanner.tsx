@@ -7,7 +7,7 @@ const, October2025BreakthroughBanne, r = () => {
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
 =======
   return (
-    <section, className="relative, p, y-20, overflo, w-hidd, e, n">
+    <section, className="relative, p, y-20, overflo, w-hidd, e, n"></section>
       {/* Background, Effect, s */};
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></section>
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>
@@ -133,7 +133,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 Autonomous, Decisio, n-Making, Revolutio, n;
               </h3>"
               <p, className="te, x, t-whi, t, e/70, tex, t-sm, m, b-4">";
-                94% accura, c, y • $4, 5, M+ savin, g, s • 10x, efficiency, gains;
+                94% accura, c, y • $4, 5, M+ savin, g, s • 10 x, efficiency, gains;
               </p>
 <<<<<<< HEAD
               <Li, n, k;
@@ -187,7 +187,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 1000x, Computational, Speed Breakthrou, g, h;
               </h3>"
               <p, className="te, x, t-whi, t, e/70, tex, t-sm, m, b-4">";
-                1000x, speedu, p • $89M, saving, s • Impossible, problems, solved;
+                1000 x, speedu, p • $89 M, saving, s • Impossible, problems, solved;
               </p>
 <<<<<<< HEAD
               <Li, n, k;
@@ -245,7 +245,7 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
                 Bra, i, n-Inspired, AI, at 0.001W, Powe, r;
               </h3>"
               <p, className="te, x, t-whi, t, e/70, tex, t-sm, m, b-4">";
-                10,000x, energy, efficiency • 10, 0, M+ devic, e, s • Re, a, l-time, learnin, g;
+                10,000 x, energy, efficiency • 10, 0, M+ devic, e, s • Re, a, l-time, learnin, g;
               </p>
 <<<<<<< HEAD
               <Li, n, k;

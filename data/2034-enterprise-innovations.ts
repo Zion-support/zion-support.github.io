@@ -249,7 +249,7 @@
     use_case,
   s: [,
       'IoT deployments',
-      '5G networks',
+      '5 G networks',
       'Smart cities',
       'Industrial automation',
       'Autonomous vehicles',
@@ -825,7 +825,7 @@
   },
 ];      'Advanced AI algorithmsIoT sensors_machine learning systems_automation frameworks_predictive analytics_real - time monitoring'
     ];
-    market_size: '$38.9B by 2035'
+    market_size: '$38.9 B by 2035'
     competitors: ['VMwareMicrosoftDell'];
     competitive_advantage: 'Only fully autonomous AI - powered data center platform'
     implementation_time: '6 - 12 months'
@@ -943,7 +943,7 @@ export const,
     api: true;
     sdk: true;
     integrations: ['Active DirectoryLDAPSIEM systemsFirewall platforms'];
-    compliance: ['SOC 2ISO 27001NISTGDPRHIPAA'];
+    compliance: ['SOC 2 ISO 27001 NISTGDPRHIPAA'];
     security: ['Quantum encryptionZero trust principlesAdvanced authentication'];
     scalability: 'Unlimited enterprise protection';
     uptime: '99.999% security platform availability';
@@ -1017,7 +1017,7 @@ export const,
     api: true;
     sdk: true;
     integrations: ['GitHubGitLabAWSAzureGoogle CloudKubernetes'];
-    compliance: ['SOC 2ISO 27001GDPRDevOps best practices'];
+    compliance: ['SOC 2 ISO 27001 GDPRDevOps best practices'];
     security: ['AI-powered securityAutomated complianceAccess controls'];
     scalability: 'Unlimited DevOps automation';
     uptime: '99.99% DevOps platform availability';
@@ -1165,7 +1165,7 @@ export const,
     api: true;
     sdk: true;
     integrations: ['ServiceNowJiraSlackTeamsMonitoring toolsCMDB systems'];
-    compliance: ['ITILISO 20000SOC 2IT operations standards'];
+    compliance: ['ITILISO 20000 SOC 2 IT operations standards'];
     security: ['AI-powered securityAccess controlsAudit trails'];
     scalability: 'Unlimited IT operations';
     uptime: '99.99% operations platform availability';
@@ -1264,7 +1264,7 @@ export const,
     technology: [
       'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
     ];
-    marketSize: '$38.9B by 2035';
+    marketSize: '$38.9 B by 2035';
     competitors: ['VMwareMicrosoftDell'];
     competitiveAdvantage: 'Only fully autonomous AI-powered data center platform';
     implementationTime: '6-12 months';
@@ -1375,7 +1375,7 @@ export const,
     api: true;
     sdk: true;
     integrations: ['Active DirectoryLDAPSIEM systemsFirewall platforms'];
-    compliance: ['SOC 2ISO 27001NISTGDPRHIPAA'];
+    compliance: ['SOC 2 ISO 27001 NISTGDPRHIPAA'];
     security: ['Quantum encryptionZero trust principlesAdvanced authentication'];
     scalability: 'Unlimited enterprise protection';
     uptime: '99.999% security platform availability';
@@ -1449,7 +1449,7 @@ export const,
     api: true;
     sdk: true;
     integrations: ['GitHubGitLabAWSAzureGoogle CloudKubernetes'];
-    compliance: ['SOC 2ISO 27001GDPRDevOps best practices'];
+    compliance: ['SOC 2 ISO 27001 GDPRDevOps best practices'];
     security: ['AI-powered securityAutomated complianceAccess controls'];
     scalability: 'Unlimited DevOps automation';
     uptime: '99.99% DevOps platform availability';
@@ -1597,7 +1597,7 @@ export const,
     api: true;
     sdk: true;
     integrations: ['ServiceNowJiraSlackTeamsMonitoring toolsCMDB systems'];
-    compliance: ['ITILISO 20000SOC 2IT operations standards'];
+    compliance: ['ITILISO 20000 SOC 2 IT operations standards'];
     security: ['AI-powered securityAccess controlsAudit trails'];
     scalability: 'Unlimited IT operations';
     uptime: '99.99% operations platform availability';

@@ -51,7 +51,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     valueProposition: '$1.2B+ annual value creation'
     metrics: {
       performance: 'Infinite processing power',
-      savings: '$1.2B+ annual savings',
+      savings: '$1.2 B+ annual savings',
       accuracy: '99.99% consciousness accuracy',
       roi: '10,000x ROI',
 =======
@@ -86,7 +86,7 @@ export const,
     valueProposition: '$2.5B+ annual value creation'
     metrics: {
       performance: 'Exponential learning',
-      savings: '$2.5B+ annual savings',
+      savings: '$2.5 B+ annual savings',
       accuracy: '99.99% superintelligence accuracy',
       roi: '25,000x ROI',
 =======

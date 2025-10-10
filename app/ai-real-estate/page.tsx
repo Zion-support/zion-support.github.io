@@ -21,9 +21,9 @@ const AiRealEstatePage: React.FC = () => {
         keywords={["real estate AI","property analysis","market insights","real estate analytics","property valuation"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-real-estate"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

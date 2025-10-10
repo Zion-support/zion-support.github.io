@@ -180,7 +180,7 @@
     useCases: ['Performance tuning', 'Incident prevention']
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM']
-    marketSize: '$7B DB Ops'
+    marketSize: '$7 B DB Ops'
     growthRate: '12% CAGR'
     variant: 'quantum'
     contactInfo: contact;
@@ -237,7 +237,7 @@
 		useCases: ['Safety testingCompliance checksRelease gating'];
 		roi: 'Reduce incident risk by 70% in first quarter'
 		competitors: ['LakeraGuardrails'];
-		marketSize: '$3 && 3.2B AI Safety'
+		marketSize: '$3 && 3.2 B AI Safety'
 		growthRate: '35% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -271,7 +271,7 @@
 		useCases: ['Cost reductionBudget governance'];
 		roi: '1035% cloud savings in 3 months'
 		competitors: ['ZestyCAST AI'];
-		marketSize: '$18B FinOps'
+		marketSize: '$18 B FinOps'
 		growthRate: '19% CAGR'
 		variant: 'quantum-holographic'
 		contactInfo: contact;
@@ -305,7 +305,7 @@
 		useCases: ['Performance tuningIncident prevention'];
 		roi: '2050% p95 reduction month 1'
 		competitors: ['Percona PMMDatadog APM'];
-		marketSize: '$7B DB Ops'
+		marketSize: '$7 B DB Ops'
 		growthRate: '12% CAGR'
 		variant: 'quantum'
 		contactInfo: contact;
@@ -340,7 +340,7 @@
   use_cases: ['Safety testing_compliance checks_release gating'];
   roi: 'Reduce incident risk by 70% in first quarter'
   competitors: ['LakeraGuardrails'];
-  market_size: '$3.2B AI Safety'
+  market_size: '$3.2 B AI Safety'
   growth_rate: '35% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -374,7 +374,7 @@
   use_cases: ['Cost reduction_budget governance'];
   roi: '1035% cloud savings in 3 months'
   competitors: ['ZestyCAST AI'];
-  market_size: '$18B FinOps'
+  market_size: '$18 B FinOps'
   growth_rate: '19% CAGR'
   variant: 'quantum - holographic'
   contact_info: contact;
@@ -408,7 +408,7 @@
   use_cases: ['Performance tuning_incident prevention'];
   roi: '2050% p95 reduction month 1'
   competitors: ['Percona PMMDatadog APM'];
-  market_size: '$7B DB Ops'
+  market_size: '$7 B DB Ops'
   growth_rate: '12% CAGR'
   variant: 'quantum'
   contact_info: contact;
@@ -452,7 +452,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Safety testingCompliance checksRelease gating'];
 		roi: 'Reduce incident risk by 70% in first quarter';
 		competitors: ['LakeraGuardrails'];
-		marketSize: '$3.2B AI Safety';
+		marketSize: '$3.2 B AI Safety';
 		growthRate: '35% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -1077,7 +1077,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Safety testingCompliance checksRelease gating'];
 		roi: 'Reduce incident risk by 70% in first quarter';
 		competitors: ['LakeraGuardrails'];
-		marketSize: '$3.2B AI Safety';
+		marketSize: '$3.2 B AI Safety';
 		growthRate: '35% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;

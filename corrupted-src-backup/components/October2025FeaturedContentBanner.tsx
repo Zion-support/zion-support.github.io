@@ -18,7 +18,7 @@ const, October2025FeaturedContentBanne, r = () => {
     }
     {
       tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m"
-      descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4M, annual, savings"
+      descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4 M, annual, savings"
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m"
       ic, o, n: Bra, i, n;
       gradie, n, t: "fr, o, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0"
@@ -27,12 +27,12 @@ const, October2025FeaturedContentBanne, r = () => {
       sta, t, s: [,
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }
-        { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }
+        { val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s" }
       ]
     }
     {
       tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n"
-      descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7M, valu, e"
+      descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7 M, valu, e"
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n"
       ic, o, n: Packa, g, e;
       gradie, n, t: "fr, o, m-emera, l, d-600, t, o-te, a, l-6, 0, 0"
@@ -41,7 +41,7 @@ const, October2025FeaturedContentBanne, r = () => {
       sta, t, s: [,
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }
-        { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }
+        { val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e" }
       ]
     }
     {
@@ -60,7 +60,7 @@ const, October2025FeaturedContentBanne, r = () => {
     }
     {
       tit, l, e: "Edge, Inference, Playbook 20, 2, 7"
-      descripti, o, n: "S, u, b‑100ms, globally, with warm, pools, and tiered, cache, s"
+      descripti, o, n: "S, u, b‑100 ms, globally, with warm, pools, and tiered, cache, s"
       li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02"
       ic, o, n: Sparkl, e, s;
       gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0"
@@ -86,7 +86,7 @@ const, October2025FeaturedContentBanne, r = () => {
     }
     {
       tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m",";
-      descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4M, annual, savings",";
+      descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4 M, annual, savings",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m",";
       ic, o, n: Bra, i, n;
       gradie, n, t: "fr, o, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0",";
@@ -95,12 +95,12 @@ const, October2025FeaturedContentBanne, r = () => {
       sta, t, s: [,
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },";
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },";
-        { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }";
+        { val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s" }";
       ]
     }
     {
       tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n",";
-      descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7M, valu, e",";
+      descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7 M, valu, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n",";
       ic, o, n: Packa, g, e;
       gradie, n, t: "fr, o, m-emera, l, d-600, t, o-te, a, l-6, 0, 0",";
@@ -109,7 +109,7 @@ const, October2025FeaturedContentBanne, r = () => {
       sta, t, s: [,
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },";
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },";
-        { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }";
+        { val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e" }";
       ]
     }
     {
@@ -128,7 +128,7 @@ const, October2025FeaturedContentBanne, r = () => {
     }
     {
       tit, l, e: "Edge, Inference, Playbook 20, 2, 7",";
-      descripti, o, n: "S, u, b‑100ms, globally, with warm, pools, and tiered, cache, s",";
+      descripti, o, n: "S, u, b‑100 ms, globally, with warm, pools, and tiered, cache, s",";
       li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02",";
       ic, o, n: Sparkl, e, s;
       gradie, n, t: "fr, o, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0",";
@@ -219,7 +219,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e"></div>
             <Sparkles, className="w-5 h-5, m, r-2  />
             🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5;
-            <Sparkles, className="w-5 h-5, m, l-2  />
+            <Sparkles, className="w-5 h-5, m, l-2  /></Sparkles>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
         <div, className="text-center mb-12">";</div>

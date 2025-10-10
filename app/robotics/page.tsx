@@ -22,9 +22,9 @@ const RoboticsPage: React.FC = () => {
         keywords={["robotics","automation","robot development","AI robotics","intelligent systems"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/robotics"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

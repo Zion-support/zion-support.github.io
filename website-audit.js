@@ -106,7 +106,7 @@ const routes = [
   '/financial-it',
   '/healthcare-it',
   '/iot-platform',
-  '/5g-implementation'
+  '/5 g-implementation'
 ];
 
 const baseUrl = 'https: //ziontechgroup.com';

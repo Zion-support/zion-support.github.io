@@ -27,8 +27,7 @@ interface ErrorContext {}
   timestamp: string
   component?: string
   action?: string
-  props?: Record<string, unknown>
-  state?: Record<string, unknown>;}
+  props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string, unknown>;}</strin>
 }
 interface ErrorReport {}
   id: string

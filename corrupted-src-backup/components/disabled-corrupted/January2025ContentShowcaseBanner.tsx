@@ -41,7 +41,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Complete, AI, Knowledge H, u, b;
             </sp, a, n>
-            <br /> <span, className='te, x, t-whi, t, e'>2025, Editio, n</sp, a, n>
+            <br /> <span, className='te, x, t-whi, t, e'></span>2025, Editio, n</sp, a, n>
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'></p>
             Access, the, most comprehensive, collection, of AI, insig, h, t, s,

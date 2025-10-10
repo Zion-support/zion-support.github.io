@@ -107,9 +107,9 @@ const FuturisticHero: React.FC = memo(() => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 to="/contact"
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 group"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              ></Lin>
+                <<<<span>Get</span></<<span>Started</span></<span>Today</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRigh>
               </Link>
               <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 group">
 <<<<<<< HEAD
@@ -200,17 +200,17 @@ const FuturisticHero: React.FC = memo(() => {}
               ))}
 
               {/* Neural Network Lines */}
-              <svg className="absolute inset-0 w-full h-full" style={{ zIndex: -1 }}>
-                <defs>
-                  <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#00ffff" stopOpacity="0.3" />
-                    <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#ec4899" stopOpacity="0.3" />
+              <svg className="absolute inset-0 w-full h-full" style={{ zIndex: -1 }}></sv>
+                <defs></def>
+                  <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%"></linearGradien>
+                    <stop offset="0%" stopColor="#00 ffff" stopOpacity="0.3" /></sto>
+                    <stop offset="50%" stopColor="#8 b5 cf6" stopOpacity="0.2" /></sto>
+                    <stop offset="100%" stopColor="#ec4899" stopOpacity="0.3" /></sto>
                   </linearGradient>
                 </defs>
-                <line x1="50%" y1="20%" x2="80%" y2="30%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse" />
-                <line x1="20%" y1="50%" x2="50%" y2="60%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse delay-1000" />
-                <line x1="80%" y1="70%" x2="50%" y2="80%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse delay-2000" />
+                <line x1="50%" y1="20%" x2="80%" y2="30%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse" /></lin>
+                <line x1="20%" y1="50%" x2="50%" y2="60%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse delay-1000" /></lin>
+                <line x1="80%" y1="70%" x2="50%" y2="80%" stroke="url(#neuralGradient)" strokeWidth="2" className="animate-pulse delay-2000" /></lin>
               </svg>
             </div>
 

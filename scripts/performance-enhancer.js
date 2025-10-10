@@ -132,7 +132,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       // Generate critical CSS;
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
-.min-h-screen { min-height: 100vh; }
+.min-h-screen { min-height: 100 vh; }
 .bg-slate-950 { background-color: #020617; }
 .flex { display: flex; }
 .items-center { align-items: center; }

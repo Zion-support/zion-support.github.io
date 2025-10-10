@@ -593,7 +593,7 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

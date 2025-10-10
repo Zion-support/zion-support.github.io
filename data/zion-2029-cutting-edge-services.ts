@@ -344,7 +344,7 @@ export const,
     benefit,
   s: [,
       'Reduce delivery costs by 60%',
-      'Improve delivery speed by 3x',
+      'Improve delivery speed by 3 x',
       'Eliminate human pilot costs',
       'Enable 24/7 autonomous operations'
     ],
@@ -831,7 +831,7 @@ export const,
   s: [,
       'Reduce power consumption by 90%',
       'Enable real-time AI on edge devices',
-      'Improve learning efficiency by 5x',
+      'Improve learning efficiency by 5 x',
       'Create new AI applications'
     ],
 <<<<<<< HEAD

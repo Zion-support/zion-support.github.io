@@ -46,8 +46,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
             </div>
             <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n'
               className='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
-            >
-              Read, Complete, Guide + Fortune, 500, Case Stu, d, y →
+            ></Link>Read</Link>, Complete, Guide + Fortune, 500, Case Stu, d, y →
             </Li, n, k>
           </div>
           <div, className='fl, e, x-1'></div>
@@ -60,21 +59,21 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
                     Predictive, anomaly, detection 15-30, min, before failu, r, e;
                   </sp, a, n>
                 </li>
-                <li, className='flex, item, s-sta, r, t'>
-                  <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
-                  <sp, a, n>Mul, t, i-agent, coordination, for complex, issue, s</sp, a, n>
+                <li, className='flex, item, s-sta, r, t'></li>
+                  <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓</sp, a, n>
+                  <sp, a, n>Mul</n>, t, i-agent, coordination, for complex, issue, s</sp, a, n>
                 </li>
-                <li, className='flex, item, s-sta, r, t'>
-                  <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
-                  <sp, a, n>Se, l, f-learning, runbooks, that improve, over, time</sp, a, n>
+                <li, className='flex, item, s-sta, r, t'></li>
+                  <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓</sp, a, n>
+                  <sp, a, n>Se</n>, l, f-learning, runbooks, that improve, over, time</sp, a, n>
                 </li>
-                <li, className='flex, item, s-sta, r, t'>
-                  <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
-                  <sp, a, n>Ze, r, o-touch, operations, with safety, mechanism, s</sp, a, n>
+                <li, className='flex, item, s-sta, r, t'></li>
+                  <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓</sp, a, n>
+                  <sp, a, n>Ze</n>, r, o-touch, operations, with safety, mechanism, s</sp, a, n>
                 </li>
-                <li, className='flex, item, s-sta, r, t'>
-                  <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
-                  <sp, a, n>Cro, s, s-cloud, orchestration, and optimizati, o, n</sp, a, n>
+                <li, className='flex, item, s-sta, r, t'></li>
+                  <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓</sp, a, n>
+                  <sp, a, n>Cro</n>, s, s-cloud, orchestration, and optimizati, o, n</sp, a, n>
                 </li>
               </ul>
             </div>

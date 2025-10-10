@@ -353,8 +353,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'author', content: seoData.author || 'Zion Tech Group' },
       { name: 'robots', content: seoData.robots || 'index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
+      { name: 'theme-color', content: '#3 B82 F6' },
+      { name: 'msapplication-TileColor', content: '#3 B82 F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
 =======
   const generateMetaTags = useCallback(() => {

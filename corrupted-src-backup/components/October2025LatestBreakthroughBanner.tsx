@@ -290,6 +290,6 @@ return (</div>
     </d, i, v>
   );
 };
-export default October2025LatestBreakthroughBanner;
+export default October2025 LatestBreakthroughBanner;
 ;
 }}"`

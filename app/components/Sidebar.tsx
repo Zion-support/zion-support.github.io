@@ -230,9 +230,9 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                         : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
-                  >
-                    <link.icon className="w-5 h-5" />
-                    <span>{link.name}</span>
+                  ></Lin>
+                    <link.icon className="w-5 h-5" /></lin>
+                    <span>{link.name}</spa>
                   </Link>
                 ))}
               </nav>
@@ -250,8 +250,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                   <div key={categoryIndex}></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <button
-                      onClick={() =>toggleSection(category.title)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors"</button>
+                      onClick={() =>toggleSection(category.title)}</button></<<<butto>className</butto></butto>="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors"</button>
                     ></button>
 <<<<<<< HEAD
                       <div className="flex items-center space-x-3">
@@ -275,7 +274,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                         <span>{category.title}</span>
                       </div>
                       {expandedSections.includes(category.title) ? (
-                        <ChevronDown className="w-4 h-4" >) : (<ChevronRight className="w-4 h-4" >)}</ChevronRight>
+                        <ChevronDown className="w-4 h-4" >) : (</ChevronDown><ChevronRight className="w-4 h-4" >)}</ChevronRigh>
                     </ChevronRight>
 
                     {expandedSections.includes(category.title) && (
@@ -298,7 +297,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                                 : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'}
                             }`}
                             onClick={onClose}
-                          >{service.name}</Link>
+                          >{service.name}</Lin>
                           </Link>
                         ))}
                       </div>
@@ -334,9 +333,9 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                         : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
-                  >
-                    <link.icon className="w-5 h-5" />
-                    <span>{link.name}</span>
+                  ></Lin>
+                    <link.icon className="w-5 h-5" /></lin>
+                    <span>{link.name}</spa>
                   </Link>
                 ))}
               </nav>
@@ -368,9 +367,9 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                         : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
-                  >
-                    <link.icon className="w-5 h-5" />
-                    <span>{link.name}</span>
+                  ></Lin>
+                    <link.icon className="w-5 h-5" /></lin>
+                    <span>{link.name}</spa>
                   </Link>
                 ))}
               </nav>
@@ -401,8 +400,8 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                  <Twitter className="w-5 h-5" /></Twitte>
                 </a>
                 <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">,
                   <Github className="w-5 h-5" />,
@@ -425,7 +424,7 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

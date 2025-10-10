@@ -151,7 +151,7 @@ const AIServicesPage: React.FC = () => {
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features: </h4>,
                     <ul className="space-y-1" role="list">,
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
                           {feature}
                         </li>
@@ -159,7 +159,7 @@ const AIServicesPage: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <div className="text-center">
+                  <div className="text-center"></div>
                     <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}</div>
                     <a;
                       href="/contact"
@@ -175,10 +175,9 @@ const AIServicesPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                Ready to Transform Your Business with AI?
+          <section className="text-center"></section>
+            <div className="cyber-card p-8 max-w-4 xl mx-auto"></div>
+              <h2 className="text-3 xl font-bold text-white mb-4 neon-text"></h>Ready</h> to Transform Your Business with AI?
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
                 Our AI experts are ready to help you implement cutting-edge artificial intelligence solutions;

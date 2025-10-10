@@ -21,9 +21,9 @@ const DeveloperToolsPage: React.FC = () => {
         keywords={["developer tools","development platform","code analysis","debugging tools","development environment"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/developer-tools"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

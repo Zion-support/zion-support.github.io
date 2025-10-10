@@ -75,7 +75,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     realService: true, technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'],
     integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'], useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.', competitors: ['TableauPower BIQlikViewLooker'],
-    marketSize: '$7.8B business intelligence market', growthRate: '28% annual growth',
+    marketSize: '$7.8 B business intelligence market', growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -386,7 +386,7 @@ export const,
     ],
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.',
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']
-    marketSize: '$5.2B sales intelligence market'
+    marketSize: '$5.2 B sales intelligence market'
     growthRate: '30% annual growth'
     variant: 'ai-sales',
     contactInfo: mobile: '+1 302 464 0950',
@@ -546,7 +546,7 @@ export const,
     ],
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.',
     competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
-    marketSize: '$4.8B customer service market'
+    marketSize: '$4.8 B customer service market'
     growthRate: '22% annual growth'
     variant: 'ai-customer-service',
     contactInfo: mobile: '+1 302 464 0950',
@@ -706,7 +706,7 @@ export const,
     ],
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.',
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
-    marketSize: '$6.2B HR technology market'
+    marketSize: '$6.2 B HR technology market'
     growthRate: '26% annual growth'
     variant: 'ai-hr',
     contactInfo: mobile: '+1 302 464 0950',
@@ -866,7 +866,7 @@ export const,
     ],
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
-    marketSize: '$8.5B financial analytics market'
+    marketSize: '$8.5 B financial analytics market'
     growthRate: '32% annual growth'
     variant: 'ai-financial',
     contactInfo: mobile: '+1 302 464 0950',
@@ -1026,7 +1026,7 @@ export const,
     ],
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Notion']
-    marketSize: '$5.5B project management market'
+    marketSize: '$5.5 B project management market'
     growthRate: '24% annual growth'
     variant: 'ai-project-management',
     contactInfo: mobile: '+1 302 464 0950',
@@ -1541,7 +1541,7 @@ export const,
     useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'];
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.';
     competitors: ['TableauPower BIQlikViewLooker'];
-    marketSize: '$7.8B business intelligence market';
+    marketSize: '$7.8 B business intelligence market';
     growthRate: '28% annual growth';
     variant: 'ai-business-intelligence';
     contactInfo: {,

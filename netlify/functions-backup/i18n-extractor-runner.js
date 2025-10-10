@@ -25,7 +25,7 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
 }
 function extractStringsFromSource(source) {const results = new Set()}
   // 1) Text between > ... < (very naive JSX text extractor)
-  const _jsxTextRegex = />\s*([^<>{}][^<>{}{\n\r]{2}})\s*</g;
+  const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g;
   let m;
 <<<<<<< HEAD
   while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim();
@@ -95,7 +95,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     strings.forEach(s => allStrings.add(s))}
   }
   const _extracted = Array.from(allStrings).sort();
-//   const outJsonPath = path.join(repoRoot, 'data', 'i18n') 'extracted-en.json');
+//   const outJsonPath = path.join(repoRoot, 'data', 'i18 n') 'extracted-en.json');
   writeFileEnsured(outJsonPath)
 <<<<<<< HEAD
     JSON.stringify(

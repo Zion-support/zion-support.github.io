@@ -17,7 +17,7 @@ const AIContentWriterPage: React.FC = () => {,
   ];
 
   const benefits = [
-    '10x content output',
+    '10 x content output',
     'SEO optimized content',
     'Brand voice consistency',
     '80% time savings'

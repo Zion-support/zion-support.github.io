@@ -326,7 +326,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               </h3>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <p, className="te, x, t-gr, a, y-3, 0, 0">";
-                $2.3T, assets, under manageme, n, t • 24/7, trading, operations • 8,500, microservice, s • 47, countrie, s;
+                $2.3 T, assets, under manageme, n, t • 24/7, trading, operations • 8,500, microservice, s • 47, countrie, s;
               </p>
             </d, i, v>
 <<<<<<< HEAD
@@ -764,9 +764,8 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-cy, a, n-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-colors, transform, hove;
   r:sca, l, e-1, 0, 5"
-            >
-              Request, Free, Assessment;
-              <Link, className="w-5 h-5  />
+            ></Li>Request</Li>, Free, Assessment;
+              <Link, className="w-5 h-5  /></Link>
             </Li, n, k>
             <div, className="te, x, t-white, tex, t-sm"></div>
               <Clock, className="w-4 h-4, inline, mr-1  />

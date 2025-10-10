@@ -41,7 +41,7 @@ import React from 'react';
       name: 'AI Services API'
       status: 'operational',
       uptime: '99.9%',
-      responseTime: '45ms',
+      responseTime: '45 ms',
       lastIncident: '2024-01-15',
       description: 'Core AI and machine learning services',
     },
@@ -49,7 +49,7 @@ import React from 'react';
       name: 'Micro SAAS Platform'
       status: 'operational',
       uptime: '99.8%',
-      responseTime: '32ms',
+      responseTime: '32 ms',
       lastIncident: '2024-01-10',
       description: 'Micro SAAS tools and applications',
     },
@@ -57,7 +57,7 @@ import React from 'react';
       name: 'IT Infrastructure'
       status: 'operational',
       uptime: '99.95%',
-      responseTime: '28ms',
+      responseTime: '28 ms',
       lastIncident: '2024-01-05',
       description: 'Cloud infrastructure and hosting',
     },
@@ -65,7 +65,7 @@ import React from 'react';
       name: 'Database Services'
       status: 'operational',
       uptime: '99.9%',
-      responseTime: '15ms',
+      responseTime: '15 ms',
       lastIncident: '2024-01-12',
       description: 'Primary and backup database systems',
     },
@@ -73,7 +73,7 @@ import React from 'react';
       name: 'CDN & Edge'
       status: 'operational',
       uptime: '99.7%',
-      responseTime: '8ms',
+      responseTime: '8 ms',
       lastIncident: '2024-01-08',
       description: 'Content delivery and edge services',
     },
@@ -81,7 +81,7 @@ import React from 'react';
       name: 'Authentication'
       status: 'operational',
       uptime: '99.9%',
-      responseTime: '22ms',
+      responseTime: '22 ms',
       lastIncident: '2024-01-14',
       description: 'User authentication and authorization',
     }
@@ -375,8 +375,8 @@ import React from 'react';
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all inline-flex items-center"
-              >
-                <Clock className="w-5 h-5 mr-2" >Call: (302) 464-0950</Clock>
+              ></a>
+                <Clock className="w-5 h-5 mr-2" >Call: (302) 464-0950</Cloc>
               </Clock>
 =======
                 <AlertTriangle className="w-5 h-5 mr-2" />

@@ -307,21 +307,21 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>
                 <Award, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />
               </div>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">3, 4, 0%+</div>
+              <div, className="te, x, t-3 xl, fon, t-extrabold, tex, t-white, m, b-2">3, 4, 0%+</div>
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Combined, RO, I</div>
             </div>
             <div, className="group, hove, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>
                 <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0" />
               </div>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</div>
+              <div, className="te, x, t-3 xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</div>
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Total, Saving, s</div>
             </div>
             <div, className="group, hove, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>
                 <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0" />
               </div>
-              <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">5.1x</div>
+              <div, className="te, x, t-3 xl, fon, t-extrabold, tex, t-white, m, b-2">5.1 x</div>
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Avg, Efficienc, y</div>
             </div>
             <div, className="group, hove, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>

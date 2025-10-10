@@ -60,7 +60,7 @@ const prs = [
     number: 25062;
     title: 'Fix errors and merge to main'
     branch: 'cursor/fix-errors-and-merge-to-main-fcbd',
-    sha: 'a5f35d4a9ddcf46941c797da316bb3a2b7b05b56',
+    sha: 'a5 f35 d4 a9 ddcf46941 c797 da316 bb3 a2 b7 b05 b56',
     priority: 'high',
   },
   {

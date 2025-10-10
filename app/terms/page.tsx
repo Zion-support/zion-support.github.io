@@ -285,7 +285,7 @@ const TermsPage: React.FC = () => {,
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
 =======
 import React from 'react';

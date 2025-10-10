@@ -1355,13 +1355,13 @@ export const biotechAIServices: BiotechAIService[] = [,
     ],
     popular: true, icon: '',
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/biotech-ai', marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100M+ funding) and Recursion ($2B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.',
+    link: 'https://ziontechgroup.com/biotech-ai', marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers',
     trialDays: 30, setupTime: '2 weeks',
     category: 'Biotech AI', realService: true;
     technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'], integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'],
-    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'], roi: 'Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',
-    competitors: ['InsitroRecursionBasic research tools'], marketSize: '$150B AI in healthcare market',
+    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'], roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',
+    competitors: ['InsitroRecursionBasic research tools'], marketSize: '$150 B AI in healthcare market',
     growthRate: '250% annual growth', variant: 'biotech-futuristic',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1674,7 +1674,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
     competitors: ['Manual methods', 'Basic tools']
-    marketSize: '$50B genetic engineering market'
+    marketSize: '$50 B genetic engineering market'
     growthRate: '300% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -1736,7 +1736,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
     competitors: ['Basic tools', 'Manual design']
-    marketSize: '$30B protein engineering market'
+    marketSize: '$30 B protein engineering market'
     growthRate: '280% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -1798,7 +1798,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
     competitors: ['Basic tools', 'Manual management']
-    marketSize: '$45B clinical trial market'
+    marketSize: '$45 B clinical trial market'
     growthRate: '220% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -1860,7 +1860,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
     competitors: ['Manual methods', 'Basic tools']
-    marketSize: '$25B biomarker market'
+    marketSize: '$25 B biomarker market'
     growthRate: '240% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -1922,7 +1922,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
     competitors: ['Basic analysis', 'Limited tools']
-    marketSize: '$60B personalized medicine market'
+    marketSize: '$60 B personalized medicine market'
     growthRate: '260% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -1984,7 +1984,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.',
     competitors: ['Manual research', 'Basic tools']
-    marketSize: '$20B drug repurposing market'
+    marketSize: '$20 B drug repurposing market'
     growthRate: '200% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -2046,7 +2046,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
     competitors: ['Basic tools', 'Manual analysis']
-    marketSize: '$35B bioinformatics market'
+    marketSize: '$35 B bioinformatics market'
     growthRate: '230% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: marketPosition: unknown;
@@ -2108,7 +2108,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ],
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
     competitors: ['Basic optimization', 'Manual processes']
-    marketSize: '$40B biomanufacturing market'
+    marketSize: '$40 B biomanufacturing market'
     growthRate: '210% annual growth'
     variant: 'biotech-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
@@ -2227,7 +2227,7 @@ export const biotechAIServices: BiotechAIService[] = [;
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-400';
     link: 'https://ziontechgroup.com/biotech-ai';
-    marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100M+ funding) and Recursion ($2B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.';
+    marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.';
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers';
     trialDays: 30;
     setupTime: '2 weeks';
@@ -2236,9 +2236,9 @@ export const biotechAIServices: BiotechAIService[] = [;
     technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'];
     integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'];
     useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'];
-    roi: 'Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings.';
+    roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.';
     competitors: ['InsitroRecursionBasic research tools'];
-    marketSize: '$150B AI in healthcare market';
+    marketSize: '$150 B AI in healthcare market';
     growthRate: '250% annual growth';
     variant: 'biotech-futuristic'}
     contactInfo: {}

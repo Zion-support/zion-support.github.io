@@ -30,7 +30,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
               🌍 NEW, 2026, CONTENT REVOLUTI, O, N;
             </sp, a, n>
-            <Globe, className="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e" />
+            <Globe, className="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Globe>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, Content, Just Releas, e, d;
@@ -151,11 +151,11 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
             <h3, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-4">
               Global, Impact, of Our, Revolutionary, Content;
             </h3>
-            <p, className="te, x, t-lg, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o">
+            <p, className="te, x, t-lg, tex, t-gr, a, y-300, ma, x-w-2 xl, m, x-au, t, o">
               Our, innovative, content is, transforming, industries worldwide, and, creating unprecedented, valu, e.
             </p>
           </div>
-          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">
+          <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8"></div>
             { [
               { val, u, e: '2., 5, M+', lab, e, l: 'Global, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-viol, e, t-40, 0'  },
               {  val, u, e: '$15, B+', lab, e, l: 'Value, Creat, e, d', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
@@ -203,7 +203,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
                 Join, the, Content Revoluti, o, n;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h, 
                 and, transformative, technologies that, are, reshaping our, worl, d.
               </p>

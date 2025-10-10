@@ -79,7 +79,7 @@ export const,
   s: [;
       'Reduce operational costs by 90%'
       'Improve system reliability by 99.9%'
-      'Accelerate deployment cycles by 10x'
+      'Accelerate deployment cycles by 10 x'
       'Eliminate manual interventions'
       'Enhance security posture'
       'Optimize resource utilization'
@@ -695,9 +695,9 @@ export const,
     useCases: [;
       'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development',
     ],
-    marketSize: '$35.2B by 2029', competitors: ['AWSMicrosoft AzureGoogle CloudIBM Cloud'],
+    marketSize: '$35.2 B by 2029', competitors: ['AWSMicrosoft AzureGoogle CloudIBM Cloud'],
     technology: ['Quantum ComputingCloud InfrastructureQuantum SecurityHybrid Computing'], integration: ['Existing cloud platformsQuantum applicationsEnterprise systems'],
-    support: ['24/7 quantum supportQuantum expertsImplementation team'], compliance: ['SOC 2ISO 27001FedRAMPQuantum standards'],
+    support: ['24/7 quantum supportQuantum expertsImplementation team'], compliance: ['SOC 2 ISO 27001 FedRAMPQuantum standards'],
     scalability: 'Enterprise-grade, global quantum network',
     roi: '700% within 24 months',
     deployment: 'Cloud-native, quantum-ready',
@@ -713,7 +713,7 @@ export const,
     whiteLabel: 'Available for cloud providers', affiliate: '15% commission for referrals',
     referral: '$75,000 bonus for partnerships',
     partnership: 'Strategic cloud partnerships',
-    funding: 'Series C funding, $400M valuation',
+    funding: 'Series C funding, $400 M valuation',
     exit: 'IPO or cloud acquisition',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -803,9 +803,9 @@ export const,
     useCases: [;
       'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment',
     ],
-    marketSize: '$38.7B by 2029', competitors: ['CrowdStrikeSentinelOneDarktraceCylance'],
+    marketSize: '$38.7 B by 2029', competitors: ['CrowdStrikeSentinelOneDarktraceCylance'],
     technology: ['AI/MLMachine LearningBehavioral AnalysisSecurity'], integration: ['SIEM systemsEDR platformsSecurity tools'],
-    support: ['24/7 security supportSecurity expertsImplementation team'], compliance: ['SOC 2ISO 27001NISTGDPR'],
+    support: ['24/7 security supportSecurity expertsImplementation team'], compliance: ['SOC 2 ISO 27001 NISTGDPR'],
     scalability: 'Enterprise-grade, global deployment',
     roi: '600% within 15 months',
     deployment: 'Cloud-native, on-premise options',
@@ -821,7 +821,7 @@ export const,
     whiteLabel: 'Available for security providers', affiliate: '20% commission for referrals',
     referral: '$30,000 bonus for partnerships',
     partnership: 'Strategic security partnerships',
-    funding: 'Series C funding, $250M valuation',
+    funding: 'Series C funding, $250 M valuation',
     exit: 'IPO or security acquisition',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -911,9 +911,9 @@ export const,
     useCases: [;
       'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management',
     ],
-    marketSize: '$28.9B by 2029', competitors: ['ServiceNowBMCMicro FocusIvanti'],
+    marketSize: '$28.9 B by 2029', competitors: ['ServiceNowBMCMicro FocusIvanti'],
     technology: ['AI/MLAutomationMonitoringITSM'], integration: ['ITSM platformsMonitoring toolsEnterprise systems'],
-    support: ['24/7 operations supportIT expertsImplementation team'], compliance: ['SOC 2ISO 27001ITILCOBIT'],
+    support: ['24/7 operations supportIT expertsImplementation team'], compliance: ['SOC 2 ISO 27001 ITILCOBIT'],
     scalability: 'Enterprise-grade, multi-tenant support',
     roi: '450% within 18 months',
     deployment: 'Cloud-native, hybrid options',
@@ -923,7 +923,7 @@ export const,
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
-    compliance: ['SOC 2ISO 27001ITILCOBIT'],
+    compliance: ['SOC 2 ISO 27001 ITILCOBIT'],
     scalability: 'Enterprise-grade, multi-tenant support'
     roi: '450% within 18 months',
     deployment: 'Cloud-native, hybrid options'
@@ -982,7 +982,7 @@ export const,
     technology: ['AI / MLAutomationMonitoringITSM'];
     integration: ['ITSM platforms_monitoring tools_enterprise systems'];
     support: ['24 / 7 operations supportIT experts_implementation team'],
-    compliance: ['SOC 2ISO 27001ITILCOBIT'],
+    compliance: ['SOC 2 ISO 27001 ITILCOBIT'],
     scalability: 'Enterprise - grade, multi - tenant support'
     roi: '450% within 18 months',
     deployment: 'Cloud - native, hybrid options'
@@ -996,7 +996,7 @@ export const,
     monitoring: 'Autonomous monitoring, self - healing'
     analytics: 'Operations insights, performance metrics'
     customization: 'Custom workflows, integration templates'
-    funding: 'Series B funding, $180M valuation'
+    funding: 'Series B funding, $180 M valuation'
     exit: 'IPO or enterprise acquisition'
     contact: unknown;
       mobile: '+1 302 464 0950',
@@ -1013,7 +1013,7 @@ export const,
     whiteLabel: 'Available for enterprise clients', affiliate: '20% commission for referrals',
     referral: '$40,000 bonus for partnerships',
     partnership: 'Strategic enterprise partnerships',
-    funding: 'Series B funding, $180M valuation',
+    funding: 'Series B funding, $180 M valuation',
     exit: 'IPO or enterprise acquisition',
     contact: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',

@@ -184,11 +184,11 @@ const AITelepathicInterfacePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Basic thought commands</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Simple device control</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Simple device control</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Email support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Email support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Basic training<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -224,17 +224,17 @@ const AITelepathicInterfacePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Advanced neural processing</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Multi-device control</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Multi-device control</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom commands</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom commands</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Advanced training<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Advanced training</Check><a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
               </a>
             </div>
 
@@ -245,14 +245,14 @@ const AITelepathicInterfacePage: React.FC = () => {,
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Full neural interface</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Enterprise integration</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Enterprise integration</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >On-premise deployment<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>

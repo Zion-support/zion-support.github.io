@@ -10,7 +10,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "AI, Disaster, Recovery Playboo, k, s","
       descripti, o, n: "Failove, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.","
-      vie, w, s: "11.2K","
+      vie, w, s: "11.2 K","
       readTi, m, e: "7, mi, n","
       catego, r, y: "AI, Operation, s","
       ic, o, n: Trending, U, p;
@@ -20,8 +20,8 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Private, Feature, Flag;
   s: Ze, r, o‑PII, Experiment, s","
-      descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100m, s.","
-      vie, w, s: "13.6K","
+      descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.","
+      vie, w, s: "13.6 K","
       readTi, m, e: "8, mi, n","
       catego, r, y: "Experimentati, o, n","
       ic, o, n: Shie, l, d;
@@ -31,7 +31,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Runtime, Rollback, Guardrails","
       descripti, o, n: "Canary, scorecard, s, kill, switche, s, and, instant, reversibility.","
-      vie, w, s: "12.1K","
+      vie, w, s: "12.1 K","
       readTi, m, e: "7, mi, n","
       catego, r, y: "Reliabili, t, y","
       ic, o, n: Trending, U, p;
@@ -41,7 +41,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "AI, Autonomous, Infrastructure 20, 2, 6","
       descripti, o, n: "Se, l, f‑heali, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.","
-      vie, w, s: "12.4K","
+      vie, w, s: "12.4 K","
       readTi, m, e: "9, mi, n","
       catego, r, y: "Platform, Engineerin, g","
       ic, o, n: Trending, U, p;
@@ -51,7 +51,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Ze, r, o‑Trust, for, GenAI 20, 2, 6","
       descripti, o, n: "Prompt, firewall, s, egress, control, s, and, signed, outputs at, scal, e.","
-      vie, w, s: "10.9K","
+      vie, w, s: "10.9 K","
       readTi, m, e: "7, mi, n","
       catego, r, y: "Securi, t, y","
       ic, o, n: Shie, l, d;
@@ -61,7 +61,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 20, 2, 6","
       descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestration.","
-      vie, w, s: "9.1K","
+      vie, w, s: "9.1 K","
       readTi, m, e: "8, mi, n","
       catego, r, y: "Quant, u, m","
       ic, o, n: Bra, i, n;
@@ -70,8 +70,8 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     }
     {
       tit, l, e: "Edge, LLM, Caching Blueprint, 202, 6","
-      descripti, o, n: "S, u, b‑100ms, prompts, via tiered, caches, and freshness, window, s.","
-      vie, w, s: "8.9K","
+      descripti, o, n: "S, u, b‑100 ms, prompts, via tiered, caches, and freshness, window, s.","
+      vie, w, s: "8.9 K","
       readTi, m, e: "6, mi, n","
       catego, r, y: "Architectu, r, e","
       ic, o, n: Z, a, p;
@@ -81,14 +81,14 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "GenAI, Data, Governance Quicksta, r, t","
       descripti, o, n: "Policy, test, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.","
-      vie, w, s: "9.8K","
+      vie, w, s: "9.8 K","
       readTi, m, e: "6, mi, n","
       catego, r, y: "AI, Governanc, e","
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5","
       tit, l, e: "AI, Disaster, Recovery Playboo, k, s",";
       descripti, o, n: "Failove, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",";
-      vie, w, s: "11.2K",";
+      vie, w, s: "11.2 K",";
       readTi, m, e: "7, mi, n",";
       catego, r, y: "AI, Operation, s",";
       ic, o, n: Trending, U, p;
@@ -98,8 +98,8 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Private, Feature, Flag;
   s: Ze, r, o‑PII, Experiment, s",";
-      descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100m, s.",";
-      vie, w, s: "13.6K",";
+      descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.",";
+      vie, w, s: "13.6 K",";
       readTi, m, e: "8, mi, n",";
       catego, r, y: "Experimentati, o, n",";
       ic, o, n: Shie, l, d;
@@ -109,7 +109,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Runtime, Rollback, Guardrails",";
       descripti, o, n: "Canary, scorecard, s, kill, switche, s, and, instant, reversibility.",";
-      vie, w, s: "12.1K",";
+      vie, w, s: "12.1 K",";
       readTi, m, e: "7, mi, n",";
       catego, r, y: "Reliabili, t, y",";
       ic, o, n: Trending, U, p;
@@ -119,7 +119,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "AI, Autonomous, Infrastructure 20, 2, 6",";
       descripti, o, n: "Se, l, f‑heali, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.",";
-      vie, w, s: "12.4K",";
+      vie, w, s: "12.4 K",";
       readTi, m, e: "9, mi, n",";
       catego, r, y: "Platform, Engineerin, g",";
       ic, o, n: Trending, U, p;
@@ -129,7 +129,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Ze, r, o‑Trust, for, GenAI 20, 2, 6",";
       descripti, o, n: "Prompt, firewall, s, egress, control, s, and, signed, outputs at, scal, e.",";
-      vie, w, s: "10.9K",";
+      vie, w, s: "10.9 K",";
       readTi, m, e: "7, mi, n",";
       catego, r, y: "Securi, t, y",";
       ic, o, n: Shie, l, d;
@@ -139,7 +139,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 20, 2, 6",";
       descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestration.",";
-      vie, w, s: "9.1K",";
+      vie, w, s: "9.1 K",";
       readTi, m, e: "8, mi, n",";
       catego, r, y: "Quant, u, m",";
       ic, o, n: Bra, i, n;
@@ -148,8 +148,8 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     }
     {
       tit, l, e: "Edge, LLM, Caching Blueprint, 202, 6",";
-      descripti, o, n: "S, u, b‑100ms, prompts, via tiered, caches, and freshness, window, s.",";
-      vie, w, s: "8.9K",";
+      descripti, o, n: "S, u, b‑100 ms, prompts, via tiered, caches, and freshness, window, s.",";
+      vie, w, s: "8.9 K",";
       readTi, m, e: "6, mi, n",";
       catego, r, y: "Architectu, r, e",";
       ic, o, n: Z, a, p;
@@ -159,7 +159,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
     {
       tit, l, e: "GenAI, Data, Governance Quicksta, r, t",";
       descripti, o, n: "Policy, test, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",";
-      vie, w, s: "9.8K",";
+      vie, w, s: "9.8 K",";
       readTi, m, e: "6, mi, n",";
       catego, r, y: "AI, Governanc, e",";
       ic, o, n: Shie, l, d;

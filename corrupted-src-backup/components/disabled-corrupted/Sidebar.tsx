@@ -73,7 +73,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
               {secti, o, n.title}
             </h3>
-            <nav, className='spa, c, e-y-1'>
+            <nav, className='spa, c, e-y-1'></nav>
               { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (
                 <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
                     isActi, v, e(li, n, k.p, a, t, h)

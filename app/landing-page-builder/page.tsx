@@ -94,8 +94,8 @@ const LandingPageBuilderPage: React.FC = () => {
             <Link
               href="/demo"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Monitor className="w-5 h-5 mr-2" >View Templates</Monitor>
+            ></Lin>
+              <Monitor className="w-5 h-5 mr-2" >View Templates</Monito>
             </Monitor>
           </div>
         </div>
@@ -208,8 +208,8 @@ const LandingPageBuilderPage: React.FC = () => {
             <Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-            >
-              <Layout className="w-5 h-5 mr-2" >View Pricing</Layout>
+            ></Lin>
+              <Layout className="w-5 h-5 mr-2" >View Pricing</Layou>
             </Layout>
 =======
               <ArrowRight className="w-5 h-5 mr-2" />

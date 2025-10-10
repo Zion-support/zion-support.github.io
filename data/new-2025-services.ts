@@ -120,7 +120,7 @@ export const,
     category: 'Developer Tools'
     realService: true;
     technology: ['Node && Node.jsCRONCloud Functions'];
-    market_size: '$3.5B+ AI safety & governance'
+    market_size: '$3.5 B+ AI safety & governance'
     growth_rate: '200% annual growth'
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -158,7 +158,7 @@ export const,
     competitors: ['Temporal (schedules)AirflowCloud Scheduler']
     rating: 4 && 4.7;
     reviews: 19;
-    market_size: '$8B workflow automation'
+    market_size: '$8 B workflow automation'
     growth_rate: '22% CAGR'
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -204,7 +204,7 @@ export const,
     competitors: ['TranscendOneTrustDidomi']
     rating: 4 && 4.7;
     reviews: 13;
-    market_size: '$4B privacy tech'
+    market_size: '$4 B privacy tech'
     growth_rate: '28% CAGR'
     variant: 'quantum - cyberpunk',
     contact_info: contact;
@@ -337,7 +337,7 @@ export const,
     competitors: ['MailreachWarmup InboxLemlist']
     rating: 4 && 4.6;
     reviews: 12;
-    market_size: '$2B email tooling'
+    market_size: '$2 B email tooling'
     growth_rate: '18% CAGR'
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -360,7 +360,7 @@ export const,
     category: 'AI & Data'
     realService: true;
     technology: ['Next && Next.jsPineconeWeaviatePGVector'];
-    integrations: ['S3GCSSlack'];
+    integrations: ['S3 GCSSlack'];
     useCases: ['Semantic searchKnowledge basesRetrieval augmentation'],
     period: '/month',
     description: 'End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.'
@@ -379,11 +379,11 @@ export const,
     category: 'AI & Data'
     real_service: true;
     technology: ['Next.jsPineconeWeaviatePGVector'];
-    integrations: ['S3GCSSlack'],
+    integrations: ['S3 GCSSlack'],
     use_cases: ['Semantic search_knowledge bases_retrieval augmentation'],
     roi: 'Ship search MVPs in days, not months'
     competitors: ['Pinecone starters_weaviate templates'];
-    market_size: '$5B vector DBs'
+    market_size: '$5 B vector DBs'
     growth_rate: '40% CAGR'
     variant: 'quantum - holographic'
     contact_info: contact;
@@ -487,7 +487,7 @@ export const,
     competitors: ['Nobl9Datadog SLO']
     rating: 4 && 4.6;
     reviews: 9;
-    market_size: '$15B observability'
+    market_size: '$15 B observability'
     growth_rate: '19% CAGR'
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -547,7 +547,7 @@ export const,
     category: 'Enterprise IT'
     realService: true;
     technology: ['Node && Node.jsNext.jsIdP SDKs'];
-    market_size: '$9B personalization'
+    market_size: '$9 B personalization'
     growth_rate: '21% CAGR'
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -579,11 +579,11 @@ export const,
     category: 'Enterprise IT'
     real_service: true;
     technology: ['Node.js_next.jsIdP SDKs'];
-    integrations: ['OktaAuth0WorkOS'];
+    integrations: ['OktaAuth0 WorkOS'];
     use_cases: ['Close enterprise deals_reduce integration time'];
     roi: 'Shorten sales cycles by 2040%'
     competitors: ['WorkOSAuth0 blueprints'];
-    market_size: '$12B identity'
+    market_size: '$12 B identity'
     growth_rate: '18% CAGR'
     variant: 'holographic - matrix'
     contact_info: contact;
@@ -621,7 +621,7 @@ export const,
     use_cases: ['HA databases_disaster recovery_performance tuning'];
     roi: 'Reduce downtime risk and improve throughput by 2040%'
     competitors: ['Crunchy DataAiven'];
-    market_size: '$10B managed DBs'
+    market_size: '$10 B managed DBs'
     growth_rate: '24% CAGR'
     variant: 'quantum - matrix'
     contact_info: contact;
@@ -683,7 +683,7 @@ export const,
     rating: 4 && 4.7;
     reviews: 21;
     competitors: ['SmartleadReply.io_apollo.io'];
-    market_size: '$5B sales tech'
+    market_size: '$5 B sales tech'
     growth_rate: '26% CAGR'
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -721,7 +721,7 @@ export const,
     competitors: ['AxoniusLansweeper']
     rating: 4 && 4.5;
     reviews: 6;
-    market_size: '$7B ITAM'
+    market_size: '$7 B ITAM'
     growth_rate: '17% CAGR'
     variant: 'quantum - holographic',
     contact_info: contact;
@@ -778,7 +778,7 @@ export const,
     targetAudience: 'AI product and research teams'
     trialDays: 14;
     setupTime: '2 days'
-    market_size: '$3B feature mgmt'
+    market_size: '$3 B feature mgmt'
     growth_rate: '24% CAGR'
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -835,7 +835,7 @@ export const,
     targetAudience: 'Frontend and platform teams'
     trialDays: 14;
     setupTime: '1 day'
-    market_size: '$4B model ops'
+    market_size: '$4 B model ops'
     growth_rate: '35% CAGR'
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -923,7 +923,7 @@ export const,
 ];
     realImplementation: true;
     implementationDetails:
-    market_size: '$3B AI governance'
+    market_size: '$3 B AI governance'
     growth_rate: '30% CAGR'
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -2898,7 +2898,7 @@ export const,
     use_cases: ['Prevent breaking changes', 'Improve API reliability'],
     roi: 'Cut API incidents by 50% within 60 days',
     competitors: ['Stoplight', 'Optic', 'Redocly'],
-    market_size: '$7B API economy tools',
+    market_size: '$7 B API economy tools',
     growth_rate: '20% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -3161,7 +3161,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Improve inbox rate by 1540% in 30 days',
     competitors: ['Mailreach', 'Warmup Inbox', 'Lemlist'],
-    market_size: '$2B email tooling',
+    market_size: '$2 B email tooling',
     growth_rate: '18% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -3358,7 +3358,7 @@ export const,
     use_cases: ['Reduce API risk', 'Enforce auth', 'Detect drift'],
     roi: 'Cut API incidents by 40%+ in 90 days',
     competitors: ['Salt Security', 'Noname Security'],
-    market_size: '$6B API security',
+    market_size: '$6 B API security',
     growth_rate: '23% CAGR',
     variant: 'quantum - cyberpunk',
     contact_info: contact;
@@ -3469,7 +3469,7 @@ export const,
     use_cases: ['Define SLOs', 'Alert on burn', 'Improve reliability'],
     roi: 'Reduce alert fatigue by 30%+ while focusing on user impact',
     competitors: ['Nobl9', 'Datadog SLO'],
-    market_size: '$15B observability',
+    market_size: '$15 B observability',
     growth_rate: '19% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -3583,7 +3583,7 @@ export const,
     use_cases: ['Increase conversion', 'Tailor content', 'Experiment fast'],
     roi: 'Boost conversion by 1025% in 60 days',
     competitors: ['Mutiny', 'Optimizely'],
-    market_size: '$9B personalization',
+    market_size: '$9 B personalization',
     growth_rate: '21% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -3919,7 +3919,7 @@ export const,
     use_cases: ['Outbound emails', 'Lead nurturing', 'Meeting booking'],
     roi: 'Increase meetings by 2050%',
     competitors: ['Smartlead', 'Reply.io', 'Apollo.io'],
-    market_size: '$5B sales tech',
+    market_size: '$5 B sales tech',
     growth_rate: '26% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -4030,7 +4030,7 @@ export const,
     use_cases: ['Asset inventory', 'Risk visibility', 'Change tracking'],
     roi: 'Improve inventory accuracy by 3060%',
     competitors: ['Axonius', 'Lansweeper'],
-    market_size: '$7B ITAM',
+    market_size: '$7 B ITAM',
     growth_rate: '17% CAGR',
     variant: 'quantum - holographic',
     contact_info: contact;
@@ -4144,7 +4144,7 @@ export const,
     use_cases: ['Gradual rollouts', 'Kill switches', 'Experiments'],
     roi: 'Reduce incident blast radius and speed up experiments',
     competitors: ['LaunchDarkly', 'GrowthBook', 'Statsig'],
-    market_size: '$3B feature mgmt',
+    market_size: '$3 B feature mgmt',
     growth_rate: '24% CAGR',
     variant: 'quantum - matrix',
     contact_info: contact;
@@ -4259,7 +4259,7 @@ export const,
     use_cases: ['Improve response quality', 'Reduce cost / latency', 'Governance'],
     roi: 'Increase task success rate 1025% with controlled spend',
     competitors: ['OpenAI finetune UI', 'HF AutoTrain'],
-    market_size: '$4B model ops',
+    market_size: '$4 B model ops',
     growth_rate: '35% CAGR',
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -4371,7 +4371,7 @@ export const,
     use_cases: ['Prevent perf regressions', 'Improve CWV scores'],
     roi: 'Boost conversion 310% by improving CWV',
     competitors: ['SpeedCurve', 'Calibre'],
-    market_size: '$2B web perf',
+    market_size: '$2 B web perf',
     growth_rate: '16% CAGR',
     variant: 'quantum - holographic',
     contact_info: contact;
@@ -4554,7 +4554,7 @@ export const,
     category: 'Enterprise IT', realService: true;
     technology: ['TypeScriptNode.jsPostgreSQL'], integrations: ['Google WorkspaceSalesforceHubSpotZendesk'],
     useCases: ['Right to accessRight to eraseCompliance evidence'], roi: 'Reduce DSAR handling time by 80%',
-    competitors: ['TranscendOneTrustDidomi'], marketSize: '$4B privacy tech',
+    competitors: ['TranscendOneTrustDidomi'], marketSize: '$4 B privacy tech',
     growthRate: '28% CAGR', variant: 'quantum-cyberpunk',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Workflow engine, connectors, secure storage and audit logs.',
@@ -4600,7 +4600,7 @@ export const,
     category: 'Cloud & FinOps', realService: true;
     technology: ['AWSGCPAzureBigQuery'], integrations: ['SlackEmailPagerDuty'],
     useCases: ['Cost reductionBudget controlCapacity planning'], roi: 'Save 1035% cloud spend in first 90 days',
-    competitors: ['CloudHealthVantageCloudZero'], marketSize: '$6B cloud cost mgmt',
+    competitors: ['CloudHealthVantageCloudZero'], marketSize: '$6 B cloud cost mgmt',
     growthRate: '25% CAGR', variant: 'quantum-holographic',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Ingestion, heuristics engine and alerting with reports.',
@@ -4623,7 +4623,7 @@ export const,
     category: 'Quality & Monitoring', realService: true;
     technology: ['IMAPSMTPNode.js'], integrations: ['SendGridMailgunPostmark'],
     useCases: ['Protect sender scoreWarm new domainsMonitor inbox placement'], roi: 'Improve inbox rate by 1540% in 30 days',
-    competitors: ['MailreachWarmup InboxLemlist'], marketSize: '$2B email tooling',
+    competitors: ['MailreachWarmup InboxLemlist'], marketSize: '$2 B email tooling',
     growthRate: '18% CAGR', variant: 'ai-futuristic',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Mailbox network, test harness and alerting.',
@@ -4645,9 +4645,9 @@ export const,
     targetAudience: 'Product and data teams', trialDays: 14;
     setupTime: '1 day', category: 'AI & Data',
     realService: true, technology: ['Next.jsPineconeWeaviatePGVector'],
-    integrations: ['S3GCSSlack'], useCases: ['Semantic searchKnowledge basesRetrieval augmentation'],
+    integrations: ['S3 GCSSlack'], useCases: ['Semantic searchKnowledge basesRetrieval augmentation'],
     roi: 'Ship search MVPs in days, not months',
-    competitors: ['Pinecone startersWeaviate templates'], marketSize: '$5B vector DBs',
+    competitors: ['Pinecone startersWeaviate templates'], marketSize: '$5 B vector DBs',
     growthRate: '40% CAGR', variant: 'quantum-holographic',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Scaffold generators and eval harness.', launchDate: '2025-02-12',
@@ -4736,7 +4736,7 @@ export const,
     targetAudience: 'SaaS product teams', trialDays: 14;
     setupTime: '1 week', category: 'Enterprise IT',
     realService: true, technology: ['Node.jsNext.jsIdP SDKs'],
-    integrations: ['OktaAuth0WorkOS'], useCases: ['Close enterprise dealsReduce integration time'],
+    integrations: ['OktaAuth0 WorkOS'], useCases: ['Close enterprise dealsReduce integration time'],
     roi: 'Shorten sales cycles by 2040%', competitors: ['WorkOSAuth0 blueprints'],
     marketSize: '$12B identity', growthRate: '18% CAGR',
     variant: 'holographic-matrix', contactInfo: contact;
@@ -4898,7 +4898,7 @@ export const,
     category: 'AI & Data', realService: true;
     technology: ['TypeScriptPostgreSQL'], integrations: ['GitHubJiraSlack'],
     useCases: ['Audit readinessAsset ownershipPolicy enforcement'], roi: 'Reduce compliance cycle time by 50%',
-    competitors: ['Model governance suites'], marketSize: '$3B AI governance',
+    competitors: ['Model governance suites'], marketSize: '$3 B AI governance',
     growthRate: '30% CAGR', variant: 'ai-futuristic',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Registry, policies and approval workflows.',
@@ -6027,7 +6027,7 @@ export const,
     useCases: ['Prevent unsafe outputsCompliance readiness', 'Model regression detection'],
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
     competitors: ['LakeraGuardrails AI', 'Azure AI Content Safety'],
-    marketSize: '$3.5B+ AI safety & governance',
+    marketSize: '$3.5 B+ AI safety & governance',
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
 =======
@@ -6099,7 +6099,7 @@ export const,
     useCases: ['Audit readiness', 'Asset ownership', 'Policy enforcement']
     roi: 'Reduce compliance cycle time by 50%'
     competitors: ['Model governance suites'];
-    marketSize: '$3B AI governance'
+    marketSize: '$3 B AI governance'
     growthRate: '30% CAGR'
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -6206,7 +6206,7 @@ review,
     useCases: ['Prevent unsafe outputsCompliance readiness', 'Model regression detection'],
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
     competitors: ['LakeraGuardrails AI', 'Azure AI Content Safety'],
-    marketSize: '$3.5B+ AI safety & governance',
+    marketSize: '$3.5 B+ AI safety & governance',
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
     contactInfo: contact,    features: [;
@@ -6228,7 +6228,7 @@ review,
     useCases: ['Prevent unsafe outputsCompliance readinessModel regression detection'];
     roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks'
     competitors: ['LakeraGuardrails AIAzure AI Content Safety'];
-    marketSize: '$3.5B+ AI safety & governance'
+    marketSize: '$3.5 B+ AI safety & governance'
     growthRate: '200% annual growth'
     variant: 'holographic-matrix'
     contactInfo: contact;
@@ -6376,7 +6376,7 @@ review,
     useCases: ['Scheduled syncsData pipelines', 'Maintenance tasks'],
     roi: 'Cut failed schedules by 90% with automated retries and DLQ',
     competitors: ['Temporal (schedules)Airflow', 'Cloud Scheduler'],
-    marketSize: '$8B workflow automation',
+    marketSize: '$8 B workflow automation',
     growthRate: '22% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;
@@ -6477,7 +6477,7 @@ review,
     useCases: ['Right to accessRight to erase', 'Compliance evidence'],
     roi: 'Reduce DSAR handling time by 80%',
     competitors: ['TranscendOneTrust', 'Didomi'],
-    marketSize: '$4B privacy tech',
+    marketSize: '$4 B privacy tech',
     growthRate: '28% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact;
@@ -6578,7 +6578,7 @@ review,
     useCases: ['Prevent breaking changesImprove API reliability'],
     roi: 'Cut API incidents by 50% within 60 days',
     competitors: ['StoplightOptic', 'Redocly'],
-    marketSize: '$7B API economy tools',
+    marketSize: '$7 B API economy tools',
     growthRate: '20% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -6679,7 +6679,7 @@ review,
     useCases: ['Cost reductionBudget control', 'Capacity planning'],
     roi: 'Save 1035% cloud spend in first 90 days',
     competitors: ['CloudHealthVantage', 'CloudZero'],
-    marketSize: '$6B cloud cost mgmt',
+    marketSize: '$6 B cloud cost mgmt',
     growthRate: '25% CAGR',
     variant: 'quantum-holographic',
     contactInfo: contact;
@@ -6780,7 +6780,7 @@ review,
     useCases: ['Protect sender scoreWarm new domains', 'Monitor inbox placement'],
     roi: 'Improve inbox rate by 1540% in 30 days',
     competitors: ['MailreachWarmup Inbox', 'Lemlist'],
-    marketSize: '$2B email tooling',
+    marketSize: '$2 B email tooling',
     growthRate: '18% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -6877,7 +6877,7 @@ review,
     category: 'AI & Data',
     realService: true;
     technology: ['Next.jsPinecone', 'WeaviatePGVector'],
-    integrations: ['S3GCS', 'Slack'],
+    integrations: ['S3 GCS', 'Slack'],
     useCases: ['Semantic searchKnowledge bases', 'Retrieval augmentation'],
     roi: 'Ship search MVPs in days, not months',
     competitors: ['Pinecone startersWeaviate templates']
@@ -7487,7 +7487,7 @@ review,
     useCases: ['Outbound emailsLead nurturing', 'Meeting booking'],
     roi: 'Increase meetings by 2050%',
     competitors: ['SmartleadReply.io', 'Apollo.io'],
-    marketSize: '$5B sales tech',
+    marketSize: '$5 B sales tech',
     growthRate: '26% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -7689,7 +7689,7 @@ review,
     useCases: ['Gradual rolloutsKill switches', 'Experiments'],
     roi: 'Reduce incident blast radius and speed up experiments',
     competitors: ['LaunchDarklyGrowthBook', 'Statsig'],
-    marketSize: '$3B feature mgmt',
+    marketSize: '$3 B feature mgmt',
     growthRate: '24% CAGR',
     variant: 'quantum-matrix',
     contactInfo: contact;

@@ -208,7 +208,7 @@ const InvestorsPage: React.FC = () => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <metric.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{metric.value}</div>
+                <div className="text-4 xl font-bold text-cyan-400 mb-2">{metric.value}</div>
                 <div className="text-lg font-semibold text-white mb-2">{metric.label}</div>
                 <div className="text-gray-300 text-sm">{metric.description}</div>
               </div>
@@ -304,7 +304,7 @@ const InvestorsPage: React.FC = () => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <highlight.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{highlight.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{highlight.title}</h>
                 <p className="text-gray-300">{highlight.description}</p>
               </div>
             ))}
@@ -334,6 +334,7 @@ const InvestorsPage: React.FC = () => {}
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Download Pitch Deck;
             </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Download</butto></<<butto>Pitch</butto></<butto>Deck</butto>
           </div>
         </div>
       </section>

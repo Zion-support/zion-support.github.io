@@ -77,7 +77,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
             </stro, n, g>{' '}
             to, deliver, exceptional personalized, experiences, at sca, l, e. Achieve, 8, 5% automat, i, o, n, 87% fir, s, t-contact, resolutio, n, and, transform, customer;
             satisfacti, o, n.{' '}
-            <strong, classNam, e = 'te, x, t-cy, a, n-4, 0, 0'>Fortune, 100, proven</stro, n, g> with, 127M, customers global, l, y.
+            <strong, classNam, e = 'te, x, t-cy, a, n-4, 0, 0'>Fortune, 100, proven</stro, n, g>with</g>, 127 M, customers global, l, y.
           </p>
         </div>
         {/* Key, Metrics, Grid */}
@@ -114,7 +114,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>2, 8, 7%</div>
             <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>ROI, First, Year</div>
-            <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$340M, valu, e</div>
+            <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$340 M, valu, e</div>
           </div>
           <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'></div>
 <<<<<<< HEAD
@@ -124,7 +124,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>85%</div>
             <div, className='te, x, t-sm, tex, t-gre, e, n-2, 0, 0'>Automation, Rat, e</div>
-            <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$243M, cost, saved</div>
+            <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$243 M, cost, saved</div>
           </div>
         </div>
         {/* Revolutionary, Capabilit, i, e, s */}
@@ -534,4 +534,4 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
     </di, v>
   );
 };
-export default October2025MultimodalCXRevolutionBanner;
+export default October2025 MultimodalCXRevolutionBanner;

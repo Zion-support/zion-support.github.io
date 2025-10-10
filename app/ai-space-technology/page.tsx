@@ -9,16 +9,16 @@ import Footer from '../components/Footer';
 
 const AISpaceTechnologyPage: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Space Technology - Advanced Space Solutions | Zion Tech Group"
         description="Revolutionary AI-powered space technology solutions for satellite management, space exploration, and orbital operations. Starting at $4,999/month."
         keywords="AI space technology, satellite management, space exploration, orbital operations, space AI, satellite AI, space analytics"
         canonical="https://ziontechgroup.com/ai-space-technology"
-      />
-      <Navigation />
+      /></SEOHea>
+      <Navigation /></Navigatio>
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></mai>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
@@ -33,7 +33,7 @@ const AISpaceTechnologyPage: React.FC = () => {
                   Advanced Space Solutions
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
                 Revolutionize space operations with AI-powered satellite management, orbital optimization, 
                 and space exploration technologies.
               </p>
@@ -41,16 +41,14 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Request Demo
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                ></a></<<<a>Request</a></<<a>Demo</a>
+                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
                 </a>
                 <a 
                   href="#contact" 
                   className="inline-flex items-center px-8 py-4 border border-violet-400 text-violet-400 font-semibold rounded-lg hover:bg-violet-400 hover:text-white transition-all duration-300"
-                >
-                  <Orbit className="mr-2 w-5 h-5" />
-                  Learn More
+                ></a>
+                  <Orbit className="mr-2 w-5 h-5" /></Orbit></<<<Orbit>Learn</Orbit></<<Orbit>More</Orbit>
                 </a>
               </div>
             </div>
@@ -64,7 +62,7 @@ const AISpaceTechnologyPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Revolutionary Space AI Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Advanced AI technology for the next generation of space operations
               </p>
             </div>
@@ -74,18 +72,16 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="w-12 h-12 bg-violet-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Satellite className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Satellite Management</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Satellite Management</h>
                 <p className="text-gray-600 mb-4">
                   AI-powered satellite operations with autonomous orbit control and mission planning.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Autonomous control
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Autonomous</CheckCircle></<<CheckCircle>control</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Mission optimization
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Mission</CheckCircle></<<CheckCircle>optimization</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -94,18 +90,16 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Orbit className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Orbital Mechanics</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Orbital Mechanics</h>
                 <p className="text-gray-600 mb-4">
                   Advanced orbital calculations and trajectory optimization using AI algorithms.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Trajectory optimization
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Trajectory</CheckCircle></<<CheckCircle>optimization</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Collision avoidance
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Collision</CheckCircle></<<CheckCircle>avoidance</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -114,18 +108,16 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Globe className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Earth Observation</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Earth Observation</h>
                 <p className="text-gray-600 mb-4">
                   AI-powered analysis of satellite imagery for environmental monitoring and research.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Image analysis
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Image</CheckCircle></<<CheckCircle>analysis</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Environmental monitoring
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Environmental</CheckCircle></<<CheckCircle>monitoring</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -134,18 +126,16 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Space Communication</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Space Communication</h>
                 <p className="text-gray-600 mb-4">
                   Intelligent space communication systems with adaptive signal processing.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Signal optimization
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Signal</CheckCircle></<<CheckCircle>optimization</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Interference mitigation
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Interference</CheckCircle></<<CheckCircle>mitigation</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -154,18 +144,16 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Space Debris Tracking</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Space Debris Tracking</h>
                 <p className="text-gray-600 mb-4">
                   AI-powered space debris monitoring and collision prediction systems.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Debris tracking
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Debris</CheckCircle></<<CheckCircle>tracking</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Collision prediction
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Collision</CheckCircle></<<CheckCircle>prediction</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -174,18 +162,16 @@ const AISpaceTechnologyPage: React.FC = () => {
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Mission Planning</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Mission Planning</h>
                 <p className="text-gray-600 mb-4">
                   Intelligent mission planning and resource optimization for space operations.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Resource optimization
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Resource</CheckCircle></<<CheckCircle>optimization</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Risk assessment
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Risk</CheckCircle></<<CheckCircle>assessment</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -200,7 +186,7 @@ const AISpaceTechnologyPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Space Technology Applications
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Transform space operations across multiple industries
               </p>
             </div>
@@ -280,7 +266,7 @@ const AISpaceTechnologyPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Space Technology Pricing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Advanced space solutions for organizations of all sizes
               </p>
             </div>
@@ -295,22 +281,22 @@ const AISpaceTechnologyPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For academic and research institutions</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Basic satellite management</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Basic satellite management</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Orbital calculations</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Orbital calculations</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Email support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Email support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Research data access</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Research data access</spa>
                   </li>
                 </ul>
                 <a 
@@ -335,26 +321,26 @@ const AISpaceTechnologyPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For commercial space companies</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Advanced satellite management</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Advanced satellite management</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Mission planning AI</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Mission planning AI</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">24/7 support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">24/7 support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">API access</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">API access</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom integrations</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom integrations</spa>
                   </li>
                 </ul>
                 <a 
@@ -374,26 +360,26 @@ const AISpaceTechnologyPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For government agencies and defense</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Full space technology suite</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Full space technology suite</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom AI models</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom AI models</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Dedicated support team</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Dedicated support team</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">On-premise deployment</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">On-premise deployment</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Security clearance</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Security clearance</spa>
                   </li>
                 </ul>
                 <a 
@@ -420,16 +406,14 @@ const AISpaceTechnologyPage: React.FC = () => {
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=AI Space Technology Inquiry"
                 className="inline-flex items-center px-8 py-4 bg-white text-violet-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Request Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
+              ></a></<<<a>Request</a></<<a>Demo</a>
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
               </a>
               <a 
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+              ></a>
+                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
               </a>
             </div>
           </div>
@@ -456,7 +440,7 @@ const AISpaceTechnologyPage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </ErrorBoundary>
   );
 };

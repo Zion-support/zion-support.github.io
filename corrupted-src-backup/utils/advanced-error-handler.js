@@ -350,9 +350,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         top: 0;
         left: 0;
         right: 0;
-        background: #ff6b6b;
+        background: #ff6 b6 b;
         color: white;
-        padding: 10px;
+        padding: 10 px;
         text-align: center;
         z-index: 9999;
       ">
@@ -386,22 +386,22 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         align-items: center;
         justify-content: center;
         z-index: 10000;
-      ">
+      "></div>
         <div style="
           background: white;
-          padding: 20px;
-          border-radius: 8px;
-          max-width: 500px;
+          padding: 20 px;
+          border-radius: 8 px;
+          max-width: 500 px;
           text-align: center;
         ">,
           <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
           <button onclick="window.location.reload()" style="
-            background: #007bff;
+            background: #007 bff;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 10 px 20 px;
+            border-radius: 4 px;
             cursor: pointer;
           ">Refresh Page</button>
         </div>
@@ -416,12 +416,12 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     toast.innerHTML = `
       <div style="
         position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #ff6b6b;
+        top: 20 px;
+        right: 20 px;
+        background: #ff6 b6 b;
         color: white;
-        padding: 15px;
-        border-radius: 4px;
+        padding: 15 px;
+        border-radius: 4 px;
         z-index: 9999;
         max-width: 300px;
       ">,

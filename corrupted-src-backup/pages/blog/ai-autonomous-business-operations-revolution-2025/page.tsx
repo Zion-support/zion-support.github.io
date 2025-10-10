@@ -11,7 +11,7 @@ const AutonomousBusinessOperationsRevolution202, 5 = () => {
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Discover, how, autonomous business, operations, are eliminating, manual, process, e, s, reducing, costs, by 70-85%, and, creatin, g $50, 0, M+ in, annual, value for, Fortune, 500 compani, e, s. Complete, implementation, guide.'
-        />
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='autonomous, business, operation, s, AI, automatio, n, enterprise, A, I, business, transformatio, n, operational, efficienc, y, R, O, I, machine, learnin, g, digital, transformatio, n'
         />)

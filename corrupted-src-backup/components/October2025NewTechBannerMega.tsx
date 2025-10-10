@@ -36,7 +36,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e"></div>
             <Sparkles, className="w-4 h-4  />
             🔥 JUST, PUBLISHE, D: OCTOBER, 2025, AI BREAKTHROUGH, SERIE, S 🔥
-            <Sparkles, className="w-4 h-4  />
+            <Sparkles, className="w-4 h-4  /></Sparkles>
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
         <div, className="text-center mb-12">";</div>

@@ -11,11 +11,11 @@ export default function NextGenSecurityOperations20, 2, 5() {
           S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3B+ in, enterprise, assets.'
-        />
+          conte, n, t='Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3 B+ in, enterprise, assets.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'
-        />
+        /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-ne x t-g e n-securi t y-operatio n s',
         />,
@@ -43,8 +43,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Security, Crisis;
               </h2>
-              <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
-                Cyber, threats, have evolved, beyond, human capacity, to, defend.
+              <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>Cyber</p>, threats, have evolved, beyond, human capacity, to, defend.
                 Modern, attacks, leverage , A, I, operate, at, machine spe, e, d, and, exploit, vulnerabilities faster, than, security teams, can, respond.
 <<<<<<< HEAD
                 The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives;

@@ -12,7 +12,7 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
   return(<secti, o, n;
   classNa, m, e="relative, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, overflo, w-hidd, e, n"
       ar, i, a-lab, e, l="Cognitive, Mesh, Platform Launch, Announcemen, t"
-    >
+    ></secti>
       {/* Animated, background, elements - purely, decorativ, e */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20" ar, i, a-hidd, e, n="tr, u, e">";</div>
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"></d, i, v>";
@@ -153,8 +153,8 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {/*
             <p, className="te, x, t-gre, e, n-300, tex, t-xs, m, t-1">Proven, Result, s</p>
 <<<<<<< HEAD
           </artic, l, e>
-          <article, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e="listit, e, m">"
-            <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l="Return, on, investment">4, 2, 5%</p>
+          <article, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e="listit, e, m">"</article>
+            <p, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l="Return, on, investment">4, 2, 5%</p>
             <p, className="te, x, t-whi, t, e/80, tex, t-sm">ROI, in, 18 Mont, h, s</p>
             <p, className="te, x, t-gre, e, n-300, tex, t-xs, m, t-1">Fortune, 100, Client</p>
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l="Platform, benefits, and achievemen, t, s">";</div>

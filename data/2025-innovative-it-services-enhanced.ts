@@ -172,7 +172,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate modeling'];
     roi: 'Organizations report 500% performance improvement and 90% reduction in security risks.',
     competitors: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'];
-    marketSize: '$500B cloud computing market', growthRate: '35% annual growth',
+    marketSize: '$500 B cloud computing market', growthRate: '35% annual growth',
     variant: 'quantum-cloud-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -205,7 +205,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network security, Identity management, Threat detection, Compliance management, Incident response'];
     roi: 'Organizations report 90% reduction in security incidents and 95% improvement in compliance scores.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Cisco'];
-    marketSize: '$424B cybersecurity market', growthRate: '13% annual growth',
+    marketSize: '$424 B cybersecurity market', growthRate: '13% annual growth',
     variant: 'zero-trust-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -238,7 +238,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IoT device management, Edge analytics, Smart manufacturing, Autonomous vehicles, Smart cities'];
     roi: 'Organizations report 60% reduction in latency and 40% improvement in edge computing efficiency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-    marketSize: '$111B edge computing market', growthRate: '37% annual growth',
+    marketSize: '$111 B edge computing market', growthRate: '37% annual growth',
     variant: 'edge-computing-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -271,7 +271,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Supply chain tracking, Digital identity, Smart contracts, Asset tokenization, Decentralized finance'];
     roi: 'Organizations report 200% improvement in transparency and 80% reduction in fraud incidents.',
     competitors: ['IBM Blockchain, AWS Managed Blockchain, Azure Blockchain, ConsenSys'];
-    marketSize: '$67B blockchain market', growthRate: '87% annual growth',
+    marketSize: '$67 B blockchain market', growthRate: '87% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -304,7 +304,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Software development automation, Testing optimization, Deployment automation, Performance monitoring, Team collaboration'];
     roi: 'Development teams report 200% improvement in deployment speed and 150% reduction in bugs.',
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, AWS CodePipeline'];
-    marketSize: '$25B DevOps market', growthRate: '20% annual growth',
+    marketSize: '$25 B DevOps market', growthRate: '20% annual growth',
     variant: 'ai-devops-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -336,7 +336,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Secure communications, Government communications, Financial transactions, Healthcare data, Defense communications'];
     roi: 'Organizations report 100% security improvement and elimination of communication vulnerabilities.',
     competitors: ['Traditional VPN providers, SD-WAN solutions, Security companies'];
-    marketSize: '$15B quantum networking market', growthRate: '500% annual growth',
+    marketSize: '$15 B quantum networking market', growthRate: '500% annual growth',
     variant: 'quantum-networking-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -369,7 +369,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Infrastructure management, Problem resolution, Performance optimization, Security automation, Compliance management'];
     roi: 'IT teams report 80% reduction in manual tasks and 90% improvement in system reliability.',
     competitors: ['ServiceNow, BMC Helix, Ivanti, Micro Focus'];
-    marketSize: '$35B IT operations market', growthRate: '28% annual growth',
+    marketSize: '$35 B IT operations market', growthRate: '28% annual growth',
     variant: 'autonomous-it-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -403,7 +403,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['High-performance computing, Quantum research, Big data processing, AI training, Scientific computing'];
     roi: 'Organizations report 1000% performance improvement and 70% reduction in energy costs.',
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite'];
-    marketSize: '$200B data center market', growthRate: '25% annual growth',
+    marketSize: '$200 B data center market', growthRate: '25% annual growth',
     variant: 'quantum-datacenter-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -437,7 +437,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network security, Application security, Data protection, Compliance, Threat detection'];
     roi: 'Organizations report 95% reduction in security incidents and 100% improvement in encryption strength.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Symantec'];
-    marketSize: '$424B cybersecurity market', growthRate: '13% annual growth',
+    marketSize: '$424 B cybersecurity market', growthRate: '13% annual growth',
     variant: 'quantum-security-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -471,7 +471,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Cloud migration, Performance optimization, Cost optimization, Security assessment, Compliance validation'];
     roi: 'Organizations report 90% reduction in migration time and 80% improvement in post-migration performance.',
     competitors: ['Migration consulting firms, Cloud migration tools, Professional services'];
-    marketSize: '$45B cloud migration market', growthRate: '35% annual growth',
+    marketSize: '$45 B cloud migration market', growthRate: '35% annual growth',
     variant: 'quantum-migration-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -504,7 +504,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Cost optimization, Resource management, Budget planning, Performance optimization, Waste reduction'];
     roi: 'Organizations report 40% reduction in cloud costs and 200% improvement in resource efficiency.',
     competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'];
-    marketSize: '$22.5B cloud management market', growthRate: '28% annual growth',
+    marketSize: '$22.5 B cloud management market', growthRate: '28% annual growth',
     variant: 'cloud-cost-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -536,7 +536,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network security, Access control, Threat prevention, Compliance management, Risk mitigation'];
     roi: 'Organizations report 400% improvement in security posture and 300% reduction in security incidents.',
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point'];
-    marketSize: '$28.9B zero-trust security market', growthRate: '40% annual growth',
+    marketSize: '$28.9 B zero-trust security market', growthRate: '40% annual growth',
     variant: 'zero-trust-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -568,7 +568,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IoT device management, Edge analytics, Real-time processing, Latency optimization, Distributed computing'];
     roi: 'IoT companies report 300% improvement in processing speed and 200% reduction in latency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
-    marketSize: '$19.8B edge computing market', growthRate: '32% annual growth',
+    marketSize: '$19.8 B edge computing market', growthRate: '32% annual growth',
     variant: 'edge-computing-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -600,7 +600,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['API management, Microservices integration, Developer experience, API security, Performance optimization'];
     roi: 'Development teams report 250% improvement in API development speed and 200% reduction in integration time.',
     competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'];
-    marketSize: '$16.2B API management market', growthRate: '28% annual growth',
+    marketSize: '$16.2 B API management market', growthRate: '28% annual growth',
     variant: 'api-management-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -632,7 +632,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Data integration, ETL automation, Real-time processing, Data quality management, Analytics pipeline'];
     roi: 'Data teams report 300% improvement in data processing speed and 250% reduction in manual work.',
     competitors: ['Apache Airflow, Talend, Informatica, DataStage'];
-    marketSize: '$18.5B ETL market', growthRate: '26% annual growth',
+    marketSize: '$18.5 B ETL market', growthRate: '26% annual growth',
     variant: 'data-pipeline-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -664,7 +664,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Infrastructure automation, Multi-cloud management, Configuration management, Deployment automation, Cost optimization'];
     roi: 'DevOps teams report 300% improvement in deployment speed and 200% reduction in infrastructure errors.',
     competitors: ['HashiCorp Terraform, AWS CloudFormation, Azure Resource Manager, Google Cloud Deployment Manager'];
-    marketSize: '$14.8B infrastructure automation market', growthRate: '30% annual growth',
+    marketSize: '$14.8 B infrastructure automation market', growthRate: '30% annual growth',
     variant: 'iac-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -696,7 +696,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Database optimization, Query tuning, Performance monitoring, Capacity planning, Troubleshooting'];
     roi: 'Database teams report 300% improvement in query performance and 200% reduction in response time.',
     competitors: ['SolarWinds, Datadog, New Relic, AppDynamics'];
-    marketSize: '$13.2B database management market', growthRate: '24% annual growth',
+    marketSize: '$13.2 B database management market', growthRate: '24% annual growth',
     variant: 'database-optimization-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -728,7 +728,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Network monitoring, Performance optimization, Troubleshooting, Capacity planning, Security monitoring'];
     roi: 'Network teams report 300% improvement in issue resolution time and 200% reduction in downtime.',
     competitors: ['SolarWinds, PRTG, Nagios, Zabbix'];
-    marketSize: '$16.8B network monitoring market', growthRate: '26% annual growth',
+    marketSize: '$16.8 B network monitoring market', growthRate: '26% annual growth',
     variant: 'network-monitoring-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -760,7 +760,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Asset discovery, License management, Compliance reporting, Cost optimization, Lifecycle management'];
     roi: 'IT teams report 300% improvement in asset visibility and 200% reduction in compliance risks.',
     competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell'];
-    marketSize: '$12.5B IT asset management market', growthRate: '22% annual growth',
+    marketSize: '$12.5 B IT asset management market', growthRate: '22% annual growth',
     variant: 'itam-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -793,7 +793,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['Secure cloud migration, Compliance requirements, Data sovereignty, High-security applications, Research computing'];
     roi: 'Financial institutions report 200% ROI through reduced security risks and compliance costs.',
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$500B cloud infrastructure market', growthRate: '30% annual growth',
+    marketSize: '$500 B cloud infrastructure market', growthRate: '30% annual growth',
     variant: 'quantum-cloud-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -826,7 +826,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IT operations automation, Incident management, Infrastructure monitoring, Performance optimization, Cost management'];
     roi: 'Enterprises report 60% reduction in IT operational costs and 80% faster incident resolution.',
     competitors: ['ServiceNow, BMC, PagerDuty, Splunk, Datadog'];
-    marketSize: '$35B IT operations market', growthRate: '25% annual growth',
+    marketSize: '$35 B IT operations market', growthRate: '25% annual growth',
     variant: 'autonomous-it-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -859,7 +859,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['IoT device management, Real-time analytics, Autonomous vehicles, Smart cities, Industrial automation'];
     roi: 'IoT companies report 300% improvement in processing speed and 40% reduction in latency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT'];
-    marketSize: '$45B edge computing market', growthRate: '35% annual growth',
+    marketSize: '$45 B edge computing market', growthRate: '35% annual growth',
     variant: 'edge-orchestration-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -892,7 +892,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     useCases: ['DeFi applications, Supply chain tracking, Digital identity, Asset tokenization, Gaming platforms'];
     roi: 'Financial services report 250% ROI through reduced transaction costs and improved transparency.',
     competitors: ['ConsenSys, R3 Corda, Hyperledger, Alchemy, Infura'];
-    marketSize: '$19B blockchain market', growthRate: '40% annual growth',
+    marketSize: '$19 B blockchain market', growthRate: '40% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2652,7 +2652,7 @@ export const,
     useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate modeling'];
     roi: 'Organizations report 500% performance improvement and 90% reduction in security risks.';
     competitors: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'];
-    marketSize: '$500B cloud computing market';
+    marketSize: '$500 B cloud computing market';
     growthRate: '35% annual growth';
     variant: 'quantum-cloud-enterprise'}
     contactInfo: {}
@@ -2696,7 +2696,7 @@ export const,
     useCases: ['Network security, Identity management, Threat detection, Compliance management, Incident response'];
     roi: 'Organizations report 90% reduction in security incidents and 95% improvement in compliance scores.';
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Cisco'];
-    marketSize: '$424B cybersecurity market';
+    marketSize: '$424 B cybersecurity market';
     growthRate: '13% annual growth';
     variant: 'zero-trust-enterprise'}
     contactInfo: {}
@@ -2740,7 +2740,7 @@ export const,
     useCases: ['IoT device management, Edge analytics, Smart manufacturing, Autonomous vehicles, Smart cities'];
     roi: 'Organizations report 60% reduction in latency and 40% improvement in edge computing efficiency.';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-    marketSize: '$111B edge computing market';
+    marketSize: '$111 B edge computing market';
     growthRate: '37% annual growth';
     variant: 'edge-computing-enterprise'}
     contactInfo: {}
@@ -2784,7 +2784,7 @@ export const,
     useCases: ['Supply chain tracking, Digital identity, Smart contracts, Asset tokenization, Decentralized finance'];
     roi: 'Organizations report 200% improvement in transparency and 80% reduction in fraud incidents.';
     competitors: ['IBM Blockchain, AWS Managed Blockchain, Azure Blockchain, ConsenSys'];
-    marketSize: '$67B blockchain market';
+    marketSize: '$67 B blockchain market';
     growthRate: '87% annual growth';
     variant: 'blockchain-enterprise'}
     contactInfo: {}
@@ -2828,7 +2828,7 @@ export const,
     useCases: ['Software development automation, Testing optimization, Deployment automation, Performance monitoring, Team collaboration'];
     roi: 'Development teams report 200% improvement in deployment speed and 150% reduction in bugs.';
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, AWS CodePipeline'];
-    marketSize: '$25B DevOps market';
+    marketSize: '$25 B DevOps market';
     growthRate: '20% annual growth';
     variant: 'ai-devops-enterprise'}
     contactInfo: {}
@@ -2872,7 +2872,7 @@ export const,
     useCases: ['Secure communications, Government communications, Financial transactions, Healthcare data, Defense communications'];
     roi: 'Organizations report 100% security improvement and elimination of communication vulnerabilities.';
     competitors: ['Traditional VPN providers, SD-WAN solutions, Security companies'];
-    marketSize: '$15B quantum networking market';
+    marketSize: '$15 B quantum networking market';
     growthRate: '500% annual growth';
     variant: 'quantum-networking-enterprise'}
     contactInfo: {}
@@ -2916,7 +2916,7 @@ export const,
     useCases: ['Infrastructure management, Problem resolution, Performance optimization, Security automation, Compliance management'];
     roi: 'IT teams report 80% reduction in manual tasks and 90% improvement in system reliability.';
     competitors: ['ServiceNow, BMC Helix, Ivanti, Micro Focus'];
-    marketSize: '$35B IT operations market';
+    marketSize: '$35 B IT operations market';
     growthRate: '28% annual growth';
     variant: 'autonomous-it-enterprise'}
     contactInfo: {}
@@ -2960,7 +2960,7 @@ export const,
     useCases: ['High-performance computing, Quantum research, Big data processing, AI training, Scientific computing'];
     roi: 'Organizations report 1000% performance improvement and 70% reduction in energy costs.';
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite'];
-    marketSize: '$200B data center market';
+    marketSize: '$200 B data center market';
     growthRate: '25% annual growth';
     variant: 'quantum-datacenter-enterprise'}
     contactInfo: {}
@@ -3004,7 +3004,7 @@ export const,
     useCases: ['Network security, Application security, Data protection, Compliance, Threat detection'];
     roi: 'Organizations report 95% reduction in security incidents and 100% improvement in encryption strength.';
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Symantec'];
-    marketSize: '$424B cybersecurity market';
+    marketSize: '$424 B cybersecurity market';
     growthRate: '13% annual growth';
     variant: 'quantum-security-enterprise'}
     contactInfo: {}
@@ -3048,7 +3048,7 @@ export const,
     useCases: ['Cloud migration, Performance optimization, Cost optimization, Security assessment, Compliance validation'];
     roi: 'Organizations report 90% reduction in migration time and 80% improvement in post-migration window.window.window.performance.';
     competitors: ['Migration consulting firms, Cloud migration tools, Professional services'];
-    marketSize: '$45B cloud migration market';
+    marketSize: '$45 B cloud migration market';
     growthRate: '35% annual growth';
     variant: 'quantum-migration-enterprise'}
     contactInfo: {}
@@ -3092,7 +3092,7 @@ export const,
     useCases: ['Cost optimization, Resource management, Budget planning, Performance optimization, Waste reduction'];
     roi: 'Organizations report 40% reduction in cloud costs and 200% improvement in resource efficiency.';
     competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'];
-    marketSize: '$22.5B cloud management market';
+    marketSize: '$22.5 B cloud management market';
     growthRate: '28% annual growth';
     variant: 'cloud-cost-enterprise'}
     contactInfo: {}
@@ -3136,7 +3136,7 @@ export const,
     useCases: ['Network security, Access control, Threat prevention, Compliance management, Risk mitigation'];
     roi: 'Organizations report 400% improvement in security posture and 300% reduction in security incidents.';
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point'];
-    marketSize: '$28.9B zero-trust security market';
+    marketSize: '$28.9 B zero-trust security market';
     growthRate: '40% annual growth';
     variant: 'zero-trust-enterprise'}
     contactInfo: {}
@@ -3180,7 +3180,7 @@ export const,
     useCases: ['IoT device management, Edge analytics, Real-time processing, Latency optimization, Distributed computing'];
     roi: 'IoT companies report 300% improvement in processing speed and 200% reduction in latency.';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
-    marketSize: '$19.8B edge computing market';
+    marketSize: '$19.8 B edge computing market';
     growthRate: '32% annual growth';
     variant: 'edge-computing-enterprise'}
     contactInfo: {}
@@ -3224,7 +3224,7 @@ export const,
     useCases: ['API management, Microservices integration, Developer experience, API security, Performance optimization'];
     roi: 'Development teams report 250% improvement in API development speed and 200% reduction in integration time.';
     competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'];
-    marketSize: '$16.2B API management market';
+    marketSize: '$16.2 B API management market';
     growthRate: '28% annual growth';
     variant: 'api-management-enterprise'}
     contactInfo: {}
@@ -3268,7 +3268,7 @@ export const,
     useCases: ['Data integration, ETL automation, Real-time processing, Data quality management, Analytics pipeline'];
     roi: 'Data teams report 300% improvement in data processing speed and 250% reduction in manual work.';
     competitors: ['Apache Airflow, Talend, Informatica, DataStage'];
-    marketSize: '$18.5B ETL market';
+    marketSize: '$18.5 B ETL market';
     growthRate: '26% annual growth';
     variant: 'data-pipeline-enterprise'}
     contactInfo: {}
@@ -3312,7 +3312,7 @@ export const,
     useCases: ['Infrastructure automation, Multi-cloud management, Configuration management, Deployment automation, Cost optimization'];
     roi: 'DevOps teams report 300% improvement in deployment speed and 200% reduction in infrastructure errors.';
     competitors: ['HashiCorp Terraform, AWS CloudFormation, Azure Resource Manager, Google Cloud Deployment Manager'];
-    marketSize: '$14.8B infrastructure automation market';
+    marketSize: '$14.8 B infrastructure automation market';
     growthRate: '30% annual growth';
     variant: 'iac-enterprise'}
     contactInfo: {}
@@ -3356,7 +3356,7 @@ export const,
     useCases: ['Database optimization, Query tuning, Performance monitoring, Capacity planning, Troubleshooting'];
     roi: 'Database teams report 300% improvement in query performance and 200% reduction in response time.';
     competitors: ['SolarWinds, Datadog, New Relic, AppDynamics'];
-    marketSize: '$13.2B database management market';
+    marketSize: '$13.2 B database management market';
     growthRate: '24% annual growth';
     variant: 'database-optimization-enterprise'}
     contactInfo: {}
@@ -3400,7 +3400,7 @@ export const,
     useCases: ['Network monitoring, Performance optimization, Troubleshooting, Capacity planning, Security monitoring'];
     roi: 'Network teams report 300% improvement in issue resolution time and 200% reduction in downtime.';
     competitors: ['SolarWinds, PRTG, Nagios, Zabbix'];
-    marketSize: '$16.8B network monitoring market';
+    marketSize: '$16.8 B network monitoring market';
     growthRate: '26% annual growth';
     variant: 'network-monitoring-enterprise'}
     contactInfo: {}
@@ -3444,7 +3444,7 @@ export const,
     useCases: ['Asset discovery, License management, Compliance reporting, Cost optimization, Lifecycle management'];
     roi: 'IT teams report 300% improvement in asset visibility and 200% reduction in compliance risks.';
     competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell'];
-    marketSize: '$12.5B IT asset management market';
+    marketSize: '$12.5 B IT asset management market';
     growthRate: '22% annual growth';
     variant: 'itam-enterprise'}
     contactInfo: {}
@@ -3488,7 +3488,7 @@ export const,
     useCases: ['Secure cloud migration, Compliance requirements, Data sovereignty, High-security applications, Research computing'];
     roi: 'Financial institutions report 200% ROI through reduced security risks and compliance costs.';
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$500B cloud infrastructure market';
+    marketSize: '$500 B cloud infrastructure market';
     growthRate: '30% annual growth';
     variant: 'quantum-cloud-enterprise'}
     contactInfo: {}
@@ -3532,7 +3532,7 @@ export const,
     useCases: ['IT operations automation, Incident management, Infrastructure monitoring, Performance optimization, Cost management'];
     roi: 'Enterprises report 60% reduction in IT operational costs and 80% faster incident resolution.';
     competitors: ['ServiceNow, BMC, PagerDuty, Splunk, Datadog'];
-    marketSize: '$35B IT operations market';
+    marketSize: '$35 B IT operations market';
     growthRate: '25% annual growth';
     variant: 'autonomous-it-enterprise'}
     contactInfo: {}
@@ -3576,7 +3576,7 @@ export const,
     useCases: ['IoT device management, Real-time analytics, Autonomous vehicles, Smart cities, Industrial automation'];
     roi: 'IoT companies report 300% improvement in processing speed and 40% reduction in latency.';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT'];
-    marketSize: '$45B edge computing market';
+    marketSize: '$45 B edge computing market';
     growthRate: '35% annual growth';
     variant: 'edge-orchestration-enterprise'}
     contactInfo: {}
@@ -3620,7 +3620,7 @@ export const,
     useCases: ['DeFi applications, Supply chain tracking, Digital identity, Asset tokenization, Gaming platforms'];
     roi: 'Financial services report 250% ROI through reduced transaction costs and improved transparency.';
     competitors: ['ConsenSys, R3 Corda, Hyperledger, Alchemy, Infura'];
-    marketSize: '$19B blockchain market';
+    marketSize: '$19 B blockchain market';
     growthRate: '40% annual growth';
     variant: 'blockchain-enterprise'}
     contactInfo: {}
@@ -4407,7 +4407,7 @@ export const,
     useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate modeling'];
     roi: 'Organizations report 500% performance improvement and 90% reduction in security risks.';
     competitors: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'];
-    marketSize: '$500B cloud computing market';
+    marketSize: '$500 B cloud computing market';
     growthRate: '35% annual growth';
     variant: 'quantum-cloud-enterprise'}
     contactInfo: {}
@@ -4451,7 +4451,7 @@ export const,
     useCases: ['Network security, Identity management, Threat detection, Compliance management, Incident response'];
     roi: 'Organizations report 90% reduction in security incidents and 95% improvement in compliance scores.';
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Cisco'];
-    marketSize: '$424B cybersecurity market';
+    marketSize: '$424 B cybersecurity market';
     growthRate: '13% annual growth';
     variant: 'zero-trust-enterprise'}
     contactInfo: {}
@@ -4495,7 +4495,7 @@ export const,
     useCases: ['IoT device management, Edge analytics, Smart manufacturing, Autonomous vehicles, Smart cities'];
     roi: 'Organizations report 60% reduction in latency and 40% improvement in edge computing efficiency.';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-    marketSize: '$111B edge computing market';
+    marketSize: '$111 B edge computing market';
     growthRate: '37% annual growth';
     variant: 'edge-computing-enterprise'}
     contactInfo: {}
@@ -4539,7 +4539,7 @@ export const,
     useCases: ['Supply chain tracking, Digital identity, Smart contracts, Asset tokenization, Decentralized finance'];
     roi: 'Organizations report 200% improvement in transparency and 80% reduction in fraud incidents.';
     competitors: ['IBM Blockchain, AWS Managed Blockchain, Azure Blockchain, ConsenSys'];
-    marketSize: '$67B blockchain market';
+    marketSize: '$67 B blockchain market';
     growthRate: '87% annual growth';
     variant: 'blockchain-enterprise'}
     contactInfo: {}
@@ -4583,7 +4583,7 @@ export const,
     useCases: ['Software development automation, Testing optimization, Deployment automation, Performance monitoring, Team collaboration'];
     roi: 'Development teams report 200% improvement in deployment speed and 150% reduction in bugs.';
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, AWS CodePipeline'];
-    marketSize: '$25B DevOps market';
+    marketSize: '$25 B DevOps market';
     growthRate: '20% annual growth';
     variant: 'ai-devops-enterprise'}
     contactInfo: {}
@@ -4627,7 +4627,7 @@ export const,
     useCases: ['Secure communications, Government communications, Financial transactions, Healthcare data, Defense communications'];
     roi: 'Organizations report 100% security improvement and elimination of communication vulnerabilities.';
     competitors: ['Traditional VPN providers, SD-WAN solutions, Security companies'];
-    marketSize: '$15B quantum networking market';
+    marketSize: '$15 B quantum networking market';
     growthRate: '500% annual growth';
     variant: 'quantum-networking-enterprise'}
     contactInfo: {}
@@ -4671,7 +4671,7 @@ export const,
     useCases: ['Infrastructure management, Problem resolution, Performance optimization, Security automation, Compliance management'];
     roi: 'IT teams report 80% reduction in manual tasks and 90% improvement in system reliability.';
     competitors: ['ServiceNow, BMC Helix, Ivanti, Micro Focus'];
-    marketSize: '$35B IT operations market';
+    marketSize: '$35 B IT operations market';
     growthRate: '28% annual growth';
     variant: 'autonomous-it-enterprise'}
     contactInfo: {}
@@ -4715,7 +4715,7 @@ export const,
     useCases: ['High-performance computing, Quantum research, Big data processing, AI training, Scientific computing'];
     roi: 'Organizations report 1000% performance improvement and 70% reduction in energy costs.';
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite'];
-    marketSize: '$200B data center market';
+    marketSize: '$200 B data center market';
     growthRate: '25% annual growth';
     variant: 'quantum-datacenter-enterprise'}
     contactInfo: {}
@@ -4759,7 +4759,7 @@ export const,
     useCases: ['Network security, Application security, Data protection, Compliance, Threat detection'];
     roi: 'Organizations report 95% reduction in security incidents and 100% improvement in encryption strength.';
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point, Symantec'];
-    marketSize: '$424B cybersecurity market';
+    marketSize: '$424 B cybersecurity market';
     growthRate: '13% annual growth';
     variant: 'quantum-security-enterprise'}
     contactInfo: {}
@@ -4803,7 +4803,7 @@ export const,
     useCases: ['Cloud migration, Performance optimization, Cost optimization, Security assessment, Compliance validation'];
     roi: 'Organizations report 90% reduction in migration time and 80% improvement in post-migration window.window.window.performance.';
     competitors: ['Migration consulting firms, Cloud migration tools, Professional services'];
-    marketSize: '$45B cloud migration market';
+    marketSize: '$45 B cloud migration market';
     growthRate: '35% annual growth';
     variant: 'quantum-migration-enterprise'}
     contactInfo: {}
@@ -4847,7 +4847,7 @@ export const,
     useCases: ['Cost optimization, Resource management, Budget planning, Performance optimization, Waste reduction'];
     roi: 'Organizations report 40% reduction in cloud costs and 200% improvement in resource efficiency.';
     competitors: ['CloudHealth, CloudCheckr, AWS Cost Explorer, Azure Cost Management'];
-    marketSize: '$22.5B cloud management market';
+    marketSize: '$22.5 B cloud management market';
     growthRate: '28% annual growth';
     variant: 'cloud-cost-enterprise'}
     contactInfo: {}
@@ -4891,7 +4891,7 @@ export const,
     useCases: ['Network security, Access control, Threat prevention, Compliance management, Risk mitigation'];
     roi: 'Organizations report 400% improvement in security posture and 300% reduction in security incidents.';
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point'];
-    marketSize: '$28.9B zero-trust security market';
+    marketSize: '$28.9 B zero-trust security market';
     growthRate: '40% annual growth';
     variant: 'zero-trust-enterprise'}
     contactInfo: {}
@@ -4935,7 +4935,7 @@ export const,
     useCases: ['IoT device management, Edge analytics, Real-time processing, Latency optimization, Distributed computing'];
     roi: 'IoT companies report 300% improvement in processing speed and 200% reduction in latency.';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
-    marketSize: '$19.8B edge computing market';
+    marketSize: '$19.8 B edge computing market';
     growthRate: '32% annual growth';
     variant: 'edge-computing-enterprise'}
     contactInfo: {}
@@ -4979,7 +4979,7 @@ export const,
     useCases: ['API management, Microservices integration, Developer experience, API security, Performance optimization'];
     roi: 'Development teams report 250% improvement in API development speed and 200% reduction in integration time.';
     competitors: ['Kong, AWS API Gateway, Azure API Management, Google Cloud Endpoints'];
-    marketSize: '$16.2B API management market';
+    marketSize: '$16.2 B API management market';
     growthRate: '28% annual growth';
     variant: 'api-management-enterprise'}
     contactInfo: {}
@@ -5023,7 +5023,7 @@ export const,
     useCases: ['Data integration, ETL automation, Real-time processing, Data quality management, Analytics pipeline'];
     roi: 'Data teams report 300% improvement in data processing speed and 250% reduction in manual work.';
     competitors: ['Apache Airflow, Talend, Informatica, DataStage'];
-    marketSize: '$18.5B ETL market';
+    marketSize: '$18.5 B ETL market';
     growthRate: '26% annual growth';
     variant: 'data-pipeline-enterprise'}
     contactInfo: {}
@@ -5067,7 +5067,7 @@ export const,
     useCases: ['Infrastructure automation, Multi-cloud management, Configuration management, Deployment automation, Cost optimization'];
     roi: 'DevOps teams report 300% improvement in deployment speed and 200% reduction in infrastructure errors.';
     competitors: ['HashiCorp Terraform, AWS CloudFormation, Azure Resource Manager, Google Cloud Deployment Manager'];
-    marketSize: '$14.8B infrastructure automation market';
+    marketSize: '$14.8 B infrastructure automation market';
     growthRate: '30% annual growth';
     variant: 'iac-enterprise'}
     contactInfo: {}
@@ -5111,7 +5111,7 @@ export const,
     useCases: ['Database optimization, Query tuning, Performance monitoring, Capacity planning, Troubleshooting'];
     roi: 'Database teams report 300% improvement in query performance and 200% reduction in response time.';
     competitors: ['SolarWinds, Datadog, New Relic, AppDynamics'];
-    marketSize: '$13.2B database management market';
+    marketSize: '$13.2 B database management market';
     growthRate: '24% annual growth';
     variant: 'database-optimization-enterprise'}
     contactInfo: {}
@@ -5155,7 +5155,7 @@ export const,
     useCases: ['Network monitoring, Performance optimization, Troubleshooting, Capacity planning, Security monitoring'];
     roi: 'Network teams report 300% improvement in issue resolution time and 200% reduction in downtime.';
     competitors: ['SolarWinds, PRTG, Nagios, Zabbix'];
-    marketSize: '$16.8B network monitoring market';
+    marketSize: '$16.8 B network monitoring market';
     growthRate: '26% annual growth';
     variant: 'network-monitoring-enterprise'}
     contactInfo: {}
@@ -5199,7 +5199,7 @@ export const,
     useCases: ['Asset discovery, License management, Compliance reporting, Cost optimization, Lifecycle management'];
     roi: 'IT teams report 300% improvement in asset visibility and 200% reduction in compliance risks.';
     competitors: ['ServiceNow, BMC Helix, Ivanti, Cherwell'];
-    marketSize: '$12.5B IT asset management market';
+    marketSize: '$12.5 B IT asset management market';
     growthRate: '22% annual growth';
     variant: 'itam-enterprise'}
     contactInfo: {}
@@ -5243,7 +5243,7 @@ export const,
     useCases: ['Secure cloud migration, Compliance requirements, Data sovereignty, High-security applications, Research computing'];
     roi: 'Financial institutions report 200% ROI through reduced security risks and compliance costs.';
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$500B cloud infrastructure market';
+    marketSize: '$500 B cloud infrastructure market';
     growthRate: '30% annual growth';
     variant: 'quantum-cloud-enterprise'}
     contactInfo: {}
@@ -5287,7 +5287,7 @@ export const,
     useCases: ['IT operations automation, Incident management, Infrastructure monitoring, Performance optimization, Cost management'];
     roi: 'Enterprises report 60% reduction in IT operational costs and 80% faster incident resolution.';
     competitors: ['ServiceNow, BMC, PagerDuty, Splunk, Datadog'];
-    marketSize: '$35B IT operations market';
+    marketSize: '$35 B IT operations market';
     growthRate: '25% annual growth';
     variant: 'autonomous-it-enterprise'}
     contactInfo: {}
@@ -5331,7 +5331,7 @@ export const,
     useCases: ['IoT device management, Real-time analytics, Autonomous vehicles, Smart cities, Industrial automation'];
     roi: 'IoT companies report 300% improvement in processing speed and 40% reduction in latency.';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT'];
-    marketSize: '$45B edge computing market';
+    marketSize: '$45 B edge computing market';
     growthRate: '35% annual growth';
     variant: 'edge-orchestration-enterprise'}
     contactInfo: {}
@@ -5375,7 +5375,7 @@ export const,
     useCases: ['DeFi applications, Supply chain tracking, Digital identity, Asset tokenization, Gaming platforms'];
     roi: 'Financial services report 250% ROI through reduced transaction costs and improved transparency.';
     competitors: ['ConsenSys, R3 Corda, Hyperledger, Alchemy, Infura'];
-    marketSize: '$19B blockchain market';
+    marketSize: '$19 B blockchain market';
     growthRate: '40% annual growth';
     variant: 'blockchain-enterprise'}
     contactInfo: {}

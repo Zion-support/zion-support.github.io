@@ -65,7 +65,7 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
     }
   }
 ];
-export const cuttingEdge2027Categories = [
+export const cuttingEdge2027 Categories = [
   'AI & Innovation',
   'Technology Innovation',
   'Future Tech',

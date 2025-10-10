@@ -2280,7 +2280,7 @@ export const,
 <<<<<<< HEAD
     roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)No direct quantum internet competitors'];
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
+    marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth', variant: 'quantum-advanced',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
@@ -2445,9 +2445,9 @@ export const,
     technology: ['Quantum computingQKD protocolsPost-quantum cryptographyQuantum entanglementQuantum networksAWS QuantumIBM Quantum'];
     integrations: ['Government systemsMilitary networksFinancial platformsHealthcare systemsEnergy gridsDefense systems'];
     useCases: ['Secure government communicationsMilitary command systemsFinancial transactionsHealthcare data exchangeCritical infrastructure protectionDefense intelligence'];
-    roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance';
+    roi: 'Prevents cyber attacks worth $6 M+ annually, 500% ROI through security cost avoidance';
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)No direct quantum internet competitors'];
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually';
+    marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
     growthRate: '400% annual growth';
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -2716,7 +2716,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Avatar customization AI'
       'Real-time collaboration spaces'
       'Virtual event platforms'
-      '3D asset marketplace'
+      '3 D asset marketplace'
       'Performance analytics'
       'API for custom integrations'
       '24/7 metaverse support'
@@ -2761,7 +2761,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     technolog,
   y: [;
       'AI content generation'
-      '3D graphics engines'
+      '3 D graphics engines'
       'Virtual reality'
       'Augmented reality'
       'WebGL'
@@ -3459,7 +3459,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Machine learning'
       'Big data analytics'
       'Cloud computing'
-      '5G connectivity'
+      '5 G connectivity'
       'Edge computing'
     ]
     integration,
@@ -4141,9 +4141,9 @@ export const,
     technology: ['Quantum computingQKD protocolsPost-quantum cryptographyQuantum entanglementQuantum networksAWS QuantumIBM Quantum'];
     integrations: ['Government systemsMilitary networksFinancial platformsHealthcare systemsEnergy gridsDefense systems'];
     useCases: ['Secure government communicationsMilitary command systemsFinancial transactionsHealthcare data exchangeCritical infrastructure protectionDefense intelligence'];
-    roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance';
+    roi: 'Prevents cyber attacks worth $6 M+ annually, 500% ROI through security cost avoidance';
     competitors: ['Traditional cybersecurity (Palo Alto) CrowdStrike)No direct quantum internet competitors'];
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually';
+    marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
     growthRate: '400% annual growth';
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4176,18 +4176,18 @@ export const,
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/ai-robotics-automation';
-    marketPosition: 'Competes with ABB Robotics ($50K+), KUKA ($75K+), and FANUC ($100K+). Our advantage: AI-powered intelligence and lower cost.';
+    marketPosition: 'Competes with ABB Robotics ($50 K+), KUKA ($75 K+), and FANUC ($100 K+). Our advantage: AI-powered intelligence and lower cost.';
     targetAudience: 'Manufacturing companies, Logistics providers, Warehouses, Automotive industry, Electronics manufacturing, Food processing';
     trialDays: 14;
     setupTime: '4-6 weeks';
     category: 'AI Robotics & Automation';
     realService: true;
-    technology: ['Computer visionMachine learningRobotics control systemsIoT sensorsEdge computingCloud robotics5G connectivity'];
+    technology: ['Computer visionMachine learningRobotics control systemsIoT sensorsEdge computingCloud robotics5 G connectivity'];
     integrations: ['Manufacturing execution systemsERP systemsWarehouse managementQuality managementMaintenance systemsSafety systems'];
     useCases: ['Manufacturing automationWarehouse roboticsQuality inspectionMaterial handlingAssembly line automationLogistics optimization'];
     roi: 'Reduces labor costs by 60%, increases productivity by 200%, 400% ROI within 18 months';
     competitors: ['ABB RoboticsKUKAFANUCYaskawaUniversal Robots'];
-    marketSize: '$45B robotics market, 25% annual growth';
+    marketSize: '$45 B robotics market, 25% annual growth';
     growthRate: '25% annual growth';
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4231,7 +4231,7 @@ export const,
     useCases: ['Smart grid optimizationRenewable energy managementEnergy demand forecastingCarbon reductionEnergy tradingSmart city energy'];
     roi: 'Reduces energy costs by 30%, increases renewable energy efficiency by 40%, 600% ROI through energy savings';
     competitors: ['Traditional energy management (Siemens) GE)No direct quantum energy competitors'];
-    marketSize: '$200B energy management market, smart grid segment growing 300% annually';
+    marketSize: '$200 B energy management market, smart grid segment growing 300% annually';
     growthRate: '300% annual growth';
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4270,12 +4270,12 @@ export const,
     setupTime: '2-3 weeks';
     category: 'Metaverse & AR/VR';
     realService: true;
-    technology: ['AI content generation3D graphics enginesVirtual realityAugmented realityWebGLWebXRCloud computingBlockchain'];
+    technology: ['AI content generation3 D graphics enginesVirtual realityAugmented realityWebGLWebXRCloud computingBlockchain'];
     integrations: ['UnityUnreal EngineVR headsetsAR devicesSocial media platformsE-commerce systemsLearning management systems'];
     useCases: ['Virtual real estate toursVirtual events and conferencesEducational simulationsGaming experiencesVirtual shoppingVirtual training'];
     roi: 'Increases customer engagement by 300%, reduces physical event costs by 70%, 350% ROI through virtual experiences';
     competitors: ['UnityUnreal EngineRoblox StudioVRChatAltspaceVR'];
-    marketSize: '$800B metaverse market, 400% annual growth';
+    marketSize: '$800 B metaverse market, 400% annual growth';
     growthRate: '400% annual growth';
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4285,7 +4285,7 @@ export const,
       website: 'https://ziontechgroup.com',
     };
     realImplementation: true;
-    implementationDetails: 'Fully functional metaverse development platform with AI content generation, VR experiences, and 3D world building tools. Includes metaverse operations center and 24/7 support.';
+    implementationDetails: 'Fully functional metaverse development platform with AI content generation, VR experiences, and 3 D world building tools. Includes metaverse operations center and 24/7 support.';
     launchDate: '2024-10-01';
     customers: 120;
     rating: 4.6;
@@ -4308,7 +4308,7 @@ export const,
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/quantum-logistics-optimization';
-    marketPosition: 'Competes with SAP SCM ($50K+), Oracle SCM ($75K+), and Manhattan Associates ($100K+). Our advantage: Quantum AI optimization and lower cost.';
+    marketPosition: 'Competes with SAP SCM ($50 K+), Oracle SCM ($75 K+), and Manhattan Associates ($100 K+). Our advantage: Quantum AI optimization and lower cost.';
     targetAudience: 'Logistics companies, E-commerce businesses, Manufacturing companies, Retail chains, Transportation companies, Supply chain managers';
     trialDays: 14;
     setupTime: '4-6 weeks';
@@ -4319,7 +4319,7 @@ export const,
     useCases: ['Route optimizationSupply chain optimizationInventory managementDemand forecastingTransportation optimizationWarehouse automation'];
     roi: 'Reduces logistics costs by 25%, improves delivery times by 40%, 450% ROI through operational efficiency';
     competitors: ['SAP SCMOracle SCMManhattan AssociatesJDA SoftwareBlue Yonder'];
-    marketSize: '$30B supply chain management market, 20% annual growth';
+    marketSize: '$30 B supply chain management market, 20% annual growth';
     growthRate: '20% annual growth';
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4352,7 +4352,7 @@ export const,
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/quantum-cybersecurity';
-    marketPosition: 'Competes with CrowdStrike ($8.99/user/month), Palo Alto Networks ($50K+), and SentinelOne ($6/user/month). Our advantage: Quantum-resistant encryption and AI threat detection.';
+    marketPosition: 'Competes with CrowdStrike ($8.99/user/month), Palo Alto Networks ($50 K+), and SentinelOne ($6/user/month). Our advantage: Quantum-resistant encryption and AI threat detection.';
     targetAudience: 'Enterprise companies, Government agencies, Financial institutions, Healthcare providers, Educational institutions, Critical infrastructure';
     trialDays: 14;
     setupTime: '2-4 weeks';
@@ -4361,9 +4361,9 @@ export const,
     technology: ['Quantum-resistant cryptographyAI algorithmsMachine learningThreat intelligenceSecurity analyticsCloud securityEndpoint protection'];
     integrations: ['SIEM systemsEDR platformsFirewallsIdentity managementVulnerability scannersCompliance tools'];
     useCases: ['Threat detection and responseVulnerability managementIncident responseSecurity monitoringCompliance reportingSecurity training'];
-    roi: 'Prevents cyber attacks worth $4M+ annually, reduces security incidents by 80%, 400% ROI through security cost avoidance';
+    roi: 'Prevents cyber attacks worth $4 M+ annually, reduces security incidents by 80%, 400% ROI through security cost avoidance';
     competitors: ['CrowdStrikePalo Alto NetworksSentinelOneCarbon BlackCylance'];
-    marketSize: '$200B cybersecurity market, 15% annual growth';
+    marketSize: '$200 B cybersecurity market, 15% annual growth';
     growthRate: '15% annual growth';
     variant: 'quantum-cyberpunk'}
     contactInfo: {}
@@ -4396,7 +4396,7 @@ export const,
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/quantum-financial-trading';
-    marketPosition: 'Competes with Renaissance Technologies ($100B+ AUM), Two Sigma ($60B+ AUM), and Citadel ($50B+ AUM). Our advantage: Accessible quantum AI technology for smaller firms.';
+    marketPosition: 'Competes with Renaissance Technologies ($100 B+ AUM), Two Sigma ($60 B+ AUM), and Citadel ($50 B+ AUM). Our advantage: Accessible quantum AI technology for smaller firms.';
     targetAudience: 'Hedge funds, Investment banks, Trading firms, Asset managers, Financial institutions, High-frequency traders';
     trialDays: 7;
     setupTime: '6-8 weeks';
@@ -4407,7 +4407,7 @@ export const,
     useCases: ['Algorithmic tradingHigh-frequency tradingPortfolio optimizationRisk managementMarket analysisTrading automation'];
     roi: 'Increases trading profits by 200%, reduces execution costs by 60%, 800% ROI through trading performance';
     competitors: ['Renaissance TechnologiesTwo SigmaCitadelBridgewater AssociatesAQR Capital'];
-    marketSize: '$15T algorithmic trading market, 150% annual growth';
+    marketSize: '$15 T algorithmic trading market, 150% annual growth';
     growthRate: '150% annual growth';
     variant: 'quantum-advanced'}
     contactInfo: {}
@@ -4440,18 +4440,18 @@ export const,
     color: 'from-teal-600 to-cyan-700';
     textColor: 'text-teal-400';
     link: 'https://ziontechgroup.com/ai-iot-platform';
-    marketPosition: 'Competes with Cisco Smart Cities ($100K+), Siemens City Performance ($150K+), and IBM Smart Cities ($200K+). Our advantage: AI-powered intelligence and lower cost.';
+    marketPosition: 'Competes with Cisco Smart Cities ($100 K+), Siemens City Performance ($150 K+), and IBM Smart Cities ($200 K+). Our advantage: AI-powered intelligence and lower cost.';
     targetAudience: 'City governments, Municipalities, Urban planners, Infrastructure companies, Utility companies, Transportation authorities';
     trialDays: 21;
     setupTime: '8-12 weeks';
     category: 'AI IoT & Smart Cities';
     realService: true;
-    technology: ['IoT sensorsAI algorithmsMachine learningBig data analyticsCloud computing5G connectivityEdge computing'];
+    technology: ['IoT sensorsAI algorithmsMachine learningBig data analyticsCloud computing5 G connectivityEdge computing'];
     integrations: ['City management systemsUtility systemsTransportation systemsPublic safety systemsEnvironmental monitoringCitizen services'];
     useCases: ['Smart city managementEnvironmental monitoringTraffic optimizationEnergy optimizationWaste managementPublic safety'];
     roi: 'Reduces city operational costs by 25%, improves citizen services by 40%, 500% ROI through efficiency gains';
     competitors: ['Cisco Smart CitiesSiemens City PerformanceIBM Smart CitiesMicrosoft CityNextOracle Smart Cities'];
-    marketSize: '$400B smart city market, 300% annual growth';
+    marketSize: '$400 B smart city market, 300% annual growth';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4494,7 +4494,7 @@ export const,
     useCases: ['Satellite communicationSpace explorationInterplanetary missionsCommercial space operationsSpace researchSpace security'];
     roi: 'Space organizations report 600% ROI through enhanced communication security and operational efficiency.';
     competitors: ['Traditional space communicationBasic satellite networksManual space operations'];
-    marketSize: '$350B space market, quantum segment growing 500% annually';
+    marketSize: '$350 B space market, quantum segment growing 500% annually';
     growthRate: '500% annual growth';
     variant: 'quantum-space'}
     contactInfo: {}
@@ -4537,7 +4537,7 @@ export const,
     useCases: ['Drug discoveryClinical trial optimizationTarget identificationDrug efficacy predictionRegulatory complianceBiotech research'];
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.';
     competitors: ['Traditional drug discoveryBasic AI drug toolsManual research methods'];
-    marketSize: '$1.5T pharmaceutical market, AI segment growing 600% annually';
+    marketSize: '$1.5 T pharmaceutical market, AI segment growing 600% annually';
     growthRate: '600% annual growth';
     variant: 'ai-futuristic'}
     contactInfo: {}
@@ -4580,7 +4580,7 @@ export const,
     useCases: ['Manufacturing automationQuality controlPredictive maintenanceSupply chain optimizationEnergy optimizationProduction planning'];
     roi: 'Manufacturing companies report 400% ROI through increased production efficiency and reduced operational costs.';
     competitors: ['Traditional manufacturingBasic automationManual production processes'];
-    marketSize: '$12T manufacturing market, AI segment growing 350% annually';
+    marketSize: '$12 T manufacturing market, AI segment growing 350% annually';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic'}
     contactInfo: {}

@@ -394,14 +394,14 @@ export const initAccessibility = (): void => {
   skipLink.className = 'skip-link';
   skipLink.style.cssText = `
     position: absolute;
-    top: -40px;
-    left: 6px;
+    top: -40 px;
+    left: 6 px;
     background: #000;
     color: #fff;
-    padding: 8px;
+    padding: 8 px;
     text-decoration: none;
     z-index: 1000;
-    transition: top 0.3s;
+    transition: top 0.3 s;
   `;
   skipLink.addEventListener('focus', () => {
     skipLink.style.top = '6px';

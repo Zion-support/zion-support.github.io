@@ -511,4 +511,4 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
     </div>
   );
 };
-export default October2025DocumentAutomationBanner;
+export default October2025 DocumentAutomationBanner;

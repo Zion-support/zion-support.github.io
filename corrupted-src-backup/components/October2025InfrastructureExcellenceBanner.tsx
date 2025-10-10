@@ -32,9 +32,9 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
 <<<<<<< HEAD
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"),
       {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0">
-        <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10  />
-        <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t  />
+      <div, className="absolute, inse, t-0"></div>
+        <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10  /></div>
+        <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t  /></div>
       </d, i, v>
       <div, className="relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8">",
         {/* Head, e, r */}

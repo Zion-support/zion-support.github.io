@@ -210,11 +210,10 @@ const ContentPromotionBanner: React.FC = () => {,
             <ArrowRight className="w-3 h-3" />
 <<<<<<< HEAD
           <button
-            onClick={() =>setIsVisible(false)}
-            className="text-white/80 hover:text-white transition-colors p-1"
+            onClick={() =>setIsVisible(false)}</button></<<<butto>className</butto></butto>="text-white/80 hover:text-white transition-colors p-1"
             aria-label="Close banner"</button>
           ></button>
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4" /></X>
           </button>
         </div>
       </div>
@@ -222,8 +221,7 @@ const ContentPromotionBanner: React.FC = () => {,
       {/* Banner indicators */}
       <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) => (</div><button
             key={index}
-            onClick={() =>setCurrentBanner(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            onClick={() =>setCurrentBanner(index)}</button></<<<butto>className</butto></butto>={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentBanner ? 'bg-white' : 'bg-white/50'
 =======
           </a>

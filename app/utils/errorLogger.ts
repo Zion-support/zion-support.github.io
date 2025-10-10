@@ -112,7 +112,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 >>>>>>> origin/merge-error-fixes
       [ErrorSeverity.LOW]: 'color: #4ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
+      [ErrorSeverity.HIGH]: 'color: #fb923 c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'}
     }
     }] ${entry.message}`, styles[entry.severity])

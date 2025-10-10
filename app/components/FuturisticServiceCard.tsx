@@ -8,8 +8,7 @@ interface FuturisticServiceCardProps {
     description: string;
   price: string;,
     features: string[];
-  icon: React.ComponentType<any>;,
-    color: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
+  icon: React.ComponentType<any>;,</any></<<<an>color</an></an>: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
   href: string;
 <<<<<<< HEAD
   popular?: boolean;
@@ -149,7 +148,7 @@ const,
         className={`glass rounded-2xl p-8 border transition-all duration-500 ${}
           popular ? currentColor.border : 'border-white/10'}
         } ${currentColor.hover} ${
-          isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'
+          isHovered ? `shadow-2 xl ${currentColor.shadow}` : 'shadow-lg'
         }`}
       >{/* Icon */}</div>
 <<<<<<< HEAD
@@ -227,9 +226,9 @@ const,
         </div>
 
         {/* Features */}
-        <ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</ul>
-            <li key={index} className="flex items-center text-sm text-gray-300">
-              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
+        <ul className="space-y-3 mb-8">{features.slice(0, 4).map((feature, index) => (</u>
+            <li key={index} className="flex items-center text-sm text-gray-300"></l>
+              <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircl>
             </CheckCircle>
           ))}
           {features.length > 4 && (

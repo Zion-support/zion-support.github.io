@@ -21,9 +21,9 @@ const AiQualityAssurancePage: React.FC = () => {
         keywords={["quality assurance","automated testing","test automation","QA AI","defect detection"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-quality-assurance"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

@@ -11,7 +11,7 @@ const AutonomousBusinessOperation, s = () => {
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, A, I-powered, autonomous, operations. Deploy, 4, 0+ se, l, f-managing, workflows, in 90, day, s. $50, 0, M+ value, creatio, n. 3, 0, 0-5, 0, 0% R, O, I. Get, started, with a, free, consultation.'
-        />
+        /></meta>
         <meta, nam, e='keywor, d, s'
           conte, n, t='autonomous, business, operation, s, AI, automation, platform, enterprise, automatio, n, business, process, automation, operational, efficienc, y, AI, transformatio, n, ROI, guarante, e'
         />)

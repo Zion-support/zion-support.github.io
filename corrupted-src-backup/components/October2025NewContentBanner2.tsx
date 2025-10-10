@@ -148,7 +148,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e;
   r:-transla, t, e-y-1"
-              >
+              ></Li>
                 {/* Bad, g, e */}
                 <div, className="absolute, to, p-4, righ, t-4">";</div>
 =======

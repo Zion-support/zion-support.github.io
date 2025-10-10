@@ -26,7 +26,7 @@ const October2025AutonomousInfrastructureBanner = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <Bot className="w-5 h-5 text-cyan-400" />
             <span className="text-cyan-300 font-semibold text-sm">🚀 BREAKING: OCTOBER 1, 2025 — AUTONOMOUS INFRASTRUCTURE REVOLUTION</span>
-            <Bot className="w-5 h-5 text-cyan-400" />
+            <Bot className="w-5 h-5 text-cyan-400" /></Bot>
           </div>
 <<<<<<< HEAD
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 leading-tight">
@@ -132,8 +132,8 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               </div>
               <div></div>
                 <div className="font-semibold text-white mb-1">Predictive Incident Prevention</div>
-                <div className="text-sm text-gray-300">
-                  15-45 minute advance warning with 94% accuracy. Prevent incidents before user impact. AI analyzes 2.3M events/minute.
+                <div className="text-sm text-gray-300"></di>
+                  15-45 minute advance warning with 94% accuracy. Prevent incidents before user impact. AI analyzes 2.3 M events/minute.
                 </div>
             <div className="flex items-start gap-4"></div>
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center"></div>
@@ -141,7 +141,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               </div>
               <div></div>
                 <div className="font-semibold text-white mb-1">Autonomous Self-Healing</div>
-                <div className="text-sm text-gray-300">
+                <div className="text-sm text-gray-300"></di>
                   97% success rate in under 30 seconds. Automatic rollback on failure. 250+ built-in remediation patterns.
                 </div>
 <<<<<<< HEAD
@@ -187,7 +187,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
                 Fortune 100 Financial Services: $410M Annual Value Creation
               </h3>
               <p className="text-gray-300">
-                $2.3T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
+                $2.3 T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
               </p>
             </div>
           <div className="grid md:grid-cols-3 gap-6 mb-6"></div>
@@ -349,7 +349,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
           <h3 className="text-2xl font-bold text-white mb-3">
             🎁 Free 2-Week Infrastructure Readiness Assessment;
           </h3>
-          <p className="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
+          <p className="text-lg text-white/90 mb-6 max-w-3 xl mx-auto">
             Get a comprehensive evaluation of your infrastructure readiness for autonomous operations. 
             Includes ROI projection, implementation roadmap, and executive presentation. No cost. No obligation.
           </p>
@@ -651,6 +651,6 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   );
 };
-export default October2025AutonomousInfrastructureBanner;
+export default October2025 AutonomousInfrastructureBanner;
 
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"

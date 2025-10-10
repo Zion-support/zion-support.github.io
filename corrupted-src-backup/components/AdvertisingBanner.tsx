@@ -10,7 +10,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   ctaText,
   ctaUrl,
   imageUrl,
-  backgroundColor = '#3b82f6',
+  backgroundColor = '#3 b82 f6',
   textColor = '#ffffff',
 }) => {
   return(<div;
@@ -53,7 +53,7 @@ const,
             style={/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             }}
-          />
+          /></img>
         </div>
       )}
 
@@ -65,7 +65,7 @@ const,
           href={ctaUrl}
           style={{
             display: 'inline-block',
-            padding: '0.75rem 1.5rem',
+            padding: '0.75 rem 1.5 rem',
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
             color: textColor;
             textDecoration: 'none',

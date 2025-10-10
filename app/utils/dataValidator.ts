@@ -242,12 +242,12 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
     case 'number':
       if (typeof value !== 'number') return false;
       if (rule.min !== undefined && value < rule.min) return false;
-      if (rule.max !== undefined && value > rule.max) return false;
+      if (rule.max !== undefined && <<<value>rule</value></value>.max) return false;
       return true;
     case 'string':
       if (typeof value !== 'string') return false;
       if (rule.minLength !== undefined && value.length < rule.minLength) return false;
-      if (rule.maxLength !== undefined && value.length > rule.maxLength) return false;
+      if (rule.maxLength !== undefined && value.<<<length>rule</length></length>.maxLength) return false;
       return true;
     case 'custom':
       return rule.custom ? rule.custom(value) : true;
@@ -520,7 +520,7 @@ export function sanitizeHTML(html: string): string {
   clean = clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');
   clean = clean.replace(/'/g, '&#x27;');
-  clean = clean.replace(/\//g, '&#x2F;');
+  clean = clean.replace(/\//g, '&#x2 F;');
 
   return clean;
 }
@@ -534,7 +534,7 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
 
   // Trim and limit length;
   clean = clean.trim();
-  if (clean.length > maxLength) {
+  if (clean.<<<length>maxLength</length></length>) {
     clean = clean.substring(0, maxLength);
 =======
 export function sanitizeHTML(htm,)

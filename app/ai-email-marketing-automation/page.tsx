@@ -9,7 +9,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
       icon: Brain;
       title: 'AI Content Generation',
       description: 'Generate compelling email content, subject lines, and CTAs using advanced AI algorithms',
-      benefits: ['10x faster content creation', 'Higher open rates', 'Personalized messaging', 'A/B testing automation']
+      benefits: ['10 x faster content creation', 'Higher open rates', 'Personalized messaging', 'A/B testing automation']
     },
     {
       icon: Target;
@@ -160,7 +160,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {,
 
   const stats = [
     { icon: Users, value: '15,000+', label: 'Active Users' },
-    { icon: Send, value: '50M+', label: 'Emails Sent' },
+    { icon: Send, value: '50 M+', label: 'Emails Sent' },
     { icon: TrendingUp, value: '40%', label: 'Avg. Open Rate Increase' },
     { icon: DollarSign, value: '60%', label: 'Revenue Increase' }
   ];

@@ -21,9 +21,9 @@ const ItAssetManagementPage: React.FC = () => {
         keywords={["IT asset management","asset tracking","license management","inventory control","asset optimization"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/it-asset-management"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

@@ -13,13 +13,13 @@ const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Eye,
-      title: "Immersive 3D Experiences",
+      title: "Immersive 3 D Experiences",
       description: "Create stunning AR/VR experiences with photorealistic graphics and smooth interactions"
     },
     {
       icon: Zap,
       title: "Real-time Rendering",
-      description: "Advanced rendering engine with 120fps support and low-latency tracking"
+      description: "Advanced rendering engine with 120 fps support and low-latency tracking"
     },
     {
       icon: Globe,
@@ -77,7 +77,7 @@ const ARVRPlatformPage: React.FC = () => {
       description: "Perfect for small teams getting started with AR/VR",
       features: [
         "Up to 10 concurrent users",
-        "Basic 3D assets library",
+        "Basic 3 D assets library",
         "Standard rendering quality",
         "Email support",
         "Mobile AR support"
@@ -90,7 +90,7 @@ const ARVRPlatformPage: React.FC = () => {
       description: "Advanced features for growing businesses",
       features: [
         "Up to 100 concurrent users",
-        "Premium 3D assets library",
+        "Premium 3 D assets library",
         "High-quality rendering",
         "Priority support",
         "VR headset support",
@@ -105,7 +105,7 @@ const ARVRPlatformPage: React.FC = () => {
       description: "Full-scale AR/VR solutions for large organizations",
       features: [
         "Unlimited concurrent users",
-        "Custom 3D asset creation",
+        "Custom 3 D asset creation",
         "Ultra-high quality rendering",
         "24/7 dedicated support",
         "All device support",
@@ -154,9 +154,9 @@ const ARVRPlatformPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AR/VR Platform
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
             Build immersive augmented and virtual reality experiences that transform how people work, learn, and interact. 
-            Create photorealistic 3D environments with our cutting-edge platform.
+            Create photorealistic 3 D environments with our cutting-edge platform.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
@@ -164,8 +164,7 @@ const ARVRPlatformPage: React.FC = () => {
               Start Building
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Watch Demo
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Watch</butto></<<butto>Demo</butto>
             </button>
           </div>
 
@@ -208,7 +207,7 @@ const ARVRPlatformPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -224,7 +223,7 @@ const ARVRPlatformPage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your Industry
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Discover how AR/VR technology is revolutionizing industries across the globe.
             </p>
           </div>
@@ -236,7 +235,7 @@ const ARVRPlatformPage: React.FC = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mr-4"></div>
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{useCase.title}</h3>
+                  <h3 className="text-2 xl font-bold text-white">{useCase.title}</h>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-2">
@@ -260,7 +259,7 @@ const ARVRPlatformPage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               Flexible pricing options to match your AR/VR development needs.
             </p>
           </div>
@@ -284,10 +283,10 @@ const ARVRPlatformPage: React.FC = () => {
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8"></u>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-300"></l>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" /></CheckCircl>
                       {feature}
                     </li>
                   ))}
@@ -297,8 +296,7 @@ const ARVRPlatformPage: React.FC = () => {
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                }`}>
-                  Get Started
+                }`}></button></<<<butto>Get</butto></<<butto>Started</butto>
                 </button>
               </div>
             ))}
@@ -313,7 +311,7 @@ const ARVRPlatformPage: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Success Stories
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4 xl mx-auto leading-relaxed">
               See how leading organizations are transforming their operations with our AR/VR platform.
             </p>
           </div>
@@ -353,7 +351,7 @@ const ARVRPlatformPage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Build the Future?
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-12 max-w-4 xl mx-auto leading-relaxed">
             Join thousands of developers and organizations creating immersive experiences with our AR/VR platform.
           </p>
           
@@ -362,14 +360,13 @@ const ARVRPlatformPage: React.FC = () => {
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              Schedule Demo
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Schedule</butto></<<butto>Demo</butto>
             </button>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

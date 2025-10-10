@@ -39,16 +39,13 @@ class Logger {
     return this.logLevel;
   }
 
-  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.DEBUG, message, context, metadata)
+  debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
   }
 
-  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.INFO, message, context, metadata)
+  info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.INFO, message, context, metadata)
   }
 
-  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.WARN, message, context, metadata)
+  warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)
   }
 
   error(message: string;),
@@ -131,8 +128,7 @@ class Logger {/* TODO: Fix JSX expression */}
   }
 <<<<<<< HEAD
 
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.FATAL, message, context, metadata)
+  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
   }
 
   private log(level: LogLevel;),

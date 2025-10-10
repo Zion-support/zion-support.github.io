@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Accessibility alt-text runner executed successfully),
         timestamp: new Date().toISOString(),
-        function: 'a11y-alt-text-runner',
+        function: 'a11 y-alt-text-runner',
         source: event.source || 'unknown'}
       }),
     };

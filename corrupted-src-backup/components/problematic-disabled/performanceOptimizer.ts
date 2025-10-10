@@ -17,8 +17,7 @@ export class PerformanceOptimizer {
   private, confi, g: OptimizationConf, i, g;
   private, observer, s: PerformanceObserv, e, r[] = [];
 
-  construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = { }) {
-    th, i, s.conf, i, g = {
+  construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = { }) {</OptimizationCon>th</OptimizationCon>, i, s.conf, i, g = {
       enableLazyLoadi, n, g: tr, u, e,
       enableCodeSplitti, n, g: t, r, u, e,
       enableImageOptimizati, o, n: t, r, u, e,

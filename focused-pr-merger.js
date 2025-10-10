@@ -34,9 +34,9 @@ const priorityBranches = [
   'add-revolutionary-content-2026',
   'ai-2027-content-integration',
   'ai-dashboard-improvements',
-  '0nylrk-codex-fix-footer-contact-link-resolved',
-  '0parff-codex-centralize-api-error-handling-resolved',
-  '0smfo8-codex-fix-404-error-resolved',
+  '0 nylrk-codex-fix-footer-contact-link-resolved',
+  '0 parff-codex-centralize-api-error-handling-resolved',
+  '0 smfo8-codex-fix-404-error-resolved',
 ];
 
 <<<<<<< HEAD

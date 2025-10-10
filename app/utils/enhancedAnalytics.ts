@@ -22,7 +22,7 @@ export interface AnalyticsEvent {}
   action: string
   label?: string
   value?: number
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>;}</strin>
 }
 export interface UserProperties {}
   userId?: string

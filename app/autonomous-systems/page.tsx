@@ -66,7 +66,7 @@ const AutonomousSystemsPage: React.FC = () => {,
       icon: '🛡️',
       price: 'Starting at $4,000/month',
       features: ['Threat detection', 'Automated response', 'Vulnerability scanning', 'Incident investigation', 'Compliance monitoring'],
-      benefits: ['Detect threats 10x faster', 'Reduce response time by 90%', 'Prevent security breaches'],
+      benefits: ['Detect threats 10 x faster', 'Reduce response time by 90%', 'Prevent security breaches'],
       marketPrice: '$6,000-15,000/month',
       category: 'Security Automation',
       technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'AI/ML Security Tools']

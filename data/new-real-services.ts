@@ -32,7 +32,7 @@
     useCases: ['LLM app monitoringCost controlPolicy compliance'];
     roi: 'Cut LLM cost 2045% while improving reliability'
     competitors: ['LangfuseArizeWeights & Biases'];
-    marketSize: '$5B+ AI Ops and Observability'
+    marketSize: '$5 B+ AI Ops and Observability'
     growthRate: 'Rapid growth with LLM adoption'
     variant: 'quantum-holographic',
     contactInfo: contact;
@@ -65,7 +65,7 @@
     use_cases: ['LLM app monitoring_cost control_policy compliance'];
     roi: 'Cut LLM cost 2045% while improving reliability'
     competitors: ['LangfuseArizeWeights & Biases'];
-    market_size: '$5B+ AI Ops and Observability'
+    market_size: '$5 B+ AI Ops and Observability'
     growth_rate: 'Rapid growth with LLM adoption'
     variant: 'quantum - holographic',
     contact_info: contact;
@@ -82,7 +82,7 @@
     price: '$129',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot',
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.',
-    targetAudience: 'B2B startups, agencies, SDR teams'
+    targetAudience: 'B2 B startups, agencies, SDR teams'
     trialDays: 14;
     setupTime: '2 hours'
     category: 'Sales & Marketing'
@@ -90,9 +90,9 @@
     technology: ['Next && Next.jsWorkersPostgreSQL'];
     integrations: ['HubSpotSalesforceApolloLemlist'];
     useCases: ['Outbound sequencesUpsell campaignsReactivation'];
-    roi: 'Increase replies 25x with hyper-personalization'
+    roi: 'Increase replies 25 x with hyper-personalization'
     competitors: ['Copy && Copy.aiLavenderInstantly'];
-    marketSize: '$15B Sales Engagement'
+    marketSize: '$15 B Sales Engagement'
     growthRate: 'Strong growth'
     variant: 'holographic',
     contactInfo: contact;
@@ -113,7 +113,7 @@
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / ai - sales - email - copilot',
     market_position: 'Lower cost with better personalization vs. Jasper and constant - contact tools.',
-    target_audience: 'B2B startups, agencies, SDR teams'
+    target_audience: 'B2 B startups, agencies, SDR teams'
     trial_days: 14;
     setup_time: '2 hours'
     category: 'Sales & Marketing'
@@ -121,9 +121,9 @@
     technology: ['Next.jsWorkersPostgreSQL'];
     integrations: ['HubSpotSalesforceApolloLemlist'];
     use_cases: ['Outbound sequences_upsell campaigns_reactivation'];
-    roi: 'Increase replies 25x with hyper - personalization'
+    roi: 'Increase replies 25 x with hyper - personalization'
     competitors: ['Copy.aiLavenderInstantly'];
-    market_size: '$15B Sales Engagement'
+    market_size: '$15 B Sales Engagement'
     growth_rate: 'Strong growth'
     variant: 'holographic',
     contact_info: contact;
@@ -164,12 +164,12 @@
     use_cases: ['Baseline enforcement_audit readiness_drift detection'];
     roi: 'Reduce audit prep time by 70%'
     competitors: ['WizPrisma CloudSnyk'];
-    market_size: '$30B Cloud Security'
+    market_size: '$30 B Cloud Security'
     growth_rate: 'High growth'
     variant: 'neural - quantum'
     contact_info: contact;
     real_implementation: true;
-    implementation_details: 'Policy engine plus cloud / K8s scanners and fix generators.'
+    implementation_details: 'Policy engine plus cloud / K8 s scanners and fix generators.'
     launch_date: '2025 - 01 - 05'
     customers: 18;
     rating: 4 && 4.6;
@@ -207,7 +207,7 @@
     use_cases: ['Pipeline health_data qualitySLA tracking'];
     roi: 'Reduce data incidents 3060%'
     competitors: ['Monte CarloBigeye'];
-    market_size: '$3B Data Observability'
+    market_size: '$3 B Data Observability'
     growth_rate: 'Growing'
     variant: 'quantum'
     contact_info: contact;
@@ -264,7 +264,7 @@
     use_cases: ['API acceleration_abuse protection_cost control'];
     roi: 'Reduce p99 latency up to 60%'
     competitors: ['Cloudflare EnterpriseAkamai API Acceleration'];
-    market_size: '$10B API Security'
+    market_size: '$10 B API Security'
     growth_rate: 'Strong'
     variant: 'quantum - matrix'
     contact_info: contact;
@@ -322,9 +322,9 @@
     technology: ['Next.jsPostHogClickHouse'];
     integrations: ['SegmentRudderStackSnowplow'];
     use_cases: ['Growth analyticsRetentionExperimentation'];
-    roi: 'Find growth levers 2x faster'
+    roi: 'Find growth levers 2 x faster'
     competitors: ['AmplitudeMixpanel'];
-    market_size: '$8B Product Analytics'
+    market_size: '$8 B Product Analytics'
     growth_rate: 'Growing'
     variant: 'holographic - advanced'
     contact_info: contact;
@@ -384,7 +384,7 @@
     use_cases: ['Self - serve support_ticket reductionCSAT improvement'];
     roi: 'Reduce tickets 3050%'
     competitors: ['Intercom FinAda'];
-    market_size: '$10B Support Tech'
+    market_size: '$10 B Support Tech'
     growth_rate: 'Strong'
     variant: 'quantum - cyberpunk'
     contact_info: contact;
@@ -441,7 +441,7 @@
     use_cases: ['Cost control_anomaly response_budgeting'];
     roi: 'Save 1535% on cloud spend'
     competitors: ['CloudZeroKubecost'];
-    market_size: '$6B FinOps'
+    market_size: '$6 B FinOps'
     growth_rate: 'Growing'
     variant: 'quantum - neural'
     contact_info: contact;
@@ -484,7 +484,7 @@
     use_cases: ['PCI / PII protection_consent management_data sharing'];
     roi: 'Reduce breach risk and compliance effort'
     competitors: ['SkyflowVery Good Security'];
-    market_size: '$4B Privacy Tech'
+    market_size: '$4 B Privacy Tech'
     growth_rate: 'Growing'
     variant: 'holographic - neural'
     contact_info: contact;
@@ -1495,7 +1495,7 @@
     use_cases: ['Chargeback reduction_account takeover_abuse prevention'];
     roi: 'Lower chargebacks by 3060%'
     competitors: ['SiftSEON'];
-    market_size: '$10B Fraud Prevention'
+    market_size: '$10 B Fraud Prevention'
     growth_rate: 'High'
     variant: 'quantum - financial'
     contact_info: contact;
@@ -1552,7 +1552,7 @@
     use_cases: ['Reliable databasesComplianceScaling'];
     roi: 'Avoid outages and accelerate teams'
     competitors: ['CrunchyDataAiven'];
-    market_size: '$12B DBaaS'
+    market_size: '$12 B DBaaS'
     growth_rate: 'High'
     variant: 'quantum'
     contact_info: contact;
@@ -1609,7 +1609,7 @@
     use_cases: ['UX improvements_conversion lift'];
     roi: 'Lift conversion 210% by fixing performance'
     competitors: ['SentryNew Relic Browser'];
-    market_size: '$5B APM'
+    market_size: '$5 B APM'
     growth_rate: 'Growing'
     variant: 'holographic'
     contact_info: contact;
@@ -1699,12 +1699,12 @@
     setup_time: '1 hour'
     category: 'Developer Tools'
     real_service: true;
-    technology: ['KafkaS3Node.js'];
+    technology: ['KafkaS3 Node.js'];
     integrations: ['StripeShopifyGitHub'];
     use_cases: ['Webhook reliability_debugging'];
     roi: 'Reduce integration incidents 50%+'
     competitors: ['SvixHookdeck'];
-    market_size: '$1B Integration Tools'
+    market_size: '$1 B Integration Tools'
     growth_rate: 'Growing'
     variant: 'quantum - matrix'
     contact_info: contact;
@@ -1768,7 +1768,7 @@
     targetAudience: 'Backend teams, SRE'
     trialDays: 14;
     setupTime: '1 day'
-    market_size: '$1B Doc Gen'
+    market_size: '$1 B Doc Gen'
     growth_rate: 'Stable'
     variant: 'holographic - advanced',
     contact_info: contact;
@@ -1844,8 +1844,8 @@
     integrations: ['OktaAzure ADGoogle'];
     use_cases: ['Enterprise deals_user management'];
     roi: 'Unlock enterprise revenue faster'
-    competitors: ['WorkosAuth0Stytch'];
-    market_size: '$8B Identity'
+    competitors: ['WorkosAuth0 Stytch'];
+    market_size: '$8 B Identity'
     growth_rate: 'High'
     variant: 'neural - quantum'
     contact_info: contact;
@@ -1932,7 +1932,7 @@
     use_cases: ['Vendor due diligence'];
     roi: 'Cut cycle time by 50%+'
     competitors: ['WhisticOneTrust'];
-    market_size: '$4B Third - party Risk'
+    market_size: '$4 B Third - party Risk'
     growth_rate: 'High'
     variant: 'quantum - cyberpunk'
     contact_info: contact;
@@ -2992,7 +2992,7 @@
     technology: ['Next.js', 'Workers', 'PostgreSQL'],
     integrations: ['HubSpot', 'Salesforce', 'Apollo', 'Lemlist'],
     use_cases: ['Outbound sequences', 'Upsell campaigns', 'Reactivation'],
-    roi: 'Increase replies 25x with hyper - personalization',
+    roi: 'Increase replies 25 x with hyper - personalization',
     competitors: ['Copy.ai', 'Lavender', 'Instantly'],
     market_size: '$15B Sales Engagement'
     growth_rate: 'Strong growth'
@@ -3096,7 +3096,7 @@
 <<<<<<< HEAD
     popular: true;
     icon: '',
-      'Policy engine plus cloud/K8s scanners and fix generators.',
+      'Policy engine plus cloud/K8 s scanners and fix generators.',
     launchDate: '2025-01-05',
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
@@ -3461,7 +3461,7 @@
     technology: ['Next.js', 'PostHog', 'ClickHouse'],
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
     use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
-    roi: 'Find growth levers 2x faster',
+    roi: 'Find growth levers 2 x faster',
     competitors: ['Amplitude', 'Mixpanel'],
     market_size: '$8B Product Analytics'
     growth_rate: 'Growing'
@@ -4249,7 +4249,7 @@
     use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20100%',
     competitors: ['Ahrefs', 'Semrush'],
-    market_size: '$6B SEO Tools',
+    market_size: '$6 B SEO Tools',
     growth_rate: 'Stable',
     variant: 'neural',
     contact_info: contact;
@@ -4469,7 +4469,7 @@
     use_cases: ['Invoices', 'Reports'],
     roi: 'Save days of maintenance yearly',
     competitors: ['PDFShift', 'DocRaptor'],
-    market_size: '$1B Doc Gen',
+    market_size: '$1 B Doc Gen',
     growth_rate: 'Stable',
     variant: 'holographic - advanced',
     contact_info: contact;
@@ -4581,7 +4581,7 @@
     use_cases: ['API reliability', 'Performance'],
     roi: 'Reduce MTTR by 3050%',
     competitors: ['Honeycomb', 'Lightstep'],
-    market_size: '$10B Observability',
+    market_size: '$10 B Observability',
     growth_rate: 'High',
     variant: 'quantum - holographic',
     contact_info: contact;
@@ -5001,7 +5001,7 @@
     category: 'AI & Machine Learning', realService: true;
     technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'], integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],
     useCases: ['LLM app monitoringCost controlPolicy compliance'], roi: 'Cut LLM cost 2045% while improving reliability',
-    competitors: ['LangfuseArizeWeights & Biases'], marketSize: '$5B+ AI Ops and Observability',
+    competitors: ['LangfuseArizeWeights & Biases'], marketSize: '$5 B+ AI Ops and Observability',
     growthRate: 'Rapid growth with LLM adoption', variant: 'quantum-holographic',
     contactInfo: contact, realImplementation: true;
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
@@ -5458,7 +5458,7 @@ export const,
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/ai-sales-email-copilot';
     marketPosition: 'Lower cost with better personalization vs. Jasper and constant-contact tools.';
-    targetAudience: 'B2B startups, agencies, SDR teams';
+    targetAudience: 'B2 B startups, agencies, SDR teams';
     trialDays: 14;
     setupTime: '2 hours';
     category: 'Sales & Marketing';
@@ -5466,9 +5466,9 @@ export const,
     technology: ['Next.jsWorkersPostgreSQL'];
     integrations: ['HubSpotSalesforceApolloLemlist'];
     useCases: ['Outbound sequencesUpsell campaignsReactivation'];
-    roi: 'Increase replies 25x with hyper-personalization';
+    roi: 'Increase replies 25 x with hyper-personalization';
     competitors: ['Copy.aiLavenderInstantly'];
-    marketSize: '$15B Sales Engagement';
+    marketSize: '$15 B Sales Engagement';
     growthRate: 'Strong growth';
     variant: 'holographic';
     contactInfo: contact;
@@ -5505,12 +5505,12 @@ export const,
     useCases: ['Baseline enforcementAudit readinessDrift detection'];
     roi: 'Reduce audit prep time by 70%';
     competitors: ['WizPrisma CloudSnyk'];
-    marketSize: '$30B Cloud Security';
+    marketSize: '$30 B Cloud Security';
     growthRate: 'High growth';
     variant: 'neural-quantum';
     contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Policy engine plus cloud/K8s scanners and fix generators.';
+    implementationDetails: 'Policy engine plus cloud/K8 s scanners and fix generators.';
     launchDate: '2025-01-05';
     customers: 18;
     rating: 4.6}
@@ -5542,7 +5542,7 @@ export const,
     useCases: ['Pipeline healthData qualitySLA tracking'];
     roi: 'Reduce data incidents 3060%';
     competitors: ['Monte CarloBigeye'];
-    marketSize: '$3B Data Observability';
+    marketSize: '$3 B Data Observability';
     growthRate: 'Growing';
     variant: 'quantum';
     contactInfo: contact;
@@ -5579,7 +5579,7 @@ export const,
     useCases: ['API accelerationAbuse protectionCost control'];
     roi: 'Reduce p99 latency up to 60%';
     competitors: ['Cloudflare EnterpriseAkamai API Acceleration'];
-    marketSize: '$10B API Security';
+    marketSize: '$10 B API Security';
     growthRate: 'Strong';
     variant: 'quantum-matrix';
     contactInfo: contact;
@@ -5614,9 +5614,9 @@ export const,
     technology: ['Next.jsPostHogClickHouse'];
     integrations: ['SegmentRudderStackSnowplow'];
     useCases: ['Growth analyticsRetentionExperimentation'];
-    roi: 'Find growth levers 2x faster';
+    roi: 'Find growth levers 2 x faster';
     competitors: ['AmplitudeMixpanel'];
-    marketSize: '$8B Product Analytics';
+    marketSize: '$8 B Product Analytics';
     growthRate: 'Growing';
     variant: 'holographic-advanced';
     contactInfo: contact;
@@ -5653,7 +5653,7 @@ export const,
     useCases: ['Self-serve supportTicket reductionCSAT improvement'];
     roi: 'Reduce tickets 3050%';
     competitors: ['Intercom FinAda'];
-    marketSize: '$10B Support Tech';
+    marketSize: '$10 B Support Tech';
     growthRate: 'Strong';
     variant: 'quantum-cyberpunk';
     contactInfo: contact;
@@ -5690,7 +5690,7 @@ export const,
     useCases: ['Cost controlAnomaly responseBudgeting'];
     roi: 'Save 1535% on cloud spend';
     competitors: ['CloudZeroKubecost'];
-    marketSize: '$6B FinOps';
+    marketSize: '$6 B FinOps';
     growthRate: 'Growing';
     variant: 'quantum-neural';
     contactInfo: contact;
@@ -5727,7 +5727,7 @@ export const,
     useCases: ['PCI/PII protectionConsent managementData sharing'];
     roi: 'Reduce breach risk and compliance effort';
     competitors: ['SkyflowVery Good Security'];
-    marketSize: '$4B Privacy Tech';
+    marketSize: '$4 B Privacy Tech';
     growthRate: 'Growing';
     variant: 'holographic-neural';
     contactInfo: contact;
@@ -5764,7 +5764,7 @@ export const,
     useCases: ['Chargeback reductionAccount takeoverAbuse prevention'];
     roi: 'Lower chargebacks by 3060%';
     competitors: ['SiftSEON'];
-    marketSize: '$10B Fraud Prevention';
+    marketSize: '$10 B Fraud Prevention';
     growthRate: 'High';
     variant: 'quantum-financial';
     contactInfo: contact;
@@ -5801,7 +5801,7 @@ export const,
     useCases: ['Reliable databasesComplianceScaling'];
     roi: 'Avoid outages and accelerate teams';
     competitors: ['CrunchyDataAiven'];
-    marketSize: '$12B DBaaS';
+    marketSize: '$12 B DBaaS';
     growthRate: 'High';
     variant: 'quantum';
     contactInfo: contact;
@@ -5838,7 +5838,7 @@ export const,
     useCases: ['UX improvementsConversion lift'];
     roi: 'Lift conversion 210% by fixing performance';
     competitors: ['SentryNew Relic Browser'];
-    marketSize: '$5B APM';
+    marketSize: '$5 B APM';
     growthRate: 'Growing';
     variant: 'holographic';
     contactInfo: contact;
@@ -5875,7 +5875,7 @@ export const,
     useCases: ['Traffic growthTech SEO'];
     roi: 'Increase organic traffic 20100%';
     competitors: ['AhrefsSemrush'];
-    marketSize: '$6B SEO Tools';
+    marketSize: '$6 B SEO Tools';
     growthRate: 'Stable';
     variant: 'neural';
     contactInfo: contact;
@@ -5907,12 +5907,12 @@ export const,
     setupTime: '1 hour';
     category: 'Developer Tools';
     realService: true;
-    technology: ['KafkaS3Node.js'];
+    technology: ['KafkaS3 Node.js'];
     integrations: ['StripeShopifyGitHub'];
     useCases: ['Webhook reliabilityDebugging'];
     roi: 'Reduce integration incidents 50%+';
     competitors: ['SvixHookdeck'];
-    marketSize: '$1B Integration Tools';
+    marketSize: '$1 B Integration Tools';
     growthRate: 'Growing';
     variant: 'quantum-matrix';
     contactInfo: contact;
@@ -5949,7 +5949,7 @@ export const,
     useCases: ['InvoicesReports'];
     roi: 'Save days of maintenance yearly';
     competitors: ['PDFShiftDocRaptor'];
-    marketSize: '$1B Doc Gen';
+    marketSize: '$1 B Doc Gen';
     growthRate: 'Stable';
     variant: 'holographic-advanced';
     contactInfo: contact;
@@ -5986,7 +5986,7 @@ export const,
     useCases: ['API reliabilityPerformance'];
     roi: 'Reduce MTTR by 3050%';
     competitors: ['HoneycombLightstep'];
-    marketSize: '$10B Observability';
+    marketSize: '$10 B Observability';
     growthRate: 'High';
     variant: 'quantum-holographic';
     contactInfo: contact;
@@ -6022,8 +6022,8 @@ export const,
     integrations: ['OktaAzure ADGoogle'];
     useCases: ['Enterprise dealsUser management'];
     roi: 'Unlock enterprise revenue faster';
-    competitors: ['WorkosAuth0Stytch'];
-    marketSize: '$8B Identity';
+    competitors: ['WorkosAuth0 Stytch'];
+    marketSize: '$8 B Identity';
     growthRate: 'High';
     variant: 'neural-quantum';
     contactInfo: contact;
@@ -6060,7 +6060,7 @@ export const,
     useCases: ['InventorySecurity'];
     roi: 'Reduce unknown assets and risk';
     competitors: ['Lansweeper'];
-    marketSize: '$2B ITAM';
+    marketSize: '$2 B ITAM';
     growthRate: 'Growing';
     variant: 'holographic';
     contactInfo: contact;
@@ -6097,7 +6097,7 @@ export const,
     useCases: ['Vendor due diligence'];
     roi: 'Cut cycle time by 50%+';
     competitors: ['WhisticOneTrust'];
-    marketSize: '$4B Third-party Risk';
+    marketSize: '$4 B Third-party Risk';
     growthRate: 'High';
     variant: 'quantum-cyberpunk';
     contactInfo: contact;

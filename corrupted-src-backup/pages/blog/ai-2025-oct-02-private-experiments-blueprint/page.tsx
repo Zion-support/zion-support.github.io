@@ -15,11 +15,11 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   with, productio, n‑grade, guardrail, s.
       </p>
-      <h2>What, you, will bui, l, d</h2>
-      <ul>
-        <li>Scop, e, d, rotating, user, identifiers without, PI, I</li>
-        <li>Signed, feature, configs validated, at, the ed, g, e</li>
-        <li>Budgeted, experiment, routes and, automatic, rollbacks</li>
+      <h2>What</h2>, you, will bui, l, d</h2>
+      <ul></ul>
+        <li>Scop</li>, e, d, rotating, user, identifiers without, PI, I</li>
+        <li>Signed</li>, feature, configs validated, at, the ed, g, e</li>
+        <li>Budgeted</li>, experiment, routes and, automatic, rollbacks</li>
       </ul>
       <h2>Architectu, r, e</h2>
       <p>

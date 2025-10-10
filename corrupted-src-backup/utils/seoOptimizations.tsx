@@ -263,9 +263,7 @@ export const contentOptimization = {/* content */}
     const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);
-    
-    return Object.entries(wordCount)
+    }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word);
@@ -506,9 +504,9 @@ export const SEOComponent = ({/* content */}
 <<<<<<< HEAD
   return(<div> </div><Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullUrl} />
+      <meta name="description" content={description} /></meta>
+      <meta name="keywords" content={keywords} /></meta>
+      <link rel="canonical" href={fullUrl} /></link>
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />

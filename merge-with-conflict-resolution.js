@@ -107,7 +107,7 @@ try {
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72',
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1',
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2c'
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c'
   ];
 
   let mergedCount = 0;

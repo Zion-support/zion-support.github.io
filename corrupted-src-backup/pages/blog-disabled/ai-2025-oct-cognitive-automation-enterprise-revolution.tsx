@@ -272,8 +272,8 @@ const,
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';';
                 robotic process automation (RPA) is giving way to</p> <strong className="text-white">cognitive automation</strong> "
                 —intelligent systems that don't just execute tasks, but understand context, make decisions';';
-              <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
-              <p className="text-lg leading-relaxed mb-4">"
+              <h2 className="text-3 xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
+              <p className="text-lg leading-relaxed mb-4"></p>"
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '
                 robotic process automation (RPA) is giving way to</p> <strong className="text-white">cognitive automation</strong> 
 =======
@@ -568,8 +568,8 @@ Real-world implementations across industries are delivering transformational res
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span></span><strong>$12M annual savings</strong> in back-office operations</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                    <li className="flex items-start gap-2"></li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
                     </li>
                     <li className="flex items-start gap-2">
 :src/pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution.tsx;
@@ -577,9 +577,9 @@ Real-world implementations across industries are delivering transformational res
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
                       <span></span><strong>$12M annual savings</strong> in back-office operations</span>"
                     </li>"
-                    <li className="<li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-              <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
+                    <li className="<li className="flex items-start gap-2"></li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
+              <h2 className="text-3 xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
               <p className="text-lg leading-relaxed mb-6">
 Real-world implementations across industries are delivering transformational results:</p>
               <div></div>
@@ -593,9 +593,9 @@ Real-world implementations across industries are delivering transformational res
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span></span><strong>$12M annual savings</strong> in back-office operations</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-              <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
+                    <li className="flex items-start gap-2"></li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
+              <h2 className="text-3 xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
               <p className="text-lg leading-relaxed mb-6">
 Real-world implementations across industries are delivering transformational results:</p>
               <div></div>
@@ -609,9 +609,9 @@ Real-world implementations across industries are delivering transformational res
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span></span><strong>$12M annual savings</strong> in back-office operations</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-              <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
+                    <li className="flex items-start gap-2"></li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /></CheckCircle>
+              <h2 className="text-3 xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
               <p className="text-lg leading-relaxed mb-6">
 Real-world implementations across industries are delivering transformational results:</p>
               <div></div>
@@ -1183,7 +1183,7 @@ Real-world implementations across industries are delivering transformational,
   </div>
 <<<<<<< HEAD
   </div>
-                      <h3 className="text-2xl font-bold text-white mb-3">Pilot Development (Weeks 7-12)</h3>
+                      <h3 className="text-2 xl font-bold text-white mb-3">Pilot Development (Weeks 7-12)</h3>
                       <p className="mb-4">
 =======
   </div>"
@@ -1209,7 +1209,7 @@ Real-world implementations across industries are delivering transformational,
   </div>
 <<<<<<< HEAD
   </div>
-                      <h3 className="text-2xl font-bold text-white mb-3">Validation & Optimization (Weeks 13-16)</h3>
+                      <h3 className="text-2 xl font-bold text-white mb-3">Validation & Optimization (Weeks 13-16)</h3>
                       <p className="mb-4">
 =======
   </div>"

@@ -61,7 +61,7 @@ const AISolutionsPage: React.FC = () => {
       description: 'Create 3D models and environments with AI technology',
       icon: Cube;
       price: '$1,600/month',
-      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
+      features: ['3 D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
       category: '3D & Graphics',
       link: '/ai-3d-generation',

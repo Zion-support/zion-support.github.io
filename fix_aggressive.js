@@ -75,7 +75,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     'const $1: React.FC = (')
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
-  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(/g, 'const $1 = (');
+  fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (');
 
   //Fix corrupted JSX;
   fixed = fixed.replace(/<([A-Z][a-zA-Z0-9_$]*)\s*([^>]*)\s*>/g, '<$1 $2>');
@@ -142,10 +142,10 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
 
   //Fix corrupted class declarations;
   fixed = fixed.replace(
-    /class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g,
+    /class\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*extends\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\{/g,
     'class $1 extends $2 {'
   );
-  fixed = fixed.replace(/class\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\{/g, 'class $1 {');
+  fixed = fixed.replace(/class\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*\{/g, 'class $1 {');
 
   //Fix corrupted method declarations;
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)\s*\{/g, '$1($2) {');

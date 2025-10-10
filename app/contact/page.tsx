@@ -250,7 +250,7 @@ const ContactPage: React.FC = () => {
     },
     {
       city: 'London, UK',
-      address: '456 Innovation Lane, London EC1A 4HD',
+      address: '456 Innovation Lane, London EC1 A 4 HD',
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM GMT',
@@ -732,9 +732,8 @@ const ContactPage: React.FC = () => {
                       href={method.action}
 <<<<<<< HEAD
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
-                    >
-                      <ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now' :</ArrowRight>
-                       method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}</ArrowRight>
+                    ></a>
+                      <ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now' :</ArrowRight></<<<ArrowRight>method</ArrowRight></ArrowRight>.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}</ArrowRight>
                     </ArrowRight>
 =======
                       className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors text-sm",
@@ -850,7 +849,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
 >>>>>>> origin/main
   );

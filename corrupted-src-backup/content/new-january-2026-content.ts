@@ -18,7 +18,7 @@ export interface January2026Content {
   };
 }
 
-export const newJanuary2026Content: January2026Content[] = [
+export const newJanuary2026 Content: January2026 Content[] = [
   {
     id: 'ai-2026-hyperconscious-computing',
     title: 'AI 2026: Hyperconscious Computing Revolution',

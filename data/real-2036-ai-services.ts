@@ -1835,7 +1835,7 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   };
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-export const real2036AIServices = [
+export const real2036 AIServices = [
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',

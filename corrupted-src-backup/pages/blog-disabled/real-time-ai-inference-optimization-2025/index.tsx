@@ -8,11 +8,11 @@ const RealTimeAIInferenceOptimization202, 5 = () => {
         </title>
 :src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx;
         <meta, nam, e = 'description'
-          conte, n, t='Producti, o, n-tested, techniques, to reduce, AI, inference latency, by, 85%. Model, quantizat, i, o, n, batching, strategie, s, and, hardware, acceleration for, su, b-50ms, response, times.'
-        />
+          conte, n, t='Producti, o, n-tested, techniques, to reduce, AI, inference latency, by, 85%. Model, quantizat, i, o, n, batching, strategie, s, and, hardware, acceleration for, su, b-50 ms, response, times.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, inferen, c, e, model, optimizatio, n, latency, reductio, n, quantizati, o, n, GPU, optimizatio, n, re, a, l-time, A, I'
-        />
+        /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/re a l-ti m e-ai-inferen c e-optimizati o n-20 2 5',
         />,
@@ -75,7 +75,7 @@ const RealTimeAIInferenceOptimization202, 5 = () => {/* TODO: Fix JSX expression
                     1. Model, Loading, Overhead
 :src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx</h3>
         <meta name="description
-  content="Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times." /><meta name="keywords
+  content="Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50 ms response times." /><meta name="keywords
   content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI" /><link rel="canonical
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
   href=" " />

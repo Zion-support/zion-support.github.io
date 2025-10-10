@@ -220,7 +220,7 @@ export const,
     technology: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],
     integrations: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],
     useCases: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],
-    roi: 'Average customer achieves 40% carbon reduction and $500K+ annual savings',
+    roi: 'Average customer achieves 40% carbon reduction and $500 K+ annual savings',
     competitors: ['Watershed', 'Normative', 'Carbon Analytics'],
     marketSize: '$1.8B carbon management market'
     growthRate: '38.7% annual growth'
@@ -454,7 +454,7 @@ export const,
     technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],
     integrations: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],
     useCases: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],
-    roi: 'Average customer prevents $2M+ in fraud annually and achieves 100% compliance',
+    roi: 'Average customer prevents $2 M+ in fraud annually and achieves 100% compliance',
     competitors: ['Sift', 'Signifyd', 'Forter', 'Riskified'],
     marketSize: '$15.3B fraud detection market'
     growthRate: '22.8% annual growth'

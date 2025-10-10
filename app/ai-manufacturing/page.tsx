@@ -21,9 +21,9 @@ const AiManufacturingPage: React.FC = () => {
         keywords={["manufacturing AI","quality control","predictive maintenance","process optimization","manufacturing intelligence"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-manufacturing"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

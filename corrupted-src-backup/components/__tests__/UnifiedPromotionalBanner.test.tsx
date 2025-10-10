@@ -64,12 +64,12 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
 
 <<<<<<< HEAD
     it('renders, both, badge and, date, when provid, e, d', () => { 
-          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r>
-          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r></UnifiedPromotionalBann>
       ); const, icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
-          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
-          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r>
-          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r></UnifiedPromotionalBann>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
+          <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r></UnifiedPromotionalBann>
       ); const icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
   descri, b, e('Animati, o, n', () => { 

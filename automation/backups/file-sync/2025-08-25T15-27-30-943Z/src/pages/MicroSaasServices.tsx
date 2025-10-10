@@ -101,7 +101,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       price: 85;
       pricingModel: "monthly",
       userLimit: "Up to 15 developers",
-      features: ["3D modeling", "VR development", "AR integration", "Analytics dashboard"],
+      features: ["3 D modeling", "VR development", "AR integration", "Analytics dashboard"],
       benefits: ["Immersive experiences", "Training efficiency", "Customer engagement", "Innovation"],
       targetAudience: ["Game developers", "Training companies", "Real estate", "Education"],
       tags: ["AR/VR", "3D Modeling", "Immersive Tech", "Training", "Development"],
@@ -766,7 +766,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           {filteredServices.map((service) => (
 =======
               {pricingModels.map(pricing => (
-                <option key={pricing} value={pricing} className="text-left">
+                <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}
         <div className="text-left">

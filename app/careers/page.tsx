@@ -117,7 +117,7 @@ export default function CareersPage() {}
       benefits: [,
         'Competitive salary + equity',
         'Health, dental, vision insurance',
-        '401k with company matching',
+        '401 k with company matching',
         'Flexible work arrangements'
       ],
       postedDate: '2024-01-15',
@@ -745,9 +745,9 @@ export default function CareersPage() {}
                       to={`/careers/${position.id}`}
 <<<<<<< HEAD
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center"
-                    >Apply Now</Link>
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
-                    <button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">Save Job</button>
+                    >Apply Now</Lin>
+                      <ArrowRight className="w-4 h-4 ml-2 inline" /></ArrowRigh>
+                    <button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">Save Job</butto>
                     </button>
                   </div>
                 </div>
@@ -915,8 +915,8 @@ export default function CareersPage() {}
             <Link
               to="/team"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-            >
-              <Users className="w-5 h-5 mr-2" >Meet Our Team</Users>
+            ></Lin>
+              <Users className="w-5 h-5 mr-2" >Meet Our Team</User>
             </Users>
 =======
               <Mail className="w-5 h-5 mr-2" />

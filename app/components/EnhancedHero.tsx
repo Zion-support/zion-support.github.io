@@ -194,7 +194,7 @@ const EnhancedHero: React.FC = () => {}
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+        /></motio>
         <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"
           animate={{}
@@ -208,7 +208,7 @@ const EnhancedHero: React.FC = () => {}
             ease: "easeInOut"
 >>>>>>> origin/merge-error-fixes
           }}
-        />
+        /></motio>
       </div>
 
 <<<<<<< HEAD
@@ -250,8 +250,7 @@ const EnhancedHero: React.FC = () => {}
           <motion.p;
             className="text-base sm: text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed",
             variants={itemVariants}
-          >Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.</motion>
-            Transform your business with our cutting-edge technology and achieve unprecedented growth.</motion>
+          >Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.</motion></<<<motion>Transform</motion></<<motion>your</motion> business with our cutting-edge technology and achieve unprecedented growth.</motion>
           </motion.p>
 
           {/* Animated Stats */}
@@ -277,7 +276,7 @@ const EnhancedHero: React.FC = () => {}
               </motion.div>
             </AnimatePresence>
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
 =======
                 <div className="text-2xl sm: text-3xl font-bold text-cyan-400 mb-2">,
@@ -306,7 +305,7 @@ const EnhancedHero: React.FC = () => {}
               </motion.div>
             </AnimatePresence>
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
 =======
                 <div className="text-2xl sm: text-3xl font-bold text-green-400 mb-2">,
@@ -335,7 +334,7 @@ const EnhancedHero: React.FC = () => {}
               </motion.div>
             </AnimatePresence>
 
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait"></AnimatePresenc>
               <motion.div
 =======
                 <div className="text-2xl sm: text-3xl font-bold text-purple-400 mb-2">,
@@ -436,7 +435,7 @@ const EnhancedHero: React.FC = () => {}
             className="w-1 h-3 bg-white/60 rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-          />
+          /></motio>
         </div>
       </motion.div>
     </motion.section>

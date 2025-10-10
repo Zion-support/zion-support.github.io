@@ -1835,7 +1835,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   };
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-export const real2036ITServices = [
+export const real2036 ITServices = [
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',

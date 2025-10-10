@@ -6,7 +6,7 @@ const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
   'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
   'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner')),
-  'breakthrough-content': lazy(() => import('./BreakthroughContent2026Banner')),
+  'breakthrough-content': lazy(() => import('./BreakthroughContent2026 Banner')),
   'comprehensive-promo': lazy(() => import('./ComprehensivePromoBanner')),
   advertising: lazy(() => import('./AdvertisingBanner')),
   'content-showcase': lazy(() => import('./ContentShowcase')),
@@ -14,7 +14,7 @@ const bannerComponents = {
     () => import('./ContentValueTestimonials')
   ),
   'december-revolutionary': lazy(
-    () => import('./December2025RevolutionaryContentShowcase')
+    () => import('./December2025 RevolutionaryContentShowcase')
   ),
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
@@ -45,7 +45,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   className = '',
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {

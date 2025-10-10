@@ -21,9 +21,9 @@ const ItTrainingPage: React.FC = () => {
         keywords={["IT training","technical training","certification","user support","IT education"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/it-training"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

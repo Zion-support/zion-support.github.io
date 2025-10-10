@@ -10,8 +10,7 @@ interface DynamicOptions {}
 >>>>>>> origin/merge-error-fixes
   ssr?: boolean;}
 }
-export function dynamic<T extends ComponentType<unknown>>(</T>
-  importFunc: () => Promise<{ default: T }>,
+export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc</T>: () => Promise<{ default: T }>,
   options: DynamicOptions = {}
 <<<<<<< HEAD
 ): ComponentType<unknown>{

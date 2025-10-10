@@ -577,42 +577,42 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
                 <div></section>
                   <h3 className="text-xl font-bold text-white mb-4">Key Drivers of the 2025 Automation Revolution</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
+                  <ul className="space-y-3"></ul>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
                       <span className="text-white">Advanced Language Models: GPT-4 class models with enterprise security</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
-                      <span className="text-white">Edge AI Computing: Sub-100ms response times for real-time automation</span>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
+                      <span className="text-white">Edge AI Computing: Sub-100 ms response times for real-time automation</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
                       <span className="text-white">Zero-Trust Security: Enterprise-grade AI with built-in compliance</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className=" />" />>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className=" />" />></CheckCircle>
                       <span className="text-white">Cost Optimization: 70% reduction in AI infrastructure costs</span>
               <section className="mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">The AI Automation Revolution: Why 2025 Changes Everything</h2>
                 <p className="text-zion-slate-light mb-6 leading-relaxed"></p>
                 <div></section>
                   <h3 className="text-xl font-bold text-white mb-4">Key Drivers of the 2025 Automation Revolution</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <ul className="space-y-3"></ul>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Advanced Language Models: GPT-4 class models with enterprise security</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-white">Edge AI Computing: Sub-100ms response times for real-time automation</span>
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
+                      <span className="text-white">Edge AI Computing: Sub-100 ms response times for real-time automation</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Zero-Trust Security: Enterprise-grade AI with built-in compliance</span>
                     </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <li className="flex items-start"></li>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" /></CheckCircle>
                       <span className="text-white">Cost Optimization: 70% reduction in AI infrastructure costs</span>
                 <div></div>
                   <h2 className="text-2xl font-bold text-white mb-4">

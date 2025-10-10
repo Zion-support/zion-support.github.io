@@ -149,7 +149,7 @@ function u() {/* TODO: Fix JSX expression */}
           }),
           (n.unstable_continueExecution = function () {p || y || ((p = !0)} A(T));
           }),
-          (n.unstable_forceFrameRate = function (n) {0 > n || n > 125 || (j = n > 0 ? Math.floor(1e3 /n) : 5)}
+          (n.unstable_forceFrameRate = function (n) {0>n</0> || n > 125 || (j = n > 0 ? Math.floor(1 e3 /n) : 5)}
           }),
           (n.unstable_getCurrentPriorityLevel = function () {return v}
           }),

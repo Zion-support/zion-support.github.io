@@ -2,9 +2,7 @@
 <<<<<<< HEAD
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
-  private metrics: Map<string, number> = new Map();
-
-  static getInstance(): PerformanceOptimizer {
+  private metrics: Map<string, number> = new Map();</string>static</string> getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
 =======

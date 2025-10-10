@@ -168,11 +168,11 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Basic market predictions</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Portfolio tracking</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Portfolio tracking</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Email alerts</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Email alerts</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Email support<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
@@ -208,17 +208,17 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
 <<<<<<< HEAD
                   <Check className="w-5 h-5 text-green-400 mr-3" >Advanced quantum predictions</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Real-time portfolio optimization</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Real-time portfolio optimization</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Risk management tools</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Risk management tools</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Priority support</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom strategies<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom strategies</Check><a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Get Started</a>
               </a>
             </div>
 
@@ -229,14 +229,14 @@ const AIQuantumFinancialOraclePage: React.FC = () => {,
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >Full quantum computing access</Check>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Institutional-grade analysis</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Institutional-grade analysis</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >Custom AI models</Chec>
                 </Check>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Check>
+                <li className="flex items-center text-gray-300"></l>
+                  <Check className="w-5 h-5 text-green-400 mr-3" >24/7 dedicated support</Chec>
                 </Check>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-5 h-5 text-green-400 mr-3" >White-label solutions<a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">Contact Sales</a>

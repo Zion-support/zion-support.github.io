@@ -357,7 +357,7 @@ const DocsPage: React.FC = () => {,
                 className="cyber-button px-8 py-4"
 <<<<<<< HEAD
               >Contact Support</a>
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" /></ArrowRigh>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"

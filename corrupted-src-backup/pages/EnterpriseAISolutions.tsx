@@ -4,8 +4,7 @@ import React from 'react';
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
     {
-      icon: <Building className="w-8 h-8" />,
-      title: 'Enterprise AI Platform',
+      icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
       features: [,
         'Scalable Infrastructure',
@@ -21,8 +20,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     },
 <<<<<<< HEAD
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'AI Automation Suite',
+      icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
       description: 'Complete automation solutions to streamline enterprise operations.',
       features: [,
         'Process Automation',
@@ -44,7 +42,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <meta;
           name="description"
           content="Comprehensive AI solutions designed for enterprise-scale deployments."
-        />
+        /></meta>
       </Helmet>
 
       <div className="container mx-auto px-4 py-16"></div>

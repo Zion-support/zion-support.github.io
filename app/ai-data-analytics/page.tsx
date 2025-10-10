@@ -20,7 +20,7 @@ const AIDataAnalyticsPage: React.FC = () => {,
       benefits: [,
         'Increase decision speed by 60%',
         'Reduce manual reporting by 85%',
-        'Identify trends 3x faster',
+        'Identify trends 3 x faster',
         'Improve forecast accuracy by 40%'
       ],
       marketPrice: '$2,000-4,000/month',
@@ -166,13 +166,9 @@ const AIDataAnalyticsPage: React.FC = () => {,
 <<<<<<< HEAD
       icon: <Database className="w-8 h-8 text-blue-600" >},
     {
-      title: 'Machine Learning Models',</Database>
-      description: 'Custom ML models trained on your specific data',</Database>
-      icon: <Brain className="w-8 h-8 text-purple-600" >},
+      title: 'Machine Learning Models',</<<<Database>description</Database></Database>: 'Custom ML models trained on your specific data',</<<<Database>icon</Database></Database>: <Brain className="w-8 h-8 text-purple-600" >},</Brain>
     {
-      title: 'Interactive Dashboards',</Brain>
-      description: 'Beautiful, responsive dashboards for all devices',</Brain>
-      icon: <BarChart3 className="w-8 h-8 text-green-600" >},
+      title: 'Interactive Dashboards',</<<<Brain>description</Brain></Brain>: 'Beautiful, responsive dashboards for all devices',</<<<Brain>icon</Brain></Brain>: <BarChart3 className="w-8 h-8 text-green-600" >},</BarChart3>
     {
       title: 'Predictive Insights',</BarChart3>
       description: 'AI-powered predictions and recommendations',</BarChart3>

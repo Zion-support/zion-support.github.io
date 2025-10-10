@@ -747,7 +747,7 @@ export const microSaasServices: MicroSaasService[] = [
       'Online retail optimization',
       'Marketplace management',
       'Subscription box services',
-      'B2B e-commerce',
+      'B2 B e-commerce',
       'Mobile commerce',
       'Cross-platform selling'
     ],

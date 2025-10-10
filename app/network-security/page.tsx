@@ -21,9 +21,9 @@ const NetworkSecurityPage: React.FC = () => {
         keywords={["network security","firewall","network protection","VPN setup","intrusion detection"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/network-security"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

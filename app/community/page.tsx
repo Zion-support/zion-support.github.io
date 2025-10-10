@@ -196,7 +196,7 @@ const CommunityPage: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-3 xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
@@ -276,7 +276,7 @@ const CommunityPage: React.FC = () => {,
                             PINNED;
                           </span>
                         )}
-                        <span className="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-2 py-1 rounded">
+                        <span className="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-2 py-1 rounded"></span>
                           {discussion.category}
                         </span>
                       </div>
@@ -337,7 +337,7 @@ const CommunityPage: React.FC = () => {,
                           <Users className="w-4 h-4" />
                           <span>{event.attendees} attendees</span>
                         </div>
-                        <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">
+                        <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs"></span>
                           {event.type}
                         </span>
                       </div>
@@ -389,7 +389,7 @@ const CommunityPage: React.FC = () => {,
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

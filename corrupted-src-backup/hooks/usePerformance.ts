@@ -34,8 +34,7 @@ export const usePerformance = (option,)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   } = options;
 
-  const _mountTimeRef = useRef<number>(0);
-  const _renderStartTimeRef = useRef<number>(0);
+  const _mountTimeRef = useRef<number>(0);</number>const</number> _renderStartTimeRef = useRef<number>(0);</number>
 
   // Track component mount time;
 <<<<<<< HEAD
@@ -61,7 +60,7 @@ export const usePerformance = (option,)
     // Use requestAnimationFrame to measure actual render time;
     requestAnimationFrame(() => {
       //       const renderTime = performance.now() - renderStartTimeRef.current;
-      //       const isSlowRender = renderTime > slowRenderThreshold;
+      //       const isSlowRender = renderTime>slowRenderThreshold</renderTime>;
 
       const metrics: PerformanceMetrics = {,
         renderTime;

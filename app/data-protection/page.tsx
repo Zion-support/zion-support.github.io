@@ -158,7 +158,7 @@ const DataProtectionPage: React.FC = () => {}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Data Protection;
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2 xl text-gray-300 mb-8 max-w-4 xl mx-auto">
             Your privacy and data security are our top priorities. Learn about our comprehensive data protection measures.
           </p>
         </div>,
@@ -203,7 +203,7 @@ const DataProtectionPage: React.FC = () => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <principle.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{principle.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{principle.title}</h>
                 <p className="text-gray-300">{principle.description}</p>
               </div>
             ))}

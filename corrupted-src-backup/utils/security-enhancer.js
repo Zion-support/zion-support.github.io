@@ -91,7 +91,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   generateCSRFToken() {
-//     const array = new Uint8Array(32);
+//     const array = new Uint8 Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
     );
@@ -283,7 +283,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       /<embed/i,
     ];
 
-    return !xssPatterns.some(pattern => pattern.test(text));
+    return !xssPatterns.some(pattern => pattern.test(text));</script>
   }
 
   setupURLValidation() {
@@ -555,12 +555,12 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     warning.innerHTML = `
       <div style="
         position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #ff6b6b;
+        top: 20 px;
+        right: 20 px;
+        background: #ff6 b6 b;
         color: white;
-        padding: 15px;
-        border-radius: 4px;
+        padding: 15 px;
+        border-radius: 4 px;
         z-index: 9999;
         max-width: 300px;
       ">,

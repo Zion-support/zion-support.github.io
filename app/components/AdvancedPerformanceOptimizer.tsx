@@ -304,10 +304,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if (typeof window === 'undefined') return;
 
     const criticalCSS = `
-      .cyber-grid { background-image: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
-      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-      .cyber-button { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; }
-      .cyber-button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+      .cyber-grid { background-image: linear-gradient(45 deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(-45 deg, transparent 25%, rgba(255,255,255,0.1) 25%), linear-gradient(45 deg, rgba(255,255,255,0.1) 75%, transparent 75%), linear-gradient(-45 deg, rgba(255,255,255,0.1) 75%, transparent 75%); background-size: 20 px 20 px; background-position: 0 0, 0 10 px, 10 px -10 px, -10 px 0 px; }
+      .cyber-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10 px); border: 1 px solid rgba(255, 255, 255, 0.1); }
+      .cyber-button { background: linear-gradient(135 deg, #667 eea 0%, #764 ba2 100%); border: none; color: white; padding: 12 px 24 px; border-radius: 8 px; font-weight: 600; transition: all 0.3 s ease; }
+      .cyber-button:hover { transform: translateY(-2 px); box-shadow: 0 10 px 20 px rgba(0,0,0,0.2); }
     `;
 
     const style = document.createElement('style');
@@ -405,5 +405,4 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   return <>{children}</>;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
-</AdvancedPerformanceOptimizerProps>
-export default AdvancedPerformanceOptimizer;</AdvancedPerformanceOptimizerProps>
+</<<<AdvancedPerformanceOptimizerProps>export</AdvancedPerformanceOptimizerProps></<<AdvancedPerformanceOptimizerProps>default</AdvancedPerformanceOptimizerProps> AdvancedPerformanceOptimizer;</AdvancedPerformanceOptimizerProps>

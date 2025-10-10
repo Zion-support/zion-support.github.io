@@ -95,7 +95,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       icon: TrendingDown;
     },
     {
-      metric: '10x',
+      metric: '10 x',
       description: 'Faster processing with AI optimization',
       icon: Zap;
     },
@@ -185,7 +185,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">Build Blockchain Solutions</a>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
               <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
 =======
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,
@@ -401,7 +401,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

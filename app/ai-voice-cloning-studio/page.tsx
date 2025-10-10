@@ -64,7 +64,7 @@ import {}
   Shuffle,
   VolumeX,
   Volume1,
-  Volume2 as Volume2Icon,
+  Volume2 as Volume2 Icon,
   Maximize,
   Minimize,
   Fullscreen,
@@ -729,9 +729,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   });
 
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);
-
-  const voices = [
+  const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);</string></<<<string>const</string></<<string>voices</string> = [
     { id: 'default', name: 'Default Voice', gender: 'Neutral', accent: 'American' },
     { id: 'male1', name: 'Professional Male', gender: 'Male', accent: 'British' },
     { id: 'female1', name: 'Warm Female', gender: 'Female', accent: 'Australian' },
@@ -1070,8 +1068,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         min="-10"
                         max="10"
                         value={voiceSettings.pitch}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}
-                        className="w-full"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}</input></<<<input>className</input></input>="w-full"
                       />
                     </div>
                     <div></div>
@@ -1084,8 +1081,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         max="2"
                         step="0.1"
                         value={voiceSettings.speed}
-                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}
-                        className="w-full"
+                        onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}</input></<<<input>className</input></input>="w-full"
                       />
                     </div>
                   </div>
@@ -1336,7 +1332,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
               Simple Pricing
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Choose the plan that fits your needs. All plans include our core voice cloning features.
             </p>
 <<<<<<< HEAD
@@ -1418,7 +1414,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Contact our team to discuss your voice cloning needs and get a custom quote.
             </p>
           </div>

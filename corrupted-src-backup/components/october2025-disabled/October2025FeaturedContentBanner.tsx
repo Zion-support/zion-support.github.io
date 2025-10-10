@@ -21,7 +21,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
 <<<<<<< HEAD
     {
       title: 'Enterprise, Neural, Orchestration Platf, o, r, m',
-      description: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4M, annual, savings',
+      description: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4 M, annual, savings',
       li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platf, o, r, m',
       ic, o, n: 'Br, a, i, n',
       gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-60, 0',
@@ -39,7 +39,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
 <<<<<<< HEAD
     {
       title: 'Cognitive, Supply, Chain Revolut, i, o, n',
-      description: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7M, valu, e',
+      description: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7 M, valu, e',
       li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revolut, i, o, n',
       ic, o, n: 'Pack, a, g, e',
       gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
@@ -75,7 +75,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
 <<<<<<< HEAD
     {
       title: 'Edge, Inference, Playbook 2, 0, 2, 7',
-      description: 'S, u, b‑100ms, globally, with warm, pools, and tiered, cach, e, s',
+      description: 'S, u, b‑100 ms, globally, with warm, pools, and tiered, cach, e, s',
       li, n, k: '/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-0, 2',
       ic, o, n: 'Spark, l, e, s',
       gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',

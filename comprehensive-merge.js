@@ -27,10 +27,10 @@ safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
 //List of PR branches to try merging;
 const prBranches = [
-  'cursor/fix-web-application-console-errors-0bf5',
-  'cursor/build-and-deploy-with-vite-and-netlify-8b37',
+  'cursor/fix-web-application-console-errors-0 bf5',
+  'cursor/build-and-deploy-with-vite-and-netlify-8 b37',
   'cursor/fix-errors-and-merge-to-main-fcbd',
-  'cursor/fix-errors-and-merge-to-main-e6e1',
+  'cursor/fix-errors-and-merge-to-main-e6 e1',
 ];
 
 // let mergedCount = 0;

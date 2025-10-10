@@ -24,7 +24,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Observability, 2025, Sept 30, E2e, Ai Tracing, V, 2;
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Learn, about, observability 2025, sept, 30 e2e, ai, tracing v2, and, how it, can, benefit your, enterpris, e.
+          Learn, about, observability 2025, sept, 30 e2 e, ai, tracing v2, and, how it, can, benefit your, enterpris, e.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'></div>
           <p>

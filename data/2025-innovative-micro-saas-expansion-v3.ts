@@ -265,7 +265,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     technology: ['Python, Qiskit, TensorFlow, React, Node.js, PostgreSQL, Quantum simulators'];
     integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     useCases: ['Drug discovery, Materials science, Financial modeling, Climate research'];
-    roi: 'Accelerate research breakthroughs by 10x and reduce computational costs by 70%',
+    roi: 'Accelerate research breakthroughs by 10 x and reduce computational costs by 70%',
     competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     marketSize: '$5B+ Quantum Computing market', growthRate: '50% YoY',
     variant: 'quantum-ai-revolutionary', contactInfo: contact;
@@ -322,7 +322,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     technology: ['Python, Rust, React, Node.js, PostgreSQL, Quantum algorithms, AI models'];
     integrations: ['NASA APIs, ESA systems, SpaceX technologies, Satellite networks'];
     useCases: ['Satellite operations, Space exploration, Climate research, Resource mining'];
-    roi: 'Accelerate space missions by 5x and reduce operational costs by 60%',
+    roi: 'Accelerate space missions by 5 x and reduce operational costs by 60%',
     competitors: ['SpaceX, Blue Origin, NASA, ESA, Lockheed Martin'];
     marketSize: '$400B+ Space Technology market', growthRate: '40% YoY',
     variant: 'space-tech-enterprise', contactInfo: contact;
@@ -350,7 +350,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     technology: ['Python, C++, React, Node.js, PostgreSQL, TensorFlow, Signal processing'];
     integrations: ['EEG devices, Medical imaging systems, Research databases, Clinical trial platforms'];
     useCases: ['Medical rehabilitation, Gaming and entertainment, Research and development, Accessibility'];
-    roi: 'Accelerate BCI development by 10x and improve patient outcomes by 50%',
+    roi: 'Accelerate BCI development by 10 x and improve patient outcomes by 50%',
     competitors: ['Neuralink, Kernel, CTRL-labs, Paradromics, Synchron'];
     marketSize: '$2B+ Neural Interface market', growthRate: '60% YoY',
     variant: 'bci-enterprise', contactInfo: contact;
@@ -471,7 +471,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     technology: ['Python, TensorFlow, OpenCV, React, Node.js, Kubernetes, Docker'];
     integrations: ['NVIDIA GPUs, Intel processors, AWS, Azure, GCP, IoT platforms'];
     useCases: ['Video surveillance, Live streaming, Autonomous vehicles, Industrial monitoring'];
-    roi: 'Reduce video processing costs by 60% and improve performance by 5x',
+    roi: 'Reduce video processing costs by 60% and improve performance by 5 x',
     competitors: ['NVIDIA DeepStream, Intel OpenVINO, AWS Panorama, Google Cloud Video AI'];
     marketSize: '$8B+ Video Analytics market', growthRate: '40% YoY',
     variant: 'edge-ai-enterprise', contactInfo: contact;
@@ -527,7 +527,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     technology: ['Python, Qiskit, TensorFlow, PyTorch, React, Node.js, Quantum simulators'];
     integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     useCases: ['Drug discovery, Financial modeling, Climate research, Optimization problems'];
-    roi: 'Accelerate ML model training by 100x and solve previously intractable problems',
+    roi: 'Accelerate ML model training by 100 x and solve previously intractable problems',
     competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     marketSize: '$15B+ Quantum ML market', growthRate: '45% YoY',
     variant: 'quantum-ml-enterprise', contactInfo: contact;
@@ -1930,7 +1930,7 @@ export const,
     useCases: ['Sales performance analysis, Customer behavior insights, Operational efficiency tracking'];
     roi: 'Increase data-driven decision making by 40% and reduce reporting time by 60%';
     competitors: ['Tableau, Power BI, Looker, QlikView'];
-    marketSize: '$25B+ Business Intelligence market';
+    marketSize: '$25 B+ Business Intelligence market';
     growthRate: '15% YoY';
     variant: 'ai-business-intelligence-enterprise';
     contactInfo: contact;
@@ -1969,7 +1969,7 @@ export const,
     useCases: ['E-commerce personalization, Customer support automation, Marketing campaign optimization'];
     roi: 'Improve customer satisfaction by 35% and increase conversion rates by 25%';
     competitors: ['Intercom, Zendesk, HubSpot, Segment, Amplitude'];
-    marketSize: '$15B+ Customer Experience market';
+    marketSize: '$15 B+ Customer Experience market';
     growthRate: '20% YoY';
     variant: 'ai-customer-success-enterprise';
     contactInfo: contact;
@@ -2008,7 +2008,7 @@ export const,
     useCases: ['Enterprise security, Government agencies, Financial institutions, Healthcare organizations'];
     roi: 'Reduce security incidents by 70% and achieve 99.9% threat detection accuracy';
     competitors: ['CrowdStrike, Palo Alto Networks, SentinelOne, Carbon Black'];
-    marketSize: '$200B+ Cybersecurity market';
+    marketSize: '$200 B+ Cybersecurity market';
     growthRate: '12% YoY';
     variant: 'quantum-cybersecurity-enterprise';
     contactInfo: contact;
@@ -2047,7 +2047,7 @@ export const,
     useCases: ['Retail inventory management, Manufacturing supply chains, E-commerce logistics'];
     roi: 'Reduce inventory costs by 25% and improve delivery times by 30%';
     competitors: ['SAP, Oracle, Blue Yonder, Manhattan Associates, JDA Software'];
-    marketSize: '$18B+ Supply Chain Management market';
+    marketSize: '$18 B+ Supply Chain Management market';
     growthRate: '18% YoY';
     variant: 'ai-supply-chain-enterprise';
     contactInfo: contact;
@@ -2086,7 +2086,7 @@ export const,
     useCases: ['IoT applications, Real-time analytics, Content delivery networks, Industrial automation'];
     roi: 'Reduce latency by 60% and improve application performance by 40%';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
-    marketSize: '$12B+ Edge Computing market';
+    marketSize: '$12 B+ Edge Computing market';
     growthRate: '35% YoY';
     variant: 'edge-computing-enterprise';
     contactInfo: contact;
@@ -2125,7 +2125,7 @@ export const,
     useCases: ['Contract management, Legal document review, Compliance monitoring, Risk assessment'];
     roi: 'Reduce legal document processing time by 80% and legal costs by 30%';
     competitors: ['DocuSign, ContractPodAi, Ironclad, Icertis, Conga'];
-    marketSize: '$8B+ Legal Tech market';
+    marketSize: '$8 B+ Legal Tech market';
     growthRate: '25% YoY';
     variant: 'ai-legal-enterprise';
     contactInfo: contact;
@@ -2162,9 +2162,9 @@ export const,
     technology: ['Python, Qiskit, TensorFlow, React, Node.js, PostgreSQL, Quantum simulators'];
     integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     useCases: ['Drug discovery, Materials science, Financial modeling, Climate research'];
-    roi: 'Accelerate research breakthroughs by 10x and reduce computational costs by 70%';
+    roi: 'Accelerate research breakthroughs by 10 x and reduce computational costs by 70%';
     competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
-    marketSize: '$5B+ Quantum Computing market';
+    marketSize: '$5 B+ Quantum Computing market';
     growthRate: '50% YoY';
     variant: 'quantum-ai-revolutionary';
     contactInfo: contact;
@@ -2203,7 +2203,7 @@ export const,
     useCases: ['Continuous deployment, Infrastructure automation, Performance monitoring, Security automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%';
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
-    marketSize: '$10B+ DevOps market';
+    marketSize: '$10 B+ DevOps market';
     growthRate: '22% YoY';
     variant: 'autonomous-devops';
     contactInfo: contact;
@@ -2240,9 +2240,9 @@ export const,
     technology: ['Python, Rust, React, Node.js, PostgreSQL, Quantum algorithms, AI models'];
     integrations: ['NASA APIs, ESA systems, SpaceX technologies, Satellite networks'];
     useCases: ['Satellite operations, Space exploration, Climate research, Resource mining'];
-    roi: 'Accelerate space missions by 5x and reduce operational costs by 60%';
+    roi: 'Accelerate space missions by 5 x and reduce operational costs by 60%';
     competitors: ['SpaceX, Blue Origin, NASA, ESA, Lockheed Martin'];
-    marketSize: '$400B+ Space Technology market';
+    marketSize: '$400 B+ Space Technology market';
     growthRate: '40% YoY';
     variant: 'space-tech-enterprise';
     contactInfo: contact;
@@ -2279,9 +2279,9 @@ export const,
     technology: ['Python, C++, React, Node.js, PostgreSQL, TensorFlow, Signal processing'];
     integrations: ['EEG devices, Medical imaging systems, Research databases, Clinical trial platforms'];
     useCases: ['Medical rehabilitation, Gaming and entertainment, Research and development, Accessibility'];
-    roi: 'Accelerate BCI development by 10x and improve patient outcomes by 50%';
+    roi: 'Accelerate BCI development by 10 x and improve patient outcomes by 50%';
     competitors: ['Neuralink, Kernel, CTRL-labs, Paradromics, Synchron'];
-    marketSize: '$2B+ Neural Interface market';
+    marketSize: '$2 B+ Neural Interface market';
     growthRate: '60% YoY';
     variant: 'bci-enterprise';
     contactInfo: contact;
@@ -2320,7 +2320,7 @@ export const,
     useCases: ['Patient care optimization, Population health management, Clinical research, Healthcare operations'];
     roi: 'Improve patient outcomes by 30% and reduce healthcare costs by 25%';
     competitors: ['Epic, Cerner, Allscripts, Athenahealth, eClinicalWorks'];
-    marketSize: '$45B+ Healthcare IT market';
+    marketSize: '$45 B+ Healthcare IT market';
     growthRate: '18% YoY';
     variant: 'ai-healthcare-enterprise';
     contactInfo: contact;
@@ -2359,7 +2359,7 @@ export const,
     useCases: ['Portfolio optimization, Risk management, Algorithmic trading, Financial research'];
     roi: 'Improve portfolio returns by 15% and reduce risk by 40%';
     competitors: ['Bloomberg, Refinitiv, FactSet, Morningstar, S&P Global'];
-    marketSize: '$30B+ Financial Data market';
+    marketSize: '$30 B+ Financial Data market';
     growthRate: '25% YoY';
     variant: 'quantum-finance-enterprise';
     contactInfo: contact;
@@ -2398,7 +2398,7 @@ export const,
     useCases: ['Blog writing, Social media content, Email marketing, Product descriptions'];
     roi: 'Increase content production by 300% and improve engagement by 45%';
     competitors: ['Grammarly, Copy.ai, Jasper, Writesonic, ContentBot'];
-    marketSize: '$12B+ Content Creation market';
+    marketSize: '$12 B+ Content Creation market';
     growthRate: '35% YoY';
     variant: 'ai-content-enterprise';
     contactInfo: contact;
@@ -2435,9 +2435,9 @@ export const,
     technology: ['Python, TensorFlow, OpenCV, React, Node.js, Kubernetes, Docker'];
     integrations: ['NVIDIA GPUs, Intel processors, AWS, Azure, GCP, IoT platforms'];
     useCases: ['Video surveillance, Live streaming, Autonomous vehicles, Industrial monitoring'];
-    roi: 'Reduce video processing costs by 60% and improve performance by 5x';
+    roi: 'Reduce video processing costs by 60% and improve performance by 5 x';
     competitors: ['NVIDIA DeepStream, Intel OpenVINO, AWS Panorama, Google Cloud Video AI'];
-    marketSize: '$8B+ Video Analytics market';
+    marketSize: '$8 B+ Video Analytics market';
     growthRate: '40% YoY';
     variant: 'edge-ai-enterprise';
     contactInfo: contact;
@@ -2476,7 +2476,7 @@ export const,
     useCases: ['Recruitment automation, Employee engagement, Performance management, Workforce analytics'];
     roi: 'Reduce hiring time by 50% and improve employee retention by 30%';
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'];
-    marketSize: '$20B+ HR Tech market';
+    marketSize: '$20 B+ HR Tech market';
     growthRate: '22% YoY';
     variant: 'ai-hr-enterprise';
     contactInfo: contact;
@@ -2513,9 +2513,9 @@ export const,
     technology: ['Python, Qiskit, TensorFlow, PyTorch, React, Node.js, Quantum simulators'];
     integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     useCases: ['Drug discovery, Financial modeling, Climate research, Optimization problems'];
-    roi: 'Accelerate ML model training by 100x and solve previously intractable problems';
+    roi: 'Accelerate ML model training by 100 x and solve previously intractable problems';
     competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
-    marketSize: '$15B+ Quantum ML market';
+    marketSize: '$15 B+ Quantum ML market';
     growthRate: '45% YoY';
     variant: 'quantum-ml-enterprise';
     contactInfo: contact;
@@ -2554,7 +2554,7 @@ export const,
     useCases: ['Building energy optimization, Industrial efficiency, Smart grid management, Sustainability tracking'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%';
     competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls, ABB'];
-    marketSize: '$35B+ Energy Management market';
+    marketSize: '$35 B+ Energy Management market';
     growthRate: '20% YoY';
     variant: 'ai-energy-enterprise';
     contactInfo: contact;
@@ -2593,7 +2593,7 @@ export const,
     useCases: ['Warehouse automation, Order fulfillment, Inventory management, Last-mile delivery'];
     roi: 'Increase warehouse efficiency by 300% and reduce operational costs by 40%';
     competitors: ['Amazon Robotics, Fetch Robotics, Locus Robotics, 6 River Systems, AutoStore'];
-    marketSize: '$28B+ Warehouse Robotics market';
+    marketSize: '$28 B+ Warehouse Robotics market';
     growthRate: '35% YoY';
     variant: 'autonomous-robotics-enterprise';
     contactInfo: contact;
@@ -2841,7 +2841,7 @@ export const,
     useCases: ['Sales performance analysis, Customer behavior insights, Operational efficiency tracking'];
     roi: 'Increase data-driven decision making by 40% and reduce reporting time by 60%';
     competitors: ['Tableau, Power BI, Looker, QlikView'];
-    marketSize: '$25B+ Business Intelligence market';
+    marketSize: '$25 B+ Business Intelligence market';
     growthRate: '15% YoY';
     variant: 'ai-business-intelligence-enterprise';
     contactInfo: contact;
@@ -2880,7 +2880,7 @@ export const,
     useCases: ['E-commerce personalization, Customer support automation, Marketing campaign optimization'];
     roi: 'Improve customer satisfaction by 35% and increase conversion rates by 25%';
     competitors: ['Intercom, Zendesk, HubSpot, Segment, Amplitude'];
-    marketSize: '$15B+ Customer Experience market';
+    marketSize: '$15 B+ Customer Experience market';
     growthRate: '20% YoY';
     variant: 'ai-customer-success-enterprise';
     contactInfo: contact;
@@ -2919,7 +2919,7 @@ export const,
     useCases: ['Enterprise security, Government agencies, Financial institutions, Healthcare organizations'];
     roi: 'Reduce security incidents by 70% and achieve 99.9% threat detection accuracy';
     competitors: ['CrowdStrike, Palo Alto Networks, SentinelOne, Carbon Black'];
-    marketSize: '$200B+ Cybersecurity market';
+    marketSize: '$200 B+ Cybersecurity market';
     growthRate: '12% YoY';
     variant: 'quantum-cybersecurity-enterprise';
     contactInfo: contact;
@@ -2958,7 +2958,7 @@ export const,
     useCases: ['Retail inventory management, Manufacturing supply chains, E-commerce logistics'];
     roi: 'Reduce inventory costs by 25% and improve delivery times by 30%';
     competitors: ['SAP, Oracle, Blue Yonder, Manhattan Associates, JDA Software'];
-    marketSize: '$18B+ Supply Chain Management market';
+    marketSize: '$18 B+ Supply Chain Management market';
     growthRate: '18% YoY';
     variant: 'ai-supply-chain-enterprise';
     contactInfo: contact;
@@ -2997,7 +2997,7 @@ export const,
     useCases: ['IoT applications, Real-time analytics, Content delivery networks, Industrial automation'];
     roi: 'Reduce latency by 60% and improve application performance by 40%';
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'];
-    marketSize: '$12B+ Edge Computing market';
+    marketSize: '$12 B+ Edge Computing market';
     growthRate: '35% YoY';
     variant: 'edge-computing-enterprise';
     contactInfo: contact;
@@ -3036,7 +3036,7 @@ export const,
     useCases: ['Contract management, Legal document review, Compliance monitoring, Risk assessment'];
     roi: 'Reduce legal document processing time by 80% and legal costs by 30%';
     competitors: ['DocuSign, ContractPodAi, Ironclad, Icertis, Conga'];
-    marketSize: '$8B+ Legal Tech market';
+    marketSize: '$8 B+ Legal Tech market';
     growthRate: '25% YoY';
     variant: 'ai-legal-enterprise';
     contactInfo: contact;
@@ -3073,9 +3073,9 @@ export const,
     technology: ['Python, Qiskit, TensorFlow, React, Node.js, PostgreSQL, Quantum simulators'];
     integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     useCases: ['Drug discovery, Materials science, Financial modeling, Climate research'];
-    roi: 'Accelerate research breakthroughs by 10x and reduce computational costs by 70%';
+    roi: 'Accelerate research breakthroughs by 10 x and reduce computational costs by 70%';
     competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
-    marketSize: '$5B+ Quantum Computing market';
+    marketSize: '$5 B+ Quantum Computing market';
     growthRate: '50% YoY';
     variant: 'quantum-ai-revolutionary';
     contactInfo: contact;
@@ -3114,7 +3114,7 @@ export const,
     useCases: ['Continuous deployment, Infrastructure automation, Performance monitoring, Security automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%';
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
-    marketSize: '$10B+ DevOps market';
+    marketSize: '$10 B+ DevOps market';
     growthRate: '22% YoY';
     variant: 'autonomous-devops';
     contactInfo: contact;
@@ -3151,9 +3151,9 @@ export const,
     technology: ['Python, Rust, React, Node.js, PostgreSQL, Quantum algorithms, AI models'];
     integrations: ['NASA APIs, ESA systems, SpaceX technologies, Satellite networks'];
     useCases: ['Satellite operations, Space exploration, Climate research, Resource mining'];
-    roi: 'Accelerate space missions by 5x and reduce operational costs by 60%';
+    roi: 'Accelerate space missions by 5 x and reduce operational costs by 60%';
     competitors: ['SpaceX, Blue Origin, NASA, ESA, Lockheed Martin'];
-    marketSize: '$400B+ Space Technology market';
+    marketSize: '$400 B+ Space Technology market';
     growthRate: '40% YoY';
     variant: 'space-tech-enterprise';
     contactInfo: contact;
@@ -3190,9 +3190,9 @@ export const,
     technology: ['Python, C++, React, Node.js, PostgreSQL, TensorFlow, Signal processing'];
     integrations: ['EEG devices, Medical imaging systems, Research databases, Clinical trial platforms'];
     useCases: ['Medical rehabilitation, Gaming and entertainment, Research and development, Accessibility'];
-    roi: 'Accelerate BCI development by 10x and improve patient outcomes by 50%';
+    roi: 'Accelerate BCI development by 10 x and improve patient outcomes by 50%';
     competitors: ['Neuralink, Kernel, CTRL-labs, Paradromics, Synchron'];
-    marketSize: '$2B+ Neural Interface market';
+    marketSize: '$2 B+ Neural Interface market';
     growthRate: '60% YoY';
     variant: 'bci-enterprise';
     contactInfo: contact;
@@ -3231,7 +3231,7 @@ export const,
     useCases: ['Patient care optimization, Population health management, Clinical research, Healthcare operations'];
     roi: 'Improve patient outcomes by 30% and reduce healthcare costs by 25%';
     competitors: ['Epic, Cerner, Allscripts, Athenahealth, eClinicalWorks'];
-    marketSize: '$45B+ Healthcare IT market';
+    marketSize: '$45 B+ Healthcare IT market';
     growthRate: '18% YoY';
     variant: 'ai-healthcare-enterprise';
     contactInfo: contact;
@@ -3270,7 +3270,7 @@ export const,
     useCases: ['Portfolio optimization, Risk management, Algorithmic trading, Financial research'];
     roi: 'Improve portfolio returns by 15% and reduce risk by 40%';
     competitors: ['Bloomberg, Refinitiv, FactSet, Morningstar, S&P Global'];
-    marketSize: '$30B+ Financial Data market';
+    marketSize: '$30 B+ Financial Data market';
     growthRate: '25% YoY';
     variant: 'quantum-finance-enterprise';
     contactInfo: contact;
@@ -3309,7 +3309,7 @@ export const,
     useCases: ['Blog writing, Social media content, Email marketing, Product descriptions'];
     roi: 'Increase content production by 300% and improve engagement by 45%';
     competitors: ['Grammarly, Copy.ai, Jasper, Writesonic, ContentBot'];
-    marketSize: '$12B+ Content Creation market';
+    marketSize: '$12 B+ Content Creation market';
     growthRate: '35% YoY';
     variant: 'ai-content-enterprise';
     contactInfo: contact;
@@ -3346,9 +3346,9 @@ export const,
     technology: ['Python, TensorFlow, OpenCV, React, Node.js, Kubernetes, Docker'];
     integrations: ['NVIDIA GPUs, Intel processors, AWS, Azure, GCP, IoT platforms'];
     useCases: ['Video surveillance, Live streaming, Autonomous vehicles, Industrial monitoring'];
-    roi: 'Reduce video processing costs by 60% and improve performance by 5x';
+    roi: 'Reduce video processing costs by 60% and improve performance by 5 x';
     competitors: ['NVIDIA DeepStream, Intel OpenVINO, AWS Panorama, Google Cloud Video AI'];
-    marketSize: '$8B+ Video Analytics market';
+    marketSize: '$8 B+ Video Analytics market';
     growthRate: '40% YoY';
     variant: 'edge-ai-enterprise';
     contactInfo: contact;
@@ -3387,7 +3387,7 @@ export const,
     useCases: ['Recruitment automation, Employee engagement, Performance management, Workforce analytics'];
     roi: 'Reduce hiring time by 50% and improve employee retention by 30%';
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'];
-    marketSize: '$20B+ HR Tech market';
+    marketSize: '$20 B+ HR Tech market';
     growthRate: '22% YoY';
     variant: 'ai-hr-enterprise';
     contactInfo: contact;
@@ -3424,9 +3424,9 @@ export const,
     technology: ['Python, Qiskit, TensorFlow, PyTorch, React, Node.js, Quantum simulators'];
     integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
     useCases: ['Drug discovery, Financial modeling, Climate research, Optimization problems'];
-    roi: 'Accelerate ML model training by 100x and solve previously intractable problems';
+    roi: 'Accelerate ML model training by 100 x and solve previously intractable problems';
     competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket'];
-    marketSize: '$15B+ Quantum ML market';
+    marketSize: '$15 B+ Quantum ML market';
     growthRate: '45% YoY';
     variant: 'quantum-ml-enterprise';
     contactInfo: contact;
@@ -3465,7 +3465,7 @@ export const,
     useCases: ['Building energy optimization, Industrial efficiency, Smart grid management, Sustainability tracking'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%';
     competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls, ABB'];
-    marketSize: '$35B+ Energy Management market';
+    marketSize: '$35 B+ Energy Management market';
     growthRate: '20% YoY';
     variant: 'ai-energy-enterprise';
     contactInfo: contact;
@@ -3504,7 +3504,7 @@ export const,
     useCases: ['Warehouse automation, Order fulfillment, Inventory management, Last-mile delivery'];
     roi: 'Increase warehouse efficiency by 300% and reduce operational costs by 40%';
     competitors: ['Amazon Robotics, Fetch Robotics, Locus Robotics, 6 River Systems, AutoStore'];
-    marketSize: '$28B+ Warehouse Robotics market';
+    marketSize: '$28 B+ Warehouse Robotics market';
     growthRate: '35% YoY';
     variant: 'autonomous-robotics-enterprise';
     contactInfo: contact;

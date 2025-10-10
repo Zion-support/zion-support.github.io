@@ -973,7 +973,7 @@ export const,
       competitors: [,
         'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
       ]
-      marketSize: '$28B warehouse automation market'
+      marketSize: '$28 B warehouse automation market'
       growthRate: '38% annual growth'
       variant: 'ai-supply-chain-enterprise',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1563,7 +1563,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
     roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.';
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
-    marketSize: '$45B supply chain management market';
+    marketSize: '$45 B supply chain management market';
     growthRate: '28% annual growth';
     variant: 'logistics'}
     contactInfo: {}
@@ -1604,9 +1604,9 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     technology: ['Quantum Computing, Logistics Optimization, Route Planning, Scheduling, Quantum Algorithms'];
     integrations: ['TMS platforms, Fleet management systems, GPS tracking, Analytics tools, Reporting systems'];
     useCases: ['Route optimization, Vehicle scheduling, Capacity planning, Network optimization, Research'];
-    roi: 'Improve route efficiency by 35%. Reduce fuel costs by 25%. Speed up optimization by 1000x.';
+    roi: 'Improve route efficiency by 35%. Reduce fuel costs by 25%. Speed up optimization by 1000 x.';
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'];
-    marketSize: '$8B quantum computing market';
+    marketSize: '$8 B quantum computing market';
     growthRate: '65% annual growth';
     variant: 'quantum-logistics'}
     contactInfo: {}
@@ -1649,7 +1649,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Fleet monitoring, Predictive maintenance, Route optimization, Driver management, Cost optimization'];
     roi: 'Reduce fuel costs by 20%. Improve fleet utilization by 25%. Cut maintenance costs by 30%.';
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'];
-    marketSize: '$30B fleet management market';
+    marketSize: '$30 B fleet management market';
     growthRate: '32% annual growth';
     variant: 'iot-futuristic'}
     contactInfo: {}
@@ -1692,7 +1692,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Supply chain traceability, Quality assurance, Compliance, Sustainability, Risk management'];
     roi: 'Improve traceability by 100%. Reduce compliance costs by 40%. Enhance brand trust by 60%.';
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'];
-    marketSize: '$22B blockchain supply chain market';
+    marketSize: '$22 B blockchain supply chain market';
     growthRate: '45% annual growth';
     variant: 'blockchain-futuristic'}
     contactInfo: {}
@@ -1735,7 +1735,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     useCases: ['Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'];
     roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.';
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'];
-    marketSize: '$28B warehouse automation market';
+    marketSize: '$28 B warehouse automation market';
     growthRate: '38% annual growth';
     variant: 'ai-supply-chain-enterprise'}
     contactInfo: {}

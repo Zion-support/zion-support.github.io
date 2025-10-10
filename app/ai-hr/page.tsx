@@ -21,9 +21,9 @@ const AiHrPage: React.FC = () => {
         keywords={["HR AI","recruitment automation","employee analytics","HR management","talent acquisition"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-hr"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

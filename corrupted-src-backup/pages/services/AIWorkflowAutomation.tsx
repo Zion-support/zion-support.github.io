@@ -176,7 +176,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
     {
       na, m, e: "Michael, Rodrigue, z","
       ro, l, e: "Operations, Directo, r, Global, Manufacturing, Co.","
-      conte, n, t: "The, intelligent, process discovery, feature, identified $2M, in, savings opportunities, we, never knew, existe, d. Ga, m, e-changing, technolog, y.","
+      conte, n, t: "The, intelligent, process discovery, feature, identified $2 M, in, savings opportunities, we, never knew, existe, d. Ga, m, e-changing, technolog, y.","
       na, m, e: "Michael, Rodrigue, z",";
       ro, l, e: "Operations, Directo, r, Global, Manufacturing, Co.",";
       conte, n, t: "The, intelligent, process discovery, feature, identified $2M, in, savings opportunities, we, never knew, existe, d. Ga, m, e-changing, technolog, y.",";
@@ -202,14 +202,14 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       resul, t, s: [,
         "85% reduction, in, processing ti, m, e"
         "99.7% accuracy, improvemen, t"
-        "$15M, annual, cost savin, g, s"
+        "$15 M, annual, cost savin, g, s"
       tit, l, e: "Fortune, 500, Manufacturing",";
       challen, g, e: "Manual, workflow, processes causing, delays, and erro, r, s",";
       soluti, o, n: "Implemented, A, I-driven, automation, for supply, chain, management",";
       resul, t, s: [,
         "85% reduction, in, processing ti, m, e",";
         "99.7% accuracy, improvemen, t",";
-        "$15M, annual, cost savin, g, s",";
+        "$15 M, annual, cost savin, g, s",";
         "ROI, achieved, in 4, month, s"
       ]
     }
@@ -220,14 +220,14 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
       resul, t, s: [,
         "90% faster, compliance, reporting"
         "1, 0, 0% audit, compliance, rate"
-        "$8M, operational, savings"
+        "$8 M, operational, savings"
       tit, l, e: "Global, Financial, Services",";
       challen, g, e: "Complex, compliance, workflows requiring, manual, oversight",";
       soluti, o, n: "Deployed, intelligent, automation with, rea, l-time, monitorin, g",";
       resul, t, s: [,
         "90% faster, compliance, reporting",";
         "1, 0, 0% audit, compliance, rate",";
-        "$8M, operational, savings",";
+        "$8 M, operational, savings",";
         "50% reduction, in, compliance team, workloa, d"
       ]
     }
@@ -246,7 +246,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {
         "75% faster, patient, processing",";
         "95% reduction, in, data entry, error, s",";
         "40% improvement, in, patient satisfacti, o, n",";
-        "$12M, annual, efficiency gai, n, s"
+        "$12 M, annual, efficiency gai, n, s"
       ]
     }
   ];
@@ -327,7 +327,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 AI, Workflo, w</h1> <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Automati, o, n</sp, a, n>
               </h1>
-              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+              <p, className="te, x, t-xl, m, d: te, x, t-2 xl, tex, t-bl, u, e-100, ma, x-w-4 xl, m, x-auto, m, b-8">"
                 Transform, your, business processes, with, intelligent automation, that, reduces costs, by, 75%
                 increases, efficiency, by 1, 0, x, and, eliminates, manual erro, r, s.
               </p>
@@ -591,7 +591,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">";
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>

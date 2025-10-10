@@ -379,8 +379,7 @@ const ContentCarousel: React.FC = () => {,
           <div className="flex justify-center space-x-2 mt-6">{slides.map((_, index) => (</div><button
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 key={index}
-                onClick={() =>goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                onClick={() =>goToSlide(index)}</button></<<<butto>className</butto></butto>={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/50'
 =======
           <div className="flex justify-center space-x-2 mt-6">

@@ -9,16 +9,16 @@ import Footer from '../components/Footer';
 
 const AICybersecuritySuitePage: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Cybersecurity Suite - Advanced Threat Protection | Zion Tech Group"
         description="Comprehensive AI-powered cybersecurity solutions with real-time threat detection, automated response, and advanced analytics. Starting at $1,999/month."
         keywords="AI cybersecurity, threat detection, security automation, cyber defense, AI security, threat intelligence, security analytics"
         canonical="https://ziontechgroup.com/ai-cybersecurity-suite"
-      />
-      <Navigation />
+      /></SEOHea>
+      <Navigation /></Navigatio>
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></mai>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"></section>
@@ -33,7 +33,7 @@ const AICybersecuritySuitePage: React.FC = () => {
                   Advanced Threat Protection
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
                 Protect your organization with AI-powered cybersecurity solutions. Real-time threat detection, 
                 automated response, and advanced analytics for comprehensive security.
               </p>
@@ -41,16 +41,14 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Security Assessment
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                ></a></<<<a>Get</a></<<a>Security</a> Assessment
+                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
                 </a>
                 <a 
                   href="#demo" 
                   className="inline-flex items-center px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-white transition-all duration-300"
-                >
-                  <Eye className="mr-2 w-5 h-5" />
-                  View Demo
+                ></a>
+                  <Eye className="mr-2 w-5 h-5" /></Eye></<<<Eye>View</Eye></<<Eye>Demo</Eye>
                 </a>
               </div>
             </div>
@@ -64,7 +62,7 @@ const AICybersecuritySuitePage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Comprehensive AI Security Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Advanced AI-powered cybersecurity tools to protect against modern threats
               </p>
             </div>
@@ -74,18 +72,16 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Brain className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Threat Detection</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Threat Detection</h>
                 <p className="text-gray-600 mb-4">
                   Machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Real-time analysis
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Real</CheckCircle></CheckCircle>-time analysis
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Behavioral analysis
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Behavioral</CheckCircle></<<CheckCircle>analysis</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -94,18 +90,16 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Response</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Response</h>
                 <p className="text-gray-600 mb-4">
                   Instant automated response to security incidents with AI-powered decision making.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Instant response
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Instant</CheckCircle></<<CheckCircle>response</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Smart quarantine
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Smart</CheckCircle></<<CheckCircle>quarantine</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -114,18 +108,17 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Monitoring</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Monitoring</h>
                 <p className="text-gray-600 mb-4">
                   24/7 network monitoring with AI-powered anomaly detection and traffic analysis.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircl>
                     24/7 monitoring
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Traffic analysis
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Traffic</CheckCircle></<<CheckCircle>analysis</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -134,18 +127,16 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Target className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vulnerability Assessment</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vulnerability Assessment</h>
                 <p className="text-gray-600 mb-4">
                   Automated vulnerability scanning and penetration testing with AI-enhanced analysis.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Automated scanning
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Automated</CheckCircle></<<CheckCircle>scanning</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Risk prioritization
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Risk</CheckCircle></<<CheckCircle>prioritization</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -154,18 +145,15 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <AlertTriangle className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Threat Intelligence</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Threat Intelligence</h>
                 <p className="text-gray-600 mb-4">
                   Global threat intelligence feeds with AI-powered correlation and analysis.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Global threat feeds
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Predictive analysis
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Global</CheckCircle></<<CheckCircle>threat</CheckCircle></<CheckCircle>feeds</CheckCircle>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Predictive</CheckCircle></<<CheckCircle>analysis</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -174,18 +162,16 @@ const AICybersecuritySuitePage: React.FC = () => {
                 <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Operations</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Operations</h>
                 <p className="text-gray-600 mb-4">
                   Centralized security operations center with AI-powered incident management.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Centralized SOC
+                <ul className="space-y-2"></u>
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Centralized</CheckCircle></<<CheckCircle>SOC</CheckCircle>
                   </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Incident management
+                  <li className="flex items-center text-sm text-gray-600"></l>
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Incident</CheckCircle></<<CheckCircle>management</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -200,7 +186,7 @@ const AICybersecuritySuitePage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Advanced Security Capabilities
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Comprehensive protection against all types of cyber threats
               </p>
             </div>
@@ -280,7 +266,7 @@ const AICybersecuritySuitePage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Cybersecurity Pricing
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
                 Comprehensive security solutions for organizations of all sizes
               </p>
             </div>
@@ -295,22 +281,22 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For small businesses and startups</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Up to 50 endpoints</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Up to 50 endpoints</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Basic threat detection</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Basic threat detection</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Email support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Email support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Monthly reports</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Monthly reports</spa>
                   </li>
                 </ul>
                 <a 
@@ -335,26 +321,26 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For mid to large enterprises</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Up to 500 endpoints</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Up to 500 endpoints</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Advanced AI detection</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Advanced AI detection</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">24/7 phone support</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">24/7 phone support</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Real-time monitoring</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Real-time monitoring</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Compliance reporting</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Compliance reporting</spa>
                   </li>
                 </ul>
                 <a 
@@ -374,26 +360,26 @@ const AICybersecuritySuitePage: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-8">For large organizations and government</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited endpoints</span>
+                <ul className="space-y-4 mb-8"></u>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Unlimited endpoints</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom AI models</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom AI models</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Dedicated SOC team</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Dedicated SOC team</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">On-premise deployment</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">On-premise deployment</spa>
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Custom integrations</span>
+                  <li className="flex items-center"></l>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
+                    <span className="text-gray-700">Custom integrations</spa>
                   </li>
                 </ul>
                 <a 
@@ -420,16 +406,14 @@ const AICybersecuritySuitePage: React.FC = () => {
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Suite Inquiry"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Security Assessment
-                <ArrowRight className="ml-2 w-5 h-5" />
+              ></a></<<<a>Get</a></<<a>Security</a> Assessment
+                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
               </a>
               <a 
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+              ></a>
+                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
               </a>
             </div>
           </div>
@@ -456,7 +440,7 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
+      <Footer /></Foote>
     </ErrorBoundary>
   );
 };

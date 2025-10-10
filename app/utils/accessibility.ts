@@ -70,9 +70,9 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     this.liveRegion.className = 'sr-only';
     this.liveRegion.style.cssText = `
       position: absolute;
-      left: -10000px;
-      width: 1px;
-      height: 1px;
+      left: -10000 px;
+      width: 1 px;
+      height: 1 px;
       overflow: hidden;
     `;
     document.body.appendChild(this.liveRegion);
@@ -472,14 +472,14 @@ export const accessibilityUtils = {}
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
       position: absolute;
-      top: -40px;
-      left: 6px;
+      top: -40 px;
+      left: 6 px;
       background: #000;
       color: #fff;
-      padding: 8px;
+      padding: 8 px;
       text-decoration: none;
       z-index: 1000;
-      transition: top 0.3s;
+      transition: top 0.3 s;
     `;
 <<<<<<< HEAD
 ,

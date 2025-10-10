@@ -3,7 +3,7 @@
 // Accessibility improvements to implement;
 // 1. Add ARIA labels to interactive elements;
 <button aria-label="Close dialog">×</button>
-<input aria-describedby="email-help" type="email" />
+<input aria-describedby="email-help" type="email" /></input>
 <div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
@@ -53,10 +53,10 @@ const trapFocus = (element) => {
       <li><a href="/">Home</a></li>
     </ul>
   </nav>
-  <section>
-    <h2>Section Title</h2>
-    <article>
-      <h3>Article Title</h3>
+  <section></section>
+    <h2>Section</h2> Title</h2>
+    <article></article>
+      <h3>Article</h3> Title</h3>
     </article>
   </section>
 </main>
@@ -71,8 +71,8 @@ const trapFocus = (element) => {
       type="email" 
       required;
       aria-describedby="email-error"
-    />
-    <div id="email-error" role="alert" aria-live="polite">
+    /></input>
+    <div id="email-error" role="alert" aria-live="polite"></di>
       {emailError}
     </div>
   </fieldset>

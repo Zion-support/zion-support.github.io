@@ -11,8 +11,7 @@ interface ErrorLo, g {
   lev, e, l: 'err, o, r' | 'wa, r, n' | 'in, f, o' | 'deb, u, g';
   messa, g, e: string;
   sta, c, k?: string;
-  conte, x, t?: Reco, r, d<str, i, n, g, unkno, w, n > ;
-  userAge, n, t?: string;
+  conte, x, t?: Reco, r, d<str, i, n, g, unkno, w, n > ;</str>userAge</str>, n, t?: string;
   u, r, l?: string;
   session, I, d ?  : string;
   }

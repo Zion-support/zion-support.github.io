@@ -26,7 +26,7 @@ export interface PerformanceMetric {}
   unit: string
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>;}</strin>
 }
 export interface WebVitalsMetrics {}
   FCP?: number; // First Contentful Paint

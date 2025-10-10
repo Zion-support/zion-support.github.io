@@ -890,7 +890,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$11.8B';
+    marketSize: '$11.8 B';
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies';
     competitiveAdvantage: 'AI-powered churn prediction, personalized engagement, predictive analytics';
     useCases: [
@@ -966,7 +966,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$15.4B';
+    marketSize: '$15.4 B';
     targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks';
     competitiveAdvantage: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics';
     useCases: [
@@ -1042,7 +1042,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$13.7B';
+    marketSize: '$13.7 B';
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups';
     competitiveAdvantage: 'Blockchain-based verification, biometric authentication, global compliance';
     useCases: [
@@ -1118,7 +1118,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$9.8B';
+    marketSize: '$9.8 B';
     targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies';
     competitiveAdvantage: 'AI-powered HR analytics, predictive modeling, comprehensive insights';
     useCases: [
@@ -1194,7 +1194,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       phone: '+1 302 464 0950'}
       email: 'kleber@ziontechgroup.com',
     };
-    marketSize: '$28.9B';
+    marketSize: '$28.9 B';
     targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions';
     competitiveAdvantage: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics';
     useCases: [

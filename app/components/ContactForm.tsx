@@ -114,7 +114,7 @@ const ContactForm: React.FC = () => {,
                 <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   +1 (302) 464-0950;
                 </a>
-                <p className="text-gray-400 text-sm mt-1">Mon-Fri 9AM-6PM EST</p>
+                <p className="text-gray-400 text-sm mt-1">Mon-Fri 9 AM-6 PM EST</p>
               </div>
             </div>
 
@@ -177,7 +177,7 @@ const ContactForm: React.FC = () => {,
                   required;
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
                   placeholder="John Doe"
-                />
+                /></inpu>
               </div>
 
               <div></div>
@@ -193,7 +193,7 @@ const ContactForm: React.FC = () => {,
                   required;
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
                   placeholder="john@company.com"
-                />
+                /></inpu>
               </div>
             </div>
 
@@ -210,7 +210,7 @@ const ContactForm: React.FC = () => {,
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
                   placeholder="Your Company"
-                />
+                /></inpu>
               </div>
 
               <div></div>
@@ -225,7 +225,7 @@ const ContactForm: React.FC = () => {,
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors"
                   placeholder="+1 (555) 123-4567"
-                />
+                /></inpu>
               </div>
             </div>
 
@@ -262,7 +262,7 @@ const ContactForm: React.FC = () => {,
                 rows={5}
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-colors resize-none"
                 placeholder="Tell us about your project and how we can help..."
-              />
+              /></textare>
             </div>
 ,
             {status.message && (,
@@ -274,9 +274,9 @@ const ContactForm: React.FC = () => {,
                 {status.type === 'success' ? (</div>
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                 ) : status.type === 'error' ? (
-                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                  <AlertCircle className="w-5 h-5 flex-shrink-0" /></AlertCircl>
                 ) : null}
-                <span>{status.message}</span>
+                <span>{status.message}</spa>
               </div>
             )}
 

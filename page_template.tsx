@@ -8,8 +8,7 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 const PageTemplate: React.FC<{
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
+  icon: React.ComponentType<any>;</any>features</any>: string[];
   benefits: string[];
   price: string;
   category: string;
@@ -42,7 +41,7 @@ const PageTemplate: React.FC<{
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
               {title}
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
               {description}
             </p>
 <<<<<<< HEAD

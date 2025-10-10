@@ -45,8 +45,8 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p"></div>
             <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}
               transiti, o, n = {{ durat, i, o, n:  , 6, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
-            >
-              <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />
+            ></moti>
+              <Sparkles, classNam, e = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>
               <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0" />
@@ -63,7 +63,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Advertising, Hu, b;
           </h3>
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, m, b-12">
+          <p, className="te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-5 xl, m, x-auto, leadin, g-relaxed, m, b-12">
             Discover, the, most advanced, AI, content library, availabl, e. From, quantu, m-neural, computing, to autonomous, operation, s - 
             everything, you, need to, lead, the AI, revolution, is right, her, e.
           </p>
@@ -197,7 +197,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 { [...Arr, a, y(, 5)].m, a, p((_, i) = > (</div>
                   <Star, ke, y = { , i  }, classNa, m, e = "w-6 h-6, tex, t-yell, o, w-400, fil, l-curr, e, n, t" />
                 ))}
-                <span, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, m, l-2">5.0/5.0, Ratin, g</sp, a, n>
+                <span, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, m, l-2"></span>5.0/5.0, Ratin, g</sp, a, n>
               </div>
             </div>
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8"></div>

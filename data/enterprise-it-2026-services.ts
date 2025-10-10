@@ -83,7 +83,7 @@ export interface EnterpriseIt2026Service {/* TODO: Fix JSX expression */}
     address: string;
   }
 }
-export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [,
+export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
     id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
     tagline: "Future-ready enterprise IT", price: "$399/month"
     description: "Comprehensive enterprise IT solutions designed for 2026 and beyond."

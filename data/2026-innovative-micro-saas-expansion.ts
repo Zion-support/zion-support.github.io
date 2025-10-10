@@ -237,7 +237,7 @@ const contact =
       ],
       roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.',
       competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView']
-      marketSize: '$29.5B BI market'
+      marketSize: '$29.5 B BI market'
       growthRate: '15% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -380,7 +380,7 @@ const contact =
       ],
       roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.',
       competitors: ['Copy.ai', 'Jasper', 'Writesonic', 'ContentBot']
-      marketSize: '$12.5B content marketing market'
+      marketSize: '$12.5 B content marketing market'
       growthRate: '18% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -510,7 +510,7 @@ const contact =
       ],
       roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.',
       competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
-      marketSize: '$18.5B customer service software market'
+      marketSize: '$18.5 B customer service software market'
       growthRate: '22% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -640,7 +640,7 @@ const contact =
       ],
       roi: 'E-commerce businesses report 25-40% increase in average order value and 30% improvement in conversion rates.',
       competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia']
-      marketSize: '$22.8B e-commerce optimization market'
+      marketSize: '$22.8 B e-commerce optimization market'
       growthRate: '20% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -779,7 +779,7 @@ const contact =
       ],
       roi: 'HR teams save 20-30 hours per week and improve hiring quality by 40%.',
       competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
-      marketSize: '$15.8B HR software market'
+      marketSize: '$15.8 B HR software market'
       growthRate: '12% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -922,7 +922,7 @@ const contact =
       ],
       roi: 'Users report 25% improvement in savings and 40% better financial decision-making.',
       competitors: ['Mint', 'YNAB', 'Personal Capital', 'Moneydance']
-      marketSize: '$8.9B personal finance software market'
+      marketSize: '$8.9 B personal finance software market'
       growthRate: '16% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -1061,7 +1061,7 @@ const contact =
       ],
       roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.',
       competitors: ['Asana', 'Monday.com', 'ClickUp', 'Basecamp']
-      marketSize: '$6.8B project management software market'
+      marketSize: '$6.8 B project management software market'
       growthRate: '14% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -1191,7 +1191,7 @@ const contact =
       ],
       roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.',
       competitors: ['Canvas', 'Blackboard', 'Moodle', 'Schoology']
-      marketSize: '$18.6B learning management system market'
+      marketSize: '$18.6 B learning management system market'
       growthRate: '19% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -1321,7 +1321,7 @@ const contact =
       ],
       roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.',
       competitors: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion']
-      marketSize: '$31.5B healthcare IT market'
+      marketSize: '$31.5 B healthcare IT market'
       growthRate: '17% annual growth'
       contactInfo: contact;
       realImplementation: true;
@@ -2371,7 +2371,7 @@ export const,
     useCases: ['Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI trackingOperational efficiency monitoring'];
     roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.';
     competitors: ['TableauPower BILookerQlikView'];
-    marketSize: '$29.5B BI market';
+    marketSize: '$29.5 B BI market';
     growthRate: '15% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2404,12 +2404,12 @@ export const,
     setupTime: '30 minutes';
     category: 'Content Creation & Marketing';
     realService: true;
-    technology: ['Next.jsOpenAI GPT-4Node.jsMongoDBAWSRedis'];
+    technology: ['Next.jsOpenAI GPT-4 Node.jsMongoDBAWSRedis'];
     integrations: ['WordPressShopifyMailchimpHootsuiteBufferGoogle Docs'];
     useCases: ['Blog post creationSocial media contentEmail marketingProduct descriptionsAd copy generation'];
     roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.';
     competitors: ['Copy.aiJasperWritesonicContentBot'];
-    marketSize: '$12.5B content marketing market';
+    marketSize: '$12.5 B content marketing market';
     growthRate: '18% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2447,7 +2447,7 @@ export const,
     useCases: ['Customer inquiry handlingTicket automationFAQ managementCustomer satisfaction trackingSupport analytics'];
     roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.';
     competitors: ['ZendeskIntercomFreshdeskHelp Scout'];
-    marketSize: '$18.5B customer service software market';
+    marketSize: '$18.5 B customer service software market';
     growthRate: '22% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2485,7 +2485,7 @@ export const,
     useCases: ['Product recommendation enginesDynamic pricing strategiesInventory optimizationCustomer segmentationConversion optimization'];
     roi: 'E-commerce businesses report 25-40% increase in average order value and 30% improvement in conversion rates.';
     competitors: ['Dynamic YieldOptimizelyKlevuAlgolia'];
-    marketSize: '$22.8B e-commerce optimization market';
+    marketSize: '$22.8 B e-commerce optimization market';
     growthRate: '20% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2523,7 +2523,7 @@ export const,
     useCases: ['Candidate screeningResume parsingInterview schedulingPerformance managementEmployee onboarding'];
     roi: 'HR teams save 20-30 hours per week and improve hiring quality by 40%.';
     competitors: ['WorkdayBambooHRGreenhouseLever'];
-    marketSize: '$15.8B HR software market';
+    marketSize: '$15.8 B HR software market';
     growthRate: '12% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2561,7 +2561,7 @@ export const,
     useCases: ['Personal finance managementBusiness financial planningInvestment trackingBudget optimizationFinancial goal achievement'];
     roi: 'Users report 25% improvement in savings and 40% better financial decision-making.';
     competitors: ['MintYNABPersonal CapitalMoneydance'];
-    marketSize: '$8.9B personal finance software market';
+    marketSize: '$8.9 B personal finance software market';
     growthRate: '16% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2599,7 +2599,7 @@ export const,
     useCases: ['Project planning and schedulingTeam collaborationResource managementRisk assessmentPerformance tracking'];
     roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.';
     competitors: ['AsanaMonday.comClickUpBasecamp'];
-    marketSize: '$6.8B project management software market';
+    marketSize: '$6.8 B project management software market';
     growthRate: '14% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2637,7 +2637,7 @@ export const,
     useCases: ['K-12 educationHigher educationCorporate trainingOnline coursesSkill development'];
     roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.';
     competitors: ['CanvasBlackboardMoodleSchoology'];
-    marketSize: '$18.6B learning management system market';
+    marketSize: '$18.6 B learning management system market';
     growthRate: '19% annual growth';
     contactInfo: contact;
     realImplementation: true;
@@ -2675,7 +2675,7 @@ export const,
     useCases: ['Patient care managementAppointment schedulingMedical record keepingTelemedicine servicesHealthcare analytics'];
     roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.';
     competitors: ['EpicCernerAllscriptsPractice Fusion'];
-    marketSize: '$31.5B healthcare IT market';
+    marketSize: '$31.5 B healthcare IT market';
     growthRate: '17% annual growth';
     contactInfo: contact;
     realImplementation: true;

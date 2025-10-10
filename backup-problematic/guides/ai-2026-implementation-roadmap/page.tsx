@@ -30,7 +30,7 @@ export default function AI2026ImplementationRoadmap() {
       </header>,
 ,
       {/* Article Content */}
-      <article className="max-w-4xl mx-auto px-4 py-8">
+      <article className="max-w-4 xl mx-auto px-4 py-8"></article>
         {/* Article Header */}
         <div className="mb-8"></div>
           <div className="flex items-center space-x-6 text-sm text-gray-600 mb-4"></div>
@@ -482,7 +482,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             </div>
           </div>
 
-          <h2>Implementation Best Practices</h2>
+          <h2>Implementation</h2> Best Practices</h2>
           
           <h3>1. Leadership and Governance</h3>
 <<<<<<< HEAD

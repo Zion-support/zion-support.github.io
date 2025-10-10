@@ -215,8 +215,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                     strokeLinejoin='round'
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     strokeWidth={2}
-                    d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-                  />
+                    d='M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z'
+                  /></p>
                 </svg>
               </div>
 <<<<<<< HEAD

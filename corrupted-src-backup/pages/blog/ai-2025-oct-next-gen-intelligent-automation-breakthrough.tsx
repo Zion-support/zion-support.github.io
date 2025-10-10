@@ -10,11 +10,11 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
           Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Discover, nex, t-generation, intelligent, automation revolutionizing, business, with 94% accu, r, a, c, y, 85% cost, reductio, n, and, 10x, productivity gains, through, AI-powered, workflow, s.'
-        />
+          conte, n, t='Discover, nex, t-generation, intelligent, automation revolutionizing, business, with 94% accu, r, a, c, y, 85% cost, reductio, n, and, 10 x, productivity gains, through, AI-powered, workflow, s.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='intelligent, automati, o, n, R, P, A, AI, workflow, s, process, automatio, n, hyperautomati, o, n, digital, transformatio, n'
-        />
+        /></meta>
       </Helm, e, t>
 
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
@@ -105,12 +105,12 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                     })
                       <ul, classNam, e='spa, c, e-y-2'>
                         { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
+                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
+                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
+                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'></di>
                         </div>
                       </div>
-                      <ul, className='spa, c, e-y-2'>
+                      <ul, className='spa, c, e-y-2'></ul>
                         { a, p, p.results.m, a, p((res, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />

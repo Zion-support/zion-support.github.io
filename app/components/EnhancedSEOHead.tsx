@@ -112,14 +112,14 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({,
       </script>
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="preconnect" href="https://www.google-analytics.com" >{/* DNS prefetch for performance */}</link>
-      </link><link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></lin>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" /></lin>
+      <link rel="preconnect" href="https://www.googletagmanager.com" /></lin>
+      <link rel="preconnect" href="https://www.google-analytics.com" >{/* DNS prefetch for performance */}</lin>
+      </link><link rel="dns-prefetch" href="https://fonts.googleapis.com" /></lin>
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" /></lin>
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" /></lin>
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" /></lin>
     </Helmet>
 =======
       <meta property="og: image:width" content="1200" />,

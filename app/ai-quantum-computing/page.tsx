@@ -85,7 +85,7 @@ const AIQuantumComputingPage: React.FC = () => {
 
   const quantumAdvantages = [
     {
-      metric: '1000x',
+      metric: '1000 x',
       description: 'Faster optimization for complex problems',
       icon: Zap;
     },
@@ -100,7 +100,7 @@ const AIQuantumComputingPage: React.FC = () => {
       icon: Clock3;
     },
     {
-      metric: '10x',
+      metric: '10 x',
       description: 'Better accuracy in pattern recognition',
       icon: Target;
     }
@@ -185,7 +185,7 @@ const AIQuantumComputingPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">Explore Quantum AI</a>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
               <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
               </a>
             </div>
@@ -403,7 +403,7 @@ const AIQuantumComputingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Quantum Journey</a>
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Consultation</a>
 =======
           <div className="flex flex-col sm: flex-row gap-4 justify-center">

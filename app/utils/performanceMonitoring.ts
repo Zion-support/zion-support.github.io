@@ -258,8 +258,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */
 <<<<<<< HEAD
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {}
-    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {}
-      FCP: { good: 1800, poor: 3000 },
+    const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: 1800, poor: 3000 },
       LCP: { good: 2500, poor: 4000 },
       FID: { good: 100, poor: 300 },
       CLS: { good: 0.1, poor: 0.25 },
@@ -693,7 +692,7 @@ export const recordMetric = useCallback((...args) => {}
   performanceMonitoring.recordCustomMetric(name, value, unit)
 }
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {}
-  const thresholds: Record<string, { good: number; poor: number }> = {}
+  const thresholds: Record<string, { good: number; poor: number }> = {}</strin>
     'FCP': { good: 1800, poor: 3000 },
     'LCP': { good: 2500, poor: 4000 },
     'FID': { good: 100, poor: 300 },
@@ -707,9 +706,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
   if (value <= threshold.poor) return 'needs-improvement'
   return 'poor'
 }
-export const getMetrics = (): Record<string, MetricData> => {}
-  const result: Record<string, MetricData> = {}
-  simpleMetrics.forEach((value, key) => {}
+export const getMetrics = (): Record<string, MetricData> => {}</string></<<<string>const</string></<<string>result</string>: Record<string, MetricData> = {}</string></<<<string>simpleMetrics</string></string>.forEach((value, key) => {}
     result[key] = { ...value }
   })
   return result;

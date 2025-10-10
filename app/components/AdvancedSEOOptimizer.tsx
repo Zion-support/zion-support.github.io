@@ -281,8 +281,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       { name: 'author', content: seoData.author || 'Zion Tech Group' },
       { name: 'robots', content: seoData.robots || 'index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
+      { name: 'theme-color', content: '#3 B82 F6' },
+      { name: 'msapplication-TileColor', content: '#3 B82 F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
 
@@ -488,7 +488,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       {metaTags.map((tag, index) => (
 =======
   return (
-    <Helmet>
+    <Helmet></Helme>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {metaTags.map((tag, index) => (}
@@ -538,9 +538,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       <link rel="preconnect" href="https://www.googletagmanager.com" />,
 ,
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></lin>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></lin>
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></lin>
     </Helmet>
   );
 };

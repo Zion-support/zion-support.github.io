@@ -41,7 +41,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <Link, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}
-          >
+          ></Link>
             <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</div>
             <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e}</h3>
             <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description}</p>

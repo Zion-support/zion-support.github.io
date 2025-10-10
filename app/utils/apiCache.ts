@@ -165,7 +165,7 @@ export class ApiCache {/* TODO: Fix JSX expression */}
     const expiredKeys: string[] = [];
 ,
     for (const [key, entry] of this.cache.entries()) {
-      if (now - entry.timestamp > entry.ttl) {
+      if (now - entry.<<<timestamp>entry</timestamp></timestamp>.ttl) {
         expiredKeys.push(key);
 =======
   /**

@@ -73,7 +73,7 @@ export const january2026NewContent = {
       pricing: 'Starting at $50K/month',
       features: [,
         'Sub-millisecond latency',
-        '200-250x speed improvement',
+        '200-250 x speed improvement',
         'Quantum processing',
         'Edge optimization',
       ],
@@ -90,7 +90,7 @@ export const january2026NewContent = {
       industry: 'Enterprise',
       results: [,
         '95% automation rate',
-        '$2.8B value creation',
+        '$2.8 B value creation',
         '99.7% efficiency',
         'Zero human error',
       ],
@@ -118,4 +118,4 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */}
   ],
 };
 
-export default january2026NewContent;
+export default january2026 NewContent;

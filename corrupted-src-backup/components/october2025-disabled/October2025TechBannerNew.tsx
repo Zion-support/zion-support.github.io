@@ -27,8 +27,8 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
           <moti, o, n.div, animat, e={{ rota, t, e: 3, 6, 0 }}
             transiti, o, n = {{ duration: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
-          >
-            <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
+          ></moti>
+            <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
           </moti, o, n.d, i, v>
           <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r">
 =======

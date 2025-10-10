@@ -23,8 +23,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Genai, 2025, Sept 30, Runtime, Rollback V3;
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Learn, about, genai 2025, sept, 30 runtime, rollback, v3 and, how, it can, benefit, your enterpri, s, e.
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>Learn</p>, about, genai 2025, sept, 30 runtime, rollback, v3 and, how, it can, benefit, your enterpri, s, e.
     </d, i, v > );
 =======
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}

@@ -21,9 +21,9 @@ const AiEmailAssistantPage: React.FC = () => {
         keywords={["email AI","email management","email automation","email productivity","smart email"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-email-assistant"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

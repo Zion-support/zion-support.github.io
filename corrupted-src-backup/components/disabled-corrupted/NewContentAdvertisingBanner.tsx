@@ -57,7 +57,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             <span, className="te, x, t-indi, g, o-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
               🚀 NEW, CONTENT, LAUNCH • Sep, t, 3, 0, 20, 2, 5;
             </sp, a, n>
-            <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" />
+            <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" /></Sparkles>
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             Revolutionary, New, Content H, u, b;
@@ -136,7 +136,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>
                   <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-4, 0, 0">
                     {conte, n, t.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
+                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></di>
                     {conte, n, t.bad, g, e}
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
               Get, Premium, Access to, All, Content;
             </h3>
-            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+            <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
               Unlock, exclusive, articl, e, s, early, access, to new, conten, t, and, premium, research repor, t, s. 
               Join, our, elite community, of, technology leaders, and, innovators.
             </p>
@@ -291,7 +291,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
                 Stay, Ahead, with Our, Newslette, r;
               </h3>
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, new, articles. 
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
               </p>

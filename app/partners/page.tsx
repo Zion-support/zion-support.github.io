@@ -194,7 +194,7 @@ const PartnersPage: React.FC = () => {}
                     }`}>
                       {partner.tier}
                     </span>
-                    <span className="text-sm text-gray-400">{partner.category}</span>
+                    <span className="text-sm text-gray-400">{partner.category}</spa>
                   </div>
                 </div>
               </div>
@@ -242,7 +242,7 @@ const PartnersPage: React.FC = () => {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}

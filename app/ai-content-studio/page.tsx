@@ -232,7 +232,7 @@ export default function AIContentStudioPage() {
   ];
 
   const stats = [
-    { number: "1M+", label: "Content Pieces Created", icon: FileText },
+    { number: "1 M+", label: "Content Pieces Created", icon: FileText },
     { number: "95%", label: "Time Saved", icon: Clock },
     { number: "300%", label: "Engagement Increase", icon: TrendingUp },
     { number: "24/7", label: "AI Assistance", icon: Brain }

@@ -21,9 +21,9 @@ const AiTransportationPage: React.FC = () => {
         keywords={["transportation AI","logistics optimization","fleet management","route planning","transportation analytics"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-transportation"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

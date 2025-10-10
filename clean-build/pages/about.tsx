@@ -7,9 +7,9 @@ export default function About() {
         <meta;
           name="description"
           content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        /></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
+        <link rel="icon" href="/favicon.ico" /></link>
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}</div>

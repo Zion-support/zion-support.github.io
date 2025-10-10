@@ -21,9 +21,9 @@ const DataCenterPage: React.FC = () => {
         keywords={["data center","server infrastructure","data center design","energy efficiency","data center management"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/data-center"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

@@ -374,8 +374,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {faqCategori, e, s.m, a, p((catego, r, y) => (
                 <butt, o, n;
   k, e, y={catego, r, y.id}
-                  onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}
-                  classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`
+                  onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa</butt>, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`
                     selectedCatego, r, y === catego, r, y.id;
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}

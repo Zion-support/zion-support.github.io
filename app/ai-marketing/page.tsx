@@ -22,9 +22,9 @@ const AiMarketingPage: React.FC = () => {
         keywords={["AI marketing","marketing automation","campaign optimization","customer insights","marketing AI"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-marketing"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

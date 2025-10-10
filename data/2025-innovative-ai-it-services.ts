@@ -878,7 +878,7 @@
     benefit,
   s: [,
       'Create metaverse experiences in days',
-      'Generate content 10x faster with AI',
+      'Generate content 10 x faster with AI',
       'Monetize virtual experiences',
       'Reach global audiences',
       'Future - proof business presence',
@@ -897,7 +897,7 @@
       'Leading metaverse development platform. Competes with Roblox, Unity, and Unreal Engine. Our advantage: AI integration and business focus.',
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland, The Sandbox'],
     tech_stack: [,
-      '3D Graphics, AI / ML, Web3, Blockchain, Unity, Unreal Engine, Cloud Infrastructure',
+      '3 D Graphics, AI / ML, Web3, Blockchain, Unity, Unreal Engine, Cloud Infrastructure',
     ],
     real_implementation: true;
     implementation_details: unknown;
@@ -2124,7 +2124,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     ];,
     marketPosition: 'Leading metaverse development platform. Competes with Roblox, Unity, and Unreal Engine. Our advantage: AI integration and business focus.';
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland, The Sandbox'];
-    techStack: ['3D Graphics, AI/ML, Web3, Blockchain, Unity, Unreal Engine, Cloud Infrastructure'];
+    techStack: ['3 D Graphics, AI/ML, Web3, Blockchain, Unity, Unreal Engine, Cloud Infrastructure'];
     realImplementation: true;
     implementationDetails: 'Production-ready metaverse platform with comprehensive creation tools, AI-powered content generation, and seamless deployment across multiple platforms.';
     roi: 'Businesses see 300% ROI through virtual presence and new revenue streams. Average payback period: 6 months.';

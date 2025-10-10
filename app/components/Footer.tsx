@@ -638,7 +638,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
               <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
@@ -680,7 +680,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                   </ul>
                 </div>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 

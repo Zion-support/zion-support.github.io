@@ -83,7 +83,7 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
     address: string;
   }
 }
-export const revolutionary2027ITServices: Revolutionary2027ItService[] = [,
+export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027", price: "$349/month"
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2027."

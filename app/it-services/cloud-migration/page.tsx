@@ -33,28 +33,25 @@ const CloudMigration: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Current Infrastructure<select
                     value={currentInfrastructure}
-                    onChange={(e) =>setCurrentInfrastructure(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setCurrentInfrastructure(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
-                    <option value="">Select current setup...<option value="on-premise">On-Premise</option>
-                    <option value="hybrid">Hybrid Cloud<option value="other-cloud">Other Cloud Provider<option value="legacy">Legacy Systems</option>
+                    <option value="">Select current setup...</option><option value="on-premise">On-Premise</optio>
+                    <option value="hybrid">Hybrid Cloud</option><option value="other-cloud">Other Cloud Provider</option><option value="legacy">Legacy Systems</optio>
                   </select>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Target Cloud<select
                     value={targetCloud}
-                    onChange={(e) =>setTargetCloud(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setTargetCloud(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
-                    <option value="">Select target...<option value="aws">Amazon Web Services</option>
-                    <option value="azure">Microsoft Azure<option value="gcp">Google Cloud Platform<option value="multi-cloud">Multi-Cloud</option>
+                    <option value="">Select target...</option><option value="aws">Amazon Web Services</optio>
+                    <option value="azure">Microsoft Azure</option><option value="gcp">Google Cloud Platform</option><option value="multi-cloud">Multi-Cloud</optio>
                   </select>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Migration Scope<select
                     value={migrationScope}
-                    onChange={(e) =>setMigrationScope(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setMigrationScope(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select scope...<option value="lift-shift">Lift & Shift</option>
                     <option value="replatform">Replatform<option value="refactor">Refactor<option value="rearchitect">Rearchitect<button className="cyber-button w-full">Get Migration Plan</button>

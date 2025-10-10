@@ -267,7 +267,7 @@ export const createReducedMotionMode = (): void => {}
       *::after {}
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.01 ms !important;
         scroll-behavior: auto !important;
 =======
 export const createReducedMotionMode = (): void => {/* TODO: Fix JSX expression */}
@@ -328,10 +328,10 @@ export const createScreenReaderOnly = (): void => {}
   style.textContent = `
     .sr-only {}
       position: absolute;
-      width: 1px;
-      height: 1px;
+      width: 1 px;
+      height: 1 px;
       padding: 0;
-      margin: -1px;
+      margin: -1 px;
       overflow: hidden;
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;

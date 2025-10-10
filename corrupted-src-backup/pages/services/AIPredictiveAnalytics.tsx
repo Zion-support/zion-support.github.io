@@ -180,7 +180,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
     {
       na, m, e: "Jennifer, Martine, z","
       ro, l, e: "VP, Marketin, g, RetailTech, Solution, s","
-      conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2M, annuall, y. The, ROI, was evident, within, the first, quarte, r.","
+      conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2 M, annuall, y. The, ROI, was evident, within, the first, quarte, r.","
       na, m, e: "Jennifer, Martine, z",";
       ro, l, e: "VP, Marketin, g, RetailTech, Solution, s",";
       conte, n, t: "The, predictive, analytics platform, helped, us increase, our, customer retention, by, 40% and, optimize, our marketing, spend, by $2M, annuall, y. The, ROI, was evident, within, the first, quarte, r.",";
@@ -200,7 +200,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {
     {
       na, m, e: "Dr. Sarah, Thompso, n","
       ro, l, e: "Head, of, Analytics, Healthcare, Networ, k","
-      conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5M, in, potential losses, and, improving patient, outcome, s.","
+      conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5 M, in, potential losses, and, improving patient, outcome, s.","
       na, m, e: "Dr. Sarah, Thompso, n",";
       ro, l, e: "Head, of, Analytics, Healthcare, Networ, k",";
       conte, n, t: "The, risk, assessment models, identified, potential issues, 3, months before, they, occurred, saving, u, s $5M, in, potential losses, and, improving patient, outcome, s.",";
@@ -615,7 +615,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6"></div>
                       <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8">";
+  g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
@@ -736,7 +736,7 @@ const, AIPredictiveAnalytic, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">";
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>

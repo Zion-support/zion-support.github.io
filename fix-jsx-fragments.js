@@ -31,7 +31,7 @@ function processFile(filePath) {
       for (let i = lines.length - 1; i >= 0; i--) {
         if (
           lines[i].trim().startsWith('</') &&
-          !lines[i].includes('</>') &&
+          !lines[i].includes('') &&
           !lines[i].includes('</Helmet>')
         ) {
           lastClosingTagIndex = i;

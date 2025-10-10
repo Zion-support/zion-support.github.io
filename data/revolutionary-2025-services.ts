@@ -83,7 +83,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
     address: string;
   }
 }
-export const revolutionary2025Services: Revolutionary2025Service[] = [,
+export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
     id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",
     tagline: "Next-generation AI capabilities", price: "$199/month"
     description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence."

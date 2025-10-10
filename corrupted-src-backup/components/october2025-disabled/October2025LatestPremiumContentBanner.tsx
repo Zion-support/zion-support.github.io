@@ -26,7 +26,7 @@ const October2025LatestPremiumContentBanne, r = () => {
                 PREMIUM, CONTEN, T;
               </sp, a, n>
             </div>
-            <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t">
+            <h2, className="te, x, t-3 xl, s, m: te, x, t-4 xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t"></h>
               🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y!
             </h2>
             <p, className="te, x, t-lg, tex, t-purp, l, e-100, m, b-4, ma, x-w-4xl, leadin, g-relax, e, d">

@@ -69,13 +69,13 @@ const Breadcrumb: React.FC = () => {
           <ol className="flex items-center space-x-2 text-sm">
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
             {breadcrumbs.map((item, index) => (
-              <li key={item.href} className="flex items-center">
+              <li key={item.href} className="flex items-center"></li>
                 {index > 0 && (
-                  <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                  <ChevronRight className="w-4 h-4 text-gray-400 mx-2" /></ChevronRight>
                 )}
                 
                 {item.current ? (
-                  <span className="text-cyan-400 font-medium" aria-current="page">
+                  <span className="text-cyan-400 font-medium" aria-current="page"></spa>
                     {item.name}
                   </span>
                 ) : (
@@ -97,8 +97,8 @@ const Breadcrumb: React.FC = () => {
       <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-    </>
+      /></script>
+    
   );
 };
 

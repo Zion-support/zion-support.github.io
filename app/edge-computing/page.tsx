@@ -10,7 +10,7 @@ const EdgeComputingPage: React.FC = () => {
       icon: Cpu;
       title: 'Low-Latency Processing',
       description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
-      benefits: ['< 1ms latency', 'Real-time processing', 'Instant responses']
+      benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
     },
     {
       icon: Zap;

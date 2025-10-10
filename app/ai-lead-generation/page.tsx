@@ -21,9 +21,9 @@ const AiLeadGenerationPage: React.FC = () => {
         keywords={["lead generation","sales automation","lead scoring","CRM integration","conversion optimization"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-lead-generation"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

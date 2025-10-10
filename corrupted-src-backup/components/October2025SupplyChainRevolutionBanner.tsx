@@ -561,7 +561,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
               { indust, r, y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%' }
               { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' }
               { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' }
-              { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4B', r, o, i: '2,4, 0, 0%' }
+              { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4 B', r, o, i: '2,4, 0, 0%' }
               { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -846,6 +846,6 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
     </d, i, v>
   );
 };
-export default October2025SupplyChainRevolutionBanner;
+export default October2025 SupplyChainRevolutionBanner;
 ;
 }"

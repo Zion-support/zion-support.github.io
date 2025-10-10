@@ -33,7 +33,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({
   children;
 }) => {
   return (
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
+    <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
       {children || (
         <div className="p-4 text-center text-gray-600">
 =======
@@ -43,7 +43,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX exp
       {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           <h3 className="text-lg font-semibold mb-2">${componentName}</h3>
-          <p>Component placeholder - implementation needed</p>
+          <p>Component</p> placeholder - implementation needed</p>
         </div>
       )}
     </div>

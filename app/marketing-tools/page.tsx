@@ -21,9 +21,9 @@ const MarketingToolsPage: React.FC = () => {
         keywords={["marketing tools","digital marketing","campaign management","marketing automation","marketing analytics"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/marketing-tools"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

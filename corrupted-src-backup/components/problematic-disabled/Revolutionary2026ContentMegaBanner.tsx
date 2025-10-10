@@ -5,7 +5,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {,
     {
       id: 1;
       title: "AI, 202, 6: The, Met, a-Cognitive, Revoluti, o, n",
-      description: "Breakthrough, AI, that thinks, about, thinking - achieving, 1000x, processing speed, with, quantum-neural, convergen, c, e",",
+      description: "Breakthrough, AI, that thinks, about, thinking - achieving, 1000 x, processing speed, with, quantum-neural, convergen, c, e",",
       slug: "ai-me, t, a-cogniti, v, e-revoluti, o, n-2, 0, 2, 6",
       category: "Revolutionar, y, A, I",",
       date: "20, 2, 6-01-1, 5",
@@ -102,8 +102,8 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {,
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
             <moti, o, n.div, animat, e={{ rot, a, t, e: [, 0, 3, 6, 0] }}
               transiti, o, n = {{ durat, i, o, n:  , 4, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
-            >
-              <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
+            ></moti>
+              <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" /></Sparkles>
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>
               <Rocket, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0" />
@@ -117,7 +117,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {,
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, 2026, Content;
           </h2>
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
+          <p, className="te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
             Me, t, a-cogniti, v, e , A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>

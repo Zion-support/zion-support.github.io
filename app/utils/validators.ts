@@ -311,7 +311,7 @@ export function isStrongPassword(password: string): boolean {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);,
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
 
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
@@ -384,7 +384,7 @@ export function validateLength(value: string, min: number, max: number, fieldNam
   if (value.length < min) {
     return { isValid: false, error: `${fieldName} must be at least ${min} characters` };
   }
-  if (value.length > max) {
+  if (value.<<<length>max</length></length>) {
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
   }
   return { isValid: true };

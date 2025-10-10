@@ -26,9 +26,9 @@ const AI3DGenerationPage: React.FC = () => {,
   ];
 
   const benefits = [
-    'Reduce 3D content creation time by 90%',
+    'Reduce 3 D content creation time by 90%',
     'Lower production costs by 80%',
-    'Create unlimited unique 3D assets',
+    'Create unlimited unique 3 D assets',
     'Accelerate game and app development',
     'Enable rapid prototyping',
     'Improve visual quality and consistency',
@@ -112,7 +112,7 @@ const AI3DGenerationPage: React.FC = () => {
     {
 <<<<<<< HEAD
       title: 'Entertainment & Media',
-      description: 'Produce 3D content for films and animations',
+      description: 'Produce 3 D content for films and animations',
       icon: '🎬',
       examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
     }
@@ -205,9 +205,9 @@ const AI3DGenerationPage: React.FC = () => {
   ];
 
   const technologies = [
-    'NeRF (Neural Radiance Fields)', '3D GANs', 'Point Cloud Processing',
+    'NeRF (Neural Radiance Fields)', '3 D GANs', 'Point Cloud Processing',
     'Mesh Generation', 'Texture Synthesis', 'Blender API Integration',
-    'Unity Integration', 'Unreal Engine Support', 'Custom 3D Models',
+    'Unity Integration', 'Unreal Engine Support', 'Custom 3 D Models',
     'Deep Learning', 'Computer Vision', 'Generative AI'
   ];
 

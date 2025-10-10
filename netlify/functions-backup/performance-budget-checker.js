@@ -103,7 +103,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   try {const htmlRes = await fetch(baseUrl);
     const _html = await htmlRes.text();
     const scriptSrcs = Array.from(
-      html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi),
+      html.matchAll(/<script[^>]*src=["']([^"']+)["'][^>]*>/gi),</script>
     )
       .map(m => m[1])
       .map(abs)

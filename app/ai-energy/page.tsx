@@ -21,9 +21,9 @@ const AiEnergyPage: React.FC = () => {
         keywords={["energy management","smart energy","renewable energy","energy optimization","sustainability"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-energy"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

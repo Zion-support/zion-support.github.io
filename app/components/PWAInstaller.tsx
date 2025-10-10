@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;</void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
 const PWAInstaller: React.FC = () => {,
@@ -94,13 +93,10 @@ const PWAInstaller: React.FC = () => {,
               onClick={handleInstallClick}
 <<<<<<< HEAD
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
-            >Install<button
-              onClick={() =>setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
-            ></button>
-              Maybe later<button
-          onClick={() =>setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
+            >Install</button><button
+              onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
+            ></<<<button>Maybe</button></<<button>later</button><button
+          onClick={() =>setShowInstallButton(false)}</button></<<<butto>className</butto></butto>="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
         ></button>
           ×</button>
         </button>

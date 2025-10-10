@@ -309,7 +309,7 @@
     technology: ['Twilio', 'Next.js', 'Vercel / Netlify'],
     integrations: ['HubSpot', 'Sheets', 'Slack'],
     use_cases: ['NPS', 'Feature feedback', 'Onboarding'],
-    roi: '24x higher completion on mobile',
+    roi: '24 x higher completion on mobile',
     competitors: ['Typeform', 'SurveyMonkey'],
     market_size: '$7B research tooling'
     growth_rate: '9% CAGR'
@@ -2353,7 +2353,7 @@
     useCases: ['Cleanup debt', 'Reduce risk']
     roi: 'Avoid outages, reduce toil',
   competitors: ['LaunchDarkly add-ons'];
-    marketSize: '$1B flags'
+    marketSize: '$1 B flags'
     growthRate: '10% CAGR'
     variant: 'ai-futuristic'
     contactInfo: contact;
@@ -2846,7 +2846,7 @@
     useCases: ['DB tuning', 'Perf boosts']
     roi: 'Cut query costs 2050%'
     competitors: ['pganalyze (adjacent)'];
-    marketSize: '$2B DB tuning'
+    marketSize: '$2 B DB tuning'
     growthRate: '9% CAGR'
     variant: 'network-futuristic'
     contactInfo: contact;
@@ -2949,7 +2949,7 @@
     useCases: ['Storage hygiene', 'Cost cuts']
     roi: 'Save 1030% storage spend'
     competitors: ['Kubecost (adjacent)'];
-    marketSize: '$3B cloud cost'
+    marketSize: '$3 B cloud cost'
     growthRate: '12% CAGR'
     variant: 'holographic-matrix'
     contactInfo: contact;
@@ -3060,7 +3060,7 @@
     useCases: ['Compliance audits', 'Risk reduction']
     roi: 'Avoid incidents and fines',
     competitors: ['Google DLP', 'AWS Macie']
-    marketSize: '$5B data security'
+    marketSize: '$5 B data security'
     growthRate: '15% CAGR'
     variant: 'ai-futuristic'
     contactInfo: contact;
@@ -3705,7 +3705,7 @@
     useCases: ['Schema governance', 'Release safety']
     roi: 'Fewer incidents, faster integration',
   competitors: ['Stoplight (adjacent)'];
-    marketSize: '$1B API tooling'
+    marketSize: '$1 B API tooling'
     growthRate: '9% CAGR'
     variant: 'network-futuristic'
     contactInfo: contact;
@@ -4956,7 +4956,7 @@ export const,
 		useCases: ['Inbound triageNurture sequencesSLA reporting'];
 		roi: 'Cuts manual email time by 6080%'
 		competitors: ['Superhuman AIFront AIGmail add-ons'];
-		marketSize: '$10B+ email productivity'
+		marketSize: '$10 B+ email productivity'
 		growthRate: '15% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -4990,9 +4990,9 @@ export const,
 		technology: ['TwilioNext && TwilioNext.jsVercel/Netlify'];
 		integrations: ['HubSpotSheetsSlack'];
 		useCases: ['NPSFeature feedbackOnboarding'];
-		roi: '24x higher completion on mobile'
+		roi: '24 x higher completion on mobile'
 		competitors: ['TypeformSurveyMonkey'];
-		marketSize: '$7B research tooling'
+		marketSize: '$7 B research tooling'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5028,7 +5028,7 @@ export const,
 		useCases: ['Agency opsClinic opsBoutique retail'];
 		roi: 'Saves 35 hrs/week per user'
 		competitors: ['Notion templatesClickUp'];
-		marketSize: '$3B productivity niche'
+		marketSize: '$3 B productivity niche'
 		growthRate: '8% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5064,7 +5064,7 @@ export const,
 		useCases: ['WebinarsTown hallsCustomer training'];
 		roi: 'Saves 50% ops time per event'
 		competitors: ['EventbriteHopin (basic)'];
-		marketSize: '$6B event tooling'
+		marketSize: '$6 B event tooling'
 		growthRate: '10% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5098,7 +5098,7 @@ export const,
 		useCases: ['SaaS referralsCourse affiliatesPartner programs'];
 		roi: '+1525% new revenue from partners'
 		competitors: ['FirstPromoterRewardful'];
-		marketSize: '$12B affiliate'
+		marketSize: '$12 B affiliate'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5132,7 +5132,7 @@ export const,
 		useCases: ['Website analyticsCampaign tracking'],
 		roi: 'Clarity on what converts, 1020% lift'
 		competitors: ['FathomPlausible'];
-		marketSize: '$2B privacy analytics'
+		marketSize: '$2 B privacy analytics'
 		growthRate: '14% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5166,7 +5166,7 @@ export const,
 		useCases: ['IT supportAsset requestsApprovals'];
 		roi: '2540% faster resolution time'
 		competitors: ['FreshserviceJira Service Management'];
-		marketSize: '$10B ITSM SMB'
+		marketSize: '$10 B ITSM SMB'
 		growthRate: '11% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5200,7 +5200,7 @@ export const,
 		useCases: ['RMAsReturn analytics'];
 		roi: 'Reduce returns costs by 1020%'
 		competitors: ['Loop ReturnsHappy Returns (PayPal)'];
-		marketSize: '$4B returns tooling'
+		marketSize: '$4 B returns tooling'
 		growthRate: '13% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5234,7 +5234,7 @@ export const,
 		useCases: ['Lead follow-upTicket nudges'];
 		roi: '+1025% more replies'
 		competitors: ['Mailshake (lite)GMass'];
-		marketSize: '$5B sales engagement (SMB)'
+		marketSize: '$5 B sales engagement (SMB)'
 		growthRate: '10% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5268,7 +5268,7 @@ export const,
 		useCases: ['AccessibilitySEO content'];
 		roi: 'Saves 24 hrs/episode'
 		competitors: ['RevDescript (lite)'];
-		marketSize: '$1B+ transcription'
+		marketSize: '$1 B+ transcription'
 		growthRate: '12% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5302,7 +5302,7 @@ export const,
 		useCases: ['SEO rewritesGap analysis'];
 		roi: '+2040% organic traffic lift'
 		competitors: ['Surfer SEOMarketMuse'];
-		marketSize: '$2B SEO tooling'
+		marketSize: '$2 B SEO tooling'
 		growthRate: '11% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5336,7 +5336,7 @@ export const,
 		useCases: ['Content calendarRepurposing'];
 		roi: 'Saves 46 hrs/week'
 		competitors: ['BufferHootsuite (lite)'];
-		marketSize: '$4B social tooling'
+		marketSize: '$4 B social tooling'
 		growthRate: '10% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5360,7 +5360,7 @@ export const,
 		textColor: 'text-blue-300',
 		link: 'https://ziontechgroup && ziontechgroup.com/services/lead-enrichment-api',
 		marketPosition: 'Usage-based simple pricing',
-		targetAudience: 'B2B SaaS, sales ops'
+		targetAudience: 'B2 B SaaS, sales ops'
 		trialDays: 14;
 		setupTime: '1 hour'
 		category: 'Developer Tools'
@@ -5370,7 +5370,7 @@ export const,
 		useCases: ['Lead routingScoring'];
 		roi: 'Improves MQLSQL by 1020%'
 		competitors: ['Clearbit (lite)Apollo enrichment'];
-		marketSize: '$3B enrichment'
+		marketSize: '$3 B enrichment'
 		growthRate: '9% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5404,7 +5404,7 @@ export const,
 		useCases: ['ComplianceUser trust'],
 		roi: 'Avoid fines, preserve UX'
 		competitors: ['OneTrust (lite)CookieYes'];
-		marketSize: '$4B privacy tooling'
+		marketSize: '$4 B privacy tooling'
 		growthRate: '14% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5438,7 +5438,7 @@ export const,
 		useCases: ['Policy updatesAudits'];
 		roi: 'Automates tedious checks'
 		competitors: ['Cookiebot (lite)'];
-		marketSize: '$1B cookie tools'
+		marketSize: '$1 B cookie tools'
 		growthRate: '8% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5472,7 +5472,7 @@ export const,
 		useCases: ['SLA reportsStatus page'];
 		roi: 'Reduce support tickets ~20%'
 		competitors: ['Statuspage (lite)'];
-		marketSize: '$1B status tools'
+		marketSize: '$1 B status tools'
 		growthRate: '9% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5506,7 +5506,7 @@ export const,
 		useCases: ['Lead captureMeeting booking'];
 		roi: '+1530% qualified demos'
 		competitors: ['Drift (lite)Intercom Fin'];
-		marketSize: '$3B chatbots'
+		marketSize: '$3 B chatbots'
 		growthRate: '12% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5540,7 +5540,7 @@ export const,
 		useCases: ['DSAR fulfillment'];
 		roi: 'Avoid compliance toil and risk'
 		competitors: ['Transcend (lite)Osano'];
-		marketSize: '$6B privacy ops'
+		marketSize: '$6 B privacy ops'
 		growthRate: '18% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5574,7 +5574,7 @@ export const,
 		useCases: ['Cleanup debtReduce risk'],
 		roi: 'Avoid outages, reduce toil'
 		competitors: ['LaunchDarkly add-ons'];
-		marketSize: '$1B flags'
+		marketSize: '$1 B flags'
 		growthRate: '10% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5608,7 +5608,7 @@ export const,
 		useCases: ['DB tuningPerf boosts'];
 		roi: 'Cut query costs 2050%'
 		competitors: ['pganalyze (adjacent)'];
-		marketSize: '$2B DB tuning'
+		marketSize: '$2 B DB tuning'
 		growthRate: '9% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5637,12 +5637,12 @@ export const,
 		setupTime: '1 hour'
 		category: 'Cloud & FinOps'
 		realService: true;
-		technology: ['AWS S3Cost models'];
+		technology: ['AWS S3 Cost models'];
 		integrations: ['AWS'];
 		useCases: ['Storage hygieneCost cuts'];
 		roi: 'Save 1030% storage spend'
 		competitors: ['Kubecost (adjacent)'];
-		marketSize: '$3B cloud cost'
+		marketSize: '$3 B cloud cost'
 		growthRate: '12% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5676,7 +5676,7 @@ export const,
 		useCases: ['Compliance auditsRisk reduction'];
 		roi: 'Avoid incidents and fines'
 		competitors: ['Google DLPAWS Macie'];
-		marketSize: '$5B data security'
+		marketSize: '$5 B data security'
 		growthRate: '15% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5710,7 +5710,7 @@ export const,
 		useCases: ['Schema governanceRelease safety'],
 		roi: 'Fewer incidents, faster integration'
 		competitors: ['Stoplight (adjacent)'];
-		marketSize: '$1B API tooling'
+		marketSize: '$1 B API tooling'
 		growthRate: '9% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5744,7 +5744,7 @@ export const,
 		useCases: ['Regression checksSLO monitoring'];
 		roi: 'Prevent broken funnels'
 		competitors: ['ChecklyDatadog Synthetics'];
-		marketSize: '$2B testing/obs'
+		marketSize: '$2 B testing/obs'
 		growthRate: '10% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5778,7 +5778,7 @@ export const,
 		useCases: ['Reduce blast radius'];
 		roi: 'Reduce risk + audit toil'
 		competitors: ['Cloud Custodian (DIY)'];
-		marketSize: '$3B cloud sec'
+		marketSize: '$3 B cloud sec'
 		growthRate: '13% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5812,7 +5812,7 @@ export const,
 		useCases: ['Cost controlOps hygiene'];
 		roi: '1030% lower DW costs'
 		competitors: ['SelectStar (adjacent)'];
-		marketSize: '$2B finops DW'
+		marketSize: '$2 B finops DW'
 		growthRate: '12% CAGR'
 		variant: 'network-futuristic'
 		contactInfo: contact;
@@ -5846,7 +5846,7 @@ export const,
 		useCases: ['DeliverabilityInbox tests'];
 		roi: 'Protects domain reputation'
 		competitors: ['Warmup InboxMailreach'];
-		marketSize: '$1B deliverability'
+		marketSize: '$1 B deliverability'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
 		contactInfo: contact;
@@ -5880,7 +5880,7 @@ export const,
 		useCases: ['Project follow-through'];
 		roi: 'Close the loop on action items'
 		competitors: ['Fathom + manual'];
-		marketSize: '$2B productivity'
+		marketSize: '$2 B productivity'
 		growthRate: '9% CAGR'
 		variant: 'ai-futuristic'
 		contactInfo: contact;
@@ -5917,7 +5917,7 @@ export const,
   use_cases: ['Inbound triage_nurture sequencesSLA reporting'];
   roi: 'Cuts manual email time by 6080%'
   competitors: ['Superhuman AIFront AIGmail add - ons'];
-  market_size: '$10B+ email productivity'
+  market_size: '$10 B+ email productivity'
   growth_rate: '15% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -5951,9 +5951,9 @@ export const,
   technology: ['TwilioNext.js_vercel / Netlify'];
   integrations: ['HubSpotSheetsSlack'];
   use_cases: ['NPSFeature feedback_onboarding'];
-  roi: '24x higher completion on mobile'
+  roi: '24 x higher completion on mobile'
   competitors: ['TypeformSurveyMonkey'];
-  market_size: '$7B research tooling'
+  market_size: '$7 B research tooling'
   growth_rate: '9% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -5989,7 +5989,7 @@ export const,
   use_cases: ['Agency ops_clinic ops_boutique retail'];
   roi: 'Saves 35 hrs / week per user'
   competitors: ['Notion templatesClickUp'];
-  market_size: '$3B productivity niche'
+  market_size: '$3 B productivity niche'
   growth_rate: '8% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6025,7 +6025,7 @@ export const,
   use_cases: ['WebinarsTown halls_customer training'];
   roi: 'Saves 50% ops time per event'
   competitors: ['EventbriteHopin (basic)'];
-  market_size: '$6B event tooling'
+  market_size: '$6 B event tooling'
   growth_rate: '10% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6059,7 +6059,7 @@ export const,
   use_cases: ['SaaS referrals_course affiliates_partner programs'];
   roi: '+1525% new revenue from partners'
   competitors: ['FirstPromoterRewardful'];
-  market_size: '$12B affiliate'
+  market_size: '$12 B affiliate'
   growth_rate: '9% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6093,7 +6093,7 @@ export const,
   use_cases: ['Website analytics_campaign tracking'],
   roi: 'Clarity on what converts, 1020% lift'
   competitors: ['FathomPlausible'];
-  market_size: '$2B privacy analytics'
+  market_size: '$2 B privacy analytics'
   growth_rate: '14% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6127,7 +6127,7 @@ export const,
   use_cases: ['IT support_asset requests_approvals'];
   roi: '2540% faster resolution time'
   competitors: ['FreshserviceJira Service Management'];
-  market_size: '$10B ITSM SMB'
+  market_size: '$10 B ITSM SMB'
   growth_rate: '11% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6161,7 +6161,7 @@ export const,
   use_cases: ['RMAsReturn analytics'];
   roi: 'Reduce returns costs by 1020%'
   competitors: ['Loop ReturnsHappy Returns (PayPal)'];
-  market_size: '$4B returns tooling'
+  market_size: '$4 B returns tooling'
   growth_rate: '13% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6195,7 +6195,7 @@ export const,
   use_cases: ['Lead follow - up_ticket nudges'];
   roi: '+1025% more replies'
   competitors: ['Mailshake (lite)GMass'];
-  market_size: '$5B sales engagement (SMB)'
+  market_size: '$5 B sales engagement (SMB)'
   growth_rate: '10% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6229,7 +6229,7 @@ export const,
   use_cases: ['AccessibilitySEO content'];
   roi: 'Saves 24 hrs / episode'
   competitors: ['RevDescript (lite)'];
-  market_size: '$1B+ transcription'
+  market_size: '$1 B+ transcription'
   growth_rate: '12% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6263,7 +6263,7 @@ export const,
   use_cases: ['SEO rewrites_gap analysis'];
   roi: '+2040% organic traffic lift'
   competitors: ['Surfer SEOMarketMuse'];
-  market_size: '$2B SEO tooling'
+  market_size: '$2 B SEO tooling'
   growth_rate: '11% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6297,7 +6297,7 @@ export const,
   use_cases: ['Content calendar_repurposing'];
   roi: 'Saves 46 hrs / week'
   competitors: ['BufferHootsuite (lite)'];
-  market_size: '$4B social tooling'
+  market_size: '$4 B social tooling'
   growth_rate: '10% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6321,7 +6321,7 @@ export const,
   text_color: 'text - blue - 300',
   link: 'https://ziontechgroup.com / services / lead - enrichment - api',
   market_position: 'Usage - based simple pricing',
-  target_audience: 'B2B SaaS, sales ops'
+  target_audience: 'B2 B SaaS, sales ops'
   trial_days: 14;
   setup_time: '1 hour'
   category: 'Developer Tools'
@@ -6331,7 +6331,7 @@ export const,
   use_cases: ['Lead routing_scoring'];
   roi: 'Improves MQLSQL by 1020%'
   competitors: ['Clearbit (lite)Apollo enrichment'];
-  market_size: '$3B enrichment'
+  market_size: '$3 B enrichment'
   growth_rate: '9% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6365,7 +6365,7 @@ export const,
   use_cases: ['ComplianceUser trust'],
   roi: 'Avoid fines, preserve UX'
   competitors: ['OneTrust (lite)CookieYes'];
-  market_size: '$4B privacy tooling'
+  market_size: '$4 B privacy tooling'
   growth_rate: '14% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6399,7 +6399,7 @@ export const,
   use_cases: ['Policy updates_audits'];
   roi: 'Automates tedious checks'
   competitors: ['Cookiebot (lite)'];
-  market_size: '$1B cookie tools'
+  market_size: '$1 B cookie tools'
   growth_rate: '8% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6433,7 +6433,7 @@ export const,
   use_cases: ['SLA reports_status page'];
   roi: 'Reduce support tickets ~20%'
   competitors: ['Statuspage (lite)'];
-  market_size: '$1B status tools'
+  market_size: '$1 B status tools'
   growth_rate: '9% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6467,7 +6467,7 @@ export const,
   use_cases: ['Lead capture_meeting booking'];
   roi: '+1530% qualified demos'
   competitors: ['Drift (lite)Intercom Fin'];
-  market_size: '$3B chatbots'
+  market_size: '$3 B chatbots'
   growth_rate: '12% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6501,7 +6501,7 @@ export const,
   use_cases: ['DSAR fulfillment'];
   roi: 'Avoid compliance toil and risk'
   competitors: ['Transcend (lite)Osano'];
-  market_size: '$6B privacy ops'
+  market_size: '$6 B privacy ops'
   growth_rate: '18% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6535,7 +6535,7 @@ export const,
   use_cases: ['Cleanup debt_reduce risk'],
   roi: 'Avoid outages, reduce toil'
   competitors: ['LaunchDarkly add - ons'];
-  market_size: '$1B flags'
+  market_size: '$1 B flags'
   growth_rate: '10% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6569,7 +6569,7 @@ export const,
   use_cases: ['DB tuning_perf boosts'];
   roi: 'Cut query costs 2050%'
   competitors: ['pganalyze (adjacent)'];
-  market_size: '$2B DB tuning'
+  market_size: '$2 B DB tuning'
   growth_rate: '9% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6598,12 +6598,12 @@ export const,
   setup_time: '1 hour'
   category: 'Cloud & FinOps'
   real_service: true;
-  technology: ['AWS S3Cost models'];
+  technology: ['AWS S3 Cost models'];
   integrations: ['AWS'];
   use_cases: ['Storage hygiene_cost cuts'];
   roi: 'Save 1030% storage spend'
   competitors: ['Kubecost (adjacent)'];
-  market_size: '$3B cloud cost'
+  market_size: '$3 B cloud cost'
   growth_rate: '12% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6637,7 +6637,7 @@ export const,
   use_cases: ['Compliance audits_risk reduction'];
   roi: 'Avoid incidents and fines'
   competitors: ['Google DLPAWS Macie'];
-  market_size: '$5B data security'
+  market_size: '$5 B data security'
   growth_rate: '15% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6671,7 +6671,7 @@ export const,
   use_cases: ['Schema governance_release safety'],
   roi: 'Fewer incidents, faster integration'
   competitors: ['Stoplight (adjacent)'];
-  market_size: '$1B API tooling'
+  market_size: '$1 B API tooling'
   growth_rate: '9% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6705,7 +6705,7 @@ export const,
   use_cases: ['Regression checksSLO monitoring'];
   roi: 'Prevent broken funnels'
   competitors: ['ChecklyDatadog Synthetics'];
-  market_size: '$2B testing / obs'
+  market_size: '$2 B testing / obs'
   growth_rate: '10% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6739,7 +6739,7 @@ export const,
   use_cases: ['Reduce blast radius'];
   roi: 'Reduce risk + audit toil'
   competitors: ['Cloud Custodian (DIY)'];
-  market_size: '$3B cloud sec'
+  market_size: '$3 B cloud sec'
   growth_rate: '13% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6773,7 +6773,7 @@ export const,
   use_cases: ['Cost control_ops hygiene'];
   roi: '1030% lower DW costs'
   competitors: ['SelectStar (adjacent)'];
-  market_size: '$2B finops DW'
+  market_size: '$2 B finops DW'
   growth_rate: '12% CAGR'
   variant: 'network - futuristic'
   contact_info: contact;
@@ -6807,7 +6807,7 @@ export const,
   use_cases: ['DeliverabilityInbox tests'];
   roi: 'Protects domain reputation'
   competitors: ['Warmup InboxMailreach'];
-  market_size: '$1B deliverability'
+  market_size: '$1 B deliverability'
   growth_rate: '9% CAGR'
   variant: 'holographic - matrix'
   contact_info: contact;
@@ -6841,7 +6841,7 @@ export const,
   use_cases: ['Project follow - through'];
   roi: 'Close the loop on action items'
   competitors: ['Fathom + manual'];
-  market_size: '$2B productivity'
+  market_size: '$2 B productivity'
   growth_rate: '9% CAGR'
   variant: 'ai - futuristic'
   contact_info: contact;
@@ -6860,7 +6860,7 @@ export const,
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
 };
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
 		id: 'ai-email-responder';
 		name: 'AI Email Responder';
@@ -6887,7 +6887,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Inbound triageNurture sequencesSLA reporting'];
 		roi: 'Cuts manual email time by 6080%';
 		competitors: ['Superhuman AIFront AIGmail add-ons'];
-		marketSize: '$10B+ email productivity';
+		marketSize: '$10 B+ email productivity';
 		growthRate: '15% CAGR';
 		variant: 'network-futuristic';
 		contactInfo: contact;
@@ -6922,9 +6922,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		technology: ['TwilioNext.jsVercel/Netlify'];
 		integrations: ['HubSpotSheetsSlack'];
 		useCases: ['NPSFeature feedbackOnboarding'];
-		roi: '24x higher completion on mobile';
+		roi: '24 x higher completion on mobile';
 		competitors: ['TypeformSurveyMonkey'];
-		marketSize: '$7B research tooling';
+		marketSize: '$7 B research tooling';
 		growthRate: '9% CAGR';
 		variant: 'holographic-matrix';
 		contactInfo: contact;
@@ -6961,7 +6961,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Agency opsClinic opsBoutique retail'];
 		roi: 'Saves 35 hrs/week per user';
 		competitors: ['Notion templatesClickUp'];
-		marketSize: '$3B productivity niche';
+		marketSize: '$3 B productivity niche';
 		growthRate: '8% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -6998,7 +6998,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['WebinarsTown hallsCustomer training'];
 		roi: 'Saves 50% ops time per event';
 		competitors: ['EventbriteHopin (basic)'];
-		marketSize: '$6B event tooling';
+		marketSize: '$6 B event tooling';
 		growthRate: '10% CAGR';
 		variant: 'network-futuristic';
 		contactInfo: contact;
@@ -10980,7 +10980,7 @@ export const,
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
 };
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
 		id: 'ai-email-responder';
 		name: 'AI Email Responder';
@@ -11007,7 +11007,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Inbound triageNurture sequencesSLA reporting'];
 		roi: 'Cuts manual email time by 6080%';
 		competitors: ['Superhuman AIFront AIGmail add-ons'];
-		marketSize: '$10B+ email productivity';
+		marketSize: '$10 B+ email productivity';
 		growthRate: '15% CAGR';
 		variant: 'network-futuristic';
 		contactInfo: contact;
@@ -11042,9 +11042,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		technology: ['TwilioNext.jsVercel/Netlify'];
 		integrations: ['HubSpotSheetsSlack'];
 		useCases: ['NPSFeature feedbackOnboarding'];
-		roi: '24x higher completion on mobile';
+		roi: '24 x higher completion on mobile';
 		competitors: ['TypeformSurveyMonkey'];
-		marketSize: '$7B research tooling';
+		marketSize: '$7 B research tooling';
 		growthRate: '9% CAGR';
 		variant: 'holographic-matrix';
 		contactInfo: contact;
@@ -11081,7 +11081,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Agency opsClinic opsBoutique retail'];
 		roi: 'Saves 35 hrs/week per user';
 		competitors: ['Notion templatesClickUp'];
-		marketSize: '$3B productivity niche';
+		marketSize: '$3 B productivity niche';
 		growthRate: '8% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -11118,7 +11118,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['WebinarsTown hallsCustomer training'];
 		roi: 'Saves 50% ops time per event';
 		competitors: ['EventbriteHopin (basic)'];
-		marketSize: '$6B event tooling';
+		marketSize: '$6 B event tooling';
 		growthRate: '10% CAGR';
 		variant: 'network-futuristic';
 		contactInfo: contact;

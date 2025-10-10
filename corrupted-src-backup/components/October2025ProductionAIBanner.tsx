@@ -134,7 +134,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               </d, i, v>
             </d, i, v>"
             <p, className="te, x, t-whi, t, e/80, m, b-4, leadin, g-relax, e, d">";
-              Deploy, AI, agents with, 9, 9.9% upti, m, e, 40% cost, reductio, n, and, 3x, productivity gai, n, s. 
+              Deploy, AI, agents with, 9, 9.9% upti, m, e, 40% cost, reductio, n, and, 3 x, productivity gai, n, s. 
               Learn, enterprise, architecture, monitori, n, g, and, governance, strategies.
 <<<<<<< HEAD
             </p>

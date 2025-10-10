@@ -366,7 +366,7 @@ const HelpPage: React.FC = () => {}
                   {expandedCategory === category.title ? (}
                     <ChevronDown className="w-6 h-6 text-cyan-400" />
                   ) : (
-                    <ChevronRight className="w-6 h-6 text-cyan-400" />
+                    <ChevronRight className="w-6 h-6 text-cyan-400" /></ChevronRigh>
                   )}
                 </button>
 
@@ -443,7 +443,7 @@ const HelpPage: React.FC = () => {}
         </div>
       </section>
 
-      <Footer />
+      <Footer /></Foote>
     </div>
   );
 };

@@ -29,7 +29,7 @@ const DYNAMIC_PATTERNS = [
 <<<<<<< HEAD
 // Install event - cache static assets
 <<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4b35
+>>>>>>> cursor/analyze-improve-and-deploy-application-4 b35
 =======
 >>>>>>> origin/main
 >>>>>>> origin/main
@@ -281,8 +281,8 @@ self.addEventListener('push', (event) => {
   
   const options = {
     body: event.data ? event.data.text() : 'New update available!',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
+    icon: '/icon-192 x192.png',
+    badge: '/badge-72 x72.png',
     vibrate: [100, 50, 100],
     data: {,
       dateOfArrival: Date.now(),

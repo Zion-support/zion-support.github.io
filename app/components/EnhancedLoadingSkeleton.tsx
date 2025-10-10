@@ -6,7 +6,7 @@ interface SkeletonProps {}
   children?: React.ReactNode;
 }
 
-const Skeleton: React.FC<SkeletonProps>= ({ className = '', children }) => (<div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>{children}</div>
+const Skeleton: React.FC<SkeletonProps>= ({ className = '', children }) => (</SkeletonProps><div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>{children}</div>
   </div>
 );
 

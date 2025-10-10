@@ -494,7 +494,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Manufacturi, n, g;
               </div>
-              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>127x, ROI, Average</div>
+              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>127 x, ROI, Average</div>
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏦</div>
@@ -505,7 +505,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Financial, Service, s;
               </div>
-              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>845x, ROI, Average</div>
+              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>845 x, ROI, Average</div>
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏥</div>
@@ -543,7 +543,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Smart, Citie, s;
               </div>
-              <div, className='te, x, t-pi, n, k-200, tex, t-xs, m, t-1'>34x, ROI, Average</div>
+              <div, className='te, x, t-pi, n, k-200, tex, t-xs, m, t-1'>34 x, ROI, Average</div>
             </div>
           </div>
         </div>
@@ -625,4 +625,4 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
   );
 };
 
-export default October2025TechBreakthroughBanner;
+export default October2025 TechBreakthroughBanner;

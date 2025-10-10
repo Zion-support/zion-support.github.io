@@ -18,7 +18,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.","
       tit, l, e: "Edge, AI, Processing",";
       descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.",";
-      benef, i, t: "S, u, b-10ms, response, times"
+      benef, i, t: "S, u, b-10 ms, response, times"
     }
     {
       ic, o, n: Z, a, p;
@@ -180,7 +180,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
     {
       na, m, e: "Robert, Ki, m","
       ro, l, e: "C, T, O, Manufacturing, Solution, s","
-      conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.","
+      conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500 ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.","
       na, m, e: "Robert, Ki, m",";
       ro, l, e: "C, T, O, Manufacturing, Solution, s",";
       conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.",";
@@ -366,8 +366,8 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Edge, Computin, g</h1> <span, className="bg-gradie, n, t-to-r, fro, m-te, a, l-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>
               </h1>
-              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-te, a, l-100, ma, x-w-4xl, m, x-auto, m, b-8">"
-                Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. 
+              <p, className="te, x, t-xl, m, d: te, x, t-2 xl, tex, t-te, a, l-100, ma, x-w-4 xl, m, x-auto, m, b-8">"
+                Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10 ms, response, times. 
                 Transform, your, IoT, industri, a, l, and, smart, city applications, with, distributed intelligen, c, e.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
@@ -640,7 +640,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6"></div>
                       <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-4, ga, p-8">";
+  g:gr, i, d-co, l, s-4, ga, p-8"></div>";
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
@@ -829,7 +829,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">";
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>

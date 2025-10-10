@@ -10,11 +10,11 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accura, c, y, 12x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization.'
-        />
+          conte, n, t='Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accura, c, y, 12 x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization.'
+        /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='cognitive, sear, c, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s'
-        />
+        /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-cogniti v e-sear c h-enterpri s e',
         />,
@@ -55,7 +55,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <sp, a, n>
                     <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n;
                   </sp, a, n>
-              <span, className='te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5</sp, a, n>
+              <span, className='te, x, t-gr, a, y-4, 0, 0'></span>Octo</span>, b, e, r , 1, 20, 2, 5</sp, a, n>
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
@@ -123,11 +123,11 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 =======
                   <span></span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"
+                <li className="flex items-start gap-3"></li>
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"</TrendingUp>
               </h2>"
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
+              <ul className="space-y-4 text-lg"></ul>
+                <li className="flex items-start gap-3"></li>
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx
                   <Search className=" />
                   <span></span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
@@ -273,11 +273,11 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   capture semantic meaning. This enables understanding of synonyms, related concepts, and contextual nuances;
                   that keyword matching misses.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Domain-specific embeddings trained on your enterprise corpus</li>
-                  <li >Multi-lingual support across 95+ languages with cross-lingual retrieval</li>
-                  <li >Query expansion automatically includes related terms and concepts</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Domain</li>-specific embeddings trained on your enterprise corpus</li>
+                  <li>Multi</li>-lingual support across 95+ languages with cross-lingual retrieval</li>
+                  <li>Query</li> expansion automatically includes related terms and concepts</li>
                 </ul>
   </div>
               <div></div>
@@ -286,10 +286,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   Combines vector similarity search with traditional keyword matching and graph-based knowledge traversal. 
                   Multi-stage ranking ensures the most relevant information surfaces first, with explainable relevance scoring.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Dense + sparse retrieval achieves 94% recall on enterprise benchmarks</li>
-                  <li >Knowledge graph enrichment surfaces implicit relationships</li>
-                  <li >Temporal relevance boosts recent and frequently accessed content</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Dense</li> + sparse retrieval achieves 94% recall on enterprise benchmarks</li>
+                  <li>Knowledge</li> graph enrichment surfaces implicit relationships</li>
+                  <li>Temporal</li> relevance boosts recent and frequently accessed content</li>
                 </ul>
   </div>
               <div></div>
@@ -298,10 +298,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   LLMs synthesize information from multiple sources to generate comprehensive answers with citations. 
                   The system explains its reasoning and confidence level, enabling users to trust and validate results.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Abstractive summarization condenses multi-document insights</li>
-                  <li >Fact verification cross-references claims against source material</li>
-                  <li >Follow-up question handling maintains conversational context</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Abstractive</li> summarization condenses multi-document insights</li>
+                  <li>Fact</li> verification cross-references claims against source material</li>
+                  <li>Follow</li>-up question handling maintains conversational context</li>
                 </ul>
   </div>
               <div></div>
@@ -310,10 +310,10 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   Machine learning models improve from user interactions, learning which results are most valuable and;
                   adapting to evolving information needs. Feedback loops ensure search quality continuously improves.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                  <li >Click-through analysis optimizes ranking models</li>
-                  <li >Query understanding learns from successful searches</li>
-                  <li >Personalization adapts results to role and expertise level</li>
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"></ul>
+                  <li>Click</li>-through analysis optimizes ranking models</li>
+                  <li>Query</li> understanding learns from successful searches</li>
+                  <li>Personalization</li> adapts results to role and expertise level</li>
                 </ul>
   </div>
             </section>
@@ -337,7 +337,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <ul className="space-y-3 text-gray-300">
                     <li >• 94% accuracy in clinical knowledge retrieval</li>
                     <li >• 82% faster care protocol discovery</li>
-                    <li >• $67M saved from improved efficiency</li>
+                    <li >• $67 M saved from improved efficiency</li>
                     <li >• HIPAA-compliant with full audit trails</li>
                   </ul>
   </div>
@@ -384,8 +384,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
   AI agents surface relevant information before users even search. Context-aware recommendations deliver;
                     insights based on current tasks, upcoming meetings, or project activities.
                   </p>
-  </div>
-  Row-level security ensures users only access information they're authorized to see. Complete audit trails '
+  </div>Row</div>-level security ensures users only access information they're authorized to see. Complete audit trails '
                     track all searches and access for compliance. Sensitive data remains encrypted and on-premises if required.
                   </p>
   </div>
@@ -435,8 +434,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <h2 className="text-3xl font-bold mb-4">Unlock Your Institutional Knowledge</h2>
               <p className="text-xl mb-6 text-indigo-100">"
   Deploy cognitive search and transform how your organization discovers and leverages information.
-              </p>
-              to="/contact"
+              </p>to</p>="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >",
                 Start Your Knowledge Transformation",

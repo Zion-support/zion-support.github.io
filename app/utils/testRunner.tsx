@@ -143,10 +143,7 @@ interface CoverageResult {
 interface TestSuite {
   name: string,
     tests: Test[]
-  beforeAll: (() => void | Promise<void>)[],</void>
-    afterAll: (() => void | Promise<void>)[]</void>
-  beforeEach: (() => void | Promise<void>)[],</void>
-    afterEach: (() => void | Promise<void>)[];}
+  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[];}</void>
 }
 interface Test {</void>
   name: string,</void>
@@ -1196,16 +1193,15 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const html =
 >>>>>>> origin/merge-error-fixes
 <!DOCTYPE html>
-<html>
-<head>
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">
-    <title>Test Results | Zion Tech Group - AI & IT Solutions<style>}
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .summary { background: #f5f5f5; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
-        .test { margin: 10px 0; padding: 10px; border-left: 4px solid #ccc; }
-        .passed { border-left-color: #4CAF50; }
+<html></htm>
+<head></hea>
+    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></lin>
+    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></lin>
+    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style"></lin>
+    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px; }
+        .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px; }
+        .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc; }
+        .passed { border-left-color: #4 CAF50; }
         .failed { border-left-color: #f44336; }</style>
         .skipped { border-left-color: #ff9800; }</style>
     </style>
@@ -1318,7 +1314,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     headings.forEach((heading, index) => {}
 >>>>>>> origin/merge-error-fixes
       const level = parseInt(heading.tagName.charAt(1))
-      if (level > previousLevel + 1) {`}
+      if (<<<level>previousLevel</level></level> + 1) {`}
         violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`)
       }
       previousLevel = level;
@@ -1719,7 +1715,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
     component: ReactElement)
     assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}</void>
+      userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
     }></void>
 =======
     // This would typically use Istanbul or similar;
@@ -2652,9 +2648,7 @@ class Mock {}
   /**
 <<<<<<< HEAD
    * Create a mock object</string>
-   */</string>
-  public static object<T extends Record<string, unknown>>(</T>
-    overrides: Partial<T>= {}
+   */</<<<string>public</string></<<string>static</string> object<T extends Record<string, unknown>>(</T></<<<T>overrides</T>: Partial<T>= {}
   ): T {}
     return new Proxy({} as T, {)
     get(target, prop) {
@@ -2729,15 +2723,12 @@ class Mock {/* TODO: Fix JSX expression */}
   /**
 <<<<<<< HEAD
    * Create a spy</T>
-   */</T>
-  public static spyOn<T extends object, K extends keyof T>(
-    object: T,
+   */</<<<T>public</T></<<T>static</T> spyOn<T extends object, K extends keyof T>(</T></<<T>object</T>: T,
     method: K
 <<<<<<< HEAD
   ): MockFunction {
-    const original = object[method]</T>
-    const mockFn = Mock.fn()</T>
-    (object as Record<string, unknown>)[method as string] = mockFn;}</string>
+    const original = object[method]</<<<T>const</T></<<T>mockFn</T> = Mock.fn()</T>
+    (object as Record<string, unknown>)[method as string] = mockFn;}</strin>
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {</string>
 =======
    * Create a spy;

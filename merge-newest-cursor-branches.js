@@ -7,7 +7,7 @@ import fs from 'fs';
 // //Newest cursor branches to merge;
 const newestCursorBranches = [
   'cursor/fix-errors-and-merge-to-main-2639',
-  'cursor/fix-errors-and-merge-to-main-7e2b',
+  'cursor/fix-errors-and-merge-to-main-7 e2 b',
   'cursor/fix-errors-and-merge-to-main-9758',
   'cursor/fix-errors-and-merge-to-main-dfd4',
 ];

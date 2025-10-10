@@ -160,7 +160,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   const stats = [
     { icon: MessageSquare, value: '5,000+', label: 'Active Chatbots' },
-    { icon: Users, value: '1M+', label: 'Conversations Handled' },
+    { icon: Users, value: '1 M+', label: 'Conversations Handled' },
     { icon: TrendingUp, value: '60%', label: 'Ticket Reduction' },
     { icon: Clock, value: '24/7', label: 'Availability' }
   ];

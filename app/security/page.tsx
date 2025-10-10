@@ -292,21 +292,21 @@ const SecurityPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <span>Use strong, unique passwords for all accounts</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Enable multi-factor authentication (MFA)</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Enable</span></<<span>multi</span>-factor authentication (MFA)</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Keep software and systems updated</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Keep</span></<<span>software</span> and systems updated</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Be cautious with email attachments and links</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Be</span></<<span>cautious</span> with email attachments and links</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regularly review account access and permissions</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regularly</span></<<span>review</span> account access and permissions</span>
                   </li>
                 </ul>
               </div>
@@ -317,21 +317,21 @@ const SecurityPage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Regular security training for all employees</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Background checks for all personnel</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Background</span></<<span>checks</span> for all personnel</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Secure development lifecycle (SDL)</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Secure</span></<<span>development</span> lifecycle (SDL)</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular penetration testing and vulnerability assessments</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regular</span></<<span>penetration</span> testing and vulnerability assessments</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Incident response and business continuity planning</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Incident</span></<<span>response</span> and business continuity planning</span>
                   </li>
                 </ul>
               </div>
@@ -357,21 +357,21 @@ const SecurityPage: React.FC = () => {
                     <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Immediate detection and assessment</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Containment and mitigation measures</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Containment</span></<<span>and</span> mitigation measures</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Investigation and root cause analysis</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Investigation</span></<<span>and</span> root cause analysis</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Recovery and service restoration</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Recovery</span></<<span>and</span> service restoration</span>
                   </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Post-incident review and improvements</span>
+                  <li className="flex items-start"></l>
+                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /></AlertTriangl>
+                    <<<<span>Post</span></span>-incident review and improvements</span>
                   </li>
                 </ul>
               </div>
@@ -382,17 +382,17 @@ const SecurityPage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                     <span>Immediate notification to affected clients</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular updates throughout the incident</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Regular</span></<<span>updates</span> throughout the incident</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Detailed post-incident report</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Detailed</span></<<span>post</span>-incident report</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Lessons learned and preventive measures</span>
+                  <li className="flex items-start"></l>
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircl>
+                    <<<<span>Lessons</span></<<span>learned</span> and preventive measures</span>
                   </li>
                 </ul>
               </div>,

@@ -21,9 +21,9 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         keywords={["e-commerce AI","product recommendations","online store optimization","shopping AI","e-commerce analytics"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-ecommerce-solutions"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

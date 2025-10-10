@@ -21,9 +21,9 @@ const AiEducationPage: React.FC = () => {
         keywords={["education AI","personalized learning","adaptive learning","educational technology","learning analytics"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/ai-education"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

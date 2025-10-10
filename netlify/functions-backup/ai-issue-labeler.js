@@ -45,7 +45,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');
     if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');
     if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');
-    if (/(a11y|accessibility|contrast|alt)/.test(text)) labels.add('a11y');
+    if (/(a11 y|accessibility|contrast|alt)/.test(text)) labels.add('a11 y');
     if (/(feat|feature|enhancement|improve)/.test(text))
       labels.add('enhancement');
 <<<<<<< HEAD
@@ -57,7 +57,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         body) {if(!openaiKey,
         return null,
         try {
-//       const prompt = `Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11y, enhancement, security, question, chore,
+//       const prompt = `Suggest at most 3 concise github labels for this issue. Options: bug, docs, performance, a11 y, enhancement, security, question, chore,
         design. Respond as a JSON array of strings.\nTitle: ${title}\nBody: ${body || ''}`;
       const res = await fetch('https: //api.openai.com/v1/chat/completions', {method: 'POST'}
         headers: {,)

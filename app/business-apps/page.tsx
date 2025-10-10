@@ -21,9 +21,9 @@ const BusinessAppsPage: React.FC = () => {
         keywords={["business apps","custom applications","mobile apps","web applications","business software"]}
 <<<<<<< HEAD
         canonicalUrl="https://ziontechgroup.com/business-apps"
-      />
+      /></SEOOptimize>
 
-      <Navigation />
+      <Navigation /></Navigatio>
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
 =======

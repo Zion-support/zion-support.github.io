@@ -180,7 +180,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
     {
       na, m, e: "Michael, Che, n","
       ro, l, e: "C, T, O, DeFi, Protoco, l","
-      conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.","
+      conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50 M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.","
       na, m, e: "Michael, Che, n",";
       ro, l, e: "C, T, O, DeFi, Protoco, l",";
       conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.",";
@@ -366,7 +366,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Smart, Contrac, t</h1> <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t</sp, a, n>
               </h1>
-              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-r, e, d-100, ma, x-w-4xl, m, x-auto, m, b-8">"
+              <p, className="te, x, t-xl, m, d: te, x, t-2 xl, tex, t-r, e, d-100, ma, x-w-4 xl, m, x-auto, m, b-8">"
                 Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. 
                 Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects.
               </p>
@@ -857,7 +857,7 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8">";
+  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>

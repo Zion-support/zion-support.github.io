@@ -691,11 +691,8 @@ interface CodeSecurityAuditorProps {}
 
 export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAuditorProps) {}
   const [isScanning, setIsScanning] = useState(false);
-  const [scanResults, setScanResults] = useState<any[]>([]);
-  const [selectedFile, setSelectedFile] = useState<string | null>(null);
-  const [codeContent, setCodeContent] = useState('');
-  const [vulnerabilities, setVulnerabilities] = useState<any[]>([]);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [scanResults, setScanResults] = useState<any[]>([]);</any></<<<any>const</any></any> [selectedFile, setSelectedFile] = useState<string | null>(null);</string></<<<string>const</string></string> [codeContent, setCodeContent] = useState('');
+  const [vulnerabilities, setVulnerabilities] = useState<any[]>([]);</any></<<<any>const</any></any> [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const securityIssues = [
 <<<<<<< HEAD
@@ -1158,9 +1155,9 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                           <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(vuln.severity)}`}>
                             {vuln.severity}
                           </span>
-                          <span className="text-gray-400 text-sm">Line {vuln.line}</span>
+                          <span className="text-gray-400 text-sm">Line {vuln.line}</spa>
                         </div>
-                        <h4 className="text-white font-semibold mb-1">{vuln.type}</h4>
+                        <h4 className="text-white font-semibold mb-1">{vuln.type}</h>
                         <p className="text-gray-300 text-sm mb-2">{vuln.description}</p>
                         <p className="text-green-400 text-sm">{vuln.recommendation}</p>
                       </div>
@@ -1252,8 +1249,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getSeverityColor(issue.severity)}`}>
                           {issue.severity}
                         </span>
-                        <span className="text-white font-semibold">{issue.type}</span>
-                        <span className="text-gray-400 text-sm">{issue.file}:{issue.line}</span>
+                        <span className="text-white font-semibold">{issue.type}</spa>
+                        <span className="text-gray-400 text-sm">{issue.file}:{issue.line}</spa>
                       </div>
                       <span className={`px-3 py-1 rounded-full text-sm font-semibold ${}
                         issue.status === 'Fixed'

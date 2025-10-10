@@ -45,7 +45,7 @@
     use_cases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high - impact features faster',
     competitors: ['UnitQ', 'EnjoyHQ'],
-    market_size: '$2B+',
+    market_size: '$2 B+',
     growth_rate: '18% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -154,8 +154,8 @@
     integrations: ['GitHub', 'GitLab', 'Jenkins'],
     use_cases: ['Pre - deploy API checks', 'Security posture'],
     roi: 'Reduce security escapes by 60%',
-    competitors: ['StackHawk', '42Crunch'],
-    market_size: '$4B',
+    competitors: ['StackHawk', '42 Crunch'],
+    market_size: '$4 B',
     growth_rate: '20% CAGR',
     variant: 'quantum - cyberpunk',
     contact_info: contact;
@@ -267,7 +267,7 @@
     use_cases: ['Billing cycles', 'Data syncs'],
     roi: 'Fewer missed jobs and incidents',
     competitors: ['Temporal (overkill)', 'DIY'],
-    market_size: '$1B+',
+    market_size: '$1 B+',
     growth_rate: '15% CAGR',
     variant: 'holographic - matrix',
     contact_info: contact;
@@ -377,7 +377,7 @@
     use_cases: ['Ticket intake', 'CRM capture'],
     roi: 'Automate manual email triage',
     competitors: ['Mailparser', 'Integromat'],
-    market_size: '$0.8B',
+    market_size: '$0.8 B',
     growth_rate: '10% CAGR',
     variant: 'neural - quantum',
     contact_info: contact;
@@ -489,7 +489,7 @@
     use_cases: ['Blog, email, ads'],
     roi: 'Scale content 5 faster',
     competitors: ['Jasper', 'Writer'],
-    market_size: '$3B+',
+    market_size: '$3 B+',
     growth_rate: '22% CAGR',
     variant: 'ai - futuristic',
     contact_info: contact;
@@ -711,7 +711,7 @@
     use_cases: ['Faster model delivery'],
     roi: 'Shorter time - to - prod models',
     competitors: ['Tecton', 'Feast'],
-    market_size: '$1B+',
+    market_size: '$1 B+',
     growth_rate: '20% CAGR',
     variant: 'neural - quantum',
     contact_info: contact;
@@ -931,7 +931,7 @@
     use_cases: ['CWV, bundle size'],
     roi: '+20 LCP, fewer regressions',
     competitors: ['SpeedCurve', 'Calibre'],
-    market_size: '$0.5B',
+    market_size: '$0.5 B',
     growth_rate: '12% CAGR',
     variant: 'neural - quantum - cyberpunk',
     contact_info: contact;
@@ -1041,7 +1041,7 @@
     use_cases: ['Spend control', 'Chargeback'],
     roi: 'Reduce overspend by 1030%',
     competitors: ['CloudZero', 'Finout'],
-    market_size: '$12B',
+    market_size: '$12 B',
     growth_rate: '25% YoY',
     variant: 'quantum - holographic',
     contact_info: contact;
@@ -1151,7 +1151,7 @@
     use_cases: ['Dev portals', 'SDKs'],
     roi: 'Docs / SDKs 5 faster',
     competitors: ['ReadMe', 'Redocly'],
-    market_size: '$1.5B',
+    market_size: '$1.5 B',
     growth_rate: '18% CAGR',
     variant: 'neural - quantum',
     contact_info: contact;
@@ -1196,11 +1196,11 @@
 		trialDays: 14;
 		setupTime: '1 hour',
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
-		integrations: ['ZendeskIntercomG2Capterra'];
+		integrations: ['ZendeskIntercomG2 Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster'
 		competitors: ['UnitQEnjoyHQ'];
-		marketSize: '$2B+'
+		marketSize: '$2 B+'
 		growthRate: '18% CAGR'
 		variant: 'ai-futuristic',
 		contactInfo: contact;
@@ -1233,8 +1233,8 @@
 		integrations: ['GitHubGitLabJenkins'];
 		useCases: ['Pre-deploy API checksSecurity posture'];
 		roi: 'Reduce security escapes by 60%'
-		competitors: ['StackHawk42Crunch'];
-		marketSize: '$4B'
+		competitors: ['StackHawk42 Crunch'];
+		marketSize: '$4 B'
 		growthRate: '20% CAGR'
 		variant: 'quantum-cyberpunk',
 		contactInfo: contact;
@@ -1268,7 +1268,7 @@
 		useCases: ['Billing cyclesData syncs'];
 		roi: 'Fewer missed jobs and incidents'
 		competitors: ['Temporal (overkill)DIY'];
-		marketSize: '$1B+'
+		marketSize: '$1 B+'
 		growthRate: '15% CAGR'
 		variant: 'holographic-matrix',
 		contactInfo: contact;
@@ -1302,7 +1302,7 @@
 		useCases: ['Ticket intakeCRM capture'];
 		roi: 'Automate manual email triage'
 		competitors: ['MailparserIntegromat'];
-		marketSize: '$0 && 0.8B'
+		marketSize: '$0 && 0.8 B'
 		growthRate: '10% CAGR'
 		variant: 'neural-quantum',
 		contactInfo: contact;
@@ -1336,7 +1336,7 @@
 		useCases: ['Blog, email, ads'];
 		roi: 'Scale content 5 faster'
 		competitors: ['JasperWriter'];
-		marketSize: '$3B+'
+		marketSize: '$3 B+'
 		growthRate: '22% CAGR'
 		variant: 'ai-futuristic',
 		contactInfo: contact;
@@ -1370,7 +1370,7 @@
 		useCases: ['Header hardeningCompliance reports'];
 		roi: 'Reduce risk and review toil'
 		competitors: ['Mozilla Observatory'];
-		marketSize: '$0 && 0.5B'
+		marketSize: '$0 && 0.5 B'
 		growthRate: '8% CAGR'
 		variant: 'holographic',
 		contactInfo: contact;
@@ -1404,7 +1404,7 @@
 		useCases: ['Faster model delivery'];
 		roi: 'Shorter time-to-prod models'
 		competitors: ['TectonFeast'];
-		marketSize: '$1B+'
+		marketSize: '$1 B+'
 		growthRate: '20% CAGR'
 		variant: 'neural-quantum',
 		contactInfo: contact;
@@ -1438,7 +1438,7 @@
 		useCases: ['Error budgetsCoaching'];
 		roi: 'Fewer incidents'
 		competitors: ['Nobl9'];
-		marketSize: '$0 && 0.8B'
+		marketSize: '$0 && 0.8 B'
 		growthRate: '14% CAGR'
 		variant: 'holographic-matrix',
 		contactInfo: contact;
@@ -1472,7 +1472,7 @@
 		useCases: ['CWV, bundle size'];
 		roi: '+20 LCP, fewer regressions'
 		competitors: ['SpeedCurveCalibre'];
-		marketSize: '$0 && 0.5B'
+		marketSize: '$0 && 0.5 B'
 		growthRate: '12% CAGR'
 		variant: 'neural-quantum-cyberpunk',
 		contactInfo: contact;
@@ -1506,7 +1506,7 @@
 		useCases: ['Spend controlChargeback'];
 		roi: 'Reduce overspend by 1030%'
 		competitors: ['CloudZeroFinout'];
-		marketSize: '$12B'
+		marketSize: '$12 B'
 		growthRate: '25% YoY'
 		variant: 'quantum-holographic',
 		contactInfo: contact;
@@ -1540,7 +1540,7 @@
 		useCases: ['Dev portalsSDKs'];
 		roi: 'Docs/SDKs 5 faster'
 		competitors: ['ReadMeRedocly'];
-		marketSize: '$1 && 1.5B'
+		marketSize: '$1 && 1.5 B'
 		growthRate: '18% CAGR'
 		variant: 'neural-quantum',
 		contactInfo: contact;
@@ -2439,7 +2439,7 @@ export const,
     useCases: ['Partner growth', 'Automated payouts'],
     roi: 'Grow partner revenue by 1025%',
     competitors: ['Impact', 'PartnerStack'],
-    marketSize: '$5B+',
+    marketSize: '$5 B+',
     growthRate: '12% YoY',
     variant: 'neural-quantum',
     contactInfo: contact;
@@ -2541,7 +2541,7 @@ export const,
     useCases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high-impact features faster',
     competitors: ['UnitQ', 'EnjoyHQ'],
-    marketSize: '$2B+',
+    marketSize: '$2 B+',
     growthRate: '18% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -2642,8 +2642,8 @@ export const,
     integrations: ['GitHub', 'GitLab', 'Jenkins'],
     useCases: ['Pre-deploy API checks', 'Security posture'],
     roi: 'Reduce security escapes by 60%',
-    competitors: ['StackHawk', '42Crunch'],
-    marketSize: '$4B',
+    competitors: ['StackHawk', '42 Crunch'],
+    marketSize: '$4 B',
     growthRate: '20% CAGR',
     variant: 'quantum-cyberpunk',
     contactInfo: contact;
@@ -2745,7 +2745,7 @@ export const,
     useCases: ['Billing cycles', 'Data syncs'],
     roi: 'Fewer missed jobs and incidents',
     competitors: ['Temporal (overkill)', 'DIY'],
-    marketSize: '$1B+',
+    marketSize: '$1 B+',
     growthRate: '15% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact;
@@ -2847,7 +2847,7 @@ export const,
     useCases: ['Ticket intake', 'CRM capture'],
     roi: 'Automate manual email triage',
     competitors: ['Mailparser', 'Integromat'],
-    marketSize: '$0.8B',
+    marketSize: '$0.8 B',
     growthRate: '10% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact;
@@ -2949,7 +2949,7 @@ export const,
     useCases: ['Blog, email, ads'],
     roi: 'Scale content 5 faster',
     competitors: ['Jasper', 'Writer'],
-    marketSize: '$3B+',
+    marketSize: '$3 B+',
     growthRate: '22% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact;
@@ -3153,7 +3153,7 @@ export const,
     useCases: ['Faster model delivery'],
     roi: 'Shorter time-to-prod models',
     competitors: ['Tecton', 'Feast'],
-    marketSize: '$1B+',
+    marketSize: '$1 B+',
     growthRate: '20% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact;
@@ -3357,7 +3357,7 @@ export const,
     useCases: ['CWV, bundle size'],
     roi: '+20 LCP, fewer regressions',
     competitors: ['SpeedCurve', 'Calibre'],
-    marketSize: '$0.5B',
+    marketSize: '$0.5 B',
     growthRate: '12% CAGR',
     variant: 'neural-quantum-cyberpunk',
     contactInfo: contact;
@@ -3459,7 +3459,7 @@ export const,
     useCases: ['Spend control', 'Chargeback'],
     roi: 'Reduce overspend by 1030%',
     competitors: ['CloudZero', 'Finout'],
-    marketSize: '$12B',
+    marketSize: '$12 B',
     growthRate: '25% YoY',
     variant: 'quantum-holographic',
     contactInfo: contact;
@@ -3561,7 +3561,7 @@ export const,
     useCases: ['Dev portals', 'SDKs'],
     roi: 'Docs/SDKs 5 faster',
     competitors: ['ReadMe', 'Redocly'],
-    marketSize: '$1.5B',
+    marketSize: '$1.5 B',
     growthRate: '18% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact;

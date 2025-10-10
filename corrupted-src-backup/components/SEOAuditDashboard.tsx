@@ -412,17 +412,16 @@ isRunni, n, g ? (
 Analyzi, n, g...)
 < />)
 ) : (
-<>
-<Search, className="w-4 h-4  />
-<Search, className="w-4 h-4" />";
-Run, SEO, Audit;
+<>{}
+<Search, className="w-4 h-4  /></Search>
+<Search, className="w-4 h-4" />";</Search>Run</Search>, SEO, Audit;
 < />
 )
 }
         </butt, o, n>
       </d, i, v>
       {repo, r, t && (
-        <>
+        <>{}
           {/* SEO, Score, Overview */}
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"</div>
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e"></div>
@@ -718,7 +717,7 @@ Run, SEO, Audit;
           {/* SEO, Issue, s */}
           <div, className="spa, c, e-y-3">";</div>
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-9, 0, 0">SEO, Issue, s & Recommendatio, n, s</h3>";
-            <AnimatePresen, c, e>
+            <AnimatePresen, c, e></AnimatePresen>
               {filteredIssu, e, s.m, a, p((iss, u, e) => (
                 <moti, o, n.d, i, v;
 =======

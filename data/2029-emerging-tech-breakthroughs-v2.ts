@@ -174,7 +174,7 @@ export const,
       competitors: [,
         'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
       ]
-      marketSize: '$5B market'
+      marketSize: '$5 B market'
       growthRate: '800% annual growth'
       variant: 'space-futuristic'
       contactInfo: unknown;
@@ -355,7 +355,7 @@ export const,
       competitors: [,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'
       ]
-      marketSize: '$8B market'
+      marketSize: '$8 B market'
       growthRate: '600% annual growth'
       variant: 'quantum-futuristic'
       contactInfo: unknown;
@@ -538,7 +538,7 @@ export const,
       competitors: [,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'
       ]
-      marketSize: '$18B market'
+      marketSize: '$18 B market'
       growthRate: '500% annual growth'
       variant: 'biotech-futuristic'
       contactInfo: unknown;
@@ -721,7 +721,7 @@ export const,
       competitors: [,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'
       ]
-      marketSize: '$12B market'
+      marketSize: '$12 B market'
       growthRate: '700% annual growth'
       variant: 'quantum-energy-revolutionary'
       contactInfo: unknown;
@@ -902,7 +902,7 @@ export const,
       competitors: [,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'
       ]
-      marketSize: '$20B market'
+      marketSize: '$20 B market'
       growthRate: '1000% annual growth'
       variant: 'space-futuristic'
       contactInfo: unknown;

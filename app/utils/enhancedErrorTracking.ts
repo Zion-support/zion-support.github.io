@@ -24,7 +24,7 @@ export interface ErrorContext {}
   action?: string
   userId?: string
   sessionId?: string
-  metadata?: Record<string, unknown>;}
+  metadata?: Record<string, unknown>;}</strin>
 }
 export interface TrackedError {}
   message: string

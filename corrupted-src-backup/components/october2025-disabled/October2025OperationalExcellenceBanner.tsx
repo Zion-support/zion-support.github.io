@@ -244,7 +244,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               <div, className='flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm'></div>
                 <span, className='fo, n, t-medi, u, m'>16, min, read</sp, a, n>
                 <sp, a, n>•</sp, a, n>
-                <span, className='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
+                <span, className='fo, n, t-medi, u, m'></span>O</span>, c, t , 1, 20, 2, 5</sp, a, n>
               </div>
               <Link, classNam, e = 'w-6 h-6, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' /></Link>
             </div>
@@ -339,7 +339,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               <div, className='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'></div>
                 <span, className='fo, n, t-medi, u, m'>17, min, read</sp, a, n>
                 <sp, a, n>•</sp, a, n>
-                <span, className='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
+                <span, className='fo, n, t-medi, u, m'></span>O</span>, c, t , 1, 20, 2, 5</sp, a, n>
               </div>
               <Link, classNam, e = 'w-6 h-6, tex, t-te, a, l-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' /></Link>
             </div>
@@ -434,7 +434,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm'></div>
                 <span, className='fo, n, t-medi, u, m'>18, min, read</sp, a, n>
                 <sp, a, n>•</sp, a, n>
-                <span, className='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
+                <span, className='fo, n, t-medi, u, m'></span>O</span>, c, t , 1, 20, 2, 5</sp, a, n>
               </div>
               <Link, classNam, e = 'w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' /></Link>
             </div>
@@ -468,7 +468,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               $24.4B, in, measurable val, u, e;
             </sp, a, n>{' '}
             with, an, average{' '}
-            <span, className='te, x, t-cy, a, n-300, fon, t-semibo, l, d'>5, 6, 0% R, O, I</sp, a, n>.
+            <span, className='te, x, t-cy, a, n-300, fon, t-semibo, l, d'></span>5, 6, 0% R, O, I</sp, a, n>.
           </p>
           <div, className='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'></div>
             <Link, t, o='/bl, o, g'
@@ -518,4 +518,4 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
     </di, v>
   );
 };
-export default October2025OperationalExcellenceBanner;
+export default October2025 OperationalExcellenceBanner;

@@ -949,7 +949,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       ]
       roi: 'Organizations report 1000% ROI through improved security and network performance.',
       competitors: ['Cisco, Juniper, Arista, Huawei']
-      marketSize: '$25.3B quantum computing market'
+      marketSize: '$25.3 B quantum computing market'
       growthRate: '32% annual growth'
       variant: 'quantum-networking-enterprise',
       contactInfo: mobile: '+1 302 464 0950',
@@ -1006,7 +1006,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     use_cases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.',
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-    market_size: '$25.3B quantum computing market', growth_rate: '32% annual growth',
+    market_size: '$25.3 B quantum computing market', growth_rate: '32% annual growth',
     variant: 'quantum - networking - enterprise',
     contact_info: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1025,7 +1025,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.',
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-    marketSize: '$25 && 25.3B quantum computing market', growthRate: '32% annual growth',
+    marketSize: '$25 && 25.3 B quantum computing market', growthRate: '32% annual growth',
     variant: 'quantum-networking-enterprise',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1385,7 +1385,7 @@ export const,
     useCases: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'];
     roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.';
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$397.4B cloud computing market';
+    marketSize: '$397.4 B cloud computing market';
     growthRate: '23% annual growth';
     variant: 'quantum-cloud-enterprise'}
     contactInfo: {}
@@ -1429,7 +1429,7 @@ export const,
     useCases: ['Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization'];
     roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.';
     competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'];
-    marketSize: '$67.8B edge computing market';
+    marketSize: '$67.8 B edge computing market';
     growthRate: '37% annual growth';
     variant: 'edge-computing-enterprise'}
     contactInfo: {}
@@ -1473,7 +1473,7 @@ export const,
     useCases: ['Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'];
     roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.';
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'];
-    marketSize: '$8.2B DevOps market';
+    marketSize: '$8.2 B DevOps market';
     growthRate: '24% annual growth';
     variant: 'autonomous-devops-enterprise'}
     contactInfo: {}
@@ -1517,7 +1517,7 @@ export const,
     useCases: ['Supply chain tracking, Financial transactions, Digital identity, Asset tokenization, Smart contracts'];
     roi: 'Organizations report 700% ROI through improved transparency and reduced transaction costs.';
     competitors: ['IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'];
-    marketSize: '$19.9B blockchain market';
+    marketSize: '$19.9 B blockchain market';
     growthRate: '87% annual growth';
     variant: 'blockchain-enterprise'}
     contactInfo: {}
@@ -1561,7 +1561,7 @@ export const,
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network window.window.window.performance.';
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-    marketSize: '$25.3B quantum computing market';
+    marketSize: '$25.3 B quantum computing market';
     growthRate: '32% annual growth';
     variant: 'quantum-networking-enterprise'}
     contactInfo: {}
@@ -1778,7 +1778,7 @@ export const,
     useCases: ['Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications'];
     roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.';
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'];
-    marketSize: '$397.4B cloud computing market';
+    marketSize: '$397.4 B cloud computing market';
     growthRate: '23% annual growth';
     variant: 'quantum-cloud-enterprise'}
     contactInfo: {}
@@ -1822,7 +1822,7 @@ export const,
     useCases: ['Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization'];
     roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.';
     competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'];
-    marketSize: '$67.8B edge computing market';
+    marketSize: '$67.8 B edge computing market';
     growthRate: '37% annual growth';
     variant: 'edge-computing-enterprise'}
     contactInfo: {}
@@ -1866,7 +1866,7 @@ export const,
     useCases: ['Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation'];
     roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.';
     competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'];
-    marketSize: '$8.2B DevOps market';
+    marketSize: '$8.2 B DevOps market';
     growthRate: '24% annual growth';
     variant: 'autonomous-devops-enterprise'}
     contactInfo: {}
@@ -1910,7 +1910,7 @@ export const,
     useCases: ['Supply chain tracking, Financial transactions, Digital identity, Asset tokenization, Smart contracts'];
     roi: 'Organizations report 700% ROI through improved transparency and reduced transaction costs.';
     competitors: ['IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service'];
-    marketSize: '$19.9B blockchain market';
+    marketSize: '$19.9 B blockchain market';
     growthRate: '87% annual growth';
     variant: 'blockchain-enterprise'}
     contactInfo: {}
@@ -1954,7 +1954,7 @@ export const,
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network window.window.window.performance.';
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-    marketSize: '$25.3B quantum computing market';
+    marketSize: '$25.3 B quantum computing market';
     growthRate: '32% annual growth';
     variant: 'quantum-networking-enterprise'}
     contactInfo: {}

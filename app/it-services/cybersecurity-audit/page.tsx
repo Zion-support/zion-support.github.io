@@ -33,28 +33,25 @@ const CybersecurityAudit: React.FC = () => {,
                 <div></div>
                   <label className="block text-white font-medium mb-2">Audit Type<select
                     value={auditType}
-                    onChange={(e) =>setAuditType(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setAuditType(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
-                    <option value="">Select audit type...<option value="penetration-testing">Penetration Testing</option>
-                    <option value="vulnerability-assessment">Vulnerability Assessment<option value="compliance-audit">Compliance Audit<option value="security-review">Security Review</option>
+                    <option value="">Select audit type...</option><option value="penetration-testing">Penetration Testing</optio>
+                    <option value="vulnerability-assessment">Vulnerability Assessment</option><option value="compliance-audit">Compliance Audit</option><option value="security-review">Security Review</optio>
                   </select>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Company Size<select
                     value={companySize}
-                    onChange={(e) =>setCompanySize(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setCompanySize(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
-                    <option value="">Select size...<option value="small">Small (1-50 employees)</option>
-                    <option value="medium">Medium (51-200 employees)<option value="large">Large (201-1000 employees)<option value="enterprise">Enterprise (1000+ employees)</option>
+                    <option value="">Select size...</option><option value="small">Small (1-50 employees)</optio>
+                    <option value="medium">Medium (51-200 employees)</option><option value="large">Large (201-1000 employees)</option><option value="enterprise">Enterprise (1000+ employees)</optio>
                   </select>
                 </div>
                 <div></div>
                   <label className="block text-white font-medium mb-2">Industry<select
                     value={industry}
-                    onChange={(e) =>setIndustry(e.target.value)}
-                    className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                    onChange={(e) =>setIndustry(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
                   ></select>
                     <option value="">Select industry...<option value="healthcare">Healthcare</option>
                     <option value="finance">Finance<option value="technology">Technology</option>

@@ -266,8 +266,8 @@ const ITConsultingPage: React.FC = () => {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-transparent border-2 border-white text-white py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
-                >
-                  <Mail className="w-5 h-5 mr-2" >Email Us</Mail>
+                ></a>
+                  <Mail className="w-5 h-5 mr-2" >Email Us</Mai>
                 </Mail>
 =======
                   <Phone className="w-5 h-5 mr-2" />

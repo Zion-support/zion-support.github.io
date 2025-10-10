@@ -42,7 +42,7 @@ const October2025FraudDetectionBanne, r = () => {
             <Zap, className="w-8 h-8, tex, t-r, e, d-400, m, x-auto, m, b-2" />
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">S, u, b-50, m, s</div>
             <div, className="te, x, t-sm, tex, t-r, e, d-2, 0, 0">Re, a, l-Time, Detectio, n</div>
-            <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-, 1">, 1,300x, faste, r</div>
+            <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-, 1">, 1,300 x, faste, r</div>
           </div>
           <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0"></div>
             <Target, className="w-8 h-8, tex, t-purp, l, e-400, m, x-auto, m, b-2" />
@@ -54,7 +54,7 @@ const October2025FraudDetectionBanne, r = () => {
             <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-400, m, x-auto, m, b-2" />
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">96%</div>
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</div>
-            <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</div>
+            <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410 M, saved, avg</div>
           </div>
           <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0"></div>
             <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />
@@ -73,7 +73,7 @@ const October2025FraudDetectionBanne, r = () => {
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r"></div>
                 <Brain, className="w-6 h-6, tex, t-r, e, d-4, 0, 0" />
               </div>
-              <d, i, v>
+              <d, i, v></d>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Mul, t, i-Model, ML, Ensemble</div>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
                   Graph, Neural, Networks + Transforme, r, s + Isolation, Fores, t + Deep, Learning, working in, concert, for unmatched, accurac, y;
@@ -84,9 +84,9 @@ const October2025FraudDetectionBanne, r = () => {
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r"></div>
                 <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
               </div>
-                <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
+                <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" /></Eye>
               </div>
-              <d, i, v>
+              <d, i, v></d>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Behavioral, Biometric, s</div>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
                   Continuous, authentication, via keystroke, dynam, i, c, s, mouse, pattern, s, device, fingerprintin, g — 99.4% user, ID, accuracy;
@@ -97,9 +97,9 @@ const October2025FraudDetectionBanne, r = () => {
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r"></div>
                 <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
               </div>
-                <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
+                <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" /></Network>
               </div>
-              <d, i, v>
+              <d, i, v></d>
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</div>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
 =======
@@ -329,7 +329,7 @@ const October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s"></div>
               <div, className="te, x, t-3xl, m, b-2">🏦</div>
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Financial, Service, s</div>
-              <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$2.3B, protecte, d</div>
+              <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$2.3 B, protecte, d</div>
             </div>
             <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s"></div>
               <div, className="te, x, t-3xl, m, b-2">🛒</div>

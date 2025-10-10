@@ -31,8 +31,8 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix JSX expression */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 strokeWidth={2}
-                d="M12 9v2m0 4h.01m-6.938 4h13?.856c1.54 0 2.502-1.667 1.732-2?.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77?.833.192 2.5 1.732 2.5z"
-              />
+                d="M12 9 v2 m0 4 h.01 m-6.938 4 h13?.856 c1.54 0 2.502-1.667 1.732-2?.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77?.833.192 2.5 1.732 2.5 z"
+              /></p>
             </svg>
 <<<<<<< HEAD
           </div>
@@ -52,7 +52,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
 =======
         <div className="mb-4"></div>
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
-          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
+          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800"></p>
             {error.message}
           </pre>
         </div>

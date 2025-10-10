@@ -182,7 +182,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
     const expiredKeys: string[] = [];
 ,
     for (const [key, entry] of this.cache.entries()) {
-      if (now - entry.timestamp > this.config.maxAge) {
+      if (now - entry.timestamp>this</timestamp>.config.maxAge) {
         expiredKeys.push(key);
 =======
   public cleanup(): void {/* TODO: Fix JSX expression */}
