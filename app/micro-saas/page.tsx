@@ -36,8 +36,7 @@ const MicroSaasPage: React.FC = () => {
       price: '$19/month',
       icon: Clock
     }
-  ]
-
+  ];
   const features = [
     {
       title: 'Rapid Deployment',
@@ -147,6 +146,6 @@ const MicroSaasPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default MicroSaasPage;

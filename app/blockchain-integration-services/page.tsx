@@ -24,7 +24,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       title: 'Multi-Chain Support',
       description: 'Support for multiple blockchain networks and protocols'
     }
-  ]
+  ];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -45,7 +45,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Integration Services;
+            Blockchain Integration Services
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
@@ -122,8 +122,9 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       </div>
     </div>
   ),
-}
-export default BlockchainIntegrationServicesPage;
+};
+
+export default BlockchainIntegrationServicesPage
   </button>
   </button>
   </h2>

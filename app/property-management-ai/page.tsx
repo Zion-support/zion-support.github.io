@@ -41,5 +41,6 @@ const PropertyManagementAIPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
+
 export default PropertyManagementAIPage;

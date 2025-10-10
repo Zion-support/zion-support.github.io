@@ -24,7 +24,7 @@ const BlockchainPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
     }
-  ]
+  ];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
@@ -45,7 +45,7 @@ const BlockchainPage: React.FC = () => {
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Blockchain Solutions;
+            Blockchain Solutions
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge blockchain technology and decentralized solutions. 
@@ -85,7 +85,7 @@ const BlockchainPage: React.FC = () => {
                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions;
+                Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -126,10 +126,10 @@ const BlockchainPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services;
+                  {category} Services
   </
                 <p className="text-xl text-gray-600">
-                  Professional {category.toLowerCase()} solutions powered by blockchain technology;
+                  Professional {category.toLowerCase()} solutions powered by blockchain technology
   </
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,7 +146,7 @@ const BlockchainPage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates;
+                          Save up to 50% vs market rates
   </
                       </div>
                       <div className="mb-4">
@@ -264,8 +264,9 @@ const BlockchainPage: React.FC = () => {
       </div>
     </div>
   );
-}
-export default BlockchainPage;
+};
+
+export default BlockchainPage
   </a>
   </a>
   </p>

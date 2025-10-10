@@ -145,6 +145,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default PerformanceMonitor;

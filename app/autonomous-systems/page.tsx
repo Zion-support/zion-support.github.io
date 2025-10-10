@@ -23,5 +23,6 @@ const AutonomousSystemsPage: React.FC = () => {
     </>,
   )
   }
-}
+};
+
 export default AutonomousSystemsPage;

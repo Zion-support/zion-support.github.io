@@ -16,7 +16,7 @@ interface LinkProps {}
 }
 export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
-  href,;
+  href,
   href: string,
   children: React.ReactNode;
   className?: string;
@@ -28,11 +28,11 @@ export const Link: React.FC<LinkProps> = ({}
 export const Link: React.FC<LinkProps> = ({
     ,
   href;
-  children,;
-  className,;
-  target,;
-  rel,;
-  onClick,;
+  children,
+  className,
+  target,
+  rel,
+  onClick,
   'aria-label': ariaLabel,
   }
   ...props}
@@ -56,7 +56,7 @@ export const Link: React.FC<LinkProps> = ({
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
-export const,;
+export const,
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
@@ -80,11 +80,13 @@ export const,;
       {children})
     </a>);
   );
-}
+};
+
 export default Link;
     >;
       {children}
     </a>);
   );
-}
+};
+
 export default Link;

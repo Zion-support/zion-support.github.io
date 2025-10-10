@@ -9,8 +9,8 @@ interface AnalyticsProps {
 }
 const Analytics: React.FC<AnalyticsProps> = ({
     enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,;
-  enableErrorTracking = true,;
+  enablePerformanceMonitoring = true,
+  enableErrorTracking = true,
   enableUserBehaviorTracking = true
   }
 }) => {
@@ -214,7 +214,8 @@ declare global {
     gtag: (...args: any[]) => void
   }
   }
-}
+};
+
 export default Analytics;
 // Analytics Provider for context;
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

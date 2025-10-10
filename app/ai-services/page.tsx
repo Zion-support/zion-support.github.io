@@ -1012,8 +1012,7 @@ const AiServicesPage: React.FC = () => {
       popular: true,
       icon: FileText
     }
-  ]
-
+  ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
@@ -1184,6 +1183,6 @@ const AiServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default AiServicesPage;

@@ -115,6 +115,6 @@ const ContentCarousel: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ContentCarousel;

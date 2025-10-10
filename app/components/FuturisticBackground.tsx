@@ -123,6 +123,6 @@ const FuturisticBackground: React.FC = () => {
       style={{ background: 'transparent' }}
     />
   );
-}
+};
 
 export default FuturisticBackground;

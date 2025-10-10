@@ -9,13 +9,17 @@ const PagePage: React.FC = () => {
   ]
 const benefits = [
     'Advanced AI technology integration',
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+
+    'Proven track record of success'
   ]
 return (
           </div>
@@ -34,5 +38,6 @@ return (
           </div>
         </div>
       </section>
-}
+};
+
 export default PagePage;

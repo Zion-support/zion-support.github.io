@@ -7,7 +7,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
       color: 'text-purple-400',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],;
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: '300% ROI'
   },
     {
@@ -15,7 +15,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       description: 'Build and maintain robust technology foundations',
       icon: Cloud,
       color: 'text-blue-400',
-      features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],;
+      features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
       stats: '99.9% Uptime'
   },
     {
@@ -23,7 +23,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       description: 'Protect your business with enterprise-grade security',
       icon: Shield,
       color: 'text-green-400',
-      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],;
+      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
       stats: 'Zero Breaches'
   },
     {
@@ -31,20 +31,27 @@ const EnhancedServicesShowcase: React.FC = () => {
       description: 'Streamline processes with intelligent automation',
       icon: Zap,
       color: 'text-yellow-400',
-      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],;
+      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
       stats: '95% Efficiency'
   }
     }
   ]
 return (
-    <section className="py-16"></section>
+    <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
           <h2>
-            Our Core Services;
+            Our Core Services
           </h2>
           <p>
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation;
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -85,5 +92,6 @@ return (
         </div>
     </section>
   );
-}
+};
+
 export default EnhancedServicesShowcase;

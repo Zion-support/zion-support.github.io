@@ -130,6 +130,6 @@ const CaseStudiesPage: React.FC = () => {
       </section>
     </div>
   );
-}
+};
 
 export default CaseStudiesPage;

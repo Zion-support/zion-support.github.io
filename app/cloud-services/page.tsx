@@ -31,7 +31,7 @@ const CloudServicesPage: React.FC = () => {
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
 
     }
-  ]
+  ];
   const benefits = [
 
     'Reduced infrastructure costs by up to 40%',
@@ -42,8 +42,7 @@ const CloudServicesPage: React.FC = () => {
     'Disaster recovery and backup solutions',
     'Global availability and performance',
     'Expert cloud architecture guidance'
-  ]
-
+  ];
   const pricing = [
     {
       name: 'Starter',
@@ -270,8 +269,9 @@ const CloudServicesPage: React.FC = () => {
     </div>
 
   ),
-}
-export default CloudServicesPage;
+};
+
+export default CloudServicesPage
   </button>
   </button>
   </h1>

@@ -37,8 +37,7 @@ const PrivacyPage: React.FC = () => {
         'System configuration information'
       ]
     }
-  ]
-
+  ];
   const purposes = [
     {
       title: 'Service Delivery',
@@ -60,8 +59,7 @@ const PrivacyPage: React.FC = () => {
       description: 'To analyze usage patterns and improve our services',
       icon: Eye
     }
-  ]
-
+  ];
   const rights = [
     {
       title: 'Access',
@@ -375,6 +373,6 @@ const PrivacyPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default PrivacyPage;

@@ -111,6 +111,6 @@ const DataAnalyticsBiPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default DataAnalyticsBiPage;

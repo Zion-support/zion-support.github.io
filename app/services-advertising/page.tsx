@@ -6,19 +6,23 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   ]
 const benefits = [
     'Advanced AI technology integration',
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+
+    'Proven track record of success'
   ]
 return (
             </h1>
             <p>
               Transform your business with our advanced page solutions.;
-              Powered by cutting-edge AI technology and industry expertise.;
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -43,5 +47,6 @@ return (
       </section>
     </div>
   );
-}
+};
+
 export default PagePage;

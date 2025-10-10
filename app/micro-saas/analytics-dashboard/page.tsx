@@ -37,29 +37,40 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ]
 const benefits = [
     'Real-time data visualization and reporting',
-    'AI-powered predictive analytics',;
-    'Customizable dashboard widgets',;
-    'Automated report generation',;
-    'Multi-platform data integration',;
-    'Mobile-responsive design';
+    'AI-powered predictive analytics',
+
+    'Customizable dashboard widgets',
+
+    'Automated report generation',
+
+    'Multi-platform data integration',
+
+    'Mobile-responsive design'
   ]
 const metrics = [
-    { label: 'Data Sources', value: '50+', icon: BarChart },;
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },;
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
+    { label: 'Data Sources', value: '50+', icon: BarChart },
+    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
+    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ]
 return (
     <>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
-        <section className="pt-24 pb-16 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
@@ -72,7 +83,7 @@ return (
               </h1>
               <p>
                 Transform your data into actionable insights with our AI-powered analytics dashboard.;
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.;
+                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
@@ -87,12 +98,19 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-16 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p>
-                Everything you need to make data-driven decisions with confidence;
+                Everything you need to make data-driven decisions with confidence
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -101,8 +119,7 @@ return (
   }
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
-                    <feature>
-                  </div>
+                    <feature />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
@@ -111,12 +128,19 @@ return (
           </div>
         </section>
         {/* Metrics Section */}
-        <section className="py-16 px-4 bg-slate-800/30"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p>
-                Built for scale and reliability;
+                Built for scale and reliability
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
@@ -125,8 +149,7 @@ return (
   }
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                    <metric>
-                  </div>
+                    <metric />
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
                 </div>
@@ -135,12 +158,19 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-16 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p>
-                Experience the difference with our AI-powered analytics platform;
+                Experience the difference with our AI-powered analytics platform
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -175,15 +205,22 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2>
-                Ready to Transform Your Analytics?;
+                Ready to Transform Your Analytics?
               </h2>
               <p>
                 Join thousands of businesses already using our AI analytics dashboard;
-                to make smarter, data-driven decisions.;
+                to make smarter, data-driven decisions.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
@@ -200,6 +237,7 @@ return (
       </div>
     </>
   ),
-}
+};
+
 export default AIAnalyticsDashboardPage;
 

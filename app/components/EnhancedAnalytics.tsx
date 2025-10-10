@@ -92,6 +92,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       {children}
     </AnalyticsContext.Provider>
   );
-}
+};
 
 export default AnalyticsProvider;

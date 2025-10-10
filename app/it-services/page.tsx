@@ -1009,8 +1009,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     }
-  ]
-
+  ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
@@ -1186,6 +1185,6 @@ const ItServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default ItServicesPage;

@@ -235,6 +235,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     {children}
   </>
   );
-}
+};
 
 export default AdvancedSEOOptimizer;

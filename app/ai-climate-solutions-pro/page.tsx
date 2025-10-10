@@ -29,7 +29,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    },
   ]
   return (
     <React.Fragment>
@@ -111,8 +111,9 @@ const AiClimateSolutionsProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   ),
-}
-export default AiClimateSolutionsProPage;
+};
+
+export default AiClimateSolutionsProPage
   </button>
   </h2>
   </button>

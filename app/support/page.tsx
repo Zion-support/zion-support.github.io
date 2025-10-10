@@ -24,8 +24,7 @@ const SupportPage: React.FC = () => {
       question: 'What technologies do you work with?',
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
-  ]
-
+  ];
   const supportChannels = [
     {
       title: 'Email Support',
@@ -136,6 +135,6 @@ const SupportPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default SupportPage;

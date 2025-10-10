@@ -1438,8 +1438,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 5 users'
     }
-  ]
-
+  ];
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
@@ -1832,6 +1831,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default HomePage;
